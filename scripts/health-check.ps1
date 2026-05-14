@@ -69,7 +69,7 @@ Write-Host "`n[NAS]" -ForegroundColor Yellow
 $nasDrive = "Z:\"
 if (Test-Path $nasDrive) {
     Write-Host "  NAS 드라이브 (Z:\): 연결됨" -ForegroundColor Green
-    $netUse = net use Z: 2>&1
+    $netUse = (net use Z:) 2>$null
     Write-Host "  $($netUse | Select-String '원격')" -ForegroundColor Gray
 } else {
     Write-Host "  NAS 드라이브 (Z:\): 연결 안 됨" -ForegroundColor Red

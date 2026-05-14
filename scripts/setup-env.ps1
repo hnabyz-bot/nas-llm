@@ -1,4 +1,4 @@
-# scripts/setup-env.ps1
+﻿# scripts/setup-env.ps1
 # LLM Wiki 환경 설정 스크립트
 # 관리자 권한으로 실행 필요
 

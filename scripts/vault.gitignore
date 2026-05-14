@@ -1,0 +1,72 @@
+# vault.gitignore
+# 배포 시 D:\vault\.gitignore 로 복사하는 템플릿
+#
+# 역할:
+#   - auto-commit.ps1 은 wiki/ 만 스테이징 (git add wiki/)
+#   - raw/sources/ 의 바이너리는 git 추적 제외
+#   - wiki/ 는 추적 대상이므로 제외 규칙 없음
+#
+# 이 파일을 수정했다면 docs/02-BUILD-PLAN.md §2.3 의
+# 배포 절차 설명도 함께 업데이트하세요.
+
+# ============================================================
+# raw/sources/ — NAS에서 동기화된 원본 바이너리
+# (append-only, 파일당 불변 — git 에 넣지 않음)
+# ============================================================
+raw/sources/*.pdf
+raw/sources/*.doc
+raw/sources/*.docx
+raw/sources/*.xls
+raw/sources/*.xlsx
+raw/sources/*.ppt
+raw/sources/*.pptx
+raw/sources/*.hwp
+raw/sources/*.hwpx
+raw/sources/*.zip
+raw/sources/*.7z
+raw/sources/*.tar
+raw/sources/*.gz
+raw/sources/*.rar
+
+# ============================================================
+# raw/assets/ — 이미지·첨부 바이너리 전체
+# ============================================================
+raw/assets/
+
+# ============================================================
+# .llm-wiki/ — 앱 내부 캐시·임시 파일
+# ============================================================
+.llm-wiki/cache/
+.llm-wiki/tmp/
+.llm-wiki/*.lock
+.llm-wiki/*.log
+
+# ============================================================
+# Windows 시스템 파일
+# ============================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS (NAS 경유 파일에 섞여 들어올 수 있음)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ============================================================
+# 편집기 / IDE
+# ============================================================
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ============================================================
+# wiki/ は 추적 대상 — 제외 규칙 없음
+# purpose.md, schema.md 도 추적 대상 — 제외 규칙 없음
+# ============================================================

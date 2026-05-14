@@ -17,11 +17,11 @@ if ($changes) {
     $count = ($changes | Measure-Object).Count
     git commit -m "wiki: auto-update $date (${count} files)"
     
-    $pushResult = git push 2>&1
+    git push 2>$null
     if ($LASTEXITCODE -eq 0) {
         Write-Host "[$date] 커밋 & 푸시 완료 (${count}개 파일)" -ForegroundColor Green
     } else {
-        Write-Host "[$date] 커밋 완료, 푸시 실패: $pushResult" -ForegroundColor Yellow
+        Write-Host "[$date] 커밋 완료, 푸시 실패 (exit $LASTEXITCODE)" -ForegroundColor Yellow
     }
 } else {
     $date = Get-Date -Format "yyyy-MM-dd HH:mm"

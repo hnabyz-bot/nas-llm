@@ -60,6 +60,36 @@ _harness_version: "4.10.0"
 - [ ] T018: 위키 페이지 생성 검증 (TC-03~TC-09 핵심 항목 통과) `cc:TODO` depends:T017
 - [ ] T019: Anthropic 토큰 비용 추적 ($15/20개 문서 이내 확인) `cc:TODO` depends:T017
 
+### Phase 5: 안정화 및 확장
+
+> depends:Phase 4
+
+#### 5-1. 자료 확장
+
+- [ ] T020: NAS 추가 폴더(Z:\ 하위 대상 경로) sync-nas.ps1 포함 범위 확정 및 적용 `cc:TODO` depends:Phase 4
+- [ ] T021: 배치 단위 20–30개씩 raw/sources/에 점진 투입 (1차 배치) `cc:TODO` depends:T020
+- [ ] T022: 1차 배치 후 wiki/ 품질 확인 (페이지 구조·링크 정합성 검토) `cc:TODO` depends:T021
+- [ ] T023: 배치 단위 20–30개씩 raw/sources/에 점진 투입 (2차 배치) `cc:TODO` depends:T022
+- [ ] T024: 2차 배치 후 wiki/ 품질 확인 `cc:TODO` depends:T023
+
+#### 5-2. 자동화 스케줄 완성
+
+- [ ] T025: auto-commit.ps1 Task Scheduler 등록 — 매일 23:00 `cc:TODO` depends:Phase 4
+- [ ] T026: health-check.ps1 Task Scheduler 등록 — 매주 일요일 09:00 `cc:TODO` depends:Phase 4
+- [ ] T027: 스케줄 작업 정상 실행 확인 (2일간 로그 검토) `cc:TODO` depends:T025,T026
+
+#### 5-3. E2E 검증 (TC-10~TC-12)
+
+- [ ] T028: TC-10 — NAS 동기화 검증 (sync-nas.ps1 스케줄 실행 후 raw/sources/ 반영 확인) `cc:TODO` depends:T027
+- [ ] T029: TC-11 — Git 자동 커밋 검증 (auto-commit.ps1 실행 후 원격 저장소 반영 확인) `cc:TODO` depends:T027
+- [ ] T030: TC-12 — 48시간 연속 가동 안정성 검증 (이벤트 로그 오류 없음 확인) `cc:TODO` depends:T028,T029
+
+#### 5-4. 운영 체계 확립
+
+- [ ] T031: purpose.md 갱신 루틴 수립 (인제스트 결과 반영 주기·담당자 확정) `cc:TODO` depends:T030
+- [ ] T032: Anthropic 비용 모니터링 체계 구축 (월별 토큰 집계 기준 설정) `cc:TODO` depends:T030
+- [ ] T033: e2e-checklist.md TC-10~TC-12 최종 판정 기입 및 운영 이관 선언 `cc:TODO` depends:T030,T031,T032
+
 ---
 
 ## Completed
