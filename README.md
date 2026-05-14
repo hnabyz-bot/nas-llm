@@ -25,39 +25,72 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 | OS | Windows 10 Pro 64bit |
 | 운영 모드 | 24시간 상시 가동 |
 
-## 문서 구조
+## 현재 상태
+
+> **Phase 0 — 환경 설정 전** (2026-05-14 기준)
+
+설계 문서와 운영 스크립트 작성 완료. 대상 PC에서의 실제 구축은 미착수.
+
+| 산출물 | 상태 |
+|--------|------|
+| 설계 문서 5종 (01~05) | ✅ 완료 |
+| 운영 스크립트 4종 (ps1) | ✅ 완료 |
+| E2E 체크리스트 (TC-01~TC-12, 45항목) | ✅ 완료 |
+| 대상 PC 환경 설정 | ⬜ 미착수 |
+| llm_wiki 빌드 및 설치 | ⬜ 미착수 |
+| NAS 동기화 연동 | ⬜ 미착수 |
+| 파일럿 인제스트 | ⬜ 미착수 |
+
+## 구축 로드맵
 
 ```
-docs/
+Phase 0  사전 준비 (전원설정, 디렉터리, SW확인)     ~1h
+Phase 1  소프트웨어 설치 (Node, Rust, Git, llm_wiki) ~2h
+Phase 2  프로젝트 초기화 (vault, API, Git)           ~30m
+Phase 3  NAS 동기화 설정 (Drive Client, 스케줄)      ~1h
+Phase 4  파일럿 인제스트 (10~20개 문서, 검증)         ~1w
+Phase 5  안정화 및 확장 (자료 확장, 자동화 완성)      ~2-4w
+```
+
+각 Phase의 상세 작업은 [Issues](../../issues)에서 추적.
+
+## 3계층 데이터 아키텍처
+
+| 계층 | 경로 | 소유자 | 규칙 |
+|------|------|--------|------|
+| Raw Sources | `D:\vault\raw\sources\` | 사람 | 불변, append-only |
+| Wiki | `D:\vault\wiki\` | LLM | LLM만 쓰기, 사람은 읽기만 |
+| Schema | `purpose.md`, `schema.md` | 사람 | LLM이 준수할 규칙 정의 |
+
+## 파일 구조
+
+```
 ├── 01-SYSTEM-SPEC.md        # 시스템 사양서
-├── 02-BUILD-PLAN.md          # 구축 계획
-├── 03-OPERATION-GUIDE.md     # 운영 가이드
-├── 04-E2E-TEST-PLAN.md       # E2E 검증 계획
-└── 05-ARCHITECTURE.md        # 아키텍처 설계
-tests/
-├── e2e-checklist.md          # E2E 체크리스트
-└── test-scenarios.md         # 테스트 시나리오
-scripts/
-├── setup-env.ps1             # 환경 설정 스크립트
-├── sync-nas.ps1              # NAS 동기화 스크립트
-└── health-check.ps1          # 상태 점검 스크립트
+├── 02-BUILD-PLAN.md         # 구축 계획 (Phase 0~5)
+├── 03-OPERATION-GUIDE.md    # 운영 가이드
+├── 04-E2E-TEST-PLAN.md      # E2E 검증 계획 (TC-01~TC-12)
+├── 05-ARCHITECTURE.md       # 아키텍처 설계
+├── e2e-checklist.md         # E2E 체크리스트 (인쇄용)
+├── setup-env.ps1            # 환경 설정 스크립트
+├── sync-nas.ps1             # NAS → vault 선별 복사
+├── auto-commit.ps1          # wiki/ Git 자동 커밋
+├── health-check.ps1         # 시스템 상태 점검
+├── CLAUDE.md                # Claude Code 가이드
+└── README.md
 ```
 
 ## 빠른 시작
 
-```bash
+```powershell
 # 1. 레포 클론
-git clone <your-repo-url>
-cd llm-wiki-project
+git clone https://github.com/hnabyz-bot/nas-llm.git
+cd nas-llm
 
 # 2. 환경 설정 (PowerShell 관리자 권한)
-.\scripts\setup-env.ps1
+.\setup-env.ps1
 
-# 3. llm_wiki 빌드 & 실행
-# → docs/02-BUILD-PLAN.md 참조
-
-# 4. E2E 검증
-# → docs/04-E2E-TEST-PLAN.md 참조
+# 3. llm_wiki 빌드 & 실행 → 02-BUILD-PLAN.md Phase 1.4 참조
+# 4. E2E 검증 → 04-E2E-TEST-PLAN.md 참조
 ```
 
 ## 라이선스
