@@ -28,9 +28,9 @@ _harness_version: "4.10.0"
 
 ### Phase 0: 사전 준비
 
-- [ ] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `cc:TODO` [P]
-- [ ] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `cc:TODO` [P]
-- [ ] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `cc:TODO` [P]
+- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:確認済`
+- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:確認済`
+- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:確認済`
 
 ### Phase 1: 소프트웨어 설치
 
@@ -96,7 +96,11 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:完了 or pm:確認済 here. -->
 
-(none)
+### Phase 0: 사전 준비 (2026-05-14 완료)
+
+- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:確認済`
+- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:確認済`
+- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:確認済`
 
 ---
 
@@ -125,5 +129,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-05-14
-- **Last session owner**: Claude Code
+- **Last session owner**: Claude Code (Phase 0 완료)
 - **Branch**: main
