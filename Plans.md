@@ -37,7 +37,7 @@ _harness_version: "4.10.0"
 - [x] T004: Node.js 20 LTS 설치 `pm:CONFIRMED` (v24.15.0)
 - [x] T005: Rust stable 1.70+ + VS Build Tools 설치 `pm:CONFIRMED` (1.95.0 + VS Community 2022)
 - [x] T006: Git 설치 + user.name/email 설정 `pm:CONFIRMED` (v2.42.0)
-- [ ] T007: nashsu/llm_wiki clone + npm install + tauri build `cc:TODO` depends:T004,T005,T006 → `.\scripts\build-llm-wiki.ps1`
+- [x] T007: nashsu/llm_wiki clone + npm install + tauri build `pm:CONFIRMED` (v0.4.9, C:\dev\llm_wiki)
 - [ ] T008: Obsidian 설치 (선택) `cc:TODO` [P] depends:Phase 0
 
 ### Phase 2: 프로젝트 초기화
@@ -102,11 +102,12 @@ _harness_version: "4.10.0"
 - [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:CONFIRMED`
 - [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:CONFIRMED`
 
-### Phase 1: 소프트웨어 설치 (2026-05-14 완료, T007·T008 제외)
+### Phase 1: 소프트웨어 설치 (2026-05-14 완료, T008 제외)
 
 - [x] T004: Node.js 20 LTS 설치 `pm:CONFIRMED` (v24.15.0)
 - [x] T005: Rust stable 1.70+ + VS Build Tools 설치 `pm:CONFIRMED` (1.95.0 + VS Community 2022)
 - [x] T006: Git 설치 + user.name/email 설정 `pm:CONFIRMED` (v2.42.0)
+- [x] T007: nashsu/llm_wiki clone + npm install + tauri build `pm:CONFIRMED` (v0.4.9, C:\dev\llm_wiki)
 
 ---
 
