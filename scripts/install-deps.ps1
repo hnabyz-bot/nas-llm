@@ -20,7 +20,7 @@ if ($nodeVer -and $nodeVer -match "^v(2[0-9]|[3-9])") {
 }
 
 # --- Rust ---
-Write-Host "`n[2/2] Rust toolchain..." -ForegroundColor Yellow
+Write-Host "`n[2/3] Rust toolchain..." -ForegroundColor Yellow
 $rustVer = rustc --version 2>$null
 if ($rustVer) {
     Write-Host "  OK: $rustVer" -ForegroundColor Green
@@ -28,6 +28,17 @@ if ($rustVer) {
     Write-Host "  Installing Rustup..." -ForegroundColor White
     winget install Rustlang.Rustup --accept-source-agreements --accept-package-agreements
     Write-Host "  Done. Restart PowerShell, then run: rustup default stable" -ForegroundColor Yellow
+}
+
+# --- protoc (prost-build / tauri 빌드 필수) ---
+Write-Host "`n[3/3] protoc (Protocol Buffers compiler)..." -ForegroundColor Yellow
+$protocVer = protoc --version 2>$null
+if ($protocVer) {
+    Write-Host "  OK: $protocVer" -ForegroundColor Green
+} else {
+    Write-Host "  Installing protoc..." -ForegroundColor White
+    winget install Google.Protobuf --accept-source-agreements --accept-package-agreements
+    Write-Host "  Done. Restart PowerShell to use protoc." -ForegroundColor Yellow
 }
 
 # --- Summary ---

@@ -53,7 +53,7 @@ Set-ItemProperty -Path $path -Name "NoAutoRebootWithLoggedOnUsers" -Value 1 -Typ
 
 ```powershell
 # 관리자 PowerShell에서 실행
-.\scripts\install-deps.ps1    # Node.js LTS + Rust 자동 설치
+.\scripts\install-deps.ps1    # Node.js LTS + Rust + protoc 자동 설치
 ```
 
 설치 후 PATH 미반영 시 수동 추가:
@@ -80,6 +80,7 @@ node --version    # v20+ (LTS)
 rustc --version   # 1.70+
 cargo --version
 git --version     # 2.x
+protoc --version  # libprotoc 3.x 이상 (prost-build 빌드 필수)
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```

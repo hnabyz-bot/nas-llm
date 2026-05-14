@@ -15,13 +15,14 @@ Write-Host "========================================" -ForegroundColor Cyan
 # --- 1. 선행 도구 확인 ---
 Write-Host "`n[1/4] 선행 도구 확인..." -ForegroundColor Yellow
 $missing = @()
-foreach ($cmd in @("node","rustc","cargo","git")) {
+foreach ($cmd in @("node","rustc","cargo","git","protoc")) {
     $ver = Invoke-Expression "$cmd --version" 2>$null
     if ($ver) { Write-Host "  OK: $cmd  $ver" -ForegroundColor Green }
     else       { Write-Host "  없음: $cmd" -ForegroundColor Red; $missing += $cmd }
 }
 if ($missing.Count -gt 0) {
-    Write-Host "`n  먼저 install-deps.ps1 를 실행하세요." -ForegroundColor Red
+    Write-Host "`n  누락 도구: $($missing -join ', ')" -ForegroundColor Red
+    Write-Host "  먼저 .\scripts\install-deps.ps1 를 실행하세요." -ForegroundColor Yellow
     exit 1
 }
 
