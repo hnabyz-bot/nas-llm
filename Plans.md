@@ -21,16 +21,16 @@ _harness_version: "4.10.0"
 
 ## Not Started
 
-<!-- Add tasks with cc:TODO or pm:依頼中 here. -->
+<!-- Add tasks with cc:TODO or pm:REQUESTED here. -->
 
 > Source: `02-BUILD-PLAN.md` Phase 0–4. Deploy LLM Wiki to DESKTOP-AT1P1UD.
 > Phase-to-phase is sequential; `[P]` marks within-phase parallel work.
 
 ### Phase 0: 사전 준비
 
-- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:確認済`
-- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:確認済`
-- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:確認済`
+- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:CONFIRMED`
+- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:CONFIRMED`
+- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:CONFIRMED`
 
 ### Phase 1: 소프트웨어 설치
 
@@ -94,13 +94,13 @@ _harness_version: "4.10.0"
 
 ## Completed
 
-<!-- Add tasks with cc:完了 or pm:確認済 here. -->
+<!-- Add tasks with cc:DONE or pm:CONFIRMED here. -->
 
 ### Phase 0: 사전 준비 (2026-05-14 완료)
 
-- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:確認済`
-- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:確認済`
-- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:確認済`
+- [x] T001: D:\vault 디렉터리 생성 + 디스크 여유 확인 `pm:CONFIRMED`
+- [x] T002: 전원 설정 — 절전/최대절전 비활성화 (24h 운영) `pm:CONFIRMED`
+- [x] T003: Windows Update 자동 재시작 비활성화 (NoAutoRebootWithLoggedOnUsers 레지스트리) `pm:CONFIRMED`
 
 ---
 
@@ -117,11 +117,11 @@ unless the project has tested parser aliases.
 
 | Marker | Meaning |
 |--------|---------|
-| `pm:依頼中` | PM requested work |
+| `pm:REQUESTED` | PM requested work |
 | `cc:TODO` | Not started by Claude Code |
 | `cc:WIP` | Claude Code is working |
-| `cc:完了` | Claude Code completed the task and is awaiting confirmation |
-| `pm:確認済` | PM confirmed completion |
+| `cc:DONE` | Claude Code completed the task and is awaiting confirmation |
+| `pm:CONFIRMED` | PM confirmed completion |
 | `blocked` | Blocked; include the reason next to the task |
 
 ---
