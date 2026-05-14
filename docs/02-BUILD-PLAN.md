@@ -18,7 +18,7 @@ Get-PSDrive -PSProvider FileSystem | Select Name, @{N='Free(GB)';E={[math]::Roun
 New-Item -ItemType Directory -Path "D:\vault" -Force
 New-Item -ItemType Directory -Path "D:\vault\raw\sources" -Force
 New-Item -ItemType Directory -Path "D:\vault\raw\assets" -Force
-New-Item -ItemType Directory -Path "D:\nas-sync" -Force
+# NAS 네트워크 드라이브 매핑 (Z:)은 Phase 3에서 설정
 ```
 
 ### 0.2 전원 설정 (24시간 운영)
@@ -193,52 +193,68 @@ git push -u origin main
 
 ## Phase 3: NAS 동기화 설정 (1시간)
 
-### 3.1 Synology Drive Client 방식 (권장)
+### 3.1 SMB 네트워크 드라이브 매핑
 
-1. Synology Drive Client 설치
-2. 동기화 작업 생성:
-   - NAS 폴더: `/volume1/shared/datasheets` (예시)
-   - 로컬 폴더: `D:\nas-sync\datasheets`
-   - 동기화 방향: NAS → PC (단방향 다운로드)
-   - 파일 필터: `*.pdf, *.md, *.txt, *.docx, *.xlsx`
+NAS에 SMB로 직접 접근하여 Synology Drive Client 없이 운영.
+
+```powershell
+# NAS 공유 폴더를 Z: 드라이브로 영구 매핑
+net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes
+
+# 연결 확인
+Test-Path Z:\
+net use Z:
+```
+
+> **참고:** Synology Drive Client는 불필요. SMB 직접 연결로 단순화.
 
 ### 3.2 선별 투입 스크립트
 
 ```powershell
 # scripts/sync-nas.ps1
-# NAS 동기화 스테이징에서 vault raw로 선별 복사
+# NAS(SMB 네트워크 드라이브)에서 vault raw/sources로 선별 복사
 
 param(
-    [string]$Source = "D:\nas-sync\datasheets",
-    [string]$Destination = "D:\vault\raw\sources\datasheets",
-    [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx")
+    [string]$Source = "Z:\",
+    [string]$Destination = "D:\vault\raw\sources",
+    [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx", "*.xlsx"),
+    [switch]$DryRun
 )
 
-if (-not (Test-Path $Destination)) {
-    New-Item -ItemType Directory -Path $Destination -Force
+# NAS 네트워크 드라이브 접근 확인
+if (-not (Test-Path $Source)) {
+    Write-Host "NAS 드라이브 접근 불가: $Source" -ForegroundColor Red
+    Write-Host "  net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes" -ForegroundColor Yellow
+    exit 1
 }
 
 foreach ($ext in $Extensions) {
-    $files = Get-ChildItem -Path $Source -Filter $ext -Recurse
+    $files = Get-ChildItem -Path $Source -Filter $ext -Recurse -File -ErrorAction SilentlyContinue
     foreach ($file in $files) {
-        $destFile = Join-Path $Destination $file.Name
+        $relativePath = $file.FullName.Substring($Source.Length).TrimStart('\')
+        $destFile = Join-Path $Destination $relativePath
+        $destDir = Split-Path $destFile -Parent
+
         if (-not (Test-Path $destFile)) {
-            Copy-Item $file.FullName $destFile
-            Write-Host "[NEW] $($file.Name)" -ForegroundColor Green
+            if (-not $DryRun) {
+                if (-not (Test-Path $destDir)) {
+                    New-Item -ItemType Directory -Path $destDir -Force | Out-Null
+                }
+                Copy-Item $file.FullName $destFile
+            }
+            Write-Host "  [NEW] $relativePath" -ForegroundColor Green
         }
     }
 }
-
-Write-Host "`nSync complete. New files copied to raw/sources/" -ForegroundColor Cyan
 ```
 
 ### 3.3 자동 동기화 (Task Scheduler)
 
 ```powershell
-# 매일 06:00에 NAS → vault 동기화
+# 매일 06:30에 NAS(Z:) → vault 동기화
 $action = New-ScheduledTaskAction -Execute "powershell.exe" `
     -Argument "-File D:\vault\scripts\sync-nas.ps1"
-$trigger = New-ScheduledTaskTrigger -Daily -At 6am
+$trigger = New-ScheduledTaskTrigger -Daily -At 6:30am
 Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
     -Action $action -Trigger $trigger -RunLevel Highest
 ```

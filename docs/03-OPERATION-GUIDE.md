@@ -12,8 +12,7 @@
 
 | 시각 | 작업 | 스크립트 |
 |------|------|---------|
-| 06:00 | NAS → nas-sync 동기화 | Synology Drive Client |
-| 06:30 | nas-sync → raw/sources 선별 복사 | `sync-nas.ps1` |
+| 06:30 | NAS(Z:\) → raw/sources 선별 복사 | `sync-nas.ps1` |
 | - | llm_wiki auto-watch가 raw/ 변경 감지 | 앱 내장 |
 | 23:00 | wiki/ Git 자동 커밋 & 푸시 | `auto-commit.ps1` |
 | 일요일 09:00 | 상태 점검 | `health-check.ps1` |
@@ -82,11 +81,14 @@ Get-AppxPackage *WebView2*
 
 ```powershell
 # SMB 연결 상태 확인
-Test-NetConnection -ComputerName <NAS-IP> -Port 445
+Test-NetConnection -ComputerName 10.11.1.40 -Port 445
 
-# Synology Drive Client 재시작
-Get-Process "Synology Drive Client" | Stop-Process -Force
-Start-Process "C:\Program Files\Synology\SynologyDrive\bin\cloud-drive-ui.exe"
+# Z: 드라이브 매핑 상태 확인
+net use Z:
+
+# 연결 끊어진 경우 재매핑
+net use Z: /delete
+net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes
 ```
 
 ### 3.4 디스크 용량 부족
