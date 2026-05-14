@@ -65,17 +65,20 @@ Phase 5  안정화 및 확장 (자료 확장, 자동화 완성)      ~2-4w
 ## 파일 구조
 
 ```
-├── 01-SYSTEM-SPEC.md        # 시스템 사양서
-├── 02-BUILD-PLAN.md         # 구축 계획 (Phase 0~5)
-├── 03-OPERATION-GUIDE.md    # 운영 가이드
-├── 04-E2E-TEST-PLAN.md      # E2E 검증 계획 (TC-01~TC-12)
-├── 05-ARCHITECTURE.md       # 아키텍처 설계
-├── e2e-checklist.md         # E2E 체크리스트 (인쇄용)
-├── setup-env.ps1            # 환경 설정 스크립트
-├── sync-nas.ps1             # NAS → vault 선별 복사
-├── auto-commit.ps1          # wiki/ Git 자동 커밋
-├── health-check.ps1         # 시스템 상태 점검
-├── CLAUDE.md                # Claude Code 가이드
+├── docs/
+│   ├── 01-SYSTEM-SPEC.md        # 시스템 사양서
+│   ├── 02-BUILD-PLAN.md         # 구축 계획 (Phase 0~5)
+│   ├── 03-OPERATION-GUIDE.md    # 운영 가이드
+│   ├── 04-E2E-TEST-PLAN.md      # E2E 검증 계획 (TC-01~TC-12)
+│   └── 05-ARCHITECTURE.md       # 아키텍처 설계
+├── scripts/
+│   ├── setup-env.ps1            # 환경 설정 스크립트
+│   ├── sync-nas.ps1             # NAS → vault 선별 복사
+│   ├── auto-commit.ps1          # wiki/ Git 자동 커밋
+│   └── health-check.ps1         # 시스템 상태 점검
+├── tests/
+│   └── e2e-checklist.md         # E2E 체크리스트 (인쇄용)
+├── CLAUDE.md                    # Claude Code 가이드
 └── README.md
 ```
 
@@ -87,10 +90,10 @@ git clone https://github.com/hnabyz-bot/nas-llm.git
 cd nas-llm
 
 # 2. 환경 설정 (PowerShell 관리자 권한)
-.\setup-env.ps1
+.\scripts\setup-env.ps1
 
-# 3. llm_wiki 빌드 & 실행 → 02-BUILD-PLAN.md Phase 1.4 참조
-# 4. E2E 검증 → 04-E2E-TEST-PLAN.md 참조
+# 3. llm_wiki 빌드 & 실행 → docs/02-BUILD-PLAN.md Phase 1.4 참조
+# 4. E2E 검증 → docs/04-E2E-TEST-PLAN.md 참조
 ```
 
 ## 라이선스

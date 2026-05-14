@@ -10,10 +10,9 @@ All documentation is written in **Korean**. Preserve Korean prose, formatting, a
 
 ## What lives here
 
-- `01-SYSTEM-SPEC.md` → `05-ARCHITECTURE.md` — numbered design docs. They are intended to be read in order and reference each other by number (e.g. "docs/02-BUILD-PLAN.md Phase 1.4"). When renumbering or splitting, update the cross-references in every other file.
-- `*.ps1` — operational scripts. These are **deployment templates**: they target hardcoded paths on the production PC (`D:\vault`, `D:\nas-sync`, `C:\dev\llm_wiki`), not paths in this repo. Do not run them here; edits are spec changes, not local executions.
-- `e2e-checklist.md` — printable acceptance checklist mirroring `04-E2E-TEST-PLAN.md` TC-01…TC-12. The two files must stay in sync.
-- `README.md` references `docs/`, `tests/`, `scripts/` subdirectories, but the actual files currently live at the repo root. Either is fine; just don't fix one without the other.
+- `docs/01-SYSTEM-SPEC.md` → `docs/05-ARCHITECTURE.md` — numbered design docs. They are intended to be read in order and reference each other by number (e.g. "docs/02-BUILD-PLAN.md Phase 1.4"). When renumbering or splitting, update the cross-references in every other file.
+- `scripts/*.ps1` — operational scripts. These are **deployment templates**: they target hardcoded paths on the production PC (`D:\vault`, `D:\nas-sync`, `C:\dev\llm_wiki`), not paths in this repo. Do not run them here; edits are spec changes, not local executions.
+- `tests/e2e-checklist.md` — printable acceptance checklist mirroring `docs/04-E2E-TEST-PLAN.md` TC-01…TC-12. The two files must stay in sync.
 
 ## Architectural invariants
 
@@ -31,27 +30,27 @@ Other load-bearing invariants:
 
 - NAS flow is one-way: `NAS → D:\nas-sync\ → D:\vault\raw\sources\`. `sync-nas.ps1` preserves NAS subdirectory structure and skips files that already exist at the destination (no overwrite, no delete).
 - `auto-commit.ps1` only stages `wiki/`. Raw binaries are excluded by `.gitignore` in the vault (`raw/sources/*.pdf` etc.) — never `git add -A` from the vault root.
-- Scheduled timing is coordinated: NAS sync at 06:00/06:30, vault git commit at 23:00, health check Sunday 09:00. Changing one window in one document means updating the timing in `03-OPERATION-GUIDE.md §1.1` and `02-BUILD-PLAN.md §3.3 / §5.2` together.
+- Scheduled timing is coordinated: NAS sync at 06:00/06:30, vault git commit at 23:00, health check Sunday 09:00. Changing one window in one document means updating the timing in `docs/03-OPERATION-GUIDE.md §1.1` and `docs/02-BUILD-PLAN.md §3.3 / §5.2` together.
 
 ## Working in this repo
 
 There is no build, lint, or test command — edits are reviewed by reading. When changing a script or spec:
 
 1. The PowerShell scripts use Windows PowerShell 5.1 syntax (the target is Win10). Avoid PS7-only operators (`??`, `?.`, ternary) and avoid `2>&1` on native exes (see global guidance — it flips `$?`).
-2. If you change a script's parameters, update the example invocation in the corresponding doc section (`02-BUILD-PLAN.md` for build/sync, `03-OPERATION-GUIDE.md` for runtime).
-3. If you change a TC-NN test case in `04-E2E-TEST-PLAN.md`, update the matching row in `e2e-checklist.md`.
+2. If you change a script's parameters, update the example invocation in the corresponding doc section (`docs/02-BUILD-PLAN.md` for build/sync, `docs/03-OPERATION-GUIDE.md` for runtime).
+3. If you change a TC-NN test case in `docs/04-E2E-TEST-PLAN.md`, update the matching row in `tests/e2e-checklist.md`.
 
 ## Things this repo deliberately does not contain
 
 - The llm_wiki app source — that is upstream `nashsu/llm_wiki`, cloned separately to `C:\dev\llm_wiki` on the target machine.
-- The vault itself (`D:\vault`) — it is created on the target machine by `setup-env.ps1` + the llm_wiki app's "New Project" flow. Don't generate vault contents here.
+- The vault itself (`D:\vault`) — it is created on the target machine by `scripts/setup-env.ps1` + the llm_wiki app's "New Project" flow. Don't generate vault contents here.
 - Anthropic API keys or any NAS credentials.
 
 ## Harness (claude-code-harness) setup
 
 This repo has `claude-code-harness` v4.x scaffolding (`harness.toml`, `.claude-plugin/`, `hooks/hooks.json`, `Plans.md`). It is opt-in plumbing for harness slash commands (`/harness-plan`, `/harness-work`, etc.); the repo's actual deliverables remain the numbered `0N-*.md` docs and the PowerShell scripts.
 
-- **Task tracking lives in `Plans.md`**, not in the numbered docs. `02-BUILD-PLAN.md` is the deployment build plan for the target PC and stays human-authored; `Plans.md` is for in-session task state with `cc:TODO/WIP/完了` markers.
+- **Task tracking lives in `Plans.md`**, not in the numbered docs. `docs/02-BUILD-PLAN.md` is the deployment build plan for the target PC and stays human-authored; `Plans.md` is for in-session task state with `cc:TODO/WIP/完了` markers.
 - **Do not edit `.claude-plugin/*.json` or `hooks/hooks.json` directly** — they are regenerated by `harness sync` from `harness.toml`. Edit `harness.toml` instead, then run `harness sync`.
 - **Status hook false positives**: the PostToolUse hook on `Plans.md` greps for marker strings and double-counts the legend table. A report of "N items in each bucket" with all buckets equal is the legend leaking through, not real task state — read the actual sections.
 - **Doctor warnings that are safe to ignore here**: "No binary for windows-amd64" (the plugin-cached binary in PATH works) and the legacy-bash-hook warning in the elicitation handler (cosmetic, plugin-bundled).
