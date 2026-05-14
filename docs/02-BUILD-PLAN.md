@@ -135,13 +135,18 @@ llm_wiki가 자동 생성하는 `.obsidian/` 설정을 사용.
 
 ### 2.2 LLM 제공자 설정
 
-llm_wiki Settings에서:
+llm_wiki Settings에서 (OpenAI 호환 endpoint 설정):
 
 | 설정 | 값 |
 |------|------|
-| Provider | Anthropic |
-| API Key | `sk-ant-xxxxx` |
-| Model | claude-sonnet-4-20250514 (비용 효율) |
+| Provider | OpenAI Compatible |
+| API Base URL | `https://models.inference.ai.azure.com` |
+| API Key | GitHub Personal Access Token (PAT) |
+| Model | `gpt-4o` 또는 사용 가능 모델 선택 |
+
+> **참고:** GitHub Copilot 구독(hnabyz-bot) 활용.
+> PAT 생성: GitHub → Settings → Developer settings → Personal access tokens.
+> Anthropic 직접 사용 시: Provider=Anthropic, API Key=`sk-ant-xxxxx`, Model=claude-sonnet.
 
 ### 2.3 purpose.md 작성
 

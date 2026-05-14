@@ -50,7 +50,7 @@ D: (HDD 1TB)
 │   │   └── comparisons/
 │   ├── .obsidian/            ← Obsidian vault 설정
 │   └── .llm-wiki/            ← 앱 설정, 채팅 이력
-└── nas-sync/                 ← NAS 동기화 스테이징 영역
+## (Z: 네트워크 드라이브)       ← NAS SMB 직접 연결 (\\10.11.1.40\DR_Dev\공통자료)
 ```
 
 ### 1.3 NAS 연동 사양
@@ -59,8 +59,8 @@ D: (HDD 1TB)
 |------|------|
 | NAS | Synology DS224+ |
 | 프로토콜 | SMB 3.0 |
-| 마운트 방식 | 네트워크 드라이브 (Z:) 또는 Synology Drive Client 선별 동기화 |
-| 동기화 방향 | NAS → `D:\nas-sync\` → 선별 복사 → `D:\vault\raw\sources\` |
+| 마운트 방식 | SMB 네트워크 드라이브 (Z:\) — `net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes` |
+| 동기화 방향 | NAS (Z:\) → `sync-nas.ps1` 선별 복사 → `D:\vault\raw\sources\` |
 | 동기화 대상 | 지정 폴더만 (데이터시트, 규격서, 기술문서) |
 
 ---
@@ -81,18 +81,20 @@ D: (HDD 1TB)
 
 | 제공자 | 용도 | 비고 |
 |--------|------|------|
-| Anthropic (Claude) | 주 인제스트 + 쿼리 | API 키 필요, 토큰 과금 |
-| Ollama (로컬) | 보조/오프라인 테스트 | 이 시스템에서는 CPU 전용, 속도 제한적 |
-| OpenAI | 대안 | 선택적 |
+| GitHub Models API (권장) | 주 인제스트 + 쿼리 | Copilot 구독 활용, GitHub PAT 인증 |
+| Anthropic (Claude) | 대안 | API 키 필요, 토큰 과금 |
+| OpenAI | 대안 | API 키 필요, 토큰 과금 |
+| Ollama (로컬) | 보조/오프라인 테스트 | CPU 전용, 속도 제한적 |
 
-> **참고:** i5-10500 + UHD 630에서 Ollama 로컬 LLM은 소형 모델(Qwen2.5:7B 이하)만 실용적.
-> 주 운영은 클라우드 API 권장.
+> **참고:** GitHub Copilot 구독(hnabyz-bot) 보유 → GitHub Models API를 OpenAI 호환 endpoint로 사용.
+> base URL: `https://models.inference.ai.azure.com`, 인증: GitHub PAT.
+> i5-10500 + UHD 630에서 Ollama 로컬 LLM은 소형 모델(7B 이하)만 실용적.
 
 ### 2.3 선택 소프트웨어
 
 | 소프트웨어 | 용도 |
 |-----------|------|
-| Synology Drive Client | NAS 자동 동기화 |
+| (불필요 — SMB 직접 연결 사용) | |
 | Windows Terminal | CLI 작업 환경 |
 | Obsidian | wiki/ 폴더 그래프 뷰 탐색 |
 
@@ -156,7 +158,7 @@ D: (HDD 1TB)
 | 드라이브 | 예상 사용 | 여유 |
 |---------|----------|------|
 | C: SSD 256GB | OS 40GB + 소프트웨어 20GB = ~60GB | ~190GB |
-| D: HDD 1TB | vault + nas-sync 예상 50~200GB | 800~950GB |
+| D: HDD 1TB | vault 예상 50~200GB | 800~950GB |
 
 ### 5.3 API 토큰 비용 (월간 예상)
 

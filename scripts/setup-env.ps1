@@ -22,8 +22,7 @@ Write-Host "`n[2/5] 디렉터리 생성..." -ForegroundColor Yellow
 $dirs = @(
     "D:\vault",
     "D:\vault\raw\sources",
-    "D:\vault\raw\assets",
-    "D:\nas-sync"
+    "D:\vault\raw\assets"
 )
 foreach ($dir in $dirs) {
     if (-not (Test-Path $dir)) {

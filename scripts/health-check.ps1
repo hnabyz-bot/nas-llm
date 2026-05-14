@@ -66,12 +66,14 @@ if (Test-Path "$vaultPath\.git") {
 
 # --- NAS 연결 ---
 Write-Host "`n[NAS]" -ForegroundColor Yellow
-$nasSync = "D:\nas-sync"
-if (Test-Path $nasSync) {
-    $nasSyncCount = (Get-ChildItem $nasSync -Recurse -File -ErrorAction SilentlyContinue).Count
-    Write-Host "  nas-sync 파일: $nasSyncCount" -ForegroundColor Green
+$nasDrive = "Z:\"
+if (Test-Path $nasDrive) {
+    Write-Host "  NAS 드라이브 (Z:\): 연결됨" -ForegroundColor Green
+    $netUse = net use Z: 2>&1
+    Write-Host "  $($netUse | Select-String '원격')" -ForegroundColor Gray
 } else {
-    Write-Host "  nas-sync 디렉터리 없음" -ForegroundColor Red
+    Write-Host "  NAS 드라이브 (Z:\): 연결 안 됨" -ForegroundColor Red
+    Write-Host "  net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes" -ForegroundColor Yellow
 }
 
 # --- 업타임 ---

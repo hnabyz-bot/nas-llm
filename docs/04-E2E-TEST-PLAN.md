@@ -135,8 +135,8 @@ T08~T10 (3개 파일 동시 투입) 사용.
 
 | 항목 | 검증 내용 | 판정 기준 |
 |------|----------|----------|
-| TC-10-1 | Synology Drive 동기화 | NAS에 파일 추가 → `D:\nas-sync\` 에 자동 다운로드 |
-| TC-10-2 | 선별 복사 | `sync-nas.ps1` 실행 → raw/sources/ 에 해당 파일만 복사 |
+| TC-10-1 | NAS SMB 연결 | `Z:\` 드라이브 접근 → NAS 파일 목록 확인 |
+| TC-10-2 | 선별 복사 | `sync-nas.ps1` 실행 → Z:\에서 raw/sources/ 에 해당 파일만 복사 |
 | TC-10-3 | 중복 방지 | 이미 복사된 파일은 건너뜀 |
 | TC-10-4 | auto-watch | raw/에 파일 추가 → llm_wiki가 변경 감지 (auto-watch 활성 시) |
 

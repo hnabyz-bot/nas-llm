@@ -47,12 +47,69 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 Phase 0  사전 준비 (전원설정, 디렉터리, SW확인)     ~1h
 Phase 1  소프트웨어 설치 (Node, Rust, Git, llm_wiki) ~2h
 Phase 2  프로젝트 초기화 (vault, API, Git)           ~30m
-Phase 3  NAS 동기화 설정 (Drive Client, 스케줄)      ~1h
+Phase 3  NAS 동기화 설정 (SMB Z: 매핑, 스케줄)        ~1h
 Phase 4  파일럿 인제스트 (10~20개 문서, 검증)         ~1w
 Phase 5  안정화 및 확장 (자료 확장, 자동화 완성)      ~2-4w
 ```
 
 각 Phase의 상세 작업은 [Issues](../../issues)에서 추적.
+
+## 시스템 아키텍처
+
+```mermaid
+flowchart TB
+    subgraph NAS["Synology DS224+"]
+        NAS_SRC["\\\\10.11.1.40\\DR_Dev\\공통자료"]
+    end
+
+    subgraph PC["DESKTOP-AT1P1UD (24h 운영)"]
+        subgraph VAULT["D:\\vault (HDD 1TB)"]
+            RAW["raw/sources/<br/>immutable 원본"]
+            SCHEMA["purpose.md<br/>schema.md"]
+            subgraph INGEST["2-Step CoT Ingest"]
+                S1["Step1: 분석<br/>엔티티·개념 추출"]
+                S2["Step2: 생성<br/>위키 페이지 생성"]
+            end
+            WIKI["wiki/<br/>entities/ concepts/ sources/<br/>synthesis/ comparisons/ queries/"]
+        end
+
+        APP["llm_wiki<br/>Tauri 앱"]
+        API["Anthropic API<br/>Claude Sonnet"]
+        GIT["Git (GitHub)<br/>wiki/ 이력 추적"]
+        OBS["Obsidian<br/>wiki/ 읽기·그래프 탐색"]
+        SCHED["Task Scheduler<br/>06:30 sync · 23:00 commit"]
+    end
+
+    NAS_SRC -- "SMB Z: 드라이브<br/>sync-nas.ps1 (06:30)" --> RAW
+    RAW --> S1
+    S1 --> S2
+    S2 --> WIKI
+    SCHEMA -. "규칙 준수" .-> S1
+    APP --> INGEST
+    API <--> INGEST
+    WIKI -- "auto-commit.ps1 (23:00)" --> GIT
+    WIKI --> OBS
+    SCHED -.-> RAW
+    SCHED -.-> GIT
+```
+
+### 일일 운영 사이클
+
+| 시각 | 자동화 작업 | 스크립트 |
+|------|------------|---------|
+| 06:30 | NAS(Z:\) → raw/sources 선별 복사 | `sync-nas.ps1` |
+| 수시 | raw/ 변경 감지 → 인제스트 | llm_wiki auto-watch |
+| 수시 | 사용자 쿼리 응답 | llm_wiki 채팅 |
+| 23:00 | wiki/ Git 자동 커밋 & 푸시 | `auto-commit.ps1` |
+| 일 09:00 | 시스템 상태 점검 | `health-check.ps1` |
+
+### 3계층 소유권 모델
+
+| 역할 | 소유 | 행동 |
+|------|------|------|
+| **사람** | raw/, schema | 자료 투입, 규칙 정의, 질문 |
+| **LLM** | wiki/ | 분석, 생성, 교차참조, 모순 표시 |
+| **자동화** | 스케줄 | 동기화, 커밋, 점검 |
 
 ## 3계층 데이터 아키텍처
 
