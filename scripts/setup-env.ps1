@@ -33,8 +33,37 @@ foreach ($dir in $dirs) {
     }
 }
 
-# --- 3. 소프트웨어 확인 ---
-Write-Host "`n[3/5] 소프트웨어 확인..." -ForegroundColor Yellow
+# --- 3. PATH 확인 및 보정 ---
+Write-Host "`n[3/6] PATH check..." -ForegroundColor Yellow
+$nodePath = "C:\Program Files\nodejs"
+$cargoPath = "$env:USERPROFILE\.cargo\bin"
+$currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
+$pathFixed = $false
+
+if (Test-Path "$nodePath\node.exe") {
+    if ($currentPath -notlike "*$nodePath*") {
+        $currentPath = $currentPath.TrimEnd(';') + ";$nodePath"
+        $pathFixed = $true
+        Write-Host "  PATH added: $nodePath" -ForegroundColor Green
+    }
+}
+if (Test-Path "$cargoPath\rustc.exe") {
+    if ($currentPath -notlike "*$cargoPath*") {
+        $currentPath = $currentPath.TrimEnd(';') + ";$cargoPath"
+        $pathFixed = $true
+        Write-Host "  PATH added: $cargoPath" -ForegroundColor Green
+    }
+}
+if ($pathFixed) {
+    [Environment]::SetEnvironmentVariable("Path", $currentPath, "User")
+    $env:Path = "$nodePath;$cargoPath;$env:Path"
+    Write-Host "  PATH saved (User scope)" -ForegroundColor Green
+} else {
+    Write-Host "  PATH OK" -ForegroundColor Green
+}
+
+# --- 4. 소프트웨어 확인 ---
+Write-Host "`n[4/6] SW check..." -ForegroundColor Yellow
 
 $checks = @(
     @{ Name = "Node.js"; Cmd = "node --version"; Min = "20" },
@@ -48,29 +77,30 @@ foreach ($check in $checks) {
         $ver = Invoke-Expression $check.Cmd 2>$null
         Write-Host "  $($check.Name): $ver" -ForegroundColor Green
     } catch {
-        Write-Host "  $($check.Name): 미설치" -ForegroundColor Red
+        Write-Host "  $($check.Name): not found" -ForegroundColor Red
         $allOk = $false
     }
 }
 
 if (-not $allOk) {
-    Write-Host "`n  누락된 소프트웨어를 설치한 후 다시 실행하세요." -ForegroundColor Red
-    Write-Host "  Node.js: https://nodejs.org (LTS 20.x)"
-    Write-Host "  Rust:    https://rustup.rs"
+    Write-Host "`n  Run install-deps.ps1 first, then re-run this script." -ForegroundColor Red
+    Write-Host "  Or install manually:" -ForegroundColor Yellow
+    Write-Host "  Node.js: winget install OpenJS.NodeJS.LTS"
+    Write-Host "  Rust:    winget install Rustlang.Rustup"
     Write-Host "  Git:     winget install Git.Git"
 }
 
-# --- 4. Windows Update 자동 재시작 비활성화 ---
-Write-Host "`n[4/5] Windows Update 자동 재시작 비활성화..." -ForegroundColor Yellow
+# --- 5. Windows Update ---
+Write-Host "`n[5/6] Windows Update auto-restart disable..." -ForegroundColor Yellow
 $auPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
 if (-not (Test-Path $auPath)) {
     New-Item -Path $auPath -Force | Out-Null
 }
 Set-ItemProperty -Path $auPath -Name "NoAutoRebootWithLoggedOnUsers" -Value 1 -Type DWord
-Write-Host "  자동 재시작 비활성화 완료" -ForegroundColor Green
+Write-Host "  Done" -ForegroundColor Green
 
-# --- 5. 시스템 정보 ---
-Write-Host "`n[5/5] 시스템 정보..." -ForegroundColor Yellow
+# --- 6. System info ---
+Write-Host "`n[6/6] System info..." -ForegroundColor Yellow
 $os = Get-CimInstance Win32_OperatingSystem
 $cpu = Get-CimInstance Win32_Processor
 $ram = [math]::Round($os.TotalVisibleMemorySize / 1MB, 1)
@@ -88,6 +118,7 @@ Get-PSDrive C, D -ErrorAction SilentlyContinue | ForEach-Object {
 
 Write-Host "`n========================================" -ForegroundColor Cyan
 Write-Host " 설정 완료. 다음 단계:" -ForegroundColor Cyan
-Write-Host " 1. llm_wiki 빌드: docs/02-BUILD-PLAN.md Phase 1.4 참조" -ForegroundColor White
-Write-Host " 2. 프로젝트 생성: docs/02-BUILD-PLAN.md Phase 2 참조" -ForegroundColor White
+Write-Host " 1. SW 설치:  .\scripts\install-deps.ps1" -ForegroundColor White
+Write-Host " 2. 앱 빌드:  .\scripts\build-llm-wiki.ps1" -ForegroundColor White
+Write-Host " 3. 프로젝트 생성: docs/02-BUILD-PLAN.md Phase 2 참조" -ForegroundColor White
 Write-Host "========================================" -ForegroundColor Cyan

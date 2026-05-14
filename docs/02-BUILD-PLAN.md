@@ -8,18 +8,17 @@
 
 ## Phase 0: 사전 준비 (1시간)
 
-### 0.1 디스크 정리 및 파티션 확인
+### 0.1 환경 설정 스크립트 실행
 
 ```powershell
-# 디스크 여유 공간 확인
-Get-PSDrive -PSProvider FileSystem | Select Name, @{N='Free(GB)';E={[math]::Round($_.Free/1GB,1)}}, @{N='Used(GB)';E={[math]::Round($_.Used/1GB,1)}}
-
-# D: 드라이브 vault 디렉터리 생성
-New-Item -ItemType Directory -Path "D:\vault" -Force
-New-Item -ItemType Directory -Path "D:\vault\raw\sources" -Force
-New-Item -ItemType Directory -Path "D:\vault\raw\assets" -Force
-# NAS 네트워크 드라이브 매핑 (Z:)은 Phase 3에서 설정
+# 관리자 PowerShell에서 실행
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\scripts\fix-encoding.ps1    # UTF-8 BOM 적용 (한국어 ps1 필수)
+.\scripts\setup-env.ps1       # 전원설정, 디렉터리, SW 확인, WinUpdate
 ```
+
+> **주의:** Cowork/에디터로 .ps1 파일 수정 후 반드시 `fix-encoding.ps1` 실행.
+> PowerShell 5.1은 UTF-8 BOM 없으면 한국어를 CP949로 해석하여 파싱 에러 발생.
 
 ### 0.2 전원 설정 (24시간 운영)
 
@@ -50,64 +49,74 @@ Set-ItemProperty -Path $path -Name "NoAutoRebootWithLoggedOnUsers" -Value 1 -Typ
 
 ## Phase 1: 소프트웨어 설치 (2시간)
 
-### 1.1 Node.js 20 LTS
+### 1.1 일괄 설치 스크립트
 
 ```powershell
-# winget으로 설치 (또는 https://nodejs.org 에서 다운로드)
-winget install OpenJS.NodeJS.LTS --version 20.18.0
-
-# 설치 확인
-node --version   # v20.x.x
-npm --version    # 10.x.x
+# 관리자 PowerShell에서 실행
+.\scripts\install-deps.ps1    # Node.js LTS + Rust 자동 설치
 ```
 
-### 1.2 Rust 툴체인
+설치 후 PATH 미반영 시 수동 추가:
 
 ```powershell
-# rustup 설치 (https://rustup.rs)
-# Visual Studio Build Tools 필요 — rustup 설치 중 자동 안내
+# PATH에 Node.js + Cargo 추가 (영구 + 현재 세션)
+$nodePath = "C:\Program Files\nodejs"
+$cargoPath = "$env:USERPROFILE\.cargo\bin"
+$currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
+$newPaths = @()
+if ($currentPath -notlike "*$nodePath*") { $newPaths += $nodePath }
+if ($currentPath -notlike "*$cargoPath*") { $newPaths += $cargoPath }
+if ($newPaths.Count -gt 0) {
+    $updated = ($currentPath.TrimEnd(';') + ';' + ($newPaths -join ';'))
+    [Environment]::SetEnvironmentVariable("Path", $updated, "User")
+}
+$env:Path = "$nodePath;$cargoPath;$env:Path"
+```
 
-rustup default stable
-rustc --version   # 1.70+ 확인
+### 1.2 설치 확인 (새 PowerShell 창)
+
+```powershell
+node --version    # v20+ (LTS)
+rustc --version   # 1.70+
 cargo --version
-```
-
-### 1.3 Git
-
-```powershell
-winget install Git.Git
-
-git --version
+git --version     # 2.x
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```
 
-### 1.4 nashsu/llm_wiki 빌드
+> **참고:** winget이 설치는 하지만 PATH에 자동 등록하지 않는 경우가 있음.
+> Node.js: `C:\Program Files\nodejs`, Rust: `%USERPROFILE%\.cargo\bin` 확인.
+
+### 1.3 nashsu/llm_wiki 빌드
 
 ```powershell
-# 소스 클론
-cd C:\dev
-git clone https://github.com/nashsu/llm_wiki.git
-cd llm_wiki
+# 이 repo 루트에서 실행 (관리자 불필요)
+.\scripts\build-llm-wiki.ps1
+```
 
-# 의존성 설치
-npm install
+스크립트가 자동으로 수행하는 작업:
+1. `C:\dev` 디렉터리 생성
+2. `nashsu/llm_wiki` 클론 → `C:\dev\llm_wiki`
+3. `npm install` (의존성 설치)
+4. `npm run tauri build` (프로덕션 빌드)
+5. 완료 후 다음 단계 안내 출력
 
-# 개발 모드 실행 (빌드 전 동작 확인)
+개발 모드(빌드 생략)로만 확인할 경우:
+
+```powershell
+.\scripts\build-llm-wiki.ps1 -DevOnly
+# 이후 직접 실행:
+cd C:\dev\llm_wiki
 npm run tauri dev
-
-# 프로덕션 빌드
-npm run tauri build
-# → src-tauri/target/release/bundle/ 에 설치 파일 생성
 ```
 
 > **빌드 실패 시 체크리스트:**
 > - Visual Studio Build Tools C++ 워크로드 설치 확인
-> - Rust stable 1.70+ 확인
-> - Node.js 20+ 확인
-> - `npm install` 에러 없이 완료 확인
+> - `rustc --version` → 1.70 이상
+> - `node --version` → 20 이상
+> - `npm install` 이 에러 없이 완료됐는지 확인
 
-### 1.5 Obsidian 설치 (선택)
+### 1.4 Obsidian 설치 (선택)
 
 ```powershell
 winget install Obsidian.Obsidian

@@ -37,7 +37,7 @@ _harness_version: "4.10.0"
 - [x] T004: Node.js 20 LTS 설치 `pm:CONFIRMED` (v24.15.0)
 - [x] T005: Rust stable 1.70+ + VS Build Tools 설치 `pm:CONFIRMED` (1.95.0 + VS Community 2022)
 - [x] T006: Git 설치 + user.name/email 설정 `pm:CONFIRMED` (v2.42.0)
-- [ ] T007: nashsu/llm_wiki clone + npm install + tauri build `cc:TODO` depends:T004,T005,T006
+- [ ] T007: nashsu/llm_wiki clone + npm install + tauri build `cc:TODO` depends:T004,T005,T006 → `.\scripts\build-llm-wiki.ps1`
 - [ ] T008: Obsidian 설치 (선택) `cc:TODO` [P] depends:Phase 0
 
 ### Phase 2: 프로젝트 초기화
