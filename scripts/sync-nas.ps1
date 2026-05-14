@@ -1,6 +1,6 @@
 # scripts/sync-nas.ps1
 # NAS(SMB 네트워크 드라이브)에서 vault raw/sources로 선별 복사
-# NAS 연결: net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes
+# NAS 연결: net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes
 
 param(
     [string]$Source = "Z:\",
@@ -12,7 +12,7 @@ param(
 # NAS 네트워크 드라이브 접근 확인
 if (-not (Test-Path $Source)) {
     Write-Host "NAS 드라이브 접근 불가: $Source" -ForegroundColor Red
-    Write-Host "  net use Z: \\10.11.1.40\R_Dev\공용\자료 /user:계정 비밀번호 /persistent:yes" -ForegroundColor Yellow
+    Write-Host "  net use Z: \\10.11.1.40\DR_Dev\공통자료 /user:계정 비밀번호 /persistent:yes" -ForegroundColor Yellow
     exit 1
 }
 

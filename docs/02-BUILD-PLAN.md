@@ -199,7 +199,7 @@ NAS에 SMB로 직접 접근하여 Synology Drive Client 없이 운영.
 
 ```powershell
 # NAS 공유 폴더를 Z: 드라이브로 영구 매핑
-net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes
+net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes
 
 # 연결 확인
 Test-Path Z:\
@@ -224,7 +224,7 @@ param(
 # NAS 네트워크 드라이브 접근 확인
 if (-not (Test-Path $Source)) {
     Write-Host "NAS 드라이브 접근 불가: $Source" -ForegroundColor Red
-    Write-Host "  net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes" -ForegroundColor Yellow
+    Write-Host "  net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes" -ForegroundColor Yellow
     exit 1
 }
 

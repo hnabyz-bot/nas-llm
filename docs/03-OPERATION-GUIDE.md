@@ -88,7 +88,7 @@ net use Z:
 
 # 연결 끊어진 경우 재매핑
 net use Z: /delete
-net use Z: \\10.11.1.40\R_Dev\공용\자료 /persistent:yes
+net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes
 ```
 
 ### 3.4 디스크 용량 부족
