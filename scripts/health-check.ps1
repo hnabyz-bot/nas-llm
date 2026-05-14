@@ -1,4 +1,4 @@
-# scripts/health-check.ps1
+﻿# scripts/health-check.ps1
 # LLM Wiki 시스템 상태 점검
 
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"

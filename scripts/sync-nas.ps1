@@ -1,4 +1,4 @@
-# scripts/sync-nas.ps1
+﻿# scripts/sync-nas.ps1
 # NAS(SMB 네트워크 드라이브)에서 vault raw/sources로 선별 복사
 # NAS 연결: net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes
 

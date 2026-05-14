@@ -1,4 +1,4 @@
-# scripts/build-llm-wiki.ps1
+﻿# scripts/build-llm-wiki.ps1
 # Phase 1: nashsu/llm_wiki 클론 + npm install + tauri build
 # 선행: install-deps.ps1 실행 완료 (Node.js, Rust, Git 설치)
 

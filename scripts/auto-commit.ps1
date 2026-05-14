@@ -1,4 +1,4 @@
-# scripts/auto-commit.ps1
+﻿# scripts/auto-commit.ps1
 # wiki/ 변경사항 자동 Git 커밋 및 푸시
 
 $vaultPath = "D:\vault"
