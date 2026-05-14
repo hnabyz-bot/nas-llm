@@ -42,10 +42,10 @@ _harness_version: "4.10.0"
 
 ### Phase 2: 프로젝트 초기화
 
-- [ ] T009: llm_wiki 앱에서 D:\vault 프로젝트 생성 (vault 구조 자동 생성 확인) `cc:TODO` depends:T007
-- [ ] T010: Anthropic API 키 입력 + 연결 테스트 `cc:TODO` depends:T009
-- [ ] T011: purpose.md 작성 (Goals / Key Questions / Scope) `cc:TODO` [P] depends:T009
-- [ ] T012: D:\vault git init + remote + .gitignore + 초기 커밋/푸시 `cc:TODO` [P] depends:T009
+- [x] T009: llm_wiki 앱에서 D:\vault 프로젝트 생성 `pm:CONFIRMED` (실제 경로: D:\vault\llm-wiki-vault)
+- [ ] T010: API 키 입력 + 연결 테스트 `cc:TODO` depends:T009
+- [x] T011: purpose.md 작성 `pm:CONFIRMED` (D:\vault\llm-wiki-vault\purpose.md)
+- [x] T012: vault git init + .gitignore + 초기 커밋 `pm:CONFIRMED` (master, 9 files)
 
 ### Phase 3: NAS 동기화 설정
 

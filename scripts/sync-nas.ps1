@@ -4,7 +4,7 @@
 
 param(
     [string]$Source = "Z:\",
-    [string]$Destination = "D:\vault\raw\sources",
+    [string]$Destination = "D:\vault\llm-wiki-vault\raw\sources",
     [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx", "*.xlsx"),
     [switch]$DryRun
 )

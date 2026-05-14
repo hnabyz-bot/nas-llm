@@ -18,7 +18,7 @@ Get-PSDrive C, D -ErrorAction SilentlyContinue | ForEach-Object {
 
 # --- Vault 통계 ---
 Write-Host "`n[Vault]" -ForegroundColor Yellow
-$vaultPath = "D:\vault"
+$vaultPath = "D:\vault\llm-wiki-vault"
 if (Test-Path $vaultPath) {
     $rawCount = (Get-ChildItem "$vaultPath\raw\sources" -Recurse -File -ErrorAction SilentlyContinue).Count
     $wikiCount = (Get-ChildItem "$vaultPath\wiki" -Recurse -Filter "*.md" -ErrorAction SilentlyContinue).Count

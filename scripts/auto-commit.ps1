@@ -1,7 +1,7 @@
 ﻿# scripts/auto-commit.ps1
 # wiki/ 변경사항 자동 Git 커밋 및 푸시
 
-$vaultPath = "D:\vault"
+$vaultPath = "D:\vault\llm-wiki-vault"
 
 if (-not (Test-Path "$vaultPath\.git")) {
     Write-Host "Git 미초기화: $vaultPath" -ForegroundColor Red
