@@ -49,9 +49,9 @@ _harness_version: "4.10.0"
 
 ### Phase 3: NAS 동기화 설정
 
-- [ ] T013: NAS SMB 네트워크 드라이브 매핑 (net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes) `cc:TODO` depends:Phase 0
-- [ ] T014: sync-nas.ps1을 vault scripts에 배치 + dry-run 테스트 `cc:TODO` depends:T013
-- [ ] T015: Task Scheduler 등록 — 06:30 sync, 23:00 auto-commit `cc:TODO` depends:T014
+- [x] T013: NAS SMB 네트워크 드라이브 매핑 (net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes) `cc:DONE`
+- [x] T014: sync-nas.ps1을 vault scripts에 배치 + dry-run 테스트 `cc:DONE` (D:\vault\llm-wiki-vault\scripts\, 47,000+파일 검출 확인)
+- [x] T015: Task Scheduler 등록 — 06:30 sync, 23:00 auto-commit `cc:DONE` (LLM-Wiki-NAS-Sync, LLM-Wiki-Auto-Commit)
 
 ### Phase 4: 파일럿 인제스트
 
