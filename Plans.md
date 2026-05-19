@@ -43,7 +43,7 @@ _harness_version: "4.10.0"
 ### Phase 2: 프로젝트 초기화
 
 - [x] T009: llm_wiki 앱에서 D:\vault 프로젝트 생성 `pm:CONFIRMED` (실제 경로: D:\vault\llm-wiki-vault)
-- [ ] T010: API 키 입력 + 연결 테스트 `cc:TODO` depends:T009
+- [x] T010: LLM 제공자 설정 + 연결 확인 `pm:CONFIRMED` (Claude Code CLI local, API 키 불필요)
 - [x] T011: purpose.md 작성 `pm:CONFIRMED` (D:\vault\llm-wiki-vault\purpose.md)
 - [x] T012: vault git init + .gitignore + 초기 커밋 `pm:CONFIRMED` (master, 9 files)
 
