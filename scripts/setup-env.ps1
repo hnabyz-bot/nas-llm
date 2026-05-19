@@ -21,8 +21,9 @@ Write-Host "  전원 설정 완료" -ForegroundColor Green
 Write-Host "`n[2/5] 디렉터리 생성..." -ForegroundColor Yellow
 $dirs = @(
     "D:\vault",
-    "D:\vault\raw\sources",
-    "D:\vault\raw\assets"
+    "D:\vault\llm-wiki-vault",
+    "D:\vault\llm-wiki-vault\raw\sources",
+    "D:\vault\llm-wiki-vault\raw\assets"
 )
 foreach ($dir in $dirs) {
     if (-not (Test-Path $dir)) {

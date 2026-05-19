@@ -26,31 +26,32 @@
 ```
 C: (SSD 256GB)
 ├── Windows 10 Pro
-├── Node.js 20 LTS
-├── Rust 1.70+
+├── Node.js 20+ LTS (C:\Program Files\nodejs)
+├── Rust stable (C:\Users\admin\.cargo\bin)
 ├── Git
 └── nashsu/llm_wiki (Tauri 앱 바이너리)
 
 D: (HDD 1TB)
-├── vault/                    ← LLM Wiki 프로젝트 루트
-│   ├── purpose.md
-│   ├── schema.md
-│   ├── raw/
-│   │   ├── sources/          ← 원본 자료 (immutable)
-│   │   └── assets/           ← 로컬 이미지
-│   ├── wiki/
-│   │   ├── index.md          ← 콘텐츠 카탈로그
-│   │   ├── overview.md       ← 전역 요약 (자동 갱신)
-│   │   ├── log.md            ← 작업 이력
-│   │   ├── entities/
-│   │   ├── concepts/
-│   │   ├── sources/
-│   │   ├── queries/
-│   │   ├── synthesis/
-│   │   └── comparisons/
-│   ├── .obsidian/            ← Obsidian vault 설정
-│   └── .llm-wiki/            ← 앱 설정, 채팅 이력
-## (Z: 네트워크 드라이브)       ← NAS SMB 직접 연결 (\\10.11.1.40\DR_Dev\공통자료)
+├── vault/
+│   └── llm-wiki-vault/       ← LLM Wiki 프로젝트 루트
+│       ├── purpose.md
+│       ├── schema.md
+│       ├── raw/
+│       │   ├── sources/      ← 원본 자료 (immutable)
+│       │   └── assets/       ← 로컬 이미지
+│       ├── wiki/
+│       │   ├── index.md      ← 콘텐츠 카탈로그
+│       │   ├── overview.md   ← 전역 요약 (자동 갱신)
+│       │   ├── log.md        ← 작업 이력
+│       │   ├── entities/
+│       │   ├── concepts/
+│       │   ├── sources/
+│       │   ├── queries/
+│       │   ├── synthesis/
+│       │   └── comparisons/
+│       ├── .obsidian/        ← Obsidian vault 설정
+│       └── .llm-wiki/        ← 앱 설정, 채팅 이력
+## (Z: 네트워크 드라이브)         ← NAS SMB 직접 연결 (\\10.11.1.40\DR_Dev\공통자료)
 ```
 
 ### 1.3 NAS 연동 사양
@@ -60,7 +61,7 @@ D: (HDD 1TB)
 | NAS | Synology DS224+ |
 | 프로토콜 | SMB 3.0 |
 | 마운트 방식 | SMB 네트워크 드라이브 (Z:\) — `net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes` |
-| 동기화 방향 | NAS (Z:\) → `sync-nas.ps1` 선별 복사 → `D:\vault\raw\sources\` |
+| 동기화 방향 | NAS (Z:\) → `sync-nas.ps1` 선별 복사 → `D:\vault\llm-wiki-vault\raw\sources\` |
 | 동기화 대상 | 지정 폴더만 (데이터시트, 규격서, 기술문서) |
 
 ---
@@ -71,24 +72,26 @@ D: (HDD 1TB)
 
 | 소프트웨어 | 버전 | 용도 | 설치 위치 |
 |-----------|------|------|----------|
-| Node.js | 20 LTS | llm_wiki 빌드, npx skills | C: |
-| Rust | 1.70+ stable | Tauri 백엔드 빌드 | C: |
+| Node.js | 20 LTS 이상 (현재 24.x) | llm_wiki 빌드, npx skills | C:\Program Files\nodejs |
+| Rust | 1.70+ stable (현재 1.95) | Tauri 백엔드 빌드 | %USERPROFILE%\.cargo\bin |
 | Git | 최신 | 버전 관리 | C: |
-| nashsu/llm_wiki | latest main | 데스크톱 앱 | C:\Program Files\llm_wiki |
+| nashsu/llm_wiki | latest main | 데스크톱 앱 | C:\dev\llm_wiki\src-tauri\target\release |
+| Claude Code CLI | v2.1.141 | LLM 인제스트 제공자 | C:\Users\admin\.local\bin\claude.exe |
 | Obsidian | 최신 | vault 뷰어 (선택) | C: |
 
 ### 2.2 LLM 제공자 설정
 
 | 제공자 | 용도 | 비고 |
 |--------|------|------|
-| GitHub Models API (권장) | 주 인제스트 + 쿼리 | Copilot 구독 활용, GitHub PAT 인증 |
+| **Claude Code CLI (local)** | **주 인제스트 + 쿼리** | **로컬 `claude` 바이너리 (v2.1.141), API 키 불필요, Anthropic 구독 활용** |
+| GitHub Models API | 보조/대안 | Copilot 구독, OpenAI 호환 endpoint (`https://models.inference.ai.azure.com`) |
 | Anthropic (Claude) | 대안 | API 키 필요, 토큰 과금 |
-| OpenAI | 대안 | API 키 필요, 토큰 과금 |
-| Ollama (로컬) | 보조/오프라인 테스트 | CPU 전용, 속도 제한적 |
+| Ollama (로컬) | 오프라인 테스트 | CPU 전용, 속도 제한적 |
 
-> **참고:** GitHub Copilot 구독(hnabyz-bot) 보유 → GitHub Models API를 OpenAI 호환 endpoint로 사용.
-> base URL: `https://models.inference.ai.azure.com`, 인증: GitHub PAT.
-> i5-10500 + UHD 630에서 Ollama 로컬 LLM은 소형 모델(7B 이하)만 실용적.
+> **현재 설정:** Claude Code CLI (local) — `C:\Users\admin\.local\bin\claude.exe`
+> 모델: `claude-sonnet-4-6`, Context window: 200K chars (~120K for wiki content)
+> API 키 불필요 (로컬 OAuth 구독 사용).
+> GitHub Models API도 Custom provider로 등록 완료 (API 키 미입력 상태, 필요 시 활성화).
 
 ### 2.3 선택 소프트웨어
 

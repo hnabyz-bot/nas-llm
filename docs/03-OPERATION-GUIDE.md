@@ -30,9 +30,23 @@
 
 ### 1.3 비용 모니터링
 
-- Anthropic Console (https://console.anthropic.com) → Usage 탭
-- 주간 토큰 소모량 기록
+- Claude Code CLI (local) 사용 시: Anthropic 구독 범위 내 → 별도 API 과금 없음
+- GitHub Models API 사용 시: Copilot 구독 범위 내
+- Anthropic API 직접 사용 시: Console (https://console.anthropic.com) → Usage 탭
+- 주간 토큰 소모량 기록 (API 직접 사용 시)
 - 월 예산 임계값 설정: 초기 $50, 안정화 후 조정
+
+---
+
+### 1.4 유틸리티 스크립트
+
+| 스크립트 | 용도 | 실행 시점 |
+|---------|------|----------|
+| `fix-encoding.ps1` | .ps1 파일에 UTF-8 BOM 적용 | .ps1 파일 수정 후 |
+| `install-deps.ps1` | Node.js + Rust winget 설치 | Phase 1 초기 1회 |
+| `setup-env.ps1` | 전원, 디렉터리, PATH, SW 확인 | Phase 0 초기 1회 |
+
+> PowerShell 5.1은 BOM 없는 UTF-8을 CP949로 해석 → 한국어 포함 .ps1은 반드시 BOM 필요.
 
 ---
 
@@ -95,10 +109,10 @@ net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes
 
 ```powershell
 # D: 드라이브 대용량 파일 확인
-Get-ChildItem D:\vault -Recurse | Sort Length -Descending | Select -First 20 Name, @{N='MB';E={[math]::Round($_.Length/1MB,1)}}
+Get-ChildItem D:\vault\llm-wiki-vault -Recurse | Sort Length -Descending | Select -First 20 Name, @{N='MB';E={[math]::Round($_.Length/1MB,1)}}
 
 # Git 이력 정리
-cd D:\vault
+cd D:\vault\llm-wiki-vault
 git gc --aggressive
 ```
 
@@ -140,6 +154,6 @@ llm_wiki의 Deep Research 기능:
 
 ### 5.3 Obsidian 병행 사용
 
-- Obsidian에서 `D:\vault` 열기
+- Obsidian에서 `D:\vault\llm-wiki-vault` 열기
 - 그래프 뷰로 지식 구조 시각적 탐색
 - Obsidian은 읽기 전용 뷰어로만 사용 (wiki/ 직접 수정 금지)

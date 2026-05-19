@@ -82,5 +82,5 @@ Write-Host "`n========================================" -ForegroundColor Cyan
 Write-Host " 완료. 다음 단계:" -ForegroundColor Cyan
 Write-Host " 1. 앱 실행: $InstallDir\src-tauri\target\release\llm_wiki.exe" -ForegroundColor White
 Write-Host " 2. 또는: cd $InstallDir && npm run tauri dev" -ForegroundColor White
-Write-Host " 3. New Project -> D:\vault 선택" -ForegroundColor White
+Write-Host " 3. New Project -> D:\vault 선택, 프로젝트명: llm-wiki-vault" -ForegroundColor White
 Write-Host "========================================" -ForegroundColor Cyan

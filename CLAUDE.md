@@ -11,7 +11,7 @@ All documentation is written in **Korean**. Preserve Korean prose, formatting, a
 ## What lives here
 
 - `docs/01-SYSTEM-SPEC.md` → `docs/05-ARCHITECTURE.md` — numbered design docs. They are intended to be read in order and reference each other by number (e.g. "docs/02-BUILD-PLAN.md Phase 1.4"). When renumbering or splitting, update the cross-references in every other file.
-- `scripts/*.ps1` — operational scripts. These are **deployment templates**: they target hardcoded paths on the production PC (`D:\vault`, `C:\dev\llm_wiki`), not paths in this repo. Do not run them here; edits are spec changes, not local executions.
+- `scripts/*.ps1` — operational scripts. These are **deployment templates**: they target hardcoded paths on the production PC (`D:\vault\llm-wiki-vault`, `C:\dev\llm_wiki`), not paths in this repo. Do not run them here; edits are spec changes, not local executions.
 - `tests/e2e-checklist.md` — printable acceptance checklist mirroring `docs/04-E2E-TEST-PLAN.md` TC-01…TC-12. The two files must stay in sync.
 
 ## Architectural invariants
@@ -20,15 +20,15 @@ The design enforces a three-tier ownership model that must not be broken when mo
 
 | Tier | Path on target | Owner | Allowed mutations |
 |------|----------------|-------|-------------------|
-| Raw sources | `D:\vault\raw\sources\` | human (NAS sync) | append-only, immutable per file |
-| Wiki | `D:\vault\wiki\` | LLM (llm_wiki app) | LLM writes, humans read |
+| Raw sources | `D:\vault\llm-wiki-vault\raw\sources\` | human (NAS sync) | append-only, immutable per file |
+| Wiki | `D:\vault\llm-wiki-vault\wiki\` | LLM (llm_wiki app) | LLM writes, humans read |
 | Schema | `purpose.md`, `schema.md` | human | human-authored rules the LLM follows |
 
 Any proposed change that would let humans edit `wiki/` directly, or let the LLM mutate `raw/sources/`, violates the contract — flag it instead of implementing it.
 
 Other load-bearing invariants:
 
-- NAS flow is one-way: `NAS (Z:\ SMB) → sync-nas.ps1 → D:\vault\raw\sources\`. `sync-nas.ps1` preserves NAS subdirectory structure and skips files that already exist at the destination (no overwrite, no delete).
+- NAS flow is one-way: `NAS (Z:\ SMB) → sync-nas.ps1 → D:\vault\llm-wiki-vault\raw\sources\`. `sync-nas.ps1` preserves NAS subdirectory structure and skips files that already exist at the destination (no overwrite, no delete).
 - `auto-commit.ps1` only stages `wiki/`. Raw binaries are excluded by `.gitignore` in the vault (`raw/sources/*.pdf` etc.) — never `git add -A` from the vault root.
 - Scheduled timing is coordinated: NAS sync at 06:30, vault git commit at 23:00, health check Sunday 09:00. Changing one window in one document means updating the timing in `docs/03-OPERATION-GUIDE.md §1.1` and `docs/02-BUILD-PLAN.md §3.3 / §5.2` together.
 
@@ -37,13 +37,14 @@ Other load-bearing invariants:
 There is no build, lint, or test command — edits are reviewed by reading. When changing a script or spec:
 
 1. The PowerShell scripts use Windows PowerShell 5.1 syntax (the target is Win10). Avoid PS7-only operators (`??`, `?.`, ternary) and avoid `2>&1` on native exes (see global guidance — it flips `$?`).
-2. If you change a script's parameters, update the example invocation in the corresponding doc section (`docs/02-BUILD-PLAN.md` for build/sync, `docs/03-OPERATION-GUIDE.md` for runtime).
-3. If you change a TC-NN test case in `docs/04-E2E-TEST-PLAN.md`, update the matching row in `tests/e2e-checklist.md`.
+2. **Encoding:** All `.ps1` files containing Korean text must be saved as UTF-8 with BOM. After editing any `.ps1` file, remind the user to run `scripts/fix-encoding.ps1`. PS 5.1 reads BOM-less UTF-8 as CP949, breaking Korean strings.
+3. If you change a script's parameters, update the example invocation in the corresponding doc section (`docs/02-BUILD-PLAN.md` for build/sync, `docs/03-OPERATION-GUIDE.md` for runtime).
+4. If you change a TC-NN test case in `docs/04-E2E-TEST-PLAN.md`, update the matching row in `tests/e2e-checklist.md`.
 
 ## Things this repo deliberately does not contain
 
 - The llm_wiki app source — that is upstream `nashsu/llm_wiki`, cloned separately to `C:\dev\llm_wiki` on the target machine.
-- The vault itself (`D:\vault`) — it is created on the target machine by `scripts/setup-env.ps1` + the llm_wiki app's "New Project" flow. Don't generate vault contents here.
+- The vault itself (`D:\vault\llm-wiki-vault`) — it is created on the target machine by `scripts/setup-env.ps1` + the llm_wiki app's "New Project" flow. Don't generate vault contents here.
 - LLM API keys (Anthropic, GitHub PAT) or any NAS credentials.
 
 ## Harness (claude-code-harness) setup

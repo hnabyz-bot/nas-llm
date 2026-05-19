@@ -123,7 +123,7 @@ npm run tauri dev
 winget install Obsidian.Obsidian
 ```
 
-설치 후 `D:\vault` 를 vault로 열기.
+설치 후 `D:\vault\llm-wiki-vault` 를 vault로 열기.
 llm_wiki가 자동 생성하는 `.obsidian/` 설정을 사용.
 
 ---
@@ -132,57 +132,65 @@ llm_wiki가 자동 생성하는 `.obsidian/` 설정을 사용.
 
 ### 2.1 llm_wiki 프로젝트 생성
 
-1. llm_wiki 앱 실행
+1. llm_wiki 앱 실행: `C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe`
 2. Welcome Screen → "New Project"
-3. 디렉터리: `D:\vault` 선택
-4. 템플릿: "Research" 또는 "General" 선택
+3. 부모 디렉터리: `D:\vault` 선택, 프로젝트 이름: `llm-wiki-vault`
+4. 템플릿: "Research" 선택
 5. 자동 생성 확인:
-   - `D:\vault\purpose.md`
-   - `D:\vault\schema.md`
-   - `D:\vault\raw\sources\`
-   - `D:\vault\wiki\`
-   - `D:\vault\.llm-wiki\`
+   - `D:\vault\llm-wiki-vault\purpose.md`
+   - `D:\vault\llm-wiki-vault\schema.md`
+   - `D:\vault\llm-wiki-vault\raw\sources\`
+   - `D:\vault\llm-wiki-vault\wiki\`
+   - `D:\vault\llm-wiki-vault\.llm-wiki\`
+
+> **완료 (2026-05-19):** 프로젝트 생성 완료. 경로: `D:\vault\llm-wiki-vault\`
 
 ### 2.2 LLM 제공자 설정
 
-llm_wiki Settings에서 (OpenAI 호환 endpoint 설정):
+llm_wiki Settings에서 두 가지 제공자 구성 완료:
+
+**주 제공자 — Claude Code CLI (local):**
 
 | 설정 | 값 |
 |------|------|
-| Provider | OpenAI Compatible |
-| API Base URL | `https://models.inference.ai.azure.com` |
-| API Key | GitHub Personal Access Token (PAT) |
-| Model | `gpt-4o` 또는 사용 가능 모델 선택 |
+| Provider | Claude Code CLI (local) |
+| Binary | `C:\Users\admin\.local\bin\claude.exe` (v2.1.141) |
+| Model | `claude-sonnet-4-6` |
+| Context | 200K chars (~120K for wiki content) |
+| API Key | 불필요 (로컬 OAuth 구독) |
 
-> **참고:** GitHub Copilot 구독(hnabyz-bot) 활용.
-> PAT 생성: GitHub → Settings → Developer settings → Personal access tokens.
-> Anthropic 직접 사용 시: Provider=Anthropic, API Key=`sk-ant-xxxxx`, Model=claude-sonnet.
+**보조 제공자 — GitHub Models API (Custom):**
+
+| 설정 | 값 |
+|------|------|
+| Provider | Custom (OpenAI Compatible) |
+| API Base URL | `https://models.inference.ai.azure.com/v1` |
+| Model | `gpt-4o` |
+| API Key | 미입력 (필요 시 GitHub PAT 입력) |
+
+> **완료 (2026-05-19):** Claude Code CLI (local) 선택. API 키 없이 로컬 구독으로 동작.
+> GitHub Models API는 보조 용도로 등록만 완료 (API 키 미입력).
 
 ### 2.3 purpose.md 작성
 
-```markdown
-# Purpose
+커스텀 한국어 purpose.md (10개 섹션, 194줄) 작성 완료.
+템플릿: `scripts/purpose.md.template` 기반, 플레이스홀더를 프로젝트 실정에 맞게 채움.
+최종 파일: `D:\vault\llm-wiki-vault\purpose.md`
 
-## Goals
-- 회사 기술 자료(데이터시트, 규격서, 설계문서)를 구조화된 지식 베이스로 컴파일
-- 교차참조와 모순 표시를 통한 기술 의사결정 지원
-- NAS 자료의 점진적 지식 자산화
+주요 내용:
+- 조직: DR_Dev, 도메인: X-ray FPD 하드웨어·의료기기 SW·반도체 계측
+- 엔티티 6종 (ic, sensor, standard, project, subsystem, vendor)
+- 개념 4종 (알고리즘, 프로토콜, 물리적 원리, 설계 패턴)
+- Obsidian callout 형식: `> [!conflict]`, `> [!info]`
+- 태그 체계: 도메인 5종 + 상태 4종
 
-## Key Questions
-- 각 ROIC/Gate IC의 타이밍 파라미터 비교?
-- 규격서 간 상충되는 요구사항?
-- 프로젝트별 기술 의존성 맵?
-
-## Scope
-- X-ray FPD 하드웨어 관련 기술문서
-- 의료기기 규격서 (IEC, FDA, CE)
-- 소프트웨어 설계 문서
-```
+> **완료 (2026-05-19):** purpose.md 작성 및 llm_wiki 에디터에서 저장 확인.
+> 상세 내용은 `purpose-for-vault.md` (workspace) 참조.
 
 ### 2.4 Git 초기화
 
 ```powershell
-cd D:\vault
+cd D:\vault\llm-wiki-vault
 git init
 git remote add origin <your-gitea-or-github-url>
 
@@ -231,7 +239,7 @@ net use Z:
 
 param(
     [string]$Source = "Z:\",
-    [string]$Destination = "D:\vault\raw\sources",
+    [string]$Destination = "D:\vault\llm-wiki-vault\raw\sources",
     [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx", "*.xlsx"),
     [switch]$DryRun
 )
@@ -268,7 +276,7 @@ foreach ($ext in $Extensions) {
 ```powershell
 # 매일 06:30에 NAS(Z:) → vault 동기화
 $action = New-ScheduledTaskAction -Execute "powershell.exe" `
-    -Argument "-File D:\vault\scripts\sync-nas.ps1"
+    -Argument "-File D:\vault\llm-wiki-vault\scripts\sync-nas.ps1"
 $trigger = New-ScheduledTaskTrigger -Daily -At 6:30am
 Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
     -Action $action -Trigger $trigger -RunLevel Highest
@@ -280,7 +288,7 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 ### 4.1 테스트 자료 투입
 
-1. `D:\vault\raw\sources\` 에 10~20개 문서 배치
+1. `D:\vault\llm-wiki-vault\raw\sources\` 에 10~20개 문서 배치
 2. llm_wiki 앱에서 "Ingest" 실행
 3. 2단계 인제스트 확인:
    - Step 1 (분석): 엔티티·개념 추출
@@ -318,7 +326,7 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 ```powershell
 # scripts/auto-commit.ps1
-cd D:\vault
+cd D:\vault\llm-wiki-vault
 $changes = git status --porcelain wiki/
 if ($changes) {
     git add wiki/
@@ -340,8 +348,8 @@ Write-Host "=== LLM Wiki Health Check ===" -ForegroundColor Cyan
 Get-PSDrive C, D | Format-Table Name, @{N='Free(GB)';E={[math]::Round($_.Free/1GB,1)}}
 
 # vault 통계
-$rawCount = (Get-ChildItem D:\vault\raw\sources -Recurse -File).Count
-$wikiCount = (Get-ChildItem D:\vault\wiki -Recurse -Filter "*.md").Count
+$rawCount = (Get-ChildItem D:\vault\llm-wiki-vault\raw\sources -Recurse -File).Count
+$wikiCount = (Get-ChildItem D:\vault\llm-wiki-vault\wiki -Recurse -Filter "*.md").Count
 Write-Host "Raw sources: $rawCount"
 Write-Host "Wiki pages:  $wikiCount"
 Write-Host "Ratio:       $([math]::Round($wikiCount/$rawCount, 1))x" 

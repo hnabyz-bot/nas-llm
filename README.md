@@ -27,18 +27,18 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 
 ## 현재 상태
 
-> **Phase 0 — 환경 설정 전** (2026-05-14 기준)
-
-설계 문서와 운영 스크립트 작성 완료. 대상 PC에서의 실제 구축은 미착수.
+> **Phase 2 완료 / Phase 3 진행 예정** (2026-05-19 기준)
 
 | 산출물 | 상태 |
 |--------|------|
 | 설계 문서 5종 (01~05) | ✅ 완료 |
-| 운영 스크립트 4종 (ps1) | ✅ 완료 |
-| E2E 체크리스트 (TC-01~TC-12, 45항목) | ✅ 완료 |
-| 대상 PC 환경 설정 | ⬜ 미착수 |
-| llm_wiki 빌드 및 설치 | ⬜ 미착수 |
-| NAS 동기화 연동 | ⬜ 미착수 |
+| 운영 스크립트 6종 (ps1) | ✅ 완료 |
+| E2E 체크리스트 (TC-01~TC-12, 46항목) | ✅ 완료 |
+| Phase 0: 환경 설정 (전원, 디렉터리, PATH) | ✅ 완료 |
+| Phase 1: SW 설치 (Node 24.x, Rust 1.95, Git 2.42) | ✅ 완료 |
+| Phase 1: llm_wiki 빌드 및 설치 (v0.4.9) | ✅ 완료 |
+| Phase 2: 프로젝트 초기화 (vault, purpose.md, Git) | ✅ 완료 |
+| Phase 3: NAS Z:\ 매핑 | ⬜ 미착수 |
 | 파일럿 인제스트 | ⬜ 미착수 |
 
 ## 구축 로드맵
@@ -74,7 +74,7 @@ flowchart TB
         end
 
         APP["llm_wiki<br/>Tauri 앱"]
-        API["Anthropic API<br/>Claude Sonnet"]
+        API["Claude Code CLI<br/>(local, v2.1.141)"]
         GIT["Git (GitHub)<br/>wiki/ 이력 추적"]
         OBS["Obsidian<br/>wiki/ 읽기·그래프 탐색"]
         SCHED["Task Scheduler<br/>06:30 sync · 23:00 commit"]
@@ -115,8 +115,8 @@ flowchart TB
 
 | 계층 | 경로 | 소유자 | 규칙 |
 |------|------|--------|------|
-| Raw Sources | `D:\vault\raw\sources\` | 사람 | 불변, append-only |
-| Wiki | `D:\vault\wiki\` | LLM | LLM만 쓰기, 사람은 읽기만 |
+| Raw Sources | `D:\vault\llm-wiki-vault\raw\sources\` | 사람 | 불변, append-only |
+| Wiki | `D:\vault\llm-wiki-vault\wiki\` | LLM | LLM만 쓰기, 사람은 읽기만 |
 | Schema | `purpose.md`, `schema.md` | 사람 | LLM이 준수할 규칙 정의 |
 
 ## 파일 구조
@@ -129,7 +129,9 @@ flowchart TB
 │   ├── 04-E2E-TEST-PLAN.md      # E2E 검증 계획 (TC-01~TC-12)
 │   └── 05-ARCHITECTURE.md       # 아키텍처 설계
 ├── scripts/
-│   ├── setup-env.ps1            # 환경 설정 스크립트
+│   ├── setup-env.ps1            # 환경 설정 (전원, 디렉터리, PATH, SW)
+│   ├── install-deps.ps1         # Node.js + Rust 설치
+│   ├── fix-encoding.ps1         # .ps1 UTF-8 BOM 일괄 적용
 │   ├── sync-nas.ps1             # NAS → vault 선별 복사
 │   ├── auto-commit.ps1          # wiki/ Git 자동 커밋
 │   └── health-check.ps1         # 시스템 상태 점검
@@ -146,11 +148,17 @@ flowchart TB
 git clone https://github.com/hnabyz-bot/nas-llm.git
 cd nas-llm
 
-# 2. 환경 설정 (PowerShell 관리자 권한)
+# 2. UTF-8 BOM 적용 (한국어 ps1 필수)
+.\scripts\fix-encoding.ps1
+
+# 3. 환경 설정 (PowerShell 관리자 권한)
 .\scripts\setup-env.ps1
 
-# 3. llm_wiki 빌드 & 실행 → docs/02-BUILD-PLAN.md Phase 1.4 참조
-# 4. E2E 검증 → docs/04-E2E-TEST-PLAN.md 참조
+# 4. SW 설치 (Node.js, Rust 미설치 시)
+.\scripts\install-deps.ps1
+
+# 5. llm_wiki 빌드 & 실행 → docs/02-BUILD-PLAN.md Phase 1.3 참조
+# 6. E2E 검증 → docs/04-E2E-TEST-PLAN.md 참조
 ```
 
 ## 라이선스
