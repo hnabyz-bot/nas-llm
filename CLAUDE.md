@@ -32,6 +32,22 @@ Other load-bearing invariants:
 - `auto-commit.ps1` only stages `wiki/`. Raw binaries are excluded by `.gitignore` in the vault (`raw/sources/*.pdf` etc.) — never `git add -A` from the vault root.
 - Scheduled timing is coordinated: NAS sync at 06:30, vault git commit at 23:00, health check Sunday 09:00. Changing one window in one document means updating the timing in `docs/03-OPERATION-GUIDE.md §1.1` and `docs/02-BUILD-PLAN.md §3.3 / §5.2` together.
 
+## Session start — mandatory checklist
+
+Run this before touching any file or tool. Never declare a tool "missing" or a task "not done" without completing step 1–4 first.
+
+1. Read `memory/MEMORY.md` (project-level memory in `C:\Users\admin\.claude\projects\D--agent-work-nas-llm\memory\`)
+2. Read `Plans.md` — check WIP/TODO, identify next task
+3. `gh issue list --repo hnabyz-bot/nas-llm --state open` — understand open phase issues
+4. `git log --oneline -5` — confirm recent work
+5. For any tool assumed missing: refresh PowerShell PATH (`$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","User")`) and retry before declaring it absent
+
+**Workflow per task:**
+- Work against the open GitHub Issue for the current phase
+- Leave a progress comment on the issue when starting, completion comment when done
+- Update Plans.md task markers (cc:TODO → pm:CONFIRMED) in the same commit
+- Close the issue only after all non-optional tasks in the phase are confirmed
+
 ## Working in this repo
 
 There is no build, lint, or test command — edits are reviewed by reading. When changing a script or spec:
