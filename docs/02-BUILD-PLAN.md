@@ -233,50 +233,29 @@ net use Z:
 
 ### 3.2 선별 투입 스크립트
 
+인허가/RA 관련 5개 폴더만 동기화. 파일 크기 상한 없음 (Full Ingest).
+
 ```powershell
-# scripts/sync-nas.ps1
-# NAS(SMB 네트워크 드라이브)에서 vault raw/sources로 선별 복사
+# scripts/sync-nas.ps1 — 5개 지정 폴더만 동기화
+# 대상 폴더: DHF (인허가), RA, Standard(국제), 연구소 문서등록대장, 타사 메뉴얼
+# 대상 확장자: *.pdf, *.md, *.txt, *.docx, *.xlsx, *.xls, *.pptx
 
-param(
-    [string]$Source = "Z:\",
-    [string]$Destination = "D:\vault\llm-wiki-vault\raw\sources",
-    [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx", "*.xlsx"),
-    [switch]$DryRun
-)
+# DryRun 모드로 테스트
+.\scripts\sync-nas.ps1 -DryRun
 
-# NAS 네트워크 드라이브 접근 확인
-if (-not (Test-Path $Source)) {
-    Write-Host "NAS 드라이브 접근 불가: $Source" -ForegroundColor Red
-    Write-Host "  net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes" -ForegroundColor Yellow
-    exit 1
-}
-
-foreach ($ext in $Extensions) {
-    $files = Get-ChildItem -Path $Source -Filter $ext -Recurse -File -ErrorAction SilentlyContinue
-    foreach ($file in $files) {
-        $relativePath = $file.FullName.Substring($Source.Length).TrimStart('\')
-        $destFile = Join-Path $Destination $relativePath
-        $destDir = Split-Path $destFile -Parent
-
-        if (-not (Test-Path $destFile)) {
-            if (-not $DryRun) {
-                if (-not (Test-Path $destDir)) {
-                    New-Item -ItemType Directory -Path $destDir -Force | Out-Null
-                }
-                Copy-Item $file.FullName $destFile
-            }
-            Write-Host "  [NEW] $relativePath" -ForegroundColor Green
-        }
-    }
-}
+# 실제 동기화
+.\scripts\sync-nas.ps1
 ```
+
+> 대상 폴더 추가/제거: `sync-nas.ps1` 내 `$TargetFolders` 배열 수정.
+> 대상 폴더 목록: `docs/01-SYSTEM-SPEC.md` §1.3 참조.
 
 ### 3.3 자동 동기화 (Task Scheduler)
 
 ```powershell
 # 매일 06:30에 NAS(Z:) → vault 동기화
 $action = New-ScheduledTaskAction -Execute "powershell.exe" `
-    -Argument "-File D:\vault\llm-wiki-vault\scripts\sync-nas.ps1"
+    -Argument "-ExecutionPolicy Bypass -File D:\agent-work\nas-llm\scripts\sync-nas.ps1"
 $trigger = New-ScheduledTaskTrigger -Daily -At 6:30am
 Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
     -Action $action -Trigger $trigger -RunLevel Highest

@@ -62,7 +62,19 @@ D: (HDD 1TB)
 | 프로토콜 | SMB 3.0 |
 | 마운트 방식 | SMB 네트워크 드라이브 (Z:\) — `net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes` |
 | 동기화 방향 | NAS (Z:\) → `sync-nas.ps1` 선별 복사 → `D:\vault\llm-wiki-vault\raw\sources\` |
-| 동기화 대상 | 지정 폴더만 (데이터시트, 규격서, 기술문서) |
+| 동기화 대상 | 인허가/RA 관련 5개 폴더 (아래 표 참조) |
+
+#### 동기화 대상 폴더
+
+| # | NAS 경로 | 내용 |
+|---|---------|------|
+| 1 | `Z:\DHF (인허가)\` | Design History File — 제품별 인허가 문서 |
+| 2 | `Z:\RA\` | Regulatory Affairs — 인증서, 규제대응, 해외등록, 시험소 |
+| 3 | `Z:\Standard(국제)\` | IEC/ISO 국제규격 — Safety, EMC, Biocompatibility, QMS |
+| 4 | `Z:\연구소 문서등록대장\` | QMS 문서관리 체계, 문서 추적성 증빙 |
+| 5 | `Z:\타사 메뉴얼\` | 타사 제품 User Manual, Predicate device 참조 |
+
+> 추가/제거 시 `scripts/sync-nas.ps1`의 `$TargetFolders` 배열과 본 표를 함께 수정할 것.
 
 ---
 
