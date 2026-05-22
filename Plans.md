@@ -88,7 +88,7 @@ _harness_version: "4.10.0"
 #### 5-4. 운영 체계 확립
 
 - [ ] T031: purpose.md 갱신 루틴 수립 (인제스트 결과 반영 주기·담당자 확정) `cc:TODO` depends:T030
-- [ ] T032: Anthropic 비용 모니터링 체계 구축 (월별 토큰 집계 기준 설정) `cc:TODO` depends:T030
+- [ ] T032: ChatGPT Pro rate limit 모니터링 체계 구축 (일일 처리량·빈도 기준 설정) `cc:TODO` depends:T030
 - [ ] T033: e2e-checklist.md TC-10~TC-12 최종 판정 기입 및 운영 이관 선언 `cc:TODO` depends:T030,T031,T032
 
 ---
@@ -136,5 +136,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-05-14
-- **L
+- **Updated at**: 2026-05-22
+- **Last session owner**: Claude Code (Phase 4 전량 인제스트 진행 중, 문서 불일치 수정)
+- **Branch**: main

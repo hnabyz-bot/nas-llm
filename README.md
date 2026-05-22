@@ -27,7 +27,7 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 
 ## 현재 상태
 
-> **Phase 3 완료 / Phase 4 파일럿 인제스트 진행 중** (2026-05-22 기준)
+> **Phase 3 완료 / Phase 4 전량 인제스트 진행 중 — 715/51,296 파일 (1.4%)** (2026-05-22 기준)
 
 | 산출물 | 상태 |
 |--------|------|
@@ -42,7 +42,7 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 | Phase 3: sync-nas.ps1 스케줄 (매일 06:30) | ✅ 완료 |
 | Phase 3: auto-commit.ps1 스케줄 (매일 23:00) | ✅ 완료 |
 | LLM 제공자: Codex CLI — ChatGPT Plus OAuth (gpt-5.4) | ✅ 완료 |
-| 파일럿 인제스트 (T017 2-Step CoT 검증) | 🔄 진행 중 |
+| Phase 4 전량 인제스트 — 715/51,296 파일 (1.4%) | 🔄 진행 중 |
 
 ## 구축 로드맵
 
@@ -51,7 +51,7 @@ Phase 0  사전 준비 (전원설정, 디렉터리, SW확인)     ~1h
 Phase 1  소프트웨어 설치 (Node, Rust, Git, llm_wiki) ~2h
 Phase 2  프로젝트 초기화 (vault, API, Git)           ~30m
 Phase 3  NAS 동기화 설정 (SMB Z: 매핑, 스케줄)        ~1h
-Phase 4  파일럿 인제스트 (10~20개 문서, 검증)         ~1w
+Phase 4  전량 인제스트 (~51,000 파일, 7개 폴더)        ~2-3m
 Phase 5  안정화 및 확장 (자료 확장, 자동화 완성)      ~2-4w
 ```
 

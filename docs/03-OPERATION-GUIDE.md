@@ -30,11 +30,10 @@
 
 ### 1.3 비용 모니터링
 
-- Claude Code CLI (local) 사용 시: Anthropic 구독 범위 내 → 별도 API 과금 없음
-- GitHub Models API 사용 시: Copilot 구독 범위 내
-- Anthropic API 직접 사용 시: Console (https://console.anthropic.com) → Usage 탭
-- 주간 토큰 소모량 기록 (API 직접 사용 시)
-- 월 예산 임계값 설정: 초기 $50, 안정화 후 조정
+- ChatGPT Pro $200/월 정액 내 처리 — 추가 토큰 과금 없음
+- 모니터링 대상: rate limit 도달 빈도, 일일 처리량 (페이지/일)
+- ChatGPT 사용량: chat.openai.com → 설정 → 사용량 탭
+- 월 처리량 목표: Phase 4 전량 인제스트 51,000 파일 / 2~3개월
 
 ---
 

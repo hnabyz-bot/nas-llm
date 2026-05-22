@@ -221,11 +221,11 @@ net use Z:
 
 ### 3.2 선별 투입 스크립트
 
-인허가/RA 관련 5개 폴더만 동기화. 파일 크기 상한 없음 (Full Ingest).
+인허가/RA 관련 7개 폴더 동기화. 파일 크기 상한 없음 (Full Ingest).
 
 ```powershell
-# scripts/sync-nas.ps1 — 5개 지정 폴더만 동기화
-# 대상 폴더: DHF (인허가), RA, Standard(국제), 연구소 문서등록대장, 타사 메뉴얼
+# scripts/sync-nas.ps1 — 7개 지정 폴더 동기화
+# 대상 폴더: DHF (인허가), RA, Standard(국제), 연구소 문서등록대장, 타사 메뉴얼, Project, Restricted_Backup
 # 대상 확장자: *.pdf, *.md, *.txt, *.docx, *.xlsx, *.xls, *.pptx
 
 # DryRun 모드로 테스트
@@ -335,4 +335,8 @@ if ($proc) { Write-Host "llm_wiki: RUNNING" -ForegroundColor Green }
 else { Write-Host "llm_wiki: STOPPED" -ForegroundColor Red }
 
 # Git 상태
-cd
+cd D:\vault
+$dirty = git status --porcelain wiki/
+if ($dirty) { Write-Host "Git: uncommitted changes in wiki/" -ForegroundColor Yellow }
+else { Write-Host "Git: clean" -ForegroundColor Green }
+```
