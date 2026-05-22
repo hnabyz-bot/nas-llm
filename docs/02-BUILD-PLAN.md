@@ -147,29 +147,17 @@ llm_wiki가 자동 생성하는 `.obsidian/` 설정을 사용.
 
 ### 2.2 LLM 제공자 설정
 
-llm_wiki Settings에서 두 가지 제공자 구성 완료:
-
-**주 제공자 — Claude Code CLI (local):**
+llm_wiki Settings에서 ChatGPT Codex로 구성:
 
 | 설정 | 값 |
 |------|------|
-| Provider | Claude Code CLI (local) |
-| Binary | `C:\Users\admin\.local\bin\claude.exe` (v2.1.141) |
-| Model | `claude-sonnet-4-6` |
-| Context | 200K chars (~120K for wiki content) |
-| API Key | 불필요 (로컬 OAuth 구독) |
+| Provider | ChatGPT Codex |
+| 구독 | ChatGPT Pro ($200/월) |
+| 과금 방식 | 월정액 내 rate limit 기반, 추가 토큰 비용 없음 |
 
-**보조 제공자 — GitHub Models API (Custom):**
-
-| 설정 | 값 |
-|------|------|
-| Provider | Custom (OpenAI Compatible) |
-| API Base URL | `https://models.inference.ai.azure.com/v1` |
-| Model | `gpt-4o` |
-| API Key | 미입력 (필요 시 GitHub PAT 입력) |
-
-> **완료 (2026-05-19):** Claude Code CLI (local) 선택. API 키 없이 로컬 구독으로 동작.
-> GitHub Models API는 보조 용도로 등록만 완료 (API 키 미입력).
+> **변경 (2026-05-22):** ChatGPT Codex (Pro) 로 전환.
+> 이전: Claude Code CLI (local) + GitHub Models API (보조).
+> rate limit 도달 시 llm_wiki 큐가 자동 대기·재개.
 
 ### 2.3 purpose.md 작성
 
@@ -263,33 +251,41 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 ---
 
-## Phase 4: 파일럿 인제스트 (1주)
+## Phase 4: 전량 인제스트 (2~3개월)
 
-### 4.1 테스트 자료 투입
+> **LLM 제��자:** ChatGPT Codex (Pro $200/월, rate limit 기반)
+> **전략:** 폴더 단위 순차 인제스트. rate limit 도달 시 자동 대기 후 재개.
+> **현황 (2026-05-22):** 715/51,296 파일 인제스트 완료 (1.4%)
 
-1. `D:\vault\llm-wiki-vault\raw\sources\` 에 10~20개 문서 배치
-2. llm_wiki 앱에서 "Ingest" 실행
-3. 2단계 인제스트 확인:
-   - Step 1 (분석): 엔티티·개념 추출
-   - Step 2 (생성): 위키 페이지 생성 + frontmatter 출처 추적
-4. `wiki/` 폴더에 생성된 페이지 확인
+### 4.1 인제스트 순서
+
+| 순번 | 대상 폴더 | 파일 수 | 목적 |
+|------|-----------|---------|------|
+| 1 | 연구소 문서등록대장 + 타사 메뉴얼 + Standard(국제) | ~123 | 소규모 품질 검증 |
+| 2 | Project | ~1,992 | 중규�� 배치 |
+| 3 | DHF (인허가) | ~4,256 | 대량 배치 |
+| 4 | Restricted_Backup | ~5,943 | 대량 배치 |
+| 5 | RA | ~38,982 | 최대 볼륨 |
+
+> 순번 1 완료 ��� 품질 확인. 이상 없으면 2~5 연속 진행.
+> rate limit 도달 시 llm_wiki 큐가 자동 대기·재개하므로 수동 개입 불필요.
 
 ### 4.2 검증 항목
 
-| # | 항목 | 판정 기준 |
+| # | 항목 | 판정 ��준 |
 |---|------|----------|
 | 1 | 위키 페이지 생성 | raw 문서당 최소 1개 source summary 생성 |
-| 2 | 엔티티 추출 | 주요 IC/부품명이 entities/ 에 개별 페이지로 존재 |
+| 2 | 엔티티 ���출 | 주��� IC/���품명이 entities/ 에 개별 페이지로 존재 |
 | 3 | 위키링크 | `[[slug]]` 형식으로 페이지 간 연결 |
 | 4 | frontmatter | type, title, tags, sources 필드 존재 |
 | 5 | index.md | 전체 카탈로그 반영 |
 | 6 | overview.md | 전역 요약 자동 갱신 |
 | 7 | 증분 캐시 | 동일 파일 재인제스트 시 건너뜀 (SHA256) |
 
-### 4.3 비용 추적
+### 4.3 비용
 
-파일럿 기간 동안 Anthropic 대시보드에서 일일 토큰 소모량 기록.
-목표: 20개 문서 인제스트 총 비용 $15 이내.
+ChatGPT Pro 월정액 $200 내 처리. 추가 토큰 과금 없음.
+모니터링 대상: rate limit 도달 빈도, 일일 처리량 (페이지/일).
 
 ---
 
@@ -297,9 +293,9 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 ### 5.1 자료 확장
 
-- 파일럿 통과 후 NAS 추가 폴더를 동기화 대상에 포함
-- 배치 단위: 20~30개씩 점진 투입
-- 매 배치 후 wiki/ 품질 확인
+- 7개 폴더 전량 동기화 완료 (2026-05-22 기준 ~51,000 파일)
+- Phase 4 인제스트 완료 후 NAS 신규 파일은 sync-nas.ps1이 06:30에 자동 반영
+- 추가 폴더 필요 시 `sync-nas.ps1` `$TargetFolders` 배열에 추가
 
 ### 5.2 Git 커밋 자동화
 
@@ -339,8 +335,4 @@ if ($proc) { Write-Host "llm_wiki: RUNNING" -ForegroundColor Green }
 else { Write-Host "llm_wiki: STOPPED" -ForegroundColor Red }
 
 # Git 상태
-cd D:\vault
-$dirty = git status --porcelain wiki/
-if ($dirty) { Write-Host "Git: uncommitted changes in wiki/" -ForegroundColor Yellow }
-else { Write-Host "Git: clean" -ForegroundColor Green }
-```
+cd

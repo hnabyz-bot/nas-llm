@@ -53,12 +53,13 @@ _harness_version: "4.10.0"
 - [x] T014: sync-nas.ps1을 vault scripts에 배치 + dry-run 테스트 `cc:DONE` (D:\vault\llm-wiki-vault\scripts\, 47,000+파일 검출 확인)
 - [x] T015: Task Scheduler 등록 — 06:30 sync, 23:00 auto-commit `cc:DONE` (LLM-Wiki-NAS-Sync, LLM-Wiki-Auto-Commit)
 
-### Phase 4: 파일럿 인제스트
+### Phase 4: 전량 인제스트 (ChatGPT Codex Pro)
 
-- [ ] T016: 테스트 문서 10–20개 raw/sources/에 배치 `cc:TODO` depends:T009,T015
-- [ ] T017: llm_wiki에서 Ingest 트리거 (2-Step CoT 완료 확인) `cc:TODO` depends:T016
-- [ ] T018: 위키 페이지 생성 검증 (TC-03~TC-09 핵심 항목 통과) `cc:TODO` depends:T017
-- [ ] T019: Anthropic 토큰 비용 추적 ($15/20개 문서 이내 확인) `cc:TODO` depends:T017
+- [x] T016: raw/sources/ 7개 폴더 배치 완료 (~51,000 파일) `pm:CONFIRMED`
+- [ ] T017: 순번1 인제스트 (연구소 문서등록대장+타사 메뉴얼+Standard) ~123파일 `cc:TODO`
+- [ ] T018: 순번1 품질 검증 (TC-03~TC-09 핵심 항목) `cc:TODO` depends:T017
+- [ ] T019: 순번2~5 연속 인제스트 (Project→DHF→Restricted_Backup→RA) `cc:TODO` depends:T018
+- [ ] T019a: 일일 처리량·rate limit 모니터링 `cc:TODO` depends:T017
 
 ### Phase 5: 안정화 및 확장
 
@@ -66,7 +67,7 @@ _harness_version: "4.10.0"
 
 #### 5-1. 자료 확장
 
-- [ ] T020: NAS 추가 폴더(Z:\ 하위 대상 경로) sync-nas.ps1 포함 범위 확정 및 적용 `cc:TODO` depends:Phase 4
+- [x] T020: NAS 7개 폴더 sync-nas.ps1 포함 범위 확정 및 적용 `pm:CONFIRMED` (2026-05-22)
 - [ ] T021: 배치 단위 20–30개씩 raw/sources/에 점진 투입 (1차 배치) `cc:TODO` depends:T020
 - [ ] T022: 1차 배치 후 wiki/ 품질 확인 (페이지 구조·링크 정합성 검토) `cc:TODO` depends:T021
 - [ ] T023: 배치 단위 20–30개씩 raw/sources/에 점진 투입 (2차 배치) `cc:TODO` depends:T022
@@ -136,5 +137,4 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-05-14
-- **Last session owner**: Claude Code (Phase 0 완료)
-- **Branch**: main
+- **L
