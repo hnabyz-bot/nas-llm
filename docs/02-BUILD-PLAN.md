@@ -255,7 +255,11 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 > **LLM 제��자:** ChatGPT Codex (Pro $200/월, rate limit 기반)
 > **전략:** 폴더 단위 순차 인제스트. rate limit 도달 시 자동 대기 후 재개.
-> **현황 (2026-05-22):** 715/51,296 파일 인제스트 완료 (1.4%)
+> **현황 (2026-05-22):**
+> - raw/sources: 51,296 파일 (전체 동기화 완료)
+> - wiki/sources: 715 페이지 생성 (source summary 단계)
+> - wiki/entities, concepts, synthesis: 0 — Step 2 미실행
+> - ingest-queue: 7,851 항목 대기 중 (앱 정지 상태 — 2026-05-21 이후 미실행)
 
 ### 4.1 인제스트 순서
 

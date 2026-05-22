@@ -42,7 +42,8 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 | Phase 3: sync-nas.ps1 스케줄 (매일 06:30) | ✅ 완료 |
 | Phase 3: auto-commit.ps1 스케줄 (매일 23:00) | ✅ 완료 |
 | LLM 제공자: Codex CLI — ChatGPT Plus OAuth (gpt-5.4) | ✅ 완료 |
-| Phase 4 전량 인제스트 — 715/51,296 파일 (1.4%) | 🔄 진행 중 |
+| Phase 4: wiki/sources 715 페이지 생성 완료 (Step 2 대기 중) | 🔄 진행 중 |
+| ingest-queue: 7,851 항목 대기 (앱 재시작 필요) | ⏸ 정지 |
 
 ## 구축 로드맵
 
