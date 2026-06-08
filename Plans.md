@@ -60,7 +60,7 @@ _harness_version: "4.10.0"
 - [x] T016b: 인제스트 큐 복원 (34개 non-PDF pending 항목) + 앱 재시작 `cc:DONE` (2026-06-08)
 - [x] T017: 34개 non-PDF 인제스트 완료 확인 `cc:DONE` (2026-06-09 완료 — 31/34 성공, 3개 실패 재시도 예정)
 - [ ] T018: 인제스트 품질 검증 (TC-03~TC-09 핵심 항목) `cc:TODO` depends:T017
-- [ ] T019: 순번2~5 연속 인제스트 (나머지 ~32K 파일 큐 투입 전략 수립) `cc:TODO` depends:T017
+- [ ] T019: 순번2~5 연속 인제스트 (나머지 ~32K 파일 큐 투입 전략 수립) `cc:WIP` (2026-06-09 — DHF 457건+연구소 7건 배치 투입, batch-enqueue.ps1 작성)
 - [ ] T019a: 일일 처리량·rate limit 모니터링 `cc:TODO` depends:T017
 
 ### Phase 5: 안정화 및 확장
