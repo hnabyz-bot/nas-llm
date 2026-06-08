@@ -8,6 +8,13 @@ if (-not (Test-Path "$vaultPath\.git")) {
     exit 1
 }
 
+# file-snapshot.json 백업 (full rescan 회피용)
+$snapshotPath = "$vaultPath\.llm-wiki\file-snapshot.json"
+if (Test-Path $snapshotPath) {
+    Copy-Item $snapshotPath "$vaultPath\.llm-wiki\file-snapshot.bak" -Force
+    Write-Host "[$(Get-Date -Format 'HH:mm')] file-snapshot.json 백업 완료" -ForegroundColor Cyan
+}
+
 Push-Location $vaultPath
 
 $changes = git status --porcelain wiki/

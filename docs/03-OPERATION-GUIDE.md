@@ -1,8 +1,8 @@
 # 03. 운영 가이드
 
 문서 번호: LW-OPS-001
-버전: 1.0
-작성일: 2026-05-14
+버전: 1.1
+작성일: 2026-05-22
 
 ---
 
@@ -12,7 +12,7 @@
 
 | 시각 | 작업 | 스크립트 |
 |------|------|---------|
-| 06:30 | NAS(Z:\) → raw/sources 선별 복사 | `sync-nas.ps1` |
+| 06:30 | NAS(Z:\) → raw/sources 7개 폴더 선별 복사 | `sync-nas.ps1` |
 | - | llm_wiki auto-watch가 raw/ 변경 감지 | 앱 내장 |
 | 23:00 | wiki/ Git 자동 커밋 & 푸시 | `auto-commit.ps1` |
 | 일요일 09:00 | 상태 점검 | `health-check.ps1` |
@@ -53,11 +53,12 @@
 
 ### 2.1 투입 원칙
 
-1. **배치 단위:** 한 번에 20~30개 이하
+1. **배치 단위:** 초기 인제스트 — 폴더 단위 순차 처리 (51,000 파일 / 7개 폴더)
 2. **파일 형식:** PDF, MD, TXT, DOCX (llm_wiki 지원 포맷)
 3. **명명 규칙:** 원본 파일명 유지 (LLM이 파일명을 분류 힌트로 사용)
 4. **폴더 구조:** NAS 디렉터리 구조를 raw/sources/ 하위에 보존
 5. **금지:** raw/sources/ 내 파일 수정·삭제 (immutable)
+6. **정상 운영 후:** 일일 증분 투입 20~30개 이하 권장
 
 ### 2.2 대용량 파일 처리
 
@@ -85,10 +86,11 @@ Get-AppxPackage *WebView2*
 ### 3.2 인제스트 실패 시
 
 1. llm_wiki → Activity 패널에서 에러 메시지 확인
-2. API 키 유효성 확인 (Anthropic Console)
-3. 네트워크 연결 확인 (api.anthropic.com 접근)
-4. 파일 인코딩 확인 (UTF-8 권장)
-5. 큐에서 실패 항목 Retry
+2. API 키 유효성 확인 (platform.openai.com → API keys)
+3. 네트워크 연결 확인 (api.openai.com 접근)
+4. Rate limit 확인 — ChatGPT Pro는 분당 요청 제한 있음
+5. 파일 인코딩 확인 (UTF-8 권장)
+6. 큐에서 실패 항목 Retry
 
 ### 3.3 NAS 연결 끊김
 
@@ -130,7 +132,32 @@ git gc --aggressive
 | wiki/ | Git push (자동) | 매일 |
 | raw/sources/ | NAS가 원본, 로컬은 사본 | - |
 | .llm-wiki/ (앱 설정) | 수동 백업 → NAS | 월 1회 |
+| file-snapshot.json | auto-commit 시 .bak 복사 | 매일 |
 | purpose.md, schema.md | Git 추적 | 변경 시 |
+
+### 4.1 file-snapshot.json 보호
+
+full rescan 회피를 위한 snapshot 백업 정책:
+
+```powershell
+# auto-commit.ps1 내 wiki/ 커밋 전에 실행
+$VaultPath = "D:\vault\llm-wiki-vault"
+Copy-Item "$VaultPath\.llm-wiki\file-snapshot.json" `
+           "$VaultPath\.llm-wiki\file-snapshot.bak" -Force
+```
+
+**복원 절차** (snapshot 손상 시):
+```powershell
+# 1. 백업에서 복원 (full rescan 회피)
+Copy-Item "$VaultPath\.llm-wiki\file-snapshot.bak" `
+           "$VaultPath\.llm-wiki\file-snapshot.json" -Force
+
+# 2. 백업도 없을 경우 — 빈 스키마로 리셋 (full rescan 발생)
+Set-Content "$VaultPath\.llm-wiki\file-snapshot.json" `
+  '{"version":1,"updatedAt":0,"files":{}}' -Encoding UTF8
+```
+
+> **주의:** 빈 스키마 리셋 시 51,000+ 파일 full rescan → HDD 기준 5~15분 소요.
 
 ---
 
