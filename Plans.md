@@ -58,7 +58,7 @@ _harness_version: "4.10.0"
 - [x] T016: raw/sources/ 7개 폴더 배치 완료 (~51,000 파일) `pm:CONFIRMED`
 - [x] T016a: watchdog-ingest.ps1 버그 수정 (Bug 3,4,5) — ProcessStartInfo PATH 전달 `cc:DONE` (2026-06-08)
 - [x] T016b: 인제스트 큐 복원 (34개 non-PDF pending 항목) + 앱 재시작 `cc:DONE` (2026-06-08)
-- [ ] T017: 34개 non-PDF 인제스트 완료 확인 `cc:WIP` (2026-06-08 시작)
+- [x] T017: 34개 non-PDF 인제스트 완료 확인 `cc:DONE` (2026-06-09 완료 — 31/34 성공, 3개 실패 재시도 예정)
 - [ ] T018: 인제스트 품질 검증 (TC-03~TC-09 핵심 항목) `cc:TODO` depends:T017
 - [ ] T019: 순번2~5 연속 인제스트 (나머지 ~32K 파일 큐 투입 전략 수립) `cc:TODO` depends:T017
 - [ ] T019a: 일일 처리량·rate limit 모니터링 `cc:TODO` depends:T017
