@@ -122,7 +122,50 @@ if ($added -eq 0) {
     exit 0
 }
 
-$json = $queueList | ConvertTo-Json -Depth 10
+# ★ 앱 실행 중이면 중단 — 큐 덮어쓰기 경쟁 방지
+$AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$wasRunning  = [bool](Get-Process -Name "llm-wiki" -ErrorAction SilentlyContinue)
+if ($wasRunning) {
+    Write-Host "llm-wiki 중단 (큐 경쟁 방지)..."
+    Stop-Process -Name "llm-wiki" -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 3
+}
+
+# 큐 다시 읽기 (앱 종료 후 최신 상태 반영)
+if (Test-Path $QueuePath) {
+    $latestQ = [System.IO.File]::ReadAllText($QueuePath, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+    # 새 항목 중 최신 큐에 없는 것만 추가
+    $latestPaths = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+    foreach ($item in $latestQ) { [void]$latestPaths.Add($item.sourcePath) }
+    $finalQueue = [System.Collections.Generic.List[object]]::new()
+    foreach ($item in $latestQ) { $finalQueue.Add($item) }
+    $newCount = 0
+    foreach ($item in $queueList) {
+        if (-not $latestPaths.Contains($item.sourcePath)) {
+            $finalQueue.Add($item)
+            $newCount++
+        }
+    }
+} else {
+    $finalQueue = $queueList
+    $newCount   = $added
+}
+
+$json = $finalQueue | ConvertTo-Json -Depth 10
 [System.IO.File]::WriteAllText($QueuePath, $json, [System.Text.UTF8Encoding]::new($false))
-Write-Host "큐 저장 완료 — 총 $($queueList.Count)개 (새 항목 $added)"
-Write-Host "llm-wiki 재시작 또는 watchdog가 자동 처리합니다."
+Write-Host "큐 저장 완료 — 총 $($finalQueue.Count)개 (새 항목 $newCount)"
+
+# 앱 재시작
+if ($wasRunning) {
+    $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" +
+                [System.Environment]::GetEnvironmentVariable("PATH","User")
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = $AppExe
+    $psi.UseShellExecute = $false
+    $psi.CreateNoWindow = $false
+    $psi.EnvironmentVariables["PATH"] = $env:PATH
+    [System.Diagnostics.Process]::Start($psi) | Out-Null
+    Write-Host "llm-wiki 재시작 완료"
+} else {
+    Write-Host "앱이 실행되지 않은 상태 — watchdog가 자동 시작"
+}
