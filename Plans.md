@@ -138,6 +138,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-08
-- **Last session owner**: Claude Code (watchdog 버그 3종 수정, 큐 복원, 인제스트 재개)
+- **Updated at**: 2026-06-09
+- **Last session owner**: Claude Code (watchdog Bug 6+7 수정, batch-enqueue.ps1 작성, DHF+연구소 464건 배치 투입, 문서 갱신)
 - **Branch**: main
