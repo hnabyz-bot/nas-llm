@@ -44,8 +44,19 @@
 | `fix-encoding.ps1` | .ps1 파일에 UTF-8 BOM 적용 | .ps1 파일 수정 후 |
 | `install-deps.ps1` | Node.js + Rust winget 설치 | Phase 1 초기 1회 |
 | `setup-env.ps1` | 전원, 디렉터리, PATH, SW 확인 | Phase 0 초기 1회 |
+| `watchdog-ingest.ps1` | 인제스트 진전 감시, 앱 자동 재시작 | Task Scheduler 5분 주기 |
+| `batch-enqueue.ps1` | 폴더 단위 DOCX/XLSX/TXT 배치 큐 투입 | 인제스트 배치 시작 시 |
+| `preprocess-queue.ps1` | 대용량 파일 청크 분할 후 재투입 | 대용량 파일 인제스트 실패 시 |
 
 > PowerShell 5.1은 BOM 없는 UTF-8을 CP949로 해석 → 한국어 포함 .ps1은 반드시 BOM 필요.
+>
+> **watchdog 등록:**
+> ```powershell
+> $action = New-ScheduledTaskAction -Execute "powershell.exe" `
+>     -Argument "-ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\watchdog-ingest.ps1"
+> $trigger = New-ScheduledTaskTrigger -RepetitionInterval (New-TimeSpan -Minutes 5) -Once -At (Get-Date)
+> Register-ScheduledTask -TaskName "LLM-Wiki-Watchdog" -Action $action -Trigger $trigger -RunLevel Highest
+> ```
 
 ---
 
@@ -86,11 +97,53 @@ Get-AppxPackage *WebView2*
 ### 3.2 인제스트 실패 시
 
 1. llm_wiki → Activity 패널에서 에러 메시지 확인
-2. API 키 유효성 확인 (platform.openai.com → API keys)
+2. Codex CLI 로그인 상태 확인: `codex login status` → "Logged in using ChatGPT"
 3. 네트워크 연결 확인 (api.openai.com 접근)
 4. Rate limit 확인 — ChatGPT Pro는 분당 요청 제한 있음
 5. 파일 인코딩 확인 (UTF-8 권장)
-6. 큐에서 실패 항목 Retry
+6. 실패 항목 재시도: 큐 파일에서 retryCount를 0으로 리셋 후 앱 재시작
+
+### 3.6 인제스트 큐 트러블슈팅
+
+**큐 상태 확인:**
+```powershell
+$q = Get-Content "D:\vault\llm-wiki-vault\.llm-wiki\ingest-queue.json" -Raw | ConvertFrom-Json
+$q | Group-Object status | Select Name, Count
+```
+
+**실패 항목 재시도 (retryCount 리셋):**
+```powershell
+# 앱 중단
+Stop-Process -Name "llm-wiki" -Force -ErrorAction SilentlyContinue
+
+# 실패 항목을 pending으로 리셋
+$qPath = "D:\vault\llm-wiki-vault\.llm-wiki\ingest-queue.json"
+$q = Get-Content $qPath -Raw | ConvertFrom-Json
+$q | Where-Object { $_.status -eq "failed" } | ForEach-Object {
+    $_.status = "pending"; $_.retryCount = 0; $_.error = $null
+}
+$q | ConvertTo-Json -Depth 10 | Set-Content $qPath -Encoding UTF8
+
+# 앱 재시작 (ProcessStartInfo 방식 — PATH 전달 필수)
+$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" +
+            [System.Environment]::GetEnvironmentVariable("PATH","User")
+$psi = New-Object System.Diagnostics.ProcessStartInfo
+$psi.FileName = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$psi.UseShellExecute = $false; $psi.CreateNoWindow = $false
+$psi.EnvironmentVariables["PATH"] = $env:PATH
+[System.Diagnostics.Process]::Start($psi) | Out-Null
+```
+
+**zombie codex 프로세스 정리:**
+```powershell
+Get-Process -Name "codex" -ErrorAction SilentlyContinue | Stop-Process -Force
+```
+
+**큐가 비었는데 앱이 idle인 경우:**
+```powershell
+# 다음 배치 투입
+.\scripts\batch-enqueue.ps1 -SourceFolder "RA" -BatchSize 500
+```
 
 ### 3.3 NAS 연결 끊김
 

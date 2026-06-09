@@ -27,23 +27,25 @@ Andrej Karpathy의 [LLM Wiki 패턴](https://gist.github.com/karpathy/442a6bf555
 
 ## 현재 상태
 
-> **Phase 3 완료 / Phase 4 전량 인제스트 진행 중 — 715/51,296 파일 (1.4%)** (2026-05-22 기준)
+> **Phase 4 전량 인제스트 진행 중 — wiki 2,037 페이지 생성, DHF+연구소 464건 처리 중** (2026-06-09 기준)
 
 | 산출물 | 상태 |
 |--------|------|
 | 설계 문서 5종 (01~05) | ✅ 완료 |
-| 운영 스크립트 6종 (ps1) | ✅ 완료 |
+| 운영 스크립트 9종 (ps1) | ✅ 완료 |
 | E2E 체크리스트 (TC-01~TC-12, 46항목) | ✅ 완료 |
 | Phase 0: 환경 설정 (전원, 디렉터리, PATH) | ✅ 완료 |
 | Phase 1: SW 설치 (Node 24.x, Rust 1.95, Git 2.42) | ✅ 완료 |
-| Phase 1: llm_wiki 빌드 및 설치 (v0.4.9) | ✅ 완료 |
+| Phase 1: llm_wiki 빌드 및 설치 (v0.4.16) | ✅ 완료 |
 | Phase 2: 프로젝트 초기화 (vault, purpose.md, Git) | ✅ 완료 |
 | Phase 3: NAS Z:\ 매핑 (\\10.11.1.40\DR_Dev\공통자료) | ✅ 완료 |
 | Phase 3: sync-nas.ps1 스케줄 (매일 06:30) | ✅ 완료 |
 | Phase 3: auto-commit.ps1 스케줄 (매일 23:00) | ✅ 완료 |
 | LLM 제공자: Codex CLI — ChatGPT Plus OAuth (gpt-5.4) | ✅ 완료 |
-| Phase 4: wiki/sources 715 페이지 생성 완료 (Step 2 대기 중) | 🔄 진행 중 |
-| ingest-queue: 7,851 항목 대기 (앱 재시작 필요) | ⏸ 정지 |
+| Phase 4 파일럿: 테스트 34건 → **34/34 성공** (2026-06-08) | ✅ 완료 |
+| Phase 4 전량: wiki/sources **2,037 페이지** 생성 (품질 분석 포함) | ✅ 완료 |
+| Phase 4 배치: DHF 457건 + 연구소 7건 = **464건 처리 중** | 🔄 진행 중 |
+| Phase 4 예정: RA 13,045건 등 나머지 ~14K건 배치 투입 | ⏳ 대기 |
 
 ## 구축 로드맵
 
@@ -77,7 +79,7 @@ flowchart TB
             WIKI["wiki/<br/>entities/ concepts/ sources/<br/>synthesis/ comparisons/ queries/"]
         end
 
-        APP["llm_wiki<br/>Tauri 앱 (v0.4.9)"]
+        APP["llm_wiki<br/>Tauri 앱 (v0.4.16)"]
         API["Codex CLI v0.132.0<br/>(ChatGPT Plus OAuth, gpt-5.4)"]
         GIT["Git (GitHub)<br/>wiki/ 이력 추적"]
         OBS["Obsidian<br/>wiki/ 읽기·그래프 탐색"]
@@ -138,7 +140,10 @@ flowchart TB
 │   ├── fix-encoding.ps1         # .ps1 UTF-8 BOM 일괄 적용
 │   ├── sync-nas.ps1             # NAS → vault 선별 복사
 │   ├── auto-commit.ps1          # wiki/ Git 자동 커밋
-│   └── health-check.ps1         # 시스템 상태 점검
+│   ├── health-check.ps1         # 시스템 상태 점검
+│   ├── watchdog-ingest.ps1      # 인제스트 자동 감시·재시작 (5분 주기)
+│   ├── batch-enqueue.ps1        # 폴더 단위 배치 큐 투입
+│   └── preprocess-queue.ps1     # 대용량 파일 청크 분할 후 재투입
 ├── tests/
 │   └── e2e-checklist.md         # E2E 체크리스트 (인쇄용)
 ├── CLAUDE.md                    # Claude Code 가이드

@@ -253,45 +253,76 @@ Register-ScheduledTask -TaskName "LLM-Wiki-NAS-Sync" `
 
 ## Phase 4: 전량 인제스트 (2~3개월)
 
-> **LLM 제��자:** ChatGPT Codex (Pro $200/월, rate limit 기반)
-> **전략:** 폴더 단위 순차 인제스트. rate limit 도달 시 자동 대기 후 재개.
-> **현황 (2026-05-22):**
-> - raw/sources: 51,296 파일 (전체 동기화 완료)
-> - wiki/sources: 715 페이지 생성 (source summary 단계)
-> - wiki/entities, concepts, synthesis: 0 — Step 2 미실행
-> - ingest-queue: 7,851 항목 대기 중 (앱 정지 상태 — 2026-05-21 이후 미실행)
+> **LLM 제공자:** Codex CLI (\@openai/codex\ v0.132.0) — ChatGPT Plus OAuth (gpt-5.4)
+> **전략:** \atch-enqueue.ps1\로 폴더 단위 배치 투입. \watchdog-ingest.ps1\이 5분마다 진전 감시·재시작.
+> **현황 (2026-06-09):**
+> - raw/sources: ~51,296 파일 (전체 동기화 완료)
+> - wiki/sources: **2,037 페이지** (품질 분석 포함, 구버전 스텁 제외)
+> - 처리 중: DHF 457건 + 연구소 7건 = **464개** 큐 진행 중
+> - 미처리: RA (~13,045건) + 타사 메뉴얼 + Project 등
 
-### 4.1 인제스트 순서
+### 4.1 인제스트 순서 (실측 기준)
 
-| 순번 | 대상 폴더 | 파일 수 | 목적 |
-|------|-----------|---------|------|
-| 1 | 연구소 문서등록대장 + 타사 메뉴얼 + Standard(국제) | ~123 | 소규모 품질 검증 |
-| 2 | Project | ~1,992 | 중규�� 배치 |
-| 3 | DHF (인허가) | ~4,256 | 대량 배치 |
-| 4 | Restricted_Backup | ~5,943 | 대량 배치 |
-| 5 | RA | ~38,982 | 최대 볼륨 |
+| 순번 | 대상 폴더 | DOCX/XLSX/TXT 수 | 상태 |
+|------|-----------|-----------------|------|
+| 1 | DHF (인허가) | 1,332 (미처리 457) | 🔄 진행 중 |
+| 2 | 연구소 문서등록대장 | 7 | 🔄 진행 중 |
+| 3 | RA | ~13,045 | ⏳ 대기 |
+| 4 | 타사 메뉴얼 | 미확인 | ⏳ 대기 |
+| 5 | Project | 미확인 | ⏳ 대기 |
 
-> 순번 1 완료 ��� 품질 확인. 이상 없으면 2~5 연속 진행.
-> rate limit 도달 시 llm_wiki 큐가 자동 대기·재개하므로 수동 개입 불필요.
+> PDF는 인제스트 대상 제외 (텍스트 추출 불가).
+> 이미 처리된 파일은 ingest-cache(파일명 기준)로 자동 스킵.
 
-### 4.2 검증 항목
+### 4.2 배치 큐 투입 방법
 
-| # | 항목 | 판정 ��준 |
+\\\powershell
+# 폴더 단위 배치 투입 (앱 자동 중단 후 재시작)
+.\scripts\batch-enqueue.ps1 -SourceFolder "RA" -BatchSize 500
+
+# 건식 테스트 (큐 수정 없이 대상 파일만 출력)
+.\scripts\batch-enqueue.ps1 -SourceFolder "RA" -DryRun
+
+# 이미 처리된 스텁도 재처리 (품질 업그레이드)
+.\scripts\batch-enqueue.ps1 -SourceFolder "DHF (인허가)" -IncludeCached
+\\\
+
+> **주의:** 앱 실행 중 큐 파일을 직접 수정하면 앱의 saveQueue가 덮어씀.
+> 반드시 \atch-enqueue.ps1\을 사용할 것 — 앱을 자동으로 중단 후 수정.
+
+### 4.3 watchdog 운영
+
+Task Scheduler에서 \watchdog-ingest.ps1\을 5분 주기로 실행:
+
+\\\powershell
+\ = New-ScheduledTaskAction -Execute "powershell.exe" `
+    -Argument "-ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\watchdog-ingest.ps1"
+\ = New-ScheduledTaskTrigger -RepetitionInterval (New-TimeSpan -Minutes 5) `
+    -Once -At (Get-Date)
+Register-ScheduledTask -TaskName "LLM-Wiki-Watchdog" `
+    -Action \ -Trigger \ -RunLevel Highest
+\\\
+
+watchdog 동작 기준:
+- 60분 내 큐 총 항목 수 감소 없음 + codex 미실행 → stuck 항목 failed 처리 후 재시작
+- 앱 미실행 + pending > 0 → 앱 자동 재시작
+- 처리 중 + codex 실행 중 → 대기 (대용량 파일 정상 처리)
+
+### 4.4 검증 항목 (TC-03~TC-09)
+
+| # | 항목 | 판정 기준 |
 |---|------|----------|
 | 1 | 위키 페이지 생성 | raw 문서당 최소 1개 source summary 생성 |
-| 2 | 엔티티 ���출 | 주��� IC/���품명이 entities/ 에 개별 페이지로 존재 |
-| 3 | 위키링크 | `[[slug]]` 형식으로 페이지 간 연결 |
-| 4 | frontmatter | type, title, tags, sources 필드 존재 |
-| 5 | index.md | 전체 카탈로그 반영 |
-| 6 | overview.md | 전역 요약 자동 갱신 |
-| 7 | 증분 캐시 | 동일 파일 재인제스트 시 건너뜀 (SHA256) |
+| 2 | frontmatter | type, title, tags, sources, related 필드 존재 |
+| 3 | 위키링크 | \[[slug]]\ 형식으로 페이지 간 연결 |
+| 4 | 한국어 분석 | 구버전 "(Analysis not available)" 스텁 아님 |
+| 5 | 증분 캐시 | 동일 파일 재인제스트 시 건너뜀 (ingest-cache.json) |
 
-### 4.3 비용
+### 4.5 비용
 
-ChatGPT Pro 월정액 $200 내 처리. 추가 토큰 과금 없음.
-모니터링 대상: rate limit 도달 빈도, 일일 처리량 (페이지/일).
-
----
+ChatGPT Pro 월정액 \ 내 처리. 추가 토큰 과금 없음.
+모니터링 대상: rate limit 도달 빈도, 일일 처리량.
+실측 처리 속도: ~6건/시간 (파일 크기에 따라 4~10분/건).
 
 ## Phase 5: 안정화 및 확장 (2~4주)
 
