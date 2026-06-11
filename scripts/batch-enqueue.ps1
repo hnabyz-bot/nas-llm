@@ -22,6 +22,21 @@ $CachePath   = "$VaultRoot\.llm-wiki\ingest-cache.json"
 $ProjectId   = "2da34b71-49aa-4919-a66a-90f1683772f9"
 $RawSources  = "$VaultRoot\raw\sources"
 $TargetDir   = Join-Path $RawSources $SourceFolder
+$PreprocessScript = "$VaultRoot\scripts\preprocess-active-originals.ps1"
+$TargetFolders = @(
+    "DHF (인허가)",
+    "RA",
+    "Standard(국제)",
+    "연구소 문서등록대장",
+    "타사 메뉴얼",
+    "Project",
+    "Restricted_Backup"
+)
+
+if ($TargetFolders -notcontains $SourceFolder) {
+    Write-Error "허용되지 않은 폴더: $SourceFolder. 지정 7개 폴더만 큐 투입 가능."
+    exit 1
+}
 
 if (-not (Test-Path $TargetDir)) {
     Write-Error "폴더를 찾을 수 없음: $TargetDir"
@@ -122,7 +137,8 @@ if ($added -eq 0) {
     exit 0
 }
 
-# ★ 앱 실행 중이면 중단 — 큐 덮어쓰기 경쟁 방지
+# 앱 실행 중이면 중단 — 큐 덮어쓰기 경쟁 방지.
+# 이 스크립트는 앱을 다시 시작하지 않는다. 전처리와 게이트 검증이 먼저다.
 $AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
 $wasRunning  = [bool](Get-Process -Name "llm-wiki" -ErrorAction SilentlyContinue)
 if ($wasRunning) {
@@ -151,21 +167,17 @@ if (Test-Path $QueuePath) {
     $newCount   = $added
 }
 
-$json = $finalQueue | ConvertTo-Json -Depth 10
+$json = ConvertTo-Json -InputObject ($finalQueue.ToArray()) -Depth 10
 [System.IO.File]::WriteAllText($QueuePath, $json, [System.Text.UTF8Encoding]::new($false))
 Write-Host "큐 저장 완료 — 총 $($finalQueue.Count)개 (새 항목 $newCount)"
 
-# 앱 재시작
-if ($wasRunning) {
-    $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" +
-                [System.Environment]::GetEnvironmentVariable("PATH","User")
-    $psi = New-Object System.Diagnostics.ProcessStartInfo
-    $psi.FileName = $AppExe
-    $psi.UseShellExecute = $false
-    $psi.CreateNoWindow = $false
-    $psi.EnvironmentVariables["PATH"] = $env:PATH
-    [System.Diagnostics.Process]::Start($psi) | Out-Null
-    Write-Host "llm-wiki 재시작 완료"
+if (Test-Path $PreprocessScript) {
+    Write-Host "원본 active 큐 전처리 실행..."
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $PreprocessScript
 } else {
-    Write-Host "앱이 실행되지 않은 상태 — watchdog가 자동 시작"
+    Write-Error "전처리 스크립트 없음: $PreprocessScript"
+    exit 1
 }
+
+Write-Host "앱은 시작하지 않음. verify-ingest-gate.ps1 PASS 및 우선순위 검토 후 수동 승인 필요."
+

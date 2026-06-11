@@ -1,4 +1,4 @@
-# preprocess-active-originals.ps1
+﻿# preprocess-active-originals.ps1
 # Convert active non-preprocessed queue entries to _preprocessed TXT entries.
 
 param(
@@ -240,3 +240,6 @@ Write-Host "New preprocessed entries: $newEntries"
 Write-Host "PDF excluded: $pdfExcluded"
 Write-Host "Failed: $failed"
 Write-Host "Final total: $($array.Count)"
+
+
+

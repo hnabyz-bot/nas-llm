@@ -1,4 +1,4 @@
-# scripts/startup-llm-wiki.ps1
+﻿# scripts/startup-llm-wiki.ps1
 # Restore snapshot if needed, then start llm_wiki only when ingest is explicitly approved.
 
 $vaultPath = "D:\vault\llm-wiki-vault"
@@ -60,3 +60,6 @@ if ($running) {
 
 Write-Log "llm_wiki 시작: $appExe" "Green"
 Start-Process $appExe
+
+
+

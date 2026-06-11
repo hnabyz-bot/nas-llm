@@ -1,4 +1,4 @@
-# preprocess-queue.ps1
+﻿# preprocess-queue.ps1
 # Large XLSX/DOCX pending items -> split into small TXT -> re-inject into ingest queue
 # XLSX: per-sheet TXT (preprocess-xlsx.js)
 # DOCX: heading-based section split (.NET XML)
@@ -251,3 +251,6 @@ if ($llmWasRunning) {
 }
 
 Write-Host "Done."
+
+
+
