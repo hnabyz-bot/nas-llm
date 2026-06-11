@@ -8,7 +8,7 @@
 2. NAS/local coverage audit shows no approved-scope NAS files missing from local raw.
 3. Local `raw/sources` contains only the approved 7 folders plus `_preprocessed`.
 4. Every local PDF/MD/TXT/DOCX/XLS/XLSX/PPTX in the approved folders has a manifest result.
-5. Files with `empty` or `error` preprocessing status must remain out of the ingest queue and be listed in `.preprocess-exceptions.csv`.
+5. Files with `excluded` preprocessing status must remain out of the ingest queue and be listed in `.preprocess-exceptions.csv`.
 6. Active queue entries are all under `raw/sources/_preprocessed/<approved-folder>/`.
 7. Every active queue entry points to an existing file.
 8. Queue has `processing = 0`.
@@ -103,3 +103,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scri
 ## Current Exception Rule
 
 The ingest queue may contain only `success` manifest outputs. `empty` and `error` manifest entries require OCR, password removal, source-file repair, or explicit human exclusion before the full gate can pass.
+
+After research and recovery attempts, known non-ingestable failures must be converted to `excluded` with a concrete class:
+
+- `requires_password`: password or decrypted source required.
+- `requires_pdf_repair`: qpdf/Ghostscript/MuPDF repair required.
+- `image_only_office_file` or `image_only_pdf`: OCR pipeline required.
+- `empty_text_file` or `empty_spreadsheet`: no usable text content found.
+- `corrupt_or_mislabeled_office_file`: source replacement or manual conversion required.

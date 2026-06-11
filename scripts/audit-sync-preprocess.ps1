@@ -102,9 +102,11 @@ foreach ($folder in $TargetFolders) {
     $errors = 0
     $stale = 0
     $missingOutput = 0
+    $excluded = 0
     foreach ($file in $localFiles) {
         $state = Test-ManifestSuccess $file $manifest
         if ($state -eq "success") { continue }
+        if ($state -eq "excluded") { $excluded++; continue }
         if ($state -eq "empty") { $empty++ }
         elseif ($state -eq "error") { $errors++ }
         elseif ($state -eq "stale") { $stale++ }
@@ -158,6 +160,7 @@ foreach ($folder in $TargetFolders) {
         ManifestMissing = $missing
         EmptyText = $empty
         Errors = $errors
+        Excluded = $excluded
         Stale = $stale
         MissingOutput = $missingOutput
         PreprocessedTxt = $preFiles.Count

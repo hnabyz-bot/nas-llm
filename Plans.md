@@ -79,7 +79,7 @@ _harness_version: "4.10.0"
 - [x] T041: 전처리 범위 7개 지정 폴더로 제한 및 malformed _preprocessed 큐 16개 분해 복구 `cc:DONE` (2026-06-11)
 - [x] T042: 앱 자동 실행 경로 차단 — Watchdog/Startup/Auth-Check 비활성화, ingest-ready.flag 가드 추가 `cc:DONE` (2026-06-11)
 - [x] T043: 인제스트 시작 게이트와 우선순위 룰 고정 — verify/dedupe/prioritize 스크립트와 운영 규칙 문서 추가 `cc:DONE` (2026-06-11)
-- [ ] T044: 전체 NAS→local→preprocess 커버리지 완료 — 69,885 source docs preprocessed, 210,414 TXT queue entries built; 205 extraction exceptions remain before full gate PASS `cc:WIP` (2026-06-11)
+- [x] T044: 전체 NAS→local→preprocess 커버리지 완료 — 69,903 source docs preprocessed, 187 non-ingestable items classified as excluded, 210,432 TXT queue entries built, full gate PASS `cc:DONE` (2026-06-12)
 
 #### 5-1. 자료 확장
 
@@ -153,5 +153,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-11
-- **Last session owner**: Codex (NAS sync completed via Node fallback, full preprocessing run, queue rebuilt from 210,414 preprocessed TXT entries; 205 extraction exceptions remain)
+- **Last session owner**: Codex (remaining preprocess exceptions researched/classified; full gate PASS with 69,903 success and 187 excluded)
 - **Branch**: main
