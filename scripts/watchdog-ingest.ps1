@@ -4,6 +4,7 @@
 
 $QueuePath   = "D:\vault\llm-wiki-vault\.llm-wiki\ingest-queue.json"
 $StatePath   = "D:\vault\llm-wiki-vault\scripts\watchdog-state.json"
+$PreprocessScript = "D:\vault\llm-wiki-vault\scripts\preprocess-active-originals.ps1"
 $AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
 $StuckMinutes = 60
 
@@ -30,6 +31,13 @@ function Start-AppWithPath {
     $pinfo.CreateNoWindow = $false
     $pinfo.EnvironmentVariables["PATH"] = $env:PATH
     [System.Diagnostics.Process]::Start($pinfo) | Out-Null
+}
+
+function Convert-ActiveOriginals {
+    if (Test-Path $PreprocessScript) {
+        Write-Host ">>> active 원본 큐 전처리 확인"
+        & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $PreprocessScript
+    }
 }
 
 function Kill-StuckItem {
@@ -80,6 +88,8 @@ if (-not $appRunning -and ($counts.pending -gt 0 -or $counts.processing -gt 0)) 
     }
 
     if ($counts.pending -gt 0) {
+        Convert-ActiveOriginals
+        $counts = Get-QueueCounts
         Write-Host ">>> 앱 미실행 감지 (pending=$($counts.pending)): llm-wiki 시작"
         Start-AppWithPath
         Write-Host ">>> llm-wiki 시작 완료"
@@ -122,6 +132,8 @@ if ($progress -ne $lastProgress) {
             }
         } elseif (-not $appRunning -and $counts.pending -gt 0) {
             # 앱이 꺼져 있고 pending 항목이 있으면 재시작
+            Convert-ActiveOriginals
+            $counts = Get-QueueCounts
             Write-Host ">>> 앱 미실행 감지 (pending=$($counts.pending)): llm-wiki 시작"
             Start-AppWithPath
             Write-Host ">>> llm-wiki 시작 완료"
