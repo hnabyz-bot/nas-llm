@@ -22,6 +22,15 @@ $ScriptDir   = Split-Path $MyInvocation.MyCommand.Path
 $XlsxScript  = Join-Path $ScriptDir "preprocess-xlsx.js"
 $ProjectId   = "2da34b71-49aa-4919-a66a-90f1683772f9"
 $AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$TargetFolders = @(
+    "DHF (인허가)",
+    "RA",
+    "Standard(국제)",
+    "연구소 문서등록대장",
+    "타사 메뉴얼",
+    "Project",
+    "Restricted_Backup"
+)
 
 function New-IngestId {
     $ts   = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
@@ -33,6 +42,17 @@ function Get-FolderContext([string]$sourcePath) {
     $rel   = $sourcePath -replace '^raw/sources/', ''
     $parts = ($rel -split '/') | Select-Object -SkipLast 1
     return $parts -join ' > '
+}
+
+function Get-SourceTopFolder([string]$sourcePath) {
+    $rel = $sourcePath -replace '^raw/sources/', ''
+    return ($rel -split '/')[0]
+}
+
+function Test-AllowedOriginalPath([string]$sourcePath) {
+    if ($sourcePath -notmatch '^raw/sources/') { return $false }
+    if ($sourcePath -match '^raw/sources/_preprocessed/') { return $false }
+    return $TargetFolders -contains (Get-SourceTopFolder $sourcePath)
 }
 
 function ConvertTo-DocxSections([string]$docxPath, [string]$outDir) {
@@ -109,9 +129,11 @@ $xlsxBytes = $XlsxThresholdKB * 1024
 $docxBytes = $DocxThresholdKB * 1024
 
 $targets = $queue | Where-Object {
-    $_.status -eq 'pending' -and ($_.sourcePath -match '\.(xlsx|docx)$')
+    $_.status -eq 'pending' -and
+        ($_.sourcePath -match '\.(xlsx|docx)$') -and
+        (Test-AllowedOriginalPath ([string]$_.sourcePath))
 } | ForEach-Object {
-    $full = Join-Path $VaultRoot ($_.sourcePath -replace '/', '\')
+    $full = Join-Path $VaultRoot ([string]$_.sourcePath).Replace('/', '\')
     if (Test-Path $full) {
         $sz   = (Get-Item $full).Length
         $ext  = [System.IO.Path]::GetExtension($full).ToLower()
@@ -170,7 +192,10 @@ foreach ($t in $targets) {
     $newFiles = @()
     if ($t.Ext -eq '.xlsx') {
         $raw = & node $XlsxScript $t.FullPath $outFullDir 2>&1
-        try   { $newFiles = $raw | ConvertFrom-Json }
+        try   {
+            $parsedFiles = $raw | ConvertFrom-Json
+            $newFiles = if ($parsedFiles -is [array]) { $parsedFiles } else { @($parsedFiles) }
+        }
         catch { Write-Host "  WARN xlsx error: $raw"; $totalSkip++; continue }
     } else {
         $newFiles = ConvertTo-DocxSections $t.FullPath $outFullDir
@@ -211,7 +236,7 @@ foreach ($t in $targets) {
 
 Write-Host "New entries: $totalNew / Skipped: $totalSkip"
 
-$newJson = $queueList | ConvertTo-Json -Depth 5
+$newJson = ConvertTo-Json -InputObject ($queueList.ToArray()) -Depth 5
 [System.IO.File]::WriteAllText($QueuePath, $newJson, [System.Text.UTF8Encoding]::new($false))
 Write-Host "Queue saved."
 

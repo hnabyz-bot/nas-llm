@@ -14,6 +14,15 @@ $env:NODE_PATH = "C:\Users\admin\AppData\Roaming\npm\node_modules"
 
 $PreprocRoot = "raw/sources/_preprocessed"
 $XlsxScript = Join-Path (Split-Path $MyInvocation.MyCommand.Path) "preprocess-xlsx.js"
+$TargetFolders = @(
+    "DHF (인허가)",
+    "RA",
+    "Standard(국제)",
+    "연구소 문서등록대장",
+    "타사 메뉴얼",
+    "Project",
+    "Restricted_Backup"
+)
 
 function New-IngestId {
     $ts = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
@@ -30,6 +39,17 @@ function Get-FolderContext([string]$sourcePath) {
     $rel = $sourcePath -replace '^raw/sources/', ''
     $parts = ($rel -split '/') | Select-Object -SkipLast 1
     return $parts -join ' > '
+}
+
+function Get-SourceTopFolder([string]$sourcePath) {
+    $rel = $sourcePath -replace '^raw/sources/', ''
+    return ($rel -split '/')[0]
+}
+
+function Test-AllowedOriginalPath([string]$sourcePath) {
+    if ($sourcePath -notmatch '^raw/sources/') { return $false }
+    if ($sourcePath -match '^raw/sources/_preprocessed/') { return $false }
+    return $TargetFolders -contains (Get-SourceTopFolder $sourcePath)
 }
 
 function New-FailedCopy($item, [string]$message) {
@@ -130,12 +150,19 @@ foreach ($item in $items) {
 
     $targets++
     $relPath = [string]$item.sourcePath
+    $topFolder = Get-SourceTopFolder $relPath
+    if (-not (Test-AllowedOriginalPath $relPath)) {
+        $newList.Add((New-FailedCopy $item "Excluded from preprocessing: source folder is outside the approved sync scope ($topFolder)"))
+        $failed++
+        continue
+    }
+
     $fullPath = Join-Path $VaultRoot ($relPath.Replace('/', '\'))
     $ext = [System.IO.Path]::GetExtension($relPath).ToLowerInvariant()
     $parentRel = ($relPath -replace '^raw/sources/', '' -replace '[^/]+$', '').TrimEnd('/')
     $outRelDir = ("$PreprocRoot/$parentRel").TrimEnd('/')
     $outFullDir = Join-Path $VaultRoot ($outRelDir.Replace('/', '\'))
-    $fallbackRelDir = "$PreprocRoot/_longpath"
+    $fallbackRelDir = "$PreprocRoot/$topFolder/_longpath"
     $fallbackFullDir = Join-Path $VaultRoot ($fallbackRelDir.Replace('/', '\'))
 
     if (-not (Test-Path $outFullDir)) { New-Item -ItemType Directory -Force -Path $outFullDir | Out-Null }
@@ -152,7 +179,8 @@ foreach ($item in $items) {
     try {
         if ($ext -eq '.xlsx') {
             $raw = & node $XlsxScript $fullPath $outFullDir 2>&1
-            $newFiles = @($raw | ConvertFrom-Json)
+            $parsedFiles = $raw | ConvertFrom-Json
+            $newFiles = if ($parsedFiles -is [array]) { $parsedFiles } else { @($parsedFiles) }
         } elseif ($ext -eq '.docx') {
             $newFiles = @(Convert-DocxToTextFiles $fullPath $outFullDir $fallbackFullDir)
         } elseif ($ext -eq '.txt') {
