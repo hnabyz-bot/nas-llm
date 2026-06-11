@@ -15,7 +15,7 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11 live: queue total 1,457 / pending 1,159 / processing 1 / failed 297 / active original 0 / scope violations 0 / missing active files 0)
+- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11 paused: queue total 1,457 / pending 1,159 / processing 0 / failed 298 / active original 0 / scope violations 0 / missing active files 0)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
 
 ---
@@ -77,6 +77,7 @@ _harness_version: "4.10.0"
 - [x] T038: ingest queue 전처리 적용 — active 원본 0개로 정리, 앱 processing 경로 _preprocessed 확인 `cc:DONE` (2026-06-11)
 - [x] T040: active 원본 queue 재발 방지 — preprocess-active-originals.ps1 추가 및 watchdog 시작 전 실행 연결 `cc:DONE` (2026-06-11)
 - [x] T041: 전처리 범위 7개 지정 폴더로 제한 및 malformed _preprocessed 큐 16개 분해 복구 `cc:DONE` (2026-06-11)
+- [x] T042: 앱 자동 실행 경로 차단 — Watchdog/Startup/Auth-Check 비활성화, ingest-ready.flag 가드 추가 `cc:DONE` (2026-06-11)
 
 #### 5-1. 자료 확장
 
@@ -150,5 +151,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-11
-- **Last session owner**: Codex (전처리 범위 7개 지정 폴더 강제, active original 0/scope violations 0/missing active files 0 확인)
+- **Last session owner**: Codex (앱 자동 실행 조사 및 차단: Watchdog/Startup/Auth-Check Disabled, ingest-ready.flag 없음, processing 0)
 - **Branch**: main
