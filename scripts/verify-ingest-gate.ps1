@@ -3,7 +3,8 @@
 
 param(
     [string]$VaultRoot = "D:\vault\llm-wiki-vault",
-    [switch]$RequireAppStopped = $true
+    [switch]$RequireAppStopped = $true,
+    [switch]$SkipCoverageAudit
 )
 
 $ErrorActionPreference = "Stop"
@@ -22,6 +23,8 @@ $QueuePath = Join-Path $VaultRoot ".llm-wiki\ingest-queue.json"
 $ReadyFlag = Join-Path $VaultRoot ".llm-wiki\ingest-ready.flag"
 $RawRoot = Join-Path $VaultRoot "raw\sources"
 $PreprocessedRoot = Join-Path $RawRoot "_preprocessed"
+$ScriptDir = Split-Path $MyInvocation.MyCommand.Path
+$CoverageAudit = Join-Path $ScriptDir "audit-sync-preprocess.ps1"
 
 $failures = [System.Collections.Generic.List[string]]::new()
 
@@ -133,6 +136,17 @@ if (-not (Test-Path $QueuePath)) {
     }
 
     Write-Host "Queue: total=$($queue.Count), pending=$pending, processing=$processing, failed=$failed"
+}
+
+if (-not $SkipCoverageAudit) {
+    if (-not (Test-Path -LiteralPath $CoverageAudit)) {
+        Add-Failure "coverage audit script not found: $CoverageAudit"
+    } else {
+        & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $CoverageAudit -VaultRoot $VaultRoot
+        if ($LASTEXITCODE -ne 0) {
+            Add-Failure "sync/preprocess coverage audit failed"
+        }
+    }
 }
 
 if ($failures.Count -gt 0) {

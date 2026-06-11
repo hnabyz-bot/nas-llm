@@ -7,7 +7,8 @@ param(
     [string]$NasDrive = "Z:\",
     [string]$Destination = "D:\vault\llm-wiki-vault\raw\sources",
     [string[]]$Extensions = @("*.pdf", "*.md", "*.txt", "*.docx", "*.xlsx", "*.xls", "*.pptx"),
-    [switch]$DryRun
+    [switch]$DryRun,
+    [switch]$SummaryOnly
 )
 
 # ── 동기화 대상 폴더 (인허가/RA 업무 범위) ──
@@ -23,7 +24,7 @@ $TargetFolders = @(
 )
 
 # ── NAS 접근 확인 ──
-if (-not (Test-Path $NasDrive)) {
+if (-not (Test-Path -LiteralPath $NasDrive)) {
     Write-Host "NAS 드라이브 접근 불가: $NasDrive" -ForegroundColor Red
     Write-Host "  net use Z: \\10.11.1.40\DR_Dev\공통자료 /persistent:yes" -ForegroundColor Yellow
     exit 1
@@ -43,7 +44,7 @@ $totalError = 0
 foreach ($folder in $TargetFolders) {
     $sourcePath = Join-Path $NasDrive $folder
 
-    if (-not (Test-Path $sourcePath)) {
+    if (-not (Test-Path -LiteralPath $sourcePath)) {
         Write-Host "`n  [WARN] 폴더 없음: $folder" -ForegroundColor Yellow
         continue
     }
@@ -53,20 +54,29 @@ foreach ($folder in $TargetFolders) {
     $folderSkip = 0
 
     foreach ($ext in $Extensions) {
-        $files = Get-ChildItem -Path $sourcePath -Filter $ext -Recurse -File -ErrorAction SilentlyContinue
+        $files = Get-ChildItem -LiteralPath $sourcePath -Filter $ext -Recurse -File -ErrorAction SilentlyContinue
         foreach ($file in $files) {
             # 상대 경로 계산 (NAS 폴더 구조 보존)
             $relativePath = $file.FullName.Substring($NasDrive.Length).TrimStart('\')
             $destFile = Join-Path $Destination $relativePath
             $destDir = Split-Path $destFile -Parent
 
-            if (-not (Test-Path $destFile)) {
+            $destExists = $false
+            try {
+                $destExists = Test-Path -LiteralPath $destFile
+            } catch {
+                Write-Host "  [ERR]  $relativePath — destination path check failed: $($_.Exception.Message)" -ForegroundColor Red
+                $totalError++
+                continue
+            }
+
+            if (-not $destExists) {
                 if (-not $DryRun) {
                     try {
-                        if (-not (Test-Path $destDir)) {
+                        if (-not (Test-Path -LiteralPath $destDir)) {
                             New-Item -ItemType Directory -Path $destDir -Force | Out-Null
                         }
-                        Copy-Item $file.FullName $destFile -ErrorAction Stop
+                        Copy-Item -LiteralPath $file.FullName -Destination $destFile -ErrorAction Stop
                     } catch {
                         Write-Host "  [ERR]  $relativePath — $($_.Exception.Message)" -ForegroundColor Red
                         $totalError++
@@ -74,7 +84,9 @@ foreach ($folder in $TargetFolders) {
                     }
                 }
                 $sizeMB = [math]::Round($file.Length / 1MB, 1)
-                Write-Host "  [NEW]  $relativePath (${sizeMB}MB)" -ForegroundColor Green
+                if (-not $SummaryOnly) {
+                    Write-Host "  [NEW]  $relativePath (${sizeMB}MB)" -ForegroundColor Green
+                }
                 $folderNew++
             } else {
                 $folderSkip++
