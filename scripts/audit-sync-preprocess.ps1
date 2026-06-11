@@ -4,8 +4,7 @@
 param(
     [string]$NasDrive = "Z:\",
     [string]$VaultRoot = "D:\vault\llm-wiki-vault",
-    [switch]$CheckNas,
-    [switch]$AllowUnsupported
+    [switch]$CheckNas
 )
 
 $ErrorActionPreference = "Stop"
@@ -21,47 +20,34 @@ $TargetFolders = @(
 )
 
 $SyncedExtensions = @(".pdf", ".md", ".txt", ".docx", ".xlsx", ".xls", ".pptx")
-$PreprocessableExtensions = @(".docx", ".xlsx", ".txt")
 
 $RawRoot = Join-Path $VaultRoot "raw\sources"
 $PreprocessedRoot = Join-Path $RawRoot "_preprocessed"
+$ManifestPath = Join-Path $PreprocessedRoot ".preprocess-manifest.json"
+$SyncManifestPath = Join-Path $RawRoot ".sync-manifest.json"
 
-function Safe-Name([string]$name, [int]$limit) {
-    $safe = $name -replace '[\\/:*?"<>|]', '_'
-    return $safe.Substring(0, [Math]::Min($limit, $safe.Length))
+function Get-SourcePath([System.IO.FileInfo]$file) {
+    return (($file.FullName.Substring($VaultRoot.Length + 1)) -replace '\\', '/')
 }
 
-function Get-RelativePath([string]$fullPath, [string]$root) {
-    return $fullPath.Substring($root.Length).TrimStart('\')
+function Get-MtimeMs([System.IO.FileInfo]$file) {
+    return [double]$file.LastWriteTimeUtc.Subtract([datetime]'1970-01-01').TotalMilliseconds
 }
 
-function Test-HasPreprocessedOutput([System.IO.FileInfo]$file, [string]$folder) {
-    $folderRoot = Join-Path $RawRoot $folder
-    $relParent = Get-RelativePath $file.DirectoryName $folderRoot
-    $outDir = Join-Path (Join-Path $PreprocessedRoot $folder) $relParent
-    $fallbackDir = Join-Path (Join-Path $PreprocessedRoot $folder) "_longpath"
+function Test-ManifestSuccess([System.IO.FileInfo]$file, $manifest) {
+    $sourcePath = Get-SourcePath $file
+    $entry = $manifest.$sourcePath
+    if (-not $entry) { return "missing" }
+    if ($entry.status -ne "success") { return [string]$entry.status }
+    if ([double]$entry.size -ne [double]$file.Length) { return "stale" }
+    if ([math]::Abs([double]$entry.mtimeMs - (Get-MtimeMs $file)) -gt 2000) { return "stale" }
+    if (-not $entry.outputs -or $entry.outputs.Count -eq 0) { return "missing-output" }
 
-    $ext = $file.Extension.ToLowerInvariant()
-    $base = [System.IO.Path]::GetFileNameWithoutExtension($file.Name)
-    $patterns = @()
-    if ($ext -eq ".xlsx") {
-        $patterns += "$(Safe-Name $base 60)_*.txt"
-    } elseif ($ext -eq ".docx") {
-        $patterns += "$(Safe-Name $base 120)*.txt"
-        $patterns += "$($base -replace '[\\/:*?""<>|]', '_')*.txt"
-    } elseif ($ext -eq ".txt") {
-        $patterns += "$(Safe-Name $file.Name 120)"
+    foreach ($rel in $entry.outputs) {
+        $full = Join-Path $VaultRoot (([string]$rel).Replace('/', '\'))
+        if (-not (Test-Path -LiteralPath $full)) { return "missing-output" }
     }
-
-    foreach ($dir in @($outDir, $fallbackDir)) {
-        if (-not (Test-Path -LiteralPath $dir)) { continue }
-        foreach ($pattern in $patterns) {
-            $match = Get-ChildItem -LiteralPath $dir -Filter $pattern -File -ErrorAction SilentlyContinue |
-                Select-Object -First 1
-            if ($match) { return $true }
-        }
-    }
-    return $false
+    return "success"
 }
 
 $failures = [System.Collections.Generic.List[string]]::new()
@@ -69,6 +55,18 @@ $rows = [System.Collections.Generic.List[object]]::new()
 
 if (-not (Test-Path -LiteralPath $RawRoot)) {
     throw "Raw root not found: $RawRoot"
+}
+
+$manifest = [pscustomobject]@{}
+if (Test-Path -LiteralPath $ManifestPath) {
+    $manifest = [System.IO.File]::ReadAllText($ManifestPath, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+} else {
+    $failures.Add("preprocess manifest not found: $ManifestPath") | Out-Null
+}
+
+$syncManifest = [pscustomobject]@{}
+if (Test-Path -LiteralPath $SyncManifestPath) {
+    $syncManifest = [System.IO.File]::ReadAllText($SyncManifestPath, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 }
 
 $nasAvailable = $false
@@ -88,7 +86,7 @@ foreach ($folder in $TargetFolders) {
     if (Test-Path -LiteralPath $localDir) {
         $localFiles = @(
             Get-ChildItem -LiteralPath $localDir -Recurse -File -ErrorAction SilentlyContinue |
-                Where-Object { $SyncedExtensions -contains $_.Extension.ToLowerInvariant() }
+                Where-Object { ($SyncedExtensions -contains $_.Extension.ToLowerInvariant()) -and (-not $_.Name.StartsWith("~$")) }
         )
     } else {
         $failures.Add("missing local raw folder: $folder") | Out-Null
@@ -99,13 +97,19 @@ foreach ($folder in $TargetFolders) {
         $preFiles = @(Get-ChildItem -LiteralPath $preDir -Recurse -File -Filter *.txt -ErrorAction SilentlyContinue)
     }
 
-    $preprocessable = @($localFiles | Where-Object { $PreprocessableExtensions -contains $_.Extension.ToLowerInvariant() })
-    $unsupported = @($localFiles | Where-Object { $PreprocessableExtensions -notcontains $_.Extension.ToLowerInvariant() })
-    $missingPre = 0
-    foreach ($file in $preprocessable) {
-        if (-not (Test-HasPreprocessedOutput $file $folder)) {
-            $missingPre++
-        }
+    $missing = 0
+    $empty = 0
+    $errors = 0
+    $stale = 0
+    $missingOutput = 0
+    foreach ($file in $localFiles) {
+        $state = Test-ManifestSuccess $file $manifest
+        if ($state -eq "success") { continue }
+        if ($state -eq "empty") { $empty++ }
+        elseif ($state -eq "error") { $errors++ }
+        elseif ($state -eq "stale") { $stale++ }
+        elseif ($state -eq "missing-output") { $missingOutput++ }
+        else { $missing++ }
     }
 
     $nasDocs = $null
@@ -113,12 +117,12 @@ foreach ($folder in $TargetFolders) {
     if ($CheckNas -and $nasAvailable -and (Test-Path -LiteralPath $nasDir)) {
         $nasFiles = @(
             Get-ChildItem -LiteralPath $nasDir -Recurse -File -ErrorAction SilentlyContinue |
-                Where-Object { $SyncedExtensions -contains $_.Extension.ToLowerInvariant() }
+                Where-Object { ($SyncedExtensions -contains $_.Extension.ToLowerInvariant()) -and (-not $_.Name.StartsWith("~$")) }
         )
         $nasDocs = $nasFiles.Count
         $localMissing = 0
         foreach ($file in $nasFiles) {
-            $rel = $file.FullName.Substring($NasDrive.Length).TrimStart('\')
+            $rel = (($file.FullName.Substring($NasDrive.Length).TrimStart('\')) -replace '\\', '/')
             $dest = Join-Path $RawRoot $rel
             $exists = $false
             try {
@@ -126,18 +130,23 @@ foreach ($folder in $TargetFolders) {
             } catch {
                 $exists = $false
             }
+            if (-not $exists) {
+                $syncEntry = $syncManifest.$rel
+                if ($syncEntry -and $syncEntry.localSourcePath) {
+                    $exists = $true
+                }
+            }
             if (-not $exists) { $localMissing++ }
         }
     } elseif ($CheckNas -and $nasAvailable) {
         $failures.Add("missing NAS source folder: $folder") | Out-Null
     }
 
-    if ($missingPre -gt 0) {
-        $failures.Add("$folder has local preprocessable files without verified _preprocessed output: $missingPre") | Out-Null
-    }
-    if ((-not $AllowUnsupported) -and ($unsupported.Count -gt 0)) {
-        $failures.Add("$folder has unsupported local document types without preprocessing path: $($unsupported.Count)") | Out-Null
-    }
+    if ($missing -gt 0) { $failures.Add("$folder has files missing from preprocess manifest: $missing") | Out-Null }
+    if ($empty -gt 0) { $failures.Add("$folder has files with no extractable text: $empty") | Out-Null }
+    if ($errors -gt 0) { $failures.Add("$folder has preprocessing errors: $errors") | Out-Null }
+    if ($stale -gt 0) { $failures.Add("$folder has stale preprocess outputs: $stale") | Out-Null }
+    if ($missingOutput -gt 0) { $failures.Add("$folder has missing preprocess output files: $missingOutput") | Out-Null }
     if ($CheckNas -and $localMissing -and $localMissing -gt 0) {
         $failures.Add("$folder has NAS files not present in local raw: $localMissing") | Out-Null
     }
@@ -146,10 +155,12 @@ foreach ($folder in $TargetFolders) {
         Folder = $folder
         NasDocs = $nasDocs
         LocalDocs = $localFiles.Count
-        Preprocessable = $preprocessable.Count
-        Unsupported = $unsupported.Count
+        ManifestMissing = $missing
+        EmptyText = $empty
+        Errors = $errors
+        Stale = $stale
+        MissingOutput = $missingOutput
         PreprocessedTxt = $preFiles.Count
-        MissingPreprocessed = $missingPre
         NasMissingLocal = $localMissing
     }) | Out-Null
 }

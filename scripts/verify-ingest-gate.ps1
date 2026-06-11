@@ -118,7 +118,7 @@ if (-not (Test-Path $QueuePath)) {
             }
 
             $fullPath = Join-Path $VaultRoot ($path.Replace('/', '\'))
-            if (-not (Test-Path $fullPath)) {
+            if (-not (Test-Path -LiteralPath $fullPath)) {
                 $missingFiles++
             }
         }

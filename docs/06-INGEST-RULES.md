@@ -7,8 +7,8 @@
 1. NAS sync has copied only the approved 7 folders into local `raw/sources`.
 2. NAS/local coverage audit shows no approved-scope NAS files missing from local raw.
 3. Local `raw/sources` contains only the approved 7 folders plus `_preprocessed`.
-4. Every local DOCX/XLSX/TXT in the approved folders has verified `_preprocessed` TXT output.
-5. PDF/MD/XLS/PPTX/DOC files are not ingest-ready until a separate preprocessing path or explicit exclusion decision exists.
+4. Every local PDF/MD/TXT/DOCX/XLS/XLSX/PPTX in the approved folders has a manifest result.
+5. Files with `empty` or `error` preprocessing status must remain out of the ingest queue and be listed in `.preprocess-exceptions.csv`.
 6. Active queue entries are all under `raw/sources/_preprocessed/<approved-folder>/`.
 7. Every active queue entry points to an existing file.
 8. Queue has `processing = 0`.
@@ -45,8 +45,10 @@ Run before any ingest start:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\sync-nas.ps1 -DryRun -SummaryOnly
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\sync-approved-folders.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\audit-sync-preprocess.ps1 -CheckNas
-powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\preprocess-active-originals.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\preprocess-all-docs.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\rebuild-queue-from-preprocessed.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\dedupe-active-queue.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\verify-ingest-gate.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\prioritize-ingest-queue.ps1
@@ -97,3 +99,7 @@ It must not restart `llm-wiki`. After any batch enqueue, run:
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\dedupe-active-queue.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\verify-ingest-gate.ps1
 ```
+
+## Current Exception Rule
+
+The ingest queue may contain only `success` manifest outputs. `empty` and `error` manifest entries require OCR, password removal, source-file repair, or explicit human exclusion before the full gate can pass.

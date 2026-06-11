@@ -15,7 +15,7 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11: app stopped, queue active paths gated, full NAS/local/preprocess coverage NOT complete)
+- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11: queue rebuilt from preprocessed outputs, total 210,414 pending, app stopped)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
 
 ---
@@ -79,7 +79,7 @@ _harness_version: "4.10.0"
 - [x] T041: 전처리 범위 7개 지정 폴더로 제한 및 malformed _preprocessed 큐 16개 분해 복구 `cc:DONE` (2026-06-11)
 - [x] T042: 앱 자동 실행 경로 차단 — Watchdog/Startup/Auth-Check 비활성화, ingest-ready.flag 가드 추가 `cc:DONE` (2026-06-11)
 - [x] T043: 인제스트 시작 게이트와 우선순위 룰 고정 — verify/dedupe/prioritize 스크립트와 운영 규칙 문서 추가 `cc:DONE` (2026-06-11)
-- [ ] T044: 전체 NAS→local→preprocess 커버리지 완료 — NAS 미복사분, 미전처리 DOCX/XLSX/TXT, PDF 등 미지원 문서 처리 정책 완료 전 앱 실행 금지 `cc:WIP` (2026-06-11)
+- [ ] T044: 전체 NAS→local→preprocess 커버리지 완료 — 69,885 source docs preprocessed, 210,414 TXT queue entries built; 205 extraction exceptions remain before full gate PASS `cc:WIP` (2026-06-11)
 
 #### 5-1. 자료 확장
 
@@ -153,5 +153,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-11
-- **Last session owner**: Codex (full NAS/local/preprocess coverage audit added after finding sync and preprocessing are not complete)
+- **Last session owner**: Codex (NAS sync completed via Node fallback, full preprocessing run, queue rebuilt from 210,414 preprocessed TXT entries; 205 extraction exceptions remain)
 - **Branch**: main
