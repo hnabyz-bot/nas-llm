@@ -6,7 +6,7 @@ _harness_version: "4.10.0"
 # Plans.md - Task Tracking
 
 > **Project**: nas-llm
-> **Last updated**: 2026-06-10
+> **Last updated**: 2026-06-11
 > **Updated by**: Claude Code
 
 ---
@@ -15,7 +15,8 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-10 live: raw 68,399 / wiki 3,025 / queue pending 342, processing 1)
+- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11 live: queue total 1,122 / pending 973 / processing 1 / failed-preprocessed 148 / _preprocessed pending 842)
+- [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
 
 ---
 
@@ -72,6 +73,8 @@ _harness_version: "4.10.0"
 - [ ] T034: Issue #9 llm_wiki 로컬 운영 패치 보존 및 재현 절차 문서화 `cc:TODO` depends:T019b
 - [ ] T035: Issue #10 운영 문서·Plans·이슈 불일치 정리 `cc:TODO` depends:T019b
 - [ ] T036: Issue #11 llm_wiki v0.4.16 → upstream 최신 업그레이드 사전 검증 `cc:TODO` depends:T034,T035
+- [x] T037: NAS sync scope 운영 버그 수정 — vault 실행 스크립트를 7개 폴더 제한 버전으로 교체 `cc:DONE` (2026-06-11, GitHub #12)
+- [x] T038: ingest queue 전처리 적용 — 대형 XLSX/DOCX 원본 148개를 _preprocessed TXT 842개로 전환 `cc:DONE` (2026-06-11)
 
 #### 5-1. 자료 확장
 
@@ -83,7 +86,7 @@ _harness_version: "4.10.0"
 
 #### 5-2. 자동화 스케줄 완성
 
-- [ ] T025: auto-commit.ps1 Task Scheduler 등록 — 매일 23:00 `cc:TODO` depends:Phase 4
+- [x] T025: auto-commit.ps1 Task Scheduler 등록 — 매일 23:00 `cc:DONE` (2026-06-11 확인: 2026-06-10 23:00 성공, 다음 2026-06-11 23:00)
 - [ ] T026: health-check.ps1 Task Scheduler 등록 — 매주 일요일 09:00 `cc:TODO` depends:Phase 4
 - [ ] T027: 스케줄 작업 정상 실행 확인 (2일간 로그 검토) `cc:TODO` depends:T025,T026
 
@@ -144,6 +147,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-10
-- **Last session owner**: Codex (운영 우선순위 이슈 #8~#11 등록, #7 live 상태 댓글, Plans.md 작업 추적 갱신)
+- **Updated at**: 2026-06-11
+- **Last session owner**: Codex (크래시 원인 확인: 자기 Codex 프로세스 종료 명령, sync-nas 운영 스크립트 교체, queue 전처리 적용, GitHub #12 생성)
 - **Branch**: main

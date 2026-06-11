@@ -68,6 +68,27 @@ if (Test-Path $StatePath) {
     $stuckSince    = $null
 }
 
+# 앱이 꺼져 있으면 대기 시간과 무관하게 먼저 복구한다.
+# Codex CLI가 실행 중이어도, llm-wiki가 없으면 큐를 소비할 프로세스가 없다.
+$appRunning = [bool](Get-Process -Name "llm-wiki" -ErrorAction SilentlyContinue)
+if (-not $appRunning -and ($counts.pending -gt 0 -or $counts.processing -gt 0)) {
+    if ($counts.processing -gt 0) {
+        Write-Host ">>> 앱 미실행 + processing=$($counts.processing): stale 항목 failed 처리"
+        $n = Kill-StuckItem
+        Write-Host ">>> stale 항목 $n 개 failed 처리 완료"
+        $counts = Get-QueueCounts
+    }
+
+    if ($counts.pending -gt 0) {
+        Write-Host ">>> 앱 미실행 감지 (pending=$($counts.pending)): llm-wiki 시작"
+        Start-AppWithPath
+        Write-Host ">>> llm-wiki 시작 완료"
+    }
+
+    $stuckSince = $null
+    $progress = $counts.pending + $counts.processing + $counts.failed
+}
+
 # 진전 여부 판단
 if ($progress -ne $lastProgress) {
     # 진전 있음 → stuck 해제
