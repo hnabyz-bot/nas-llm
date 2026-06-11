@@ -6,7 +6,7 @@ _harness_version: "4.10.0"
 # Plans.md - Task Tracking
 
 > **Project**: nas-llm
-> **Last updated**: 2026-05-14
+> **Last updated**: 2026-06-10
 > **Updated by**: Claude Code
 
 ---
@@ -15,7 +15,7 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-(none)
+- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-10 live: raw 68,399 / wiki 3,025 / queue pending 342, processing 1)
 
 ---
 
@@ -66,6 +66,12 @@ _harness_version: "4.10.0"
 ### Phase 5: 안정화 및 확장
 
 > depends:Phase 4
+
+#### 5-0. 운영 우선순위 선행 작업
+
+- [ ] T034: Issue #9 llm_wiki 로컬 운영 패치 보존 및 재현 절차 문서화 `cc:TODO` depends:T019b
+- [ ] T035: Issue #10 운영 문서·Plans·이슈 불일치 정리 `cc:TODO` depends:T019b
+- [ ] T036: Issue #11 llm_wiki v0.4.16 → upstream 최신 업그레이드 사전 검증 `cc:TODO` depends:T034,T035
 
 #### 5-1. 자료 확장
 
@@ -138,6 +144,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-09
-- **Last session owner**: Claude Code (watchdog Bug 6+7 수정, batch-enqueue.ps1 작성, DHF+연구소 464건 배치 투입, 문서 갱신)
+- **Updated at**: 2026-06-10
+- **Last session owner**: Codex (운영 우선순위 이슈 #8~#11 등록, #7 live 상태 댓글, Plans.md 작업 추적 갱신)
 - **Branch**: main
