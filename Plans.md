@@ -6,8 +6,8 @@ _harness_version: "4.10.0"
 # Plans.md - Task Tracking
 
 > **Project**: nas-llm
-> **Last updated**: 2026-06-11
-> **Updated by**: Claude Code
+> **Last updated**: 2026-06-12
+> **Updated by**: Codex
 
 ---
 
@@ -80,6 +80,7 @@ _harness_version: "4.10.0"
 - [x] T042: 앱 자동 실행 경로 차단 — Watchdog/Startup/Auth-Check 비활성화, ingest-ready.flag 가드 추가 `cc:DONE` (2026-06-11)
 - [x] T043: 인제스트 시작 게이트와 우선순위 룰 고정 — verify/dedupe/prioritize 스크립트와 운영 규칙 문서 추가 `cc:DONE` (2026-06-11)
 - [x] T044: 전체 NAS→local→preprocess 커버리지 완료 — OCR recovery applied, 69,985 source docs preprocessed, 105 non-ingestable items excluded, 210,514 TXT queue entries built, full gate PASS `cc:DONE` (2026-06-12)
+- [x] T045: 전처리 예외 재시도 금지 룰 문서화 — OCR 적용 범위와 excluded 종료 조건 기록 `cc:DONE` (2026-06-12)
 
 #### 5-1. 자료 확장
 
@@ -152,6 +153,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-11
-- **Last session owner**: Codex (OCR stack installed, image-only exceptions recovered; full gate PASS with 69,985 success and 105 excluded)
+- **Updated at**: 2026-06-12
+- **Last session owner**: Codex (OCR stack installed, image-only exceptions recovered; excluded no-retry rule documented; full gate PASS with 69,985 success and 105 excluded)
 - **Branch**: main

@@ -13,6 +13,14 @@ Current manifest status after OCR recovery:
 - ingest queue: 210,514 `_preprocessed` TXT entries
 - active raw queue paths: 0
 
+Final decision:
+
+- OCR recovery is now part of the preprocessing system.
+- OCR recovered 82 previously non-ingestable image-only documents.
+- The remaining 105 excluded documents are not retry targets under the current source state.
+- They must stay out of ingest until the recorded cause is fixed.
+- The app must not be started by automation unless the full ingest gate passes and `ingest-ready.flag` is intentionally created.
+
 ## Research Findings
 
 OCR for image-only documents is technically possible. Since this machine does not have native `qpdf`, `gswin64c`, `tesseract`, `ocrmypdf`, `mutool`, `winget`, `choco`, or `py` available in PATH, a Node OCR stack was installed instead:
@@ -58,6 +66,16 @@ This prevents repeated failures while preserving an explicit audit trail in:
 
 - `D:\vault\llm-wiki-vault\raw\sources\_preprocessed\.preprocess-exceptions.csv`
 - `D:\vault\llm-wiki-vault\raw\sources\_preprocessed\.preprocess-exceptions.json`
+
+Do not convert `excluded` entries back to pending work just to retry them. Retry is allowed only when the source file or recovery capability changed:
+
+- password/decrypted file supplied for `requires_password`.
+- repaired/replaced file supplied for `requires_pdf_repair`.
+- valid Office source supplied for `corrupt_or_mislabeled_office_file`.
+- source content changed for `empty_text_file`, `empty_spreadsheet`, or `no_images_for_ocr`.
+- OCR/repair tooling was added for an exception class that was not previously recoverable.
+
+If none of those conditions changed, rerunning preprocessing against the same excluded item is an operational error.
 
 ## Future Recovery
 

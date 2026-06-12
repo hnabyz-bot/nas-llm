@@ -111,3 +111,19 @@ After research and recovery attempts, known non-ingestable failures must be conv
 - `image_only_office_file` or `image_only_pdf`: OCR pipeline required.
 - `empty_text_file` or `empty_spreadsheet`: no usable text content found.
 - `corrupt_or_mislabeled_office_file`: source replacement or manual conversion required.
+
+## No-Retry Rule For Excluded Items
+
+`excluded` is a terminal operational state unless the source condition changes. Do not repeatedly retry excluded files, do not place them back into `pending`, and do not enqueue their raw paths.
+
+Allowed reasons to revisit an excluded item:
+
+- password or decrypted source was provided.
+- damaged PDF was repaired or replaced.
+- corrupt or mislabeled Office source was replaced with a valid file.
+- a new OCR/repair tool was installed that directly targets the recorded `exclusionClass`.
+- the source file changed and the sync manifest records a new file state.
+
+OCR must be used only for image-only documents where text extraction failed but images are available. OCR is not a valid recovery path for empty text files, empty spreadsheets, password-protected files, damaged PDFs, or corrupt/mislabeled Office files.
+
+The gate must fail if any excluded item appears in the active ingest queue. The correct queue source is always the manifest `success` outputs under `_preprocessed`.
