@@ -10,7 +10,8 @@ Current manifest status after OCR recovery:
 
 - `success`: 69,985 source documents
 - `excluded`: 105 source documents
-- ingest queue: 210,514 `_preprocessed` TXT entries
+- ingest queue: 69,985 source-level `_preprocessed` combined TXT entries
+- internal preprocessing outputs: 210,514 `_by_source` TXT part files
 - active raw queue paths: 0
 
 Final decision:
@@ -19,6 +20,7 @@ Final decision:
 - OCR recovered 82 previously non-ingestable image-only documents.
 - The remaining 105 excluded documents are not retry targets under the current source state.
 - They must stay out of ingest until the recorded cause is fixed.
+- `_by_source` part files are not the production ingest queue; production ingest uses one `_combined` TXT per successful source document.
 - The app must not be started by automation unless the full ingest gate passes and `ingest-ready.flag` is intentionally created.
 
 ## Research Findings

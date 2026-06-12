@@ -10,10 +10,11 @@
 4. Every local PDF/MD/TXT/DOCX/XLS/XLSX/PPTX in the approved folders has a manifest result.
 5. Files with `excluded` preprocessing status must remain out of the ingest queue and be listed in `.preprocess-exceptions.csv`.
 6. Active queue entries are all under `raw/sources/_preprocessed/<approved-folder>/`.
-7. Every active queue entry points to an existing file.
-8. Queue has `processing = 0`.
-9. `LLM-Wiki-Watchdog`, `LLM-Wiki-Startup`, and `LLM-Wiki-Auth-Check` are disabled during sync/preprocess/priority work.
-10. `ingest-ready.flag` is absent until the operator intentionally approves ingest start.
+7. The default queue is source-level: one active combined TXT entry per successful source document.
+8. Every active queue entry points to an existing file.
+9. Queue has `processing = 0`.
+10. `LLM-Wiki-Watchdog`, `LLM-Wiki-Startup`, and `LLM-Wiki-Auth-Check` are disabled during sync/preprocess/priority work.
+11. `ingest-ready.flag` is absent until the operator intentionally approves ingest start.
 
 Approved folders:
 
@@ -88,6 +89,12 @@ The app may be started only when:
 - `.llm-wiki\ingest-ready.flag` is intentionally created.
 
 If the flag is missing, `watchdog-ingest.ps1` and `startup-llm-wiki.ps1` must refuse to start `llm-wiki`.
+
+## Queue cardinality rule
+
+`rebuild-queue-from-preprocessed.ps1` must use the default source-level combined mode. It creates one `_combined/*.txt` queue item for each manifest entry with `status = success`.
+
+Do not queue every chunk in `_by_source` for normal ingest. `_by_source` outputs are internal preprocessing parts. Queueing them directly inflates the active queue from source-document count to chunk count and causes duplicated ingest work. The `--queue-mode outputs` option is diagnostic only and must not be used for production ingest without explicit approval.
 
 ## Batch enqueue rule
 

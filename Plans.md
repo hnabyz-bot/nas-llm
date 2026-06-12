@@ -15,7 +15,7 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-11: queue rebuilt from preprocessed outputs, total 210,414 pending, app stopped)
+- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-12: source-level combined queue rebuilt, total 69,985 pending, app stopped)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
 
 ---
@@ -79,8 +79,9 @@ _harness_version: "4.10.0"
 - [x] T041: 전처리 범위 7개 지정 폴더로 제한 및 malformed _preprocessed 큐 16개 분해 복구 `cc:DONE` (2026-06-11)
 - [x] T042: 앱 자동 실행 경로 차단 — Watchdog/Startup/Auth-Check 비활성화, ingest-ready.flag 가드 추가 `cc:DONE` (2026-06-11)
 - [x] T043: 인제스트 시작 게이트와 우선순위 룰 고정 — verify/dedupe/prioritize 스크립트와 운영 규칙 문서 추가 `cc:DONE` (2026-06-11)
-- [x] T044: 전체 NAS→local→preprocess 커버리지 완료 — OCR recovery applied, 69,985 source docs preprocessed, 105 non-ingestable items excluded, 210,514 TXT queue entries built, full gate PASS `cc:DONE` (2026-06-12)
+- [x] T044: 전체 NAS→local→preprocess 커버리지 완료 — OCR recovery applied, 69,985 source docs preprocessed, 105 non-ingestable items excluded, source-level combined queue rebuilt `cc:DONE` (2026-06-12)
 - [x] T045: 전처리 예외 재시도 금지 룰 문서화 — OCR 적용 범위와 excluded 종료 조건 기록 `cc:DONE` (2026-06-12)
+- [x] T046: 큐 과증가 오류 수정 — `_by_source` 조각 210,514건 대신 원본문서 단위 `_combined` 69,985건만 production queue로 사용 `cc:DONE` (2026-06-12)
 
 #### 5-1. 자료 확장
 
@@ -154,5 +155,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-12
-- **Last session owner**: Codex (OCR stack installed, image-only exceptions recovered; excluded no-retry rule documented; full gate PASS with 69,985 success and 105 excluded)
+- **Last session owner**: Codex (app autostart blocked; queue cardinality fixed to 69,985 source-level combined entries; gate PASS without coverage audit; 105 excluded remain terminal)
 - **Branch**: main
