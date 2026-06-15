@@ -6,7 +6,7 @@ _harness_version: "4.10.0"
 # Plans.md - Task Tracking
 
 > **Project**: nas-llm
-> **Last updated**: 2026-06-12
+> **Last updated**: 2026-06-15
 > **Updated by**: Codex
 
 ---
@@ -17,6 +17,7 @@ _harness_version: "4.10.0"
 
 - [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-12: source-level combined queue rebuilt, total 69,985 pending, app stopped)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
+- [ ] T047: 2026-06-15 NAS/local coverage FAIL 개선 — RA NAS files missing locally 131건 원인 분석, sync 보강, 전처리/큐 재검증 `cc:WIP`
 
 ---
 
