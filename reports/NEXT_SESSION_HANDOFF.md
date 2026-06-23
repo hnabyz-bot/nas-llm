@@ -109,14 +109,22 @@ Generated: 2026-06-23
   - evidence records: 1,650
   - review flags: 334
   - chunked fallback: 0
+- Ranks 1501-1600 passed:
+  `reports/p0-pilot-eval-p0-r1501-r1600-202606240433`
+  - final outputs: 100/100
+  - validation errors: 0
+  - page-marker leakage: 0
+  - evidence records: 2,036
+  - review flags: 373
+  - chunked fallback: 0
 
 ## Next Resume Point
 
-Prepare and run the next ranks 1501-1600 checkpoint.
+Prepare and run the next ranks 1601-1700 checkpoint.
 
 ```powershell
-$bundle = "reports\p0-pilot-eval-p0-r1501-r1600-$(Get-Date -Format yyyyMMddHHmm)"
-node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1501 --count 100 --out-dir $bundle
+$bundle = "reports\p0-pilot-eval-p0-r1601-r1700-$(Get-Date -Format yyyyMMddHHmm)"
+node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1601 --count 100 --out-dir $bundle
 node scripts/run-p0-pilot-extraction.js --bundle-dir $bundle --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
 ```
 
@@ -141,9 +149,9 @@ Expected QA gate:
 - every output has evidence.
 - review flags are recorded.
 
-## Documentation After 1501-1600 QA
+## Documentation After 1601-1700 QA
 
-Update these after the 1501-1600 checkpoint is complete:
+Update these after the 1601-1700 checkpoint is complete:
 
 - `README.md`
 - `Plans.md`
@@ -151,4 +159,4 @@ Update these after the 1501-1600 checkpoint is complete:
 - `docs/09-P0-PILOT-EVALUATION.md`
 - GitHub issue #17
 
-Then continue with ranks 1601-1700.
+Then continue with ranks 1701-1775.

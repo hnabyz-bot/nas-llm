@@ -915,6 +915,67 @@ Interpretation: the ranks 1401-1500 expansion checkpoint passed the same
 staging QA gate as prior P0 checkpoints. Continue P0 representative extraction
 with the next checkpoint starting at rank 1501.
 
+## P0 Expansion Checkpoint: Ranks 1501-1600
+
+Codex CLI extraction was run for the next 100 P0 representative candidates from
+the full ranked representative set. The app was not started.
+
+Bundle:
+
+- `reports/p0-pilot-eval-p0-r1501-r1600-202606240433`
+- representative rank range: 1501-1600
+- selected representatives: 100
+- estimated input size: 1,641,485 chars/4 tokens
+- product distribution:
+  - HAD/A/F 1417-1717: 69
+  - HnX: 24
+  - ADD/AspenView: 6
+  - CYAN: 1
+- authority distribution:
+  - FDA: 43
+  - general: 29
+  - CE/MDR: 19
+  - MFDS/domestic: 6
+  - overseas: 3
+
+Command pattern:
+
+```powershell
+node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1501 --count 100 --out-dir reports\p0-pilot-eval-p0-r1501-r1600-202606240433
+node scripts/run-p0-pilot-extraction.js --bundle-dir reports\p0-pilot-eval-p0-r1501-r1600-202606240433 --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
+node scripts/summarize-p0-eval.js --bundle-dir reports\p0-pilot-eval-p0-r1501-r1600-202606240433
+```
+
+Result:
+
+- completed outputs: 100
+- JSON parse pass: 100
+- JSON/required-field/source-field validation pass: 100
+- failures after retry: 0
+- chunked fallback passes: 0
+- validation errors after final QA: 0
+- page-marker leakage after final QA: 0
+- outputs missing evidence: 0
+- total extracted evidence records: 2,036
+- average evidence records/source: 20.4
+- minimum evidence records/source: 7
+- total review flags: 373
+- average review flags/source: 3.7
+- recorded runtime: 8,010.2 seconds total, 80.1 seconds/source average
+
+Observed quality:
+
+- all final outputs are parseable JSON and preserve `queueId`, `sourcePath`,
+  and `canonicalGroupId`.
+- no preprocessing page-marker wrappers leaked into final outputs.
+- every output has at least seven evidence records.
+- review flags captured missing or inferred metadata, OCR/text quality issues,
+  and document/source-path ambiguity without blocking extraction.
+
+Interpretation: the ranks 1501-1600 expansion checkpoint passed the same
+staging QA gate as prior P0 checkpoints. Continue P0 representative extraction
+with the next checkpoint starting at rank 1601.
+
 ## Expansion Gate
 
 Run 30 representatives first. Do not expand to 300 until all of these are true:

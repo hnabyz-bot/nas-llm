@@ -287,3 +287,7 @@ P0 meaningful-content triage result:
   JSON/source validation without chunked fallback; final QA found 0 validation
   errors, 0 page-marker leakage items, 1,650 evidence records, and 334 review
   flags
+- P0 expansion checkpoint ranks 1501-1600: 100/100 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 2,036 evidence records, and 373 review
+  flags
