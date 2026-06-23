@@ -117,14 +117,22 @@ Generated: 2026-06-23
   - evidence records: 2,036
   - review flags: 373
   - chunked fallback: 0
+- Ranks 1601-1700 passed:
+  `reports/p0-pilot-eval-p0-r1601-r1700-202606240649`
+  - final outputs: 100/100
+  - validation errors: 0
+  - page-marker leakage: 0
+  - evidence records: 1,725
+  - review flags: 360
+  - chunked fallback: 0
 
 ## Next Resume Point
 
-Prepare and run the next ranks 1601-1700 checkpoint.
+Prepare and run the final ranks 1701-1775 checkpoint.
 
 ```powershell
-$bundle = "reports\p0-pilot-eval-p0-r1601-r1700-$(Get-Date -Format yyyyMMddHHmm)"
-node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1601 --count 100 --out-dir $bundle
+$bundle = "reports\p0-pilot-eval-p0-r1701-r1775-$(Get-Date -Format yyyyMMddHHmm)"
+node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1701 --count 75 --out-dir $bundle
 node scripts/run-p0-pilot-extraction.js --bundle-dir $bundle --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
 ```
 
@@ -149,9 +157,9 @@ Expected QA gate:
 - every output has evidence.
 - review flags are recorded.
 
-## Documentation After 1601-1700 QA
+## Documentation After 1701-1775 QA
 
-Update these after the 1601-1700 checkpoint is complete:
+Update these after the final 1701-1775 checkpoint is complete:
 
 - `README.md`
 - `Plans.md`
@@ -159,4 +167,4 @@ Update these after the 1601-1700 checkpoint is complete:
 - `docs/09-P0-PILOT-EVALUATION.md`
 - GitHub issue #17
 
-Then continue with ranks 1701-1775.
+Then decide whether to open the app ingest path behind a disposition gate.

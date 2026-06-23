@@ -17,7 +17,7 @@ _harness_version: "4.10.0"
 
 - [ ] T019b: Issue #8 continuation ingest queue `cc:WIP` (2026-06-16: source-level combined queue rebuilt, existing cache/wiki analyzed, 506 already-ingested entries pruned, 69,614 pending remain, priority applied, full ingest gate PASS, app stopped, ready flag absent)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
-- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-23: page-marker triage fix applied; P0 full-wiki representatives=1,775, duplicates=6,491, low-text=94, empty/recovery=667; 30-source Codex CLI evaluation passed 30/30; 300-source evaluation passed 300/300 after chunked fallback for 5 large/context-heavy sources; ranks 301-400, 901-1000, and 1301-1400 passed 100/100 with chunked fallback for 1 source each; ranks 401-500, 501-600, 601-700, 701-800, 801-900, 1001-1100, 1101-1200, 1201-1300, 1401-1500, and 1501-1600 passed 100/100 without chunked fallback; app remains stopped)
+- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-23: page-marker triage fix applied; P0 full-wiki representatives=1,775, duplicates=6,491, low-text=94, empty/recovery=667; 30-source Codex CLI evaluation passed 30/30; 300-source evaluation passed 300/300 after chunked fallback for 5 large/context-heavy sources; ranks 301-400, 901-1000, and 1301-1400 passed 100/100 with chunked fallback for 1 source each; ranks 401-500, 501-600, 601-700, 701-800, 801-900, 1001-1100, 1101-1200, 1201-1300, 1401-1500, 1501-1600, and 1601-1700 passed 100/100 without chunked fallback; app remains stopped)
 
 ---
 
@@ -160,5 +160,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-23
-- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; direct 30-source evaluation passed 30/30; 300-source evaluation passed 300/300 final validation after chunked fallback for large/context-heavy sources; ranks 301-400, 901-1000, and 1301-1400 expansion checkpoints passed 100/100 final validation after one chunked fallback each; ranks 401-500, 501-600, 601-700, 701-800, 801-900, 1001-1100, 1101-1200, 1201-1300, 1401-1500, and 1501-1600 passed 100/100 final validation without chunked fallback; app future-ingest compatibility requires a disposition gate before autoIngest)
+- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; direct 30-source evaluation passed 30/30; 300-source evaluation passed 300/300 final validation after chunked fallback for large/context-heavy sources; ranks 301-400, 901-1000, and 1301-1400 expansion checkpoints passed 100/100 final validation after one chunked fallback each; ranks 401-500, 501-600, 601-700, 701-800, 801-900, 1001-1100, 1101-1200, 1201-1300, 1401-1500, 1501-1600, and 1601-1700 passed 100/100 final validation without chunked fallback; app future-ingest compatibility requires a disposition gate before autoIngest)
 - **Branch**: main
