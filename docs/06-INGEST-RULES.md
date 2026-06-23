@@ -79,6 +79,86 @@ Keyword boost applies inside each folder for active regulatory work:
 - `DHF`, `DMR`, `BOM`, `출하검사`, `성능`, `안전`, `검증`, `validation`, `verification`
 - `manual`, `Manual`, `메뉴얼`, `IFU`, `Instructions`
 
+## RA priority classification rule
+
+For the 2026-06-17 continuation ingest, do not treat the active queue as one
+flat set. Run the RA priority classifier and review the report before applying
+any queue reorder:
+
+```powershell
+node D:\agent-work\nas-llm\scripts\classify-ra-ingest-priority.js --scope active --sample-bytes 0
+```
+
+The classifier is dry-run only. It writes reports under `reports/` and does not
+modify `.llm-wiki\ingest-queue.json`.
+
+Priority classes:
+
+1. `P0_ACTIVE_SUBMISSION`: active RA submission, authority response,
+   certification, current package evidence.
+2. `P1_CORE_RA_EVIDENCE`: DHF/DMR, verification/validation, safety, software,
+   cybersecurity, risk, usability, clinical evidence.
+3. `P2_STANDARDS_QMS_TRACEABILITY`: standards, QMS, traceability, certificates,
+   and supporting submission material.
+4. `P3_SUPPORTING_REFERENCE`: predicate, competitor, manual, and general
+   references.
+5. `P4_ARCHIVE_DUPLICATE`: backup, old version, `RA/99_...`,
+   `Restricted_Backup`, copy/archive-like material.
+6. `P5_LOW_VALUE_ARTIFACT`: build artifacts and low-value technical files.
+
+Latest reviewed report:
+
+- `reports/ra-ingest-priority-20260617052118`
+- `docs/08-RA-INGEST-PRIORITY-REVIEW.md`
+- GitHub issue: https://github.com/hnabyz-bot/nas-llm/issues/17
+
+Initial official-quality ingest capacity must go to P0 first. P4/P5 must stay
+out of the first service-quality wave unless a user explicitly requests the
+source or a P0/P1 package directly depends on it.
+
+## Meaningful content disposition rule
+
+Successful preprocessing does not mean every source must receive full LLM wiki
+generation. It means every source must receive an explicit disposition before
+service publication.
+
+Run P0 meaningful-content triage after RA priority classification:
+
+```powershell
+node D:\agent-work\nas-llm\scripts\triage-p0-meaningful-content.js --pilot-size 300
+```
+
+The triage script is dry-run only. It reads `_combined/*.txt` outputs, strips
+preprocessing source/path wrappers, groups sources by normalized body hash, and
+writes reports under `reports/`.
+
+Allowed P0 dispositions:
+
+1. `full_wiki_candidate`: representative source has meaningful text and may go
+   to Codex/Claude CLI fact extraction.
+2. `canonical_duplicate`: source has the same normalized body as a
+   representative and must inherit representative facts while preserving its own
+   source traceability.
+3. `needs_review_low_text`: preprocessed body is too short for reliable full
+   wiki extraction and requires human/OCR/recovery review before official use.
+4. `needs_recovery_empty_text`: preprocessed body is effectively empty and must
+   not enter full wiki ingest until recovered or explicitly excluded.
+
+Do not silently drop a successful preprocessed source. Every P0 source must
+appear in the disposition manifest and later end as a generated source page, a
+canonical duplicate link, a source stub with a concrete reason, or an explicit
+recovery/exclusion record.
+
+Latest reviewed triage:
+
+- `reports/p0-meaningful-triage-20260618153500`
+- P0 sources: 9,027
+- full-wiki representative candidates: 1,775
+- canonical duplicates: 6,491
+- low-text review: 94
+- empty-text recovery: 667
+- first full-wiki pilot: 300 representative sources
+
 ## App start rule
 
 The app may be started only when:
@@ -90,11 +170,49 @@ The app may be started only when:
 
 If the flag is missing, `watchdog-ingest.ps1` and `startup-llm-wiki.ps1` must refuse to start `llm-wiki`.
 
+`startup-llm-wiki.ps1` must start the app with Machine + User `PATH` explicitly injected so the app can find `codex`.
+
+`watchdog-ingest.ps1` must treat only `codex.exe` processes in the `llm-wiki.exe` descendant process tree as active ingest work. On Windows the observed chain is `llm-wiki.exe -> cmd.exe -> node.exe -> codex.exe`; other Codex sessions on the machine must not block stuck-item recovery.
+
+When the app is restarted after an older stuck marker was recorded, the watchdog must not carry that previous run's `stuckSince` into the new ingest session.
+
+If the app start time is newer than the previous watchdog `lastCheckTime`, the watchdog must move `lastCheckTime` forward to that app start time as well. Otherwise the next no-progress calculation can recreate a stale elapsed time from the previous app session.
+
+The watchdog must also recover an app-running idle queue: when `pending > 0`,
+`processing = 0`, and no app-owned Codex process is running for the idle
+threshold, restart `llm-wiki`. This covers the case where one item completes
+and is removed, but the app does not start the next pending item.
+
+The watchdog must also recover stale processing without waiting for the general
+60-minute stuck timeout: when `processing > 0` and no app-owned Codex process is
+running for the short processing/no-Codex threshold, stop `llm-wiki`, reset
+`processing` items back to `pending`, and restart the app. This is an app
+orchestration failure, not a source-document failure, so the item must not be
+marked `failed` by this fast recovery path.
+
 ## Queue cardinality rule
 
 `rebuild-queue-from-preprocessed.ps1` must use the default source-level combined mode. It creates one `_combined/*.txt` queue item for each manifest entry with `status = success`.
 
 Do not queue every chunk in `_by_source` for normal ingest. `_by_source` outputs are internal preprocessing parts. Queueing them directly inflates the active queue from source-document count to chunk count and causes duplicated ingest work. The `--queue-mode outputs` option is diagnostic only and must not be used for production ingest without explicit approval.
+
+## Continuation prune rule
+
+After a full source-level queue rebuild, prune already-ingested entries before starting the app.
+
+Use:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\prune-ingest-queue-from-cache.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\vault\llm-wiki-vault\scripts\prune-ingest-queue-from-cache.ps1 -Apply
+```
+
+The prune step may remove only safe cache hits:
+
+- exact original-source path matches in `ingest-cache.json` whose `filesWritten` still exist.
+- basename cache hits only when that basename is unique in the current queue and `filesWritten` still exist.
+
+Do not automatically remove duplicate-basename hits. Many approved-scope files repeat the same filename in different folders; pruning them by basename can skip distinct source documents.
 
 ## Batch enqueue rule
 

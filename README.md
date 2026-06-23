@@ -197,3 +197,73 @@ codex login --device-auth
 ## 라이선스
 
 내부 사용 전용
+# Current Operating Update - 2026-06-19
+
+The active source-level ingest queue has been reclassified for RA/regulatory
+value before continuing bulk ingest. The queue remains unchanged; the
+classification is a dry-run report used to choose the first official-quality
+ingest wave. Because the source corpus is too large to wait for flat full
+ingest, P0 now has a meaningful-content triage step before LLM full ingest.
+
+- Active queue candidates: 69,549
+- P0 active RA/submission candidates: 9,027
+- P1 core RA evidence candidates: 7,941
+- P2 standards/QMS/traceability candidates: 7,959
+- P4 archive/duplicate candidates: 43,403
+- Latest local report: `reports/ra-ingest-priority-20260617052118`
+- Latest P0 triage report: `reports/p0-meaningful-triage-20260618153500`
+- Latest P0 30-source evaluation bundle: `reports/p0-pilot-eval-20260618153600`
+- Latest P0 300-source evaluation bundle: `reports/p0-pilot-eval-300-20260618173500`
+- Latest P0 expansion checkpoint: `reports/p0-pilot-eval-p0-r901-r1000-202606231431`
+- Review document: `docs/08-RA-INGEST-PRIORITY-REVIEW.md`
+- Evaluation document: `docs/09-P0-PILOT-EVALUATION.md`
+- GitHub tracking issue: https://github.com/hnabyz-bot/nas-llm/issues/17
+
+Decision: P0 must be processed first to secure official wiki quality for the
+most important RA service surface. The current single-lane llm-wiki ingest rate
+is not sufficient for a weeks-scale target, so P0 needs a controlled
+official-quality acceleration plan rather than a flat full-queue ingest.
+
+P0 meaningful-content triage result:
+
+- P0 sources: 9,027
+- Canonical normalized body groups: 1,817
+- Full-wiki representative candidates: 1,775
+- Canonical duplicate sources: 6,491
+- Needs review for low text: 94
+- Needs recovery for empty text: 667
+- First full-wiki pilot: 300 representative sources
+- Expected avoided full LLM calls before pilot: 7,252 (80.3%)
+- First 30-source extraction evaluation: 30/30 Codex CLI outputs passed JSON
+  validation with 0 blocker flags while keeping the app stopped
+- 300-source extraction evaluation: 300/300 final outputs passed JSON/source
+  validation after chunked fallback for 5 large/context-heavy sources; final
+  QA found 0 validation errors, 6,491 evidence records, and 1,113 review flags
+- P0 expansion checkpoint ranks 301-400: 100/100 final outputs passed
+  JSON/source validation after chunked fallback for 1 context-heavy source;
+  final QA found 0 validation errors, 0 page-marker leakage items, 1,958
+  evidence records, and 375 review flags
+- P0 expansion checkpoint ranks 401-500: 100/100 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 2,076 evidence records, and 379 review
+  flags
+- P0 expansion checkpoint ranks 501-600: 100/100 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 2,204 evidence records, and 395 review
+  flags
+- P0 expansion checkpoint ranks 601-700: 100/100 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 2,123 evidence records, and 360 review
+  flags
+- P0 expansion checkpoint ranks 701-800: 100/100 final outputs passed
+  JSON/source validation after one single-row JSON escape retry and without
+  chunked fallback; final QA found 0 validation errors, 0 page-marker leakage
+  items, 1,656 evidence records, and 377 review flags
+- P0 expansion checkpoint ranks 801-900: 100/100 final outputs passed
+  JSON/source validation after two single-row JSON escape retries and without
+  chunked fallback; final QA found 0 validation errors, 0 page-marker leakage
+  items, 1,782 evidence records, and 378 review flags
+- P0 expansion checkpoint ranks 901-1000: 100/100 final outputs passed
+  JSON/source validation with chunked fallback for one large source; final QA
+  found 0 validation errors, 0 page-marker leakage items, 1,990 evidence
+  records, and 381 review flags

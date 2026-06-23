@@ -34,7 +34,7 @@ function Get-ExceptionClass($entry) {
             Action = "Replace source with a valid DOCX/XLSX/PPTX or convert manually."
         }
     }
-    if ($status -eq "empty") {
+    if (($status -eq "empty") -or ($error -match 'No extractable text')) {
         if ($ext -eq ".txt") {
             return [pscustomobject]@{
                 Class = "empty_text_file"

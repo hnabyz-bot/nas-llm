@@ -6,7 +6,7 @@ _harness_version: "4.10.0"
 # Plans.md - Task Tracking
 
 > **Project**: nas-llm
-> **Last updated**: 2026-06-15
+> **Last updated**: 2026-06-23
 > **Updated by**: Codex
 
 ---
@@ -15,9 +15,9 @@ _harness_version: "4.10.0"
 
 <!-- Add tasks with cc:WIP here. -->
 
-- [ ] T019b: Issue #8 현재 인제스트 큐 완료 확인 및 다음 배치 투입 `cc:WIP` (2026-06-12: source-level combined queue rebuilt, total 69,985 pending, app stopped)
+- [ ] T019b: Issue #8 continuation ingest queue `cc:WIP` (2026-06-16: source-level combined queue rebuilt, existing cache/wiki analyzed, 506 already-ingested entries pruned, 69,614 pending remain, priority applied, full ingest gate PASS, app stopped, ready flag absent)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
-- [ ] T047: 2026-06-15 NAS/local coverage FAIL 개선 — RA NAS files missing locally 131건 원인 분석, sync 보강, 전처리/큐 재검증 `cc:WIP`
+- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-23: page-marker triage fix applied; P0 full-wiki representatives=1,775, duplicates=6,491, low-text=94, empty/recovery=667; 30-source Codex CLI evaluation passed 30/30; 300-source evaluation passed 300/300 after chunked fallback for 5 large/context-heavy sources; ranks 301-400 and 901-1000 passed 100/100 with chunked fallback for 1 context-heavy source each; ranks 401-500, 501-600, 601-700, 701-800, and 801-900 passed 100/100 without chunked fallback; app remains stopped)
 
 ---
 
@@ -129,6 +129,10 @@ _harness_version: "4.10.0"
 - [x] T006: Git 설치 + user.name/email 설정 `pm:CONFIRMED` (v2.42.0)
 - [x] T007: nashsu/llm_wiki clone + npm install + tauri build `pm:CONFIRMED` (v0.4.9, C:\dev\llm_wiki)
 
+### Operational recovery (2026-06-16)
+
+- [x] T047: 2026-06-15 NAS/local coverage FAIL recovery `cc:DONE` (reran sync/audit/preprocess, recovered 136 changed/missing documents plus 5 Excel COM recoveries, classified 103 terminal exclusions, rebuilt source-level combined queue to 70,120 pending, applied priority, full verify-ingest-gate PASS)
+
 ---
 
 ## Archive
@@ -155,6 +159,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-12
-- **Last session owner**: Codex (app autostart blocked; queue cardinality fixed to 69,985 source-level combined entries; gate PASS without coverage audit; 105 excluded remain terminal)
+- **Updated at**: 2026-06-23
+- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; direct 30-source evaluation passed 30/30; 300-source evaluation passed 300/300 final validation after chunked fallback for large/context-heavy sources; ranks 301-400 and 901-1000 expansion checkpoints passed 100/100 final validation after one context-window chunked fallback each; ranks 401-500, 501-600, 601-700, 701-800, and 801-900 passed 100/100 final validation without chunked fallback; app future-ingest compatibility requires a disposition gate before autoIngest)
 - **Branch**: main

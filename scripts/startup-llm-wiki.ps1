@@ -8,6 +8,9 @@ $snapshotBak = "$vaultPath\.llm-wiki\file-snapshot.bak"
 $ingestReadyFlag = "$vaultPath\.llm-wiki\ingest-ready.flag"
 $minValidBytes = 1MB
 
+$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" +
+            [System.Environment]::GetEnvironmentVariable("PATH","User")
+
 function Write-Log {
     param([string]$msg, [string]$color = "White")
     $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
@@ -59,7 +62,11 @@ if ($running) {
 }
 
 Write-Log "llm_wiki 시작: $appExe" "Green"
-Start-Process $appExe
-
+$pinfo = New-Object System.Diagnostics.ProcessStartInfo
+$pinfo.FileName = $appExe
+$pinfo.UseShellExecute = $false
+$pinfo.CreateNoWindow = $false
+$pinfo.EnvironmentVariables["PATH"] = $env:PATH
+[System.Diagnostics.Process]::Start($pinfo) | Out-Null
 
 
