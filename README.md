@@ -214,7 +214,7 @@ ingest, P0 now has a meaningful-content triage step before LLM full ingest.
 - Latest P0 triage report: `reports/p0-meaningful-triage-20260618153500`
 - Latest P0 30-source evaluation bundle: `reports/p0-pilot-eval-20260618153600`
 - Latest P0 300-source evaluation bundle: `reports/p0-pilot-eval-300-20260618173500`
-- Latest P0 expansion checkpoint: `reports/p0-pilot-eval-p0-r1101-r1200-202606232014`
+- Latest P0 expansion checkpoint: `reports/p0-pilot-eval-p0-r1201-r1300-202606232211`
 - Review document: `docs/08-RA-INGEST-PRIORITY-REVIEW.md`
 - Evaluation document: `docs/09-P0-PILOT-EVALUATION.md`
 - GitHub tracking issue: https://github.com/hnabyz-bot/nas-llm/issues/17
@@ -274,4 +274,8 @@ P0 meaningful-content triage result:
 - P0 expansion checkpoint ranks 1101-1200: 100/100 final outputs passed
   JSON/source validation without chunked fallback; final QA found 0 validation
   errors, 0 page-marker leakage items, 1,727 evidence records, and 373 review
+  flags
+- P0 expansion checkpoint ranks 1201-1300: 100/100 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 1,978 evidence records, and 393 review
   flags
