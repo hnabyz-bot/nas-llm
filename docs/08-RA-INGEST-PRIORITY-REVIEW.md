@@ -199,6 +199,8 @@ Pilot evaluation bundle:
   `reports/p0-pilot-eval-p0-r801-r900-202606231226`
 - ranks 901-1000 checkpoint bundle:
   `reports/p0-pilot-eval-p0-r901-r1000-202606231431`
+- ranks 1001-1100 checkpoint bundle:
+  `reports/p0-pilot-eval-p0-r1001-r1100-202606231802`
 - evaluation doc: `docs/09-P0-PILOT-EVALUATION.md`
 - 30-source extraction: 30/30 JSON validation pass using Codex CLI
 - 300-source extraction: 300/300 final JSON/source validation pass using Codex
@@ -229,6 +231,9 @@ Pilot evaluation bundle:
 - ranks 901-1000 extraction: 100/100 final JSON/source validation pass using
   Codex CLI plus chunked fallback for one large source; final QA: validation
   errors 0, page-marker leakage 0, evidence records 1,990, review flags 381
+- ranks 1001-1100 extraction: 100/100 final JSON/source validation pass using
+  Codex CLI without chunked fallback; final QA: validation errors 0,
+  page-marker leakage 0, evidence records 1,963, review flags 363
 - current interpretation: continue P0 representative extraction in staging;
   do not start the app bulk ingest path yet
 
