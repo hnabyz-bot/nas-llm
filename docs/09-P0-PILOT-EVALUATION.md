@@ -789,6 +789,71 @@ Interpretation: the ranks 1201-1300 expansion checkpoint passed the same
 staging QA gate as prior P0 checkpoints. Continue P0 representative extraction
 with the next checkpoint starting at rank 1301.
 
+## P0 Expansion Checkpoint: Ranks 1301-1400
+
+Codex CLI extraction was run for the next 100 P0 representative candidates from
+the full ranked representative set. The app was not started.
+
+Bundle:
+
+- `reports/p0-pilot-eval-p0-r1301-r1400-202606240018`
+- representative rank range: 1301-1400
+- selected representatives: 100
+- estimated input size: 983,208 chars/4 tokens
+- product distribution:
+  - HAD/A/F 1417-1717: 52
+  - HnX: 35
+  - CYAN: 10
+  - HnVUE: 3
+- authority distribution:
+  - FDA: 34
+  - MFDS/domestic: 34
+  - CE/MDR: 20
+  - general: 12
+
+Command pattern:
+
+```powershell
+node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1301 --count 100 --out-dir reports\p0-pilot-eval-p0-r1301-r1400-202606240018
+node scripts/run-p0-pilot-extraction.js --bundle-dir reports\p0-pilot-eval-p0-r1301-r1400-202606240018 --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
+node scripts/run-p0-chunked-extraction.js --bundle-dir reports\p0-pilot-eval-p0-r1301-r1400-202606240018 --failed --chunk-chars 180000 --timeout-ms 900000 --run
+node scripts/summarize-p0-eval.js --bundle-dir reports\p0-pilot-eval-p0-r1301-r1400-202606240018
+```
+
+Result:
+
+- completed outputs: 100
+- JSON parse pass: 100
+- JSON/required-field/source-field validation pass: 100
+- failures after retry: 0
+- chunked fallback passes: 1
+- validation errors after final QA: 0
+- page-marker leakage after final QA: 0
+- outputs missing evidence: 0
+- total extracted evidence records: 1,998
+- average evidence records/source: 20.0
+- minimum evidence records/source: 7
+- total review flags: 368
+- average review flags/source: 3.7
+- recorded runtime: 8,472.0 seconds total, 84.7 seconds/source average
+
+Chunked fallback note:
+
+- rank 1335 passed through `scripts/run-p0-chunked-extraction.js`.
+
+Observed quality:
+
+- all final outputs are parseable JSON and preserve `queueId`, `sourcePath`,
+  and `canonicalGroupId`.
+- no preprocessing page-marker wrappers leaked into final outputs.
+- every output has at least seven evidence records.
+- review flags captured missing or inferred metadata, OCR/text quality issues,
+  and document/source-path ambiguity without blocking extraction.
+
+Interpretation: the ranks 1301-1400 expansion checkpoint passed the same
+staging QA gate as prior P0 checkpoints. Continue P0 representative extraction
+with the next checkpoint starting at rank 1401.
+
 ## Expansion Gate
 
 Run 30 representatives first. Do not expand to 300 until all of these are true:
