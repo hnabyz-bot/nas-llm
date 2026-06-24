@@ -1,0 +1,255 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17hc",
+    "sourcePath": "raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/7. A-CLA-HNXR1_Cybersecurity Labeling.pdf",
+    "canonicalGroupId": "ebbb66c026a8"
+  },
+  "document": {
+    "title": "Cybersecurity Labeling",
+    "documentType": "Technical Documentation",
+    "productModels": [
+      "HnX-R1",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW",
+      "HnVUE"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev. No. 0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "DICOM"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity labeling for the HnX-R1 Digital X-ray Imaging System, including device description, cybersecurity controls, logging, SBOM, update process, backup and incident response instructions.",
+    "officialUse": "Supports technical documentation by providing warnings, precautions, notices and cybersecurity labeling information for HnX-R1 software cyber risks.",
+    "keyPoints": [
+      "Scope is limited to the Digital X-ray Imaging System HnX-R1.",
+      "The system includes detector hardware and HnVUE console software for image acquisition and image processing.",
+      "Security measures include Windows Defender, network connection allow list rules, ID/password login controls and restricted software installation.",
+      "Software and firmware updates cannot be performed in the field and require collection by the manufacturer or service center.",
+      "If a cybersecurity threat is detected, users are instructed to disconnect Bluetooth, turn off the device and contact the H&abyz service team."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "Manufacturer",
+      "evidence": "Manufacturer H&abyz Co., Ltd."
+    },
+    {
+      "name": "Digital X-ray Imaging System",
+      "type": "Product",
+      "evidence": "Product name Digital X-ray Imaging System"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "Device model",
+      "evidence": "Model name HnX-R1"
+    },
+    {
+      "name": "HnVUE",
+      "type": "Console software",
+      "evidence": "Console software HnVUE"
+    },
+    {
+      "name": "PACS",
+      "type": "External system",
+      "evidence": "The captured images are sent to the Picture Archiving & Communication System (PACS) server, and can be used for reading images."
+    },
+    {
+      "name": "DICOM",
+      "type": "Medical imaging standard",
+      "evidence": "saved in DICOM file, a standard for medical imaging"
+    },
+    {
+      "name": "Cybersecurity test report EBB-2025-000109",
+      "type": "Referenced report",
+      "evidence": "Refer to Cybersecurity test report (Report no. EBB-2025-000109)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity labeling purpose",
+      "pageTarget": "Cybersecurity Labeling",
+      "evidence": "This is a document that has written warnings, precautions, and notices about software cyber risks."
+    },
+    {
+      "name": "HnX-R1 intended use",
+      "pageTarget": "HnX-R1 Intended Use",
+      "evidence": "HnX-R1 (Digital X-ray Imaging System) is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children."
+    },
+    {
+      "name": "Mammography exclusion",
+      "pageTarget": "HnX-R1 Intended Use",
+      "evidence": "Not to be used for mammography."
+    },
+    {
+      "name": "Cybersecurity risk management",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Management",
+      "evidence": "The cybersecurity risk of the HnX-R1 have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis."
+    },
+    {
+      "name": "Endpoint protection",
+      "pageTarget": "HnX-R1 Endpoint Protection",
+      "evidence": "Anti-malware : window defender"
+    },
+    {
+      "name": "Allow list and deny list",
+      "pageTarget": "HnX-R1 Access Control",
+      "evidence": "Access to the software can be granted by logging in using an ID and password."
+    },
+    {
+      "name": "Communication ports",
+      "pageTarget": "HnX-R1 Communication Ports",
+      "evidence": "In this chapter, all ports of communication are mentioned."
+    },
+    {
+      "name": "Software bill of materials",
+      "pageTarget": "HnX-R1 SBOM",
+      "evidence": "3.6 SBOM"
+    },
+    {
+      "name": "EOL/EOS",
+      "pageTarget": "HnX-R1 EOL EOS",
+      "evidence": "HnVue software does not have a specific EOL/EOS due to the nature of the product."
+    },
+    {
+      "name": "Software and firmware download process",
+      "pageTarget": "HnX-R1 Software Firmware Update Process",
+      "evidence": "Software (firmware) updates cannot be performed in the field and must be performed after the product has been collected from the manufacturer or a service center."
+    },
+    {
+      "name": "Security event response",
+      "pageTarget": "HnX-R1 Cybersecurity Incident Response",
+      "evidence": "If a cybersecurity threat is detected, please disconnect the Bluetooth connection first, turn off the device, and then contact the H&abyz service team."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is Technical Documentation document number A-CLA-HNXR1.",
+      "evidenceText": "Technical Documentation Document No. A-CLA-HNXR1",
+      "pageTarget": "A-CLA-HNXR1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document title is Cybersecurity Labeling.",
+      "evidenceText": "Cybersecurity Labeling",
+      "pageTarget": "Cybersecurity Labeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev. No. 0.",
+      "evidenceText": "Rev. No. 0",
+      "pageTarget": "A-CLA-HNXR1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision date is August 06, 2025.",
+      "evidenceText": "Cybersecurity Labeling Rev. Date August 06, 2025",
+      "pageTarget": "A-CLA-HNXR1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The cybersecurity labeling scope is limited to the Digital X-ray Imaging System HnX-R1.",
+      "evidenceText": "This cybersecurity labeling is limited to the Digital X-ray Imaging System (HnX-R1).",
+      "pageTarget": "Cybersecurity Labeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-R1 is intended for general radiographic diagnosis of human anatomy for adults and children.",
+      "evidenceText": "HnX-R1 (Digital X-ray Imaging System) is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children.",
+      "pageTarget": "HnX-R1 Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-R1 is not to be used for mammography.",
+      "evidenceText": "Not to be used for mammography.",
+      "pageTarget": "HnX-R1 Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The system includes detector, power supply box, battery pack, battery charger, accessories and software for image acquisition and processing, and does not include the X-ray generator.",
+      "evidenceText": "The HnX-R1 wired/wireless digital X-ray imaging system consists of Detector, Power supply box, Battery pack, Battery charger, Other Accessories and software for image acquisition and image processing and does not include the X-ray generator.",
+      "pageTarget": "HnX-R1 System Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "Captured images are saved in DICOM file format and sent to a PACS server.",
+      "evidenceText": "saved in DICOM file, a standard for medical imaging. The captured images are sent to the Picture Archiving & Communication System (PACS) server",
+      "pageTarget": "HnX-R1 Image Data Flow",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz states that HnX-R1 cybersecurity risks have been addressed as part of device risk analysis.",
+      "evidenceText": "The cybersecurity risk of the HnX-R1 have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis.",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Endpoint protection includes Wi-Fi communication reference testing, Windows Defender anti-malware and network connection whitelist firewall rules.",
+      "evidenceText": "Wi-FI communication : Refer to Cybersecurity test report (Report no. EBB-2025-000109) Anti-malware : window defender Firewall / Firewall rules : Network connection white list(ACL)",
+      "pageTarget": "HnX-R1 Endpoint Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software access is granted by logging in with an ID and password.",
+      "evidenceText": "Access to the software can be granted by logging in using an ID and password.",
+      "pageTarget": "HnX-R1 Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized users cannot log in and software installation is limited to authorized persons.",
+      "evidenceText": "Unauthorized users can't login and have limited access to the software. Software installations may only be installed by an authorized person.",
+      "pageTarget": "HnX-R1 Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Logs are updated in real time, saved as hidden .txt files and viewed through a log viewer instead of IDS or SIEM automated analysis software.",
+      "evidenceText": "The logs are updated in real time. The log file is saved in a .txt format and is hidden to prevent access by general users. The log file is utilized through a log viewer instead of automated analysis software IDS , SIEM",
+      "pageTarget": "HnX-R1 Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVue software does not have a specific EOL/EOS; the end date is determined by software change or the 10-year software life cycle.",
+      "evidenceText": "HnVue software does not have a specific EOL/EOS due to the nature of the product. The end date is determined by the software change or the software life cycle (10 years).",
+      "pageTarget": "HnX-R1 EOL EOS",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software and firmware updates cannot be performed in the field.",
+      "evidenceText": "Software (firmware) updates cannot be performed in the field and must be performed after the product has been collected from the manufacturer or a service center.",
+      "pageTarget": "HnX-R1 Software Firmware Update Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "When a cybersecurity threat is detected, users should disconnect Bluetooth, turn off the device and contact H&abyz service.",
+      "evidenceText": "If a cybersecurity threat is detected, please disconnect the Bluetooth connection first, turn off the device, and then contact the H&abyz service team.",
+      "pageTarget": "HnX-R1 Cybersecurity Incident Response",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal CE/MDR is metadata only and was not used as a document fact."
+    },
+    {
+      "severity": "info",
+      "reason": "Some OCR or source formatting issues are present, including broken table rows, misspellings such as 'unkonown' and inconsistent line breaks in SBOM dates."
+    },
+    {
+      "severity": "info",
+      "reason": "Referenced cybersecurity test report EBB-2025-000109 is cited, but its contents are not included in this source text."
+    }
+  ]
+}

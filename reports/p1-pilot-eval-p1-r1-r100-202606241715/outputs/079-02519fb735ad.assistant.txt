@@ -1,0 +1,242 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954392-mf4",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 국내 제조인증/4. 250429 3차 보완/최종 수정본/03 기술문서 심사에 관한 자료 (Rev)/03 제품의 성능 및 안전을 확인하기 위한 자료 (Rev)/04 성능에 관한 자료 (Rev)/2. SW (Rev)/Software Development Plan_Rev.1_(A-TCF-10-143).pdf",
+    "canonicalGroupId": "02519fb735ad"
+  },
+  "document": {
+    "title": "Software Development Plan for G Series Digital Flat Panel X-ray Detector",
+    "documentType": "Software Development Plan",
+    "productModels": [
+      "G Series Digital Flat Panel X-ray Detector"
+    ],
+    "authorityOrJurisdiction": [
+      "MFDS/domestic",
+      "FDA Guide Line"
+    ],
+    "revisionOrVersion": "Rev.0",
+    "documentDate": "Jul/01/2024",
+    "standards": [
+      "EN 62304",
+      "ISO 14971",
+      "EN ISO13485:2016",
+      "EN ISO14971:2019",
+      "EN 62304:2006/AC:2008"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software development plan for the G Series Digital Flat Panel X-ray Detector, including software classification, development process, requirements, risk management, verification and validation, release, configuration management, and problem support.",
+    "officialUse": "Technical documentation supporting software development and verification activities for a medical device software-controlled digital flat panel X-ray detector.",
+    "keyPoints": [
+      "The software development process follows a classic waterfall methodology.",
+      "Software classification is described using FDA levels of concern and EN 62304 software safety classes.",
+      "Functional requirements cover common functions, image acquisition, calibration, preprocessing, firmware update, firmware modules, cybersecurity, and error control.",
+      "Software risk management includes risk evaluation, risk control verification, severity and probability scales, and the EN 62304 assumption of 100 percent probability for hazards arising from software failure.",
+      "Software release requires completed verification, residual abnormal condition assessment, release version documentation, creation procedure documentation, storage, and delivery controls."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "Manufacturer",
+      "evidence": "Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd."
+    },
+    {
+      "name": "G Series Digital Flat Panel X-ray Detector",
+      "type": "Medical device product family",
+      "evidence": "Software Development Plan for G Series Digital Flat Panel X-ray Detector"
+    },
+    {
+      "name": "R&D team",
+      "type": "Internal organization",
+      "evidence": "Prepared R&D team Song, Jinsun Jul/01/2024"
+    },
+    {
+      "name": "Quality Manager",
+      "type": "Internal role",
+      "evidence": "Approval Quality Manager Hur Namkyu Jul/01/2024"
+    },
+    {
+      "name": "MFDS/domestic",
+      "type": "Authority signal",
+      "evidence": "authoritySignal: MFDS/domestic"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "FDA software level of concern",
+      "pageTarget": "FDA software level of concern",
+      "evidence": "S/W is classified into Major, Moderate and Minor by its level of concern"
+    },
+    {
+      "name": "EN 62304 software safety class",
+      "pageTarget": "EN 62304 software safety classification",
+      "evidence": "Software classification in accordance with EN 62304"
+    },
+    {
+      "name": "Software risk management",
+      "pageTarget": "Software risk management",
+      "evidence": "As for the software risk management, personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software."
+    },
+    {
+      "name": "Software verification and validation",
+      "pageTarget": "Software verification and validation",
+      "evidence": "Software verification and validation shall be confirmed through the software test. The software test shall conduct the unit test, integration and system test."
+    },
+    {
+      "name": "Software release",
+      "pageTarget": "Software release",
+      "evidence": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software."
+    },
+    {
+      "name": "Software configuration management",
+      "pageTarget": "Software configuration management",
+      "evidence": "In case the software configuration is changed, it should be validated before it is applied to the software."
+    },
+    {
+      "name": "Cybersecurity for wireless detector software",
+      "pageTarget": "Wireless medical device cybersecurity",
+      "evidence": "Transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is Software Development Plan A-TCF-10-143 Rev.0 for the G Series Digital Flat Panel X-ray Detector.",
+      "evidenceText": "Technical Documentation Document No. A-TCF-10-143 Rev. No. 0 Software Development Plan Rev. Date Jul/01/2024 Page 1 / 22 Software Development Plan for G Series Digital Flat Panel X-ray Detector Report No.: A-TCF-10-143 (Rev.0)",
+      "pageTarget": "Software Development Plan A-TCF-10-143",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision history identifies Rev. 0 dated 2024.07.01 as the initial release.",
+      "evidenceText": "Revision history Rev. Revision date Page The reason & content for establishment and amendment 0 2024.07.01 - Initial Release",
+      "pageTarget": "Software Development Plan A-TCF-10-143",
+      "confidence": "high"
+    },
+    {
+      "claim": "The purpose of the plan is to develop software that manipulates and uses the Digital Flat Panel X-ray Detector product functions according to intended use.",
+      "evidenceText": "To use the Digital Flat Panel X-ray Detector developed, produced and sold by this company according to intention, it aims at developing software that can manipulate and utilize the product function.",
+      "pageTarget": "G Series Digital Flat Panel X-ray Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document classifies software using FDA guideline levels of concern: Major, Moderate, and Minor.",
+      "evidenceText": "S/W is classified into Major, Moderate and Minor by its level of concern",
+      "pageTarget": "FDA software level of concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document describes EN 62304 software safety classes A, B, and C.",
+      "evidenceText": "Class A: There is no injury nor health damage. -. Class B: The possible harm is non-serious injury. -. Class C: The possible harm is death or serious injury.",
+      "pageTarget": "EN 62304 software safety classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Until a software safety class is assigned, Class C requirements apply for each software system.",
+      "evidenceText": "For each software system, until a software safety class is assigned, Class C requirements applied.",
+      "pageTarget": "EN 62304 software safety classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development process follows classic waterfall methodology.",
+      "evidenceText": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\", as illustrated in the following chart.",
+      "pageTarget": "Software development lifecycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development schedule includes analysis, planning, design, implementation, qualification, maintenance, software release, and development plan update stages from 2024.07.01 to 2024.11.25.",
+      "evidenceText": "Analysis 2024.07.01~2024.07.15 Planning 2024.07.16~2024.07.31 Design 2024.08.01~2024.08.31 Implementation 2024.09.01~2024.10.15 Qualification 2024.10.16~2024.10.31 Maintenance 2024.11.01~2024.11.14 Software release 2024.11.15~2024.11.22 Development plan updated 2024.11.23~2024.11.25",
+      "pageTarget": "Software development lifecycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software development hardware resources include a 32-bit microprocessor and Intel Cyclone V MCU model.",
+      "evidenceText": "Hardware resources Section Resource MCU Function 32Bit Microprocessor MCU Model Intel Cyclone V",
+      "pageTarget": "G Series Digital Flat Panel X-ray Detector software environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software development resources include Windows 11 64bit, Microsoft Visual Studio 2022 Professional, aarch64-poky-linux-gcc, and C#.",
+      "evidenceText": "Operation system Windows 11 64bit Compiler Microsoft Visual Studio 2022 Professional / aarch64-poky-linux-gcc / C# Debugging tool Microsoft Visual Studio 2022 Professional Editor tool Microsoft Visual Studio 2022 Professional",
+      "pageTarget": "G Series Digital Flat Panel X-ray Detector software environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software functional requirements include common functions, image acquisition, calibration, preprocessing, firmware update, firmware functions, cybersecurity, and error control.",
+      "evidenceText": "Function by each module and essential factor that each function must equip in software are as below: 1) Software function ① Common functions Module ... ② Image acquisition Module ... ③ Calibration Module ... ④ Pre-Processing Module ... ⑤ Firmware Update Module ... 2) Firmware function ... 3) Cyber Security ... 4) Error control",
+      "pageTarget": "G Series Digital Flat Panel X-ray Detector software requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity requirements include wireless network ID/password access control and encryption such as WPA, WPAPSK, WPA2, WPA2PSK, and WPAPSK+TKIP.",
+      "evidenceText": "Random access should be limited by setting ID and password when accessing the wireless network. Transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Wireless medical device cybersecurity",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk management requires participants in development to decide and analyze potential risk, reason, probability, and severity of the software.",
+      "evidenceText": "As for the software risk management, personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software.",
+      "pageTarget": "Software risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "If risk remains in the non-acceptable zone after risk reduction or removal measures, design work must stop.",
+      "evidenceText": "If the risk still remains on the non-acceptable zone even after taking measures to reduce or remove the risk, stop the design work.",
+      "pageTarget": "Software risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "For hazards arising from failure of the software system to behave as specified, probability of failure is assumed to be 100 percent under EN 62304:2006/AC:2008 clause 4.3 a).",
+      "evidenceText": "If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the probability of such failure shall be assumed to be 100 percent [∵EN 62304:2006/AC:2008, Cl. 4.3 a)].",
+      "pageTarget": "EN 62304 software risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software verification and validation are confirmed through software testing, including unit test, integration test, and system test.",
+      "evidenceText": "Software verification and validation shall be confirmed through the software test. The software test shall conduct the unit test, integration and system test.",
+      "pageTarget": "Software verification and validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Before software release, verification must be completed and results evaluated.",
+      "evidenceText": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software.",
+      "pageTarget": "Software release",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software release documentation must include the deployed software version and procedures and environment used to create the deployed software.",
+      "evidenceText": "The version of the software product being deployed should be documented. The procedures and environment used to create the deployed software should be documented.",
+      "pageTarget": "Software release",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration changes must be validated before application to the software.",
+      "evidenceText": "In case the software configuration is changed, it should be validated before it is applied to the software.",
+      "pageTarget": "Software configuration management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software issues must be recorded and applicable corrective measures conducted.",
+      "evidenceText": "Any issues identified with the software shall be recorded and applicable corrective measures shall be conducted.",
+      "pageTarget": "Software problem resolution",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The source metadata authoritySignal is MFDS/domestic, but the document text does not explicitly mention MFDS; it references FDA guideline and EN/ISO standards."
+    },
+    {
+      "severity": "info",
+      "reason": "The file path suggests Rev.1, but the document body states Rev. No. 0 and Report No. A-TCF-10-143 (Rev.0)."
+    },
+    {
+      "severity": "info",
+      "reason": "Specific product model names such as G1417MCW appear only in the source path, while the document body identifies the product as G Series Digital Flat Panel X-ray Detector."
+    },
+    {
+      "severity": "info",
+      "reason": "No low OCR quality indicators were observed in the provided text."
+    }
+  ]
+}

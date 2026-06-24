@@ -299,8 +299,12 @@ Latest P1 extraction bundle:
 - total available P1 representatives: 2,275
 - total normalized chars: 7,114,530
 - estimated tokens chars/4: 1,778,633
-- output status: extraction not started at this checkpoint
+- output status: PASS
+- extraction run: direct Codex extraction for 98 rows, chunked fallback for 2
+  context-window rows
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- chunked pass rows: rank 9 and rank 34
 
-Next step: run direct CLI extraction for P1 ranks 1-100 with the same schema and
-QA gate used for P0, then summarize and commit/push the checkpoint before
-continuing to the next P1 rank range.
+Next step: commit/push the P1 ranks 1-100 extraction checkpoint, then continue
+with the next P1 representative rank range.

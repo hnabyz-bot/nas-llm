@@ -1,0 +1,376 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19k2",
+    "sourcePath": "raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/05_설계개발 검증 및 유효성 확인/07_Software Validation/IEC 62304-1 기반.docx",
+    "canonicalGroupId": "52b20a4246db"
+  },
+  "document": {
+    "title": "Attachment - Software – IEC 62304:2006+AMD1:2015",
+    "documentType": "Software validation checklist / IEC 62304 evidence mapping",
+    "productModels": [
+      "A1417MCW",
+      "A1717MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "IEC 62304:2006+AMD1:2015",
+      "IEC 60601-1 ed. 3.1",
+      "ISO 14971"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Checklist attachment mapping medical device software lifecycle, risk management, configuration management, and problem resolution evidence to IEC 62304:2006+AMD1:2015 clauses.",
+    "officialUse": "Supports software validation and regulatory evidence review by identifying required IEC 62304 deliverables, manufacturer responsibilities, and gaps in referenced software development documentation.",
+    "keyPoints": [
+      "Software safety classes A, B, and C are assigned according to risk of harm from hazardous situations to which the software system can contribute.",
+      "The software development plan should address lifecycle model, development processes, deliverables, traceability, configuration management, change management, and problem resolution.",
+      "Software requirements should include functional, interface, alarm, security, user interface, data, installation, maintenance, IT-network, user maintenance, and regulatory requirements as appropriate.",
+      "Risk management activities include identifying software items contributing to hazardous situations, potential causes, risk control measures, verification, traceability, and analysis of software changes.",
+      "Required evidence mapping lists deliverables such as software development plan, requirements specification, architecture design, test records, release records, SOUP anomaly lists, change control records, and problem resolution records."
+    ]
+  },
+  "entities": [
+    {
+      "name": "A1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/..."
+    },
+    {
+      "name": "A1717MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/..."
+    },
+    {
+      "name": "F1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/..."
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "authoritySignal: FDA"
+    },
+    {
+      "name": "IEC 62304:2006+AMD1:2015",
+      "type": "standard",
+      "evidence": "Attachment - Software – IEC 62304:2006+AMD1:2015"
+    },
+    {
+      "name": "IEC 60601-1 ed. 3.1",
+      "type": "standard",
+      "evidence": "IEC 60601-1 ed. 3.1, H.2 참고바랍니다."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "The manufacturer identifies software items that could contribute to a hazardous situation identified in the medical device risk analysis activity of ISO 14971"
+    },
+    {
+      "name": "SOUP",
+      "type": "software concept",
+      "evidence": "software configuration and change management, including soup configuration items and software used to support development"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software safety classification",
+      "pageTarget": "IEC 62304 Software Safety Classification",
+      "evidence": "[A, B, C] Software safety classification"
+    },
+    {
+      "name": "Software safety class A",
+      "pageTarget": "IEC 62304 Software Safety Class A",
+      "evidence": "The software system is software safety class A if: – the software system not contribute to a hazardous situation; or – the software system contribute to a hazardous situation which does not result in unacceptable risk after consideration of risk control measures external to the software system"
+    },
+    {
+      "name": "Software safety class B",
+      "pageTarget": "IEC 62304 Software Safety Class B",
+      "evidence": "The software system is software safety class B if: – the software system contribute to a hazardous situation which results in unacceptable risk after consideration of risk control measures external to the software system and the resulting possible harm is non-serious injury"
+    },
+    {
+      "name": "Software safety class C",
+      "pageTarget": "IEC 62304 Software Safety Class C",
+      "evidence": "The software system is software safety class C if: – the software system contribute to a hazardous situation which results in unacceptable risk after consideration of risk control measures external to the software system and the resulting possible harm is death or serious injury"
+    },
+    {
+      "name": "Legacy software",
+      "pageTarget": "IEC 62304 Legacy Software",
+      "evidence": "[A, B, C] Legacy software"
+    },
+    {
+      "name": "Software development process",
+      "pageTarget": "IEC 62304 Software Development Process",
+      "evidence": "5 SOFTWARE DEVELOPMENT PROCESS"
+    },
+    {
+      "name": "Software development planning",
+      "pageTarget": "IEC 62304 Software Development Planning",
+      "evidence": "The manufacturer establishes a software development plan (or plans) for conducting the activities of the software development process appropriate to the scope, magnitude, and software safety classifications of the software system to be developed."
+    },
+    {
+      "name": "Software requirements analysis",
+      "pageTarget": "IEC 62304 Software Requirements Analysis",
+      "evidence": "For each software system of the medical device, the manufacturer defines and documents software system requirements from the system level requirements"
+    },
+    {
+      "name": "Software architectural design",
+      "pageTarget": "IEC 62304 Software Architectural Design",
+      "evidence": "The manufacturer transforms the requirements for the medical device software into a documented architecture that describes the software’s structure and identifies the software items"
+    },
+    {
+      "name": "Software detailed design",
+      "pageTarget": "IEC 62304 Software Detailed Design",
+      "evidence": "The manufacturer subdivides the software until it is represented by software units"
+    },
+    {
+      "name": "Software unit implementation",
+      "pageTarget": "IEC 62304 Software Unit Implementation",
+      "evidence": "The manufacturer implements each software unit"
+    },
+    {
+      "name": "Software integration and integration testing",
+      "pageTarget": "IEC 62304 Software Integration and Integration Testing",
+      "evidence": "The manufacturer integrates the software units in accordance with the integration plan"
+    },
+    {
+      "name": "Software system testing",
+      "pageTarget": "IEC 62304 Software System Testing",
+      "evidence": "The manufacturer establishes and performs a set of tests, expressed as input stimuli, expected outcomes, pass/fail criteria and procedures, for conducting software system testing, such that all software requirements are covered"
+    },
+    {
+      "name": "Software release",
+      "pageTarget": "IEC 62304 Software Release",
+      "evidence": "Software release for utilization at a system level"
+    },
+    {
+      "name": "Software risk management process",
+      "pageTarget": "IEC 62304 Software Risk Management Process",
+      "evidence": "7 SOFTWARE RISK MANAGEMENT PROCESS"
+    },
+    {
+      "name": "Risk control measures",
+      "pageTarget": "IEC 62304 Risk Control Measures",
+      "evidence": "For each case documented in the risk management file where a software item could contribute to a hazardous situation, the manufacturer defines and documents risk control measures in accordance with ISO 14971"
+    },
+    {
+      "name": "Software configuration management process",
+      "pageTarget": "IEC 62304 Software Configuration Management Process",
+      "evidence": "8 SOFTWARE CONFIGURATION MANAGEMENT PROCESS"
+    },
+    {
+      "name": "Software problem resolution process",
+      "pageTarget": "IEC 62304 Software Problem Resolution Process",
+      "evidence": "9 SOFTWARE PROBLEM RESOLUTION PROCESS"
+    },
+    {
+      "name": "SOUP configuration item",
+      "pageTarget": "IEC 62304 SOUP Configuration Item",
+      "evidence": "For each soup configuration item being used, including standard libraries, the manufacturer documents: a) the title b) the manufacturer c) the unique soup designator"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is an IEC 62304:2006+AMD1:2015 software attachment.",
+      "evidenceText": "Attachment - Software – IEC 62304:2006+AMD1:2015",
+      "pageTarget": "IEC 62304 Software Evidence Mapping",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source file path identifies product models A1417MCW, A1717MCW, and F1417MCW.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/05_설계개발 검증 및 유효성 확인/07_Software Validation/IEC 62304-1 기반.docx",
+      "pageTarget": "A1417MCW A1717MCW F1417MCW Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The supplied authority signal is FDA.",
+      "evidenceText": "authoritySignal: FDA",
+      "pageTarget": "FDA Software Validation",
+      "confidence": "medium"
+    },
+    {
+      "claim": "IEC 62304 software safety classification assigns each software system a class according to risk of harm from a hazardous situation to which the software can contribute in a worst-case scenario.",
+      "evidenceText": "The manufacturer assigns to each software system a software safety class according to the risk of harm to the patient, operator, or other people resulting from a hazardous situation to which the software system can contribute in a worst-case-scenario",
+      "pageTarget": "IEC 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety class A applies when the software system does not contribute to a hazardous situation or does not result in unacceptable risk after external risk control measures.",
+      "evidenceText": "The software system is software safety class A if: – the software system not contribute to a hazardous situation; or – the software system contribute to a hazardous situation which does not result in unacceptable risk after consideration of risk control measures external to the software system",
+      "pageTarget": "IEC 62304 Software Safety Class A",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety class B applies when the software contributes to an unacceptable risk and the possible harm is non-serious injury.",
+      "evidenceText": "The software system is software safety class B if: – the software system contribute to a hazardous situation which results in unacceptable risk after consideration of risk control measures external to the software system and the resulting possible harm is non-serious injury",
+      "pageTarget": "IEC 62304 Software Safety Class B",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety class C applies when the software contributes to an unacceptable risk and the possible harm is death or serious injury.",
+      "evidenceText": "The software system is software safety class C if: – the software system contribute to a hazardous situation which results in unacceptable risk after consideration of risk control measures external to the software system and the resulting possible harm is death or serious injury",
+      "pageTarget": "IEC 62304 Software Safety Class C",
+      "confidence": "high"
+    },
+    {
+      "claim": "The assigned software safety class must be documented in the risk management file.",
+      "evidenceText": "The manufacturer documents the software safety class assigned to each software system in the risk management file",
+      "pageTarget": "IEC 62304 Risk Management File",
+      "confidence": "high"
+    },
+    {
+      "claim": "Class C requirements apply until a software safety class is assigned.",
+      "evidenceText": "Class C requirements apply for each software system, until a software safety class is assigned",
+      "pageTarget": "IEC 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Legacy software compliance may be demonstrated through clauses 5 through 9 or alternatively through clauses 4.4.2 through 4.4.5.",
+      "evidenceText": "Clauses 5 through 9 have applied to demonstrate the compliance of legacy software ... As alternative, clauses 4.4.2 through 4.4.5 have applied to demonstrate the compliance of legacy software",
+      "pageTarget": "IEC 62304 Legacy Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development plan should cover development activities appropriate to the scope, magnitude, and software safety classifications of the software system.",
+      "evidenceText": "The manufacturer establishes a software development plan (or plans) for conducting the activities of the software development process appropriate to the scope, magnitude, and software safety classifications of the software system to be developed.",
+      "pageTarget": "IEC 62304 Software Development Planning",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development plan should address traceability between system requirements, software requirements, software system test, and software risk control measures.",
+      "evidenceText": "traceability between system requirements, software requirements, software system test, and risk control measures implemented in software",
+      "pageTarget": "IEC 62304 Traceability",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development plan should include or reference software risk management activities, including SOUP-related risks.",
+      "evidenceText": "In the software development plan the manufacturer includes or references a plan to conduct the activities and tasks of the software risk management process, including the management of risks relating to soup",
+      "pageTarget": "IEC 62304 Software Risk Management Planning",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software requirements should be defined and documented from system-level requirements for each software system of the medical device.",
+      "evidenceText": "For each software system of the medical device, the manufacturer defines and documents software system requirements from the system level requirements",
+      "pageTarget": "IEC 62304 Software Requirements Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software requirements may include functional requirements, inputs and outputs, interfaces, alarms, security, user interface, data, installation, maintenance, IT-network, user maintenance, and regulatory requirements.",
+      "evidenceText": "As appropriate to the medical device software, the manufacturer includes in the software requirements: a) functional and capability requirements ... l) regulatory requirements",
+      "pageTarget": "IEC 62304 Software Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "For class B and C software, risk control measures implemented in software should be included in the requirements as appropriate.",
+      "evidenceText": "[B, C] The manufacturer includes risk control measures implemented in software in the requirements as appropriate to the medical device software",
+      "pageTarget": "IEC 62304 Risk Control Measures In Software Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "For class B and C software, software architecture should document the structure and identify software items.",
+      "evidenceText": "[B, C] The manufacturer transforms the requirements for the medical device software into a documented architecture that describes the software’s structure and identifies the software items",
+      "pageTarget": "IEC 62304 Software Architectural Design",
+      "confidence": "high"
+    },
+    {
+      "claim": "For class B and C software, software units should be integrated according to the integration plan and integration testing records should be documented.",
+      "evidenceText": "The manufacturer integrates the software units in accordance with the integration plan ... The manufacturer tests the integrated software items in accordance with the integration plan and documents the results",
+      "pageTarget": "IEC 62304 Software Integration And Integration Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software system testing should cover all software requirements using input stimuli, expected outcomes, pass/fail criteria, and procedures.",
+      "evidenceText": "The manufacturer establishes and performs a set of tests, expressed as input stimuli, expected outcomes, pass/fail criteria and procedures, for conducting software system testing, such that all software requirements are covered",
+      "pageTarget": "IEC 62304 Software System Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Before software release, all verification activities should be completed and results evaluated.",
+      "evidenceText": "The manufacturer ensures that all software verification activities has been completed and the results evaluated before the software is released",
+      "pageTarget": "IEC 62304 Software Release",
+      "confidence": "high"
+    },
+    {
+      "claim": "Known residual anomalies should be documented, and for class B and C software they should be evaluated to ensure they do not contribute to unacceptable risk.",
+      "evidenceText": "The manufacturer documents all known residual anomalies ... [B, C] The manufacturer ensured that all known residual anomalies have been evaluated to ensure that they do not contribute to an unacceptable risk",
+      "pageTarget": "IEC 62304 Residual Anomalies",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software risk management requires identifying software items that could contribute to hazardous situations identified in ISO 14971 medical device risk analysis.",
+      "evidenceText": "The manufacturer identifies software items that could contribute to a hazardous situation identified in the medical device risk analysis activity of ISO 14971",
+      "pageTarget": "IEC 62304 Software Risk Management Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk control measures for software items contributing to hazardous situations should be defined and documented according to ISO 14971.",
+      "evidenceText": "For each case documented in the risk management file where a software item could contribute to a hazardous situation, the manufacturer defines and documents risk control measures in accordance with ISO 14971",
+      "pageTarget": "IEC 62304 Risk Control Measures",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software hazard traceability should link hazardous situation, software item, software cause, risk control measure, and verification of the risk control measure.",
+      "evidenceText": "The manufacturer documents traceability of software hazards as appropriate: a) from the hazardous situation to the software item b) from the software item to the specific software cause c) from the software cause to the risk control measure d) from the risk control measure to the verification of the risk control measure",
+      "pageTarget": "IEC 62304 Software Hazard Traceability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Configuration identification requires unique identification of configuration items and their versions according to development and configuration planning.",
+      "evidenceText": "The manufacturer establishes a scheme for the unique identification of configuration items and their versions to be controlled according to the development and configuration planning specified in 5.1",
+      "pageTarget": "IEC 62304 Configuration Identification",
+      "confidence": "high"
+    },
+    {
+      "claim": "For each SOUP configuration item, the title, manufacturer, and unique SOUP designator should be documented.",
+      "evidenceText": "For each soup configuration item being used, including standard libraries, the manufacturer documents: a) the title b) the manufacturer c) the unique soup designator",
+      "pageTarget": "IEC 62304 SOUP Configuration Item",
+      "confidence": "high"
+    },
+    {
+      "claim": "Change control permits changing controlled configuration items only in response to an approved change request.",
+      "evidenceText": "The manufacturer changes configuration items identified to be controlled according to 8.1 only in response to an approved change request",
+      "pageTarget": "IEC 62304 Change Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software problem resolution process requires a problem report for each problem detected in medical device software.",
+      "evidenceText": "The manufacturer prepares a problem report for each problem detected in the medical device software",
+      "pageTarget": "IEC 62304 Software Problem Resolution Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Problem report records and resolutions, including verification, should be maintained and the risk management file updated as appropriate.",
+      "evidenceText": "The manufacturer maintains records of problem reports and their resolution including their verification ... The manufacturer updates the risk management file as appropriate",
+      "pageTarget": "IEC 62304 Problem Resolution Records",
+      "confidence": "high"
+    },
+    {
+      "claim": "The attachment maps IEC 62304 clauses to required evidence and manufacturer documents.",
+      "evidenceText": "Attachment Software - Mapping of required evidence and manufacturer documents Standard Clause Deliverables Title Revision # Date",
+      "pageTarget": "IEC 62304 Required Evidence Mapping",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document revision number is not populated; the attachment includes a mapping table with Revision # column but no values."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: metadata supplies authoritySignal FDA, but the source text itself is an IEC 62304 checklist and does not identify FDA as issuing authority."
+    },
+    {
+      "severity": "info",
+      "reason": "Several checklist items contain Korean reviewer comments indicating missing or incomplete evidence in manufacturer documents."
+    }
+  ]
+}

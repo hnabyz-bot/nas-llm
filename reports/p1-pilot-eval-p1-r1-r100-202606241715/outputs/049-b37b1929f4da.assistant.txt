@@ -1,0 +1,315 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17dl",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/05_설계개발 검증 및 유효성 확인/07_Software Validation/4.2 [HnVUE] Software Development Plan (A-SDP-HNV).docx",
+    "canonicalGroupId": "b37b1929f4da"
+  },
+  "document": {
+    "title": "Software Development Plan for HnVUE",
+    "documentType": "Software Development Plan",
+    "productModels": [
+      "HnX-R1"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "HIPAA"
+    ],
+    "revisionOrVersion": "A-SDP-HNV (Rev.0)",
+    "documentDate": "July 02, 2024",
+    "standards": [
+      "DICOM",
+      "EN 62304",
+      "EN 62304:2006/AC:2008",
+      "EN ISO13485:2016",
+      "EN ISO14971:2019",
+      "ISO 14971"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software development plan for HnVUE console software for the Digital Flat Panel X-ray Detector model HnX-R1.",
+    "officialUse": "Defines planned software development lifecycle activities, classification approach, development environment, requirements, risk management, verification and validation, release, configuration management, and problem settlement for HnVUE.",
+    "keyPoints": [
+      "The document identifies HnVUE as console software for a Digital Flat Panel X-ray Detector with model name HnX-R1.",
+      "The report number is A-SDP-HNV (Rev.0), with initial release dated July 02, 2024.",
+      "Software classification is described using FDA level of concern categories Major, Moderate, and Minor.",
+      "Software safety classification is described according to EN 62304 with Class A, Class B, and Class C definitions.",
+      "The development process follows a classic waterfall methodology with stages from analysis through software release and development plan update.",
+      "The plan lists software resources including Windows 10 64bit, .NET Framework 4.8, .NET Framework 8, C# Microsoft Visual Studio 2022, C++ Microsoft Visual Studio 2019(v142), and SQLite 3.46.1.",
+      "The SRS includes DICOM, PACS, image acquisition, image processing, viewer, worklist, studylist, settings, logging, security, and detector information functions.",
+      "Software verification and validation activities include original code test, unit test, integration test, and system test."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnVUE",
+      "type": "software",
+      "evidence": "Software Development Plan for HnVUE; Product name: Digital Flat Panel X-ray Detector (Console software); Ref no.: HnVUE"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "Model name: HnX-R1"
+    },
+    {
+      "name": "Digital Flat Panel X-ray Detector",
+      "type": "medical device product",
+      "evidence": "Product name: Digital Flat Panel X-ray Detector (Console software)"
+    },
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\""
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "Software classification comply with FDA Guide Line"
+    },
+    {
+      "name": "PACS",
+      "type": "clinical system",
+      "evidence": "DICOM image files are transferred to the PACS storage server."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "FDA software level of concern",
+      "pageTarget": "FDA Software Level of Concern",
+      "evidence": "S/W is classified into Major, Moderate and Minor by its level of concern"
+    },
+    {
+      "name": "Major Level of Concern",
+      "pageTarget": "FDA Major Level of Concern",
+      "evidence": "The level of concern is “Major” if a failure or latent flaw could directly result in death or serious injury to the patient or operator."
+    },
+    {
+      "name": "Moderate Level of Concern",
+      "pageTarget": "FDA Moderate Level of Concern",
+      "evidence": "The level of concern is “Moderate” if a failure or latent design flaw could directly result in minor injury to the patient or operator."
+    },
+    {
+      "name": "Minor Level of Concern",
+      "pageTarget": "FDA Minor Level of Concern",
+      "evidence": "The level of concern is “Minor” if failures or latent design flaws are unlikely to cause any injury to the patient or operator."
+    },
+    {
+      "name": "EN 62304 software safety class",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "evidence": "The software safety classes shall initially be assigned based on concern as follows: -. Class A: There is no injury nor health damage. -. Class B: The possible harm is non-serious injury. -. Class C: The possible harm is death or serious injury."
+    },
+    {
+      "name": "Software risk management",
+      "pageTarget": "Software Risk Management",
+      "evidence": "As for the software risk management, personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software."
+    },
+    {
+      "name": "Software verification and validation",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "The qualification phase verifies that the design and code implemented meet the requirements."
+    },
+    {
+      "name": "Software configuration management",
+      "pageTarget": "Software Configuration Management",
+      "evidence": "In case the software configuration is changed, it should be recorded, managed on 12. Software Configuration Management of the Software Validation Report."
+    },
+    {
+      "name": "DICOM export",
+      "pageTarget": "DICOM Export",
+      "evidence": "With the data export feature, you can export images in DICOM, BMP, JPG, TIFF formats."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a software development plan for HnVUE.",
+      "evidenceText": "Software Development Plan for HnVUE",
+      "pageTarget": "HnVUE Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is identified as Digital Flat Panel X-ray Detector console software.",
+      "evidenceText": "Product name: Digital Flat Panel X-ray Detector (Console software)",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model name is HnX-R1.",
+      "evidenceText": "Model name: HnX-R1",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report number and revision are A-SDP-HNV (Rev.0).",
+      "evidenceText": "Report No.: A-SDP-HNV (Rev.0)",
+      "pageTarget": "A-SDP-HNV",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document was prepared, reviewed, and approved on July 02, 2024.",
+      "evidenceText": "Prepared R&D Manager KyungSoo LEE July 02, 2024; Review RA Team Jimin HAN July 02, 2024; Approval Quality Manager Namkyu HUR July 02, 2024",
+      "pageTarget": "HnVUE Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision 0 was the initial release dated July 02, 2024.",
+      "evidenceText": "Rev. 0; Revision date July 02, 2024; The reason & content for establishment and amendment Initial Release",
+      "pageTarget": "A-SDP-HNV Rev.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "The plan's purpose is to develop software that can manipulate and utilize the product function for intended use.",
+      "evidenceText": "it aims at developing software that can manipulate and utilize the product function.",
+      "pageTarget": "HnVUE Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is classified and applied according to FDA guideline level of concern categories.",
+      "evidenceText": "Software classification comply with FDA Guide Line; S/W is classified into Major, Moderate and Minor by its level of concern",
+      "pageTarget": "FDA Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Major level of concern applies when a failure or latent flaw could directly or indirectly result in death or serious injury.",
+      "evidenceText": "The level of concern is “Major” if a failure or latent flaw could directly result in death or serious injury to the patient or operator.",
+      "pageTarget": "FDA Major Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Moderate level of concern applies when a failure or latent design flaw could directly or indirectly result in minor injury.",
+      "evidenceText": "The level of concern is “Moderate” if a failure or latent design flaw could directly result in minor injury to the patient or operator.",
+      "pageTarget": "FDA Moderate Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Minor level of concern applies when failures or latent design flaws are unlikely to cause injury.",
+      "evidenceText": "The level of concern is “Minor” if failures or latent design flaws are unlikely to cause any injury to the patient or operator.",
+      "pageTarget": "FDA Minor Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The plan describes software safety classification in accordance with EN 62304.",
+      "evidenceText": "Software classification in accordance with EN 62304",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "EN 62304 Class A is defined as no injury or health damage, Class B as possible non-serious injury, and Class C as possible death or serious injury.",
+      "evidenceText": "Class A: There is no injury nor health damage. -. Class B: The possible harm is non-serious injury. -. Class C: The possible harm is death or serious injury.",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development process follows a classic waterfall methodology.",
+      "evidenceText": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\"",
+      "pageTarget": "Waterfall Software Development",
+      "confidence": "high"
+    },
+    {
+      "claim": "The planned development schedule runs from analysis starting 2024.07.01 to development plan update ending 2024.11.25.",
+      "evidenceText": "Analysis 2024.07.01~ 2024.07.15 ... Development plan updated 2024.11.23~ 2024.11.25",
+      "pageTarget": "HnVUE Software Development Schedule",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed software resources include Windows 10 64bit, .NET Framework 4.8, .NET Framework 8, Visual Studio 2022, Visual Studio 2019(v142), and SQLite 3.46.1.",
+      "evidenceText": "Windows 10 64bit; .NET Framework 4.8; .NET Framework 8; C# Microsoft Visual Studio 2022; C++ Microsoft Visual Studio 2019(v142); SQLite 3.46.1",
+      "pageTarget": "HnVUE Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SRS includes DICOM export of images in DICOM, BMP, JPG, and TIFF formats.",
+      "evidenceText": "With the data export feature, you can export images in DICOM, BMP, JPG, TIFF formats.",
+      "pageTarget": "DICOM Export",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software transfers DICOM image files to a PACS storage server.",
+      "evidenceText": "DICOM image files are transferred to the PACS storage server.",
+      "pageTarget": "PACS",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software acquires detector images via Ethernet communication.",
+      "evidenceText": "Acquire images captured from the detector via Ethernet communication.",
+      "pageTarget": "HnVUE Image Capture",
+      "confidence": "high"
+    },
+    {
+      "claim": "The viewer supports image adjustments and tools including W/L, brightness, invert, rotate, flip, marker, and text.",
+      "evidenceText": "W/L, brightness, invert, rotate, flip, marker, and text functions are available.",
+      "pageTarget": "HnVUE Viewer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The worklist can retrieve capture orders from a PACS worklist server or allow manual registration.",
+      "evidenceText": "You can check the capture order on the PACS worklist server or manually register the order by the user.",
+      "pageTarget": "HnVUE Worklist",
+      "confidence": "high"
+    },
+    {
+      "claim": "Settings include audit log functionality showing what the user did, when, and who it is.",
+      "evidenceText": "The administrator can check what the user did, when, and who it is.",
+      "pageTarget": "HnVUE Audit Log",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Password length is specified as at least 8 characters with a HIPAA regulations reference.",
+      "evidenceText": "Password must be at least 8 characters long. (HIPAA regulations)",
+      "pageTarget": "HnVUE Password Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The plan includes encryption of security-required DCM header information and database encryption.",
+      "evidenceText": "Encryption of security-required header information for all DCM files; Encrypt the DB so that only those with a password can access it.",
+      "pageTarget": "HnVUE Security Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "Verification and validation test items include original code test, unit test, integration test, and system test.",
+      "evidenceText": "Original code test; Unit test; Integration test; System test",
+      "pageTarget": "HnVUE Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Traceability analysis is described as required between related documents and development activities.",
+      "evidenceText": "do clear traceability analysis between the related document and development activities.",
+      "pageTarget": "Software Traceability Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software release requires confirmation that verification is complete and results are evaluated before release.",
+      "evidenceText": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software.",
+      "pageTarget": "Software Release",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration changes should be recorded and validated before application.",
+      "evidenceText": "In case the software configuration is changed, it should be recorded, managed on 12. Software Configuration Management of the Software Validation Report. In case the software configuration is changed, it should be validated before it is applied to the software.",
+      "pageTarget": "Software Configuration Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software issues shall be recorded and applicable corrective measures conducted.",
+      "evidenceText": "Any issues identified with the software shall be recorded and applicable corrective measures shall be conducted.",
+      "pageTarget": "Software Problem Resolution",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The source references an FDA guideline but does not provide the exact FDA guidance title, publication date, or document identifier."
+    },
+    {
+      "severity": "warning",
+      "reason": "The source provides FDA level-of-concern and EN 62304 classification criteria but does not show completed checkbox answers or a final assigned classification for HnVUE."
+    },
+    {
+      "severity": "info",
+      "reason": "Some SRS table rows appear misaligned in the preprocessed text, so individual row-to-description mappings for settings, logging, and error handling should be reviewed against the original DOCX."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority signal indicates FDA and the text references HIPAA regulations, but the document is primarily an internal software development plan rather than an issued regulatory authority document."
+    }
+  ]
+}

@@ -217,4 +217,8 @@ Latest P1 extraction bundle:
 - script: `scripts/prepare-priority-pilot-eval.js`
 - rank range: 1-100
 - selected representatives: 100
-- extraction status: not started at this checkpoint
+- extraction status: PASS
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- note: rank 9 and rank 34 required chunked fallback because their source text
+  exceeded the Codex CLI context window
