@@ -225,6 +225,27 @@ most important RA service surface. The current single-lane llm-wiki ingest rate
 is not sufficient for a weeks-scale target, so P0 needs a controlled
 official-quality acceleration plan rather than a flat full-queue ingest.
 
+# Current Vault Publish Update - 2026-06-24
+
+P0 staging extraction has now been materialized into the live vault wiki through
+the revised app-compatible priority workflow.
+
+- Vault: `D:\vault\llm-wiki-vault`
+- App source: `C:\dev\llm_wiki`
+- Operations repo: `D:\agent-work\nas-llm`
+- P0 disposition rows covered: 9,027/9,027
+- QA-passed representative outputs loaded: 1,775/1,775
+- Wiki contributions materialized: 70,763
+- Unique wiki files written/merged: 41,145
+- New wiki files: 40,967
+- Existing wiki files merged: 178
+- Materialize validation failures: 0
+- Vault commit pushed: `f36083933 wiki: publish P0 staging knowledge`
+
+The live app was not started. `LLM-Wiki-Watchdog`,
+`LLM-Wiki-Startup`, and `LLM-Wiki-Auth-Check` remain disabled, and the
+priority workflow remains the gate before P1/P2 work.
+
 P0 meaningful-content triage result:
 
 - P0 sources: 9,027

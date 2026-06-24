@@ -171,3 +171,38 @@ Latest dry-run bundle:
 Next implementation step: build the deterministic apply/materialize path with
 merge handling, resolve the stale queue `processing` item, then run another
 dry-run before writing vault `wiki/`.
+
+## P0 Vault Publish Applied
+
+P0 has been materialized into `D:\vault\llm-wiki-vault\wiki\` and pushed.
+
+- apply report: `reports/p0-vault-materialize-apply-202606241458`
+- script: `scripts/materialize-p0-vault-publish.js`
+- mode: apply
+- P0 disposition rows covered: 9,027/9,027
+- representative outputs loaded: 1,775/1,775
+- wiki contributions materialized: 70,763
+- unique wiki files written/merged: 41,145
+- new wiki files: 40,967
+- existing wiki files merged: 178
+- missing materialized files: 0
+- missing P0 marker: 0
+- missing frontmatter sources: 0
+- vault queue total: 69,549
+- vault queue counts after stale reset: `{"pending":69549}`
+- vault `wiki/` markdown files after apply: 44,902
+- vault `wiki/sources` markdown files after apply: 11,235
+- vault commit pushed: `f36083933 wiki: publish P0 staging knowledge`
+
+Stale queue handling:
+
+- backup:
+  `D:\vault\llm-wiki-vault\.llm-wiki\ingest-queue.before-p0-vault-publish-20260624145114.json`
+- one stale `processing` item was reset to `pending`
+- `.llm-wiki/`, `logs/`, `raw/`, and vault `scripts/` were not staged for the
+  vault knowledge commit
+
+Next gate: run vault/app usability QA against the P0-published wiki before
+starting P1. P1 should use the same revised flow: staging QA, deterministic
+publish gate, vault materialize, vault `wiki/` commit/push, then operations
+checkpoint commit/push.

@@ -17,7 +17,7 @@ _harness_version: "4.10.0"
 
 - [ ] T019b: Issue #8 continuation ingest queue `cc:WIP` (2026-06-16: source-level combined queue rebuilt, existing cache/wiki analyzed, 506 already-ingested entries pruned, 69,614 pending remain, priority applied, full ingest gate PASS, app stopped, ready flag absent)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
-- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-24: P0 representative staging extraction covers 1,775/1,775 with final QA pass; staging-to-vault dry-run covered 9,027/9,027 P0 disposition rows with 0 failures and planned 70,647 wiki contributions across 41,145 unique paths; apply remains gated on deterministic merge handling and stale queue processing cleanup; P1/P2 should not start by default before P0 vault publication; app remains stopped)
+- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-24: P0 representative staging extraction covers 1,775/1,775 with final QA pass; P0 vault materialize apply covered 9,027/9,027 disposition rows, wrote/merged 41,145 wiki files, passed materialize validation with 0 failures, and pushed vault commit `f36083933`; next gate is vault/app usability QA before starting P1; app remains stopped)
 
 ---
 
@@ -160,5 +160,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-24
-- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; all 1,775 P0 representatives now have final QA-passed Codex CLI staging outputs; staging-to-vault dry-run passed with 0 failures; next step is deterministic apply/materialize with merge handling and stale queue processing cleanup before vault `wiki/` write)
+- **Last session owner**: Codex (P0-first staging-direct pipeline published to vault `wiki/` with app stopped; materialize validation passed with 0 failures; vault commit `f36083933` pushed; next step is vault/app usability QA and only then P1 through the same revised workflow)
 - **Branch**: main

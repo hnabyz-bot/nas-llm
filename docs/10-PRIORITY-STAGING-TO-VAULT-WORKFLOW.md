@@ -100,6 +100,23 @@ Interpretation: the publish set is complete enough for the next implementation
 step, but the apply step must first resolve the stale live `processing` item and
 must implement deterministic merge handling for colliding page targets.
 
+Latest apply:
+
+- report: `reports/p0-vault-materialize-apply-202606241458`
+- materializer: `scripts/materialize-p0-vault-publish.js`
+- representative outputs loaded: 1,775/1,775
+- P0 disposition rows covered: 9,027/9,027
+- wiki contributions materialized: 70,763
+- unique wiki files written/merged: 41,145
+- new wiki files: 40,967
+- existing wiki files merged: 178
+- validation failures: 0
+- vault queue count after stale reset: `{"pending":69549}`
+- vault commit pushed: `f36083933 wiki: publish P0 staging knowledge`
+
+Interpretation: P0 is published to the vault `wiki/` and committed. P1 must
+still wait for vault/app usability QA, then repeat this same workflow.
+
 ## Vault Git Rule
 
 The vault repo is separate from this operations repo.
