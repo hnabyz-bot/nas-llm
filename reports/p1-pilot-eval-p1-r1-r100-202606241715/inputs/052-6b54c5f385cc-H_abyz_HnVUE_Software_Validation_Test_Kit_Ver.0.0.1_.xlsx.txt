@@ -1,0 +1,502 @@
+queueId: ingest-1781569954417-15z0
+sourcePath: raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/05_설계개발 검증 및 유효성 확인/10_Performance/[H&abyz] HnVUE Software Validation Test Kit(Ver.0.0.1).xlsx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/279126d285d8/[H&abyz] HnVUE Software Validation Test Kit(Ver.0.0.1)__279126d285d8_combined.txt
+canonicalGroupId: 6b54c5f385cc
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 52
+
+SOURCE_TEXT
+ㅅ,All,,,,,,,,,,,,,,,,,,,,,,,,
+,39,,,,,,,,,,,,,,,,,,,,,,,,
+Step,Item,Title,Details,Reference,,,,,,,,,,,,,,,,,,,,,
+1,HnVUE Setup.exe,HnVUE 관리자권한 실행,"1. HnVUE 설치파일 관리자 권한 실행.
+2. 설치파일 .exe & installer.exe.sha256 (두 개 파일이 같은 폴더 내에 있어야 정상 설치가능) 3. 설치 후, 실행파일 바로가기 바탕화면 생성 확인 (HnVUE / HnVUE VET 각각에 맞는 바로가기 아이콘 생성)",HnVUE설치과정r.pdf,,,,,,,,,,,,,,,,,,,,,
+2,,"HnVUE Visual studio, Microsoft.NET 설치","1. Vcredist.exe, Microsoft.NET 정상설치 확인",,,,,,,,,,,,,,,,,,,,,,
+3,,HnVUE 설치 언어 선택,"1. 설치과정에서 선택한 프로그램 사용언어 <> 프로그램 실행 후 UI 상 표기언어 일치하는지 확인
+2. English - English / Espanol - Espanil / Portugues - Portugues",,,,,,,,,,,,,,,,,,,,,,
+4,PC,DEP 설정 해제,"1. 설정 → 개인정보 및 보안 → Windows 보안 → 앱 및 브라우저 컨트롤 → Exploit Protection 설정 → 시스템 설정 → 데이터 실행 방지 (DEP) → ‘기본적으로 끄기’
+2. ‘cmd’ 기입 후 관리자 권한으로 실행 → ‘Bcdedit /set {current} nx alwaysoff’ 기입 후 ‘Enter’
+3. 1의 순서대로 DEP 실행 방지 설정 유지 확인",DEP설정.pdf,,,,,,,,,,,,,,,,,,,,,
+5,,가상메모리 크기지정,1. 제어판 → 시스템 → 고급 시스템 설정 → 고급 → 성능 설정 → 고급 → 가상메모리 변경 → ‘모든 드라이브에 대한 페이징 파일 크기 자동 관리’ 체크해제→ 사용자 지정 크기 선택(처음 크기 : 8192 | 최대 크기 : 16384),가상메모리.png,,,,,,,,,,,,,,,,,,,,,
+6,,PC Ethernet IP,"1. 모델별 Ethernet IP 설정 확인
+ -. MCW (Station AP) : 192.168.197.100
+ -. MCW (Inside AP) : 192.168.199.100
+ -. MC (Wired) : 2.2.22.200",Ethernet IP설정.png,,,,,,,,,,,,,,,,,,,,,
+7,,PC Ethernet LAN 카드 전원설정,1. PC lan card 전원설정 (전원 절약모드 off),랜카드 전원설정.png,,,,,,,,,,,,,,,,,,,,,
+8,,PC 전원옵션 관리,1. PC 전원옵션 설정 모두 해당없음 / 해제 상태 확인,PC 전원옵션.png,,,,,,,,,,,,,,,,,,,,,
+9,,PC 해상도 확인,1. 화면 해상도 1920 * 1080,모니터해상도.png,,,,,,,,,,,,,,,,,,,,,
+10,Detector,Detector 및 악세서리 모델별 준비,"1. 1717MC (2대), 1417MCW(1대), 1717MCW(1대)",,,,,,,,,,,,,,,,,,,,,,
+11,HnVUE.exe,Log in 후 진입,"1. 동글키 삽입 후 admin / admin 입력 후 Log in
+2. 동글키 없이 demo / 0001 입력 후 로그인 시도 (데모버전)",로그인.png,,,,,,,,,,,,,,,,,,,,,
+12,HnVUE.exe,"SW정보, 버전정보 확인","1. 로그인 창 Human/Vet 로고 차이 확인
+2. 로그인 후, 좌상단 로고 Human/Vet 차이 확인
+3. 로그인 후, 좌상단 로고 클릭 시, HnVUE/HnVUE VET Software 버전정보 확인 ",인체용&동물용.pdf,,,,,,,,,,,,,,,,,,,,,
+13,HnVUE.exe,User Account + PW강도 Medium 조합생성,"1. 설정 - Account 진입 후 계정 생성
+ 2. Operator : user / ID : user / PWD : abyz@1234 입력
+ 3. Privilege Level : User
+ 4. PW Strength : Medium
+ 5. Add 클릭 및 정상 생성여부 확인
+ 6. 생성된 계정으로 로그인 시도",계정생성_User.png,,,,,,,,,,,,,,,,,,,,,
+14,HnVUE.exe,Engineer Account + PW강도 Strong 조합생성,"1. 설정 - Account 진입 후 계정 생성
+ 2. Operator : engineer / ID : engineer / PWD : H&abyz@12345 입력
+ 3. Privilege Level : Engineer
+ 4. PW Strength : Strong
+ 5. Add 클릭 및 정상 생성여부 확인
+ 6. 생성된 계정으로 로그인 시도 ",계정생성_Engineer.png,,,,,,,,,,,,,,,,,,,,,
+15,Bunny.exe,Bunny <> HnVUE 연계설정,"1. Bunny 실행 (*설치파일 : BUNNY.exe)
+ 2. Setting > Network Local Port : 3000
+ 3. Setting > Procedure > 아래 정보 각각 Add > OK
+-. (인체용) Exam code : A01, Exam String : Chest Series
+-. (인체용) Exam code : A02, Exam String : Hand Series
+-. (동물용) Exam code : B01, Exam String : Thorax Series
+-. (인체용/동물용) Exam code : U01, Exam String : Echocardiography >> 초음파 US. RIS Code block 테스트 용도
+ 4. Setting > Modality > DX, CR, US 각각 Add > Ok
+ 5. Apply Setting > Bunny 재실행
+ 6. Worklist server > Modality, Scheduled Step Description 에 상기 기입정보 Drop-down list 화 되었는지 확인",Bunny설정.png,,,,,,,,,,,,,,,,,,,,,
+16,HnVUE.exe,,"1. HnVUE > Setting > PACS >Add 클릭 후 정보입력
+ - Local AE Title : HnVUE
+ - Remote AE Title : Storage_test
+ - Remote IP Address : 127.0.0.1
+ - Remote Port : 3000
+ 2. Use 체크 표시 후 Echo 클릭 시 ""Eco Success"" 알림창 확인",Storage.png,,,,,,,,,,,,,,,,,,,,,
+17,HnVUE.exe,,"1. HnVUE > Setting > Worklist > Add 클릭 후 정보입력
+ - Local AE Title : HnVUE
+ - Remote AE Title : MWL_test
+ - Remote IP Address : 127.0.0.1
+ - Remote Port : 3000
+ 2. Use 체크 표시 후 Echo 클릭 시 ""Eco Success"" 알림창 확인",MWL.png,,,,,,,,,,,,,,,,,,,,,
+18,HnVUE.exe,,"1. HnVUE > Setting > Dicom Printer > Add 클릭 후 정보입력
+ - Local AE Title : HnVUE
+ - Remote AE Title : Printer_test
+ - Remote IP Address : 127.0.0.1
+ - Remote Port : 3000
+2. Use 체크 표시 후 Echo 클릭 시 ""Eco Success"" 알림창 확인",Printer.png,,,,,,,,,,,,,,,,,,,,,
+19,UBPACS.exe,UBPACS <> HnVUE 연계설정,"1. ZeTTA Brilliant Broker 프로그램 실행
+2. 의사랑.exe >검사목록 > 우측마우스 > 기존검사코드 모두삭제
+3. UBPACS.exe > Today > 검사목록 전체선택 > 우측마우스 > 전체삭제
+4. 의사랑.exe > 코드조회 > 방사선촬영 > 원하는 검사 추가 > 검사 추가내역 저장
+5. UBPACS.exe > 신규추가 검사목록 Query",UBPACS 처방.mp4,,,,,,,,,,,,,,,,,,,,,
+20,HnVUE.exe,,"1. HnVUE > Setting > PACS >Add 클릭 후 정보입력
+ - Local AE Title : HnVUE
+ - Remote AE Title : UBPACS
+ - Remote IP Address : 10.20.6.133
+ - Remote Port : 104
+2. Use 체크 표시 후 Echo 클릭 시 ""Eco Success"" 알림창 확인",,,,,,,,,,,,,,,,,,,,,,
+21,HnVUE.exe,,"1. HnVUE > Setting > Worklist > Add 클릭 후 정보입력
+ - Local AE Title : HnVUE
+ - Remote AE Title : UBPACS1
+ - Remote IP Address : 10.20.6.133
+ - Remote Port : 10004
+2. Use 체크 표시 후 Echo 클릭 시 ""Eco Success"" 알림창 확인",,,,,,,,,,,,,,,,,,,,,,
+22,HnVUE.exe,DB 백업 기능,"1. 설정 - System - Backup - Manual Backup. 오늘 날짜 백업 후 C:\HnVUE 내 날짜별 BackUP 폴더 생성여부 확인
+2. C:\HnVUE 내 BackUP폴더 향 후 테스트 간 설정 초기화 필요 시, DB kit 로 사용",DB_backup.png,,,,,,,,,,,,,,,,,,,,,
+23,Stitcing,Stitching sample,"1. Stitching Sample 영상 아래경로에 다운로드
+ -. 저장경로 : C:\HnVUE\sample
+ (비고) Demo shot 사용할 영상 이름 chest.dcm 으로 바꾸어주면서 사용",WholeSpine_AP.zip,,,,,,,,,,,,,,,,,,,,,
+
+,S/N (1),S/N (2),,All,,,,,,,,,,,,,,,,,,,,,,
+HAD1717MC,,,,39,,,,,,,,,,,,,,,,,,,,,,
+A1417MCW,,,,,,,,,,,,,,,,,,,,,,,,,,
+A1717MCW,,,,,,,,,,,,,,,,,,,,,,,,,,
+F1717MCW,,,,,,,,,,,,,,,,,,,,,,,,,,
+TestCase No,Category,Pre-condition,Title,Result,Test Scenario,담당자,검증날짜,위험도,특이사항,,,,,,,,,,,,,,,,,
+DTC-01,Setting,HAD1717MC,1D 촬영 설정,,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand Detector HAD1717MC 만 선택
+2. XAS 탭에서 XAS.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-02,Exam,,1환자 정보 생성,,"1. ""+"" 버튼을 눌러 신규 환자 정보 생성.
+2. ID Name 추가 후 Start Exam
+3. 촬영 포지션 Hand R AP 30회 선택 후 Start Exam 클릭 후 검사 창 진입",,,High,,,,,,,,,,,,,,,,,,
+DTC-03,Exposure,,검사 창 내 영상 검사,,"1. HnVUE 상단 바 연두색으로 색상변경 & ""Ready"" 상태표시 확인 > 50kvp 3mAs 로 1회 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-04,Exposure,,연속 촬영 시 통신 상태 검사,,"1. 30장 연속 촬영 진행.
+2. 진행 과정에서 상단 바 Ready 상태 변경 타이밍 확인 하면서 연속 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-05,Setting,"HAD1717MC
+HAD1717MC",2D 촬영 설정,,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand /Table Detector HAD1717MC 선택 디텍터 모델설정.png
+2. XAS 탭에서 XAS.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-06,Worklist,,환자 정보 생성,,"1. ""+"" 버튼을 눌러 신규 환자 정보 생성
+2. ID Name 추가 후 Start Exam
+3. 촬영 포지션 Hand R AP 30회 선택 후 Start Exam 클릭 후 검사 창 진입",,,High,,,,,,,,,,,,,,,,,,
+DTC-07,Exposure,,검사 창 내 영상 검사,,"1. HnVUE 상단 바 내 ""Ready"" 와 연두색 상단바 확인 후 50kvp 3mAs 로 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-08,Exposure,,연속 촬영 시 통신 상태 검사,,"1. 30장 연속 촬영 시 우측 Bucky 선택 창을 Stand <-> Table 번갈아 가며 선택
+2. 상태 바 Ready 지속 상태 확인 후 연속 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-09,Setting,A1717MCW,1D 촬영 설정 (A1717MCW),,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand Detector A1717MCW 만 선택
+2. XAS_W 탭에서 XAS_W.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-10,Setting,,Acquire Preview Image 확인,,1. MCW 의 Preview 기능 정상 동작을 확인 하기 위해 Acquire Preview Image 를 선택 (2G/3G 모델만 선택),,,High,,,,,,,,,,,,,,,,,,
+DTC-11,Worklist,,환자 정보 생성,,"1. ""+"" 버튼을 눌러 신규 환자 정보 생성
+2. ID Name 추가 후 Start Exam
+3. 촬영 포지션 Hand R AP 30회 선택 후 Start Exam 클릭 후 검사 창 진입",,,High,,,,,,,,,,,,,,,,,,
+DTC-12,Exposure,,검사 창 내 영상 검사,,"1. HnVUE 상단 바 내 ""Ready"" 와 연두색 상단바 확인 후 50kvp 3mAs 로 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-13,Exposure,,연속 촬영 시 통신 상태 검사,,1. 30장 연속 촬영 시 상태 바 Ready 지속 상태 확인 후 연속 조사,,,High,,,,,,,,,,,,,,,,,,
+DTC-14,Setting,"HAD1717MC
+F1717MCW","2D 촬영 설정
+(A1717MCW + F1417MCW)",,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand : A1717MCW /Table : F1417MCW 선택 디텍터 모델설정.png
+2. XAS_W 탭에서 XAS_W.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-15,Setting,,Acquire Preview Image 확인,,1. MCW 의 Preview 기능 정상 동작을 확인 하기 위해 Acquire Preview Image 를 선택 (2G/3G 모델만 선택),,,High,,,,,,,,,,,,,,,,,,
+DTC-16,Exam,,환자 정보 생성,,"1. ""+"" 버튼을 눌러 신규 환자 정보 생성
+2. ID Name 추가 후 Start Exam
+3. 촬영 포지션 Hand R AP 30회 선택 후 Start Exam 클릭 후 검사 창 진입
+4. 획득영상 dicom 정보 내, 각 디텍터 모델명 정보 tag 에 정상 삽입 여부 확인
+ : 우하단 Tool > Information 모양 > (0008,1090) 모델명 확인",,,High,,,,,,,,,,,,,,,,,,
+DTC-17,Exposure,,검사 창 내 영상 검사,,"1. HnVUE 상단 바 내 ""Ready"" 와 연두색 상단바 확인 후 50kvp 3mAs 로 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-18,Exposure,,연속 촬영 시 통신 상태 검사,,"1. 30장 연속 촬영 시 우측 Bucky 선택 창을 Stand <-> Table 번갈아 가며 선택
+2. 상태 바 Ready 지속 상태 확인 후 연속 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-19,Setting,"A1717MCW
+HAD1717MC","2D 촬영 설정
+(A1717MCW + HAD1717MC)",,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand : A1717MCW /Table : HAD1717MC 선택디텍터 모델설정.png
+2. XAS_W 탭에서 XAS_W.ini 선택 후 Save / XAS 탭에서 XAS.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-20,Setting,,Acquire Preview Image 확인,,"1. MCW 의 Preview 기능 정상 동작을 확인 하기 위해 Acquire Preview Image 를 선택
+(2G/3G 모델만 선택)",,,High,,,,,,,,,,,,,,,,,,
+DTC-21,Exam,,환자 정보 생성,,"1. ""+"" 버튼을 눌러 신규 환자 정보 생성
+2. ID Name 추가 후 Start Exam
+3. 촬영 포지션 Hand R AP 30회 선택 후 Start Exam 클릭 후 검사 창 진입",,,High,,,,,,,,,,,,,,,,,,
+DTC-22,Exposure,,검사 창 내 영상 검사,,"1. HnVUE 상단 바 내 ""Ready"" 와 연두색 상단바 확인 후 50kvp 3mAs 로 조사",,,High,,,,,,,,,,,,,,,,,,
+DTC-23,Exposure,,연속 촬영 시 통신 상태 검사,,"1. 30장 연속 촬영 시 우측 Bucky 선택 창을 Stand <-> Table 번갈아 가며 선택
+2. 상태 바 Ready 지속 상태 확인 후 연속 조사
+3. 획득영상 dicom 정보 내, 각 디텍터 모델명 정보 tag 에 정상 삽입 여부 확인
+ : 우하단 Tool > Information 모양 > (0008,1090) 모델명 확인",,,High,,,,,,,,,,,,,,,,,,
+DTC-24, Setting ,"A1417MCW
+A1717MCW","2D 촬영 설정
+(A1417MCW + A 1717MCW)",,"1. HnVUE 실행 설정창 진입. > Detector Tab 에서 Stand : A1717MCW /Table : A1417MCW 선택 디텍터 모델설정.png
+2. XAS_W 탭에서 XAS_W.ini 선택 후 Save",,,High,,,,,,,,,,,,,,,,,,
+DTC-25,Exposure,,연속 촬영 시 통신 상태 검사 ,,"1. 30장 연속 촬영 시 우측 Bucky 선택 창을 Stand <-> Table 번갈아 가며 선택
+2. 상태 바 Ready 지속 상태 확인 후 연속 조사
+( Stand <-> Table 변경 시 영상 획득 불가 및 프로그램 튕김 현상 발생)",,,High,,,,,,,,,,,,,,,,,,
+
+,,,,,All,,,,,,,,,,,,,,,,,,
+,,,,,39,,,,,,,,,,,,,,,,,,
+TestCase No,Human/Vet,Category,Pre-condition,Title,Result,Test Scenario,담당자,검증날짜,위험도,특이사항,,,,,,,,,,,,,
+STC-01,공통,Account,Log in,Log in 실패,Pending,"1. 동글키 삽입 후 admin / 1 입력
+2. 로그인 실패 메시지 확인(Check the ID or Password)
+3. 연속 5회 실패 후, admin/admin 로그인 불가 확인
+4. admin/console1234 로그인 후, admin 계정 비밀번호 admin으로 재설정",,,,"아직 로그인 반복실패 시,
+admin/console1234 무제한 진입 적용안됨",,,,,,,,,,,,,
+STC-02,공통,License,Log in,"동글키 미삽입 Log in 시, 라이센스팝업",PASS,"1. 동글키 없이 admin / admin 입력 후 Log in
+2. Check the license 메시지 확인",,,,,,,,,,,,,,,,,
+STC-03,공통,License,Log in,Software license 발행 Log in,Pending,"1. C:\HnVUE\Bin\License\LicenseApp.exe 실행
+2. Status : Unlicensed 확인
+3. Test License key 중 마지막 칸만 key 오기입 후 Actication >' 승인되지 않은 CD-Key 입니다' 메세지 발생",,,,"Sample license key 없으므로 테스트 펜딩
+임의로 넣었을때는 Fail 이라고만 뜸",,,,,,,,,,,,,
+STC-04,공통,License,Log in,Demo License 발행 Log in,PASS,"1. C:\HnVUE\Bin\License\LicenseApp.exe 실행
+2. Status : Unlicensed 확인
+3. 'Demo' 버튼 클릭 > '기존 Demo license 정보는 다 사라집니다' > 'Y"" > 이제 Demo 버전을 사용할 수 있습니다 > '확인'
+4. Status : Demo (Expires on 만료날짜) 표기 확인",,,,,,,,,,,,,,,,,
+STC-05,공통,License,Log in,Software license 활성화<>비활성화,Pending,"1. C:\HnVUE\Bin\License\LicenseApp.exe 실행
+2. Status : Unlicensed 확인
+3. Test License key 입력 후 Activation > 'SDK가 확인되었습니다. 프로그램이 활성화됩니다' 메세지 발생
+4. 'Deactivation' 클릭 시, 'SDK 가 비활성화 되었습니다' 메세지 발생
+5. 동일한 License key 재입력 후, Activation > 정상 활성화 여부 확인
+ (*동일 CDK로는 max 3회까지만 활성화<>비활성화 테스트 가능. 전환 테스트 1번만 해볼 것)",,,,Sample license key 없으므로 테스트 펜딩,,,,,,,,,,,,,
+STC-06,공통,Account,Log in,Log in 계정별 권한설정,PASS,"1. Admin 계정 진입 시, Setting 창 진입 아이콘 활성화 여부 확인 (ID : admin / PWD : admin)",,,,,,,,,,,,,,,,,
+STC-07,공통,Account,Log in,Log in 계정별 권한설정,PASS,"1. User 계정 진입 시, Setting 창 진입 아이콘 비활성화 여부 확인 (ID : user / PWD : abyz@1234)
+2. User 계정 진입 시, 촬영 창 > Tool > 휴지통 아이콘 비활성화",,,,,,,,,,,,,,,,,
+STC-08,공통,Account,Log in,Log in 계정별 권한설정,N/A,"1. Demo 계정 진입 시, Setting 창 진입 되나, Detector, PACS, Worklist, Option, Display 창만 접근 가능 확인)",,,,,,,,,,,,,,,,,
+STC-09,공통,Account,Log in,Log in 계정별 권한설정,PASS,"1. Engineer 계정 진입 시, Setting 창 진입 되나, Account 탭 접근 비활성화 (ID : user / PWD : abyz@1234)",,,,,,,,,,,,,,,,,
+STC-10,공통,Action,Feature,"Worklist / Studylist 최소화, 종료 버튼 동작 확인",PASS,"1. 최소화 버튼 클릭 > HnVUE 화면 최소화 및 바탕화면으로 나가기
+2. 종료 버튼 클릭 > '종료하시겠습니까?' 팝업창 발생 > 사용자 추가 승인 하에 program 종료 확인 (*투스텝 동작)",,,,,,,,,,,,,,,,,
+STC-11,공통,Action,Feature,"Acquisitoin 창 최소화, 종료 버튼 동작 확인",PASS,"1. 최소화 버튼 클릭 > HnVUE 화면 최소화 및 바탕화면으로 나가기
+2. 종료 버튼 클릭 > Worklist 창으로 복귀",,,,,,,,,,,,,,,,,
+STC-12,공통,Setting,System,언어 변경,PASS,"1. Setting > System > 언어 설정 변경 후, 변경 국가 언어로 SW 재실행 하라는 팝업 발생.
+2. 재실행 후, Worklist/Studylist 창 UI 표기언어 변경 확인
+3. Quick Start > Acquisition 창 내 UI 표기언어 변경 확인
+4. Add Procedure 아이콘 '+' > Body part, Position 표기언어 변경 확인
+5. 아래 언어별로 각 1회씩 수행
+: English - English / Espanol - Espanil / Portugues - Portugues",,,,,,,,,,,,,,,,,
+STC-13,공통,Setting,System,Log 정보 정상 로드 여부,PASS,"1. Setting > System > Log > Audit Log / System Log 클릭
+2. Audit Log > 날짜선택 > Search > 로그 정상 로드 여부 확인
+3. System Log > 날짜선택 > Search > 로그 정상 로드 여부 확인",,,,,,,,,,,,,,,,,
+STC-14,공통,Setting,System,Integrity check,PASS,"1. 첨부링크 내 파일 명 중 1개를 골라서, C:\HnVUE\Bin' 경로 내 파일 명 변경 IntegrityCheckFile.csv
+2. System > 'Integrity check (무결성검사)' 수행 시, 경고창 발생 및 SW 종료 진행 확인.
+3. 변경한 파일명 다시 원상복구 (ex) libmmd.dll <>libmmd_org.dll",,,,,,,,,,,,,,,,,
+STC-15,공통,Setting,System,자동삭제 기능,PASS,"1. Automatic Deletion > Data capacity 체크박스 선택 > 우측 공란에 상단바 저장공간% 수치 보다 작은 수치 입력 > 저장
+2. SW재실행 > 자동삭제 실행 팝업 창 발생 확인 > UI 상단 상태표시줄 용량아이콘 색상 붉은색 변경 확인
+3. 자동삭제 실행 체크박스 해제",,,,,,,,,,,,,,,,,
+STC-16,공통,Setting,System,자동삭제 기능,PASS,"1. Automatic Deletion > Period 체크박스 활성화 > 기간 일/주/월 클릭 시, 각각 옆 드랍다운 리스트 활성화 확인
+2. Day : 1 설정 확인 후, SW 종료 > PC 날짜 다음날로 설정 > SW 재실행 > 자동삭제 실행 팝업 창 발생 확인
+3. 자동삭제 실행 체크박스 해제",,,,,,,,,,,,,,,,,
+STC-17,공통,Setting,System,DB 백업 기능,PASS,"1. Backup > Manual Backup > Yesterday 선택 > 백업 후 C:\HnVUE 내 날짜별 BackUP 폴더 생성여부 확인
+2. Backup 폴더 내 아래 파일 백업여부 확인
+- Config.cfg, Exam.db, Intergrity.db, RefParam.ini, System.db, ImageParameter폴더",,,,,,,,,,,,,,,,,
+STC-18,공통,Setting,System,DB 백업 기능,FAIL,"1. Backup > Automatic Backup > 자동 백업 일/주/월 클릭 시, 각각 아래 드랍다운 리스트 활성화 확인
+2. Day : 1 / Time : 현재시각과 가장 가까운 시각으로 설정 > 해당 시각 이후, C:\HnVUE 내 오늘날짜 BackUP 폴더 생성여부 확인
+3. Backup 폴더 내 아래 파일 백업여부 확인
+- Config.cfg, Exam.db, Intergrity.db, RefParam.ini, System.db, ImageParameter폴더",,,,자동 DB Backup 동작안함,,,,,,,,,,,,,
+STC-19,공통,Setting,System,DB 복구 기능,PASS,"1. C:\HnVUE 폴더 삭제 > HnVUE Setup 재설치
+2. DB 복구 TEST 용 Backup 키트 파일들 아래 경로에 덮어쓰기
+-. 테스트용 RefParam.ini, Config.cfg, > C:\HnVUE\Bin 로 덮어쓰기
+-. 테스트용 ImageParameter 폴더, > C:\HnVUE\ 덮어쓰기
+-. 테스트용 .db 포멧 파일들 > C:\HnVUE\db 덮어쓰기
+3. DB Restore 클릭 시, 백업정보 SW 상 정상 로드 여부 확인 (네트워크 ip 정보, 로그인 어카운트 등등)
+4. Worklist 상 Quick start 생성이력 (STC-12) 삭제 여부 확인",,,,,,,,,,,,,,,,,
+STC-20,공통,Account,Log in,사용자 계정,PASS,"1. Setting > Account > Operator : user / ID : user / PW : abyz@1234 / 비밀번호 변경 기간 '0' 설정 후, 저장
+2. SW재실행 > user 계정으로 로그인 > 비밀번호 변경 알림 안뜨는지 확인",,,,,,,,,,,,,,,,,
+STC-21,공통,Detector,Preview,Preview 활성화 ,Pending,"1. Setting > Detector > Preview 획득 활성화
+2. Worklist > Quick start > F3_demo 영상 2회 연속 획득
+3. Bunny 영상 정상 전송 여부 확인",,,,,,,,,,,,,,,,,
+STC-22,공통,Setting,Generator,제너레이터 연동 툴 활성화 확인,FAIL,"1. Setting > 제너레이터 제조사 none > 촬영창 진입 시, 우측 상단 xray condition 확인 UI 창 비활성화 확인
+2. Setting > 제너레이터 제조사 'H&abyz' 선택 > 모델명 미선택 > 저장
+3. 촬영창 진입 시, 우측 상단 xray condition 확인 UI 창 활성화 여부 확인",,,,None 이어도 제너레이터 콘솔 활성화 됨,,,,,,,,,,,,,
+STC-23,공통,Setting,PACS,PACS 서버 정보 특수문자 표기,PASS,"1. AE Title 정보 특수문자 삽입 가능 여부
+-. Add > Local AE Title > !@#$%^&*()-_=+ > 기입만 되는지 확인 후 종료",,,,,,,,,,,,,,,,,
+STC-24,공통,Setting,Network,PACS echo test,PASS,"1. Bunny 실행
+2. HnVUE 상단 바, PACS 아이콘 더블클릭 > 아이콘 활성화 확인 ",,,,,,,,,,,,,,,,,
+STC-25,공통,Setting,Network,Dual PACS echo test,PASS,"1. Setting > PACS > Add 클릭 후, UBPACS 연결용 정보 추가 입력 (첫번째 행-Bunny용 이미 추가 되어있는 상태 / 두번째 행-UBPACS용)
+ - Local AE Title : HnVUE
+ - Remote AE Title : UBPACS
+ - Remote IP Address : 10.20.6.133
+ - Remote Port : 104
+2. Bunny, UBPACS 둘다 실행 중인 상태에서 상단바 PACS 아이콘 (프린터모양 좌측 아이콘)더블클릭 > 아이콘 활성화 확인
+3. Bunny 프로그램 종료. UBPACS 만 단독 실행중인 상태에서 상단바 PACS 아이콘 더블클릭 > 아이콘 활성화 확인",,,,,,,,,,,,,,,,,
+STC-26,공통,Setting,Network,Dual PACS 전송 test,PASS,"1. Worklist > Quck start >F3_Virtual shot 데모영상 획득 > 전송 > Bunny (Storage server 탭) & UBPACS 에 둘 다 영상 수신 되는지 확인
+2. 촬영 창 내 test 촬영 된 영상 Thumbnail 상, 초록색 원형 마크(영상획득), 파란색 비행기 마크(영상전송) 생성 여부 확인
+(Unknown 포지션 영상 pacs 정상 전송되는지 확인목적)",,,,,,,,,,,,,,,,,
+STC-27,공통,Setting,Network,MWL 서버 정보 특수문자 표기,PASS,"1. AE Title 정보 특수문자 삽입 가능 여부
+-. Add > Local AE Title > !@#$%^&*()-_=+ > 기입만 되는지 확인 후 종료",,,,,,,,,,,,,,,,,
+STC-28,공통,Setting,Network,PACS echo test,PASS,"1. Bunny 실행
+2. HnVUE 상단 바, Worklist 아이콘 (용량표시 우측아이콘) 더블클릭 > 아이콘 활성화 확인 ",,,,,,,,,,,,,,,,,
+STC-29,공통,Setting,Network,MWL Query test,PASS,"1. Bunny > Worklist server > 아래 정보 입력 후, Add worklist
+-. ID : Александр / Name : Александр / Acc No : Test_Russia / 검사 : Chest Series / Modality : DX / Study date : Yesterday
+2. HnVUE Worklist > ALL > 3days > 돋보기 클릭 > 해당 환자목록 쿼리 여부 확인
+3. HnVUE Worklist > DX > 1 Month > 돋보기 클릭 > 해당 환자목록 쿼리 여부 확인
+4. HnVUE Worklist > CR > 1 Month > 돋보기 클릭 > 해당 환자목록 안뜨는지 확인",,,,,,,,,,,,,,,,,
+STC-30,공통,Setting,Network,Dual MWL echo test,PASS,"1. Setting > Worklist > Add 클릭 후, UBPACS 연결용 정보 추가 입력 (첫번째 행-Bunny용 이미 추가 되어있는 상태 / 두번째 행-UBPACS용)
+ - Local AE Title : HnVUE
+ - Remote AE Title : UBPACS1
+ - Remote IP Address : 10.20.6.133
+ - Remote Port : 10004
+2. Bunny / UBPACS 네트워크 서버 리스트 둘 다 체크박스 선택
+3. Bunny, UBPACS 둘다 실행 중인 상태에서 상단바 Workklist 아이콘 (용량표시 우측아이콘) 더블클릭 > 아이콘 활성화 확인",,,,,,,,,,,,,,,,,
+STC-31,공통,Setting,Network,MWL Query test,PASS,"1. Bunny 실행 (Worklist 상, ID : Александр 쿼리중) 상태 유지한 채로 UBPACS 처방 아래와 같이 추가
+-. ID : H&abyz / Name : H_n^뷰 / Acc No : Special_character / 검사 : Hand Series / Modality : CR
+2. HnVUE Worklist > ALL > 3days > 돋보기 클릭 > STC-29, STC-31 환자목록 쿼리 여부 확인
+3. HnVUE Worklist > ALL > 1 day > 돋보기 클릭 > STC-31 환자목록 쿼리 여부 확인
+4. HnVUE Worklist > DX > 1 Month > 돋보기 클릭 > STC-29 만 단독 쿼리 확인
+5. HnVUE Worklist > CR > 1 Month > 돋보기 클릭 > STC-31 만 단독 쿼리 확인
+6. HnVUE Worklist > DR > 1 Month > 돋보기 클릭 > 목록 모두 안뜨는지 확인",,,,,,,,,,,,,,,,,
+STC-32,공통,Setting,Network,MWL echo test,PASS,"1. Bunny > Worklist Server > 다른 모달리티 검사 추가생성 (아래참고)
+-. ID : 王芳_123 / Name : 王芳_123 / Acc No : Test_China / 검사 : Echocardiography > Modality : US / Study date : Yesterday
+2. HnVUE Worklist > ALL > 3days > 돋보기 클릭 > 해당 환자목록 쿼리 여부 확인
+3. HnVUE Worklist > DX > 3days > 돋보기 클릭 > 해당 환자목록 목록 사라짐 확인",,,,,,,,,,,,,,,,,
+STC-33,공통,Setting,Network,MWL 자동 쿼리 기능,PASS,"1. Setting > Worklist > Auto Searching time 10s 설정
+2. Dual MWL 서버 활성화 후, Bunny & UBPACS 사용 10s 간격 신규 오더 번갈아 가며 2회씩 생성. 정상 수신여부 확인",,,,,,,,,,,,,,,,,
+STC-34,공통,Setting,Network,Printer 서버 정보 특수문자 표기,PASS,"1. AE Title 정보 특수문자 삽입 가능 여부
+-. Add > Local AE Title > !@#$%^&*()-_=+ > 기입만 되는지 확인 후 종료",,,,,,,,,,,,,,,,,
+STC-35,공통,Action,Feature,Printer 옵션기능 설정,PASS,"1. Setting > Dicom Printer > Printer 설정 창내 옵션 아래와 같이 변경 후 저장
+-. Film size : 14INx17IN / Orientation : LANDSCAPE
+-. Logo file : C:\HnVUE\Bin\logo\logo3.png
+2. 검사목록 > 촬영완료된 검사중 하나 선택 후 Print 아이콘 클릭 > 프린트 창 내 Film size, Orientiatoin 값 변경 적용 확인.
+3. Print Dicom 창 우측 Thumbnail 영상 Drag > 가운데 메인창으로 Drop > 영상 내 로고 표시 확인",,,,,,,,,,,,,,,,,
+STC-36,공통,Setting,Network,Printer 출력 test,Pending,1. 업체 test 이관 요청,,,,,,,,,,,,,,,,,
+STC-37,공통,Setting,Option,영상저장경로 변경,PASS,"1. Image storage path : 영상저장경로 (*다른 drive. 예-D:\image) 변경
+2. Worklist > ID : IMPORT, Name : IMPORT 그 외 임의 작성 > 'F3'_Virtual shot 데모영상 획득 > 촬영창 종료
+3. 변경 된 경로에 영상 정상저장되었는지 확인
+4. 변경 경로 내 생성된 영상폴더 잘라내기 (*삭제)> 바탕화면에 해당폴더 붙여넣기 ",,,,,,,,,,,,,,,,,
+STC-38,공통,Setting,Option,영상저장경로 변경 > 원상복구 후 import,FAIL,"1. Image storage path : 영상저장경로 원상복구 (*C:\HnVUE\image)
+2. Studylist > ID : IMPORT 환자 검사목록 삭제
+3. Setting > Option > Import DCM > 바탕화면으로 이동시킨 ID : IMPORT 영상폴더 찾기 > Import 수행
+4. Studylist > ID : IMPORT 목록 생성 > 더블클릭 촬영창 접근 시, 영상 정상 로드 되는지 확인
+5. C:\HnVUE\image 경로 내 import 한 영상폴더 생성여부 확인",,,,"저장경로 변경 후, 기 획득영상 영상 import 오류",,,,,,,,,,,,,
+STC-39,공통,Setting,Option,마커 추가/삭제/위치변경,PASS,"1. Marker 추가, 삭제, 위치 변경 후, 촬영창 내에서 동일하게 반영되는지 확인",,,,,,,,,,,,,,,,,
+STC-40,공통,Setting,Option,크롭 사이즈 추가/삭제/위치변경,PASS,"1. 크롭사이즈 추가, 삭제, 위치 변경 후, 촬영창 내에서 동일하게 반영되는지 확인",,,,,,,,,,,,,,,,,
+STC-41,공통,Setting,Option,Bitstore 변경적용,FAIL,"1. Bitstore off (16bit) 상태로, Skull/Chest/Hip/Knee 포지션별 'F3'_Virtual shot 또는 test exposure
+ 2. 각각 아래 dicom tag 값 확인
+ (0028,0101) ""Bits Stored""
+ (0028,0102) ""High Bit""",,,,ㅍ,,,,,,,,,,,,,
+STC-42,공통,Setting,Option,Annotation 저장기능,PASS,"1. Annotation Save 체크박스 활성화
+2. Worklist > Quick촬영 > 'F3'_Demo 영상 획득 > 우측 툴 > Annotation 탭 > 텍스트에 Ann 삽입
+3. Bunny 실행 후, 영상 전송 > Bunny - Storage server 창으로 수신된 영상 Ann 출력 여부 확인
+4. (SW 재부팅 없이) Annotation 비활성화 > (1)촬영 영상 재전송 > Bunny 에서 Ann 텍스트 삭제된 채로 전송됐는지 확인",,,,,,,,,,,,,,,,,
+STC-43,Human,Setting,Option,Stitching Save ratio 동작 확인,PASS,"1. 사전설정 no21 참고 준비
+2. Worklist > Add patient > Acc : Stitching / ID : Stitching / Name : Whole spine > 그외 정보 무작위입력 > Procedure 추가 > Whole spine 뷰 3개 추가
+3. C:\HnVUE\sample 경로 내, 'C','T','L' 영상 각각 'chest'로 파일명 변경해가며 F3_Demo 영상 획득 (목/가슴/허리 총3장 영상 획득)
+4. Tool > Stitching 아이콘 클릭 > Auto-stitching > save (기본 1:1 비율)
+5. Setting > Option > Stitching save ratio 1:4 변경 > Stitching 추가 수행
+6. no 4,5 각 획득영상 간 영상사이즈 크기 차이 발생확인 (*C:\HnVUE\image\검사날짜\Stitching 영상저장경로 폴더 내 dcm 파일사이즈로 비교)",,,,,,,,,,,,,,,,,
+STC-44,Human,Setting,Option,Stitching Move XY,PASS,"1. Setting > Option > Stitching Move 1px 적용 > Stitching 수행 창에서 방향키 클릭 시 이동 성 확인
+2. Stitching Move 100px 적용 > Stitching 수행 창에서 방향키 클릭 시 이동 반경 커지는지 비교 확인",,,,,,,,,,,,,,,,,
+STC-45,Human,Setting,Display,Overlay 기본값 정상 등록 확인,PASS,"1. 설정 창 내, Overlay 기본 값 정상 적용 여부
+<Left Top> <Right Top> <Left Bottom> <Right Bottom>
+1) Patient ID 1) Study Date 1) Exposure Index 1) Window Width
+2) Patient Name 2) Operator Name 2) Target Exposure Index 2) Window Center
+3) Birth Date 3) Institution Name 3) Deviation Index
+4) Age
+5) Sex",,,,,,,,,,,,,,,,,
+STC-46,Human,Exam,Overlay,Overlay 정상 로드 확인,PASS,"1. Studylist > 아무 검사나 Open > 기본 Overlay 정상 로드 여부
+2. Setting > Overlay 정보 아무거나 추가/삭제 후, (SW 재실행 없이) 촬영 창 Overlay 내 변경사항 즉시반영 여부 확인",,,,,,,,,,,,,,,,,
+STC-47,Vet,Setting,Display,Overlay 기본값 정상 등록 확인,N/A,"1. 설정 창 내, Overlay 기본 값 정상 적용 여부
+<Left Top> <Right Top> <Left Bottom> <Right Bottom>
+1) VET ID 1) Study Date 1) Window Width
+2) VET Name 2) Operator Name 2) Window Center
+3) Age 3) Institution Name
+4) Species
+5) Breed",,,,,,,,,,,,,,,,,
+STC-48,공통,Setting,DicomSet,Modality 변경 & 병원명 정보 Tag 반영 여부,PASS,"1. Modality DX (Default) > CR 변경.
+2. Hospital name - H&abyz 삽입
+3. (SW 재실행 없이), Worklist > Quick start > F3_Demo 영상획득 > 우측 툴 (i) 모양 아이콘 클릭
+4. 팝업 정보 전체선택 > 메모장에 Copy & Paste
+5. (0008,0060) 찾기 > CR반영 확인
+6. (0008,0080) 찾기 > H&abyz 반영 확인",,,,,,,,,,,,,,,,,
+STC-49,공통,Setting,DicomSet,Series Format 동작성 확인-One Series,FAIL,"1. One Series 선택 > Worklist > Quick start
+2. RIS > Position 추가 : Chest PA , Chest R Lat, Hand Both PA, Hand both OBL 추가 > F3_Demo 영상 각 1회 획득
+3. UB PACS 전송 후, 모두 One series 로 동작 하는지 확인",,,,"하나의 Study에 Bodypart 다른 영상 획득 시, One series 태그구성방식 변경필요",,,,,,,,,,,,,
+STC-50,공통,Setting,DicomSet,Series Format 동작성 확인-Each Series,PASS,"1. Each Series 선택 > Worklist > Quick start
+2. RIS > Position 추가 : Chest PA , Chest R Lat, Hand Both PA, Hand both OBL 추가 > F3_Demo 영상 각 1회 획득
+3. UB PACS 전송 후, 모두 Each series 로 동작 하는지 확인",,,,,,,,,,,,,,,,,
+STC-51,공통,Setting,DicomSet,Series Format 동작성 확인-Custom Series,PASS,"1. Custom Series 선택 > Worklist > Quick start
+2. RIS > Position 추가 : Chest PA , Chest R Lat, Hand Both PA, Hand both OBL 추가 > F3_Demo 영상 각 1회 획득
+3. UB PACS 전송 후, 모두 Custom Series 로 동작 하는지 확인",,,,,,,,,,,,,,,,,
+STC-52,공통,Setting,DicomSet,Character Set 정상로드여부,PASS,"1. 각 문자셋 한번식 설정 후 제각각 Quick start 영상획득
+2. 획득영상 dicom tag (0008,0005) 값에 설정했던 문자셋 번호 포함여부 확인",,,,,,,,,,,,,,,,,
+STC-53,공통,Exam,Overlay,Character Set 정상동작여부,FAIL,"1. Setting > DicomSet > Character Set 192 설정
+2. Worklist > Add patient > 환자 ID : Thai / 환자이름 : โตะ โอ เอาะ / 그외 정보 임의기입 > F3_Demo 영상획득
+3. Overlay 상 환자이름 안깨지는지 확인",,,,"영어 외, 다른 언어 환자이름 Overlay 상 ??? 로 표기 됨",,,,,,,,,,,,,
+STC-54,공통,Setting,DicomSet,Character Set 정상동작여부,PASS,"1. Studylist > ID : Thai > dcm Export > (0010,0010) 환자이름 언어 안깨지는지 확인",,,,,,,,,,,,,,,,,
+STC-55,공통,Setting,RIS Code,MWL 서버 연동 결과 RIS Code 로드,PASS,"1. Setting > RIS Code > Edit > Load Worklist 클릭 > 좌측 공간에 STC-29,31,32 에서 쿼리 한 검사정보 로드 되는지 확인
+-. ID : Александр, H&abyz, 王芳_123
+2. 로드 된 RIS Code 클릭 > 맨 우측리스트에서 각 Code 명칭에 맞는 Position 을 더블클릭 (*아래 정보 참고)
+-. Chest Series : Chest - PA
+-. Hand Series : Hand - Both AP, OBL, LAT
+3. 각 RIS Code 에 맞는 position들이 중앙 procedure 섹션으로 이동 (RIS Code matching 이라고 표현)
+4. Setting > RIS Code 탭 화면 내, 좌측 Code list / 우측 Procedure list 매칭한대로 업데이트 되었는지 확인",,,,,,,,,,,,,,,,,
+STC-56,공통,Setting,RIS Code,RIS Code Block,PASS,"1. Worklist 목록 > STC-31 (ID : 王芳_123) 에서 쿼리 한 Modality 'US' 검사 우클릭 > Block RIS Code 클릭
+2. Worlist 목록 업데이트 되면서 Block 처리한 검사정보 안뜨는지 확인",,,,,,,,,,,,,,,,,
+STC-57,공통,Setting,RIS Code,RIS Code Block,PASS,"1. Setting > RIS Code > Block Code list > STC-56 (ID : 王芳_123) 에서 Block 처리한 RIS code 내역 확인
+2. Block 처리한 RIS Code 해제 후, Worklist 에 해당 검사 정보 다시 복구되는지 확인",,,,,,,,,,,,,,,,,
+STC-58,공통,Setting,RIS Code,RIS Code Export,PASS,"1. Setting > RIS Code >STC-55 에서 매칭했던 RIS Code 리스트 확인
+2. Export RIS Code 클릭 > 확인 > C:\HnVUE\data\RISCode.xlsx 리스트 업데이트 확인
+3. RISCode.xlsx 파일 끄기",,,,,,,,,,,,,,,,,
+STC-59,공통,Setting,RIS Code,RIS Code Import,PASS,"1. Setting > RIS Code 화면 좌측 RIS Code 리스트중 하나 선택 > Delete
+2. Import RIS Code 클릭 > 방금 삭제한 코드 재생성 여부 확인",,,,,,,,,,,,,,,,,
+STC-60,공통,Setting,RIS Code,RIS Code add,PASS,"1. Setting > RIS Code > Edit > RIS Code 편집 창으로 이동
+2. A03 / PNS Series / P.N.S > WATERS, CALDWELL, LAT 뷰 추가
+3. 추가한 뷰 촬영 순서 up/down 변경
+4. Setting > RIS Code 창으로 복귀 시, 좌측 Code list / 우측 Procedure list 편집한대로 업데이트 되었는지 확인",,,,,,,,,,,,,,,,,
+STC-61,공통,Setting,Option,Auto Generate ID,PASS,"1. RIS Code > RIS Code 매핑 된 리스트 각각 'Add Auto Generate ID' 클릭 (*3개까지만 가능. STC-55,60 에서 매칭했던 RIS 코드 사용)
+2. Option > Auto Generate ID 빈칸에 RIS 코드 등록되었는지 확인
+3. Option > Auto Generate ID 체크박스 활성화
+4. Worklist > Add patient > Description 란 에 Auto Generate ID 선택된 3가지 RIS Code의 Description정보 모두 올라오는지 확인
+5. 셋중 하나 Description 정보만 남기고 나머지 지운 후 촬영 창 진입 (남긴 Description 정보 앞뒤로 공백 2개씩 삽입한채로 수행)
+6. 촬영창 좌측 목록에, Description 연계된 View procedure 자동 list-up 되는지 확인",,,,,,,,,,,,,,,,,
+STC-62,공통,Setting,RIS Code,ProcedureStep Add,FAIL,"1. Setting > RIS Code > Edit ProcedureStep > Body part & View 추가
+-. 사람모양 가슴쪽 선택 / Bodypart : QC (dcm 명칭 : QC) / Positoin : Uniformity (dcm 명칭 : Uniformity)
+2. Worklist > Quick start > 신규 생성한 View procedure (QC) 선택 > F3_Demo 영상 획득",,,,신규 Bodypart/View 추가 할때 간헐적 SW Crush,,,,,,,,,,,,,
+STC-63,공통,Setting,RIS Code,ProcedureStep Delete,PASS,"1. Setting > RIS Code > Edit ProcedureStep > STC-62 에서 신규 생성한 Body part & View (QC) list 삭제
+2. Setting > RIS Code 창으로 복귀 시, RIS Code 매핑 리스트에 삭제한 Procedure step정보 안뜨는지 확인",,,,,,,,,,,,,,,,,
+STC-64,공통,Exam,Unknown,Quick start 촬영 후 획득 영상 포지션 변경,PASS,"1. Quick start > Unknown 포지션에 F3_Demo 영상 획득
+2. '+' 버튼 클릭해서 Chest PA 뷰포지션 추가
+3. Unknown 썸네일 이미지 Drag > 신규추가한 Chest PA 리스트에 drop
+4. 영상 옮길지 여부 팝업창 발생 > 확인 > Unknown 에 있던 영상이 Chest PA 로 정상 이동/파라메터 처리 되었는지 확인",,,,,,,,,,,,,,,,,
+STC-65,공통,Exam,Unknown,Quick start 촬영 전 View position 변경,PASS,"1. Quick start > Unknown 포지션 단독존재 확인> + 버튼 클릭 > 좌측 섹션 Chest PA 더블클릭 > 우측 섹션 Unknown 포지션이 Chest PA 로 대치 됨
+2. Close 시, 촬영창 좌측 리스트에 Unknown 제거되고, Chest PA 로 포지션 명칭 변경 여부 확인",,,,,,,,,,,,,,,,,
+STC-66,공통,Worklist,Register,동일 Acc No 의 검사 생성 불가,FAIL,"1. Worklist > Add patient > 동일 Acc No 의 다른 Patient ID/Name 환자 검사 생성 시도
+-. Acc No :111 / PID : 111 / Name : HnVUE
+-. Acc No :111 / PID : 222 / Name : HnVUE VET
+2. 생성 불가 팝업창 발생",,,,아직 미개선 상태,,,,,,,,,,,,,
+STC-67,공통,Worklist,Procedure,동일 PID 의 검사 list 묶음촬영,PASS,"1. Worklist > Add patient > 동일 PID 검사 여러개 수동 생성 후, (*같은 환자의 다른 Bodypart 검사 여러개 생성 시)
+-. Acc No :111 / PID : 111 / Name : HnVUE / Procedure : Chest PA
+-. Acc No :222 / PID : 111 / Name : HnVUE / Procedure : Skull AP
+2. 둘중 하나 Worklist 클릭 해도 ChestPA, Skull AP 포지션 리스트 모두 끌고오는지 확인",,,,,,,,,,,,,,,,,
+STC-68,공통,Worklist,Query,동일 Acc No / 다른 환자 검사목록 로드 방지,FAIL,"1. Bunny 로 아래 케이스 생성 후 HnVUE query 시도.
+-. Acc No :111 / PID : 111 / Name : HnVUE
+-. Acc No :111 / PID : 222 / Name : HnVUE VET
+2. 로드 불가 or 둘중 하나만 로드 되어야함",,,,아직 미개선 상태,,,,,,,,,,,,,
+STC-69,공통,Exam,RIS code,RIS Code update 동작확인,PASS,"1. Worklist > STC-29 에서 생성한 ID : Александр 검사창 진입 > Chest PA 이미 매칭 되어있는 상태 > '+' 버튼 클릭 > Chest R Lat 추가
+2. 촬영 창 좌측 리스트 내 Chest PA, R Lat 추가 확인 > 'RIS' 버튼 클릭 > Add/Update 하시겠습니까 팝업메세지 확인 > 'Y'
+3. Setting > RIS Code > Chest Series 용 RIS 코드에 R Lat 뷰 추가되었는지 확인",,,,,,,,,,,,,,,,,
+STC-70,공통,Exam,Crop&Marker,Crop 기능 동작성 확인,FAIL,"1. Worklist > Quick start > F3_Demo 영상 2회 연속 획득
+2. 획득된 영상 각각 Crop & Marker 다르게 지정 후 저장 (원형/사각, L/R)> Thumbnail 상 반영 여부 확인
+3. 이 후, 해당 두 thumbnail 약 10회 반복 교차 선택 해가면서 촬영 창에 영상 로드
+4. Crop / Marker 적용 위치/모양 미세하게 이동하거나 풀리는 현상 발생여부 확인",,,, Crop / Marker 적용 위치/모양 미세하게 이동하거나 풀리는 현상,,,,,,,,,,,,,
+STC-71,공통,Exam,Crop&Marker,Marker 신규생성,PASS,1. 촬영 창 > Input Marker > OBL 기입 > 추가 > 영상에 마우스 갖다대면 OBL 마커 로드 되는지 확인,,,,,,,,,,,,,,,,,
+STC-72,공통,Exam,Manipulation,화살표 아이콘 단독 동작성 확인,PASS,"1. 영상 내 삽입 된 Marker, Annotation 에 마우스 클릭 > 키보드 'Delete' 누르면 삭제 되는지 확인
+2. Crop box 테두리 근처에 마우스 Drag > Crop box 위치 변경 할수 있는지 확인
+3. 영상 내에서 우측마우스 Drag 한채로 마우스 좌우 이동 시, WW 조정(Grayscale 폭)
+4. 영상 내에서 우측마우스 Drag 한채로 마우스 상하 이동 시, WC 조정 (밝기)",,,,,,,,,,,,,,,,,
+STC-73,공통,Exam,Manipulation,Crop 아이콘 동작성 확인,PASS,"1. STC-69 화살표에서 수행가능한 기능 모두 동일하게 동작 확인
+2. Crop box 상단 회전 핸들 사용, Crop box 회전 적용
+3. Crop box 크기 줄인 후, Crop box 밖에 마우스 커서 클릭 > Drag & Drop 으로 원하는 사이즈의 Crop box 생성 확인",,,,,,,,,,,,,,,,,
+STC-74,공통,Exam,Manipulation,돋보기/Panning/Fit to Screen/부분확대 동작성 확인,PASS,"1. 돋보기 아이콘 클릭 > 영상 내에서 마우스 Drag 한채로 마우스 상하이동 시, 영상 전체 확대/축소
+2. Panning 아이콘 클릭 > 영상 내에서 마우스 Drag 한채로 마우스 이동 시, 영상 전체 같이 이동.
+3. Fit to screen 아이콘 클릭 > 영상 display 화면 배율에 맞추어 영상 위치/크기 자동조정.
+4. 부분확대 아이콘 클릭 > 영상 클릭한 부분만 부분확대 동작 확인",,,,,,,,,,,,,,,,,
+STC-75,공통,Exam,Manipulation,"Rotation, Flip 기능 동작성 확인",PASS,"1. 시계방향 90도 4회 , 반시계방향 90도 4회 > 영상 정상 회전확인
+2. 세부 Rotation > 바 좌우로 움직이면서 영상 rotation 확인, 부등호/쌍부등호 회전동작 확인
+3. 상하반전/좌우반전 동작 확인",,,,,,,,,,,,,,,,,
+STC-76,공통,Exam,Manipulation,"흑백반전,ROI WW/WC 레벨링 동작성 확인",FAIL,"1. 흑백반전 동작성 확인
+2. ROI WW/WC 레벨링 동작성 확인",,,,흑백반전 도중 Thumbnail 사라짐 현상,,,,,,,,,,,,,
+STC-77,공통,Exam,RIS code,Procedure 정보 update 동작성 확인,PASS,"1. Worklist > Quick start > Skull_R LAT > F3_demo 영상 획득 > 90도 회전 & 상하반전 적용
+2. 'RIS' 아이콘 클릭 > Procedure 정보 업데이트
+3. Setting > RIS Code > Edit ProcedureStep > Skull R LAT 클릭 > 아래 90도 & Vertical flip 선택 되었는지 확인",,,,,,,,,,,,,,,,,
+STC-78,공통,Exam,Manipulation,Annotation 동작성 확인,FAIL,"1. Worklist > Quick start > F3_Demo 영상 2회 연속 획득
+2. 획득된 영상 중 한 영상에만 Annotation 종류별로 모두 적용 및 저장
+3. 획득 된 두 영상 thumbnail 약 10회 반복 교차 선택 해가면서 촬영 창에 영상 로드
+4. Annotation 적용 위치/모양 미세하게 이동하거나 풀리거나 수치 값 틀어지는 현상 발생여부 확인",,,,Annotation 적용 위치/모양 미세하게 이동하거나 풀리거나 수치 값 틀어지는 현상 ,,,,,,,,,,,,,
+STC-79,공통,Exam,Tool,Copy / Reject / Restore / Releat / Reset 기능 확인,PASS,"1. 선택된 영상 Copy 시, 동일 Position/동일 영상/동일 Crop, 마커, Ann 정보 모두 copy 된 영상 생성
+2. 선택된 영상 Reject 시, Thumbnail 상 'X'표기 확인 > Reject 영상 전송 > bunny 수신 불가 확인
+3. Reject 한 영상 Restore 시, Thumbnail 상, 'X'표기 사라짐 확인 > 복구한 영상 전송 시도 > bunny 정상 수신 확인
+4. 선택된 영상 Repeat 시, 재촬영 할 수 있는 동일 position 리스트 자동으로 추가생성
+5. Rotation, WW/WL, Annotation 등 편집 적용 된 영상 Reset 시, 영상 초기 획득 당시 원본으로 복구 확인",,,,,,,,,,,,,,,,,
+STC-80,공통,Exam,Tool,Suspend 동작성 확인,PASS,"1. 촬영 창 내 Suspend (일시정지) 모양 버튼 클릭 시, Worklist 창으로 자동 이탈
+2. Worklist 목록 내 Suspend 중인 검사 붉은색 표기 확인",,,,,,,,,,,,,,,,,
+STC-81,공통,Exam,Tool,Delete DCM ,PASS,"1. User 계정에서는 Delete (휴지통) 아이콘 없음
+2. Delete 아이콘 클릭 시 영상 삭제 확인",,,,,,,,,,,,,,,,,
+STC-82,공통,Exam,Tool,Report 동작성 확인,PASS,"1. Report 아이콘 클릭 > Report 창 진입 > 우측 Thumbnail 리스트 중 Report 삽입 할 영상 선택 Drag > Report 내에 Drop
+2. Report 내 환자 정보 자동 로드되는지 확인
+3. Comments 란 ""정상소견, lesão (포르투갈 lesion), fracturá (스페인어 골절), Normal"" 기입 후 word / PDF 각각 변환 저장.
+4. C:\HnVUE\Report 경로에 생성된 Report 동일여부 확인",,,,,,,,,,,,,,,,,
+STC-83,공통,Exam,Tool,Viewer 창 동작성 확인,FAIL,"1. Viewer 아이콘 클릭 > Viewer 창 진입 > Layout 설정 > 우측 Thumbnail 리스트에서 Viewer 창에 띄울 영상 drag-drop
+2. Annotation 활성화 / 비활성화 동작 확인
+3. Overlay 정보 활성화 / 비활성화 동작 확인
+4. Overlay 추가/삭제 설정 (*Setting > Overlay 설정값을 기본 가져오나, Viewer 창에서 수정한 Overlay 정보는 일회성으로 Setting 값에 영향주지 않음)
+5. Viewer 창 용 tool 각각 정상 동작 여부 확인 및 우측 마우스 Drag-drop 활용 WW/WC 조정
+6. Delete all image > Viewer 창에 띄운 영상 사라짐. 선택 Layout 만 유지
+7. 다분할 Layout 에 영상 여러장 띄운 후, 각각 panning / 확대 수행 > Fit all image > 각 Layout 창 배율에 맞게 이미지 크기 자동 조정/정렬 됨",,,,영문 아닌 환자이름 표기 안됨,,,,,,,,,,,,,
+STC-84,공통,Worklist,Worklist Type,Worklist View 방식,PASS,"1. TileView 선택 시 Tile type 으로 Worklist 표시 확인
+ 2. ListView 선택 시 List type 으로 Worklist 표시확인
+3. 각 List 변환 도중 누실 정보/미표기정보 있는지 확인",,,,,,,,,,,,,,,,,
+STC-85,공통,Worklist,Add Patient,신규 환자 수동 추가,FAIL,"1. Add Patient 클릭 후 New Patient 팝업 확인
+ 2. Acc no - TEST / Patiend ID - TEST / Patinet Name - TEST 입력
+ 3. BirthDate - 2000-01-01 변경 후 Age 자동 변경 확인
+ 4. Sex - Female 변경
+ 5. Description - Description test 입력 후 Register 클릭 / Worklist 내 저장 확인
+6. 해당 검사 Study 편집 아이콘 클릭 > 변경사항 없이 Register 클릭 > Worklist 내 누실 정보 있는지 확인
+7. 해당 검사 Study 편집 아이콘 클릭 > Acc no : TESTING 으로 변경 > Register 클릭 > Worklist 내 변경사항 반영 및 누실정보 여부 확인",,,,"한번 추가 후, 환자정보 수정 시, 환자이름 or Study Description 정보 빠짐",,,,,,,,,,,,,
+STC-86,공통,Worklist,Add Patient,기 추가한 처방 검사창 진입,PASS,"1. TEST / TEST 처방 더블클릭 시 Add Procedure 팝업창 확인
+ 2. Ankle R AP 추가 후 Start Exam 확인
+
+,,,,,All,,,,,,,,,,,,,,,,,,
+ 3. F3 누른 후 데모 영상 획득 확인",,,,,,,,,,,,,,,,,
+STC-87,공통,Worklist,Hide,검사목록 Hide 동작 확인,PASS,"1. 검사목록 중 하나 'Hide' 숨김처리 > list 상 즉시 반영
+2. 'Hide' 체크박스 클릭 (*숨김처리한 검사목록만 보기) 후, 정상동작 확인",,,,,,,,,,,,,,,,,
+STC-88,공통,Studylist,Studylist Type,Studylist View 방식,FAIL,"1. TileView 선택 시 Tile type 으로Studylist표시 확인
+ 2. ListView 선택 시 List type 으로 Studylist 표시확인
+3. 각 List 변환 도중 누실 정보/미표기정보 있는지 확인",,,,"Tile 뷰에서, 성/중간이름/이름 중에 이름만 표기됨",,,,,,,,,,,,,
+STC-89,공통,Studylist,Edit Patient,촬영된 환자정보 수정,PASS,"1. 아래 케이스 생성 후, test 촬영 진행
+-. Acc No :333 / PID : 333 / Name : HnVUE / Procedure : Chest PA
+-. Acc No :3333 / PID : 333 / Name : HnVUE / Procedure : Skull AP
+2. Studylist 에서 Acc No :333 검사 환자정보 수정 > 이름 HnVUE VET 변경
+3. 아래 케이스 이름 둘다 자동 변경 되는지 확인
+-. Acc No :333 / PID : 333 / Name : HnVUE VET / Procedure : Chest PA
+-. Acc No :3333 / PID : 333 / Name : HnVUE VET / Procedure : Skull AP",,,,,,,,,,,,,,,,,
+STC-90,공통,Studylist,Merge,촬영 완료 된 검사목록 끼리 병합 시도,PASS,"1. Merge > STC-89 촬영 한 검사 목록 ID : 333 > Acc : 333 은 좌측, Acc : 3333 은 우측에 배치
+2. 좌측 영상 우측으로, 우측영상 좌측으로 이동 수행. 정상적용 확인",,,,,,,,,,,,,,,,,
+STC-91,공통,Studylist,Export,획득된 영상 Export,PASS,"1. SCT-78 획득 검사목록 중 하나 선택
+2. Export > DCM > Path : 바탕화면 > Export
+3. 바탕화면에 선택한 Patient ID 로 폴더생성 확인",,,,,,,,,,,,,,,,,
+STC-92,공통,Exam,Processing,Processing parameter 변경 적용,PASS,"1. Worklist > Quick start > Chest PA test 영상 획득 > Image processing 툴 진입> Contrast 1 to 6 > Apply > 영상 변경되는지 확인
+2. 그 외 값들 임의로 양끝단으로 이동해가면서 영상 처리 변경되는지 확인",,,,,,,,,,,,,,,,,
+STC-93,공통,Exam,Processing,Processing parameter 로드/저장,PASS,"1. Worklist > Add patient > ID : Parameter, Name : Parameter, Chest PA (그외 정보 임의구성) > F3_Demo영상획득
+2. Image processing 툴 진입 > Load > HAND_A.pyr > Open > Parameter 값 변경 확인
+3. Apply > 영상 처리 변경되는지 확인
+4. C:\HnVUE\imageParameter\CHEST\CHEST_A.pyr 파일 백업
+5. Hand_A.pyr 값 화면에 로드된 채로 > Save Parameter
+6. C:\HnVUE\imageParameter\CHEST\CHEST_A.pyr 파일 생성일자 Update 여부 확인
+7. 업데이트 된 CHEST_A.pyr <> Hand_A.pyr 파라메터 값 동일한지 비교",,,,"Chest view 영상로드 상태로 Hand 파라메터 불러와서 적용. contrast 값 추가 변경 후, 저장 시, Hand 파라메터에 적용 됨.",,,,,,,,,,,,,
+STC-94,공통,Exam,Processing,Processing parameter 다른이름저장,PASS,"1. STC-93 (ID : Parameter) 획득 영상 기본 파라메터 값(UI 상), 전부 5씩 상향 조정 후, 다른이름으로 저장. (*파일명 : CHEST_C.pyr)
+2. 저장된 파일 <> CHEST_A.pyr 간 파라메터값 비교. (*5개 파라미터 +5씩 상향조정 되었는지)",,,,,,,,,,,,,,,,,
+STC-95,공통,Exam,Processing,Processing parameter DB저장,PASS,"1. STC-94 > +5 상향 조정 된 CHEST_C.pyr 저장 직후 > 화면 상 DB저장 클릭
+2. Setting > RIS Code > Edit Procedure step > Chest PA > 파라메터 경로 CHEST_C.pyr 변경확인",,,,,,,,,,,,,,,,,
+
+STC Test case,91
+PASS,73
+FAIL,15
+N/A,2
+Pending,5

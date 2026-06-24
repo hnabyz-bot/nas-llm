@@ -1,0 +1,918 @@
+queueId: ingest-1781569954418-16xx
+sourcePath: raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/3.1_A-CAV-HNX_Architecture View.docx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/60928bca6908/3.1_A-CAV-HNX_Architecture View__60928bca6908_combined.txt
+canonicalGroupId: 884b7e8e0fef
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 51
+
+SOURCE_TEXT
+Cybersecurity
+
+Architecture View
+
+Product name: Digital X-ray Imaging System
+
+Model name: HnX-R1
+
+Ref no.
+
+Detector 1
+
+(G series)
+
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+
+G1717CW, G1717CWP, G1717FW, G1717FWP
+
+Detector 2
+
+(2/3G series)
+
+A1717MCW, A1417MCW, F1417MCW
+
+Console software
+
+HnVUE
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+Jimin HAN
+
+RA team
+
+August 06, 2025
+
+Reviewed by
+
+Kyungsoo LEE
+
+R&D Manager
+
+August 06, 2025
+
+Approved by
+
+Namkyu HUR
+
+Quality Management Representative
+
+August 06, 2025
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+August 06, 2025
+
+Initial
+
+Contents
+
+1. Overview 4
+
+1.1 Purpose 4
+
+1.2 Scope 4
+
+2. Architecture view 4
+
+2.1 Data Flow Diagram (Global security architecture view) 4
+
+2.2 Updateability/Patch-ability View 6
+
+2.3 Security Use Case View 7
+
+Overview
+
+Purpose
+
+The purpose of this document is to show a cyber security architecture view for Digital X-ray Imaging System (Model name: HnX-R1).
+
+Scope
+
+This document is limited to HnX-R1, the Digital X-ray Imaging System.
+
+In addition, three of the four architectural views corresponding to the FDA requirements are Global system view, Updateability/Patchability view, and Security use case view. Multi patient harm view is excluded because it is not our product.
+
+Architecture view
+
+Data Flow Diagram (Global security architecture view)
+
+A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system. It highlights how data moves between devices, systems, and users, identifying points where data is input, processed, stored, and output. By visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission, and storage
+
+< Systematic Functional Diagram >
+
+< Data Flow Diagram >
+
+CRM-1~CRM-25(A1~A25): These assets are entities implemented in the console application and consist of a database, data manipulation process, detector, and communication interface between PACS/worklist servers and a GUI interface for the console program to implement its functions.
+
+CRM-1~CRM-6(A1~A6): Console Subcomponents, SQL database structure implemented in Console application
+
+CRM-7(A7):User interface with console accessing by console user(keyboards, Display interfacing, IO device etc)
+
+CRM-8~CRM-21(A8~A21): Console Subcomponents, Console Application Process : The console application process is comprised of functions responsible for the image acquisition station, such as post-processing images acquired from the detector, matching them with the worklist, transmitting this information to an independent PACS server within the hospital, and communicating with the detector.
+
+CRM-22(A22): Console – PACS/Worklist server ethernet communication interface
+
+CRM-23 ~CRM-25(A23-25): Console – Detector ethernet communication interface
+
+A26~A32: These assets are entities implemented in the detector inside and consist of a database, data manipulation process, interface for the console program to communication its image data.
+
+CRM-26~CRM-27(A26~27): Detector subcomponents, The detector firmware process is a stand-alone board that acts as the CPU in the detector, manages the detector storage system and communication modules, and configures overall image communication and detector settings.
+
+CRM-28~CRM-29(A28~29): Detector subcomponents, Detector System Storage (store) serves as the memory required to store and communicate images from the detector.
+
+CRM-30~CRM-31(A30~A31) : communication interface between Detector and console implementation by software communication protocol(Socket API)
+
+CRM-32(A32): Detector subcomponents, Communication and data requests are communication protocols for image data and transmission between firmware processes, communication interfaces, and data system storage, and are passages for transmitting images and data.
+
+Updateability/Patch-ability View
+
+• The detector's update process can only proceed after a proper connection has been established through the standard communication procedure. No additional ports are used.
+
+The console sends the update file (*.bpd) to the detector and initiates the patch request.(Console → Communication → Communication Interface → Request → Firmware process in Detector)
+
+The detector decrypts the received patch data and performs a SHA-256 integrity check.
+
+If the above process completes successfully, a normal response is sent back; otherwise, an error response is returned.(Firmware process in Detector → Response → Communication Interface → Communication → Console)
+
+After sending a normal response, the detector proceeds with applying the update and automatically reboots itself.
+
+Security Use Case View
+
+In order to attack the security of the console PC in various ways, several penetration tests were conducted through the following paths.
+
+Risk identification according to Data-Flow Diagram
+
+Risk ID
+
+Asset
+
+STRIDE
+
+Threat Description
+
+CRM-01
+
+A1: Console SQL database(Store)
+
+Tampering
+
+Malicious attacker manipulates database to tamper with diagnostic information
+
+CRM-02
+
+A2: Console SQL database(Store)
+
+Denial of service
+
+Risk of losing important image data and the database due to system failures or attacks.
+
+CRM-03
+
+A3: Console SQL database(Store)
+
+Tampering
+
+An attacker can manipulate the database to change passwords.
+
+CRM-04
+
+A4: Console SQL database(Store)
+
+Information disclosure
+
+An attacker hacks the database to steal account information.
+
+CRM-05
+
+A5: Console SQL database(Store)
+
+Information disclosure
+
+Sensitive data such as patient personal information, medical records, license keys, and user settings stored in the database files must be protected.
+
+CRM-06
+
+A6: Console SQL database(Store)
+
+Information disclosure
+
+Internal information such as user authentication data must be protected from internal staff and malicious users to prevent data leakage.
+
+CRM-07
+
+A7:Console User user interface
+
+Spoofing
+
+If account information is exposed, an attacker may impersonate another user.
+
+CRM-08
+
+A8: Console Application (Process)
+
+Information disclosure
+
+Revealing login failure reasons may help attackers infer account information.
+
+CRM-09
+
+A9: Console Application (Process)
+
+Elevation of privilege
+
+Attacker executes malicious code (SQL Injection, XSS, etc.)
+
+CRM-10
+
+A10: Console Application (Process)
+
+Repudiation
+
+Attackers attempt to commit malicious acts without leaving any evidence behind.
+
+CRM-11
+
+A11: Console Application (Process)
+
+Information disclosure
+
+Exposing audit logs can expose security vulnerabilities
+
+CRM-12
+
+A12: Console Application (Process)
+
+Tampering
+
+Risk of system files being tampered with - Malware or hackers can tamper with system files to insert backdoors.
+
+CRM-13
+
+A13: Console Application (Process)
+
+Denial of service
+
+Critical system files are damaged or deleted, causing service failures.
+
+CRM-14
+
+A14: Console Application (Process)
+
+Spoofing
+
+Unauthorized users with administrative privileges put the system at risk -a normal user can gain administrative privileges and take over or delete other accounts.
+
+CRM-15
+
+A15: Console Application (Process)
+
+Elevation of privilege
+
+Attackers can take over a system if they gain administrative privileges -insiders access unauthorized accounts and manipulate account information without authorization
+
+CRM-16
+
+A16: Console Application (Process)
+
+Elevation of privilege
+
+If you leave your password unchangeable for too long, any stolen credentials will remain valid for a long time, allowing the attacker to continue accessing your account as a legitimate user.
+
+CRM-17
+
+A17: Console Application (Process)
+
+Spoofing
+
+Random password attempts should be blocked to delay or prevent brute-force attacks.
+
+CRM-18
+
+A18: Console Application (Process)
+
+Spoofing
+
+If you fail to log in consecutively for a set number of times, you will be blocked from logging in.
+
+CRM-19
+
+A19: Console Application (Process)
+
+Information Disclosure
+
+DICOM (.dcm) files contain personal data such as patient names and birthdates and must be protected from leakage.
+
+CRM-20
+
+A20: Console Application (Process)
+
+Repudiation
+
+Users must be made aware that their actions are traceable and subject to legal accountability.
+
+CRM-21
+
+A21: Console Application (Process)
+
+Denial of Service
+
+Prevent issues caused by insufficient disk space during data storage.
+
+CRM-22
+
+A22: Communication with PACS/worklist server(Ethernet)
+
+Information Disclosure
+
+Patient information, patient identification information, and patient data may be exposed during transmission.
+
+CRM-23
+
+A23: Console -Detector interface connected with console
+
+(process)
+
+Tampering
+
+A malicious attacker intrudes into the detector through the console and modifies the detector connection information.
+
+CRM-24
+
+A24: Console - detector interface(data flow)
+
+Tampering
+
+Risk of loss of important diagnostic information and DB due to system failure, attack, etc.
+
+CRM-25
+
+A25: Console -detector interface(data flow)
+
+Information Disclosure
+
+Risk of losing critical diagnostic information and database due to system failures or attacks.
+
+CRM-26
+
+A26: Firmware Process in detector(Process)
+
+Tampering
+
+An attacker may tamper with or alter the firmware patch data, allowing the device to run malicious firmware that includes malware or other harmful code.
+
+CRM-27
+
+A27: Firmware Process in detector(Process)
+
+Denial of service
+
+An attacker may generate a large volume of traffic to overload the firmware, potentially disrupting or blocking access for legitimate users.
+
+CRM-28
+
+A28: Detector System Storage(store)
+
+Information disclosure
+
+Data stored in internal storage may be leaked externally or accessed and tampered with by unauthorized users.
+
+CRM-29
+
+A29: Detector System Storage(store)
+
+Elevation of privilege
+
+An attacker may attempt to access the system by using the root account or by creating additional user accounts and granting them elevated privileges.
+
+CRM-30
+
+A31: Communication
+
+(data flow)
+
+Information disclosure
+
+Communication packets may be exposed through tools such as network interface capture tools, potentially leaking sensitive data to an attacker.
+
+CRM-31
+
+A31: Communication
+
+(data flow)
+
+Tampering
+
+An attacker may intercept a packet, modify its contents, and forward it.
+
+CRM-32
+
+A32: Request
+
+(data flow)
+
+Tampering
+
+An attacker may intercept a packet, modify its contents, and forward it.
+
+* Risk ID by Cybersecurity Controls list
+
+A) Authentication controls: Risk ID CRM-07, 14, 17, 18
+
+B) Authorization controls: Risk ID CRM-09, 15, 16, 29
+
+C) Cryptography controls: Risk ID CRM-04, 05, 22
+
+D) Code, data, and execution integrity controls: Risk ID: CRM-01, 03, 12, 23, 24, 26, 31,32
+
+E) Confidentiality controls: Risk ID CRM-06, 08, 11, 19, 25, 28, 30
+
+F) Event detection and logging controls: Risk ID CRM-10, 20
+
+G) Resiliency and recovery controls: Risk ID CRM-02, 13, 21, 27
+
+H) Firmware and software update controls: N/A
+
+Risk identification according to cybersecurity requirements (IEC 60601-4-5)
+
+Risk ID
+
+Requirement ID
+
+Requirement
+
+STRIDE
+
+Threat Description
+
+CRM-33
+
+IA-01
+
+User Identification
+
+And Authentication
+
+Spoofing
+
+Authentication procedures can be bypassed, allowing attackers to access the system by impersonating legitimate users. CMR-8, CRM-16, CRM-18
+
+CRM-34
+
+IA-02
+
+Account Management
+
+Spoofing
+
+There is a risk that an attacker can access the system by impersonating a trusted user through credential theft.
+
+CRM-35
+
+IA-03
+
+Identification
+
+Information
+
+Management
+
+Spoofing
+
+Since user identification is not properly verified, an attacker can infiltrate the system with a forged identity.
+
+CRM-36
+
+IA-04
+
+Authentication
+
+Information
+
+Management
+
+Spoofing
+
+Vulnerabilities in the authentication mechanism can be exploited to illegally steal identities and escalate privileges.
+
+CRM-37
+
+IA-05
+
+Password
+
+Strength
+
+Configuration
+
+Spoofing
+
+There is a possibility of an attacker accessing the system by submitting false credentials.
+
+CRM-38
+
+IA-06
+
+Feedback on
+
+Authentication
+
+Information
+
+Spoofing
+
+Due to the absence of an identity verification procedure, a malicious user can inappropriately access system resources.
+
+CRM-39
+
+IA-07
+
+Login Restriction
+
+After Consecutive
+
+Failed Login Attemps
+
+Spoofing
+
+There is a risk that an attacker can illegally use system functions by forging legitimate user credentials.CRM-16
+
+CRM-40
+
+IA-08
+
+System Usage
+
+Notification Message
+
+Spoofing
+
+Due to insufficient authentication methods, there is a high possibility of identity theft attacks. CMR-8, CRM-18
+
+CRM-41
+
+UC-01
+
+Authorization
+
+Repudiation
+
+There is a risk that users can deny the actions they have performed due to the lack of behavior tracking records.
+
+CRM-42
+
+UC-02
+
+Mobile Code Usage
+
+Control
+
+Repudiation
+
+Due to insufficient auditing and logging functions, it may be difficult to trace responsibility for user actions later.
+
+CRM-43
+
+UC-03
+
+Session Lock
+
+Repudiation
+
+There is a possibility of denial of user actions, making it difficult to secure truthfulness during follow-up investigations.
+
+CRM-44
+
+UC-04
+
+Audit Log
+
+Generation
+
+Repudiation
+
+There is no clear record of user activities within the system, making it vulnerable to denial attacks.
+
+CRM-45
+
+UC-05
+
+Countermeasure
+
+for Audit Processing
+
+Failure
+
+Repudiation
+
+There is a vulnerability that allows users to deny system activities, making it difficult to identify legal/security responsibilities.
+
+CRM-46
+
+UC-06
+
+Timestamp
+
+Repudiation
+
+Due to insufficient logging of user actions, it is difficult to track and respond when an accident occurs.
+
+CRM-47
+
+UC-07
+
+Non Repudiation
+
+Repudiation
+
+Due to insufficient authentication and record keeping, the possibility of user denial increases, which may lead to security issues.
+
+CRM-48
+
+SI-01
+
+Integrity
+
+Assurance for
+
+Communication
+
+Tampering
+
+There is a risk that system components or data may be tampered with by attacks.
+
+CRM-49
+
+SI-02
+
+Protection against
+
+Malware
+
+Tampering
+
+Malicious users may modify software or firmware to disrupt normal functions.
+
+CRM-50
+
+SI-03
+
+Security Function
+
+Verification
+
+Tampering
+
+Unexpected functional failures or security vulnerabilities may occur through modification of system settings.
+
+CRM-51
+
+SI-04
+
+Integrity Checking of
+
+Software and
+
+Information
+
+Tampering
+
+Attackers may tamper with internal data to undermine the reliability of the system.
+
+CRM-52
+
+SI-05
+
+Input
+
+Validation
+
+Tampering
+
+If important configuration information is changed by an attack, the stability of the entire system may be threatened.
+
+CRM-53
+
+SI-06
+
+Output to a
+
+Pre-determined
+
+State in Case of Error
+
+Tampering
+
+If system files or logs are tampered with, it may be difficult to respond to and track security incidents.
+
+CRM-54
+
+SI-07
+
+Error Handling
+
+Tampering
+
+If system components are modified without permission, the reliability and operational continuity of the service may be damaged.
+
+CRM-55
+
+SI-08
+
+Update
+
+Tampering
+
+There is a risk that external intruders may affect the normal operation of the entire system by manipulating internal data.
+
+CRM-56
+
+SI-09
+
+Verification of
+
+Authenticity and Integrity of Updates
+
+Tampering
+
+If data or settings that should not be changed are tampered with, the system security system may collapse.
+
+CRM-57
+
+SI-10
+
+Physical Tamper
+
+Prevention
+
+Tampering
+
+Unauthorized changes to system components may cause unexpected malfunctions and security risks.
+
+CRM-58
+
+SI-11
+
+Boot Process Integrity
+
+Verification
+
+Tampering
+
+Due to data integrity violations, there is a possibility that an attacker may induce abnormal system operation. CRM-9
+
+CRM-59
+
+DC-01
+
+Confidentiality Assurance for
+
+Information
+
+Information Disclosure
+
+Sensitive information may be inappropriately exposed and leaked to unauthorized users. CRM-17
+
+CRM-60
+
+DC-02
+
+De-identification
+
+of Healthcare
+
+Information
+
+Information Disclosure
+
+Due to insufficient data encryption and access control, important information may be leaked to the outside. CRM-5
+
+CRM-61
+
+DC-03
+
+Use of Secure
+
+Encryption
+
+Information Disclosure
+
+There is a risk that sensitive data being stored and transmitted may be exposed by attacks.
+
+CRM-62
+
+TRE-01
+
+Restriction of
+
+Unauthorized
+
+Access to Audit Logs
+
+Denial of Service
+
+There is a risk that normal service provision may be interrupted due to concentrated attacks on system resources., CRM-6, CRM-10, CRM-11
+
+CRM-63
+
+RA-01
+
+Prevention of
+
+Denial of Service (DoS)
+
+Elevation of Privilege
+
+Due to privilege management vulnerabilities, there is a risk that low-privileged users may illegally obtain high-privileges.
+
+CRM-64
+
+RA-02
+
+Medical Device
+
+Backup
+
+Elevation of Privilege
+
+Due to inappropriate access control, there is a possibility of system misuse through user privilege escalation.
+
+CRM-65
+
+RA-03
+
+Medical Device
+
+Recovery and
+
+Reconfiguration
+
+Elevation of Privilege
+
+Due to weak privilege separation, there is a risk that an attacker may control the entire system beyond limited privileges.
+
+CRM-66
+
+RA-04
+
+Network and
+
+Security Configuration
+
+Settings
+
+Elevation of Privilege
+
+An attack that started with low privileges may lead to privilege escalation, potentially affecting the entire system.
+
+CRM-67
+
+RA-05
+
+Disabling
+
+Unnecessary
+
+Functions
+
+Elevation of Privilege
+
+Failure to authenticate users and manage permissions could allow attackers to gain unauthorized privileges.
+
+* Risk ID by Cybersecurity Controls list
+
+A) Authentication controls: Risk ID CRM-33-40
+
+B) Authorization controls: Risk ID CRM-63-67
+
+C) Cryptography controls: Risk ID CRM-61
+
+D) Code, data, and execution integrity controls: Risk ID: CRM-48-54, 58
+
+E) Confidentiality controls: Risk ID CRM-59-60
+
+F) Event detection and logging controls: Risk ID CRM-41-47
+
+G) Resiliency and recovery controls: Risk ID CRM-62
+
+H) Firmware and software update controls: Risk ID CRM-55,56, 57
+
+Please refer to the following report for the evaluation results of the penetration test
+
+(Test report no. EBB-2025-000109 - Penetration test PT-1 ~ PT7)

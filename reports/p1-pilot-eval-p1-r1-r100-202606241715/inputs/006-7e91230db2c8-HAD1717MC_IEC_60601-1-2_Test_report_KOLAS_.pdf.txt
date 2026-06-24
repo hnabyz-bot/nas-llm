@@ -1,0 +1,1357 @@
+queueId: ingest-1781569954419-180a
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/05_설계개발 검증 및 유효성 확인/규격 Test report/[HAD1717MC] IEC 60601-1-2 Test report (KOLAS).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/a06adce6d21d/[HAD1717MC] IEC 60601-1-2 Test report (KOLAS)__a06adce6d21d_combined.txt
+canonicalGroupId: 7e91230db2c8
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 6
+
+SOURCE_TEXT
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 2 / 79
+CONTENTS
+1. General Remarks ...................................................................................................................... 3
+2. Test Laboratory ......................................................................................................................... 3
+3. General Information of EUT...................................................................................................... 4
+4. EUT Operations and Test Configurations ............................................................................... 5
+4.1 Principle of Configuration Selection ....................................................................................... 5
+4.2 EUT Operation Mode ............................................................................................................. 5
+4.3 Test Configuration Mode........................................................................................................ 5
+4.4 Supported Equipment ............................................................................................................ 6
+4.5 EUT In/Output Port ................................................................................................................ 6
+4.6 Test Voltage and Frequency .................................................................................................. 6
+4.7 BASIC SAFETY, ESSENTIAL PERFORMANCE and Pass/Fail Criteria as determined by the
+Manufacture ................................................................................................................................ 7
+5. Test Summary ........................................................................................................................... 9
+6. Test Environment.................................................................................................................... 10
+7. Test Results : Emission.......................................................................................................... 11
+7.1 Conducted RF EMISSIONS ................................................................................................. 11
+7.2 Radiated RF EMISSIONS .................................................................................................... 25
+7.3 Harmonic Current Emissions ............................................................................................... 39
+7.4 Voltage Change, Fluctuations and Flicker ............................................................................ 50
+8. Test Results : Immunity.......................................................................................................... 54
+8.1 Electrostatic Discharge ........................................................................................................ 54
+8.2 Radiated RF EM Fields ........................................................................................................ 58
+8.3 Electrical Fast Transients and bursts ................................................................................... 62
+8.4 Surges ................................................................................................................................. 65
+8.5 Conducted Disturbances, induced by RF fields .................................................................... 68
+8.6 Rated Power-frequency Magnetic Field ............................................................................... 71
+8.7 Voltage Dips and Interruptions ............................................................................................. 74
+9. Photographs of EUT ............................................................................................................... 77
+10. Revision History.................................................................................................................... 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 3 / 79
+1. General Remarks
+This report contains the result of tests performed by :
+DT&C Co., Ltd.
+42, Yurim-ro, 154beon-gil, Cheoin-gu, Yongin-si, Gyeonggi-do, Korea 17042
+http://www.dtnc.net
+Tel: +82-31-321-2664 Fax: +82-31-321-1664
+2. Test Laboratory
+DT&C Co., Ltd. has been accredited / filed / authorized by the agencies listed
+in the following table
+Certificate Nation Agency Code Remark
+Accreditation
+Korea KOLAS 393 ISO/IEC 17025
+South Africa SABS 0006 ISO/IEC 17025
+Ghana NCA NCA agreement
+23rd,Oct,2018 -
+Site Filing
+USA FCC
+KR0034
+101842
+678747, 596748,
+804488, 165783
+Accredited
+2.948 Listed
+Canada IC 5740A-3
+5740A-4 Registered
+Japan VCCI
+C-1427
+R-3385, R-4076,
+R-4180, R-4496,
+T-1442,
+G-10338, G-754,
+G-10815, G-20051
+Registered
+Certification
+Korea KC KR0034 Designation
+Germany TUV CARAT 089112
+0006 Rev.00 ISO/IEC 17025
+Russia RMRS 17.10189.296 ISO/IEC 17025
+Quality control in the testing laboratory is implemented as per ISO/IEC 17025
+which is the “General requirements for the competent of calibration and testing laboratory”.
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 4 / 79
+3. General Information of EUT
+Applicant
+H&abyz
+41-16, Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea (17118)
+Manufacturer
+H&abyz
+41-16, Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea (17118)
+Factory
+H&abyz
+41-16, Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea (17118)
+Product Name Digital X-ray Flat Panel detector
+Model Name HAD1717MC
+Add Model Name HAD1717MG
+Add Model Difference - Scintillator difference mounted on panel
+- Scintillator is a chemical material, so no electrical difference.
+Software Version 2.16.0
+Hardware Version MAIN: V006 /_ROIC: V007/ GATE: V006/ POWERBOX: V006
+Serial No None
+Rated Power AC 100-240 V, 50/60 Hz, Max 80 W
+Remarks None
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 5 / 79
+4. EUT Operations and Test Configurations
+4.1 Principle of Configuration Selection
+Emission :
+The equipment under test (EUT) was configured to measure its highest possible radiation level.
+The test modes were adapted accordingly in reference to the instructions for use.
+For each testing mode different configurations were used,
+Refer to the individual tests.
+Immunity :
+The equipment under test (EUT) was configured to have its highest possible susceptibility against
+the tested phenomena. The test modes were adapted accordingly in reference to the instructions for
+use. For each testing mode different configurations were used.
+Refer to the individual tests.
+4.2 EUT Operation Mode
+No. Mode Description
+1 Normal Operating The EUT (Controller) transmits the image acquired by the EUT (Detector) to the
+notebook.
+4.3 Test Configuration Mode
+No. Mode Description
+1 Normal Operating
+EUT (controller) and EUT (detector) are connected with POWER & DATA cable,
+EUT (controller) and notebook are connected with LAN cable.
+EUT (controller) and switch are connected with TRIGGER cable.
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 6 / 79
+4.4 Supported Equipment
+Used* Product Type Manufacturer Model Remarks
+AE NOTEBOOK Lenovo PC HK Limited 20298 WB12618039
+AE SWITCH N/A N/A None
+*Abbreviations:
+AE - Auxiliary/Associated Equipment, or
+SIM - Simulator
+4.5 EUT In/Output Port
+Name Type* Cable
+Max. >3 m
+Cable
+Shielded Remarks
+POWER AC 2.0 Non-shield None
+POWER&DATA I/O 15.0 Shield None
+TRIGGER I/O 12.5 Shield None
+LAN TP 5.0 Non-shield None
+*Abbreviations:
+AC = AC Power Port DC = DC Power Port N/E = Non-Electrical
+I/O = Signal Input or Output Port PC = Patient-Coupled
+TP = Telecommunication Ports
+4.6 Test Voltage and Frequency
+Case Voltage
+(V)
+Frequency
+(Hz) Phases Remarks
+1 AC 100 50 Single None
+2 AC 100 60 Single None
+3 AC 120 60 Single None
+4 AC 127 60 Single None
+5 AC 220 60 Single None
+6 AC 230 50 Single None
+7 AC 120 50 Single For Rated Power-frequency
+Magnetic Field
+8 AC 127 50 Single For Rated Power-frequency
+Magnetic Field
+9 AC 220 50 Single For Rated Power-frequency
+Magnetic Field
+10 AC 230 60 Single For Rated Power-frequency
+Magnetic Field
+11 AC 240 50 Single Maximum rating power
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 7 / 79
+4.7 BASIC SAFETY, ESSENTIAL PERFORMANCE and Pass/Fail Criteria as
+determined by the Manufacture
+Description of BASIC SAFETY and ESSENTIAL PERFORMANCE
+BASIC SAFETY and ESSENTIAL PERFORMANCE.
+Operation check of the product can be monitored by using the acquisition software.
+- Must be able to acquire image within 5 seconds
+- The acquired image should not have two Line Adjacent, Line Block, or No Display.
+Description how the BASIC SAFETY and ESSENTIAL PERFORMANCE were monitored during each test
+Test standards and results
+When acquiring a Dark image using Acquisition Software in the evaluation of the following criteria, there should be no
+problem with the image.
+STANDARDS RESULTS
+CISPR 11
+Conducted Emission on AC mains Port PASS
+Radiated Emission PASS
+IEC 61000-3-2 Harmonic Current Emission on AC Mains Input Port PASS
+IEC 61000-3-3 Voltage Fluctuations and Flicker on AC Mains Input Port PASS
+IEC 61000-4-2 Electrostatic Discharge Immunity PASS
+IEC 61000-4-3 Radio-frequency electromagnetic field Amplitude modulated Immunity PASS
+IEC 61000-4-4 Fast Transients Immunity PASS
+IEC 61000-4-5 Surges Immunity PASS
+IEC 61000-4-6 Radio-frequency common mode Immunity PASS
+IEC 61000-4-8 Power frequency magnetic fields PASS
+IEC 61000-4-11 Voltage Dips, Voltage Interruptions Immunity PASS
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 8 / 79
+Immunity Pass/Fail Criteria
+Test Description Pass/Fail Criteria description Part 2 reference
+Electrostatic Discharges
+Before, during, and after the test, the
+essential performance and basic safety
+shall not be affected, and the
+performance degradation which does
+not affect essential performance and
+basic safety is PASS.
+Radiated RF EM Fields
+Proximity Wireless fields
+Electrical Fast Transients
+and bursts
+Surges
+Conducted Disturbances,
+induced by RF fields
+Voltage Dips and Interruptions
+Rated Power-frequency Magnetic
+Field
+Note: Specific, detailed immunity pass/fail criteria, shall be based on applicable part two standards or risk
+management, for immunity with regard to em disturbances. These pass/fail criteria shall be included in the risk
+management file
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 9 / 79
+5. Test Summary
+Test Items Applied Standards Results
+I. Emission
+Conducted RF EMISSIONS EN 55011 : 2009 / A1 : 2010 Class A
+(CISPR 11 : 2009 / A1 : 2010) C
+Radiated RF EMISSIONS EN 55011 : 2009 / A1 : 2010 Class A
+(CISPR 11 : 2009 / A1 : 2010) C
+Harmonic Current Emission EN 61000-3-2 : 2014
+(IEC 61000-3-2 : 2014) C
+Voltage Change, Fluctuations and Flicker EN 61000-3-3 : 2013
+(IEC 61000-3-3 : 2013) C
+II. Immunity
+Electrostatic Discharge
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-2 : 2009
+(IEC 61000-4-2 : 2008)
+Radiated RF EM Fields
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-3 : 2006 / A2 : 2010
+(IEC 61000-4-3 : 2006 / A2 : 2010)
+Electrical Fast Transients and bursts
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-4 : 2012
+(IEC 61000-4-4 : 2012)
+Surges
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-5 : 2014
+(IEC 61000-4-5 : 2014)
+Conducted Disturbances, induced by RF fields
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN61000-4-6 : 2014
+(IEC61000-4-6 : 2013)
+Rated Power-frequency Magnetic Field
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-8 : 2010
+(IEC 61000-4-8 : 2009)
+Voltage Dips and Interruptions
+EN 60601-1-2 : 2015
+(IEC 60601-1-2 : 2014) C
+EN 61000-4-11 : 2004
+(IEC 61000-4-11 : 2004)
+C=Comply N/C=Not Comply N/T=Not Tested N/A=Not Applicable
+The data in this test report are traceable to the national or international standards.
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 10 / 79
+6. Test Environment
+Test Items Test date
+(YYYY-MM-DD)
+Temp.
+(℃)
+Humidity
+(% R.H.)
+Pressure
+(kPa)
+I. Emission
+Conducted RF EMISSIONS 2019-04-08 20 29
+-
+Radiated RF EMISSIONS 2019-04-09 22 31
+Harmonic Current Emission 2019-04-09 20 34
+Voltage Change, Fluctuations and Flicker 2019-04-09 20 34
+II. Immunity
+Electrostatic Discharge 2019-04-19 21 38 101.7
+Radiated RF EM Fields 2019-04-17 20 29 101.5
+Electrical Fast Transients and bursts 2019-04-12 22 40 101.9
+Surges 2019-04-12 22 40 101.9
+Conducted Disturbances, induced
+by RF fields 2019-04-09 24 32 101.9
+Rated Power-frequency Magnetic Field 2019-04-15 21 30 102.0
+Voltage Dips and Interruptions 2019-04-12 22 40 101.9
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 11 / 79
+7. Test Results : Emission
+7.1 Conducted RF EMISSIONS
+EN 55011, CISPR 11 Mains terminal disturbance voltage Result
+Method: The AMN placed 0,8 m from the boundary of the unit under test and bonded to a ground
+reference plane. This distance was between the closest points of the AMN and the EUT. All
+other units of the EUT and associated equipment were at least 0,8 m from the AMN. All
+power was connected to the system through Artificial Mains Network (AMN). Conducted
+voltage measurements on mains lines were made at the output of the AMN.
+Comply
+Fully configured sample scanned ov
+er the following frequency range
+Frequency range on each side of line Measurement Point
+150 kHz to 30 MHz Mains
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Limits
+Frequency (MHz)
+Limit dBμV
+Quasi-Peak Average
+Class A Class B Class A Class B
+0.15 to 0.50 79 66 to 56 66 56 to 46
+0.50 to 5 73 56 60 46
+0.50 to 30 60 50
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+MEASUREMENT
+SOFTWARE
+EMI-C VER.
+2.00.0165 TSJ N/A N/A N/A
+EMI TEST RECEIVER ESR ROHDE & SCHWARZ 101767 2018.12.19 2019.12.19
+LISN NNLK8121 SCHWARZBECK NNLK8121-580 2018.07.09 2019.07.09
+LISN NNLK 8129 SCHWARZBECK 8129-272 2018.07.31 2019.07.31
+PULSE LIMITER ESH3-Z2 ROHDE & SCHWARZ 101334 2018.12.19 2019.12.19
+TERMINATION CT-01 TME N/A 2018.12.19 2019.12.19
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 12 / 79
+Mains terminal disturbance voltage _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 13 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 100 Test Frequency (Hz) 50
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 14 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 15 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 100 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 16 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 17 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 120 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 18 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 19 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 127 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 20 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 21 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 220 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 22 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 23 / 79
+Mains terminal disturbance voltage _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 230 Test Frequency (Hz) 50
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 24 / 79
+Calculation
+N : Neutral phase, L1 : Live phase
+
+C.FACTOR(dB) : Pulse Limiter(dB) + Cable loss(dB) + Insertion loss of LISN(dB)
+Result(dBμV) : Reading Value(dBμV) + C.FACTOR(dB)
+Margin(dB) : Limit(dBμV) - Result(dBμV)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 25 / 79
+7.2 Radiated RF EMISSIONS
+EN 55011, CISPR 11 Radiated disturbance 30 MHz –1 GHz Result
+Method: Measurements were made in a 10-meter semi-anechoic chamber that complies to CISPR 16.
+Preliminary (peak) measurements were performed at an antenna to EUT separation distance of 10
+meter below 1GHz and 3 meter above 1GHz. The EUT was rotated 360° about its azimuth with the
+receive antenna located at various heights in horizontal and vertical polarities. Final measurements
+(quasi-peak detector below 1GHz and CISPR-average detector above 1GHz) were then performed
+by rotating the EUT 360° and adjusting the receive antenna height from 1 to 4 m. All frequencies were
+investigated in both horizontal and vertical antenna polarity, where applicable.
+Comply
+Fully configured sample
+scanned over the following
+frequency range
+Frequency range Measurement distance
+30 MHz – 1 GHz 10 m measurement distance
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Radiated Disturbance below 1 000 MHz at a measuring distance of 10 m
+Frequency range
+(MHz)
+Quasi-peak limit dBμV/m
+Class A Class B
+30 to 230 40 30
+230 to 1 000 47 37
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+MEASUREMENT
+SOFTWARE
+EMI-R VER.
+2.00.0177 TSJ N/A N/A N/A
+EMI TEST RECEIVER ESU ROHDE & SCHWARZ 100014 2018.10.30 2019.10.30
+TRILOG BROADBAND
+TEST-ANTENNA VULB 9160 SCHWARZBECK 3358 2018.04.23 2020.04.23
+LOW NOISE PRE
+AMPLIFIER MLA-10K01-B01-27 TSJ 1760253 2018.05.09 2019.05.09
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 26 / 79
+Radiated disturbance at ( 30 ~ 1 000 ) MHz _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 27 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 100 Test Frequency (Hz) 50
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 28 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 29 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 100 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 30 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 31 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 120 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 32 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 33 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 127 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 34 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 35 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 220 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 36 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 37 / 79
+Radiated disturbance at (30 ~ 1000) MHz _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 230 Test Frequency (Hz) 50
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 38 / 79
+Calculation
+Result(dBμV/m) : Reading Value(dBμV) + Cable loss(dB) - Pre amplifier gain(dB) + Ant. Factor(dB)
+Margin(dB) : Limit(dBμV/m) - Result(dBμV/m)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 39 / 79
+7.3 Harmonic Current Emissions
+EN/IEC 61000-3-2 Harmonic current emissions Result
+Method: This test consists on the measurement of harmonics components of the input current which may be
+produced by equipment having an input current up to and including 16 A per phase, and intended
+to be connected to public low-voltage distribution systems. The equipment is tested under specified
+conditions of operation.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 5, 6
+Limit classification
+in accordance with
+the standard
+Class A
+Class B
+Class C with active input power > 25 W
+Class C with active input power ≤ 25 W
+(First requirement, Table 3 column 2)
+Class C with active input power ≤ 25 W (Second requirement)
+Class D
+Limit classification
+Class A
+- balanced three-phase equipment
+- household appliances, excluding equipment identified as class D
+- tools, excluding portable tools
+- dimmers for incandescent lamps
+- audio equipment
+- equipments not specified in one of the three other classes
+Class B - portable tools
+- arc welding equipment which is not professional equipment
+Class C - lighting equipment
+Class D
+- Equipment specified power less than or equal to 600 W of the
+following types
+- personal computers and personal computer monitors
+- television receiver
+1) According to EN61000-3-2 the manufacturer shall specify the power of the apparatus. This value shall be used for
+establishing limits; the specified power shall be within ±10 % of the measured power.
+2) Limit are not specified for
+- Equipment with a rated power of 75 W or less (other than lighting equipment)
+- Professional equipment with a total rated power greater than 1 kW
+- Symmetrically controlled heating elements with a rated power less than or equal to 200 W
+- Independent dimmers for incandescent lamps with a rated power less than or equal to 1 kW
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 40 / 79
+Harmonic Current Emission Limit
+- Limit for Class A equipment
+Harmonic order (n) Maximum permissible
+Harmonic current (A)
+Harmonic order (n) Maximum permissible
+Harmonic current (A) Odd harmonics Even harmonics
+3
+5
+7
+9
+11
+13
+15 ≤ n ≤ 39
+2.30
+1.14
+0.77
+0.40
+0.33
+0.21
+0.15 15/n
+2
+4
+6
+8 ≤ n ≤ 40
+1.08
+0.43
+0.3
+0.23 8/n
+- Limit for Class B equipment
+It shall not exceed the value give in Class A multiplied by a factor of 1.5.
+- Limit for Class C equipment
+Harmonic order (n) Maximum permissible harmonic current expressed as a percentage
+of the input current at the fundamental frequency %
+2
+3
+5
+7
+9
+11 ≤ n ≤ 39
+(odd harmonics only)
+2
+30∙λ(λ is the circuit power factor)
+10
+7
+5
+3
+- Limit for Class D equipment
+Harmonic order (n) Maximum permissible
+Harmonic current per watt (mA/W)
+Maximum permissible
+Harmonic current (A)
+3
+5
+7
+9
+11
+13 ≤ n ≤ 39
+(odd harmonics only)
+3.4
+1.9
+1.0
+0.5
+0.35
+3.85/n
+2.30
+1.14
+0.77
+0.40
+0.33
+See Class A
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+MULTIFUNCTION AC / DC
+POWER SOURCE NETWAVE 60-400 EM TEST P1311115470 2019.02.20 2020.02.20
+DIGITAL POWER
+ANALYZER DPA 503N EM TEST P1303109858 2019.02.20 2020.02.20
+THREE-PHASE FLICKER
+IMPEDANCE AIF 503N63 EM TEST P1311114936 2019.02.20 2020.02.20
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 41 / 79
+Harmonic current emissions _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 42 / 79
+Harmonic current emissions _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 220 Test Frequency (Hz) 60
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 43 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 44 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 45 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 46 / 79
+Harmonic current emissions _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+Test voltage (V) AC 230 Test Frequency (Hz) 50
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 47 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 48 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 49 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 50 / 79
+7.4 Voltage Change, Fluctuations and Flicker
+EN/IEC 61000-3-3 Voltage change, fluctuations and flicker Result
+Method: EUT was connected to the Power Analyzer system. Measurements were conducted to obtain the
+desired flicker parameters. The measuring time depends on which parameters are to be measured.
+The measurement was performed with the test software
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 6
+parameters
+Pst the short-term flicker indicator, Pst, shall not be greater than 1.0
+Plt the long-term flicker indicator, Plt, shall not be greater than 0.65
+Tmax
+Tmax the accumulated time value of d(t) with a deviation exceeding 3,3 %
+during a single voltage change at the EUT terminals, shall not exceed 500 ms
+dc The maximum relative steady-state voltage change, dc, shall not exceed 3.3 %
+dmax
+The maximum relative voltage change dmax, shall not exceed
+4 % without additional conditions
+6 % for equipment which is switched manually, if any
+7 % for equipment which is attended whilst in use
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+MULTIFUNCTION AC / DC
+POWER SOURCE NETWAVE 60-400 EM TEST P1311115470 2019.02.20 2020.02.20
+DIGITAL POWER
+ANALYZER DPA 503N EM TEST P1303109858 2019.02.20 2020.02.20
+THREE-PHASE FLICKER
+IMPEDANCE AIF 503N63 EM TEST P1311114936 2019.02.20 2020.02.20
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 51 / 79
+Voltage change, fluctuations and flicker _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 52 / 79
+Voltage change, fluctuations and flicker _Measurement data
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 53 / 79
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 54 / 79
+8. Test Results : Immunity
+8.1 Electrostatic Discharge
+EN/IEC 60601-1-2 Electrostatic Discharge Result
+Method:
+The test set-up was made accordance with EN/IEC 61000-4-2.
+A ground reference plane was located on the floor, and connected to earth via a low impedance
+connection.
+The return cable of the ESD generator was connected to the reference plane.
+In case of table top equipment, EUT was placed on the reference plane on 80 cm of insulating support.
+And a vertical coupling plane (VCP) of (0.5 x 0.5) m was located 10 cm from the EUT’s sides.
+The VCP was connected to the reference plane via a cable with a 470 k (2ea) resistor.
+The test was made by applying contact and air discharges to the EUT and contact discharges to the
+VCP/HCP.
+When applying the discharges to the VCP the tip of the generator was located at the middle edge of the
+VCP. The VCP was located 10 cm from each side of the EUT.
+Contact discharges were applied to various points of the EUT at conductive surfaces and to the
+HCP/VCP. Air discharges were applied to various points of the EUT at non-conductive surfaces.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Test spec
+Direct : Air Discharges
+Contact Discharges
+2, 4, 8, 15 kV
+8 kV
+Indirect : HCP ( Floor-stand product excluded )
+VCP 8 kV
+Polarity + and -
+Number of discharges per point for each voltage and polarity
+Air Discharge
+Contact Discharge
+≥10
+≥10
+Discharge impedance 330  / 150 pF
+Discharge Repetition ≥1 sec
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+ELECTROSTATIC
+DISCHARGE SYSTEM ESS-2000 NOISEKEN ESS0675752 2019.01.30 2020.01.30
+ESD GUN TC-815R NOISEKEN ESS0675835 2019.01.30 2020.01.30
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 55 / 79
+Electrostatic discharge _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 56 / 79
+Electrostatic discharge position photo
+Test configuration mode 1 EUT Operation mode 1
+Air Discharge : Contact Discharge :
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 57 / 79
+Electrostatic discharge _Test result
+Test configuration mode 1 EUT Operation mode 1
+Indirect Discharge
+No. Position Kind of
+Discharge Test level Remark Result
+1 Horizontal Coupling Plane
+Contact 8 kV
+No disturbance of
+function PASS
+2 Vertical Coupling Plane No disturbance of
+function PASS
+Direct Discharge
+No. Position Kind of
+Discharge Test level Remark Result
+1 ENCLOSURE
+(DETECTOR)
+Contact 8 kV
+No disturbance of
+function PASS
+2 ENCLOSURE
+(CONTROLLER)
+No disturbance of
+function PASS
+3 SCREW
+(DETECTOR)
+No disturbance of
+function PASS
+4 SCREW
+(CONTROLLER)
+No disturbance of
+function PASS
+5 POWER/DATA PORT
+(DETECTOR)
+No disturbance of
+function PASS
+6 POWER/DATA PORT
+(CONTROLLER)
+No disturbance of
+function PASS
+7 TRIGGER PORT
+(CONTROLLER)
+No disturbance of
+function PASS
+8 LAN PORT
+(CONTROLLER)
+No disturbance of
+function PASS
+NOTE 1)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 58 / 79
+8.2 Radiated RF EM Fields
+EN/IEC 60601-1-2 Radiated RF EM Fields Result
+Method:
+The test set-up was made accordance with EN/IEC 61000-4-3 in semi-anechoic chamber.
+The EUT has been placed in center of a non-metallic turntable.
+The height of this table was 0.8 m. The field strength was monitored by an isotropic sensor during the
+complete test.
+The isotropic sensor was located beside the equipment.
+The antenna has been orientated for both horizontal and vertical polarization.
+The distance between antennas the equipment under testing was at least 3 m.
+The tests have been performed with the antenna facing each of the four side of the EUT.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Test Spec
+Professional healthcare Home healthcare Proximity Wireless fields
+Field strength 3 V/m 10 V/m 9 ~ 28 V/m
+Frequency range 80 MHz ~ 2.7 GHz 80 MHz ~ 2.7 GHz 385 MHz ~ 6.0 GHz
+Amplitude Modulation AM, 80 %, 1 kHz sine-wave FM, ±5 kHz deviation, 1 kHz
+PM, 50%, 18/217 Hz
+Step size 1 % of fundamental
+Sweep capability ≤1.5 x 10-3 decade/s
+Dwell time 3 sec
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+SIGNAL GENERATOR SMB 100A ROHDE & SCHWARZ 106884 2018.05.08 2019.05.08
+STACKED
+LOGARITHMIC-PERIODIC
+TEST-ANTENNA
+STLP 9128 D SCHWARZBECK 9128DS 3016 N/A N/A
+POWER METER NRP2 ROHDE & SCHWARZ 102606 2018.05.15 2019.05.15
+POWER AMPLIFIER MT 1200 PRANA 1482 N/A N/A
+POWER AMPLIFIER SV220 PRANA 1708-2104 N/A N/A
+POWER AMPLIFIER UX100 PRANA 1708-2103 N/A N/A
+HORN ANTENNA 3117 ETS-LINDGREN 211466 N/A N/A
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 59 / 79
+Radiated RF EM Fields _Test setup photo
+
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 60 / 79
+Radiated RF EM Fields _Test result
+Test configuration mode 1 EUT Operation mode 1
+Frequency Test Level
+(V/m)
+ANT.
+Polarization Position Remark Result
+80 ~ 2 700
+MHz 3
+Horizontal
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Vertical
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Note :
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 61 / 79
+Radiated RF EM Fields and Proximity Wireless fields _Test result
+Test configuration mode 1 EUT Operation mode 1
+Frequency Test Level
+(V/m)
+ANT.
+Polarization Position Remark Result
+385 MHz 27
+Horizontal
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Vertical
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+450, 810,
+870, 930,
+1 720, 1 845,
+1 970, 2 450
+MHz
+28
+Horizontal
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Vertical
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+710, 745,
+780, 5 240,
+5 500, 5 785
+MHz
+9
+Horizontal
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Vertical
+Left No disturbance of function PASS
+Right No disturbance of function PASS
+Front No disturbance of function PASS
+Rear No disturbance of function PASS
+Note :
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 62 / 79
+8.3 Electrical Fast Transients and bursts
+EN/IEC 60601-1-2 Electrical Fast Transients and bursts Result
+Method:
+The test set-up was made accordance with EN/IEC 61000-4-4.
+The EUT has been placed on a wooden table 10 cm above the reference ground plane.
+The reference ground plane exceeded the projected geometry of the EUT and the capacitive clamp
+by more than 20 cm. The clamp has placed directly on the reference ground plane.
+The distance between the EUT and all other conductive structures except the ground plane beneath
+the EUT was more than 50 cm.
+The distance between noise generator and EUT was about 50 cm.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Test Spec
+AC power ports and
+DC power ports Signal ports
+Test voltage (kV) 2 1
+Polarity + and -
+Repetition frequency 100 kHz
+Tr/Th ns 5 / 50
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+CAPACITIVE COUPLING
+CLAMP HFK EMTEST P1504147683 2018.05.08 2019.05.08
+COMPACT NX
+GENERATOR
+COMPACT NX5
+BSP-1-300-16 EMTEST P1602169866 2019.03.04 2020.03.04
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 63 / 79
+Electrical Fast Transients and bursts _Test setup photo _ Power Port
+Test configuration mode 1 EUT Operation mode 1
+Electrical Fast Transients and bursts _Test setup photo _ Signal Port
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 64 / 79
+Electrical Fast Transients and bursts _Test result of power port
+Test configuration mode 1 EUT Operation mode 1
+Line Test Level (kV) Remark Result
+N
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+L1
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+PE
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+N - L1
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+N - PE
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+L1 - PE
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+N - L1 - PE
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+NOTE 1)
+N : Neutral line, L1 : Live line, PE : Ground line
+Electrical Fast Transients and bursts _Test result of signal port
+Line Test Level (kV) Remark Result
+POWER & DATA
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
+TRIGGER
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
+LAN
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
+NOTE 1)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 65 / 79
+8.4 Surges
+EN/IEC 60601-1-2 Surges Result
+Method:
+The test set-up was made accordance with EN/IEC 61000-4-5.
+The test consists of the injection of slow high energy transients in the AC/DC mains supply lines in
+both line-to-line and line-to-ground coupling mode, and into the signal and extra low voltage supply
+lines in line-to-ground coupling mode. The impedance of the transient generator is characterized by
+the shape of the open-circuit voltage and the circuit current pulses.
+To simulate typical installation impedances, 40 are inserted when the generator when extra low
+voltage and signal lines are tested, and 10 are inserted when the line-to-ground test is conducted on
+the AC/DC mains lines. The test pulses are coupled into the leads to be tested by means of
+appropriate coupling networks, which maintain the test pulses within their specification. The reference
+ground plane exceeded the projected geometry of the EUT and the back filler by more than 20 cm.
+The back filler has been placed directly on a separated reference ground plane. Both ground planes
+were connected together. The ground terminal of the back filler has been connected directly with its
+reference ground plane.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Test Spec
+AC power ports DC power ports Signal ports
+Test voltage (kV) Line to Line : 0.5, 1
+Line to Ground : 0.5, 1, 2
+Line to Line : 0.5, 1
+Line to Ground : 0.5, 1, 2 Line to Ground : 2
+Polarity + and -
+Waveshape,
+open circuit voltage 1.2 μs / 50 μs 10 μs / 700 μs
+Waveshape,
+short circuit current 8 μs / 20 μs
+Phase shifting 0°, 90°, 180°, 270° (AC power ports)
+Repetition rate 60 sec
+Number of surges 5
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+COMPACT NX
+GENERATOR
+COMPACT NX5
+BSP-1-300-16 EMTEST P1602169866 2019.03.04 2020.03.04
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 66 / 79
+Surges _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 67 / 79
+Surges _Test result of AC power ports
+Test configuration mode 1 EUT Operation mode 1
+Line Test Level (kV) Remark Result
+N - L1
++0.5 No disturbance of function PASS
+-0.5 No disturbance of function PASS
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
+N - PE
++0.5 No disturbance of function PASS
+-0.5 No disturbance of function PASS
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+L1 - PE
++0.5 No disturbance of function PASS
+-0.5 No disturbance of function PASS
++1 No disturbance of function PASS
+-1 No disturbance of function PASS
++2 No disturbance of function PASS
+-2 No disturbance of function PASS
+NOTE 1)
+N : Neutral line, L1 : Live line, PE : Ground line
+Surges _Test result of signal ports
+Line Test Level (kV) Remark Result
+-
++2 - -
+-2 - -
+NOTE 1)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 68 / 79
+8.5 Conducted Disturbances, induced by RF fields
+EN/IEC 60601-1-2 Conducted Disturbances, induced by RF fields Result
+Method:
+Test set-up was made according to EN/IEC 61000-4-6.
+The EUT has been placed on a wooden table 10 cm above the reference ground plane.
+The reference ground plane exceeded the projected geometry of the EUT and the Coupling
+/Decoupling Network (CDN) by more than 30 cm. The CDN has been placed directly on the reference
+ground plane. The cable between CDN and EUT has a length of 30 cm.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6
+Test Spec
+Professional
+healthcare Home healthcare
+Applied voltage 3 V 6 V 3 V 6 V
+Frequency range 150 kHz ~ 80 MHz ISM bands @
+150 kHz ~ 80 MHz 150 kHz ~ 80 MHz
+ISM and amateur
+radio bands @
+150 kHz ~ 80 MHz
+Modulation AM, 80 %, 1 kHz sine-wave
+Step size 1 % of fundamental
+Sweep capability 1.5 x 10-3 decade/s
+Dwell time 3 sec
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+CONTINUOUS WAVE
+SIMULATOR CWS 500N1 EMTEST P1251106909 2018.05.08 2019.05.08
+ATTENUATOR ATT6/75 EMTEST 1012-55 2018.05.08 2019.05.08
+CDN CDN M3N/32A EMTEST 0113-31 2018.06.07 2019.06.07
+BULK CURRENT
+INJECTION PROBE F-140 FCC 121745 2018.05.09 2019.05.09
+TERMINATION CT-01 TME N/A 2018.12.19 2019.12.19
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 69 / 79
+Conducted Disturbances, induced by RF fields _Test setup photo _Power Port
+Test configuration mode 1 EUT Operation mode 1
+Conducted Disturbances, induced by RF fields _Test setup photo _Signal Port
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 70 / 79
+Conducted Disturbances, induced by RF fields _Test result of power port
+Test configuration mode 1 EUT Operation mode 1
+Port Test Level (V) Remark Result
+Mains (M3) 3 No disturbance of function PASS
+Note 1 :
+Conducted Disturbances, induced by RF fields _Test result of power port (ISM band)
+Test configuration mode 1 EUT Operation mode 1
+Port Test Level (V) Remark Result
+Mains (M3) 6 No disturbance of function PASS
+Note 1 :
+Conducted Disturbances, induced by RF fields _ Test result of signal port
+Port Test Level (V) Remark Result
+POWER & DATA
+(BCI)
+3
+No disturbance of function PASS
+TRIGGER
+(BCI) No disturbance of function PASS
+LAN
+(BCI) No disturbance of function PASS
+Note 1 :
+Conducted Disturbances, induced by RF fields _Test result of signal port (ISM band)
+Port Test Level (V) Remark Result
+POWER & DATA
+(BCI)
+6
+No disturbance of function PASS
+TRIGGER
+(BCI) No disturbance of function PASS
+LAN
+(BCI) No disturbance of function PASS
+Note 1 :
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 71 / 79
+8.6 Rated Power-frequency Magnetic Field
+EN/IEC 60601-1-2 Rated Power-frequency Magnetic Field Result
+Method:
+The test set-up was made accordance in with EN/IEC 61000-4-8.
+The following tests are intended to demonstrate the immunity of equipment when subjected to
+power frequency magnetic fields related to the specific location and installation condition of the
+equipment (e.g. proximity of equipment to the disturbance source).
+The power frequency magnetic field is generated by power frequency current in conductors or,
+more seldom, from other devices (e.g. leakage of transformers) in the proximity of equipment.
+As for the influence of nearby conductors, one should differentiate between :
+- the current under normal operating conditions, which produces a steady magnetic field, with a
+comparatively small magnitude;
+- the current under fault conditions which can produce comparatively high magnetic fields nut of
+short duration, until the protection devices operate (a few milliseconds with fuses, a few seconds for
+protection relays).
+Comply
+Test spec
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Frequency range 50 / 60 Hz
+Field level (EMF) 30 A/m
+Duration 60 seconds each axis
+Axis of orientation X-axis, Y-axis and Z-axis
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+AC LOW OHM TSTER TOS6100 KIKUSUI 15102727 2018.05.29 2019.05.29
+INDUCTION COIL INA702 SCHAFFNER 200226-004SC 2018.06.28 2019.06.28
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 72 / 79
+Rated Power-frequency Magnetic Field _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 73 / 79
+Rated Power-frequency Magnetic Field _Test result at 50 Hz
+Test configuration mode 1 EUT Operation mode 1
+Test Level (A/m) Axis of orientation Remark Result
+30
+X No disturbance of function PASS
+Y No disturbance of function PASS
+Z No disturbance of function PASS
+Note)
+Rated Power-frequency Magnetic Field _Test result at 60 Hz
+Test configuration mode 1 EUT Operation mode 1
+Test Level (A/m) Axis of orientation Remark Result
+30
+X No disturbance of function PASS
+Y No disturbance of function PASS
+Z No disturbance of function PASS
+Note)
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 74 / 79
+8.7 Voltage Dips and Interruptions
+EN/IEC 60601-1-2 Voltage Dips and Interruptions Result
+Method:
+The test set-up was made accordance in with EN/IEC 61000-4-11.
+The dips/interruptions test is only applicable to AC mains. The dips/interruptions were applied at 0°,
+45°, 90°, 135°, 180°, 225°, 270° and 315° on each phase.
+Comply
+EUT mode
+(Refer to clauses 4)
+Test configuration mode 1
+EUT Operation mode 1
+Power interface mode 1, 2, 3, 4, 5, 6, 11
+Test Spec
+Voltage Dips
+Frequency range 50 Hz 60 Hz
+Voltage reduction 100 % 100 %
+Number of periods 0.5 0.5
+Phase shifting 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°
+Voltage reduction 30 % 100 % 30 % 100 %
+Number of periods 25 1 30 1
+Phase shifting 0°
+Number of reductions (periods) at each duration 3
+Interval between reductions ≥10
+Voltage Interruptions
+Frequency range 50 Hz 60 Hz
+Voltage reduction 100 %
+Number of periods 250 300
+Number of reductions (periods) at each duration 3
+Interval between reductions ≥10
+Measurement Instrument
+Description Model Manufacturer Identifier Cal. Date Cal. Due
+POWER FAIL
+SIMULATOR PFS503N63 EM TEST V1212112315 2018.06.19 2019.06.19
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 75 / 79
+Voltage dips and interruptions _Test setup photo
+Test configuration mode 1 EUT Operation mode 1
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 76 / 79
+Voltage dips and interruptions _Test result at 50 Hz
+Test configuration mode 1 EUT Operation mode 1
+Voltage Dips
+Test Level
+% Ut
+Voltage dips
+% Ut Number of periods Remark Result
+0 100 0.5 No disturbance of function PASS
+0 100 1 No disturbance of function PASS
+70 30 25 No disturbance of function PASS
+Note 1)
+Voltage interruptions
+Test Level
+% Ut
+Voltage dips
+% Ut Number of periods Remark Result
+0 100 250 No disturbance of function PASS Note1)
+Note 1) During the test, the EUT turns off but operates again by the tester.
+Voltage dips and interruptions _Test result at 60 Hz
+Test configuration mode 1 EUT Operation mode 1
+Voltage Dips
+Test Level
+% Ut
+Voltage dips
+% Ut Number of periods Remark Result
+0 100 0.5 No disturbance of function PASS
+0 100 1 No disturbance of function PASS
+70 30 30 No disturbance of function PASS
+Note 1)
+Voltage interruptions
+Test Level
+% Ut
+Voltage dips
+% Ut Number of periods Remark Result
+0 100 300 No disturbance of function PASS Note1)
+Note 1) During the test, the EUT turns off but operates again by the tester.
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 77 / 79
+9. Photographs of EUT
+Front View of Detector
+Rear View of Detector
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 78 / 79
+Front View of Controller
+Rear View of Controller
+
+Report No.: DREKCEE1905-0342(1)
+TRF-EM-082(00)190502 Prohibits the copying and re-issue of this report without DT&C approval. Pages: 79 / 79
+10. Revision History
+Date Description Revised By Reviewed By
+May. 16. 2019 Initial report JunHo Park KyoungHwan Bae
+Nov. 25. 2019 Corrected typos of test voltage
+in page 37 JunHo Park KyoungHwan Bae

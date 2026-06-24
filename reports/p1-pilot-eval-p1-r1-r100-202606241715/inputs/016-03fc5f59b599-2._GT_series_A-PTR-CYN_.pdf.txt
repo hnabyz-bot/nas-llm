@@ -1,0 +1,672 @@
+queueId: ingest-1781569954420-18yl
+sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/91_인증 - 국내/02. G series + CYAN/2. 보완(준비본)/보완제출_예정)/03 기술문서 심사에 관한 자료/03 제품의 성능 및 안전을 확인하기 위한 자료 (Rev)/04 성능에 관한 자료 (Rev)/2. 사이버보안/PDF/성능시험성적서/2. [GT series] 성능시험성적서 (A-PTR-CYN).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/d8abb7ea1afb/2. [GT series] 성능시험성적서 (A-PTR-CYN)__d8abb7ea1afb_combined.txt
+canonicalGroupId: 03fc5f59b599
+productSignal: CYAN
+authoritySignal: MFDS/domestic
+pilotRank: 16
+
+SOURCE_TEXT
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 1 / 26
+H&abyz Co., Ltd.
+성능 시험 성적서
+Performance Test Report
+Manufacturer H&abyz Co., Ltd.
+Product name 의료영상획득장치 Digital Falt Panel X-ray Detector
+Model
+Name
+(G series)
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+G1717CW, G1717CWP, G1717FW, G1717FWP
+(GT series) GT1717C, GT1717CP
+Write Review Approval
+Name Han, Jimin Kim, Myeongseop Hur, Namkyu
+Dept. R&D Team R&D Team Leader Quality Management
+Representative
+Date 2026.04.14 2026.04.14 2026.04.14
+Signature
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 2 / 26
+H&abyz Co., Ltd.
+목 차
+0. 제·개정이력 REVISION HISTORY ........................................................................................................3
+1. 개요 DOCUMENT OVERVIEW ............................................................................................................4
+2. 시험 정보 DEVICE INFORMATION.....................................................................................................4
+2.1 시험품목 ............................................................................................................................................... 4
+2.2 시험환경 ............................................................................................................................................... 4
+3. 시험 결과 요약 ......................................................................................................................................5
+4. TEST CONTENTS 시험 내용 ................................................................................................................8
+4.1 SENSOR TYPE .......................................................................................................................................... 8
+4.2 SCINTILLATOR 확인 ................................................................................................................................ 9
+4.3 PIXEL PITCH 확인 ................................................................................................................................. 10
+4.4 E FFECTIVE PIXEL N UMBER 확인 ............................................................................................................ 11
+4.5 E FFECTIVE PIXEL AREA 확인.................................................................................................................. 12
+4.6 MTF ..................................................................................................................................................... 13
+4.7 DQE..................................................................................................................................................... 14
+4.8 SENSITIVITY ........................................................................................................................................... 15
+4.9 L IMITED RESOLUTION ............................................................................................................................ 15
+4.10 E NERGY RANGE ..................................................................................................................................... 16
+4.11 A/D CONVERSION ................................................................................................................................ 17
+4.12 C OMMUNICATION................................................................................................................................. 18
+4.13 TRIGGER MODE ..................................................................................................................................... 19
+5. 결론 ...................................................................................................................................................... 19
+6. 기타 첨부서류...................................................................................................................................... 19
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 3 / 26
+H&abyz Co., Ltd.
+0. 제·개정이력 Revision History
+Rev. No. Issue date Note
+0 2026.04.14 First establishment
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 4 / 26
+H&abyz Co., Ltd.
+1. 개요 Document Overview
+본 시험 성적서는 의료영상획득장치 GT series 디텍터(GT1717C, GT1717CP) 성능 확인을 위한
+시험성적서이다.
+2. 시험 정보 Device information
+2.1 시험품목
+(1) 품목명: 의료영상획득장치
+(2) 시험제품 및 Serial number:
+GTseries
+Model name Serial Number
+GT1717C GT1717CW2501030001
+GT1717CP GT1717CW2501030002
+2.2 시험환경
+(1) 시험일시: 2026.04.06~2026.04.10
+(2) 시험장소: ㈜에이치앤아비즈 (경기도 용인시 처인구 처인성로41-16 2동 (우) 17118)
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 5 / 26
+H&abyz Co., Ltd.
+3. 시험 결과 요약
+번호 구분 시험 항목 시험 기준 시험 방법 시험 결과
+1
+GT1717C CsI Deposition
+Thickness
+(CsI 증착 두께
+확인)
+300μm type:
+340μm ± 10% N2 레이저 비접촉 거리 측정기를
+통해 9개 부위를 측정하여 평균값을
+계산한다.
+PASS
+GT1717CP 500μm type:
+520μm ± 10%
+2 공통 Sensor Type a-Si TFT 사양서 확인 PASS
+3 공통 Scintillator 확인 CsI 사양서 확인 PASS
+4 공통 Pixel pitch 140μm 사양서 확인 PASS
+5 공통 Effective Pixel
+Number
+3072 x
+3072pixels
+전체영상 획득 후 유효한 영역의
+픽셀 수 확인 PASS
+6 공통 Effective Pixel
+Area
+430.08mm x
+430.08mm
+전체 영상획득 후 유효한 Pixel 확인
+후
+Pitch Area계산 (Pixel Pitch * 유효
+Pixel Number)
+PASS
+7
+GT1717C
+MTF
+75% 이상
+(@ 0.5lp/mm),
+55% 이상
+(@ 1.0lp/mm),
+35% 이상
+(@ 2.0lp/mm),
+15% 이상
+(@ 3.0lp/mm)
+MTF Phantom 영상 이미지를
+획득하여 Calibration 적용 후 ‘Final
+Test’ 프로그램을 사용한 측정값이
+시험 기준을 만족하는지 확인한다.
+* 조사 조건
+RQA5
+Beam condition,
+70kV, 40mAs
+21mm Al filter
+SID: 150cm
+PASS
+GT1717CP
+70% 이상
+(@ 0.5lp/mm),
+50% 이상
+(@ 1.0lp/mm),
+29% 이상
+(@ 2.0lp/mm),
+10% 이상
+(@ 3.0lp/mm)
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 6 / 26
+H&abyz Co., Ltd.
+8
+GT1717C
+DQE
+45% 이상
+(@ 0.1lp/mm),
+35% 이상
+(@ 0.5lp/mm),
+25% 이상
+(@ 1.0lp/mm),
+20% 이상
+(@ 2.0lp/mm),
+15% 이상
+(@ 3.0lp/mm)
+Bright 영상 이미지를 획득하여
+Calibration 적용 후 ‘Final Test’
+프로그램을 사용한 측정값이 시험
+기준을 만족하는지 확인한다.
+* 조사 조건
+RQA5
+Beam condition,
+70kV, 40mAs
+21mm Al filter
+SID: 150cm
+PASS
+GT1717CP
+55% 이상
+(@ 0.1lp/mm),
+45% 이상
+(@ 0.5lp/mm),
+35% 이상
+(@ 1.0lp/mm),
+30% 이상
+(@ 2.0lp/mm),
+25% 이상
+(@ 3.0lp/mm)
+9
+GT1717C
+Sensitivity
+Center 기준 110
+LSB/uGy 이상
+Bright 영상 이미지를 획득하여
+Calibration 적용 후 ‘Final Test’
+프로그램을 사용한 측정값이 시험
+기준을 만족하는지 확인한다.
+* 조사 조건
+RQA5 Beam condition,
+70kV, 6.4mAs ~ 64mAs
+21mm Al filter
+SID: 150cm
+PASS
+GT1717CP Center 기준 150
+LSB/uGy 이상
+10 공통 Limited
+resolution Max 3.57 lp/mm 1 / Pixel pitch * 2 PASS
+11 공통 Energy range 40kvp, 150kvp
+조사 시 정상동작
+40kvp / 150kvp로 조사 시 영상
+획득되는지 확인. PASS
+12 공통 A/D Conversion 16bits ROIC A/D 변환 해상도는 16bit임 PASS
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 7 / 26
+H&abyz Co., Ltd.
+13 공통 Communication
+1 Giga-bit
+Ethernet via PoE
+(Power over
+Ethernet) 이상
+사양서 확인 PASS
+14 공통 Trigger mode
+AED(Automatic
+Exposure
+Detection)
+디텍터를 AED모드로 설정하고
+Acquisition 시작 후 shoot 시그널이
+도착한 뒤 x-선을 조사했을 때
+이미지가 취득되는지 확인한다.
+PASS
+Line(Manual)
+Trigger
+디텍터를 line trigger 모드로
+설정하고 trigger button을
+prep하여 Acquisition시작 후 shoot
+시그널이 도착한 뒤 trigger
+button을 길게 눌러서 X-선을
+조사하여 이미지가 취득되는지
+확인한다.
+PASS
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 8 / 26
+H&abyz Co., Ltd.
+4. Test contents 시험 내용
+4.1 CsI Deposition Thickness (CsI 증착 두꼐 확인)
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+1
+GT1717C CsI Deposition
+Thickness
+300μm type: 340μm ± 10% N2 레이저 비접촉 거리 측정
+기를 통해 9개 부위를 측정
+하여 평균값을 계산한다.
+PASS
+GT1717CP 500μm type: 520μm ± 10%
+시험
+결과
+- G1717CP / 300 μm Type : 340.40 μm 기준치 만족
+- G1717CP / 500 μm Type : 508.11 μm 기준치 만족
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 9 / 26
+H&abyz Co., Ltd.
+4.2 Sensor Type
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+2 공통 Sensor Type a-Si TFT 사양서 확인
+PASS
+시험
+결과
+※ Panel 사양서 확인 결과 Sensor type ‘a-Si TFT’ 이상 없음을 확인함.
+첨부 [첨부 1.] Panel 사양서
+4.3 Scintillator 확인
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+3 공통 Scintillator
+확인 CsI 사양서 확인
+PASS 시험
+결과
+※ 사양서 확인 결과 재질 CsI 이상 없음을 확인함.
+첨부 [첨부 2.] CsI 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 10 / 26
+H&abyz Co., Ltd.
+4.4 Pixel pitch 확인
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+4 공통 Pixel pitch 140μm ± 10% Panel 사양서 확인.
+PASS
+시험
+결과
+※ 사양서 확인 결과 Pixel pitch가 기준값 이내 이상 없음을 확인함.
+첨부 [첨부 3.] Panel 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 11 / 26
+H&abyz Co., Ltd.
+4.5 Effective Pixel Number 확인
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+5 공통 Effective Pixel
+Number 확인 3072 x 3072 pixels 전체영상 획득 후 유효한
+영역의 픽셀 수 확인
+PASS 시험
+결과
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 12 / 26
+H&abyz Co., Ltd.
+4.6 Effective Pixel Area 확인
+번
+호 구분 시험 항목 시험 기준 시험 방법 판정
+6 공통 Effective Pixel Area
+확인 430.08 x 430.08mm
+전체 영상획득 후 유효한
+Pixel 확인 후
+Pitch Area계산 (Pixel
+Pitch * 유효 Pixel)
+PASS
+시
+험
+결
+과
+※ 확인 결과 Effective Pixel Number가 기준값 이내 이상 없음을 확인함.
+첨
+부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 13 / 26
+H&abyz Co., Ltd.
+4.7 MTF
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+7
+GT1717C
+MTF
+75% 이상(@ 0.5lp/mm),
+55% 이상(@ 1.0lp/mm),
+35% 이상(@ 2.0lp/mm),
+15% 이상(@ 3.0lp/mm)
+MTF Phantom 영상
+이미지를 획득하여
+Calibration 적용 후 ‘Final
+Test’ 프로그램을 사용한
+측정값이 시험 기준을
+만족하는지 확인한다.
+* 조사 조건
+RQA5
+Beam condition,
+70kV, 40mAs
+21mm Al filter
+SID: 150cm
+PASS
+GT1717CP
+70% 이상(@ 0.5lp/mm),
+50% 이상(@ 1.0lp/mm),
+29% 이상(@ 2.0lp/mm),
+10% 이상(@ 3.0lp/mm)
+시험
+결과
+구분 항목 기준 값 측정값
+GT1717C
+0.5lp/mm 75%이상 83.3209
+1.0lp/mm 55%이상 67.9223
+2.0lp/mm 35%이상 40.6248
+3.0lp/mm 15%이상 23.7418
+GT1717CP
+0.5lp/mm 70%이상 87.1766
+1.0lp/mm 50%이상 68.8551
+2.0lp/mm 29%이상 36.8646
+3.0lp/mm 10%이상 19.2563
+※ 확인 결과 MTF가 기준값 이내 이상 없음을 확인함.
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 14 / 26
+H&abyz Co., Ltd.
+4.8 DQE
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+8
+GT1717C
+DQE
+45% 이상(@ 0.1lp/mm),
+35% 이상(@ 0.5lp/mm),
+25% 이상(@ 1.0lp/mm),
+20% 이상(@ 2.0lp/mm),
+15% 이상(@ 3.0lp/mm)
+Bright 영상 이미지를
+획득하여 Calibration 적용
+후 ‘Final Test’ 프로그램을
+사용한 측정값이 시험
+기준을 만족하는지
+확인한다.
+* 조사 조건
+RQA5
+Beam condition,
+70kV, 40mAs
+21mm Al filter
+SID: 150cm
+PASS
+GT1717CP
+55% 이상(@ 0.1lp/mm),
+45% 이상(@ 0.5lp/mm),
+35% 이상(@ 1.0lp/mm),
+30% 이상(@ 2.0lp/mm),
+25% 이상(@ 3.0lp/mm)
+시험
+결과
+구분 항목 기준 값 측정값
+GT1717C
+0.1lp/mm 45% 이상 64.4233
+0.5lp/mm 35% 이상 58.1596
+1.0lp/mm 25% 이상 50.3647
+2.0lp/mm 20% 이상 40.1334
+3.0lp/mm 15% 이상 28.64
+GT1717CP
+0.1lp/mm 55% 이상 64.7529
+0.5lp/mm 45% 이상 60.4980
+1.0lp/mm 35% 이상 56.8896
+2.0lp/mm 30% 이상 47.3153
+3.0lp/mm 25% 이상 33.4586
+※ 확인 결과 DQE가 기준값 이내 이상 없음을 확인함.
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 15 / 26
+H&abyz Co., Ltd.
+4.9 Sensitivity
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+9
+GT1717C
+Sensitivity
+Center 기준 110 LSB/uGy 이상
+Bright 영상 이미지를
+획득하여 Calibration 적용
+후 ‘Final Test’ 프로그램을
+사용한 측정값이 시험
+기준을 만족하는지
+확인한다.
+* 조사 조건
+RQA5 Beam condition,
+70kV, 6.4mAs ~ 64mAs
+21mm Al filter
+SID: 150cm
+PASS GT1717CP Center 기준 150 LSB/uGy 이상
+시험
+결과
+구분 기준 값 측정값
+GT1717C Center 기준 110 LSB/uGy 이상 148.0681 LSB/uGy
+GT1717CP Center 기준 150 LSB/uGy 이상 159.0634 LSB/uGy
+※ 확인 결과 Sensitivity 가 기준값 이내 이상 없음을 확인함.
+첨부 -
+4.10 Limited resolution
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+10 공통 Limited
+resolution Max 3.57 lp/mm 1 / Pixel pitch * 2
+PASS 시험
+결과
+결과: 1 / 140um(Pixel pitch) * 2 = 3.57 lp/mm
+※ 확인 결과 Limited resolution 이 기준값 이내 이상 없음을 확인함.
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 16 / 26
+H&abyz Co., Ltd.
+4.11 Energy range
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+11 공통 Limited
+resolution Max 3.57 lp/mm 1 / Pixel pitch * 2
+PASS 시험
+결과
+기준 값 측정 내용
+40kvp 조사 시 정상동작 정상 동작 확인
+150kvp 조사 시 정상동작 정상 동작 확인
+※ 확인 결과 Energy range별 이상 없이 정상동작 함을 확인 함.
+첨부 -
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 17 / 26
+H&abyz Co., Ltd.
+4.12 A/D conversion
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+12 공통 A/D Conversion 16bits ROIC 사양서 확인
+PASS
+시험
+결과
+※ 확인 결과 A/D Conversion 사양은 기준값을 만족함을 확인 함.
+첨부 [첨부 4.] ROIC 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 18 / 26
+H&abyz Co., Ltd.
+4.13 Communication
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+13 공통 Communication 1 Giga-bit Ethernet via PoE
+(Power over Ethernet)이상 CPU모듈 사양서 확인
+PASS 시험
+결과
+※ 확인 결과 Communication 사양은 기준값을 만족함을 확인 함.
+첨부 [첨부 5.] CPU 모듈사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 19 / 26
+H&abyz Co., Ltd.
+4.14 Trigger mode
+번호 구분 시험 항목 시험 기준 시험 방법 판정
+14 공통 Trigger mode
+AED(Automatic Exposure
+Detection) 정상동작
+디텍터를 AED모드로 설정하고
+Acquisition 시작 후 shoot 시그널
+이 도착한 뒤 x-선을 조사했을 때
+이미지가 취득되는지 확인한다.
+PASS
+Line(Manual) Trigger
+정상동작
+디택터를 line trigger 모드로 설정
+하고 trigger button을 prep하여
+Acquisition시작 후 shoot 시그널
+이 도착한 뒤 trigger button을 길
+게 눌러서 X-선을 조사하여 이미지
+가 취득되는지 확인한다.
+시험
+결과
+기준 값 측정 내용
+AED(Automatic Exposure Detection) 정상동작 영상취득 확인
+Line(Manual) Trigger 정상동작 영상취득 확인
+※ 확인 결과 Trigger mode는 이상 없이 정상동작 함을 확인 함.
+첨부 -
+5. 결론
+해당 시험 결과를 통해 의료영상획득장치 (모델명: GT1717C, GT1717CP)의 성능 설정 값에 이상
+없음을 확인하였다.
+6. 기타 첨부서류
+[첨부 1.] Panel 사양서
+[첨부 2.] CsI 사양서
+[첨부 3.] ROIC 사양서
+[첨부 4.] CPU 모듈 사양서
+[첨부 5.] KGMP 적합인정서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 20 / 26
+H&abyz Co., Ltd.
+[첨부 1.] Panel 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 21 / 26
+H&abyz Co., Ltd.
+[첨부 2.] CsI 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 22 / 26
+H&abyz Co., Ltd.
+[첨부 3.] ROIC 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 23 / 26
+H&abyz Co., Ltd.
+[첨부 4.] CPU 모듈 사양서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 24 / 26
+H&abyz Co., Ltd.
+[첨부 5.] KGMP 적합인정서
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 25 / 26
+H&abyz Co., Ltd.
+
+성능시험성적서
+(Performance Test Report)
+Doc No. A-PTR-CYN
+Rev. No. 0
+Issue date 2026.04.14
+Page 26 / 26
+H&abyz Co., Ltd.

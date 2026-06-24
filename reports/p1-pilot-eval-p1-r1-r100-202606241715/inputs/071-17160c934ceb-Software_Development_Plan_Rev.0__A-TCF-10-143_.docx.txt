@@ -1,0 +1,1332 @@
+queueId: ingest-1781569954407-vm6
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/13. Software Validation 문서/Software Development Plan_Rev.0_(A-TCF-10-143).docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/b5c881d4276f/Software Development Plan_Rev.0_(A-TCF-10-143)__b5c881d4276f_combined.txt
+canonicalGroupId: 17160c934ceb
+productSignal: Unclassified
+authoritySignal: FDA
+pilotRank: 71
+
+SOURCE_TEXT
+Software Development Plan
+
+for
+
+B Series
+
+Digital Flat Panel X-ray Detector
+
+Report No.: A-TCF-10-143 (Rev.0)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+R&D team
+
+Song, Jinsun
+
+Jul/01/2024
+
+Review
+
+R&D Manager
+
+Lee, Dongho
+
+Jul/01/2024
+
+Approval
+
+Quality Manager
+
+Hur Namkyu
+
+Jul/01/2024
+
+Table of contents
+
+1. Purpose of the software development plan 4
+
+2. Work that should be performed in the development stage 4
+
+3. Classification of software and its application 5
+
+3.1 Software classification comply with FDA Guide Line 5
+
+3.2 Software classification in accordance with EN 62304 6
+
+4. Software Development Environment 8
+
+4.1 Software development resources 10
+
+5. Software Requirements Specification 11
+
+6. Software Architectural Design 14
+
+7. Software Design Specification 14
+
+8. Software Risk Management 15
+
+9. Software Verification & Validation 17
+
+10. Software release 20
+
+11. Software Configuration Management 21
+
+12. Problem settlement and support in the software development activities 22
+
+
+
+Revision history
+
+Rev.
+
+Revision date
+
+Page
+
+The reason & content for establishment and amendment
+
+0
+
+2024.07.01
+
+-
+
+Initial Release
+
+Purpose of the software development plan
+
+To use the Digital Flat Panel X-ray Detector developed, produced and sold by this company according to intention, it aims at developing software that can manipulate and utilize the product function.
+
+Work that should be performed in the development stage
+
+(1) Determine which product will be developed, and forward the requirements to the R&D team so get it developed according to intention.
+
+(2) Stage of the development work (time frame)
+
+1) First stage: Select the product to be developed.
+
+2) Second stage: Gather material on the selected product.
+
+3) Third stage: Based on the gathered material, select and contract with a development firm which will realize the product development.
+
+4) Fourth stage: Forward the requirements necessary for the product development to the selected firm.
+
+5) Fifth stage: Once the development firm get started the product development, this company shall forward the development direction, changed requirements, etc to the development firm aside from a relevant meeting and support the product development positively.
+
+6) Sixth stage: If the development is finished, conduct testing and verification for the product realization jointly with the development firm, and adjust, complement so make the completed product a reality.
+
+Classification of software and its application
+
+Software classification comply with FDA Guide Line
+
+S/W is classified and applied in accordance with the table as follows. :
+
+ “Major” Level of Concern
+
+The level of concern is “Major” if a failure or latent flaw could directly result in death or serious injury to the patient or operator. The level of concern is also “Major” if a failure or latent flaw could indirectly result in death or serious injury of the patient or operator through incorrect or delayed information.
+
+ “Moderate” Level of Concern
+
+The level of concern is “Moderate” if a failure or latent design flaw could directly result in minor injury to the patient or operator. The level of concern is also “Moderate” if a failure or latent flaw could indirectly result in minor injury to the patient or operator through incorrect or delayed information.
+
+ “Minor” Level of Concern
+
+The level of concern is “Minor” if failures or latent design flaws are unlikely to cause any injury to the patient or operator.
+
+ S/W is classified into Major, Moderate and Minor by its level of concern, which is determined by answer to the questions listed in the table as follows:
+
+Table 1 “Major” Level of Concern
+
+If the answer to any one question below is Yes, the Level of Concern for the Software Device is likely to be “Major”.
+
+Answer
+
+1. Does the Software Device qualify as Blood Establishment Computer Software?
+
+□Y □N
+
+2. Is the Software Device intended to be used in combination with a drug or biologic?
+
+□Y □N
+
+3. Is the Software Device an accessory to a medical device that has a ‘Major’ Level of Concern?
+
+□Y □N
+
+4. Prior to mitigation of hazards, could a failure of the Software Device result in death or serious injury, either to a patient or to a user of the device?
+
+□Y □N
+
+a. Does the Software Device control a life supporting or life sustaining function?
+
+□Y □N
+
+b. Does the Software Device control the delivery of potentially harmful energy that could result in death or serious injury, such as radiation treatment systems, defibrillators, and ablation generators?
+
+□Y □N
+
+c. Does the Software Device control the delivery of treatment or therapy such that an error or malfunction could result in death or serious injury?
+
+□Y □N
+
+d. Does the Software Device provide diagnostic information that directly drives a decision regarding treatment or therapy, such that if misapplied it could result in serious injury or death?
+
+□Y □N
+
+e. Does the Software Device provide vital signs monitoring and alarms for potentially life threatening situations in which medical intervention is necessary?
+
+□Y □N
+
+Table 2 “Moderate” Level of Concern
+
+If the Software Device is not Major Level of Concern and the answer to any one question below is Yes, the Level of Concern is likely to be Moderate.
+
+Answer
+
+1. Is the Software Device an accessory to a medical device that has a Moderate Level of Concern?
+
+□Y □N
+
+2. Prior to mitigation of hazards, could a failure of the Software Device result in Minor Injury, either to a patient or to a user of the device?
+
+□Y □N
+
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to an erroneous diagnosis or a delay in delivery of appropriate medical care that would likely lead to Minor Injury?
+
+□Y □N
+
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is Minor.
+
+Software classification in accordance with EN 62304
+
+S/W is classified and applied in accordance with as follows. :
+
+This company shall assign software safety class to each software system originated by our software system and based on the impact of the harm on the patient, the worker, or others.
+
+The software safety classes shall initially be assigned based on concern as follows:
+
+-. Class A: There is no injury nor health damage.
+
+-. Class B: The possible harm is non-serious injury.
+
+-. Class C: The possible harm is death or serious injury.
+
+In case harm is caused by that Software system is not operate by designated, the possibility of such defectiveness should be regarded as 100%.
+
+If the risk of death or serious injury arising from a software failure is subsequently reduced to an acceptable level (as defined by ISO 14971) by a hardware risk control measure, either by reducing the consequences of the failure or by reducing the probability of death or serious injury arising from that failure, the software safety classification may be reduced from C to B. and If the risk of non- serious injury arising from a software failure is similarly reduced to an acceptable level by a hardware risk control measure, the software safety classification may be reduced from B to A. Our company assigned to each software system that contributes to the implementation of a risk control measure a software safety class based on the possible effects of the hazard that the risk control measure is controlling.
+
+[If applicable] The company documented the software safety class assigned to each software system in the risk management file.
+
+[If applicable] When a software system is decomposed into software items, and when a software item is decomposed into further software items, such software items inherit the software safety classification of the original software item (or software system) unless our company documents a rationale for classification into a different software safety class. Such A rationale explains how the new software items are segregated so that they may be classified separately.
+
+[If applicable] Our company documented the software safety class of each software item if that class is different from the class of the software item from which it was created by decomposition.
+
+[If applicable] For compliance with standard, wherever a process is required for software items of a specific classification and the process is necessarily applied to a group of software items, our company used the processes and tasks which are required by the classification of the highest-classified software item in the group unless our company documents in the risk management file a rationale for using a lower classification.
+
+[If applicable] For each software system, until a software safety class is assigned, Class C requirements applied.
+
+Software Development Environment
+
+Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology", as illustrated in the following chart.
+
+The details of the development process and schedule of each software are presented in the table below.
+
+Step
+
+Main Contents
+
+Development Period
+
+Analysis
+
+The activity consists of establishing requirements for as much as possible before the design phase. The requirements are documented in the software-specific requirements and design notes.
+
+2024.07.01~
+
+2024.07.15
+
+Planning
+
+This activity constructs the software development plan. This plan outlines the tasks, responsibilities, resource, and other items pertinent to the specific development project.
+
+2024.07.16~
+
+2024.07.31
+
+Design
+
+The activity considers four functional attribute of the software: data structure, software architecture, functionality, and interface characterization. The design is documented in design documents.
+
+2024.08.01~
+
+2024.08.31
+
+Implementation
+
+The implementation phase converts the design into a machine readable form. The software source code is created in accordance with H&abyz Co., Ltd.‘s coding conventions.
+
+To verify that the code created is consistent with H&abyz Co., Ltd. standard, reviews/inspections are held.
+
+2024.09.01~
+
+2024.10.15
+
+Qualification
+
+The qualification phase verifies that the design and code implemented meet the requirements. Testing ensures that defined input will produce actual results that agree with required results.
+
+2024.10.16~
+
+2024.10.31
+
+Maintenance
+
+Once the software enters a released state, the only software changes allowed are to fix identified defects in the code or to support approved enhancements.
+
+2024.11.01~
+
+2024.11.14
+
+Software release
+
+Software verification has been completed and the software prior to release of the software should verify the evaluation results.
+
+2024.11.15~
+
+2024.11.22
+
+Development plan updated
+
+UI can be updated or completely replaced to satisfy customer requirement or revision s/w.
+
+2024.11.23~
+
+2024.11.25
+
+The input requirements and verification results (outputs) required at each development step of each software are presented in the table below.
+
+Step
+
+Input requirements
+
+Responsible person
+
+Verification Results (Outputs)
+
+Analysis and Planning
+
+Investigating similar products
+
+Jinsun, Song
+
+Jaemin, Jeong
+
+Dongho, Lee
+
+Software Development Plan, Software Requirements Specification
+
+Design
+
+Software Development Plan, Software Requirements Specification
+
+Jinsun, Song
+
+Jaemin, Jeong
+
+Dongho, Lee
+
+Architecture Design,
+
+Design Technique Specification
+
+Implementation
+
+Software design
+
+Jinsun, Song
+
+Jaemin, Jeong
+
+Dongho, Lee
+
+Source code
+
+Qualification
+
+Measuring instrument for certification validation
+
+Jinsun, Song
+
+Jaemin, Jeong
+
+Namkyu, Hur
+
+Test, Software Risk Management,
+
+Software Validation Report
+
+Maintenance
+
+Measuring instrument for output validation
+
+Jinsun, Song
+
+Jaemin, Jeong
+
+Dongho, Lee
+
+Software Configuration Management Plan
+
+Software development resources
+
+Hardware resources
+
+Section
+
+Resource
+
+MCU Function
+
+32Bit Microprocessor
+
+MCU Model
+
+Intel Cyclone V
+
+Software resources
+
+Section
+
+Resource
+
+Operation system
+
+Windows 11 64bit
+
+Compiler
+
+Microsoft Visual Studio 2022 Professional / aarch64-poky-linux-gcc / C#
+
+Debugging tool
+
+Microsoft Visual Studio 2022 Professional
+
+Editor tool
+
+Microsoft Visual Studio 2022 Professional
+
+Human Resources
+
+Team
+
+Person
+
+Responsibilities (produced or processed documents)
+
+SW Team
+
+SW Engineer
+
+(2 person)
+
+SRS (design)
+
+Software architecture (design) Implementation, coding
+
+SDS (design)
+
+User Manual (design) Hazards analysis (design)
+
+Software static test report (perform) Software dynamic test report (verification)
+
+Team Manager
+
+(1 person)
+
+SRS (approval)
+
+Software architecture (design, approval) SDS (approval)
+
+Hazards analysis (verification) User Manual (verification) Software test plan (verification) Software test report (verification) Traceability analysis (design) Validation report (design)
+
+Test Engineers
+
+(2 person)
+
+Software test report
+
+Application Software Team
+
+SW Engineers
+
+(2 person)
+
+User Manual (verification)
+
+Proprietary application Design and implementation. Casual Software test
+
+Team Manager
+
+(1 person)
+
+SDS (verification)
+
+User Manual (verification)
+
+Quality Management Team
+
+Team Manager
+
+(1 person)
+
+SRS (approval) SDS (approval)
+
+Hazards analysis (approval) User Manual (approval) Hazards Analysis (approval) Software test report (approval) Traceability analysis (approval) Validation report (approval)
+
+Marketing Team
+
+Team Manager
+
+(1 person)
+
+SRS (verification)
+
+Hazards analysis (verification)
+
+Customer Support Team
+
+Team Manager
+
+(1 person)
+
+SDS (verification)
+
+User Manual (verification) Hazards analysis (verification) Validation report (verification)
+
+Software Requirements Specification
+
+Functional Requirement
+
+Function by each module and essential factor that each function must equip in software are as below:
+
+1) Software function
+
+① Common functions Module
+
+It should support normal mode setting function.
+
+It should support AED mode setting function.
+
+It should create a handle to connect with the detector.
+
+It should return the handle used to connect the detector.
+
+It should support X-ray exposure time setting function during image acquisition.
+
+It should support sensing panel area setting of the detector.
+
+It should support operation trigger mode setting of the detector device.
+
+It should support the indicator LED color setting of the operating status of the external equipment of the detector.
+
+It should support sleep mode of the detector device.
+
+It should apply the threshold value of the detector device.
+
+It should check the connection status of the detector device
+
+② Image acquisition Module
+
+It should support the preparation process and initialization for image acquisition.
+
+It should support a start function for image acquisition.
+
+It should support a message processing event handler for image acquisition.
+
+It should support the function of checking completion of the image acquisition and transmitting.
+
+It should support the function to retransmit the image acquired from the detector device if the transmission is not completed.
+
+It should support the function of removing the used event handle and releasing the memory after image acquisition.
+
+It should support the function to send and receive commands with the hardware of the detector device.
+
+③ Calibration Module
+
+It should support the handle generation function to create a calibration file.
+
+It should support the function to acquire dark file image.
+
+It should support the function to acquire bright file image.
+
+It should support the function to load the acquired bright image.
+
+It should support the function to create the defect map file and the algorithm to create a BPM file.
+
+It should support the function to process offset correction.
+
+It should support the function to process gain correction.
+
+It should support the function to process BPM correction.
+
+It should support the function to remove the handle used to create a calibration file and return the memory.
+
+④ Pre-Processing Module
+
+It should support the algorithm function to calibration to image from the detector.
+
+It should support the function to read the raw image from the detector and store it in a buffer.
+
+It should support the function to apply and store the algorithm to the raw image from the detector.
+
+It should support the function to load and process the bpm file for calibration algorithm.
+
+It should support the function to provide and process the gain correction function for calibration algorithm.
+
+It should support the function to provide and process the offset correction function for calibration algorithm.
+
+It should support the function to load the parameter file for calibration algorithm and apply correction.
+
+⑤ Firmware Update Module
+
+It should support the administrator feature to import, read and write the firmware file.
+
+It should support the function to read and deliver the firmware file information that is saved from the detector.
+
+It should support the writing function on the firmware file of the detector device.
+
+It should support the function to gain the structure and information of the loaded firmware file.
+
+It should support the function to update the loaded firmware file to the detector.
+
+It should support the validation function on the detector device after updating the firmware.
+
+2) Firmware function
+
+① xSystem Module
+
+It should support the function to supply and control the power to the detector’s peripherals.
+
+It should support simultaneous access restriction function for each task control.
+
+It should support the reading function of the detector shock sensor and the data.
+
+It should support the function to communicate with SDK and process the acquired image from FPGA.
+
+It should support the function to monitor the power cable.
+
+It should support the function to handle read and write operations of the firmware on FPGA chip.
+
+It should support the task to process the data read from the shock sensor.
+
+It should support the algorithm function on the data read from the shock sensor.
+
+It should support the function to save the calibrated data by algorithm as a file.
+
+② FPGA App Module
+
+It should support the function to handle the detector parameter and the preference.
+
+It should process messages regarding commands from SDK and provide return value.
+
+It should support initialization function to communicate with the detector.
+
+It should support function to analyze messages from SDK, and command and set up the image acquisition process to FPGA controller.
+
+It should support the function to load the image data from FPGA controller to a buffer.
+
+It should support the image acquisition processing function on FPGA controller.
+
+It should support the function to save the image data loaded in a buffer as a file.
+
+③ System task Module
+
+It should support the function to save the detector setting parameter value in the internal memory.
+
+It should support the function to read and write the firmware file used for FPGA module.
+
+It should support the function to check the wireless network status and indicate on the surface of the detector.
+
+It should support the monitoring function of power cable connection linked to the detector.
+
+It should support the function to check the status of detector power button operation and process the button event.
+
+④ Interface Module
+
+It should support the function to check the status of the detector power control module and read and write commands.
+
+It should support the function to initialize the sensor that measures the internal temperature of the detector.
+
+It should support the function to initialize the detector shock sensor.
+
+It should support the function to initialize the sensor that measures the gyro of the detector.
+
+It should support the function to measure the internal temperature of the detector and process the event.
+
+It should support the function to check the external shock generation of the detector and calibrate the sensor.
+
+It should support the function to check the moving direction of the detector.
+
+3) Cyber Security
+
+① Wi-Fi Login Password
+
+Random access should be limited by setting ID and password when accessing the wireless network.
+
+② Authentication and encryption
+
+Transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+
+4) Error control
+
+① Connect Error
+
+It should support recovery mode to enable reconnection in case of disconnection between the detector and SDK software.
+
+② Image Processing Error
+
+When noise or line is appeared during the pre-processing the image received from the detector, it should provide a calibration image for normal process.
+
+Verification activities
+
+Prior to development of the software, concrete items thereof should be planned/devised, and based on this the software development should be done.
+
+The software requirements should analyze the risk to examine the safety and reliability and subsequently manage toward the software developed as an input material for the software development so evaluate whether it is legitimate to use.
+
+Category
+
+Description
+
+Reference
+
+Result
+
+responsible person
+
+Software development
+
+Devise a plan for the software development and put it in writing
+
+EN ISO13485:2016
+
+Software development plan
+
+R&D manager
+
+Software risk analysis
+
+Identification of the characteristics and hazards associated with the intended use and the safety of the device, risk assessment
+
+EN ISO14971:2019
+
+Software Validation Report
+
+Quality manager
+
+Software Architectural Design
+
+The software architectural design is a structure that explains the software requirements by the software structure and identifies the software item. The software architectural design includes a similar description etc on the relation between the primary functions of the software inclusive of the relation with the data flow such as a typical flow chart, hardware and networking. That does not need to include every function call of this document and module in general. However, there should be sufficient information to allow review by an organization on the functionality and intended use of the software equipment.
+
+Software Design Specification
+
+The software design specification explains materialization of the requirements on the software device. In the aspect of the relation between the Software Requirements Specification (SRS) and the Software Design Specification (SDS), SRS explains how the software device will be worked while SDS explains how the requirements will be materialized to SRS. The information presented to SDS should be enough to confirm the job conducted by a software engineer who made the software device is clear and not vague along with a temporary design decision at least. SDS can include a reference on the other document like the Software Detailed Design.
+
+Software Risk Management
+
+As for the software risk management, personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software.
+
+As to the analyzed risk, make out a risk evaluation and present, verify the risk control method thereof.
+
+Software risk management
+
+1) Risk evaluation matrix
+
+Severity
+
+Probability
+
+Not Entirely Harmful (1)
+
+Slight
+
+(2)
+
+Severe
+
+(3)
+
+Very Severe
+
+(4)
+
+Paralysis State(5)
+
+Frequent
+
+(5)
+
+5
+
+10
+
+15
+
+20
+
+25
+
+Probable
+
+(4)
+
+4
+
+8
+
+12
+
+16
+
+20
+
+Occasional
+
+(3)
+
+3
+
+6
+
+9
+
+12
+
+15
+
+Remote
+
+(2)
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Improbable
+
+(1)
+
+1
+
+2
+
+3
+
+4
+
+5
+
+2) Explanation of the risk evaluation zone
+
+① Acceptable zone (Green Zone)
+
+As severity and probability on hazard is quite low, the risk is a level which is acceptable and negligible when compared with the risk of another hazard. But risk control measures for the risk reduction are needed as far as possible.
+
+② Non-acceptable zone (Red Zone)
+
+If the risk still remains on the non-acceptable zone even after taking measures to reduce or remove the risk, stop the design work.
+
+3) Risk estimation level
+
+① Severity
+
+Step
+
+Severity
+
+Definition
+
+5
+
+Paralysis State
+
+Potential failure mode affects safe system operation
+
+4
+
+Very Severe
+
+System inoperable with equipment damage
+
+3
+
+Severe
+
+System inoperable without damage
+
+2
+
+Slight
+
+System operable with some degradation of performance
+
+1
+
+Not Entirely Harmful
+
+None
+
+② Probability
+
+Step
+
+Probability
+
+Definition
+
+5
+
+Frequent
+
+Daily, 1 / 1 day (usually)
+
+Likely to occur often in the life of an item, with a likelihood of occurrence greater than 10^-2 in any one mission
+
+4
+
+Probable
+
+Weekly, 1 / 1 week (often)
+
+Will occur several times in the life of an item, with a likelihood of occurrence less than 10^-2 but greater than 10^-3 in any one mission
+
+3
+
+Occasional
+
+Monthly, 1 / 1 month (sometimes)
+
+Likely to occur sometime in the life of an item, with likelihood of occurrence less than 10^-3 but greater than 10^-5 in any one mission
+
+2
+
+Remote
+
+Quarterly, 1 / 1 quarter (a few times while its life cycle)
+
+Unlikely but possible to occur in the life of an item, with a likelihood of occurrence less than 10^-5 but greater than 10^-6 in any one mission
+
+1
+
+Improbable
+
+Annually, 1 / 1 (might occur but hardly does)
+
+So unlikely, it can be assumed occurrence may not be experienced, with a likelihood of occurrence less than 10^-6 in any one mission.
+
+※ If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the probability of such failure shall be assumed to be 100 percent [∵EN 62304:2006/AC:2008, Cl. 4.3 a)].
+
+Software Verification & Validation
+
+(1) Work of verification and Validation
+
+1) Definition
+
+Verification means “confirmation that specific requirements are met by presentation of objective evidence and inspection”. The software verification in the software development environment is confirmation that the output in the specific stage of development meets every input requisite of the said stage. The software test is one of the several verification activities to confirm that the output in the software development stage meets the input requisite. The software validation is to prove with objective evidence that both the user requirements and use purpose on the function whose software has been used are consistent with the software.
+
+Software verification and validation shall be confirmed through the software test. The software test shall conduct the unit test, integration and system test.
+
+Type
+
+Item
+
+Yardstick
+
+Criteria
+
+Alternative
+
+Common functions Module
+
+Common application function setting function
+
+Initial settings and default values apply
+
+Every error found should be
+
+removed
+
+Debugging
+
+Image acquisition Module
+
+Image acquisition event setup and job notification message handling
+
+Set the collection handle and save the file
+
+Debugging
+
+Calibration Module
+
+Image correction image acquisition function
+
+Average image acquisition for deviation correction
+
+Additional coding work
+
+Pre-Processing Module
+
+Image correction processing algorithm function
+
+Bright image, defect removal
+
+Debugging
+
+Firmware update Module
+
+Firmware update and version control function
+
+Firmware read/write and firmware check
+
+Debugging
+
+xSystem Module
+
+Detector peripheral settings and system control functions
+
+System control and settings
+
+Debugging
+
+FPGA App Module
+
+Signal processing and image generation and parameter setting
+
+Create an image acquisition and save the acquired image
+
+Interface checking
+
+System task Module
+
+System schedule job management and system monitoring function
+
+Scheduling and monitoring management
+
+Debugging
+
+Interface Module
+
+Communication control and internal sensor detection function
+
+Communication control and sensor control by module
+
+Debugging
+
+Cyber Security
+
+Wireless communication account control and encryption capabilities
+
+Account management and communication encryption control
+
+Debugging
+
+Error Control
+
+Communication connection and image processing error handling function
+
+Communication error control and video error control
+
+Debugging
+
+Common functions module
+
+Implements and initializes functions of commonly used functions.
+
+Image acquisition module
+
+Implement and handle functions for image acquisition event setting and motion notification.
+
+Calibration module
+
+Implements image acquisition and generation functions handled by image correction.
+
+Pre-processing module
+
+Implement an image processing correction algorithm and remove noise from the acquired image.
+
+Firmware update module
+
+It implements firmware file update and version management functions, and implements read/write functions.
+
+xSystem module
+
+It implements the peripheral device setting and system control setting function of the detector.
+
+FPGA App module
+
+It implements x-ray signal processing and image generation and parameter setting functions.
+
+System task module
+
+It implements the functions of system task schedule creation and management and monitoring.
+
+Interface module
+
+It implements internal communication control and peripheral sensor control functions.
+
+Cyber security
+
+Implements wireless communication account creation and management and encryption processing functions.
+
+Error control
+
+Controls communication connection error and image processing-related error events.
+
+(2) Time frame and resources for the work activities of Software Verification & Validation
+
+1) Time frame
+
+Primary stage
+
+Date of the test case preparation
+
+Date of beginning
+
+Date of completion
+
+Common functions module
+
+After reviewing and writing initialization requirements
+
+Upon completion of common function implementation
+
+3 days after the test
+
+Image acquisition module
+
+After designing the image acquisition structure and writing specifications
+
+Upon completion of the acquisition module implementation
+
+2 days after the start of the exam
+
+Calibration module
+
+After writing the calibration processing specification
+
+Upon completion of each module implementation
+
+2 days after the start of the exam
+
+Pre-processing module
+
+After writing the pre-processing correction module specification
+
+When the implementation of the pre-processing module is completed
+
+2 days after the start of the exam
+
+Firmware update module
+
+After writing the file system and update specification
+
+When the update module implementation is complete
+
+3 days after the start of the exam
+
+xSystem module
+
+After creating a peripheral control specification
+
+Upon completion of device control module implementation
+
+2 days after the start of the exam
+
+FPGA App module
+
+After signal processing and parameter requirements
+
+Upon completion of signal processing module implementation
+
+3 days after the start of the exam
+
+System task module
+
+After writing scheduling management and monitoring requirements
+
+Upon completion of each module implementation
+
+3 days after the start of the exam
+
+Interface module
+
+After writing the interface requirements
+
+Upon completion of interface module implementation
+
+2 days after the start of the exam
+
+Cyber security
+
+ After filling out the requirements
+
+Upon completion of module implementation
+
+2 days after the start of the exam
+
+Error control
+
+After writing the error handling control specification
+
+Upon completion of the control module implementation
+
+3 days after the start of the exam
+
+2) Resource
+
+Item
+
+Detail item
+
+Resource
+
+MCU
+
+CPU
+
+Intel Cyclone V
+
+FLASH Program Memory
+
+8G byte
+
+DATA Memory
+
+2G byte
+
+NIC
+
+10/100/1000 network system
+
+OS
+
+Embedded Linux 32bit
+
+※ Traceability analysis
+
+As the traceability analysis is an essential element on comprehension of the effective product development, product design, development, testing and risk alleviation, do clear traceability analysis between the related document and development activities.
+
+Software
+
+Requirements Specification(SRS)
+
+Software Design Specification(SDS)
+
+Hazard Mitigations
+
+Software Verification
+
+& Validation(SVV)
+
+Software release
+
+Confirmation of the integrity of software verification
+
+It should be ensured that the software verification is completed and that the results are evaluated before releasing the software.
+
+Documentation of identified residual abnormal conditions
+
+All identified residual abnormalities should be documented.
+
+Assessment of identified residual abnormal conditions
+
+In order to ensure that all identified residual abnormalities are not causing unacceptable risks, It should be ensured that such abnormal conditions have been evaluated.
+
+Documentation of the releasing version
+
+The version of the software product being deployed should be documented.
+
+Document how you created the distributed software
+
+The procedures and environment used to create the deployed software should be documented.
+
+Confirmation of activity and work completion
+
+Ensure that all activities and tasks are completed with all relevant documentation.
+
+Software storage
+
+Either a period of time determined by the manufacturer's defined minimum life time of the equipment or the time specified by the relevant regulatory requirements, the following shall be stored for longer period:
+
+1) Software products and configuration items
+
+2) Document
+
+Ensure repetition accuracy of software release
+
+Procedures to ensure that the deployed software product is reliably delivered to the point of use without modification or unauthorized modification should be established. This procedure should address the production and handling of media containing software products, including:
+
+1) Replication
+
+2) Media labeling
+
+3) Packing
+
+4) Protection
+
+5) Storage
+
+6) Delivery
+
+Software Configuration Management
+
+Purpose of the configuration management plan
+
+Software should include a function that can materialize the optimum performance on the product developed by this company. To this end, continual upgrade from the previously launched version should be available.
+
+How to manage configuration
+
+1) The development request firm shall conduct monitoring continually the customer requirements, item for performance improvement and other problematic issue, etc on the software-applied product so settle through the software upgrade based on the immediate foregoing.
+
+2) In case the software upgrade has settled the performance improvement, application of the customer request and bug matter, etc, it should be able to distinguish by a version name and write as the following type.
+
+Major: A significant change (for example: the change of PCB or another basic functional frame)
+
+Minor: In case of regular check or Warranty service required
+
+Internal management: Slight change
+
+If Ver. was upgraded for the change of customer requirements and performance improvement, it will be changed accordingly.
+
+ (However, the upgrade item of Ver. will be limited to the one that does not affect the product's basic performance.)
+
+3) In case the software configuration is changed, it should be recorded, managed on 12. Software Configuration Management of the Software Validation Report.
+
+In case the software configuration is changed, it should be validated before it is applied to the software.
+
+Problem settlement and support in the software development activities
+
+Software's problem-solving procedure
+
+The customer dissatisfaction item should be received pursuant to Customer complaints Procedure and if a software change is needed, it should quickly be notified to R&D team.
+
+To settle the software's problem, a top priority should be given to improving the problem under mutual cooperation between Production team and R&D team and it should promptly be applied to the product.
+
+Any issues identified with the software shall be recorded and applicable corrective measures shall be conducted.
+
+In addition, when correcting the issues of software, the company shall examine the issues, notify them to relevant personnel, and analyze any trend of issues. The software shall be used only after the required validation has completed.
+
+As for the software's preservation, R&D team should keep the same version against the original, and whenever the version changes the two firms should put it in a separate backup file (CD, hard disk) so keep in the system.

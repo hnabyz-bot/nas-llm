@@ -1,0 +1,2950 @@
+queueId: ingest-1781569954419-17kz
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/05_설계개발 검증 및 유효성 확인/07_Software Validation/A-TCF-5-010_Software Validation 221201 (Rev.3).docx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/85e6cdfdfaf2/A-TCF-5-010_Software Validation 221201 (Rev.3)__85e6cdfdfaf2_combined.txt
+canonicalGroupId: 636e4d72513b
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 56
+
+SOURCE_TEXT
+Software Validation
+
+For
+
+Digital Flat Panel X-ray Detector
+
+HAD1717MC, HAD1717MG
+
+Report No.: A-TCF-5-010 (Rev.3)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+Quality team
+
+Han, Jimin
+
+Dec 01, 2022
+
+Review
+
+R&D Manager
+
+Lee, Dong jin
+
+Dec 01, 2022
+
+Approval
+
+Quality Manager
+
+Hur Namkyu
+
+Dec 01, 2022
+
+Revision History
+
+Revision
+
+Date
+
+Description
+
+0
+
+March/15/2019
+
+Initially issued to Software validation.
+
+1
+
+March/26/2020
+
+Correction of audit Points
+
+2
+
+March/31/2020
+
+Correction of audit Points
+
+3
+
+Dec 01, 2022
+
+Revision according to the update of applicable standards.
+
+Quick Links Reference based on the level of Concern (Moderate)
+
+Requirement
+
+Description
+
+Link<s>
+
+Level Of Concern
+
+A statement indicating the Level of
+
+Concern and a description of the rationale for that level.
+
+Chapter 1
+
+Software Description
+
+A summary overview of the features and software operational environment.
+
+Chapter 3:
+
+Role of Software
+
+Software Layout Diagram
+
+Common Requirements (Deployment Environment)
+
+Device Hazard Analysis
+
+Tabular description of identified hardware
+
+and software hazards, including severity assessment and mitigations
+
+Chapter 5 (Hazards Analysis)
+
+Hazard Analysis Summary Table
+
+Software
+
+Requirements Specification (SRS)
+
+The complete SRS document.
+
+Chapter 3 (SRS)
+
+Architecture Design Chart
+
+Detailed depiction of functional units and
+
+software modules. May include state diagrams as well as flow charts.
+
+Chapter 3: Software Layout Diagram
+
+Chapter 4: Software Design Chart
+
+Software Design
+
+Specification (SDS)
+
+Software design specification document.
+
+Chapter 4 (SDS)
+
+Traceability Analysis
+
+Traceability among requirements, specifications, identified hazards and mitigations, and Verification and
+
+Validation testing.
+
+Chapter 7 (Traceability)
+
+Software Development Environment
+
+Description
+
+Summary of software life cycle development plan, including a summary of the configuration management and maintenance activities.
+
+Chapter 2: Human Resources and Responsibilities Chapter 4: Software Design and Development Procedure
+
+Verification and Validation Documentation
+
+Description of V&V activities at the unit, integration, and system level. System level test protocol, including pass/fail criteria, and tests results.
+
+Chapter 6 (VVT plans) Static tests Dynamic tests
+
+Chapter 8 (VVT results) Static Tests and Analysis
+
+Dynamic Tests and Analysis
+
+Results of tests Appendix A Appendix B
+
+Revision Level
+
+History
+
+Revision history log, including release version number and date.
+
+Chapter 9 (Revisions)
+
+Unresolved Anomalies
+
+(Bugs or Defects)
+
+List of remaining software anomalies, annotated with an explanation of the impact on safety or effectiveness, including operator usage and human
+
+factors.
+
+Chapter 8 Dynamic Tests and Analysis
+
+(Summary)
+
+TABLE OF CONTENTS
+
+1. Level of concern: Moderate (Class B) 7
+
+2. References, Associated Documents, Resources and Life Cycle 8
+
+2.1 References 8
+
+2.1.1 Regulatory Standards & Guidances 8
+
+2.1.2 Industry Standards & Guidances 8
+
+2.2 Associated Documents 9
+
+2.3 Human Resources and Responsibilities 10
+
+3.Software Requirements Specification (SRS) 11
+
+3.1 General Specification 11
+
+3.1.1 Terms and abbreviations 11
+
+3.1.2 Identifiers “SRS n” 11
+
+3.1.3 Role of Software 11
+
+3.1.4 Software Layout Diagram 12
+
+3.1.5 Program modules 12
+
+3.1.6 Data Formats 13
+
+3.1.7 Common Requirements 14
+
+3.2 SRS: Required Functionality 15
+
+3.3 SRS: Conditions for Check, Logging and Error Handling 18
+
+4.Software Design Specification (SDS) 20
+
+4.1 Introduction 20
+
+4.2 System Overview 20
+
+4.3 Design Considerations 20
+
+4.3.1 General Constraints 20
+
+4.3.2 Goals and Guidelines 20
+
+4.4 Detailed System Design 21
+
+4.4.1 Software Design Chart 21
+
+4.4.2 Utility Design Objects “UD_xxx” 22
+
+4.4.3 Functional Design Objects “FD_xxx” 23
+
+4.4.4 Identifiers “SDS n” 24
+
+4.4.5 Specification Table 24
+
+4.5 Development Life Cycle 27
+
+4.5.1 Development Life Cycle Procedure 27
+
+4.5.2 Description of Development Life Cycle 28
+
+4.6 Software Maintenance Life Cycle 29
+
+4.6.1 Software Maintenance Life Cycle Procedure 29
+
+4.6.2 Description of Software Maintenance Life Cycle Procedure 29
+
+4.7 Software Configuration Management Life Cycle 30
+
+4.7.1 Software Configuration Management Life Cycle Procedure 30
+
+4.7.2 Description of Software Configuration Management 30
+
+5.Hazards’ Analysis 31
+
+6.Test Plan 33
+
+Static tests 33
+
+Dynamic tests 35
+
+7.Traceabilty Analysis 37
+
+Introduction 37
+
+Traceabilty Table of SRS and SDS against Potential Hazards and Planned Tests 37
+
+8.Verification, Validation and Test Results 39
+
+Dynamic Tests and Analysis 39
+
+9. Software Version History 40
+
+Appendix A: Results of “TS 1001A” (Calibration flattens air) 41
+
+Appendix B: Results of “TS 1002A” (Acquire image from detector) 42
+
+Appendix C: Results of “TS 1003A” (Line mode and AED mode Trigger Change) 44
+
+Software Validation Report
+
+No
+
+Contents
+
+Revision Record (No. & Date)
+
+1
+
+2
+
+3
+
+4
+
+5
+
+1
+
+Level of Concern
+
+(moderate)
+
+Aril/04/2018
+
+2
+
+References,
+
+Associated Documents,
+
+Resources and Life Cycle
+
+Aril/09/2018
+
+3
+
+Software Requirements
+
+Specification (SRS)
+
+Aril/13/2018
+
+4
+
+Software Design
+
+Specification (SDS)
+
+December/12/2018
+
+5
+
+Hazards’ Analysis
+
+January/08/2019
+
+6
+
+Test Plan
+
+January/24/2019
+
+7
+
+Traceability Analysis
+
+February /12/2019
+
+8
+
+Verification,
+
+Validation and Test Plan
+
+March/05/2019
+
+9
+
+Software Revisions’ History
+
+March/15/2019
+
+1. Level of concern: Moderate (Class B)
+
+If the answer to any one question below is Yes, the Level of Concern for the Software Device is likely to be Major.
+
+Does the Software Device qualify as Blood Establishment Computer Software? No
+
+Is the Software Device intended to be used in combination with a drug or biologic? No
+
+Is the Software Device an accessory to a medical device that has a Major Level of Concern? No
+
+Prior to mitigation of hazards, could a failure of the Software Device result in death or serious injury, either to a patient or to a user of the device? Examples of this include the following:
+
+Does the Software Device control a life supporting or life sustaining function? No
+
+Does the Software Device control the delivery of potentially harmful energy that could result in death or serious injury, such as radiation treatment systems, defibrillators, and ablation generators? No
+
+Does the Software Device control the delivery of treatment or therapy such that an error or malfunction could result in death or serious injury? No
+
+Does the Software Device provide diagnostic information that directly drives a decision regarding treatment or therapy, such that if misapplied it could result in serious injury or death?
+
+No
+
+Does the Software Device provide vital signs monitoring and alarms for potentially life threatening situations in which medical intervention is necessary? No
+
+If the Software Device is not Major Level of Concern and the answer to any one question below is Yes, the Level of Concern is likely to be Moderate.
+
+Is the Software Device an accessory to a medical device that has a Moderate Level of Concern?
+
+Yes
+
+Prior to mitigation of hazards, could a failure of the Software Device result in Minor Injury, either to a patient or to a user of the device? No
+
+Could a malfunction of, or a latent design flaw in, the Software Device lead to an erroneous diagnosis or a delay in delivery of appropriate medical care that would likely lead to Minor Injury? Yes
+
+TFT-detectors use low X-ray irradiation that could not harm patient seriously in any way. Because of that the level of concern is defined as “moderate”.
+
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is Minor. (The answer is “No”)
+
+References, Associated Documents, Resources and Life Cycle
+
+The term “Software” when used from uppercase “S” in respective context of this document assumes this “acquisition library for detectors”.
+
+2.1 References
+
+2.1.1 Regulatory Standards & Guidances
+
+FDA Quality System Regulation 21 CFR, Part 820
+
+FDA Quality System Regulation 21 CFR, Part 803
+
+CDRH Guidance: General Principles of Software Validation
+
+CDRH Guidance: Off-The-Shelf Software Use in Medical Devices
+
+CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices
+
+Software Engineering (Pressman, Sommerville, and Van Vliet), Object-Oriented Development (Booch, Rumbaugh, Berard, and Wirfs-Brock),
+
+2.1.2 Industry Standards & Guidances
+
+ISO 9001, December 2000 Quality System Standards
+
+IEEE 1012-1986, Standard for Software Verification and Validation Plans
+
+IEEE 829-1983, Standard for Software Test Documentation
+
+IEEE 1016 , Standard for software designs
+
+IEEE 830, Standard for software requirements)
+
+ EN ISO 13485 [2016]
+
+ Quality management systems-Requirements for regulatory purpose
+
+ IEC 60601-1 [2006/A1:2013]
+
+  Medical electrical equipment - Part 1: General requirements for basic safety and essential performance
+
+ IEC 62304 [2006]+ A1[2015]
+
+  Medical device software - Software life-cycle processes
+
+ EN ISO14971 [2019]
+
+  Medical devices - Application of risk management to medical devices
+
+ Guidance for the content of premarket submission for software contained in medical devices
+
+2.2 Associated Documents
+
+Name
+
+Reference in text
+
+Content/scope
+
+Mnemon ic prefix for
+
+enlisted items
+
+Software
+
+Validation Report
+
+This file
+
+Includes SDS, SRS,
+
+Software Requirements Spec
+
+SRS
+
+Included in this file. Enlists requirements for
+
+Functionalities and sub-functions
+
+Most important logs and handling of critical errors (Refer chapter 3)
+
+SRS
+
+n.n
+
+Software Design Spec
+
+SDS
+
+Included in this file.
+
+Documents relations between requirements of SRS, paragraphs of User Manual and Software s implementation.
+
+(Refer chapter 4)
+
+SDS
+
+nnn
+
+Software User Manual
+
+It is not an “End- User” manual. The term “user” here assumes designer of EUA, Customer Service Engineer or skilled Technician in Manufacturing
+
+Line
+
+User Manual
+
+External document “SDK Manual”
+
+Describes Software architecture (with exception of scope of SDS)
+
+Abstraction level of this documentation is suitable for all still image detectors.
+
+Software Traceability Analysis
+
+Included in this file (Refer chapter 7)
+
+Software Hazards’ and
+
+Risks’ Analysis
+
+Hazards Analysis
+
+Included in this file (Refer chapter 5)
+
+NZ
+
+nnnX
+
+Software Test Plan
+
+Test Plan
+
+Included in this file. (Refer chapter 6)
+
+TS
+
+nnnX
+
+Software Test Report
+
+Test Report
+
+Included in this file Result of test procedures
+
+(Refer chapter 8)
+
+Assume that a document matches to the current recent release of Software (refer paragraph 9.2) if other is not stipulated in the document’s preface.
+
+2.3 Human Resources and Responsibilities
+
+Team
+
+Person
+
+Responsibilities (produced or processed documents)
+
+SW Team
+
+SW Engineer (1 person)
+
+SRS (design)
+
+Software architecture (design) Implementation, coding
+
+SDS (design)
+
+User Manual (design) Hazards analysis (design)
+
+Software static test report (perform) Software dynamic test report (verification)
+
+Team Manager (1 person)
+
+SRS (approval)
+
+Software architecture (design, approval) SDS (approval)
+
+Hazards analysis (verification) User Manual (verification) Software test plan (verification) Software test report (verification) Traceability analysis (design) Validation report (design)
+
+Test Engineers (1 person)
+
+Software test report
+
+Application Software Team
+
+SW Engineers (1 person)
+
+User Manual (verification)
+
+Proprietary EUA Design and implementation. Casual Software test
+
+Team Manager (1 person)
+
+SDS (verification)
+
+User Manual (verification)
+
+Quality Management Team
+
+Team Manager (1 person)
+
+SRS (approval) SDS (approval)
+
+Hazards analysis (approval) User Manual (approval) Hazards Analysis (approval) Software test report (approval) Traceability analysis (approval) Validation report (approval)
+
+Marketing Team
+
+Team Manager (1 person)
+
+SRS (verification)
+
+Hazards analysis (verification)
+
+Customer Support Team
+
+Team Manager (1 person)
+
+SDS (verification)
+
+User Manual (verification) Hazards analysis (verification) Validation report (verification)
+
+3.Software Requirements Specification (SRS)
+
+3.1 General Specification
+
+3.1.1 Terms and abbreviations
+
+Frame – whole data frame received from detector ”as is” with original width and height.
+
+ROI – abbreviation for “Region Of Interest“ (ROI assumed to be located within a frame in this document’s context)
+
+Image – given ROI with optional rotation and flip. In particular cases it might coincide with the whole frame.
+
+End User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user.
+
+UI – abbreviation for User Interface
+
+SU – SetUp. It is Property sheet supplied by Software for intrinsic configuration and maintenance operations.
+
+Offset/Gain-calibration –equalization of pixels’ transfer functions
+
+Bad pixel – pixel that can’t be calibrated
+
+CBP – CallBack Process. Acquisition SW(DLL) passes data to Upper level SW(EAU) through CBP(data : a error code and a acquisition frame).
+
+3.1.2 Identifiers “SRS n”
+
+SRS-C – Common requirements (enlisted in preface)
+
+SRS 1 – Frame Acquisition
+
+SRS 2 – SU
+
+SRS 3 – check-up for Frame Acquisition (SRS 1)
+
+SRS 4 – check-up for Gain/Offset Calibration (SRS 1)
+
+SRS 5 – check-up for Auxiliary Noise Removal (SRS 1)
+
+SRS 6 – check-up SU(SRS 2)
+
+3.1.3 Role of Software
+
+This is “middle-ware” utility library between still image detector (and its low-level driver) from one side and EUA from the other. It also contains SU to modify software and hardware configuration parameters and preparation of Gain/Offset-Calibration and Bad Pixels’ Correction. Software shall be able also to perform some image processing operations, which are stipulated in SRS.
+
+Images from Software shall be generally ready for display. But fine final enhancement of visual presentation is not an exact function of this Software. A customer (physician) might require further post-processing (like automatic or manual contrast and brightness adjustment or some additional filtration algorithms. EUA should be responsible for such post-processing.
+
+3.1.4 Software Layout Diagram
+
+MS Windows 7 or10 (32-bits NT-like architecture)
+
+End-User Application (EUA)
+
+End- User acquisiti
+
+Data Base Manager
+
+Another modules
+
+Image Viewer
+
+Detector (Proprietary HW)
+
+Ethernet Card
+
+Ethernet Interface (Windows TCP/IP Socket)
+
+Acquisition Library (Software)
+
+UDP Cable
+
+3.1.4.1 Firmware Layout Diagram
+
+ Firmware
+
+Main Procedure
+
+FPGA modules
+
+Controller Module
+
+Send Module
+
+Ethernet interface
+
+PC Software
+
+3.1.5 Program modules
+
+Software is capable to provide the functionality specified below for OEM-customers applications. It includes the next program modules:
+
+Sensor library (original name Dlib.dll)
+
+Sample acquisition program (original name XAS.exe)
+
+Configuration ini-file (original name Dlib_xx.ini/XAS.ini)
+
+Configuration ini-file
+
+Sensor library
+
+Sample acquisition program
+
+Load Dlib_xx.ini(FPGA, ROIC Parameter, IP, Image information)
+
+Acquire image files (with progress bar dialog as User Interface)
+
+- Acquisition Command
+
+- Calibration Command
+
+Load App.ini(Acq Parameter)
+
+3.1.5.1 Firmware Program modules
+
+3.1.6 Data Formats
+
+All image data shall be transmitted and stored as 16-bits little-endian (Intel bytes order) two- dimensional arrays without any specific header. Image’s dimension shall be passed as auxiliary procedure’s parameter or value in configuration file. Grayscale range assumed to be 0..1^16-1 (16 bits non-negative integer) for saved files. That is eligible if Software internally uses either signed and unsigned integer types for pixels’ values.
+
+Raw frame’s pixels are 14 bits non-negative integers. Software treats highest unused bits of frame’s pixels as zeros (even detector’s hardware set those to “1”).
+
+3.1.7 Common Requirements
+
+Development Environment (SRS-C-DevE):
+
+Windows 10 pro 64bit.
+
+MS Visual C++ 2019 (MS Visual Studio Professional 2019).
+
+Ubuntu 14 32bit
+
+Compiler : ARM cross gcc compiler
+
+Editor : geditor, Source insight4.0
+
+Software interface for EUA (SRS-C-EUA compatibility with Development Environment:):
+
+MS Visual C++ 2017 (MS Visual Studio Professional 2017).
+
+MfgTool.exe
+
+Character encoding (SRS-C-CharSet)::
+
+Software basically deploys as UNICODE and ANSI-C.
+
+English is the only required language for SU and internal logs.
+
+Text messages for End-User should persists as strings in configuration ini-file <or files> with possibility of translation to another languages.
+
+Detector Operational Environment
+
+Peripheral hardware : Window10 connected by VMware virtual machine
+
+OS : Ubuntu 14.0 Linux
+
+CPU/Motherboard : At least Intel Core 2
+
+RAM : 4 GB RAM
+
+Hard drive : At least 500 GB hard disk for the software, in addition to the required
+
+ archive capacity for image storage
+
+Hardware and interface requirement
+
+Peripheral hardware
+
+TFT sensor connected by Ethernet
+
+OS :
+
+At least Window 7 32-bit/64-bit.
+
+CPU/Motherboard:
+
+At least Intel Core 2
+
+RAM:
+
+At least 4 GB RAM
+
+Hard drive:
+
+At least 500 GB hard disk for the software, in addition to the required archive capacity for image storage
+
+Monitor
+
+Graphics card / monitor: Resolution of at least 1,920 x 1,080 pixels in True Color mode
+
+Ethernet
+
+Gigabit network card
+
+Peripheral hardware
+
+Detector Firmware main board by Ethernet
+
+OS :
+
+ Embedded Linux
+
+CPU/Motherboard:
+
+ARM Cortex-A9 core 64-bit CPU
+
+RAM:
+
+2 GB DRAM
+
+Flash Memory:
+
+8GB Nand Flash Memory
+
+Ethernet
+
+Gigabit network module
+
+3.2 SRS: Required Functionality
+
+Identifier
+
+Functionality
+
+Function
+
+Description
+
+Note
+
+SRS 1
+
+Acquisition
+
+Acquire raw frame from detector and deliver it to EUA as image.
+
+Final image shall adequately represent integral densities of objects along X-ray beams.
+
+I.e. that shall be radiographic image with Offset/Gain- calibration and Bad Pixels’ correction at least.
+
+SRS.1.1
+
+Moderate level of concern.
+
+Frame’s acquisition
+
+Transmit raw frame’s pixels from file object to array in conventional RAM.
+
+This operation also includes control communications (proprietary configuration commands) with detector’s firmware.
+
+It shall be robust against:
+
+Concurrent applications, which exhausts system resources
+
+Sudden disconnect of device shall not cause error after its re- connection
+
+SRS.1.2
+
+Moderate level of concern.
+
+Offset/Gain- Calibration
+
+This operation equalizes transfer functions of each pixel.
+
+It shall be at least Flat-Field Correction (FFC) with one flat bright calibration point and one dark frame. More general algorithms are suitable. But simple basic FFC shall be supported anyway.
+
+Visual result of correction shall be adequate. Non-saturated bright frame without object shall be flat after correction.
+
+Other details of requirements would be considered in the Code review (refer 6.1.3)
+
+SRS.1.3
+
+<Only a placeholder is required>
+
+Replacement of saturated pixels
+
+Saturated pixels (i.e. pixels that have value bigger than specified threshold) shall to be replaced with specified constant (or perhaps with an automatically calculated replacement value)
+
+This operation implements standard “saturation- replacement value” for constant predefined. Software should also have placeholder for automatic calculation of the replacement value by histogram of properly calibrated image pixels.
+
+Saturated pixels shall be excluded from SRS 1.2.
+
+SRS.1.4
+
+<Only a placeholder is required>
+
+Bad Pixels Correction
+
+This operation corrects scattered bad (dead) pixels by interpolation with good neighbors.
+
+We call pixels which can’t be calibrated as “bad”
+
+Bad pixels shall be excluded from SRS 1.2
+
+SRS 1.5
+
+Preparing to use the detector system
+
+It creates a thread to configure the network and process events for the detector system to operate.
+
+SRS 1.6
+
+ Acquisition
+
+Read from fpga to frame buffer
+
+Receive the acquired x-ray frame image
+
+Through the firmware eim interface, it processes images stored in buffer shares
+
+SRS 1.7
+
+ Send Image
+
+Transfer acquired image to PC
+
+Transferring the Acquired Video Image to PC Transfer the image from fpga to the PC via wired LAN cable.
+
+SRS 1.8
+
+ Trigger mode
+
+Line mode, AED mode
+
+-. When the line mode is set, an image is acquired when a signal is transmitted through the line trigger cable.
+
+-. When AED mode is set, an image is obtained by detecting a signal received from x-ray generation.
+
+The difference between the line mode and the AED mode is that the line mode uses the trigger cable, and the AED mode does not.
+
+SRS 2
+
+SU(SetUp)
+
+Service for configuration and maintenance.
+
+SRS.2.1
+
+<Correlates with SRS 1.1 Moderate concern >
+
+Maintain general HW configuration
+
+Model-specific constants
+
+- Acquisition protocol (data de-scramble)
+
+- Another required integer/float/ string values by requirement
+
+SRS.2.2
+
+<Depends on SRS 1.2,
+
+Moderate concern>
+
+Acquisition/prepa ration of dark frame for Offset- calibration
+
+Software subtracts this frame from acquired raw frame. By command “SW-trigger” detector starts read-out immediately (acquires dark
+
+frames without X-ray).
+
+SRS.2.3
+
+<Depends on SRS 1.2
+
+Moderate concern >
+
+Acquisition/prepa ration of flat bright frame<s> (or calibration points) for Gain-
+
+calibration
+
+Software equalizes pixels’ transfer functions using prepared calibration points. Normally detector automatically initiates data-transfer when recognizes X-ray exposure.
+
+SRS.2.4
+
+<Depends on SRS 1.5 >
+
+Configuration of Bad Pixels’ Correction
+
+SRS 2.5
+
+<Depends on SRS 1.3, SRS
+
+1.4 >
+
+Non-critical adjustments
+
+Additive noise removal
+
+Saturation-replacement
+
+SRS 2.6
+
+Firmware initialization and register settings.
+
+Initialize and register settings to prepare the Firmware for operation.
+
+Set registers and variables used by the firmware.
+
+3.3 SRS: Conditions for Check, Logging and Error Handling
+
+All error messages shall conform to Character encoding rules in paragraph 0. All error messages shall be stored in the log and then displayed for user in modal dialog box by API “Message Box”. Logging- only message (about success completion of a step) should be defined locally in English only (for service engineers but not for end-user).
+
+Identifie r
+
+Functionality
+
+Function
+
+Description
+
+Note
+
+SRS 3
+
+Frame’s acquisition Moderate concern
+
+SRS 1.1
+
+SRS.3.1
+
+Check detector’s connection
+
+In case of connection error, the “Connect Error” message is passed to the Data_CBP.
+
+API “connect” shall return connection status (SRS 2.1)
+
+SRS.3.2
+
+Internal log ”success connection”
+
+In case of connection success, the “ConnectSuccess” message is passed to the Data_CBP.
+
+SRS.3.3
+
+Error handling when user voluntarily cancels acquisition
+
+If EUA aborts acquisition or when user clicks button [Cancel] in Preview “Acquisition aborted”
+
+Software should also log message about acquisition progress in this case.
+
+Software shall reset detector (without error handling) in this case.
+
+SRS 3.4
+
+Internal log ”success acquisition”
+
+In case of acquisition complete, the “Acq Complete” message is passed to the Data_CBP.
+
+SRS 4
+
+Offset/Gain- Calibration Moderate
+
+concern
+
+SRS 1.2
+
+SRS 4.1
+
+Check existence of dark frame of for Offset- calibration.
+
+Message “cDark.raw file does not exist” if there is no dark reference file.
+
+This library does not treat this as fatal error because image probably would be sufficient for diagnostic (though it will have visual artifacts).
+
+Note: EUA might treat this as fatal error.
+
+SRS 4.2
+
+Check existence of at least one flat bright frame of proper dimension (or calibration point) for Gain- calibration
+
+Message “Calset??_????.raw file does not exist” if there are no gain calibration reference files..
+
+This is fatal error
+
+SRS 5
+
+Auxiliary Noise Removal
+
+SRS 1.3, 1.4,
+
+1.5
+
+Formal error handling for these operations is less important. Software shall never constrain “numeric overflow” or “access violation” because of wrong input data.
+
+SRS 5.1
+
+Internally log number of bad pixels which can’t be corrected
+
+Pixel’ can’t be corrected if it has not enough good neighbors within specified radius.
+
+This is not fatal error
+
+Current detectors do not have bad pixels.
+
+Placeholder function should use simple interpolation and require at least 4 good neighbors within surrounding radius of 3 pixels.
+
+SRS 5.2
+
+Logging for Internal Behavior Processing
+
+Record log data about internal operations. If an error occurs, the error status log is recorded and a message is sent.
+
+SRS 6
+
+SU
+
+SRS 3
+
+SRS 6.1
+
+SRS 3, SRS 4,
+
+SRS 5
+
+SU shall provide error handling mentioned for SRS 4, SRS 5 in this table
+
+Software shall correctly invoke its own exported methods with stipulated error handling and logs..
+
+SRS 6.2
+
+Moderate concern
+
+roic, fpga cal Find and set saved files.
+
+Stores roic_param and fpga_param calibration setting data received from the acquisition program.
+
+4.Software Design Specification (SDS)
+
+4.1 Introduction
+
+Purpose of this document is to describe relations between SRS, source code and User Manual (refer paragraph 2.2 for prerequisites). This document does not duplicate comprehensive and detailed consideration of Software architecture in the User Manual. This document enumerates (enlists, formalizes) items of SRS and User Manual for tracebility analysis. The expected audience of this document would be Software Engineer, who needs to modify functionality of this Software.
+
+4.2 System Overview
+
+Refer also paragraph 2.1 in SRS.
+
+This Software is a part of workspace of Still Imaging X-ray Acquisition Library. The workspace contains several acquisition libraries’ projects. The projects share most of their source code, that implements general operations for still image X-ray detectors. All projects use the same header files at the highest abstraction level. All projects have almost identical SW-interface (of course meaning, range and scope of control parameters are specific for each detector’s type).
+
+4.3 Design Considerations
+
+4.3.1 General Constraints
+
+Software invokes only commnon subset of Windows API communicating with Ethernet detector to conform Srs-C-DepE. Source code follows the syntax of MS VC 2015 and contains respective pragmas under conditional “define” (file stdafx.h) for more recent version of C++ compiler from MS Visual Studio 2019.
+
+To make deployment easier, Software never relies on existence of MFC (as well as all of another specific libraries) in system’s paths but has those linked statically.
+
+Still imaging detectors do not produce huge data-series and do not require especially high performance during acquisition. So we need not to impose especial constraints for available physical memory or CPU frequency.
+
+4.3.2 Goals and Guidelines
+
+Purpose of this library’s architecture is to provide optimal trade-off between abstraction level and customization of particular X-ray detector libraries. A DLL simply mapped into address space of caller process gives most flexible and customizable application interface.
+
+Note that this architecture is not suitable for fast acquisition. For fluoroscopy or CT we would rater prefer to run acquisition/reconstruction as separate process in (executable program) its own address space to isolate EUA from potential danger of exceptions in acquisition modules and resources’ leakage.
+
+4.4 Detailed System Design
+
+4.4.1 Software Design Chart
+
+To simplify cross-relations we classify design objects as the next:
+
+Utility design objects (UD_xxx) – internal service entities
+
+Functional design objects (FD_xxx)– exported entities, which may perform an application function (explicitly modify image pixels, send detector’s control commands etc)
+
+Windows Socket API(TCP/IP)
+
+Acquisition Library
+
+ 
+
+Ethernet Card
+
+Acquisition SW(Aging, Sample, EUA …)
+
+FD_Cal
+
+Functional Design Objects
+
+Utility Design Objects
+
+UD_App
+
+ 
+
+UD_Intf (Exported Methods and definitions)
+
+FD_SUCal
+
+FD_Acq
+
+UD_Log
+
+ 
+
+SetUp
+
+FD_SUBPM
+
+UD_Mtx
+
+UD_CBP
+
+UD_Ini
+
+ 
+
+External File
+
+ 
+
+Ini File
+
+ 
+
+APP_Ini
+
+ 
+
+Dll_Ini
+
+ 
+
+Calibration Reference File
+
+ 
+
+Offset Ref File
+
+ 
+
+Gain Ref File
+
+ 
+
+BPM Ref File
+
+ 
+
+Firmware
+
+ 
+
+Embedded Linux Socket API(TCP/IP)
+
+Utility Design Objects
+
+Ethernet Module
+
+Functional Design Objects
+
+UD_Log
+
+ 
+
+UD_CtrlProc
+
+ 
+
+UD_SendProc
+
+ 
+
+UD_App
+
+ 
+
+UD_MsgProc
+
+ 
+
+FD_main
+
+FD_server
+
+FD_rtc
+
+SetUp
+
+FD_SUroic_param
+
+FD_SUfpga_param
+
+4.4.2 Utility Design Objects “UD_xxx”
+
+The most of Software’s functional components depend on one or several of the next utility components:
+
+Identifier
+
+Description
+
+Source file
+
+Members and functions
+
+Notes
+
+Dependencies
+
+UD_Ini
+
+Initialization profile
+
+GIniFile.h
+
+GIniFile.cpp
+
+Class GIniFile
+
+Read/write data from/to standard windows ini-files (and optionally from/to registry)
+
+none
+
+UD_Intf
+
+Exported interface entities
+
+Dlib_Intf.h
+
+Dlib_Intf.cpp
+
+All exported functions and definitions that are enlisted and documented in User Manual.
+
+In this document we refer methods as
+
+All UD_xxx
+
+UD_FileIO
+
+File IO service (built in-log and errors’ check)
+
+VaU_FileRW
+
+UD_Log
+
+UD_Mtx
+
+Hand-made mutexes for opportunity of deadlocks’ check
+
+VaU3_MutexCreate
+
+VaU3_MutexGet
+
+VaU3_MutexRelease
+
+VaU3_MutexDelete
+
+VaU3_MutexLock
+
+VaU3_MutexLocked
+
+None
+
+UD_CBP
+
+The upper application checks the error code and the acquisition, calibration image.
+
+Acq_CBP
+
+Cal_CBP
+
+UD_CtrlProc
+
+Firmware and device management and memory control.
+
+Main.c
+
+Server.c
+
+Main
+
+CtrlTask
+
+CtrlProc
+
+UD_App
+
+UD_SendProc
+
+Acquisition image transfer.
+
+SendTask
+
+SendProc
+
+SPKT
+
+UD_MsgProc
+
+Check image acquisition status
+
+MessageProc
+
+tFPGAPar_v1
+
+
+
+4.4.3 Functional Design Objects “FD_xxx”
+
+Identifier
+
+Description
+
+Source file
+
+Members and functions
+
+Notes
+
+Dependencies
+
+FD_Acq
+
+Data acquisition
+
+D_Acq,h
+
+D_Acq.cpp
+
+AD_Connect
+
+AD_Init
+
+AD_GetImage
+
+ACQ_SendCommand
+
+ACQ_SendPacket
+
+ACQ_ReadyIn
+
+ACQ_Abort
+
+ACQ_Close
+
+I_Feedback
+
+UD_Par
+
+UD_Ini
+
+UD_Mtx
+
+FD_Cal
+
+Calibration and Bad Pixels’ Correction
+
+D_Calib.h
+
+D_Calib.hpp
+
+D_Calib.cpp
+
+ Upper level main
+
+Calib_Process
+
+ Upper level service
+
+dCropFrame
+
+Internal use
+
+OfsCalibration
+
+ShiftMinusValue
+
+GainMap_Init
+
+iGainCalibration
+
+Gain_Close
+
+BP_Correction
+
+MovAvg
+
+FindMinMax
+
+i_FeedBack
+
+UD_Par
+
+UD_Ini
+
+UD_FileIO
+
+UD_Mtx
+
+UD_CAL
+
+FD_SUCal
+
+Acquire calibration files(dark, bright, gain cal files)
+
+D_Calib.h
+
+D_Calib.cpp
+
+D_Acq,h
+
+D_Acq.cpp
+
+dGetDark
+
+dGetBright
+
+dGenerateCalSet
+
+FD_SUBPM
+
+Acquire BPM file
+
+D_Calib.h
+
+D_Calib.cpp
+
+dGenerateBPM
+
+FD_main
+
+Register initialization, thread creation, socket communication open
+
+Cmd_list.h
+
+Envdef.h
+
+Server.h
+
+Fpga.h
+
+Rtc.h
+
+Main.c
+
+SvLd_AppINI
+
+Initialize
+
+Rtc2systemtime
+
+Init_seq
+
+CtrlTask
+
+SendTask
+
+MessageProc
+
+UD_CtrlProc
+
+UD_SendProc
+
+UD_MsgProc
+
+FD_server
+
+Thread control processed by each module, communication thread control, image transfer thread control
+
+Server.h
+
+Server.c
+
+Sockaddr_in
+
+CtrlTask
+
+SendTask
+
+CtrlProc
+
+SendProc
+
+ReadOutProc
+
+TriggerProc
+
+MessageProc
+
+StatusProc
+
+UD_CtrlProc
+
+UD_SendProc
+
+UD_MsgProc
+
+FD_rtc
+
+Set target system time and apply system operation log time
+
+Rtc.h
+
+Rtc.c
+
+Main.c
+
+Server.c
+
+Write_logfile
+
+UD_Log
+
+FD_SUroic_param
+
+roic register param configuration file
+
+Roic_param
+
+SvLd_ROICParam
+
+UD_CtrlProc
+
+FD_SUfpga_param
+
+fpga register param setting save file
+
+Fpga_param
+
+SvLd_FPGAParam
+
+UD_CtrlProc
+
+4.4.4 Identifiers “SDS n”
+
+100..199 – Common features
+
+200..299 – Acquisition and calibration features
+
+300..399 – Configuration features
+
+400..499 – logs and errors’ handling
+
+ 4.4.5 Specification Table
+
+Identifier
+
+Description
+
+Source file
+
+Members and functions
+
+Notes
+
+SDS 101
+
+Common Requirements (refer 3.1.6)
+
+SRS-C-DevE
+
+Stdafx.h
+
+Conditional define
+
+3.API Description
+
+3.2 Error code description
+
+3.3 ~ 3.26 Dlib.dll interface fuction description
+
+SDS 102
+
+Common Requirements (refer 3.1.6)
+
+SRS-C-CharSet:
+
+All source files user TCHAR macros
+
+3.API Description
+
+3.2 Error code description
+
+3.3 ~ 3.26 Dlib.dll interface fuction description
+
+Exceptions (FD_Acq)
+
+D_acq.cpp which sends/receives ANSI characters from HW
+
+ImgProcs.cpp ANSI interface for SRS.2.4
+
+SDS 103
+
+Common Requirements (refer 3.1.6)
+
+SRS-C-DepE
+
+All source files user standard Windows API.
+
+MFC is linked as static library
+
+3.API Description
+
+3.2 Error code description
+
+3.3 ~ 3.26 Dlib.dll interface fuction description
+
+Considered in “code review” (refer 6.1.2)
+
+SDS 104
+
+Common Requirements
+
+UD_Intf
+
+3.API Description
+
+3.2 Error code description
+
+3.3 ~ 3.26 Dlib.dll interface fuction description
+
+Note that Software has 2 files with the same name “Dlib_Intf.cpp”. One belongs to project and contains export wrappers (see design object UD_Intf). Another one is part of an application and loads table of exported methods from its counterpart.
+
+SDS 201
+
+SRS 1.1
+
+Moderate concern
+
+FD_Acq
+
+-SDK Manual
+
+3.1 Image Acquisition Flow Chart
+
+3.19 dGetImage
+
+SDS 202
+
+SRS 1.2
+
+Moderate concern
+
+FD_Cal
+
+-SDK Manual
+
+3.1 Image Acquisition Flow Chart
+
+3.26 dPreprocessing
+
+SDS 203
+
+SRS 1.3
+
+(Replacement of saturated pixels)
+
+FD_Cal
+
+-SDK Manual
+
+3.1 Image Acquisition Flow Chart
+
+3.26 dPreprocessing
+
+SDS 204
+
+SRS 1.4
+
+(Bad Pixels Correction)
+
+FD_Cal
+
+-SDK Manual
+
+3.1 Image Acquisition Flow Chart
+
+3.26 dPreprocessing
+
+SDS 302
+
+SRS 2.1
+
+SDS 302
+
+SRS 2.2
+
+(Offset)
+
+FD_Cal
+
+FD_SUCal
+
+-SDK Manual
+
+3.27 dGetDark
+
+SDS 303
+
+SRS 2.3
+
+(Gain)
+
+FD_Cal
+
+FD_SUCal
+
+-SDK Manual
+
+3.28 dGetBright
+
+3.29 dGenerateCalSet
+
+- User Manual V1.4
+
+- Detector Image Calibration
+
+SDS 304
+
+SRS 2.4
+
+(BPM)
+
+FD_Cal
+
+FD_SUBPM
+
+-SDK Manual
+
+3.28 dGenerateBPM
+
+- User Manual V1.4
+
+- Detector Image Calibration
+
+SDS 401
+
+SRS 3.1
+
+SRS 3.2
+
+SRS 3.3
+
+SRS 3.4
+
+SRS 6.1
+
+Moderate concern
+
+FD_Acq
+
+FD_Cal
+
+For handling acquisition’s errors and logs it intensively uses
+
+SDS 402
+
+SRS 4.1
+
+SRS 4.2
+
+SRS 6.1
+
+Moderate concern
+
+FD_Cal
+
+For handling calibration’s errors and logs it intensively uses
+
+SDS 403
+
+SRS5
+
+SRS 5.1
+
+FD_Cal
+
+Bad Pixels Correction (including log error handling)
+
+None
+
+Empty placeholders are not documented
+
+Log-related requirement SRS 6.1 does not need dedicated documentation
+
+Current detectors do not need auxiliary noise-removal. .
+
+SDS 405
+
+SRS 6.2
+
+UD_FileIO
+
+(Error handling and log for file read operations)
+
+None
+
+SDS 406
+
+SRS 1.6
+
+UD_CtrlProc
+
+-. The parameter is properly applied when changing to line trigger mode.
+
+-. The parameter is applied properly when changing to auto trigger mode.
+
+Check the error by sending the response code when sending parameter data.
+
+4.5 Development Life Cycle
+
+4.5.1 Development Life Cycle Procedure
+
+Software development process follows classic methodology of Waterfall Life Cycle Model, as illustrated in the following chart.
+
+Basic
+
+e
+
+Integration Test
+
+Definition
+
+mplementation Qualification Maintenance
+
+Monitoring
+
+I
+
+Design
+
+ion & Check
+
+Validat
+
+d
+
+Assessment an g
+
+Quality Plannin
+
+mentation, Unit
+
+Impl
+
+Detailed
+
+ng
+
+Planni
+
+Analysis
+
+Analysis. The scope of software development is defined and analyzed. The activity consists of establishing requirements and work scope before the design phase. The requirements are documented for each level of the software-specific project and design notes. When enough of the requirements are gathered and analyzed for the iteration of the prototype, the activities shift into the design phase.
+
+Planning. Specific step by step activities for projected work scopes are planned. The tasks, responsibilities, resources, and other aspects pertinent to the specific development project are outlined.
+
+Design. The design phase addresses four functional attributes of the software: data structure, software architecture, functionality, and interface characterization. Each attribute is designed and documented.
+
+Implementation. The implementation phase converts the design into a machine language. The software source code is created in accordance with coding conventions. Design reviews/inspections are held to verify the consistency of the code created with respect to the company standards.
+
+Qualification. The qualification phase verifies that the design and code implemented meet the original requirements. Testing ensures that defined inputs will produce intended results that coincide with required outputs.
+
+Maintenance. Once the software is released, the only software changes allowed are to fix identified defects in the code or to support approved enhancements. All identified system software defects are recorded on System Discrepancy Reports(SDR) forms or submitted electronically to the Modification Request(MR) database.
+
+4.5.2 Description of Development Life Cycle
+
+4.6 Software Maintenance Life Cycle
+
+4.6.1 Software Maintenance Life Cycle Procedure
+
+4.6.2 Description of Software Maintenance Life Cycle Procedure
+
+4.7 Software Configuration Management Life Cycle
+
+4.7.1 Software Configuration Management Life Cycle Procedure
+
+4.7.2 Description of Software Configuration Management
+
+5.Hazards’ Analysis
+
+Introduction
+
+This document contains results of the Hazard Evaluation and corrective actions for those hazards for the Software. The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA). Used terms are defined below:
+
+The probability concerns hazards that occur during normal system operation.
+
+High (H): Likely to occur more than 30 times per installation site and year. Medium (M): Probability between High and Low.
+
+Low (L): Likely to occur 2 or less times a year.
+
+Eliminate (E): Probability shall be reduced near to zero. “Zero” means that problem virtually shall happen rarer than “blue screen of death” because of failure of basic hardware like hard disk, video-adapter or mainboard).
+
+The level of concern considers the difficulty to detect and handle the origin of a hazard and also the possible harm that may come to a patient. Possible harm to a person takes precedence over the difficulty to detect and handle the origin of the hazard.
+
+Minor: The hazardous condition does not result in injury to the patient.
+
+Moderate: The hazardous condition could directly cause minor to moderate injury to the patient, or indirectly cause minor to moderate injury via incorrect or delayed information being presented to
+
+the care provider.
+
+Major: The hazardous condition could directly cause death or serious injury to the patient, or indirectly cause death or serious injury via incorrect or delayed information being presented to the care provider
+
+Identifiers “HZ n”
+
+0000..0999 – induced by design of this Software (or associated hardware or manufacturing
+
+issue)
+
+1000..1999 – induced by End-User’s own mistake, by design of EUA or by X-ray source
+
+failure (here we can’t comprehensively distinguish these three sources of error)
+
+2000..2999 – induced by design of another co-existing software (including malicious SW at “user level” of privileges)
+
+Hazard Analysis Summary Table
+
+Identifier
+
+Description
+
+Probab ility
+
+Level of concern
+
+Action<s> to reduce probability and mitigate potential failure
+
+Action/ control accept able
+
+(Y/N)
+
+Test Plan
+
+HZ
+
+Mismatched calibration file
+
+(No calibration file)
+
+L
+
+Moderate
+
+Check for the presence of a calibration file in "End User Application".
+
+0001
+
+Y
+
+TS 0006A
+
+HZ 1001
+
+Stop data-transmission after X- ray exposure because of disconnection of LAN-cable.
+
+L
+
+Moderate
+
+End-User documentation shall explain importance of physical security of LAN- cable connection
+
+Y
+
+TS 0002B
+
+6.Test Plan
+
+We classify the test by two groups as the next:
+
+Static– expert reviews and analysis of source code and DEBUG release of Software.
+
+Dynamic –run Software for test data acquisition and processing (mostly with real detector irradiation)
+
+Static tests
+
+Implementation of Service Data Objects(SDOs)
+
+This table confirms that Software’s source code implements specified SDOs (refer 4.4.2 and4.4.3). Export declarations and text formatting conform paragraph SDK Manual.
+
+SDO
+
+Implemented
+
+Notes
+
+UD_Par
+
+Y
+
+UD_Ini
+
+Y
+
+UD_Intf
+
+Y
+
+Paragraph “SDK Manual” matches to the declarations in Dlib_intf.h. The source code of procedure “Dlib_DLL” in Dlib_Intf.cpp enlists all the specified exported functions.
+
+UD_Log
+
+Y
+
+UD_CBP
+
+Y
+
+UD_Mtx
+
+Y
+
+FD_Acq
+
+Y
+
+This is а part of check of “UD_Intf”
+
+FD_Cal
+
+Y
+
+Тhis is а part of check of “UD_Intf”
+
+FD_SUCal
+
+Y
+
+FD_SUBPM
+
+Y
+
+Code Review for SDS 101, SDS 103, SDS 104
+
+It is excerption from proprietary document Refer paragraph 3.1.6, 4.4.5.
+
+The requirement SRS-C-DevE (free switching between MS VC++ 2019 and MS Visual Studio 2019) ensures that Software uses safe and unambiguous subset of Windows API (that exists in all 32-bits Windows releases). It means that requirement SRS-C-EUA technically should be satisfied almost automatically and does not need further test. Requirement SRS-C-DepE (deployment in various Windows releases) still needs to be tested explicitly (refer TS0004A in 6.2.3).
+
+One instance of DLL is able to connect only one detector at the same time, but that’s not restriction as one is able to invoke several instances of DLL at the same time.
+
+Code Review for SRS 1.2, SDS 202, SDS 502 and suggested Dynamic tests
+
+It is excerption from proprietary document Refer paragraph 0 for SDS 202, 402
+
+Refer paragraph 0 for SRS 1.2
+
+For proprietary EUA we choose (see User Manual “3.2 Calibration”) multi-point linear calibration with 4 calibration points. Aging tests show that recent detectors might permanently use the same calibration points and dark-frame acquired at the factory.
+
+One is able to rely safely on the formal mathematical correctness of Offset-/Gain-calibration implemented in FD_Cal According to paragraph 3.1.3 (which describes general requirements to the produced images) we define test condition for calibration quality as the next
+
+Requirement 1:
+
+“Non-saturated bright frame without object shall be (visually) flat after correction.” (This is quotation from SRS 1.2.)
+
+Requirement 2:
+
+This requirement ensures that two bright frames with different (might be just slightly different) exposure remain different enough after Offset-/Gain-calibration.
+
+Dynamic tests
+
+SW Tools for Aging and Durability test
+
+Acquisition Library detectors (Software)
+
+UD_Intf FD_Acq FD_Cal
+
+Standalone Aging Test Program mentioned in paragraph
+
+2.2 above. It supports more complex communication protocols and allows customize acquisition sequence.
+
+Standalone Aging Test Program
+
+The both tool use UD_Intf and save text logs as well as logs of acquired raw frames.
+
+Identifiers “TS n”
+
+0001-0999 tests for particular SRS (the concerns about anticipated errors)
+
+1000-1999 tests for particular functionalities
+
+Avoidance of Hazards and Error Handling
+
+Identifier
+
+References
+
+Description (Test case)
+
+Operations and expected result
+
+TS 0002B
+
+SRS.3.1
+
+Check physical existence of detector’s connection
+
+In case of connection error, the “Connect Error” message is passed to the CBP.
+
+TS 0003B
+
+SRS.3.3
+
+Correctly terminate detector’s firmware when user cancels acquisition.
+
+If EUA aborts acquisition or when user clicks button [Cancel] in Preview “Acquisition aborted”Repeat this test 10 times
+
+TS 0004A
+
+SRS-C-DepE
+
+Code review for SDS 103
+
+6.1.2
+
+Software shall work in required versions of Windows
+
+Perform functional aging tests in various machines:
+
+Windows 10 Pro
+
+Windows 7 Home
+
+All cases shall work properly
+
+TS 0006A
+
+HZ 0001
+
+(Refer 5.1.3)
+
+SRS 8.2
+
+(Refer 3.3)
+
+SRS 5.1
+
+(Refer 3.3)
+
+In case of absence of calibration frames
+
+If there is no Offset, Gain, BPM reference file or the size does not match, EAU display a warning message.
+
+The EUA receives an error message through Data_CBP.
+
+Functional Tests
+
+Identifier
+
+References
+
+Description (Test case)
+
+Expected result
+
+TS 1001A
+
+SRS 1.2
+
+SDS 202
+
+SDS 402
+
+(Refer paragraphs 3.1.2 and 4.4.5 above)
+
+Code review 6.1.3
+
+Calibration flattens bright frames (air without an object).
+
+Acquire non-calibrated bright raw file and apply offset and gain calibration, then compare the standard deviation, Line deviation.
+
+TS 1002A
+
+SRS 1.1
+
+Acquisition image from the detector
+
+Acquire two test pattern images and perform a subtraction operation to check whether the two images are the same image.
+
+TS 1003A
+
+SRS 1.8
+
+mage acquisition when the Trigger mode (line, AED) setting is changed
+
+Line mode or AED mode When the trigger mode is changed, the image acquisition operation is performed by detecting the trigger signal.
+
+7.Traceabilty Analysis
+
+Introduction
+
+The Traceability Table summarizes links (cross-correlation) between
+
+enumerated (SRS x.x) or enlisted (SRS-C-xxx) items in SRS
+
+enumerated items in SDS (SDS x)
+
+enumerated potential Hazards (HZ x)
+
+respective enlisted static tests and enumerated dynamic tests (TS xxx).
+
+Traceabilty Table of SRS and SDS against Potential Hazards and Planned Tests
+
+SRS
+
+SDS
+
+(Refer 4.4.5)
+
+Element of design (An object for analysis)
+
+Associated SDO<s>
+
+(Refer 4.4.3)
+
+Potential Hazard<s>
+
+(Refer 5.1.3)
+
+Test
+
+(Refer 6.2.3 and 6.2.4)
+
+Refer 3.2
+
+SRS of Functionalities
+
+3.1.6
+
+SRS- C-
+
+DevE
+
+101
+
+Portable syntax (VC2019/ Visual Studio 2019)
+
+Stdafx.h All source files
+
+None
+
+Design time, to build Software’s project under VC 2019 and under MS VS 2019
+
+Refer Code Review 6.1.2
+
+3.1.6
+
+SRS- C-
+
+Char
+
+102
+
+Portable syntax (TCHAR)
+
+All cpp -files
+
+None
+
+Design time, to build Software’s project with definitions “_UNICODE” and “UNICODE”
+
+Set
+
+3.1.6
+
+SRS- C-
+
+DepE
+
+103
+
+Correct and portable project's configuration
+
+settings
+
+Project’s configuration
+
+None
+
+TS0004A
+
+3.1.6
+
+SRS- C- EUA
+
+104
+
+Portable set of used libraries and APIs. Correct linker’s settings.
+
+All cpp -files
+
+None
+
+Design time approval.
+
+Refer Code Review 6.1.2
+
+1.1
+
+201
+
+401
+
+Acquisition API
+
+moderate concern
+
+FD_Acq
+
+No need for current detectors
+
+TS 0003B
+
+TS 1002A
+
+1.2
+
+202
+
+402
+
+Calibration API
+
+moderate concern
+
+FD_Cal
+
+HZ 0001
+
+TS 0002B
+
+1.3
+
+203
+
+Calibration/replace ment
+
+FD_Cal
+
+No need for current detectors
+
+No test for current detectors
+
+1.4
+
+204
+
+Bad Pixels Correction
+
+FD_Cal
+
+No need for
+
+current detectors
+
+No test for current detectors
+
+1.5
+
+1.6
+
+406
+
+Acquisition
+
+Send Image
+
+(Firmware)
+
+UD_CtrlProc
+
+UD_SendProc
+
+None
+
+TS 1002A
+
+1.7
+
+406
+
+Trigger mode
+
+UD_CtrlProc
+
+None
+
+TS 1003A
+
+2.2
+
+6.1
+
+304
+
+SetUp for Offset- calib
+
+FD_Cal FD_SUCal
+
+None
+
+Tests for SDS 202 include this topic TS 1001A
+
+2.
+
+6.1
+
+305
+
+SetUp for Gain-calib
+
+FD_Cal FD_SUCal
+
+None
+
+Tests for SDS 202 include this topic TS 1001A
+
+2.5
+
+6.1
+
+306
+
+SetUp for BPM
+
+FD_Cal FD_SUBPM
+
+None
+
+No test for current detectors
+
+Refer 3.3
+
+Conditions for Check, Logging and Error Handling
+
+3.1
+
+3.2
+
+3.3
+
+3.4
+
+8.1
+
+401
+
+Check presence of driver and device
+
+Properly handle transmission errors
+
+Refer SDS 501
+
+(including notes)
+
+HZ 1001
+
+TS 0002B
+
+4.1
+
+4.2
+
+402
+
+Check existence of calibration frames (message box about error for Gain- and warning message for
+
+Offset-calibration).
+
+Check for improper pixels’ levels (warning log)
+
+Refer SDS 502
+
+(including notes)
+
+HZ 0001
+
+TS 0006A
+
+.
+
+5.1
+
+303
+
+Warning log for non-corrected bad pixels
+
+Refer SDS 502
+
+No need for current detectors
+
+No test for current detectors
+
+6.1
+
+304
+
+305
+
+306
+
+307
+
+CBP shall properly
+
+display error-
+
+messages and
+
+warnings from
+
+FD_Acq, FD_Cal
+
+FD_SUBPM
+
+FD_SUCal
+
+Refer entries for respective SDS 4** above in this table
+
+8.Verification, Validation and Test Results
+
+Static Tests and Analysis
+
+Topic (subject) of test
+
+Result is Ok (approved)
+
+Refer paragraph 6.1
+
+Implementation of SDO (refer 6.1.1)
+
+Y
+
+Code Review for SDS 101, SDS 103, SDS 104 (Refer 6.1.2)
+
+Y
+
+Code Review for SRS 1.1, SDS 201, SDS 501 (Refer 6.1.3)
+
+Y
+
+Summary: As a result of code review, we positively evaluate the success in installed Software on standard PC. Therefore, we may advance to the next stage with the proven software code as the basis. As a result of the code review, we hereby certify that the static verification of Software is properly accomplished
+
+Dynamic Tests and Analysis
+
+Topic (subject) of test
+
+Result is Ok (passed)
+
+Tests for handling of errors (refer 6.2.3)
+
+TS 0002B
+
+Passed
+
+TS 0003B
+
+Passed
+
+TS 0004A
+
+Passed
+
+TS 0006A
+
+Passed
+
+Functionality tests (refer 6.2.4)
+
+TS 1001A
+
+Passed (refer Appendix A)
+
+TS 1002A
+
+Passed (refer Appendix B)
+
+TS 1003A
+
+Passed (refer Appendix C)
+
+Summary: As a result of dynamic tests, we hereby certify that all functionalities, which are stipulated in the SRS are proper. There were no found unsolved bugs that are subjected to safety and effectiveness in this software.
+
+Firmware program is not applicable.
+
+ None
+
+Software Version History
+
+SW version info
+
+Revision
+
+Date
+
+Type
+
+Description
+
+1.0.0
+
+March/15/2019
+
+HAD-MD-SW
+
+Initial release, Dual polynomial fitting calibration Only for proprietary applications.
+
+Firmware version info
+
+Revision
+
+Date
+
+Type
+
+Description
+
+1.0
+
+March/12/2019
+
+HAD-MD-FW
+
+Initial release
+
+Appendix A: Results of “TS 1001A” (Calibration flattens air)
+
+Step 1: Prepare calibration points
+
+The chosen calibration algorithm is multi-point linear interpolation (5 calibration points). So at the first stage we prepare 4 calibration points at 375, 1528, 7406 and 10288 LSB (Unsigned 14bit).
+
+Step 2: Acquire flat raw bright frames by specification in the TS 1001A We disable Offset- and Gain-calibration at this time
+
+Step 3: Apply Offset- and Gain-calibration to acquired frames.
+
+Step 4: Compare statistics of the raw and calibrated frames. Ensure those match requirements of the TS 1001A. Measure frames’ standard deviations and line deviations using viewer
+
+Value of standard, line deviation
+
+Area to calculate standard, line deviation
+
+TestFrame(Median)
+
+Raw Frame
+
+Offset calibrated Frame
+
+Gain calibrated Frame
+
+Standard Dev
+
+Line Dev
+
+Standard Dev
+
+Line Dev
+
+Standard Dev
+
+Line Dev
+
+TestFrame1(1508 LSB)
+
+256
+
+255
+
+12
+
+9
+
+4
+
+0.28
+
+TestFrame2(2094 LSB)
+
+254
+
+251
+
+23
+
+17
+
+7.65
+
+0.51
+
+ TestFrame3(2740 LSB)
+
+247
+
+244
+
+46
+
+35
+
+8.06
+
+0.67
+
+Calibration makes source raw frames “flat”. It reduces standard deviation (within area of 1500x1500 pixels).
+
+Summary: As a result of this test, we positively evaluate that chosen calibration algorithm properly calibrates flat bright frames without an object.
+
+Appendix B: Results of “TS 1002A” (Acquire image from detector)
+
+Step 1: Acquire test pattern image (1) from X-ray detector.
+
+Step 2: Acquire test pattern image (2) from X-ray detector.
+
+Step 3: Substraction operation image is generated by subtracting the test pattern image(1) and the test pattern image (2).
+
+Step 4: To verify that the Test Pattern 1 and Test Pattern 2 images are the same, check that the pixel values of the Substraction operation image are all zeros.
+
+※ Test patten image : Test image in which the pixel value increases as the image line goes down.
+
+(Incremental value is constant.)
+
+※ Substraction operation image : New image created by subtracting two test pattern images.
+
+Test patten image(1)
+
+Test patten image(2)
+
+ Substraction operation image
+
+Summary: As a result of this test, it can be confirmed that the image created in the FPGA has been successfully transferred to the software via firmware. The zero pixel value of the subtraction operation image proves that both test pattern images have the same pixel value. As a result, this test proves that there is no data loss or corruption during the image acquisition and sending functions of the firmware and the image receiving function of the software.
+
+Appendix C: Results of “TS 1003A” (Line mode and AED mode Trigger Change)
+
+1). Line mode trigger set.
+
+Step 1. Run XAS Software and select 'Setting' list on the upper left.
+
+Step 2. Press "Line Trigger" in the "Line Trigger" "Auto Trigger (AED)" selection menu in the
+
+ "Trigger Mode" menu in the right screen.
+
+Step 3. Select "Detector" list at the top left of XAS Software.
+
+Step 4. Press the "FPGA Reg Setting" menu on the right side of the screen and a popup will appear.
+
+ Press the "Get Setting" button at the bottom of the pop-up menu to read the setting values ​​of
+
+ the detector device.
+
+ Check if the "AED CMD" menu is deactivated by clicking the arrow direction button on the
+
+ bottom left of the popup.
+
+Step 5. If "AED CMD" menu is deactivated, "Line Trigger" mode is set.
+
+2). AED mode trigger set.
+
+Step 1. Press "Auto Trigger" in the "Line Trigger" "Auto Trigger (AED)" selection menu in the
+
+ "Trigger Mode" menu in the right screen.
+
+Step 2. Select "Detector" list at the top left of XAS Software.
+
+Step 3. Press the "FPGA Reg Setting" menu on the right side of the screen and a popup will appear.
+
+ Press the "Get Setting" button at the bottom of the pop-up menu to read the setting values ​​of
+
+ the detector device.
+
+ Click the arrow direction button at the bottom left of the popup and check that the "AED
+
+ CMD" menu is activated.
+
+Step 4. If "AED CMD" menu is activated, "Auto Trigger" mode is set.
+
+A). Line mode trigger set.
+
+ [ Figure – 1 ]
+
+Step 2
+
+ [ Figure – 2 ]
+
+Step 4
+
+Step 3
+
+ [ Figure – 3 ]
+
+Step 6
+
+Step 5
+
+B). AED mode trigger set.
+
+ [ Figure – 4 ]
+
+Step 1
+
+ [ Figure – 5 ]
+
+Step 5
+
+Step 4
+
+Step 3
+
+Step 2
+
+Summary: As a result of this test, when changing the Line mode or AED mode When reading the setting file of the
+
+detector device by pressing the "Get Setting" button in the "FPGA Reg Setting" menu, it can be seen
+
+that the Line mode or AED mode setting is normally applied.
+
+The AED trigger mode verifies that the signal from the x-ray generator acquires the image by
+
+detecting the signal itself in the detector device's image conversion processor FPGA.
+
+In line trigger mode, an image is acquired by simultaneously detecting signals synchronized with each
+
+other by connecting a physical trigger cable to an x-ray generator and a detector field.

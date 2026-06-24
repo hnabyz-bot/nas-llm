@@ -1,0 +1,4583 @@
+queueId: ingest-1781569954417-15cx
+sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/05_설계개발 검증 및 유효성 확인/15_규격 Test/4. [A1417MCW, F1417MCW] EN 60601-1-2 Test report (4.1).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/066e17eda544/4. [A1417MCW, F1417MCW] EN 60601-1-2 Test report (4.1)__066e17eda544_combined.txt
+canonicalGroupId: b44cc5c5294d
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 11
+
+SOURCE_TEXT
+Test Report issued under the responsibility of
+www.nemko.com
+This Test Report, when bearing the Nemko name and logo is only valid when issued by a Nemko laboratory, or
+by a laboratory having special agreement with Nemko.
+TEST REPORT
+IEC 60601-1-2
+Medical electrical equipment –
+Part 1-2: General requirements for basic safety and essential
+performance –
+Collateral Standard: ELECTROMAGNETIC disturbances – Requirements
+and tests
+Report Number. .............................. : NK-22-E-0810
+Date of issue................................... : 2022-10-04
+Total number of pages .................. : 65
+Name of Testing Laboratory
+preparing the Report ..................... : Nemko Korea Co., Ltd.
+Applicant’s name ........................... : H&abyz Co., Ltd.
+Address........................................... : 1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-myeon, Cheoin-
+gu, Yongin-si, Gyeonggi-do, Korea, Republic of
+Test specification:
+Standard.......................................... : IEC 60601-1-2:2014, IEC 60601-1-2:2014/AMD1:2020
+Test procedure ............................... : None
+Non-standard test method ............ : N/A
+TRF template used .........................: IECEE OD-2020-F1:2020, Ed.1.3
+Test Report Form No. .................... : IEC60601_1_2J_EMC
+Test Report Form(s) Originator...................: CSA Group
+Master TRF ...................................................: Dated 2021-11-11
+Copyright © 2021 IEC System of Conformity Assessment Schemes for Electrotechnical
+Equipment and Components (IECEE System). All rights reserved.
+This publication may be reproduced in whole or in part for non-commercial purposes as long as the IECEE is acknowledged as
+copyright owner and source of the material. IECEE takes no responsibility for and will not assume liability for damages resulting
+from the reader's interpretation of the reproduced material due to its placement and context.
+If this Test Report Form is used by non-IECEE members, the IECEE/IEC logo and the reference to the
+CB Scheme procedure shall be removed.
+This report is not valid as a CB Test Report unless signed by an approved IECEE Testing
+Laboratory and appended to a CB Test Certificate issued by an NCB in accordance with IECEE 02.
+General disclaimer:
+The test results presented in this report relate only to the object tested.
+This report shall not be reproduced, except in full, without the written approval of the Issuing NCB. The
+authenticity of this Test Report and its contents can be verified by contacting the NCB, responsible for this
+Test Report.
+
+Page 2 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test item description....................... : Digital Flat Panel X-ray Detector
+Trade Mark........................................ : H&abyz
+Manufacturer .................................... : H&abyz Co., Ltd.
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-myeon, Cheoin-gu,
+Yongin-si, Gyeonggi-do, Korea, Republic of
+Model/Type reference...................... : F1417MCW, A1417MCW
+Ratings.............................................. : Detector: 3 A, 16 V or internally powered
+Power Supply box:
+1.0 A, 100-240 V~, 50/60 Hz, Cl. I (for model DEPS9601)
+Responsible Testing Laboratory (as applicable), testing procedure and testing location(s):
+CB Testing Laboratory: Nemko Korea Co., Ltd.
+Testing location/ address ............................ : 155, 153 and 159, Osan-ro, Mohyeon-eup, Cheoin-gu,
+Yongin-si, Gyeonggi-do 16885, Republic of Korea
+Tested by (name, function, signature) ........: HyunHo Choi
+Project handler
+Approved by (name, function, signature) .. : Kyounghoon Lee
+Verificator
+Testing procedure: CTF Stage 1:
+Testing location/ address ............................ :
+Tested by (name, function, signature)........ :
+Approved by (name, function, signature) .. :
+Testing procedure: CTF Stage 2:
+Testing location/ address ............................ :
+Tested by (name + signature)...................... :
+Witnessed by (name, function, signature) . :
+Approved by (name, function, signature) .. :
+Testing procedure: CTF Stage 3:
+Testing procedure: CTF Stage 4:
+Testing location/ address ............................ :
+Tested by (name, function, signature)........ :
+Witnessed by (name, function, signature) . :
+Approved by (name, function, signature) .. :
+Supervised by (name, function, signature) :
+
+Page 3 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+List of Attachments (including a total number of pages in each attachment):
+Attachment 1 : Mains terminal disturbance voltage, 11 pages (including cover page)
+Attachment 2 : Asymmetric Mode Conducted Emissions, 13 pages (including cover page)
+Attachment 3 : Radiated disturbance, 17 pages (including cover page)
+Attachment 4 : Harmonic Current Emissions, 11 pages (including cover page)
+Attachment 5 : Voltage Fluctuations and Flicker, 5 pages (including cover page)
+Attachment 6 : Photographs of EUT, 5 pages (including cover page)
+Attachment 7 : Test Plan, 4 pages (including cover page)
+Attachment 8 : Applicable Standards and Test Methods, 2 pages (including cover page)
+Summary of testing:
+Tests performed (name of test and test clause):
+Conducted emission (7.3)
+Radiated RF emission (7.3)
+Harmonic distortion (7.2.1)
+Voltage fluctuations and flicker (7.2.2)
+Electrostatic discharges (8.9)
+Radiated RF EM fields (8.9)
+Proximity fields from RF wireless communications
+equipment (8.10)
+Electrical fast transients / burst (8.9)
+Surges (8.9)
+Conducted disturbances induced by RF fields (8.9)
+Rated power frequency magnetic fields (8.9)
+Voltage dips (8.9)
+Voltage interruptions (8.9)
+Proximity magnetic fields (8.11)
+*** The model F1417MCW was tested for
+representative model.
+Testing location:
+Nemko Korea Co., Ltd.
+155, 153 and 159, Osan-ro, Mohyeon-eup,
+Cheoin-gu, Yongin-si, Gyeonggi-do 16885,
+Republic of Korea
+Summary of compliance with National Differences (List of countries addressed):
+N/A
+The product fulfils the requirements of
+IEC 60601-1-2:2014 and EN 60601-1-2:2015
+IEC 60601-1-2:2014/AMD1:2020 and EN 60601-1-2:2015/A1:2021
+
+Page 4 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Copy of marking plate:
+The artwork below may be only a draft. The use of certification marks on a product must be
+authorized by the respective NCBs that own these marks.
+[F1417MCW]
+[A1417MCW]
+[Detector Sub Label] [Switch box]
+
+Page 5 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test item particulars: Digital Flat Panel X-ray Detector
+Classification of installation and use...................... : Portable
+Type of Applied Part.................................................. : N/A
+Possible test case verdicts:
+- test case does not apply to the test object...........: N/A
+- test object does meet the requirement..................: P (Pass)
+- test object does not meet the requirement...........: F (Fail)
+Testing..........................................................................:
+Date of receipt of test item ........................................: 2022-09-05
+Date (s) of performance of tests ...............................: 2022-09-30 to 2022-10-03
+General remarks:
+"(See Enclosure #)" refers to additional information appended to the report.
+"(See appended table)" refers to a table appended to the report.
+Throughout this report a comma / point is used as the decimal separator.
+Manufacturer’s Declaration per sub-clause 4.2.5 of IECEE 02:
+The application for obtaining a CB Test Certificate
+includes more than one factory location and a
+declaration from the Manufacturer stating that the
+sample(s) submitted for evaluation is (are)
+representative of the products from each factory has
+been provided ...............................................................:
+Yes
+Not applicable
+When differences exist; they shall be identified in the General product information section.
+Name and address of factory ...................................: H&abyz Co., Ltd.
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-myeon,
+Cheoin-gu, Yongin-si, Gyeonggi-do, Korea,
+Republic of
+General product information (GPI) and other remarks:
+The F1417MCW, A1417MCW series are a portable digital x-ray flat panel detector that can generate images of any
+part of the body. This x-ray imaging system is based on amorphous silicon sensor pixels arrayed on a flat panel for X-
+ray image acquisition. It makes high-resolution, high-sensitive digital images.
+[I/O port]
+Digital Flat Panel X-ray Detector : Detector x 1 ea
+POWER SUPPLY : Detector x 1 ea, LAN x 1 ea, AC In x 1 ea
+Switch box : USB x 1 ea, RJ11 x 1 ea
+Basic Report (NK-22-E-0810)
+
+Page 6 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Table of Contents:
+1 General description of test item..........................................................................................7
+1.1 Photos of the test item..............................................................................................10
+1.2 Block diagram of the ME equipment and ME system and all peripherals and
+auxiliary equipment used..........................................................................................14
+2 Verdict summary section ..................................................................................................15
+3 Test conditions .................................................................................................................16
+3.1 General .....................................................................................................................16
+3.2 Specific test conditions for IEC 60601-1-2 BASIC SAFETY, ESSENTIAL
+PERFORMANCE......................................................................................................17
+3.3 Specific test conditions for IEC 60601-1-2 TEST LEVELS for SPECIAL
+ENVIRONMENTS.....................................................................................................17
+4 Emission ...........................................................................................................................18
+4.1 Disturbance Voltage .................................................................................................18
+4.2 Radiation Measurements..........................................................................................20
+5 Harmonics IEC 61000-3-2 ................................................................................................23
+6 Voltage fluctuation and flicker ..........................................................................................24
+7 Immunity ...........................................................................................................................25
+7.1 Information specific for IEC 60601-1-2.....................................................................25
+7.2 Electrostatic Discharge.............................................................................................26
+7.3 Radiated RF EM fields..............................................................................................31
+7.4 Proximity fields From RF wireless communications equipment ...............................34
+7.5 Electrical fast transients / bursts...............................................................................37
+7.6 Surges Line-to-line, Surges Line-to-ground .............................................................39
+7.7 Conducted disturbances induced by RF Fields........................................................41
+7.8 RATED power frequency magnetic fields.................................................................43
+7.9 Voltage dips and voltage interruptions .....................................................................46
+7.10 Electrical transient conduction along supply lines....................................................48
+7.11 Proximity magnetic fields..........................................................................................49
+7.12 Specialized Emissions and Immunity tests ..............................................................53
+8 Accompanying documents as required by IEC 60601-1-2...............................................54
+9 List of test equipment .......................................................................................................62
+10 Statement of Measurement Uncertainty...........................................................................65
+
+Page 7 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+1 General description of test item
+Description ........................: Digital Flat Panel X-ray Detector
+Serial number ....................: N/A
+Brand name .......................: H&abyz
+Prototype or production
+version ...............................:
+Prototype
+Units tests and rationale for
+selected sample size
+460 x 384 x 15 mm (W x L x H)
+Intended use F1417MCW, A1417MCW series Digital Flat Panel X-Ray Detector are
+indicated for digital imaging solution designed for providing general
+radiographic diagnosis of human anatomy targeting both adult and children. It
+is intended to replace film based radiographic diagnostic systems and provide
+more precise case diagnosis and treatment planning on a real time basis for
+physicians and radiologists. Not to be used for mammography and direct
+cardiac application.
+Intended ENVIRONMENT Professional healthcare facility environment
+PORT ..................................: AC power port Cable
+Specified
+length
+[m]
+Attached
+during
+test
+Shielded
+POWER SUPPLY AC Inlet 1.6
+PORT ..................................: DC power port Cable
+Specified
+length
+[m]
+Attached
+during
+test
+Shielded
+- -
+PORT ..................................: PATIENT COUPLING PORT Cable
+Specified
+length
+[m]
+Attached
+during
+test
+Shielded
+- -
+PORT ..................................: SIP / SOP PORT Cable
+Specified
+length
+[m]
+Attached
+during
+test
+Shielded
+POWER SUPPLY LAN 3.0
+Digital Flat Panel X-
+ray Detector Detector 7.0
+Switch box USB 2.1
+RJ11 0.6
+Supplemental information to
+the PORTS ...........................: N/A
+
+Page 8 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Rated power supply ...........: Voltage and frequency 1 ph/ PE 2 ph/N/PE 3 ph/N/PE
+AC: 100 V – 240 V / 50 - 60 Hz
+<POWER SUPPLY, DEPS9601> / / / / /
+DC: 16 V (Battery power)
+Rated power ......................: Detector: 3 A, 16 V or internally powered
+Power Supply box:
+1.0 A, 100-240 V~, 50/60 Hz, Cl. I (for model DEPS9601)
+Protection class .................: Class I
+Other parameters ..............: EUT Internal Operating Frequencies;
+Frequency
+(㎒) Description Frequency
+(㎒) Description
+24 USB 25 LAN
+25 SOC(HPS) 50 SOC(FPGA)
+Software version ................: 1) XAS_W 2.3
+2) Ezview 1.0
+Hardware version ..............: R0
+Dimensions (W x H x D) ....: 460 x 384 x 15 mm (W x L x H)
+Mounting position: Table top equipment
+Wall/Ceiling mounted equipment
+Floor standing equipment
+Hand-held equipment (Main unit)
+Other: Portable ME equipment (Power Hub and AC-DC adapter)
+Modules / parts ..................: Module / parts of test item Type Manufacturer
+Power supply box DEPS9601
+DAEAN
+ELECOM
+CO., LTD.
+Rechargeable Li-ion battery pack ELT-3S1PA Elentec Co.,
+Ltd.
+Exposure switch NARTIA/SERA DAEYOUNG
+ONE Co., Ltd.
+Switch box Switch box H&abyz Co.,
+Ltd.
+PCB
+MR12-V-0
+Mir System
+Co., Ltd.
+Alt.) Interchangeab
+le
+
+Page 9 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Operating modes ...............: No. Operating mode of test item Applied for testing
+EMISSION IMMUNITY
+1
+Wired (LAN) Mode;
+Digital Flat Panel X-ray Detector +
+POWER SUPPLY + Rechargeable
+Li-ion Battery + Exposure switch +
+Switch box + Laptop Computer
+2
+Wireless (WiFi) Mode;
+Digital Flat Panel X-ray Detector +
+Rechargeable Li-ion Battery +
+Exposure switch + Switch box +
+Laptop Computer + AC/DC
+ADAPTER + Access Point +AC
+Adapter
+Supplemental information to
+the operating modes ..........: N/A
+Supporting equipment (not
+part of the test item)...........:
+Accessory / Auxiliary / Simulator Type Manufacturer
+Laptop Computer Latitude
+E7470 DELL
+AC/DC ADAPTER FA90PM130
+Flextronics
+Power
+Systems
+(Dongguan)
+Co., Ltd.
+Access Point A1004NS ipTIME
+AC Adapter DCP005C090
+80K
+Zioncom
+Electronics
+(Shenzhen)
+Ltd.
+Documents as provided by
+the applicant ......................:
+Description File name Issue date
+BASIC SAFETY ESSENTIAL
+PERFORMANCE and Pass Fail Criteria EMC1 2022-10-24
+Test plan EMC2 2022-10-24
+clock & Block diagram EMC3 2022-10-24
+compliance summary EMC4 2022-10-24
+Test Methods EMC5 2022-10-24
+Modifications to the test
+item during testing .............:
+A statement that they will all be incorporated into production units.
+Manufacturer provided declaration statement.
+Manufacturer did not provide declaration statement.
+
+Page 10 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+1.1 Photos of the test item
+Photo of test item..........................:
+[A1417MCW, Front]
+[A1417MCW, Rear]
+
+Page 11 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo of test item..........................:
+[F1417MCW, Front]
+[F1417MCW, Rear]
+
+Page 12 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo of test item..........................:
+[POWER SUPPLY, Front]
+[POWER SUPPLY, Rear]
+
+Page 13 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo of test item..........................:
+[Switch box, Front]
+[Switch box, Rear]
+
+Page 14 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+1.2 Block diagram of the ME equipment and ME system and all peripherals and auxiliary equipment used
+
+Page 15 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+2 Verdict summary section
+IEC 60601-1-2 referenced emission standards
+Clause Requirement – Test case Basic standard Verdict
+7.1 Terminal disturbance voltages CISPR 11:2015 +A1:2016 +
+A2:2019 P
+7.1 Radiation disturbance CISPR 11:2015 +A1:2016 +
+A2:2019 P
+7.1 Terminal disturbance voltages CISPR 14-1:2016 N/A
+
+7.1 Disturbance Power CISPR 14-1:2016 N/A
+7.1 Radiated disturbances CISPR 14-1:2016 N/A
+7.2.1 AC-Mains Harmonics IEC 61000-3-2:2018 P
+7.2.2 AC-Mains Voltage fluctuations and flicker IEC 61000-3-3:2013/AMD1:2017 P
+IEC 60601-1-2 referenced immunity standards
+Clause Requirement – Test case Basic standard Verdict
+8.9 ELECTROSTATIC DISCHARGE IEC 61000-4-2:2008 P
+8.9 Radiated RF EM fields IEC 61000-4-3:2006 +A1:2007
++A2:2010 P
+8.9 Electrical fast transients / bursts IEC 61000-4-4:2012 P
+8.9 Surges IEC 61000-4-5:2014+A1:2017 P
+8.9 Conducted disturbances induced by RF fields IEC 61000-4-6:2013 P
+8.9 RATED power frequency magnetic fields IEC 61000-4-8:2009 P
+8.9 Voltage dips IEC 61000-4-11:2004/AMD1:2017 P
+8.9 Voltage interruptions IEC 61000-4-11:2004/AMD1:2017 P
+8.9 Electrical transient conduction along supply lines ISO 7637-2: 2011 N/A
+8.10 IMMUNITY to proximity fields from RF wireless
+communications equipment
+IEC 60601-1-2:2014/AMD1:2020
+Table 9 P
+8.11 Immunity to proximity magnetic fields IEC 61000-4-39:2017 P
+Supplementary information: N/A
+
+Page 16 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+3 Test conditions
+3.1 General
+Environmental reference
+conditions.................................. :
+The climatic conditions during the tests are within the limits specified by
+the manufacturer for the operation of the EUT and the test equipment.
+The climatic conditions during the tests were within the following limits:
+Temperature Relative humidity Atmospheric pressure
+15 °C to 35 °C 30 % to 60 % 86 kPa to 106 kPa
+If explicitly required in the basic standard or applied product standard
+the climatic values are recorded and documented separately in this test
+report i.e. at the supplementary information of each test.
+Measurement uncertainties ...... : For all measurements where guidance for the calculation of the
+instrumentation uncertainty of a measurement is specified in
+CISPR 16-4-2, IEC 61000-4 series or a product standard, the
+measurement instrumentation uncertainty has been calculated and
+applied in accordance with these standards. See statement of
+measurement uncertainty at the end of the report.
+In all cases if the test laboratory uncertainty is larger than the value for
+UCISPR given in CISPR 16-4-2 the uncertainty is included in the test
+report annex.
+In case the standards in the IEC 61000-4 series or the product standard
+requires the indication of the uncertainty in the report these uncertainty
+values are included in Section 11.
+
+Page 17 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+3.2 Specific test conditions for IEC 60601-1-2 BASIC SAFETY, ESSENTIAL PERFORMANCE
+Description of BASIC SAFETY and ESSENTIAL PERFORMANCE
+Operation check of the product can be monitored by using the acquisition software.
+- Acquisition image is obtained as intended.
+- The acquired image should not have two lines adjacent or be blank.
+- Operation normally when operation is required.
+- DC power is consistently supplied from POWER SUPPLY when EMC test is performed.
+- When connected to POWER SUPPLY, program provided by manufacturer is operated normally.
+Description how the BASIC SAFETY and ESSENTIAL PERFORMANCE were monitored during each
+test (Note: for some aspects of BASIC SAFETY this monitoring might be carried out before and after the test)
+Test standards and results
+When acquiring a Dark image using Acquisition Software in the evaluation of the following criteria, there
+should be no problem with the image.
+STANDARDS RESULTS
+CISPR 11 Conducted Emission on AC mains Port PASS
+Radiated Emission PASS
+IEC 61000-3-2 Harmonic Current Emission on AC Mains Input Port PASS
+IEC 61000-3-3 Voltage Fluctuations and Flicker on AC Mains Input Port PASS
+IEC 61000-4-2 Electrostatic Discharge Immunity PASS
+IEC 61000-4-3 Radio-frequency electromagnetic field Amplitude modulated Immunity PASS
+IEC 61000-4-4 Fast Transients Immunity PASS
+IEC 61000-4-5 Surges Immunity PASS
+IEC 61000-4-6 Radio-frequency common mode Immunity PASS
+IEC 61000-4-8 Power frequency magnetic fields PASS
+IEC 61000-4-11 Voltage Dips, Voltage Interruptions Immunity PASS
+3.3 Specific test conditions for IEC 60601-1-2 TEST LEVELS for SPECIAL ENVIRONMENTS
+Not Applicable
+
+Page 18 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+4 EMISSION
+4.1 Disturbance Voltage
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-02
+Test location (stand) .....................: 3rd Building Emission Room
+Applied limit class or ENVIRONMENT: Class A according to applied standard
+Class B according to applied standard
+General Limits (CISPR 14-1 Table 5)
+Limits for mains port of tools (CISPR 14-1 Table 6)
+Other:
+Applied limit group ........................: Group 1 according to applied standard
+Group 2 according to applied standard
+Test set-up description .................: Set-up Type A (40 cm distance to vertical ground plane, 80 cm
+over ground plane)
+Set-up Type B (40 cm distance to horizontal ground plane)
+Floor standing equipment set-up (10 cm over ground plane)
+Other:
+Artificial hand applied
+Supplementary test set-up
+description ....................................: N/A
+Test method applied .....................: Artificial mains network
+Artificial mains network used as voltage probe
+Voltage probe
+Current probe and capacitive voltage probe (CVP)
+ISN
+In situ CDN (150 Ohm and current probe)
+Other:
+All used mains voltage and
+frequency ......................................:
+Voltage: Frequency:
+100 V 50 Hz
+100 V 60 Hz
+220 V 60 Hz
+230 V 50 Hz
+240 V 50 Hz
+Supplementary information...........: N/A
+
+Page 19 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Front]
+[Side]
+Discontinuous disturbances (clicks)
+Not Applicable
+Disturbance power
+Not Applicable
+
+Page 20 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+4.2 Radiation Measurements
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-01
+Test location (stand) .....................: 3rd building shielded room
+Applied limit class .........................: Class A according to applied standard
+Class B according to applied standard
+Other:
+Applied limit Group .......................: Group 1 according to applied standard
+Group 2 according to applied standard
+Other:
+Test set up description .................: Equipment on a table 80 cm height
+Equipment on the floor (isolated from ground plane)
+Other:
+Supplementary test set up
+description ....................................:
+N/A
+Test method applied .....................: OATS with measurement distance [m]:
+SAC with measurement distance [m]: 10
+Alternative Test Site
+Supplementary information...........: 100 V~, 50 Hz
+100 V~, 60 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V (Battery power)
+
+Page 21 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Front]
+[Rear]
+
+Page 22 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wireless (WiFi) Mode]
+[Front]
+[Rear]
+
+Page 23 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+5 Harmonics IEC 61000-3-2
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-03
+Test location (stand) .....................: 3rd Building immunity shield room
+Test set up description .................: N/A
+Limit classification in accordance
+with the standard ..........................:
+Class A
+Class B
+Class C with power > 25 W
+Class C with power < 25 W Option a)
+Class C with power < 25 W Option b)
+Class D
+Observation period .......................: Description Period selected Tobs
+Quasi stationary 2.5 min
+Short cyclic Tobs ≥ 10 cycles =
+Random Tobs =
+Long cyclic Full program cycle or 2.5 min. with highest THC
+Tobs =
+Control principle used in the
+sample ..........................................: without additional conditions
+Supplementary information...........: 230 V~ 50 Hz
+Test set-up photo..........................:
+
+Page 24 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+6 Voltage fluctuation and flicker
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-03
+Test Location (stand)....................: 3rd Building immunity shield room
+Test set up description .................: N/A
+Test method..................................: 4.2.2 Measurement with Flickermeter according IEC 61000-4-15
+4.2.3 Simulation
+4.2.4 Analytical method
+4.2.5 Use of Pst = 1 curve
+Observation time selected ............: 10 minutes
+120 minutes
+24 times switching according to annex B
+Limit for dmax applied.....................: 4 %
+6 %
+7 %
+Supplementary information...........: N/A
+Test set-up photo..........................:
+
+Page 25 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7 IMMUNITY
+7.1 Information specific for IEC 60601-1-2
+IMMUNITY Pass/Fail Criteria
+Product Function
+related to Basic
+Safety and Essential
+performance
+Pass/Fail Criteria description
+(see EMC test sections for any additional Part 2 P/F criteria)*
+Part 2
+reference (if
+applicable)
+Digital Flat Panel X-ray
+Detector
+Before, during, and after the test, the essential performance and
+basic safety shall not be affected, and the performance
+degradation which does not affect essential performance and
+basic safety is PASS.
+Note: Specific, detailed IMMUNITY pass/fail criteria, are based on applicable part two standards or RISK
+MANAGEMENT, for BASIC SAFETY and ESSENTIAL PERFORMANCE with regard to EM
+DISTURBANCES. These pass/fail criteria must be included in the RISK MANAGEMENT FILE
+
+Page 26 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.2 Electrostatic Discharge
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (Stand) ....................: 3rd Building immunity shield room
+Test set up ....................................: Table top equipment
+Floor standing equipment
+Wall or ceiling mounted equipment (Treated as table top)
+Supplementary test set up
+description ....................................: N/A
+Size of horizontal coupling plate...: 1.6 x 0.8 m
+Number of DISCHARGES for each
+test point .......................................: 10 positive / 10 negative
+DISCHARGE interval .......................: 1 s
+Environmental conditions .............: Temperature: 22.4 ± 1.0 (Range: 15 °C to 35 °C)
+Relative humidity: 51.0 ± 1.0 (Range: 30 % to 60 %)
+Atmospheric pressure: 99.7 ± 0.1 (Range: 86 kPa to 106 kPa)
+Supplementary information...........: 220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V (Battery power)
+
+Page 27 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Wireless (WiFi) Mode]
+
+Page 28 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo or drawing of selected test
+points ............................................:
+[Wired (LAN) Mode]
+[Point 1]
+[Point 2]
+Air discharge
+Contact discharge
+
+Page 29 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo or drawing of selected test
+points ............................................:
+[Wireless (WiFi) Mode]
+[Point 1]
+[Point 2]
+Air discharge
+Contact discharge
+
+Page 30 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for ELECTROSTATIC DISCHARGE
+No. Location of DISCHARGE Type Polarity TEST LEVEL
+[kV]
+Operating
+mode Observations
+1 HCP Con P/N 8 1, 2 1
+2 VCP Con P/N 8 1, 2 1
+3 Enclosure
+(Conductive surface) Con P/N 8 1, 2 1
+4 Screws Con P/N 8 1, 2 1
+5 Port Con P/N 8 1, 2 1
+6 Enclosure
+(Non-conductive surface) Air P/N 2, 4, 8, 15 1, 2 1
+7 Switch Air P/N 2, 4, 8, 15 1, 2 1
+8 Cable Air P/N 2, 4, 8, 15 1, 2 1
+HCP = Horizontal coupling plate; VCP = Vertical coupling plate
+N= Negative; P= Positive
+Con= Conducted Discharge; Air= Air Discharge
+Supplementary information:
+X - Not Performed nor required.
+1 - Compliant - No perceived discharge, no observed response from EUT.
+2 - Compliant - During the test, Display output is off.
+2 - Compliant - But after the test, the EUT was recovered by operator’s intervention.
+
+Page 31 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.3 Radiated RF EM fields
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-03
+Test location (Stand) ....................: 3rd Building RS Chamber
+Test set-up....................................: Equipment on the table (0.8 m height)
+Equipment standing on floor (0.05 – 0.15 m height)
+Supplementary test set up
+description ....................................: N/A
+Exposed side of EUT....................: 0 ° (Front)
+90 °
+180 ° (Rear)
+270 °
+Top
+Bottom
+Reason for not exposing a side ....: N/A
+Distance Antenna to EUT .............: 3 m
+Step size [%].................................: 1 %
+Supplementary information...........: EUT powered at one of the Nominal input voltages and frequencies.
+Dwell time minimum 3 s. Actual dwell time noted in results table.
+Actual IMMUNITY TEST LEVEL noted in results table.
+
+Page 32 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Wireless (WiFi) Mode]
+
+Page 33 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for Radiated RF EM fields
+Frequency range
+/ discrete
+frequencies
+TEST
+LEVEL
+[V/m]
+Polari-
+sation Modulation Operation
+mode
+Dwell
+time
+[s]
+Observations
+80 – 1 000 MHz 3 H/V AM 1 kHz 80 % 1, 2 3 P
+1.0 – 2.7 GHz 3 H/V AM 1 kHz 80 % 1, 2 3 P
+Supplementary information:
+P - No observed response from EUT.
+
+Page 34 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.4 Proximity fields From RF wireless communications equipment
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-10-03
+Test location (Stand) ....................: 3rd Building RS Chamber
+Test set-up....................................: Equipment on the table (0.8 m height)
+Equipment standing on floor (0.05 – 0.15 m height)
+Supplementary test set up
+description ....................................: N/A
+Exposed side of EUT....................: 0 ° (Front)
+90 °
+180 ° (Rear)
+270 °
+Top
+Bottom
+Reason for not exposing a side ....: N/A
+Distance Antenna to EUT .............: 3 m
+Supplementary information...........: Add more rows above if additional frequencies are required to be tested
+as identified in the risk management process.
+EUT powered at one of the Nominal input voltages and frequencies.
+Dwell time minimum 3 s. Actual dwell time noted in results table.
+
+Page 35 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Wireless (WiFi) Mode]
+
+Page 36 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for Proximity fields From RF wireless communications equipment
+Frequency range
+/ discrete
+frequencies
+[MHz]
+TEST
+LEVEL
+[V/m]
+Polari-
+sation Modulation Operation
+mode
+Dwell
+time
+[s]
+Observations
+385 27 H/V *Pulse Modulation: 18 Hz 1, 2 3 P
+450 28 H/V *Pulse Modulation: 18 Hz 1, 2 3 P
+710
+745
+780
+9 H/V *Pulse Modulation: 217 Hz 1, 2 3 P
+810
+870
+930
+28 H/V *Pulse Modulation: 18 Hz 1, 2 3 P
+1 720
+1 845
+1 970
+28 H/V *Pulse Modulation: 217 Hz 1, 2 3 P
+2 450 28 H/V *Pulse Modulation: 217 Hz 1, 2 3 P
+5 240
+5 500
+5 785
+9 H/V *Pulse Modulation: 217 Hz 1, 2 3 P
+Supplementary information:
+P - No observed response from EUT.
+Note* - The carrier shall be modulated using a 50 % duty cycle square wave signal.
+
+Page 37 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.5 Electrical fast transients / bursts
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (stand) .....................: 3rd Building immunity shield room
+Test set-up....................................: Equipment on the table (0.1 ± 0.01) m above ground plane
+Equipment standing on floor at (0.1 ± 0.05) m above ground
+plane
+Artificial hand applied. Location see photo.
+Supplementary test set up
+description ....................................: N/A
+Repetition frequency.....................: 100 kHz
+Test time .......................................: 1 min
+Supplementary information...........: N/A
+Test set-up photo..........................:
+
+Page 38 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results Electrical fast transients / bursts
+PORT Coupling Level
+[kV] Polarity Operating
+mode
+Mains voltage /
+frequency Observation
+mains CDN 2 P/N 1
+100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+P
+LAN CAPACITIVE
+COUPLING
+CLAMP
+1 P/N 1
+100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+P
+Detector
+Supplementary information:
+P - No observed response from EUT.
+
+Page 39 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.6 Surges Line-to-line, Surges Line-to-ground
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (Stand) ....................: 3rd Building immunity shield room
+Test set up description .................: N/A
+Repetition rate ..............................: 1 / min
+Number of pulses for each
+coupling ........................................: 5
+Supplementary information...........: N/A
+Test set-up photo..........................:
+
+Page 40 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for Surges Line-to-line, Surges Line-to-ground
+PORT Coupling CDN
+
+(figure no.)
+Level
+[kV] Polarity Phase
+angles [°]
+Operating
+mode
+Mains
+voltage /
+frequency
+Observation
+Mains L1 - N Mains 1 P / N 0, 90,
+180, 270 1
+100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+P
+Mains L – PE
+N – PE Mains 2 P / N 0, 90,
+180, 270 1
+100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+P
+Lower TEST LEVELS.................... : The lower TEST LEVELS are tested.
+The lower TEST LEVELS are not tested (Table 5 table footnote j)
+applies.)
+Legend:
+Polarity: P = Positive, N = Negative
+CDN: Mains = Mains Coupling Network, Signal/Control: e.g. F9 = Figure No. 9 from IEC 61000-4-5
+Supplementary information:
+P - No observed response from EUT.
+
+Page 41 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.7 Conducted disturbances induced by RF Fields
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (Stand) ....................: 3rd Building immunity shield room
+Test set-up....................................: Equipment located (0.1 ± 0.05) m above ground plane
+Elevated ground plane according to Annex F (IEC 61000-4-6)
+Artificial hand applied. Location see photo.
+Supplementary test set up
+description ....................................: N/A
+Modulation ....................................: 80 % AM with 1 kHz
+Other: 80 % AM with 2 Hz
+Step size .......................................: 1 %
+Supplementary information...........: The test was performed with 3 V RMS outside the ISM band,
+6 V RMS in the ISM band.
+Test set-up photo..........................:
+
+Page 42 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for Conducted disturbances induced by RF Fields
+Frequency
+range / discrete
+frequencies
+TEST
+LEVEL
+[V]
+PORT
+under
+test
+CDN
+type
+Cable
+length
+used
+[m]
+PORT with
+terminated
+CDN
+Operating
+mode
+Dwell time
+[s] Observations
+(0.15 - 80) MHz 3 Mains M3 1.6 M2 1 3 P
+(0.15 - 80) MHz 3 LAN CLAMP 3.0 M3 1 3 P
+(0.15 - 80) MHz 3 Detector CLAMP 7.0 M3 1 3 P
+(0.15 - 80) MHz 3 Exposure
+switch CLAMP 0.6 M3 1 3 P
+ISM bands between
+(0.15 - 80) MHz 6 Mains M3 1.6 M2 1 3 P
+ISM bands between
+(0.15 - 80) MHz 6 LAN CLAMP 3.0 M3 1 3 P
+ISM bands between
+(0.15 - 80) MHz 6 Detector CLAMP 7.0 M3 1 3 P
+ISM bands between
+(0.15 - 80) MHz 6 Exposure
+switch CLAMP 0.6 M3 1 3 P
+Supplementary information:
+P - No observed response from EUT.
+
+Page 43 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.8 RATED power frequency magnetic fields
+Tested by .....................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (Stand) ....................: 3rd Building immunity shield room
+Test set-up....................................: 0.1 m above metal surface (floor standing devices)
+Homogeneous field (Helmholtz coil). Dimensions:
+Single Coil. Dimensions: 1 x 1 m
+Single Coil. Dimensions: 1 x 2.6 m
+Other (Describe):
+Observations during test...............: Monitoring according to IMMUNITY pass/fail criteria provided by the
+manufacturer.
+Supplementary information...........: EUT powered at one of the Nominal input voltages and frequency of
+either 50 Hz or 60 Hz. During the test, the frequency of the field and line
+frequency of the ME EQUIPMENT were the same.
+
+Page 44 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[Wireless (WiFi) Mode]
+
+Page 45 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test results for RATED power frequency magnetic fields
+Test
+frequency
+TEST
+LEVEL
+[A/m]
+Test
+time [s] Axis Operating mode Mains voltage /
+frequency Observations
+50 Hz / 60 Hz 30 60 x 1, 2
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+P
+50 Hz / 60 Hz 30 60 y 1, 2
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+P
+50 Hz / 60 Hz 30 60 z 1, 2
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+P
+Supplementary information:
+P- No observed response from EUT.
+
+Page 46 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.9 Voltage dips and voltage interruptions
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Test location (Stand) ....................: 3rd Building immunity shield room
+Test set up description .................: N/A
+Repetition rate ..............................: 10 s
+Number of dips or interruptions ....: 3
+Supplementary information...........: N/A
+Test voltage requirements
+Supply Voltage
+Range
+Difference of Max
+Voltage – Min Voltage
+25 % of highest Rated
+input Voltage
+Voltage Dips Test at Min/Max
+Voltages required (Y/N)
+(100 - 240) V~ 140 V~ 25 V~ Y
+Test results voltage dips for 0% of UN for 0.5 cycles and phase angles of 0 °, 45 °, 90 °, 135 °, 180°,
+225 °, 270° and 315 °
+UN
+[V]
+Frequency
+[Hz]
+TEST LEVEL UT
+[V]
+Operating
+mode Observations
+100 50 0 1 1
+220 60 0 1 1
+240 50 0 1 1
+Supplementary information: N/A
+Test results voltage dips for 0% of UN for 1 cycle and phase angles of 0 °
+UN
+[V]
+Frequency
+[Hz]
+TEST LEVEL UT
+[V]
+Operating
+mode Observations
+100 50 0 1 1
+220 60 0 1 1
+240 50 0 1 1
+Supplementary information: N/A
+Test results voltage dips for 70% of UN for 25 / 30 cycles and phase angles of 0 °
+UN
+[V]
+Frequency
+[Hz]
+TEST LEVEL UT
+[V]
+Operating
+mode Observations
+100 50 70 1 1
+220 60 154 1 1
+240 50 168 1 1
+Supplementary information: N/A
+
+Page 47 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Voltage interruptions for 0% of UN for 250 / 300 cycles
+UN
+[V]
+Frequency
+[Hz]
+TEST LEVEL UT
+[V]
+Operating
+mode Observations
+100 50 0 1 2
+220 60 0 1 2
+240 50 0 1 2
+Supplementary information: N/A
+Results Descriptions:
+X - Not performed nor required.
+1 – Compliant - No observed response from EUT.
+2 – Compliant – During the interruption, a power of EUT was turned off.
+But after the test, the EUT was recovered by operator’s intervention.
+Note: Description of the response should detail observations during testing.
+
+Page 48 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................:
+7.10 Electrical transient conduction along supply lines
+Not Applicable
+
+Page 49 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+7.11 Proximity magnetic fields
+Tested by ......................................: HyunHo Choi
+Test date.......................................: 2022-09-30
+Supplementary information...........: N/A
+Magnetic field immunity 9 kHz to 150 kHz
+Test location (stand)..................... : 3rd Building immunity shield room
+Test set up description ................. : N/A
+Selected window size 100 mm x 100 mm (maximum)
+Other: --
+Test distance d ............................. : (50 ± 3) mm
+Other: --
+Frequencies applied..................... : 30 kHz
+134.2 kHz
+Supplementary information .......... : N/A
+
+Page 50 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Magnetic field immunity 150 kHz to 26 MHz
+Test location (stand)..................... : 3rd Building immunity shield room
+Test set up description ................. : N/A
+Selected windows size ................. : 80 mm x 80 mm (maximum)
+Other: e.g. Testing at selected points only (See result table)
+Test distance d ............................. : (50 ± 3) mm
+Other: --
+Frequency applied........................ : 13.56 MHz
+Supplementary information .......... : N/A
+Test results
+Frequencies Test
+Level
+[A/m]
+Point /
+Window
+Modulation Operating
+mode
+Dwell
+time
+[s]
+Observations
+30 kHz 8 All points on
+photo below CW 1, 2 5 P
+134.2 kHz 65 All points on
+photo below
+Pulse modulation
+2.1 kHz 1, 2 5 P
+13.56 MHz 7.5 All points on
+photo below
+Pulse modulation
+50 kHz 1, 2 5 P
+Supplementary information:
+P- No observed response from EUT.
+
+Page 51 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wired (LAN) Mode]
+[30 kHz, 134.2 kHz]
+[13.56 MHz]
+
+Page 52 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Test set-up photo..........................: [Wireless (WiFi) Mode]
+[30 kHz, 134.2 kHz]
+[13.56 MHz]
+
+Page 53 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Photo or drawing of locations of
+application.....................................:
+7.12 Specialized Emissions and Immunity tests
+Not Applicable
+EUT
+5 cm
+Signal Generator
+Amplifier
+Ant.
+
+Page 54 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+8 Accompanying documents as required by IEC 60601-1-2
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+4 GENERAL REQUIREMENTS
+4.1 RISKS resulting from reasonably foreseeable
+ELECTROMAGNETIC DISTURBANCES taken into account
+in the RISK MANAGEMENT PROCESS.
+Risk Management Report
+(A-TCF-5-104)
+P
+4.2 Non-ME EQUIPMENT used in an ME SYSTEM N/A
+Check 16.1 of general standard, checked by
+inspection of the RISK MANAGEMENT FILE and
+OBJECTIVE EVIDENCE of compliance with the
+respective EMC standards, or by the tests of this
+collateral standard
+N/A
+non-ME EQUIPMENT used in an ME SYSTEM complies
+with IEC and ISO EMC standards applicable to that
+EQUIPMENT, checked by inspection of the RISK
+MANAGEMENT FILE and OBJECTIVE EVIDENCE of
+compliance with the respective EMC standards, or by
+the tests of this collateral standard
+N/A
+non- ME EQUIPMENT used in an ME SYSTEM for which
+the intended EM ENVIRONMENT could result in the loss
+of BASIC SAFETY or ESSENTIAL PERFORMANCE of the ME
+SYSTEM due to the non-ME EQUIPMENT tested
+according to the requirements of this collateral
+standard, checked by inspection of the RISK
+MANAGEMENT FILE and OBJECTIVE EVIDENCE of
+compliance with the respective EMC standards, or by
+the tests of this collateral standard
+N/A
+4.3.1 Configurations P
+ME EQUIPMENT and ME SYSTEMS tested in
+representative configurations, consistent with
+INTENDED USE, that are most likely to result in
+unacceptable RISK as determined by the
+MANUFACTURER (This was determined using RISK
+ANALYSIS, experience, engineering analysis, or
+pretesting). Compliance checked by inspection of the
+test report and the RISK MANAGEMENT FILE.
+Risk Management Report
+(A-TCF-5-104)
+P
+4.3.3 Power input and frequencies P
+5 IDENTIFICATION, MARKING AND DOCUMENTS
+5.1 Additional requirements for marking on the outside of ME EQUIPMENT and ME
+SYSTEMS specified for use only in a shielded location SPECIAL ENVIRONMENT
+N/A
+ME EQUIPMENT and ME SYSTEMS specified for use only
+in a shielded location SPECIAL ENVIRONMENT labelled
+with a CLEARLY LEGIBLE warning that they should be
+used only in the specified type of shielded location
+N/A
+5.2 ACCOMPANYING DOCUMENTS
+5.2.1 Instructions for use
+5.2.1.1 General
+
+Page 55 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+a) A statement of the environments for which the ME
+EQUIPMENT or ME SYSTEM is suitable. Relevant
+exclusions determined by RISK ANALYSIS, are listed.
+Risk Management Report
+(A-TCF-5-104)
+P
+b) The ESSENTIAL PERFORMANCE of ME EQUIPMENT and a
+description of what the operator can expect if the
+ESSENTIAL PERFORMANCE is lost or degraded due to
+EM disturbances.
+User Manual
+(A-TCF-5-129)
+P
+c) A warning regarding stacking and location close to
+other EQUIPMENT
+User Manual
+(A-TCF-5-129)
+P
+d) List of cables, transducers and accessories User Manual
+(A-TCF-5-129)
+P
+e) A warning that other cables and accessories may
+negatively affect EMC performance
+User Manual
+(A-TCF-5-129)
+P
+f) A statement that portable RF communications
+EQUIPMENT including antennas, can effect medical
+electrical EQUIPMENT. The warning includes a use
+distance such as “…be used no closer than 30 cm
+(12 inches) to any part of the [F1417MCW], including
+cables specified by manufacturer”
+N/A
+5.2.1.2 Requirements applicable to ME EQUIPMENT and ME SYSTEMS classified class A
+according to CISPR 11
+P
+FOR ME EQUIPMENT and ME SYSTEMS that are
+classified as class A according to CISPR 11, the
+instructions for use include the following note:
+NOTE: “The EMISSIONS characteristics of this
+equipment make it suitable for use in industrial areas
+and hospitals (CISPR 11 class A). If it is used in a
+residential environment (for which CISPR 11 class B
+is normally required) this equipment might not offer
+adequate protection to radio-frequency
+communication services. The user might need to take
+mitigation measures, such as relocating or re-
+orienting the equipment.”
+User Manual
+(A-TCF-5-129)
+P
+5.2.2 Technical description
+5.2.2.1 Requirements applicable to all ME EQUIPMENT and ME SYSTEMS
+The technical description describes precautions to be
+taken to prevent adverse events to the PATIENT and
+Operator due to electromagnetic disturbances
+User Manual
+(A-TCF-5-129)
+P
+a) Compliance for each EMISSIONS and IMMUNITY
+standard or test specified by this collateral standard,
+e.g. EMISSIONS class and group and IMMUNITY TEST
+LEVEL
+User Manual
+(A-TCF-5-129)
+P
+b) Any deviations from this collateral standard and
+allowances used
+N/A
+
+Page 56 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+c) All necessary instructions for maintaining BASIC
+SAFETY and ESSENTIAL PERFORMANCE with regard to
+ELECTROMAGNETIC DISTURBANCES for the EXPECTED
+SERVICE LIFE
+User Manual
+(A-TCF-5-129)
+P
+5.2.2.2 Requirements applicable to ME EQUIPMENT specified for use only in shielded location SPECIAL
+ENVIRONMENT
+The technical description includes the following information:
+a) A warning to the effect that:
+WARNING: Failure to use this EQUIPMENT in the
+specified type of shielded location could result in
+degradation of performance, interference with other
+equipment or interference with radio services
+N/A
+b) Specifications for shielded location including:
+– minimum RF shielding effectiveness;
+– for each cable that enters or exits the shielded
+location, the minimum RF filter attenuation; and
+– the frequency range(s) over which the
+specifications apply
+N/A
+c) Test methods for measurement of RF shielding
+effectiveness and RF filter attenuation
+N/A
+d) One or more of the following and a recommendation
+that a notice containing this information be posted at
+the entrance(s) to the shielded location:
+– a specification of the EMISSIONS characteristics of
+other EQUIPMENT allowed inside the shielded location
+with the ME EQUIPMENT or ME SYSTEM;
+– a list of specific EQUIPMENT allowed;
+– a list of types of EQUIPMENT prohibited.
+N/A
+5.2.2.3 Requirements applicable to ME EQUIPMENT that
+intentionally receive RF electromagnetic energy
+include the following information.............................:
+- each frequency or frequency of reception,
+- the preferred frequency or frequency band, if
+applicable, and
+- the bandwidth of the receiving section of the ME
+Equipment in those bands
+N/A
+5.2.2.4 Requirements applicable to the ME EQUIPMENT that
+include RF transmitters the technical description
+includes the frequency or frequency band of
+transmission, the type and frequency characteristics
+of the modulation and the EFFECTIVE RADIATED POWER
+(ERP) ........................................................................ :
+N/A
+5.2.2.5 Requirements applicable to PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME
+SYSTEMS
+The technical description includes the following information:
+
+Page 57 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+a) A statement that an exemption has been used and
+that the EQUIPMENT has not been tested for radiated
+RF IMMUNITY over the entire frequency range 80 MHz
+to 6 GHz
+N/A
+b) WARNING: “This EQUIPMENT has been tested for
+radiated RF IMMUNITY only at selected frequencies,
+and use nearby of emitters at other frequencies could
+result in improper operation”
+N/A
+c) A list of the frequencies and modulations used to test
+the IMMUNITY of the ME EQUIPMENT or ME SYSTEMS
+N/A
+5.2.2.6 Requirements applicable to ME EQUIPMENT that claim compatibility with HF
+Surgical EQUIPMENT
+N/A
+Technical description includes a statement of HF
+SURGICAL EQUIPMENT compatibility and the conditions
+of INTENDED USE during HF Surgery
+N/A
+6.1 Documentation of tests – General
+The documentation of tests contains all information
+necessary to facilitate adequate planning (test plan)
+and execution of tests
+P
+6.2 Test Plan
+Prior to the start of formal testing, a detailed test plan
+provided to the test laboratory.
+(Note: title / name / version of test plan in remark
+section)
+P
+7 Electromagnetic EMISSIONS requirements for ME EQUIPMENT and ME SYSTEMS
+7.1.1 Protection of radio services and other equipment – General N/A
+Unless otherwise specified herein, ME EQUIPMENT and
+ME SYSTEMS complies with CISPR 11
+N/A
+7.1.2 Operating modes
+During Emission testing, ME EQUIPMENT or ME SYSTEM
+tested in the modes that maximize Emissions. In
+addition to active modes, the inclusion of standby
+mode was considered. The operating modes
+selected for testing documented in the test plan and
+documented in the test report
+N/A
+7.1.3 Multimedia Equipment N/A
+Multimedia equipment connected to ME EQUIPMENT or
+ME SYSTEM complies with CISPR 32. If CISPR 32
+class A equipment is supplied as part of the ME
+SYSTEM classified class A
+N/A
+7.1.4 Subsystems N/A
+Compliance with CISPR 11 demonstrated by testing
+each subsystem of an ME SYSTEM on a subsystem
+basic, provided the requirements of CISPR 11 for
+evaluation of EQUIPMENT that interacts with other
+equipment to form a system are met
+N/A
+
+Page 58 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+7.1.5 ME EQUIPMENT and ME SYSTEMS specified for use only in a shielded location
+SPECIAL ENVIRONMENT
+N/A
+For ME EQUIPMENT and ME SYSTEMS that are specified
+for use only in a shielded location SPECIAL
+ENVIRONMENT, the electromagnetic radiation
+disturbance limits of CISPR 11 may be increased,
+
+when tests are performed on a test site, by an
+amount up to the applicable specified value of
+minimum RF shielding effectiveness, provided the
+minimum RF shielding effectiveness specification
+N/A
+For ME EQUIPMENT and ME SYSTEMS that are specified
+for use only in a shielded location SPECIAL
+ENVIRONMENT, the mains terminal disturbance voltage
+limits of CISPR 11 may be increased, when tests are
+performed on a test site, by an amount up to the
+applicable specified value of minimum RF filter
+attenuation for all cables that enter or exit the
+shielded location, provided the minimum RF filter
+attenuation specification
+N/A
+a) The specified RF shielding effectiveness and RF filter
+attenuation:
+- expressed in dB;
+- rounded to the nearest integer; and
+- at least 20 dB
+N/A
+b) The RF shielding effectiveness and RF filter
+attenuation specification include the frequency range
+over which the RF shielding effectiveness and RF
+filter attenuation apply, and this frequency range is at
+least one decade in width
+N/A
+c) The specified value(s) for minimum RF filter
+attenuation are identical to the specified value(s) for
+minimum RF shielding effectiveness in each
+frequency range for which they are specified
+N/A
+d) In frequency ranges for which the minimum RF
+shielding effectiveness and RF filter attenuation are
+not specified or are specified to be less than 20 dB,
+the RF shielding effectiveness and RF filter
+attenuation assumed to be 0 dB for the purpose of
+this collateral standard
+N/A
+7.1.6 ME EQUIPMENT and ME SYSTEMS that include radio equipment P
+ME EQUIPMENT and ME SYSTEMS that include radio
+equipment (e.g. RF transmitters, receivers,
+transceivers) and have been tested together with the
+radio equipment and found to comply with applicable
+national radio regulations are exempt from testing to
+CISPR ELECTROMAGNETIC DISTURBANCE requirements
+RF EMC Test report
+Doc no.
+NK-22-E-0812
+P
+
+Page 59 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+7.1.7 ME EQUIPMENT whose main functions are performed by motors and switching or
+regulating devices N/A
+ME EQUIPMENT whose main functions are performed
+by motors and switching or regulating devices may
+be classified in accordance with CISPR 14-1
+N/A
+7.1.8 ME EQUIPMENT and ME SYSTEMS containing X-ray generators N/A
+For diagnostic X-ray generators and ME SYSTEMS that
+include X-ray generators operating in INTERMITTENT
+MODE, the quasi-peak limits to discontinuous radiated
+and conducted DISTURBANCES can be relaxed by
+20 dB
+N/A
+7.1.12 PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE
+ME SYSTEMS
+N/A
+PERMANENTLY INSTALLED LARGE ME EQUIPMENT and
+LARGE ME SYSTEMS was TYPE TESTED by at least one
+of the following methods:
+- on a test site as a system;
+- on a test site on a subsystem basis;
+- in situ as a system at the premises of a
+RESPONSIBLE ORGANIZATION
+N/A
+TEST METHOD SELECTED N/A
+7.2 Protection of the PUBLIC MAINS NETWORK P
+7.2.1 Harmonic distortion P
+If the ME EQUIPMENT OR ME SYSTEMS has a PUBLIC
+MAINS NETWORK it complies with the requirements of
+IEC 61000-3-2
+P
+7.2.2 Voltage fluctuations and flicker P
+If the ME EQUIPMENT AND ME SYSTEMS has a PUBLIC
+MAINS NETWORK it complies with the requirements of
+IEC 61000-3-3.
+P
+7.3 Emissions requirements summary P
+Emission limits per environment P
+8 Electromagnetic IMMUNITY requirements for ME EQUIPMENT and ME SYSTEMS
+For ME EQUIPMENT and ME SYSTEMS for which the
+INTENDED USE includes types of transportation or
+other locations as in the HOME HEALTHCARE
+ENVIRONMENT if additional IMMUNITY tests or IMMUNITY
+TEST LEVELS that are higher these additional tests to
+these higher IMMUNITY TEST LEVELS are documented
+Intended use in the
+professional environment
+N/A
+
+Page 60 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+ME EQUIPMENT or ME SYSTEMS intended for use in the
+EMERGENCY MEDICAL SERVICES ENVIRONMENT for the
+HOME HEALTHCARE ENVIRONMENT. If locations in the
+EMERGENCY MEDICAL SERVICES ENVIRONMENT are
+identified for which the specifications are for the
+HOME HEALTHCARE ENVIRONMENT are not adequate,
+then Annexe E may be used to determine
+appropriate IMMUNITY TEST LEVELS
+N/A
+Before IMMUNITY testing begins, the MANUFACTURER
+determined specific, detailed IMMUNITY Pass/Fail
+criteria, based on applicable part two standards or
+RISK MANAGEMENT, for BASIC SAFETY and ESSENTIAL
+PERFORMANCE with regard to EM DISTURBANCES. The
+Pass/Fail criteria and the monitoring specification are
+included in the test plan, in the test report and in the
+RISK MANAGEMENT FILE
+P
+8.2 PATIENT physiological simulation N/A
+If a PATIENT simulation is required to verify normal
+operation of the ME EQUIPMENT or ME SYSTEM, it was
+provided during IMMUNITY testing
+N/A
+Prior to the beginning of the test, the amplitude of
+simulated PATIENT physiological signals were
+adjusted to be consistent with normal operation of
+the ME EQUIPMENT or ME SYSTEM, as specified by the
+MANUFACTURER
+N/A
+8.5 Subsystems N/A
+When subsystems are tested to demonstrate
+compliance normal operating conditions are
+simulated
+N/A
+The RISK MANAGEMENT PROCESS used to determine
+whether subsystem testing is allowed.
+N/A
+8.6 PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME SYSTEMS N/A
+PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME SYSTEMS were TYPE
+TESTED by at least one of the following methods:
+N/A
+– on a test site as a system;
+– on a test site on a subsystem basis;
+– in situ as a system at the premises of a
+RESPONSIBLE ORGANIZATION
+N/A
+Test Method selected N/A
+8.7 Operating Modes P
+
+Page 61 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+Operating Modes and settings User Manual
+(A-TCF-5-129)
+P
+8.8 Non-ME EQUIPMENT N/A
+Non-ME EQUIPMENT (e.g. ITE) that is a part of an ME
+SYSTEM fulfils the pass/fail criteria and IMMUNITY TEST
+LEVELS of Clause 8 if it has been determined, as a
+result of the RISK MANAGEMENT PROCESS, that the non-
+ME EQUIPMENT could affect the BASIC SAFETY or
+ESSENTIAL PERFORMANCE of the ME SYSTEM.
+(Inspection of the test report and the RISK
+MANAGEMENT FILE).
+N/A
+8.9 IMMUNITY TEST LEVELS P
+Immunity Test Levels based on environment location
+of Intended Use
+P
+8.10 Immunity to proximity fields from RF wireless communication equipment P
+Enclosure Port of ME EQUIPMENT and ME SYSTEMS
+tested as specified in Table 9 as per IEC 61000-4-3
+User Manual
+(A-TCF-5-129)
+P
+
+Page 62 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+9 List of test equipment
+Equipment used
+Disturbance Voltage
+Equipment Type Inventory
+number
+Manufacturer Last
+calibration
+Calibration
+due date
+EMI Test Receiver ESCI 101041 Rohde & Schwarz 2022.04.05 2023.04.05
+Software EMC32 Version 8.53.0 Rohde & Schwarz - -
+ARTIFICIAL MAINS
+NETWORK ESH2-Z5 100273 Rohde & Schwarz 2021.10.13 2022.10.13
+TWO-LINE VNETWORK ENV216 101156 Rohde & Schwarz 2022.04.05 2023.04.05
+Impedance Stabilization
+Network ISN S8 0012 SCHWARZBECK 2022.01.11 2023.01.11
+Radiation Measurements
+EMI TEST RECEIVER ESW8 100994 Rohde & Schwarz 2022.04.05 2023.04.05
+Software EMC32 EMC32
+V10.60.15 Rohde & Schwarz - -
+TRILOG Broadband Test
+Antenna VULB 9163 9163-01027 SCHWARZBECK 2021.05.03 2023.05.03
+CONTROLLER CO2000-G CO2000/562/
+23890210/L
+innco systems
+GmbH - -
+OPEN SWITCH AND
+CONTROL UNIT OSP-120 100015 Rohde & Schwarz - -
+ANTENNA MAST
+(LEFT) MA4000-EP N/A innco systems
+GmbH - -
+Turn Table DT3000-3T N/A innco systems
+GmbH - -
+Signal Conditioning Unit SCU 01 10030 Rohde & Schwarz 2022.04.05 2023.04.05
+ATTENUATOR SA3N5W-06 N/A FAIRVIEW 2022.01.12 2023.01.12
+Harmonics,
+Voltage fluctuation and flicker
+Precision Power
+Analyzer PPA5511 162-04585 Newtons4th Ltd 2022.02.24 2023.02.24
+REFERENCE
+IMPEDANCE NETWORK IEC61000-3 IG16412018 Voltech 2022.02.24 2023.02.24
+AC POWER SOURCE 360AMXT-
+UPC32/M5283 0926-03765 PACIFIC POWER
+SOURCE INC. 2022.01.11 2023.01.11
+AC POWER SOURCE 360AMXT/
+M5283/M5304 1169_05469 PACIFIC POWER
+SOURCE INC. 2022.01.11 2023.01.11
+AC POWER SOURCE 360AMXT/
+M5283/M5304 1217_05753 PACIFIC POWER
+SOURCE INC. 2022.01.11 2023.01.11
+
+Page 63 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Electrostatic Discharge
+ESD SIMULATOR esd NX30 22946 EMTEST 2022.07.22 2023.07.22
+Radiated RF EM fields,
+Proximity fields From RF wireless communications equipment
+POWER METER NRP 100053 Rohde & Schwarz 2022.01.12 2023.01.12
+SIGNAL GENERATOR SMB 100A 103440 Rohde & Schwarz 2022.04.06 2023.04.06
+Power Amplifier BLMA 1060-
+100/50D 107808B BONN Elektronik - -
+Power Amplifier BLWA 0810-
+160/100D 107808A BONN Elektronik - -
+TRIPOD MOBILE HL046Z1 100112 Rohde & Schwarz - -
+EMS- ANTENNA HL046 100054 Rohde & Schwarz - -
+Stacked Double Log - per
+Antenna STLP 9149 9149-064 SCHWARZBECK - -
+AUTO POLARISATION
+SWITCH - N/A Rohde & Schwarz - -
+AVG POWER SENSOR NRP-Z91 100966 Rohde & Schwarz 2022.01.12 2023.01.12
+AVG POWER SENSOR NRP-Z91 100965 Rohde & Schwarz 2022.01.12 2023.01.12
+Electrical fast transients / bursts
+compact NX Generator compact NX5
+bsp-1-300-16 P1650188707 EM TEST 2022.04.05 2023.04.05
+Capacitive Coupling Clamp 15-00001A N/A NoiseKen 2022.04.05 2023.04.05
+Surges Line-to-line, Surges Line-to-ground
+compact NX Generator compact NX5
+bsp-1-300-16 P1650188707 EM TEST 2022.04.05 2023.04.05
+Conducted disturbances induced by RF Fields
+Continuous Wave Simulator CWS 500N1 V0952105687 EM TEST 2022.07.07 2023.07.07
+CDN CDN M2/M3N 0110 - 18 EM TEST 2022.01.11 2023.01.11
+CDN CDN M2/M3N 0110 - 17 EM TEST 2022.01.11 2023.01.11
+6 dB Attenuator ATT6 / 75 1009 - 11 EM TEST 2022.07.06 2023.07.06
+EM INJECTION CLAMP NEM-32 411 FCC 2022.01.12 2023.01.12
+RATED power frequency magnetic fields
+Ultra Compact Simulator UCS 500 N7 V0952105684 EM TEST 2022.01.11 2023.01.11
+Magnetic field antenna MS 100/MC
+2630 1209-39 EM TEST 2022.04.05 2023.04.05
+AC CLAMP METER CM4141 200961561 HIOKI 2022.01.14 2023.01.14
+
+Page 64 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+Voltage dips and voltage interruptions
+compact NX Generator compact NX5
+bsp-1-300-16 P1650188707 EM TEST 2022.04.05 2023.04.05
+Motor driven AC source variac NX1-
+260-16 P2208260924 EM TEST 2022.07.07 2023.07.07
+Proximity magnetic fields
+RF Power Amplifier BSA 0110-100 2113415 BONN Elektronik - -
+Signal Generator SMB 100A 103440 ROHDE &
+SCHWARZ 2022.04.06 2023.04.06
+Radiating Loop FESP 5132 00426 SCHWARZBECK - -
+Loop Antenna HFRA 5164 00073 SCHWARZBECK - -
+Compensation
+Network for 13.56 MHz NFCN 1356 00027 SCHWARZBECK - -
+Antenna mast N/A N/A TESTEK - -
+* Calibration interval extended based on sufficient calibration data and experience of use (see IECEE OD-5011:2015 clause 8.3)
+
+Page 65 of 65 Report No. NK-22-E-0810
+TRF No. IEC60601_1_2J_EMC
+10 Statement of Measurement Uncertainty
+Statement concerning the uncertainty of the measurement systems used for the tests
+Internal procedure used for type testing through which traceability of the measuring uncertainty has
+been established:
+Calculations leading to the reported values below are on file with the NCB and testing laboratory
+that conducted the testing.
+For MIU details for emission (according to CISPR 11 and CISPR 14-1) see table below.
+Statement not required by the standard used for type testing
+Supplementary information: N/A
+Parameter/ Measurement / test method Requirement
+UCISPR
+Calculated U of M
+Ulab
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No. NK-22-E-0810
+Attachment 1
+Mains terminal disturbance voltage :
+- Tested voltage : 100 V~ 50 ㎐
+100 V~ 60 ㎐
+220 V~ 60 ㎐
+230 V~ 50 ㎐
+240 V~ 50 ㎐
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55011 Class A
+AC 100 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+1.EMI Auto Test_2-Line Voltage LISN
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+150k 300 400500 8001M 2M 3M 4M 5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+1.EMI Auto Test_2-Line Voltage LISN
+QP Class A
+AV Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022 4:30:11
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 60.7 15000.0 9.000 On N 9.9 18.3 79.0
+0.258206 51.8 15000.0 9.000 On N 9.7 27.2 79.0
+0.586556 46.6 15000.0 9.000 On N 9.9 26.4 73.0
+0.653719 47.6 15000.0 9.000 On N 9.9 25.4 73.0
+0.978338 39.8 15000.0 9.000 On N 9.8 33.2 73.0
+1.899956 45.5 15000.0 9.000 On N 9.8 27.5 73.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 53.3 15000.0 9.000 On N 9.9 12.7 66.0
+0.258206 49.1 15000.0 9.000 On N 9.7 16.9 66.0
+0.586556 46.5 15000.0 9.000 On N 9.9 13.5 60.0
+0.653719 46.3 15000.0 9.000 On N 9.9 13.7 60.0
+0.978338 39.1 15000.0 9.000 On N 9.8 20.9 60.0
+1.899956 44.9 15000.0 9.000 On N 9.8 15.1 60.0
+EMI Auto Test(8) 2 / 2
+10/2/2022 4:30:11
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55011 Class A
+AC 100 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+1.EMI Auto Test_2-Line Voltage LISN
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+150k 300 400500 8001M 2M 3M 4M 5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+1.EMI Auto Test_2-Line Voltage LISN
+QP Class A
+AV Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022 5:45:52
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.194775 68.4 15000.0 9.000 On N 9.9 10.6 79.0
+0.261938 56.3 15000.0 9.000 On N 9.7 22.7 79.0
+0.590288 49.8 15000.0 9.000 On N 9.9 23.2 73.0
+0.978338 41.0 15000.0 9.000 On N 9.8 32.0 73.0
+1.306688 42.3 15000.0 9.000 On N 9.8 30.7 73.0
+2.291738 44.5 15000.0 9.000 On N 9.8 28.5 73.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.194775 61.0 15000.0 9.000 On N 9.9 5.0 66.0
+0.261938 53.8 15000.0 9.000 On N 9.7 12.2 66.0
+0.590288 49.8 15000.0 9.000 On N 9.9 10.2 60.0
+0.978338 40.5 15000.0 9.000 On N 9.8 19.5 60.0
+1.306688 41.3 15000.0 9.000 On N 9.8 18.7 60.0
+2.291738 44.3 15000.0 9.000 On N 9.8 15.7 60.0
+EMI Auto Test(8) 2 / 2
+10/2/2022 5:45:52
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55011 Class A
+AC 220 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+1.EMI Auto Test_2-Line Voltage LISN
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+150k 300 400500 8001M 2M 3M 4M 5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+1.EMI Auto Test_2-Line Voltage LISN
+QP Class A
+AV Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022 5:21:58
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 57.8 15000.0 9.000 On N 9.9 21.2 79.0
+0.258206 53.8 15000.0 9.000 On N 9.7 25.2 79.0
+0.392531 54.2 15000.0 9.000 On N 9.9 24.8 79.0
+0.586556 50.4 15000.0 9.000 On N 9.9 22.6 73.0
+1.441012 52.7 15000.0 9.000 On N 9.8 20.3 73.0
+2.291738 51.5 15000.0 9.000 On N 9.8 21.5 73.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 53.8 15000.0 9.000 On N 9.9 12.2 66.0
+0.258206 53.3 15000.0 9.000 On N 9.7 12.7 66.0
+0.392531 54.1 15000.0 9.000 On N 9.9 11.9 66.0
+0.586556 50.2 15000.0 9.000 On N 9.9 9.8 60.0
+1.441012 52.3 15000.0 9.000 On N 9.8 7.7 60.0
+2.291738 51.5 15000.0 9.000 On N 9.8 8.5 60.0
+EMI Auto Test(8) 2 / 2
+10/2/2022 5:21:58
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55011 Class A
+AC 230 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+1.EMI Auto Test_2-Line Voltage LISN
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+150k 300 400500 8001M 2M 3M 4M 5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+1.EMI Auto Test_2-Line Voltage LISN
+QP Class A
+AV Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022 5:33:49
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.194775 65.2 15000.0 9.000 On N 9.9 13.8 79.0
+0.261938 58.4 15000.0 9.000 On N 9.7 20.6 79.0
+0.523125 53.2 15000.0 9.000 On N 9.9 19.8 73.0
+0.590288 54.3 15000.0 9.000 On N 9.9 18.7 73.0
+1.571606 52.8 15000.0 9.000 On N 9.8 20.2 73.0
+2.552925 52.3 15000.0 9.000 On N 9.8 20.7 73.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Bandwidth
+(kHz)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.194775 62.0 15000.0 9.000 On N 9.9 4.0 66.0
+0.261938 58.0 15000.0 9.000 On N 9.7 8.0 66.0
+0.523125 52.9 15000.0 9.000 On N 9.9 7.1 60.0
+0.590288 54.2 15000.0 9.000 On N 9.9 5.8 60.0
+1.571606 52.4 15000.0 9.000 On N 9.8 7.6 60.0
+2.552925 51.5 15000.0 9.000 On N 9.8 8.5 60.0
+EMI Auto Test(8) 2 / 2
+10/2/2022 5:33:49
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55011 Class A
+AC 240 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+1.EMI Auto Test_2-Line Voltage LISN
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+150k 300 400500 8001M 2M 3M 4M 5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+1.EMI Auto Test_2-Line Voltage LISN
+QP Class A
+AV Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022 6:16:17
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Filter Line Corr.
+(dB)
+
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 59.6 15000.0 On N 9.9 19.4 79.0
+0.261938 58.2 15000.0 On N 9.7 20.8 79.0
+0.586556 49.1 15000.0 On N 9.9 23.9 73.0
+1.306688 50.6 15000.0 On N 9.8 22.4 73.0
+2.093981 49.8 15000.0 On L1 9.8 23.2 73.0
+3.075300 48.1 15000.0 On N 9.8 24.9 73.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Filter Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.191044 53.6 15000.0 On N 9.9 12.4 66.0
+0.258206 53.1 15000.0 On N 9.7 12.9 66.0
+0.586556 48.6 15000.0 On N 9.9 11.4 60.0
+1.306688 49.6 15000.0 On N 9.8 10.4 60.0
+2.093981 49.4 15000.0 On L1 9.8 10.6 60.0
+3.075300 47.6 15000.0 On N 9.8 12.4 60.0
+EMI Auto Test(8) 2 / 2
+10/2/2022 6:16:17
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+Attachment 2
+Asymmetric Mode Conducted Emissions :
+- Tested voltage : 100 V~ 50 ㎐
+100 V~ 60 ㎐
+220 V~ 60 ㎐
+230 V~ 50 ㎐
+240 V~ 50 ㎐
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+1. Asymmetric Mode Conducted Emissions
+1.1 Test Procedure
+The measurements were performed in a shielded enclosure.
+The telecommunication port of an EUT was connected to a ISN described in EN 55032:2015/A11:2020.
+EUT was placed a non-conducting support 0.1 m above the supporting plane and at least 0.4 m from the
+reference
+ground plane (wall), EUT was placed at least 0.8 m from ISN.
+During the test at telecommunication port of LAN, the 3 m category 7 cable between EUT and ISN was
+used.
+All other test setup was done properly, according to relative standard.
+The measurement at telecommunication port was conducted in the frequency range 150 ㎑ to 30 ㎒.
+A peak detector scan was conducted over the defined frequency range.
+This “Worst Case” scan with quasi-peak detector & CISPR average detector was presented detector.
+Instrumentation used during this session:
+Instruments Manufacturer Model Serial number Due to Calibration
+EMI Test Receiver Rohde & Schwarz ESCI 101041 2023.04.05
+Software Rohde & Schwarz EMC32 Version 8.53.0 -
+Artificial Mains
+Network Rohde & Schwarz ESH2-Z5 100273 2022.10.13
+TWO-LINE
+V-NETWORK Rohde & Schwarz ENV 216 101156 2023.04.05
+Impedance
+Stabilization Network SCHWARZBECK ISN S8 0012 2023.01.11
+1.2 Measurement Uncertainty
+U = 2 x 1.46 = 2.92 ㏈
+U = 3.0 ㏈ (CL is 95 %, k = 2)
+1.3 Test Parameters
+Port: LAN port Test Engineer: HyunHo Choi
+Product or
+Product Family Standard : EN 55032:2015/A11:2020, Class A (CISPR 32:2015 +COR1:2016)
+Frequency Range: Frequency Step: IF Bandwidth: Measurement Time:
+150 ㎑ to 30 ㎒ 4 ㎑ 9 ㎑ 15 s
+1.4 Test Data
+* See below attachment.
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+1.5 Test Photo
+[Front]
+[Side]
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55032 Class A
+AC 100 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN 1000 Mbps
+EMI Auto Test_Telecommunication ports-S8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+150k 300 400500 8001M 2M 3M 4M5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+EMI Auto Test_Telecommunication ports-S8
+QP-Telecommunication Class A
+AV-Telecommunication Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.698469 36.5 15000.0 LAN 9.6 50.5 87.0
+2.556656 30.0 15000.0 LAN 9.6 57.0 87.0
+3.668569 30.0 15000.0 LAN 9.6 57.0 87.0
+5.642400 35.0 15000.0 LAN 9.7 52.0 87.0
+7.508025 49.7 15000.0 LAN 9.8 37.3 87.0
+17.630906 42.2 15000.0 LAN 10.0 44.8 87.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.698469 25.6 15000.0 LAN 9.6 48.4 74.0
+2.556656 28.1 15000.0 LAN 9.6 45.9 74.0
+3.668569 26.4 15000.0 LAN 9.6 47.6 74.0
+5.646131 27.8 15000.0 LAN 9.7 46.2 74.0
+7.508025 43.2 15000.0 LAN 9.8 30.8 74.0
+17.630906 39.0 15000.0 LAN 10.0 35.0 74.0
+EMI Auto Test(8) 2 / 2
+10/2/2022
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55032 Class A
+AC 100 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN 1000 Mbps
+EMI Auto Test_Telecommunication ports-S8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+150k 300 400500 8001M 2M 3M 4M5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+EMI Auto Test_Telecommunication ports-S8
+QP-Telecommunication Class A
+AV-Telecommunication Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.620112 33.9 15000.0 LAN 9.6 53.1 87.0
+5.261812 31.4 15000.0 LAN 9.7 55.6 87.0
+5.873738 36.2 15000.0 LAN 9.7 50.8 87.0
+7.683394 49.4 15000.0 LAN 9.8 37.6 87.0
+18.022688 42.5 15000.0 LAN 10.0 44.5 87.0
+28.250044 33.0 15000.0 LAN 10.2 54.0 87.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.631306 24.0 15000.0 LAN 9.6 50.0 74.0
+5.239425 26.7 15000.0 LAN 9.7 47.3 74.0
+5.892394 31.7 15000.0 LAN 9.7 42.3 74.0
+7.683394 42.4 15000.0 LAN 9.8 31.6 74.0
+18.022688 40.3 15000.0 LAN 10.0 33.7 74.0
+28.250044 28.2 15000.0 LAN 10.2 45.8 74.0
+EMI Auto Test(8) 2 / 2
+10/2/2022
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55032 Class A
+AC 220 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN 1000 Mbps
+EMI Auto Test_Telecommunication ports-S8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+150k 300 400500 8001M 2M 3M 4M5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+EMI Auto Test_Telecommunication ports-S8
+QP-Telecommunication Class A
+AV-Telecommunication Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.571606 36.3 15000.0 LAN 9.6 50.7 87.0
+2.358900 35.1 15000.0 LAN 9.6 51.9 87.0
+3.213356 33.4 15000.0 LAN 9.6 53.6 87.0
+5.567775 35.4 15000.0 LAN 9.7 51.6 87.0
+7.470712 50.0 15000.0 LAN 9.8 37.0 87.0
+17.832394 37.1 15000.0 LAN 10.0 49.9 87.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.571606 32.0 15000.0 LAN 9.6 42.0 74.0
+2.358900 34.5 15000.0 LAN 9.6 39.5 74.0
+3.209625 32.8 15000.0 LAN 9.6 41.2 74.0
+5.571506 31.2 15000.0 LAN 9.7 42.8 74.0
+7.470712 42.9 15000.0 LAN 9.8 31.1 74.0
+17.832394 34.0 15000.0 LAN 10.0 40.0 74.0
+EMI Auto Test(8) 2 / 2
+10/2/2022
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55032 Class A
+AC 230 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN 1000 Mbps
+EMI Auto Test_Telecommunication ports-S8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+150k 300 400500 8001M 2M 3M 4M5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+EMI Auto Test_Telecommunication ports-S8
+QP-Telecommunication Class A
+AV-Telecommunication Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.635038 36.4 15000.0 LAN 9.6 50.6 87.0
+2.489494 35.6 15000.0 LAN 9.6 51.4 87.0
+3.403650 32.0 15000.0 LAN 9.6 55.0 87.0
+6.399844 39.8 15000.0 LAN 9.7 47.2 87.0
+7.444594 49.6 15000.0 LAN 9.8 37.4 87.0
+17.433150 39.0 15000.0 LAN 10.0 48.0 87.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margi
+n
+(dB)
+Limit
+(dBμV)
+Comme
+nt
+1.635038 32.0 15000.0 LAN 9.6 42.0 74.0
+2.489494 34.9 15000.0 LAN 9.6 39.1 74.0
+3.403650 30.6 15000.0 LAN 9.6 43.4 74.0
+6.399844 32.1 15000.0 LAN 9.7 41.9 74.0
+7.418475 42.2 15000.0 LAN 9.8 31.8 74.0
+17.433150 34.3 15000.0 LAN 10.0 39.7 74.0
+EMI Auto Test(8) 2 / 2
+10/2/2022
+
+Test Report
+Common Information
+Test Description:
+Test Site:
+Test Standard:
+Environment Conditions:
+Operator Name:
+Model:
+Conducted emission (NK-22-E-0810,0811)
+3rd building shielded room
+EN 55032 Class A
+AC 240 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN 1000 Mbps
+EMI Auto Test_Telecommunication ports-S8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+150k 300 400500 8001M 2M 3M 4M5M 6 8 10M 20M 30M
+Level in dBμV
+Frequency in Hz
+EMI Auto Test_Telecommunication ports-S8
+QP-Telecommunication Class A
+AV-Telecommunication Class A
+EMI Auto Test(8) 1 / 2
+10/2/2022
+
+Final Result 1
+Frequency
+(MHz)
+QuasiPeak
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.209700 38.4 15000.0 LAN 9.4 55.7 94.1
+0.396262 41.1 15000.0 LAN 9.4 47.8 88.8
+0.605212 39.4 15000.0 LAN 9.4 47.6 87.0
+0.847744 28.7 15000.0 LAN 9.5 58.3 87.0
+5.952094 50.1 15000.0 LAN 9.7 36.9 87.0
+23.130769 43.3 15000.0 LAN 10.1 43.7 87.0
+Final Result 2
+Frequency
+(MHz)
+CAverage
+(dBμV)
+Meas.
+Time
+(ms)
+Line Corr.
+(dB)
+Margin
+(dB)
+Limit
+(dBμV)
+Comment
+0.209700 33.1 15000.0 LAN 9.4 48.0 81.1
+0.396262 23.2 15000.0 LAN 9.4 52.6 75.8
+0.605212 16.0 15000.0 LAN 9.4 58.0 74.0
+0.847744 22.9 15000.0 LAN 9.5 51.1 74.0
+5.952094 42.6 15000.0 LAN 9.7 31.4 74.0
+23.130769 39.6 15000.0 LAN 10.1 34.4 74.0
+EMI Auto Test(8) 2 / 2
+10/2/2022
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No. NK-22-E-0810
+Attachment 3
+Radiated disturbance :
+- Tested voltage : 100 V~ 50 ㎐
+100 V~ 60 ㎐
+220 V~ 60 ㎐
+230 V~ 50 ㎐
+DC 16 V (Battery power)
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+AC 100 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 2:27:43 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.060333 28.15 40.00 11.85 15000.0 120.000 100.0 V 6.0
+64.790667 26.57 40.00 13.43 15000.0 120.000 100.0 V 76.0
+75.751667 25.87 40.00 14.13 15000.0 120.000 202.0 V 32.0
+98.061667 27.96 40.00 12.04 15000.0 120.000 130.0 V 96.0
+237.774000 34.22 47.00 12.78 15000.0 120.000 400.0 H 328.0
+883.567667 27.76 47.00 19.24 15000.0 120.000 202.0 V 142.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.060333 -21.3
+64.790667 -22.8
+75.751667 -26.6
+98.061667 -21.8
+237.774000 -18.7
+883.567667 -2.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 2:27:43 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+AC 100 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 2:01:16 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.092667 29.18 40.00 10.82 15000.0 120.000 400.0 V 5.0
+61.169333 24.53 40.00 15.47 15000.0 120.000 301.0 V 304.0
+65.178667 27.85 40.00 12.15 15000.0 120.000 100.0 V 51.0
+98.967000 27.52 40.00 12.48 15000.0 120.000 177.0 V 124.0
+238.873333 33.81 47.00 13.19 15000.0 120.000 400.0 H -29.0
+883.600000 29.41 47.00 17.59 15000.0 120.000 100.0 V 61.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.092667 -21.2
+61.169333 -21.8
+65.178667 -23.0
+98.967000 -21.7
+238.873333 -18.5
+883.600000 -2.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 2:01:16 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+AC 220 V, 60 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 1:32:31 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.028000 28.58 40.00 11.42 15000.0 120.000 400.0 V 88.0
+61.557333 27.18 40.00 12.82 15000.0 120.000 176.0 V 255.0
+76.236667 27.27 40.00 12.73 15000.0 120.000 170.0 V 90.0
+99.161000 28.08 40.00 11.92 15000.0 120.000 100.0 V 91.0
+236.674667 34.17 47.00 12.83 15000.0 120.000 400.0 H 328.0
+883.697000 28.16 47.00 18.84 15000.0 120.000 100.0 V 46.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.028000 -21.3
+61.557333 -21.9
+76.236667 -26.7
+99.161000 -21.7
+236.674667 -18.9
+883.697000 -2.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 1:32:31 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+AC 230 V, 50 Hz
+Hyunho, Choi
+F1417MCW
+LAN
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 11:49:49 AM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+41.349000 25.65 40.00 14.35 15000.0 120.000 302.0 V 15.0
+62.462667 25.90 40.00 14.10 15000.0 120.000 100.0 V 218.0
+75.719333 26.38 40.00 13.62 15000.0 120.000 221.0 V 100.0
+98.579000 26.82 40.00 13.18 15000.0 120.000 100.0 V 95.0
+237.774000 35.06 47.00 11.94 15000.0 120.000 400.0 H 331.0
+883.600000 29.38 47.00 17.62 15000.0 120.000 170.0 V -28.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+41.349000 -21.3
+62.462667 -22.0
+75.719333 -26.6
+98.579000 -21.8
+237.774000 -18.7
+883.600000 -2.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 11:49:49 AM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+DC 16 V(Battery)
+Hyunho, Choi
+F1417MCW
+2.4 GHz WiFi
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 6:04:57 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.189667 27.10 40.00 12.90 15000.0 120.000 270.0 V 348.0
+65.502000 27.26 40.00 12.74 15000.0 120.000 100.0 V 92.0
+71.257333 26.90 40.00 13.10 15000.0 120.000 202.0 V 237.0
+79.534667 25.99 40.00 14.01 15000.0 120.000 176.0 V 250.0
+85.969000 26.98 40.00 13.02 15000.0 120.000 170.0 V 208.0
+238.873333 31.70 47.00 15.30 15000.0 120.000 400.0 H 347.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.189667 -21.2
+65.502000 -23.2
+71.257333 -25.0
+79.534667 -27.0
+85.969000 -24.9
+238.873333 -18.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 6:04:57 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+DC 16 V(Battery)
+Hyunho, Choi
+F1417MCW
+5 GHz WiFi
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 5:35:58 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.804000 25.80 40.00 14.20 15000.0 120.000 370.0 V 286.0
+62.980000 25.52 40.00 14.48 15000.0 120.000 270.0 V 118.0
+65.211000 30.95 40.00 9.05 15000.0 120.000 100.0 V 104.0
+71.451333 26.42 40.00 13.58 15000.0 120.000 202.0 V 224.0
+86.939000 27.05 40.00 12.95 15000.0 120.000 177.0 V 253.0
+237.774000 31.87 47.00 15.13 15000.0 120.000 400.0 H 346.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.804000 -21.1
+62.980000 -22.1
+65.211000 -23.0
+71.451333 -25.0
+86.939000 -24.4
+237.774000 -18.7
+EMI Auto Test(3) 2 / 2
+10/1/2022 5:35:58 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+DC 16 V(Battery)
+Hyunho, Choi
+F1417MCW
+2.4 GHz WiFi
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 6:04:57 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.189667 27.10 40.00 12.90 15000.0 120.000 270.0 V 348.0
+65.502000 27.26 40.00 12.74 15000.0 120.000 100.0 V 92.0
+71.257333 26.90 40.00 13.10 15000.0 120.000 202.0 V 237.0
+79.534667 25.99 40.00 14.01 15000.0 120.000 176.0 V 250.0
+85.969000 26.98 40.00 13.02 15000.0 120.000 170.0 V 208.0
+238.873333 31.70 47.00 15.30 15000.0 120.000 400.0 H 347.0
+(continuation of the "Final_Result" table from column 15 ...)
+
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.189667 -21.2
+65.502000 -23.2
+71.257333 -25.0
+79.534667 -27.0
+85.969000 -24.9
+238.873333 -18.5
+EMI Auto Test(3) 2 / 2
+10/1/2022 6:04:57 PM
+
+Test Report
+Common Information
+Test Description :
+Test Site :
+Test Standard :
+Environment Conditions :
+Operator Name :
+Model :
+Radiated Emission(NK-22-E-0810,0811)
+3rd Building 10 m Chamber
+EN 55011 Class A
+DC 16 V(Battery)
+Hyunho, Choi
+F1417MCW
+5 GHz WiFi
+Full Spectrum
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+30M 50 60 80 100M 200 300 400 500 800 1G
+Level in dBμV/m
+Frequency in Hz
+Full Spectrum
+QP - Limits for Class A
+EMI Auto Test(3) 1 / 2
+10/1/2022 5:35:58 PM
+
+Final_Result
+Frequency
+(MHz)
+QuasiPeak
+(dBμV/m)
+Limit
+(dBμV/m)
+Margin
+(dB)
+Meas. Time
+(ms)
+Bandwidth
+(kHz)
+Height
+(cm)
+Pol Azimuth
+(deg)
+42.804000 25.80 40.00 14.20 15000.0 120.000 370.0 V 286.0
+62.980000 25.52 40.00 14.48 15000.0 120.000 270.0 V 118.0
+65.211000 30.95 40.00 9.05 15000.0 120.000 100.0 V 104.0
+71.451333 26.42 40.00 13.58 15000.0 120.000 202.0 V 224.0
+86.939000 27.05 40.00 12.95 15000.0 120.000 177.0 V 253.0
+237.774000 31.87 47.00 15.13 15000.0 120.000 400.0 H 346.0
+(continuation of the "Final_Result" table from column 15 ...)
+Frequency
+(MHz)
+Corr.
+(dB/m)
+Comment
+42.804000 -21.1
+62.980000 -22.1
+65.211000 -23.0
+71.451333 -25.0
+86.939000 -24.4
+237.774000 -18.7
+EMI Auto Test(3) 2 / 2
+10/1/2022 5:35:58 PM
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No. NK-22-E-0810
+Attachment 4
+Harmonic Current Emissions Test Data :
+- Tested voltage : 230 V~ 50 ㎐
+
+Signature
+Results Test - N/A. Rated Power < 75W
+Test not applicable
+With the exception of lighting equipment section 7 of the IEC61000-3-2:2018+AMD1:2020 standard declares
+that no Harmonic current limits are specified for equipment with a rated power of 75W or less.
+Lab Name N/A
+Location N/A
+Notes NK-22-E-0810,0811
+Minimum Current 100A
+Test Duration 2.5 minutes
+Additional Test Details
+Operator N/A
+Max Power 30.786W
+Max F.Current 134.928mA
+Average F.Current 132.799mA
+Additional Test Information
+Measured Power Factor 0.444
+Max Current THD 203.29%
+Average THC 267.101mA
+Rated Frequency 50.000Hz 49.999Hz
+Rated Power N/A 30.388W
+Rated Voltage 230.000V 230.427V
+Rated Current N/A 297.348mA
+Impedance Network ID N/A
+Test Conditions
+User Entered Measured
+Equipment Under Test
+Brand H&Abiz
+Model F1417MCW
+Serial N/A
+Source Settling Time 10.0 s
+Test Settings
+Class Class A
+Mode Measured
+Source Serial 91J-11432
+Source Frequency 50.000Hz
+Source Voltage RMS 230.000V
+N4L Calibration Date N/A
+Instrument Version
+Source Details
+Source Model N4A06
+Instrument Details
+Instrument Model PPA5511
+Serial Number 162-04585
+Firmware Version 2.185
+03rd October 2022 - 11:47:53 Ph:1 Page 1/10 IECSoft v2_7
+IEC61000-3-2:2018+AMD1:2020
+Fluctuating Harmonics
+
+Test # Test #
+2 1 2 N/A
+3 2 1 PASS
+4 1 2 PASS
+5 2 1 PASS
+6 1 2 PASS
+7 1 2 PASS
+8 1 2 PASS
+9 1 2 PASS
+10 2 1 N/A
+11 1 2 PASS
+12 1 2 N/A
+13 1 2 PASS
+14 2 1 N/A
+15 1 2 PASS
+16 1 2 N/A
+17 1 2 PASS
+18 1 2 N/A
+19 1 2 PASS
+20 1 2 N/A
+21 1 2 PASS
+22 2 1 N/A
+23 1 2 PASS
+24 2 1 N/A
+25 2 1 PASS
+26 2 1 N/A
+27 2 1 PASS
+28 2 1 N/A
+29 2 1 PASS
+30 2 1 N/A
+31 2 1 PASS
+32 2 1 N/A
+33 1 2 PASS
+34 1 2 N/A
+35 1 2 PASS
+36 1 2 N/A
+37 1 2 PASS
+38 1 2 N/A
+39 1 2 PASS
+40 1 2 N/A
+Key:
+5.000m*
+Ignored
+Good
+OK
+Poor
+Fail
+For values lower than the min limit (5mA or 0.6% of the Input Current), min limit is used
+Since both values are less than 5mA or 0.6% of the Input Current this harmonic is ignored
+The difference is less than 50% of the allowance
+The difference is between 50% of the allowance and 75% of the allowance
+The difference is between 75% of the allowance and 100% of the allowance
+The difference has exceeded the allowance
+5.427m 6.078m 0.002885 0.000651
+5.000m* 5.000m* 0.0023 0
+7.148m 7.883m 0.003041 0.000734
+5.000m* 5.000m* 0.002421 0
+9.121m 9.870m 0.003214 0.000748
+5.000m* 5.000m* 0.002556 0
+10.839m 11.185m 0.003409 0.000345
+5.000m* 5.000m* 0.002706 0
+11.526m 11.589m 0.003629 0.000064
+5.000m* 5.000m* 0.002875 0
+10.646m 11.133m 0.003879 0.000488
+5.000m* 5.000m* 0.003067 0
+8.128m 9.017m 0.004167 0.000889
+5.000m* 5.000m* 0.003286 0
+5.438m 5.974m 0.0045 0.000537
+5.000m* 5.000m* 0.003538 0
+6.745m 8.144m 0.004891 0.001399
+5.000m* 5.000m* 0.003833 0
+14.349m 16.663m 0.005357 0.002314
+5.000m* 5.000m* 0.004182 0
+25.330m 27.797m 0.005921 0.002467
+5.000m* 5.000m* 0.0046 0
+38.392m 40.846m 0.006618 0.002454
+5.000m* 5.000m* 0.005111 0
+52.903m 55.076m 0.0075 0.002173
+5.000m* 5.000m* 0.00575 0
+67.964m 69.813m 0.0105 0.001849
+5.000m* 5.000m* 0.006571 0
+83.243m 84.552m 0.0165 0.001309
+5.000m* 5.000m* 0.007667 0
+97.253m 98.160m 0.02 0.000906
+5.000m* 5.000m* 0.0092 0
+109.888m 110.232m 0.0385 0.000344
+5.032m 5.082m 0.0115 0.00005
+119.655m 119.827m 0.057 0.000172
+5.161m 5.180m 0.015 0.000019
+126.795m 127.334m 0.115 0.000539
+5.259m 5.264m 0.0215 0.000005
+Average (A) Average (A) Allowance (A) Difference (A)
+5.000m* 5.000m* 0.054 0
+Model F1417MCW
+Serial N/A
+Harmonic Difference
+Harmonic Lowest Highest Limit Status
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+Equipment Under Test
+Brand H&Abiz
+03rd October 2022 - 11:47:53 Ph:1 Page 2/10 IECSoft v2_7
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+
+Harmonic Avg (A) Avg L(A) Avg %ofL Peak (A) Peak L(A) Peak %ofL
+1 0.133107 N/A N/A 0.134928 N/A N/A
+2 0.004182 N/A N/A 0.005074 N/A N/A
+3 0.127334 N/A N/A 0.129104 N/A N/A
+4 0.005259 N/A N/A 0.00601 N/A N/A
+5 0.119827 N/A N/A 0.121306 N/A N/A
+6 0.005161 N/A N/A 0.006026 N/A N/A
+7 0.109888 N/A N/A 0.111498 N/A N/A
+8 0.005032 N/A N/A 0.005666 N/A N/A
+9 0.097253 N/A N/A 0.099163 N/A N/A
+10 0.004996 N/A N/A 0.00563 N/A N/A
+11 0.083243 N/A N/A 0.085143 N/A N/A
+12 0.004876 N/A N/A 0.005525 N/A N/A
+13 0.067964 N/A N/A 0.069478 N/A N/A
+14 0.004821 N/A N/A 0.005297 N/A N/A
+15 0.052903 N/A N/A 0.055022 N/A N/A
+16 0.004747 N/A N/A 0.005234 N/A N/A
+17 0.038392 N/A N/A 0.04026 N/A N/A
+18 0.004749 N/A N/A 0.005232 N/A N/A
+19 0.02533 N/A N/A 0.027399 N/A N/A
+20 0.004699 N/A N/A 0.005268 N/A N/A
+21 0.014349 N/A N/A 0.016132 N/A N/A
+22 0.004771 N/A N/A 0.005224 N/A N/A
+23 0.006745 N/A N/A 0.007853 N/A N/A
+24 0.004787 N/A N/A 0.005382 N/A N/A
+25 0.005974 N/A N/A 0.007118 N/A N/A
+26 0.004792 N/A N/A 0.005252 N/A N/A
+27 0.009017 N/A N/A 0.010283 N/A N/A
+28 0.004818 N/A N/A 0.005403 N/A N/A
+29 0.011133 N/A N/A 0.011938 N/A N/A
+30 0.004738 N/A N/A 0.005261 N/A N/A
+31 0.011589 N/A N/A 0.012273 N/A N/A
+32 0.004812 N/A N/A 0.005401 N/A N/A
+33 0.010839 N/A N/A 0.011568 N/A N/A
+34 0.004713 N/A N/A 0.005283 N/A N/A
+35 0.009121 N/A N/A 0.010164 N/A N/A
+36 0.004733 N/A N/A 0.005297 N/A N/A
+37 0.007148 N/A N/A 0.008468 N/A N/A
+38 0.004736 N/A N/A 0.005333 N/A N/A
+39 0.005427 N/A N/A 0.00612 N/A N/A
+40 0.00479 N/A N/A 0.005476 N/A N/A N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+Harmonics Results 1/2
+Status
+Current Crest Factor 3.598 3.995 N/A
+Voltage Crest Factor 1.41 1.412 N/A
+POHC (Clause C.2) 30.166mA 31.436mA 251.375mA
+THC 264.477mA 268.333mA N/A
+Average Peak Limit
+Extra Test Information
+Current THDG 199.99%
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 3/10 IECSoft v2_7
+
+Harmonics Results Graph 1/2
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 4/10 IECSoft v2_7
+
+Harmonic Avg (A) Avg L(A) Avg %ofL Peak (A) Peak L(A) Peak %ofL
+1 0.132491 N/A N/A 0.134039 N/A N/A
+2 0.004224 N/A N/A 0.005267 N/A N/A
+3 0.126795 N/A N/A 0.128783 N/A N/A
+4 0.005264 N/A N/A 0.005898 N/A N/A
+5 0.119655 N/A N/A 0.121037 N/A N/A
+6 0.00518 N/A N/A 0.005962 N/A N/A
+7 0.110232 N/A N/A 0.111526 N/A N/A
+8 0.005082 N/A N/A 0.00594 N/A N/A
+9 0.09816 N/A N/A 0.099159 N/A N/A
+10 0.004915 N/A N/A 0.005635 N/A N/A
+11 0.084552 N/A N/A 0.085431 N/A N/A
+12 0.004942 N/A N/A 0.0056 N/A N/A
+13 0.069813 N/A N/A 0.07094 N/A N/A
+14 0.00482 N/A N/A 0.005389 N/A N/A
+15 0.055076 N/A N/A 0.056162 N/A N/A
+16 0.004791 N/A N/A 0.005273 N/A N/A
+17 0.040846 N/A N/A 0.041749 N/A N/A
+18 0.00478 N/A N/A 0.005267 N/A N/A
+19 0.027797 N/A N/A 0.028602 N/A N/A
+20 0.004745 N/A N/A 0.005368 N/A N/A
+21 0.016663 N/A N/A 0.017828 N/A N/A
+22 0.004756 N/A N/A 0.005312 N/A N/A
+23 0.008144 N/A N/A 0.009018 N/A N/A
+24 0.004759 N/A N/A 0.00529 N/A N/A
+25 0.005438 N/A N/A 0.005938 N/A N/A
+26 0.004738 N/A N/A 0.005323 N/A N/A
+27 0.008128 N/A N/A 0.009067 N/A N/A
+28 0.004787 N/A N/A 0.005342 N/A N/A
+29 0.010646 N/A N/A 0.011508 N/A N/A
+30 0.004732 N/A N/A 0.005224 N/A N/A
+31 0.011526 N/A N/A 0.012271 N/A N/A
+32 0.004777 N/A N/A 0.005358 N/A N/A
+33 0.011185 N/A N/A 0.012074 N/A N/A
+34 0.004808 N/A N/A 0.005441 N/A N/A
+35 0.00987 N/A N/A 0.010583 N/A N/A
+36 0.004823 N/A N/A 0.005355 N/A N/A
+37 0.007883 N/A N/A 0.008738 N/A N/A
+38 0.004777 N/A N/A 0.005254 N/A N/A
+39 0.006078 N/A N/A 0.006688 N/A N/A
+40 0.004827 N/A N/A 0.005552 N/A N/A N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+4.328 N/A
+Harmonics Results 2/2
+Status
+Current Crest Factor 3.548
+32.726mA 251.375mA
+Voltage Crest Factor 1.41 1.411 N/A
+POHC (Clause C.2) 31.751mA
+Peak Limit
+THC 266.749mA 269.171mA N/A
+Average
+Extra Test Information
+Current THDG 201.53%
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 5/10 IECSoft v2_7
+
+Harmonics Results Graph 2/2
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IECSoft v2_7
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 6/10
+
+Harmonic
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40 PASS 0.026779 0.021601 0.230436
+PASS 0.026385 0.021866 0.230436
+PASS 0.027352 0.021781 0.230436
+PASS 0.029033 0.023647 0.230436
+PASS 0.026132 0.022121 0.230436
+PASS 0.028921 0.0229 0.230436
+PASS 0.027855 0.02209 0.230436
+PASS 0.02664 0.021654 0.230436
+PASS 0.02663 0.021451 0.230436
+PASS 0.027059 0.022274 0.230436
+PASS 0.027268 0.022363 0.230436
+PASS 0.033261 0.027858 0.230436
+PASS 0.027451 0.022146 0.230436
+PASS 0.027559 0.022548 0.230436
+PASS 0.026602 0.021986 0.230436
+PASS 0.031857 0.025196 0.230436
+PASS 0.028285 0.022705 0.230436
+PASS 0.026118 0.02153 0.230436
+PASS 0.029099 0.023993 0.230436
+PASS 0.028041 0.023461 0.230436
+PASS 0.026859 0.0211 0.230436
+PASS 0.033666 0.028008 0.230436
+PASS 0.029356 0.022874 0.230436
+PASS 0.031249 0.025453 0.230436
+PASS 0.026296 0.022131 0.230436
+PASS 0.036558 0.030924 0.230436
+PASS 0.033166 0.028288 0.230436
+PASS 0.038659 0.033043 0.230436
+PASS 0.030049 0.024826 0.230436
+PASS 0.044221 0.035492 0.230436
+PASS 0.027469 0.022113 0.460871
+PASS 0.049049 0.042581 0.460871
+PASS 0.025435 0.021954 0.460871
+PASS 0.038378 0.031979 0.691307
+PASS 0.032528 0.026663 0.460871
+PASS 0.041843 0.035576 0.921742
+PASS 0.029827 0.02432 0.460871
+PASS 0.040572 0.033997 2.073921
+PASS 0.023931 0.019513 0.460871
+PASS 230.41 230.4 No Limit
+Source Results 1/2
+Status Peak (V) Average (V) Limit (V)
+Extra Test Information
+Voltage THDS 0.07%
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 7/10 IECSoft v2_7
+
+Source Results Graph 1/2
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 8/10 IECSoft v2_7
+
+Harmonic
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+0.022086 0.230418
+PASS 0.026107 0.021772 0.230418
+PASS 0.028541
+0.02396 0.230418
+PASS 0.027933 0.022002 0.230418
+PASS 0.028985
+0.023319 0.230418
+PASS 0.0267 0.02218 0.230418
+PASS 0.028342
+0.021714 0.230418
+PASS 0.026473 0.021764 0.230418
+PASS 0.026865
+0.022811 0.230418
+PASS 0.026013 0.021406 0.230418
+PASS 0.029533
+0.027121 0.230418
+PASS 0.027808 0.022411 0.230418
+PASS 0.033334
+0.022901 0.230418
+PASS 0.027682 0.022261 0.230418
+PASS 0.027837
+0.0257 0.230418
+PASS 0.026113 0.021354 0.230418
+PASS 0.032552
+0.021923 0.230418
+PASS 0.027858 0.023205 0.230418
+PASS 0.025819
+0.023704 0.230418
+PASS 0.029533 0.023772 0.230418
+PASS 0.030534
+0.028562 0.230418
+PASS 0.026691 0.022058 0.230418
+PASS 0.035003
+0.028477 0.230418
+PASS 0.028744 0.023689 0.230418
+PASS 0.033996
+0.032605 0.230418
+PASS 0.028338 0.022271 0.230418
+PASS 0.038323
+0.034113 0.230418
+PASS 0.033996 0.02809 0.230418
+PASS 0.041416
+0.035922 0.230418
+PASS 0.03181 0.025158 0.230418
+PASS 0.042801
+0.043303 0.460836
+PASS 0.027479 0.021921 0.460836
+PASS 0.050447
+0.031865 0.691254
+PASS 0.027142 0.021934 0.460836
+PASS 0.037481
+0.035876 0.921671
+PASS 0.032501 0.026118 0.460836
+PASS 0.042664
+0.033712 2.073761
+PASS 0.031233 0.024016 0.460836
+PASS 0.038639
+230.39 No Limit
+PASS 0.024952 0.020271 0.460836
+PASS 230.41
+Source Results 2/2
+Status Peak (V) Average (V) Limit (V)
+Extra Test Information
+Voltage THDS 0.07%
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 9/10 IECSoft v2_7
+
+Source Results Graph 2/2
+Model F1417MCW
+Serial N/A
+Equipment Under Test
+Brand H&Abiz
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+IEC61000-3-2:2018+AMD1:2020 Fluctuating Harmonics
+Instrument Details
+Instrument Model PPA5511
+03rd October 2022 - 11:47:53 Ph:1 Page 10/10 IECSoft v2_7
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No. NK-22-E-0810
+Attachment 5
+Voltage Fluctuations and Flicker Test Data :
+- Tested voltage : 230 V~ 50 ㎐
+
+Results Phase1: PASS
+Location N/A
+Notes NK-22-E-0810,0811
+Signature
+DC max 0.0089% (Limit: 3.3%)
+Additional Test Details
+Operator N/A
+Lab Name N/A
+Rated Power N/A N/A
+D max 0.0481% (Limit: 4.0%)
+T max 0.0000 s (Limit: 0.5 s)
+Rated Current N/A N/A
+Rated Frequency 50.000Hz 49.999Hz
+Test Conditions
+User Entered Measured
+Rated Voltage 230.000V 230.405V
+Model F1417MCW
+Serial N/A
+Impedance Network ID N/A
+PST 10 minutes
+PLT 12 PSTs
+Equipment Under Test
+Brand H&Abiz
+Test Settings
+Class Voltage
+Mode Normal (4.0%)
+Minimum Current 10A
+Source Serial 91J-11432
+Source Frequency 50.000Hz
+Source Voltage RMS 230.000V
+N4L Calibration Date N/A
+Instrument Version
+Source Details
+Source Model N4A06
+Instrument Details
+Instrument Model PPA5511
+Serial Number 162-04585
+Firmware Version 2.185
+03rd October 2022 - 11:57:02 Ph:1 Page 1/3 IECSoft v2_7
+IEC61000-3-3:2013+AMD1:2017+AMD2:2021
+Flickermeter
+
+PST no. DC (%) Tmax (s) PST PST Lim PLT PLT Lim
+1 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+2 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+3 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+4 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+5 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+6 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+7 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+8 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+9 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+10 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+11 0.00888 0.00000 0.08226 1.00000 0.08226 N/A
+12 0.00888 0.00000 0.08226 1.00000 0.08226 0.65000
+Phase1: PASS 0.04805
+Phase1: PASS 0.04805
+Phase1: PASS 0.04805
+Phase1: PASS 0.04805
+Phase1: PASS 0.04805
+Phase1: PASS 0.04805
+Phase1: PASS 0.04483
+Phase1: PASS 0.04483
+Phase1: PASS 0.04483
+Phase1: PASS 0.04437
+Phase1: PASS 0.04437
+Phase1: PASS 0.04483
+Model F1417MCW
+Serial N/A
+Flicker Test Results
+Status Dmax (%)
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+Equipment Under Test
+Brand H&Abiz
+03rd October 2022 - 11:57:02 Ph:1 Page 2/3 IECSoft v2_7
+IEC61000-3-3:2013+AMD1:2017+AMD2:2021 Flickermeter
+Instrument Details
+Instrument Model PPA5511
+
+Model F1417MCW
+Serial N/A
+Flicker PST Sum Graph
+Instrument Serial 162-04585
+Instrument Firmware 2.185
+Equipment Under Test
+Brand H&Abiz
+03rd October 2022 - 11:57:02 Ph:1 Page 3/3 IECSoft v2_7
+IEC61000-3-3:2013+AMD1:2017+AMD2:2021 Flickermeter
+Instrument Details
+Instrument Model PPA5511
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+Attachment 6
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+Photographs of EUT
+1. Front View of EUT (A1417MCW)
+2. Rear View of EUT (A1417MCW)
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+3. Front View of EUT (F1417MCW)
+4. Rear View of EUT (F1417MCW)
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+5. Front View of POWER SUPPLY
+6. Rear View of POWER SUPPLY
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.:NK-22-E-0810
+7. Front View of Switch box
+8. Rear View of Switch box
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+Attachment 7
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+
+Guidance: Test plan
+Table G.1 – Recommended minimum test plan contents
+No. Item Description
+1 Name and address of the test facility
+Nemko Korea Co., Ltd.
+155 & 159, Osan-Ro, Mohyeon-Myeon, Cheoin-Gu,
+Yongin-Si, Gyeonggi-Do 16885 Republic of Korea
+2
+Description of the ME EQUIPMENT or ME
+SYSTEM
+Additional detail : Describe all devices,
+racks, modules,
+boards, cables, etc. belonging to the ME
+EQUIPMENT or
+ME SYSTEM.
+F1417MCW Digital Flat Panel X-Ray Detector is indicated
+for digital imaging solution designed for providing general
+radiographic diagnosis of human anatomy targeting both
+adult and children. It is intended to replace film based
+radiographic diagnostic systems and provide more
+precise case diagnosis and treatment planning on a real
+time basis for physicians and radiologists.
+Not to be used for mammography and direct
+cardiac application.
+3
+Description of the BASIC SAFETY and
+ESSENTIAL
+PERFORMANCE including a description
+how the BASIC
+SAFETY and ESSENTIAL
+PERFORMANCE will be
+monitored against the pass/fail criteria
+during each test
+Operation normally when operation is required
+Connected consistently to POWER SUPPLY when EMC
+test is performed.
+When connected to POWER SUPPLY, program provided
+by manufacturer is operated normally.
+Image pixel size is obtained as intended.
+4
+Identification of the ME EQUIPMENT or
+ME SYSTEM
+Additional detail : Include device name and
+model
+number.
+Product name : Digital Flat Panel X-Ray Detector
+Model : F1417MCW
+5
+ME EQUIPMENT or ME SYSTEM software
+/ firmware
+version of the sample to be tested
+Software 1) XAS_W 2.3
+2) Ezview 1.0
+Firmware: 2.0
+6
+Number of samples to be tested
+Additional detail : The number of samples
+for each EMC
+Test
+Number of samples to be tested : 1 EA
+7 INTENDED USE and intended
+environments
+F1417MCW Digital Flat Panel X-Ray Detector are
+indicated for digital imaging solution designed for
+providing general radiographic diagnosis of human
+anatomy targeting both adult and children. It is intended
+to replace film based radiographic diagnostic systems
+and provide more precise case diagnosis and treatment
+planning on a real time basis for physicians and
+radiologists. Not to be used for mammography and direct
+cardiac application.
+8
+Applicable standards and test methods
+Additional detail : A list of the standards
+(with dates) and
+EMISSIONS limits or IMMUNITY TEST
+LEVELS
+Refer to Attach 8. Applicable Standards and Test Methods
+9
+Deviations from the Basic EMC standards
+or from this
+collateral standard
+Additional detail : Include any instructions
+needed
+N/A
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+10
+Applicability / tests that will not be
+performed
+Additional detail : The decision and
+justification not to
+perform a measurement or test shall be
+documented.
+N/A
+11
+If the procedure specified by Annex E or an
+equivalent procedure is used:
+– a justification for any SPECIAL
+ENVIRONMENTS
+identified or adjustments made
+– the adjusted reasonably foreseeable
+maximum EM
+DISTURBANCE levels
+– the resulting final IMMUNITY TEST
+LEVELS, rounded
+to the nearest whole number or, if a
+decimal, to a
+single significant digit
+– details of the methods and data sources
+used in
+determining the appropriate IMMUNITY
+TEST
+LEVELS
+N/A
+12 IMMUNITY TEST LEVELS for each
+IMMUNITY test and
+EMISSIONS compliance class and group Group 1 Class A
+13
+IMMUNITY pass/fail criteria
+Additional detail : Specific IMMUNITY
+pass/fail criteria for
+BASIC SAFETY and ESSENTIAL
+PERFORMANCE as
+per the RISK ANALYSIS (see Annex I)
+- Operation normally when operation is required
+- Connected consistently to POWER SUPPLY
+when EMC test is performed.
+- When connected to POWER SUPPLY, program
+provided by manufacturer is operated normally.
+- Image pixel size is obtained as intended.
+14
+ME EQUIPMENT or ME SYSTEM
+configurations,
+settings and operating modes
+Use provided program
+Access ping signal continuously.
+15
+Test setup electrical and physical diagrams
+Additional detail : Show how the ME
+EQUIPMENT OR
+ME SYSTEM hardware will be configured
+and
+connected to the test systems, how cables
+will be routed
+and bundled, and disposition of excess
+cable.
+Refer to test report
+16
+ME EQUIPMENT or ME SYSTEM power
+input voltages
+and frequencies
+Additional detail : List by test.
+ME EQUIPMENT power input voltages and frequencies
+INPUT : 100 - 240 V~, 50/60 Hz, 1.0 A
+OUTPUT : d.c. 16 V, 3 A
+List by test : Refer to Attach 8. Applicable Standards and
+Test Methods
+17
+Earthing configuration
+Additional detail : Describe how the ME
+EQUIPMENT OR
+ME SYSTEM connects to protective earth.
+N/A
+18
+Whether the ME EQUIPMENT or ME
+SYSTEM will be
+tested as table-top or floor-standing
+equipment, or a
+ME EQUIPMENT will be tested as table-top.
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+combination of the two
+19
+Testing of PERMANENTLY INSTALLED
+LARGE ME
+EQUIPMENT or LARGE ME SYSTEM
+Additional detail : If on-site testing is
+required, diagram
+the equipment or system in the location in
+which it will be
+installed and describe how testing will be
+performed.
+N/A
+20
+Exercising of SIP/SOPS
+Additional detail : Describe how each
+SIP/SOP PORT is
+to be exercised.
+Refer to test report
+21 For floor-standing ME EQUIPMENT or ME
+SYSTEMS, the height of the support N/A
+22
+Description of any PATIENT-COUPLED
+cable
+terminations to be used
+N/A
+23
+Simulators, accessories and auxiliary
+equipment
+Additional detail : Describe simulators,
+ACCESSORIES
+and auxiliary equipment used, including
+PATIENT
+physiological and subsystem simulation
+Power Supply Box: Source of necessary electricity
+Battery Pack: Source for wireless connection
+MainCable:To connect X-ray detector with Power Supply
+Box
+24
+Documentation of any special ME
+EQUIPMENT or ME
+SYSTEM hardware or software needed to
+perform the
+Tests
+SDXAcq Program
+25
+ALARM LIMIT settings
+Additional detail : If applicable, provide
+rationale for the
+settings chosen.
+N/A
+26
+Planned ESD test points.
+Additional detail : If possible, include a
+drawing or
+annotated photo showing the ESD test
+points.
+Offer the photo showing the test points and
+will be recorded to test report.
+27 Dwell time for each IMMUNITY test
+requiring a dwell time Refer to Attach 8. Applicable Standards and Test Methods
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+Attachment 8
+
+H&abyz Co., Ltd.
+F1417MCW
+EMC Test Report
+Reference No.: NK-22-E-0810
+Test Name
+IEC 60601-
+1-2 4.1
+Edition
+Ref. Standard Ports to Test AC Mains
+Voltage
+Test Level
+Required Notes
+Mains terminal
+disturbance voltage 4.1 CISPR 11:2015
++A1:2016 + A2:2019 AC Mains
+100 V~, 50 Hz
+100 V~, 60 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+Group 1,
+Class A
+Radiated disturbance 4.1 CISPR 11:2015
++A1:2016 + A2:2019 Enclosure
+100 V~, 50 Hz
+100 V~, 60 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+Group 1,
+Class A
+Harmonic Current
+Emissions 4.1 IEC 61000-3-2:2018 AC Mains 230 V~, 50 Hz Class A
+Voltage Fluctuations
+and Flicker 4.1 IEC 61000-3-
+3:2013/AMD1:2017 AC Mains 230 V~, 50 Hz Class A
+Electrostatic
+Discharges (ESD) 4.1 IEC 61000-4-2:2008 Enclosure
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+±8 ㎸
+Contact
+±2 ㎸, ±4 ㎸,
+±8 ㎸, ±15 ㎸
+Air
+1 pulse/1 sec
+contact 8 kV
+air 15 kV
+Radiated RF
+electromagnetic Fields 4.1
+IEC 61000-4-
+3:2006+
+A1:2007+A2:2010
+Enclosure
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+3 V/m
+80 ㎒ to 2.7 G ㎐
+80%, 1 ㎑ AM
+RF Wireless
+Comm.
+Dwell time is
+3 sec
+Proximity fields from
+RF wireless
+communications
+equipment
+4.1
+IEC 61000-4-
+3:2006+
+A1:2007+A2:2010
+Enclosure
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+Table 9 in
+IEC 60601-1-2:2014 Dwell time is 3 sec
+Electric Fast
+Transients and bursts 4.1 IEC 61000-4-4:2012
+AC Mains 100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+±2 ㎸ AC,
+100 ㎑ PRR
+I/O Lines
+>3m
+±1 ㎸ AC,
+100 ㎑ PRR
+Surges 4.1 IEC 61000-4-5:2014
+/AMD:2017 AC Mains
+100 V~, 50 Hz
+220 V~, 60 Hz
+230 V~, 50 Hz
+240 V~, 50 Hz
+±0.5 ㎸, ±1 ㎸
+L1 to L2 (DM) 5 pulses at
+0˚, 90˚,
+180˚, 270˚ ±0.5 ㎸, ±1 ㎸,
+±2 ㎸
+L1 & L2 to PE (CM)
+Conducted
+Disturbances, induced
+by RF fields
+4.1 IEC 61000-4-6:2013
+AC Mains
+220 V~, 60 Hz
+230 V~, 50 Hz
+3 Vrms
+150 ㎑ to 80 ㎒
+6 Vrms in ISM
+bands between
+0.15 ㎒ and 80 ㎒
+Dwell time is
+3 sec
+all I/O
+Voltage Dips,
+Interruptions, and
+variations
+4.1
+IEC 61000-4-
+11:2004
+/AMD1:2017
+AC Mains
+100 V~, 50 Hz
+220 V~, 60 Hz
+240 V~, 50 Hz
+0 % UT for 0.5 cycle
+At 0˚, 45˚, 90˚, 135˚,
+180˚, 225˚, 270˚,
+315˚
+0% UT for 1 cycle At 0˚, 180˚
+50 ㎐ :
+70 % UT for 25 cycles
+60 ㎐ :
+70 % UT for 30 cycles
+At 0˚, 180˚
+50 ㎐ :
+0 % UT for 250 cycles
+60 ㎐ :
+0 % UT for 300 cycles
+At 0˚, 180˚
+Power-frequency
+Magnetic Field 4.1 IEC 61000-4-8:2009 Enclosure
+220 V~, 60 Hz
+230 V~, 50 Hz
+DC 16 V
+(Battery power)
+30 A/m
+Immunity to proximity
+magnetic fields 4.1 IEC 61000-4-
+39:2017 Enclosure
+220 V~ 60 Hz
+230 V~ 50 Hz
+DC 16 V
+(Battery power)
+30 kHz: CW 8 A/m
+Dwell time is
+5 sec
+134.2 kHz: PM, 2.1 kHz
+65 A/m
+13.56 MHz: PM, 50 kHz
+7.5 A/m

@@ -195,3 +195,26 @@ After P0 is published to the vault:
 
 This prevents a growing backlog of high-quality staging artifacts that are not
 usable in the live LLM Wiki.
+
+## P1 Status
+
+P1 started after P0 static QA and app API smoke QA passed.
+
+Latest P1 triage:
+
+- report: `reports/p1-meaningful-triage-202606241713`
+- script: `scripts/triage-priority-meaningful-content.js`
+- P1 sources: 7,941
+- full-wiki representatives: 2,275
+- canonical duplicates: 4,363
+- low-text review: 209
+- empty/recovery: 1,094
+- avoided full LLM calls before pilot: 5,666 (71.4%)
+
+Latest P1 extraction bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1-r100-202606241715`
+- script: `scripts/prepare-priority-pilot-eval.js`
+- rank range: 1-100
+- selected representatives: 100
+- extraction status: not started at this checkpoint

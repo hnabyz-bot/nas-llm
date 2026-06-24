@@ -269,3 +269,38 @@ Smoke procedure:
 - app-state was restored from backup
 
 P0 is now ready for P1 to start through the same revised workflow.
+
+## P1 Started
+
+P1 has started through the revised workflow.
+
+Latest P1 meaningful triage:
+
+- report: `reports/p1-meaningful-triage-202606241713`
+- script: `scripts/triage-priority-meaningful-content.js`
+- priority report: `reports/ra-ingest-priority-20260617052118/priority-full.json`
+- P1 sources: 7,941
+- P1 bytes: 371.6 MB
+- canonical normalized body groups: 2,413
+- full-wiki representative candidates: 2,275
+- canonical duplicates: 4,363
+- low-text review: 209
+- empty/recovery: 1,094
+- representative input: 90.6 MB
+- estimated representative tokens chars/4: 23,755,841
+- avoided full LLM calls before pilot: 5,666 (71.4%)
+
+Latest P1 extraction bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1-r100-202606241715`
+- script: `scripts/prepare-priority-pilot-eval.js`
+- representative rank range: 1-100
+- selected representatives: 100
+- total available P1 representatives: 2,275
+- total normalized chars: 7,114,530
+- estimated tokens chars/4: 1,778,633
+- output status: extraction not started at this checkpoint
+
+Next step: run direct CLI extraction for P1 ranks 1-100 with the same schema and
+QA gate used for P0, then summarize and commit/push the checkpoint before
+continuing to the next P1 rank range.

@@ -1,0 +1,5962 @@
+queueId: ingest-1781569954418-16be
+sourcePath: raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/cyan 추가에 따른 개정 문서/5. A-SBOM-HNXR1_Cybersecurity BOM and evaluation report.docx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/3ccfc2d78175/5. A-SBOM-HNXR1_Cybersecurity BOM and evaluation report__3ccfc2d78175_combined.txt
+canonicalGroupId: fa7247c9e80f
+productSignal: HnX
+authoritySignal: general
+pilotRank: 55
+
+SOURCE_TEXT
+Cybersecurity Risk Management – Software Bill of Materials and Evaluation Report
+
+Product name: digital X-ray imaging system
+
+Model name: HnX-R1
+
+Ref no.
+
+Detector 1
+
+(G series)
+
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+
+G1717CW, G1717CWP, G1717FW, G1717FWP
+
+Detector 2
+
+(2/3G series)
+
+A1717MCW, A1417MCW, F1417MCW
+
+Console software
+
+HnVUE
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+Jimin HAN
+
+RA team
+
+August 06, 2025
+
+Reviewed by
+
+Kyungsoo LEE
+
+R&D Manager
+
+August 06, 2025
+
+Approved by
+
+Namkyu HUR
+
+Quality Management Representative
+
+August 06, 2025
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+August 06, 2025
+
+Initial
+
+Contents
+
+1. Overview 4
+
+2. SBOM list and Support Lifecycle 6
+
+3. Machine Readable Format in Cyclone DX (JSON) 12
+
+4. SW Supply Chain Security System Diagnosis and SBOM Analysis Results Report 54
+
+Overview
+
+Document Overview
+
+This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Digital X-ray Imaging System (HnX-R1).
+
+Medical Device Overview
+
+Product name
+
+Digital X-ray Imaging System
+
+Model name
+
+HnX-R1
+
+Ref. No.
+
+Detector 1
+
+(G series)
+
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+
+G1717CW, G1717CWP, G1717FW, G1717FWP
+
+Detector 2
+
+(2/3G series)
+
+A1717MCW, A1417MCW, F1417MCW
+
+Console software
+
+HnVUE
+
+Manufacturer
+
+H&abyz Co., Ltd.
+
+Manufacturer address
+
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si, Gyeonggi-do, Republic of Korea
+
+Intended use
+
+HnX-R1 (Digital X-ray Imaging System) is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children. It is intended to replace film based radiographic diagnostic systems. Not to be used for mammography.
+
+The HnX-R1 wired/wireless digital X-ray imaging system consists of Detector, Power supply box, Battery pack, Battery charger, Other Accessories and software for image acquisition and image processing and does not include the X-ray generator. The detector is a wired/wireless type, and there are 8 types of G series (G1417CW, G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW, G1717FWP) and 3 types of 2/3G series (A1717MCW, A1417MCW, F1417MCW). The name of the image acquisition and image processing software (Console software) is HnVUE.
+
+This system is used to capture images by transmitting X-ray to a patient’s body. The X-ray passing through a patient’s body is sent to the detector and then converted into electrical signals. These signals go through the process of amplification and digital data conversion in the signal process device before being sent to the HnVUE (Console Software) and saved in DICOM file, a standard for medical imaging. The captured images are sent to the Picture Archiving & Communication System (PACS) server, and can be used for reading images.
+
+The cybersecurity risk of the HnX-R1 have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis. These risks are defined as sequence of events leading to a hazardous situation, and the control for their risks were treated and implemented as proposed in the risk analysis (e.g., requirements, verification)
+
+SBOM list and Support Lifecycle
+
+No
+
+Software name
+
+Component name
+
+Supplier
+
+Software level of support by manufacturer
+
+version
+
+Time stamp
+
+(Release date)
+
+EOS date
+
+Author
+
+Description
+
+Function
+
+1
+
+HnVue
+
+BCrypt.Net
+
+OpenBSD
+
+actively maintained
+
+0.1.0
+
+11. 5. 5.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Vadim Chekan
+
+Port of jBCrypt library to C#
+
+Application
+
+2
+
+BouncyCastle.Cryptography
+
+Legion of the Bouncy Castle Inc.
+
+actively maintained
+
+2.4.0
+
+24. 5. 27.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Legion of the Bouncy Castle Inc.
+
+BouncyCastle.NET is a popular cryptography library for .NET
+
+Application
+
+3
+
+DocumentFormat.OpenXml
+
+Microsoft
+
+actively maintained
+
+3.1.1
+
+24. 10. 16.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents.
+
+Application
+
+4
+
+DocumentFormat.OpenXml.Framework
+
+Microsoft
+
+actively maintained
+
+3.1.1
+
+24. 10. 16.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents.
+
+Application
+
+5
+
+EntityFramework
+
+Microsoft
+
+actively maintained
+
+6.4.4
+
+20. 5. 12.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Entity Framework 6 (EF6) is a tried and tested object-relational mapper for .NET with many years of feature development and stabilization.",
+
+Application
+
+6
+
+fo-dicom.Desktop
+
+fo-dicom
+
+actively maintained
+
+4.0.8
+
+21. 9. 10.
+
+Until the product life cycle (The end of support date is unknown.)
+
+fo-dicom contributors
+
+Core fo-dicom libraries for .NET Framework (Windows Desktop)
+
+Application
+
+7
+
+Fody
+
+Simon Cropp
+
+actively maintained
+
+6.6.2
+
+22. 5. 20.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Fody
+
+Extensible tool for weaving .net assemblies.
+
+Application
+
+8
+
+HtmlRenderer.Core
+
+ArthurHub (GitHub), BSD‑3-Clause
+
+actively maintained
+
+1.5.0.5
+
+14. 10. 9.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Arthur Teplitzki
+
+Cross framework (WinForms/WPF/PDF/Metro/Mono/etc.), Multipurpose (UI Controls / Image generation / PDF generation / etc.), 100% managed (C#), High performance HTML Rendering library.
+
+Application
+
+9
+
+HtmlRenderer.PdfSharp
+
+ArthurHub (GitHub), BSD‑3-Clause
+
+actively maintained
+
+1.5.0.6
+
+15. 5. 6.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Arthur Teplitzki
+
+PDF document generator from HTML snippet, 100% managed (C#), High performance library using PdfSharp.
+
+Application
+
+10
+
+InTheHand.BluetoothLE
+
+In The Hand Ltd
+
+actively maintained
+
+4.0.37
+
+24. 8. 24.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Peter Foot
+
+32feet.NET is an open-source project to make personal area networking technologies such as Bluetooth easily accessible from .NET code.
+
+Application
+
+11
+
+log4net
+
+The Apache Software Foundation
+
+actively maintained
+
+2.0.14
+
+21. 12. 20.
+
+Until the product life cycle (The end of support date is unknown.)
+
+The Apache Software Foundation
+
+log4net is a tool to help the programmer output log statements to a variety of output targets
+
+Application
+
+12
+
+Microsoft.Bcl.AsyncInterfaces
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides the IAsyncEnumerable\u003CT\u003E and IAsyncDisposable interfaces and helper types for .NET Standard 2.0.
+
+Application
+
+13
+
+Microsoft.Extensions.DependencyInjection
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.
+
+Application
+
+14
+
+Microsoft.Extensions.Dependency
+
+Injection.Abstractions
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Abstractions for dependency injection.
+
+Commonly Used Types:\nMicrosoft.Extensions.Dependency
+
+Injection.IServiceCollection
+
+Application
+
+15
+
+Microsoft.Extensions.Logging
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Logging infrastructure default implementation for Microsoft.Extensions.Logging.
+
+Application
+
+16
+
+Microsoft.Extensions.Logging.Abstractions
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Logging abstractions for Microsoft.Extensions.Logging.
+
+Application
+
+17
+
+Microsoft.Extensions.Options
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides a strongly typed way of specifying and accessing settings using dependency injection.
+
+Application
+
+18
+
+Microsoft.Extensions.Primitives
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Primitives shared by framework extensions. Commonly used types include
+
+Application
+
+19
+
+Microsoft.NETCore.Platforms
+
+Microsoft
+
+actively maintained
+
+7.0.0
+
+22. 11. 7.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides runtime information required to resolve target framework, platform, and runtime specific implementations of .NETCore packages.
+
+Application
+
+20
+
+Microsoft.Windows.SDK.Contracts
+
+Microsoft
+
+actively maintained
+
+10.0.
+
+22621.
+
+2428
+
+23. 10. 31.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+The Windows WinRT API Pack enables you to add the latest Windows Runtime APIs support to your .NET Framework 4.6\u002B and .NET Core 3.0\u002B libraries and apps.
+
+Application
+
+21
+
+Newtonsoft.Json
+
+Newtonsoft (James Newton‑King)
+
+actively maintained
+
+13.0.1
+
+21. 3. 17.
+
+Until the product life cycle (The end of support date is unknown.)
+
+James Newton-King
+
+Json.NET is a popular high-performance JSON framework for .NET
+
+Application
+
+22
+
+OpenCvSharp4
+
+shimat
+
+actively maintained
+
+4.9.0.
+
+20240103
+
+24. 1. 3.
+
+Until the product life cycle (The end of support date is unknown.)
+
+shimat
+
+OpenCV wrapper for .NET. Since this package includes only core managed libraries, another package of native bindings for your OS is required (OpenCvSharp4.runtime.*).
+
+Application
+
+23
+
+OpenCvSharp4.runtime.win
+
+shimat
+
+actively maintained
+
+4.9.0.
+
+20240103
+
+24. 1. 3.
+
+Until the product life cycle (The end of support date is unknown.)
+
+shimat
+
+Internal implementation package for OpenCvSharp to work on Windows except UWP.
+
+Application
+
+24
+
+PDFsharp
+
+PDFsharp Team
+
+actively maintained
+
+6.1.1
+
+24. 7. 1.
+
+Until the product life cycle (The end of support date is unknown.)
+
+PDFsharp Team
+
+A .NET library for processing PDF.
+
+Application
+
+25
+
+PropertyChanged.Fody
+
+Simon Cropp
+
+actively maintained
+
+3.4.1
+
+22. 5. 22.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Simon Cropp
+
+Add property notification to all classes that implement INotifyPropertyChanged.
+
+Application
+
+26
+
+Stub.System.Data.SQLite.Core.
+
+NetFramework
+
+SQLite Development Team
+
+actively maintained
+
+1.0.116.0
+
+22. 6. 2.
+
+Until the product life cycle (The end of support date is unknown.)
+
+SQLite Development Team
+
+The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.
+
+Application
+
+27
+
+System.Buffers
+
+Microsoft
+
+actively maintained
+
+4.5.1
+
+20. 3. 24.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.
+
+Application
+
+28
+
+System.Data.SQLite
+
+SQLite Development Team
+
+actively maintained
+
+1.0.116.0
+
+22. 6. 2.
+
+Until the product life cycle (The end of support date is unknown.)
+
+SQLite Development Team
+
+The official SQLite database engine for both x86 and x64 along with the ADO.NET provider. This package includes support for LINQ and Entity Framework 6.
+
+Application
+
+29
+
+System.Data.SQLite.Core
+
+SQLite Development Team
+
+actively maintained
+
+1.0.116.0
+
+22. 6. 2.
+
+Until the product life cycle (The end of support date is unknown.)
+
+SQLite Development Team
+
+The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.
+
+Application
+
+30
+
+System.Data.SQLite.EF6
+
+SQLite Development Team
+
+actively maintained
+
+1.0.116.0
+
+22. 6. 2.
+
+Until the product life cycle (The end of support date is unknown.)
+
+SQLite Development Team
+
+Support for Entity Framework 6 using System.Data.SQLite.
+
+Application
+
+31
+
+System.Data.SQLite.Linq
+
+SQLite Development Team
+
+actively maintained
+
+1.0.116.0
+
+22. 6. 2.
+
+Until the product life cycle (The end of support date is unknown.)
+
+SQLite Development Team
+
+Support for LINQ using System.Data.SQLite.
+
+Application
+
+32
+
+System.Diagnostics.DiagnosticSource
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools
+
+Application
+
+33
+
+System.Drawing.Common
+
+Microsoft
+
+actively maintained
+
+7.0.0
+
+22. 11. 7.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides access to GDI\u002B graphics functionality.
+
+Application
+
+34
+
+System.IO
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader and System.IO.StreamWriter, that allow reading and writing to data streams
+
+Application
+
+35
+
+System.Memory
+
+Microsoft
+
+actively maintained
+
+4.5.5
+
+22. 5. 26.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.
+
+Application
+
+36
+
+System.Net.Http
+
+Microsoft
+
+actively maintained
+
+4.3.4
+
+18. 10. 9.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides a programming interface for modern HTTP applications, including HTTP client components that allow applications to consume web services over HTTP and HTTP components that can be used by both clients and servers for parsing HTTP headers.
+
+Application
+
+37
+
+System.Numerics.Vectors
+
+Microsoft
+
+actively maintained
+
+4.5.0
+
+18. 5. 29.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.
+
+Application
+
+38
+
+System.Runtime
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.
+
+Application
+
+39
+
+System.Runtime.CompilerServices.Unsafe
+
+Microsoft
+
+actively maintained
+
+6.0.0
+
+21. 11. 8.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides the System. Runtime. CompilerServices. Unsafe class, which provides generic, low-level functionality for manipulating pointers.
+
+Application
+
+40
+
+System.Runtime.InteropServices.
+
+WindowsRuntime
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides classes that support interoperation between managed code and the Windows Runtime, and that enable the creation of Windows Runtime types with managed code.
+
+Application
+
+41
+
+System.Runtime.WindowsRuntime
+
+Microsoft
+
+actively maintained
+
+4.6.0
+
+19. 9. 23.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides extensions methods that improve interoperation between managed code and the Windows Runtime.
+
+Application
+
+42
+
+System.Runtime.WindowsRuntime.
+
+UI.Xaml
+
+Microsoft
+
+actively maintained
+
+4.6.0
+
+19. 9. 23.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides managed equivalents of Extensible Application Markup Language (XAML) UI types from Windows Runtime.
+
+Application
+
+43
+
+System.Security.Cryptography.Algorithms
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides base types for cryptographic algorithms, including hashing, encryption, and signing operations.
+
+Application
+
+44
+
+System.Security.Cryptography.Encoding
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides types for representing Abstract Syntax Notation One (ASN.1)-encoded data.
+
+Application
+
+45
+
+System.Security.Cryptography.Primitives
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides common types for the cryptographic libraries.
+
+Application
+
+46
+
+System.Security.Cryptography.
+
+X509Certificates
+
+Microsoft
+
+actively maintained
+
+4.3.0
+
+16. 11. 15.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides types for reading, exporting and verifying Authenticode X.509 v3 certificates. These certificates are signed with a private key that uniquely and positively identifies the holder of the certificate.
+
+Application
+
+47
+
+System.Threading.Tasks.Extensions
+
+Microsoft
+
+actively maintained
+
+4.5.4
+
+20. 3. 24.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides additional types that simplify the work of writing concurrent and asynchronous code.
+
+Application
+
+48
+
+System.ValueTuple
+
+Microsoft
+
+actively maintained
+
+4.5.0
+
+18. 5. 29.
+
+Until the product life cycle (The end of support date is unknown.)
+
+Microsoft
+
+Provides the System.ValueTuple structs, which implement the underlying types for tuples in C# and Visual Basic.
+
+Application
+
+49
+
+Detector
+
+Gen2.Imaging(SDK for G-series)
+
+H&abyz
+
+actively maintained
+
+1.0.0
+
+22. 5. 22.
+
+Until the product life cycle (The end of support date is unknown.)
+
+H&abyz
+
+Acquisition image preprocessing tool package of detector.
+
+Application
+
+50
+
+Gen2.Core(SDK for G-series)
+
+H&abyz
+
+actively maintained
+
+1.0.0
+
+22. 5. 22.
+
+Until the product life cycle (The end of support date is unknown.)
+
+H&abyz
+
+Software development kit (SDK) of detector.
+
+Application
+
+51
+
+Gen2Server(firmware for G-series)
+
+H&abyz
+
+Actively maintained
+
+1.0.0
+
+25. 07. 07.
+
+Until the product life cycle (The end of support date is unkonown)
+
+H&abyz
+
+Firmware of detector
+
+(G1417CW, G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW, G1717FWP)
+
+Application
+
+52
+
+G2_DET(firmware for 2/3G-series)
+
+H&abyz
+
+Actively maintained
+
+2.10.0.0.3
+
+24. 12. 09.
+
+Until the product life cycle (The end of support date is unkonown)
+
+Samsung Medison
+
+Firmware of detector
+
+(A1417MCW, A1717MCW, F1417MCW)
+
+Application
+
+53
+
+libxd2(SDK for 2/3G-series)
+
+H&abyz
+
+Actively maintained
+
+2.3.0.3
+
+22. 09. 12.
+
+Until the product life cycle (The end of support date is unkonown)
+
+Samsung Medison
+
+Software development kit (SDK) of detector.
+
+(A1417MCW, A1717MCW, F1417MCW)
+
+Application
+
+SDK for cyan-series
+
+Firmware for cyan-series
+
+Machine Readable Format in Cyclone DX (JSON)
+
+JSON of HnVue
+
+{
+
+ "bomFormat": "CycloneDX",
+
+ "specVersion": "1.6",
+
+ "serialNumber": "urn:uuid:cf42441d-655c-4ec5-947e-ac10a9a86895",
+
+ "version": 1,
+
+ "metadata": {
+
+ "timestamp": "2025-03-26T08:37:32Z",
+
+ "tools": [
+
+ {
+
+ "vendor": "CycloneDX",
+
+ "name": "CycloneDX module for .NET",
+
+ "version": "5.1.1.0"
+
+ }
+
+ ],
+
+ "component": {
+
+ "type": "application",
+
+ "bom-ref": "C:\\Users\\diman\\source\\HnVue\\HnVue@0.0.0",
+
+ "name": "C:\\Users\\diman\\source\\HnVue\\HnVue",
+
+ "version": "0.0.0"
+
+ }
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+ "components": [
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/BCrypt.Net@0.1.0",
+
+ "authors":
+
+ [
+
+ {
+
+ "name": "Vadim Chekan"
+
+ }
+
+ ],
+
+ "name": "BCrypt.Net",
+
+ "version": "0.1.0",
+
+ "description": "Port of jBCrypt library to C#",
+
+ "scope": "required",
+
+ "hashes":
+
+ [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "B8CB71724C18B2B56FCDBA1CF9FAB9C4386CB3C70B7AE00049CAC733BEABCE2F6BD0CB41028068892B8CDBAD40E6290C8608924C954C9B1B3BEA0ED251EE9F4D"
+
+ }
+
+ ],
+
+ "licenses":
+
+ [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://bcrypt.codeplex.com/license"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/BCrypt.Net@0.1.0",
+
+ "externalReferences":
+
+ [
+
+ {
+
+ "url": "https://bitbucket.org/vadim/bcrypt.net",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/BouncyCastle.Cryptography@2.4.0",
+
+ "authors": [
+
+ {
+
+ "name": "Legion of the Bouncy Castle Inc."
+
+ }
+
+ ],
+
+ "name": "BouncyCastle.Cryptography",
+
+ "version": "2.4.0",
+
+ "description": "BouncyCastle.NET is a popular cryptography library for .NET",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "693BFF75F97F0D061CE230AC8B53B72B0664D8F1C9AD3810C2C25176A787DE2480EFC766C18706CDDBEE0E1B2CE8646772BDB075826E7FEA20F45A088B9DBC6E"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 Legion of the Bouncy Castle Inc. 2000-2024",
+
+ "purl": "pkg:nuget/BouncyCastle.Cryptography@2.4.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://www.bouncycastle.org/stable/nuget/csharp/website",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/bcgit/bc-csharp",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/DocumentFormat.OpenXml@3.1.1",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "DocumentFormat.OpenXml",
+
+ "version": "3.1.1",
+
+ "description": "The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:\n\n- High-performance generation of word-processing documents, spreadsheets, and presentations.\n- Populating content in Word files from an XML data source.\n- Splitting up (shredding) a Word or PowerPoint file into multiple files, and combining multiple Word/PowerPoint files into a single file.\n- Extraction of data from Excel documents.\n- Searching and replacing content in Word/PowerPoint using regular expressions.\n- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.\n- Document modification, such as removing tracked revisions or removing unacceptable content from documents.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "491D47942B07559C7117EBE8AC633CE9982F3FE547576E572C8CE34754FE65831C8CBA540455C4A27C4F9BF41495D6BD4A6DF94541426425DCB5FED7DFF6C5CB"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/DocumentFormat.OpenXml@3.1.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/dotnet/Open-XML-SDK",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/Open-XML-SDK",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/DocumentFormat.OpenXml.Framework@3.1.1",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "DocumentFormat.OpenXml.Framework",
+
+ "version": "3.1.1",
+
+ "description": "The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:\n\n- High-performance generation of word-processing documents, spreadsheets, and presentations.\n- Populating content in Word files from an XML data source.\n- Splitting up (shredding) a Word or PowerPoint file into multiple files, and combining multiple Word/PowerPoint files into a single file.\n- Extraction of data from Excel documents.\n- Searching and replacing content in Word/PowerPoint using regular expressions.\n- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.\n- Document modification, such as removing tracked revisions or removing unacceptable content from documents.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "BCD5C19A4F50AAF4B7D69C8DE11992B9D30AA5C28DA08A504E6CF71DD5A11CBBD52E719417A851C04EF46CC488E5D4F4EE85663F45759B255EE82C9D075C6756"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/DocumentFormat.OpenXml.Framework@3.1.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/dotnet/Open-XML-SDK",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/Open-XML-SDK",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/EntityFramework@6.4.4",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "EntityFramework",
+
+ "version": "6.4.4",
+
+ "description": "Entity Framework 6 (EF6) is a tried and tested object-relational mapper for .NET with many years of feature development and stabilization.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "FB19B748675E145E18143D7FA5BE46498B10A331A7B9BCCC5988B34F8AA5D85547146CF1C054969B621166714F79CD0BFDEC61AB0178BEF95BAA7C2C8D0DB7B0"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "Apache-2.0"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/EntityFramework@6.4.4",
+
+ "externalReferences": [
+
+ {
+
+ "url": "http://go.microsoft.com/fwlink/?LinkID=263480",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/ef6",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/fo-dicom.Desktop@4.0.8",
+
+ "authors": [
+
+ {
+
+ "name": "fo-dicom contributors"
+
+ }
+
+ ],
+
+ "name": "fo-dicom.Desktop",
+
+ "version": "4.0.8",
+
+ "description": "Core fo-dicom libraries for .NET Framework (Windows Desktop).",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "1015861A619FF999752BEF0C23DEFFEB5B0FF450108A8AAC92D20EF80AF33C7532BF6E95AF10D5A145F6A0703FB24C4C1D8B2A6A1342700F62EF67DBD8E318BF"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MS-PL"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/fo-dicom.Desktop@4.0.8",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/fo-dicom/fo-dicom",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Fody@6.6.2",
+
+ "authors": [
+
+ {
+
+ "name": "Fody"
+
+ }
+
+ ],
+
+ "name": "Fody",
+
+ "version": "6.6.2",
+
+ "description": "Extensible tool for weaving .net assemblies.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "874EEBBFD322C33A550A50CCA080719A624523CD14156E4534A755AF80BBEBAEDA8B5326667D51CC9482B0D6F4E6ECFD3B4B03800E915A27A5D5A378EBA9E329"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://aka.ms/deprecateLicenseUrl"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/Fody@6.6.2",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/Fody/Fody",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/HtmlRenderer.Core@1.5.0.5",
+
+ "authors": [
+
+ {
+
+ "name": "Arthur Teplitzki"
+
+ }
+
+ ],
+
+ "name": "HtmlRenderer.Core",
+
+ "version": "1.5.0.5",
+
+ "description": "Cross framework (WinForms/WPF/PDF/Metro/Mono/etc.), Multipurpose (UI Controls / Image generation / PDF generation / etc.), 100% managed (C#), High performance HTML Rendering library.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F4D00ED09B614D6DA95BF35B7E7D39A8292E0170AEE392E31CBEB7C05A69BB17CDEF5DC65BBCB60A8B5DB903919B4F3706D158F88F55AE1CFCF0513A79CFA086"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://htmlrenderer.codeplex.com/license"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/HtmlRenderer.Core@1.5.0.5",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://htmlrenderer.codeplex.com/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/HtmlRenderer.PdfSharp@1.5.0.6",
+
+ "authors": [
+
+ {
+
+ "name": "Arthur Teplitzki"
+
+ }
+
+ ],
+
+ "name": "HtmlRenderer.PdfSharp",
+
+ "version": "1.5.0.6",
+
+ "description": "PDF document generator from HTML snippet, 100% managed (C#), High performance library using PdfSharp.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "ABC1BB4AB2D1BFC738CF5B69CA5E1F28B9A7F71EABF0913F1266E92BBB6D9A929A8CAF0985209C2339617A55C2009F951EF130209EC1E0C620BA89867C93A636"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://htmlrenderer.codeplex.com/license"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/HtmlRenderer.PdfSharp@1.5.0.6",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://htmlrenderer.codeplex.com/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/InTheHand.BluetoothLE@4.0.37",
+
+ "authors": [
+
+ {
+
+ "name": "Peter Foot"
+
+ }
+
+ ],
+
+ "name": "InTheHand.BluetoothLE",
+
+ "version": "4.0.37",
+
+ "description": "32feet.NET is an open-source project to make personal area networking technologies such as Bluetooth easily accessible from .NET code.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "09883326A4BE1270E541B0104DE1F6C2BBFCB54A1E1BA687858F24D0E45E7A30BF2FD7831C7926B5861F215F3BBC0FE6AAD274B715178816DBD968A1A2FA08C2"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright (c) 2004-2024 In The Hand Ltd",
+
+ "purl": "pkg:nuget/InTheHand.BluetoothLE@4.0.37",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/inthehand/32feet",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/inthehand/32feet",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/log4net@2.0.14",
+
+ "authors": [
+
+ {
+
+ "name": "The Apache Software Foundation"
+
+ }
+
+ ],
+
+ "name": "log4net",
+
+ "version": "2.0.14",
+
+ "description": "log4net is a tool to help the programmer output log statements to a variety of output targets.\n In case of problems with an application, it is helpful to enable logging so that the problem \n can be located. With log4net it is possible to enable logging at runtime without modifying the\n application binary. The log4net package is designed so that log statements can remain in \n shipped code without incurring a high performance cost. It follows that the speed of logging\n (or rather not logging) is crucial.\n\n At the same time, log output can be so voluminous that it quickly becomes overwhelming.\n One of the distinctive features of log4net is the notion of hierarchical loggers.\n Using these loggers it is possible to selectively control which log statements are output\n at arbitrary granularity.\n\n log4net is designed with two distinct goals in mind: speed and flexibility",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "30A36C9AADC3AF47EF3C9D1B7A29110259E86EAE2415488C6A6BF9CB88A1E0BA4CC1CC39A9438FC34A51B4D016BE801FE0B1DFB005EBDF9BC5FA918BEF00C385"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "Apache-2.0"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright 2004-2017 The Apache Software Foundation",
+
+ "purl": "pkg:nuget/log4net@2.0.14",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://logging.apache.org/log4net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/apache/logging-log4net",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Bcl.AsyncInterfaces@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Bcl.AsyncInterfaces",
+
+ "version": "6.0.0",
+
+ "description": "Provides the IAsyncEnumerable\u003CT\u003E and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.\n\nCommonly Used Types:\nSystem.IAsyncDisposable\nSystem.Collections.Generic.IAsyncEnumerable\nSystem.Collections.Generic.IAsyncEnumerator",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F6C6565B2B3B708979A0E351390C39E83756499E864B99B0DA8A5B0183E14B11CFEF04CB6E783A4F5352E65F06708F2D2221F90776BF5977A7D733412D4FD7A1"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Bcl.AsyncInterfaces@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.DependencyInjection",
+
+ "version": "6.0.0",
+
+ "description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F931E54280EDA7E41862F621280E8F12FF634ACACD7206C889D2E954A94480B767E869C745527597F8F65B5E408E2CEC703A0D4CAA2FC429D8E3E4B9B9C3F098"
+
+}
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.DependencyInjection@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+
+ "version": "6.0.0",
+
+ "description": "Abstractions for dependency injection.\n\nCommonly Used Types:\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "9A1D62337A800E70D37E31A5AB932CC314E1610E329639F365D62B41B83AAD8B603A44FAEF8E6B55AA88EF62096C80E8CA2ED1C7B1D52314480D1077A1FFB918"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.Logging@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.Logging",
+
+ "version": "6.0.0",
+
+ "description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "B2766C5288F7644186913FFCF53233D9C23D0B153595D371D1A23388BF41449219D18C8B3986F96A810B65220A24E327DE7BEAC2C57D3C2794352AE95E3BD7EA"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.Logging@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.Logging.Abstractions",
+
+ "version": "6.0.0",
+
+ "description": "Logging abstractions for Microsoft.Extensions.Logging.\n\nCommonly Used Types:\nMicrosoft.Extensions.Logging.ILogger\nMicrosoft.Extensions.Logging.ILoggerFactory\nMicrosoft.Extensions.Logging.ILogger\u003CTCategoryName\u003E\nMicrosoft.Extensions.Logging.LogLevel\nMicrosoft.Extensions.Logging.Logger\u003CT\u003E\nMicrosoft.Extensions.Logging.LoggerMessage\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "3111F79FA95217A5C5BF95E73842B0792381D2316771846D206CED73AA6194D8274D7E17D00B9B7CC2692C47A67011E84363D2E6305236A0540BBBF961666B64"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.Options@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.Options",
+
+ "version": "6.0.0",
+
+ "description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "027525AE7601130CAF6AA15F87BBC476264DDEBA79CD020A0953DE66F2B2220EC38321050691D90FA9A1B3286768FEF6C03A7DEED6F88229A84AE3A84F225FC9"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.Options@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Extensions.Primitives@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Extensions.Primitives",
+
+ "version": "6.0.0",
+
+ "description": "Primitives shared by framework extensions. Commonly used types include:\n\nCommonly Used Types:\nMicrosoft.Extensions.Primitives.IChangeToken\nMicrosoft.Extensions.Primitives.StringValues\nMicrosoft.Extensions.Primitives.StringSegment",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F5DD1037638C873ABC6AAB172EF2C618F76CD847285BE73116D0B00FF53D09FDD21B345602452658AC4DF8E2D1B305D7F845E0CB7DE086E96F72EDB3F90ECB48"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Extensions.Primitives@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.NETCore.Platforms@7.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.NETCore.Platforms",
+
+ "version": "7.0.0",
+
+ "description": "Provides runtime information required to resolve target framework, platform, and runtime specific implementations of .NETCore packages.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "AC62C9531601ED55DF5E7344381091EE97BB00CD4936780BCCEFA35B457E718936F1239740E2D52830CEDAE6D80D330098121F4198852A978839B0FF9C30FA36"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.NETCore.Platforms@7.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Windows.SDK.Contracts@10.0.22621.2428",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Windows.SDK.Contracts",
+
+ "version": "10.0.22621.2428",
+
+ "description": "The Windows WinRT API Pack enables you to add the latest Windows Runtime APIs support to your .NET Framework 4.6\u002B and .NET Core 3.0\u002B libraries and apps.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "37CA3CC6894587ABDF4962F1DC21C07F94AB897461319B7F5EB21C5798E79E53824B0CF86327479C27FE8F8CF1B328969708E742A217FAA4B057AAB128ECABAE"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://aka.ms/WinSDKLicenseURL"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Windows.SDK.Contracts@10.0.22621.2428",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://aka.ms/WinSDKProjectURL",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Newtonsoft.Json@13.0.1",
+
+ "authors": [
+
+ {
+
+ "name": "James Newton-King"
+
+ }
+
+ ],
+
+ "name": "Newtonsoft.Json",
+
+ "version": "13.0.1",
+
+ "description": "Json.NET is a popular high-performance JSON framework for .NET",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "AF4C1A7044A3D1EB6BC58236D4624689374D18D54428BC22CF9847D8FBF87FC92D80B90201BE79E55C02330A3A21E0E910C8C87497F64C2901451CE1E459EF4D"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 James Newton-King 2008",
+
+ "purl": "pkg:nuget/Newtonsoft.Json@13.0.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://www.newtonsoft.com/json",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/JamesNK/Newtonsoft.Json",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/OpenCvSharp4@4.9.0.20240103",
+
+ "authors": [
+
+ {
+
+ "name": "shimat"
+
+ }
+
+ ],
+
+ "name": "OpenCvSharp4",
+
+ "version": "4.9.0.20240103",
+
+ "description": "OpenCV wrapper for .NET. Since this package includes only core managed libraries, another package of native bindings for your OS is required (OpenCvSharp4.runtime.*).",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "8532865E1C4D481E30345197528161371437B7A96012BD27708A2AA2A0CF368C656B126FDA237AC8BC425910448580F916DD9E8D05E1B9C6FF9703A8306B8D96"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "Apache-2.0"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright 2008-2020",
+
+ "purl": "pkg:nuget/OpenCvSharp4@4.9.0.20240103",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/shimat/opencvsharp",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/shimat/opencvsharp.git",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/OpenCvSharp4.runtime.win@4.9.0.20240103",
+
+ "authors": [
+
+ {
+
+ "name": "shimat"
+
+ }
+
+ ],
+
+ "name": "OpenCvSharp4.runtime.win",
+
+ "version": "4.9.0.20240103",
+
+ "description": "Internal implementation package for OpenCvSharp to work on Windows except UWP.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "070602DEA5B3E66B0257AEAE2C0357850A9FE5907355965FDF7F861C56E7B1D93B779FA582463A1DD60A6B09AE94067E42B1BDB6486195133848FE0A1B1CC21C"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "Apache-2.0"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright 2008-2020",
+
+ "purl": "pkg:nuget/OpenCvSharp4.runtime.win@4.9.0.20240103",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/shimat/opencvsharp",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/shimat/opencvsharp.git",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/PDFsharp@6.1.1",
+
+ "authors": [
+
+ {
+
+ "name": "PDFsharp Team"
+
+ }
+
+ ],
+
+ "name": "PDFsharp",
+
+ "version": "6.1.1",
+
+ "description": "A .NET library for processing PDF.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "D068965FADDF9BEEB6B8FCC1EBF9E264B9F243E6078018E8E930C51EED31D884339D98F10F57AAC2756EB5D0918C640E60172D1B36D639E169326036E0CBD4A7"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 2024 empira",
+
+ "purl": "pkg:nuget/PDFsharp@6.1.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://docs.pdfsharp.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/empira/PDFsharp",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/PropertyChanged.Fody@3.4.1",
+
+ "authors": [
+
+ {
+
+ "name": "Simon Cropp"
+
+ }
+
+ ],
+
+ "name": "PropertyChanged.Fody",
+
+ "version": "3.4.1",
+
+ "description": "Add property notification to all classes that implement INotifyPropertyChanged.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "4BFCC7422BC53EDAA1A27F7A53D5CDC5A4C7633845136CD36E3DFAE2FE7EDD0E7023B4649FB196110584261B5DA513D6975637A60118E52EC21B7E20A2E291FE"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "purl": "pkg:nuget/PropertyChanged.Fody@3.4.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/Fody/PropertyChanged",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Stub.System.Data.SQLite.Core.NetFramework@1.0.116.0",
+
+ "authors": [
+
+ {
+
+ "name": "SQLite Development Team"
+
+ }
+
+ ],
+
+ "name": "Stub.System.Data.SQLite.Core.NetFramework",
+
+ "version": "1.0.116.0",
+
+ "description": "The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "7523EA0A6498FE005593296A03E0F7B9EAC1D40AC74372E0D653877DFAD685567FF2C87CDA905AC33CDB54035EA23AC150DA14A3167274966AB8C435E6C6F34A"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://www.sqlite.org/copyright.html"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 2004-2008 Hipp, Wyrick \u0026 Company, Inc.",
+
+ "purl": "pkg:nuget/Stub.System.Data.SQLite.Core.NetFramework@1.0.116.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://system.data.sqlite.org/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Buffers@4.5.1",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Buffers",
+
+ "version": "4.5.1",
+
+ "description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\n\nCommonly Used Types:\nSystem.Buffers.ArrayPool\u003CT\u003E\n \n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "BD29389FF6601F5FE9191DFBA5A86B4BB5B1D0969560F3F4C0C0B857D2287AE6541B532708FF0D8A6828DA9DA7604508D903B37707F20AB9B3DA9AC4BF4BFA2C"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Buffers@4.5.1",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Data.SQLite@1.0.116.0",
+
+ "authors": [
+
+ {
+
+ "name": "SQLite Development Team"
+
+ }
+
+ ],
+
+ "name": "System.Data.SQLite",
+
+ "version": "1.0.116.0",
+
+ "description": "The official SQLite database engine for both x86 and x64 along with the ADO.NET provider. This package includes support for LINQ and Entity Framework 6.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "5AAB7310D8600FF4D6AA547E29DDB6B5F0E191D7FA3ABF396B7C74C5562B8CECAE904F3E791802939563043193CE6C81F8DF49369A80427A025442C6BB30A000"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+"name": "Unknown - See URL",
+
+ "url": "https://www.sqlite.org/copyright.html"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 2004-2008 Hipp, Wyrick \u0026 Company, Inc.",
+
+ "purl": "pkg:nuget/System.Data.SQLite@1.0.116.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://system.data.sqlite.org/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Data.SQLite.Core@1.0.116.0",
+
+ "authors": [
+
+ {
+
+ "name": "SQLite Development Team"
+
+ }
+
+ ],
+
+ "name": "System.Data.SQLite.Core",
+
+ "version": "1.0.116.0",
+
+ "description": "The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "1EAB1705EC9AB57029F5B890BF2924B7D0AB4C85460F6C4F46934983579FC27FFDD1095BE632BFA69EDA696FCA1E08F2724DD2E1B28B3E075755819E4A378C21"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://www.sqlite.org/copyright.html"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 2004-2008 Hipp, Wyrick \u0026 Company, Inc.",
+
+ "purl": "pkg:nuget/System.Data.SQLite.Core@1.0.116.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://system.data.sqlite.org/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Data.SQLite.EF6@1.0.116.0",
+
+ "authors": [
+
+ {
+
+ "name": "SQLite Development Team"
+
+ }
+
+ ],
+
+ "name": "System.Data.SQLite.EF6",
+
+ "version": "1.0.116.0",
+
+ "description": "Support for Entity Framework 6 using System.Data.SQLite.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "1947F9BE1F0B6E4EA7A75CD9BF47F1C800EF174DA011700C854A2733A651C27C55DF7632D383A4F87D50B89E7D21482EBC32AB8A71CFFEB15AAAA8DB114FF655"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://www.sqlite.org/copyright.html"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 2004-2008 Hipp, Wyrick \u0026 Company, Inc.",
+
+ "purl": "pkg:nuget/System.Data.SQLite.EF6@1.0.116.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://system.data.sqlite.org/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Data.SQLite.Linq@1.0.116.0",
+
+ "authors": [
+
+ {
+
+ "name": "SQLite Development Team"
+
+ }
+
+ ],
+
+ "name": "System.Data.SQLite.Linq",
+
+ "version": "1.0.116.0",
+
+ "description": "Support for LINQ using System.Data.SQLite.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F0AA8EEF93F235A5308514B3B9F31926155AEBC43D56746AB6349780B7B4FF1C603C3ED2BB182F7053C254BFD2A953D66A16A7459756EF5E8EB2D25FEB418469"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://www.sqlite.org/copyright.html"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "Copyright \u00A9 2004-2008 Hipp, Wyrick \u0026 Company, Inc.",
+
+ "purl": "pkg:nuget/System.Data.SQLite.Linq@1.0.116.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://system.data.sqlite.org/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Diagnostics.DiagnosticSource@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Diagnostics.DiagnosticSource",
+
+ "version": "6.0.0",
+
+ "description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\n\nCommonly Used Types:\nSystem.Diagnostics.DiagnosticListener\nSystem.Diagnostics.DiagnosticSource",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "C91005070461528B88BDC31D250F0A681C8730196144160846581A106F8CEF3B80589E71A6E6B550763ABBE8E047E7F8972181D0D0BBF361916B5F0BBDEE50B8"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Diagnostics.DiagnosticSource@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Drawing.Common@7.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Drawing.Common",
+
+ "version": "7.0.0",
+
+ "description": "Provides access to GDI\u002B graphics functionality.\n\nCommonly Used Types:\nSystem.Drawing.Bitmap\nSystem.Drawing.BitmapData\nSystem.Drawing.Brush\nSystem.Drawing.Font\nSystem.Drawing.Graphics\nSystem.Drawing.Icon\n\nSince .NET 7, non-Windows platforms are not supported, even with the runtime configuration switch. See https://aka.ms/systemdrawingnonwindows for more information.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "999020E7D6E957BBAEF6A3BDFA1F1255132627AE0453D1609BF337856851B47047A05B3FB5F8F1C456BC4E64EDD5AB1CFB46E152CFDD0506AA92B9184DCF9472"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Drawing.Common@7.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.IO@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.IO",
+
+ "version": "4.3.0",
+
+ "description": "Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader and System.IO.StreamWriter, that allow reading and writing to data streams\n\nCommonly Used Types:\nSystem.IO.Stream\nSystem.IO.EndOfStreamException\nSystem.IO.MemoryStream\nSystem.IO.StreamReader\nSystem.IO.StreamWriter\nSystem.IO.StringWriter\nSystem.IO.TextWriter\nSystem.IO.TextReader\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "DADE32346F2123D81852FF018DA7C48C2CC9267855295BE4D6CA895D300F08C57EB5014BDEFB0D9EFA96D78F9D297A7EE561E79BB34BAFB66DEF3A3136C5AA04"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.IO@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Memory@4.5.5",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Memory",
+
+ "version": "4.5.5",
+
+ "description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\n\nCommonly Used Types:\nSystem.Span\nSystem.ReadOnlySpan\nSystem.Memory\nSystem.ReadOnlyMemory\nSystem.Buffers.MemoryPool\nSystem.Buffers.ReadOnlySequence\nSystem.Buffers.Text.Utf8Parser\nSystem.Buffers.Text.Utf8Formatter\n \n32b491939fbd125f304031c35038b1e14b4e3958 \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "1CE73A9D23F26FA70A5E1E2CE0BCF4DD2579537A82240BD4C5BD866198742D8851AE02D49BAAC876C1A2B25CA42477C47E012C65F27BB63845B40E8221CFE614"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Memory@4.5.5",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Net.Http@4.3.4",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Net.Http",
+
+ "version": "4.3.4",
+
+ "description": "Provides a programming interface for modern HTTP applications, including HTTP client components that allow applications to consume web services over HTTP and HTTP components that can be used by both clients and servers for parsing HTTP headers.\n\nCommonly Used Types:\nSystem.Net.Http.HttpResponseMessage\nSystem.Net.Http.DelegatingHandler\nSystem.Net.Http.HttpRequestException\nSystem.Net.Http.HttpClient\nSystem.Net.Http.MultipartContent\nSystem.Net.Http.Headers.HttpContentHeaders\nSystem.Net.Http.HttpClientHandler\nSystem.Net.Http.StreamContent\nSystem.Net.Http.FormUrlEncodedContent\nSystem.Net.Http.HttpMessageHandler\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "D10A9B1DEBC2B29C81DE0646B2F2E35BAC6A5519077113FFD50F643299C6A8ECDD8AEDB5C535A1A1A29893F24E7151407F133F8330B329CF0D6DC0CB1E062EB0"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Net.Http@4.3.4",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Numerics.Vectors@4.5.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Numerics.Vectors",
+
+ "version": "4.5.0",
+
+ "description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\n\nCommonly Used Types:\nSystem.Numerics.Matrix3x2\nSystem.Numerics.Matrix4x4\nSystem.Numerics.Plane\nSystem.Numerics.Quaternion\nSystem.Numerics.Vector2\nSystem.Numerics.Vector3\nSystem.Numerics.Vector4\nSystem.Numerics.Vector\nSystem.Numerics.Vector\u003CT\u003E\n \n30ab651fcb4354552bd4891619a0bdd81e0ebdbf",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "0D44A1F88EF12B09ACEF8845BDC1DC2262E84BB355E835CD63F6729FAE1E20D9224E174C97FD3BB86F83D60446617A6F7C1BA13A2891F5EDFEECE52FE9024738"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Numerics.Vectors@4.5.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Runtime@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Runtime",
+
+ "version": "4.3.0",
+
+ "description": "Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.\n\nCommonly Used Types:\nSystem.Object\nSystem.Exception\nSystem.Int16\nSystem.Int32\nSystem.Int64\nSystem.Enum\nSystem.String\nSystem.Char\nSystem.Boolean\nSystem.SByte\nSystem.Byte\nSystem.DateTime\nSystem.DateTimeOffset\nSystem.Single\nSystem.Double\nSystem.UInt16\nSystem.UInt32\nSystem.UInt64\nSystem.IDisposable\nSystem.Uri\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "E709402D84663FB2A3DFA10DC3BD1E3B4C39F08E8A7CAD3B5A8F846C03B04E31DEDBE133B1A16BE123791860BB67AB1394E0535F159B94AF774F8F05B4961993"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Runtime@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Runtime.CompilerServices.Unsafe@6.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Runtime.CompilerServices.Unsafe",
+
+ "version": "6.0.0",
+
+ "description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\n\nCommonly Used Types:\nSystem.Runtime.CompilerServices.Unsafe",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "A0A34CC7783A7D7DBE7EC7935146BBB9C92C7AD911A0506969E0A6D049A3C37B57C9761018087B58D85562C4E91466FA2FB1CF5226268348465C3811F60E8532"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Runtime.CompilerServices.Unsafe@6.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Runtime.InteropServices.WindowsRuntime@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Runtime.InteropServices.WindowsRuntime",
+
+ "version": "4.3.0",
+
+ "description": "Provides classes that support interoperation between managed code and the Windows Runtime, and that enable the creation of Windows Runtime types with managed code.\n\nCommonly Used Types:\nSystem.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal\nSystem.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute\nSystem.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute\nSystem.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "041E18E06E501FA8CF96723897C8290F44316DA505514CF9E3BF130767F12C1E298196C948A0CB41F0DA45E09BA293CF241E4B930B242E8F3A99706AD8ACE91E"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Runtime.InteropServices.WindowsRuntime@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Runtime.WindowsRuntime@4.6.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Runtime.WindowsRuntime",
+
+ "version": "4.6.0",
+
+"description": "Provides extensions methods that improve interoperation between managed code and the Windows Runtime.\n\nCommonly Used Types:\nSystem.WindowsRuntimeSystemExtensions\nSystem.IO.WindowsRuntimeStorageExtensions\nSystem.IO.WindowsRuntimeStreamExtensions\nSystem.Runtime.InteropServices.WindowsRuntime.AsyncInfo\nSystem.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBuffer\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "5B23E03A432C75D8AA3D26E0679410A1A0D411D4C0C19FDD7AF79D7E9531187737848672A6DAE7CA6A5259C6C1E294E520CE80D575BBC2B29AA04FA4E8F6975B"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Runtime.WindowsRuntime@4.6.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/dotnet/corefx",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Runtime.WindowsRuntime.UI.Xaml@4.6.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Runtime.WindowsRuntime.UI.Xaml",
+
+ "version": "4.6.0",
+
+ "description": "Provides managed equivalents of Extensible Application Markup Language (XAML) UI types from Windows Runtime.\n\nCommonly Used Types:\nWindows.UI.Xaml.CornerRadius\nWindows.UI.Xaml.Duration\nWindows.UI.Xaml.DurationType\nWindows.UI.Xaml.GridLength\nWindows.UI.Xaml.GridUnitType\nWindows.UI.Xaml.Thickness\nWindows.UI.Xaml.Media.Matrix\nWindows.UI.Xaml.Media.Animation.KeyTime\nWindows.UI.Xaml.Media.Animation.RepeatBehavior\nWindows.UI.Xaml.Media.Animation.RepeatBehaviorType\nWindows.UI.Xaml.Media.Media3D.Matrix3D\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "667EF15A298E24E052F6074996452DE2B516135FBB592D18311DB702CEBCA82307B7C400C6D3973B3B32AB401445A3AC16CD65C2922321F58C8664B2CFF087BC"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Runtime.WindowsRuntime.UI.Xaml@4.6.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/dotnet/corefx",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Security.Cryptography.Algorithms@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Security.Cryptography.Algorithms",
+
+ "version": "4.3.0",
+
+ "description": "Provides base types for cryptographic algorithms, including hashing, encryption, and signing operations.\n\nCommonly Used Types:\nSystem.Security.Cryptography.Aes\nSystem.Security.Cryptography.RSA\nSystem.Security.Cryptography.RSAParameters\nSystem.Security.Cryptography.HMACSHA1\nSystem.Security.Cryptography.SHA256\nSystem.Security.Cryptography.SHA1\nSystem.Security.Cryptography.SHA512\nSystem.Security.Cryptography.SHA384\nSystem.Security.Cryptography.HMACSHA256\nSystem.Security.Cryptography.MD5\nSystem.Security.Cryptography.HMACSHA384\nSystem.Security.Cryptography.HMACSHA512\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "76645267093649C4B67FDB9DA16600A0F44A0FF5CAD16FE07DCF2A694462DCB1DF5A085A4E4B8E756AAB2577A5817A93EA44D01696AE9BF7B48A81F7D2A647D3"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Security.Cryptography.Algorithms@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Security.Cryptography.Encoding@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Security.Cryptography.Encoding",
+
+ "version": "4.3.0",
+
+ "description": "Provides types for representing Abstract Syntax Notation One (ASN.1)-encoded data.\n\nCommonly Used Types:\nSystem.Security.Cryptography.AsnEncodedData\nSystem.Security.Cryptography.Oid\nSystem.Security.Cryptography.OidCollection\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "36068EE2A81D1E4C1DCFCFD47C0381191E2ADDE9D92AFE68A7EAA8032F60A4FE4B61FBA8942DAD7FFDA8E7860D468727FA322CC7FD3CEA5C9424D788534C6A30"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Security.Cryptography.Encoding@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Security.Cryptography.Primitives@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Security.Cryptography.Primitives",
+
+ "version": "4.3.0",
+
+ "description": "Provides common types for the cryptographic libraries.\n\nCommonly Used Types:\nSystem.Security.Cryptography.ICryptoTransform\nSystem.Security.Cryptography.AsymmetricAlgorithm\nSystem.Security.Cryptography.SymmetricAlgorithm\nSystem.Security.Cryptography.HashAlgorithm\nSystem.Security.Cryptography.KeyedHashAlgorithm\nSystem.Security.Cryptography.HMAC\nSystem.Security.Cryptography.KeySizes\nSystem.Security.Cryptography.CryptographicException\nSystem.Security.Cryptography.CipherMode\nSystem.Security.Cryptography.PaddingMode\nSystem.Security.Cryptography.CryptoStream\nSystem.Security.Cryptography.CryptoStreamMode\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F1ADD634885492D6BF3CF1D479E345E81A0025CEEC7EE25D2C114ACD5C2F7D78C698B0DB3A11C4C5A840297A40C36FEFADA296E2DD9327BABABD5A5F18A507F5"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Security.Cryptography.Primitives@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Security.Cryptography.X509Certificates@4.3.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Security.Cryptography.X509Certificates",
+
+ "version": "4.3.0",
+
+ "description": "Provides types for reading, exporting and verifying Authenticode X.509 v3 certificates. These certificates are signed with a private key that uniquely and positively identifies the holder of the certificate.\n\nCommonly Used Types:\nSystem.Security.Cryptography.X509Certificates.X509Certificate2\nSystem.Security.Cryptography.X509Certificates.X509Certificate\nSystem.Security.Cryptography.X509Certificates.X509ContentType\nSystem.Security.Cryptography.X509Certificates.StoreLocation\nSystem.Security.Cryptography.X509Certificates.StoreName\nSystem.Security.Cryptography.X509Certificates.X509FindType\nSystem.Security.Cryptography.X509Certificates.X509ChainStatus\nSystem.Security.Cryptography.X509Certificates.X509Certificate2Collection\nSystem.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension\nSystem.Security.Cryptography.X509Certificates.X509Chain\n \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F6449AAAFD418555BCC64DE738B92FBB250200E00BD8829DA0F6AF505235A4ECB97486AF28C122397A233812959A8527641C452F7A5623C82A2B986A9F901F24"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "http://go.microsoft.com/fwlink/?LinkId=329770"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Security.Cryptography.X509Certificates@4.3.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Threading.Tasks.Extensions@4.5.4",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Threading.Tasks.Extensions",
+
+ "version": "4.5.4",
+
+ "description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\n\nCommonly Used Types:\nSystem.Threading.Tasks.ValueTask\u003CTResult\u003E\n \n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "F8BD8263AAADF427B26A1ACC4C116F3383B42C527FE43C6F11EABBBB62A575A0FEE0B688994BAD2034D32A0D32DB696EA6BD6FEBDF28675930FD0E9B88B80440"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Threading.Tasks.Extensions@4.5.4",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ },
+
+
+
+
+
+
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.ValueTuple@4.5.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.ValueTuple",
+
+ "version": "4.5.0",
+
+ "description": "Provides the System.ValueTuple structs, which implement the underlying types for tuples in C# and Visual Basic.\n\nCommonly Used Types:\nSystem.ValueTuple\nSystem.ValueTuple\u003CT1\u003E\nSystem.ValueTuple\u003CT1, T2\u003E\nSystem.ValueTuple\u003CT1, T2, T3\u003E\nSystem.ValueTuple\u003CT1, T2, T3, T4\u003E\nSystem.ValueTuple\u003CT1, T2, T3, T4, T5\u003E\nSystem.ValueTuple\u003CT1, T2, T3, T4, T5, T6\u003E\nSystem.ValueTuple\u003CT1, T2, T3, T4, T5, T6, T7\u003E\nSystem.ValueTuple\u003CT1, T2, T3, T4, T5, T6, T7, TRest\u003E\n \n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \nWhen using NuGet 3.x this package requires at least version 3.4.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "3F7BF29EEDCCA5A17F3DDD4A70823E5D84D64B61CA8D2BDD02E88661D25B3755D40724A1D7BF5D2687F44154579A1A5CAE3775EC7E7C800D5EDB3E4B314304CC"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "name": "Unknown - See URL",
+
+ "url": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.ValueTuple@4.5.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ }
+
+ ]
+
+ }
+
+ ],
+
+
+
+
+
+
+
+ "dependencies": [
+
+ {
+
+ "ref": "C:\\Users\\diman\\source\\HnVue\\HnVue@0.0.0",
+
+ "dependsOn": [
+
+ "pkg:nuget/BCrypt.Net@0.1.0",
+
+ "pkg:nuget/BouncyCastle.Cryptography@2.4.0",
+
+ "pkg:nuget/DocumentFormat.OpenXml@3.1.1",
+
+ "pkg:nuget/DocumentFormat.OpenXml.Framework@3.1.1",
+
+ "pkg:nuget/EntityFramework@6.4.4",
+
+ "pkg:nuget/fo-dicom.Desktop@4.0.8",
+
+ "pkg:nuget/Fody@6.6.2",
+
+ "pkg:nuget/HtmlRenderer.Core@1.5.0.5",
+
+ "pkg:nuget/HtmlRenderer.PdfSharp@1.5.0.6",
+
+ "pkg:nuget/InTheHand.BluetoothLE@4.0.37",
+
+ "pkg:nuget/log4net@2.0.14",
+
+ "pkg:nuget/Microsoft.Bcl.AsyncInterfaces@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.DependencyInjection@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.Logging@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.Options@6.0.0",
+
+ "pkg:nuget/Microsoft.Extensions.Primitives@6.0.0",
+
+ "pkg:nuget/Microsoft.NETCore.Platforms@7.0.0",
+
+ "pkg:nuget/Microsoft.Windows.SDK.Contracts@10.0.22621.2428",
+
+ "pkg:nuget/Newtonsoft.Json@13.0.1",
+
+ "pkg:nuget/OpenCvSharp4@4.9.0.20240103",
+
+ "pkg:nuget/OpenCvSharp4.runtime.win@4.9.0.20240103",
+
+ "pkg:nuget/PDFsharp@6.1.1",
+
+ "pkg:nuget/PropertyChanged.Fody@3.4.1",
+
+ "pkg:nuget/Stub.System.Data.SQLite.Core.NetFramework@1.0.116.0",
+
+ "pkg:nuget/System.Buffers@4.5.1",
+
+ "pkg:nuget/System.Data.SQLite@1.0.116.0",
+
+ "pkg:nuget/System.Data.SQLite.Core@1.0.116.0",
+
+ "pkg:nuget/System.Data.SQLite.EF6@1.0.116.0",
+
+ "pkg:nuget/System.Data.SQLite.Linq@1.0.116.0",
+
+ "pkg:nuget/System.Diagnostics.DiagnosticSource@6.0.0",
+
+ "pkg:nuget/System.Drawing.Common@7.0.0",
+
+ "pkg:nuget/System.IO@4.3.0",
+
+ "pkg:nuget/System.Memory@4.5.5",
+
+ "pkg:nuget/System.Net.Http@4.3.4",
+
+ "pkg:nuget/System.Numerics.Vectors@4.5.0",
+
+ "pkg:nuget/System.Runtime@4.3.0",
+
+ "pkg:nuget/System.Runtime.CompilerServices.Unsafe@6.0.0",
+
+ "pkg:nuget/System.Runtime.InteropServices.WindowsRuntime@4.3.0",
+
+ "pkg:nuget/System.Runtime.WindowsRuntime@4.6.0",
+
+ "pkg:nuget/System.Runtime.WindowsRuntime.UI.Xaml@4.6.0",
+
+ "pkg:nuget/System.Security.Cryptography.Algorithms@4.3.0",
+
+ "pkg:nuget/System.Security.Cryptography.Encoding@4.3.0",
+
+ "pkg:nuget/System.Security.Cryptography.Primitives@4.3.0",
+
+ "pkg:nuget/System.Security.Cryptography.X509Certificates@4.3.0",
+
+ "pkg:nuget/System.Threading.Tasks.Extensions@4.5.4",
+
+ "pkg:nuget/System.ValueTuple@4.5.0"
+
+ ]
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/BCrypt.Net@0.1.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/BouncyCastle.Cryptography@2.4.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/DocumentFormat.OpenXml.Framework@3.1.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/DocumentFormat.OpenXml@3.1.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/EntityFramework@6.4.4",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/fo-dicom.Desktop@4.0.8",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Fody@6.6.2",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/HtmlRenderer.Core@1.5.0.5",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/HtmlRenderer.PdfSharp@1.5.0.6",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/InTheHand.BluetoothLE@4.0.37",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/log4net@2.0.14",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Bcl.AsyncInterfaces@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.DependencyInjection@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.Logging@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.Options@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Extensions.Primitives@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.NETCore.Platforms@7.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Windows.SDK.Contracts@10.0.22621.2428",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Newtonsoft.Json@13.0.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/OpenCvSharp4.runtime.win@4.9.0.20240103",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/OpenCvSharp4@4.9.0.20240103",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/PDFsharp@6.1.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/PropertyChanged.Fody@3.4.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Stub.System.Data.SQLite.Core.NetFramework@1.0.116.0",
+
+"dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Buffers@4.5.1",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Data.SQLite.Core@1.0.116.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Data.SQLite.EF6@1.0.116.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Data.SQLite.Linq@1.0.116.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Data.SQLite@1.0.116.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Diagnostics.DiagnosticSource@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Drawing.Common@7.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.IO@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Memory@4.5.5",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Net.Http@4.3.4",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Numerics.Vectors@4.5.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Runtime.CompilerServices.Unsafe@6.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Runtime.InteropServices.WindowsRuntime@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Runtime.WindowsRuntime.UI.Xaml@4.6.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Runtime.WindowsRuntime@4.6.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Runtime@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Security.Cryptography.Algorithms@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Security.Cryptography.Encoding@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Security.Cryptography.Primitives@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Security.Cryptography.X509Certificates@4.3.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Threading.Tasks.Extensions@4.5.4",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.ValueTuple@4.5.0",
+
+ "dependsOn": []
+
+ }
+
+ ]
+
+}
+
+JSON of AXD
+
+{
+
+ "bomFormat": "CycloneDX",
+
+ "specVersion": "1.6",
+
+ "serialNumber": "urn:uuid:2605c3eb-af61-4609-a0db-588e1716b792",
+
+ "version": 1,
+
+ "metadata": {
+
+ "timestamp": "2025-07-24T07:31:27Z",
+
+ "tools": [
+
+ {
+
+ "vendor": "CycloneDX",
+
+ "name": "CycloneDX module for .NET",
+
+ "version": "5.0.1.0"
+
+ }
+
+ ],
+
+ "component": {
+
+ "type": "application",
+
+ "bom-ref": "Gen2Demo@0.0.0",
+
+ "name": "Gen2Demo",
+
+ "version": "0.0.0"
+
+ }
+
+ },
+
+ "components": [
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "Microsoft.Win32.SystemEvents",
+
+ "version": "8.0.0",
+
+ "description": "Provides access to Windows system event notifications.\n\nCommonly Used Types:\nMicrosoft.Win32.SystemEvents",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "25016C508653FBF463C52D8FC3D2773B7C211C2402C4EA7B4AA987FB29C851D3F80C5E7ABBCACE2D4D5E061AE290524E8029AFBC49A37D7E5186FE06AA4609B2"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://dot.net/",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/runtime",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "pkg:nuget/System.Drawing.Common@8.0.7",
+
+ "authors": [
+
+ {
+
+ "name": "Microsoft"
+
+ }
+
+ ],
+
+ "name": "System.Drawing.Common",
+
+ "version": "8.0.7",
+
+ "description": "Provides access to GDI\u002B graphics functionality.\n\nCommonly Used Types:\nSystem.Drawing.Bitmap\nSystem.Drawing.BitmapData\nSystem.Drawing.Brush\nSystem.Drawing.Font\nSystem.Drawing.Graphics\nSystem.Drawing.Icon\n\nSince .NET 7, non-Windows platforms are not supported, even with the runtime configuration switch. See https://aka.ms/systemdrawingnonwindows for more information.",
+
+ "scope": "required",
+
+ "hashes": [
+
+ {
+
+ "alg": "SHA-512",
+
+ "content": "1A527AFAC8C5DC6C622F98F6F2E9815734DA515E3A11428B69FCD0A4726883918C0942B2A54653BA1381BDD1CB5985EBA5090C81E9BE3087D72E51308D40E7FD"
+
+ }
+
+ ],
+
+ "licenses": [
+
+ {
+
+ "license": {
+
+ "id": "MIT"
+
+ }
+
+ }
+
+ ],
+
+ "copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+ "purl": "pkg:nuget/System.Drawing.Common@8.0.7",
+
+ "externalReferences": [
+
+ {
+
+ "url": "https://github.com/dotnet/winforms",
+
+ "type": "website"
+
+ },
+
+ {
+
+ "url": "https://github.com/dotnet/winforms",
+
+ "type": "vcs"
+
+ }
+
+ ]
+
+ },
+
+ {
+
+ "type": "library",
+
+ "bom-ref": "Gen2.Imaging@1.0.0",
+
+ "name": "Gen2.Imaging",
+
+ "version": "1.0.0",
+
+ "scope": "required"
+
+ }
+
+ ],
+
+ "dependencies": [
+
+ {
+
+ "ref": "Gen2Demo@0.0.0",
+
+ "dependsOn": [
+
+ "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+
+ "pkg:nuget/System.Drawing.Common@8.0.7"
+
+ ]
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+
+ "dependsOn": []
+
+ },
+
+ {
+
+ "ref": "pkg:nuget/System.Drawing.Common@8.0.7",
+
+ "dependsOn": [
+
+ "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0"
+
+ ]
+
+ },
+
+ {
+
+ "ref": "Gen2.Core@0.0.0",
+
+ "dependsOn": [
+
+ "Gen2.Imaging@1.0.0"
+
+ ]
+
+ },
+
+ {
+
+ "ref": "Gen2.Imaging@1.0.0",
+
+ "dependsOn": []
+
+ }
+
+ ]
+
+}
+
+JSON of Detector
+
+{
+
+ "bomFormat": "CycloneDX",
+
+ "specVersion": "1.6",
+
+ "serialNumber": "urn:uuid:6f912eb8-2a32-49f5-ac94-68079e7fe9f6",
+
+ "version": 1,
+
+ "metadata": {
+
+ "timestamp": "2025-07-24T07:08:49Z",
+
+ "tools": [
+
+ {
+
+ "vendor": "CycloneDX",
+
+ "name": "CycloneDX module for .NET",
+
+ "version": "5.0.1.0"
+
+ }
+
+ ],
+
+ "component": {
+
+ "type": "application",
+
+ "bom-ref": "Gen2Server@0.0.0",
+
+ "name": "Gen2Server",
+
+ "version": "0.0.0"
+
+ }
+
+ },
+
+ "components": [],
+
+ "dependencies": [
+
+ {
+
+ "ref": "Gen2Server@0.0.0",
+
+ "dependsOn": []
+
+ }
+
+ ]
+
+}
+
+SW Supply Chain Security System Diagnosis and SBOM Analysis Results Report
+
+The above Software library (2. SBOM list and Support Lifecycle), which includes both the library and open source used in the console application and the detector/firmware, was evaluated for commonly known vulnerabilities and CVE (Common Vulnerabilities and Exposures) on a site that can be verified as open source using the three tools below, and it was confirmed that "there are no known vulnerabilities." This analysis was conducted through the Korea Internet & Security Agency (KISA) Software Supply Chain Department.
+
+Diagnostic tool: 3 types of diagnostic tools
+
+Sparrow SCA, BlackDuck, Mend
+
+Diagnostic result: No weakest content in the diagnostic result
+
+Diagnostic Results
+
+-. Number of detected components: Total number of components discovered
+
+-. Number of vulnerable components: Number of components with 1 or more CVE vulnerabilities discovered
+
+-. Number of security vulnerabilities: Total number of security vulnerabilities discovered (based on CVE)
+
+-. Ratio of vulnerable components: (Number of vulnerable components/Number of detected components)*100(%)
+
+ Detection Results (No Results)
+
+Vulnerability Component items(no results)

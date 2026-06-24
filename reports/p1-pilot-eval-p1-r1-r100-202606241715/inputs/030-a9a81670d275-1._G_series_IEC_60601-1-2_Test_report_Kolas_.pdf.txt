@@ -1,0 +1,3329 @@
+queueId: ingest-1781569954420-18te
+sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/91_인증 - 국내/02. G series + CYAN/3. 보완(제출)★/★보완제출문서/03 기술문서 심사에 관한 자료/03 제품의 성능 및 안전을 확인하기 위한 자료 (Rev)/02 전자파안전에 관한 자료/1. [G series] IEC 60601-1-2 Test report (Kolas).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/ce7a49994126/1. [G series] IEC 60601-1-2 Test report (Kolas)__ce7a49994126_combined.txt
+canonicalGroupId: a9a81670d275
+productSignal: CYAN
+authoritySignal: MFDS/domestic
+pilotRank: 30
+
+SOURCE_TEXT
+TEST REPORT
+Report No. : KES-EM244316
+Page 1 / 119
+KES Co., Ltd.
+#3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-
+gu, Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+Tel : +82-31-425-6200, Fax : +82-31-341-3838
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1. Client
+○ Name : H&abyz Co., Ltd.
+○ Address : 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si, Gyeonggi-do,
+Republic of Korea
+2. Sample Description
+○ Test item : Digital Flat Panel X-ray Detector
+○ Model name : G1417CW
+○ Variant model : G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP,
+G1717FW, G1717FWP
+○ Manufacturer etc. : H&abyz Co., Ltd.
+○ Manufacturer Address : 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea
+3. Date of test : Jan. 11, 2025 ~ Jan. 19, 2025
+4. Location of Test : ■ Permanent Testing Lab □ On Site Testing
+○ Address : 473-21, Gayeo-ro, Yeoju-si, Gyeonggi-do, 12658, Korea
+5. Test method used : CISPR 11:2015+A1:2016+A2:2019, IEC 60601-1-2:2014+A1:2020,
+IEC 61000-3-2:2018+A1:2020, IEC 61000-3-3:2013+A1:2017,
+EN 55011:2016/A2:2021, EN 60601-1-2:2015/A1:2021,
+EN IEC 61000-3-2:2019, EN 61000-3-3:2013+A1:2019
+6. Test result : Test result reference
+The results shown in this test report refer only to the sample(s) tested unless otherwise stated.
+This laboratory is not accredited for the test results Marked *
+Affirmation
+Tested by Technical manager
+Name : Se Heon, Kim (Signature) Name : Seong Min, Choi (Signature)
+The above test report provides test result(s) under the scope accredited by Korea Laboratory Accreditation
+Scheme (KOLAS), which signed the ILAC-MRA.
+2025. 02. 20.
+KES Co., Ltd.
+Accredited by KOLAS, Republic of KOREA
+
+Report No. : KES-EM244316 Page 2 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+REPORT REVISION HISTORY
+Date Test Report No. Revision History
+Feb. 20, 2025 KES-EM244316 Issued
+This report shall not be reproduced except in full, without the written approval of KES Co., Ltd. This
+document may be altered or revised by KES Co., Ltd. personnel only, and shall be noted in the
+revision section of the document. Any alteration of this document not carried out by KES Co., Ltd.
+will constitute fraud and shall nullify the document.
+
+Report No. : KES-EM244316 Page 3 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+TABLE OF CONTENTS
+1.0 General Product Description................................................................................................................... 5
+1.1 Test Voltage & Frequency ....................................................................................................................... 6
+1.2 Alternate Model Differences ................................................................................................................... 6
+1.3 Device Modifications ............................................................................................................................... 6
+1.4 Equipment Under Test ............................................................................................................................ 6
+1.5 Support Equipments ............................................................................................................................... 6
+1.6 External I/O Cabling ................................................................................................................................ 7
+1.7 EUT Operating Mode(s) .......................................................................................................................... 8
+1.8 Basic Safety, Essential Performance and Immunity Pass/Fail Criteria as determined by the
+Manufacturer ...................................................................................................................................................... 9
+1.9 Compliance Summary ............................................................................................................................ 9
+1.10 Configuration ........................................................................................................................................ 20
+1.11 Remarks when standards applied ........................................................................................................ 22
+1.12 Calibration Details of Equipment Used for Measurement .................................................................... 22
+1.13 Test Facility ........................................................................................................................................... 22
+1.14 Laboratory Accreditations and Listings ................................................................................................. 22
+2.0 Test Regulations ................................................................................................................................... 23
+3.0 Emissions Test ...................................................................................................................................... 25
+3.1 Conducted Emissions at Mains Power Ports ........................................................................................ 25
+3.2 Conducted Emissions at Telecommunication Ports .............................................................................. 27
+3.3 Radiated Electric Field Emissions(Below 1 ㎓).................................................................................... 28
+3.4 Harmonic Current Emissions ................................................................................................................ 30
+3.5 Voltage Fluctuations and Flicker ........................................................................................................... 31
+4.0 Immunity Test ........................................................................................................................................ 32
+4.1 Electrostatic Discharge ......................................................................................................................... 32
+4.2 Radiated Electric Field Immunity .......................................................................................................... 39
+4.3 Immunity to Proximity fields from RF wireless communications equipment ......................................... 42
+4.4 Immunity to proximity magnetic fields in the frequency range 9 ㎑ to 13,56 ㎒ ......................................... 49
+4.5 Electrical Fast Transients/Bursts .......................................................................................................... 54
+4.6 Surge Transients ................................................................................................................................... 57
+4.7 Conducted Disturbance ........................................................................................................................ 60
+4.8 Power Frequency Magnetic Field Immunity ......................................................................................... 64
+4.9 Voltage Dips and Short Interruptions .................................................................................................... 67
+APPENDIX A – TEST DATA ............................................................................................................................ 69
+Conducted Emissions at Mains Power Ports................................................................................................... 69
+Conducted Emissions at Telecommunication Ports......................................................................................... 77
+Radiated Electric Field Emissions(Below 1 ㎓)............................................................................................... 78
+Harmonic Current Emissions and Voltage Fluctuations and Flicker ............................................................... 84
+Test Setup Photos and Configuration .............................................................................................................. 89
+Conducted Emissions at Mains Power Ports................................................................................................... 89
+Conducted Emissions at Telecommunication Ports......................................................................................... 90
+Radiated Electric Field Emissions(Below 1 ㎓)............................................................................................... 91
+Harmonic Current Emissions and Voltage Fluctuations and Flicker ............................................................... 92
+Electrostatic Discharge .................................................................................................................................... 95
+Radiated Electric Field Immunity ..................................................................................................................... 96
+Immunity to Proximity fields from RF wireless communications equipment .................................................... 97
+Immunity to proximity magnetic fields in the frequency range 9 ㎑ to 13,56 ㎒ .......................................... 100
+Electrical Fast Transients/Bursts ................................................................................................................... 103
+Surge Transients ............................................................................................................................................ 105
+Conducted Disturbance ................................................................................................................................. 107
+Power Frequency Magnetic Field Immunity .................................................................................................. 107
+Voltage Dips and Short Interruptions .............................................................................................................. 110
+EUT External Photographs ............................................................................................................................. 111
+
+Report No. : KES-EM244316 Page 4 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+ANNEX 1 EMC (Electromagnetic Compatibility) Information ......................................................................... 115
+ANNEX 2 Guidance: Test Plan ....................................................................................................................... 117
+
+Report No. : KES-EM244316 Page 5 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.0 General Product Description
+Main Specifications of EUT are:
+Item Specifications
+G1417 Series G1717 Series
+Model Name G1417CW G1417CWP G1417FW G1417FWP G1717CW G1717CWP G1717FW G1717FWP
+CsI Deposition
+Thickness 300μm 500μm 300μm 500μm 300μm 500μm 300μm 500μm
+Image Sensor PIN-TFT
+(a-Si, IGZO)
+Flexible PIN-TFT
+(a-Si, IGZO)
+PIN-TFT
+(a-Si, IGZO)
+Flexible PIN-TFT
+(a-Si, IGZO)
+X-ray Scintillator
+Type Csl
+Pixel Pitch 140 ㎛
+Field of View 14 x 17 inch 17 x 17 inch
+Effective Area 350 x 427.3 mm 425.6 x 425.6 mm 430.1 x 430.1 mm
+Effective Array 2500 x 3052 3040 x 3040 3072 x 3072
+Grayscale 14, 16bit
+Spatial Resolution 3.57lp/mm
+Image Acquisition
+Time
+(Wired)
+~3sec
+Image Acquisition
+Time
+(Wireless)
+~4sec
+Cycle Time 8sec
+IP Range IP68
+Power Supply
+Powered from Gender via tether interface Cable: DC 15V, Max 2.0A
+Powered via AC-DC adaptor: DC 15V, Max 6.0A
+Powered via Battery Recharger: DC 19V, Max 3.0A
+Powered via 2 battery packs: DC 9~12.6, Max 77.9W
+Power
+Consumption
+Max 22.5W (w/o battery charged)
+Max 52.5W (when recharging battery)
+Dimensions
+(H x W x D) 384.5 ㎜ x 460.5 ㎜ x 15.7 ㎜ 460.5 ㎜ x 460.5 ㎜ x 15.7 ㎜
+Weight
+(Maximum) 3.1kg 3.3kg 2.9kg 3.1kg 3.6kg 3.8kg 3.4kg 3.6kg
+Battery packs lose capacity as they age. This may reduce the operating time of the detector.
+
+Report No. : KES-EM244316 Page 6 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.1 Test Voltage & Frequency
+Unless indicated otherwise on the individual data sheet or test results, the test voltage and
+frequency was as indicated below.
+AC 120 V, 60 ㎐ AC 220 V, 60 ㎐ AC 230 V, 50 ㎐ Battery
+1.2 Variant Model Differences
+Image sensor (Panel):
+G1417CW/G1717CW/G1417CWP/G1717CWP: PIN-TFT
+G1417FW/G1717FW/G1417FWP/G1717FWP: Flexible PIN-TFT
+Size:
+G1417CW/G1417FW/G1417CWP/G1417FWP: 384.5*460.5*15.7㎜
+G1717CW/G1717FW/G1717CWP/G1717FWP: 460.5*460.5*15.7㎜
+CsI Deposition Thickness:
+G1417CW/G1717CW/G1417FW/G1717FW: 300μm
+G1417CWP/G1717CWP/G1417FWP/G1717FWP: 500μm
+1.3 Device Modifications
+Not applicable
+1.4 Equipment Under Test
+Description Model Number Serial Number Manufacturer Remarks
+Digital Flat Panel X-ray
+Detector G1417CW - H&abyz Co., Ltd. EUT
+AC/DC Adapter BM090S15F - Wendeng Jeil Electronics EUT
+Converter - - H&abyz Co., Ltd. EUT
+Battery - - - EUT
+1.5 Support Equipments
+Description Model Number Serial Number Manufacturer Remarks
+Notebook 15U480 - LG Electronics -
+Notebook Adapter A13-040N3A - CHICONY -
+Wireless Router A2004MU - ipTime -
+Wireless Router AC/DC
+Adapter DCP024B121000K - ZIONCOM ELECTRONICS
+(SHENZHEN) LTD. -
+
+Report No. : KES-EM244316 Page 7 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.6 External I/O Cabling
+■ mode 1
+Start END Cable Spec.
+Description I/O Port Description I/O Port Length Shield
+Flat Panel Digital X-ray
+Detector
+(EUT)
+17 Pin Converter
+(EUT) 17 Pin 5.0 S
+Converter
+(EUT)
+DC Jack AC/DC Adapter
+(EUT) DC Jack 1.5 U
+RJ-45 Notebook RJ-45 10.0 S
+Notebook DC Jack Notebook
+AC/DC Adapter DC Jack 1.6 U
+• Unshielded = U, Shielded = S
+■ mode 2
+Start END Cable Spec.
+Description I/O Port Description I/O Port Length Shield
+Flat Panel Digital X-ray
+Detector
+(EUT)
+17 Pin Converter
+(EUT) 17 Pin 5.0 S
+Converter
+(EUT) RJ-45 Notebook RJ-45 10.0 S
+Notebook DC Jack Notebook
+AC/DC Adapter DC Jack 1.6 U
+• Unshielded = U, Shielded = S
+■ mode 3, mode 4
+Start END Cable Spec.
+Description I/O Port Description I/O Port Length Shield
+Flat Panel Digital X-ray
+Detector
+(EUT)
+Wireless Wireless Router Wireless - -
+Notebook
+Wireless Wireless Router Wireless - -
+DC Jack Notebook
+AC/DC Adapter DC Jack 1.6 U
+Wireless Router DC Jack Wireless Router
+AC/DC Adapter DC Jack 1.8 U
+• Unshielded = U, Shielded = S
+
+Report No. : KES-EM244316 Page 8 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.7 EUT Operating Mode(s)
+Equipment under test was operated during the measurement under the following conditions:
+Test No. Test mode Operating Test Voltages
+mode 1 Charging &
+Operating
+- Checked the charging status through LCD of the product.
+- After connecting the EUT to the Notebook, it operated
+continuously using the program.
+- Checked the network status through Ping test on the
+Notebook.
+AC 120 V, 60 ㎐,
+AC 220 V, 60 ㎐,
+AC 230 V, 50 ㎐
+mode 2 Battery &
+Operating
+- After connecting the EUT to the Notebook, it operated
+continuously using the program.
+- Checked the network status through Ping test on the
+Notebook.
+Battery
+mode 3 Battery &
+WLAN 2.4 ㎓
+- After connecting the EUT wirelessly to the Wireless Router, it
+is operated continuously using the program.
+- Checked the network status through Ping test on the
+Notebook.
+Battery
+mode 4 Battery &
+WLAN 5 ㎓
+- After connecting the EUT wirelessly to the Wireless Router, it
+is operated continuously using the program.
+- Checked the network status through Ping test on the
+Notebook.
+Battery
+EUT Test operating S/W
+Name Version Manufacture Company
+Gen2 Demo - H&abyz Co., Ltd.
+
+Report No. : KES-EM244316 Page 9 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.8 Basic Safety, Essential Performance and Immunity Pass/Fail
+Criteria as determined by the Manufacturer
+Description of Basic Safety and Essential Performance
+The essential performance for Digital Flat Panel X-ray Detector during EMC test was defined as
+follows.
+- Operation normally when operation is required
+- DC power is consistently supplied from Power solution #1 or #2 when EMC test is performed.
+- When connected to Power solution #1 or #2, program provided by manufacturer is operated
+normally.
+- Acquisition image is obtained as intended.
+Description how the Basic Safety and Essential Performance were monitored during
+each test
+During each EMC test, we monitored visually whether the device can operate and transmit the
+stored information including the essential performance items listed below.
+- Operation normally when operation is required
+- DC power is consistently supplied from Power solution #1 or #2 when EMC test is performed.
+- When connected to Power solution #1 or #2, program provided by manufacturer is operated
+normally.
+- Acquisition image is obtained as intended.
+Immunity Pass/Fail Criteria
+- Operation normally when operation is required
+- DC power is consistently supplied from Power solution #1 or #2 when EMC test is performed.
+- When connected to Power solution #1 or #2, program provided by manufacturer is operated
+normally.
+- Acquisition image is obtained as intended.
+Specific, detailed IMMUNITY pass/fail criteria, shall be based on applicable part two standards
+
+or RISK MANAGEMENT, for IMMUNITY with regard to EM DISTURBANCES. There pass/fail
+criteria shall be included in the RISK MANAGEMENT FILE
+
+Report No. : KES-EM244316 Page 10 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.9 Compliance Summary
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+4 GENERAL REQUIREMENTS
+4.1 RISKS resulting from reasonably foreseeable
+ELECTROMAGNETIC DISTURBANCES taken into
+account in the RISK MANAGEMENT PROCESS.
+RMF Reference Document
+Plan: A-TCF-10-103
+Report: A-TCF-10-104
+FMEA: A-TCF-10-105
+PASS
+4.2 Non-ME EQUIPMENT used in an ME SYSTEM
+Check 16.1 of general standard, checked by
+inspection of the RISK MANAGEMENT FILE and
+OBJECTIVE EVIDENCE of compliance with the
+respective EMC standards, or by the tests of this
+collateral standard
+N/A
+non-ME EQUIPMENT used in an ME SYSTEM
+complies with IEC and ISO EMC standards
+applicable to that EQUIPMENT, checked by
+inspection of the RISK MANAGEMENT FILE and
+OBJECTIVE EVIDENCE of compliance with the
+respective EMC standards, or by the tests of this
+collateral standard
+N/A
+non- ME EQUIPMENT used in an ME SYSTEM for
+which the intended EM ENVIRONMENT could result
+in the loss of BASIC SAFETY or ESSENTIAL
+PERFORMANCE of the ME SYSTEM due to the non-
+ME EQUIPMENT tested according to the
+requirements of this collateral standard, checked
+by inspection of the RISK MANAGEMENT FILE and
+OBJECTIVE EVIDENCE of compliance with the
+respective EMC standards, or by the tests of this
+collateral standard
+N/A
+4.3.1 Configurations
+ME EQUIPMENT and ME SYSTEMS tested in
+representative configurations, consistent with
+INTENDED USE, that are most likely to result in
+unacceptable RISK as determined by the
+MANUFACTURER (This was determined using RISK
+ANALYSIS, experience, engineering analysis, or
+pretesting). Compliance checked by inspection of
+the test report and the RISK MANAGEMENT FILE.
+RMF Reference Document
+Plan: A-TCF-10-103
+Report: A-TCF-10-104
+FMEA: A-TCF-10-105
+PASS
+4.3.3 Power input and frequencies AC (100 ~ 240) V, 50/60Hz PASS
+5 IDENTIFICATION, MARKING AND DOCUMENTS
+
+Report No. : KES-EM244316 Page 11 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+5.1 Additional requirements for marking on the outside of ME EQUIPMENT and ME
+SYSTEMS specified for use only in a shielded location SPECIAL ENVIRONMENT
+ME EQUIPMENT and ME SYSTEMS specified for use
+only in a shielded location SPECIAL ENVIRONMENT
+labelled with a CLEARLY LEGIBLE warning that they
+should be used only in the specified type of
+shielded location
+N/A N/A
+5.2 ACCOMPANYING DOCUMENTS
+5.2.1 Instructions for use
+5.2.1.1 General
+a) A statement of the environments for which the ME
+EQUIPMENT or ME SYSTEM is suitable. Relevant
+exclusions determined by RISK ANALYSIS, are
+listed.
+Refer to intended used in
+user manual PASS
+b) The ESSENTIAL PERFORMANCE of ME EQUIPMENT
+and a description of what the operator can expect
+if the ESSENTIAL PERFORMANCE is lost or degraded
+due to EM disturbances.
+Refer to Warning Message in
+user manual PASS
+c) A warning regarding stacking and location close
+to other EQUIPMENT
+Refer to user manual PASS
+d) List of cables, transducers and accessories Refer to user manual PASS
+e) A warning that other cables and accessories may
+negatively affect EMC performance
+Refer to user manual PASS
+f) A statement that portable RF communications
+EQUIPMENT including antennas, can effect
+medical electrical EQUIPMENT. The warning
+includes a use distance such as “…be used no
+closer than 30 cm (12 inches) to any part of the
+[ME EQUIPMENT or ME SYSTEM], including cables
+specified by manufacturer”
+PASS
+5.2.1.2 Requirements applicable to ME EQUIPMENT and ME SYSTEMS classified class A
+according to CISPR 11
+
+Report No. : KES-EM244316 Page 12 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+FOR ME EQUIPMENT and ME SYSTEMS that are
+classified as class A according to CISPR 11,
+the instructions for use include the following
+note:
+NOTE: “The EMISSIONS characteristics of this equi
+pment make it suitable for use in industrial area
+s and hospitals (CISPR 11 class A). If it is used
+in a residential environment (for which CISPR 11
+class B is normally required) this equipment mig
+ht not offer adequate protection to radio-frequenc
+y communication services. The user might need
+to take mitigation measures, such as relocating
+or re-orienting the equipment.”
+Refer to Warning Massage in
+user manual.
+PASS
+5.2.2 Technical description
+5.2.2.1 Requirements applicable to all ME EQUIPMENT and ME SYSTEMS
+The technical description describes precautions
+to be taken to prevent adverse events to the
+PATIENT and Operator due to electromagnetic
+disturbances
+PASS
+a) Compliance for each EMISSIONS and IMMUNITY
+standard or test specified by this collateral
+standard, e.g. EMISSIONS class and group and
+IMMUNITY TEST LEVEL
+PASS
+b) Any deviations from this collateral standard and
+allowances used
+N/A
+c) All necessary instructions for maintaining BASIC
+SAFETY and ESSENTIAL PERFORMANCE with regard
+to ELECTROMAGNETIC DISTURBANCES for the
+EXPECTED SERVICE LIFE
+PASS
+5.2.2.2 Requirements applicable to ME EQUIPMENT specified for use only in shielded location
+SPECIAL ENVIRONMENT
+The technical description includes the following information:
+a) A warning to the effect that:
+WARNING: Failure to use this EQUIPMENT in the
+specified type of shielded location could result in
+degradation of performance, interference with
+other equipment or interference with radio
+services
+N/A
+
+Report No. : KES-EM244316 Page 13 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+b) Specifications for shielded location including:
+– minimum RF shielding effectiveness;
+– for each cable that enters or exits the shielded
+location, the minimum RF filter attenuation; and
+– the frequency range(s) over which the
+specifications apply
+N/A
+c) Test methods for measurement of RF shielding
+effectiveness and RF filter attenuation
+N/A
+d) One or more of the following and a
+recommendation that a notice containing this
+information be posted at the entrance(s) to the
+shielded location:
+– a specification of the EMISSIONS characteristics
+of other EQUIPMENT allowed inside the shielded
+location with the ME EQUIPMENT or ME SYSTEM;
+– a list of specific EQUIPMENT allowed;
+– a list of types of EQUIPMENT prohibited.
+N/A
+5.2.2.3 Requirements applicable to ME EQUIPMENT that
+intentionally receive RF electromagnetic energy
+include the following
+information
+..............................................................................
+:
+- each frequency or frequency of reception,
+- the preferred frequency or frequency band, if
+applicable, and
+- the bandwidth of the receiving section of the ME
+Equipment in those bands
+N/A
+5.2.2.4 Requirements applicable to the ME EQUIPMENT
+that include RF transmitters the technical
+description includes the frequency or frequency
+band of transmission, the type and frequency
+characteristics of the modulation and the
+EFFECTIVE RADIATED POWER
+(ERP)
+..............................................................................
+:
+N/A
+5.2.2.5 Requirements applicable to PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME
+SYSTEMS
+The technical description includes the following information:
+
+Report No. : KES-EM244316 Page 14 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+a) A statement that an exemption has been used
+and that the EQUIPMENT has not been tested fo
+r radiated RF IMMUNITY over the entire frequenc
+y range 80 MHz to 6 GHz
+N/A
+b) WARNING: “This EQUIPMENT has been tested f
+or radiated RF IMMUNITY only at selected freque
+ncies, and use nearby of emitters at other freq
+uencies could result in improper operation”
+N/A
+c) A list of the frequencies and modulations used
+to test the IMMUNITY of the ME EQUIPMENT or M
+E SYSTEMS
+N/A
+5.2.2.6 Requirements applicable to ME EQUIPMENT that claim compatibility with HF
+Surgical EQUIPMENT
+Technical description includes a statement of HF
+SURGICAL EQUIPMENT compatibility and the
+conditions of INTENDED USE during HF Surgery
+N/A
+6.1 Documentation of tests – General
+The documentation of tests contains all
+information necessary to facilitate adequate
+planning (test plan) and execution of tests
+PASS
+6.2 Test Plan
+Prior to the start of formal testing, a detailed test
+plan provided to the test laboratory.
+(Note: title / name / version of test plan in remark
+section)
+PASS
+7 Electromagnetic EMISSIONS requirements for ME EQUIPMENT and ME SYSTEMS
+7.1.1 Protection of radio services and other equipment – General
+Unless otherwise specified herein, ME EQUIPMENT
+and ME SYSTEMS complies with CISPR 11
+PASS
+7.1.2 Operating modes PASS
+During Emission testing, ME EQUIPMENT or ME
+SYSTEM tested in the modes that maximize
+Emissions. In addition to active modes, the
+inclusion of standby mode was considered. The
+operating modes selected for testing documented
+in the test plan and documented in the test report
+PASS
+7.1.3 Multimedia Equipment
+
+Report No. : KES-EM244316 Page 15 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+Multimedia equipment connected to ME
+EQUIPMENT or ME SYSTEM complies with CISPR
+32. If CISPR 32 class A equipment is supplied as
+part of the ME SYSTEM classified class A
+N/A
+7.1.4 Subsystems
+Compliance with CISPR 11 demonstrated by
+testing each subsystem of an ME SYSTEM on a
+subsystem basic, provided the requirements of
+CISPR 11 for evaluation of EQUIPMENT that
+interacts with other equipment to form a system
+are met
+N/A
+7.1.5 ME EQUIPMENT and ME SYSTEMS specified for use only in a shielded location
+SPECIAL ENVIRONMENT
+For ME EQUIPMENT and ME SYSTEMS that are
+specified for use only in a shielded location
+SPECIAL ENVIRONMENT, the electromagnetic
+radiation disturbance limits of CISPR 11 may be
+increased, when tests are performed on a test
+site, by an amount up to the applicable specified
+value of minimum RF shielding effectiveness,
+provided the minimum RF shielding effectiveness
+specification
+N/A
+For ME EQUIPMENT and ME SYSTEMS that are
+specified for use only in a shielded location
+SPECIAL ENVIRONMENT, the mains terminal
+disturbance voltage limits of CISPR 11 may be
+increased, when tests are performed on a test
+site, by an amount up to the applicable specified
+value of minimum RF filter attenuation for all
+cables that enter or exit the shielded location,
+provided the minimum RF filter attenuation
+specification
+N/A
+a) The specified RF shielding effectiveness and RF
+filter attenuation:
+- expressed in dB;
+- rounded to the nearest integer; and
+- at least 20 dB
+N/A
+b) The RF shielding effectiveness and RF filter
+attenuation specification include the frequency
+range over which the RF shielding effectiveness
+and RF filter attenuation apply, and this
+frequency range is at least one decade in width
+N/A
+
+Report No. : KES-EM244316 Page 16 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+c) The specified value(s) for minimum RF filter
+attenuation are identical to the specified value(s)
+for minimum RF shielding effectiveness in each
+frequency range for which they are specified
+N/A
+d) In frequency ranges for which the minimum RF
+shielding effectiveness and RF filter attenuation
+are not specified or are specified to be less than
+20 dB, the RF shielding effectiveness and RF
+filter attenuation assumed to be 0 dB for the
+purpose of this collateral standard
+N/A
+7.1.6 ME EQUIPMENT and ME SYSTEMS that include radio equipment
+ME EQUIPMENT and ME SYSTEMS that include radio
+equipment (e.g. RF transmitters, receivers,
+transceivers) and have been tested together with
+the radio equipment and found to comply with
+applicable national radio regulations are exempt
+from testing to CISPR ELECTROMAGNETIC
+DISTURBANCE requirements
+N/A
+7.1.7 ME EQUIPMENT whose main functions are performed by motors and switching
+or regulating devices
+ME EQUIPMENT whose main functions are
+performed by motors and switching or regulating
+devices may be classified in accordance with
+CISPR 14-1
+N/A
+7.1.8 ME EQUIPMENT and ME SYSTEMS containing X-ray generators
+For diagnostic X-ray generators and ME SYSTEMS
+that include X-ray generators operating in
+INTERMITTENT MODE, the quasi-peak limits to
+discontinuous radiated and conducted
+DISTURBANCES can be relaxed by 20 dB
+N/A
+7.1.12 PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME SYSTEMS
+PERMANENTLY INSTALLED LARGE ME EQUIPMENT
+and LARGE ME SYSTEMS was TYPE TESTED by at
+least one of the following methods:
+- on a test site as a system;
+- on a test site on a subsystem basis;
+- in situ as a system at the premises of a
+RESPONSIBLE ORGANIZATION
+N/A
+
+Report No. : KES-EM244316 Page 17 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+TEST METHOD SELECTED N/A
+7.2 Protection of the PUBLIC MAINS NETWORK
+7.2.1 Harmonic distortion
+If the ME EQUIPMENT OR ME SYSTEMS has a PUBLIC
+MAINS NETWORK it complies with the requirements
+of IEC 61000-3-2
+PASS
+7.2.2 Voltage fluctuations and flicker
+If the ME EQUIPMENT AND ME SYSTEMS has a
+PUBLIC MAINS NETWORK it complies with the
+requirements of IEC 61000-3-3.
+PASS
+7.3 Emissions requirements summary
+Emission limits per environment PASS
+8 Electromagnetic IMMUNITY requirements for ME EQUIPMENT and ME SYSTEMS
+For ME EQUIPMENT and ME SYSTEMS for which the
+INTENDED USE includes types of transportation or
+other locations as in the HOME HEALTHCARE
+ENVIRONMENT if additional IMMUNITY tests or
+IMMUNITY TEST LEVELS that are higher these
+additional tests to these higher IMMUNITY TEST
+LEVELS are documented
+N/A
+ME EQUIPMENT or ME SYSTEMS intended for use in
+the EMERGENCY MEDICAL SERVICES ENVIRONMENT
+for the HOME HEALTHCARE ENVIRONMENT. If
+locations in the EMERGENCY MEDICAL SERVICES
+ENVIRONMENT are identified for which the
+specifications are for the HOME HEALTHCARE
+ENVIRONMENT are not adequate, then Annexe E
+may be used to determine appropriate IMMUNITY
+TEST LEVELS
+N/A
+Before IMMUNITY testing begins, the
+MANUFACTURER determined specific, detailed
+IMMUNITY Pass/Fail criteria, based on applicable
+part two standards or RISK MANAGEMENT, for BASIC
+SAFETY and ESSENTIAL PERFORMANCE with regard
+to EM DISTURBANCES. The Pass/Fail criteria and
+the monitoring specification are included in the
+test plan, in the test report and in the RISK
+MANAGEMENT FILE
+PASS
+
+Report No. : KES-EM244316 Page 18 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+8.2 PATIENT physiological simulation
+If a PATIENT simulation is required to verify normal
+operation of the ME EQUIPMENT or ME SYSTEM, it
+was provided during IMMUNITY testing
+N/A
+Prior to the beginning of the test, the amplitude of
+simulated PATIENT physiological signals were
+adjusted to be consistent with normal operation
+of the ME EQUIPMENT or ME SYSTEM, as specified
+by the MANUFACTURER
+N/A
+8.5 Subsystems N/A
+When subsystems are tested to demonstrate
+compliance normal operating conditions are
+simulated
+N/A
+The RISK MANAGEMENT PROCESS used to
+determine whether subsystem testing is allowed.
+N/A
+8.6 PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME SYSTEMS
+PERMANENTLY INSTALLED LARGE ME EQUIPMENT and LARGE ME SYSTEMS were TYPE
+TESTED by at least one of the following methods:
+– on a test site as a system;
+– on a test site on a subsystem basis;
+– in situ as a system at the premises of a
+RESPONSIBLE ORGANIZATION
+N/A
+Test Method selected N/A
+8.7 Operating Modes
+Operating Modes and settings PASS
+8.8 Non-ME EQUIPMENT N/A
+Non-ME EQUIPMENT (e.g. ITE) that is a part of an
+ME SYSTEM fulfils the pass/fail criteria and
+IMMUNITY TEST LEVELS of Clause 8 if it has been
+determined, as a result of the RISK MANAGEMENT
+PROCESS, that the non-ME EQUIPMENT could affect
+the BASIC SAFETY or ESSENTIAL PERFORMANCE of
+the ME SYSTEM.
+(Inspection of the test report and the RISK
+MANAGEMENT FILE).
+N/A
+8.9 IMMUNITY TEST LEVELS
+Immunity Test Levels based on environment
+location of Intended Use
+PASS
+
+Report No. : KES-EM244316 Page 19 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+IEC 60601-1-2
+Clause Requirement + Test Result - Remark Verdict
+8.10 Immunity to proximity fields from RF wireless communication equipment PASS
+Enclosure Port of ME EQUIPMENT and ME SYSTEMS
+tested as specified in Table 9 as per IEC 61000-
+4-3
+PASS
+Enclosure Port of ME EQUIPMENT and ME SYSTEMS
+tested as specified in Table 11 as per IEC 61000-
+4-39
+PASS
+
+Report No. : KES-EM244316 Page 20 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.10 Configuration
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 21 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+EUT – Wireless Router : WLAN (2.4, 5) ㎓
+Notebook - Wireless Router : WLAN (2.4, 5) ㎓
+
+Report No. : KES-EM244316 Page 22 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.11 Remarks when standards applied
+The USB Type-C port was excluded from the test as a port for administrators.
+1.12 Calibration Details of Equipment Used for Measurement
+Test equipment and test accessories are calibrated on regular basis. The maximum time between
+calibrations is one year or what is recommended by the manufacturer, whichever is less.
+1.13 Test Facility
+The measurement facility is located at 473-21, Gayeo-ro, Yeoju-si, Gyeonggi-do, 12658, Korea,
+Republic of. The sites are constructed in conformance with the requirements of ANSI C63.4:2014
+and CISPR 16-1-4:2019
+1.14 Laboratory Accreditations and Listings
+Country Agency Scope of Accreditation Logo
+KOREA RRA
+EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+KR0100
+International KOLAS
+EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+KT489
+USA FCC
+3 m & 10 m Semi-Anechoic Chamber
+Conducted test site to perform FCC Part 15/18
+measurements.
+KR0100
+Canada ISED 3 m & 10 m Semi-Anechoic Chamber
+and Conducted test site
+23298
+JAPAN VCCI EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+C-20136, T-20137,
+R-20181, G-20176
+Europe TÜ V SÜ D
+EMI (3 m & 10 m Semi-Anechoic Chamber and
+conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+CARAT 001633 0008
+
+Report No. : KES-EM244316 Page 23 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.0 Test Regulations
+The emissions tests were performed according to following regulations:
+CISPR 11:2015+A1:2016+A2:2019 Group 1, Class A
+IEC 60601-1-2:2014+A1:2020
+IEC 61000-3-2:2018+A1:2020
+IEC 61000-3-3:2013+A1:2017
+EN 55011:2016/A2:2021 Group 1, Class A
+EN 60601-1-2:2015/A1:2021
+EN IEC 61000-3-2:2019
+EN 61000-3-3:2013+A1:2019
+
+Report No. : KES-EM244316 Page 24 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Summary of test results
+Product Standard EMI/
+Immunity Test method Test items Results
+IEC 60601-1-2:
+2014+A1:2020
+EN 60601-1-2:
+2015/A1:2021
+Emission
+CISPR 11:2015
++A1:2016+A2:2019,
+EN 55011:2016/A2:2021
+Group 1, Class A
+Conducted Emissions Pass
+CISPR
+32:2015+A1:2019,
+EN 55032:2015/A1:2020
+Group 1, Class A
+Conducted Emissions at
+Telecommunication Ports N/A
+CISPR 11:2015
++A1:2016+A2:2019,
+EN 55011:2016/A2:2021
+Group 1, Class A
+Radiated Emissions Pass
+IEC 61000-3-2:2018
++A1:2020 ,
+EN IEC 61000-3-2:2019
+Harmonics Current Emissions Pass
+IEC 61000-3-3:2013
++A1:2017,
+EN 61000-3-3:2013
++A1:2019
+Voltage changes, voltage
+fluctuations and Flicker Emissions Pass
+Immunity
+IEC 61000-4-2:2008,
+EN 61000-4-2:2009 Electrostatic Discharge Pass
+IEC 61000-4-3:2020,
+EN IEC 61000-4-3:2020
+Radiated RF electromagnetic Field Pass
+Immunity to Proximity fields from
+RF wireless communications
+equipment
+Pass
+IEC 61000-4-39:2017,
+EN 61000-4-39:2017
+Immunity to proximity magnetic
+fields in the frequency range 9 ㎑
+to 13.56 ㎒
+Pass
+IEC 61000-4-4:2012,
+EN 61000-4-4:2012 Electrical Fast Transients/Burst Pass
+IEC 61000-4-5:2014
++A1:2017,
+EN 61000-4-5:2014
++A1:2017
+Surge Pass
+IEC 61000-4-6:2023,
+EN 61000-4-6:2014 Conducted RF Disturbance Pass
+IEC 61000-4-8:2009,
+EN 61000-4-8:2010 Power Frequency Magnetic Field Pass
+IEC 61000-4-11:2020,
+EN IEC 61000-4-11:2020
+Voltage Dips, Short Interruptions
+and voltage variations Pass
+- N/A : Does not apply because there is no signal line ports.
+Use of uncertainty of measurement for decisions on conformity (decision rule):
+☐ No decision rule is specified by the standard, when comparing the measurement result with the
+applicable limit according to the specification in that standard. The decisions on conformity are made
+without applying the measurement uncertainty (“simple acceptance” decision rule, previously known as
+“accuracy method”).
+■ Other (to be specified, for example when required by the standard or client)
+
+Report No. : KES-EM244316 Page 25 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.0 Emissions Test
+3.1 Conducted Emissions at Mains Power Ports
+Reference Standard
+CISPR 11:2015+A1:2016+A2:2019, EN 55011:2016/A2:2021 Group 1, Class A
+Test Date
+Jan. 11, 2025
+Test Location
+Electro wave Shieldroom #6
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EMC32 R & S 9.12.00 -
+EMI TEST
+RECEIVER ESR3 R & S 101783 11, 06, 2025
+LISN ENV216 R & S 101786 01, 09, 2026
+ARTIFICIAL MAINS
+NETWORK ESH2-Z5 R & S 100450 11, 06, 2025
+PULSE LIMITER ESH3-Z2 R & S 101915 11, 06, 2025
+Test Conditions
+Temperature: (22,8 ± 0,3) ℃
+Relative Humidity: (45,7 ± 0,1) % R.H.
+Frequency Range of Measurement
+150 ㎑ to 30 ㎒
+Instrument Settings
+IF Band Width: 9 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+- See Appendix A for test data.
+- Since the difference between the maximum voltage and the minimum voltage is more than 25%,
+the test is performed by dividing the maximum voltage and the minimum voltage.
+
+Report No. : KES-EM244316 Page 26 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Uncertainty of measurement
+HOT Line : Uncertainty of measurement 2.22 ㏈
+(Confidence level: Approx. 95 %, k=2)
+Neutral Line : Uncertainty of measurement 2.22 ㏈
+(Confidence level: Approx. 95 %, k=2)
+
+Report No. : KES-EM244316 Page 27 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.2 Conducted Emissions at Telecommunication Ports
+Reference Standard
+CISPR 32:2015+A1:2019, EN 55032:2015/A1:2020 Group 1, Class A
+Test Date
+N/A
+Test Location
+Electro wave Shieldroom
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EMC32 R & S 9.12.00 -
+EMI TEST
+RECEIVER ESR3 R & S 101783 11, 06, 2025
+LISN ENV216 R & S 101786 01, 09, 2026
+ARTIFICIAL
+MAINS NETWORK ESH2-Z5 R & S 100450 11, 06, 2025
+PULSE LIMITER ESH3-Z2 R & S 101915 11, 06, 2025
+8-WIRE ISN
+CAT3,5 ENY81 R & S 100174 11, 12, 2025
+8-WIRE ISN CAT6 ENY81-CAT6 R & S 101666 03, 06, 2025
+Test Conditions
+Temperature: ℃
+Relative Humidity: % R.H.
+Frequency Range of Measurement
+150 ㎑ to 30 ㎒
+Instrument Settings
+IF Band Width: 9 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+It was excluded from testing because it connects directly to the PC and not to a public network.
+
+Report No. : KES-EM244316 Page 28 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.3 Radiated Electric Field Emissions(Below 1 ㎓)
+Reference Standard
+CISPR 11:2015+A1:2016+A2:2019, EN 55011:2016/A2:2021 Group 1, Class A
+Test Date
+Jan. 11, 2025
+Test Location
+OPEN AREA TEST SITE (OATS) # 2 SEMI ANECHOIC CHAMBER #4(10 m)
+Test Equipment
+Used Description Model
+Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EP5/RE TOYO
+Corporation 6.0.0 -
+EMI TEST RECEIVER ESU26 R & S 100551 02, 13, 2025
+AMPLIFIER SCU 01 R & S 100603 11, 06, 2025
+BILOG ANTENNA VULB 9168 SCHWARZBECK 9168-461 05, 09, 2026
+ATTENUATOR 6806.17.A HUBER+SUHNER - 02, 13, 2025
+Test Conditions
+Temperature: (22,7 ± 0,5) ℃
+Relative Humidity: (45,7 ± 0,2) % R.H.
+Frequency Range of Measurement
+30 ㎒ to 1 ㎓
+Instrument Settings
+IF Band Width: 120 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM244316 Page 29 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Uncertainty of measurement
+Horizontal : Uncertainty of measurement 4.30 ㏈
+(Confidence level: Approx. 95 %, k=2)
+Vertical : Uncertainty of measurement 4.30 ㏈
+(Confidence level: Approx. 95 %, k=2)
+
+Report No. : KES-EM244316 Page 30 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.4 Harmonic Current Emissions
+Reference Standard
+IEC 61000-3-2:2018+A1:2020, EN IEC 61000-3-2:2019
+Test Date
+Jan. 12, 2025
+Test Location
+Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W net.control EM TEST 2.1.4 -
+DIGITAL POWER
+ANALYZER DPA 500N EM TEST V1024106759 03, 28, 2025
+POWER SOURCE ACS 500N6 EM TEST V1024106760 -
+Test Conditions
+Temperature: (22,8 ± 0,0) ℃
+Relative Humidity: (46,1 ± 0,0) % R.H.
+Classification of Equipment for Harmonic Current Emissions
+Class A
+Class B
+Class C(Below 25 W)
+Class C(Above 25 W)
+Class D
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM244316 Page 31 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.5 Voltage Fluctuations and Flicker
+Reference Standard
+IEC 61000-3-3:2013+A1:2017, EN 61000-3-3:2013/A1:2019
+Test Date
+Jan. 12, 2025
+Test Location
+Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W net.control EM TEST 2.1.4 -
+DIGITAL POWER
+ANALYZER DPA 500N EM TEST V1024106759 03, 28, 2025
+POWER SOURCE ACS 500N6 EM TEST V1024106760 -
+Test Conditions
+Temperature: (22,8 ± 0,8) ℃
+Relative Humidity: (46,1 ± 0,6) % R.H.
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM244316 Page 32 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.0 Immunity Test
+4.1 Electrostatic Discharge
+Reference Standard
+IEC 61000-4-2:2008, EN 61000-4-2:2009
+Test Date
+Jan. 13, 2025
+Test Location
+EMS-ESD: Electro wave Shieldroom #3
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+ESD SIMULATOR ESS-2000 Noise Ken ESS05X4620 03, 05, 2025
+HCP - Noise Ken - -
+VCP - Noise Ken - -
+Test Conditions
+Temperature: (22,5 ± 0,2) ℃
+Relative Humidity: (46,2 ± 0,0) % R.H.
+Atmospheric Pressure: (100,3 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 33 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Discharge Factor:  1 s
+Discharge Impedance: 330 Ω / 150 ㎊
+Kind of Discharge: Air, Contact (direct and indirect)
+Polarity: Positive and Negative
+Number of Discharge: 10 at all locations for Air discharge
+10 at all locations for Contact discharge
+Discharge Voltage: Contact Air HCP VCP
+2 ㎸ 2 ㎸ 2 ㎸ 2 ㎸
+4 ㎸ 4 ㎸ 4 ㎸ 4 ㎸
+6 ㎸ 6 ㎸ 6 ㎸ 6 ㎸
+8 ㎸ 8 ㎸ 8 ㎸ 8 ㎸
+15 ㎸ 15 ㎸ 15 ㎸ 15 ㎸
+Notes: HCP: Horizontal coupling plane
+VCP: Vertical coupling plane
+
+Report No. : KES-EM244316 Page 34 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Location of Discharge:
+■ mode 1
+■ mode2, mode 3, mode 4
+Air
+Contact
+1
+2
+3
+1
+2
+
+Report No. : KES-EM244316 Page 35 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1
+4
+5
+6
+
+Report No. : KES-EM244316 Page 36 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+5
+4
+
+Report No. : KES-EM244316 Page 37 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐, AC 230 V, 50 ㎐)
+Indirect Discharge
+No. Test Point Discharge Method Observations Remarks
+1 HCP Contact Contact Discharge Complied -
+2 VCP Contact Contact Discharge Complied -
+Direct Discharge
+No. Test Point Discharge Method Observations Remarks
+1 Enclosure 1 Air Discharge Complied -
+2 Enclosure 2 Contact Discharge Complied -
+3 Port Contact Discharge Complied -
+4 AC/DC Adapter
+Enclosure Air Discharge Complied -
+5 Converter
+Enclosure Air Discharge Complied -
+6 Converter Port Air Discharge Complied -
+■ mode 2
+Indirect Discharge
+No. Test Point Discharge Method Observations Remarks
+1 HCP Contact Contact Discharge Complied -
+2 VCP Contact Contact Discharge Complied -
+Direct Discharge
+No. Test Point Discharge Method Observations Remarks
+1 Enclosure 1 Air Discharge Complied -
+2 Enclosure 2 Contact Discharge Complied -
+3 Port Contact Discharge Complied -
+4 Converter
+Enclosure Air Discharge Complied -
+5 Converter Port Air Discharge Complied -
+
+Report No. : KES-EM244316 Page 38 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3
+Indirect Discharge
+No. Test Point Discharge Method Observations Remarks
+1 HCP Contact Contact Discharge Complied -
+2 VCP Contact Contact Discharge Complied -
+Direct Discharge
+No. Test Point Discharge Method Observations Remarks
+1 Enclosure 1 Air Discharge Complied -
+2 Enclosure 2 Contact Discharge Complied -
+■ mode 4
+Indirect Discharge
+No. Test Point Discharge Method Observations Remarks
+1 HCP Contact Contact Discharge Complied -
+2 VCP Contact Contact Discharge Complied -
+Direct Discharge
+No. Test Point Discharge Method Observations Remarks
+1 Enclosure 1 Air Discharge Complied -
+2 Enclosure 2 Contact Discharge Complied -
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, There are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 39 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.2 Radiated Electric Field Immunity
+Reference Standard
+IEC 61000-4-3:2020, EN IEC 61000-4-3:2020
+Test Date
+Jan. 14, 2025 / Jan. 15, 2025 / Jan. 16, 2025
+Test Location
+EMS-RS: SEMI ANECHOIC CHAMBER # 3 SEMI ANECHOIC CHAMBER #4(10 m)
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W EMC32 R & S 10.10.02 -
+SIGNAL
+GENERATOR SMB 100A Rohde & Schwarz 108252 07, 29, 2025
+HIGH POWER
+DUAL AMP SSA532 SUNGSAN SSA532-001 -
+POWER METER E4419B Agilent GB40203000 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY52170007 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY41498669 02, 13, 2025
+STACKED
+DOUBLE LOG-
+PER- ANTENNA
+STPL9128 E Schwarzbeck 9128ES-121 -
+DOUBLE RIDGED
+HORN ANTENNA SAS-571 A.H.SYSTEM,INC 781 03, 05, 2025
+Test Conditions
+Test Date: Jan. 14, 2025 Jan. 15, 2025 Jan. 16, 2025
+Temperature: (22,8 ± 1,2) ℃ (23,1 ± 1,4) ℃ (22,9 ± 1,4) ℃
+Relative Humidity: (46,2 ± 0,6) % R.H. (45,9 ± 1,0) % R.H. (46,1 ± 1,1) % R.H.
+Atmospheric Pressure: (100,2 ± 0,0) ㎪ (100,3 ± 0,0) ㎪ (100,1 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 40 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Antenna Polarization: Horizontal & vertical unless indicated otherwise
+Antenna Distance: 3 m
+Field Strength: 1 V/m 3 V/m
+10 V/m
+Frequency Range: 80 ㎒ to 1 ㎓ 1,4 ㎓ to 2,7 ㎓
+80 ㎒ to 2,7 ㎓ 80 ㎒ to 2,5 ㎓
+Modulation: AM, 80 %, 1 ㎑ sine wave
+AM, 80 %, 2 ㎐ sine wave
+AM, 80 %, 5 ㎑ sine wave
+AM, 80 %, 10 ㎐ sine wave
+Frequency step: 1 % step
+Dwell Time: 1 s 3 s
+# of Sides Radiated: 4
+
+Report No. : KES-EM244316 Page 41 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐)
+Side Exposed Observations
+Horizontal Vertical
+Front Complied Complied
+Right Complied Complied
+Back Complied Complied
+Left Complied Complied
+■ mode 1_AC 230 V, 50 ㎐
+Side Exposed Observations
+Horizontal Vertical
+Front Complied Complied
+Right Complied Complied
+Back Complied Complied
+Left Complied Complied
+■ mode 2
+Side Exposed Observations
+Horizontal Vertical
+Front Complied Complied
+Right Complied Complied
+Back Complied Complied
+Left Complied Complied
+■ mode 3
+Side Exposed Observations
+Horizontal Vertical
+Front Complied Complied
+Right Complied Complied
+Back Complied Complied
+Left Complied Complied
+■ mode 4
+Side Exposed Observations
+Horizontal Vertical
+Front Complied Complied
+Right Complied Complied
+Back Complied Complied
+Left Complied Complied
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 42 / 119
+
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.3 Immunity to Proximity fields from RF wireless communications
+equipment
+Reference Standard
+IEC 61000-4-3:2020, EN IEC 61000-4-3:2020
+Test Date
+Jan. 14, 2025 / Jan. 15, 2025 / Jan. 16, 2025
+Test Location
+EMS-RS: SEMI ANECHOIC CHAMBER # 3 SEMI ANECHOIC CHAMBER # 4(10 m)
+Test Equipment
+(385, 450, 710, 745, 780, 810, 870, 930) ㎒, (1.720, 1.845, 1.970, 2.450, 5.240, 5.500, 5.785) ㎓
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W EMC32 R & S 10.10.02 -
+SIGNAL
+GENERATOR SMB 100A Rohde & Schwarz 108252 07, 29, 2025
+HIGH POWER
+DUAL AMP SSA532 SUNGSAN SSA532-001 -
+POWER METER E4419B Agilent GB40203000 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY52170007 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY41498669 02, 13, 2025
+STACKED
+DOUBLE LOG-
+PER- ANTENNA
+STPL9128 E Schwarzbeck 9128ES-121 -
+DOUBLE RIDGED
+HORN ANTENNA SAS-571 A.H.SYSTEM,INC 781 03, 05, 2025
+Test Conditions
+Test Date: Jan. 14, 2025 Jan. 15, 2025 Jan. 16, 2025
+Temperature: (22,8 ± 1,2) ℃ (23,1 ± 1,4) ℃ (22,9 ± 1,4) ℃
+Relative Humidity: (46,2 ± 0,6) % R.H. (45,9 ± 1,0) % R.H. (46,1 ± 1,1) % R.H.
+Atmospheric Pressure: (100,2 ± 0,0) ㎪ (100,3 ± 0,0) ㎪ (100,1 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 43 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Antenna Polarization: Horizontal & vertical unless indicated otherwise
+Antenna Distance: 1 m 3 m
+Field Strength: See next pages.
+Modulation: 9 V/m, Pulse Modulation (217 ㎐)
+27 V/m, Pulse Modulation (18 ㎐)
+28 V/m, FM ± 5 ㎑ Deviation (1 ㎑ sine)
+28 V/m, Pulse Modulation (18 ㎐)
+28 V/m, Pulse Modulation (217 ㎐)
+Tested Frequency: 385 ㎒, 450 ㎒, 710 ㎒, 745 ㎒, 780 ㎒, 810 ㎒, 870 ㎒,
+930 ㎒, 1720 ㎒, 1845 ㎒, 1970 ㎒, 2450 ㎒, 5240 ㎒,
+5500 ㎒, 5785 ㎒
+Dwell Time: 1 s 3 s 5 s
+# of Sides Radiated: 4
+
+Report No. : KES-EM244316 Page 44 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐)
+Test
+Frequency
+(㎒)
+Modulation
+Immunity
+Level
+(V/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+385 Pulse Modulation:
+18 ㎐ 27
+Front
+Rear
+Left
+Right
+Horizontal 5 Complied
+Vertical
+450
+FM ± 5 ㎑
+deviation,
+1 ㎑ sine
+28
+Horizontal
+5 Complied
+Vertical
+710
+745
+780
+Pulse Modulation:
+217 ㎐ 9
+Horizontal
+5 Complied
+Vertical
+810
+870
+930
+Pulse Modulation:
+18 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+1720
+1845
+1970
+Pulse Modulation:
+217 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+2450 Pulse Modulation:
+217 ㎐ 28 Horizontal 5 Complied
+Vertical
+5240
+5500
+5785
+Pulse Modulation:
+217 ㎐ 9 Horizontal 5 Complied
+
+Report No. : KES-EM244316 Page 45 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1_AC 230 V, 50 ㎐
+Test
+Frequency
+(㎒)
+Modulation
+Immunity
+Level
+(V/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+385 Pulse Modulation:
+18 ㎐ 27
+Front
+Rear
+Left
+Right
+Horizontal 5 Complied
+Vertical
+450
+FM ± 5 ㎑
+deviation,
+1 ㎑ sine
+28
+Horizontal
+5 Complied
+Vertical
+710
+745
+780
+Pulse Modulation:
+217 ㎐ 9
+Horizontal
+5 Complied
+Vertical
+810
+870
+930
+Pulse Modulation:
+18 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+1720
+1845
+1970
+Pulse Modulation:
+217 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+2450 Pulse Modulation:
+217 ㎐ 28 Horizontal 5 Complied
+Vertical
+5240
+5500
+5785
+Pulse Modulation:
+217 ㎐ 9 Horizontal 5 Complied
+
+Report No. : KES-EM244316 Page 46 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+Test
+Frequency
+(㎒)
+Modulation
+Immunity
+Level
+(V/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+385 Pulse Modulation:
+18 ㎐ 27
+Front
+Rear
+Left
+Right
+Horizontal 5 Complied
+Vertical
+450
+FM ± 5 ㎑
+deviation,
+1 ㎑ sine
+28
+Horizontal
+5 Complied
+Vertical
+710
+745
+780
+Pulse Modulation:
+217 ㎐ 9
+Horizontal
+5 Complied
+Vertical
+810
+870
+930
+Pulse Modulation:
+18 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+1720
+1845
+1970
+Pulse Modulation:
+217 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+2450 Pulse Modulation:
+217 ㎐ 28 Horizontal 5 Complied
+Vertical
+5240
+5500
+5785
+Pulse Modulation:
+217 ㎐ 9 Horizontal 5 Complied
+
+Report No. : KES-EM244316 Page 47 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3
+Test
+Frequency
+(㎒)
+Modulation
+Immunity
+Level
+(V/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+385 Pulse Modulation:
+18 ㎐ 27
+Front
+Rear
+Left
+Right
+Horizontal 5 Complied
+Vertical
+450
+FM ± 5 ㎑
+deviation,
+1 ㎑ sine
+28
+Horizontal
+5 Complied
+Vertical
+710
+745
+780
+Pulse Modulation:
+217 ㎐ 9
+Horizontal
+5 Complied
+Vertical
+810
+870
+930
+Pulse Modulation:
+18 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+1720
+1845
+1970
+Pulse Modulation:
+217 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+2450 Pulse Modulation:
+217 ㎐ 28 Horizontal 5 Complied
+Vertical
+5240
+5500
+5785
+Pulse Modulation:
+217 ㎐ 9 Horizontal 5 Complied
+
+Report No. : KES-EM244316 Page 48 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 4
+Test
+Frequency
+(㎒)
+Modulation
+Immunity
+Level
+(V/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+385 Pulse Modulation:
+18 ㎐ 27
+Front
+Rear
+Left
+Right
+Horizontal 5 Complied
+Vertical
+450
+FM ± 5 ㎑
+deviation,
+1 ㎑ sine
+28
+Horizontal
+5 Complied
+Vertical
+710
+745
+780
+Pulse Modulation:
+217 ㎐ 9
+Horizontal
+5 Complied
+Vertical
+810
+870
+930
+Pulse Modulation:
+18 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+1720
+1845
+1970
+Pulse Modulation:
+217 ㎐ 28
+Horizontal
+5 Complied
+Vertical
+2450 Pulse Modulation:
+217 ㎐ 28 Horizontal 5 Complied
+Vertical
+5240
+5500
+5785
+Pulse Modulation:
+217 ㎐ 9 Horizontal 5 Complied
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 49 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.4 Immunity to proximity magnetic fields in the frequency range 9 ㎑ to
+13,56 ㎒
+Reference Standard
+IEC 61000-4-39:2017, EN 61000-4-39:2017
+Test Date
+Jan. 14, 2025 / Jan. 15, 2025 / Jan. 16, 2025
+Test Location
+EMS-RS: SEMI ANECHOIC CHAMBER # 3 SEMI ANECHOIC CHAMBER # 4(10 m)
+Test Equipment
+(385, 450, 710, 745, 780, 810, 870, 930) ㎒, (1.720, 1.845, 1.970, 2.450, 5.240, 5.500, 5.785) ㎓
+Used Description Model Number Manufacturer Serial Number Cal. Due
+SIGNAL
+GENERATOR SMB 100A Rohde & Schwarz 108252 07, 29, 2025
+RADIATING LOOP FESP 5132 SCHWARZBECK 00411 -
+LOOP ANTENNA HFRA 5164 SCHWARZBECK 00074 -
+COMPENSATOPN
+NETWORK
+FOR 13.56 MHz
+NFCN 1356 SCHWARZBECK 00020 -
+RF AMPLIFIER BSA 0110-100 BONN
+ELEKTRONIK 1811828 07, 29, 2025
+Test Conditions
+Test Date: Jan. 14, 2025 Jan. 15, 2025 Jan. 16, 2025
+Temperature: (22,8 ± 0,2) ℃ (23,1 ± 0,3) ℃ (22,9 ± 0,1) ℃
+Relative Humidity: (46,2 ± 0,0) % R.H. (45,9 ± 0,2) % R.H. (46,1 ± 0,2) % R.H.
+Atmospheric Pressure: (100,2 ± 0,0) ㎪ (100,3 ± 0,0) ㎪ (100,1 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 50 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Antenna Polarization: Parallel arrangement for the EUT surface.
+Antenna Distance: 50 ㎜ (± 3 ㎜)
+Tested Frequency: 30 ㎑
+134,2 ㎑
+13,56 ㎒
+Field Strength &
+Modulation : 30 ㎑ - 8 A/m, CW
+: 134,2 ㎑ - 65 A/m, Pulse Modulation(2,1 ㎑)
+: 13,56 ㎒ - 7,5 A/m, Pulse Modulation(50 ㎑)
+Dwell Time: 1 s 3 s 5 s
+Locations of application : Front Rear Right
+of magnetic fields Left Top Bottom
+
+Report No. : KES-EM244316 Page 51 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐)
+Test
+Frequency Modulation
+Immunity
+Level
+(A/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+30 ㎑ A) CW 8
+Front
+Rear
+Left
+Right
+Top
+Bottom
+Parallel B) 5 N/A
+134,2 ㎑ PM, 2,1 ㎑ 65 Parallel B) 5 Complied
+13,56 ㎒ PM, 50 ㎑ 7,5 Parallel B) 5 Complied
+A) 30 ㎑ : The 30 ㎑ test applies only to "Home healthcare environment" products.
+B) The radiating loop was positioned at 50 ㎜ from the exposed face and parallel to the face of the
+EUT
+■ mode 1_AC 230 V, 50 ㎐
+Test
+Frequency Modulation
+Immunity
+Level
+(A/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+30 ㎑ A) CW 8
+Front
+Rear
+Left
+Right
+Top
+Bottom
+Parallel B) 5 N/A
+134,2 ㎑ PM, 2,1 ㎑ 65 Parallel B) 5 Complied
+13,56 ㎒ PM, 50 ㎑ 7,5 Parallel B) 5 Complied
+A) 30 ㎑ : The 30 ㎑ test applies only to "Home healthcare environment" products.
+B) The radiating loop was positioned at 50 ㎜ from the exposed face and parallel to the face of the
+EUT
+
+Report No. : KES-EM244316 Page 52 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+Test
+Frequency Modulation
+Immunity
+Level
+(A/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+30 ㎑ A) CW 8
+Front
+Rear
+Left
+Right
+Top
+Bottom
+Parallel B) 5 N/A
+134,2 ㎑ PM, 2,1 ㎑ 65 Parallel B) 5 Complied
+13,56 ㎒ PM, 50 ㎑ 7,5 Parallel B) 5 Complied
+A) 30 ㎑ : The 30 ㎑ test applies only to "Home healthcare environment" products.
+B) The radiating loop was positioned at 50 ㎜ from the exposed face and parallel to the face of the
+EUT
+■ mode 3
+Test
+Frequency Modulation
+Immunity
+Level
+(A/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+30 ㎑ A) CW 8
+Front
+Rear
+Left
+Right
+Top
+Bottom
+Parallel B) 5 N/A
+134,2 ㎑ PM, 2,1 ㎑ 65 Parallel B) 5 Complied
+13,56 ㎒ PM, 50 ㎑ 7,5 Parallel B) 5 Complied
+A) 30 ㎑ : The 30 ㎑ test applies only to "Home healthcare environment" products.
+B) The radiating loop was positioned at 50 ㎜ from the exposed face and parallel to the face of the
+EUT
+
+Report No. : KES-EM244316 Page 53 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 4
+Test
+Frequency Modulation
+Immunity
+Level
+(A/m)
+Location
+(EUT)
+Antenna
+polarization
+(V/H)
+Dwell Time
+(second) Result
+30 ㎑ A) CW 8
+Front
+Rear
+Left
+Right
+Top
+Bottom
+Parallel B) 5 N/A
+134,2 ㎑ PM, 2,1 ㎑ 65 Parallel B) 5 Complied
+13,56 ㎒ PM, 50 ㎑ 7,5 Parallel B) 5 Complied
+A) 30 ㎑ : The 30 ㎑ test applies only to "Home healthcare environment" products.
+B) The radiating loop was positioned at 50 ㎜ from the exposed face and parallel to the face of the
+EUT
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 54 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.5 Electrical Fast Transients/Bursts
+Reference Standard
+IEC 61000-4-4:2012, EN 61000-4-4:2012
+Test Date
+Jan. 19, 2025
+Test Location
+EMS-EFT: Electro wave Shieldroom # 7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA
+COMPACT
+SIMULATOR
+UCS 500N7 EM TEST P1608172950 11, 06, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+CAPACITIVE
+COUPLING
+CLAMP
+HFK EM TEST P1633183115 11, 06, 2025
+Test Conditions
+Temperature: (23,2 ± 0,3) ℃
+Relative Humidity: (45,9 ± 0,3) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪
+Test Specifications
+Pulse Amplitude & Polarity:  1.0 ㎸  2.0 ㎸
+(Power Lines)  4.0 ㎸
+Pulse Amplitude & Polarity:  0.5 ㎸  1.0 ㎸
+(Signal Lines)  2.0 ㎸
+Burst Period: 300 ㎳ 2 s
+Repetition Rate: 5 ㎑ 100 ㎑
+Duration of Test Voltage:  1 min
+
+Report No. : KES-EM244316 Page 55 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐, AC 230 V, 50 ㎐)
+Input a.c. power ports – Coupling/Decoupling Network used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+L Complied Complied
+N Complied Complied
+PE Complied Complied
+L – N Complied Complied
+L – PE Complied Complied
+N – PE Complied Complied
+L – N – PE Complied Complied
+Input d.c. power ports – Coupling/Decoupling Network used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+- - -
+Signal ports and telecommunication ports – Coupling Clamp used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+17 Pin Complied Complied
+RJ-45 Complied Complied
+
+Report No. : KES-EM244316 Page 56 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+Input a.c. power ports – Coupling/Decoupling Network used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+- - -
+Input d.c. power ports – Coupling/Decoupling Network used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+- - -
+Signal ports and telecommunication ports – Coupling Clamp used
+Mode of Application Result
+(+) Burst (㎸) (-) Burst (㎸)
+17 Pin Complied Complied
+RJ-45 Complied Complied
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 57 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.6 Surge Transients
+Reference Standard
+IEC 61000-4-5:2014+A1:2017, EN 61000-4-5:2014+A1:2017
+Test Date
+Jan. 19, 2025
+Test Location
+EMS-Surge: Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 07, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+Test Conditions
+Temperature: (23,2 ± 0,7) ℃
+Relative Humidity: (45,9 ± 0,4) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 58 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Power Lines
+Source Impedance: 12 Ω for common mode and 2 Ω for differential mode
+Surge Amplitude: Common Mode
+(0,5 / 1,0 / 2,0) ㎸
+Differential Mode
+(0,5 / 1,0) ㎸
+Number of Surges: 5 surges per angle
+Angle: 0, 90, 180, 270 (input a.c. power port)
+Polarity: Positive & Negative
+Repetition Rate: 1 surge per min 1 surge per 30 s
+Signal Lines
+Source Impedance: 42 Ω for common mode
+Surge Amplitude: Common Mode
+(0,5 / 1,0) ㎸
+Number of Surges: 5 Surges
+Polarity: Positive & Negative
+Repetition Rate: 1 surge per min 1 surge per 30 sec.
+
+Report No. : KES-EM244316 Page 59 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐, AC 230 V, 50 ㎐)
+Power Lines
+Line to Line – Differential Mode
+Mode of Application Result
+(+) Surge (㎸) (-) Surge (㎸)
+L – N Complied Complied
+Line to Earth – Common Mode
+Mode of Application Result
+(+) Surge (㎸) (-) Surge (㎸)
+L – PE Complied Complied
+N – PE Complied Complied
+Signal Lines
+Line to Earth – Common Mode
+Mode of Application Result
+(+) Surge (㎸) (-) Surge (㎸)
+- - -
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 60 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.7 Conducted Disturbance
+Reference Standard
+IEC 61000-4-6:2023, EN 61000-4-6:2014
+Test Date
+Jan. 17, 2025 / Jan. 18, 2025
+Test Location
+EMS-CS: Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W icd.control EM TEST 7.2.0 -
+TEST SYSTEM
+FOR
+CONDUCTED
+AND RADIATED
+NSG4070 TESEQ 65585 11, 18, 2025
+ATTENUATOR ATT 6/80 EM TEST P1614178148 11, 06, 2025
+CDN CDN M016 TESEQ 43694 11, 07, 2025
+CDN CDN M016 TESEQ 43697 11, 07, 2025
+CDN CDN T8RJ45 EM TEST 0909-09 07, 29, 2025
+BULK CURRENT
+INJECTION
+PROBE
+F-120-6A FCC 181302 03, 05, 2025
+Test Conditions
+Test Date: Jan. 17, 2025 Jan. 18, 2025
+Temperature: (23,2 ± 1,6) ℃ (23,1 ± 0,3) ℃
+Relative Humidity: (45,8 ± 0,9) % R.H. (45,6 ± 0,3) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪ (100,3 ± 0,0) ㎪
+
+Report No. : KES-EM244316 Page 61 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Frequency range: 150 ㎑ to 80 ㎒ 10 ㎑ to 30 ㎒
+150 ㎑ to 230 ㎒ 10 ㎑ to 100 ㎒
+Voltage Level: 1 Vrms 3 Vrms
+10 Vrms 6 Vrms (ISM bands)
+6 Vrms (ISM and amateur radio bands)
+Modulation: AM, 80 %, 1 ㎑ sine wave
+AM, 80 %, 10 ㎐ sine wave
+PM, 1 ㎐ (0,5 s ON : 0,5 s OFF)
+Frequency step: 1 % step
+Dwell Time: 1 s 3 s
+ISM bands 6,765 ㎒ to 6,795 ㎒, 13,553 ㎒ to 13,567 ㎒,
+26,957 ㎒ to 27,283 ㎒, 40,66 ㎒ to 40,70 ㎒
+
+Amateur radio band 1.8 ㎒ to 2.0 ㎒, 3.5 ㎒ to 4.0 ㎒, 5.3 ㎒ to 5.4 ㎒,
+7 ㎒ to 7.3 ㎒,
+(• Home HEALTHCARE applied.) 10.1 ㎒ to 10.5 ㎒, 14 ㎒ to 14.2 ㎒, 18.07 ㎒ to 18.17 ㎒,
+21.0 ㎒ to 21.4 ㎒, 24.89 ㎒ to 24.99 ㎒, 28.0 ㎒ to 29.7 ㎒,
+50.0 ㎒ to 54.0 ㎒
+
+Report No. : KES-EM244316 Page 62 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐, AC 230 V, 50 ㎐)
+Input a.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Result
+L – N – PE CDN Complied
+L – N – PE
+(ISM bands) CDN Complied
+Input d.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Result
+- - -
+Signal coupling port
+Coupling Location
+(Line Stressed) Coupling Method Result
+RJ-45 CDN Complied
+RJ-45
+(ISM bands) CDN Complied
+Patient coupling port
+Coupling Location
+(Line Stressed) Coupling Method Result
+17 Pin Clamp Complied
+17 Pin
+(ISM bands) Clamp Complied
+
+Report No. : KES-EM244316 Page 63 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+Input a.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Result
+- - -
+Input d.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Result
+- - -
+Signal coupling port
+Coupling Location
+(Line Stressed) Coupling Method Result
+RJ-45 CDN Complied
+RJ-45
+(ISM bands) CDN Complied
+Patient coupling port
+Coupling Location
+(Line Stressed) Coupling Method Result
+17 Pin Clamp Complied
+17 Pin
+(ISM bands) Clamp Complied
+Notes: CDN = Coupling Decoupling Network
+EIC = EM Injection Clamp
+“blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 64 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.8 Power Frequency Magnetic Field Immunity
+Reference Standard
+IEC 61000-4-8:2009, EN 61000-4-8:2010
+Test Date
+Jan. 13, 2025
+Test Location
+EMS-Magnetic: Electro wave Shieldroom #7
+Test Equipment
+Test Conditions
+Temperature: (23,2 ± 0,3) ℃
+Relative Humidity: (45,8 ± 0,2) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪
+Test Specifications
+Field Strength: 1 A/m 3 A/m
+30 A/m
+Frequency: 50 ㎐ 60 ㎐
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 08, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 08, 2025
+MAGNETIC FIELD
+COIL MS 100N EM TEST P1536163691 11, 08, 2025
+CURRENT
+TRANSFORMER MC 2630 EM TEST P1629182219 11, 08, 2025
+
+Report No. : KES-EM244316 Page 65 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ mode 1_(AC 120 V, 60 ㎐, AC 220 V, 60 ㎐, AC 230 V, 50 ㎐)
+Immersion method
+Coil orientation Result
+X Complied
+Y Complied
+Z Complied
+Proximity method
+Coil orientation Result
+X -
+Y -
+Z -
+■ mode 2
+Immersion method
+Coil orientation Result
+X Complied
+Y Complied
+Z Complied
+Proximity method
+Coil orientation Result
+X -
+Y -
+Z -
+■ mode 3
+Immersion method
+Coil orientation Result
+X Complied
+Y Complied
+Z Complied
+Proximity method
+Coil orientation Result
+X -
+Y -
+Z -
+
+Report No. : KES-EM244316 Page 66 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 4
+Immersion method
+Coil orientation Result
+X Complied
+Y Complied
+Z Complied
+Proximity method
+Coil orientation Result
+X -
+Y -
+Z -
+Note: “blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+During the test, there are no degradation of performance was found.
+
+Report No. : KES-EM244316 Page 67 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.9 Voltage Dips and Short Interruptions
+Reference Standard
+IEC 61000-4-11:2020, EN IEC 61000-4-11:2020
+Test Date
+Jan. 19, 2025
+Test Location
+EMS-Voltage dip: Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 07, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+Test Conditions
+Temperature: (23,2 ± 0,2) ℃
+Relative Humidity: (45,9 ± 0,1) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪
+Test Specifications
+Test Level: 0 % UT – 0.5 cycle
+(Phase : 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°)
+0 % UT – 1 cycle (Phase : 0°)
+70 % UT – 25 cycle / 30 cycle (Phase : 0°)
+0 % UT – 250 cycle / 300 cycle (Phase : 0°)
+
+Report No. : KES-EM244316 Page 68 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #1_(AC 100 V, 50 ㎐ & AC 240 V, 50 ㎐)
+Test Test Level Duration Result
+Voltage Dip
+0 % UT (100 % dip) 0,5 cycle Complied
+0 % UT (100 % dip) 1 cycle Complied
+70 % UT (30 % dip) 25 cycle Complied
+Voltage
+Interruptions 0 % UT (100 % dip) 250 cycle Complied
+■ #1_(AC 100 V, 60 ㎐ & AC 240 V, 60 ㎐)
+Test Test Level Duration Result
+Voltage Dip
+0 % UT (100 % dip) 0,5 cycle Complied
+0 % UT (100 % dip) 1 cycle Complied
+70 % UT (30 % dip) 30 cycle Complied
+Voltage
+Interruptions 0 % UT (100 % dip) 300 cycle Complied
+■ #1_AC 120 V, 60 ㎐
+Test Test Level Duration Result
+Voltage Dip
+0 % UT (100 % dip) 0,5 cycle Complied
+0 % UT (100 % dip) 1 cycle Complied
+70 % UT (30 % dip) 30 cycle Complied
+Voltage
+Interruptions 0 % UT (100 % dip) 300 cycle Complied
+■ #1_AC 220 V, 60 ㎐
+Test Test Level Duration Result
+Voltage Dip
+0 % UT (100 % dip) 0,5 cycle Complied
+0 % UT (100 % dip) 1 cycle Complied
+70 % UT (30 % dip) 30 cycle Complied
+Voltage
+Interruptions 0 % UT (100 % dip) 300 cycle Complied
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+Remarks
+- During the interruption (0%, 250 cycle / 300 cycle), EUT's Charge was cut off but after the test, it
+was recovered without operator’s intervention.
+- Since the difference between the maximum voltage and the minimum voltage is more than 25%,
+the test is performed by dividing the maximum voltage and the minimum voltage.
+
+Report No. : KES-EM244316 Page 69 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+APPENDIX A – TEST DATA
+Conducted Emissions at Mains Power Ports
+■ mode 1_AC 100 V, 50 Hz
+[HOT]
+
+Report No. : KES-EM244316 Page 70 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+[NEUTRAL]
+
+Report No. : KES-EM244316 Page 71 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1_AC 120 V, 60 Hz
+[HOT]
+
+Report No. : KES-EM244316 Page 72 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+[NEUTRAL]
+
+Report No. : KES-EM244316 Page 73 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1_AC 220 V, 60 Hz
+[HOT]
+
+Report No. : KES-EM244316 Page 74 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+[NEUTRAL]
+
+Report No. : KES-EM244316 Page 75 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1_AC 240 V, 50 Hz
+[HOT]
+
+Report No. : KES-EM244316 Page 76 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+[NEUTRAL]
+
+Report No. : KES-EM244316 Page 77 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Conducted Emissions at Telecommunication Ports
+[1 000 Mbps]
+N/A
+
+Report No. : KES-EM244316 Page 78 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Below 1 ㎓)
+■ mode1_AC 120 V, 60 Hz
+
+Report No. : KES-EM244316 Page 79 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode1_AC 220 V, 60 Hz
+
+Report No. : KES-EM244316 Page 80 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode1_AC 230 V, 50 Hz
+
+Report No. : KES-EM244316 Page 81 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+
+Report No. : KES-EM244316 Page 82 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3
+
+Report No. : KES-EM244316 Page 83 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 4
+
+Report No. : KES-EM244316 Page 84 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Harmonic Current Emissions and Voltage Fluctuations and Flicker
+■ mode 1_AC 220 V, 60 Hz
+Average harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.260
+2 0.001 0.056 1.080 n/a
+3 0.080 3.464 2.300 PASS
+4 0.001 0.231 0.430 n/a
+5 0.018 1.614 1.140 PASS
+6 0.001 0.262 0.300 n/a
+7 0.005 0.657 0.770 PASS
+8 0.001 0.375 0.230 n/a
+9 0.014 3.378 0.400 PASS
+10 0.001 0.402 0.184 n/a
+11 0.008 2.361 0.330 PASS
+12 0.001 0.491 0.153 n/a
+13 0.004 1.865 0.210 n/a
+14 0.001 0.563 0.131 n/a
+15 0.002 1.592 0.150 n/a
+16 0.001 0.650 0.115 n/a
+17 0.008 6.204 0.132 PASS
+18 0.001 0.637 0.102 n/a
+19 0.002 1.433 0.118 n/a
+20 0.001 0.821 0.092 n/a
+21 0.003 1.877 0.161 n/a
+22 0.001 0.799 0.084 n/a
+23 0.003 2.296 0.147 n/a
+24 0.001 0.965 0.077 n/a
+25 0.006 4.512 0.135 PASS
+26 0.001 0.955 0.071 n/a
+27 0.002 1.896 0.125 n/a
+28 0.001 1.054 0.066 n/a
+29 0.002 1.840 0.116 n/a
+30 0.001 1.098 0.061 n/a
+31 0.003 3.079 0.109 n/a
+32 0.001 1.161 0.058 n/a
+33 0.003 3.197 0.102 n/a
+34 0.001 1.328 0.054 n/a
+35 0.004 4.467 0.096 n/a
+36 0.001 1.380 0.051 n/a
+37 0.002 2.103 0.091 n/a
+38 0.001 1.498 0.048 n/a
+39 0.003 2.982 0.087 n/a
+40 0.001 1.450 0.046 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+* Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM244316 Page 85 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data - Harmonics (continued)
+Maximum harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.264
+2 0.001 0.052 1.620 n/a
+3 0.081 2.337 3.450 PASS
+4 0.001 0.193 0.645 n/a
+5 0.019 1.102 1.710 PASS
+6 0.001 0.247 0.450 n/a
+7 0.006 0.498 1.155 PASS
+8 0.001 0.354 0.345 n/a
+9 0.014 2.314 0.600 PASS
+10 0.001 0.371 0.276 n/a
+11 0.008 1.702 0.495 PASS
+12 0.001 0.377 0.230 n/a
+13 0.004 1.402 0.315 n/a
+14 0.001 0.620 0.197 n/a
+15 0.003 1.450 0.225 n/a
+16 0.001 0.498 0.173 n/a
+17 0.009 4.307 0.199 PASS
+18 0.001 0.485 0.153 n/a
+19 0.002 1.293 0.178 n/a
+20 0.001 0.690 0.138 n/a
+21 0.003 2.128 0.161 n/a
+22 0.001 0.627 0.125 n/a
+23 0.004 2.681 0.147 n/a
+24 0.001 0.762 0.115 n/a
+25 0.007 4.937 0.135 PASS
+26 0.001 0.859 0.106 n/a
+27 0.003 2.755 0.125 n/a
+28 0.001 0.802 0.099 n/a
+29 0.003 2.698 0.116 n/a
+30 0.001 0.969 0.092 n/a
+31 0.004 3.396 0.109 n/a
+32 0.001 0.932 0.086 n/a
+33 0.004 4.023 0.102 n/a
+34 0.001 1.215 0.081 n/a
+35 0.005 5.631 0.096 PASS
+36 0.001 1.123 0.077 n/a
+37 0.003 2.792 0.091 n/a
+38 0.001 1.448 0.073 n/a
+39 0.003 3.515 0.087 n/a
+40 0.001 1.179 0.069 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+* Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM244316 Page 86 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 1_AC 230 V, 50 Hz
+Average harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.244
+2 0.001 0.052 1.080 n/a
+3 0.076 3.298 2.300 PASS
+4 0.001 0.163 0.430 n/a
+5 0.017 1.481 1.140 PASS
+6 0.001 0.227 0.300 n/a
+7 0.005 0.617 0.770 n/a
+8 0.001 0.301 0.230 n/a
+9 0.012 2.908 0.400 PASS
+10 0.001 0.411 0.184 n/a
+11 0.006 1.746 0.330 PASS
+12 0.001 0.437 0.153 n/a
+13 0.004 2.025 0.210 n/a
+14 0.001 0.564 0.131 n/a
+15 0.004 2.485 0.150 n/a
+16 0.001 0.578 0.115 n/a
+17 0.007 5.321 0.132 PASS
+18 0.001 0.645 0.102 n/a
+19 0.002 1.755 0.118 n/a
+20 0.001 0.750 0.092 n/a
+21 0.003 1.603 0.161 n/a
+22 0.001 0.778 0.084 n/a
+23 0.004 2.581 0.147 n/a
+24 0.001 0.992 0.077 n/a
+25 0.004 2.635 0.135 n/a
+26 0.001 1.029 0.071 n/a
+27 0.004 2.903 0.125 n/a
+28 0.001 1.113 0.066 n/a
+29 0.002 2.098 0.116 n/a
+30 0.001 1.151 0.061 n/a
+31 0.003 2.556 0.109 n/a
+32 0.001 1.193 0.058 n/a
+33 0.002 2.051 0.102 n/a
+34 0.001 1.182 0.054 n/a
+35 0.003 3.543 0.096 n/a
+36 0.001 1.243 0.051 n/a
+37 0.002 2.156 0.091 n/a
+38 0.001 1.467 0.048 n/a
+39 0.002 2.255 0.087 n/a
+40 0.001 1.401 0.046 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+* Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM244316 Page 87 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data - Harmonics (continued)
+Maximum harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.251
+2 0.001 0.047 1.620 n/a
+3 0.078 2.250 3.450 PASS
+4 0.001 0.162 0.645 n/a
+5 0.018 1.059 1.710 PASS
+6 0.001 0.207 0.450 n/a
+7 0.009 0.753 1.155 PASS
+8 0.001 0.235 0.345 n/a
+9 0.012 2.076 0.600 PASS
+10 0.001 0.361 0.276 n/a
+11 0.006 1.299 0.495 PASS
+12 0.001 0.368 0.230 n/a
+13 0.007 2.206 0.315 PASS
+14 0.001 0.444 0.197 n/a
+15 0.006 2.829 0.225 PASS
+16 0.001 0.456 0.173 n/a
+17 0.008 3.808 0.199 PASS
+18 0.001 0.514 0.153 n/a
+19 0.003 1.893 0.178 n/a
+20 0.001 0.566 0.138 n/a
+21 0.003 2.088 0.161 n/a
+22 0.001 0.619 0.125 n/a
+23 0.005 3.133 0.147 n/a
+24 0.001 0.974 0.115 n/a
+25 0.004 3.266 0.135 n/a
+26 0.001 0.788 0.106 n/a
+27 0.004 3.227 0.125 n/a
+28 0.001 0.975 0.099 n/a
+29 0.003 2.732 0.116 n/a
+30 0.001 0.966 0.092 n/a
+31 0.003 3.125 0.109 n/a
+32 0.001 1.008 0.086 n/a
+33 0.004 3.445 0.102 n/a
+34 0.001 1.001 0.081 n/a
+35 0.004 4.118 0.096 n/a
+36 0.001 0.984 0.077 n/a
+37 0.003 3.135 0.091 n/a
+38 0.001 1.200 0.073 n/a
+39 0.004 4.071 0.087 n/a
+40 0.001 1.104 0.069 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+* Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM244316 Page 88 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data - Voltage Fluctuations
+Maximum Flicker results
+■ mode 1_A 220 V, 60 Hz
+Flicker Measurements
+Plt Max Pst Max Dc Max Dmax Max Tmax
+Line 1: 0.027 0.027 0 < 0.2 0
+Limits: 0.65 1 3.3 4 0.5
+Results: PASS PASS PASS PASS PASS
+■ mode 1_AC 230 V, 50 Hz
+Flicker Measurements
+Plt Max Pst Max Dc Max Dmax Max Tmax
+Line 1: 0.028 0.028 0 < 0.2 0
+Limits: 0.65 1 3.3 4 0.5
+Results: PASS PASS PASS PASS PASS
+
+Report No. : KES-EM244316 Page 89 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Setup Photos and Configuration
+Conducted Emissions at Mains Power Ports
+■ mode 1
+
+Report No. : KES-EM244316 Page 90 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Conducted Emissions at Telecommunication Ports
+N/A
+
+Report No. : KES-EM244316 Page 91 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Below 1 ㎓)
+■ mode 1
+
+Report No. : KES-EM244316 Page 92 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+
+Report No. : KES-EM244316 Page 93 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+
+Report No. : KES-EM244316 Page 94 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Harmonic Current Emissions and Voltage Fluctuations and Flicker
+■ mode 1
+
+Report No. : KES-EM244316 Page 95 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Electrostatic Discharge
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 96 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+
+Report No. : KES-EM244316 Page 97 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Immunity
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 98 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+
+Report No. : KES-EM244316 Page 99 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Immunity to Proximity fields from RF wireless communications
+equipment
+■ mode 1
+[Below 1 ㎓]
+[Above 1 ㎓]
+
+Report No. : KES-EM244316 Page 100 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+[Below 1 ㎓]
+[Above 1 ㎓]
+
+Report No. : KES-EM244316 Page 101 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+[Below 1 ㎓]
+[Above 1 ㎓]
+
+Report No. : KES-EM244316 Page 102 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Immunity to proximity magnetic fields in the frequency range 9 ㎑ to
+13,56 ㎒
+■ mode 1
+[㎑]
+[㎒]
+
+Report No. : KES-EM244316 Page 103 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 2
+[㎑]
+[㎒]
+
+Report No. : KES-EM244316 Page 104 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+[㎑]
+[㎒]
+
+Report No. : KES-EM244316 Page 105 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Electrical Fast Transients/Bursts
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 106 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Surge Transients
+■ mode 1
+
+Report No. : KES-EM244316 Page 107 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Conducted Disturbance
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 108 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Power Frequency Magnetic Field Immunity
+■ mode 1
+■ mode 2
+
+Report No. : KES-EM244316 Page 109 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ mode 3, mode 4
+
+Report No. : KES-EM244316 Page 110 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Voltage Dips and Short Interruptions
+■ mode 1
+
+Report No. : KES-EM244316 Page 111 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+EUT External Photographs
+(Top)
+(Bottom)
+
+Report No. : KES-EM244316 Page 112 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Label
+Label size
+G1417 Series Label
+No. Label Size
+1 G1417 Series Detector Label 74.5mm * 58.2mm
+2 G1717 Series Detector Label 74.5mm * 58.2mm
+3 Detector Sub Label 74.5mm * 58.2mm
+4 Shipment Label 74.5mm * 58.2mm
+
+Report No. : KES-EM244316 Page 113 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+G1717 Series Label
+
+Report No. : KES-EM244316 Page 114 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Detector Sub Label
+Shipment Label
+
+Report No. : KES-EM244316 Page 115 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+ANNEX 1 EMC (Electromagnetic Compatibility) Information
+Phenomenon
+Basic EMC
+standard or test
+method
+Operating
+mode
+Port
+tested
+Test
+Voltage
+Test
+level/requireme
+nt
+Mains terminal
+disturbance
+voltage
+CISPR 11:2015
++A1:2016+A2:2019
+EN 55011:2016
+/A2:2021
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 100 V, 50 Hz
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 240 V, 50 Hz
+Group1, Class A
+Radiated
+disturbance
+CISPR 11:2015
++A1:2016+A2:2019
+EN 55011:2016
+/A2:2021
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+Group1, Class A
+Harmonic
+Current
+Emission
+IEC 61000-3-
+2:2018
++A1:2020
+EN IEC 61000-3-2
+:2019
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz Class A
+Voltage change,
+Voltage
+fluctuations and
+Flicker Emission
+IEC 61000-3-
+3:2013
++A1:2017
+EN 61000-3-3:2013
++A1:2019
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+Pst: 1
+Plt: 0.65
+Tmax: 0.5 s
+dmax: 4%
+dc: 3.3%
+Electrostatic
+Discharge
+Immunity
+IEC 61000-4-
+2:2008
+EN 61000-4-2:2009
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+± 8 kV/Contact
+± 2, ± 4, ± 8,
+± 15 kV/Air
+Radiated RF
+Electromagnetic
+Field Immunity
+IEC 61000-4-
+3:2020
+EN IEC 61000-4-3
+:2020
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+3 V/m
+80 MHz-2.7
+GHz
+80% AM at 1
+kHz
+Immunity to
+Proximity Fields
+from RF
+wireless
+Communication
+s Equipment
+IEC 61000-4-
+3:2020
+EN IEC 61000-4-3
+:2020
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+Table 9 in
+IEC 60601-1-2:
+2020
+Immunity to
+proximity
+magnetic fields
+in the frequency
+range 9 kHz to
+13.56 MHz
+IEC 61000-4-
+39:2017
+EN 61000-4-
+39:2017
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+Table 11 in
+IEC 60601-1-2:
+2020
+Electrical Fast
+Transient/Burst
+Immunity
+IEC 61000-4-
+4:2012
+EN 61000-4-4:2012
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+AC Line: ± 2 kV
+Signal: ±1 kV
+100 kHz
+repetition
+frequency
+Surge Immunity
+IEC 61000-4-
+5:2014
++A1:2017
+EN 61000-4-5:2014
++A1:2017
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+Line to Line
+± 0.5 kV, ± 1 kV
+Line to Ground
+
+Report No. : KES-EM244316 Page 116 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+± 0.5 kV, ± 1 kV,
+± 2 kV
+Immunity to
+Conducted
+Disturbances
+Induced by
+RF fields
+IEC 61000-4-
+6:2013
+EN 61000-4-6:2014
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+AC Line &
+Signal:
+3 V, 0.15-80
+MHz
+6 V in ISM
+bands
+Between 0.15
+MHz and 80
+MHz
+80% AM at 1
+kHz
+Power
+Frequency
+Magnetic Field
+Immunity
+IEC 61000-4-
+8:2009
+EN 61000-4-8:2010
+Battery +
+Operating Mode,
+Charging +
+Operating Mode
+Enclosure AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 230 V, 50 Hz
+30 A/m
+50 Hz & 60 Hz
+Voltage dips
+IEC 61000-4-
+11:2020
+EN IEC 61000-4-11
+:2020
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 100 V, 50 Hz
+AC 100 V, 60 Hz
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 240 V, 50 Hz
+AC 240 V, 60 Hz
+0 % UT: 0.5
+cycle
+At 0°, 45°, 90°,
+135°, 180°,
+225°, 270° and
+315°
+0 % UT; 1 cycle
+and
+70 % UT; 25/30
+cycles
+Single phase: at
+0º
+Voltage
+interruptions
+IEC 61000-4-
+11:2020
+EN IEC 61000-4-11
+:2020
+Charging +
+Operating Mode
+AC Mains
+of power
+supply
+unit
+AC 100 V, 50 Hz
+AC 100 V, 60 Hz
+AC 120 V, 60 Hz
+AC 220 V, 60 Hz
+AC 240 V, 50 Hz
+AC 240 V, 60 Hz
+0 % UT; 250/300
+cycle
+
+Report No. : KES-EM244316 Page 117 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+ANNEX 2 Guidance: Test Plan
+Table G.1-Recommended minimum test plan contents
+No. Item Additional detail
+1 Name and address of the test facility KES
+473-29, Gayeoro, Yeoju-si, Gyeonggi-do, 469-
+803,
+Republic of Korea
+2 Description of the of the ME Equipment
+or ME
+System
+These Digital Flat Panel X-ray Detectors are
+indicated for digital imaging solution designed for
+providing general radiographic diagnosis of human
+anatomy targeting both adult and children. It is
+intended to replace film based radiographic
+diagnostic systems and provide more precise case
+diagnosis and treatment planning on a real time
+basis for physicians and radiologists. Not to be
+used for mammography and direct cardiac
+application.
+3. Description of the BASIC SAFETY and
+ESSENTIAL PERFORMANCE including
+a description how the BASIC SAFETY
+and ESSENTIAL PERFORMANCE will
+be monitored against the pass/fail criteria
+during each test
+These Digital Flat Panel X-ray Detectors are
+indicated for digital imaging solution designed for
+providing general radiographic diagnosis of human
+anatomy targeting both adult and children. It is
+intended to replace film based radiographic
+diagnostic systems and provide more precise case
+diagnosis and treatment planning on a real time
+basis for physicians and radiologists. Not to be
+used for mammography and direct cardiac
+application.
+During each EMC test, we monitored visually
+whether the device can operate and transmit the
+stored information including the essential
+performance items listed below.
+- Operation normally when operation is required
+- DC power is consistently supplied from Power
+solution #1 or #2 when EMC test is performed.
+- When connected to Power solution #1 or #2,
+program provided by manufacturer is operated
+normally.
+- Acquisition image is obtained as intended.
+4 Identification of the ME EQUIPMENT or
+ME SYSTEM
+Product Name: Digital Flat Panel X-ray Detector
+Model:
+G1417CW/G1717CW/G1417FW/G1717FW/
+G1417CWP/G1717CWP/G1417FWP/G1717FWP
+ME EQUIPMENT or ME SYSTEM
+software / firmware version of the
+sample to be tested
+Software version: 1.0.0.0
+Hardware version: 1.0.0.0
+6 Number of samples to be tested 1
+7 INTENDED USE and
+intended environments
+This Digital Flat Panel X-ray Detector is used for
+screening and diagnosis of disease of injury. These
+detectors are intended for use by a qualified/trained
+doctor or technician on both adult subjects for
+taking diagnostic radiographic exposures of the
+
+Report No. : KES-EM244316 Page 118 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+skull, spinal column, chest, abdomen, extremities,
+and other body parts.
+Professional healthcare facility environment
+8 Applicable standards and test methods Refer to ANNEX 1
+9 Deviations from the Basic EMC standards
+or from this collateral standard
+There are no deviations from Basic EMC or
+collateral standard.
+10 Applicability / tests that will not be
+performed
+N/A
+11 If the procedure specified by Annex E or
+an
+equivalent procedure is used:
+– a justification for any SPECIAL
+ENVIRONMENTS
+identified or adjustments made
+– the adjusted reasonably foreseeable
+maximum EM
+DISTURBANCE levels
+– the resulting final IMMUNITY TEST
+LEVELS, rounded
+to the nearest whole number or, if a
+decimal, to a
+single significant digit
+– details of the methods and data
+sources used in
+determining the appropriate IMMUNITY
+TEST LEVELS
+N/A
+12 IMMUNITY TEST LEVELS for
+each IMMUNITY test and
+EMISSIONS compliance class and group
+EMISSION: Class A / Group 1
+IMMUNITY: Professional healthcare
+facility environment
+13 IMMUNITY pass/fail criteria The measurement data should meet the criteria
+of
+Performance Characteristics in the manual.
+14 ME EQUIPMENT or ME SYSTEM
+configurations, settings and operating
+modes
+Refer to the EMC report.
+15 Test setup electrical and physical
+diagrams
+Refer to the EMC report.
+16 ME EQUIPMENT or ME SYSTEM power
+input voltages and frequencies AC (100 ~ 240) V, 50/60Hz
+17 Earthing configuration N/A
+18 Whether the ME EQUIPMENT or ME
+SYSTEM will be tested as table-top or
+floor-standing equipment, or
+a combination of the two
+floor-standing equipment
+19 Testing of PERMANENTLY INSTALLED
+LARGE ME EQUIPMENT or LARGE ME
+SYSTEM
+N/A
+20 Exercising of SIP/SOPS N/A
+21 For floor-standing ME EQUIPMENT or
+ME SYSTEMS, the
+height of the support
+N/A
+22 Description of any PATIENT-COUPLED
+Cable terminations to be used
+Refer to the EMC report.
+23 Simulators, accessories and auxiliary Refer to the EMC report.
+
+Report No. : KES-EM244316 Page 119 / 119
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+equipment
+24 Documentation of any special ME
+EQUIPMENT or ME SYSTEM hardware
+or software needed to perform the tests
+N/A
+25 ALARM LIMIT settings N/A
+26 Planned ESD test points Enclosure port
+27 Dwell time for each IMMUNITY test
+requiring a dwell time
+In accordance with requirement of the standard.
+28 The locations of application of
+proximity magnetic
+fields
+Refer to the EMC report.
+The End.
