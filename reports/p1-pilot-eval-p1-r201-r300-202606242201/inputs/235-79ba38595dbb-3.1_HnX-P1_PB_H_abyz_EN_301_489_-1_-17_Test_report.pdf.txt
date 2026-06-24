@@ -1,0 +1,1377 @@
+queueId: ingest-1781569954375-5jp
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/06_HnX-P1, HnX-PB/공통 - CSDT/[Attachment] 4. Summary of Design Verification/1.4. Safety EMC Test report/3.1 [HnX-P1, PB] H&abyz_EN 301 489 -1, -17 Test report.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/b3915845cb9e/3.1 [HnX-P1, PB] H&abyz_EN 301 489 -1, -17 Test report__b3915845cb9e_combined.txt
+canonicalGroupId: 79ba38595dbb
+productSignal: HnX
+authoritySignal: general
+pilotRank: 235
+
+SOURCE_TEXT
+TEST REPORT
+Report No. : KES-EM243956-R1
+Page 1 / 63
+KES Co., Ltd.
+#3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-
+gu, Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+Tel : +82-31-425-6200, Fax : +82-31-341-3838
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1. Client
+Applicant : H&abyz
+Applicant Address : 1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea, 17118
+2. Sample Description
+Product name : Portable X-Ray System
+Model/Type No. : HnX-P1
+Variant Model : HnX-PB
+Manufacturer : H&abyz
+Manufacturer Address : 1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea, 17118
+3. Date of Receipt : May. 19, 2025
+4. Test date : Nov. 21, 2024 ~ Nov. 28, 2024
+5. Date of Issue : May. 20, 2025
+6. Test Results : In Compliance
+Tested by Reviewed by
+Se Heon, Kim
+EMC Test Engineer
+Seong Min, Choi
+EMC Technical Manager
+This test report is not related to KS Q ISO/IEC 17025 and KOLAS.
+
+Report No. : KES-EM243956-R1 Page 2 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+CEPORT REVISION HISTORY
+Date Test Report No. Revision History
+Jan. 24, 2025 KES-EM243956 Issued
+May. 20, 2025 KES-EM243956-R1 Reissuance due to the addition of a derivative
+This report shall not be reproduced except in full, without the written approval of KES Co., Ltd. This
+document may be altered or revised by KES Co., Ltd. personnel only, and shall be noted in the
+revision section of the document. Any alteration of this document not carried out by KES Co., Ltd.
+will constitute fraud and shall nullify the document.
+
+Report No. : KES-EM243956-R1 Page 3 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+TABLE OF CONTENTS
+1.0 General Product Description................................................................................................................... 4
+1.1 Test Voltage & Frequency ....................................................................................................................... 5
+1.2 Variant Model Differences ....................................................................................................................... 5
+1.3 Device Modifications ............................................................................................................................... 5
+1.4 Equipment Under Test ............................................................................................................................ 5
+1.5 Support Equipments ............................................................................................................................... 5
+1.6 External I/O Cabling ................................................................................................................................ 6
+1.7 EUT Operating Mode(s) .......................................................................................................................... 7
+1.8 Configuration .......................................................................................................................................... 8
+1.9 Remarks when standards applied .......................................................................................................... 9
+1.10 Calibration Details of Equipment Used for Measurement ...................................................................... 9
+1.11 Test Facility ............................................................................................................................................. 9
+1.12 Laboratory Accreditations and Listings ................................................................................................... 9
+2.0 Test Regulations ................................................................................................................................... 10
+2.1 Conducted Emissions at Mains Power Ports ......................................................................................... 11
+2.2 Conducted Emissions at Telecommunication Ports .............................................................................. 12
+2.3 Radiated Electric Field Emissions(Below 1 ㎓).................................................................................... 13
+2.4 Radiated Electric Field Emissions(Above 1 ㎓) ................................................................................... 14
+2.5 Harmonic Current Emissions ................................................................................................................ 15
+2.6 Voltage Fluctuations and Flicker ........................................................................................................... 16
+3.0 Criteria for compliance .......................................................................................................................... 17
+3.1 Electrostatic Discharge ......................................................................................................................... 20
+3.2 Radiated Electric Field Immunity .......................................................................................................... 25
+3.3 Electrical Fast Transients/Bursts .......................................................................................................... 28
+3.4 Surge Transients ................................................................................................................................... 30
+3.5 Transients and surges in the vehicular environment ............................................................................ 33
+3.6 Conducted Disturbance ........................................................................................................................ 35
+3.7 Voltage Dips and Short Interruptions .................................................................................................... 37
+APPENDIX A – TEST DATA ............................................................................................................................ 39
+Conducted Emissions at Mains Power Ports ...................................................................................................39
+Conducted Emissions at Telecommunication Ports .........................................................................................41
+Radiated Electric Field Emissions(Below 1 ㎓) ...............................................................................................42
+Radiated Electric Field Emissions(Above 1 ㎓) ...............................................................................................44
+Harmonic Current Emissions and Voltage Fluctuations and Flicker ................................................................46
+APPENDIX B - Test Setup Photos and Configuration ......................................................................................49
+Conducted Emissions at Main Power Ports .....................................................................................................49
+Conducted Emissions at Telecommunication Ports .........................................................................................50
+Radiated Electric Field Emissions(Below 1 ㎓) ...............................................................................................51
+Radiated Electric Field Emissions(Above 1 ㎓) ...............................................................................................52
+Harmonic Current Emissions and Voltage Fluctuations and Flicker ................................................................54
+Electrostatic Discharge .....................................................................................................................................56
+Radiated Electric Field Immunity ......................................................................................................................57
+Electrical Fast Transients/Bursts ......................................................................................................................58
+Surge Transients...............................................................................................................................................58
+Transients and surges in the vehicular environment ........................................................................................59
+Conducted Disturbance ....................................................................................................................................59
+Voltage Dips and Short Interruptions ................................................................................................................60
+APPENDIX C - EUT Photographs ....................................................................................................................61
+EUT External Photographs ...............................................................................................................................61
+EUT Internal Photographs ................................................................................................................................62
+Label .................................................................................................................................................................63
+
+Report No. : KES-EM243956-R1 Page 4 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.0 General Product Description
+Main Specifications of EUT are:
+Adapter Input Voltage 100-240V~, 50/60Hz
+Output Voltage 20VDC/ 3.25A/65W ---- USB C-type
+Battery Pack
+Cell 29.6V/1,470mAh, Li-Polymer
+Output Voltage 25.6~33.6VDC
+Output Current 50A @ (2sec)
+Control Circuit BMS
+Charging Time 2hr
+Output Power 720Wmax
+kV & mA & mAs Range
+kV mA mAs
+50kV ~ 70kV 10mA 0.4mAs ~ 20mAs
+71kV ~ 90kV 8mA 0.4mAs ~ 16mAs
+mAs Range 0.4, 0.5, 0.6, 0.8, 1.0, 1.3, 1.6, 2.0, 2.5, 3.2, 4.0, 5.0, 6.3, 8.0, 10, 13, 16, 20mAs
+Exposure Time
+sec: 0.040 ~ 2.000sec.
+0.04, 0.05, 0.06, 0.075, 0.10, 0.125, 0.13, 0.16, 0.2, 0.25, 0.32, 0.40,0.5, 0.63,
+0.8, 1.0, 1.25, 1.3, 1.6, 2.000 (20 Steps)
+kV Deviation ± 5%
+mA/mAs Deviation ± 10%
+Special Features DR Interface, Calibration, APR, Remote Function
+X-Ray TUBE
+OX/90
+Focal Spot 0.5 mm x 0.5 mm
+Target Angle 19 degree
+Anode Heat Storage 10kJ
+kV & mAs Display 4inch LCD
+Collimator
+Type Manual, Double Slit
+Min. X-ray Field ≤ 5×5cm @ 100cm SID
+Max. X-ray Field ≤ 47×47cm @ 100cm SID
+Timer 20/30sec
+Lamp/Lux LED/over 160Lux
+
+Report No. : KES-EM243956-R1 Page 5 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.1 Test Voltage & Frequency
+Unless indicated otherwise on the individual data sheet or test results, the test voltage and
+frequency was as indicated below.
+AC 230 V 50 Hz
+1.2 Variant Model Differences
+The variant model(HnX-PB) is only changed the appearance design compared to the existing model
+HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.
+1.3 Device Modifications
+Not applicable
+1.4 Equipment Under Test
+Description Model Number Serial Number Manufacturer Remarks
+Portable X-Ray
+System HnX-P1 - H&abyz EUT
+Hand Switch - - H&abyz EUT
+Stand - - INNOREL EUT
+1.5 Support Equipments
+Description Model Number Serial Number Manufacturer Remarks
+AC/DC Adapter ADLX65YLC3D - LENOVO -
+Tablet PC SM-T500 - Samsung Electronics -
+
+Report No. : KES-EM243956-R1 Page 6 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.6 External I/O Cabling
+■ #1 Mode
+Start END Cable Spec.
+Description I/O Port Description I/O Port Length Shield
+Portable X-Ray
+System
+(EUT)
+RJ-11 Hand Switch
+(EUT) RJ-11 1.0 U
+Wireless Tablet PC Wireless - -
+Mount Stand
+(EUT) Mount - -
+* Unshielded=U, Shielded=S
+■ #2 Mode
+Start END Cable Spec.
+Description I/O Port Description I/O Port Length Shield
+Portable X-Ray
+System
+(EUT)
+RJ-11 Hand Switch
+(EUT) RJ-11 1.0 U
+USB Type-C AC/DC Adapter USB Type-C 1.6 U
+Wireless Tablet PC Wireless -
+Mount Stand
+(EUT) Mount - -
+* Unshielded=U, Shielded=S
+
+Report No. : KES-EM243956-R1 Page 7 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.7 EUT Operating Mode(s)
+Test No. Test mode Operating Test Voltages
+#1 X-Ray Exposure
+[EMI]
+- Operate the EUT continuously.
+- After connecting the EUT and the tablet PC
+wirelessly (Bluetooth), I checked the function of
+changing the level value of the EUT using the
+application of the Tablet PC.
+[EMS]
+- While continuously operating the EUT, we checked
+the X-ray level values emitted by the X-ray meter
+during the test.
+- After connecting the EUT and the tablet PC
+wirelessly (Bluetooth), I checked the function of
+changing the level value of the EUT using the
+application of the Tablet PC.
+Battery
+#2 Charge
+- Tested it while checking the charging status
+through the display of the EUT.
+- After connecting the EUT and the tablet PC
+wirelessly (Bluetooth), I checked the function of
+changing the level value of the EUT using the
+application of the Tablet PC.
+AC 230 V, 50 ㎐
+EUT Test operating S/W
+Name Version Manufacture Company
+nRF Connect - Nordic Semiconductor
+
+Report No. : KES-EM243956-R1 Page 8 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.8 Configuration
+■ #1 Mode
+EUT - Tablet PC : Bluetooth
+■ #2 Mode
+EUT - Tablet PC : Bluetooth
+
+Report No. : KES-EM243956-R1 Page 9 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.9 Remarks when standards applied
+N/A
+1.10 Calibration Details of Equipment Used for Measurement
+Test equipment and test accessories are calibrated on regular basis. The maximum time between
+calibrations is one year or what is recommended by the manufacturer, whichever is less.
+1.11 Test Facility
+The measurement facility is located at 473-21, Gayeo-ro, Yeoju-si, Gyeonggi-do, 12658, Korea,
+Republic of. The sites are constructed in conformance with the requirements of ANSI C63.4a-2017
+and CISPR 16-1-4:2019
+1.12 Laboratory Accreditations and Listings
+Country Agency Scope of Accreditation Logo
+KOREA RRA
+EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+KR0100
+International KOLAS
+EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+KT489
+USA FCC
+3 m & 10 m Semi-Anechoic Chamber
+Conducted test site to perform FCC Part 15/18
+measurements.
+KR0100
+Canada ISED 3 m & 10 m Semi-Anechoic Chamber and
+Conducted test site
+23298
+JAPAN VCCI EMI (3 m & 10 m Semi-Anechoic Chamber
+and conducted test site)
+C-20136, T-20137,
+R-20181, G-20176
+Europe TÜ V SÜ D
+EMI (3 m & 10 m Semi-Anechoic Chamber and
+conducted test site)
+EMS (ESD, RS, EFT/Burst, Surge, CS,
+Magnetic, Dips and interruptions)
+CARAT 001633 0008
+
+Report No. : KES-EM243956-R1 Page 10 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.0 Test Regulations
+The emissions tests were performed according to following regulations:
+RE – Directive 2014/53/EU
+EN 301 489-1 V2,2,3
+Equipment for fixed use Class A Class B
+Equipment for vehicular use
+Equipment for portable use
+EN 301 489-17 V3,2,4
+EN IEC 61000-3-2:2019
+EN 61000-3-3:2013/A2:2021
+
+Report No. : KES-EM243956-R1 Page 11 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.1 Conducted Emissions at Mains Power Ports
+Test Date
+Nov. 21, 2024
+Test Location
+Electro wave Shieldroom #6
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EMC32 R & S 9.12.00 -
+EMI TEST
+RECEIVER ESR3 R & S 101783 11, 06, 2025
+LISN ENV216 R & S 101786 01, 10, 2025
+LISN ENV216 R & S 101137 01, 10, 2025
+PULSE LIMITER ESH3-Z2 R & S 101915 11, 06, 2025
+Test Conditions
+Temperature: (22,9 ± 0,0) ℃
+Relative Humidity: (45,8 ± 0,0) % R.H.
+Frequency Range of Measurement
+150 ㎑ to 30 ㎒
+Instrument Settings
+IF Band Width: 9 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM243956-R1 Page 12 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.2 Conducted Emissions at Telecommunication Ports
+Test Date
+N/A
+Test Location
+Electro wave Shieldroom #6
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EMC32 R & S 9.12.00 -
+EMI TEST
+RECEIVER ESR3 R & S 101783 11, 06, 2025
+LISN ENV216 R & S 101786 01, 10, 2025
+LISN ESH2-Z5 R & S 100450 11, 06, 2025
+LISN ENV216 R & S 101137 01, 10, 2025
+PULSE LIMITER ESH3-Z2 R & S 101915 11, 06, 2025
+8-WIRE ISN
+CAT3,5 ENY81 R & S 100174 11, 12, 2025
+8-WIRE ISN CAT6 ENY81-CAT6 R & S 101666 03, 06, 2025
+Test Conditions
+Temperature: ( ± ) ℃
+Relative Humidity: ( ± ) % R.H.
+Frequency Range of Measurement
+150 ㎑ to 30 ㎒
+Instrument Settings
+IF Band Width: 9 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+Does not apply because there is no signal line ports.
+
+Report No. : KES-EM243956-R1 Page 13 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.3 Radiated Electric Field Emissions(Below 1 ㎓)
+Test Date
+Nov. 21, 2024
+Test Location
+Open Area Test Site #2 SEMI ANECHOIC CHAMBER #4(10 m)
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W EP5/RE TOYO
+Corporation 6.0.0 -
+EMI TEST
+RECEIVER ESU26 R & S 100551 02, 13, 2025
+AMPLIFIER SCU 01 R & S 100603 11, 06, 2025
+BILOG ANTENNA VULB 9168 SCHWARZBECK 9168-461 05, 09, 2026
+ATTENUATOR 6806.17.A HUBER+SUHNER - 02, 13, 2025
+Test Conditions
+Temperature: (22,5 ± 0,2) ℃
+Relative Humidity: (46,4 ± 0,1) % R.H.
+Frequency Range of Measurement
+30 ㎒ to 1 ㎓
+Instrument Settings
+IF Band Width: 120 ㎑
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM243956-R1 Page 14 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.4 Radiated Electric Field Emissions(Above 1 ㎓)
+Test Date
+Nov. 27, 2024
+Test Location
+SEMI ANECHOIC CHAMBER #5
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W ES10/RE TOYO Corporation 2022.01.000 -
+EMI TEST
+RECEIVER ESU26 Rohde & Schwarz 100552 02, 13, 2025
+HORN ANTENNA BBHA 9120D SCHWARZBECK 9120D-1802 11, 04, 2025
+PREAMPLIFIER 8449B HP 3008A00538 04, 30, 2025
+ATTENUATOR 8491B HP 23094 02, 13, 2025
+Test Conditions
+Temperature: (22,7 ± 0,3) ℃
+Relative Humidity: (46,3 ± 0,2) % R.H.
+Frequency Range of Measurement
+1 ㎓ to 6 ㎓
+Instrument Settings
+IF Band Width: 1 ㎒
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+The Average of the test data is the cispr average result.
+
+Report No. : KES-EM243956-R1 Page 15 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.5 Harmonic Current Emissions
+Test Date
+Nov. 23, 2024
+Test Location
+Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W net.control EM TEST 2.1.4 -
+DIGITAL POWER
+ANALYZER DPA 500N EM TEST V1024106759 03, 28, 2025
+POWER SOURCE ACS 500N6 EM TEST V1024106760 -
+Test Conditions
+Temperature: (22,4 ± 0,0) ℃
+Relative Humidity: (46,0 ± 0,0) % R.H.
+Classification of Equipment for Harmonic Current Emissions
+Class A
+Class B
+Class C(Below 25 W)
+Class C(Above 25 W)
+Class D
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM243956-R1 Page 16 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2.6 Voltage Fluctuations and Flicker
+Test Date
+Nov. 23, 2024
+Test Location
+Electro wave Shieldroom #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMI Test S/W net.control EM TEST 2.1.4 -
+DIGITAL POWER
+ANALYZER DPA 500N EM TEST V1024106759 03, 28, 2025
+POWER SOURCE ACS 500N6 EM TEST V1024106760 -
+Test Conditions
+Temperature: (22,4 ± 0,5) ℃
+Relative Humidity: (46,0 ± 0,2) % R.H.
+Test Results
+The requirements are:
+PASS
+NOT PASS
+NOT APPLICABLE
+Remarks
+See Appendix A for test data.
+
+Report No. : KES-EM243956-R1 Page 17 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.0 Criteria for compliance
+[EN 301 489 -17]
+The performance criteria are:
+•. performance criteria A for immunity tests with phenomena of a continuous nature;
+•. performance criteria B for immunity tests with phenomena of a transient nature;
+•. performance criteria for immunity tests with power interruptions exceeding a certain time.
+The equipment shall meet the performance criteria as specified in the following clauses.
+Performance criteria
+Criteria During test After test
+(i.e. as a result of the application of the test)
+A
+Shall operate as intended.
+(See note).
+Shall be no loss of function.
+Shall be no unintentional transmissions.
+Shall operate as intended.
+Shall be no degradation of performance.
+Shall be no loss of function.
+Shall be no loss of critical stored data.
+B May be loss of function.
+Functions shall be self-recoverable.
+Shall operate as intended after recovering.
+Shall be no loss of critical stored data.
+C May be loss of function.
+Functions shall be recoverable by the operator.
+Shall operate as intended after recovering.
+Shall be no loss of critical stored data.
+NOTE : Operate as intended during the test allows a level of degradation in accordance with “Minimum performance
+level”.
+Minimum performance level
+For equipment that supports a PER or FER, the minimum performance level shall be a PER or FER less
+than or equal to 10 %.
+For equipment that does not support a PER or a FER, the minimum performance level shall be no loss of the
+wireless transmission function needed for the intended use of the equipment.
+
+Report No. : KES-EM243956-R1 Page 18 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Performance criteria for Continuous phenomena
+The performance criteria A shall apply.
+Where the EUT is a transmitter in standby mode, unintentional transmission shall not occur during the test.
+Where the EUT is a transceiver in receive mode, unintentional transmission shall not occur during the test.
+Performance criteria for Transient phenomena
+The performance criteria B shall apply, except for voltage dips greater than or equal to 100 ms and voltage
+interruptions of 5 000 ms duration, for which performance criteria C shall apply.
+Where the EUT is a transmitter in standby mode, unintentional transmission shall not occur as a result of the
+application of the test.
+Where the EUT is a transceiver in receive mode, unintentional transmission shall not occur as a result of the
+application of the test.
+
+Report No. : KES-EM243956-R1 Page 19 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Introduction
+Only the performance criteria specified in the present document or in ETSI EN 301 489-1 [1] where
+referenced shall
+apply.
+The equipment shall meet the minimum performance criteria as specified in clauses 6.1 and 6.2 as
+appropriate.
+For the purpose of the present document two categories of performance criteria apply:
+• Performance criteria for continuous phenomena.
+• Performance criteria for transient phenomena.
+Performance criteria for Continuous phenomena
+During the test, the equipment shall operate as intended, e.g. not unintentionally change its operating state
+and not
+unintentionally change critical stored data.
+After the test, the equipment shall operate as intended, e.g. have no loss of function and have no loss of
+critical stored
+data.
+6.2 Performance criteria for Transient phenomena
+After the test, functions shall be self-recoverable and the equipment shall operate as intended and the
+equipment shall
+have no loss of critical stored data.
+
+Report No. : KES-EM243956-R1 Page 20 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.1 Electrostatic Discharge
+Reference Standard
+EN 61000-4-2
+Test Date
+Nov. 24, 2024
+Test Location
+EMS-ESD: SHIELD ROOM #6
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+ESD SIMULATOR ESS-2000 Noise Ken ESS01Z0454 01, 30, 2025
+HCP - KES - -
+VCP - Noise Ken - -
+Test Conditions
+Temperature: (22,4 ± 0,0) ℃
+Relative Humidity: (46,0 ± 0,0) % R.H.
+Atmospheric Pressure: (100,0 ± 0,0) ㎪
+Test Specifications
+Discharge Factor:  1 s
+Discharge Impedance: 330 ohm / 150 pF
+Kind of Discharge: Air, Contact (direct and indirect)
+Polarity: Positive and Negative
+Number of Discharge: more than 10 time
+Discharge Voltage: Contact Air HCP VCP
+2 ㎸ 2 ㎸ 2 ㎸ 2 ㎸
+4 ㎸ 4 ㎸ 4 ㎸ 4 ㎸
+6 ㎸ 6 ㎸ 6 ㎸ 6 ㎸
+8 ㎸ 8 ㎸ 8 ㎸ 8 ㎸
+15 ㎸ 15 ㎸ 15 ㎸ 15 ㎸
+Notes: HCP: Horizontal coupling plane
+VCP: Vertical coupling plane
+Required Performance Criteria: T.P(B)
+
+Report No. : KES-EM243956-R1 Page 21 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Location of Discharge:
+#1 Mode
+#2 Mode
+Contact
+Air
+2
+3
+1
+1
+2
+3
+
+Report No. : KES-EM243956-R1 Page 22 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ #1 Mode, #2 Mode
+4
+5
+
+Report No. : KES-EM243956-R1 Page 23 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+6
+
+Report No. : KES-EM243956-R1 Page 24 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #1 Mode
+Indirect Discharge
+No. Test Point Discharge Method Performance Remarks
+Criteria Results
+1 HCP Contact Contact Discharge T.P(B) A -
+2 VCP Contact Contact Discharge T.P(B) A -
+Direct Discharge
+No. Test Point Discharge Method Performance Remarks
+Criteria Results
+1 Enclosure1, Button Air Discharge T.P(B) A -
+2 Display, Air Discharge T.P(B) A -
+3 Port Air Discharge T.P(B) A -
+4 Enclosure2 Air Discharge T.P(B) A -
+5 Stand Enclosure Contact Discharge T.P(B) A -
+6 Hand Switch Enclosure Air Discharge T.P(B) A -
+■ #2 Mode
+Indirect Discharge
+No. Test Point Discharge Method Performance Remarks
+Criteria Results
+1 HCP Contact Contact Discharge T.P(B) A -
+2 VCP Contact Contact Discharge T.P(B) A -
+Direct Discharge
+No. Test Point Discharge Method Performance Remarks
+Criteria Results
+1 Enclosure1, Button Air Discharge T.P(B) A -
+2 Display, Air Discharge T.P(B) A -
+3 Port Air Discharge T.P(B) A -
+4 Enclosure2 Air Discharge T.P(B) A -
+5 Stand Enclosure Contact Discharge T.P(B) A -
+6 Hand Switch Enclosure Air Discharge T.P(B) A -
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+
+Report No. : KES-EM243956-R1 Page 25 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.2 Radiated Electric Field Immunity
+Reference Standard
+EN IEC 61000-4-3
+Test Date
+Nov. 22, 2024, Nov. 23, 2024
+Test Location
+EMS-RS: FULL Anechoic Chamber # 1 Semi Anechoic Chamber #3
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W EMC32 R & S 10.10.02 -
+SIGNAL
+GENERATOR SMB 100A Rohde & Schwarz 108252 07, 29, 2025
+HIGH POWER
+DUAL AMP SSA532 SUNGSAN SSA532-001 -
+POWER METER E4419B Agilent GB40203000 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY52170007 02, 13, 2025
+AVERAGE
+POWER SENSOR E9301A Agilent MY41498669 02, 13, 2025
+STACKED
+DOUBLE LOG-
+PER- ANTENNA
+STPL9128 E Schwarzbeck 9128ES-121 -
+DOUBLE RIDGED
+HORN ANTENNA SAS-571 A.H.SYSTEM,INC 781 03, 05, 2025
+Test Conditions
+Nov. 22, 2024 Nov. 23, 2024
+Temperature: (22,6 ± 0,7) ℃ (22,3 ± 0,6) ℃
+Relative Humidity: (46,0 ± 0,4) % R.H. (46,0 ± 0,8) % R.H.
+Atmospheric Pressure: (100,1 ± 0,0) ㎪ (100,1 ± 0,0) ㎪
+
+Report No. : KES-EM243956-R1 Page 26 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Antenna Polarization: Horizontal & vertical unless indicated otherwise
+Antenna Distance: 3 m
+Field Strength: 1 V/m 3 V/m
+10 V/m
+Frequency Range: 80 ㎒ to 6 ㎓ 1,4 ㎓ to 2,7 ㎓
+80 ㎒ to 2,7 ㎓
+Modulation: AM, 80 %, 1 ㎑ sine wave
+PM, 1 ㎐ (0,5 s ON : 0,5 s OFF)
+Frequency step: 1 % step
+Dwell Time: 1 s 3 s
+# of Sides Radiated: 4
+Required Performance Criteria: C.P(A)
+
+Report No. : KES-EM243956-R1 Page 27 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #1 Mode
+Side Exposed Performance
+Criteria
+Results
+Horizontal Vertical
+Front C.P(A) A A
+Right C.P(A) A A
+Back C.P(A) A A
+Left C.P(A) A A
+■ #2 Mode
+Side Exposed Performance
+Criteria
+Results
+Horizontal Vertical
+Front C.P(A) A A
+Right C.P(A) A A
+Back C.P(A) A A
+Left C.P(A) A A
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+
+Report No. : KES-EM243956-R1 Page 28 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.3 Electrical Fast Transients/Bursts
+Reference Standard
+EN 61000-4-4
+Test Date
+Nov. 28, 2024
+Test Location
+EMS-EFT: SHIELD ROOM #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 06, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+CAPACITIVE
+COUPLING
+CLAMP
+HFK EM TEST P1633183115 11, 06, 2025
+Test Conditions
+Temperature: (22,7 ± 0,1) ℃
+Relative Humidity: (46,4 ± 0,1) % R.H.
+Atmospheric Pressure: (100,4 ± 0,0) ㎪
+Test Specifications
+Pulse Amplitude & Polarity:  0.5 ㎸  1.0 ㎸
+(Power Lines)  2.0 ㎸  4.0 ㎸
+Pulse Amplitude & Polarity:  0.5 ㎸  1.0 ㎸
+(Signal Lines)  2.0 ㎸
+Burst Period: 300 ㎳ 2 s
+Repetition Rate: 5 ㎑ 100 ㎑
+Duration of Test Voltage:  1 min
+Required Performance Criteria: T.P(B)
+
+Report No. : KES-EM243956-R1 Page 29 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #2 Mode
+Input a.c. power ports – Coupling/Decoupling Network used
+Mode of Application Performance
+Criteria
+Results
+(+) Burst (㎸) (-) Burst (㎸)
+L T.P(B) A A
+N T.P(B) A A
+PE T.P(B) A A
+L – N T.P(B) A A
+L – PE T.P(B) A A
+N – PE T.P(B) A A
+L – N – PE T.P(B) A A
+Input d.c. power ports – Coupling/Decoupling Network used
+Mode of Application Performance
+Criteria
+Results
+(+) Burst (㎸) (-) Burst (㎸)
+- T.P(B) - -
+Signal ports and telecommunication ports – Coupling Clamp used
+Mode of Application Performance
+Criteria
+Results
+(+) Burst (㎸) (-) Burst (㎸)
+- T.P(B) - -
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+
+Report No. : KES-EM243956-R1 Page 30 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.4 Surge Transients
+Reference Standard
+EN 61000-4-5
+Test Date
+Nov. 28, 2024
+Test Location
+EMS-Surge: SHIELD ROOM #7
+Test Equipment
+Test Conditions
+Temperature: (22,7 ± 0,2) ℃
+Relative Humidity: (46,9 ± 0,2) % R.H.
+Atmospheric Pressure: (100,4 ± 0,0) ㎪
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 07, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+
+Report No. : KES-EM243956-R1 Page 31 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Specifications
+Power Lines
+Source Impedance: 12 ohm for common mode and 2 ohm for differential mode
+Surge Amplitude: Common Mode
+(0,5 / 1,0 / 2,0) ㎸
+Differential Mode
+(0,5 / 1,0) ㎸
+Number of Surges: 5 surges per angle
+Angle: 0, 90, 180, 270 (input a.c. power port)
+Polarity: Positive & Negative
+Repetition Rate: 1 surge per min 1 surge per 30 sec.
+Required Performance Criteria: T.P(B)
+Signal Lines
+Source Impedance: 42 ohm for common mode
+Surge Amplitude: Common Mode
+(0,5 / 1,0) ㎸
+Number of Surges: 5 Surges
+Polarity: Positive & Negative
+Repetition Rate: 1 surge per min 1 surge per 30 sec.
+Required Performance Criteria: T.P(B)
+
+Report No. : KES-EM243956-R1 Page 32 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #2 Mode
+Line to Line – Differential Mode
+Mode of Application Performance
+Criteria
+Results
+(+) Surge (㎸) (-) Surge (㎸)
+L - N T.P(B) A A
+Line to Earth – Common Mode
+Mode of Application Performance
+Criteria
+Results
+(+) Surge (㎸) (-) Surge (㎸)
+L - PE T.P(B) A A
+N - PE T.P(B) A A
+Signal Lines
+Line to Earth – Common Mode
+Mode of Application Performance
+Criteria
+Results
+(+) Surge (㎸) (-) Surge (㎸)
+- T.P(B) - -
+Note: “Blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+
+Report No. : KES-EM243956-R1 Page 33 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.5 Transients and surges in the vehicular environment
+Reference Standard
+ISO 7637-2
+Test Date
+N/A
+Test Location
+Electro wave Shieldroom #4
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iso.control EM TEST 5.5.3 -
+ULTRA COMPACT
+SIMULATOR UCS 200N50 EM TEST P1610176206 11, 06, 2025
+
+VOLTAGE DROP
+SIMULATOR VDS 200N50 EM TEST P1605171484 11, 06, 2025
+Test Conditions
+Temperature: ( ± ) ℃
+Relative Humidity: ( ± ) % R.H.
+Atmospheric Pressure: ( ± ) ㎪
+Test Specifications
+Requirements
+Test pulse
+Test severity level III
+US (V)
+Functional status
+for systems Minimum
+number
+of pulses
+or test time
+12 V
+system
+24 V
+system
+Not related to
+immunity
+related functions
+1 -75 -450 T.P(B) 10 pulses
+2a +37 +37 T.P(B) 10 pulses
+2b +10 +20 T.P(B) 10 pulses
+3a -112 -150 C.P(A) 20 min
+3b +75 +150 C.P(A) 20 min
+4 -6 -12 T.P(B) 10 pulses
+
+Report No. : KES-EM243956-R1 Page 34 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+Test
+pulse
+Test Voltage [V] Performance Criteria
+pulses
+or test time
+Performance Result
+12 V
+system
+24 V
+system
+Not related to
+immunity
+related functions
+12 V 24 V
+1 -75 -450 T.P(B) 10 pulses - -
+2a +37 +37 T.P(B) 10 pulses - -
+2b +10 +20 T.P(B) 10 pulses - -
+3a -112 -150 C.P(A) 20 min - -
+3b + 75 + 150 C.P(A) 20 min - -
+4 -6 -12 T.P(B) 10 pulses - -
+Notes: CDN = Coupling Decoupling Network
+EMC = Electro Magnetic Clamp
+“blank” = Not performed
+Results:
+A – No degradation of function
+B – Distortion/Error of function (self-recoverable)
+C – Loss of function
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+N/A
+
+Report No. : KES-EM243956-R1 Page 35 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.6 Conducted Disturbance
+Reference Standard
+EN 61000-4-6
+Test Date
+Nov. 24, 2024
+Test Location
+EMS-CS: SHIELD ROOM #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W icd.control EM TEST 7.2.0 -
+TEST SYSTEM
+FOR
+CONDUCTED
+AND RADIATED
+NSG4070 TESEQ 65585 11, 18, 2025
+ATTENUATOR ATT 6/80 EM TEST P1614178148 11, 06, 2025
+CDN CDN M016 TESEQ 43694 11, 07, 2025
+CDN CDN M016 TESEQ 43697 11, 07, 2025
+CDN CDN T800 TESEQ 42800 11, 07, 2025
+EM CLAMP KEMZ 801A TESEQ 44099 11, 08, 2025
+Test Conditions
+Temperature: (22,5 ± 0,3) ℃
+Relative Humidity: (46,2 ± 0,2) % R.H.
+Atmospheric Pressure: (100,5 ± 0,0) ㎪
+Test Specifications
+Frequency range: 150 ㎑ to 80 ㎒ 10 ㎑ to 30 ㎒
+150 ㎑ to 230 ㎒ 10 ㎑ to 100 ㎒
+Voltage Level: 1 Vrms 3 Vrms
+10 Vrms
+Modulation: AM, 80 %, 1 ㎑ sine wave
+PM, 1 ㎐ (0,5 s ON : 0,5 s OFF)
+Frequency step: 1 % step
+Dwell Time: 1 s 3 s
+Required Performance Criteria: C.P(A)
+
+Report No. : KES-EM243956-R1 Page 36 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #2 Mode
+Input a.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Performance
+Criteria Results
+L – N – PE CDN C.P(A) A
+Input d.c. power ports
+Coupling Location
+(Line Stressed) Coupling Method Performance
+Criteria Results
+- - C.P(A) -
+Signal ports and telecommunication ports
+Coupling Location
+(Line Stressed) Coupling Method Performance
+Criteria Results
+- - C.P(A) -
+Notes: CDN = Coupling Decoupling Network
+EMC = Electro Magnetic Clamp
+“blank” = Not performed
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+
+Report No. : KES-EM243956-R1 Page 37 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.7 Voltage Dips and Short Interruptions
+Reference Standard
+EN IEC 61000-4-11
+Test Date
+Nov. 28, 2024
+Test Location
+EMS-Voltage dip: SHIELD ROOM #7
+Test Equipment
+Used Description Model Number Manufacturer Serial Number Cal. Due
+EMS Test S/W iec.control EM TEST 5.4.8 -
+ULTRA COMPACT
+SIMULATOR UCS 500N7 EM TEST P1608172950 11, 07, 2025
+MOTOR VARIAC MV2616 EM TEST P1552169719 11, 07, 2025
+Test Conditions
+Temperature: (22,7 ± 0,0) ℃
+Relative Humidity: (46,4 ± 0,0) % R.H.
+Atmospheric Pressure: (100,4 ± 0,0) ㎪
+Test Specifications
+Number of Tests : 3 times
+Test Intervals : 10 sec
+Performance Criteria : T.P(B) for Voltage Dips (100 %, 0.5 T)
+T.P(B) for Voltage Dips (100 %, 1 T)
+T.P(B) for Voltage Dips (30%, 25 T)
+T.P(C)/TR(C) for Voltage Interruptions (100 %, 250 T)
+
+Report No. : KES-EM243956-R1 Page 38 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data
+■ #2 Mode
+Voltage Dips
+NO Depth Duration Performance Remarks
+Criteria Results
+1 100 % 0.5 T T.P(B) A -
+2 100 % 1 T T.P(B) A -
+3 30 % 25 T T.P(B) A -
+Short Interruptions
+NO Depth Duration Performance Remarks
+Criteria Results
+1 100 % 250 T T.P(C) B -
+Test Results
+PASS Required Performance Criteria
+NOT PASS Required Performance Criteria
+NOT APPLICABLE
+Remarks
+Any degradations of performance was not observed during in the test.
+During the interruption (0%, 250 cycle), EUT's Charge was cut off but after the test, it was
+recovered without operator’s intervention.
+
+Report No. : KES-EM243956-R1 Page 39 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+APPENDIX A – TEST DATA
+Conducted Emissions at Mains Power Ports
+■ #2 Mode
+[HOT]
+
+Report No. : KES-EM243956-R1 Page 40 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+[NEUTRAL]
+♦ Calculation
+QuasiPeak[㏈ uV] / CAverage [㏈ uV] = Reading Value[㏈ uV] + Corr. [㏈]
+QuasiPeak / CAverage : The Final Value
+Reading Value : Not shown in the table.
+Corr. : Correction values (LISN FACTOR + (Cable Loss + Pulse Limiter FACTOR))
+
+Report No. : KES-EM243956-R1 Page 41 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Conducted Emissions at Telecommunication Ports
+[100 Mbps]
+N/A
+♦ Calculation
+QuasiPeak[㏈uV] / CAverage [㏈uV] = Reading Value[㏈uV] + Corr. [㏈]
+QuasiPeak / CAverage : The Final Value
+Reading Value : Not shown in the table.
+Corr. : Correction values (ISN FACTOR+ Cable Loss)
+
+Report No. : KES-EM243956-R1 Page 42 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Below 1 ㎓)
+■ #1 Mode
+
+Report No. : KES-EM243956-R1 Page 43 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ #2 Mode
+♦ Calculation – SAC #6(3 m)
+Result(QP) [㏈(㎶/m)] = (Reading(QP)[㏈(㎶)] + c.f[㏈(1/m)]
+Margin(QP)[㏈] = Limit[㏈(㎶/m)] - Result(QP) [㏈(㎶/m)]
+Reading(QP) : Reading value, Result(QP) : Reading value + Factor value
+Limit(QP) : Limit value, c.f : (ANT Factor + Cable Loss - Preamp Factor), Margin: Margin value
+
+Report No. : KES-EM243956-R1 Page 44 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Above 1 ㎓)
+■ #1 Mode
+
+Report No. : KES-EM243956-R1 Page 45 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ #2 Mode
+♦ Calculation
+Over Limit [㏈] = (Read Level[㏈㎶] + Ant Factor[㏈/m] + Cable Loss [㏈] – Preamp Factor [㏈]+ ATT[㏈]) –
+Limit Line[㏈㎶]
+Over Limit : Margin, Read Level : Reading value, Ant Factor : ANT Factor,
+Cable Loss : Cable loss, Preamp Factor : Preamp Factor, ATT : Attenuator Factor
+
+Report No. : KES-EM243956-R1 Page 46 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Harmonic Current Emissions and Voltage Fluctuations and Flicker
+■ #2 Mode
+Average harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.240
+2 0.002 0.228 1.080 n/a
+3 0.228 9.893 2.300 PASS
+4 0.003 0.763 0.430 n/a
+5 0.220 19.255 1.140 PASS
+6 0.003 1.008 0.300 n/a
+7 0.209 27.079 0.770 PASS
+8 0.003 1.289 0.230 n/a
+9 0.194 48.479 0.400 PASS
+10 0.002 1.180 0.184 n/a
+11 0.178 53.876 0.330 PASS
+12 0.003 1.942 0.153 n/a
+13 0.160 76.143 0.210 PASS
+14 0.004 2.689 0.131 n/a
+15 0.141 94.062 0.150 PASS
+16 0.003 2.758 0.115 n/a
+17 0.122 92.366 0.132 PASS
+18 0.003 2.890 0.102 n/a
+19 0.104 88.181 0.118 PASS
+20 0.003 3.387 0.092 n/a
+21 0.088 54.988 0.161 PASS
+22 0.003 3.996 0.084 n/a
+23 0.074 50.192 0.147 PASS
+24 0.003 4.368 0.077 n/a
+25 0.062 45.576 0.135 PASS
+26 0.003 4.567 0.071 n/a
+27 0.052 41.405 0.125 PASS
+28 0.003 4.487 0.066 n/a
+29 0.044 38.138 0.116 PASS
+30 0.003 4.698 0.061 n/a
+31 0.038 35.266 0.109 PASS
+32 0.003 4.471 0.058 n/a
+33 0.033 32.716 0.102 PASS
+34 0.002 3.873 0.054 n/a
+35 0.029 30.473 0.096 PASS
+35 0.002 3.457 0.051 n/a
+37 0.025 27.513 0.091 PASS
+38 0.001 2.861 0.048 n/a
+39 0.021 24.449 0.087 PASS
+40 0.001 2.822 0.046 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+• Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM243956-R1 Page 47 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data - Harmonics (continued)
+Maximum harmonic current results
+Hn Ieff [A] % of Limit Limit [A] Result
+1 0.244
+2 0.004 0.247 1.620 n/a
+3 0.231 6.705 3.450 PASS
+4 0.004 0.635 0.645 n/a
+5 0.223 13.033 1.710 PASS
+6 0.003 0.774 0.450 n/a
+7 0.212 18.324 1.155 PASS
+8 0.003 0.983 0.345 n/a
+9 0.196 32.691 0.600 PASS
+10 0.005 1.638 0.276 n/a
+11 0.180 36.280 0.495 PASS
+12 0.003 1.472 0.230 n/a
+13 0.161 51.252 0.315 PASS
+14 0.004 2.198 0.197 n/a
+15 0.142 63.117 0.225 PASS
+16 0.004 2.172 0.173 n/a
+17 0.123 61.870 0.199 PASS
+18 0.004 2.664 0.153 n/a
+19 0.105 59.211 0.178 PASS
+20 0.004 2.920 0.138 n/a
+21 0.089 55.422 0.161 PASS
+22 0.004 2.986 0.125 n/a
+23 0.074 50.679 0.147 PASS
+24 0.004 3.449 0.115 n/a
+25 0.062 45.961 0.135 PASS
+26 0.004 3.449 0.106 n/a
+27 0.052 41.731 0.125 PASS
+28 0.003 3.452 0.099 n/a
+29 0.045 38.419 0.116 PASS
+30 0.003 3.564 0.092 n/a
+31 0.039 35.776 0.109 PASS
+32 0.003 3.426 0.086 n/a
+33 0.034 33.217 0.102 PASS
+34 0.002 3.040 0.081 n/a
+35 0.030 30.918 0.096 PASS
+35 0.002 2.785 0.077 n/a
+37 0.025 27.894 0.091 PASS
+38 0.002 2.683 0.073 n/a
+39 0.021 24.717 0.087 PASS
+40 0.002 2.474 0.069 n/a
+Note: Harmonic currents less than 0.6 % of the input current measured under the test conditions, or less
+than 5 mA, whichever is greater, are disregarded.
+• Application of limits for average is 100% except for odd harmonics from 21 to 39, where 150% applies.
+
+Report No. : KES-EM243956-R1 Page 48 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test Data - Voltage Fluctuations
+■ #2 Mode
+Maximum Flicker results
+Flicker Measurements
+Plt Max Pst Max Dc Max Dmax Max Tmax
+Line 1: 0.028 0.028 0.016 < 0.2 0
+Limits: 0.65 1 3.3 4 0.5
+Results: PASS PASS PASS PASS PASS
+
+Report No. : KES-EM243956-R1 Page 49 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+APPENDIX B - Test Setup Photos and Configuration
+Conducted Emissions at Main Power Ports
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 50 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Conducted Emissions at Telecommunication Ports
+N/A
+
+Report No. : KES-EM243956-R1 Page 51 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Below 1 ㎓)
+■ #1 Mode
+
+Report No. : KES-EM243956-R1 Page 52 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 53 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Emissions(Above 1 ㎓)
+■ #1 Mode
+
+Report No. : KES-EM243956-R1 Page 54 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 55 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Harmonic Current Emissions and Voltage Fluctuations and Flicker
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 56 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Electrostatic Discharge
+■ #1 Mode
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 57 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Radiated Electric Field Immunity
+■ 1 Mode
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 58 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Electrical Fast Transients/Bursts
+■ #2 Mode
+Surge Transients
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 59 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Transients and surges in the vehicular environment
+N/A
+Conducted Disturbance
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 60 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Voltage Dips and Short Interruptions
+■ #2 Mode
+
+Report No. : KES-EM243956-R1 Page 61 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+APPENDIX C - EUT Photographs
+EUT External Photographs
+(Front)
+(Rear)
+
+Report No. : KES-EM243956-R1 Page 62 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+EUT Internal Photographs
+(Internal View)
+
+Report No. : KES-EM243956-R1 Page 63 / 63
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Label
+The End.
+Portable X-Ray System
+Model No : HnX-P1
+Manufacturer : H&abyz
+Made in Korea

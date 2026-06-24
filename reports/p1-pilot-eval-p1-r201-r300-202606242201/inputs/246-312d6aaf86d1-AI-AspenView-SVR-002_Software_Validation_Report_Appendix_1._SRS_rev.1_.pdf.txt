@@ -1,0 +1,632 @@
+queueId: ingest-1781569954419-17c4
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/[AI-AspenView-SVR-002] Software Validation Report_Appendix 1. SRS (rev.1).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/7760ef01f7e2/[AI-AspenView-SVR-002] Software Validation Report_Appendix 1. SRS (rev.1)__7760ef01f7e2_combined.txt
+canonicalGroupId: 312d6aaf86d1
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 246
+
+SOURCE_TEXT
+AspenView Document 1/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+Appendix 1.
+SRS
+(Software Requirement Specification)
+Revision Status
+Number Revision
+Date
+Revision
+Number
+Description of
+Revision
+Prepar
+ed by
+Reviewed by Approved by
+1 2022.05.22 0 Firstly prepared
+2 2023.09.01 1
+1) Form Change
+2) Update based on
+unannounced audit
+• Add standard to update
+Software Validation
+• Separated software
+validation as SRS(Appendix
+1), SDS &Testing &
+Traceability (Appendix 2) and
+updated
+
+AspenView Document 2/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+1. Software Requirement Specification (SRS)
+1.1 Terms and abbreviations
+• Frame – whole data frame received from detector “as is” with original width and height.
+• ROI – abbreviation for “Region of Interest” (ROI assumed to be located within a frame in
+this document’s context)
+• Image – given ROI with optional rotation and flip. In particular cases it might coincide
+with the whole frame.
+• End User Application (EUA) – upper level software that acquires images from detector
+using this library and then presents (displays) images to end-user.
+• UI – User Interface
+• DICOM – Digital Imaging and Communications in Medicine
+• SCP – Service Class Provider
+• SCU – Service Class User
+• AE – Application Entity
+
+AspenView Document 3/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+1.2 Main functions
+1.2.1Acquisition
+Acquire raw images from the detector and convert to the DICOM image with original raw
+image that will be used to restore when happened some image quality issue, and also
+acquired image will be transfer to End User Application software. And the raw image also
+saved with processed images in the same folder.
+1.2.2Image processing
+Image processing module enhance image quality to diagnose.
+1.2.3End User Application
+- Register Mode
+Register module input and save patient information in Local database. And then change
+over from Register Mode to Exam Mode for X-ray exposure.
+- Exam Mode Acquire raw image from the detector (library)
+▪ Display the raw or DICOM image files on the monitor.
+▪ Enhance image quality to diagnose
+▪ Save Patient’s information
+- Review Mode
+▪ Patient management module can edit or delete data.
+And it search patient easily to diagnose.
+▪ Display the raw or DICOM image files on the monitor.
+
+AspenView Document 4/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+1.3 Identifiers “SRS n”
+• RIV-SRS-1 – Common requirements (enlisted in Software Description)
+• RIV-SRS-2 – Acquisition
+• RIV-SRS-3 – Image Processing
+• RIV-SRS-4 – EUA
+• RIV-SRS-5 – check-up for Image Processing (RIV-SRS-3)
+• RIV-SRS-6 – check-up for EUA (RIV-SRS-4)
+• RIV-SRS 7 – check-up for Worklist mode (RIV-SRS-4)
+• RIV-SRS 8 – check-up for Exam mode (RIV-SRS-4)
+• RIV-SRS 9 – check-up for Review mode (RIV-SRS-4)
+• RIV-SRS 10 – check-up for Browser mode (RIV-SRS-4)
+• RIV-SRS 11 – check-up for Option & Settings (RIV-SRS-4)
+
+AspenView Document 5/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+1.4 SRS: Required Functionality
+SRS ID Functionality Function Description Remark
+RIV-SRS-1
+S/W Common
+General options
+RIV-SRS-1-1 Install File install file release
+RIV-SRS-1-2 Resolution 1920x1080 or higher
+RIV-SRS-1-3 Language
+default language is English
+Text input and data
+character set UTF-8
+RIV-SRS-1-4 S/W Key Managing the Software Serial
+Key with Supportingwell.com
+RIV-SRS-2
+Acquisition
+Acquire raw frame data from
+detector
+and deliver it to EUA as
+image.
+RIV-SRS-2-1 Raw Data
+acquisition
+Acquired raw frame data
+from
+detector is delivered at
+workstation and is saved.
+RIV-SRS-2-2 Cut frame
+to Image
+Extracts region of interest
+from a frame with optional
+flip or rotation.
+RIV-SRS-2-3
+Convert
+DICOM
+Images
+The software can read raw
+frames and convert to the
+DICOM 3.0 format files.
+For converting the
+DICOM files,
+There is no
+compression to
+cause
+data loss
+RIV-SRS-3 Image Processing
+Global grayscale re-map
+Global equalization by
+histogram
+Local filtration
+
+AspenView Document 6/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+RIV-SRS-3-1
+Basic
+Grayscale re-
+map
+Gamma-correction for
+brightness or its equivalence
+Histogram cutting
+These are
+standard
+algorithms.
+(Refer book
+“numerical recipes
+in C++”)
+RIV-SRS-3-2 Basic local
+filters
+Median filter
+Standard Convolution
+(smooth / sharpening)
+Standard unsharpened mask
+Directional
+smoothing for
+initial noise
+reduction
+Identification of
+important
+structures and
+generation of
+protective masks
+using protective
+contours
+Adaptive
+unsharpened with
+Gaussian/Laplacian
+pyramid for
+overall image
+improvement
+Final quality check
+and metadata
+generation
+RIV-SRS-3-3
+Additional
+advanced
+filters with
+subjective
+quality
+estimation.
+Directional smooth
+Adaptive unsharpened with
+Gaussian / Laplacian pyramid
+and protective contours
+
+AspenView Document 7/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+RIV-SRS-4
+EUA
+(End User
+Application)
+RIV-SRS-1
+RIV-SRS-2
+Graphic User Interface is
+consist of
+Worklist mode, Exam mode,
+Review mode and Browser
+mode
+After acquire an
+image from
+library, EUA will
+proceed to
+processing the
+image to better to
+see for clinical
+site. But also EUA
+include the
+function as image
+exporting (Patient
+CD, DICOM Print)
+RIV-SRS-4-1
+Worklist
+(Patient
+registration)
+Input patient information
+and save manually
+Edit Patient information and
+save
+Delete Patient information
+Query Patient
+information from
+MWL
+RIV-SRS-4-2
+Exam
+(Acquired
+image and
+display)
+Add the addition study
+Save the image
+Display the image after X-ray
+exposure
+
+AspenView Document 8/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+RIV-SRS-4-3
+Review
+(Image
+manipulation)
+geometry
+transformation &
+etc. function as
+followings
+- Format (1X1, 1X2,
+2X1,
+2X2, 3X3)
+- Window
+width/level
+control
+- Zoom In/Out
+- Panning
+(image moving)
+- Magnify
+- Image processing
+- Measure
+Angle/Length
+- Input Marker &
+Label
+- DICOM sending to
+PACS
+- DICOM Printing
+Stitching
+RIV-SRS-4-4
+Browser
+(Search
+image for
+Exam or
+Review)
+Display studied patient list
+Display studied images
+Image backup
+Studied data exporting
+Display studied
+patient list
+Studied data
+exporting
+3.3 Image Processing
+1) Directional smooth
+A. Theoretical basis : Directional smooth technique is based on the theory of anisotropic
+diffusion. This method is an extension of the technique proposed by Perona and Malik
+(1990), which analyzes the directionality of the image using the local structure tensor.
+B. Mathematical model :
+The local structure tensor J is defined as:
+
+AspenView Document 9/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+J = [J11 J12; J12 J22] = [∇I ∇I^T]
+where ∇I is the gradient of the image. The directional smoothing is modeled by the
+following partial differential equation:
+∂I/∂t = div(D∇I)
+where D is the diffusion tensor, which is constructed based on the eigenvectors of the
+structure tensor J.
+C. Algorithm Details :
+(1) Initial noise reduction using Gaussian filter
+(2) Compute structural tensor and eigenvalue decomposition
+(3) Construct diffusion tensor D
+(4) Solve diffusion equation using iterative numerical solution
+D. Optimization and Implementation
+(1) Parallel processing using SIMD (Single Instruction, Multiple Data) instructions
+(2) Increased calculation speed through GPU acceleration
+(3) Large-scale image processing using multithreading
+E. Clinical significance
+Directional smooth technique is particularly important in medical images that contain
+highly directional anatomical structures such as vascular structures or fibrous tissues.
+This technique effectively removes noise while preserving important directional
+information, thus improving diagnostic accuracy.
+2) Adaptive Unsharpened with Gaussian / Laplacian pyramid
+A. Theoretical basis : This technique combines the image pyramid concept proposed by
+Burt and Adelson (1983) with the adaptive histogram equalization theory of Pizer et al.
+(1987). The multi-scale representation allows for individual processing of different
+frequency components of the image.
+B. Mathematical model :
+Each level l of the Gaussian pyramid is defined as:
+G_l = downsample(G_(l-1) * g)
+where g is the Gaussian kernel.
+Each level of the Laplacian pyramid is computed as:
+
+AspenView Document 10/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+L_l = G_l - upsample(G_(l+1))
+Unsharp masking is expressed as:
+S_l = G_l + k * (G_l - G_l * b)
+where k is the sharpening strength and b is the blur kernel.
+C. Algorithm Details :
+(1) Generate Gaussian pyramid for input image
+(2) Compute Laplacian pyramid
+(3) Measure local contrast at each pyramid level
+(4) Apply adaptive unsharp masking
+(5) Reassemble modified Laplacian pyramid to generate final image
+D. Optimization and Implementation
+(1) Optimization of large-scale convolution operations using FFT (Fast Fourier
+Transform)
+(2) Minimization of memory access through cache-friendly algorithm design
+(3) Implementation of heterogeneous computing using OpenCL
+E. Clinical significance : This technique is particularly useful in complex medical images
+containing structures of varying sizes. It improves the visibility of fine structures while
+maintaining overall image quality, facilitating the detection of microcalcifications or small
+tumors.
+3) Protective contours
+A. Theoretical basis : This technique is particularly useful in complex medical images
+containing structures of varying sizes. It improves the visibility of fine structures while
+maintaining overall image quality, facilitating the detection of microcalcifications or
+small tumors.
+B. Mathematical model :
+The contour C is defined as the curve
+minimizing the following energy function:
+E(C) = ∫ (α|C'(s)|^2 + β|C''(s)|^2 + λE_image(C(s))) ds
+where α, β, λ are the weights, and E_image is the image-based energy term.
+
+AspenView Document 11/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+The protection mask M is generated as follows:
+M(x, y) = exp(-d(x, y)^2 / (2σ^2))
+where d(x, y) is the distance from pixel (x, y) to the nearest contour.
+C. Algorithm Details :
+(1) Initial contour setting (automatic or semi-automatic)
+(2) Gradient vector flow (GVF) calculation
+(3) Iterative contour optimization using active contour model
+(4) Protection mask generation based on final contour
+D. Optimization and Implementation
+(1) Improving computational efficiency using narrow-band level set method
+(2) Parallel implementation of contour evolution
+(3) Optimizing memory usage through adaptive mesh technique
+E. Clinical significance : Protective contours technique is important for preserving
+important anatomical boundaries such as organ boundaries or tumor margins. This
+enables accurate segmentation and measurement, especially in computer-aided
+diagnosis (CAD) systems, thus improving diagnostic accuracy.
+4) Median Filter
+A. Theoretical basis : Median Filter is a nonlinear digital filtering technique that is mainly
+effective in removing 'salt-and-pepper' noise. This filter is widely used in medical imaging
+because it can remove noise while preserving edges.
+B. Mathematical model :
+The output y[m,n] of the median filter is defined as:
+y[m,n] = median{x[i,j], (i,j) ∈ w}
+where w represents the filter window.
+C. Algorithm Details :
+(1) Apply a sliding window to the input image
+(2) Sort the pixel values within the window
+(3) Select the median of the sorted values and assign it as the output pixel value
+(4) Repeat for the entire image
+D. Optimization and Implementation
+(1) Speed improvement through histogram-based median calculation
+
+AspenView Document 12/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+(2) Optimization of large-scale image processing through parallel processing
+E. Clinical significance : Median Filter effectively removes impulse noise from medical
+images, thereby improving the accuracy of diagnosis.
+5) Sharpen
+A. Theoretical basis : Sharpen technique enhances the high frequency components of an
+image to make edges and details more distinct. It is mainly based on the principle of
+Unsharp Masking.
+B. Mathematical model :
+The sharpened image S is computed as:
+S = I + λ(I - I_blur)
+where I is the original image, I_blur is the blurred image, and λ is the sharpening
+strength.
+C. Algorithm Details :
+(1) Apply Gaussian blur to the original image
+(2) Calculate the difference between the original image and the blurred image
+(3) Multiply the difference by the intensity coefficient and add it to the original image
+D. Optimization and Implementation
+(1) Optimization of blur operation using separable Gaussian filter
+(2) Parallel processing using SIMD instructions
+E. Clinical significance : The Sharpen technique emphasizes the fine structures of X-ray
+or MRI images, making it easier to identify small lesions or fractures.
+6) Contrast
+A. Theoretical basis : Contrast enhancement is a technique that expands the dynamic
+range of an image to increase visual distinction. Methods such as histogram
+equalization and contrast stretching are used.
+B. Mathematical model :
+For contrast stretching, the new pixel value p_new is computed as follows:
+p_new = (p - min) * (newMax - newMin) / (max - min) + newMin
+Where p is the original pixel value, min and max are the minimum and maximum
+values of the original image, and newMin and newMax are the new range.
+C. Algorithm Details :
+
+AspenView Document 13/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+(1) Analyze image histogram
+(2) Determine contrast enhancement function (linear or non-linear)
+(3) Create lookup table
+(4) Map pixel values
+D. Optimization and Implementation
+(1) Fast pixel value conversion using lookup tables
+(2) Parallelization of histogram calculations
+E. Clinical significance : Contrast enhancement improves diagnostic accuracy by making
+it easier to distinguish between tissues in low-contrast medical images (e.g., chest X-
+rays).
+7) Edge Enhancement
+A. Theoretical basis : Edge Enhancement is a technique that emphasizes the edges of an
+image to make the boundaries of structures clearer. It usually uses a high-pass filter or
+a Laplacian filter.
+B. Mathematical model :
+Edge enhancement using the Laplacian filter is expressed as:
+I_enhanced = I + λ * ∇²I
+where ∇²I is the Laplacian of the image, and λ is the enhancement strength.
+C. Algorithm Details :
+(1) Apply edge detection filter (e.g. Sobel, Prewitt)
+(2) Calculate the intensity of the detected edge
+(3) Add weighted edge information to the original image
+D. Optimization and Implementation
+(1) Reduced computational complexity by using separable filters
+(2) Parallel processing using GPUs
+E. Clinical significance : Edge Enhancement improves diagnostic accuracy by clarifying
+the boundaries of structures in angiography or bone imaging.
+8) Gamma Correction
+A. Theoretical basis : Gamma Correction is a technique that nonlinearly adjusts the
+luminance or trichromatic component values of an image. It is used to compensate for
+nonlinearities in display devices or to adjust the overall brightness of an image.
+B. Mathematical model :
+
+AspenView Document 14/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+The gamma-corrected pixel value V_out is calculated as:
+V_out = A * V_in^γ
+where A is a constant, V_in is the input pixel value, and γ is the gamma value.
+C. Algorithm Details :
+(1) Normalize pixel values of input image to 0-1 range
+(2) Apply gamma function to each pixel
+(3) Rescale result value to original pixel value range
+D. Optimization and Implementation
+(1) Fast gamma correction using lookup tables
+(2) Parallel processing using SIMD instructions
+Clinical significance : Gamma correction improves tissue contrast in X-ray
+images, making it easier to distinguish between soft and hard tissues.
+
+AspenView Document 15/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+1.5 SRS: Conditions for Check, Logging and Error Handling
+SRS ID Functionality Function Description Remark
+RIV-SRS-5 Image Processing RIV-SRS-3
+Software shall transform
+pixels and produce (by
+request) detailed images’
+logs in such manner so
+particular mistake in
+algorithm could be
+identified visually
+RIV-SRS-6
+EUA
+RIV-SRS-4
+End User Application shall
+provide error handling
+mentioned for RIV-SRS-4
+in this Table
+RIV-SRS-6-1
+Check
+Selecting
+Exam
+When a user does not
+Select patient/study. EUA
+display as following
+message box. “There is no
+exam”
+RIV-SRS-7
+Worklist mode
+RIV-SRS-4
+RIV-SRS-7-1
+Check
+MWL's
+connection
+When the MWL don’t
+connect, EUA display the
+MWL icon in gray.
+or disable
+worklist control
+RIV-SRS-8
+Exam mode
+RIV-SRS-4
+RIV-SRS-8-1
+Check
+detector’s
+connection
+When the detector don’t
+connect,
+EUA display as following
+message.
+“Detector Disconnected”
+or disable
+exposure
+control
+RIV-SRS-9 Review mode RIV-SRS-4
+
+AspenView Document 16/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+RIV-SRS-9-1 Check PACS’s
+connection
+When the PACS don’t
+connect, EUA display the
+PACS icon in gray
+or disable send
+control
+RIV-SRS-9-2
+Check
+DICOM
+Printer’s
+connection
+When the DICOM printer
+don’t connect, EUA display
+the icon in gray
+or disable print
+control
+RIV-SRS-9-3 Delete the
+image
+When the user tries to
+delete an image, the
+program asks whether to
+delete the image or reject
+it.
+checks whether
+processed file
+is or not
+RIV-SRS-10
+Browser mode
+RIV-SRS-4
+
+RIV-SRS-10-1 Check Delete
+study
+When a user try to delete
+without selecting for
+interesting study, EUA
+display as following
+message box.
+“Are you sure you want to
+delete the patient
+permanently?”
+or disable
+study control
+RIV-SRS-11 ETC RIV-SRS-4
+RIV-SRS-11-1 Login System Error
+When login failed, EUA
+display as following
+message box.
+“Invalid Password or
+Username”
+RIV-SRS-11-2 Run
+Check
+duplication
+run
+The program will be re-
+run.
+Also, the
+operator could
+put the
+password in
+the message
+box. It blocks
+to delete the
+
+AspenView Document 17/17
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002
+Initiate date: 2022.05.22 /Revision: 1
+images by
+mistake.
+RIV-SRS-11-3 Setting Check
+config files
+Image processing
+parameter,
+program state storage
+setting file, etc.
+It should be
+possible
+to save and
+modify as user
+setting.

@@ -1,0 +1,289 @@
+queueId: ingest-1781569954417-15zw
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/05_설계개발 검증 및 유효성 확인/06_Risk Management/ARMR-FMEA-0-001 Risk Table 19.09.17.xlsx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/29336b372bd2/ARMR-FMEA-0-001 Risk Table 19.09.17__29336b372bd2_combined.txt
+canonicalGroupId: f15fed064f37
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 297
+
+SOURCE_TEXT
+,File No.,ARMR-FMEA-0-001,,,Dept. / Title,Name,Date,,Signature,,,,,,,,,,,,,,,,,,,,,,,,
+,Rev. No.,0,,Prepared,R&D team,"Lee, Dong wook",SEP/17/2019,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Date.,SEP/17/2019,,Review,R&D Manager,"Lee, Dong jin",SEP/17/2019,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,Approval,Quality Manager,Hur Namkyu ,SEP/17/2019,,,,,,,,,,,,,,,,,,,,,,,,,,
+"ISO 14971
+Clause",,4.2 Intended use and identification of characteristics related to the safety of the medical device,,,,,,,4.3 Identification of hazards,,4.4 Estimation of the risk(s) for each harzadous situation,,,,,5. Risk Evaluation,6.2 Risk Control option analysis,,,6.3 Implementation of risk control measures,,,,6.4 Residual risk evaluation,,,,6.5 Risk benefit analysis,6.6 Risks arising from risk control,6.7 Completeness of risk control,7. Evaluation of overall residual risk acceptability ,,
+No,IEC 60601-1 Clause,"IEC60601-1
+Requirements",Questions for identifying characteristics ,,A/NA,Related Characteristics ,Cond.,,RM No.,Hazard ,Failure Effect (Hazardous situation) ,Harm (risk) ,Risks,,, Acceptability ,Risk Control,,,Implementation of risk control,,," (observation, measurement, testing, other means)",통제 후 위험,,,,Risk/Benefit analysis,Additional hazard ,If other hazzards are introduced from the measeres?(Y/N),,,
+,,,,,,,Normal,Fault,,,,,Sev ,Pro,Risk,,"Inherent Design
+","Protective
+Measures ","Labelling/
+Warning ","Inherent Design
+","Protective
+Measures ","Labelling/
+Warning ",,"Sev
+심각도 ","Pro
+확률",Risk,Acceptability,,,,,,
+Q1,4.3,ESSENTIAL PERFORMANCE,Is there essential performance?,,A ,"Manufacturer shall identify which functions are Essential Performance.
+- Must be able to acquire image within 5 seconds
+- The acquired image should not have two Line Adjacent, Line Block, or No Display.
+",A,,RM-01,Operational Hazards,Measurement in a fault condition,Incorrect measurement,3,3,9,Unacceptable,High Performance CPU and Gigabit Ethernet to drive the panel through improved image acquisition speed and stable design.,"When the manufacturing process is in progress, the work guide and inspection standard shall be provided to determine whether it meets the required performance standards.
+  - Quality improvement through manufacturing management",,Mandatory inspection items and standards in Inspection Standards,Provide work guidance and inspection standard in inspection process,Required performance report,Required Performance Verification Report,1,1,1,Acceptable,N/A,N/A,A,A,,
+Q2,4.5,"Equivalent safety for ME EQUIPMENT or ME SYSTEMS
+","Where the specification specifically specifies requirements to assess a particular risk, the other method of assessing such risk is the same as or less than the residual risk obtained by applying the requirements of this standard, If it can be justified, can it be used?
+If so, are these risks identified in the risk assessment process?
+If so, is the risk as a result of applying a control method equal to or less than the residual risk resulting from applying the requirements of this standard?",,N/A,There is no other way to assess the risk of specific hazards required by this standard.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q3,4.6,ME equipment or ME system parts that contact the patient,It should be assessed whether the requirements of the accessory apply to the area of contact with the patient but deviates from the definition of the accessory.,,N/A,This product do not have any comtact to patient part.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q4,4.7,Single Fault Condition for Me Equipment,"When applying the single fault condition identified in 13.2, can it lead to the hazard situation described in 13.1?
+Can we accept the risks arising from the risk situation described in 13.1?",,A,"The single fault condition described in 13.2 applies.
+13.2.2. Electrical single fault condition
+-> Interruption of any one supply conductor
+-> Disconnection of one power lead of the ME system, polarity change, protection ground break
+13.2.3 Overheating of transformer in ME equipment -> Overheating due to over temperature protection function of AC-DC transformer
+13.2.4 Failure of Thermostat
+-> Not applicable
+13.2.5 Failure of the temperature limiter
+-> Not applicable
+13.2.6 Leak of liquid -> Not applicable
+13.2.7 Cooling Failure -> Not Applicable
+13.2.8 Restraint of moving parts
+-> Not applicable
+13.2.9 Separation and short-circuit of motor capacitor -> Not applicable.
+13.2.10 Additional test criteria for motor-operated ME equipment
+-> Not applicable
+13.2.11 Component failure in ME equipment used in oxygen overcorrection environment -> Not applicable.
+13.2.12 Failure of parts that may cause mechanical hazards
+-> Not applicable
+13.2.13 Overload -> In case of overloading inside the system, a protection device using FUSE (3.15AH / 250V) is installed at the AC power input terminal to cut off the current when the current exceeds the allowable value.
+Compliance with the emission of hazardous quantities of flame, molten metal, toxic and flammable materials as described in 13.1.2 shall not apply, as the power dissipation of the product itself is less than 1 W.",,A,RM-02,leakage current,Can deliver unacceptable current to the patient or operator in a single fault condition,Electrical hazards,3,3,9,unacceptable,"Designed to use approved AC-DC transformer, AC cable, fuse to prevent leakage current","-. Specification for AC-DC transformer, AC cable, and fuse in the process inspection work guide
+ ' -. Electrical safety test is carried out during shipment inspection
+'  -. Work guidance on electrical safety test","To use approved AC-DC transformer, AC cable, fuse","In order to prevent leakage current, it must be designed using approved parts",Provide work guidance and inspection standard in inspection process,"To use approved AC-DC transformer, AC cable, fuse","blueprint,
+Work instructions",3,1,3,Acceptable,N/A,N/A,A,A,,
+Q5,4.8,Components of ME EQUIPMENT,"Are there specific exemptions for certain parts of the appliance in the investigation to allow not to use them at the prescribed rating of the appliance? If so, are these exclusions made clear as a result of the risk management process?",,N/A,"Designed for use with specified ratings.
+The parts used are standard",,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q6,4.9,4.9 Use of Components with High-Integrity Characteristics in ME Equipment,"Are components with high-integrity characteristics applied?
+ If so, have the risks associated with its use been identified as such during the risk assessment process, or in other words are they selected and evaluated consistent with their conditions of use and reasonably foreseeable misuse during the expected service life of the ME equipment?",,N/A,No components with high-integrity characteristics,,,.,,,,,,,,,,,,,,,,,,,,,,,,
+Q7,5.1,Type tests,"Has the test to be taken into account the requirements of clause 4, in particular clause 4.2? Has the risk management process been applied in accordance with ISO 14971 to select the tests to be performed?
+The results of the list analysis are used to determine the combination test of simultaneous faults.
+Has the risk assessment been applied to determine combinations of simultaneous failures?",,N/A,there is no exist any combinations of simultaneous faliures.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q8,7.2.2,Identification,ME Equipment and its detachable parts not marked with the name or trademark of the manufacturer and with a Model or Type reference does not present an unacceptable risk?,,N/A,This product have no removable parts.,A,,RM-03,User's cognitive error,If you are using the product in an environment where it is not allowed or if it is not allowed,Electrical hazards,3,3,9,Unacceptable,,"In the working guide for the label, the model name, part name
+Serial number, attachment location, etc.",Indication and instruction manual for clearly identifying the product exterior,,In-process work guide,Detailed record in user manual,Label Design and User's Guide,3,1,3,Acceptable,N/A,N/A,A,A,,
+Q9,7.2.13,Marking for Physiological Effect,Do the instructions for use describe the nature of the HAZARD and the precautions for avoiding it or minimizing the associated RISK?,,N/A,No physiological effects on the patient or operator other than the intended function.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q10,7.2.17,Marking for Protective Packaging,Are appropriate safety signs marked on the package?,,A,"Operating conditions displayed on the outer packaging
+Temperature, Humidity, Pressure",,A,RM-04,User's cognitive error,If the user is not aware of the warning or prohibition,"Electrical hazards
+Physical hazards",3,3,9,Unacceptable,,Printed status of the outer packing box and attachment condition check on work instructions.,Indication and instruction manual for clearly identifying the product exterior,Detailed record in user manual,Progress of the manufacturing process for the work instruction,Detailed record in user manual,Label Design and User's Guide,3,3,3,Acceptable,N/A,N/A,A,A,,
+Q11,7.3.3,"Marking for Batteries
+(배터리)
+","Can integrated lithium batteries or fuel cells and inaccurate battery replacements present unacceptable risks? If so, are there any warnings indicating that a person who has not been trained properly may experience a risk of injury?",,N/A,This product do not use lithium batteries or fuel cell.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q12,7.3.7,Marking for Supply Terminals,"Are Terminals for supply conductors marked adjacent to the terminals?
+If not, does the identification of known or foreseeable?",,N/A,This product is integral-type.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q13,7.4.2,Mraking for Control devices,"In NORMAL USE, can the change of the setting
+of a control result in an unacceptable RISK to
+the PATIENT?",,N/A,this product are not controllable during operation and operate with control vcaluse determined at the initial stage. However emergency stop is possible.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q14,7.5,Safety signs,"Is marking used to convey a warning, prohibition or mandatory action that mitigates a RISK that is not obvious to the OPERATOR?",,A,ISO 3864-1: 2002 Cover corresponding to Clause 7 and ISO 7010: 20030W001 Symbol Application,,A,RM-05,Recognition error of user,User may not be aware of warnings or prohibitions.,"Electrical hazards
+For physical ",3,3,9,unacceptable,,,"The user's manual is included in the size label that can be clearly identified on the product exterior, and the operation manual and the handling are also included in the manual provided at the time of product shipment.",,,Display product labels on the ouside of the product,"Label Design and User's Guide
+User Compliance Report (AA-UER-01)",3,1,3,Acceptable,N/A,N/A,Y,A,,
+Q15,"7.9.2.4
+",7.9.2.4 Electrical power source,"
+If the leakage of the battery creates an unacceptable risk, did it include a warning to remove the battery if not used for a period of time? If so, review the manufacturer's risk analysis, risk assessment and risk control.
+If the power source causes a danger that is not acceptable for the fault, does the manual contain a warning that the ME device should be connected to an appropriate power source? If so, review the manufacturer's risk analysis, risk assessment and risk control.
+",,N/A,This product do not used the batteries.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q16,7.9.3.2,"7.9.3.2 Manual for Replacement of fuses, power supply cords, other parts","Where replacement of a component could result in an unacceptable RISK, is there appropriate warnings to identify the nature of the HAZARD
+and, if the MANUFACTURER specifies the component as replaceable by SERVICE PERSONNEL, is all information necessary to safely replace the component?",,A,FUSE and AC power cables are user replaceable,,A,RM-06,Leakage current,When the user uses power cable and fuse at random,Electrical hazards,2,4,8,unacceptable,,,Describe the FUSE specifications and replacement methods available in the product exterior and user manual.,,,"Use only the specified cable.
+Describe the FUSE specifications and replacement methods available in the product exterior and user manual.",User-manual,2,1,2,Acceptability,N/A,N/A,Y,A,,
+Q17,8.1.b),Fundamental rule of protection against electric shock,"Is there any chance of causing a hazard due to accidental disadvantages of lead and connector? If so, during the product test this hazard situation must be tested as part of a single fault condition.",,A,"There is no risk of the wires and connectors being located inside, but they can be short-circuited due to overcurrent.",,A,RM-07,Leakage current,"By chance, isolated conductors can be brought into contact with other circuits",Electrical hazards,3,3,9,unacceptable,The wires and connectors of the ME device are accidentally detached and use locking parts to prevent the situation from occurring.,"In the manufacturing process, according to the operation manual, the cable is assembled and fixed
+  Describe in the user manual what is required for field installation of components",Described in the instruction manual to confirm the use of the specified cable and the locking device after connection.,The wires and connectors of the ME device are accidentally detached and use locking parts to prevent the situation from occurring.,Describe the contents required for assembly of the components in the user's manual,Described in the instruction manual to confirm the use of the specified cable and the locking device after connection.,User-manual Work Instruction,1,1,1,Acceptable,N/A,N/A,Y,A,,
+Q18,8.5.2.2,Type B Applied parts ,"Has the manufacturer identified in their risk management file, unearthed Type B applied parts that are not separated from unearthed conductive accessible parts, however, determined that the level of risk that the unearthed accessible part will make contact with a source of voltage or leakage current above permitted limits is acceptably low?",,N/A,This unit does not have type B mounting part.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q19,8.5.2.3,Patient Leads ,"
+The connector for the electrical connection of the patient lead or patient cable shall be of such a construction that, during contact with the patient, the part can not be connected to earth or to a faulted voltage unless it is separated from all patient connections by 1 MOPP. The risk management process must demonstrate that there is no unacceptable risk due to contact with power sockets or objects other than flat surfaces (eg, edges or edges).
+If it can not be verified, an unshifted test finger of the same dimensions as a standard test finger shall be inserted into the connection opening with a force of 10 N at the most unfavorable position and shall not be electrically connected to that part.",,N/A,Not applicable to patient lead or patient cable,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q20,8.6.3,Protective earthing of moving parts (가동부의 보호접지),"Does the manufacturer’s risk management file indicate the need to bond moving parts to the protective earth connection? If so, has the manufacturer demonstrated the reliability of the connection during the expected service life?",,N/A,No moving parts.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q21,8.8.4.1,Mechanical strength and resistance to heat.,"Has the manufacturer identified in the risk management file the need for insulations of all types, considering its resistance to heat in the application and the expected service life?
+Has the manufacturer identified any specific test protocols that must be performed during product safety verification?",,A,"Considering the expected service period, heat resistance should be considered:
+- For exterior parts and other external insulation parts",A,,RM-08,Electromagnetic energy / thermal energy,Insulator may be damaged by heat.,Electrical hazards,2,4,8,unacceptable,Designed using flame-retardant insulators,,,Use flame retardant insulation,Identification of raw materials according to cable drawing and import inspection standard,,"Cable drawing, connector, external raw material data, import inspection standard",2,1,2,Acceptable,N/A,N/A,Y,A,,
+Q22,8.10.1,Fixing of components,"Has the manufacturer identified components the movement of which could result in an
+unacceptable risk in their risk management file?",,A,"Inside the product, PCB, PCB components, AC-DC transformer and AC filter are fixed.",,A,RM-09,Leakage current,Unintentional movement of components can cause excessive leakage currents to the patient or operator,Electrical hazards,4,2,8,unacceptable,The part must be firmly secured to prevent accidental separation.,Ensure that the parts are securely fixed during the manufacturing process,,4.2.2 Refer to Identification,These parts are identified through clear product standards and inspection reports to ensure that parts do not move during the manufacturing process.,,"Work instructions,
+Related Design Drawings",2,1,2,Acceptable,N/A,N/A,Y,A,,
+Q23,8.11.5,"Mains fuses and over-current releases
+(전원퓨즈 및 과전류차단기)
+","
+Are you justifying the risk management file for missing fuses and overcurrent breakers?
+If so, inspect the circuit for the requirements of this section and the acceptable fault condition test results to verify double insulation.",,A,We are applying fuses and overcurrent shut-off compontents.,A,,RM-601-10,Electromagnetic energy,instantaneous high voltage occurs,Electrical hazards,5,2,10,unacceptable,Designed to fit the relevant clause(8.10.5),,,The test is inspected by using the fuse which is applied as protection of the circuit against the insantaneous overvoltage the reby enhancing the reliability.,,,"Test report
+설계 파일",5,1,5,Acceptable,N/A,N/A,Y,A,,
+Q24,9.2.1,"HAZARDs associated
+with moving parts
+General
+","Are protective measures used to reduce the risk from contact with moving parts?
+Considering use as indicated in the
+Accompanying Documents or reasonably foreseeable misuse and bearing in mind the ease of access, the ME Equipment function, the shape of the parts, the energy and speed of the motion and the benefits to the patient, is this risk reduced to an acceptable level?
+Is exposure to moving parts needed for MEE to perform its intended function?
+Have all reasonable protective measures including warning markings on the MEE where the hazards persist been implemented?",,N/A,this product is not associated with moving parts,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q25,9.2.4,"Emergency stopping devices
+(비상정지장치)",Does the MEE use emergency stopping devices?,,N/A,Emergency stop device not used.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q26,9.2.5,Release of patient ,Describe the hazards caused by mechanical hazards associated with patient emancipation?,,N/A,No mechanical devices to hold patients,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q27,9.5.1,Protective means ,Have the risks caused by mechanical hazards associated with expelled parts been addressed?,,N/A,No asbestos.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q28,9.6.1,Acoustic energy-general ,Do you have the risk of mechanical hazards caused by acoustic energy and vibration?,,N/A,It is not a product that causes harmful effects due to acoustic energy and vibration.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q29,9.6.2.2,Infrasound and ultrasound energy,Are there hazards caused by mechanical hazards caused by very low frequency and ultrasonic energy?,,N/A,It is not a product that causes harmful effects on very low frequency and ultrasonic energy.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q30,9.7.2,Pneumatic and hydraulic parts,Do you have the risk of mechanical hazards caused by air pressure and water pressure?,,N/A,It is not a product that causes harmful effects on air pressure and water pressure.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q31,9.7.7 ,Pressure-relief device,Has the risk due to the mechanical risk associated with the pressure relief device been assessed?,,N/A,No pressure,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q32,9.8.1,Hazards associated with support systems-General ,"If a part of the ME device is designed to provide a force to support or manipulate loads, can mechanical failure create an unacceptable risk?",,N/A,Parts of the ME device are not products that support loads or cause hazards,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q33,9.8.2,Tensile safety factor,"The support system maintains structural integrity during the expected service of the ME device. Shall be not less than the values ​​shown in Table 21, except that the alternate method fails to demonstrate structural integrity during the expected service period of the ME device or the support is a stepping stone.",,N/A,No devices of ME devices restraining patients,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q34,9.8.3.1,"Strength of patient or operator support or suspension systems
+",Has the risk from mechanical risks (including certain applications) been assessed relative to the patient's assistance or interruption?,,N/A,It is not a product that causes harm to the patient's assistance or interruption.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q35,9.8.5,Systems without mechanical protective devices ,"Has the manufacturer determined that it is not necessary to use a mechanical protection device on the ME device?
+Was the reason for not using mechanical protection justified?",,N/A,It is not a product that causes factors to use mechanical protective devices for ME devices.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q36,10.1.2,ME equipment intended to produce diagnostic or therapeutic X-radiation ,"When applicable, has the manufacturer identified hazards and hazardous situations associated with production of X-radiation in the risk management file?",,N/A,It is not a product that causes diagnostic and therapeutic hazards.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q37,10.2,"Alpha, beta, gamma, neutron and other particle radiation ","When applicable, has the manufacturer identified hazards and hazardous situations associated with production of alpha, beta, gamma, neutron or other particle radiation in the risk management file?",,N/A,"The manufacturer is not a product that generates alpha, beta, or hazard in the risk management process.",,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q38,10.5,Other visible electromagnetic radiation ,"Where applicable, the manufacturer shall address the risks associated with visible electromagnetic radiation other than lasers and light emitting diodes in the risk management process.",,N/A,"If applicable, the manufacturer is not the product that causes the hazard in the risk management process.",,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q39,10.6,Infrared radiation ,"Where applicable, the manufacturer shall address the risks associated with the infrared, excluding lasers and light-emitting diodes, in the risk management process.",,N/A,No part generating infrared rays.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q40,10.7,Ultraviolet radiation ,"Where applicable, the manufacturer shall address the risks associated with ultraviolet light, excluding lasers and light-emitting diodes, in the risk management process.",,N/A,No part to generate ultraviolet rays.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q41,11.1.1,Maximum temperature during normal use ,"Table 23
+ This temperature limit is applicable for healthy skin contact of adults. The limit value is not applicable when a large part of the skin (more than 10% of the body surface) can contact the hot surface. This also applies to contact with skin surface of more than 10%. In this case, the application limit value must be determined and documented in the risk management file.
+Table 24
+ This temperature limit is applicable for healthy skin contact of adults. The limit value is not applicable when a large part of the skin (more than 10% of the body surface) can contact the hot surface. This also applies to contact with skin surface of more than 10%. In this case, the application limit value must be determined and documented in the risk management file.
+ If the installation needs to exceed the temperature limits in Table 24 for clinical effectiveness, the risk management file should include a document indicating that the risk is greater than the risk associated with the resulting benefit.",,N/A,No part contact more than 10% of body surface and head surface.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q42,11.1.2.1,Applied parts intended to supply heat to a patient ,"A stall that intends to heat (high temperature, low temperature) or intended for a clinical effect should be subjected to a risk management process.",,N/A,It is not intended to cause heat (hot or cold) to the patient or to cause a hazard.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q43,11.1.2.2,Applied parts not intended to supply heat to a patient ,"The risk management process should be performed if the surface temperature of the mounting part, which does not intend to heat the patient, exceeds 41 degrees.",,N/A,It is not a product that causes the patient unintended heat hazard.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q44,11.1.3,Measurements ,"For parts of ME equipment and possible mounting areas, contact probability and contact time are determined and documented in the risk management file.",,A,"A product that is not in contact with a patient, but that the user is expected to contact within 10 seconds if necessary. Do not use test corners",,A,RM-10,Over heat,Products can be exposed to high temperatures due to overheating in abnormal conditions,Burn,4,2,8,Unacceptable,Reduce contact time by simplifying the steps in use,,Add an instruction to stop using when a problem is found,Reduce contact time by simplifying the steps in use,,Add an instruction to stop using when a problem is found,User manual,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q45,11.2.2.1,Oxygen rich environment,"Has the manufacturer checked the risk of fire in an oxygen-rich environment?
+If it is scenario 3, has the manufacturer conducted a risk assessment to determine the risk of spillage or component failure that could cause ignition?",,N/A,Manufacturers are not products that cause hazards in an oxygen-rich environment.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q46,11.3,"Constructional
+requirements
+for fire enclosures of
+ME equipment","Have the specific requirements of this clause
+been employed to comply with cl 13.1.2?
+Has the manufacturer analyzed and addressed
+risks of not complying with the constructional
+requirements and showed than an equivalent
+level of risk / benefit has been provided?",,N/A,This equipment has an external structure for fire protection.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q47,11.5,ME EQUIPMENT and ME SYSTEMS intended for use in conjunction with flammable agents,"
+Are medical electronic devices combined with flammable chemicals? (Or you can overcome the possible misuse of the tier)",,N/A,Medical electronic devices are not products that cause flammable chemicals and hazards.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q48,11.6.3,Spillage on ME equipment and ME system ,"Does ME equipment require the use of liquids in normal use?
+Could the ME equipment get wet as a result of the hazard situation?
+Has the manufacturer identified a hazard situation related to the type and amount of liquid?
+Did you identify the hazardous situation associated with the most severe location for the spill?
+",,N/A,It is not a liquid product in normal use.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q49,11.6.6,Cleaning and disinfection of ME equipment and ME systems ,"Has the manufacturer identified the parts of the ME equipment which may be subject to cleaning or disinfection in normal or foreseeable misuse and the type of cleaning or disinfection?
+Based on the ESL of the ME equipment has the manufacturer extrapolated the number of cleaning processes to which the ",,N/A,The main body and the sensor part can be cleaned with a dry cloth. There is no other risk.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q50,11.6.7, Sterilization of ME equipment and ME system ,Has the manufacturer identified the intended part of the sterilization and the type of sterilization?,,N/A,this product do not require sterillization.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q51,11.6.8,Compatibility with substances used with the ME EQUIPMENT,During normal use Did you identify all substances that could come into contact with the ME device?,,N/A,Not intended to be used with any substance.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q52,12.4.1,"Intentional exceeding
+of safety limits","Has the manufacturer identified risks associated with the intentional exceeding of safety limits?
+Has the manufacturer addressed such risks to comply with the manufacturer’s risk acceptability criteria?",,N/A,There is no intentionally exceeding the safety limit.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q53,12.4.2,"Indication of
+parameters relevant
+to safety","Has the manufacturer identified all functions related to the delivery of energy or substances to the patient?
+Has the manufacturer explored such functions for hazardous situations in which these functions can produce an output to the patient?",,N/A,This product is not a product that causes energy hazard to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q54,12.4.3,"Accidental selection of excessive output values
+","Has the manufacturer identified all features of
+the ME Equipment that provide an output to the
+patient for therapeutic purposes?
+Has the manufacturer identified which of these
+features have multiple purposes that require
+different intensities for different treatments?
+Has the manufacturer identified hazards
+associated with accidental selection of
+excessive output values?",,N/A,Not a product that provides output to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q55,12.4.4,Incorrect output,"Has the manufacturer identified all features of the ME Equipment that provide an output?
+Has the manufacturer identified hazards associated with incorrect output?",,N/A,The manufacturer is not a product that causes harm to the ME device providing the output.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q56,12.4.5.3 ,Radiotherapy Equipment,"Is it a device for radiation therapy?
+Did you identify and assess the risks associated with radiation for therapeutic purposes?",,N/A,It is not a product that causes harmful factors for radiation therapy.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q57,12.4.5.4,Other ME equipment producing diagnostic or therapeutic radiation,"Does the device generate diagnostic or therapeutic radiation?
+Did you identify and assess the risks involved?",,N/A,It is not a product that causes factors for diagnostic or therapeutic radiation,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q58,12.4.6,Diagnostic or therapeutic acoustic pressure,"Did you check if the instrument produces sound pressure output?
+Did you identify and assess the risks associated with sound pressure output?",,N/A,It is not a product that causes the cause of sound pressure output.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q59,13.2.6,Leakage of liquid,Has the vendor determined appropriate test conditions for liquid leak assessment in accordance with risk management procedures?,,N/A,It is not a product that causes a factor for liquid leak evaluation.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q60,14.1,"Programmable
+electrical medical
+systems - General",Does the application of ISO 14971 demonstrate that the failure of the PESS does not lead to an unacceptable RISK?,,N/A,Applied to IEC60601-1-14,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q61,14.6.1,"Identification of
+known and foreseeable hazards","Has the manufacturer considered such hazards related to the software and hardware aspects of the PEMS, including those related to network / data coupling and basic subsystems?",,A,Manufacturer is not a product that generates network / data coupling and primary hazards,A,,RM-11,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+5. Incorrect timing of data",Incorrect measurement due to insufficient required performance,3,3,9,Unacceptable,Software Design to Achieve Essential Performance,Software validation,,Software Design to Achieve Essential Performance,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q62,14.6.2,"Risk control
+(위험통제)","Has the manufacturer identified appropriate means and procedures for implementing the means of risk control?
+Effective identification of each risk management approach What are the appropriate tools and procedures to ensure that risks are reduced?",,A,software for centrifuge and control is applied: software validation report,A,,RM-12,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+6. Incorrect timing of data",Incorrect measurement due to insufficient required performance,3,3,9,Unacceptable,Software design for risk instrument control,Software validation,,Software design for risk instrument control,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q63,14.7,"Requirement
+specification
+(요구사항 사양서)",Does the requirements specification include and classify risk control measures?,,A,software for centrifuge and control is applied: software validation report,A,,RM-13,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+7. Incorrect timing of data",Inaccurate measurement due to underdelivery,3,3,9,Unacceptable,Software design to meet requirements,Software validation,,Software design to meet requirements,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q64,14.8,Architecture,"Does the architecture specification reduce risk to an acceptable level using a) -f) levels as appropriate?
+Has the architecture specification considered risk control measures?",,A,software for centrifuge and control is applied: software validation report,A,,RM-14,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+8. Incorrect timing of data",Inaccurate measurement due to underdelivery,3,3,9,Unacceptable,Software design that meets architectural requirements,Software validation,,Software design that meets architectural requirements,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q65,14.9,Design and Implementation,Was the description data on the design environment included in the risk management file?,,A,software for centrifuge and control is applied: software validation report,A,,RM-15,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+9. Incorrect timing of data",Incorrect measurement,3,3,9,Unacceptable,Software designs that do not contradict each other,Software validation,,Software designs that do not contradict each other,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q66,14.10,Verification,"Has the results of the verification activities been documented?
+Have all the functions of risk control measures been verified?",,A,software for centrifuge and control is applied: software validation report,A,,RM-16,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+10. Incorrect timing of data",Incorrect measurement,3,3,9,Unacceptable,Software designs that are validated as deliverables and risk control measures within a software development plan,Software validation,,Software designs that are validated as deliverables and risk control measures within a software development plan,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q67,14.11,Programmable electrical medical systems – PEMS validation,Was the manufacturer documented in the risk management file all the professional relationships between the staff of the PEMS validation team and the staff of the design team?,,A,software for centrifuge and control is applied: software validation report,A,,RM-17,Degradation of function,"1. Failure of network / data coupling
+2. Unavailable data
+3. Lack of data integrity
+4. Incorrect data
+11. Incorrect timing of data",Incorrect measurement,3,3,9,Unacceptable,Software design that satisfies PEMS validation,Software validation,,Software design that satisfies PEMS validation,Software validation,,Software validation report,2,2,4,Acceptable,N/A,N/A,A,A,,
+Q68,14.13,Connection of PEMS by NETWORK/DATA COUPLING to other equipment,Is there a list of hazard situations that arise from failures in the network / data coupling that provide the specified characteristics?,,N/A,This device is not connected by network / data coupling with other devices outside the control of the PEMS manufacturer.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q69,15.4.1,"Construction of connectors
+","Has the manufacturer identified electrical, hydraulic, and pneumatic or gas connection terminals and connectors removable without the use of a tool where incorrect connection to other outlets intended for other functions would not result in unacceptable risks?",,A ,"AC power cable, data cable, LAN cable, trigger cable can be removed without tools",,A,RM-18,Degradation of function,When a user randomly connects unauthorized cables,Electrical hazard,3,3,9,Unacceptable,Designed not to be mixed with other connectors.,Designed to be used with a certain standard,Instruction manual to connect the specified cable according to the specified regulations.,Designed with different number of pins and shapes so that they are not mixed when using external connectors,,Detailed record in user manual,"Cable Drawing, User's Manual",2,2,4,Acceptable,N/A,N/A,A,A,,
+Q70,15.4.2.1 a),thermal cut-outs and over-current releases,"Has the manufacturer identified in the risk
+management file, any automatic resetting
+thermal cut-outs or over-current releases where their use would not result in an unacceptable
+risk?",,N/A,Not applicable to thermal breakers and overcurrent breakers.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q71,15.4.2.1 c) ,Independent non-self-resetting thermal cut-out,"Has the manufacturer checked the use of a thermostat in the medical device in the risk management file? If so, an independent nonautomatic recovery column with a setting within the safe temperature limit for the intended function, but beyond the maximum limit of the thermostat Investigate the detection breaker.",,N/A,Not applicable to thermal breakers and overcurrent breakers.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q72,15.4.2.1 d),"Loss of function of me equipment
+","Has the manufacturer identified that loss of
+function of the MEE could result in a hazardous
+situation?",,N/A,Loss of function is not a product that causes a factor for a dangerous situation.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q73,15.4.2.1 h),"Me equipment with tubular heating elements
+","
+Has the manufacturer identified in the risk management file the need to fuse each lead for the use of tubular heating elements in the risk management file?
+If so, inspect the fuses on both leads and ensure that no overheating occurs.
+",,N/A,Not applicable to thermal breakers and overcurrent breakers.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q74,15.4.3.1,"Housing
+","Has the manufacturer identified the need for a ventilated battery container where it could leak dangerous gases during charging or discharging?
+If yes, check the battery container for a suitable ventilation system.
+Did the manufacturer check for a short circuit-free battery polarity connection structure?
+If so, check the battery connections and ensure that no faulty connections are possible.",,N/A,I do not use the battery.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q75,15.4.3.5,"Excessive current and voltage protection
+","Has the manufacturer provided a reason for the misuse or overcurrent of the fuse in the risk management file?
+If so, protection against over-current fires is based on design and risk management files, which do not require additional testing.",,N/A,Not an internal power device.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q76,15.4.5,Pre-set controls,"If applicable, did the manufacturer specify the hazards associated with the preset controller?
+",,N/A,No preset controller.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q77,16.1,General Requirements for ME System,"After installation or subsequent modification,
+does the ME system result in an unacceptable
+risk?
+Have hazards arising from combining various
+equipment to constitute an ME system been
+considered?
+Is the level of safety equivalent to ME system
+complying with this standard IEC 60601-1 within
+the patient environment?
+If the ME System is reconfigurable, have risk anagement methods been used to determine which configurations constitute the highest risks and which measures are needed to ensure that the reconfiguration does not constitute an unacceptable risk?",,N/A,"this product are not medical devices that can be used in combination with other products. But special accessories can be used.
+It is also a movable devices, noa a fixed installation.",,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q78,16.9.1,"Connection terminals and connectors
+","Are the design and construction of electrical, hydraulic, pneumatic and gas connection terminals and connectors such that incorrect connection of accessible connectors, removable without the use of a TOOL, can be prevented where a HAZARDOUS SITUATION could otherwise exist?
+Are plugs for patient leads designed to prevent connection to other outlets of the same ME System that are likely to be located in the patient environment unless no hazardous situation can result?",,N/A,this product is not applicable for connection terminals and connectors.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Q79,17,"Electromagnetic
+compatibility of ME
+equipment and ME
+systems","Has the risk management process addressed the risks associated with electromagnetic phenomena that exist in the place where the ME instrument or ME system intends to use it as described in the annexes?
+Has the risk management process addressed the risks associated with the environment that could degrade the performance of ME devices or other devices, electrical devices and systems due to electromagnetic phenomena in the ME system? ",,A,This product is used in general practice rooms and it can affect electromagnetic effects on various ME devices in the medical room.,A,,RM-19,electromagnetic waves,The performance of other devices is degraded due to electromagnetic waves.,electrical hazard,1,1,1,Acceptable,I will apply the electromagnetic hazards to the design.,,,I will apply the electromagnetic hazards to the design.,,,EMC Test report,1,1,1,Acceptable,N/A,N/A,Y,A,,
+,Revision history,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Rev. No.,Rev. date,Revision contents,Remark,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,0,SEP/17/2019,Establishment,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

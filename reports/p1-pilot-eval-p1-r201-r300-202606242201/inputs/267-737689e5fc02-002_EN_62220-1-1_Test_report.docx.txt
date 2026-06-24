@@ -1,0 +1,884 @@
+queueId: ingest-1781569954415-13mw
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - 2,3G FDA 문서/VOL_010_Appendix I Non-Clinical Test Report/002_EN 62220-1-1 Test report.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/f30e2e9aa3b2/002_EN 62220-1-1 Test report__f30e2e9aa3b2_combined.txt
+canonicalGroupId: 737689e5fc02
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 267
+
+SOURCE_TEXT
+EN 62220-1-1 Test Report
+
+for
+
+A1717MCW / A1417MCW / F1417MCW
+
+Digital Flat Panel X-ray Detector
+
+Report No.: A-TCF-5-116 (Rev.0)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+R&D team
+
+Kim, Kihyun
+
+Nov/18/2022
+
+Review
+
+R&D Manager
+
+Lee, Dong jin
+
+Nov/18/2022
+
+Approval
+
+Quality Manager
+
+Hur Namkyu
+
+Nov/21/2022
+
+Revision history
+
+Rev. No.
+
+Rev. date
+
+Revision contents
+
+Remark
+
+0
+
+Nov/18/2022
+
+Establishment
+
+Introduce
+
+Test report was provided for Solid-State X-ray Imaging Devices, which includes MTF and DQE measurements as tested by EN 62220-1-1(2015)
+
+Among the accessories of the Digital Flat Panel X-ray Detector can be selected between A1717MCW, A1417MCW and F1417MCW.
+
+Performance and usage are all the same expect for size. (A-TCF-5-127)
+
+1.1 Standard
+
+12-289 EN 62220-1-1 Edition 1.0 2015-03
+
+Medical electrical equipment-Characteristics of digital X-ray imaging devices Part 1-1: Determination of the detective quantum efficiency Detectors used in radiographic imaging.
+
+1.2 Reference
+
+9. Flat detectors and their clinical applications_Martin Spahn
+
+Quantitative measurements
+
+2.1. Physical Characteristics
+
+2.1.1. Provide the overall dimensions including length, width, thickness and any shape characteristics that are unique to the device.
+
+A1717MCW
+
+Design parameter
+
+Specification
+
+Entire dimensions include outer short ring
+
+460 (X) mm x 460 (Y) mm
+
+Panel size (outer short ring removed)
+
+430 mm x 430 mm
+
+Shipping size
+
+580 mm x 550 mm
+
+A1417MCW
+
+Design parameter
+
+Specification
+
+Entire dimensions include outer short ring
+
+384 (X) mm x 460 (Y) mm
+
+Panel size (outer short ring removed)
+
+358.4 mm x 430 mm
+
+Shipping size
+
+580 mm x 550 mm
+
+F1417MCW
+
+Design parameter
+
+Specification
+
+Entire dimensions include outer short ring
+
+384 (X) mm x 460 (Y) mm
+
+Panel size (outer short ring removed)
+
+358.4 mm x 430 mm
+
+Shipping size
+
+580 mm x 550 mm
+
+2.1.2. Provide the sensor element dimensions and spacings including the fill factor, the fraction of the exposed area of the device that is sensitive to incident x-rays. Also describe any features added to compensate for input photon loss resulting from inactive interelement spacing. Include total horizontal and vertical element count if applicable.
+
+A1717MCW
+
+Design parameter
+
+Specification
+
+Active pixel area size
+
+425.04 mm x 425.6 mm
+
+Number of active area pixel
+
+3,036 x 3,040 = 9,229,440
+
+Number of data line
+
+3,040
+
+Number of gate line
+
+3,036
+
+A1417MCW
+
+Design parameter
+
+Specification
+
+Active pixel area size
+
+345.24 mm x 425.6 mm
+
+Number of active area pixel
+
+2,466 x 3,040 = 7,496,640
+
+Number of data line
+
+3,040
+
+Number of gate line
+
+2,466
+
+F1417MCW
+
+Design parameter
+
+Specification
+
+Active pixel area size
+
+345.24 mm x 425.6 mm
+
+Number of active area pixel
+
+2,466 x 3,040 = 7,496,640
+
+Number of data line
+
+3,040
+
+Number of gate line
+
+2,466
+
+2.1.3. Provide the structure cross section showing schematically the elements of the device so that its means of x-ray conversion and signal generation are explained.
+
+2.1.4. Describe the interconnections of the elements, and any active or passive elements that are used to store, switch or otherwise process the electrical signals in the detector itself.
+
+2.1.5. Provide a schematic diagram of the elemental signal storage scheme and the overall “scanning” and readout mechanism. This may be included as part of “A.3.” above.
+
+Refer to 2.1.3(A.3.) of the Physical characteristics.
+
+2.1.6. Provide the input electrical power requirements with tolerance limits and effects of power noise on the operation of the device.
+
+Electrical Inputs
+
+Unit
+
+Min
+
+Typ
+
+Max
+
+Gate-on Voltage
+
+(VGH)
+
+V
+
+5
+
+15
+
+25
+
+Gate-off Voltage
+
+(VGL)
+
+V
+
+-12
+
+-7
+
+-5
+
+Photodiode Bias Voltage
+
+V
+
+-10
+
+-5
+
+1.5
+
+2.2 Operational Functions
+
+2.2.1. Provide the method(s) of exposure, and for fluoroscopy, rates of response (frames per second). Describe a typical exposure sequence from turn-on of the device to presentation of the image to the user.
+
+Part
+
+Contents
+
+Scintillator
+
+CsI
+
+Converting X-ray to Visible light to charge Phot-Diode
+
+TFT Panel
+
+Basically, Pixel Arrays
+
+Pixel Architecture: Passive pixel
+
+Frame Rate
+
+1 fps
+
+Signal Processing
+
+ROIC
+
+To read out the charge from photo-diodes
+
+Converting Analog signal (photo-diode charge) to Digital signal
+
+SoC
+
+(FPGA + CPU)
+
+Driving Panel & ROIC to get images
+
+Tx image data to CPU & Rx parameters to driving ROIC & Panels from CPU
+
+Bridge between FPGA and PC (Acquisition S/W)
+
+ - Delivering image data or parameters between FPGA and PC (Acquisition S/W)
+
+Controlling several components
+
+PC
+
+Performing Acquisition S/W
+
+- To get images & to send parameters to control the detector
+
+Performing Image processing Algorithm
+
+ - Dark level Cancellation, Defect Correction, Flat Field Correction
+
+2.2.2. Provide the x-ray absorber(s), material description. Describe the primary x-ray detection material and its x-ray detection properties as a function of photon energy (keV) or wavelength (mm); including any nonlinear response characteristics.
+
+ X-ray absorber(scintillator) is commercially available and converts x-ray energy directly to light. There are two types of scintillators which are CsI. It has an extremely linear response of light output with x-ray exposure for a given x-ray spectrum over a wide range of x-ray exposure in the range appropriate for radiography. The X-ray passes through the substrate and interact in the scintillator. The theoretical quantum efficiency of the detector is a function of x-ray energy E and is given by where αAl(E) is the x-ray transmission factor through the reflector and αS(E) is the transmission factor through the scintillator material. This absorbers wavelength is 540nm. (Visible region)
+
+2.2.3. Provide a description of the energy conversion mechanisms utilized (e.g., x-ray to light to electrical signal). Describe all the processes in the device that involve energy conversion (e.g., x-ray to visible).
+
+2.2.4. Describe the readout mechanisms, and techniques used to commutate detector elements. Describe the means used to sequentially read-out the signal from successive elements. Include maximum and minimum rates, and for fluoroscopic devices the means provided for establishing synchronization with display or recording devices.
+
+A1717MCW/A1417MCW/F1417MCW should be used within the limits of the operating temperature. After the system power is on, 30 minutes of warming up time is required to acquire high quality X-Ray images. A1717MCW/A1417MCW/F1417MCW generates a digital x-ray image in response to a trigger signal, but does not initiate an X-ray generator or control the x-ray exposure setting for a patient.
+
+Typical exposure sequence
+
+The power button is ON.
+
+The power LED is turned on when the power button is ON.
+
+The initial values are saved in the detector’s CPU (Linux) by the parameters stored in the PC. The initial parameter settings can be modified by S/W.
+
+When an image is acquired through S/W, the image is displayed on the monitor and then saved to the system hard disk after processing.
+
+X-ray absorber
+
+The A1717MCW/A1417MCW/F1417MCW device uses a CsI screen on a substrate. This scintillator is commercially available and converts x-ray energy directly to light. It has an extremely linear light output response of x-ray exposure for a given x-ray spectrum over the range appropriate for radiography.
+
+The X-ray beam passes through the substrate and interacts with the CsI. The theoretical quantum efficiency of the detector is a function of x-ray energy E and is given by
+
+where αC(E) is the x-ray transmission factor through the carbon substrate and αS(E) is the transmission factor through the screen material.
+
+Energy conversion mechanism
+
+The X-ray photons interacting in the screen are converted directly to light. This light exits from the screen and be absorbed at photodiode arrays.
+
+The photodiode arrays convert light to electrical signals proportional to the intensity of the light. The signal readout circuit makes digital image data from the electrical signals from photodiode arrays.
+
+Readout mechanisms
+
+The detector outputs raw image data to the workstation, via 1Gbps Ethernet or Wireless to Access Point. The acquisition software in the workstation receives the 16-bit digital image data and processes it. It is stored in the hard disk in a 16-bit format.
+
+Output data
+
+Images can be exported in raw image format and saved in a storage device of the workstation. The raw data is after pre-processed data which means just calibrated image (gain-offset correction and bad pixel correction). The saved raw data from A1717MCW/A1417MCW/F1417MCW will be transferred to the end user’s S/W and then converted to a DICOM or Bitmap file. The size of the raw image output data is editable by using image acquisition software.
+
+2.2.5 Provide a description of the output data, and any direct access to output signals. Indicate what communications standard (e.g., DICOM) is used to format the data for downloading and analysis.
+
+All image data shall be transmitted and stored as 16-bits little-endian (Intel bytes order) two- dimensional arrays without any specific header. Image’s dimension shall be passed as auxiliary procedure’s parameter or value in configuration file. Grayscale range assumed to be 0..1^14-1 (14 bits non-negative integer) for saved files. That is eligible if Software internally uses either signed and unsigned integer types for pixels’ values.
+
+2.3 Functional Characteristics
+
+2.3.1. For fluoroscopic devices, provide the output format of the video signal, sample waveform and standards applied. Provide a sketch or photograph of horizontal scan line and vertical field signals noting the key elements of signal.
+
+This device is not for fluoroscopic.
+
+2.3.2. Provide an estimate of Detective Quantum Efficiency (DQE) at low spatial and temporal frequency. Describe the method used to make the estimate, and the level of uncertainty due to propagation of error.
+
+Estimate of DQE
+
+Measured DQE
+
+-Criteria
+
+ A1717MCW/A1417MCW/F1417MCW:
+
+ 0.1 lp/mm (≥ 70%), 0.5 lp/mm (≥ 62%)
+
+ 1.0 lp/mm (≥ 53%), 2.0 lp/mm (≥ 42%)
+
+ 3..0 lp/mm (≥ 19%)
+
+-Method:
+
+After obtaining bright images by FT program, BPM images are generated by using them and verified whether the test criteria are satisfied by FT program.
+
+*Irradiation condition: RQA5(70kV, 8mAs)
+
+ SID: 150cm, Al 21mm filter
+
+*Measure condition: after calibration
+
+A1717MCW:
+
+ 0.1 lp/mm (≥ 79%), 0.5 lp/mm (≥ 69%)
+
+ 1.0 lp/mm (≥ 62%), 2.0 lp/mm (≥ 49%)
+
+ 3..0 lp/mm (0 ≥ 31%)
+
+A1417MCW:
+
+ 0.1 lp/mm (≥ 78%), 0.5 lp/mm (≥ 69%)
+
+ 1.0 lp/mm (≥ 61%), 2.0 lp/mm (≥ 50%)
+
+ 3..0 lp/mm (0 ≥ 34%)
+
+F1417MCW:
+
+ 0.1 lp/mm (≥ 76%), 0.5 lp/mm (≥ 71%)
+
+ 1.0 lp/mm (≥ 64%), 2.0 lp/mm (≥ 51%)
+
+ 3..0 lp/mm (0 ≥ 35%)
+
+ The detective quantum efficiency (DQE) was evaluated as a function of spatial frequency over a wide range of incident exposure levels. The measurement procedure described in the report IEC 62220-1 was used with details provided in the attached report “Measurements of the Linearity, Quantum Noise, Lag, Modulation Transfer Function and Detective Quantum Efficiency of the Intra-Oral Sensor”. The DQE is given by . The value of Ka is the absorbed dose (µGy) in free air at the image plane measured using a solid-state detector dosimeter (Piranha205) after making corrections for dosimeter-detector. The value of SNRin2 was taken from the following table for the standardized spectra used (IEC-62220-1). The NPS is the noise power spectrum measured at same air kerma. The value of G means the gain of the detector at zero spatial frequency.
+
+2.3.3. For quantum limited performance [i.e., The noise added by the SSXI does not exceed the x- ray quantum noise when operated in the normal range of exposures or frame rates.] provide data showing that the device operates in a quantum limited mode at the frame rates or exposure levels specified for its use. If not quantum limited, provide the range of exposures (for fluoroscopy: frame rates) where quantum limited operation is not achieved. It is expected that all predicate devices exhibit quantum limited behavior over their normal operating ranges.
+
+The modeling of image noise in terms of pixel variance is described as where, is “dark” noise variance meaning electronic noise of detector. The value of is depends on system design such as optical collection efficiency. X is the incident x-ray exposure (μGy). At the low exposure level, the image noise variance is equal to and is independent of the x-ray exposure. At a high exposure level, the image noise variance is proportional to the exposure with a slope of . In x-ray imaging systems, the additive detector noise does not exceed the quantum noise with the linear range of detector. The exposure at which the x-ray quantum noise equals the additive detector noise is called the quantum noise exposure limits or noise equivalent dose. It means the lowest exposure level of a detector at which the image noise is determined primarily by x-ray detection.
+
+A1717MCW
+
+* Dark Noise [LSB]: <1.29
+
+* Quantum Noise limit [μGy]: <0.075
+
+A1417MCW
+
+* Dark Noise [LSB]: <1.22
+
+* Quantum Noise limit [μGy]: <0.065
+
+F1417MCW
+
+2.3.4. Provide a plot of the modulation or contrast transfer function of the device. Indicate the device settings and input dose level required to obtain the measurement. If the transfer characteristic varies with any other function indicate how and provide the maximum and minimum transfer functions that the device provides when used with typical clinical exposures.
+
+MTF
+
+0.1lp
+
+1lp
+
+2lp
+
+3lp
+
+Spec.
+
+83%
+
+62%
+
+29%
+
+11%
+
+A1717MCW
+
+84%
+
+65%
+
+30%
+
+13%
+
+A1417MCW
+
+85%
+
+65%
+
+33%
+
+17%
+
+F1417MCW
+
+86%
+
+66%
+
+34%
+
+17%
+
+2.3.5. Quantify the effects aliasing has on the DQE and Modulation Transfer Function (MTF) of the device. If aliasing is evidenced from the pre-sampled MTF, quantitatively describe how it affects the resulting image. If there are no aliasing effects from the device explain why.
+
+ Generally, the actual effects and extent of aliasing artifact in image is the integrated value under MTF curve above the cut-off frequency (nyquist frequency). The ideal value of MTF at cut-off frequency is zero. However, real measured pre-sampling MTF at cut-off frequency is over zero. The detector element determines the spatial resolution capability of the detector. Its pitch of this system is 0.14 mm corresponding to a sampling cut-off frequency of 3.57 lp/mm. The MTF value at this frequency is approximately close to zero. For average human observers, MTF values around 0.1 are considered barely observable. Therefore, artifacts in the image due to aliasing will be negligible. In addition, no evidence of aliasing was observed in a test pattern image acquired with this detector (shown below). If there are aliasing artifacts, near nyquist frequency, the white and black spokes may reverse - i.e., white bars become black and black become white. This occurs between frequencies 1/(pixels width) and 2/(pixels width), and is one kind of aliasing artifact..
+
+A1717MCW
+
+A1417MCW
+
+F1417MCW
+
+Line
+
+Chart
+
+(Test
+
+Pattern)
+
+2.3.6. Provide a plot of the output signal level as a function of input dose level for a specified x-ray spectrum. The spectrum may be defined in terms of kVp and beam filtration. Plot so that any nonlinearities are clearly shown. Other methods of showing the dynamic range capabilities of the device may also be used.
+
+A1717MCW
+
+* The linearity of detector was measured between 0.34 and 127.10μGy.
+
+A1417MCW
+
+* The linearity of detector was measured between 0.34 and 126.74μGy.
+
+F1417MCW
+
+* The linearity of detector was measured between 0.27 and 121.5μGy.
+
+2.3.7. Lag or residual signal level from prior exposures, short term and long term: Describe, quantitatively where possible, any device characteristics (often due to electron or hole trapping) that cause the device to include in the output, signal components attributable to one or more prior exposures. Indicate the relative amplitude and decay characteristics of such signals.
+
+Actual measurement of A1717MCW: 0.010
+
+Actual measurement of A1417MCW: 0.011
+
+Actual measurement of F1417MCW: 0.007
+
+2.3.8. Means provided to expose and/or readout subsections (partial areas) of the full SSXI: Describe, if this is a characteristic of the device, how it can be under-scanned so that only a portion of the total detector matrix is utilized.
+
+This device does not provide the applicable functionality.
+
+2.3.9. Describe how x-ray beam alignment and collimation to the “active” area of the device will be achieved to meet the requirements of 21CFR1020.31 or .32. What signal(s) will the device provide to indicate the size and position of the active area? If no “under-scanning” capability is provided, so indicate.
+
+The active area of this device is 425.04 mm x 425.6 mm(A1717MCW), 345.24 mm x 425.6 mm(A1417MCW/F1417MCW) and is in full use and no under-scanning is possible. The X-ray system is designed to be installed with the detector input perpendicular to the X-ray beam axis.
+
+2.3.10. Describe the allowable types and quantity of defects, and any methods of compensation or blanking that are utilized to compensate for allowable maximum output, minimum output or otherwise inoperative pixel elements.
+
+Pixel Defect (Cluster)
+
+-Criteria: Normal within the criteria
+
+ A1717MCW/A1417MCW/F1417MCW:
+
+ Defect Class #0: ≤ 2,300 Pixel
+
+ Defect Class #1: ≤ 1,000 Pixel
+
+ Defect Class #2: ≤ 500 Pixel
+
+ Defect Class #3: ≤ 300 Pixel
+
+ Defect Class #4: ≤ 100 Pixel
+
+ Defect Class #5: ≤ 50 Pixel
+
+ Defect Class #6: ≤ 25 Pixel
+
+ Defect Class #7: ≤ 0 Pixel
+
+ Defect Density: ≤ 40 Pixel
+
+-Method
+
+ After obtaining bright images by FT program, BPM images are generated by using them and verified whether the test criteria are satisfied within the Active-area (A1717MCW: 3,036 x 3,040, A1417MCW/F1417MCW: 2,466 x 3,040) area by FT program.
+
+Defect Class checks Pixel Defect (Cluster) within 3x3 Pixel-area.
+
+Defect Density checks Pixel Defect (Cluster) within 20x20 Pixel-area.
+
+A1717MCW:
+
+Defect Class #0: 555 Pixel
+
+ Defect Class #1: 42 Pixel
+
+ Defect Class #2: 2 Pixel
+
+ Defect Class #3: 0 Pixel
+
+ Defect Class #4: 0 Pixel
+
+ Defect Class #5: 0 Pixel
+
+ Defect Class #6: 0 Pixel
+
+ Defect Class #7: 0 Pixel
+
+ Defect Density: 5 Pixel
+
+A1417MCW:
+
+Defect Class #0: 445 Pixel
+
+ Defect Class #1: 22 Pixel
+
+ Defect Class #2: 3 Pixel
+
+ Defect Class #3: 0 Pixel
+
+ Defect Class #4: 0 Pixel
+
+ Defect Class #5: 0 Pixel
+
+ Defect Class #6: 0 Pixel
+
+ Defect Class #7: 0 Pixel
+
+ Defect Density: 6 Pixel
+
+F1417MCW:
+
+Defect Class #0: 512 Pixel
+
+ Defect Class #1: 30 Pixel
+
+ Defect Class #2: 3 Pixel
+
+ Defect Class #3: 0 Pixel
+
+ Defect Class #4: 0 Pixel
+
+ Defect Class #5: 0 Pixel
+
+ Defect Class #6: 0 Pixel
+
+ Defect Class #7: 0 Pixel
+
+ Defect Density: 4 Pixel
+
+2.3.11. Provide data or a plot of any change in detection sensitivity as a function of time after the device is “ready” (e.g., biased, erased, etc.) for the next exposure. Also indicate any other changes such as reduction in dynamic range that take place after the device is “ready.”
+
+2.3.12. Latent image decay characteristic as a function of time and temperature.
+
+ When the x-ray exposure is ended, the image is read immediately by the TFT imaging sensor and hence no image decay is possible.
+
+ To reduce thermal difference or variation due to surrounding conditions of the TFT imaging sensor, and to maintain the offset at the same level with each image acquired, the dynamic offset correction method is used. It feed-back the offset level to maintain always similar value. There is therefore no significant change due to changes in ambient temperature.
+
+2.3.13. Recovery Time for radiographic devices: Indicate the time after readout is complete (including any preparation function) until the device is able to accept the next exposure.
+
+Readout of the detector after an x-ray exposure requires least 1 second with window 0.5 second. And to stabilize offset 7 seconds are needed. Thus, the minimum time between exposures is 8 seconds.
+
+2.4 Exposure Characteristics
+
+2.4.1. Dose Requirements and reciprocity changes: Provide quantitative measurements of the input dose required to generate an image or video frame equivalent to that provided by a predicate device. Also indicate any changes in this characteristic that will occur with time and/or cumulative radiation exposure.
+
+2.4.2. Stability of device characteristics with time (total integrated exposure): In addition to exposure requirement changes, indicate any other characteristics of the device that change with time and/or total integrated exposure
+
+- Stability time: 7 sec.
+
+2.4.3. Uniformity of device characteristics (large and small area): Describe any nonuniformity characteristics of the device that may cause large or small area changes such as shading.
+
+A1717MCW
+
+[Before Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 36.72 LSB
+
+[After Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 17.14 LSB
+
+A1417MCW
+
+[Before Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 37.18 LSB
+
+[After Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 18.327 LSB
+
+F1417MCW
+
+[Before Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 82.39 LSB
+
+[After Flat Field Correction]
+
+* Standard Deviation of 1,500x1,500 pixels at center area: 17.98 LSB
+
+2.4.4. Frame-Rate for fluoroscopic devices: Indicate the maximum number of images that can be generated per unit time and any characteristics that change as a function of frame rate. For any characteristics that do change, indicate how they change. If the frame rate limit is a function of another characteristic(s) [outside the SSXI] indicate which one(s) and indicate how that characteristic(s) impacts the frame rate.
+
+This device is not for fluoroscopic.
+
+2.4.5. Reuse Rate for radiographic devices: Indicate the maximum number of images that can be generated per unit time. If limited by other than the device itself, describe.
+
+This device is fixed at 1 fps because it is a static x-ray detector.
+
+2.5 Safety Features
+
+2.5.1. Indicate what means [e.g., ready signal] that are provided to indicate the SSXI is prepared to accept and process an x-ray input.
+
+5.1 REGULATORY APPROVALSThe A1717MCW/A1417MCW/F1417MCW meets the regulatory standards as outlined in the A1717MCW/A1417MCW/F1417MCW safety report: REP001824, EMC report: NK-22-E-0811, NK-22-E-0814
+
+2.6 Test Results
+
+2.6.1. Provide samples of test pattern images (SSXI and predicate) that show the ability of the device to provide images equivalent to those of a predicate device(s). Each image should have with it the x-ray factors used and the set-up parameters of the device. The test patterns must be clearly identified and all characteristics indicated (e.g., lp/mm for each bar group). The geometry of the test set-up must be indicated as well as the focal spot size of the x-ray source. The images may be on film recorded from the output, or VHS videotape in the case of fluoroscopy devices. Any signal processing used should be described.
+
+A1717MCW
+
+A1417MCW
+
+F1417MCW
+
+Line
+
+Chart
+
+(Test
+
+Pattern)
+
+Exposure Condition
+
+- 75kVp, 100mA, 10mAs, SID: 100cm
+
+2.6.2. Provide sample measurements of the characteristics described in C and D above; include the tolerance or level of uncertainty associated with each measurement.
+
+Linearity & Sensitivity
+
+* Each manufacturer has a different performance measurement program.
+
+* A1717MCW: 127.10 LSB/μGy
+
+* Each manufacturer has a different performance measurement program.
+
+* A1417MCW: 126.74 LSB/uGy
+
+* Each manufacturer has a different performance measurement program.
+
+* F1417MCW: 121.5 LSB/uGy
+
+MTF
+
+MTF Point
+
+0.5lp
+
+1lp
+
+2lp
+
+3lp
+
+A1717MCW
+
+84%
+
+65%
+
+30%
+
+13%
+
+A1417MCW
+
+85%
+
+65%
+
+33%
+
+17%
+
+F1417MCW
+
+86%
+
+66%
+
+34%
+
+17%
+
+NPS
+
+NPS Point
+
+0.1lp
+
+0.5lp
+
+1lp
+
+2lp
+
+3lp
+
+A1717MCW
+
+7.61
+
+6.27
+
+3.64
+
+0.99
+
+0.33
+
+A1417MCW
+
+7.68
+
+6.36
+
+4.3
+
+1.38
+
+0.52
+
+F1417MCW
+
+7.81
+
+6.55
+
+4.32
+
+1.42
+
+0.54
+
+DQE
+
+DQE Point
+
+0lp
+
+0.5lp
+
+1lp
+
+2lp
+
+3lp
+
+A1717MCW
+
+79%
+
+69%
+
+62%
+
+49%
+
+31%
+
+A1417MCW
+
+78%
+
+69%
+
+61%
+
+50%
+
+34%
+
+F1417MCW
+
+76%
+
+71%
+
+64%
+
+51%
+
+35%

@@ -1,0 +1,1112 @@
+queueId: ingest-1781569954420-18da
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/[AI-AspenView-SVR-003] Software Validation Report_Appendix 2. SDS Testing_Traceabiltiy (rev.2).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/b55a615f56c7/[AI-AspenView-SVR-003] Software Validation Report_Appendix 2. SDS Testing_Tracea__b55a615f56c7_combined.txt
+canonicalGroupId: fb689e65fe36
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 244
+
+SOURCE_TEXT
+AspenView Document 1/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Appendix 2.
+SDS (Software Design Specification)
+& Testing
+& Traceability
+
+AspenView Document 2/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Revision Status
+Number Revision
+Date
+Revision
+Number
+Description of Revision Prepared by Reviewed by Approved by
+1 2019.05.06 0 Firstly prepared
+2 2020.01.06 1
+1) Form Change
+2) Update based on
+unannounced audit
+• Add standard to update
+Software Validation
+• Separated software
+validation as SRS(Appendix
+1), SDS &Testing &
+Traceability (Appendix 2)
+and updated
+3 2020.08.01 2 update for risk
+management
+
+AspenView Document 3/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Software Design Specification (SDS)
+1. Introduction
+Purpose of this document is to describe relations between SRS, source code and
+Operation Manual. This document enumerates (enlists, formalizes) items of SRS and
+Operation Manual for traceability.
+2. Development Methods and Life Cycle Model
+Software development process follows classic methodology of Waterfall Life Cycle Model, as
+illustrated in the following chart.
+2.1 Definition
+1) Analysis
+The scope of software development is defined and analyzed. The activity consists of establishing
+requirements and work scope before the design phase. The requirements are documented for
+each level of the software-specific project and design notes. When enough of the requirements
+are gathered and analyzed for the iteration of the prototype, the activities shift into the design
+phase.
+2) Planning
+Specific step by step activities for projected work scopes are planned. The tasks, responsibilities,
+resources, and other aspects pertinent to the specific development project are outlined.
+2.2 Design
+The design phase addresses four functional attributes of the software: data structure, software
+architecture, functionality, and interface characterization. Each attribute is designed and
+documented.
+2.3 Implementation
+The implementation phase converts the design into a machine language. The software source
+code is created in accordance with coding conventions. Design reviews/inspections are held to
+verify the consistency of the code created with respect to the company standards.
+
+AspenView Document 4/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+2.4 Qualification.
+The qualification phase verifies that the design and code implemented meet the original
+requirements. Testing ensures that defined inputs will produce intended results that coincide with
+required outputs.
+2.5 Maintenance.
+Once the software is released, the only software changes allowed are to fix Identified defects in
+the code or to support approved enhancements. All identified system software defects are
+recorded on System Discrepancy Reports (SDR) forms or submitted electronically to the
+Modification Request (MR) database
+
+AspenView Document 5/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+3. Specification
+3.1 Identifiers “AIV-SDS n”
+• AIV-SDS-100..199 – Common features
+• AIV-SDS-200..299 – Acquisition features
+• AIV-SDS-300..399 – Image Processing features
+• AIV-SDS-400..499 – EUA
+• AIV-SDS-500..599 – Check, logging and error handling features
+3.2 Specification Table
+SDS ID SRS ID SDO Reference Reference to
+Software Manual Description
+AIV-SDS-101 AIV-SRS-1-1 use Advanced Installer
+AIV-SDS-102 AIV-SRS-1-2 Find and apply system
+resolution
+AIV-SDS-103 AIV-SRS-1-3
+default language is English
+Text input and data character
+set UTF-8
+AIV-SDS-104 AIV-SRS-1-4 S/W Serial Key
+Managing the Software
+Serial Key with
+Supportingwell.com
+AIV-SDS-201
+AIV-SRS-2-1 Raw Image
+Library software interface.
+Acquire raw frame from
+detector.
+AIV-SRS-2-2 Raw Image,
+DICOM Image
+Raw image to DICOM image
+with meta data (patient,
+acquisition, etc)
+AIV-SRS-2-3 DICOM Image
+AIV-SDS-301
+AIV-SRS-3-1
+Raw Image,
+DICOM Image,
+Viewer Mode
+8.3.3 Image
+Processing
+Gamma-correction for
+brightness or its equivalence
+Histogram cutting
+AIV-SRS-3-2
+Median filter
+Standard Convolution
+(smooth / sharpening)
+Standard unsharpened mask
+AIV-SDS-302 AIV-SRS-3-3
+Gaussian / Laplacian image
+pyramid. Visual contrast
+enhancement without
+artifacts. Edge Enhancement
+
+AspenView Document 6/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+AIV-SDS-401 AIV-SRS-4-1 Worklist Mode
+3.4 Worklist
+4. Registration of
+Prescription
+Input patient information
+and save manually
+Edit Patient information and
+save
+Delete patient information
+AIV-SDS-402 AIV-SRS-4-2 Exam Mode 5. Exposure
+Add the addition study
+Save the image
+Display the image after X-ray
+exposure
+AIV-SDS-403 AIV-SRS-4-3 Viewer(Decision
+Board) Mode
+3.7 Viewer
+(Decision Board)
+6. Image
+manipulation
+geometry transformation
+function,
+Window width/level control,
+Zoom In/Out,
+Panning(image moving),
+Magnify,
+Measure Angle/Length,
+Input Marker & Label,
+DICOM sending to PACS,
+DICOM Printing
+Stitching
+AIV-SDS-404 AIV-SRS-4-4 Browser
+(Worklist) Mode 3.6 Browser Display studied patient list
+Studied data exporting
+AIV-SDS-501 AIV-SRS-5 Image Process 6. Image
+Manipulation
+Software shall transform
+pixels and produce (by
+request) detailed images’
+logs in such manner so
+particular mistake in
+algorithm could be identified
+visually
+AIV-SDS-502 AIV-SRS-6-1
+Worklist Mode,
+Browser
+(Worklist) Mode
+When a user does not Select
+patient/study. EUA display as
+following message box.
+“There is no exam”
+AIV-SDS-503 AIV-SRS-7-1 Worklist Mode
+10. Trouble
+shooting
+Check existence of the
+patient’s information from
+the MWL SCP or local
+
+AspenView Document 7/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Database
+AIV-SDS-504 AIV-SRS-8-1 Exam(Decision
+Board) Mode
+10. Trouble
+shooting
+Check whether detector is
+available or not.
+AIV-SDS-505 AIV-SRS-9-1
+Browser(Worklis
+t) Mode,
+Viewer(Decision
+Board) Mode
+10. Trouble
+shooting
+Check whether Storage SCP
+(PACS) is available or not.
+AIV-SDS-506 AIV-SRS-9-2
+Browser(Worklis
+t) Mode,
+Viewer(Decision
+Board) Mode
+10. Trouble
+shooting
+Check whether Printer SCP is
+available or not.
+AIV-SDS-507 AIV-SRS-9-3
+Viewer
+(Decision Board)
+Mode
+4. Registration of
+Prescription
+When the user tries to delete
+an image, the program asks
+whether to delete the image
+or reject it.
+AIV-SDS-508 AIV-SRS-10-1 Browser(Worklis
+t) Mode
+4. Registration of
+Prescription
+7. Exam
+Management
+When a user try to delete
+without selecting for
+interesting study, EUA
+display as following message
+box.
+“Are you sure you want to
+delete the patient
+permanently?”
+AIV-SDS-509 AIV-SRS-11-1 Login Window
+When login failed, EUA
+display as following message
+box.
+“Invalid Password or
+Username”
+AIV-SDS-510 AIV-SRS-11-2 Main The program will be re-run.
+AIV-SDS-511 AIV-SRS-11-3 Setting Mode use XML data format
+
+AspenView Document 8/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+3.3 Image Processing
+1) Directional smooth
+A. Theoretical basis : Directional smooth technique is based on the theory of anisotropic
+diffusion. This method is an extension of the technique proposed by Perona and Malik
+(1990), which analyzes the directionality of the image using the local structure tensor.
+B. Mathematical model :
+The local structure tensor J is defined as:
+J = [J11 J12; J12 J22] = [∇I ∇I^T]
+where ∇I is the gradient of the image. The directional smoothing is modeled by the
+following partial differential equation:
+∂I/∂t = div(D∇I)
+where D is the diffusion tensor, which is constructed based on the eigenvectors of the
+structure tensor J.
+C. Algorithm Details :
+(1) Initial noise reduction using Gaussian filter
+(2) Compute structural tensor and eigenvalue decomposition
+(3) Construct diffusion tensor D
+(4) Solve diffusion equation using iterative numerical solution
+D. Optimization and Implementation
+(1) Parallel processing using SIMD (Single Instruction, Multiple Data) instructions
+(2) Increased calculation speed through GPU acceleration
+(3) Large-scale image processing using multithreading
+E. Clinical significance
+Directional smooth technique is particularly important in medical images that contain
+highly directional anatomical structures such as vascular structures or fibrous tissues.
+This technique effectively removes noise while preserving important directional
+information, thus improving diagnostic accuracy.
+2) Adaptive Unsharpened with Gaussian / Laplacian pyramid
+A. Theoretical basis : This technique combines the image pyramid concept proposed by
+Burt and Adelson (1983) with the adaptive histogram equalization theory of Pizer et al.
+(1987). The multi-scale representation allows for individual processing of different
+frequency components of the image.
+B. Mathematical model :
+Each level l of the Gaussian pyramid is defined as:
+G_l = downsample(G_(l-1) * g)
+where g is the Gaussian kernel.
+Each level of the Laplacian pyramid is computed as:
+L_l = G_l - upsample(G_(l+1))
+Unsharp masking is expressed as:
+S_l = G_l + k * (G_l - G_l * b)
+where k is the sharpening strength and b is the blur kernel.
+C. Algorithm Details :
+(1) Generate Gaussian pyramid for input image
+(2) Compute Laplacian pyramid
+(3) Measure local contrast at each pyramid level
+
+AspenView Document 9/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+(4) Apply adaptive unsharp masking
+(5) Reassemble modified Laplacian pyramid to generate final image
+D. Optimization and Implementation
+(1) Optimization of large-scale convolution operations using FFT (Fast Fourier
+Transform)
+(2) Minimization of memory access through cache-friendly algorithm design
+(3) Implementation of heterogeneous computing using OpenCL
+E. Clinical significance : This technique is particularly useful in complex medical images
+containing structures of varying sizes. It improves the visibility of fine structures while
+maintaining overall image quality, facilitating the detection of microcalcifications or small
+tumors.
+3) Protective contours
+A. Theoretical basis : This technique is particularly useful in complex medical images
+containing structures of varying sizes. It improves the visibility of fine structures while
+maintaining overall image quality, facilitating the detection of microcalcifications or
+small tumors.
+B. Mathematical model :
+The contour C is defined as the curve
+minimizing the following energy function:
+E(C) = ∫ (α|C'(s)|^2 + β|C''(s)|^2 + λE_image(C(s))) ds
+where α, β, λ are the weights, and E_image is the image-based energy term.
+The protection mask M is generated as follows:
+M(x, y) = exp(-d(x, y)^2 / (2σ^2))
+where d(x, y) is the distance from pixel (x, y) to the nearest contour.
+C. Algorithm Details :
+(1) Initial contour setting (automatic or semi-automatic)
+(2) Gradient vector flow (GVF) calculation
+(3) Iterative contour optimization using active contour model
+(4) Protection mask generation based on final contour
+D. Optimization and Implementation
+(1) Improving computational efficiency using narrow-band level set method
+(2) Parallel implementation of contour evolution
+(3) Optimizing memory usage through adaptive mesh technique
+E. Clinical significance : Protective contours technique is important for preserving
+important anatomical boundaries such as organ boundaries or tumor margins. This
+enables accurate segmentation and measurement, especially in computer-aided
+diagnosis (CAD) systems, thus improving diagnostic accuracy.
+4) Median Filter
+A. Theoretical basis : Median Filter is a nonlinear digital filtering technique that is mainly
+effective in removing 'salt-and-pepper' noise. This filter is widely used in medical imaging
+because it can remove noise while preserving edges.
+B. Mathematical model :
+The output y[m,n] of the median filter is defined as:
+y[m,n] = median{x[i,j], (i,j) ∈ w}
+where w represents the filter window.
+C. Algorithm Details :
+(1) Apply a sliding window to the input image
+(2) Sort the pixel values within the window
+
+AspenView Document 10/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+(3) Select the median of the sorted values and assign it as the output pixel value
+(4) Repeat for the entire image
+D. Optimization and Implementation
+(1) Speed improvement through histogram-based median calculation
+(2) Optimization of large-scale image processing through parallel processing
+E. Clinical significance : Median Filter effectively removes impulse noise from medical
+images, thereby improving the accuracy of diagnosis.
+5) Sharpen
+A. Theoretical basis : Sharpen technique enhances the high frequency components of an
+image to make edges and details more distinct. It is mainly based on the principle of
+Unsharp Masking.
+B. Mathematical model :
+The sharpened image S is computed as:
+S = I + λ(I - I_blur)
+where I is the original image, I_blur is the blurred image, and λ is the sharpening
+strength.
+C. Algorithm Details :
+(1) Apply Gaussian blur to the original image
+(2) Calculate the difference between the original image and the blurred image
+(3) Multiply the difference by the intensity coefficient and add it to the original image
+D. Optimization and Implementation
+(1) Optimization of blur operation using separable Gaussian filter
+(2) Parallel processing using SIMD instructions
+E. Clinical significance : The Sharpen technique emphasizes the fine structures of X-ray
+or MRI images, making it easier to identify small lesions or fractures.
+6) Contrast
+A. Theoretical basis : Contrast enhancement is a technique that expands the dynamic
+range of an image to increase visual distinction. Methods such as histogram
+equalization and contrast stretching are used.
+B. Mathematical model :
+For contrast stretching, the new pixel value p_new is computed as follows:
+p_new = (p - min) * (newMax - newMin) / (max - min) + newMin
+Where p is the original pixel value, min and max are the minimum and maximum
+values of the original image, and newMin and newMax are the new range.
+C. Algorithm Details :
+(1) Analyze image histogram
+(2) Determine contrast enhancement function (linear or non-linear)
+(3) Create lookup table
+(4) Map pixel values
+D. Optimization and Implementation
+(1) Fast pixel value conversion using lookup tables
+(2) Parallelization of histogram calculations
+E. Clinical significance : Contrast enhancement improves diagnostic accuracy by making
+it easier to distinguish between tissues in low-contrast medical images (e.g., chest X-
+rays).
+7) Edge Enhancement
+A. Theoretical basis : Edge Enhancement is a technique that emphasizes the edges of an
+image to make the boundaries of structures clearer. It usually uses a high-pass filter or
+a Laplacian filter.
+B. Mathematical model :
+
+AspenView Document 11/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Edge enhancement using the Laplacian filter is expressed as:
+I_enhanced = I + λ * ∇²I
+where ∇²I is the Laplacian of the image, and λ is the enhancement strength.
+C. Algorithm Details :
+(1) Apply edge detection filter (e.g. Sobel, Prewitt)
+(2) Calculate the intensity of the detected edge
+(3) Add weighted edge information to the original image
+D. Optimization and Implementation
+(1) Reduced computational complexity by using separable filters
+(2) Parallel processing using GPUs
+E. Clinical significance : Edge Enhancement improves diagnostic accuracy by clarifying
+the boundaries of structures in angiography or bone imaging.
+8) Gamma Correction
+A. Theoretical basis : Gamma Correction is a technique that nonlinearly adjusts the
+luminance or trichromatic component values of an image. It is used to compensate for
+nonlinearities in display devices or to adjust the overall brightness of an image.
+B. Mathematical model :
+The gamma-corrected pixel value V_out is calculated as:
+V_out = A * V_in^γ
+where A is a constant, V_in is the input pixel value, and γ is the gamma value.
+C. Algorithm Details :
+(1) Normalize pixel values of input image to 0-1 range
+(2) Apply gamma function to each pixel
+(3) Rescale result value to original pixel value range
+D. Optimization and Implementation
+(1) Fast gamma correction using lookup tables
+(2) Parallel processing using SIMD instructions
+E. Clinical significance : Gamma correction improves tissue contrast in X-ray images,
+making it easier to distinguish between soft and hard tissues.
+4. Development Environment
+1) Programming language : C++
+2) Programming Tools
+A. Editor : Qt Creator 4.9 with Microsoft Visual C++ ( Visual Studio 2015)
+B. Compiler : Qt Creator 4.9 with Microsoft Visual C++ ( Visual Studio 2015)
+C. Linker : Qt Creator 4.9 with Microsoft Visual C++ ( Visual Studio 2015)
+D. Debugger : Qt Creator 4.9 with Microsoft Visual C++ ( Visual Studio 2015)
+3) Library
+A. DICOM: LEADTOOLS v19
+B. Image processing : KImage library by ASPEN IMAGING HEALTHCARE INC
+C. DBMS : MariaDB 10.2 or higher
+D. Detector : Various libraries by manufacturer
+E. Generator : Various libraries by manufacturer
+4) Hardware
+A. Operating System : Microsoft Windows 10 pro 64bit
+B. CPU : Intel Core i7 8700 or higher (or compatible CPU Like AMD Ryzen 7 series)
+C. MEMORY : 8GB or higher
+D. HDD/SSD : 1TB or higher
+
+AspenView Document 12/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+E. Network : Gigabit Ethernet card
+F. Display Monitor : 1920 X 1080 or higher
+
+AspenView Document 13/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5) Software Concept Block-diagram
+
+AspenView Document 14/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5. Detailed Design
+5.1 Software Design Chart
+
+AspenView Document 15/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.2 Dependency Description
+1) Worklist Module
+A. Worklist Module
+And then change over from Worklist Mode to Exam Mode for X-ray exposure.
+B. Database Module
+Query / Save / Edit / Delete patient information in Local database.
+C. MWL(Modality Worklist) module
+MWL module searches for patient information from OCS server or PACS Worklist Server.
+2) Exam Module
+A. Device Control module
+Detector Control module acquire raw image form detector (Library).
+Generator control module adjusts the X-ray dose and shoots (Library).
+B. Pre-Image display module
+Image display module display DICOM image files on the monitor.
+C. Post-Image process module
+Image processing module enhance image quality to diagnose.
+D. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+E. Database Module
+Save Study/Patient’s information
+3) Viewer Module
+A. Pre-Image display module
+Image display module display DICOM image files on the monitor.
+B. Post process module
+Image processing module enhance image quality to diagnose.
+C. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+And then it send DICOM images to PACS server or print.
+Also Export DICOM Image to external storage.
+4) Browser Module
+A. Database Module
+Save / Edit study and patient information
+Search Study information
+Delete Study information
+5) Database Module
+Query / Save / Edit / Delete patient information in worklist mode
+Query / Edit /Delete Study information in browser(worklist) mode
+Save / Edit Image information in Exam(Decision Board) mode , Viewer(Decision Board) mode
+
+AspenView Document 16/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.3 Workflow
+
+AspenView Document 17/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.4 Menu tree
+
+AspenView Document 18/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.5 Project Files
+The following is a list of source code modules.
+SMCW_Backup.csproj,SMCW_BLL.csproj,SMCW_CC.Common.csproj,SMCW_CC.Dicom.cspr
+oj,SMCW_DAL.csproj,SMCW_DBMigrator.csproj,SMCW_Design.csproj,SMCW_Device.csproj,
+SMCW_Dicom.Imaging.Core.csproj,SMCW_DICOMMigrator.csproj,SMCW_DicomViewer.csproj
+SMCW_DicomViewer.Controls.csproj,SMCW_Distribution.csproj,SMCW_GoDRFix.csproj,SMC
+W_IL.csproj,SMCW_ImageProcessing.csproj,SMCW_Imaging.csproj,SMCW_Log.csproj,SMCW
+_Model.csproj,SMCW_MultiframeDicom.csproj,SMCW_Print.csproj,SMCW_Product.csproj,SM
+CW_SmartInfra.csproj,SMCW_UndoRedoFramework.csproj,SMCW_Util.csproj,SMCW_ViewMo
+del.csproj,SMCW_XMLParser.csproj
+
+AspenView Document 19/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.6 Database
+Table
+
+AspenView Document 20/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.7 Image Processing
+1) Image Processing Parameter
+Someone who is working in the hospital can adjust the image processing parameter
+files to enhance the image quality instead of the default image processing parameter.
+Refer to the AspenView user manual for how to adjust the image processing parameters.
+2) Algorithm principle and architecture
+
+AspenView Document 21/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+
+AspenView Document 22/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+3) Block diagram
+
+AspenView Document 23/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+4) Features
+Invert
+Change image from black tone to white tone and improve contrast and resolution.
+Before After
+Gradation
+Control Histogram and Contrast
+Before After
+
+AspenView Document 24/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Saturation
+Control Max pixel Value. saturation.
+Before After
+Tone
+Adjust the Brightness and Contrast of the image.
+Noise
+Noise reduction using Gaussian filter on image.
+Before After
+
+AspenView Document 25/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Background
+Remove the background in the image.
+Before (Crop=0) After (Crop=1)
+6) Result
+For the Visual evaluations, it was performed by specialist radiologists.
+He evaluated and believed that the view of the images was truly improved and proper. Based on
+the above steps and visual evaluations, it is possible to check the figures show, the overall
+visibility, clarity and contrast is improved remarkably and more information is available from the
+processed images. For detailed information and images for each body parts, please check the
+“AspenView Clinical report_ AspenImaging-17F”.
+
+AspenView Document 26/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+5.8 User Interface Design
+1) Worklist Mode
+2) Exam Mode
+
+AspenView Document 27/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+3) Browser (Manual Entry) Mode
+
+AspenView Document 28/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+4) Settings Mode
+5) Image Processing Mode (Quick, Custom Processing)
+
+AspenView Document 29/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+Testing & Traceability
+6. Software Validation & Verification, Testing
+6.1 Testing Organization & Resource
+1) Human Resource (Roles and Responsibilities)
+Person Responsibilities (Processed documents)
+SW Engineer
+(3 person)
+SRS (design)
+Software architecture (design)
+Implementation, coding
+SDS (design)
+Operation manual (design)
+Hazards analysis (design)
+Software dynamic test report (verification)
+Team Manager
+(1 person)
+SRS (approval)
+Software architecture (design, approval)
+SDS (verification, approval)
+Operation manual (verification, approval)
+Hazards analysis (verification)
+Software test plan (verification)
+Software test report (verification)
+Traceability analysis (design)
+Validation report (design)
+Test Engineer
+(1 person) Software test
+2) Hardware & Software Environment
+A. Program Language : C#
+B. Programming Tools
+▪ Editor : Visual Studio 2022
+▪ Compiler : Roslyn ( Visual Studio 2022)
+▪ Debugger : Visual Studio 2022
+C. Library
+▪ DICOM: fo-dicom 4.0.7.0
+▪ Image processing : Intel® Integrated Performance Primitives
+▪ DBMS : SQLite 3.3.4 or higher
+D. Hardware
+▪ CPU : Intel Core i7 8700 or higher (or compatible CPU Like AMD Ryzen 7 series)
+▪ RAM : 8GB or higher
+▪ HDD : 1TB or higher
+▪ Network : Gigabit Ethernet network card
+▪ Display : 1920 X 1080 or higher
+▪ Operating System : Microsoft Windows 10 64bit
+6.2 Reference
+• EN 62304:2006/AC:2008,Medical electrical equipment – Medical device software - Software
+life-cycle processes
+• EN ISO 14971:2012, Medical devices – Application of risk management to medical devices
+• EN ISO 13485:2016/AC:2016, Medical devices – Quality management systems -
+Requirements for regulatory purposes.
+• FDA Quality System Regulation 21 CFR, Part 820
+• FDA Quality System Regulation 21 CFR, Part 803
+• CDRH Guidance: General Principles of Software Validation
+
+AspenView Document 30/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+• CDRH Guidance: Off-The-Shelf Software Use in Medical Devices
+• CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image
+Management Devices
+• IEEE 1012-1986, Standard for Software Verification and Validation Plans
+• IEEE 829-1983, Standard for Software Test Documentation
+• IEEE 1016 , Standard for software designs
+• IEEE 830, Standard for software requirements)
+
+AspenView Document 31/46
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision: 2
+6.3 V, V & Testing Techniques
+1) Techniques
+Testing original code
+Need Test Driver or Stub for Module. Because the module is not
+stand alone software.
+The Unit test after compile the created source code by developers.
+Unit Testing Minimum test unit for each software’s module.
+Integrating Testing Check flow or operating between software module and sub or all
+system.
+System Testing This testing must do test in office.
+2) Methodologies
+The waterfall method based lifecycle, modify fit this software. The testing method, this software
+used a combine a white box or glass box testing and act-like-customer testing.
+6.3.1 Life Cycle Verification and Validation Model
+Refer to chapter SDS.2 development Method and Life Cycle Model.
+6.3.2 Verification, Validation and Testing Input and Output
+1) Planning phase
+2) Requirements phase
+3) Design phase
+4) Design qualification
+5) Design transfer
+6) Product and service provision phase
+
+AspenView Document 32/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+6.4 Test Report
+6.4.1 Code Review
+# Software Requirement
+Implemented
+?
+(Y/N)
+Module Remark
+A System initialize Y Main Check Database connection consistency
+Check duplication run
+B Y Main Connect to Worklist Server and Store Server
+C Hardware check Y Main
+Check the validity of the Detector and Display to check detector
+Status.
+For wireless detector, It supports to check the Wi-Fi, Battery status
+only.
+D Management Worklist
+database Y Worklist Registers Patient or Query from MWL Server
+Modifies Patient Information (Add/Edit/Delete Ref. phyisican)
+E Management Image
+database Y Browser Search Study and Start Review Image
+F Image Manipulation Y Viewer
+Geometry Transformation Function,
+Window/Level control
+Zoom in/out
+Panning(Image Moving)
+Magnify Glass
+Measure Angle/Length
+Marker & Label Display
+Image Invert
+Compare images
+Region of Interest
+Duplication image
+Exposure Index
+Stitching
+G User’s System Environmental
+Setup
+Y OCSManager
+ProtocolManager
+Loads system operational environment
+Image Processing Parameters
+H Y ConfigManager Configuration PACS Server and Worklist Server and System and Print
+I Y ParameterManager Apply and modify Image processing parameters
+
+AspenView Document 33/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+J Image Data Management Y KimageLib Manages memory allocation of the images and the list of images by a
+unit of the patients
+K DICOM/Paper Printing Y DicomFile
+DicomNetwork
+Integrates with DICOM Server sharing Images and Patients’ information
+and embodies Local Paper or DICOM Image printing function (real-size)
+Show time of image acquisition, patient’s date of birth, age, Ref.
+physician on the printed DICOM image
+L Image Processing KimageLib
+KGraphicView Processes the Raw Images within the allowed time (MAX 3sec)
+Acceptance: ◆ Pass ◇ Fail
+Summary: As a result of code review, we hereby certify that all the functions those support system specifications are proper. Therefore, you may
+advance to the next phase. As a result of system Integration review, we confirm that software verification is properly accomplished.
+Inspected by :
+Reviewed by :
+
+AspenView Document 34/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+6.4.2 Module Review
+#
+Software Specifications Implemented
+?
+(Y/N)
+Remark
+Module Function
+A
+Worklist
+Create Worklist Y Add Patient info & Protocol
+B Edit Worklist Y Edit Patient info & Protocol
+C Delete Worklist Y Delete registered patient lists
+D
+Exam
+Get Raw Image Y Gets a raw image from detector
+E Open Detector Libray Y Connect to detector library
+F Close Detector Libray Y Close connection to detector library
+G
+Viewer
+Set Adjust Y Set image rotation or inverting.
+H Set Annotation & Measurement Y Set annotation & measurement info to DICOM Image
+I Save Image Y Save selected image to DICOM
+J Update Image Y Update current image to DICOM
+K Image Processing Y Process a raw image to improve image quality by reducing noise,
+and optimizing contrast for viewing.
+L
+DICOM
+Load Dcm Y Load a DICOM Image
+M Create Dcm Y Create a DICOM Image from the raw image
+N Save Dcm Y Save to a DICOM Image
+O Database Connect Database Y Configures Databases
+P Execute Query Y Stores and retrieves Patients’ information to Database
+Acceptance: ◆ Pass ◇ Fail
+Summary: As a result of module review, we hereby certify that all the functions those support system specifications are proper. Therefore, you
+may advance to the next phase. As a result of system Integration review, we confirm that software verification is properly
+accomplished.
+Inspected by :
+Reviewed by :
+
+AspenView Document 35/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+6.4.3 Integration Module Review
+# Software Specifications Implemented?
+(Y/N) Remark
+Status Function Module
+A Initialize Hardware Initialize Main Y
+Check hardware connection and initialize it
+Display to check detector Status. For wireless detector, It supports to check the Wi-Fi,
+Battery states only.
+B Image
+Acquisition
+Request From Detector Exam Y Check response and status of detector after checking the registration of a patient
+C Enhance Image ParameterManager
+KimageLib Y Get quality improved image with auto leveling
+D
+DICOM
+Do Store DicomFile Y Check DICOM server and send DICOM images
+E Do Store DicomPrint Y Check DICOM printer and print images
+F Worklist DicomNetwork Y Check existence of the patient’s information from the MWL
+G DB
+Managemen
+t
+Connect Database DatabaseManager Y Connect and initialize database
+H Execute Query DatabaseManager Y Check the existence of the expected patient’s information by querying the Database
+Acceptance: ◆ Pass ◇ Fail
+Summary: As a result of integration review, we hereby certify that all the functions those support system specifications are proper. Therefore, you
+may advance to the next phase. As a result of system Integration review, we confirm that software verification is properly accomplished.
+Inspected by :
+Reviewed by :
+
+AspenView Document 36/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+6.4.4 Dynamic Test
+# Description (Test case) Operations and expected result Pass(P)
+/ Fail(F)
+A Run the software If you run it again while the software is running, it restart the running software. P
+B Check the login information Displays message “Invalid Password or User name” if the login is failed. P
+C Software checks free disk space after connect to
+detector but before detector’s initialization
+Displays message “We are going to delete oldest images for maintain proper space
+of the storage” if current hard disk drive does not have enough space P
+D Check presence of LAN Port Displays message “Detector disconnected” in this case when tries to establish any
+connection to detector. P
+E Check that device is not busy
+(when detector is connected)
+Start bright acquisition but do not expose X-ray (so detector is connected and
+waiting for exposure).
+Display to check detector status. For wireless detector, It supports to check the Wi-
+Fi, Battery status only.
+P
+F Software shall work in required versions of
+Windows Perform functional aging tests in various machines: P
+G Time taken to process the Image Process a series of Images and measures the time taken to process each images
+and calculated an averages of them P
+H Check the image quality Display the image with specified image size of the detector P
+I Send Image to PACS Server Send the images to PACS server
+(When the PACS don’t connect, EUA display the PACS icon in gray) P
+Acceptance: ◆ Pass ◇ Fail
+Summary: As a result of dynamic test, we hereby certify that all the functions those support system specifications are proper. Therefore, you may
+advance to the next phase. As a result of system Integration review, we confirm that software verification is properly accomplished.
+Inspected by :
+Reviewed by :
+
+AspenView Document 37/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+6.4.5 Functional Test
+# Description (Test case) Expected result Pass(P)
+/ Fail(F)
+A Installation Check to install the AspenView program one stop.
+(It blocks to make the mistake during the installation) P
+B Registration of patient
+Registers patients information and stores to and retrieves from database.
+Register patient information automatically when body part/projection is selected.
+When manually registering a patient, automatically create a patient ID / Access Number,
+Input/Edit/Delete Ref. Physician information.
+P
+C Image Acquisition From Detector Makes Test shots in various environment changing the X-RAY condition P
+D Image Processing
+Shows the processed Images to skilled doctors and get their advice.
+(Apply to process image only one time used raw file. Processed file cannot process again)
+Adjust window level for different body parts manually
+P
+E Operate on Images Carries out all operation on Images and checks the result P
+F Reset Image Reverts the modified image to its original state (Rotation, Label, Marking, etc.) P
+G Transfer Images to DICOM Server Send to numerous DICOM Server made by various companies P
+H Export DICOMDIR to External Storage Export Image data and checks equality between them in the way of file comparing P
+I Acquire the X-ray images Acquire X-ray images changing the selected patient/series P
+J Check database data & User Input data Verify user input data versus database data P
+K Delete the Patient/Study Delete the selected patient/study P
+L Delete the X-ray images Delete X-ray images to change the number of selected patient/series P
+M
+
+Display the information Display the information (version, manufacturer information etc.) for user in help and
+configuration window (E-labeling)
+P
+Result :
+
+AspenView Document 38/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Log in Window Configuration Window (E-labeling)
+N Check, Search the patient ID/Name/Date … Search patient name/ Patient ID P
+O DICOM / paper printing Print real-size DICOM images with printer annotation / tag (time of image acquisition,
+patient’s date of birth, age, Ref. physician) P
+P
+Reference Physician Add / Edit/ delete Ref. physician when registering patients
+P
+Result :
+Before search in the Register mode After search in the Register mode
+
+AspenView Document 39/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Before search in the review mode After search in the review mode
+Q
+Check, capacitance of HDD storage Check the HDD storage by icon
+P
+Result :
+
+AspenView Document 40/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+R
+Check, DICOM sending to PACS Queue count check and PACS ON
+P
+S
+Check, Application functions - Zoom/Panning/Crop
+P
+Result :
+Default Image Image Panning
+
+AspenView Document 41/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Crop ZOOM
+T
+Check, Application functions -Adjust Image (Reset, Rotation, Flip, Invert)
+P
+Result :
+Reset Image Rotate Image
+
+AspenView Document 42/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Flip Image Invert Image
+U
+Check, Application functions -Annotation (Clear, R/L mark, Text, Length, Angle)
+P
+Result :
+Mark(L) on image Text on Image
+
+AspenView Document 43/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Length measurement Angle measurement
+V
+Check, Application functions -ETC(WL)
+P
+Result :
+Adjusting Window level by dragging up and down while clicking the right button
+W
+Check, Application functions -ETC(Stitching, DICOM Print)
+P Result :
+
+AspenView Document 44/
+46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06 /Revision:2
+Stitching DICOM Print
+Acceptance: ◆ Pass ◇ Fail
+Summary: As a result of functional test, we hereby certify that all the functions those support system specifications are proper. Therefore, you
+may advance to the next phase. As a result of system Integration review, we confirm that software verification is properly
+accomplished.
+Inspected by :
+Reviewed by :
+
+AspenView Document 45/46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06
+/Revision : 2
+7. Traceability Analysis
+We noticed that some traceability analysis doesn’t be needed while determining the
+classification of the software based on the each module. If you find the “-(None)” it does not
+need to analyze the Hazard because of not affects the serious situation by the software safety
+classification.
+SRS SDS Hazard Analysis
+Number Test ID
+AIV-SRS-1-1 AIV-SDS-101 R21 6.4.5 A
+AIV-SRS-1-2 AIV-SDS-102 6.4.5 M
+AIV-SRS-1-3 AIV-SDS-103 6.4.5 A~W
+AIV-SRS-1-4 AIV-SDS-104 R19, R20 6.4.4 A
+AIV-SRS-2-1
+AIV-SRS-2-2
+AIV-SRS-2-3
+AIV-SDS-201 R14
+6.4.2 D~F, N
+6.4.3 B
+6.4.5 C
+AIV-SRS-3-1
+AIV-SRS-3-2
+AIV-SRS-3-3
+AIV-SDS-301
+AIV-SDS-302
+AIV-SDS-303
+R16
+6.4.1 L
+6.4.2 K
+6.4.3 C
+6.4.5 D
+AIV-SRS-4-1 AIV-SDS-401 R09 6.4.2 A, B, C
+6.4.5 B, D, K, L M, N, P
+AIV-SRS-4-2 AIV-SDS-402 R04
+6.4.2 M,N, P
+6.4.3 B
+6.4.4 H
+6.4.5 C, I
+AIV-SRS-4-3 AIV-SDS-403 R5, R18
+6.4.1 F, H, K
+6.4.2 G, H, I
+6.4.3 D, E
+6.4.4 G, I
+6.4.5 F~H, O, S~W
+AIV-SRS-5 AIV-SDS-501 R17
+6.4.1 I, L
+6.4.2. K
+6.4.3 C
+6.4.4 G
+6.4.5 D
+AIV-SRS-6-1 AIV-SDS-502 R04 6.4.1 D
+6.4.5 I
+AIV-SRS-7-1 AIV-SDS-503 R08 6.4.1 D, H
+6.4.3 F
+AIV-SRS-8-1 AIV-SDS-504 R02, R22
+6.4.1 C
+6.4.3. A, B
+6.4.4 B, C, D
+6.4.5 C
+
+AspenView Document 46/46
+Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-003
+Initiate date: 2022.09.06
+/Revision : 2
+AIV-SRS-9-1 AIV-SDS-505 R12
+6.4.1 H
+6.4.3. D
+6.4.4. H
+6.4.5 H, R
+AIV-SRS-9-2 AIV-SDS-506 R12
+6.4.1 H, K
+6.4.5 E
+6.4.5 O
+AIV-SRS-9-3 AIV-SDS-507 R25 6.4.2 C
+6.4.5 L
+AIV-SRS-10-1 AIV-SDS-508 R25
+6.4.1 D
+6.4.3 C
+6.4.5 J, K, L
+AIV-SRS-11-1 AIV-SDS-509 R11, R24
+6.4.1 A
+6.4.4 B
+6.4.5 L, M
+AIV-SRS-11-2 AIV-SDS-510 R26 6.4.4 A
+AIV-SRS-11-3 AIV-SDS-511 R27 6.4.4 C
+6.4.5 B, J, M, Q

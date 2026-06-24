@@ -1,0 +1,2237 @@
+queueId: ingest-1781569954412-10uj
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/EN_60SIPT-602230C/EN 300 440_ST60-SIPT,ST60-2230C,ST60-2230C-P__EQ740701-06.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/ddccf4ceeb60/EN 300 440_ST60-SIPT,ST60-2230C,ST60-2230C-P__EQ740701-06__ddccf4ceeb60_combined.txt
+canonicalGroupId: adb27ce58c02
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 203
+
+SOURCE_TEXT
+Report No.: EQ740701-06 Page : 1 of 191
+Report Version: Rev. 01
+CE Test Report
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-SIPT
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : EN 300 440 V2.1.1 (2017-03)
+Received Date : Jul. 01, 2019
+Tested Date : Jul. 01 ~ Aug. 22, 2019
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: EQ740701-06 Page : 2 of 191
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List ................................................................................................................ 8
+1.3 Test Setup Chart .................................................................................................................................... 8
+1.4 Test Equipment and Calibration Data ..................................................................................................10
+1.5 Testing Applied Standards ...................................................................................................................12
+1.6 Deviation from Test Standard and Measurement Procedure ...............................................................12
+1.7 Measurement Uncertainty ....................................................................................................................12
+2 TEST CONFIGURATION .....................................................................................................................13
+2.1 Testing Condition .................................................................................................................................13
+2.2 The Worst Test Modes and Channel Details .......................................................................................13
+3 TRANSMITTER TEST RESULTS........................................................................................................14
+3.1 Equivalent Isotropically Radiated Power (e.i.r.p.) ................................................................................14
+3.2 Permitted Range of Operating Frequencies .........................................................................................24
+3.3 Transmitter Unwanted Emissions in the Spurious Domain ..................................................................34
+4 RECEIVER TEST RESULTS .............................................................................................................108
+4.1 Receiver Spurious Emissions .............................................................................................................108
+4.2 Adjacent Channel Selectivity ..............................................................................................................182
+4.3 Receiver Blocking ...............................................................................................................................185
+5 PHOTOGRAPHS OF THE TEST CONFIGURATION .......................................................................188
+6 TEST LABORATORY INFORMATION .............................................................................................191
+
+Report No.: EQ740701-06 Page : 3 of 191
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+EQ740701-06 Rev. 01 Initial issue Oct. 02, 2019
+
+Report No.: EQ740701-06 Page : 4 of 191
+Report Version: Rev. 01
+Summary of Test Results
+Ref. Std.
+Clause Test Items Measured Result
+4.2.2 Equivalent Isotropically Radiated Power 13.95 dBm Pass
+4.2.3 Permitted Range of Operating Frequencies Meet the requirement of limit. Pass
+4.2.4 Unwanted Emissions in the Spurious Domain Meet the requirement of limit. Pass
+4.2.5.4 Duty Cycle w/o test (No Restriction) N/A
+4.2.6 Additional Requirements for FHSS Equipment N/A N/A
+4.3.3 Adjacent Channel Selectivity Meet the requirement of limit. Pass
+4.3.4 Blocking or Desensitization Meet the requirement of limit. Pass
+4.3.5 Receiver Spurious Radiation Meet the requirement of limit. Pass
+4.4 Spectrum Access Techniques N/A N/A
+4.6.4 GBSAR Antenna Pattern N/A N/A
+ANNEX F Limits for GBSAR N/A N/A
+Note: N/A means not applicable.
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: EQ740701-06 Page : 5 of 191
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-SIPT 802.11 ac/a/b/g/n +
+Bluetooth 4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module For marketing purpose
+SU60-2230C-P
+ The above models, model SU60-2230C was selected as a representative one for the final test and
+only its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency
+Range (MHz)
+IEEE Std.
+802.11 Ch. Freq. (MHz) Channel
+Number
+Transmit
+Chains (NTX)
+Data Rate /
+MCS
+5725-5850 a 5745-5825 149-165 [5] 2 6-54 Mbps
+5725-5850 n (HT20) 5745-5825 149-165 [5] 2 MCS 0-15
+5725-5850 n (HT40) 5755-5795 151-159 [2] 2 MCS 0-15
+5725-5850 ac (VHT20) 5745-5825 149-165 [5] 2 MCS 0-9
+5725-5850 ac (VHT40) 5755-5795 151-159 [2] 2 MCS 0-9
+5725-5850 ac (VHT80) 5775 155 [1] 2 MCS 0-9
+Note: 802.11a/n/ac uses a combination of OFDM-BPSK, QPSK, 16QAM, 64QAM modulation.
+
+Report No.: EQ740701-06 Page : 6 of 191
+Report Version: Rev. 01
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+6
+Laird/MIMO
+FlexPIFA
+Antenna
+PIFA IPEX U.FL 2 3 3 3 3
+1.1.4 EUT Operational Condition
+Power Supply Type DC 3.3V from host
+SW Version SD-UAPSTA-8997-U14-MMC-16.68.1.p95-C3X16219_V4-MGPL-src
+Operational Voltage Vnom (3.3 V) Vmax (3.63 V) Vmin (2.97 V)
+Operational Climatic Tnom (20°C) Tmax (85°C) Tmin (-30°C)
+1.1.5 Accessories
+N/A
+
+Report No.: EQ740701-06 Page : 7 of 191
+Report Version: Rev. 01
+1.1.6 Receiver Category
+Receiver
+Category Risk Assessment Of Receiver Performance
+1 Highly reliable SRD communication media; e.g. serving human life inherent systems (may result in a
+physical risk to a person).
+2 Medium reliable SRD communication media e.g. causing Inconvenience to persons, which cannot simply
+be overcome by other means.
+3 Standard reliable SRD communication media e.g. Inconvenience to persons, which can simply be
+overcome by other means (e.g. manual).
+1.1.7 Channel List
+Frequency band (MHz) 5725~5850
+802.11 a / n HT20 / ac VHT20 802.11n HT40 / ac VHT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+149 5745 151 5755
+153 5765 159 5795
+157 5785 802.11ac VHT80
+161 5805 155 5775
+165 5825 --- ---
+1.1.8 Test Tool and Duty Cycle
+Test Tool Test command
+Modulation Mode Duty Cycle Of Test Signal (%) Duty Factor (dB)
+a 100.00 0
+ac (VHT20) 100.00 0
+ac (VHT40) 100.00 0
+ac (VHT80) 100.00 0
+1.1.9 Power Index of Test Tool
+Modulation Mode
+Test Frequency (MHz)
+a / VHT20 VHT40 VHT80
+5745 5785 5825 5755 5795 5775
+a 7 7 7 --- --- ---
+ac (VHT20) 7 7 7 --- --- ---
+ac (VHT40) --- --- --- 7 7 ---
+ac (VHT80) --- --- -- --- --- 7
+
+Report No.: EQ740701-06 Page : 8 of 191
+Report Version: Rev. 01
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model S/N Remarks
+1 Notebook DELL Latitude E5420 DoC ---
+2 Notebook Lenovo T430 DoC Provided by applicant.
+3 50Ω terminator --- --- --- ---
+4 Fixture --- --- --- Provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram (Conducted)
+No. Signal cable / Length (m)
+1 RJ45, 1m non-shielded
+2 RJ45, 1m non-shielded
+
+Report No.: EQ740701-06 Page : 9 of 191
+Report Version: Rev. 01
+Test Setup Diagram (Radiated)
+No. Signal cable / Length (m)
+1 RJ45, 1m non-shielded
+2 RJ45, 1m non-shielded
+
+Report No.: EQ740701-06 Page : 10 of 191
+Report Version: Rev. 01
+1.4 Test Equipment and Calibration Data
+Test Item Radiated Emissions
+Test Site Fully-anechoic chamber 2 / (05CH02-WS)
+Tested Date Jul. 02, 2019
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer Agilent N9010A MY52221474 Oct. 10, 2018 Oct. 09, 2019
+Bilog Antenna
+30-1000MHz SCHWARZBECK VULB9168 9168-563 Jan. 04, 2019 Jan. 03, 2020
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D 9120D-1205 Jan. 18, 2019 Jan. 17, 2020
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170508 Dec. 22, 2018 Dec. 21, 2019
+Preamplifier Agilent 83017A MY53270013 Dec. 27, 2018 Dec. 26, 2019
+Preamplifier EMC EMC02325 980188 Dec. 13, 2018 Dec. 12, 2019
+Preamplifier EMC EMC184045B 980192 Aug. 09, 2018 Aug. 08, 2019
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22622/4 Oct. 16, 2018 Oct. 15, 2019
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22623/4 Oct. 16, 2018 Oct. 15, 2019
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22621/4 Oct. 16, 2018 Oct. 15, 2019
+RF cable-4M HUBER+SUHNER SUCOFLEX104 MY22579/4 Oct. 16, 2018 Oct. 15, 2019
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800
+-002 Oct. 16, 2018 Oct. 15, 2019
+LF cable-3M EMC EMC8D-NM-NM-300
+0 131102 Oct. 16, 2018 Oct. 15, 2019
+LF cable-10M EMC EMC8D-NM-NM-100
+00 131101 Oct. 16, 2018 Oct. 15, 2019
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: EQ740701-06 Page : 11 of 191
+Report Version: Rev. 01
+Test Item RF Conducted
+Test Site (TH01-WS)
+Tested Date Aug. 21, 2019
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101486 Jan. 08, 2019 Jan. 07, 2020
+TEMP&HUMIDITY
+CHAMBER GIANT FORCE GCT-225-40-SP-SD MAF1212-002 Dec. 05, 2018 Dec. 04, 2019
+Power Sensor Agilent U2021XA MY53480019 Jan. 30, 2019 Jan. 29, 2020
+Power Sensor Agilent U2021XA MY53510003 Jan. 30, 2019 Jan. 29, 2020
+Power Sensor Agilent U2021XA MY54070003 Feb. 11, 2019 Feb. 10, 2020
+Power Sensor Agilent U2021XA MY54060013 Feb. 11, 2019 Feb. 10, 2020
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 25, 2018 Oct. 24, 2019
+AC POWER
+SOURCE APC AFC-500W F312060012 Nov. 29, 2018 Nov. 28, 2019
+Combiner(1X2) woken 0120A02201801O DOM2AEW1A23 Oct. 18, 2018 Oct. 17, 2019
+Combiner(1X4) WOKEN 4WAYDIV 0120A042011010 Oct. 17, 2018 Oct. 16, 2019
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Measurement
+Software Agilent EN RF test 1.1501125 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Receiver Blocking
+Test Site (05CH02-WS)
+Tested Date Aug. 22, 2019
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Wireless
+connectivity tester ROHDE&SCHWARZ CMW270 100856 Oct. 17, 2018 Oct. 16, 2019
+Signal Generator ROHDE&SCHWARZ SMB100A 175727 Dec. 24, 2018 Dec. 23, 2019
+RF Cable HUBER+SUHNER SUCOFLEX_104 500202/4 Oct. 17, 2018 Oct. 16, 2019
+RF Cable HUBER+SUHNER SUCOFLEX_104 296088/4 Oct. 17, 2018 Oct. 16, 2019
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Oct. 17, 2018 Oct. 16, 2019
+Combiner(1X2) WOKEN 2WAYDIV 12101200003 Oct. 17, 2018 Oct. 16, 2019
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: EQ740701-06 Page : 12 of 191
+Report Version: Rev. 01
+1.5 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+EN 300 440 V2.1.1 (2017-03)
+1.6 Deviation from Test Standard and Measurement Procedure
+None
+1.7 Measurement Uncertainty
+ISO/IEC 17025 requires that an estimate of the measurement uncertainties associated with the emissions test
+results be included in the report. The measurement uncertainties given below are based on a 95% confidence
+level (based on a coverage factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty Limit
+Radio Frequency ±0.059 x 10-7 ±1 × 10-7
+RF power (conducted) ±0.685 dB ±2,5 dB
+Radiated emission of transmitter, valid up to 40 GHz ±3.40 dB ±8 dB
+Radiated emission of receiver, valid up to 40 GHz ±3.40 dB ±8 dB
+Temperature ±0.4 °C ±1 °C
+Humidity ±3.3 % ±5 %
+Voltage (DC) ±0.15 % ±1 %
+Voltage (AC, < 10kHz) ±0.15 % ±2 %
+
+Report No.: EQ740701-06 Page : 13 of 191
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+RF Conducted TH01-WS 25°C / 65% Alex Huang
+Radiated Emission 05CH02-WS 24°C / 65% Ryan Lee
+Receiver Blocking 05CH02-WS 22.5°C / 64% Jack Li
+2.2 The Worst Test Modes and Channel Details
+Test item Modulation
+Mode
+Test Frequency
+(MHz) Data Rate
+Test
+Configura
+tion
+Equivalent Isotropic Radiated Power
+Permitted Range of Operating Frequencies
+11a
+VHT20
+VHT40
+VHT80
+5745 / 5785 / 5825
+5745 / 5785 / 5825
+5755 / 5795
+5775
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+1, 2, 3, 4
+Transmitter Unwanted Emissions
+11a
+VHT20
+VHT40
+VHT80
+5745 / 5785 / 5825
+5745 / 5785 / 5825
+5755 / 5795
+5775
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+2
+Receiver Spurious Emissions
+11a
+VHT20
+VHT40
+VHT80
+5745 / 5785 / 5825
+5745 / 5785 / 5825
+5755 / 5795
+5775
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+2
+Receiver Blocking
+Adjacent Channel Selectivity 11a 5745 / 5825 6 Mbps 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y, and
+Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The device can be operated under adapter mode and charging mode. Each mode was selected for related test
+items as below configuration.
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4: Isolated Magnetic Dipole Antenna
+3. Conducted emission is only measured for configuration 1 which has maximum conducted power.
+4. Two 50Ω terminators are connected to antenna port of EUT for radiated emission measurement.
+
+Report No.: EQ740701-06 Page : 14 of 191
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Equivalent Isotropically Radiated Power (e.i.r.p.)
+3.1.1 Limit of Equivalent Isotropically Radiated Power
+Frequency Bands Power Applications
+5 725 MHz to 5 875 MHz 25 mW (14dBm) e.i.r.p. Non-specific short range devices
+3.1.2 Test Procedures
+Reference to clause 4.2.2.3 of EN 300 440 V2.1.1 (2017-03).
+3.1.3 Test Setup
+
+Report No.: EQ740701-06 Page : 15 of 191
+Report Version: Rev. 01
+3.1.4 Test Result of Equivalent Isotropically Radiated Power
+Configuration 1 : Dipole Antenna
+Maximum Transmit Power (dBm)
+Modulation Mode 11a
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 11.13 14 Pass
+TminVmax 5745 11.78 14 Pass
+TminVmin 5745 11.80 14 Pass
+TmaxVmax 5745 11.31 14 Pass
+TmaxVmin 5745 11.28 14 Pass
+TnomVnom 5785 11.09 14 Pass
+TminVmax 5785 11.79 14 Pass
+TminVmin 5785 11.82 14 Pass
+TmaxVmax 5785 11.32 14 Pass
+TmaxVmin 5785 11.30 14 Pass
+TnomVnom 5825 10.91 14 Pass
+TminVmax 5825 11.76 14 Pass
+TminVmin 5825 11.79 14 Pass
+TmaxVmax 5825 11.12 14 Pass
+TmaxVmin 5825 11.10 14 Pass
+
+Report No.: EQ740701-06 Page : 16 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT20
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 11.34 14 Pass
+TminVmax 5745 11.99 14 Pass
+TminVmin 5745 12.01 14 Pass
+TmaxVmax 5745 11.46 14 Pass
+TmaxVmin 5745 11.44 14 Pass
+TnomVnom 5785 11.23 14 Pass
+TminVmax 5785 11.84 14 Pass
+TminVmin 5785 11.86 14 Pass
+TmaxVmax 5785 11.32 14 Pass
+TmaxVmin 5785 11.30 14 Pass
+TnomVnom 5825 11.11 14 Pass
+TminVmax 5825 11.80 14 Pass
+TminVmin 5825 11.82 14 Pass
+TmaxVmax 5825 11.19 14 Pass
+TmaxVmin 5825 11.17 14 Pass
+Maximum Transmit Power (dBm)
+Modulation Mode VHT40
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5755 11.05 14 Pass
+TminVmax 5755 11.86 14 Pass
+TminVmin 5755 11.89 14 Pass
+TmaxVmax 5755 11.30 14 Pass
+TmaxVmin 5755 11.28 14 Pass
+TnomVnom 5795 11.00 14 Pass
+TminVmax 5795 11.72 14 Pass
+TminVmin 5795 11.76 14 Pass
+TmaxVmax 5795 11.23 14 Pass
+TmaxVmin 5795 11.20 14 Pass
+
+Report No.: EQ740701-06 Page : 17 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT80
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5775 11.39 14 Pass
+TminVmax 5775 11.96 14 Pass
+TminVmin 5775 12.00 14 Pass
+TmaxVmax 5775 11.54 14 Pass
+TmaxVmin 5775 11.51 14 Pass
+Configuration 2 : PCB Dipole Antenna
+Maximum Transmit Power (dBm)
+Modulation Mode 11a
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 13.12 14 Pass
+
+TminVmax 5745 13.77 14 Pass
+TminVmin 5745 13.79 14 Pass
+TmaxVmax 5745 13.30 14 Pass
+TmaxVmin 5745 13.27 14 Pass
+TnomVnom 5785 13.05 14 Pass
+TminVmax 5785 13.75 14 Pass
+TminVmin 5785 13.78 14 Pass
+TmaxVmax 5785 13.28 14 Pass
+TmaxVmin 5785 13.26 14 Pass
+TnomVnom 5825 12.88 14 Pass
+TminVmax 5825 13.73 14 Pass
+TminVmin 5825 13.76 14 Pass
+TmaxVmax 5825 13.09 14 Pass
+TmaxVmin 5825 13.07 14 Pass
+
+Report No.: EQ740701-06 Page : 18 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT20
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 13.28 14 Pass
+TminVmax 5745 13.93 14 Pass
+TminVmin 5745 13.95 14 Pass
+TmaxVmax 5745 13.40 14 Pass
+TmaxVmin 5745 13.38 14 Pass
+TnomVnom 5785 13.21 14 Pass
+TminVmax 5785 13.82 14 Pass
+TminVmin 5785 13.84 14 Pass
+TmaxVmax 5785 13.30 14 Pass
+TmaxVmin 5785 13.28 14 Pass
+TnomVnom 5825 13.09 14 Pass
+TminVmax 5825 13.78 14 Pass
+TminVmin 5825 13.80 14 Pass
+TmaxVmax 5825 13.17 14 Pass
+TmaxVmin 5825 13.15 14 Pass
+Maximum Transmit Power (dBm)
+Modulation Mode VHT40
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5755 13.06 14 Pass
+TminVmax 5755 13.87 14 Pass
+TminVmin 5755 13.90 14 Pass
+TmaxVmax 5755 13.31 14 Pass
+TmaxVmin 5755 13.29 14 Pass
+TnomVnom 5795 12.94 14 Pass
+TminVmax 5795 13.66 14 Pass
+TminVmin 5795 13.70 14 Pass
+TmaxVmax 5795 13.17 14 Pass
+TmaxVmin 5795 13.14 14 Pass
+
+Report No.: EQ740701-06 Page : 19 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT80
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5775 13.33 14 Pass
+TminVmax 5775 13.90 14 Pass
+TminVmin 5775 13.94 14 Pass
+TmaxVmax 5775 13.48 14 Pass
+TmaxVmin 5775 13.45 14 Pass
+Configuration 3 : PIFA Antenna
+Maximum Transmit Power (dBm)
+Modulation Mode 11a
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 12.13 14 Pass
+TminVmax 5745 12.78 14 Pass
+TminVmin 5745 12.80 14 Pass
+TmaxVmax 5745 12.31 14 Pass
+TmaxVmin 5745 12.28 14 Pass
+TnomVnom 5785 12.09 14 Pass
+TminVmax 5785 12.79 14 Pass
+TminVmin 5785 12.82 14 Pass
+TmaxVmax 5785 12.32 14 Pass
+TmaxVmin 5785 12.30 14 Pass
+TnomVnom 5825 11.91 14 Pass
+TminVmax 5825 12.76 14 Pass
+TminVmin 5825 12.79 14 Pass
+TmaxVmax 5825 12.12 14 Pass
+TmaxVmin 5825 12.10 14 Pass
+
+Report No.: EQ740701-06 Page : 20 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT20
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 12.34 14 Pass
+TminVmax 5745 12.99 14 Pass
+TminVmin 5745 13.01 14 Pass
+TmaxVmax 5745 12.46 14 Pass
+TmaxVmin 5745 12.44 14 Pass
+TnomVnom 5785 12.23 14 Pass
+TminVmax 5785 12.84 14 Pass
+TminVmin 5785 12.86 14 Pass
+TmaxVmax 5785 12.32 14 Pass
+TmaxVmin 5785 12.30 14 Pass
+TnomVnom 5825 12.11 14 Pass
+TminVmax 5825 12.80 14 Pass
+TminVmin 5825 12.82 14 Pass
+TmaxVmax 5825 12.19 14 Pass
+TmaxVmin 5825 12.17 14 Pass
+Maximum Transmit Power (dBm)
+Modulation Mode VHT40
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5755 12.05 14 Pass
+TminVmax 5755 12.86 14 Pass
+TminVmin 5755 12.89 14 Pass
+TmaxVmax 5755 12.30 14 Pass
+TmaxVmin 5755 12.28 14 Pass
+TnomVnom 5795 12.00 14 Pass
+TminVmax 5795 12.72 14 Pass
+TminVmin 5795 12.76 14 Pass
+TmaxVmax 5795 12.23 14 Pass
+TmaxVmin 5795 12.20 14 Pass
+
+Report No.: EQ740701-06 Page : 21 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT80
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5775 12.39 14 Pass
+TminVmax 5775 12.96 14 Pass
+TminVmin 5775 13.00 14 Pass
+TmaxVmax 5775 12.54 14 Pass
+TmaxVmin 5775 12.51 14 Pass
+Configuration 4: Isolated Magnetic Dipole Antenna
+Maximum Transmit Power (dBm)
+Modulation Mode 11a
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 12.67 14 Pass
+TminVmax 5745 13.32 14 Pass
+TminVmin 5745 13.34 14 Pass
+TmaxVmax 5745 12.85 14 Pass
+TmaxVmin 5745 12.82 14 Pass
+TnomVnom 5785 12.59 14 Pass
+TminVmax 5785 13.29 14 Pass
+TminVmin 5785 13.32 14 Pass
+TmaxVmax 5785 12.82 14 Pass
+TmaxVmin 5785 12.80 14 Pass
+TnomVnom 5825 12.41 14 Pass
+TminVmax 5825 13.26 14 Pass
+TminVmin 5825 13.29 14 Pass
+TmaxVmax 5825 12.62 14 Pass
+TmaxVmin 5825 12.60 14 Pass
+
+Report No.: EQ740701-06 Page : 22 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT20
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5745 12.82 14 Pass
+TminVmax 5745 13.47 14 Pass
+TminVmin 5745 13.49 14 Pass
+TmaxVmax 5745 12.94 14 Pass
+TmaxVmin 5745 12.92 14 Pass
+TnomVnom 5785 12.73 14 Pass
+TminVmax 5785 13.34 14 Pass
+TminVmin 5785 13.36 14 Pass
+TmaxVmax 5785 12.82 14 Pass
+TmaxVmin 5785 12.80 14 Pass
+TnomVnom 5825 12.61 14 Pass
+TminVmax 5825 13.30 14 Pass
+TminVmin 5825 13.32 14 Pass
+TmaxVmax 5825 12.69 14 Pass
+TmaxVmin 5825 12.67 14 Pass
+Maximum Transmit Power (dBm)
+Modulation Mode VHT40
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5755 12.54 14 Pass
+TminVmax 5755 13.35 14 Pass
+TminVmin 5755 13.38 14 Pass
+TmaxVmax 5755 12.79 14 Pass
+TmaxVmin 5755 12.77 14 Pass
+TnomVnom 5795 12.45 14 Pass
+TminVmax 5795 13.17 14 Pass
+TminVmin 5795 13.21 14 Pass
+TmaxVmax 5795 12.68 14 Pass
+TmaxVmin 5795 12.65 14 Pass
+
+Report No.: EQ740701-06 Page : 23 of 191
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Modulation Mode VHT80
+Condition Freq. (MHz) EIRP Power (dBm) EIRP Limit (dBm) Results
+TnomVnom 5775 12.81 14 Pass
+TminVmax 5775 13.38 14 Pass
+TminVmin 5775 13.42 14 Pass
+TmaxVmax 5775 12.96 14 Pass
+TmaxVmin 5775 12.93 14 Pass
+
+Report No.: EQ740701-06 Page : 24 of 191
+Report Version: Rev. 01
+3.2 Permitted Range of Operating Frequencies
+3.2.1 Limit of Permitted Range of Operating Frequencies
+The width of the power spectrum envelope is fH -fL for a given operating frequency. In equipment that allows
+adjustment or selection of different operating frequencies, the power envelope takes up different positions in
+the allowed band. The frequency range is determined by the lowest value of fL and the highest value of fH
+resulting from the adjustment of the equipment to the lowest and highest operating frequencies.
+The occupied bandwidth (i.e. the bandwidth in which 99 % of the wanted emission is contained) and the
+necessary bandwidth of the transmitter shall fall within the assigned frequency band.
+For all equipment the frequency range shall lie within the frequency band given by clause 4.2.2.4, table 2.
+For non-harmonized frequency bands the available frequency range may differ between national
+administrations.
+3.2.2 Test Procedures
+Reference to clause 4.2.3.3 of EN 300 440 V2.1.1 (2017-03).
+3.2.3 Test Setup
+
+Report No.: EQ740701-06 Page : 25 of 191
+Report Version: Rev. 01
+3.2.4 Test Result of Permitted Range of Operating Frequencies
+Configuration 1 : Dipole Antenna
+Frequency Range (MHz)
+Modulation Mode 11a
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5736.28 - 5725 5875 Pass
+TminVmax 5745 5736.59 - 5725 5875 Pass
+TminVmin 5745 5736.59 - 5725 5875 Pass
+TmaxVmax 5745 5736.56 - 5725 5875 Pass
+TmaxVmin 5745 5736.56 - 5725 5875 Pass
+TnomVnom 5825 - 5833.46 5725 5875 Pass
+TminVmax 5825 - 5832.86 5725 5875 Pass
+TminVmin 5825 - 5832.86 5725 5875 Pass
+TmaxVmax 5825 - 5833.48 5725 5875 Pass
+TmaxVmin 5825 - 5833.48 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT20
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5735.90 - 5725 5875 Pass
+TminVmax 5745 5735.96 - 5725 5875 Pass
+TminVmin 5745 5735.96 - 5725 5875 Pass
+TmaxVmax 5745 5736.15 - 5725 5875 Pass
+TmaxVmin 5745 5736.15 - 5725 5875 Pass
+TnomVnom 5825 - 5834.20 5725 5875 Pass
+TminVmax 5825 - 5833.82 5725 5875 Pass
+TminVmin 5825 - 5833.82 5725 5875 Pass
+TmaxVmax 5825 - 5834.33 5725 5875 Pass
+TmaxVmin 5825 - 5834.33 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 26 of 191
+Report Version: Rev. 01
+Frequency Range (MHz)
+Modulation Mode VHT40
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5755 5736.43 - 5725 5875 Pass
+TminVmax 5755 5736.65 - 5725 5875 Pass
+TminVmin 5755 5736.65 - 5725 5875 Pass
+TmaxVmax 5755 5736.70 - 5725 5875 Pass
+TmaxVmin 5755 5736.70 - 5725 5875 Pass
+TnomVnom 5795 - 5813.26 5725 5875 Pass
+TminVmax 5795 - 5813.22 5725 5875 Pass
+TminVmin 5795 - 5813.22 5725 5875 Pass
+TmaxVmax 5795 - 5813.45 5725 5875 Pass
+TmaxVmin 5795 - 5813.45 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT80
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5775 5736.42 - 5725 5875 Pass
+TminVmax 5775 5736.63 - 5725 5875 Pass
+TminVmin 5775 5736.63 - 5725 5875 Pass
+TmaxVmax 5775 5736.78 - 5725 5875 Pass
+TmaxVmin 5775 5736.78 - 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 27 of 191
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Frequency Range (MHz)
+Modulation Mode 11a
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5736.32 - 5725 5875 Pass
+TminVmax 5745 5736.65 - 5725 5875 Pass
+TminVmin 5745 5736.65 - 5725 5875 Pass
+TmaxVmax 5745 5736.61 - 5725 5875 Pass
+TmaxVmin 5745 5736.61 - 5725 5875 Pass
+TnomVnom 5825 - 5833.54 5725 5875 Pass
+TminVmax 5825 - 5832.89 5725 5875 Pass
+TminVmin 5825 - 5832.89 5725 5875 Pass
+TmaxVmax 5825 - 5833.54 5725 5875 Pass
+TmaxVmin 5825 - 5833.54 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT20
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5735.93 - 5725 5875 Pass
+TminVmax 5745 5736.00 - 5725 5875 Pass
+TminVmin 5745 5736.00 - 5725 5875 Pass
+TmaxVmax 5745 5736.22 - 5725 5875 Pass
+TmaxVmin 5745 5736.22 - 5725 5875 Pass
+TnomVnom 5825 - 5834.26 5725 5875 Pass
+TminVmax 5825 - 5833.88 5725 5875 Pass
+TminVmin 5825 - 5833.88 5725 5875 Pass
+TmaxVmax 5825 - 5834.41 5725 5875 Pass
+TmaxVmin 5825 - 5834.41 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 28 of 191
+Report Version: Rev. 01
+Frequency Range (MHz)
+Modulation Mode VHT40
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5755 5736.48 - 5725 5875 Pass
+TminVmax 5755 5736.71 - 5725 5875 Pass
+TminVmin 5755 5736.71 - 5725 5875 Pass
+TmaxVmax 5755 5736.77 - 5725 5875 Pass
+TmaxVmin 5755 5736.77 - 5725 5875 Pass
+TnomVnom 5795 - 5813.32 5725 5875 Pass
+TminVmax 5795 - 5813.28 5725 5875 Pass
+TminVmin 5795 - 5813.28 5725 5875 Pass
+TmaxVmax 5795 - 5813.52 5725 5875 Pass
+TmaxVmin 5795 - 5813.52 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT80
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5775 5736.48 - 5725 5875 Pass
+TminVmax 5775 5736.69 - 5725 5875 Pass
+TminVmin 5775 5736.69 - 5725 5875 Pass
+TmaxVmax 5775 5736.84 - 5725 5875 Pass
+TmaxVmin 5775 5736.84 - 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 29 of 191
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Frequency Range (MHz)
+Modulation Mode 11a
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5736.30 - 5725 5875 Pass
+TminVmax 5745 5736.61 - 5725 5875 Pass
+TminVmin 5745 5736.61 - 5725 5875 Pass
+TmaxVmax 5745 5736.57 - 5725 5875 Pass
+TmaxVmin 5745 5736.57 - 5725 5875 Pass
+TnomVnom 5825 - 5833.48 5725 5875 Pass
+TminVmax 5825 - 5832.87 5725 5875 Pass
+TminVmin 5825 - 5832.87 5725 5875 Pass
+TmaxVmax 5825 - 5833.50 5725 5875 Pass
+TmaxVmin 5825 - 5833.50 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT20
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5735.92 - 5725 5875 Pass
+TminVmax 5745 5735.98 - 5725 5875 Pass
+TminVmin 5745 5735.98 - 5725 5875 Pass
+TmaxVmax 5745 5736.17 - 5725 5875 Pass
+TmaxVmin 5745 5736.17 - 5725 5875 Pass
+TnomVnom 5825 - 5834.22 5725 5875 Pass
+TminVmax 5825 - 5833.84 5725 5875 Pass
+TminVmin 5825 - 5833.84 5725 5875 Pass
+TmaxVmax 5825 - 8834.36 5725 5875 Pass
+TmaxVmin 5825 - 8834.36 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 30 of 191
+Report Version: Rev. 01
+Frequency Range (MHz)
+Modulation Mode VHT40
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5755 5736.45 - 5725 5875 Pass
+TminVmax 5755 5736.66 - 5725 5875 Pass
+TminVmin 5755 5736.66 - 5725 5875 Pass
+TmaxVmax 5755 5736.72 - 5725 5875 Pass
+TmaxVmin 5755 5736.72 - 5725 5875 Pass
+TnomVnom 5795 - 5813.28 5725 5875 Pass
+TminVmax 5795 - 5813.24 5725 5875 Pass
+TminVmin 5795 - 5813.24 5725 5875 Pass
+TmaxVmax 5795 - 5813.46 5725 5875 Pass
+TmaxVmin 5795 - 5813.46 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT80
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5775 5736.43 - 5725 5875 Pass
+TminVmax 5775 5736.65 - 5725 5875 Pass
+TminVmin 5775 5736.65 - 5725 5875 Pass
+TmaxVmax 5775 5736.81 - 5725 5875 Pass
+TmaxVmin 5775 5736.81 - 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 31 of 191
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Frequency Range (MHz)
+Modulation Mode 11a
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5736.33 - 5725 5875 Pass
+TminVmax 5745 5736.64 - 5725 5875 Pass
+TminVmin 5745 5736.64 - 5725 5875 Pass
+TmaxVmax 5745 5736.60 - 5725 5875 Pass
+TmaxVmin 5745 5736.60 - 5725 5875 Pass
+TnomVnom 5825 - 5833.52 5725 5875 Pass
+TminVmax 5825 - 5832.90 5725 5875 Pass
+TminVmin 5825 - 5832.90 5725 5875 Pass
+TmaxVmax 5825 - 5833.53 5725 5875 Pass
+TmaxVmin 5825 - 5833.53 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT20
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5745 5735.93 - 5725 5875 Pass
+TminVmax 5745 5736.02 - 5725 5875 Pass
+TminVmin 5745 5736.02 - 5725 5875 Pass
+TmaxVmax 5745 5736.20 - 5725 5875 Pass
+TmaxVmin 5745 5736.20 - 5725 5875 Pass
+TnomVnom 5825 - 5834.25 5725 5875 Pass
+TminVmax 5825 - 5833.86 5725 5875 Pass
+TminVmin 5825 - 5833.86 5725 5875 Pass
+TmaxVmax 5825 - 5834.40 5725 5875 Pass
+TmaxVmin 5825 - 5834.40 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 32 of 191
+Report Version: Rev. 01
+Frequency Range (MHz)
+Modulation Mode VHT40
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5755 5736.47 - 5725 5875 Pass
+TminVmax 5755 5736.69 - 5725 5875 Pass
+TminVmin 5755 5736.69 - 5725 5875 Pass
+TmaxVmax 5755 5736.75 - 5725 5875 Pass
+TmaxVmin 5755 5736.75 - 5725 5875 Pass
+TnomVnom 5795 - 5813.31 5725 5875 Pass
+TminVmax 5795 - 5813.27 5725 5875 Pass
+TminVmin 5795 - 5813.27 5725 5875 Pass
+TmaxVmax 5795 - 5813.50 5725 5875 Pass
+TmaxVmin 5795 - 5813.50 5725 5875 Pass
+Frequency Range (MHz)
+Modulation Mode VHT80
+Condition Freq. (MHz) FL
+(MHz)
+FH
+(MHz)
+FL Limit
+(MHz)
+FH Limit
+(MHz) Results
+TnomVnom 5775 5736.46 - 5725 5875 Pass
+TminVmax 5775 5736.68 - 5725 5875 Pass
+TminVmin 5775 5736.68 - 5725 5875 Pass
+TmaxVmax 5775 5736.83 - 5725 5875 Pass
+TmaxVmin 5775 5736.83 - 5725 5875 Pass
+
+Report No.: EQ740701-06 Page : 33 of 191
+Report Version: Rev. 01
+Occupied Bandwidth (MHz)
+Modulation Mode Frequency (MHz) 99% Bandwidth (MHz)
+11a 5745 16.49
+11a 5785 16.48
+11a 5825 16.54
+VHT20 5745 17.35
+VHT20 5785 17.29
+VHT20 5825 17.42
+VHT40 5755 36.09
+VHT40 5795 36.08
+VHT80 5775 75.79
+
+Report No.: EQ740701-06 Page : 34 of 191
+Report Version: Rev. 01
+3.3 Transmitter Unwanted Emissions in the Spurious Domain
+3.3.1 Limit of Transmitter Unwanted Emissions in the Spurious Domain
+Limit for Radiated Spurious Emission
+Frequency ranges /
+State
+47 MHz to 74 MHz
+87,5 MHz to 108 MHz
+174 MHz to 230 MHz
+470 MHz to 862 MHz
+Other frequencies
+
+1 000 MHz
+Frequencies
+> 1 000 MHz
+Operating -54 dBm -36 dBm -30 dBm
+Standby -57 dBm -57 dBm -47 dBm
+Limit for Conducted Spurious Emission
+Frequency ranges /
+State
+47 MHz to 74 MHz
+87,5 MHz to 108 MHz
+174 MHz to 230 MHz
+470 MHz to 862 MHz
+Other frequencies
+
+1 000 MHz
+Frequencies
+> 1 000 MHz
+Operating -57.01 dBm -39.01 dBm -33.01 dBm
+Standby -60.01 dBm -60.01 dBm -50.01 dBm
+3.3.2 Test Procedures
+Reference to 4.2.4.3 of EN 300 440 V2.1.1 (2017-03).
+
+Report No.: EQ740701-06 Page : 35 of 191
+Report Version: Rev. 01
+3.3.3 Test Setup
+Below 1GHz
+Above 1 GHz
+Conducted Emission
+
+Report No.: EQ740701-06 Page : 36 of 191
+Report Version: Rev. 01
+3.3.4 Transmitter Conducted Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 37 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 38 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 39 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 40 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 41 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 42 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 0
+
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 43 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 44 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 45 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 46 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 47 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 48 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 49 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 50 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 51 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 52 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 53 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 54 of 191
+Report Version: Rev. 01
+3.3.5 Transmitter Conducted Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 55 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 56 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 57 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 58 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 59 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 60 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 61 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 62 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 63 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 64 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 65 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 66 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 67 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 68 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 69 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 70 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 71 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 72 of 191
+Report Version: Rev. 01
+3.3.1 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 73 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 74 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 75 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 76 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 77 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 78 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 79 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 80 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 81 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 82 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 83 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 84 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 85 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 86 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 87 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 88 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 89 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 90 of 191
+Report Version: Rev. 01
+3.3.2 Transmitter Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 91 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 92 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 93 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 94 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 95 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 96 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 97 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 98 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 99 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 100 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 101 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 102 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 103 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 104 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 105 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 106 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 107 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 108 of 191
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Limit for Radiated Spurious Emission
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -57 100
+Above 1 GHz to 12,75 GHz -47 1000
+Limit for Conducted Spurious Emission
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -60.01 100
+Above 1 GHz to 12,75 GHz -50.01 1000
+4.1.2 Test Procedures
+Reference to clause 4.3.5.3 of EN 300 440 V2.1.1 (2017-03).
+
+Report No.: EQ740701-06 Page : 109 of 191
+Report Version: Rev. 01
+4.1.3 Test Setup
+Below 1GHz
+Above 1 GHz
+Conducted Emission
+
+Report No.: EQ740701-06 Page : 110 of 191
+Report Version: Rev. 01
+4.1.4 Receiver Conducted Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 111 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 112 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 113 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 114 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 115 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 116 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 117 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 118 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 119 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 120 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 121 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 122 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 123 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 124 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 125 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 126 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 127 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 128 of 191
+Report Version: Rev. 01
+4.1.5 Receiver Conducted Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 129 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 130 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 131 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 132 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 133 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 134 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 135 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 136 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 137 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 138 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 139 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 140 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 141 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 142 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 143 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 144 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 145 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 146 of 191
+Report Version: Rev. 01
+4.1.6 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 147 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 148 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 149 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 150 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 151 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 152 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 153 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 154 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 155 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 156 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 157 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 158 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 159 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 160 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 161 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 162 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 163 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 164 of 191
+Report Version: Rev. 01
+4.1.7 Receiver Spurious Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 165 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 166 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 167 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 168 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 169 of 191
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 170 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 171 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 172 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 173 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 174 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 175 of 191
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 176 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 177 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 178 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 179 of 191
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 180 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 181 of 191
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: EQ740701-06 Page : 182 of 191
+Report Version: Rev. 01
+4.2 Adjacent Channel Selectivity
+4.2.1 Limit of Adjacent Channel Selectivity
+Receiver category Limit
+1 -30 dBm + k
+2 No limit
+3 No limit
+The correction factor, k, is as follows:
+k = −20log f −10logBW
+Where:
+- f is the frequency in GHz;
+- BW is the channel bandwidth in MHz.
+The factor k is limited within the following:
+- 0 < k < 40 dB.
+4.2.2 Test Procedures
+Reference to clause 4.3.3.3 of ETSI EN 300 440 V2.1.1 (2017-03).
+4.2.3 Test Setup
+
+Report No.: EQ740701-06 Page : 183 of 191
+Report Version: Rev. 01
+4.2.4 Test Result of Adjacent Channel Selectivity
+11a / 5745 MHz
+Receiver Category 1
+Signal Generator
+(MHz)
+Communication
+Device (dBm)
+Signal Generator
+(dBm) Limit (dBm) Test Result
+5765.00 -85.00 -44.50 -58.17 Pass
+
+Report No.: EQ740701-06 Page : 184 of 191
+Report Version: Rev. 01
+11a / 5825 MHz
+Receiver Category 1
+Signal Generator
+(MHz)
+Communication
+Device (dBm)
+Signal Generator
+(dBm) Limit (dBm) Test Result
+5805 -85.00 -44.10 -58.39 Pass
+
+Report No.: EQ740701-06 Page : 185 of 191
+Report Version: Rev. 01
+4.3 Receiver Blocking
+4.3.1 Limit of Receiver Blocking
+Receiver category Limit
+1 -30 dBm + k
+2 -45 dBm + k
+3 No limit
+The correction factor, k, is as follows:
+k = −20log f −10logBW
+Where:
+- f is the frequency in GHz;
+- BW is the channel bandwidth in MHz.
+The factor k is limited within the following:
+- 0 < k < 40 dB.
+4.3.2 Test Procedures
+Reference to clause 4.3.4.3 of ETSI EN 300 440 V2.1.1 (2017-03).
+4.3.3 Test Setup
+
+Report No.: EQ740701-06 Page : 186 of 191
+Report Version: Rev. 01
+4.3.4 Test Result of Receiver Blocking
+11a / 5745 MHz
+Without Interference Signal Sensitivity Level
+Receiver Category 1
+Signal Generator
+(MHz)
+Communication
+Device (dBm)
+Signal Generator
+(dBm) Limit (dBm) Test Result
+4725.00 -85.00 -26.60 -58.17 Pass
+5345.00 -85.00 -28.70 -58.17 Pass
+5545.00 -85.00 -31.50 -58.17 Pass
+
+Report No.: EQ740701-06 Page : 187 of 191
+Report Version: Rev. 01
+11a / 5825 MHz
+Without Interference Signal Sensitivity Level
+Receiver Category 1
+Signal Generator
+(MHz)
+Communication
+Device (dBm)
+Signal Generator
+(dBm) Limit (dBm) Test Result
+6075 -85.00 -30.50 -58.39 Pass
+6275 -85.00 -27.30 -58.39 Pass
+6875 -85.00 -25.60 -58.39 Pass
+
+Report No.: EQ740701-06 Page : 188 of 191
+Report Version: Rev. 01
+5 Photographs of the Test Configuration
+Conducted Spurious Emission Test
+
+Report No.: EQ740701-06 Page : 189 of 191
+Report Version: Rev. 01
+Radiated Spurious Emission Test
+
+Report No.: EQ740701-06 Page : 190 of 191
+Report Version: Rev. 01
+Receiver Blocking Test
+
+Report No.: EQ740701-06 Page : 191 of 191
+Report Version: Rev. 01
+6 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

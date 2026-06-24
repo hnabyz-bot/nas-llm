@@ -234,3 +234,11 @@ Next P1 bundle:
   missing evidence 0, page marker leakage 0
 - note: rank 137 and rank 170 required chunked fallback because their source
   text exceeded direct Codex extraction limits
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r201-r300-202606242201`
+- rank range: 201-300
+- selected representatives: 100
+- total normalized chars: 6,909,952
+- extraction status: not started at this checkpoint

@@ -1,0 +1,365 @@
+queueId: ingest-1781569954420-188p
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/05_설계개발 검증 및 유효성 확인/11_Clinical Evaluation/LITERATURE/1. Development of a Digital X-ray Imaging Module.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/ade609d428ca/1. Development of a Digital X-ray Imaging Module__ade609d428ca_combined.txt
+canonicalGroupId: d6c23cb89bf5
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 261
+
+SOURCE_TEXT
+Journal of the Korean Physical Society, Vol. 46, No. 5, May 2005, pp. 1096∼1101
+Development of a Digital X-ray Imaging Module for Portable
+High-Resolution Imaging Applications
+Hyosung Cho and Manhee Jeong
+Department of Radiological Science and Basic Atomic Energy Research Institute, Yonsei University, Wonju 220-710
+Sin Kim
+Department of Nuclear & Energy Engineering, Jeju National University, Cheju 690-756
+Bongsoo Lee∗
+School of Biomedical Engineering, Konkuk University, Chungju 380-701
+(Received 19 January 2005, in final form 10 March 2005)
+We have developed a digital X-ray imaging module based on a CMOS photosensor array for
+portable high-resolution imaging applications and evaluated its image performance. The imaging
+module consists of a commercially-available CMOS photosensor array with a 48 μm × 48 μm
+pixel size and a 49.2 mm × 49.3 mm active area, a conventional Gd2O2S:Tb scintillator (Min-R,
+Kodak), a controlling readout IC board, a battery-operated X-ray generator (60 kVp, < 1 mA), and
+GUI software. In this paper, we describe in detail the digital imaging components we integrated,
+and present a performance evaluation in terms of the system response, the contrast-to-noise ratio
+(CNR), the modulation transfer function (MTF), the noise power spectrum (NPS), and the detective
+quantum efficiency (DQE).
+PACS numbers: 29.40.Mc; 29.40.Wk
+Keywords: CMOS photosensor array, Digital radiography, X-ray imaging, Image performance
+I. INTRODUCTION
+In recent years, digital radiography (DR) technol-
+ogy, compared with conventional film/screen technology,
+has gained popularity in many medical and industrial
+applications owing to a number of useful capabilities,
+such as electronic archiving, real-time acquisition, post-
+processing, and easy image storage and retrieval. In
+addition, digital X-ray imaging sensors have started to
+come of age over the past few years, and many efforts
+have been focused on X-ray imaging sensors with bet-
+ter image performance. Although some of those efforts
+have addressed amorphous silicon (a-Si) or amorphous
+selenium (a-Se) flat panel detectors [1,2], most imaging
+systems to date feature a charge-coupled device (CCD)
+due to its high resolution, high sensitivity, and low noise
+[3,4]. However, CCD sensors are sensitive to radiation-
+induced damage, and their production requires a spe-
+cialized process that adds to their development cost [5].
+As an alternative, the use of complementary-metal-oxide
+semiconductor (CMOS) sensors is changing the way dig-
+ital imaging is performed for many applications. The
+∗E-mail: bslee@kku.ac.kr;
+Tel:+82-43-840-3755; Fax:+82-43-851-0620
+replacement of CCD sensors with CMOS ones for digi-
+tal X-ray imaging applications is a desirable technique
+shift due to their inherent characteristics of lower power
+consumption, lower cost, and, most importantly, higher
+system integration such as on-chip analog-to-digital con-
+version (ADC) circuits [6]. The achievement of both low
+power consumption and low cost is highly desirable for
+portable applications, such as those required for emer-
+gency medical vehicles and remote sites. In this paper,
+we describe in detail the digital X-ray imaging compo-
+nents we integrated, and we evaluate their performance
+in terms of the system response, the contrast-to-noise ra-
+tio (CNR), the modulation transfer function (MTF), the
+noise power spectrum (NPS), and the detective quantum
+efficiency (DQE).
+II. SYSTEM DESCRIPTION
+A schematic illustration of our fully-integrated
+portable digital X-ray imaging system based on a CMOS
+photosensor array is shown in Fig. 1. The imaging sys-
+tem consists of a CMOS photosensor array directly cou-
+pled with a Gd2O2S : Tb scintillator, a readout IC board,
+a battery-operated X-ray generator, and GUI software.
+-1096-
+
+Development of a Digital X-ray Imaging Module· · · – Hyosung Cho et al. -1097-
+Fig. 1. Schematic illustration of the fully-integrated
+portable digital X-ray imaging system based on a CMOS pho-
+tosensor array coupled with a Min-R scintillator.
+Fig. 2. Examples of X-ray images acquired by using our
+prototype portable X-ray imaging system: (a) CPU socket
+and (b) carpal bone.
+Fig. 2 shows examples of X-ray images acquired by us-
+ing our prototype X-ray imaging system: (a) CPU socket
+and (b) carpal bone.
+1. CMOS Photosensor Array
+As a digital X-ray imaging sensor, a commercially-
+available CMOS photosensor array (RadEyeT M 2) of pre-
+mium grade (no line defect) was introduced to our imag-
+ing system [7]. It contained dual silicon photodiode ar-
+rays with a pixel size of 48 μm and 512 × 1024 pixel
+matrix, along with associated circuitry for scanning and
+readout. The photodiode arrays were directly coupled
+with a 46.3-μm-thick Gd2O2S : Tb scintillator (Min-R,
+Kodak). Min-R is well known to have the physical prop-
+erties of high atomic number and density (coverage ∼ 34
+mg/cm2), and thus to have efficient light production (∼
+22,400 photons/MeV) [8]. Fig. 3 shows the timing di-
+agram of the RadEyeT M 2 CMOS photosensor array for
+its signal control. As Fig. 3 shows, the RadEyeT M 2
+is controlled with four signal inputs (pixel clock, frame,
+line, and start) and provides differential high-speed video
+signals from two video outputs.
+Fig. 3. Timing diagram of the CMOS photosensor array
+for its signal control.
+Fig. 4. Block diagram of the prototype readout IC board
+for the digital X-ray image system.
+2. Readout IC Board
+We also developed a prototype readout IC board for
+the RadEyeT M 2 sensor module. The IC board consists of
+an amplifier (AD8022) for buffering and amplifying small
+image signals, an analog-to-digital converter (ADS805E,
+12 bit, 20 MHz), and components for image signal con-
+trol and transmission. The acquired image data were
+controlled by using a FPGA control chip (ACEX, Al-
+tera) and were stored into a SRAM memory (512 kBx4,
+Samsung Electronics). An USB chip (FT245BM, 1-MB
+Fig. 5. Prototype IC board for readout electronics and in-
+terfacing between the RadEyeT M 2 sensor module and a lap-
+top.
+
+-1098- Journal of the Korean Physical Society, Vol. 46, No. 5, May 2005
+data-transfer rate) was also used for interfacing between
+the RadEyeT M 2 sensor module and a laptop. Fig. 4
+and 5 show a block diagram and a photography of the
+prototype readout IC board for our imaging system, re-
+spectively.
+3. Battery-operated X-ray Generator
+A battery-operated X-ray generator was also devel-
+oped in our R & D and was incorporated in our imaging
+system for potential application as a portable digital X-
+ray imaging device for use in emergency medical vehicles
+or at remote sites. It consists of an X-ray tube (20 ∼ 60
+kVp, < 1 mA, 800-μm focal size) and a battery-operated
+(16 V, 6 A) HVPS (high-voltage power supply) mod-
+ule. A detailed description of the X-ray generator will
+be given in a separate paper.
+4. GUI Software
+The image data, acquired with an 8-bit grayscale for-
+mat, are transferred through the USB port into the GUI
+software that we coded. A correction algorithm is then
+applied to the data in order to achieve precise image ac-
+quisition. In this study, the non-ideal properties of image
+components, such as image sensor defects, mostly due to
+bad pixels, and non-uniformity of pixel sensitivity, have
+been compensated for. The compensation for bad pix-
+els was performed in two steps. In the first step, the
+positions for bad pixels were found with a 3 × 3 differ-
+entiation operator. If the differentiation at a given pixel
+was greater than a threshold value, the pixel was classi-
+fied as a bad pixel. In the last step, the intensity value
+at the bad pixel was determined by using a linear inter-
+polation of nearby pixel values. For the non-uniformity
+Fig. 6. Block diagram of the post-processing in our image
+software.
+Fig. 7. 3D graphs of (a) the raw image and (b) the com-
+pensated image of the disk phantom applied for bad pixel and
+non-uniformity corrections (x and y axes indicate the pixel
+number, and the z axis indicates the gray scale).
+Fig. 8. GUI environment for image acquisition and data
+analysis.
+compensation, we obtained both a white reference im-
+age and a dark reference image, taking an average of five
+images. After the reference images had been obtained,
+the dark reference image was subtracted from the pro-
+jection image data, and then the result was divided by
+the white reference image. Fig. 6 shows a block dia-
+gram of the post-processing in our image software, and
+Fig. 7 shows the 3D graphs of (a) the raw image and
+(b) the compensated image of the disk phantom used for
+
+Development of a Digital X-ray Imaging Module· · · – Hyosung Cho et al. -1099-
+Fig. 9. Photograph of the fully-integrated portable digital
+radiographic system: a CMOS sensor, a readout IC board, a
+battery-operated X-ray generator, and GUI software.
+the bad pixel and the non-uniformity corrections. Here,
+the x and the y axes indicate the pixel number, and the
+z axis indicates the gray scale.
+Fig. 8 shows the GUI environment for image acquisi-
+tion and data analysis. In this GUI environment, image
+manipulations, including interactive image contrast and
+brightness control, zooming in on a region of interest
+(ROI), spatial image filtering, and obtaining the image’s
+histogram and its profile information, can be activated.
+The prototype of the fully integrated portable digital X-
+ray imaging modules we developed is shown in Fig. 9.
+III. PERFORMANCE EVALUATION
+Performance evaluation for our digital X-ray imag-
+ing system was performed with a 46.3-μm-thick Min-R
+scintillator by using experimental measurements and ac-
+quired X-ray images. The evaluation was done in terms
+of the system response, the CNR, the MTF, the NPS,
+and the DQE.
+Fig. 10. System response curve measured for our image
+system by using the Min-R scintillator
+Fig. 11. CNR curve measured for our image system by
+using the Min-R scintillator.
+1. System Response
+The system response was measured in the exposure
+range of 15-150 mR by recording a mean pixel value from
+the white image obtained at each exposure level. As Fig.
+10 shows, the imaging system showed good system lin-
+earity with exposure before reaching a saturation point
+that depended on the scintillator speed (or thickness for
+the same scintillator material). Better system linearity
+is important to obtain a more accurate DQE.
+2. Contrast-to-noise Ratio (CNR)
+Noise in image, which means indeterminacy or inaccu-
+racy in image signals, is typically divided into two types:
+quantum mottle and electronic noise [9]. The former be-
+comes manifest when the number of photons contributing
+to image formation is small, and is dominant in our imag-
+ing system. In order to evaluate the noise characteristics
+of the system, we measured the CNR for an image ob-
+tained from a circular test phantom (a 4-mm-thick, and
+1-cm-diameter lead plate) at a tube voltage of 60 kVp by
+dividing the average contrast over the ROI in the image
+by the standard deviation of the background. As Fig. 11
+shows, the measured CNR increased almost linearly with
+exposure up to about 80 mR. The CNR will be improved
+by using higher-speed scintillators due to more efficient
+light production at a given exposure and by using a FOP
+(fiber optic plate) coupled with a scintillator owing to its
+optical characteristics of a significant reduction of direct
+X-ray absorption in the CMOS sensor module, high light
+collection, and high image transmitting ability.
+3. Modulation Transfer Function (MTF)
+One-dimensional presampled MTF was measured us-
+ing the angled-edge technique to characterize the resolu-
+
+-1100- Journal of the Korean Physical Society, Vol. 46, No. 5, May 2005
+Fig. 12. MTF curve measured for our image system by
+using the Min-R scintillator at a test condition of 60 kVp and
+45.6 mR.
+tion properties of the imaging system. The system MTF
+can be obtained, as in Eq. (1), by Fourier transforming
+(FT) the line spread function (LSF), which is the deriva-
+tive of the edge spread function (ESF) obtained from an
+edge image:
+M T F (f ) = F T
+[ d
+dx [ESF (x)]
+]
+(1)
+As Fig. 12 shows, the spatial frequency measured at
+10 % MTF was about 9.0 LP/mm, which is about 10
+% lower than for the ideal system (i.e., 10.0 LP/mm).
+This may be somewhat due to light diffusion inside the
+scintillator.
+4. Noise Power Spectrum (NPS)
+The system NPS was measured from uniformly irra-
+diated radiographs by using a two-dimensional Fourier
+analysis method. In this method, excluding the edge
+portion of the images, the central portion of each image
+was divided into multiple, non-overlapping regions of 128
+× 128 pixels. The image data within each region were
+converted to relative noise units by dividing the data by
+its mean value, and the noise spectrum of relative fluc-
+tuations within each region was computed by using a
+two-dimensional fast Fourier transformation. The spec-
+tra from all regions were averaged to obtain the overall
+two-dimensional NPS, expressed as in Eqs. 2 and 3:
+N P Sraw(u, ν) = < |F T (u, ν)|2 >
+NxNy
+∆x∆y (2)
+N P Snormalized(u, ν) = N P Sraw(u, ν)
+(Smean)2 (3)
+where < |F T (u, ν)|2 > is the ensemble average of the
+squares of the Fourier amplitudes from all ROIs, Nx and
+Ny are the numbers of elements in the discrete Fourier
+Fig. 13. One-dimensional NPS curve measured for our im-
+age system by using the Min-R scintillator at a test condition
+of 60 kVp and 45.6 mR.
+transforms, ∆x and ∆y are the pixel sizes in the x and
+the y directions, and Smean represents the mean signal of
+the ROI. The values of the NPS in the horizontal and the
+vertical directions were deduced by averaging the central
+± 10 horizontal/vertical/diagonal lines in the 2D NPS.
+As Fig. 13 shows, the 1D NPS (normalized) gradually
+decrease with the spatial frequency, and the NPS value
+at zero frequency was about 4.4 × 10−5. The 1D NPS(0)
+value will be improved for a lower-speed scintillator due
+to less photon production and, thus, increased quantum
+noise.
+5. Detective Quantum Efficiency (DQE)
+The detective quantum efficiency for the system was
+deduced from the measured MTF, NPS, and exposure,
+X, along with an estimated value for the ideal SNR2 per
+mR (q), as described in Eq. 4:
+DQE(f ) = G2 · M T F 2(f ) · Φ
+N P S(f ) = S2 · M T F 2(f )
+Φ · N P S(f ) (4)
+Fig. 14. DQE curve measured for our image system by
+using the Min-R scintillator at a test condition of 60 kVp and
+45.6 mR.
+
+Development of a Digital X-ray Imaging Module· · · – Hyosung Cho et al. -1101-
+where G is the sensor gain and Φ is the X-ray quanta
+per area at the sensor input. The expression on the right-
+hand side, where S is the sensor signal, applies only if the
+system response is almost linear and has a zero intercept.
+When the MTF and the NPS are obtained from images
+linearized to quanta per unit area at the sensor input,
+the IEC standard expression for DQE(f ) is
+DQE(f ) = M T F 2(f ) · Φ
+N P S(f ) (5)
+Fig. 14 shows the DQE curve measured for our imag-
+ing system at a test condition of 60 kVp and 45.6 mR.
+As Fig. 14 shows, the DQE decreases with the spatial
+frequency, and the DQE value at zero frequency is about
+0.3. The DQE(0) value will be higher for higher-speed
+scintillators due to their thicker scintillator thicknesses
+and for a FOP coupled with a scintillator due to the
+light absorption at the FOP cladding.
+IV. CONCLUSION
+As a continuation of our digital X-ray imaging sen-
+sor R & D [10, 11], we have developed a digital X-ray
+imaging module based on a CMOS photosensor array for
+portable high-resolution imaging applications and have
+evaluated its image performance. The 1024 × 1024-pixel
+CMOS array with a size of 48 μm is directly coupled
+with a 46.3-μm-thick Gd2O2S : Tb scintillator (Min-R,
+Kodak). According to our evaluation analysis, the CNR
+at an exposure of 30 mR was 34.3, the spatial frequency
+at 10 % MTF was about 9.0, and the NPS and the DQE
+at zero frequency were 4.4 × 10−5 and 0.3, respectively.
+In terms of system response, resolution, noise, and detec-
+tive quantum efficiency, the portable digital X-ray imag-
+ing module based on the CMOS array with the Min-R
+scintillator gave promising image performances for many
+high-resolution imaging applications. The image system
+we developed in this study will be useful for potential
+portable applications, such as those in emergency medi-
+cal vehicles and at remote sites.
+ACKNOWLEDGMENTS
+This study was supported by the Basic Atomic Energy
+Research Institute (BAERI) program of the Ministry of
+Science & Technology (MOST) under contract No. M2-
+0376-03-0000.
+REFERENCES
+[1] J. H. Siewerdsen, L. E. Antonuk and J. Yorkston, Proc.
+SPIE 2708, 484 (1996).
+[2] M. P. Andre, B. Spivey, P. Martin, L. Morsell, E. Atlas
+and T. Pellegrino, Proc. SPIE 3336, 204 (1998).
+[3] A. Karellas, L. J. Harris, H. Liu, M. A. Davis and C. J.
+D’Orsi, Med. Phys. 19, 1015 (1992).
+[4] H. Roehrig, L. L. Fajardo, T. Yu and W. S. Schempp,
+Proc. SPIE 2163, 320 (1994).
+[5] D. Rosen, W. Phillips, M. Stanton, J. Xie, D. O’Mara
+and A. Stewart, Proc. SPIE 3032, 52 (1997).
+[6] S. T. Smith, D. R. Bednarek, D. C. Wobschall, M. jeong,
+H. Kim and S. Rudin, Proc. SPIE 3659, 952 (1999).
+[7] Rad-icon Imaging Corp., Santa Clara, CA, USA.
+[8] Hyosung Cho, Manhee Jeong, Bongsoo Han, Sin Kim,
+Bongsoo Lee and Byongrae Park, J. Korean Phys. Soc.
+46, 418 (2005).
+[9] A. B. Wolbrast, Physics of Radiology, (Prentice-Hall In-
+ternational, New York, 1993), p. 58.
+[10] H. S. Cho, S. M. Kang, M. H. Jeong, D. K. Hong, J.
+Kadyk and J. G. Kim, J. Korean Phys. Soc. 39, 980
+(2001).
+[11] H. S. Cho, H. R. Yoon, S. H. Han and H. K. Kim, J.
+Korean Phys. Soc. 42, 56 (2003).

@@ -1,0 +1,205 @@
+queueId: ingest-1781569954384-e98
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/EN_60SIPT-602230C/EN 50385_6231_50665_RF Exp_ST60-SIPT_ST60-2230C_EA740701-08.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/30ce4a9118b1/EN 50385_6231_50665_RF Exp_ST60-SIPT_ST60-2230C_EA740701-08__30ce4a9118b1_combined.txt
+canonicalGroupId: f0a8d4d08afc
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 211
+
+SOURCE_TEXT
+Report No.: EA740701-08 Page : 1 of 9
+Report Version: Rev. 01
+CE RF Exposure Report
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-2230C
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : EN 62311:2008
+EN 50665:2017
+EN 50385:2017
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 24 ~ Jun. 01, 2017 (for original test)
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: EA740701-08 Page : 2 of 9
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 4
+1.1 Information.............................................................................................................................................. 4
+2 RF EXPOSURE EVALUATION ............................................................................................................. 6
+2.1 Limits ...................................................................................................................................................... 6
+2.2 Evaluation Formula for Far-Field ............................................................................................................ 7
+2.3 Deviation from Test Standard and Measurement Procedure ................................................................. 7
+2.4 Measurement Uncertainty ...................................................................................................................... 7
+2.5 Evaluation Results .................................................................................................................................. 8
+3 TEST LABORATORY INFORMATION ................................................................................................. 9
+
+Report No.: EA740701-08 Page : 3 of 9
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+EA740701-08 Rev. 01 Initial issue Jul. 30, 2020
+
+Report No.: EA740701-08 Page : 4 of 9
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. EA740701. The difference is
+concerned with following items:
+ Adding standard EN 50665:2017 and updating version of EN50385.
+ New applicant name & brand name.
+Due to no impact on tests, all data remain unchanged.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-SIPT 802.11 ac/a/b/g/n + Bluetooth
+4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 +
+Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+WLAN
+Operating Frequency
+802.11b/g/n: 2412 MHz ~ 2472 MHz
+802.11a/n/ac: 5180 MHz ~ 5240 MHz; 5260 MHz ~ 5320 MHz;
+5500 MHz ~ 5700 MHz
+Modulation Type 802.11b: DSSS (DBPSK / DQPSK / CCK)
+802.11a/g/n/ac: OFDM (BPSK / QPSK / 16QAM / 64QAM / 256QAM)
+BT
+Operating Frequency 2402 MHz ~ 2480 MHz
+Modulation Type
+Bluetooth 4.2 LE: GFSK
+Bluetooth BR(1Mbps): GFSK
+Bluetooth EDR (2Mbps): π/4-DQPSK
+Bluetooth EDR (3Mbps): 8-DPSK
+
+Report No.: EA740701-08 Page : 5 of 9
+Report Version: Rev. 01
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+6
+Laird/MIMO
+FlexPIFA
+Antenna
+PIFA IPEX U.FL 2 3 3 3 3
+1.1.4 EUT Operational Condition
+Power Supply Type DC 3.3V from host
+
+Report No.: EA740701-08 Page : 6 of 9
+Report Version: Rev. 01
+2 RF exposure evaluation
+2.1 Limits
+The device shall comply with the relevant limits for general public exposure specified as basic restrictions or
+reference levels in the Council Recommendation 1999/519/EC as below table.
+
+Report No.: EA740701-08 Page : 7 of 9
+Report Version: Rev. 01
+2.2 Evaluation Formula for Far-Field
+Follow below formula to evaluate E-field strength.
+E=R
+G P * * 30
+Where
+P(W) is the input power of antenna
+G is the gain of antenna
+R(m) Is the distance between the human body and the antenna
+2.3 Deviation from Test Standard and Measurement Procedure
+None
+2.4 Measurement Uncertainty
+ISO/IEC 17025 requires that an estimate of the measurement uncertainties associated with the emissions test
+results be included in the report. The measurement uncertainties given below are based on a 95% confidence
+level (based on a coverage factor (k=2)
+Parameters Uncertainty
+Conducted power ±0.808 dB
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: EA740701-08 Page : 8 of 9
+Report Version: Rev. 01
+2.5 Evaluation Results
+Frequency
+Range (MHz)
+Maximum
+E.I.R.P.
+(dBm)
+Distance (m)
+Evaluation
+E-Field
+Strength (V/m)
+Limit (V/m) PASS / FAIL
+2402-2480 BR 14.81 0.2 4.76 61 Pass
+2402-2480 LE 9.85 0.2 2.69 61 Pass
+2412-2472 19.86 0.2 8.52 61 Pass
+5180-5240 22.87 0.2 12.05 61 Pass
+5260-5320 22.76 0.2 11.90 61 Pass
+5500-5700 22.89 0.2 12.08 61 Pass
+
+Report No.: EA740701-08 Page : 9 of 9
+Report Version: Rev. 01
+3 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

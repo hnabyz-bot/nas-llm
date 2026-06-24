@@ -1,0 +1,986 @@
+queueId: ingest-1781569954411-zn1
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/EN_60SIPT-602230C/EN 300 328 V2.2.2_2.4G BT LE_ST60-SIPT,ST60-2230C_ER740701-08AE.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/d46df55a82fd/EN 300 328 V2.2.2_2.4G BT LE_ST60-SIPT,ST60-2230C_ER740701-08AE__d46df55a82fd_combined.txt
+canonicalGroupId: 9951699dc2f8
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 207
+
+SOURCE_TEXT
+Report No.: ER740701-08AE Page : 1 of 60
+Report Version: Rev. 01
+CE Test Report
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-2230C
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : EN 300 328 V2.2.2 (2019-07)
+Received Date : Jun. 05, 2020
+Tested Date : Apr. 24 ~ Jun. 01, 2017 (for original test)
+Jun. 05, 2020 (for new test)
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: ER740701-08AE Page : 2 of 60
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List ................................................................................................................ 9
+1.3 Test Setup Chart .................................................................................................................................... 9
+1.4 Test Equipment List and Calibration Data ............................................................................................11
+1.5 Testing Applied Standards ...................................................................................................................13
+1.6 Deviation from Test Standard and Measurement Procedure ...............................................................13
+1.7 Measurement Uncertainty ....................................................................................................................13
+2 TEST CONFIGURATION .....................................................................................................................14
+2.1 Testing Condition .................................................................................................................................14
+2.2 Testing Facility......................................................................................................................................14
+2.3 The Worst Test Modes and Channel Details .......................................................................................14
+3 TRANSMITTER TEST RESULTS........................................................................................................15
+3.1 RF Output Power ..................................................................................................................................15
+3.2 Power Spectral Density ........................................................................................................................18
+3.3 Occupied Channel Bandwidth ..............................................................................................................19
+3.4 Transmitter Unwanted Emissions in the Out-Of-Band Domain ............................................................20
+3.5 Transmitter Unwanted Emissions in the Spurious Domain ..................................................................24
+4 RECEIVER TEST RESULTS ...............................................................................................................38
+4.1 Receiver Spurious Emissions...............................................................................................................38
+5 RECEIVER BLOCKING TEST RESULTS ...........................................................................................52
+5.1 Receiver Blocking .................................................................................................................................52
+6 PHOTOGRAPHS OF THE TEST CONFIGURATION .........................................................................57
+7 TEST LABORATORY INFORMATION ...............................................................................................60
+
+Report No.: ER740701-08AE Page : 3 of 60
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+ER740701-08AE Rev. 01 Initial issue Jul. 30, 2020
+
+Report No.: ER740701-08AE Page : 4 of 60
+Report Version: Rev. 01
+Summary of Test Results
+Ref. Std.
+Clause Test Items Measured Result
+4.3.2.2 RF Output Power 9.85 dBm. Pass
+4.3.2.3 Power Spectral Density Meet the requirement of limit. Pass
+4.3.2.4 Duty Cycle, Tx-sequence, Tx-gap Only for non-adaptive
+equipment N/A
+4.3.2.5 Medium Utilisation (MU) factor Only for non-adaptive
+equipment N/A
+4.3.2.6 Adaptivity
+The RF Output power is less
+than 10 dBm e.i.r.p. This item is
+not applicable.
+N/A
+4.3.2.7 Occupied Channel Bandwidth Meet the requirement of limit. Pass
+4.3.2.8 Transmitter unwanted emissions in the out of
+band domain Meet the requirement of limit. Pass
+4.3.2.9 Transmitter unwanted emissions in the
+spurious domain Meet the requirement of limit. Pass
+4.3.2.10 Receiver spurious emissions Meet the requirement of limit. Pass
+4.3.2.11 Receiver Blocking Meet the requirement of limit. Pass
+4.3.2.12 Geo-location Capability The device has no this
+capability. N/A
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: ER740701-08AE Page : 5 of 60
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. ER740701AE. The difference is
+concerned with following items:
+ Updating standard version from V2.1.1 to V2.2.2.
+ New applicant name & brand name.
+Therefore, related test items had been performed and presented in the following sections.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-SIPT 802.11 ac/a/b/g/n + Bluetooth
+4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 +
+Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency Range
+(MHz)
+Bluetooth
+Mode
+Ch. Frequency
+(MHz) Channel Number Data Rate
+2400-2483.5 V4.2 LE 2402-2480 0-39 [40] 1 Mbps
+Note 1: Bluetooth LE (Low energy) uses GFSK modulation.
+
+Report No.: ER740701-08AE Page : 6 of 60
+Report Version: Rev. 01
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+6
+Laird/MIMO
+FlexPIFA
+Antenna
+PIFA IPEX U.FL 2 3 3 3 3
+1.1.4 EUT Operational Condition
+Power Supply Type DC 3.3V from host
+SW Version SD-UAPSTA-8997-U14-MMC-16.68.1.p95-C3X16219_V4-MGPL-src
+Operational Climatic Tnom (20°C) Tmax (85°C) Tmin (-30°C)
+1.1.5 Accessories
+N/A
+
+Report No.: ER740701-08AE Page : 7 of 60
+Report Version: Rev. 01
+1.1.6 Channel List
+Channel No. Frequency (MHz) Channel No. Frequency (MHz)
+37 2402 18 2442
+0 2404 19 2444
+1 2406 20 2446
+2 2408 21 2448
+3 2410 22 2450
+4 2412 23 2452
+5 2414 24 2454
+6 2416 25 2456
+7 2418 26 2458
+8 2420 27 2460
+9 2422 28 2462
+10 2424 29 2464
+38 2426 30 2466
+11 2428 31 2468
+12 2430 32 2470
+13 2432 33 2472
+14 2434 34 2474
+15 2436 35 2476
+16 2438 36 2478
+17 2440 39 2480
+1.1.7 Test Tool and Duty Cycle
+Test Tool Command
+Duty Cycle and Duty Factor Modulation Mode Duty Cycle (%) Duty Factor (dB)
+GFSK-1Mbps 62.90 2.01
+
+Report No.: ER740701-08AE Page : 8 of 60
+Report Version: Rev. 01
+1.1.8 Power Setting
+Configuration 1 : Dipole Antenna
+Modulation Mode Test Frequency (MHz)
+2402 2440 2480
+GFSK-1Mbps 5 5 6
+Configuration 2 : PCB Dipole Antenna
+Modulation Mode Test Frequency (MHz)
+2402 2440 2480
+GFSK-1Mbps 5 5 5
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation Mode Test Frequency (MHz)
+2402 2440 2480
+GFSK-1Mbps 5 5 5
+
+Report No.: ER740701-08AE Page : 9 of 60
+Report Version: Rev. 01
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 1m non-shielded
+2 Notebook Lenovo T430 DoC RJ45, 1m non-shielded
+3 50Ω terminator --- --- --- ---
+4 Fixture --- --- --- ---
+Note: No2 and 4 were provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram (Conducted)
+
+Report No.: ER740701-08AE Page : 10 of 60
+Report Version: Rev. 01
+Test Setup Diagram (Radiated)
+
+Report No.: ER740701-08AE Page : 11 of 60
+Report Version: Rev. 01
+1.4 Test Equipment List and Calibration Data
+Test Item Radiated Emissions
+Test Site Fully-anechoic chamber 2 / (05CH02-WS)
+Tested Date Apr. 24, 2017
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer Agilent N9010A MY52221474 Oct. 14, 2016 Oct. 13, 2017
+Bilog Antenna
+30-1000MHz SCHWARZBECK VULB9168 9168-563 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D 9120D-1205 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170508 Dec. 29, 2016 Dec. 28, 2017
+Preamplifier Agilent 83017A MY53270013 Jan. 10, 2017 Jan. 09, 2018
+Preamplifier
+30-1000MHz EMC EMC02325 980188 Dec. 13, 2016 Dec. 12, 2017
+Preamplifier EMC EMC184045B 980192 Aug. 24, 2016 Aug. 23, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22622/4 Dec. 13, 2016 Dec. 12, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22623/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22621/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX104 MY22579/4 Dec. 14, 2016 Dec. 13, 2017
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-002 Dec. 14, 2016 Dec. 13, 2017
+LF cable-3M EMC EMC8D-NM-NM-3000 131102 Dec. 14, 2016 Dec. 13, 2017
+LF cable-10M EMC EMC8D-NM-NM-10000 131101 Dec. 14, 2016 Dec. 13, 2017
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: ER740701-08AE Page : 12 of 60
+Report Version: Rev. 01
+Test Item RF Conducted
+Test Site (TH01-WS)
+Tested Date May 06, 2017
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Mar. 15, 2017 Mar. 14, 2018
+Spectrum Analyzer Agilent N9010A MY53400091 Sep. 09, 2016 Sep. 08, 2017
+TEMP&HUMIDITY
+CHAMBER GIANT FORCE GCT-225-40-SP-SD MAF1212-002 Nov. 21, 2016 Nov. 20, 2017
+Power Meter Anritsu ML2495A 1241002 Oct. 06, 2016 Oct. 05, 2017
+Power Sensor Anritsu MA2411B 1207366 Oct. 06, 2016 Oct. 05, 2017
+Signal Generator R&S SMB100A 175727 Oct. 19, 2016 Oct. 18, 2017
+Radio
+Communication
+Analyzer
+Anritsu MT8820C 6201465544 Aug. 19, 2016 Aug. 18, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53050081 Apr. 15, 2017 Apr. 14, 2018
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 20, 2016 Oct. 19, 2017
+AC POWER
+SOURCE APC AFC-500W F312060012 Oct. 28, 2016 Oct. 27, 2017
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Adaptivity
+Test Site (TH01-WS)
+Tested Date Jun. 01, 2017
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Keysight N9010A MY54200247 Aug. 30, 2016 Aug. 29, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX_104 MY15686/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.5M HUBER+SUHNER SUCOFLEX_104 296081/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329021/4 Dec. 16, 2016 Dec. 15, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53051912 Nov. 21, 2016 Nov. 20, 2017
+Preamplifier Burgeon BPA-530 100219 Nov. 02, 2016 Nov. 01, 2017
+Oscilloscope National Instruments USB-5133 F651FF Jun. 22, 2016 Jun. 21, 2017
+Measurement
+Software Sporton Sporton_3 2.2.0.0 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: ER740701-08AE Page : 13 of 60
+Report Version: Rev. 01
+Test Item Receiver Blocking
+Test Site (05CH02-WS)
+Tested Date Jun. 05, 2020
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Wireless
+connectivity tester ROHDE&SCHWARZ CMW270 100856 Oct. 24, 2019 Oct. 23, 2020
+Signal Generator ROHDE&SCHWARZ SMB100A 175727 Dec. 27, 2019 Dec. 26, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 500202/4 Oct. 16, 2019 Oct. 15, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 296088/4 Oct. 16, 2019 Oct. 15, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Oct. 16, 2019 Oct. 15, 2020
+Combiner(1X2) WOKEN 2WAYDIV 12101200003 Oct. 16, 2019 Oct. 15, 2020
+Note: Calibration Interval of instruments listed above is one year.
+1.5 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+EN 300 328 V2.2.2 (2019-07)
+1.6 Deviation from Test Standard and Measurement Procedure
+None
+1.7 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty Limit
+Occupied Channel Bandwidth ±0.0034 % ±5 %
+RF output power, conducted ±0.537 dB ±1.5 dB
+Power Spectral Density, conducted ±0.463 dB ±3 dB
+Unwanted Emissions, conducted ±2.505 dB ±3 dB
+All emissions, radiated ±3.401 dB ±6 dB
+Temperature ±0.6 oC ±3 °C
+Supply voltages ±0.16 % ±3 %
+Time ±0.1 % ±5 %
+
+Report No.: ER740701-08AE Page : 14 of 60
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+RF Conducted TH01-WS 23°C / 62% Jack Li
+Radiated Emission 05CH02-WS 24°C / 65% Penguin Jiang
+Receiver Blocking 05CH02-WS 25°C / 65% Ryan Lee
+2.2 Testing Facility
+Test Laboratory International Certification Corp.
+Test Site TH01-WS
+Address of Test Site
+(Kwei Shan)
+No. 3-1, Lane 6, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333, Taiwan,
+R.O.C.
+Test Laboratory International Certification Corp.
+Test Site 05CH02-WS
+Address of Test Site
+(Kwei Shan II)
+No. 14-1, Lane 19, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333,
+Taiwan, R.O.C.
+2.3 The Worst Test Modes and Channel Details
+Test item Modulation
+Mode
+Test Frequency
+(MHz) Data Rate Test
+Configuration
+RF Output Power GFSK 2402 / 2440 / 2480 1 Mbps 1, 2, 3, 4
+Power Spectral Density
+Transmitter unwanted emissions in the out
+of band domain GFSK 2402 / 2480 1 Mbps 1, 2, 3, 4
+Occupied Channel Bandwidth GFSK 2402 / 2480 1 Mbps 1
+Transmitter Spurious Emissions GFSK 2402 / 2480 1 Mbps 1
+Receiver Spurious Emissions
+Receiver Blocking GFSK 2402 / 2480 1 Mbps 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y,
+and Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The device can be operated under adapter mode and charging mode. Each mode was selected for related
+test items as below configuration.
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4: Isolated Magnetic Dipole Antenna
+3. Conducted emission is only measured for configuration 1 which has maximum conducted power.
+4. Two 50Ω terminators are connected to antenna port of EUT for radiated emission measurement.
+
+Report No.: ER740701-08AE Page : 15 of 60
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 RF Output Power
+3.1.1 Limit of RF Output Power
+The maximum RF output power shall be equal to or less than 20 dBm
+3.1.2 Test Procedures
+Reference to clause 5.4.2.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.1.3 Test Setup
+
+Report No.: ER740701-08AE Page : 16 of 60
+Report Version: Rev. 01
+3.1.4 Test Result of RF Output Power
+Configuration 1 : Dipole Antenna
+RF Output Power (dBm)
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2402 8.29 20 Pass
+TminVnom 2402 9.06 20 Pass
+TmaxVnom 2402 7.79 20 Pass
+TnomVnom 2440 8.07 20 Pass
+TminVnom 2440 8.78 20 Pass
+TmaxVnom 2440 7.62 20 Pass
+TnomVnom 2480 8.82 20 Pass
+TminVnom 2480 9.61 20 Pass
+TmaxVnom 2480 8.38 20 Pass
+Configuration 2 : PCB Dipole Antenna
+RF Output Power (dBm)
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2402 9.08 20 Pass
+TminVnom 2402 9.85 20 Pass
+TmaxVnom 2402 8.58 20 Pass
+TnomVnom 2440 8.86 20 Pass
+TminVnom 2440 9.57 20 Pass
+TmaxVnom 2440 8.41 20 Pass
+TnomVnom 2480 8.81 20 Pass
+TminVnom 2480 9.60 20 Pass
+TmaxVnom 2480 8.37 20 Pass
+
+Report No.: ER740701-08AE Page : 17 of 60
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+RF Output Power (dBm)
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2402 8.79 20 Pass
+TminVnom 2402 9.56 20 Pass
+TmaxVnom 2402 8.29 20 Pass
+
+TnomVnom 2440 8.57 20 Pass
+TminVnom 2440 9.28 20 Pass
+TmaxVnom 2440 8.12 20 Pass
+TnomVnom 2480 8.52 20 Pass
+TminVnom 2480 9.31 20 Pass
+TmaxVnom 2480 8.08 20 Pass
+
+Report No.: ER740701-08AE Page : 18 of 60
+Report Version: Rev. 01
+3.2 Power Spectral Density
+3.2.1 Limit of Power Spectral Density
+For equipment using wide band modulations other than FHSS (e.g. DSSS, OFDM, etc.), the maximum
+Power Spectral Density is limited to 10 dBm per MHz.
+3.2.2 Test Procedures
+Reference to clause 5.4.3.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.2.3 Test Setup
+3.2.4 Test Result of Power Spectral Density
+Configuration 1 : Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+GFSK-1Mbps 2402 7.71 10 Pass
+GFSK-1Mbps 2440 7.53 10 Pass
+GFSK-1Mbps 2480 7.54 10 Pass
+Configuration 2 : PCB Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+GFSK-1Mbps 2402 6.23 10 Pass
+GFSK-1Mbps 2440 7.08 10 Pass
+GFSK-1Mbps 2480 6.69 10 Pass
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+GFSK-1Mbps 2402 7.21 10 Pass
+GFSK-1Mbps 2440 7.03 10 Pass
+GFSK-1Mbps 2480 6.98 10 Pass
+
+Report No.: ER740701-08AE Page : 19 of 60
+Report Version: Rev. 01
+3.3 Occupied Channel Bandwidth
+3.3.1 Limit of Occupied Channel Bandwidth
+The Occupied Channel Bandwidth shall fall completely within 2.4~2.4835 GHz.
+In addition, for non-adaptive equipment using wide band modulations other than FHSS and with e.i.r.p
+greater than 10 dBm, the occupied channel bandwidth shall be less than 20 MHz.
+3.3.2 Test Procedures
+Reference to clause 5.4.7.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.3.3 Test Setup
+3.3.4 Test Result of Occupied Channel Bandwidth
+Modulation
+Mode
+Frequency
+(MHz)
+99% Bandwidth
+(MHz)
+FL at 99% BW
+(MHz)
+FH at 99% BW
+(MHz)
+Limit FL / FH
+(MHz)
+GFSK-1Mbps 2402 1.02 2401.49 2402.52 2400.0
+GFSK-1Mbps 2480 1.03 2479.49 2480.52 2483.5
+
+Report No.: ER740701-08AE Page : 20 of 60
+Report Version: Rev. 01
+3.4 Transmitter Unwanted Emissions in the Out-Of-Band Domain
+3.4.1 Limit of Transmitter Unwanted Emissions in the Out-Of-Band Domain
+3.4.2 Test Procedures
+Reference to clause 5.4.8.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.4.3 Test Setup
+
+Report No.: ER740701-08AE Page : 21 of 60
+Report Version: Rev. 01
+3.4.4 Test Result of Transmitter Unwanted Emissions in the Out-Of-Band Domain
+Configuration 1 : Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom GFSK-1Mbps 2402 2399.50 -45.98 -10
+TnomVnom GFSK-1Mbps 2402 2398.46 -46.18 -20
+TnomVnom GFSK-1Mbps 2480 2484.00 -45.91 -10
+TnomVnom GFSK-1Mbps 2480 2485.03 -45.97 -20
+Low Band Up Band
+
+Report No.: ER740701-08AE Page : 22 of 60
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom GFSK-1Mbps 2402 2399.50 -46.05 -10
+TnomVnom GFSK-1Mbps 2402 2398.46 -46.36 -20
+TnomVnom GFSK-1Mbps 2480 2484.00 -45.99 -10
+TnomVnom GFSK-1Mbps 2480 2485.03 -46.08 -20
+Low Band Up Band
+
+Report No.: ER740701-08AE Page : 23 of 60
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom GFSK-1Mbps 2402 2399.50 -46.27 -10
+TnomVnom GFSK-1Mbps 2402 2398.46 -46.58 -20
+TnomVnom GFSK-1Mbps 2480 2484.00 -46.26 -10
+TnomVnom GFSK-1Mbps 2480 2485.06 -46.35 -20
+Low Band Up Band
+
+Report No.: ER740701-08AE Page : 24 of 60
+Report Version: Rev. 01
+3.5 Transmitter Unwanted Emissions in the Spurious Domain
+3.5.1 Limit of Transmitter Unwanted Emissions in the Spurious Domain
+Conducted Emission
+Frequency Range (MHz) Maximum power (dBm) Bandwidth (kHz)
+30 to 47 -39.01 100
+47 to 74 -57.01 100
+74 to 87,5 -39.01 100
+87,5 to 118 -57.01 100
+118 to 174 -39.01 100
+174 to 230 -57.01 100
+230 to 470 -39.01 100
+470 to 694 -57.01 100
+694 to 1000 -39.01 100
+1000 to 12750 -33.01 1000
+Radiated Emission
+Frequency Range (MHz) Maximum power (dBm) Bandwidth (kHz)
+30 to 47 -36 100
+47 to 74 -54 100
+74 to 87,5 -36 100
+87,5 to 118 -54 100
+118 to 174 -36 100
+174 to 230 -54 100
+230 to 470 -36 100
+470 to 694 -54 100
+694 to 1000 -36 100
+1000 to 12750 -30 1000
+3.5.2 Test Procedures
+Reference to clause 5.4.9.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-08AE Page : 25 of 60
+Report Version: Rev. 01
+3.5.3 Test Setup
+Below 1GHz
+Above 1 GHz
+Conducted Emission
+
+Report No.: ER740701-08AE Page : 26 of 60
+Report Version: Rev. 01
+3.5.4 Transmitter Conducted Unwanted Emissions (Below 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 27 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 28 of 60
+Report Version: Rev. 01
+3.5.5 Transmitter Conducted Unwanted Emissions (Above 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 29 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 30 of 60
+Report Version: Rev. 01
+3.5.6 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 31 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 32 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 33 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 34 of 60
+Report Version: Rev. 01
+3.5.7 Transmitter Radiated Unwanted Emissions (Above 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 35 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 36 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 37 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 38 of 60
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Conducted Emission
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -60.01 100
+Above 1 GHz to 12.75 GHz -50.01 1000
+Radiated Emission
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -57 100
+Above 1 GHz to 12.75 GHz -47 1000
+4.1.2 Test Procedures
+Reference to clause 5.4.10.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-08AE Page : 39 of 60
+Report Version: Rev. 01
+4.1.3 Test Setup
+Below 1GHz
+Above 1 GHz
+Conducted Emission
+
+Report No.: ER740701-08AE Page : 40 of 60
+Report Version: Rev. 01
+4.1.4 Receiver Conducted Unwanted Emissions (Below 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 41 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 42 of 60
+Report Version: Rev. 01
+4.1.5 Receiver Conducted Unwanted Emissions (Above 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 43 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 44 of 60
+Report Version: Rev. 01
+4.1.6 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 45 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 46 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 47 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 48 of 60
+Report Version: Rev. 01
+4.1.7 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 49 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 50 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 51 of 60
+Report Version: Rev. 01
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-08AE Page : 52 of 60
+Report Version: Rev. 01
+5 Receiver Blocking Test Results
+5.1 Receiver Blocking
+5.1.1 Limit of Receiver Blocking
+Receiver Blocking Parameters for Receiver Category 1 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 4)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 4)
+Type of Blocking
+Signal
+(-133 dBm + 10 ×
+log10(OCBW)) or -68
+dBm whichever is less
+(see note 2)
+2 380
+2 504
+-34 CW
+(-139 dBm + 10 ×
+log10(OCBW)) or -74
+dBm whichever is less
+(see note 3)
+2 300
+2 330
+2 360
+2 524
+2 584
+2 674
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal
+from the companion device cannot be determined, a relative test may be performed using a
+wanted signal up to Pmin + 26 dB where Pmin is the minimum level of wanted signal required to meet
+the minimum performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking
+signal.
+Note 3: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative test may be performed using a wanted signal
+up to Pmin + 20 dB where Pmin is the minimum level of wanted signal required to meet the minimum
+performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 4: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+
+Report No.: ER740701-08AE Page : 53 of 60
+Report Version: Rev. 01
+Receiver Blocking Parameters for Receiver Category 2 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 3)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 3)
+Type of Blocking
+Signal
+(-139 dBm + 10 ×
+log10(OCBW) + 10 dB) or
+(-74 dBm + 10 dB)
+whichever is less
+(see note 2)
+2 380
+2 504
+2 300
+2 584
+-34 CW
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative test may be performed using a wanted
+signal up to Pmin + 26 dB where Pmin is the minimum level of wanted signal required to meet the
+minimum performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 3: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+Receiver Blocking Parameters for Receiver Category 3 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 3)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 3)
+Type of Blocking
+Signal
+(-139 dBm + 10 ×
+log10(OCBW) + 20 dB) or
+(-74 dBm + 20 dB)
+whichever is less
+2 380
+2 504
+2 300
+2 584
+-34 CW
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative the test may be performed using a wanted
+signal up to Pmin + 30 dB where Pmin is the minimum level of wanted signal required to meet the
+minimum performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 3: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+5.1.2 Test Procedures
+Reference to clause 5.4.11.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-08AE Page : 54 of 60
+Report Version: Rev. 01
+5.1.3 Test Setup
+
+Report No.: ER740701-08AE Page : 55 of 60
+Report Version: Rev. 01
+5.1.4 Test Result of Receiver Blocking
+2402 MHz
+Receiver Category 2
+Performance Criteria
+Limit PER ≤ 10 %
+Wanted Signal Mean
+Power from
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-66.09 2380 -31.21 Pass
+-66.09 2504 -31.21 Pass
+-66.09 2300 -31.21 Pass
+-66.09 2584 -31.21 Pass
+
+Report No.: ER740701-08AE Page : 56 of 60
+Report Version: Rev. 01
+2480 MHz
+Receiver Category 2
+Performance Criteria
+Limit PER ≤ 10 %
+Wanted Signal Mean
+Power from
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-66.07 2380 -31.21 Pass
+-66.07 2504 -31.21 Pass
+-66.07 2300 -31.21 Pass
+-66.07 2584 -31.21 Pass
+
+Report No.: ER740701-08AE Page : 57 of 60
+Report Version: Rev. 01
+6 Photographs of the Test Configuration
+Conducted Spurious Emission Test
+
+Report No.: ER740701-08AE Page : 58 of 60
+Report Version: Rev. 01
+Radiated Spurious Emission Test
+
+Report No.: ER740701-08AE Page : 59 of 60
+Report Version: Rev. 01
+Receiver Blocking Test
+
+Report No.: ER740701-08AE Page : 60 of 60
+Report Version: Rev. 01
+7 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

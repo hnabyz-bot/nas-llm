@@ -1,0 +1,1587 @@
+queueId: ingest-1781569954418-16qz
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/05_설계개발 검증 및 유효성 확인/11_Clinical Evaluation/LITERATURE/2. Digital Radiography Image Quality.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/564cfce9479b/2. Digital Radiography Image Quality__564cfce9479b_combined.txt
+canonicalGroupId: 3306b305f0bb
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 257
+
+SOURCE_TEXT
+Digital Radiography Image Quality:
+Image Acquisition
+Mark B. Williams, PhDa
+, Elizabeth A. Krupinski, PhDb
+, Keith J. Strauss, MSc
+,
+William K. Breeden, III, MSd
+, Mark S. Rzeszotarski, PhDe
+,
+Kimberly Applegate, MD, MSf
+, Margaret Wyattg
+, Sandra Bjork, RN, JDg
+,
+J. Anthony Seibert, PhDh
+This article on digital radiography image acquisition is the first of two articles written as part of an intersociety
+effort to establish image quality standards for digital and computed radiography. The topic of the other paper
+is digital radiography image processing and display. The articles were developed collaboratively by the ACR, the
+American Association of Physicists in Medicine, and the Society for Imaging Informatics in Medicine. Increas-
+ingly, medical imaging and patient information are being managed using digital data during acquisition,
+transmission, storage, display, interpretation, and consultation. Data management during each of these oper-
+ations has a direct impact on the quality of patient care. These articles describe what is known to improve image
+quality for digital and computed radiography and make recommendations on optimal acquisition, processing,
+and display. The practice of digital radiography is a rapidly evolving technology that will require the timely
+revision of any guidelines and standards. This document provides a basis for the technologies available today in
+clinical practice and may be useful in guiding the future clinical practice of digital radiography.
+Key Words: Digital radiography, image quality, image acquisition
+J Am Coll Radiol 2007;4:371-388. Copyright © 2007 American College of Radiology
+INTRODUCTION AND DEFINITIONS
+Computed radiography (CR) and digital radiography (DR)
+are the commonly used terms for digital radiographic
+detectors. Computed radiography uses a photostimu-
+lable storage phosphor that stores the latent image with
+subsequent processing using a stimulating laser beam and
+can be easily adapted to a cassette-based system analo-
+gous to that used in screen-film (SF) radiography. His-
+torically, DR has been used to describe a digital x-ray
+imaging system that reads the transmitted x-ray signal
+immediately after exposure with the detector in place.
+There are several types of detectors that can be classified
+as DR systems, including automated (cassetteless) CR
+systems. In addition, some DR systems are adapted to a
+cassette-based x-ray system. Thus, the historical nomen-
+clature becomes less accurate as technology advances be-
+cause distinct classification into the two broad categories
+of CR and DR is no longer possible. More appropriate is
+the distinction based on cassette vs cassetteless operation.
+In this article, digital radiography is used to refer to all
+types of digital radiographic systems, including both
+those historically termed CR and those historically
+termed DR.
+There are many ways to categorize the current state-
+of-the-art digital radiography technology. One categori-
+zation considers (1) form factor, (2) image acquisition
+time, and (3) x-ray signal conversion methodology. The
+concept of cassette-based vs cassetteless operation is de-
+fined using the term form factor. A cassette-based digital
+detector uses the SF paradigm, which allows the use of
+existing imaging modality infrastructure and provides
+excellent positioning flexibility. On the other hand, the
+labor-intensive handling of cassettes and the need to wait
+for the image, often with batch-mode processing, leads to
+a loss of time efficiency. Cassetteless operation indicates
+the ability to acquire the x-ray signal and, without sub-
+sequent user intervention, produce an image at a local
+a Department of Radiology, University of Virginia, Charlottesville, Va.
+b Department of Radiology, University of Arizona, Tucson, Ariz.
+c Department of Radiology, Children’s Hospital, Harvard University, Boston,
+Mass.
+d St. Vincent Hospital, Indianapolis, Ind.
+e Department of Radiology, Case Western Reserve University, Cleveland,
+Ohio.
+f Department of Radiology, Indiana University, Indianapolis, Ind.
+g American College of Radiology, Reston, Va.
+h Department of Radiology, University of California, Davis, Sacramento,
+Calif.
+Corresponding author and reprints: J. Anthony Seibert, PhD, University of
+California, Davis, Department of Radiology, 4860 Y Street, Suite 3100, Sac-
+ramento, CA 95817; e-mail: jaseibert@ucdavis.edu.
+© 2007 American College of Radiology
+0091-2182/07/$32.00 ● DOI 10.1016/j.jacr.2007.02.002
+371
+
+workstation for review and manipulation. By image ac-
+quisition time, a distinction is made regarding the ability
+to acquire an image nearly instantaneously over the full
+field of view for a large area detector vs the sequential,
+longer scan time acquisition of a slot-scan device. X-ray
+signal conversion refers to the method by which the x-rays
+are converted to the output signal of interest and is usu-
+ally described as being either an indirect or direct radia-
+tion detection scheme. All digital detectors produce an
+output signal, usually in the form of electrons, which
+represent a quantity of charge that corresponds to the
+number of x-rays absorbed in a given detector element
+(del) in the detector. The charge is then converted to a
+digital value for storage in the image matrix. Indirect
+refers to the conversion of x-rays into secondary informa-
+tion carriers, such as light via a scintillator, before con-
+version to charge. Direct refers to the conversion of x-rays
+into electron-hole pairs and the direct collection of
+charge using semiconductors as the x-ray converter, with-
+out a secondary conversion event. There are advantages
+and disadvantages that can be ascribed to each of the
+digital detectors in these broad categories, and they de-
+termine the best solution for a given clinical task or
+imaging application.
+This article is applicable to the practice of cassette-
+based and cassetteless digital radiography. It defines mo-
+tivations, equipment guidelines, specifications of data
+manipulation and management, and quality control and
+quality improvement procedures for the use of digital
+radiography that should result in high quality radiologic
+patient care. It also includes a brief review of the differ-
+ences between digital radiography and SF radiography in
+terms of imaging characteristics such as sensitivity, dy-
+namic range, noise, and spatial resolution. A brief over-
+view of current receptor technologies available for the
+clinical practice of digital radiography also is included. A
+glossary of commonly used terminology is included in
+the companion paper on image processing and display.
+Motivations for using digital radiography in clinical
+practice include, but are not limited to:
+1. the significantly larger range of x-ray intensities that
+can be imaged by digital receptors compared with
+analog systems;
+2. the independence of displayed contrast from the
+x-ray tube potential setting (kVp) through adjust-
+ment of the display window width;
+3. the independence of displayed brightness from mil-
+liampere-second (mAs) setting through adjustment
+of the display window level;
+4. the availability of image processing and computer-
+aided diagnostic algorithms for image enhancement
+and analysis;
+5. the easier and more reliable generation of accurately
+labeled and identified image data;
+6. the ability to electronically transmit data to an ap-
+propriate storage medium from which it can be elec-
+tronically retrieved for display for formal interpreta-
+tion, review, and consultation; and
+7. the ability to transmit data to and from remote sites
+for consultation, review, or formal interpretation.
+Components of the performance of high-quality digi-
+tal radiography include, but are not limited to:
+1. the development of validated imaging protocols so
+that the consistency of image quality and radiation
+dose can be established and maintained between
+rooms and between sites;
+2. the use of appropriate compression of image data to
+facilitate transmission or storage, without loss of
+clinically significant information;
+3. the archiving of data to maintain accurate patient
+medical records in a form that may be retrieved in a
+timely fashion;
+4. the ability to retrieve data from available prior imag-
+ing studies to be displayed for comparison with a
+current study;
+5. the ability to apply image processing for better dis-
+play of acquired information;
+6. adherence to applicable facility, state, and federal
+regulations;
+7. maintenance of patient confidentiality;
+8. minimization of the occurrence of poor image qual-
+ity;
+9. minimization of the delivery of inappropriate ioniz-
+ing radiation dose to patients; and
+10. the promotion of clinical efficiency and continuous
+quality improvement.
+GENERAL REQUIREMENTS
+Image acquisition should be performed in accordance
+with the appropriate ACR modality or examination
+guideline or standard. At the time of acquisition, the
+system must have capabilities for capturing demographic
+as well as imaging information such as accession number,
+patient name, identification number, date and time of
+examination, name of facility or institution of acquisi-
+tion, type of examination, patient or anatomic part ori-
+entation (eg, right, left, superior, inferior), amount and
+method of data compression, and display of the total
+number of images acquired in the study. This informa-
+tion (except for the number of images acquired) must be
+associated with the images when transmitted. These
+fields should be formatted according to the Digital Im-
+aging and Communications in Medicine (DICOM)
+standard.
+372 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+The ability to record patient date of birth and gender
+and a brief patient history is recommended. The ability
+to record peak kilovoltage (kVp), tube current (mA),
+exposure time, beam filtration, and radiation exposure
+indicator is imperative, particularly for cassette and cas-
+setteless digital radiography systems that have a direct
+interface to the x-ray generator information. The use of
+the DICOM DX object is recommended instead of the
+more limited CR object for digital radiography. It is also
+recommended that gray-scale presentation state objects
+be used to transmit annotations, shutter, and display
+lookup tables (LUTs).
+COMPARISON OF SCREEN-FILM AND
+DIGITAL RECEPTORS
+There are several fundamental differences between SF
+systems and digital (CR or DR) systems in terms of the
+physical processes involved in image acquisition. The
+different processes introduce different constraints on the
+factors determining image quality, such as spatial resolu-
+tion, contrast, and noise. Here we briefly describe the
+basic operation of each system and then discuss the most
+important acquisition-related factors affecting image
+quality for each.
+Screen-Film
+In SF radiography, an x-ray photon absorbed in the
+screen deposits energy, which is converted into the pro-
+duction of multiple visible light photons that travel
+through the screen and in turn deposit energy in the film
+grains in the emulsion layers of the film. The image
+information is stored in the film emulsion during an
+exposure through the accumulation of exposed grains.
+Regions of the film with a greater density of exposed
+grains have higher optical density and appear dark after
+film processing and thus correspond to regions of greater
+x-ray absorption in the screen. However, the relationship
+between optical density and the number of absorbed
+x-rays is nonlinear. For analog SF radiography, the acqui-
+sition, display, and storage of the image are intrinsically
+nonseparable. This means that acquisition techniques
+must be used that result in both acceptable film darken-
+ing while maximizing image contrast. Because the range
+of acceptable optical density is limited by view box lumi-
+nance and the response of the human visual system, max-
+imization of image contrast occurs at the expense of ex-
+posure dynamic range. This is referred to as the exposure
+latitude, and it is quite narrow in SF radiography com-
+pared with digital radiography.
+Limitations in SF radiography include narrow expo-
+sure latitude, the need for chemical processing, ineffi-
+cient mechanical handling, incompatibility with elec-
+tronic transmission and image enhancement, and higher
+costs for film materials and labor. The chief advantages
+are high spatial resolution, consistency of image appear-
+ance, and the accumulated experience of radiologists,
+medical physicists, and technologists in utilizing SF ra-
+diography in an optimal manner.
+Screen-film images can be converted to a digital form
+using a film digitizer to produce an equivalent digital
+image. The characteristics of the output digitized image
+are chiefly those of the SF image, with its inherent ad-
+vantages and disadvantages as listed above. Two major
+digitizer types are based on laser point scanning and
+optical line transmission scanning, using a light collec-
+tion guide or an array of charge-coupled device (CCD)
+photosensors, respectively [1]. In general, these digitizers
+provide good gray-scale rendition, with the laser systems
+typically having more accurate conversion of high optical
+density values and the CCD array scanners able to have a
+more compact, higher resolution scanner capability.
+Film digitizers should output the DICOM radiographic
+imaging information object descriptor with patient and
+acquisition method demographic data and must meet the
+minimum spatial frequency resolution requirements of
+2.5 lp/mm at the film plane for conventional digital
+radiography images. In general, film digitizers introduce
+additional noise in the digital image, especially in regions
+of high optical density.
+Computed Radiography
+In photostimulable storage phosphor (CR) systems, x-
+ray photons are absorbed in the storage phosphor, also
+known as the imaging plate (IP). Unlike conventional
+screens, the deposition of x-ray energy in storage phos-
+phors results in the storage of a portion of the energy in
+highly localized, metastable areas called f-centers, which
+serve as energy wells. During an x-ray exposure, the im-
+age is built up in the phosphor through the accumulation
+of f-centers. After the exposure, plate readers scan a (red)
+laser beam over the surface of the IP. In one implemen-
+tation the laser beam sweeps across the IP (scan direction)
+and in combination with IP translation (subscan direc-
+tion) the beam extracts the latent image from the IP. The
+plate reading time depends on the size of the detector and
+the scan speed of the reader. Some newer readers use a
+line-scan approach (the laser illumination on the plate is
+a line) rather than a point-scan approach to increase
+readout speed, but the principle is the same in both
+approaches. At each location, the energy of the incident
+laser photons triggers a deexcitation of the f-centers, re-
+sulting in the prompt emission of (indigo) light photons.
+A portion of these photons is detected by a photosensitive
+device (usually a photomultiplier tube for point-scan
+readers or a linear solid-state photodiode array for line-
+scan readers), whose output is then digitized and stored.
+Although the amount of photostimulated light detected
+Williams et al/Image Acquisition 373
+
+is proportional to the number of f-centers and thus to the
+number of absorbed x-rays at that location (ie, the rela-
+tionship between the photomultiplier tube signal and the
+number of absorbed x-rays is linear), nonlinear amplifi-
+cation of the photomultiplier tube signal before digitiza-
+tion is often used. The resulting raw pixel values are
+subsequently processed for display using a combination
+of segmentation, rescaling, and filtering algorithms. The
+size of the image matrix is a function of the IP dimensions
+(18  24 cm, 24  30 cm, 35  35 cm, 35  43 cm, and
+custom sizes) and the pixel sampling pitch (typically 100
+to 200
+m in general radiography). Output image sizes
+vary between 8 and 16 MB for radiography with a typical
+matrix size of approximately 2,000  2,500 pixels. A
+detailed description of technical issues associated with
+CR imaging is given in the report of American Associa-
+tion of Physicists in Medicine Task Group 10 [2].
+DR Systems
+DR systems encompass a number of different technolo-
+gies that are rapidly evolving. At this time, the majority of
+DR systems use thin-film transistor (TFT) arrays, com-
+monly known as flat-panel arrays. Systems based on
+CCDs are available for general-purpose and chest radi-
+ography, using scanned, slot-shaped detectors [3-5]; a
+single CCD; or tiled arrays of CCDs optically coupled to
+larger area x-ray-to-light converters. Thin-film transistor
+arrays are composed of a matrix of discrete dels, each of
+which contains a transistor. The transistors operate as
+gates, permitting an electric charge to flow through them
+only when they are turned on. During an x-ray exposure,
+the gates are turned off, and the image is built up in the
+dels in the form of an electric charge, with the amount of
+charge in each del proportional to the number of x-rays
+absorbed in that region of the detector (again, a linear
+relationship). The means by which x-ray energy is con-
+verted to a stored electrical charge varies somewhat be-
+tween manufacturers but can be broadly classified ac-
+cording to whether it involves an intermediate
+conversion of x-ray energy to visible photons (indirect
+flat-panel devices) or not (direct flat-panel devices). In an
+indirect device, an x-ray-to-light converter, similar to
+that used in SF imaging, is placed in contact with the
+TFT array. Each del of the TFT array contains a light
+sensor (a photodiode) to convert the fluorescent light to a
+stored electric charge. In a direct device, a layer of mate-
+rial is deposited directly onto the TFT array. When an
+x-ray photon is absorbed in this photoconductor mate-
+rial, an electric charge is generated and collected in the
+dels of the TFT array. For both indirect and direct flat-
+
+panel detectors, after the x-ray exposure, the TFT array
+gates are turned on one row at a time, and the amount of
+charge stored in each del of that row is transferred
+through drain lines to a row of charge amplifiers at the
+edge of the array for digitization and storage. The entire
+detector is read out by successively turning on all of the
+rows in a sequential fashion and storing the digital data in
+corresponding locations in the output digital image ma-
+trix.
+Advantages and Limitations of Digital
+Radiography
+The main limitations of CR and DR are higher initial
+cost (especially for DR), a lack of familiarity on the part
+of both radiologists and technologists with electronic
+image display and with online soft copy reading (com-
+pared with alternator-based batch-mode reading), and
+the lack of consistent feedback to technologists concern-
+ing the use of optimal acquisition techniques. The latter
+problem, along with the much larger dynamic range of
+digital systems, has led to a gradual increase in patient
+radiation dose, an issue discussed in more detail below
+[6-8]. The advantages of CR and DR include the separa-
+tion of acquisition, display, and archiving, allowing tre-
+mendous flexibility using image-processing functions
+such as those that adjust the level (analogous to the
+brightness) and window width (analogous to the con-
+trast) of the image gray-scale presentation. However, dis-
+play contrast is limited by the inherent image signal-to-
+noise ratio (SNR), because as the signal contrast is
+increased, so is the visibility of noise. Other advantages
+include: anatomy-specific presentation and disease-spe-
+cific algorithms; in most cases better x-ray detection effi-
+ciency and higher detective quantum efficiency (DQE),
+permitting lower doses to patients; the ability to use a
+second computer reader to assist the radiologist; a reduc-
+tion in the number of image retakes due to underexpo-
+sure or overexposure; and the elimination of labor-inten-
+sive handling and distribution of images during the
+acquisition process.
+FACTORS AFFECTING IMAGE QUALITY
+Just as with SF radiography, a number of factors affect
+the quality of the image in digital radiography. Contrast,
+detail, and noise are the primary factors associated with
+image quality, and they play a major role in CR and DR.
+Some additional factors are the result of the digital nature
+of the process, and they are discussed below.
+Detection Efficiency
+For SF, CR, and DR, the efficiency with which incident
+x-rays are absorbed is determined by the absorber thick-
+ness, density, and composition. Efficiency can be in-
+creased by increasing material density or absorber thick-
+ness (usually at the expense of spatial resolution) or
+through the incorporation of materials having atomic
+numbers that provide a good match between the x-ray
+374 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+spectrum exiting the patient and the absorption charac-
+teristics of the material. Figure 1 shows the absorption
+efficiency of 3 materials commonly used as x-ray scintil-
+lators, plotted against incident x-ray energy [2].
+Dynamic Range
+In digital chest radiography, the ratio of the maximum to
+minimum x-ray exposures incident on the detector sur-
+face can be greater than 100:1 [9]. For high-quality dig-
+ital radiography, the receptor must be able to maintain
+good contrast resolution over this wide dynamic range.
+The dynamic range of an x-ray imaging system is the
+ratio of the largest and smallest input x-ray intensities
+that can be imaged. For all systems, the smallest useful
+intensity is determined by the intrinsic system noise. The
+signal must be large enough to exceed this noise, com-
+bined with the x-ray quantum noise. The largest intensity
+is determined by receptor saturation. The dynamic range
+of SF systems, often referred to as the latitude, is deter-
+mined by the loss of contrast at low and high exposure
+levels (the toe and shoulder, respectively, of the H&D
+curve). For SF systems, the useful dynamic range is de-
+pendent on the screen and film characteristics, ranging
+from approximately 10:1 to 100:1 [10]. By comparison,
+the response curve of CR is linear (the photostimulated
+light output is directly proportional to x-ray exposure)
+over approximately 4 orders of magnitude (a ratio of
+10,000:1) [2]. Figure 2 compares the response curves for
+a 400-speed SF system with that of a typical CR system
+[2]. The dynamic range of DR systems is determined at
+the low end by the system noise and at the high end by
+the charge-holding capacity of the dels. When this capac-
+ity is filled, the detector must be read out to remove the
+charge before any subsequent exposure. The dynamic
+range of typical TFT arrays used in general radiography,
+with del sizes of 150 to 200
+m, is approximately 3 to 4
+orders of magnitude (a ratio of 1,000:1 to 10,000:1) [11].
+Spatial Sampling
+All digital detectors sample the continuously varying x-
+ray fluence at their input at discrete locations separated
+by some interval called the sampling pitch. In CR sys-
+tems, the sampling pitch is the distance between adjacent
+laser beam positions during plate readout. In DR sys-
+tems, the pitch is the center-to-center spacing between
+dels. The spatial frequency at which sampling occurs
+determines how well high-frequency fluctuations in x-ray
+fluence (those that occur over short distances in the im-
+aging plane) are imaged by the digital system. The sam-
+pling frequency of a system with sampling pitch p is 1/p.
+For example, if the pitch is 100
+m (0.1 mm), the sam-
+pling frequency is 10 per millimeter (10 mm1
+). The
+highest spatial frequency in the incident x-ray fluence
+that can be reliably imaged (the Nyquist frequency) is
+half the sampling frequency, or 1/(2p). Thus, a system
+with 100-
+m pitch can image frequencies up to 5 cycles
+per millimeter. If the x-ray fluence incident on the recep-
+tor contains information at frequencies higher than the
+Nyquist frequency, and the presampling modulation
+Fig 1. The photon absorption fractions for computed
+radiography and rare-earth x-ray phosphors are plot-
+ted as a function of energy. Phosphor thicknesses are
+representative of a standard 400-speed conventional
+screen, a standard resolution computed radiography
+phosphor detector (100 mg/cm 2 ), and a cesium io-
+dide phosphor commonly used in indirect thin-film
+transistor array and optically coupled charge-coupled
+device camera digital radiography systems [2].
+Fig 2. The characteristic response of a 400-speed
+rare-earth screen-film (solid S-shaped curve) and the
+computed radiography photostimulable phosphor
+(PSP) detector (dashed curve) are compared. Expo-
+sure ranges indicated by double arrows roughly indi-
+cate the exposure ranges characterized as underex-
+posed, correct, or overexposed. Useless areas depict
+system responses that do not contain information
+useful for diagnosis because of either excessive
+quantum noise at the low-dose end of the scale or
+saturation of the PSP detector [2].
+Williams et al/Image Acquisition 375
+
+transfer function (MTF) is nonvanishing at these fre-
+quencies, the result is false image signals occurring at low
+frequencies. This phenomenon, called aliasing, produces
+large-scale artifacts in images and reduces the ability to
+see fine details in the images.
+Spatial Resolution
+Spatial resolution is the ability of an imaging system to
+allow two adjacent structures to be visualized as being
+separate, or the distinctness of an edge in the image (ie,
+sharpness). Spatial resolution losses occur because of
+blurring caused by geometric factors (eg, the size of the
+x-ray tube focal spot, light diffusion in the receptor), del
+effective aperture size, and motion of the patient relative
+to the x-ray source and image receptor. The measure-
+ment of spatial resolution is performed by subjective or
+objective methods. Subjective measurement is achieved
+with a bar pattern of alternating radio-opaque bars and
+radiolucent spaces of equal width, imaged to determine
+the limiting resolution in line pairs per unit of distance,
+usually expressed in units of line pairs per millimeter.
+Intrinsic detector resolution measurements are per-
+formed by fixing the bar pattern to the receptor surface to
+eliminate focal spot blurring. System resolution (includ-
+ing the effects of the focal spot blur) uses a bar pattern
+placed at a clinically relevant distance above the receptor.
+For digital systems, the resolution may be different in the
+row and column directions, often requiring separate eval-
+uations. The limiting resolution is the frequency at which
+the bars and spaces can no longer be visualized. Objective
+measurements by the MTF are obtained by measuring
+the transfer of signal amplitude (contrast) of sinusoidal
+patterns (of various frequencies) from incident x-rays to
+the output. The system MTF is determined by the prod-
+uct of the individual MTF components along the signal
+chain. The system MTF can be measured by imaging a
+test object containing a narrow slit or a sharp edge. For
+most digital radiography examinations (except possibly
+digital fluoroscopy), a limiting system spatial resolution
+of at least 2.5 mm1 is essential and higher resolution
+(e.g. 5.0 mm1
+) is desirable for specialized applications.
+In SF imaging, spatial resolution is determined pri-
+marily by the thickness of the screen, because the light
+produced when an x-ray photon is absorbed is emitted in
+all directions from that point. Thicker screens provide
+more distance for the light to spread before reaching the
+film and have poorer spatial resolution. The film has very
+high resolution and is not responsible for spatial resolu-
+tion degradation. A conventional 400-speed SF system
+for general radiography has a spatial resolution limit (the
+smallest visible set of bars in a bar pattern image) of
+approximately 7 lp/mm (7 mm1
+). In mammography,
+in which very thin screens are used, the limiting resolu-
+tion is often greater than 15 mm1
+.
+In CR imaging, the primary source of spatial resolu-
+tion loss is scattering of the laser light beam during image
+plate readout. Laser light scatter results in the deexcita-
+tion of locations in the phosphor that are somewhat
+larger than the size of the laser beam and potentially
+larger than the separation between laser positions. As a
+result, the actual blur extends beyond the pixel size. Be-
+cause thicker phosphors result in a greater scattering
+depth and more blur, CR systems have been introduced
+that permit the plate to be read from both sides [12].
+Also, CR systems with a structured crystalline geometry
+allow a greater thickness and enhanced detection efficiency
+without the corresponding loss of spatial resolution [13].
+Spatial resolution in DR systems depends primarily on
+two factors. The first factor for indirect systems is the
+spread of light photons in the x-ray-to-light conversion
+process, and this can be important. This results in blur-
+ring similar to that described above because of the spread
+of photons within the screen of an SF system. To mini-
+mize visible photon spread, several manufacturers of in-
+direct DR systems use structured converters, in which the
+converter material (usually cesium iodide) is formed into
+narrow, parallel columnar structures, oriented so that the
+x-ray photons are incident along the long dimension of
+the columns. The advantage of this structure is that the
+majority of the light exiting the converter onto the TFT
+array has been internally reflected along the length of the
+columns. The internal reflection process thus confines
+the light photons to a region close to the actual location
+of the x-ray absorption. This approach permits improved
+absorption efficiency through thicker absorbers (longer
+columns) without as much spatial resolution degradation
+as seen in unstructured converters constructed using the
+same thickness. Direct-conversion DR systems do not
+suffer from this effect, because the spread of the electrons
+within the photoconductor material as they are acceler-
+ated toward the TFT array is minimal.
+The second factor affecting spatial resolution in DR is
+the size of the del itself. Because all x-rays absorbed
+within a single del during an exposure contribute to a
+single quantity (the summed charge read from that del),
+there is no way to distinguish different absorption loca-
+tions within a del. Therefore, structures in the patient
+smaller than the del size are smeared out, and their con-
+trast is reduced (this is known as the partial volume
+effect). Such structures may thus be undetectable unless
+they are inherently high contrast objects (eg, a microcal-
+cification smaller than a del may be recognized as a cal-
+cification because its attenuation properties are so differ-
+ent from the other tissue in the del).
+Noise
+In radiography, noise can be defined as any fluctuations
+in an image that do not correspond to variations in the
+376 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+x-ray attenuation of the object being imaged. Image noise
+is typically measured by illuminating the receptor with a
+uniform x-ray fluence, then measuring the variance (the
+square of the standard deviation) in selected regions of
+the resulting image. A more informative measure of noise
+can be obtained by estimating the noise power spectrum
+(NPS), which characterizes the spatial frequency depen-
+dence of the noise [14-16]. Knowledge of the frequency
+response of noise in an imaging system is important be-
+cause there are a number of additional noise sources in
+digital radiography, such as aliasing and electronic noise,
+that are not present in SF systems.
+Ideally, image noise is dominated by the x-ray quan-
+tum noise. However, all image receptors contain some
+internal sources of noise. Random noise (noise not cor-
+related with particular locations on the receptor) typi-
+cally cannot be corrected and adds to the random noise of
+the x-ray quanta. Examples of random noise include film
+granularity noise in SF and electronic noise in CR and
+DR. Internal noise that has a fixed correlation to loca-
+tions on the receptor is called fixed-pattern noise. Sources
+of fixed-pattern noise include spatial variation in screen
+thickness in SF, position-dependent light collection effi-
+ciency in CR plate readers, and variations among pream-
+plifier gains in DR. One advantage of digital imaging is
+that fixed-pattern noise can be largely eliminated
+through digital postprocessing. This is typically per-
+formed by obtaining a set of nominally identical images
+using a uniform x-ray flood field. Averaging the flood
+images results in a single image in which the magnitude
+of the random noise is small compared with the magni-
+tude of the fixed-pattern noise. This image is stored and
+used as a map to remove the fixed-pattern noise from all
+subsequent images in a process called flat fielding. Detec-
+tor artifacts are common in digital systems as a result of
+spatial variations in the sensitivity of the receptor, caus-
+ing the image to have structure that is unrelated to the
+tissue being imaged. Bad dels, typically aligned in col-
+umns and rows, may occur during the manufacturing
+process. The locations of such point and line defects are
+typically identified and stored, and adjacent neighbor
+response values are averaged and used as substitute values
+for the missing data. The number and proximity of de-
+tector defects that is allowable without affecting image
+quality remains to be specified.
+Digitization of the analog detector output voltage to
+form discrete pixel values introduces a type of noise called
+quantization noise. Digital imaging systems use an ana-
+log-to-digital converter to sample and quantize the image
+data into discrete integer (gray-scale) values, with the
+range of values determined by the number of electronic
+binary (on/off) channels within the ADC, also known as
+bits. The maximum number of gray-scale values that can
+be encoded is equal to 2 #
+, where # is the number of bits.
+For example, an 8-bit analog-to-digital converter en-
+codes 2 8 or 256 discrete digital values (0-255) over the
+signal amplitude range (these values are often called an-
+alog-to-digital units). An insufficient number of quanti-
+zation steps will introduce signal-encoding errors that
+increase the quantization noise. Digital detectors for pro-
+jection radiography typically use from 10 to 14 bits
+(1,024 to 16,384 unique analog-to-digital units) in the
+output image to keep quantization noise small. Some
+systems use nonlinear (eg, logarithmic) amplification be-
+fore digitization, which can further reduce the quantiza-
+tion error, particularly in the low output signal response
+range of the detector [17].
+Scatter radiation is another source of image degrada-
+tion in radiography, and it acts in the same manner as
+other noise sources. Scatter reduces the available dynamic
+range of x-ray intensities at the exit side of the patient.
+The primary effect of scatter is the reduction of subject
+contrast. In addition to reducing subject contrast, scatter
+decreases the SNR because it contains no signal but does
+contain Poisson quantum noise. Scanned slot DR detec-
+tors possess inherent scatter rejection capability and do
+not require the use of a grid. Area detectors used in CR,
+DR, and SF radiography should be used with an antiscat-
+ter grid in clinical imaging situations in which scatter
+dominates (usually patient thicknesses in excess of 10
+cm). They are often not used with pediatric and extrem-
+ity imaging. The use of grids is especially important in
+CR because of the increased scatter sensitivity of barium
+halide (k-edge approximately 35 keV) compared with SF
+screens such as gadolinium oxysulfide (k-edge approxi-
+mately 50 keV) (see Figure 1). When using stationary
+grids (eg, snap-on grids used in portable x-ray and for
+lateral tabletop exposures), consider the use of high-fre-
+quency grid strips of greater than 60 lines/cm (140 lines/
+
+in) to avoid grid aliasing patterns caused by insufficient
+sampling. Consultation with the vendor for an appropri-
+ate grid is recommended.
+When using scatter grids with digital detectors, any
+adjustment in exposure technique (mAs) should be made
+in the interest of maintaining SNR. Insertion of the grid
+reduces both the signal (incomplete transmission of the
+primary radiation by the grid) and noise (removal of
+scattered radiation), with the relative amount of reduc-
+tion dependent on both the scatter-to-primary ratio in
+the beam (higher for larger patients) and the design of the
+grid. This is different than in SF radiography, in which
+upward mAs compensation is required both for the re-
+moval of primary and scattered radiation to achieve the
+correct film optical density range. For this reason, the
+adjustment of radiographic technique upward according
+to the Bucky factor (defined as the increase in exposure
+required to obtain the same optical density as with no
+Williams et al/Image Acquisition 377
+
+grid) overestimates the appropriate technique increase
+for digital receptors.
+Contrast
+Contrast (radiographic contrast) is proportional to the
+magnitude of the signal difference between the struc-
+ture of interest and its surroundings in the displayed
+image, which is expressed in terms of the optical den-
+sity difference between two adjacent areas on the SF
+film or as the relative brightness difference between
+the corresponding areas in a digital image displayed on
+a monitor. For both SF and digital imaging, radio-
+graphic contrast is influenced by subject contrast and
+receptor sensitivity. However, in digital imaging, con-
+trast in the displayed image can also be altered by the
+adjustment of display parameters independent of the
+acquisition parameters. Subject contrast is propor-
+tional to the relative difference in x-ray exposure on
+the exit side of the patient and is the result of the
+attenuating properties of the tissues under study. At-
+tenuation is strongly dependent on the x-ray energy
+spectrum and is determined by the target material,
+kilovoltage, and total beam filtration. Subject contrast
+is further reduced by the presence of scatter. Receptor
+sensitivity is defined as the amount by which the out-
+put (optical density for SF or analog-to-digital unit
+value for CR and DR) changes per unit change in
+exposure to the receptor. In digital detector design,
+sensitivity can, to a certain extent, be selected through
+electronic gain settings, but this must be done with an
+awareness of the range of exposures that must be si-
+multaneously measured, taking into account the de-
+tector response energy dependence. With a properly
+designed image acquisition system, the dynamic range
+should be adequate to measure the entire range of
+intensities from that of the unattenuated beam outside
+the patient to that through the densest, thickest part of
+the anatomy. The signal stored in digital form is di-
+rectly (or logarithmically) proportional to the amount
+of radiation transmitted through the patient. For this
+reason, the stored for-processing image reflects the
+inherent subject contrast very faithfully, provided the
+image receptor is operated in the linear (or log-linear)
+portion of its response curve.
+For CR and DR, image processing (usually proprietary
+to the device’s manufacturer and not under control of the
+radiologist) is used to determine display contrast by es-
+tablishing the relationship between raw pixel values and
+gray-scale levels. This produces the final for-presentation
+image for interpretation either on hard-copy film or soft-
+copy displays. Discussion of image processing, including
+contrast enhancement and spatial frequency processing,
+is presented in the companion paper on image processing
+and display.
+Detective Quantum Efficiency
+The DQE is a useful descriptor of image receptor perfor-
+mance because it takes into account detection efficiency,
+spatial resolution, and noise. The DQE describes the
+relative efficiency in maintaining the signal-to-noise level
+available in the imaging process and is defined as
+SNR2
+out/SNR 2
+in, where SNR 2
+in is the SNR of the expo-
+sure incident on the receptor, numerically equal to the
+input fluence. SNR out is the ratio of the relative magni-
+tudes of the image signal to the noise. Thus, DQE can be
+considered the system’s SNR transfer efficiency. Efficient
+SNR transfer is important because the detection perfor-
+mance of both human and ideal observers improves with
+increasing SNR [18-22].
+The DQE is generally plotted against spatial fre-
+quency, DQE( f ). A perfect system has a DQE( f ) of
+unity at all spatial frequencies. Real systems lose effi-
+ciency at higher spatial frequencies because of decreasing
+spatial resolution and increasing noise sources. DQE( f )
+is determined by quantitative measurements of the mod-
+ulation transfer function, MTF( f ), to determine the
+spatial resolution and the noise power spectrum,
+NPS( f ), to determine the noise characteristics, both as a
+function of spatial frequency, using an accurately known
+Fig 3. Detective quantum efficiencies of screen-film,
+general-purpose computed radiography (GP-CR),
+high-resolution computed radiography (HR-CR), and
+selenium-based digital radiography (DR) systems.
+The detective quantum efficiencies (DQEs) were mea-
+sured using 4 different standardized radiation quality
+beam qualities, with higher radiation quality (RQA)
+number corresponding to higher average beam en-
+ergy [23].
+378 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+input exposure to the detector. The exposure required to
+achieve a given SNR in the image is inversely related to
+the system DQE. Therefore, systems with higher DQE
+require less exposure for a given image quality (SNR)
+than systems with lower DQE. The DQE is important in
+CR and DR because these technologies can offer signifi-
+cantly improved DQE compared with SF systems. How-
+ever, it is important to remember that the DQE is an
+energy-dependent quantity. Figure 3 compares the DQE
+of a general-purpose radiographic SF system with those
+of a general-purpose CR system, a high-resolution CR
+system, and a DR system. Plots are shown for 4 different
+standardized radiation quality x-ray beams, with the
+higher radiation quality number corresponding to higher
+beam energy. Figure 3 demonstrates that the DQEs of
+the CR and DR systems decrease compared with that of
+SF with increasing beam energy. As pointed out by the
+study authors, this suggests that automatically increasing
+the beam energy when switching from SF to digital radi-
+ography may not always be the most appropriate course
+of action [23].
+DOSE CREEP IN DIGITAL RADIOGRAPHY
+AND ITS PREVENTION
+Film-based imaging provides immediate feedback to tech-
+nologists and radiologists concerning the delivery of the
+proper radiation exposure to patients. If the optical densities
+in the film image are too great, the patient received too
+much radiation, whereas reduced optical densities indicated
+a reduced radiation exposure relative to the proper value.
+When digital image receptors replace SF image receptors,
+the brightness and contrast in the displayed image on the
+monitor are independent of the exposure used during acqui-
+sition. Only the noise in the image changes with the expo-
+sure. Radiologists react negatively to digital images with
+excessive noise (low patient exposure) but rarely complain
+about images with reduced noise due to excessive patient
+exposures. Technologists quickly recognize this and gradu-
+ally increase patient doses by adjusting radiographic tech-
+niques upward. This leads to the potential for dose creep in
+CR and DR [6-8]. The medical physicist and/or imaging
+specialist should monitor for dose creep on a consistent,
+ongoing basis, because it is a recurring phenomenon. One
+effective way to eliminate dose creep is to develop validated
+radiographic technique charts for all performed examina-
+tions as a function of patient size. If these factors are entered
+into the anatomic programming of state-of-the-art x-ray
+generator controls, the technologists simply select the radio-
+logic examination and patient size at the beginning of the
+case and are assured of the use of standard radiographic
+technique factors and standard radiation exposure regardless of
+whether the examination is conducted with the image receptor
+on the table top with manual techniques or in the Bucky tray
+using the automatic exposure control (AEC) [24].
+EXPOSURE INDICATORS FOR DIGITAL
+RADIOGRAPHY
+Currently, most CR manufacturers provide exposure indi-
+cators on images displayed on the image reader workstation.
+However, this information may not be transferred over to
+the picture archiving and communication system (PACS)
+or may appear buried in the DICOM information page of
+the patient. Most PACS have the ability to display the ex-
+posure indicator on the image. Check with your PACS
+vendor and insist that this information be displayed on each
+image. Today, the various numerical exposure indicators
+used by different CR manufacturers are not easily compara-
+ble. To compound the problem further, some DR manu-
+facturers do not provide an exposure indicator on their pro-
+cessed images, or the information is not transferred to the
+PACS and is not recoverable.
+The American Association of Physicists in Medicine
+formed Task Group 116 to address the lack of a uniform
+exposure indicator on digital radiography images. Their re-
+port, “Recommended Exposure Indicator for Digital Radi-
+ography,” will propose standardized radiation exposure
+conditions from which a relative exposure indicator can be
+defined. Because the major manufacturers of digital radio-
+graphic image receptors participated in the task group, this
+standardized exposure indicator should migrate into their
+future products. See exposure value estimate in the glossary in
+the companion paper on image processing and display,
+which summarizes several of the exposure indices currently
+used by different manufacturers.
+PEDIATRIC IMAGING ISSUES
+As with all pediatric imaging examinations involving ion-
+izing radiation, CR and DR should be performed using
+the lowest possible radiation exposure to the patient (as
+low as reasonably achievable [ALARA]), because pediat-
+ric patients are believed to be up to 10 times more sensi-
+tive to ionizing radiation than adults [25]. This suggests
+that the exposure delivered to the digital image receptor
+should be approximately 0.4 to 0.8 mR for chest and
+abdominal examinations [26]. However, it should be
+noted that adopting a policy of reduced exposure levels to
+the image receptor to achieve ALARA in pediatric imag-
+ing increases the possibility of unacceptably high quan-
+tum noise and thus reduces the margin for error in the
+selection of the parameters that affect the beam quality.
+Also, the achievable reduction in exposure at the plate is
+dependent on how well the digital system is optimized
+for pediatric imaging and on the nature of the particular
+disease being diagnosed [27].
+Commitment and effort on the part of staff members
+is required to achieve ALARA in pediatric imaging. First,
+the multiple x-ray machines of a given type in a depart-
+ment require validation, calibration, and matching to
+Williams et al/Image Acquisition 379
+
+ensure the same exposure for similar radiographic tech-
+nique parameters. The actual exposure required to pro-
+duce clinically acceptable images for a given digital recep-
+tor is a function of the digital receptor’s DQE. The goal
+is to produce similar image quality in all images regard-
+less of the device chosen and regardless of the size of the
+pediatric patient. Second, all CR readers or DR image
+receptors should be adjusted to provide a uniform re-
+sponse to the recorded x-ray image pattern in space.
+Third, all monitors on all diagnostic display workstations
+should be tested and calibrated to provide a uniform
+appearance of displayed images. These topics are ad-
+dressed in more detail elsewhere [28].
+Pediatric patients provide unique challenges when im-
+aged with digital radiography. Uncooperative pediatric
+patients may require sedation or anesthesia. The range in
+size from the neonate to the young adult patient requires
+a wide range in radiographic technique factors and a
+digital image receptor that properly processes an x-ray
+pattern in space that may or may not cover the entire
+image receptor. The decision to use an antiscatter grid
+must be carefully considered as a function of patient size.
+Standard positioning aids used to immobilize pediatric
+patients may generate unacceptable artifacts when used
+with digital image receptors. Because the x-ray pattern
+from a pediatric chest compared with an adult chest, for
+example, has a different dynamic range and other char-
+acteristics [24], display parameters used by the digital
+acquisition device to properly display the digital image
+may need to be unique as a function of patient size.
+Display parameters require further alteration if gonadal
+shielding or orthopedic implants appear in the displayed
+image. Finally, because scoliosis examinations are com-
+mon in children, the digital image receptor must provide
+an efficient method to generate images up to 36 inches in
+length, preferably without doubly exposing some sec-
+tions of the patient’s anatomy.
+PROPER EXPOSURE FACTORS FOR
+STANDARD EXAMINATIONS
+Exposure (technique) charts are part of the standard of
+care expected by the Joint Commission on Accreditation
+of Healthcare Organizations and are required in many
+states. For example, in Ohio, exposure charts are required
+and must include specification of the body part, thick-
+ness, and image receptor components to be used for the
+procedure. Internationally, most countries require regu-
+lar use of exposure charts. It is necessary to check your
+county, state, and local regulations for any specific re-
+quirements. You may also be required to compute esti-
+mates for entrance skin exposures for these charts.
+Exposure charts are an essential quality assurance compo-
+nent of any diagnostic x-ray imaging department. These
+exposure guides are especially important in CR and DR, in
+which the wide exposure latitude makes it possible to obtain
+clinical images that are severely underexposed, resulting in
+noisy images, or grossly overexposed, resulting in possible
+data saturation as well as high patient doses. Improper ex-
+posures in digital radiography are more likely to go unno-
+ticed because image processing can correct these deficiencies
+to a much greater degree than SF systems because of the
+wide latitude of the image receptor. Exposure charts are
+critical in the portable x-ray environment with CR, because
+manual technique factors are normally required. An under-
+exposed radiograph will have unacceptable noise, while an
+overexposed radiograph may appear to be of exceptional
+quality at the expense of patient dose.
+The first challenge is to understand what constitutes a
+properly exposed radiograph [29-31]. In SF systems, the
+limited dynamic range of the film determines the exposure
+latitude. In the digital world, wider exposure latitude can be
+used to take into account the differing energy responses of
+the systems and the variability introduced in the dose esti-
+mation scheme. Appendix A provides a suggested range of
+exposures to facilitate identifying whether a proper radio-
+graph has been obtained. The log of median exposure, sen-
+sitivity number, exposure index, and sensitivity value are
+representative exposure indicators used by several CR ven-
+dors. The detector exposure column lists an approximate
+range of corresponding incident exposure values to the CR
+imaging plate. Note that repeating overexposures is not rec-
+ommended unless information has been lost. At the low
+dose end of the scale, it is important for the radiologist and
+technologist to review underexposed radiographs to develop
+a comfort level for which radiographs need to be repeated. It
+is useful to provide some guidance to the technologist with
+respect to how to correct an improperly exposed radiograph
+(see Appendix B). Exposure charts must be tailored for each
+digital radiography x-ray system and detector combination
+[32]. There is considerable variability in image receptor re-
+sponse because of varying scatter sensitivity, the use of grids
+with different grid ratios, collimation, beam filtration, the
+choice of kilovoltage, source to image distance, and image
+receptor size. Many CR and DR systems also permit the
+choice of several exposure (speed) classes. Technique factors
+for each clinically used exposure class should be constructed.
+In addition, exposure charts should be designed to function
+over the wide range of adult patient sizes seen in our clinics
+today and over the even wider range of sizes found in pedi-
+atric radiography.
+Given a table of body-part thicknesses with suggested
+technique factors, one can derive, using a spreadsheet pro-
+gram, a full table of values using knowledge of the effect of
+thickness and kVp on the penetration of the beam. There
+are also several commercial programs that can be tailored to
+digital radiography. Typically, the entire exposure chart is
+calibrated to a single set of exposures based on a common
+body part, such as the abdomen. A water tank or anthropo-
+380 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+morphic phantom can be used to develop appropriate tech-
+niques for the abdominal radiograph. Water works better
+than acrylic or aluminum because the scatter characteristics
+are more comparable with the clinical situation. As dis-
+cussed previously, scatter characteristics can be quite differ-
+ent for digital radiography than for SF. It is also necessary to
+measure Bucky factors for the undertable and wall Bucky
+assemblies as well as for any snap-on grids (also known as
+grid caps, portable grids) that may be used with the x-ray
+
+machine. Once exposure factors have been determined that
+result in an appropriate radiograph for the abdomen with
+the various image receptors, all other values for mAs are
+interpolated using corrections for distance, Bucky factors,
+exposure class, patient thickness, and machine output. The
+exposure chart is then cleaned up by rounding values of mAs
+to match available mAs stations on the machine. An exam-
+ple of a technique chart developed for CR is shown in
+Appendix C.
+Similar exposure charts should be constructed for the use
+of portable x-ray equipment. The x-ray output of a portable
+radiography unit is generally substantially lower than that of
+a 3-phase or high-frequency stationary x-ray machine. This
+reduced output capability results in increased exposure
+times compared with conventional radiography. As a result,
+patient motion is a common image degradation factor. This
+factor, coupled with the difficulty in positioning grids cor-
+rectly in a portable setting, results in frequent exposures
+being taken without the use of a grid, also degrading overall
+image quality. Manual techniques are used because photo-
+timers are usually not available in the portable setting. An
+example of an exposure chart suitable for portable radiogra-
+phy in an emergency department trauma setting is shown in
+Appendix D.
+Another issue to consider, particularly for portable
+radiography, is achieving reproducible image quality for
+repeated studies such as portable chest images that are
+used for radiographic detection and evidence of incre-
+mental changes. Important for the radiologist is consis-
+tent acquisition techniques by the technologist, includ-
+ing kVp, mAs, geometry (source to image distance,
+patient positioning), the orientation of imaging receptor
+cassette, the use of a grid, technologist positioning mark-
+ers, and the consistent use of image-processing parame-
+ters that are optimized for the specific study. Acquisition
+protocols and technique charts with minimal parameters
+and variables (eg, using crosswise image acquisition for all
+adult chests with decubitus grids, using a fixed source-to-
+image receptor distance (SID) of 127 cm [50 in], 110
+kVp, and adjusting only mAs as a function of estimated
+patient girth) are key to establishing the desired repro-
+ducibility of image presentation (orientation, magnifica-
+tion, image enhancement) on the radiologist display
+workstation. An example of an exposure chart specifying
+these requirements for adult chest portable imaging and
+other adult examinations is shown in Appendix E.
+AUTOMATIC EXPOSURE CONTROL
+In CR, phototimers are frequently used with wall and un-
+dertable Buckys in emergency, inpatient, and outpatient
+radiology department settings. These AEC units are de-
+signed to turn off the x-ray generator when an appropriate
+exposure level has been received at the image receptor. Au-
+tomatic exposure controls work well if properly calibrated
+and properly positioned over clinically important areas of
+the patient. They fail if placed incorrectly or if pathology in
+the AEC region of interest causes a significantly different
+density to be present than expected. Automatic exposure
+control devices are energy dependent and may require cali-
+bration at multiple kVps to function properly over a wide
+range of patient sizes. Some x-ray generators have prepro-
+grammed energy response curves, and these units may not
+work as well with CR as with conventional SF receptors
+because they were probably manufactured to be matched to
+typical SF energy and scatter characteristics. In this situa-
+tion, calibrate the wall Bucky for chest work and the under-
+table Bucky for abdominal procedures, or whatever is the
+most common procedure performed on that image receptor
+at your institution.
+In DR, the AEC is normally built into the image
+receptor assembly, and it works in a manner similar to the
+phototimers used in SF radiography. However, the num-
+ber or area of the photosensitive elements may differ
+from the configurations normally used with conven-
+tional SF systems depending on vendor implementation.
+Most x-ray generator phototimers are designed to be
+calibrated for multiple image receptor speeds, usually
+designated by names such as regular, chest, and detail
+cassettes. AECs can be calibrated to multiple exposure
+classes such as 400, 200, and 100 to cover a variety of
+different CR and DR receptors or specific clinical situa-
+tions such as pediatrics [33,34]. Some CR vendors per-
+mit a variety of exposure classes in their software, so the
+exposure class on the x-ray console must be manually
+selected to match the exposure class appropriate for that
+procedure. This can lead to errors if technologists are not
+vigilant in matching the x-ray generator exposure class to
+the CR reader exposure class. With some implementa-
+tions of CR, the AEC unit must be calibrated on the basis
+of cassette size instead of exposure class. Check with the
+vendor so that you know which method is most appro-
+priate for you. In DR, the exposure class may also be user
+selectable, and vigilance is necessary to ensure that tech-
+nologists are using the appropriate exposure classes, es-
+pecially for pediatrics. It is usually set automatically in
+digital radiography systems with an integral x-ray tube
+assembly.
+Williams et al/Image Acquisition 381
+
+SUMMARY: OBSERVATIONS AND
+CHALLENGES
+The rapid movement in radiography away from SF tech-
+nology to both CR and DR has created both improved
+efficiency and more options in radiology. Yet at the same
+time, the increased complexity and lack of transfer of
+skills learned in the SF era by both radiologists and tech-
+nologists has produced a gap in the ability to perform
+quality assurance and quality improvement. It is imper-
+ative to understand these digital radiography systems to
+provide quality radiology services and to protect patients
+from unnecessary radiation dose.
+ACKNOWLEDGMENTS
+This paper was written collaboratively by the ACR, the
+American Association of Physicists in Medicine, and the
+Society for Imaging Informatics in Medicine according
+to the process described in the ACR’s Practice Guidelines
+and Technical Standards book.
+REFERENCES
+1. Seibert JA. Film digitizers and laser printers. In: Seibert JA, Filipow LJ,
+Andriole KP, eds. Practical digital imaging and PACS (American Associ-
+ation of Physicists in Medicine Medical Physics Monograph No. 25).
+Madison, WI: Medical Physics Publishing; 1999:107-33.
+2. American Association of Physicists in Medicine. Report of AAPM Task
+Group 10, Report #93. Acceptance testing and quality control of photo-
+stimulable storage phosphor imaging systems: College Park, MD: Amer-
+ican Association of Physicists in Medicine; 2006. Available from http://
+aapm.org/pubs/reports/RPT_93.pdf.
+3. Samei E, Saunders RS, Lo JY, et al. Fundamental imaging characteristics of a
+slot-scan digital chest radiographic system. Med Phys 2004;31:2687-98.
+4. Pascoal A, Lawinski CP, Mackenzie A, Tabakov S, Lewis CA. Chest
+radiography: a comparison of image quality and effective dose using four
+digital systems. Radiat Prot Dosim 2005;114:273-7.
+5. Beningfield S, Potgieter H, Nicol A, et al. Report on a new type of trauma
+fullbody digital x-ray machine. Emer Radiol 2003;10:23-9.
+6. Seibert JA, Shelton DK, Moore EH. Computed radiography x-ray expo-
+sure trends. Acad Radiol 1996;3:331-8.
+7. Freedman M, Pe E, Mun SK, Lo SCB, Nelson M. The potential for
+unnecessary patient exposure from the use of storage phosphor imaging
+systems. Proc SPIE 1993;1897:472-9.
+8. Gur D, Fuhman CR, Feist JH, Slifko R, Peace B. Natural migration to a
+higher dose in CR imaging. In: Proceedings of the Eighth European
+Congress of Radiology, Vienna, Austria, September 12-17, 1993:154.
+9. Zhao W, Rowlands JA. X-ray imaging using amorphous selenium: feasi-
+bility of a flat panel self-scanned detector for digital radiology. Med Phys
+1995;22:1595-604.
+10. Johns HE, Cunningham JR. The physics of radiology. 4th ed. Springfield,
+IL: Charles C. Thomas; 1983.
+11. El-Mohri Y, Antonuk LE, Yorkston J, et al. Relative dosimetry using active
+matrix flat-panel imager (AMFPI) technology. Med Phys 1999;26:1530-41.
+12. Seibert JA, Boone JM III, Cooper VN, Lindfors KK. Cassette-based
+digital mammography. Technol Cancer Res Treat 2004;3:413-27.
+13. Schaetzing R. Computed radiography technology. In: Balter S, Shope TB,
+eds. Radiological Society of North American 81st Scientific Assembly and
+Annual Meeting. Oak Brook, IL: Radiological Society of North America;
+1995:7-22.
+14. Blackman RB, Tukey JW. The measurement of power spectra. New York:
+Dover; 1958.
+15. Rabbani M, Shaw R, Van Metter R. Detective quantum efficiency of
+imaging systems with amplifying and scattering mechanisms. J Opt Soc
+Am A 1987;4:895-901.
+16. Cunningham IA. Applied linear-systems theory. In: Beutel J, Kundel HL,
+Van Metter RL, eds. Handbook of medical imaging. Bellingham, WA:
+SPIE Press; 2000:79-159.
+17. Seibert JA. Digital image processing basics. In: Balter S, Shope TB, eds.
+Radiological Society of North American 81st Scientific Assembly and
+Annual Meeting. Oak Brook, IL: Radiological Society of North America;
+1995:121-42.
+18. International Commission on Radiation Units and Measurements. Med-
+ical imaging—the assessment of image quality. Bethesda, MD: Interna-
+tional Commission on Radiation Units and Measurements; 1996.
+19. Myers KJ. Ideal observer models of visual signal detection. In: Beutel J,
+Kundel HL, Van Metter RL, eds. Handbook of medical imaging. Belling-
+ham, WA: SPIE Press; 2000:559-92.
+20. Barrett HH, Yao J, Rolland JP, Myers KJ. Model observers for assessment
+of image quality. Proc Natl Acad Sci U S A 1993;90:9758-9765.
+21. Rose A. Vision human and electronic. New York, NY: Plenum; 1972.
+22. Gagne RM, Myers KJ, Quinn PW. Effect of shift invariance and station-
+arity assumptions on simple detection tasks: spatial and spatial frequency
+domains. Proc SPIE 2001;4320:373-80.
+23. Monnin P, Gutierrez D, Bulling S, Lepori D, Valley JF, Verdun FR.
+Performance comparison of an active matrix flat panel imager, computed
+radiography system, and a screen-film system at four standard radiation
+qualities. Med Phys 2005;32:343-50.
+24. Strauss KJ, Poznauskis L. Practical applications of CR in pediatric imag-
+ing. App Radiol 2005;June(suppl):S12-8.
+25. Hall EJ. Lessons we have learned from our children: cancer risks from
+diagnostic radiology. Pediatr Radiol 2002;32:700-6.
+26. Hufton AP, Doyle SM, Carty HML. Digital radiography in paediatrics:
+radiation dose considerations and magnitude of possible dose reduction.
+Br J Radiol 1998;71:186-99.
+27. Huda W, Slone RM, Belden CJ, Williams JL, Cumming WA, Palmer
+CK. Mottle on computed radiographs of the chest in pediatric patients.
+Radiology 1996;199:249-52.
+28. The ALARA concept in pediatric CT and DR; dose reduction in pediatric
+radiographic exams—a white paper conference executive summary. Pedi-
+atr Radiol 2004;3(suppl):S162-4.
+29. Merrill’s atlas of radiographic positions and radiologic procedures, vols
+I-III. 10th ed. St. Louis, MO: Mosby; 2003.
+30. Bontrager KL. Textbook of radiographic positioning and related anat-
+omy. 5th ed. St. Louis, MO: Mosby; 2001.
+31. Carlton RR, Adler AM. Principles of radiographic imaging: an art and a
+science. 3rd ed. Stanford, CT: Thomson Learning; 2001.
+32. Carroll OB. Fuch’s radiographic exposure and quality control. 7th ed.
+Springfield, IL: Charles C. Thomas; 2003.
+33. Christodoulou EG, Goodsitt MM, Chan HP. Phototimer setup for CR
+imaging. Med Phys 2000;27:2653-8.
+34. Goldman LW. Speed values, AEC performance evaluation, and quality
+control with digital receptors. In: Goldman LW, Yester MV, eds. Speci-
+fications, performance evaluations, and quality assurance of radiographic
+and fluoroscopic systems in the digital era. Madison, WI: Medical Physics
+Publishing; 2004:272-97.
+382 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+Appendix A
+On the basis of the vendor’s recommendation for what consti-
+tutes an appropriately exposed radiograph, one can use Table
+A1 or a similar table to provide guidance to the technologist
+regarding proper exposure levels. Several CR exposure indices
+are illustrated in this example.
+With too low an incident exposure, the image is domi-
+nated by noise, the corresponding SNR is very poor, and the
+ability to detect subtle differences in x-ray attenuation is
+compromised. With too high an incident exposure, highly
+penetrated areas in the image may suffer from saturation
+effects and the loss of contrast that cannot be compensated
+for with image processing. These recommendations depend
+on several issues, including the type of CR reader (newer
+systems, such as the dual-light collection systems, have a
+higher DQE and will consequently have a lower exposure
+recommendation for all indications), the type of image plate
+(later-generation image plates may have better exposure
+performance), the quality and calibration settings of the CR
+reader and image plate, and the tolerance of the radiologist
+to image noise, among other considerations. Continuous
+analysis and feedback are required to get the optimal range
+of exposures and indications for a given examination at a
+given site. Similar guidance can be provided for digital
+radiography for those systems that provide an indication of
+the exposure used to obtain a radiograph. Use caution in
+applying this chart to any specific CR implementation since
+x-ray generator output characteristics and CR plate energy
+sensitivities vary widely.
+Appendix B
+Table B1 is a conversion factor table that provides a rapid
+means for the technologist to understand how to correct for
+an improperly exposed radiograph. This example is for one
+CR vendor implementation (Agfa), using log of median
+exposure as the exposure indicator. Similar tables can be
+constructed using the information in Table A1 as a guide-
+line for other vendor exposure settings. Technologists are
+very familiar with the change required to obtain an appro-
+priate SF radiograph, and the same concept is used here to
+suggest improvements in technique factors with CR, as well
+as in deciding when to repeat a study. Use caution in apply-
+ing this chart to any specific CR implementation since x-ray
+generator output characteristics and CR plate energy sensi-
+tivities vary widely.
+Appendix C
+Table C1 is an example of an exposure chart for CR for a
+3-phase, 12-pulse generator. Distances are in inches. When
+constructing a clinical exposure chart, the mAs values
+should be adjusted to match the nearest mAs station avail-
+able on the generator.
+Appendix D
+Table D1 is a typical mobile radiography exposure chart for
+CR used in an emergency department trauma setting. This
+example includes the use of 3 exposure classes, depending
+on the clinical situation. Note the use of lower kVps and
+longer exposure times and the minimal use of grids in this
+portable trauma setting compared with the previous fixed
+3-phase generator exposure chart (Table C1). Use caution
+in applying this chart to any specific CR implementation
+since x-ray generator output characteristics and CR plate
+energy sensitivities vary widely.
+Appendix E
+Table E1 is an example of an exposure chart developed for
+bedside CR with the standardization of parameters. In this
+example, all AP chest examinations are performed crosswise
+(landscape orientation). All adult chest procedures are per-
+formed using a decubitus grid. If their conditions allow,
+patients are inclined to get as close to upright as is possible.
+Use caution in applying this chart to any specific CR im-
+plementation since x-ray generator output characteristics
+and CR plate energy sensitivities vary widely.
+Table A1. Suggested guidelines for QC action based on estimated incident exposure
+(Conventional CR system for an “equivalent” speed class  200)
+Fuji
+(S Number)
+Agfa
+(lgM Value)
+Kodak
+(Exposure Index)
+Detector Exposure
+(mR) Indication
+1,000 1.45 1,250 0.2 Underexposed: repeat if necessary
+1000-601 1.45-1.74 1,250-1,549 0.2-0.3 Underexposed: QC exception
+600-301 1.75-2.04 1,550-1,849 0.3-0.7 Underexposed: QC review
+300-150 2.05-2.35 1,850-2,150 0.7-1.3 Acceptable range
+149-75 2.36-2.65 2,151-2,450 1.3-2.7 Overexposed: QC review
+74-50 2.66-2.95 2,451-2,750 2.7-4.0 Overexposed: QC exception
+50 2.95 2,750 4.0 Overexposed: QC repeat if necessary
+Note: lgM  log of median exposure; QC  quality control; S number  sensitivity number.
+Williams et al/Image Acquisition 383
+
+Table B1. Required change in milliampere-seconds (mAs) to achieve a target log of median exposure (IgM) value of 2.20
+Underexposed: Increase mAs Proper Clinical Techniques Overexposed: Reduce mAs
+LgM
+Value
+Difference
+From Target
+LgM
+Required mAs
+Scale Factor
+LgM
+Value
+Difference
+From Target
+LgM
+Required mAs
+Scale Factor
+LgM
+Value
+Difference
+From Target
+LgM
+Required mAs
+Scale Factor
+Underexposed,
+repeat
+1.40 0.80 6.31 2.00 0.20 1.58 2.42 0.22 0.60 Overexposed
+1.42 0.78 0.03 2.02 0.18 1.51 2.44 0.24 0.58
+1.44 0.76 5.75 2.04 0.16 1.45 2.46 0.26 0.55
+1.46 0.74 5.50 2.06 0.14 1.38 2.48 0.28 0.52
+1.48 0.72 5.25 2.08 0.12 1.32 2.50 0.30 0.50
+1.50 0.70 5.01 2.10 0.10 1.26 2.52 0.32 0.48
+1.52 0.68 4.79 2.12 0.08 1.20 2.54 0.34 0.46
+1.54 0.66 4.57 2.14 0.06 1.15 2.56 0.36 0.44
+1.56 0.64 4.37 2.16 0.04 1.10 2.58 0.38 0.42
+1.58 0.62 4.17 2.18 0.02 1.05 2.60 0.40 0.40
+1.60 0.60 3.98  2.20 0.00 1.00  2.62 0.42 0.38 Overexposed,
+check for
+burnout,
+repeat if
+necessary
+1.62 0.58 3.80 2.22 0.02 0.95 2.64 0.44 0.36
+1.64 0.56 3.63 2.24 0.04 0.91 2.66 0.46 0.35
+1.66 0.54 3.47 2.26 0.06 0.87 2.68 0.48 0.33
+1.68 0.52 3.31 2.28 0.08 0.83 2.70 0.50 0.32
+1.70 0.50 3.16 2.30 0.10 0.79 2.72 0.52 0.30
+1.72 0.48 3.02 2.32 0.12 0.76 2.74 0.54 0.29
+1.74 0.46 2.88 2.34 0.14 0.72 2.76 0.56 0.28
+
+1.76 0.44 2.75 2.36 0.16 0.69 2.78 0.58 0.26
+1.78 0.42 2.63 2.38 0.18 0.68 2.80 0.60 0.25
+Underexposed,
+review with
+radiologist
+1.80 0.40 2.51 2.40 0.20 0.63 2.82 0.62 0.24
+1.82 0.38 2.40 2.84 0.64 0.23
+1.84 0.36 2.29 2.86 0.68 0.22
+1.86 0.34 2.19 2.88 0.68 0.21
+1.88 0.32 2.09 2.90 0.70 0.20
+1.90 0.30 2.00 2.92 0.72 0.19
+1.92 0.28 1.91 2.94 0.74 0.18
+1.94 0.26 1.82 2.96 0.76 0.17
+1.96 0.24 1.74 2.98 0.78 0.17
+1.98 0.22 1.68 3.00 0.80 0.15
+Example 1: LgM value was 1.80. To get a proper exposure of 2.2, increase the mAs by a factor of 2.5. If the mAs was 20, change it to 2.5  20  50 mAs. You could also increase the
+kilovolt peak (kVp). Remember, a 15% increase in kVp doubles the tube output.
+Example 2: LgM value was 3.02. To get a proper exposure of 2.2, decrease the mAs by a factor of 0.16. If the mAs was 20, change it to 0.16  20  32 mAs. You could also decrease
+the kVp to achieve the same effect.
+384
+
+Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+Table C1. Computed radiography exposure chart
+Procedure View Distance Receptor
+Speed
+class kVp
+Total mAs for Different Body Part Thicknesses
+Average
+cm 6 cm 4 cm 2 cm Average 2 cm 4 cm 6 cm 8 cm
+Chest PA/AP 72 W 200 106 72 1.25 1.67 2.50 3.33 5.00 6.67 10.00 13.33
+LAT 72 W 200 116 30 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+AP 72 T 200 80 22 1.25 1.67 2.50 3.33 5.00 6.67 10.00 13.33
+LAT 72 T 200 90 30 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Supine chest AP 40 T 200 80 22 0.90 1.20 1.80 2.40 3.60 4.80 7.20 9.60
+Ribs/sternum AP Above Diaph 72 W 400 60 22 10.00 13.33 20.00 26.67 40.00 53.33 80.00 106.67
+OBL Above Diaph 72 W 400 64 24 15.00 20.00 30.00 40.00 60.00 80.00 120.00 160.00
+AP Below Diaph 72 W 400 76 22 30.00 40.00 60.00 80.00 120.00 160.00 240.00 320.00
+Abdomen AP/PA 40 B 400 80 22 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+30° OBL 40 B 400 60 24 11.00 14.67 22.00 29.33 44.00 58.67 88.00 117.33
+Pelvis/hip AP 40 B 400 80 22 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+LAT 40 B 400 80 22 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+Sacrum AP 40 B 400 76 20 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+LAT 40 B 400 80 28 15.00 20.00 30.00 40.00 60.00 80.00 120.00 160.00
+Lumbar spine AP 40 B 400 80 22 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+45° OBL 40 B 400 80 26 15.00 20.00 30.00 40.00 60.00 80.00 120.00 160.00
+LAT 40 B 400 80 30 30.00 40.00 60.00 80.00 120.00 160.00 240.00 320.00
+L5/S1 40 B 400 90 30 30.00 40.00 60.00 80.00 120.00 180.00 240.00 320.00
+Thoracic spine AP 40 B 400 76 22 6.50 8.87 13.00 17.33 26.00 34.67 52.00 69.33
+LAT 40 B 400 76 30 15.00 20.00 30.00 40.00 60.00 80.00 120.00 160.00
+Cervical spine AP/Odon 40 B 400 76 13 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+AP/Odon 72 W 400 76 13 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+OBL/LAT 72 W 400 76 13 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+OBL/LAT 72 T 400 76 13 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Skull PA/Caldwell 40 B 400 80 19 5.00 6.67 10.00 13.33 20.00 26.67 40.00 53.33
+LAT 40 B 400 76 15 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Townes 40 B 400 80 22 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+Sinuses/facial
+bones
+PA/Caldwell 40 B 400 76 19 5.00 6.67 10.00 13.33 20.00 26.67 40.00 53.33
+Waters 40 B 400 80 20 5.00 6.67 10.00 13.33 20.00 26.67 40.00 53.33
+LAT 40 B 400 76 15 1.88 2.50 3.75 5.00 7.50 10.00 15.00 20.00
+Hand PA 40 T 100 54 4 1.10 1.47 2.20 2.93 4.40 5.87 8.80 11.73
+OBL 40 T 100 54 6 1.25 1.67 2.50 3.33 5.00 6.67 10.00 13.33
+Fanned LAT 40 T 100 54 8 2.25 3.00 4.50 6.00 8.00 12.00 16.00 24.00
+Wrist PA 40 T 100 60 5 1.10 1.47 2.20 2.93 4.40 5.67 6.80 11.73
+OBL 40 T 100 60 6 1.85 2.20 3.30 4.40 6.60 8.80 13.20 17.60
+LAT 40 T 100 60 7 2.25 3.00 4.50 6.00 8.00 12.00 18.00 24.00
+Forearm AP 40 T 100 64 7 1.10 1.47 2.20 2.93 4.40 5.87 8.80 11.73
+LAT 40 T 100 64 8 2.25 3.00 4.50 6.00 8.00 12.00 18.00 24.00
+AP  anterior-posterior; Diaph  diaphragm; L5/S1  fifth lumbar vertebrae/first sacra vertebrae; LAT  Lateral; OBL  oblique; Ondo  ondotoid; PA  posterior-anterior.
+Williams et al/Image Acquisition
+
+385
+
+Table C1. Continued
+Procedure View Distance Receptor
+Speed
+class kVp
+Total mAs for Different Body Part Thicknesses
+Average
+cm 6 cm 4 cm 2 cm Average 2 cm 4 cm 6 cm 8 cm
+Elbow AP 40 T 100 64 7 1.50 2.00 3.00 4.00 8.00 8.00 12.00 16.00
+OBL 40 T 100 64 8 2.00 2.67 4.00 5.33 8.00 10.87 16.00 21.33
+LAT 40 T 100 64 8 3.00 4.00 6.00 8.00 12.00 16.00 24.00 32.00
+Humerus AP 40 T 100 72 8 1.10 1.47 2.20 2.93 4.40 5.67 8.80 11.73
+LAT 40 T 100 72 9 1.80 2.40 3.60 4.80 7.20 9.60 14.40 19.20
+Toes All 40 T 100 60 2 1.10 1.47 2.20 2.93 4.40 5.67 8.80 11.73
+Foot AP 40 T 100 64 7 1.25 1.67 2.60 3.33 5.00 6.67 10.00 13.33
+OBL 40 T 100 64 8 1.65 2.20 3.30 4.40 6.60 8.80 13.20 17.50
+LAT 40 T 100 64 8 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Calcanus PA 40 T 100 68 9 3.50 4.67 7.00 9.33 14.00 18.67 26.00 37.33
+LAT 40 T 100 68 8 3.50 4.67 7.00 9.33 14.00 18.67 28.00 37.33
+Ankle AP/OBL 40 T 100 64 9 1.80 2.40 3.60 4.80 7.20 9.60 14.40 19.20
+LAT 40 T 100 64 8 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Tibia/fibula AP 40 T 100 68 11 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+LAT 40 T 100 68 10 2.50 3.33 5.00 5.57 10.00 13.33 20.00 26.67
+Knee AP 40 T 100 70 12 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+LAT 40 T 100 70 11 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+AP/OBL 40 B 100 70 12 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+LAT 40 B 100 70 11 2.50 3.33 5.00 6.67 10.00 13.33 20.00 26.67
+Femur AP/LAT 40 B 400 76 16 6.00 8.00 12.00 16.00 24.00 32.00 48.00 64.00
+Shoulder AP/Transax 40 B 400 76 18 3.00 4.00 6.00 8.00 12.00 16.00 24.00 32.00
+Transthoracic 40 B 400 90 40 7.50 10.00 15.00 20.00 30.00 40.00 60.00 80.00
+Clavicle AP/PA 40 B 400 74 16 3.00 4.00 6.00 8.00 12.00 16.00 24.00 32.00
+Scapula AP 40 B 400 74 18 3.00 4.00 6.00 8.00 12.00 16.00 24.00 32.00
+LAT 40 B 400 74 24 5.00 6.67 10.00 13.33 20.00 26.67 40.00 53.33
+Note: AP  anterior-posterior; B  under table Bucky with grid; LAT  lateral; mAs  milliampere-seconds; OBL  oblique; PA  posterior-anterior; T  tabletop nongrid; Transax 
+trans-axial; W  wall Bucky with grid.
+386
+
+Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007
+
+Table D1. Mobile computed radiography exposure chart for trauma radiology
+Body Part Position Patient Size kVp mAs Distance Speed Class Grid
+Chest PA/AP
+Upright 72
+Small 80 5 72 200 No
+Average 85 10 72 200 No
+Large 90 16 72 200 No
+PA/AP Small 70 5 40 200 No
+Average 75 8 40 200 No
+Large 85 10 40 200 No
+Lateral-72 Small 85 10 72 200 No
+Average 90 20 72 200 No
+Large 95 32 72 200 No
+Lateral Small 75 10 40 200 No
+Average 80 16 40 200 No
+Large 90 20 40 200 No
+AP Newborn 65 0.5 40 400 No
+Lateral Newborn 70 1 40 400 No
+Abdomen AP-Grid Average 70 48 40 400 Yes
+Ankle AP Average 55 12.55 40 100 No
+Lateral Average 55 10 40 100 No
+Cervical spine AP Average 60 7.5 40 400 No
+Lateral-72 Average 65 15 72 400 No
+Elbow AP Average 55 12.5 40 100 No
+Lateral Average 55 10 40 100 No
+Femur AP/Lateral Average 55 10 40 400 No
+Foot AP Average 52 8 40 100 No
+Hand/Wrist PA Average 50 5 40 100 No
+Lateral Average 55 8 40 100 No
+Humerus AP/Lateral Average 55 2.5 40 100 No
+Knee AP Average 55 25 40 100 No
+Lateral Average 55 16 40 100 No
+Lumbar spine AP-Grid Average 75 48 40 400 Yes
+Lateral-Grid Average 85 150 40 400 Yes
+Pelvis/Hip AP Average 55 24 40 400 No
+AP-Grid Average 70 50 40 400 Yes
+Lateral-Grid Average 80 75 40 400 Yes
+Shoulder/Clavicle AP Average 55 5 40 400 No
+Skull AP Average 60 16 40 400 No
+Lateral Average 55 10 40 400 No
+AP-Grid Average 75 20 40 400 Yes
+Lateral-Grid Average 65 10 40 400 Yes
+Thoracic spine AP Average 65 16 40 400 No
+Note: AP  anterior-posterior; kVp  kilovolt peak; mAs  milliampere-seconds.
+Williams et al/Image Acquisition 387
+
+Table E1. Exposure chart: example of computed radiography exposure chart using grids and
+standardized parameters
+Anatomic Region Examination
+Measurement
+(cm) SID Grid kVp
+Small
+(mAs)
+Medium
+(mAs)
+Large
+(mAs)
+Chesta Chest portable AP 20-30 50 Yesa 110 6 10 12
+Skull Skull PA/AP 18-21 40 Yes 80 12 20 30
+Skull lateral 14-17 40 Yes 80 6 12 18
+Spine Cervical AP 11-14 40 Yes 80 6 12 18
+Thoracic AP 20-24 40 Yes 80 18 26 40
+Lumbar AP 18-22 40 Yes 80 24 40 64
+Abdomen Abdomen (KUB) 18-22 40 Yes 80 24 40 64
+Pelvis Pelvis AP 19-23 40 Yes 80 24 40 64
+Hip AP 17-21 40 Yes 80 20 35 50
+Cross table lateral hip 25-31 40 Yes 85 30 42 55
+Upper extremities Finger 1.5-4 40 No 60 1 1 2
+Hand AP/OBL 3-5 40 No 60 1 2 4
+Hand lateral 3-5 40 No 60 2 3 4
+Wrist AP/OBL 3-6 40 No 60 1.5 2 3
+Wrist lateral 3-6 40 No 60 1.5 3 4
+Forearm AP 6-8 40 No 60 2 3 4
+Forearm lateral 6-8 40 No 60 2 3 4
+Elbow 6-8 40 No 60 2 3 4
+Humerus 7-10 40 Yes 80 6 10 13
+Shoulder 12-16 40 Yes 80 7 12 15
+Lower extremities Toes 1.5-4 40 No 60 1.5 2.5 4
+Foot AP/OBL 6-8 40 No 60 2 3 5
+Foot lateral 6-8 40 No 60 2.5 4 6
+Ankle AP 8-10 40 No 60 3 5 7
+Ankle lateral 8-10 40 No 60 2 3 6
+Tib/Fib AP 10-12 40 No 60 2 4 6
+Tib/Fib lateral 10-12 40 No 60 2 4 6
+Knee AP/lateral 10-13 40 No 60 6 12 20
+Knee AP/lateral 10-13 40 Yes 60 3 5 8
+Femur AP/lateral 14-17 40 Yes 80 15 25 40
+Note: AP  anterior-posterior; Fib  fibula; KUB  Kidneys, Ureter, Bladder; kVp  kilovolt peak; large  30 cm; mAs 
+milliampere-seconds; medium  25 to 30 cm; OBL  oblique; PA  posterior-anterior; SID  Source to Image receptor Distance;
+small  20 to 25 cm; Tib  tibia.
+a Use short dimension (decubitus) grid, position cassette always cross-wise (landscape).
+388 Journal of the American College of Radiology/ Vol. 4 No. 6 June 2007

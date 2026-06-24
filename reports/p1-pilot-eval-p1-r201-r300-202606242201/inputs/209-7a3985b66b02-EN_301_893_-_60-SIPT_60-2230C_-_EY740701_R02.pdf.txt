@@ -1,0 +1,375 @@
+queueId: ingest-1781569954389-jd3
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/EN_60SIPT-602230C/EN 301 893 - 60-SIPT_60-2230C - EY740701 R02.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/57d4ec77a20f/EN 301 893 - 60-SIPT_60-2230C - EY740701 R02__57d4ec77a20f_combined.txt
+canonicalGroupId: 7a3985b66b02
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 209
+
+SOURCE_TEXT
+Report No.: EY740701 Page : 1 of 15
+Report Version: Rev. 02
+CE DFS Test Report
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-2230C
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Technologies
+Applicant : Laird Technologies
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : EN 301 893 V2.1.1 (2017-05)
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 27, 2017
+Operating Mode : Slave without radar detection
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: EY740701 Page : 2 of 15
+Report Version: Rev. 02
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Support Equipment List .......................................................................................................................... 6
+1.3 Channel Loading/Data Streaming .......................................................................................................... 6
+1.4 Off Channel CAC Feature Implemented ................................................................................................ 6
+1.5 TPC Information ..................................................................................................................................... 6
+1.6 DFS Parameters ..................................................................................................................................... 7
+1.7 Radar Test Signal ................................................................................................................................... 9
+1.8 DFS Technical Requirements Specifications .......................................................................................10
+1.9 Master DFS Threshold Level................................................................................................................10
+1.10 Test Setup ............................................................................................................................................11
+1.11 The Equipment List ..............................................................................................................................11
+1.12 Testing Condition .................................................................................................................................11
+1.13 Test Standards .....................................................................................................................................11
+2 TEST RESULT .....................................................................................................................................12
+2.1 Channel Shutdown ...............................................................................................................................12
+3 PHOTOGRAPHS OF THE TEST CONFIGURATION .........................................................................14
+4 TEST LABORATORY INFORMATION ...............................................................................................15
+
+Report No.: EY740701 Page : 3 of 15
+Report Version: Rev. 02
+Release Record
+Report No. Version Description Issued Date
+EY740701 Rev. 01 Initial issue Jul. 13, 2017
+EY740701 Rev. 02 Revised model name Jul. 24, 2017
+
+Report No.: EY740701 Page : 4 of 15
+Report Version: Rev. 02
+Summary of Test Results
+Ref. Std. Clause Test Items Measured Result
+4.2.6.2.5 Channel shutdown Meet the requirement of limit. Pass
+
+Report No.: EY740701 Page : 5 of 15
+Report Version: Rev. 02
+1 General Description
+1.1 Information
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Technologies
+ST60-SIPT 802.11 ac/a/b/g/n +
+Bluetooth 4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+Frequency Range (GHz) 5.15~5.25, 5.25~5.35, 5.47~5.725
+Wireless Function 11a / HT20 / HT40 / VHT20 / VHT40 / VHT80
+Operating Mode at DFS Band Client without ad hoc and radar detection function
+Firmware / Software Version SD-UAPSTA-8997-U14-MMC-16.68.1.p95-C3X16219_V4-MGPL-src
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+5150~5250 5250~5350 5470~5725
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 3.9 3.9 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 3.5 3.5 3.5
+
+Report No.: EY740701 Page : 6 of 15
+Report Version: Rev. 02
+1.2 Support Equipment List
+Support Equipment List
+No. Equipment Brand Name Model Name Remark
+1 AP (Master) Netgear R6100 --
+2 Notebook DELL LATITUDE-E6430 9ZFB4X1
+3 Notebook DELL LATITUDE-E5420 B6FV9T1
+1.3 Channel Loading/Data Streaming
+Test transmission sequence is from the Master to the Slave.
+Channel Shutdown, Off-Channel CAC Check and In-Service Monitoring with about 30%
+loadingover 100 ms interval.
+No transmissions on channels being checked during a Channel Availability Check or during an
+Off Channel CAC check.
+1.4 Off Channel CAC Feature Implemented
+Off Channel CAC Feature Implemented
+No
+Yes
+If yes, specify the Off Channel CAC Time: Hours
+If the Off Channel CAC Time for the band 5600 MHz to 5650 MHz is different from the Off-Channel
+CAC Time for frequencies outside this band, please specify the Off-Channel CAC Time for the band
+If yes, specify the Off Channel CAC Time:5600 MHz to 5650 MHz: Hours
+Minimum Off-Channel CAC Time
+1.5 TPC Information
+The DFS Related Operating Mode(s) of the Equipment
+Communication Mode IP Based (Load Based) Frame Based
+IEEE Std. 802.11
+Protocol
+Frequency Range
+(MHz) TPC (Transmit Power Control) Passive Scan
+a
+n HT20/40
+ac VHT20/40/80
+5250-5350 Yes Yes
+5470-5725 Yes Yes
+5600-5650 Yes Yes
+
+Report No.: EY740701 Page : 7 of 15
+Report Version: Rev. 02
+1.6 DFS Parameters
+Table D.1: DFS requirement values
+Parameter Value
+Channel Availability Check Time 60 seconds (see note 1)
+Minimum Off-Channel CAC Time 6 minutes (see note 2)
+Maximum Off-Channel CAC Time 4 hours (see note 2)
+Channel Move Time 10 seconds
+Channel Closing Transmission Time 1 second.
+Non-occupancy period Minimum 30 minutes
+NOTE 1: For channels whose nominal bandwidth falls completely or partly within the band 5600 MHz to
+5650 MHz, the Channel Availability Check Time shall be 10 minutes.
+NOTE 2: For channels whose nominal bandwidth falls completely or partly within the band 5600 MHz to
+5650 MHz, the Off-Channel CAC Time shall be within the range 1 hour to 24 hours.
+Table D.2: Interference threshold values
+EIRP Spectral Density (dBm/MHz) Value (see notes 1 and 2)
+10 -62
+Note 1: This is the level at the input of the receiver of an RLAN device with a maximum e.i.r.p. density of 10
+dBm/MHz and assuming a 0 dBi receive antenna. For devices employing different e.i.r.p. spectral
+density and/or a different receive antenna gain G (dBi) the DFS threshold level at the receiver input
+follows the following relationship:
+DFS Detection Threshold (dBm) = -62 + 10 - e.i.r.p. Spectral Density (dBm/MHz)+ G (dBi); however
+the DFS threshold level shall not be less than -64 dBm assuming a 0 dBi receive antenna gain.
+Note 2: Slave devices with a maximum e.i.r.p. of less than 23 dBm do not have to implement radar detection
+unless these devices are used in fixed outdoor point to point or fixed outdoor point to multipoint
+applications
+Table D.3: Parameters of the reference DFS test signal
+Pulse width W [μs] Pulse repetition frequency PRF [pps] Pulses per burst [PPB]
+1 700 18
+
+Report No.: EY740701 Page : 8 of 15
+Report Version: Rev. 02
+Table D.4: Parameters of radar test signals
+Radar test
+signal #
+(note 1 to 3)
+Pulse width
+W [μs]
+Pulse repetition frequency
+PRF (PPS) Number of
+different
+PRFs
+Pulses per
+burst for
+each PRF
+(PPB) (note 5) Min Max Min Max
+1 0.5 5 200 1000 1 10 (note 6)
+2 0.5 15 200 1600 1 15 (note 6)
+3 0.5 15 2300 4000 1 25
+4 20 30 2000 4000 1 20
+5 0.5 2 300 400 2/3 10 (note 6)
+6 0.5 2 400 1200 2/3 15 (note 6)
+NOTE 1: Radar test signals #1 to #4 are constant PRF based signals. See figure D.1. These radar test
+signals are intended to simulate also radars using a packet based Staggered PRF. See figure
+D.2.
+NOTE 2: Radar test signal #4 is a modulated radar test signal. The modulation to be used is a chirp
+modulation with a ±2,5 MHz frequency deviation.
+NOTE 3: Radar test signals #5 and #6 are single pulse based Staggered PRF radar test signals using 2 or
+3 different PRF values. For radar test signal #5, the difference between the PRF values chosen
+shall be between 20 PPS and 50 PPS. For radar test signal #6, the difference between the PRF
+values chosen shall be between 80 PPS and 400 PPS.
+NOTE 4: Apart for the Off-Channel CAC testing, the radar test signals above shall only contain a single
+burst of pulses. See figure D.1, figure D.3 and figure D.4.For the Off-Channel CAC testing,
+repetitive bursts shall be used for the total duration of the test.See figure D.2 and figure D.5. See
+also clause 4.2.6.2.3, clause 5.4.8.2.1.4.2 and clause 5.4.8.2.1.4.3.
+NOTE 5: The total number of pulses in a burst is equal to the number of pulses for a single PRF multiplied
+by the number of different PRFs used
+NOTE 6: For the CAC and Off-Channel CAC requirements, the minimum number of pulses (for each PRF)
+for any of the radar test signals to be detected in the band 5 600 MHz to 5 650 MHz shall be 18.
+Table D.5: Detection probability
+Parameter
+Detection Probability (Pd)
+Channels whose nominal bandwidth
+falls partly or completely within the 5
+600 MHz to 5 650 MHz band
+Other channels
+CAC, Off-Channel CAC 99,99 % 60 %
+In-Service Monitoring 60 % 60 %
+NOTE: Pd gives the probability of detection per simulated radar burst and represents a minimum level of
+detection performance under defined conditions. Therefore Pd does not represent the overall
+detection probability for any particular radar under real life conditions.
+
+Report No.: EY740701 Page : 9 of 15
+Report Version: Rev. 02
+1.7 Radar Test Signal
+Figure D.1: General structure of a single burst / constant PRF based radar test signal
+Figure D.2: General structure of a multiple burst / constant PRF based radar test signal
+Figure D.3: General structure of a single burst/single pulse based staggered PRF radar test signal
+Figure D.4: General structure of a single burst / packet based staggered PRF radar test signal
+
+Report No.: EY740701 Page : 10 of 15
+Report Version: Rev. 02
+Figure D.5: Structure of a multiple burst / packet based staggered PRF based radar test signal
+1.8 DFS Technical Requirements Specifications
+Requirement
+DFS Operational mode
+Master
+Slave without radar
+detection
+(see table D.2)
+Slave with radar
+detection
+(see table D.2)
+Channel Availability Check  Not required  (note 2)
+Off-Channel CAC (note 1)  Not required  (note 2)
+In-Service Monitoring  Not required 
+Channel Shutdown   
+Non-Occupancy Period  Not required 
+Uniform Spreading  Not required Not required
+Note 1: Where implemented by the manufacturer.
+Note 2: A slave with radar detection is not required to perform a CAC or Off-Channel CAC at initial use of the
+channel but only after the slave has detected a radar signal on a channel by In-Service Monitoring.
+1.9 Master DFS Threshold Level
+DFS Threshold Level
+DFS Threshold level: -64 dBm
+Note 1: DFS Detection Threshold (dBm) = -62 + 10 - EIRP Spectral Density (dBm/MHz) + G0(dBi)
+The DFS Master Detection Threshold Level is (-62dBm) + 10 –16.84 + 2.9 dBi = -65.94 dBm
+Note 2: However, the DFS threshold level shall not be lower than -64 dBm assuming a 0 dBi receive antenna
+gain. If more than one antenna is intended for this TPC, range or power setting, the antenna gain of
+the antenna with the lowest gain shall be used.
+
+Report No.: EY740701 Page : 11 of 15
+Report Version: Rev. 02
+1.10 Test Setup
+Slave without Radar Detection Conducted Measurement
+1.11 The Equipment List
+Test Site DF01-WS
+Tested Date Dec. 10 ~ Dec. 11, 2014
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Dec. 07, 2016 Dec. 06, 2017
+Horn Antenna
+1G-18G ETS-LINDGREN 3115 00149268 Aug. 31, 2016 Aug. 30, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 MY15686/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 296081/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 329021/4 Dec. 16, 2016 Dec. 15, 2017
+Vector signal
+generator R&S SMJ100A 100498 Dec. 07, 2016 Dec. 06, 2017
+Note: Calibration Interval of instruments listed above is one year.
+1.12 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+DFS DF01-WS 23°C / 68% Jack Li
+1.13 Test Standards
+According to the specification of EUT, the EUT must comply with following standard.
+EN 301 893 V2.1.1 (2017-05)
+
+Report No.: EY740701 Page : 12 of 15
+Report Version: Rev. 02
+2 Test Result
+2.1 Channel Shutdown
+Test Method
+Refer as EN 301 893, clause 5.3.2 for test channel. One channel out of the declared channels for this
+frequency range. If more than one nominal channel bandwidth has been declared for this sub-band,
+testing shall be performed using the lowest and highest nominal channel bandwidth. Where the
+declared channel plan includes channels whose nominal channel bandwidth falls completely or partly
+within the 5600 MHz to 5650 MHz band, the tests for the Channel Availability Check (and where
+implemented, for the Off-Channel CAC) shall be performed on one of these channels in addition to a
+channel within the band 5470 MHz to 5600 MHz or 5650 MHz to 5725 MHz band.
+Refer as EN 301 893, clause 5.4.8.2.1.6 for Channel Shutdown and Non-Occupancy period.
+Refer as EN 301 893, clause 5.4.8.2.1 for conducted measurement.
+For conducted measurements on devices with multiple transmit chains and receive chains. The
+power splitter/combiner shall be used to combine all the transmit/receive chains (antenna outputs)
+into a single test point. The insertion loss of the power splitter/combiner shall be taken into
+account.
+Refer as EN 301 893, clause 5.4.8.2.2 for radiated measurement.
+Channel Shutdown Result
+Minimum Antenna Gain of Master (dBi) 2.9
+Detection Threshold Level (dBm) -54dBm (DFS Detection Threshold -64dBm + 10 dB)
+Modulation
+Mode Freq. (MHz) Radar Test
+Signal
+Channel Closing
+Transmission Time(ms)
+Channel Move
+Time(s)
+11a 5320 table D.3 12.5 0.420
+11a 5500 table D.3 12.5 0.4725
+VHT80 5290 table D.3 10 0.4175
+VHT80 5530 table D.3 10 0.440
+Limit 1 sec 10 sec
+Result Complied
+Note 1: Table D.3: Parameters of the reference DFS test signal.
+
+Report No.: EY740701 Page : 13 of 15
+Report Version: Rev. 02
+2.1.1 Channel Shutdown Plots
+5320MHz - 20 sec(total 8001 bin, transmit data 5 bin) 5290MHz - 20 sec(total 8001 bin, transmit data 4 bin)
+5500MHz - 20 sec(total 8001 bin, transmit data 5 bin) 5530MHz - 20sec(total 8001 bin, transmit data 4 bin)
+
+Report No.: EY740701 Page : 14 of 15
+Report Version: Rev. 02
+3 Photographs of the Test Configuration
+DFS Test
+
+Report No.: EY740701 Page : 15 of 15
+Report Version: Rev. 02
+4 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══
