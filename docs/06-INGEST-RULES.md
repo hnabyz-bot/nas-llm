@@ -149,6 +149,26 @@ appear in the disposition manifest and later end as a generated source page, a
 canonical duplicate link, a source stub with a concrete reason, or an explicit
 recovery/exclusion record.
 
+## Priority staging-to-vault rule
+
+Direct CLI extraction is an acceleration stage, not the final operating ingest.
+A priority class is complete only after its QA-passed staging outputs are
+reflected into `D:\vault\llm-wiki-vault\wiki\`, vault QA passes, and the vault
+`wiki/` changes are committed and pushed.
+
+Default sequence:
+
+1. run classification and disposition for the priority.
+2. run representative staging extraction.
+3. run staging QA.
+4. publish the approved set through an app-compatible vault gate.
+5. commit and push vault `wiki/`.
+6. commit and push the operations repo checkpoint.
+7. only then move to the next priority.
+
+Do not continue from P0 to P1, or from P1 to P2, only because staging extraction
+is complete. See `docs/10-PRIORITY-STAGING-TO-VAULT-WORKFLOW.md`.
+
 Latest reviewed triage:
 
 - `reports/p0-meaningful-triage-20260618153500`

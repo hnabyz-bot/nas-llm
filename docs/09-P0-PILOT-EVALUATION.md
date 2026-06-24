@@ -1095,8 +1095,11 @@ Observed quality:
 
 Interpretation: the final ranks 1701-1775 checkpoint passed the same staging QA
 gate as prior P0 checkpoints. P0 representative staging extraction now covers
-1,775/1,775 representatives. The next step is deciding whether to open the app
-ingest path behind a disposition gate.
+1,775/1,775 representatives. The next step is publishing P0 to the service
+vault through the app-compatible gate defined in
+`docs/10-PRIORITY-STAGING-TO-VAULT-WORKFLOW.md`, then committing and pushing
+the vault `wiki/` changes. P1/P2 should not begin by default before that P0
+vault publication is complete.
 
 ## Expansion Gate
 
@@ -1158,3 +1161,5 @@ selected small/new sources, not for the bulk P0 backlog.
 - Do not create `.llm-wiki/ingest-ready.flag`.
 - Run pilot extraction in staging only.
 - Publish to the service vault only after QA.
+- Do not proceed to the next priority class until the current priority has been
+  published to vault `wiki/` and the vault `wiki/` commit has been pushed.

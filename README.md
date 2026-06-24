@@ -214,7 +214,8 @@ ingest, P0 now has a meaningful-content triage step before LLM full ingest.
 - Latest P0 triage report: `reports/p0-meaningful-triage-20260618153500`
 - Latest P0 30-source evaluation bundle: `reports/p0-pilot-eval-20260618153600`
 - Latest P0 300-source evaluation bundle: `reports/p0-pilot-eval-300-20260618173500`
-- Latest P0 expansion checkpoint: `reports/p0-pilot-eval-p0-r1401-r1500-202606240243`
+- Latest P0 final checkpoint: `reports/p0-pilot-eval-p0-r1701-r1775-202606240843`
+- Priority staging-to-vault workflow: `docs/10-PRIORITY-STAGING-TO-VAULT-WORKFLOW.md`
 - Review document: `docs/08-RA-INGEST-PRIORITY-REVIEW.md`
 - Evaluation document: `docs/09-P0-PILOT-EVALUATION.md`
 - GitHub tracking issue: https://github.com/hnabyz-bot/nas-llm/issues/17
@@ -300,3 +301,6 @@ P0 meaningful-content triage result:
   errors, 0 page-marker leakage items, 1,148 evidence records, and 291 review
   flags. P0 representative staging extraction now covers 1,775/1,775
   representatives; app ingest remains behind the disposition gate.
+- Revised operating rule: do not proceed to P1/P2 as the default next step until
+  P0 staging outputs are published to `D:\vault\llm-wiki-vault\wiki\` through an
+  app-compatible gate and the vault `wiki/` changes are committed and pushed.

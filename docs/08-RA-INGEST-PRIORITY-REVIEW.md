@@ -131,6 +131,9 @@ subscriptions may be used.
    every duplicate or empty/low-text source.
 6. Rebuild `wiki/index.md` and `wiki/overview.md` from the assembled page
    registry, not from each parallel document worker.
+7. Treat local CLI extraction as staging. Do not move to P1/P2 by default until
+   P0 is published to the service vault through an app-compatible gate and the
+   vault `wiki/` commit is pushed.
 
 ## Acceleration Options
 
@@ -303,6 +306,9 @@ Pilot evaluation bundle:
 10. Generate `wiki/index.md` deterministically from the page registry.
 11. Generate `wiki/overview.md` from a corpus-level digest, not per source.
 12. Run QA gates before publishing to the service vault.
+13. Commit and push `D:\vault\llm-wiki-vault\wiki\` after publication.
+14. Move to the next priority only after the current priority is published and
+    both the vault repo and operations repo have pushed checkpoints.
 
 ## P0 QA Gates
 

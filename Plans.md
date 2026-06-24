@@ -17,7 +17,7 @@ _harness_version: "4.10.0"
 
 - [ ] T019b: Issue #8 continuation ingest queue `cc:WIP` (2026-06-16: source-level combined queue rebuilt, existing cache/wiki analyzed, 506 already-ingested entries pruned, 69,614 pending remain, priority applied, full ingest gate PASS, app stopped, ready flag absent)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
-- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-23: page-marker triage fix applied; P0 full-wiki representatives=1,775, duplicates=6,491, low-text=94, empty/recovery=667; Codex CLI representative staging extraction now covers 1,775/1,775 with final QA pass; 300-source seed passed 300/300 after chunked fallback for 5 large/context-heavy sources; ranks 301-400, 901-1000, and 1301-1400 passed 100/100 with chunked fallback for 1 source each; ranks 401-500, 501-600, 601-700, 701-800, 801-900, 1001-1100, 1101-1200, 1201-1300, 1401-1500, 1501-1600, 1601-1700, and final 1701-1775 passed without chunked fallback; app remains stopped)
+- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-24: P0 representative staging extraction covers 1,775/1,775 with final QA pass; workflow revised so a priority is not complete until QA-passed staging outputs are published to vault `wiki/` through an app-compatible gate and vault `wiki/` is committed/pushed; P1/P2 should not start by default before P0 vault publication; app remains stopped)
 
 ---
 
@@ -159,6 +159,6 @@ unless the project has tested parser aliases.
 
 ## Last Update
 
-- **Updated at**: 2026-06-23
-- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; direct 30-source evaluation passed 30/30; all 1,775 P0 representatives now have final QA-passed Codex CLI staging outputs; app future-ingest compatibility requires a disposition gate before autoIngest)
+- **Updated at**: 2026-06-24
+- **Last session owner**: Codex (P0-first staging-direct pipeline continued with app stopped; all 1,775 P0 representatives now have final QA-passed Codex CLI staging outputs; operating workflow revised in docs/10 so each priority must be published to vault `wiki/` and vault-committed before moving to the next priority)
 - **Branch**: main

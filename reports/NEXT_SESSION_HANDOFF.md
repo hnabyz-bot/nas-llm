@@ -137,11 +137,16 @@ Generated: 2026-06-23
 ## Next Decision Point
 
 P0 representative staging extraction is complete: 1,775/1,775 representatives
-have final QA-passed outputs. Decide whether to open the app ingest path behind
-a disposition gate.
+have final QA-passed outputs. Do not continue to P1/P2 by default yet. First
+publish P0 to `D:\vault\llm-wiki-vault\wiki\` through the app-compatible gate
+described in `docs/10-PRIORITY-STAGING-TO-VAULT-WORKFLOW.md`.
 
 ## App Ingest Gate
 
 Before app auto-ingest or bulk ingest, require a disposition gate that consumes
 the QA-passed staging outputs and rejects sources without preserved source
 identity, evidence, or acceptable review-flag handling.
+
+After P0 is published, commit and push the vault repo with only `wiki/` staged.
+Then commit and push the operations repo checkpoint. Record both commit hashes
+before starting P1.
