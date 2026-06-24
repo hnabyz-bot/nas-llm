@@ -241,4 +241,7 @@ Next P1 bundle:
 - rank range: 201-300
 - selected representatives: 100
 - total normalized chars: 6,909,952
-- extraction status: not started at this checkpoint
+- extraction status: PASS
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- note: all 100 rows passed direct extraction; no chunked fallback was needed

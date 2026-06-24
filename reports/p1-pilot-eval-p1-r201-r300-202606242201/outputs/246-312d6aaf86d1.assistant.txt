@@ -1,0 +1,216 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17c4",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/[AI-AspenView-SVR-002] Software Validation Report_Appendix 1. SRS (rev.1).pdf",
+    "canonicalGroupId": "312d6aaf86d1"
+  },
+  "document": {
+    "title": "AspenView Appendix 1. SRS (Software Requirement Specification)",
+    "documentType": "Software Requirement Specification",
+    "productModels": [
+      "AspenView"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Revision: 1",
+    "documentDate": "2023.09.01",
+    "standards": [
+      "DICOM 3.0",
+      "UTF-8"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "AspenView Software Requirement Specification defining acquisition, image processing, End User Application functions, and check/error handling requirements.",
+    "officialUse": "Supports software validation documentation by specifying required functionality, image processing algorithms, DICOM conversion, UI modes, logging, and error handling behavior.",
+    "keyPoints": [
+      "Document number is RS-AspenView-SVR-002 and the header states Revision 1.",
+      "Revision status shows Revision Number 1 dated 2023.09.01 with updates based on an unannounced audit and separation of software validation appendices.",
+      "Required functionality covers acquisition, image processing, End User Application modes, and check/error handling.",
+      "The software can read raw frames and convert to DICOM 3.0 format files without compression causing data loss.",
+      "End User Application includes Worklist, Exam, Review, and Browser modes."
+    ]
+  },
+  "entities": [
+    {
+      "name": "AspenView",
+      "type": "software product",
+      "evidence": "Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002"
+    },
+    {
+      "name": "End User Application",
+      "type": "software component",
+      "evidence": "End User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user."
+    },
+    {
+      "name": "DICOM",
+      "type": "standard or protocol",
+      "evidence": "DICOM – Digital Imaging and Communications in Medicine"
+    },
+    {
+      "name": "PACS",
+      "type": "system",
+      "evidence": "DICOM sending to PACS"
+    },
+    {
+      "name": "MWL",
+      "type": "system interface",
+      "evidence": "Query Patient information from MWL"
+    },
+    {
+      "name": "DICOM Printer",
+      "type": "system interface",
+      "evidence": "When the DICOM printer don’t connect, EUA display the icon in gray"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Requirement Specification",
+      "pageTarget": "Software Requirement Specification",
+      "evidence": "1. Software Requirement Specification (SRS)"
+    },
+    {
+      "name": "Image acquisition",
+      "pageTarget": "Image Acquisition",
+      "evidence": "Acquire raw images from the detector and convert to the DICOM image with original raw image"
+    },
+    {
+      "name": "DICOM conversion",
+      "pageTarget": "DICOM Conversion",
+      "evidence": "The software can read raw frames and convert to the DICOM 3.0 format files."
+    },
+    {
+      "name": "Image processing",
+      "pageTarget": "Medical Image Processing",
+      "evidence": "Image processing module enhance image quality to diagnose."
+    },
+    {
+      "name": "Directional smooth",
+      "pageTarget": "Directional Smoothing",
+      "evidence": "Directional smooth technique is based on the theory of anisotropic diffusion."
+    },
+    {
+      "name": "Adaptive unsharpened with Gaussian / Laplacian pyramid",
+      "pageTarget": "Adaptive Unsharp Masking",
+      "evidence": "This technique combines the image pyramid concept proposed by Burt and Adelson (1983) with the adaptive histogram equalization theory of Pizer et al. (1987)."
+    },
+    {
+      "name": "Protective contours",
+      "pageTarget": "Protective Contours",
+      "evidence": "Protective contours technique is important for preserving important anatomical boundaries such as organ boundaries or tumor margins."
+    },
+    {
+      "name": "Median Filter",
+      "pageTarget": "Median Filter",
+      "evidence": "Median Filter is a nonlinear digital filtering technique that is mainly effective in removing 'salt-and-pepper' noise."
+    },
+    {
+      "name": "Gamma Correction",
+      "pageTarget": "Gamma Correction",
+      "evidence": "Gamma Correction is a technique that nonlinearly adjusts the luminance or trichromatic component values of an image."
+    },
+    {
+      "name": "Error handling",
+      "pageTarget": "Software Error Handling",
+      "evidence": "End User Application shall provide error handling mentioned for RIV-SRS-4 in this Table"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is an AspenView Software Requirement Specification with document number RS-AspenView-SVR-002.",
+      "evidenceText": "Doc. Name: AspenView/Doc. No.: RS-AspenView-SVR-002",
+      "pageTarget": "AspenView Software Requirement Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document header identifies Revision 1 and initiate date 2022.05.22.",
+      "evidenceText": "Initiate date: 2022.05.22 /Revision: 1",
+      "pageTarget": "AspenView Software Requirement Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision status lists Revision Number 1 dated 2023.09.01.",
+      "evidenceText": "2 2023.09.01 1 1) Form Change 2) Update based on unannounced audit",
+      "pageTarget": "AspenView Software Requirement Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SRS defines acquisition, image processing, and End User Application functions.",
+      "evidenceText": "1.2 Main functions 1.2.1Acquisition ... 1.2.2Image processing ... 1.2.3End User Application",
+      "pageTarget": "Software Requirement Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Acquisition covers acquiring raw frame data from the detector and delivering it to the End User Application as an image.",
+      "evidenceText": "Acquire raw frame data from detector and deliver it to EUA as image.",
+      "pageTarget": "Image Acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software can convert raw frames to DICOM 3.0 format files without compression causing data loss.",
+      "evidenceText": "The software can read raw frames and convert to the DICOM 3.0 format files. For converting the DICOM files, There is no compression to cause data loss",
+      "pageTarget": "DICOM Conversion",
+      "confidence": "high"
+    },
+    {
+      "claim": "The default language is English and text input/data character set is UTF-8.",
+      "evidenceText": "default language is English Text input and data character set UTF-8",
+      "pageTarget": "Software Localization",
+      "confidence": "high"
+    },
+    {
+      "claim": "The End User Application consists of Worklist mode, Exam mode, Review mode, and Browser mode.",
+      "evidenceText": "Graphic User Interface is consist of Worklist mode, Exam mode, Review mode and Browser mode",
+      "pageTarget": "End User Application",
+      "confidence": "high"
+    },
+    {
+      "claim": "Review mode includes image manipulation functions such as window width/level control, zoom, panning, magnify, measurement, markers/labels, DICOM sending to PACS, DICOM printing, and stitching.",
+      "evidenceText": "Window width/level control - Zoom In/Out - Panning (image moving) - Magnify - Image processing - Measure Angle/Length - Input Marker & Label - DICOM sending to PACS - DICOM Printing Stitching",
+      "pageTarget": "Medical Image Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Directional smooth processing is based on anisotropic diffusion and uses local structure tensor analysis.",
+      "evidenceText": "Directional smooth technique is based on the theory of anisotropic diffusion. This method is an extension of the technique proposed by Perona and Malik (1990), which analyzes the directionality of the image using the local structure tensor.",
+      "pageTarget": "Directional Smoothing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Median filtering is described as effective for removing salt-and-pepper noise while preserving edges.",
+      "evidenceText": "Median Filter is a nonlinear digital filtering technique that is mainly effective in removing 'salt-and-pepper' noise. This filter is widely used in medical imaging because it can remove noise while preserving edges.",
+      "pageTarget": "Median Filter",
+      "confidence": "high"
+    },
+    {
+      "claim": "Exam mode error handling displays Detector Disconnected when the detector is not connected.",
+      "evidenceText": "When the detector don’t connect, EUA display as following message. “Detector Disconnected”",
+      "pageTarget": "Software Error Handling",
+      "confidence": "high"
+    },
+    {
+      "claim": "Login failure displays Invalid Password or Username.",
+      "evidenceText": "When login failed, EUA display as following message box. “Invalid Password or Username”",
+      "pageTarget": "Software Error Handling",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "FDA appears in source metadata/path as authoritySignal and folder context, but the document text itself does not state an FDA authority, jurisdiction, submission type, or approval status."
+    },
+    {
+      "severity": "info",
+      "reason": "Product signal metadata says HnVUE, while the document text identifies AspenView; productModels uses the product name present in the document text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document has both an initiate date of 2022.05.22 and a Revision 1 revision-status date of 2023.09.01; documentDate uses the current revision date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Approval, reviewer, and preparer names are not present in the extracted text."
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954417-15s4",
+    "sourcePath": "raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/90_규격 Test report/1. 시험소 제출서류/12. EMC - 기재사항 및 클락주파수/Cyan(GT1717C,GT1717CP)_Frequency.docx",
+    "canonicalGroupId": "b34a4260dec3"
+  },
+  "document": {
+    "title": "Cyan(G1717C) Detector 기타 서류",
+    "documentType": "기타 서류; EUT internal operating frequencies, working voltage measurement, and input test data",
+    "productModels": [
+      "GT1717C",
+      "GT1717CP",
+      "G1717C"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Cyan detector document listing EUT internal operating frequencies, working voltage measurements, and input test conditions.",
+    "officialUse": "Supports EMC/test laboratory submissions by recording clock frequencies and electrical measurement data for the Cyan detector.",
+    "keyPoints": [
+      "EUT internal operating frequencies are listed for ROIC, PCIe, and FPGA functions.",
+      "Working voltage measurements include RMS voltage, peak voltage, frequency, phases/pins, and comments.",
+      "Input tests cover 90 V, 100 V, 240 V, and 264 V at 50 Hz and 60 Hz."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN",
+      "type": "product family",
+      "evidence": "productSignal: CYAN"
+    },
+    {
+      "name": "GT1717C",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Frequency.docx"
+    },
+    {
+      "name": "GT1717CP",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Frequency.docx"
+    },
+    {
+      "name": "Cyan(G1717C) Detector",
+      "type": "equipment under test",
+      "evidence": "Cyan(G1717C) Detector 기타 서류"
+    },
+    {
+      "name": "F1",
+      "type": "fuse",
+      "evidence": "Fuse No ... F1"
+    },
+    {
+      "name": "T1",
+      "type": "test point or component",
+      "evidence": "T1 Pin 1-6"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "EUT Internal Operating Frequencies",
+      "pageTarget": "EUT Internal Operating Frequencies",
+      "evidence": "1. EUT Internal Operating Frequencies:"
+    },
+    {
+      "name": "Working voltage measurement",
+      "pageTarget": "Working Voltage Measurement",
+      "evidence": "2. Working voltage measurement"
+    },
+    {
+      "name": "Input test",
+      "pageTarget": "Input Test",
+      "evidence": "3. Input test"
+    },
+    {
+      "name": "Test Voltage/Freq",
+      "pageTarget": "Test Voltage and Frequency",
+      "evidence": "Test Voltage/Freq : 240V/60Hz"
+    },
+    {
+      "name": "Rated current or rated power measurement",
+      "pageTarget": "Rated Current and Rated Power Measurement",
+      "evidence": "Equipment may be having rated current or rated power or both. Both should be measured"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title identifies a Cyan(G1717C) Detector miscellaneous document.",
+      "evidenceText": "Cyan(G1717C) Detector 기타 서류",
+      "pageTarget": "Cyan G1717C Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source path identifies product models GT1717C and GT1717CP.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Frequency.docx",
+      "pageTarget": "GT1717C and GT1717CP",
+      "confidence": "high"
+    },
+    {
+      "claim": "The EUT internal operating frequencies include 60 MHz for ROIC.",
+      "evidenceText": "60 MHz ROIC",
+      "pageTarget": "ROIC Operating Frequency",
+      "confidence": "high"
+    },
+    {
+      "claim": "The EUT internal operating frequencies include 100 MHz for PCIe.",
+      "evidenceText": "100 MHz PCIe",
+      "pageTarget": "PCIe Operating Frequency",
+      "confidence": "high"
+    },
+    {
+      "claim": "The EUT internal operating frequencies include 50 MHz and 25 MHz for FPGA.",
+      "evidenceText": "50 MHz FPGA; 25 MHz FPGA",
+      "pageTarget": "FPGA Operating Frequency",
+      "confidence": "high"
+    },
+    {
+      "claim": "The working voltage measurement supplementary test voltage and frequency is 240V/60Hz.",
+      "evidenceText": "Supplementary information Test Voltage/Freq : 240V/60Hz",
+      "pageTarget": "Working Voltage Measurement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Working voltage mode 1 records Max. RMS at T1 Pin 1-6 with RMS voltage 150 and frequency 60.",
+      "evidenceText": "1 150 336 60 T1 Pin 1-6 Max. RMS",
+      "pageTarget": "Working Voltage Measurement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Working voltage mode 7 records Max. Peak at T1 Pin 5-6 with RMS voltage 147 and peak voltage 520.",
+      "evidenceText": "7 147 520 108K T1 Pin 5-6 Max. Peak",
+      "pageTarget": "Working Voltage Measurement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Input test mode 1 uses 90V at 50Hz with current 0.6645 A and power 36.87 W.",
+      "evidenceText": "1 90V 50Hz 0.6645 -- 36.87 -- F1 0.6645 PoE portload51Vdc,0.59A",
+      "pageTarget": "Input Test",
+      "confidence": "high"
+    },
+    {
+      "claim": "Input test mode 6 uses 240V at 60Hz with current 0.2619 A and power 35.90 W.",
+      "evidenceText": "6 240V 60Hz 0.2619 0.6 35.90 -- F1 0.2619",
+      "pageTarget": "Input Test",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states that rated current, rated power, or both may be present and both should be measured.",
+      "evidenceText": "Equipment may be having rated current or rated power or both. Both should be measured",
+      "pageTarget": "Rated Current and Rated Power Measurement",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No authority or jurisdiction is identified; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product model evidence is inconsistent or possibly OCR-affected: source path lists GT1717C and GT1717CP, while document text says Cyan(G1717C)."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some table text appears low quality or ambiguous, including 'PoE portload51Vdc,0.59A' and mixed capitalization such as 104K/106k/108k."
+    }
+  ]
+}

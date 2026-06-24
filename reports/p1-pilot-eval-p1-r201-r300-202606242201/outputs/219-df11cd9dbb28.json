@@ -1,0 +1,196 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954372-2ad",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/260121 터키 EKOL, 1G, 23G  등록서류 - 이경수 이사님/260121 1차 제출본/자사 의료기기 UDI-DI (Basic UDI 검증) 관리대장 20251021.xlsx",
+    "canonicalGroupId": "df11cd9dbb28"
+  },
+  "document": {
+    "title": "자사 Detector UDI-DI (Basic UDI-DI) 관리대장; 자사 Portable X-ray UDI-DI (Basic UDI-DI) 관리대장",
+    "documentType": "UDI-DI/Basic UDI-DI 관리대장",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG",
+      "ADD(HAD1417MC)",
+      "ADD(HAD1717MC)",
+      "F1417MCW",
+      "A1417MCW",
+      "A1717MCW",
+      "G1417CW",
+      "G1417FW",
+      "G1417CWP",
+      "G1417FWP",
+      "G1717CW",
+      "G1717FW",
+      "G1717CWP",
+      "G1717FWP",
+      "HnX-R1",
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "유럽"
+    ],
+    "revisionOrVersion": "715-1 (REV.00)",
+    "documentDate": "2025.10.21; 2025.07.03",
+    "standards": [
+      "UDI-DI",
+      "Basic UDI-DI",
+      "GTIN",
+      "GTIN-13"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Internal UDI-DI and Basic UDI-DI ledger for Detector and Portable X-ray product models.",
+    "officialUse": "Tracks model names, DI codes, PI/UI serial-number coding, GTIN registration dates, and European Basic UDI-DI verification codes where available.",
+    "keyPoints": [
+      "Detector ledger lists models including HnX-R1 with DI code (01)08800070400173 and GTIN registration date 10/21/25.",
+      "Portable X-ray ledger lists HnX-P1 and HnX-PB with European Basic UDI-DI marked as (TBD).",
+      "Both ledger sections show form identifier 715-1 (REV.00)."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "productModel",
+      "evidence": "16,,HnX-R1,,,,,,,(01)08800070400173"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "productModel",
+      "evidence": "1,,HnX-P1,,,,,,,(01)08800070400074"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "productModel",
+      "evidence": "2,,HnX-PB,,,,,,,(01) 8800070400166"
+    },
+    {
+      "name": "정경균",
+      "type": "person",
+      "evidence": "정경균,,,-,,,허남규"
+    },
+    {
+      "name": "허남규",
+      "type": "person",
+      "evidence": "정경균,,,-,,,허남규"
+    },
+    {
+      "name": "유럽",
+      "type": "jurisdiction",
+      "evidence": "유럽 Basic UDI-DI 검증코드"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "UDI-DI",
+      "pageTarget": "UDI-DI",
+      "evidence": "자사 Detector UDI-DI\n(Basic UDI-DI) 관리대장"
+    },
+    {
+      "name": "Basic UDI-DI",
+      "pageTarget": "Basic UDI-DI",
+      "evidence": "유럽 Basic UDI-DI 검증코드"
+    },
+    {
+      "name": "GTIN-13",
+      "pageTarget": "GTIN-13",
+      "evidence": "DI 코드 (국가/업체/상품코드)\n* GTIN-13( 단품 )"
+    },
+    {
+      "name": "GTIN registration date",
+      "pageTarget": "GTIN 등록일",
+      "evidence": "유통표준코드(GTIN) 등록일"
+    },
+    {
+      "name": "Serial-number production identifier",
+      "pageTarget": "UDI PI 코드",
+      "evidence": "(11)제조 년월일 (21) Detector 시리얼 번호"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source contains a Detector UDI-DI and Basic UDI-DI management ledger.",
+      "evidenceText": "자사 Detector UDI-DI\n(Basic UDI-DI) 관리대장",
+      "pageTarget": "Detector UDI-DI 관리대장",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source contains a Portable X-ray UDI-DI and Basic UDI-DI management ledger.",
+      "evidenceText": "자사 Portable X-ray UDI-DI\n(Basic UDI-DI) 관리대장",
+      "pageTarget": "Portable X-ray UDI-DI 관리대장",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector ledger uses DI codes based on country, company, and product code with GTIN-13 for individual items.",
+      "evidenceText": "DI 코드 (국가/업체/상품코드)\n* GTIN-13( 단품 )",
+      "pageTarget": "GTIN-13",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector PI coding records manufacturing date and Detector serial number.",
+      "evidenceText": "PI 코드 (제품 시리얼번호) ... (11)제조 년월일 (21) Detector 시리얼 번호",
+      "pageTarget": "UDI PI 코드",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-R1 is listed as a Detector model with DI code (01)08800070400173 and GTIN registration date 10/21/25.",
+      "evidenceText": "16,,HnX-R1,,,,,,,(01)08800070400173,,,,,,(11)제조 년월일 (21) Detector 시리얼 번호,,,,,,,,,,,10/21/25",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-P1 is listed as a Portable X-ray model with DI code (01)08800070400074, GTIN registration date 2024. 11. 27, and European Basic UDI-DI marked (TBD).",
+      "evidenceText": "1,,HnX-P1,,,,,,,(01)08800070400074,,,,,,(11)제조 년월일 (21) Portable 시리얼 번호,,,,,,,,,,,2024. 11. 27,,,,,,,(TBD)",
+      "pageTarget": "HnX-P1",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-PB is listed as a Portable X-ray model with DI code (01) 8800070400166, GTIN registration date 2025. 07. 03, and European Basic UDI-DI marked (TBD).",
+      "evidenceText": "2,,HnX-PB,,,,,,,(01) 8800070400166,,,,,,(11)제조 년월일 (21) Portable 시리얼 번호,,,,,,,,,,,2025. 07. 03,,,,,,,(TBD)",
+      "pageTarget": "HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "Some Detector rows include European Basic UDI-DI verification codes, including HAD1717MC with 88000704HAAP-17S.",
+      "evidenceText": "1,,HAD1717MC,,,,,,,(01)08800070400012 ... 2021.06,,,,,,,88000704HAAP-17S",
+      "pageTarget": "HAD1717MC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ledger form identifier is 715-1 (REV.00).",
+      "evidenceText": "715-1 (REV.00)",
+      "pageTarget": "715-1 REV.00",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector ledger approval area shows date 2025.10.21.",
+      "evidenceText": "2025.10.21,,,-,,,2025.10.21",
+      "pageTarget": "Detector UDI-DI 관리대장",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The Portable X-ray ledger approval area shows date 2025.07.03.",
+      "evidenceText": "2025.07.03,,,-,,,2025.07.03",
+      "pageTarget": "Portable X-ray UDI-DI 관리대장",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source metadata authoritySignal is FDA, but the source text does not mention FDA; it only contains '유럽 Basic UDI-DI'."
+    },
+    {
+      "severity": "warning",
+      "reason": "The combined source contains two ledger sections with different approval dates, 2025.10.21 and 2025.07.03."
+    },
+    {
+      "severity": "info",
+      "reason": "Portable X-ray European Basic UDI-DI values for HnX-P1 and HnX-PB are marked '(TBD)'."
+    },
+    {
+      "severity": "info",
+      "reason": "Spreadsheet text is comma-expanded and partially sparse, so approval roles and table alignment are not fully explicit."
+    }
+  ]
+}
