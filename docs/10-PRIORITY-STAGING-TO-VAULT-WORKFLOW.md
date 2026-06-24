@@ -117,6 +117,23 @@ Latest apply:
 Interpretation: P0 is published to the vault `wiki/` and committed. P1 must
 still wait for vault/app usability QA, then repeat this same workflow.
 
+Latest static QA:
+
+- report: `reports/p0-vault-qa-202606241625`
+- QA script: `scripts/qa-p0-vault-publish.js`
+- result: PASS
+- errors: 0
+- warnings: 0
+- materialized files checked: 41,145/41,145
+- P0 source queueIds found: 9,027/9,027
+- pages with frontmatter, non-empty `sources`, and P0 markers: 41,145
+- vault `wiki/` dirty: false
+- app running: false
+- queue count: `{"pending":69549}`
+
+Interpretation: P0 static vault QA passed. A manual/app usability smoke check
+can now be run before P1 starts.
+
 ## Vault Git Rule
 
 The vault repo is separate from this operations repo.

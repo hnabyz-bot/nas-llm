@@ -206,3 +206,31 @@ Next gate: run vault/app usability QA against the P0-published wiki before
 starting P1. P1 should use the same revised flow: staging QA, deterministic
 publish gate, vault materialize, vault `wiki/` commit/push, then operations
 checkpoint commit/push.
+
+## P0 Vault Static QA
+
+Latest QA:
+
+- report: `reports/p0-vault-qa-202606241625`
+- script: `scripts/qa-p0-vault-publish.js`
+- result: PASS
+- errors: 0
+- warnings: 0
+- materialized files checked: 41,145/41,145
+- source pages checked: 9,027
+- P0 source queueIds found: 9,027/9,027
+- pages with frontmatter: 41,145
+- pages with non-empty `sources`: 41,145
+- pages with P0 marker: 41,145
+- P0 marker begin/end counts: 41,145/41,145
+- vault `wiki/` dirty: false
+- app running: false
+- `ingest-ready.flag`: false
+- scheduled tasks disabled: `LLM-Wiki-Watchdog`, `LLM-Wiki-Startup`,
+  `LLM-Wiki-Auth-Check`
+- queue state: `{"pending":69549}`
+
+Note: `verify-ingest-gate.ps1 -SkipCoverageAudit` was attempted after publish
+but exceeded the command timeout because it still checks all 69,549 active queue
+file paths. The P0 vault QA script performs the relevant P0 wiki validation and
+queue state checks without mutating the vault.
