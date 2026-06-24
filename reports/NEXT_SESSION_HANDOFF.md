@@ -234,3 +234,38 @@ Note: `verify-ingest-gate.ps1 -SkipCoverageAudit` was attempted after publish
 but exceeded the command timeout because it still checks all 69,549 active queue
 file paths. The P0 vault QA script performs the relevant P0 wiki validation and
 queue state checks without mutating the vault.
+
+## P0 App API Smoke QA
+
+Latest smoke QA:
+
+- report: `reports/p0-app-smoke-202606241708`
+- script: `scripts/smoke-p0-app-api.js`
+- result: PASS
+- errors: 0
+- warnings: 0
+- app version: 0.4.16
+- project returned by API: `llm-wiki-vault`
+  (`2da34b71-49aa-4919-a66a-90f1683772f9`)
+- source page content read: PASS
+- source page includes P0 marker, `queueId`, and frontmatter `sources`: PASS
+- wiki top-level folders returned: `sources`, `entities`, `concepts`,
+  `findings`, plus existing wiki folders
+- search query: `HnX cybersecurity labeling`
+- search mode: keyword
+- search results: 10
+- first search hits included `wiki/concepts/cybersecurity-labeling.md`,
+  `wiki/entities/hnx-p1.md`, and `wiki/entities/hnx-pb.md`
+- graph endpoint returned: 200 nodes / 0 edges
+
+Smoke procedure:
+
+- app-state was backed up, API `allowUnauthenticated` was enabled temporarily,
+  and source watch/auto ingest remained disabled
+- only read endpoints were called: health, projects, files, content, search,
+  graph
+- rescan, ingest, chat, or mutation endpoints were not called
+- app was stopped after smoke QA
+- app-state was restored from backup
+
+P0 is now ready for P1 to start through the same revised workflow.

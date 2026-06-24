@@ -134,6 +134,24 @@ Latest static QA:
 Interpretation: P0 static vault QA passed. A manual/app usability smoke check
 can now be run before P1 starts.
 
+Latest app API smoke QA:
+
+- report: `reports/p0-app-smoke-202606241708`
+- smoke script: `scripts/smoke-p0-app-api.js`
+- result: PASS
+- errors: 0
+- warnings: 0
+- API project: `llm-wiki-vault`
+- source page content read through app API: PASS
+- search query `HnX cybersecurity labeling`: 10 keyword results
+- first hits included `wiki/concepts/cybersecurity-labeling.md`,
+  `wiki/entities/hnx-p1.md`, and `wiki/entities/hnx-pb.md`
+- graph endpoint returned 200 nodes
+- app was stopped and app-state restored after the smoke check
+
+Interpretation: P0 has passed static vault QA and app API smoke QA. P1 may
+start, using the same completion definition and vault commit rule.
+
 ## Vault Git Rule
 
 The vault repo is separate from this operations repo.

@@ -17,7 +17,7 @@ _harness_version: "4.10.0"
 
 - [ ] T019b: Issue #8 continuation ingest queue `cc:WIP` (2026-06-16: source-level combined queue rebuilt, existing cache/wiki analyzed, 506 already-ingested entries pruned, 69,614 pending remain, priority applied, full ingest gate PASS, app stopped, ready flag absent)
 - [ ] T039: E2E 운영 검증 — sync, preprocess, watchdog, auto-commit 상태 확인 `cc:WIP` (GitHub #12 생성, 추가 외부 이슈 등록은 정책 차단으로 로컬 추적)
-- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-24: P0 representative staging extraction covers 1,775/1,775 with final QA pass; P0 vault materialize apply covered 9,027/9,027 disposition rows, wrote/merged 41,145 wiki files, passed materialize validation with 0 failures, pushed vault commit `f36083933`, and static vault QA passed with 0 errors/warnings; next gate is manual/app usability smoke QA before starting P1; app remains stopped)
+- [ ] T048: Issue #17 P0-first official-quality RA ingest acceleration `cc:WIP` (2026-06-24: P0 representative staging extraction covers 1,775/1,775 with final QA pass; P0 vault materialize apply covered 9,027/9,027 disposition rows, wrote/merged 41,145 wiki files, passed materialize validation with 0 failures, pushed vault commit `f36083933`, static vault QA passed with 0 errors/warnings, and app API smoke QA passed; P1 may now start through the same revised workflow; app remains stopped)
 
 ---
 
@@ -160,5 +160,5 @@ unless the project has tested parser aliases.
 ## Last Update
 
 - **Updated at**: 2026-06-24
-- **Last session owner**: Codex (P0-first staging-direct pipeline published to vault `wiki/` with app stopped; materialize validation passed with 0 failures; vault commit `f36083933` pushed; static P0 vault QA passed with 0 errors/warnings; next step is manual/app usability smoke QA and only then P1 through the same revised workflow)
+- **Last session owner**: Codex (P0-first staging-direct pipeline published to vault `wiki/` with app stopped; materialize validation passed with 0 failures; vault commit `f36083933` pushed; static P0 vault QA and app API smoke QA both passed with 0 errors/warnings; P1 is cleared to start through the same revised workflow)
 - **Branch**: main
