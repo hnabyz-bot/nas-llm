@@ -1,0 +1,11562 @@
+queueId: ingest-1781569954375-5d5
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ 국내 제조인증/3. HAD1717MCW 모델 추가_210723/성적서, 소프트웨어 밸리데이션/임포유_콘솔_문서/Console Software Validation Report_Rev.2_KOR_2.1.255.60.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/ade092c173fb/Console Software Validation Report_Rev.2_KOR_2.1.255.60__ade092c173fb_combined.txt
+canonicalGroupId: 82d50be04d65
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 182
+
+SOURCE_TEXT
+Software Validation
+
+Console Report
+
+for
+
+ADD
+
+Digital Flat Panel X-ray Detector
+
+Report No.: A-TCF-5-072 (Rev.2)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+R&D team
+
+Kim Wan Soo
+
+MAY/27/2021
+
+Review
+
+R&D Manager
+
+Lee, Dong jin
+
+MAY/27/2021
+
+Approval
+
+Quality Manager
+
+Hur Namkyu
+
+MAY/28/2021
+
+목차
+
+1. 일반 개요 5
+
+1.1. 품질경영시스템 6
+
+1.2. 위험관리 6
+
+1.3. 소프트웨어 안정성 분류 6
+
+1.4. 레거시 소프트웨어 6
+
+2. 소프트웨어 개발 프로세스 7
+
+2.1. 소프트웨어 개발 계획 7
+
+2.1.1. 목적 7
+
+2.1.2. 범위 7
+
+2.1.3. 개발 개요 7
+
+2.1.4. 제품 개발 일정 9
+
+2.1.5. Target Specification 11
+
+2.1.6. 책임과 권한 12
+
+2.1.7. 제품 개발 프로세스 12
+
+2.1.8. Verification Plan 12
+
+2.1.9. Validation Plan 12
+
+2.1.10. 제품개발환경 12
+
+2.1.11. 개발 계획 일정표 14
+
+2.2. 소프트웨어 요구사항 분석 15
+
+2.2.1. Terms and abbreviations 15
+
+2.2.2. 식별 구분 정의 15
+
+2.2.3. 소프트웨어 정의 16
+
+2.2.4. 소프트웨어 블록도 16
+
+2.2.5. 데이터 형식 16
+
+2.2.6. 견고성 및 성능 16
+
+2.2.7. 사용요구사항 17
+
+2.3. 소프트웨어 아키텍쳐 설계 24
+
+2.3.1. 소프트웨어 architecture diagram 24
+
+2.3.2. Dependency Description 25
+
+2.3.3. Interface Description 26
+
+2.4. 소프트웨어 상세 설계 27
+
+2.4.1. User Interface Design 27
+
+2.4.2. Identifiers “SDS n” 37
+
+2.4.3. SDS: Specification Table 38
+
+2.4.4. SDS: Error Table 44
+
+2.5. 소프트웨어 Unit 구현 및 검증 47
+
+2.6. 소프트웨어 통합 및 통합시험 55
+
+2.7. 소프트웨어 시스템 시험 59
+
+2.8. 소프트웨어 배포 62
+
+2.9. 의료기기 사이버 보안 62
+
+2.9.1. 의료기기 사이버 보안 특성 62
+
+3. 소프트웨어 유지보수 프로세스 66
+
+3.1. 소프트웨어 유지보수계획 66
+
+3.2. 문제 및 수정 분석 66
+
+3.3. 수정 사항 구현 67
+
+3.4. 사이버 보안 위험 탐지시 대처방안 67
+
+4. 소프트웨어 위험관리 프로세스 68
+
+4.1. 위험 상황에 기여하는 소프트웨어의 분석 68
+
+4.2. 위험 통제 수단 68
+
+4.3. 위험 통제 수단의 검증 68
+
+4.4. 소프트웨어 변경의 위험 관리 68
+
+5. 소프트웨어 형상관리 프로세스 69
+
+5.1. 형상 식별 69
+
+5.2. 변경 관리 69
+
+5.3. 형상 상태 기록 69
+
+6. 소프트웨어 문제 해결 프로세스 70
+
+6.1. 문제보고준비 70
+
+6.2. 문제조사 70
+
+6.3. 관계자에게 통지 70
+
+6.4. 변경 관리 프로세스 사용 70
+
+6.5. 유지보수 기록 71
+
+6.6. 문제의 경향 분석 71
+
+6.7. 소프트웨어 문제 해결 검증 71
+
+6.8. 시험 문건 내용 71
+
+7. 추적관리(Requirements’ Traceability Matrix) 72
+
+7.1. 소개 72
+
+7.2. 추적테이블(Traceability Matrix) 72
+
+7.3. PEMS List for Traceability Matrix 81
+
+8. Verification & Validation Test Results 83
+
+Appendix 1. 83
+
+Appendix 2. 87
+
+Appendix 3. 97
+
+Appendix 4. 102
+
+Appendix 5. 106
+
+Appendix 6. 112
+
+9. Version History 122
+
+일반 개요
+
+feelDRCS은 디지털 X선 촬영장치의 운영콘솔 소프트웨어로써, 의료영상의 국제표준인 DICOM 3.0을 지원하며, 고해상도의 영상을 X선 검출기로부터 획득하여 최적을 영상을 만든 후 PACS 네트워크를 통해 PACS 서버로 영상을 전송하거나, 의료용 필름 프린터장치로 필름을 출력하는 소프트웨어이다.
+
+소프트웨어 명칭 : feel-DRCS
+
+버전 : 2.1.255.60
+
+연결 하드웨어 : HAD1717MG, HAD1717MC, ADD(HAD1417MCW), ADD(HAD1717MCW) 검출기
+
+적용규격: ISO 62304:2006+AMD1:2015, ISO 14971:2007
+
+시스템 구성도
+
+PEMS의 범위
+
+X선 검출기의 연결 및 병원정보망과 통신하는 DICOM Network 관련된 기능들에 대하여 PEMS로 정의한다.
+
+해당 기능 항목에 대한 분류는 2.4. 소프트웨어 상세 설계에서 식별하고, 해당 식별에 대한 추적성은 7, 추적관리테이블을 참조한다.
+
+품질경영시스템
+
+당사의 품질 경영 시스템인 EN ISO 13485:2016 에 의하여 소프트웨어 개발 및 관리를 실시한다.
+
+Medical Devices Quality Management system Certificate No : 31406501
+
+적용 규격 : EN ISO 13485:2016
+
+위험관리
+
+본 소프트웨어 개발생명주기 전반에 걸쳐서 ISO 14971:2007을 적용한다.
+
+적용하여 생성된 아래 report 문서를 참조한다.
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+소프트웨어 안정성 분류
+
+소프트웨어의 안전성 분류등급 : B 등급
+
+등급
+
+내용
+
+A 등급
+
+부상이나 신체적 피해가 발생할 가능성이 없음.
+
+B 등급
+
+심각하지 않은 부상(경상)이 발생할 가능성이 있음.
+
+C 등급
+
+심각한 부상 또는 사장이 발생할 기능성이 있음.
+
+소프트웨어 위험산정을 통하여 각 식별된 위험도가 8 – 14 인 경우에는 비록 Acceptance level zone 에 있더라도, 위험도가 8 - 14 level zone에 하나라도 해당 위험도가 존재하는 경우에는 소프트웨어 안정등급을 보수적으로 반영하여 B등급으로 산정한다.
+
+참조 : Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+레거시 소프트웨어
+
+ 해당사항 없음.
+
+소프트웨어 개발 프로세스
+
+2.1. 소프트웨어 개발 계획
+
+목적
+
+이 문서는 feel-DRCS 제품의 개발을 위한 개발계획에 관한 문서이며 이 문서에 기술된 제품개발계획에 의거하여 개발이 진행된다. feel-DRCS 제품은 새로운 디지털 X선 콘솔 소프트웨어에 대한 고객의 요청에 만족하는 제품 개발 계획을 시행한다.
+
+범위
+
+이문서는 feel-DRCS 제품의 개발에 적용하며, 관련 규격에 대하여 검토하여 반영한다.
+
+개발 개요
+
+1) 고객 친화적인 Digital X-ray Console software를 개발
+
+2) 자체 개발을 통한 기술 내제화
+
+2.1.3.1. 개요
+
+품명
+
+디지털 X선 콘솔 소프트웨어
+
+소프트웨어명
+
+FEEL-DRCS/Version 2.1.255.60
+
+실행부서
+
+개발본부 및 연구소
+
+개발구분
+
+변경(업데이트)
+
+총괄 및 PM
+
+이동진 부장
+
+개발기간
+
+단계별 구분
+
+완 료 일 정
+
+기획 단계
+
+2021.05.04
+
+개발 단계
+
+2021.05.08
+
+제품검증 단계 (Verification)
+
+2021.05.22
+
+유효성 확인 단계 (Validation)
+
+2021.05.22
+
+문서제작
+
+2021.05.26
+
+2.1.3.1. 개발 내용
+
+소프트웨어의 개발 방향
+
+시스템 콘솔 및 retrofit 제품에 부합되는 제품성
+
+One UI를 구성하여 사용자가 여러 개의 버튼 사용 없는 한 화면에서의 업무를 마무리할 수 있도록 사용자 만족 GUI 구성
+
+Analysis
+
+사용자 요구사항 분석
+
+User Request Specifications
+
+Functional Specification
+
+Design Specification
+
+User interface 배치도 분석
+
+제너레이터 및 디텍터 연동에 관련된 인터페이스 분석
+
+DICOM 기능 지원 범위 분석
+
+PC(workstation) 및 모니터 분석
+
+Planning
+
+위의 분석된 내용을 기반으로 하여 각 항목별 계획을 잡는다.
+
+Generator and Detector interface planning
+
+UI graphic design planning
+
+사용자 요구 function 구현 planning
+
+DICOM 구현 function planning
+
+사용하게 될 Library의 설정 planning
+
+Design
+
+이 단계에서는 다음의 소프트웨어 4가지 기능적 속성을 고려하여 디자인하였다.
+
+data structure/software architecture/functionality/interface characterization.
+
+위의 근간으로 하여 아래의 3가지 부분을 디자인한다.
+
+User Request Design
+
+Functional Specification Design
+
+Detail design
+
+4가지의 기능적 속성에 맞는 각 항목별 디자인은 다음과 같다.
+
+Raw data 저장파일 위치
+
+Correction 파일 적용을 위한 위치
+
+저장되어지는 DICOM 파일의 folder 구조
+
+각종 요구되어진 기능에 따른 database table 설계 디자인
+
+User Interface graphic 디자인
+
+시스템 workflow 디자인
+
+데이터 flow procedure 디자인
+
+시스템 설정관련 디자인
+
+에러 및 로그파일 저장 디자인
+
+Implementation
+
+Planning에 근거하여 Design 단계에서 정의된 각 항목별 디자인을 실제 코드로 변환작업을 실시하였다. 이 코드의 생성 및 실시는 H&abyz Co.,LTD.에서 개발하였으며, 각종 국제표준 protocol(DICOM등)을 준수하여 제작되었다.
+
+Qualification
+
+검증단계에서는 요구사항에 맞도록 디자인 및 코드작업이 되었는지는 확인하게 된다. 이때 테스팅의 의미는 한다. 테스팅은 처리된결과와 요구하였던 결과에 만족하는지에 대하여 검증에 대하여 보증하게 된다.
+
+Maintenance
+
+제품 출시전에 모든 검토가 이루어진 다음 소프트웨어를 릴리즈하여 제품을 출시한다. 하지만 현장에서 설치가 되고 나면 모든 소프트웨어는 결점을 가지고 있다고 판다하여야 함으로, 사후관리가 중요하다. 이에 대하여 에러처리요구 양식 및 사용자 수정 요청 양식을 작성하여 다음 릴리즈시에 반영 할 수 있도록 접수된 서류에 대하여 다시 modify 할 수 있도록 한다.
+
+제품 개발 일정
+
+제품개발일정은 관련 담당자들의 회의 및 review를 통해 결정하며 대표이사의 승인을 받는다.
+
+변경 업데이트 개발기간 : 2021. 05. 04 – 2021.05.26
+
+개발 단계별 일정 및 설계 출력 사항
+
+개발 Event
+
+일 정
+
+설계 출력
+
+비고
+
+기획 단계
+
+2021.05.04
+
+개발계획서, SRS, FRS
+
+개발 단계
+
+2021.05.08
+
+SDS, Design file, Source Code
+
+제품검증 단계 (Verification)
+
+2021.05.22
+
+Verification(Review) Report
+
+유효성 확인 단계 (Validation)
+
+2021.05.22
+
+Test Report
+
+문서제작
+
+2021.05.26
+
+Validation Report
+
+Target Specification
+
+주요 개발 내용
+
+소프트웨어 명칭
+
+Feel-DRCS
+
+설계입력 시 ISO13485 및 사내 개발프로세스의 설계입력을 근거하여 법적, 계약적, 사내적 요구사항에 맞는 설계를 진행한다.
+
+개발제품 구성표
+
+Image Acquisition Module
+
+디텍터부터 영상 획득 하는 class
+
+Worklist Module
+
+검사정보 DICOM/수동 입력 하는 class
+
+Browser Module
+
+저장된 검사정보를 리스트해 주는 Class
+
+Review(image View) Module
+
+선택된 검사를 또는 획득된 영상을 보여주는 class
+
+Processing Module
+
+획득된 영상을 설정된 파라메터에 맞도록 처리하는 class
+
+DB Module
+
+각종 정보를 저장 및 관리하는 데이터벵스 class
+
+DICOM module
+
+국제 의료영상표준 프로토콜인 DICOM 호환 class
+
+Expert Module
+
+저장된 영상에 대한 workstation 출력하는 class
+
+차별화 Item 및 요구사항
+
+System 안정성
+
+Risk 관리를 통하여 안정적인 메모리 관리 및 안정성 확보
+
+UI
+
+사용자 편의성을 높히기 위한 One UI window 요청
+
+DICOM 호환성
+
+PACS 및 film printer 의 안정적인 연동
+
+RISK 관리
+
+ISO 14971의 기준에 따라 위험관리계획 및 리포트작성
+
+개발 생명 주기
+
+폭포수 방법으로 개발
+
+개발 참조 표준
+
+EN 62304:2006+AMD1:2015
+
+품질관리시스템
+
+EN ISO 13485:2016
+
+책임과 권한
+
+실시부서
+
+성명
+
+책임과 권한
+
+개발팀
+
+이동진 부장
+
+Project 책임자
+
+개발팀
+
+김완수 차장
+
+소프트웨어 설계 및 제품 개발
+
+임용빈 사원
+
+제품 개발 및 문서화
+
+품질부
+
+허남규 차장
+
+소프트웨어 검증 및 RM
+
+영업부
+
+전제우 이사
+
+소프트웨어 검증 및 고객요청사항 정리
+
+제품 개발 프로세스
+
+제품개발은 ㈜에이치앤아비즈의 제품개발절차서에 규정된 설계 및 개발 절차에 따라 진행되며, process에 규정된 document 및 status 에 대한 대표이사의 검토/승인 결과에 따라 제품개발의 진행이 결정된다.
+
+개발프로세스 방법론 : 폭포수 방식
+
+Verification Plan
+
+품질경영팀장은 SDS에서 기술된 모든 기능에 대한 Verification 계획을 수립하고 각 부문별 개발이 완료되고 최종 System Integration된 시점에 각 항목에 대한 Verification을 수행한다.
+
+프로젝트팀은 Verification plan에 따라 시행한 Verification 결과에 대해 계획 대비 목표치를 달성하였는지 검토하고, Verification결과에 대한 승인여부를 결정한다
+
+Validation Plan
+
+품질경영팀장은 SDS를 기반으로 하여 Validation Plan을 수립하여야 하며, 사전 정의한 validation 담당자와 함께 실시할 수 있다.
+
+ 제품개발환경
+
+제품개발을 위해 필수적으로 사용되는 개발software 및 개발 장비를 보유, 관리하고 요구되는 제품개발 프로세스를 따르기 위한 개발환경을 구축한다.
+
+Document
+
+제품 개발 단계에서 작성되는 모든 문서는 문서관리 절차에 따라 유지 관리한다. 모든 requirement 의 설계입력항목은 추적성을 가지고 하위문서로 연계될 수 있도록 유지하고 설계출력까지의 추적성을 마련한다.
+
+Software 개발 Tool
+
+Tool
+
+Description
+
+MS Visual C++
+
+MS Visual Studio 2005
+
+.NET Framework
+
+.NET Framework 3.5 SP1 or later
+
+DICOM Library
+
+Leadtools PACS Imaging SDK 16.5 or 17
+
+ 개발 계획 일정표
+
+No.
+
+활동(Activity)
+
+개발일정 (Schedule) : 년/월
+
+담당 부서 및 담당자
+
+개발입력
+
+개발 출력
+
+2021
+
+(Design Input)
+
+(Design Output)
+
+5
+
+1
+
+소프트웨어 기획 및 개발 계획
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발/영업
+
+고객요구 및 표준요구사항
+
+개발계획서
+
+/이동진, 전제우
+
+2
+
+스프트웨어 요구사항 분석
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발
+
+개발계획서
+
+SRS, SDS
+
+/김완수
+
+3
+
+소프트웨어 아키텍처 설계
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발
+
+SRS, SDS
+
+Workflow Diagram
+
+/김완수
+
+4
+
+소프트웨어 상세 설계/ 코딩
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발
+
+Workflow Diagram, SDS
+
+GUI, 소스코드
+
+/김완수
+
+5
+
+소프트웨어 유닛 이행 및 검증
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발
+
+GUI, 소스코드
+
+Cord Reivew Report,
+
+S/W test Report
+
+/김완수
+
+6
+
+소프트웨어 통합 및 통합 시험
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발
+
+GUI
+
+S/W TEST report
+
+/김완수, 임용빈
+
+7
+
+소프트웨어 시스템 시험
+
+　
+
+　
+
+　
+
+　
+
+　
+
+ 개발/영업
+
+GUI
+
+S/W TEST report
+
+/김완수, 전제우
+
+8
+
+소프트웨어 유효성 확인 및 문서화
+
+　
+
+　
+
+　
+
+　
+
+　
+
+개발/영업
+
+S/W Test Report
+
+SW Validation Report
+
+/임용빈, 전제우
+
+소프트웨어 요구사항 분석
+
+고객 및 이해관계자의 관점으로 기술된 고객 요구사항과 각종 관련된 국제표준등을 바탕으로 소프트웨어 제품 관점의 요구사항을 구체화한 결과로서 소프트웨어 요구사항을 기술한다.
+
+Terms and abbreviations
+
+DICOM – Digital Imaging and Communications in Medicine (DICOM)은 의료영상정보를 관리 및 저장, 인쇄 및 전송하기 위한 표준.
+
+PACS – Picture Archiving and Communication System. 의료 영상에서 의료영상저장전송시스템(PACS)은 경제적으로 전자파일로 저장, 빠른 이미지 검색, 여러 의료장비로부터 획득된 이미지에 대한 액세스 및 여러 사이트에서 동시 액세스를 제공하기 위한 시스템
+
+Worklist Server – 촬영장비에서 환자 이름, 환자 ID, accession number, 생년월일, 검사 날짜를 기반으로 검사 목록을 구체적인 검색을 지원해 주는 서버.
+
+저장소 서버 – DICOM SCU(Service Class User)를 지원하는 각 개별적 DICOM node 즉, 개별촬영장비(Modality)에 저장된 DICOM 파일을 서버로 전송하기 위하여 DICOM SCP(Service Class Provider)를 지원해 주는 서버. 다만, 서버는 무조건 데이터를 받는 것이 아니라 서버에 등록된 즉, 개별 application AETitle Modality에 한하여 저장을 허락되어짐.
+
+식별 구분 정의
+
+No
+
+Name
+
+SRS 1
+
+Acquisition
+
+SRS 2
+
+Image Processing
+
+SRS 3
+
+Worklist
+
+SRS 4
+
+Browser
+
+SRS 5
+
+Exposure
+
+SRS 6
+
+Review
+
+SRS 7
+
+Setting
+
+SRS 8
+
+DICOM Standard
+
+SRS 9
+
+ETC
+
+SRS 10
+
+Logging and Error Handling
+
+소프트웨어 정의
+
+Feel-DRCS Console Software는 X선 디텍터로 부터 영상을 획득하고, 획득된 영상을 DICOM 으로 변환하여 local 데이터베이스에 저장 및 관리하는 소프트웨어.
+
+소프트웨어 블록도
+
+데이터 형식
+
+모든 디텍터로 받는 이미지 데이터는 특정 헤더없이 16 또는 14 bit 의 2차워 배열로 획득한다. 그리고 해당 raw는 최초에 한해서 저장하고, 동일한 데이터를 DICOM으로 변환하여 _org.dcm 으로 원본데이타를 저장하고, 후처리된 영상은 dicom으로 변환하여 .dcm 로 저장하여 관리한다.
+
+견고성 및 성능
+
+FEEL-DRCS 는 C++언어로 개발할 것이며 .NET Framework의 Garbage Collector가 메모리 누수를 방지하기 위해 메모리 관리하도록 한다. 하였다.
+
+소프트웨어는 이미지 저장 경로를 확인하고 지정된 폴더 또는 파일이 존재하지 않는 경우 지정된 폴더를 만들거나 파일을 설정해야한다는 것을 사용자에게 알려준다.
+
+사용요구사항
+
+하드웨어 요구사항
+
+System
+
+Category
+
+Description
+
+Hardware
+
+CPU
+
+Intel Core i3 6세대 이상(i5 이상 추천)
+
+Memory
+
+4G Byte RAM 이상(8GB 추천)
+
+HDD
+
+100GB 이상(DATA disk 별도 사용 추천)
+
+VGA
+
+1920 X 1080 X 32bit color 이상 지원
+
+Monitor
+
+23 inch FULL HD 지원 이상
+
+ETC
+
+RS-232C 지원 port 1 개 이상
+
+Gigabit LAN 카드 2개 이상(PACS + Detector)
+
+확장 slot 2 개 이상
+
+디스프레이 요구사항 및 관리
+
+Select and review TestPattern in the Browser mode.
+
+Checkavailable seeing “0% - 5% Constrast”
+
+Check available seeing “95% - 100% Constrast”
+
+Check available seeing step “0% - 100%”
+
+Check seeing Number
+
+Check seeing SMPE pattern(“D”)
+
+If you don’t see ➁ - ➅, you should control OSD(On Screen Display) of Monitor.
+
+All of operator must check upper checking list at daily.
+
+At least 19 inch
+
+Brightness : 250cd/(typical)
+
+Contrast Ratio : 600:1(typical)
+
+Response time : 8 ms(typical)
+
+Viewing Angle : 150/160(typical)
+
+Video graphic adapter
+
+Resolution : min. 1280 X 1024 pixels
+
+True Color 24 bit mode(No shared memory)
+
+D-SUB or DVI interface connector
+
+Intended Use : viewing display
+
+OS 및 SOUP 소프트웨어 환경 요구사항
+
+System
+
+Category
+
+Description
+
+Software
+
+OS
+
+Windows 7 Pro Sp1 32/64 이상
+
+DB
+
+MS Access 2002 이상
+
+DICOM Library
+
+Leadtools PACS Imaging Ver 16.5
+
+기타 하드웨어 인터페이스
+
+Detector : Depend on Detector Manufacture SDK and interface protocol
+
+SRS(Software Requirement Specifications)
+
+Identifier
+
+Function
+
+Description
+
+SRS 1
+
+Acquisition
+
+Acquire image from detector by SDK of detector manufacture. So, all of detector is not same. The feel-DRCS software should have to be followed by the detector’s SDK and sample code.
+
+SRS 1.1
+
+Connect Detector
+
+Connect with detector and software by SDK of detector manufacture.
+
+SRS 1.2
+
+Initialize Detector
+
+Be Initialized detector by SDK of detector manufacture. But all of detector is not same. Some detector don’t need this function. Because when feel-DRCS connect with detector, the detector is initialized
+
+SRS 1.3
+
+Get status of detector
+
+Check status of detector by SDK of detector manufacture.
+
+Update
+
+Add WIFI and Battery status
+
+Update
+
+Add Temperature of detector status
+
+SRS 1.4
+
+Ready Detector
+
+Ready detector for X-ray Exposure by trigger mode (H/W trigger, S/W trigger, Auto Trigger) by SDK of detector manufacture.
+
+Update : Show AED button for auto trigger mode
+
+SRS 1.5
+
+Acquisition Image
+
+Acquire image from detector after X-ray exposure by SDK of detector manufacture.
+
+SRS 1.6
+
+Correction Image
+
+Correct image by using detector calibration data by SDK of detector manufacture.
+
+(some detector don’t need this function. The detector send a corrected image)
+
+SRS 1.7
+
+Disconnect detector
+
+Disconnect detector when the software shut down or worklist/browser/configure mode of feel-DRCS.
+
+SRS 1.8
+
+Preview Image
+
+Some Detector support preview image after exposure immediately. Need to update preview function by related detector company.
+
+SRS 2
+
+Image Processing
+
+The Feel-DRCS process an acquired image from detector for diagnosis. And need to make parameter by each view position.
+
+SRS 2.1
+
+Pre processing
+
+Apply various LUT(Look-Up Table) by each view position.
+
+SRS 2.2
+
+Post Processing
+
+Apply various enhancement parameter by each view position.
+
+SRS 2.3
+
+Noise Reduction
+
+Apply noise reduction
+
+SRS 2.4
+
+Auto Windowing
+
+Apply auto windowing(Window Width/Level). And the value will support when make DICOM File.
+
+SRS 3
+
+Worklist
+
+For exam(study), get order list from DICOM Modality Server and make study by manual.
+
+SRS 3.1
+
+Search Worklist
+
+Search Patient Name/ID/Accession No/Modality Name/Period in stored worklist.
+
+SRS 3.2
+
+Query Worklist
+
+Query worklist from PACS server(DICOM worklist SCP)
+
+SRS 3.3
+
+Make Worklist
+
+Make worklist by manual.
+
+Patient Name/ID/Birth date/Age/ accession no./Study date/Study Description/Body part + View position.
+
+SRS 3.4
+
+Delete Worklist
+
+Delete selected worklist.
+
+SRS 3.5
+
+Export Worklist
+
+Update
+
+Export the listed order to excel file.
+
+SRS 4
+
+Browser
+
+For searching from the stored study information and images on local DB.
+
+- Separate 3 list – Patient/Study/Images(thumbnail)
+
+- Tools function for browser
+
+SRS 4.1
+
+Query Patient
+
+For searching patient in the local stored DB.
+
+Patient Name/ID/D.O.B.
+
+SRS 4.2
+
+Query Study
+
+When selected Patient, display study by automatically.
+
+SRS 4.3
+
+Display thumbnail
+
+When selected study, display related thumbnail images by automatically.
+
+SRS 4.4
+
+Tools
+
+Need several functions.
+
+- Data Backup and restore
+
+- Expert Images to several media with viewer
+
+- DICOM service(Store/Print)
+
+SRS 5
+
+Exposure
+
+For capture image from detector and control X-ray exposure parameter when connected with X-ray Generator.
+
+- Generator Control Panel/display detector status
+
+- Image acquisition from detector/various icons of editing image.
+
+SRS 5.1
+
+Display status of detector
+
+Display status of detector.
+
+- Ready “OK” or “No” for exposure/Acquire image
+
+SRS 5.2
+
+X-ray Generator control panel
+
+Display and control panel for X-ray exposure parameter
+
+SRS 5.3
+
+Image processing control panel
+
+Select processing parameter file and control processing parameter acquired image panel
+
+SRS 5.4
+
+Image display panel
+
+Image display panel for acquired image and processed image.
+
+SRS 5.5
+
+Annotation display
+
+Display various annotation
+
+- Patient/Study/Image/Hospital/external machines information
+
+SRS 5.6
+
+Several Progress Bar
+
+Display progress bar
+
+- control detector/acquire image/processing image
+
+SRS 5.7
+
+Tools Panel
+
+Need several edit and communication function tool panel.
+
+- Display/Edit image, DICOM networking, Study control
+
+SRS 5.8
+
+List view position
+
+Need list of view position. If selected multi worklist, have to show all list view position matched selected all of worklist.
+
+SRS 5.9
+
+Save Annotation
+
+Update.
+
+Need to save with annotation(length/line etc)
+
+SRS 5.10
+
+Auto adjustment for size of marker size
+
+Update.
+
+Need to auto sizing of Marker
+
+SRS 6
+
+Review
+
+For display images of selected study in the Browser mode.
+
+SRS 6.1
+
+Same Exposure mode
+
+Need same exposure excepted detector and generator and view position panel.
+
+SRS 6.2
+
+Status DICOM Network
+
+Need status of processing of DICOM Storage and PACS
+
+SRS 6.3
+
+Measurement function
+
+Need length and angle measurement function.
+
+SRS 7
+
+Setting
+
+For setting information, system
+
+SRS 7.1
+
+Information
+
+User ID and password/Hospital Information and etc
+
+SRS 7.2
+
+System
+
+Modality(CR, DX), Storage Gray Bit of image, Auto delete and period, DB compression, Bucky configure, Detector configure, Option Configure, Log Configure
+
+SRS 7.3
+
+DICOM
+
+DICOM Storage/Print/Worklist SCP information and connecting testing
+
+SRS 8
+
+DICOM Standard
+
+For setting information, system and DICOM
+
+SRS 8.1
+
+DICOM Setting
+
+DICOM Storage/Print/Worklist SCP information and connecting testing
+
+SRS 8.2
+
+DICOM Status
+
+Display Status of DICOM Connection/processing/Que/Cancel
+
+SRS 8.3
+
+DICOM Print Composer
+
+Add various annotation and layout on the Print Preview
+
+SRS 8.4
+
+DICOM Print Composer Font Size control
+
+Add font size control at print composer
+
+SRS 9
+
+ETC
+
+Integrated Generator and Detector
+
+SRS 9.1
+
+Generator Control
+
+Connect and control kVp/mA/mSec/AEC position and Density by Generator manufacture protocol or SDK
+
+SRS 9.2
+
+Add new detector
+
+Add Trixell 3543EZ detector. Need to add WIFI/BATEERY status
+
+SRS 9.3
+
+Add New Detector
+
+Add Rayence 1717SGC/SCC, 1417 PGA/PCA detector
+
+SRS 9.4
+
+Add New DAP
+
+Add iba DAP(Dose Area Product)
+
+SRS 9.5
+
+Add New Generator
+
+Add IMD Mobile generator interface by IMD protocol
+
+SRS 9.6
+
+DAP Unit control
+
+Add select DAP Unit although DICOM stand fix DAP Unit. So, Just display by selected Unit, but don’t change DAP unit when store DICOM file.
+
+SRS 9.7
+
+Add New Detector
+
+Update
+
+Add iRay Mars1417/1717 V1/V2/V3,
+
+iRay Venu1717X/Venu1717MF detector
+
+SRS 9.8
+
+Add New Detector
+
+Update
+
+Add Careray 1800L, 1800CW, 1599C
+
+SRS 9.9
+
+Add New Detector
+
+Update
+
+Add PZMedical 4343A wired/wireless, 3543 wired/wireless
+
+SRS 9.10
+
+Add New Detector
+
+Update
+
+Add Radisen FEDERA-17F
+
+SRS 9.11
+
+Add New Detector
+
+Update
+
+Add VarexImaging Paxscan 4343R V3/4343RC/4336W V4/2430C
+
+SRS 9.12
+
+Add New Detector
+
+Update
+
+Add Trixell 3543DR-(GS/GX/CS/CX)
+
+SRS 9.13
+
+Add New Detector
+
+Update
+
+Add CETD 4343FDXA detector
+
+SRS 9.14
+
+Add New Generator
+
+Update
+
+Hitachi Generator(APSARAS-M1000)
+
+SRS 9.15
+
+Add New Generator
+
+Update
+
+Suzhou PowerSite Electric Generator(PSH-HR)
+
+SRS 9.16
+
+Add New Generator
+
+Update
+
+Siemens Polydoros Generator
+
+SRS 9.17
+
+Add New Detector
+
+Update
+
+Add H&abyz HAD1717MG, HAD1717MC,
+
+ADD(HAD1417MCW), ADD(HAD1717MCW) detector
+
+SRS 10
+
+Logging and error handling
+
+Save log file for handle error
+
+SRS 10.1
+
+Detector
+
+Setting and store log and error at detector control software folder by detector control SDK and feel-DRCS just display error on the screen. The client can clear by detector manufacture manual.
+
+SRS 10.2
+
+Generator
+
+Setting and log and error at feel-DRCS log folder by Generator Protocol or SDK and feel-DRCS display error on the screen. The client can clear by generator manufacture manual.
+
+SRS 10.3
+
+System
+
+When system have error, feel-DRCS store error content log file and display.
+
+SRS 10.4
+
+Image Processing
+
+When happen error, feel-DRCS store error content log file and display.
+
+SRS 10.5
+
+Worklist
+
+When happen error, feel-DRCS store error content log file and display
+
+SRS 10.6
+
+Browser
+
+When happen error, feel-DRCS store error content log file and display
+
+SRS 10.7
+
+Exposure
+
+When happen error without generator and X-ray, feel-DRCS store error content log file and display.
+
+SRS 10.8
+
+Review
+
+When happen error, feel-DRCS store error content log file and display
+
+SRS 10.9
+
+DICOM Network
+
+When checked save log option, feel-DRCS store all of communication step by DICOM standard.
+
+위험관리요구사항
+
+사용요구사항은 ISO 14971 기준에 대하여 안정성에 대한 요구사항을 반영함.
+
+위험관리문서 참조
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+소프트웨어 아키텍쳐 설계
+
+소프트웨어 architecture diagram
+
+Dependency Description
+
+Acquisition Module
+
+Connecting and control Detector
+
+Worklist Module
+
+Worklist Module search for patient information from OCS server or PACS Worklist Server.
+
+And save it in Local database.
+
+And then change over from Worklist Module to Control Panel Module for X-ray exposure.
+
+Exposure Module
+
+Control Panel communicate to Detector and X-ray Generator for a raw image.
+
+Raw image transmit of viewer module.
+
+Post-processing.
+
+Image Editing.
+
+Save Image to Local disk.
+
+Send to PACS Server
+
+DICOM Print
+
+ReView Module
+
+Post-processing.
+
+Image Editing.
+
+Save Image to Local disk.
+
+Send to PACS Server
+
+DICOM Print
+
+Browser Module
+
+Search for Patient images from Local database
+
+Edit/Delete/Send/Backup for Local Disk/Backup for Optical Disk
+
+DICOM Module
+
+Print Management Service Class
+
+Storage Service Class
+
+Modality Worklist Management
+
+Image Processing Module
+
+Pre-processing : Calibration
+
+Post-processing : Image Enhancement
+
+Database Module
+
+Search or edit of Patient Information/Image Information/Study Information
+
+Interface Description
+
+Workflow Flow chart
+
+소프트웨어 상세 설계
+
+User Interface Design
+
+UID Identify
+
+Description and sketch
+
+UID 0
+
+Login Window
+
+UID 1
+
+Main title and status bar
+
+UID 2
+
+Worklist mode window
+
+UID 3
+
+Browser mode window
+
+UID 4
+
+Exposure mode window
+
+UID 5
+
+Review mode window
+
+UID 6
+
+Configure mode window
+
+UID 7
+
+Print Preview window
+
+Design Change to UID 15
+
+UID 8
+
+NewSet window
+
+UID 9
+
+Code Matching window
+
+UID 10
+
+CD Backup window
+
+UID 11
+
+Stitching window
+
+UID 12
+
+Text Add window
+
+UID 13
+
+Common Message box window
+
+UID 14
+
+WIFI and Battery status
+
+: Step unit 20%
+
+ : Step unit 25%
+
+UID 15
+
+New Print Preview UI for Composer and Paper Print
+
+UID 16
+
+AED enable button
+
+ : show display AED off or standbye mode
+
+ : show display AED ON or chang turn on AED by click
+
+UID 17
+
+Display temperature of detector
+
+Identifiers “SDS n”
+
+Identifiers SDS
+
+Name
+
+Source Class
+
+Description
+
+SDS 1.XXX
+
+Acquisition
+
+CClassDet
+
+CClassAcq
+
+This SDS use in Exposure mode for control of Detector. Connect / Disconnect/ initialize/ Ready etc.
+
+SDS 2.XXX
+
+Image Processing
+
+CClassImgProc
+
+Post processing with acquired raw image from detector. After processing, this image convert DCM file and store to Local DB.
+
+SDS 3.XXX
+
+Worklist
+
+CClassWorkist
+
+The worklist work get worklist from DCM worklist SCP or input study information by manual.
+
+SDS 4.XXX
+
+Browser
+
+CClassBrowser
+
+List stored study and patient and thumbnail image in the local DB. And additional Backup/ restore/ PACS sending/ Printing/ File Export.
+
+SDS 5.XXX
+
+Exposure
+
+CClassContorlPanel
+
+CClasssExp
+
+CClassGen
+
+CClassRev
+
+Image and annotation display is same exposure and review.
+
+Exposure mode : control for Detector interface and generator interface. And view position list for exam study.
+
+SDS 6.XXX
+
+Review
+
+CClassRev
+
+Review mode : display image and annotation by selected study in the Browser mode.
+
+SDS 7.XXX
+
+Setting
+
+CClassSetup
+
+Various setting tab.
+
+SDS 8.XXX
+
+DICOM Standard
+
+CClassDCM
+
+Control DICOM service and format
+
+SDS 9.XXX
+
+ETC
+
+CClassMain
+
+CClassLogin
+
+CClassExit
+
+Login UI and Main command bar and UI and exit control
+
+SDS 10.XXX
+
+Logging and Error Handling
+
+CClassLogErr
+
+When happen error, save log file and error list and control.
+
+PEMS
+
+SDS 1.XXX : X-ray 검출기 연결
+
+SDS 8.XXX : 병원 PACS network 망 연결
+
+SDS: Specification Table
+
+Identifier
+
+SRS Reference
+
+UID Reference
+
+Function Name
+
+Function Define
+
+SDS 1.1
+
+SRS 1.1
+
+SRS 5.1
+
+UID 4
+
+CDetCon
+
+Feel-DRCS connects to detector by the Detector manufacturer’s SDK.
+
+SDS 1.2
+
+SRS 1.2
+
+SRS 5.1
+
+UID 4
+
+CDetInit
+
+Feel-DRCS command to initialize the detector by the Detector manufacturer’s SDK.
+
+SDS 1.3
+
+SRS 1.5
+
+UID 4
+
+CDetReady
+
+Feel-DRCS command to the detector to prepare for X-ray Exposure by the Detector manufacturer’s SDK.
+
+SDS 1.4
+
+SRS 1.4
+
+SRS 5.1
+
+UID 4
+
+CDetGetImg
+
+Feel-DRCS get a raw image from the detector by the Detector manufacturer’s SDK. In this time, feel-DRCS have to wait until the detector send a raw image.
+
+SDS 1.5
+
+SRS 1.3
+
+SRS 5.1
+
+UID 4
+
+CDetGetStatus
+
+Feel-DRCS get status of the detector by the Detector manufacturer’s SDK.
+
+(Update)
+
+Add display ICON for WIFI and Battery status.
+
+SDS 1.6
+
+SRS 1.6
+
+SRS 5.1
+
+UID 4
+
+CDetCor
+
+Feel-DRCS command correct with acquired image to the detector by the Detector manufacturer’s SDK.
+
+SDS 1.7
+
+SRS 1.7
+
+SRS 5.1
+
+UID 4
+
+CDetDiscon
+
+Feel-DRCS disconnect with detector by the Detector manufacturer’s SDK.
+
+SDS 1.8
+
+SRS 9.2
+
+UID 4/14
+
+Device No
+
+UPDATE.
+
+Add new detector.
+
+Device No is same with Trixell Detector Pixium 4343R. Because Trixell SDK is used only one SDK for support whole detector model.
+
+SDS 1.9
+
+SRS 9.2
+
+UID 4
+
+Device No
+
+UPDATE.
+
+Add New Detector.
+
+Device No is same with VATECH detector. Because Rayence company is branch from VATECH. So they used same SDK. And feel-DRCS just followed by davinci(Rayence Detector SDK) configuration.
+
+Detector : 1717SGC/SCC, 1417 PGA/PCA
+
+SDS 1.10
+
+SRS 9.3
+
+UID 4
+
+DAP No
+
+UPDATE.
+
+Add New DAP.
+
+Interface with Serial Communication(RS232) by iba interface protocol.
+
+SDS 1.11
+
+SRS 9.5
+
+setup
+
+DAP Unit
+
+Update.
+
+Add control Font size when display and print at dicom print composer.
+
+SDS 1.12
+
+SRS 9.7
+
+SRS 9.8
+
+SRS 9.9
+
+SRS 9.10
+
+SRS 9.11
+
+SRS 9.12
+
+SRS 9.13
+
+SRS 9.17
+
+UID 4/14
+
+Device No
+
+UPDATE.
+
+Add New Detector
+
+- iRay Mars1417/1717 V1/V2/V3,
+
+- iRay Venu1717X/Venu1717MF
+
+- Careray 1800L, 1800CW, 1500C
+
+- PZMedical 4343A wired/wireless
+
+3543 wired/wireless
+
+- Pixxgen PIXX 1717
+
+- Radisen FEDERA-17F
+
+- VarexImaging Paxscan 4343R V3/
+
+4343RC/4336W V4/2430C
+
+- Trixell 3543DR-(GS/GX/CS/CX)
+
+- CETD 4343FDXA detector
+
+- H&abyz HAD1717MG,MC
+
+ HAD1417MCW/ HAD1717MCW detector
+
+SDS 2.1
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_LoadParameter
+
+For Processing image, load the matched or predefined parameter file.
+
+SDS 2.2
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_SaveParameter
+
+Save the parameter file after change parameter.
+
+SDS 2.3
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_ImageEnhancement
+
+Process a selected image with loaded parameter.
+
+SDS 2.4
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+CimgReset
+
+Reset or return a processed image to raw image.
+
+SDS 3.1
+
+SRS 3.1
+
+UID 2
+
+CWorkListDlg_Search
+
+Search worklist by the set search condition in the local DB.
+
+SDS 3.2
+
+SRS 3.2
+
+UID 2
+
+CWorkListDlg_Query
+
+Query worklist by the set search condition from selected DICOM Modality Worklist SCP by DICOM Networking.
+
+SDS 3.3
+
+SRS 3.3
+
+UID 2
+
+CWorkListDlg_Manual
+
+Input new study information (Worklist) and store it to Local DB.
+
+Patient ID/Name/Sex/DOB/Age
+
+Accession No./Study description/Body part + Viewposition
+
+SDS 3.4
+
+SRS 3.4
+
+UID 2
+
+CWorkListDlg_Delete
+
+Delete selected worklist.
+
+SDS 3.5
+
+SRS 3.5
+
+UID 2
+
+CWorkListDlg_OutExcel
+
+UPDATE.
+
+Export the listed worklist to Excel file.
+
+SDS 4.1
+
+SRS 4.1
+
+UID 3
+
+CBrowserQrPat
+
+Query and display patient list by the set search condition in the local DB.
+
+SDS 4.2
+
+SRS 4.2
+
+UID 3
+
+CBrowserQrStudy
+
+Query and display study list of selected patient.
+
+SDS 4.3
+
+SRS 4.3
+
+UID 3
+
+CBrowserThDisap
+
+Query and display thumbnail images of selected study.
+
+SDS 4.4
+
+SRS 4.4
+
+UID 3
+
+CDICOMSend
+
+Send selected DICOM files to selected PACS server by DICOM Storage Service.
+
+SDS 4.5
+
+SRS 4.4
+
+UID 3/15
+
+CDICOMPrintPreview
+
+Call and display Print Preview window with selected images.
+
+Update
+
+Update User Interface and Layout and annotation.
+
+SDS 4.6
+
+SRS 4.4
+
+UID 3/15
+
+CDICOMPrint
+
+Print as same as display of print preview to selected DICOM Print Server by DICOM Print Service.
+
+Update
+
+Same print, but just changed UI.
+
+SDS 4.7
+
+SRS 4.4
+
+UID 3/10
+
+CCDBackup
+
+Copy selected study DICOM file to CD/DVD Media with Image Viewer.
+
+SDS 4.8
+
+SRS 4.4
+
+UID 3
+
+CBackup
+
+Backup or copy selected study DICOM files to destination.
+
+SDS 4.9
+
+SRS 4.4
+
+UID 3
+
+CRestore
+
+Restore selected DICOM files to local DB.
+
+SDS 5.1
+
+SRS 5.1
+
+UID 4
+
+UID 14
+
+CDetStatusDisp
+
+Display a status of detector.
+
+READY/ACQUIRE/DISCONNECT
+
+SDS 5.2
+
+SRS 5.2
+
+UID 4
+
+CGenKvpGetDisp
+
+Display a value of KVP from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.3
+
+SRS 5.2
+
+UID 4
+
+CGenKvpSetDisp
+
+Send of Set command of Generator with the set value of KVP by the protocol of X-ray Generator Company.
+
+SDS 5.4
+
+SRS 5.2
+
+UID 4
+
+CGenmAGetDisp
+
+Display a value of mA from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.5
+
+SRS 5.2
+
+UID 4
+
+CGenmASetDisp
+
+Send of Set command of Generator with the set value of mA by the protocol of X-ray Generator Company.
+
+SDS 5.6
+
+SRS 5.2
+
+UID 4
+
+CGenmSecGetDisp
+
+Display a value of mSec from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.7
+
+SRS 5.2
+
+UID 4
+
+CGenmSecSetDisp
+
+Send of Set command of Generator with the set value of mSec by the protocol of X-ray Generator Company.
+
+SDS 5.8
+
+SRS 5.2
+
+UID 4
+
+CGenmAsGetDisp
+
+Display a value of mAs from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.9
+
+SRS 5.2
+
+UID 4
+
+CGenmAsSetDisp
+
+Send of Set command of Generator with the set value of mAs by the protocol of X-ray Generator Company.
+
+SDS 5.10
+
+SRS 5.2
+
+UID 4
+
+CGenAECGetDisp
+
+Display a value of AEC from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.11
+
+SRS 5.2
+
+UID 4
+
+CGenAECSetDisp
+
+Send of Set command of Generator with the set value of AEC by the protocol of X-ray Generator Company.
+
+SDS 5.12
+
+SRS 5.2
+
+UID 4
+
+CGenDenGetDisp
+
+Display a value of Density of AEC from Generator by the protocol of X-ray Generator Company.
+
+SDS 5.13
+
+SRS 5.2
+
+UID 4
+
+CGenDenSetDisp
+
+Send of Set command of Generator with the set value of Density of AEC by the protocol of X-ray Generator Company.
+
+SDS 5.14
+
+SRS 5.3
+
+SRS 6.1
+
+UID 4/5
+
+ImageProcessingPanel
+
+Separate panel for only image processing.
+
+Refer SDS 2.X about functions.
+
+SDS 5.15
+
+SRS 5.4
+
+SRS 6.1
+
+UID 4/5
+
+CImgDispPre
+
+Display pre raw image from detector. It’s don’t need to store image in the local DB.
+
+SDS 5.16
+
+SRS 5.4
+
+UID 4/5
+
+CImgDisp
+
+Display raw image and processed image continuously.
+
+SDS 5.17
+
+SRS 5.5
+
+UID 4/5
+
+CAnnDisplay
+
+Display annotation on the image with related DICOM tag.
+
+SDS 5.18
+
+SRS 5.6
+
+UID 4/5
+
+CProgAcquireImg
+
+Display the progress bar when acquire image from detector.
+
+SDS 5.19
+
+SRS 5.6
+
+UID 4/5
+
+CProgStorageImg
+
+Display the progress bar when store image to local DB.
+
+SDS 5.20
+
+SRS 5.7
+
+UID 4/5
+
+CToolsLayout0
+
+Display 1 X 1 layout.
+
+SDS 5.21
+
+SRS 5.7
+
+UID 4/5
+
+CToolsLayout1
+
+Display a selected layout. This layout function include additional user define.
+
+SDS 5.22
+
+SRS 5.7
+
+UID 4/5
+
+CToolsResetSSWL
+
+Reset and display windows width and level as store DICOM tag.
+
+SDS 5.23
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMag
+
+Magnification glass.
+
+SDS 5.24
+
+SRS 5.7
+
+UID 4/5
+
+CToolsZoom
+
+Zoom in and out to maximum 200%.
+
+SDS 5.25
+
+SRS 5.7
+
+UID 4/5
+
+CToolsHang
+
+Hanging image.
+
+SDS 5.26
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFit
+
+Fit image to screen size.
+
+SDS 5.27
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCropCircle
+
+Crop Circle.
+
+SDS 5.28
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCropRect
+
+Crop rectangle.
+
+SDS 5.29
+
+SRS 5.7
+
+UID 4/5/11
+
+CToolsStitching
+
+Open the Stitch window and stitch image with 2 – 4 images.
+
+SDS 5.30
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSave
+
+Save the image to local DB after edit image.
+
+SDS 5.31
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSaveSending
+
+Save the image and send the stored image to PACS server by using DICOM Store service.
+
+SDS 5.32
+
+SRS 5.7
+
+UID 4/5
+
+CToolsClose
+
+Close study.
+
+SDS 5.33
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCancle
+
+Cancel the acquired image.
+
+SDS 5.34
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFlip
+
+Flip image
+
+SDS 5.35
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFlop
+
+Flop image
+
+SDS 5.36
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCCW
+
+Rotate CCW
+
+SDS 5.37
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCW
+
+Rotate CW
+
+SDS 5.38
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMarkerR
+
+Add and display on the image “R”. R = Right
+
+SDS 5.39
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMarkerL
+
+Add and display on the image “L”. L = Left
+
+SDS 5.40
+
+SRS 5.7
+
+UID 4/5/12
+
+CToolsText
+
+Add and display on the TEXT
+
+SDS 5.41
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSelectPACS
+
+Select PACS destination of pre-defined PACS server list..
+
+SDS 5.42
+
+SRS 5.7
+
+UID 4/5/8
+
+CToolsNewSET
+
+Set and edit for predefine body part/view postion/path of image parameter path/exposure condition/Rotate etc
+
+SDS 5.43
+
+SRS 5.7
+
+UID 4/5/9
+
+CToolsCodeManager
+
+Set and edit code manager.
+
+SDS 5.44
+
+SRS 5.8
+
+UID 4/5
+
+CStudyList
+
+Display study list from selected study in the worklist mode.
+
+SDS 5.45
+
+SRS 5.8
+
+UID 4/5
+
+CViewPosition
+
+Display and select a view position for exposure.
+
+SDS 5.46
+
+SRS 9.5
+
+SRS 9.14
+
+SRS 9.15
+
+SRS 9.16
+
+UID 4
+
+CGenNo
+
+Update.
+
+Add IMD generator interface by IMD Generator interface model. This IMD generator is mobile generator. So don’t need interface with AEC control (SDS 10/11/12/13).
+
+UPDATE.
+
+Add New Generator
+
+- Control and define by TypeGen No.
+
+- Hitachi APSARAS-M1000
+
+- Suzhou PowerSite PSH-HR
+
+- Siemens Polydoros
+
+SDS 5.47
+
+SRS 1.8
+
+UID 4/5
+
+CImgDispPreBinning
+
+Update.
+
+Preiview image before corrected raw image display from detector
+
+SDS 5.48
+
+SRS 5.9
+
+UID 4/5
+
+CAnnBurn
+
+Update.
+
+Be Burned added annotations to the image data.
+
+SDS 5.49
+
+SRS 5.10
+
+UID 4/5
+
+CToolsMarkerAutoAdj
+
+Update.
+
+Auto adjust Marker Size by vertical crop size.
+
+SDS 5.50
+
+SRS 1.4
+
+UID 16
+
+CAEDbtn
+
+Update
+
+Show and control AED(auto trigger)
+
+function
+
+SDS 5.51
+
+SRS 1.3
+
+UID 17
+
+CDispStatusTemp
+
+Update
+
+Show the detector temperature
+
+SDS 6.1
+
+SRS 6.1
+
+UID 5
+
+Same SDS 5.14 ~ 5.43
+
+SDS 6.2
+
+SRS 6.2
+
+UID 5
+
+CDICOMSendingQueTable
+
+Display and control (Pause/Stop/Restart
+
+/Delete) que table of DICOM sending.
+
+SDS 6.3
+
+SRS 6.2
+
+UID 5
+
+CDICOMPrintingQueTable
+
+Display and control (Pause/Stop/Restart
+
+/Delete) que table of DICOM Printing.
+
+SDS 6.4
+
+SRS 6.3
+
+UID 5
+
+CMeasureLength
+
+Measurement Length by Pixel size
+
+SDS 6.5
+
+SRS 6.3
+
+UID 5
+
+CMeasureAngle
+
+Measurement angle between two line
+
+SDS 7.1
+
+SRS 7.1
+
+UID 6
+
+CSysSetID
+
+Manage User ID
+
+SDS 7.2
+
+SRS 7.1
+
+UID 6
+
+CSysSetPass
+
+Manage User Password
+
+SDS 7.3
+
+SRS 7.1
+
+UID 6
+
+CDateFormat
+
+Set Date Format
+
+SDS 7.4
+
+SRS 7.1
+
+UID 6
+
+CSetModal
+
+Set stand/table/stand+table for installed X-ray system.
+
+SDS 7.5
+
+SRS 7.1
+
+UID 6
+
+CSetHospInfo
+
+Set hospital information.
+
+SDS 7.6
+
+SRS 7.2
+
+UID 6
+
+CSetDataPath
+
+Set the path of store DICOM file.
+
+SDS 7.7
+
+SRS 7.2
+
+UID 6
+
+CSetModalName
+
+Set Modality name. The modality name of X-ray detector have to use DX. But many of PACS server(Worklsit/Storage) CR. Because hospital environment status of initial PACS don’t have X-ray detector. So they have to use CR. So feel-DRCS have to support CR modality name. This means the general radiography modality is CR and DX.
+
+SDS 7.8
+
+SRS 7.2
+
+UID 6
+
+CSetDataBits
+
+Set DICOM gray scale bit.
+
+SDS 7.9
+
+SRS 7.2
+
+UID 6
+
+CSetAutoDelete
+
+Set auto delete option.
+
+On/OFF, Period or capacity of HDD.
+
+SDS 7.10
+
+SRS 7.2
+
+UID 6
+
+CDBBack
+
+Backup Local database/
+
+SDS 7.11
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMWroklist
+
+Set DICOM worklist SCP information.
+
+SDS 7.12
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMStorage
+
+Set and add and modify DICOM Storage SCP information.
+
+SDS 7.13
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMPrint
+
+Set and add and modify DICOM Print SCP information.
+
+SDS 8.1
+
+SRS 8.1
+
+UID 6
+
+Same SDS 7.11 ~ 7.13
+
+SDS 8.2
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusSending
+
+Display status of DICOM sending.
+
+Connected/sending/error/disconnect
+
+SDS 8.3
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusWorklist
+
+Display status of DICOM Worklist.
+
+Connected/error/disconnect
+
+SDS 8.4
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusPrinting
+
+Display status of DICOM sending.
+
+Connected/sending/error/disconnect
+
+SDS 8.5
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMQueImgSending
+
+Display Que count of sending images.
+
+SDS 8.6
+
+SRS 8.2
+
+UID 1
+
+CLogin
+
+User Login page
+
+SDS 8.7
+
+SRS 8.2
+
+UID 2
+
+CMain
+
+Main UI and command Button
+
+Program Exit
+
+SDS 9.1
+
+SRS 9.1
+
+UID 4
+
+CGenConStatus
+
+Display status of connecting generator.
+
+SDS 9.2
+
+SRS 9.1
+
+UID 4
+
+CGenGetParameter
+
+Command get the parameter of exposure condition. This command used only generator be supported by multi command.
+
+SDS 9.3
+
+SRS 9.1
+
+UID 4
+
+CGenGetParamterPost
+
+Command get the post exposure parameter. This command used only generator be supported by post parameter command.
+
+SDS 9.4
+
+SRS 9.1
+
+UID 4
+
+CGenSetParameter
+
+Command set the parameter of exposure condition. This command used only generator be supported by multi command.
+
+SDS 10.1
+
+SRS 10.1
+
+SRS 10.3
+
+UID 4/13
+
+CDetCallBack
+
+Feel-drcs use the call back function from detector SDK. After call back from detector, feel-DRCS be operated by case of define detector SDK.
+
+SDS 10.2
+
+SRS 10.2
+
+SRS 10.3
+
+UID 4/13
+
+CGenCallBack
+
+Feel-drcs use the call back function from generator protocol. After call back from generator, feel-DRCS be operated by case of define generator protocol.
+
+SDS 10.3
+
+SRS 10.3
+
+SRS 10.4
+
+UID 4/5/13
+
+feelTK_GetLastErr
+
+Display error message when we have an error using feelTK_ImageEnhancement.
+
+SDS 10.4
+
+SRS 10.3
+
+SRS 10.5
+
+UID 2/13
+
+CDicomWorkListErr
+
+Display error message when happen an error using DICOM worklist.
+
+SDS 10.5
+
+SRS 10.3
+
+SRS 10.6
+
+UID 3/13
+
+CBrowserErr
+
+Display error message when we have an error using search and select patien/study/image on the Browser Mode.
+
+SDS 10.6
+
+SRS 10.3
+
+SRS 10.7
+
+UID 4/13
+
+CExposureErr
+
+Display error message when we have an error using select view position, acquire image from detector, storing image to HDD in exposure mode.
+
+SDS 10.7
+
+SRS 10.3
+
+SRS 10.8
+
+UID 5/13
+
+CReviewErr
+
+Display error message when we have an error using display image in the review mode.
+
+SDS 10.8
+
+SRS 10.3
+
+SRS 10.9
+
+UID 2/3/4/5
+
+CDcmNetErr
+
+Display error and save log when we have an error using DICOM networking.
+
+SDS: Error Table
+
+Error Code
+
+SDS Reference
+
+Error Code Name
+
+Description
+
+300
+
+SDS 10.8
+
+IDS_ERR_ALEADYCONNECT
+
+Server is connecting. End server connection.
+
+301
+
+SDS 10.5
+
+IDS_ERR_BACKUPDIR
+
+Backup drive is empty.
+
+302
+
+SDS 10.5
+
+IDS_ERR_BACKUPFAILED
+
+Backup failed, check CD-RW.
+
+303
+
+SDS 10.4
+
+SDS 10.5
+
+SDS 10.6
+
+IDS_ERR_CANOTUPDATEDB
+
+Can not update database, check database.
+
+304
+
+SDS 10.5
+
+SDS 10.7
+
+IDS_ERR_CHANGEDIMAGE
+
+Image information was changed successfully.
+
+305
+
+SDS 10.5
+
+IDS_ERR_CHANGEDPATIENT
+
+Patient information was changed successfully.
+
+306
+
+SDS 10.5
+
+IDS_ERR_CHANGEDSERIES
+
+Series information was changed successfully.
+
+307
+
+SDS 10.5
+
+IDS_ERR_CHANGEDSTUDY
+
+Study information was changed successfully.
+
+308
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_CLOSECURPATIENT
+
+Do you close present patient information?(Y/N)
+
+309
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_CLOSEWIDTHSAVESEND
+
+Can not end program during storage/transmission process execution.
+
+310
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_CLOSEWIDTHSEND
+
+Can not end program during transmission process execution.
+
+311
+
+SDS 10.5
+
+IDS_ERR_DELALLSELPATIENT
+
+Do you delete all patient information? (Y/N)\n\n* been subordinate all study/series/image information are deleted.
+
+312
+
+SDS 10.5
+
+IDS_ERR_DELETEALLOPERATOR
+
+Do you delete all operator information?(Y/N)
+
+313
+
+SDS 10.5
+
+IDS_ERR_DELETEALLPATIENTLIST
+
+Do you delete all patient lists?(Y/N)
+
+314
+
+SDS 10.5
+
+IDS_ERR_DELETEALLPHYSICIAN
+
+Do you delete all physician lists?(Y/N)
+
+315
+
+SDS 10.5
+
+IDS_ERR_DELETEFAILEDSELPATIENT
+
+Failed in patient information delete.
+
+316
+
+SDS 10.5
+
+IDS_ERR_DELETEFAILEDSELSERIES
+
+Failed in series information delete.
+
+317
+
+SDS 10.5
+
+IDS_ERR_DELETEFAILEDSELSTUDY
+
+Failed in study information delete.
+
+318
+
+SDS 10.5
+
+IDS_ERR_DELETESELOPERATOR
+
+Do you delete selected operator?(Y/N)
+
+319
+
+SDS 10.5
+
+IDS_ERR_DELETESELPATIENT
+
+Do you delete selected patient?(Y/N)
+
+320
+
+SDS 10.5
+
+IDS_ERR_DELETESELPHYSICIAN
+
+Do you delete selected physician?(Y/N)
+
+321
+
+SDS 10.5
+
+IDS_ERR_DELETESUCCESSSELIMAGE
+
+Deleted image successfully.
+
+322
+
+SDS 10.5
+
+IDS_ERR_DELETESUCCESSSELPATIENT
+
+Deleted patient information successfully.
+
+323
+
+SDS 10.5
+
+IDS_ERR_DELETESUCCESSSELSERIES
+
+Deleted series information successfully.
+
+324
+
+SDS 10.5
+
+IDS_ERR_DELETESUCCESSSELSTUDY
+
+Deleted study information successfully.
+
+325
+
+SDS 10.5
+
+IDS_ERR_DELSELIMAGE
+
+Do you delete selected image?(Y/N)
+
+326
+
+SDS 10.5
+
+IDS_ERR_DELSELPATIENT
+
+Do you delete selected Patient information?(Y/N)\n\n* been subordinate all study/series/image informations are deleted.
+
+327
+
+SDS 10.5
+
+IDS_ERR_DELSELSERIES
+
+Do you delete selected Series information?(Y/N)\n\n* been subordinate all image information are deleted.
+
+328
+
+SDS 10.5
+
+IDS_ERR_DELSELSERIES2
+
+Do you delete selected Study information?(Y/N)\n\n* been subordinate all series/image information are deleted.
+
+329
+
+SDS 10.5
+
+IDS_ERR_DELSELSTUDY
+
+Delete current selected Study information?(Y/N)\n\n* Delete all as under Series/Images Information.
+
+330
+
+SDS 10.6
+
+IDS_ERR_EXISTEXPOSUREIMAGE
+
+Acquired image is available now. Discard this image?(Y/N)
+
+331
+
+SDS 10.5
+
+IDS_ERR_GETPATIENTSTUDY
+
+Select patient/study.
+
+332
+
+SDS 10.5
+
+IDS_ERR_GETSERIES
+
+Select series.
+
+333
+
+SDS 10.4
+
+IDS_ERR_INSERTNEWSTUDY
+
+New study generated error.
+
+334
+
+SDS 10.4
+
+IDS_ERR_INVALIDIMAGE
+
+Image type error.
+
+335
+
+SDS 10.6
+
+IDS_ERR_INVALIDPATH
+
+Invalid path.
+
+336
+
+SDS 10.6
+
+IDS_ERR_INVALIDPATIETNAME
+
+Invalid patient name.
+
+337
+
+SDS 10.6
+
+IDS_ERR_INVALIDPATINFO
+
+Invalid patient information. Please check correctly.
+
+338
+
+SDS 10.6
+
+IDS_ERR_INVALIDRAWPATH
+
+Invalid RAW file path.
+
+339
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_LAYOUT11
+
+Failed in layout 1x1 creation.
+
+340
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_LAYOUT12
+
+Failed in layout 1x2 creation.
+
+341
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_LAYOUT21
+
+Failed in layout 2x1 creation.
+
+342
+
+SDS 10.6
+
+SDS 10.7
+
+IDS_ERR_LAYOUT22
+
+Failed in layout 2x2 creation.
+
+343
+
+SDS 10.8
+
+IDS_ERR_LOCALAE
+
+Local AE title is not correct.
+
+344
+
+SDS 10.5
+
+IDS_ERR_NOCONTENT
+
+There is no content.
+
+345
+
+SDS 10.5
+
+IDS_ERR_NOIMAGE
+
+There is no image data.
+
+346
+
+SDS 10.5
+
+IDS_ERR_NOPATIENT
+
+There is no Patient
+
+347
+
+SDS 10.5
+
+IDS_ERR_NOSELIMAGE
+
+Selected image does not exist.
+
+348
+
+SDS 10.5
+
+IDS_ERR_NOSELSERIES
+
+Selected series does not exist.
+
+349
+
+SDS 10.5
+
+IDS_ERR_NOSELSTUDY
+
+Selected study does not exist.
+
+350
+
+SDS 10.9
+
+IDS_ERR_NOTCONNET
+
+Unconnected to server.
+
+351
+
+SDS 10.7
+
+IDS_ERR_NOTEXISTIMAGE
+
+Image dose not exist.
+
+352
+
+SDS 10.7
+
+IDS_ERR_NOTEXISTPATIENT
+
+Patient dose not exist.
+
+353
+
+SDS 10.7
+
+IDS_ERR_NOTEXISTSERIES
+
+Series dose not exist.
+
+354
+
+SDS 10.7
+
+IDS_ERR_NOTEXISTSTUDY
+
+Study dose not exist.
+
+355
+
+SDS 10.4
+
+IDS_ERR_NOTPASSWD
+
+Password is invalid!\nCheck password.
+
+356
+
+SDS 10.6
+
+IDS_ERR_NOTRAWIMAGE
+
+This is not RAW Image.\nCan't Save Image.
+
+357
+
+SDS 10.6
+
+IDS_ERR_NOTRAWIMAGE2
+
+This image is not RAW image.
+
+358
+
+SDS 10.7
+
+IDS_ERR_OPENFAILED
+
+Open Failed.
+
+359
+
+SDS 10.6
+
+IDS_ERR_QUIT
+
+Quit the application?(Y/N)
+
+360
+
+SDS 10.6
+
+IDS_ERR_SAVENOTRAW
+
+Can not save the Raw Image
+
+361
+
+SDS 10.8
+
+IDS_ERR_SENDMAX
+
+Too many transmission.
+
+362
+
+SDS 10.8
+
+IDS_ERR_SENDMEMORY
+
+Can't start sending because memory is not enough.
+
+363
+
+SDS 10.8
+
+IDS_ERR_SENDSELIMAGE
+
+Send selected images?(Y/N)
+
+364
+
+SDS 10.8
+
+IDS_ERR_SERVERAE
+
+Server AE title is not correct.
+
+365
+
+SDS 10.8
+
+IDS_ERR_SERVERIP
+
+Server IP is not correct.
+
+366
+
+SDS 10.8
+
+IDS_ERR_SERVERPORT
+
+server port number is not correct.
+
+367
+
+SDS 10.6
+
+IDS_ERR_VP
+
+Please, select view position.
+
+368
+
+SDS 10.6
+
+IDS_ERR_CLOSEWIDTHPRINT
+
+Can not end program during print process execution.
+
+369
+
+SDS 10.6
+
+IDS_ERR_CANOTMODIFYOP
+
+Can't modify operator:Default.
+
+370
+
+SDS 10.6
+
+IDS_ERR_CANOTDELOP
+
+Can't delete operator:Default.
+
+371
+
+SDS 10.6
+
+IDS_ERR_ITEMEXIST
+
+This item exist.
+
+372
+
+SDS 10.6
+
+IDS_ERR_UNSELECTSID
+
+Please select SID.
+
+373
+
+SDS 10.3
+
+IDS_ERR_INVALIDPARAM
+
+Invalid parameter value.
+
+374
+
+SDS 10.6
+
+IDS_ERR_EMPTYVP
+
+View Position can not empty.
+
+375
+
+SDS 10.6
+
+IDS_ERR_UNSELECTROI
+
+Can't start print because Film ROI Setting is not selected.\nPlease first select Film ROI Setting.\nDo you select Film ROI Setting?(Y/N)
+
+소프트웨어 Unit 구현 및 검증
+
+SDS에 정의된 각 항목들에 대하여 UNIT을 구현하였다.
+
+구현된 UNIT를 Code Review를 통하여 Verification을 확인하였다.
+
+UID Implemented Verification
+
+UID/Class
+
+Implemented (Y/N)
+
+Note
+
+UID 1
+
+UID 2
+
+UID 3
+
+UID 4
+
+UDI 5
+
+UID 6
+
+UID 7
+
+Change to UID 15
+
+UID 8
+
+UID 9
+
+UID 10
+
+UID 11
+
+UID 12
+
+UID 13
+
+UID 14
+
+UID 15
+
+UID 16
+
+CClassAcq
+
+CClassImgProc
+
+CClassWorkist
+
+CClassBrowser
+
+CClasssExp
+
+CClassRev
+
+CClassSetup
+
+CClassDCM
+
+CClassMain
+
+CClassLogin
+
+CClassExit
+
+CClassLogErr
+
+Code Review
+
+Identify Code Review
+
+Identifiers Group of Code Review
+
+Name
+
+CR-01-XXX
+
+Login
+
+CR-02-XXX
+
+Main
+
+CR-03-XXX
+
+Worklist
+
+CR-04-XXX
+
+Browser
+
+CR-05-XXX
+
+Exposure
+
+CR-06-XXX
+
+Review
+
+CR-07-XXX
+
+Config
+
+CR-08-XXX
+
+DICOM
+
+CR-09-XXX
+
+Image Processing
+
+Name
+
+Identify
+
+Performance
+
+(Source Class)
+
+Related Module name
+
+Source UID
+
+Ref. SDS
+
+Login
+
+CR-01-001
+
+CR-01-002
+
+CClassLogin
+
+CClassLogErr
+
+ETC:Login
+
+Logging and Error
+
+UID 0
+
+UID 13
+
+SDS 8.XXX
+
+Main
+
+CR-02-001
+
+CR-02-002
+
+CR-02-003
+
+CClassMain
+
+CClassExit
+
+CClassLogErr
+
+ETC:Main
+
+ETC:Exit
+
+Logging and Error
+
+UID 1
+
+UID 13
+
+UID 14
+
+SDS.8.XXX
+
+Worklist
+
+CR-03-001
+
+CR-03-002
+
+CClassWorklist
+
+CClassDCM
+
+CClassLogErr
+
+Worklist
+
+DICOM Standard
+
+Logging and Error
+
+UID 2
+
+UID 13
+
+SDS 3.XXX
+
+Browser
+
+CR-04-001
+
+CR-04-002
+
+CClassBrowser
+
+CClassDCM
+
+CClassLogErr
+
+Browser
+
+DICOM Standard
+
+Logging and Error
+
+UID 3
+
+UID 13
+
+UID 15
+
+SDS 4.XXX
+
+Exposure
+
+CR-05-001
+
+CR-05-002
+
+CR-05-003
+
+CR-05-004
+
+CR-05-005
+
+CR-05-006
+
+CR-05-006
+
+CR-05-007
+
+CClassDet
+
+CClassAcq
+
+CClassImgProc
+
+CClassContorlPanel
+
+CClassExp
+
+CClassGen
+
+CClassDCM
+
+CClassLogErr
+
+Acquisition
+
+Image Processing
+
+Exposure
+
+DICOM Standard
+
+Logging and Error
+
+UID 4
+
+UID 5
+
+UID 8
+
+UID 9
+
+UID 13
+
+UID 14
+
+UID 15
+
+SDS 1.XXX
+
+SDS 5.XXX
+
+Review
+
+CR-06-001
+
+CR-06-002
+
+CR-05-003
+
+CR-05-004
+
+CClassImgProc
+
+CClassRev
+
+CClassDCM
+
+CClassLogErr
+
+Image Processing
+
+DICOM Standard
+
+Logging and Error
+
+UID 5
+
+UID 13
+
+UID 15
+
+SDS 5.XXX
+
+Config
+
+CR-07-001
+
+CR-07-002
+
+CClassSetup
+
+CClassLogErr
+
+Setting
+
+Logging and Error
+
+UID 6
+
+UID 13
+
+SDS 6.XXX
+
+DICOM
+
+CR-08-001
+
+CR-08-002
+
+CClassDCM
+
+CClassLogErr
+
+DICOM Standard
+
+Logging and Error
+
+UID 5
+
+UID 6
+
+UID 15(Print View)
+
+SDS 7.XXX
+
+Image Processing
+
+CR-09-001
+
+CR-09-002
+
+CClassImgProc
+
+CClassLogErr
+
+Image Processing
+
+Logging and Error
+
+UID 4
+
+SDS 2.XXX
+
+위의 시나리오에 따른 CoreReview Test Report는 Appendix 1.를 참조한다.
+
+Unit Test
+
+코드 리뷰를 통하여 verification이 완료 후, 아래의 각 unit에 대한 test scenario를 통하여 unit validation 검증을 실시하였다.
+
+Unit Validation 에 대한 규정은 다음과 같이 하였다.
+
+How
+
+Developer have to review and check performance.
+
+After accept Code Revie Verification, start next Unit Testing.
+
+When
+
+Initial Development Software
+
+Add Major Upgrade
+
+Add Detector or Generator model
+
+Release version
+
+Who
+
+Software developer
+
+Review Boundary
+
+Initial Development Software : All class
+
+Add Major Upgrade : All class
+
+Add Detector or Generator model : Related Detector or generator class
+
+Release version
+
+Unit Test에 대한 식별은 다음과 같이 정의하였다.
+
+Identifiers Group of Code Review
+
+Name
+
+TSU-01-XXX
+
+Start Screen
+
+TSU-02-XXX
+
+Main Control
+
+TSU-03-XXX
+
+Worklist Tab
+
+TSU-04-XXX
+
+Exposure Tab
+
+TSU-05-XXX
+
+Review Tab
+
+TSU-06-XXX
+
+Browser Tab
+
+TSU-07-XXX
+
+Config Tab
+
+다음은 각 unit에 대한 Test 시나리오는 다음과 같다.
+
+Unit Test Scenario
+
+Name
+
+Item
+
+Identify Unit Test Item
+
+Ref. SDS
+
+Test Scenario
+
+Start screen
+
+Log-In
+
+TSU-01-001
+
+SDS 8.6
+
+Select your user account (Supervisor/company/user) to the user account combo box.
+
+TSU-01-002
+
+SDS 8.6
+
+Insert the authorized password from your administrator.
+
+Main Control
+
+Exit
+
+TSU-02-001
+
+SDS 8.7
+
+Click Exit Button of right top Main UI. And click the OK and then close feel-DRCS software.
+
+Control tab
+
+TSU-02-002
+
+SDS 8.7
+
+Click each tab(worklist/ browser/ exposure/ review/ config),
+
+Worklist Tab
+
+Search Order
+
+TSU-03-001
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the patient ID in the Patient ID edit box and click Search button.
+
+TSU-03-002
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the patient name in the Patient Name edit box and click Search button.
+
+TSU-03-003
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the accession number in the Accession No. edit box and click Search button.
+
+TSU-03-004
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the Modality name in the Modality edit box and click Search button.
+
+TSU-03-005
+
+SDS 3.1
+
+SDS 3.2
+
+Click From Date button on the From Date Control Box and Click To Date on the To Date Control Box.
+
+TSU-03-006
+
+SDS 3.3
+
+Can special characters \ / : * ? " < > | that are not allowed in the window folder creation be entered in the Name item?
+
+TSU-03-007
+
+SDS 3.3
+
+Click the OK button after entering the information in the Manual Entry window.
+
+TSU-03-008
+
+SDS 3.3
+
+Click the EXAM button after entering the information in the Manual Entry window.
+
+Search Result List
+
+TSU-03-009
+
+SDS 3.1
+
+SDS 3.2
+
+Restart the program properly after randomly rearranging the column headers of the list.
+
+TSU-03-010
+
+SDS 3.1
+
+SDS 3.2
+
+Restart the program properly after randomly increasing or decreasing the width of the column headers.
+
+TSU-03-011
+
+SDS 3.1
+
+SDS 3.2
+
+Double click on any item of the list
+
+TSU-03-015
+
+SDS 3.5
+
+Click right button of mouse and select Export to Excel popup menu.
+
+Buttons
+
+TSU-03-012
+
+SDS 3.1
+
+SDS 3.2
+
+The procedure step item of the Exposure tab when the EMERGENCY button is clicked and transitioned to the exposure tab?
+
+TSU-03-013
+
+SDS 3.1
+
+SDS 3.2
+
+Click the EXAM button.
+
+TSU-03-014
+
+SDS 3.4
+
+Click the DELETE button after selected study in the list.
+
+Exposure Tab
+
+Detector Status
+
+TSU-04-001
+
+SDS 1.1
+
+SDS 1.2
+
+SDS 1.3
+
+SDS 1.5
+
+SDS 5.1
+
+Push the EMERGENCY mode in worklist.
+
+Generator Control Panel
+
+TSU-04-002
+
+SDS 5.2
+
+SDS 5.3
+
+Click kV Up / Down button
+
+TSU-04-003
+
+SDS 5.4
+
+SDS 5.5
+
+Click mA Up / Down button
+
+TSU-04-004
+
+SDS 5.6
+
+SDS 5.7
+
+Click sec Up / Down button
+
+TSU-04-005
+
+SDS 5.8
+
+SDS 5.9
+
+Click mAs Up / Down button
+
+TSU-04-006
+
+SDS 5.10
+
+SDS 5.11
+
+Click AEC button
+
+TSU-04-007
+
+SDS 5.12
+
+SDS 5.13
+
+Click Density up / down button
+
+Image Processing Panel
+
+TSU-04-008
+
+SDS 5.14
+
+SDS 2.1
+
+Click button parameter path
+
+TSU-04-009
+
+SDS 5.14
+
+SDS 2.2
+
+Click button save parameter/Save path
+
+TSU-04-010
+
+SDS 5.14
+
+SDS 2.3
+
+Click Processing button
+
+TSU-04-011
+
+SDS 5.14
+
+SDS 2.4
+
+Click Cancel button
+
+Patient Information
+
+TSU-04-012
+
+SDS 5.17
+
+Possible to check the patient ID?
+
+TSU-04-013
+
+SDS 5.17
+
+Possible to check the patient Name?
+
+TSU-04-014
+
+SDS 5.17
+
+Possible to check the patient Gender?
+
+Study name and view position List
+
+TSU-04-015
+
+SDS 5.42
+
+SDS 5.43
+
+SDS 5.44
+
+SDS 5.45
+
+The state of the selected next view position after the image acquisition in “A” button(auto sequence)
+
+Image Display
+
+TSU-04-016
+
+SDS 1.4
+
+SDS 1.5
+
+SDS 1.7
+
+SDS 5.15
+
+SDS 5.16
+
+SDS 5.18
+
+SDS 5.19
+
+SDS 5.47
+
+Select view position and take exposure and display raw image and then processed image and thumbnail.
+
+Select view position and take exposure and display raw binning image and corrected raw image and then processed image and thumbnail.
+
+ICON tools Panel
+
+TSU-04-017
+
+SDS 5.20
+
+SDS 5.21
+
+Click 1 X 1 layout and Click user layout
+
+TSU-04-018
+
+SDS 5.22
+
+Change window width and level with right button of mouse click. And then Click WWL Reset button.
+
+TSU-04-019
+
+SDS 5.23
+
+Click Magnification button and move mouse with right button of mouse click
+
+TSU-04-020
+
+SDS 5.24
+
+Click ZOOM button and move up and down mouse with right button of mouse click
+
+TSU-04-021
+
+SDS 5.25
+
+Click the Panning icon.
+
+TSU-04-022
+
+SDS 5.26
+
+Click the Auto-fit icon.
+
+TSU-04-023
+
+SDS 5.27
+
+Click the ellipse crop icon.
+
+TSU-04-024
+
+SDS 5.28
+
+Click the Rectangular crop icon.
+
+TSU-04-025
+
+SDS 5.29
+
+Open the 2 or 4 images.
+
+Click the Stitching icon
+
+TSU-04-026
+
+SDS 5.30
+
+Click the SAVE icon.
+
+TSU-04-027
+
+SDS 5.31
+
+Click the save and sending icon.
+
+TSU-04-028
+
+SDS 5.32
+
+Click the Close icon.
+
+TSU-04-029
+
+SDS 5.33
+
+Click the Cancel icon
+
+TSU-04-030
+
+SDS 5.34
+
+Click the Vertical Flip icon.
+
+TSU-04-031
+
+SDS 5.35
+
+Click the Horizontal Flip icon.
+
+TSU-04-032
+
+SDS 5.36
+
+Click the CCW Rotate icon.
+
+TSU-04-033
+
+SDS 5.37
+
+Click the CW Rotate icon.
+
+Buttons
+
+TSU-04-034
+
+SDS 5.38
+
+Click the “R” marker and Crop shutter and check Marker size.
+
+TSU-04-035
+
+SDS 5.39
+
+Click the “L” marker and Crop shutter and check Marker size.
+
+TSU-04-036
+
+SDS 5.40
+
+Click the TEXT button and Crop shutter and check Marker size.
+
+TSU-04-037
+
+SDS 5.41
+
+Click the PACS Button
+
+Status Bar
+
+TSU-04-038
+
+SDS 5.50
+
+Click the AED button when AED button turn off
+
+TSU-04-039
+
+SDS 5.51
+
+Check detector temperature VS. Detector Calibration software.
+
+Review
+
+Tab
+
+Tools ICON
+
+TSU-05-001
+
+SDS 6.2
+
+Click PACS status Icon
+
+TSU-05-002
+
+SDS 6.3
+
+Click Print status Icon
+
+TSU-05-003
+
+SDS 5.48
+
+SDS 5.49
+
+SDS 6.4
+
+SDS 6.5
+
+Click the Length Icon and measure length on the image and save file and return to Browser and select stored annotation image and open the image and check it.
+
+Browser Tab
+
+Patient Data Search
+
+TSU-06-001
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Patient ID in the Patient ID edit box and then click the Search Patient button
+
+TSU-06-002
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Patient Name in the Patient Name edit box and then click the Search Patient button
+
+TSU-06-003
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Accession Number in the Accession Number edit box and then click the Search Patient button
+
+Thumbnail List
+
+TSU-06-004
+
+SDS 4.3
+
+Select a study list item.
+
+Open
+
+TSU-06-005
+
+SDS 4.3
+
+Click the button when the Image List thumbnail item at the bottom is not selected.
+
+TSU-06-006
+
+SDS 4,3
+
+Click the button when the Image List thumbnail item at the bottom is selected.
+
+DICOM Send
+
+TSU-06-007
+
+SDS 4.4
+
+Click the button when all of the items in the Study List and Image List at the bottom are not selected.
+
+TSU-06-008
+
+SDS 4.4
+
+Click the button when the Study List is selected and Image List is not selected
+
+TSU-06-009
+
+SDS 4.4
+
+Click the button when the Image List thumbnail at the bottom is selected.
+
+Print
+
+TSU-06-010
+
+SDS 4.5
+
+SDS 4.6
+
+Click the button when the Image List thumbnail at the bottom is not selected.
+
+TSU-06-011
+
+SDS 4.5
+
+SDS 4.6
+
+Click the button when the Image List thumbnail at the bottom is selected.
+
+TSU-06-015
+
+SDS 4.5
+
+SDS 4.6
+
+Click the each ICON Button. And Check it.
+
+TSU-06-016
+
+SDS 4.5
+
+SDS 4.6
+
+Type in font size value
+
+Button
+
+TSU-06-012
+
+SDS 4.7
+
+Click the CD Publisher
+
+TSU-06-013
+
+SDS 4.8
+
+Click the Backup button
+
+TSU-06-014
+
+SDS 4.9
+
+Click the restore button
+
+Config
+
+Software /
+
+Default Setting
+
+TSU-07-001
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List – Click Add button
+
+TSU-07-002
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List – Click the Modify button after selecting one in the Operator List
+
+TSU-07-003
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List - Click the Delete button after selecting one in the Operator List
+
+TSU-07-004
+
+SDS 7.3
+
+Date Format - Click Format control
+
+TSU-07-005
+
+SDS 7.3
+
+Date Format – Click delimiter control
+
+TSU-07-006
+
+SDS 7.4
+
+Modality – Select Full/Stand/Table
+
+TSU-07-007
+
+SDS 7.5
+
+Information – Type hospital name
+
+Software /
+
+Storage Setting
+
+TSU-07-008
+
+SDS 7.6
+
+Image Save Path – select DICOM file save path
+
+TSU-07-009
+
+SDS 7.7
+
+SDS 7.8
+
+DICOM 3.0 Save Option – select CR/DX and Bits
+
+TSU-07-010
+
+SDS 7.9
+
+Image Auto Delete – check Auto Delete
+
+Check delete by space and selected capacity or
+
+Check delete by Date and period
+
+TSU-07-011
+
+SDS 7.10
+
+Database – click backup button.
+
+DICOM /
+
+DICOM MWL
+
+TSU-07-012
+
+SDS 7.11
+
+DICOM MWL – type in AE title / IP address / Port number and then click Test Button. Before testing, run MWL SCP service by other product.
+
+DICOM /
+
+DICOM Storage
+
+TSU-07-013
+
+SDS 7.12
+
+DICOM Storage – click Insert button.
+
+TSU-07-014
+
+SDS 7.12
+
+DICOM Storage – type in
+
+Server : AETitle/ IP address/ Port Number
+
+Client : AETitle/ Port Numner
+
+And then click the OK button.
+
+TSU-07-015
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then Click the Select Button.
+
+TSU-07-016
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then click the Delete button.
+
+TSU-07-017
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then Click the Modify button.
+
+DICOM /
+
+DICOM Print
+
+TSU-07-018
+
+SDS 7.13
+
+DICOM Print – click Insert button.
+
+TSU-07-019
+
+SDS 7.13
+
+DICOM Print – type in
+
+Print Server : AETitle/ IP address/ Port Number
+
+Client : AETitle/ Port Numner
+
+And then click the OK button.
+
+TSU-07-020
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then Click the Select Button.
+
+TSU-07-021
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then click the Delete button.
+
+TSU-07-022
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then Click the Modify button.
+
+위의 시나리오에 따른 Unit Test Report는Appendix 2.를 참조한다.
+
+소프트웨어 통합 및 통합시험
+
+Verification 된 Unit Test를 통과한 후에 각 unit에 대한 통합을 실시하였다.
+
+통합은 각 module 별로 이루어 졌고, 각 module 간의 통합도 같이 실시하였다.
+
+통합 검증을 위한 시험에 대해서는 다음과 같이 정의하였다.
+
+Integrating Testing
+
+Developer or validator test and make report
+
+After accept integrate Testing, start next system testing.
+
+When
+
+Initial Development Software
+
+Add Major Upgrade
+
+Add Detector or Generator model
+
+Add Function
+
+Release
+
+Who
+
+Software developer
+
+Review Boundary
+
+Initial Development Software : All Unit
+
+Add Major Upgrade : All Unit
+
+Add Detector or Generator model : Related Detector or generator unit function
+
+Add Function : Related add function unit function
+
+Release : All Unit
+
+또한 회귀시험에 대한 수행은 아래와 같이 정의하였다.
+
+Regression Testing
+
+- Developer or validator test and make report
+
+- After accept integrate Testing, start next system testing.
+
+When
+
+- Initial Development Software
+
+- Add Major Upgrade
+
+- Add Detector or Generator model
+
+- Add Function
+
+- Release
+
+Who
+
+- Software developer
+
+Review Boundary
+
+- Initial Development Software : All Unit
+
+- Add Major Upgrade : All Unit
+
+- Add Detector or Generator model : Related Detector or generator unit function
+
+- Add Function : Related add function unit function
+
+- Release : All Unit
+
+통합시험에 대한 identify는 다음과 같다
+
+Identify Integration Test
+
+Identifiers Group of Code Review
+
+Name
+
+TSI-01-XXX
+
+Main Control
+
+TSI-02-XXX
+
+Worklist Tab
+
+TSI-03-XXX
+
+Exposure Tab
+
+TSI-04-XXX
+
+Review Tab
+
+TSI-05-XXX
+
+Browser Tab
+
+TSI-06-XXX
+
+Config Tab
+
+위에서 정의한 통합 테스트에 대한 기준에 의하여 아래와 같이 test scenario를 가지고 테스트 를 정의하였고, 정의에 따라 테스트 하였다.
+
+Name
+
+Item
+
+Identify Integration
+
+Test Item
+
+Test Scenario
+
+Main Control
+
+Avoid Redundant Execution
+
+TSI-01-001
+
+Run Feel-DRCS.
+
+Execute Feel-DRCS again while Feel-DRCS is running.
+
+Log-in
+
+TSI-01-002
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the correct user ID/Password which are registered.
+
+Click OK button.
+
+TSI-01-003
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the user account /Password which are not registered.
+
+Click OK button.
+
+TSI-01-004
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the correct user account /Password which are registered.
+
+Click Cancel button.
+
+Exit
+
+TSI-01-005
+
+Move to the Login screen through the log off.
+
+Click Shut Down button at the bottom right.
+
+Worklist Tab
+
+Order Search
+
+TSI-02-001
+
+Enter the patient ID in the Patient ID input box.
+
+Click the Search button.
+
+TSI-02-002
+
+Enter the patient name in the Patient Name input box.
+
+Click the Search button.
+
+TSI-02-003
+
+Enter the Accession No. in the Accession Number input box.
+
+Click the Search button.
+
+Manual Entry
+
+TSI-02-004
+
+Enter the patient information on the Manual Study Panel
+
+Click the OK button.
+
+TSI-02-005
+
+Enter the patient information on the Manual Study Panel
+
+Click the EXAM button.
+
+Exposure Tab
+
+Procedure Add
+
+Exposure Ready
+
+TSI-03-001
+
+Push Study button.
+
+Add and edit body part + view position.
+
+Push the OK button
+
+Check Detector Status
+
+TSI-03-002
+
+Select View position
+
+Check WIFI and Battery Status
+
+Check DAP Value
+
+TSI-03-003
+
+Select View position
+
+Take Exposure
+
+Check display DAP Value on the image annotation.
+
+TSI-03-004
+
+Select DAP Unit before run feel-DRCS
+
+Take exposure
+
+Check display DAP Value by selected unit.
+
+Review Tab
+
+Layout Change
+
+TSI-04-001
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Change to the desired layout by using the Layout Tool.
+
+Image View Change
+
+TSI-04-002
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Change to the desired View mode.
+
+Apply Image Control
+
+TSI-04-003
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Apply the desired Image Control.
+
+DICOM Send
+
+TSI-04-004
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Select the image in the thumbnail panel to transfer.
+
+Click the Send button.
+
+DICOM Print
+
+TSI-04-005
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Click the Print button.
+
+Browser Tab
+
+Patient Search
+
+TSI-05-001
+
+Enter the patient ID to the Patient ID input box.
+
+Click the Search Patient button.
+
+TSI-05-002
+
+Enter the patient name in the Patient Name input box.
+
+Click the Search Patient button.
+
+TSI-05-003
+
+Enter the Accession No. in the Accession Number input box.
+
+Click the Search Patient button.
+
+Study Open
+
+TSI-05-004
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Click the Open button.
+
+TSI-05-005
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Double click the desired Study.
+
+DICOM Send
+
+TSI-05-006
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Images are listed in the Thumbnail List.
+
+Select the image to transfer.
+
+Click the send button.
+
+DICOM Print
+
+TSI-05-007
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Images are listed in the Thumbnail List.
+
+Select the image to transfer.
+
+Click the Print button.
+
+Config
+
+Save setting
+
+TSI-06-001
+
+Change the setting.
+
+Click the OK button.
+
+Restart Feel-DRCS
+
+Move to the Config Tab
+
+위의 시나리오에 따른 통합 테스트 리포트는 Appendix 3. 및 Appendix 6.를 참조한다.
+
+소프트웨어 시스템 시험
+
+소프트웨어 시스템 테스트는 아래와 같이 규정하였다.
+
+System Testing
+
+- Developer or validator test and make report
+
+- After accept integrate Testing, start next system testing.
+
+When
+
+- Initial Development Software
+
+- Add Major Upgrade
+
+- Add Detector or Generator model
+
+- Add Function
+
+- Release
+
+Who
+
+- Software developer
+
+Review Boundary
+
+- Initial Development Software : All Unit
+
+- Add Major Upgrade : All Unit
+
+- Add Detector or Generator model : Related Detector or generator unit function
+
+- Add Function : Related add function unit function
+
+- Release : All Unit
+
+또한 위의 회귀시험 기준에 의하여 이번 단위/통합/시스템 테스트는 회귀테스트 기준에 의하여 모든 항목에 대하여 시험을 실시하였다.
+
+시스템 테스트에 대한 identify는 다음과 같다.
+
+Identify system Test
+
+Identifiers Group of Code Review
+
+Name
+
+TSS-01-XXX
+
+Image Acquisition
+
+TSS-02-XXX
+
+Review
+
+TSS-03-XXX
+
+Worklist
+
+TSS-04-XXX
+
+Browser
+
+TSS-05-XXX
+
+DICOM Send
+
+TSS-06-XXX
+
+DICOM Print
+
+TSS-07-XXX
+
+Config
+
+위와 같이 정의된 기준에 따라 아래와 같이 시스템시험 시나리오를 설정하였고 테스트를 진행하였다.
+
+Name
+
+Identify system Test item
+
+Test Scenario
+
+Image Acquisition
+
+TSS-01-01
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure
+
+Wait for the completion of image acquisition
+
+Wait until the image processing is completed
+
+TSS-01-02
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure.
+
+Force the PC to shut down.
+
+TSS-01-03
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure.
+
+Force the Feel-DRCS to terminate.
+
+Review
+
+TSS-02-01
+
+Run Feel-DRCS
+
+Move to the Browser tab.
+
+Search patient.
+
+Select the desired Study.
+
+Double-click the desired image.
+
+Review tab is moved.
+
+As the button of Brightness, Rotate and Zoom In/Out is clicked, image feature is changed.
+
+Worklist
+
+TSS-03-01
+
+Run Feel-DRCS
+
+Click the Search Patient button.
+
+Connect to DICOM Worklist server.
+
+Display capture order list.
+
+TSS-03-02
+
+Run Feel-DRCS
+
+Insert patient Information on the Manual Study Panel
+
+Click the Exposure button.
+
+Move to Exposure tab.
+
+Browser
+
+TSS-04-01
+
+Run Feel-DRCS.
+
+Move to Browser tab.
+
+Select terms in calendar.
+
+Click the Search Patient button.
+
+Select the one of the Patient List.
+
+Select the one of the Study List.
+
+Click one image or select multiple images in thumb nail list.
+
+View or Delete the image or images.
+
+DICOM Send
+
+TSS-05-01
+
+Run Feel-DRCS.
+
+Move to the Browser tab.
+
+Search the desired patient.
+
+Select the desired Study.
+
+Select the desired image.
+
+Click the Send button.
+
+The send process display Que table on the right bottom.
+
+DICOM Print
+
+TSS-06-01
+
+Run Feel-DRCS.
+
+Move to the Browser tab.
+
+Search the desired patient.
+
+Select the desired Study.
+
+Select the desired image.
+
+Click the Print button.
+
+The Print Preview window pops up.
+
+Set the print setting.
+
+Click the Print button.
+
+Config
+
+TSS-07-01
+
+Run Feel-DRCS.
+
+Move to the config tab.
+
+Change Configuration setting.
+
+Click the OK button.
+
+위의 시나리오에 따른 통합 테스트 리포트는 Appendix 4.를 참조한다.
+
+소프트웨어 배포
+
+위의 2.5 ~ 2.7 까지의 시험에서 소프트웨어 기능 및 검증이 이상 없음을 확인하였다.
+
+또한 회귀시험으로 모든 항목들에 대한 검증도 완료된 것으로 확인되었다.
+
+그리고 Risk Management Report 기준에서도 잔여 위험이 없는 것으로 확인하였다.
+
+소프트웨어 배포시에는 배포버젼에 대한 식별 및 검증을 완료한 후에 배포하였으며, 또한 고객 관리자의 감독하에 설치하도록 제안하였으며, 설치 또는 업데이트시에 고객 관리자에게 인증암호를 전달하여 관리자에 의해서만 설치를 진행할 수 있도록 보안처리 하였다.
+
+참조 : Appendix 5.
+
+이로써 이번 릴리즈에 대한 모든 개발관련 활동은 완결로 처리하고, 소프트웨어를 배포하였다.
+
+완료된 개발관련 문서들은 당사 품질관리시스템 기준으로 하여 보관 및 관리한다.
+
+2.9. 의료기기 사이버 보안
+
+의료기기 사이버 보안 특성
+
+1) 사이버 보안 안정성 등급 : 중
+
+2) 사용되는 통신 기술 : 유선LAN
+
+3) 통신목적 ■ 환자의 생체정보 등의 개인의료정보 송수신
+
+□ 기기제어
+
+□ 펌웨어 또는 소프트웨어 업데이트등 유지보수
+
+4) 공용 네트워크망 사용여부 : 사용안함
+
+사이버 보안 필수원칙
+
+해당기기적용여부
+
+적합성 입증방법
+
+해당 법규 및 규격
+
+해당첨부 자료 또는 문서번호
+
+1. 식별번호
+
+1.1. 접급통제 및 인증
+
+식별 및 인증에 기반하여 사용자(의료기기) 역할에 따른 접근 권한을 부여가 가능하고 접근 권한에 따라 인가된 데이터에만 접근 가능해야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-01)
+
+1.2 다중접속 금지
+
+동일 사용자가 다중으로 접속하지 않아야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-01)
+
+1.3 사용자(의료기기) 접속 인식
+
+비인가된 사용자(의료기기)가 접속될 시 이를 인 식하여 구분할 수 있어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-02)
+
+1.4 비인가된 사용자(의료기기) 접속 제한
+
+비인가된 사용자(의료기기)의 접속 시 접속을 제한 할 수 있어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-02)
+
+1.5 비인가된 네트워크 통신 차단
+
+비인가된 네트워크 통신 접속을 제한할 수 있어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-07)
+
+1.6 원격접속 차단
+
+사용자(의료기기)가 의료기관의 서버에 접속할 수 있는 경우, 사용자 계정 또는 의료기기 도난 시 해당 계정(의료기기)이 서버에 접속할 수 없도록 접근통제를 할 수 있어야 한다.
+
+해당없음
+
+원격접속계정없음
+
+1.7 사용자(의료기기) 인증 관리
+
+사용자(의료기기) 계정의 유효기간을 설정할 수 있어야 하며, 설정된 유효기간 만료 시 접근이 통제되어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-09)
+
+1.8 자동세션종료
+
+설정된 시간 이후에는 의료기기간의 통신 또는 접속이 종료되어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-03)
+
+1.9 비밀번호 작성 규칙 강화
+
+비밀번호 작성규칙은 ‘개인정보의 기술적·관리적 보호조치 기준’을 만족하여야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-02)
+
+1.10 비밀번호 하드코딩 금지
+
+비밀번호를 하드코딩하지 않아야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-04)
+
+1.11 비밀번호 노출 금지
+
+비밀번호를 입력 시 ***와 같이 노출되지 않는 형태로 사용되어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-05)
+
+1.12 펌웨어 또는 소프트웨어 업데이트의 인가
+
+펌웨어 또는 소프트웨어 업데이트 시 관리자의 인가를 요청 및 확인하는 절차가 있거나 관리자 또는 사용자가 인지할 수 있는 거리에서 보안이 보장되는 방법으로 수행되어야 한다.
+
+적용
+
+지침서
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+사용자 매뉴얼 : 4. Software 설치 및 제거
+
+1.13 펌웨어 또는 소프트웨어 업데이트의 무결성 보장
+
+펌웨어 또는 소프트웨어 업데이트 파일 배포 시 버전 식별이 가능하여야 하며, 파일에 대한 배포자 및 무결성을 검증할 수 있어야 한다.
+
+적용
+
+성능시험 및 자료
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-06)
+
+1.14 펌웨어 또는 소프트웨어 업데이트 시 인증방식 사용
+
+펌웨어 또는 소프트웨어의 업데이트 시 코드 서명 확인 등 인증된 코드로 제한하여야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-06)
+
+1.15 네트워크상의 의료기기 제어정보 전송 기밀성 및 무결성 보장
+
+네트워크를 통하여 의료기기 제어정보를 주고받을 경우 적절한 암호화 및 복호화 방식을 활용하여 기밀성과 무결성을 보장하여야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-07)
+
+1.16 네트워크 상의 개인의료정보 전송 기밀성 및 무결성 보장
+
+네트워크를 통하여 개인의료정보를 주고받을 경우 적절한 암호화 및 복호화 방식을 활용하여 기밀성과 무결성을 보장하여야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’’
+
+‘DICOM 3.0 Standard(EN ISO 12052: 2017)’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-07)
+
+1.17 안전한 암호 알고리즘 사용
+
+데이터 전송 및 저장 시 사용되는 암호 알고리즘은 112비트 이상 보안강도를 가진 검증된 암호 알고리즘 또는 모듈을 사용하여야 하며, 암호화 시 사용 되는 암호키는 안전하게 관리되어야 한다.
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’ ‘DICOM 3.0 Standard(EN ISO 12052: 2017)’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-08)
+
+1.18 물리적인 통신포트 침해의 최소화
+
+통신포트의 침해를 최소화하기 위해 기기에 물리 적인 잠금을 제공하여야 한다.
+
+적용
+
+성능시험
+
+IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-10)
+
+1.19 불필요한 서비스 비활성화
+
+불필요한 외부 접속 포트 등의 서비스 비활성화를 기본값으로 설정하고, 외부 접속 포트를 사용할 경우 비밀번호 설정, IP 제한 등의 추가적인 보안 조치를 수행하여야 한다.
+
+적용
+
+성능시험
+
+IEC 62304’‘스마트의료사이버보안가이드’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-10)
+
+1.20 개인의료정보 저장관리
+
+의료기관 외부에서 사용되는 측정기기 또는 게이트웨이에는 개인의료정보를 저장하지 않는 것을 권고한다.
+
+해당없음
+
+외부에서 저장 및 사용하지 않음.
+
+2. 탐지, 대응, 복구
+
+2.1 데이터 감사를 위한 시스템 로그 기록
+
+사용자의 의료기기에 접속 시 접속기록, 환자정보 조회, 데이터 생성, 변경, 삭제 등과 같은 로그가 기록되어야 한다
+
+적용
+
+성능시험
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+‘사물인터넷 보안시험·인 증기준해설서’
+
+Software Test Report
+
+: Appendix 5.(TSSE-01-11)
+
+2.2 주요 실행파일 및 설정파일에 대한 무결성 검증 및 대응
+
+의료기기의 정상 작동을 보장하기 위해 주요 실행 파일 및 설정파일에 대한 무결성을 검증하여야 하며, 무결성 오류 발생 시 대응방안을 고려하여야 한다
+
+적용
+
+성능시험정보제공관련규정
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+‘사물인터넷 보안시험·인 증기준해설서’
+
+Software Test Report
+
+2.3 사이버 보안 위협 탐지 시 취해야 할 대응책에 관한 정보 제공
+
+의료기기의 사용 중 발생하는 사이버 보안 사고에 대하여 긴급 연락처 및 기기의 제조자와 상담을 할 수 있는 연락방식을 제공하여야 하며, 사이버 보안 위협 탐지 시 취해야 할 대응책을 수립하고 사용자에게 제공하여야 한다.
+
+적용
+
+성능시험정보제공관련규정
+
+‘IEC 62304’‘스마트의료사이버보안가이드’
+
+‘사물인터넷 보안시험·인 증기준해설서’
+
+Software Validation Report
+
+3.4. 사이버보안위험 탐지시 대처방안
+
+2.4 DDoS 공격에 대한 방어
+
+공용 네트워크망에 접속하여 의료기기를 실시간 으로 제어 또는 환자 생명과 직접적으로 연관될 수 있는 정보(예: 사이버 보안 안전성 등급 ‘상’에 해 당되는 정보 등)를 실시간으로 송수신하는 장비의
+
+경우 DDoS 공격에 대한 대응책이 수립되어야 한다.
+
+해당없음
+
+병원정보서버에 데이터 전송시에만 병원정보폐쇄망에 접속하며 그 외에는 접속하지 않음.
+
+소프트웨어 유지보수 프로세스
+
+소프트웨어 유지보수계획
+
+소프트웨어 유지보수는 다음의 순서에 의하여 처리하게 된다.
+
+단, 모든 절차는 당사 품질관리시스템에 의하여 관리 및 처리하게 된다.
+
+고객의 feedback을 통하여 다음의 절차에 의하여 처리한다.
+
+개선 및 문제점 접수
+
+유선 및 문서로 접수
+
+접수문서화
+
+품질관리절차에 따른 기록
+
+해당 접수 내용에 대한 평가
+
+해당 접수 내용에 대한 위험도에 따른 평가
+
+평가에 대한 해결
+
+위험도에 따른 해결 유무 결정
+
+단순 요청 사항들에 대해서는 요청 빈도에 따른평가를 통하여 개선 유무 결정
+
+사용자교육 부족에 대한 것인지에 대한 평가결과에 따른 교육개선 결정
+
+수정이 요하는 경우에는 해당 수정된 부분에 대한 위험관리를 통시에 실시하여야 한다. 위험관리는 소프트웨어 전주기에 해당된다.
+
+해결된 내용에 대한 반영 및 추적
+
+해결 및 방법론에 따른 보고 및 처리에 대하여 추적 관리
+
+변경된 소프트웨어에 대해서는 형상관리를 통하여 관리 및 추적관리한다.
+
+SOUP 관련된 기능의 변경도 동일하게 관리하여야 한다.
+
+문제 및 수정 분석
+
+3.1.의 기준에 의하여 피드백을 통한 문제 접수시 품질관리시스템 절차에 의하여 기록 및 관리한다.
+
+접수된 문제점에 대하여서는 위험평가를 통하여 안정성에 미치는것인지에 대하여 평가하고 보고유무를 결정한다.
+
+문제해결을 결정한 사항에 대해서는 소프트웨어개발 주기에 맞추어 문제해결을 실시한다, 만약 소프트웨어 안정성 평가를 통하여 변경되었다면 기록하고 보고하여야 한다.
+
+고객지원부는 해당 내용에 대하여 개발팀에 변경 요청을 하고, 개발팀은 해당 문제에 대하여 분석 하고, 변경 유무를 결정한 후에 승인을 득한다.
+
+수정 사항 구현
+
+소프트웨어의 수정이 승인이 나는 경우에는 해당 기능에 대한 수정에 대하여 위험분석 및 회귀테스트 기준에 따라 verification 및 validation을 실시한다.
+
+수정된 소프트웨어에 대한 배포는 2.8 소프트웨어 배포 절을 참조하여 배포한다.
+
+사이버 보안 위험 탐지시 대처방안
+
+의료기기의 사용 중 사이버 보안 사고 발생시, 바로 연락을 위할 수 있도록 담당자의 긴급 연락처를 사용자에게 제공하고, 사이버 보안 사고가 생기면 해당 장비에 대해서는 다음과 우선 조치하도록 사용자에게 교육하도록 한다.
+
+(1) 현재 진행중인 모든 검사 강제 중지 및 병원내 제품관리 책임자에게 전달
+
+(2) 병원관리책임자는 해당 사항에 대하여 제조사 담당자에게 해당 사항 전달
+
+(3) PC 상에 연결된 모든 네트워크 케이블 및 USB 형태의 연결된 포트 제거
+
+(4) PC 강제 종료를 통하여 더 이상의 데이터 손상 및 피해상황 제거
+
+소프트웨어 위험관리 프로세스
+
+위험 상황에 기여하는 소프트웨어의 분석
+
+본 소프트웨어 개발생명주기 전반에 걸쳐서 ISO 14971:2007을 적용한다.
+
+또한 품질관리시스템의 절차에 의하여 처리한다.
+
+적용하여 생성된 아래 report 문서를 참조한다.
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+위험 통제 수단
+
+본 소프트웨어 개발생명주기 전반에 걸쳐서 ISO 14971:2007을 적용한다.
+
+또한 품질관리시스템의 절차에 의하여 처리한다.
+
+적용하여 생성된 아래 report 문서를 참조한다.
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+위험 통제 수단의 검증
+
+본 소프트웨어 개발생명주기 전반에 걸쳐서 ISO 14971:2007을 적용한다.
+
+또한 품질관리시스템의 절차에 의하여 처리한다.
+
+적용하여 생성된 아래 report 문서를 참조한다.
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+소프트웨어 변경의 위험 관리
+
+본 소프트웨어 개발생명주기 전반에 걸쳐서 ISO 14971:2007을 적용한다.
+
+또한 품질관리시스템의 절차에 의하여 처리한다.
+
+적용하여 생성된 아래 report 문서를 참조한다.
+
+Risk Management Plan : 10-P. Risk Management Plan, A TCF-5-070, Rev 1
+
+Risk Management Report : 10-R. Risk Management Report, A TCF-5-071, Rev 1
+
+소프트웨어 형상관리 프로세스
+
+소프트웨어 형상관리프로세스는 다음의 순서에 의하여 처리하게 된다.
+
+단, 모든 절차는 당사 품질관리시스템에 의하여 관리 및 처리하게 된다.
+
+5.1. 형상 식별
+
+“소프트웨어 명칭 VER. 1.0.XXX.XXX ” (예)
+
+VER. X.X.XXX.XXX :
+
+분류
+
+해당내용
+
+1차 번호 X
+
+제품번호, 해당 기능에 대하여 새로운 제품을 디자인 및 개발되어지는 경우
+
+2차 부번호 X
+
+- 기능 및 function 등은 동일하나 UI가 변경되는 경우.
+
+- DICOM library가 변경되는 경우,
+
+- Compiler가 변경되는 경우
+
+3차 부번호 XXX
+
+외관이 변경되는 경우, 단, 범위는 10 – 300까지
+
+4차 부번호 XXX
+
+단순 오류 수정 및 기능 수정 및 검출기 추가시 변경, 단, 범위는 10 – 300까지
+
+변경 관리
+
+소프트웨어 변경요청에 의하여 해당 내용에 대한 변경유무를 분석 및 품질회의를 통하여 결정하고 승인을 득하여야 한다.
+
+승인된 변경요청에 대하여 정의 및 내용을 명확히 정의한 다음, 관련부서간의 verification 을 통하여 변경할 내용이 명확한지를 검증한다.
+
+검증된 내용에 대하여 개발 및 품질부에서는 해당 변경에 대하여 소프트웨어 주기에 맞추어 위험분석관리 및 회귀분석테스트 기준에 맞추어 verification 및 validation을 실시한다.
+
+형상 상태 기록
+
+모든 변경에 관련된 문서들은 품질절차서에 의해 추적 및 관리되어야 한다.
+
+해당 형상기록은 소프트웨어 밸리데이션 리포트에 기록하고 특히 version history에 변경된 내용에 대하여 기록하여 형상관리에 대한 이력이 관리 및 유지시키도록 한다.
+
+소프트웨어 문제 해결 프로세스
+
+소프트웨어 문제해결프로세스는 다음의 순서에 의하여 처리하게 된다.
+
+단, 모든 절차는 당사 품질관리시스템에 의하여 관리 및 처리하게 된다.
+
+문제보고준비
+
+회사 내외부 및 제품의 배포전후를 전반에 대하여 문제점이 발생이 되면 해당 문제에 대하여 다음의 정보를 포함하여 자료를 준비 한다.
+
+성능 영향을 미치는 정도
+
+안정성 영향을 미치는 정도
+
+보안에 영향을 미치는 정도
+
+위의 3가지에 중점으로 하여 문제에 대한 발생현상 및 상황 및 환경등을 고려하여 기록한다.
+
+문제조사
+
+해당 문제에 대하여 문제 발생 원인을 찾을수 있으면 찾아야 하나, 최대한 찾을 수 있도록 하여야 한다. 해당 문제점에 대한 조사에 대한 기록도 같이 한다.
+
+해당 문제점이 위험관리프로세스를 통하여 위험도에 대한 평가를 실시한다.
+
+해당 평가에 따라 문제 시정 요청을 하고 이에 대한 조치를 시행한다. 단, 조치가 이루어지지 않은 경우에는 해당하는 근거자료를 기록하도록 한다.
+
+단, 해당 문제점이 위험관리결과에서 안정성에 문제가 없는 것으로 판단되며, 해당 문제에 대해서는 수정여부를 결정한다.(안정성에 문제가 없는 것으로 판단된 문제에 대해서는 반드시 문제 해결 프로세스에 따라 시정할 필요는 없다,)
+
+관계자에게 통지
+
+품질부에서 해당 문제 평가에 따라서 관련부서 및 외주업체에 해당 내용을 통보할지를 결정하고, 결정에 따라 전달하여야 한다.
+
+변경 관리 프로세스 사용
+
+해당 문제점에 대하여 문제 시정 조치 요구를 실시하게 되고, 해당 시정요구에 따라 관련부서에는 품질절차에 따라 시정조치하여야 한다.
+
+단, 시정조치에 대한 결정에 따라 승인을 득하여야 한다.
+
+유지보수 기록
+
+시정조치에 따른 내용을 기록하고, 변경된 내용에 따라 3. 소프트웨어 유지보수 프로세스, 4. 소프트웨어 위험관리 프로세스, 5. 소프트웨어 형상관리 프로세스를 참조하여 기록관리한다.
+
+문제의 경향 분석
+
+기록된 문제점에 대한 품질절차서의 데이터분석절차에 대한 경향을 분석하고 소프트웨어 개선 및 성능에 반영할 수 있도록 분석자료를 정리한다.
+
+소프트웨어 문제 해결 검증
+
+소프트웨어 문제 해결 검증은 2.5 – 2.7 사항에 대하여 검증된 결과를 토대로 해당 문제점에 대한 검증을 완료한다.
+
+또한 추적관리를 통하여 사후검증을 실시하여 완료 처리한다.
+
+시험 문건 내용
+
+회귀시험기준이 포함된 2.6. 통합 및 통합시험 및 단위검증, 시스템시험 chapter를 참조하여 기록관리한다.
+
+추적관리(Requirements’ Traceability Matrix)
+
+소개
+
+아래의 기준을 가지고 위험식별에 따른 소프트웨어전반에 따른 추적연결도를 작성하였다.
+
+enumerated (SRS x.x) or enlisted (SRS-C-xxx) items in SRS
+
+enumerated items in SDS (SDS x)
+
+enumerated items in UID (UID x)
+
+enumerated potential Hazards (RAD x)
+
+Respective enlisted static tests and enumerated dynamic tests (TS xxx).
+
+추적테이블(Traceability Matrix)
+
+NO
+
+SDS Reference
+
+SRS Reference
+
+UID Reference
+
+Function Name
+
+Hazard
+
+Hazardous situation
+
+Test No.
+
+RAD01-01-01
+
+SDS 1.1
+
+SRS 1.1
+
+SRS 5.1
+
+UID 4
+
+CDetCon
+
+H/W error or Installation Error
+
+Can’t get image from Detector.
+
+TSU-04-001
+
+RAD01-01-02
+
+SDS 1.2
+
+SRS 1.2
+
+SRS 5.1
+
+UID 4
+
+CDetInit
+
+H/W error or Installation Error
+
+Can’t get image from Detector.
+
+TSU-04-001
+
+RAD01-01-03
+
+SDS 1.3
+
+SRS 1.5
+
+UID 4
+
+CDetReady
+
+H/W error
+
+Can’t get image from Detector.
+
+TSU-04-001
+
+RAD01-01-04
+
+SDS 1.4
+
+SRS 1.4
+
+SRS 5.1
+
+UID 4
+
+CDetGetImg
+
+H/W error
+
+Can’t get image from Detector.
+
+TSU-04-016
+
+RAD01-01-05
+
+SDS 1.5
+
+SRS 1.3
+
+SRS 5.1
+
+UID 4
+
+CDetGetStatus
+
+H/W error
+
+Can’t display Detector status.
+
+TSU-04-001
+
+TSU-04-016
+
+RAD01-01-06
+
+SDS 1.6
+
+SRS 1.6
+
+SRS 5.1
+
+UID 4
+
+CDetCor
+
+H/W error or Detector Calibration Error
+
+Can’t get image from Detector.
+
+TSU-04-016
+
+RAD01-01-07
+
+SDS 1.7
+
+SRS 1.7
+
+SRS 5.1
+
+UID 4
+
+CDetDiscon
+
+H/W Error
+
+Can’t exit normally.
+
+TSU-04-016
+
+RAD01-02-01
+
+SDS 2.1
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_LoadParameter
+
+Post Processing Error
+
+Don’t display post processed image.
+
+TSU-04-008
+
+RAD01-02-02
+
+SDS 2.2
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_SaveParameter
+
+Post Processing Error
+
+Don’t display post processed image.
+
+TSU-04-009
+
+RAD01-02-03
+
+SDS 2.3
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+feelTK_ImageEnhancement
+
+Post Processing Error
+
+Don’t display post processed image.
+
+TSU-04-010
+
+RAD01-02-04
+
+SDS 2.4
+
+SRS 2.1
+
+SRS 2.2
+
+SRS 2.3
+
+SRS 2.4
+
+SRS 5.3
+
+UID 4/5
+
+CimgReset
+
+Can’t Return Image
+
+Don’t display raw image.
+
+TSU-04-011
+
+RAD01-03-01
+
+SDS 3.1
+
+SRS 3.1
+
+UID 2
+
+CWorkListDlg_Search
+
+NIC error or PACS server error
+
+Can’t get order information
+
+TSU-03-001
+
+TSU-03-002
+
+TSU-03-003
+
+TSU-03-004
+
+TSU-03-005
+
+TSU-03-009
+
+TSU-03-010
+
+TSU-03-011
+
+TSU-03-012
+
+TSU-03-013
+
+RAD01-03-02
+
+SDS 3.2
+
+SRS 3.2
+
+UID 2
+
+CWorkListDlg_Query
+
+NIC error or PACS server error
+
+Can’t get order information
+
+TSU-03-001
+
+TSU-03-002
+
+TSU-03-003
+
+TSU-03-004
+
+TSU-03-005
+
+TSU-03-009
+
+TSU-03-010
+
+TSU-03-011
+
+TSU-03-012
+
+TSU-03-013
+
+RAD01-03-03
+
+SDS 3.3
+
+SRS 3.3
+
+UID 2
+
+CWorkListDlg_Manual
+
+DB Error
+
+Operation Error
+
+Can’t input order information
+
+Misdiagnose
+
+TSU-03-006
+
+TSU-03-007
+
+TSU-03-008
+
+RAD01-03-04
+
+SDS 3.4
+
+SRS 3.4
+
+UID 2
+
+CWorkListDlg_Delete
+
+DB Error
+
+Can’t delete worklist.
+
+TSU-03-014
+
+RAD01-03-05
+
+SDS 3.5
+
+SRS 3.5
+
+UID 2
+
+CWorkListDlg_OutExcel
+
+File error
+
+Can’t make order list to excel file.
+
+TSU-03-015
+
+RAD01-04-01
+
+SDS 4.1
+
+SRS 4.1
+
+UID 3
+
+CBrowserQrPat
+
+DB Error
+
+Can’t get patient from DB file.
+
+TSU-06-001
+
+TSU-06-002
+
+TSU-06-003
+
+RAD01-04-02
+
+SDS 4.2
+
+SRS 4.2
+
+UID 3
+
+CBrowserQrStudy
+
+DB Error
+
+Can’t get study from DB file.
+
+TSU-06-001
+
+TSU-06-002
+
+TSU-06-003
+
+RAD01-04-03
+
+SDS 4.3
+
+SRS 4.3
+
+UID 3
+
+CBrowserThDisap
+
+DB Error
+
+Can’t get thumbnail image file by from stored path in DB.
+
+TSU-06-004
+
+TSU-06-005
+
+TSU-06-006
+
+RAD01-04-04
+
+SDS 4.4
+
+SRS 4.4
+
+UID 3
+
+CDICOMSend
+
+NIC error or PACS server error or PACS server configuration error
+
+Can’t send image to PACS for diagnosis
+
+TSU-06-007
+
+TSU-06-008
+
+TSU-06-009
+
+RAD01-04-05
+
+SDS 4.5
+
+SRS 4.4
+
+UID 3/15
+
+CDICOMPrintPreview
+
+NIC error or Print server error or Print server configuration error
+
+Can’t print selected image for diagnosis
+
+TSU-06-010
+
+TSU-06-011
+
+TSU-06-015
+
+TSU-06-016
+
+RAD01-04-06
+
+SDS 4.6
+
+SRS 4.4
+
+UID 3/15
+
+CDICOMPrint
+
+NIC error or Print server error or Print server configuration error
+
+Can’t print selected image for diagnosis
+
+TSU-06-010
+
+TSU-06-011
+
+TSU-06-015
+
+TSU-06-016
+
+RAD01-04-07
+
+SDS 4.7
+
+SRS 4.4
+
+UID 3/10
+
+CCDBackup
+
+CD Media error or drive error
+
+Can’t burn selected images to CD media.
+
+TSU-06-012
+
+RAD01-04-08
+
+SDS 4.8
+
+SRS 4.4
+
+UID 3
+
+CBackup
+
+HDD error
+
+Can’t back up files.
+
+TSU-06-013
+
+RAD01-04-09
+
+SDS 4.9
+
+SRS 4.4
+
+UID 3
+
+CRestore
+
+HDD error or DB file error
+
+Can’t restore from backup file.
+
+TSU-06-014
+
+RAD01-05-01
+
+SDS 5.1
+
+SRS 5.1
+
+UID 4
+
+UID 14
+
+CDetStatusDisp
+
+Communication Error
+
+- Can’t get image or display error
+
+TSU-04-001
+
+RAD01-05-02
+
+SDS 5.2
+
+SRS 5.2
+
+UID 4
+
+CGenKvpGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-002
+
+RAD01-05-03
+
+SDS 5.3
+
+SRS 5.2
+
+UID 4
+
+CGenKvpSetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-002
+
+RAD01-05-04
+
+SDS 5.4
+
+SRS 5.2
+
+UID 4
+
+CGenmAGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-003
+
+RAD01-05-05
+
+SDS 5.5
+
+SRS 5.2
+
+UID 4
+
+CGenmASetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-003
+
+RAD01-05-06
+
+SDS 5.6
+
+SRS 5.2
+
+UID 4
+
+CGenmSecGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-004
+
+RAD01-05-07
+
+SDS 5.7
+
+SRS 5.2
+
+UID 4
+
+CGenmSecSetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-004
+
+RAD01-05-08
+
+SDS 5.8
+
+SRS 5.2
+
+UID 4
+
+CGenmAsGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-005
+
+RAD01-05-09
+
+SDS 5.9
+
+SRS 5.2
+
+UID 4
+
+CGenmAsSetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-005
+
+RAD01-05-10
+
+SDS 5.10
+
+SRS 5.2
+
+UID 4
+
+CGenAECGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-006
+
+RAD01-05-11
+
+SDS 5.11
+
+SRS 5.2
+
+UID 4
+
+CGenAECSetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-006
+
+RAD01-05-12
+
+SDS 5.12
+
+SRS 5.2
+
+UID 4
+
+CGenDenGetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-007
+
+RAD01-05-13
+
+SDS 5.13
+
+SRS 5.2
+
+UID 4
+
+CGenDenSetDisp
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSU-04-007
+
+RAD01-05-14
+
+SDS 5.14
+
+SRS 5.3
+
+SRS 6.1
+
+UID 4/5
+
+ImageProcessingPanel
+
+N/A
+
+TSU-04-008
+
+TSU-04-009
+
+TSU-04-010
+
+TSU-04-011
+
+RAD01-05-15
+
+SDS 5.15
+
+SRS 5.4
+
+SRS 6.1
+
+UID 4/5
+
+CImgDispPre
+
+Communication Error
+
+- Can’t get image or display error
+
+TSU-04-016
+
+RAD01-05-16
+
+SDS 5.16
+
+SRS 5.4
+
+UID 4/5
+
+CImgDisp
+
+Display Error
+
+- Can’t see the images.
+
+TSU-04-016
+
+RAD01-05-17
+
+SDS 5.17
+
+SRS 5.5
+
+UID 4/5
+
+CAnnDisplay
+
+Display Error
+
+- Can’t see the images and annotation information.
+
+TSU-04-012
+
+TSU-04-013
+
+TSU-04-014
+
+RAD01-05-18
+
+SDS 5.18
+
+SRS 5.6
+
+UID 4/5
+
+CProgAcquireImg
+
+Communication Error
+
+- Can’t get image or display error
+
+TSU-04-016
+
+RAD01-05-19
+
+SDS 5.19
+
+SRS 5.6
+
+UID 4/5
+
+CProgStorageImg
+
+Communication Error
+
+- Can’t get image or display error
+
+TSU-04-016
+
+RAD01-05-20
+
+SDS 5.20
+
+SRS 5.7
+
+UID 4/5
+
+CToolsLayout0
+
+Display Error
+
+- Can’t display 1 x 1 layout
+
+TSU-04-017
+
+RAD01-05-21
+
+SDS 5.21
+
+SRS 5.7
+
+UID 4/5
+
+CToolsLayout1
+
+Display Error
+
+- Can’t display 1 x 1 layout
+
+TSU-04-017
+
+RAD01-05-22
+
+SDS 5.22
+
+SRS 5.7
+
+UID 4/5
+
+CToolsResetSSWL
+
+Display Error
+
+- Can’t reset windowing value to initial state.
+
+TSU-04-018
+
+RAD01-05-23
+
+SDS 5.23
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMag
+
+Display Error
+
+- Can’t Magnified image
+
+TSU-04-019
+
+RAD01-05-24
+
+SDS 5.24
+
+SRS 5.7
+
+UID 4/5
+
+CToolsZoom
+
+Display Error
+
+- Can’t zoom in/out image.
+
+TSU-04-020
+
+RAD01-05-25
+
+SDS 5.25
+
+SRS 5.7
+
+UID 4/5
+
+CToolsHang
+
+Display Error
+
+- Can’t moving image
+
+TSU-04-021
+
+RAD01-05-26
+
+SDS 5.26
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFit
+
+Display Error
+
+- Can’t display fitting image on panel.
+
+TSU-04-022
+
+RAD01-05-27
+
+SDS 5.27
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCropCircle
+
+Display Error
+
+- Can’t crop circle
+
+TSU-04-023
+
+RAD01-05-28
+
+SDS 5.28
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCropRect
+
+Display Error
+
+- Can’t crop rectangle
+
+TSU-04-024
+
+RAD01-05-29
+
+SDS 5.29
+
+SRS 5.7
+
+UID 4/5/11
+
+CToolsStitching
+
+Display Error
+
+- Can’t stitching images
+
+- Display fault sequence images.
+
+TSU-04-025
+
+RAD01-05-30
+
+SDS 5.30
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSave
+
+Information Error
+
+- Diagnose with wrong image information.
+
+TSU-04-026
+
+RAD01-05-31
+
+SDS 5.31
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSaveSending
+
+Information Error
+
+Communication Error
+
+- Diagnose with wrong image information.
+
+- Can’t store or Can’t sending DICOM image
+
+TSU-04-027
+
+RAD01-05-32
+
+SDS 5.32
+
+SRS 5.7
+
+UID 4/5
+
+CToolsClose
+
+Display Error
+
+- Can’t close exposure mode
+
+TSU-04-028
+
+RAD01-05-33
+
+SDS 5.33
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCancle
+
+Display Error
+
+- Can’t cancel exam image.
+
+TSU-04-029
+
+RAD01-05-34
+
+SDS 5.34
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFlip
+
+Display Error
+
+- Can’t desired flip or flop.
+
+TSU-04-030
+
+RAD01-05-35
+
+SDS 5.35
+
+SRS 5.7
+
+UID 4/5
+
+CToolsFlop
+
+Display Error
+
+- Can’t desired flip or flop.
+
+TSU-04-031
+
+RAD01-05-36
+
+SDS 5.36
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCCW
+
+Display Error
+
+- Can’t desired rotation direction
+
+TSU-04-032
+
+RAD01-05-37
+
+SDS 5.37
+
+SRS 5.7
+
+UID 4/5
+
+CToolsCW
+
+Display Error
+
+- Can’t desired rotation direction
+
+TSU-04-033
+
+RAD01-05-38
+
+SDS 5.38
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMarkerR
+
+Display Error
+
+- Abnormal display Marker Value R/L
+
+TSU-04-034
+
+RAD01-05-39
+
+SDS 5.39
+
+SRS 5.7
+
+UID 4/5
+
+CToolsMarkerL
+
+Display Error
+
+- Abnormal display Marker Value R/L
+
+TSU-04-035
+
+RAD01-05-40
+
+SDS 5.40
+
+SRS 5.7
+
+UID 4/5/12
+
+CToolsText
+
+Display Error
+
+- Abnormal TEXT
+
+TSU-04-036
+
+RAD01-05-41
+
+SDS 5.41
+
+SRS 5.7
+
+UID 4/5
+
+CToolsSelectPACS
+
+Display or Communication Error
+
+- Can’t send desired PACS destination
+
+TSU-04-037
+
+RAD01-05-42
+
+SDS 5.42
+
+SRS 5.7
+
+UID 4/5/8
+
+CToolsNewSET
+
+Display or DB Error
+
+- Can’t display NewSET window
+
+TSU-04-015
+
+RAD01-05-43
+
+SDS 5.43
+
+SRS 5.7
+
+UID 4/5/9
+
+CToolsCodeManager
+
+Display or DB Error
+
+- Can’t display CodeManager window
+
+TSU-04-015
+
+RAD01-05-44
+
+SDS 5.44
+
+SRS 5.8
+
+UID 4/5
+
+CStudyList
+
+DB Error
+
+- Can’t display study list
+
+TSU-04-015
+
+RAD01-05-45
+
+SDS 5.45
+
+SRS 5.8
+
+UID 4/5
+
+CViewPosition
+
+DB Error
+
+- Can’t display view position list
+
+TSU-04-015
+
+RAD01-05-46
+
+SDS 5.46
+
+SRS 9.5
+
+SRS 9.14
+
+SRS 9.15
+
+SRS 9.16
+
+UID 4
+
+CGenNo
+
+Configuration Error
+
+- Can’t connect with Generator.
+
+Generator Test report
+
+RAD01-05-47
+
+SDS 5.47
+
+SRS 1.8
+
+UID 4/5
+
+CImgDispPreBinning
+
+Communication Error
+
+- Can’t get image or display error
+
+TSU-04-016
+
+RAD01-05-48
+
+SDS 5.48
+
+SRS 5.9
+
+UID 4/5
+
+CAnnBurn
+
+Display or Save Error
+
+- Can’t burned image with annotation.
+
+TSU-05-003
+
+RAD01-05-49
+
+SDS 5.49
+
+SRS 5.10
+
+UID 4/5
+
+CToolsMarkerAutoAdj
+
+Display error
+
+- display abnormal marker size
+
+TSU-05-003
+
+RAD01-05-50
+
+SDS 5.50
+
+SRS 1.4
+
+UID 16
+
+CAEDbtn
+
+Display or Communication Error
+
+- Can’t dispaly
+
+TSU-04-038
+
+RAD01-05-51
+
+SDS 5.51
+
+SRS 1.3
+
+UID 17
+
+CDispStatusTemp
+
+Display
+
+- Can’t display Temperature
+
+TSU-04-039
+
+RAD01-06-01
+
+SDS 6.1
+
+SRS 6.1
+
+UID 5
+
+Same SDS 5.14 ~ 5.49
+
+N/A
+
+RAD01-06-02
+
+SDS 6.2
+
+SRS 6.2
+
+UID 5
+
+CDICOMSendingQueTable
+
+Communication Error
+
+- Can’t send desired PACS destination
+
+TSU-05-001
+
+RAD01-06-03
+
+SDS 6.3
+
+SRS 6.2
+
+UID 5
+
+CDICOMPrintingQueTable
+
+Communication Error
+
+- Can’t send desired Printer destination
+
+TSU-05-002
+
+RAD01-06-04
+
+SDS 6.4
+
+SRS 6.3
+
+UID 5
+
+CMeasureLength
+
+Incorrect measurement
+
+- Display incorrect value when measurement
+
+TSU-05-003
+
+RAD01-06-05
+
+SDS 6.5
+
+SRS 6.3
+
+UID 5
+
+CMeasureAngle
+
+Incorrect measurement
+
+- Display incorrect value when measurement
+
+TSU-05-003
+
+RAD01-07-01
+
+SDS 7.1
+
+SRS 7.1
+
+UID 6
+
+CSysSetID
+
+Operator Login Error
+
+- Can’t log in
+
+TSU-07-001
+
+TSU-07-002
+
+TSU-07-003
+
+RAD01-07-02
+
+SDS 7.2
+
+SRS 7.1
+
+UID 6
+
+CSysSetPass
+
+Operator Login Error
+
+- Can’t log in
+
+TSU-07-001
+
+TSU-07-002
+
+TSU-07-003
+
+RAD01-07-03
+
+SDS 7.3
+
+SRS 7.1
+
+UID 6
+
+CDateFormat
+
+Display Error
+
+- abnormal display
+
+TSU-07-004
+
+TSU-07-005
+
+RAD01-07-04
+
+SDS 7.4
+
+SRS 7.1
+
+UID 6
+
+CSetModal
+
+Information Error
+
+- Diagnose with wrong image information.
+
+TSU-07-006
+
+RAD01-07-05
+
+SDS 7.5
+
+SRS 7.1
+
+UID 6
+
+CSetHospInfo
+
+Information Error
+
+- Diagnose with wrong image information.
+
+TSU-07-007
+
+RAD01-07-06
+
+SDS 7.6
+
+SRS 7.2
+
+UID 6
+
+CSetDataPath
+
+Configuration Error
+
+- Can’t store dicom file
+
+TSU-07-008
+
+RAD01-07-07
+
+SDS 7.7
+
+SRS 7.2
+
+UID 6
+
+CSetModalName
+
+Configuration Error
+
+- Miss matched view position by stand or table.
+
+TSU-07-009
+
+RAD01-07-08
+
+SDS 7.8
+
+SRS 7.2
+
+UID 6
+
+CSetDataBits
+
+Configuration Error
+
+- Display abnormal image
+
+TSU-07-009
+
+RAD01-07-09
+
+SDS 7.9
+
+SRS 7.2
+
+UID 6
+
+CSetAutoDelete
+
+Configuration Error
+
+- Abnormal delete study list
+
+TSU-07-010
+
+RAD01-07-10
+
+SDS 7.10
+
+SRS 7.2
+
+UID 6
+
+CDBBack
+
+Configuration Error
+
+- Abnormal backup
+
+TSU-07-011
+
+RAD01-07-11
+
+SDS 7.11
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMWroklist
+
+DICOM Configuration Error
+
+- Can’t connect with DICOM Server
+
+TSU-07-012
+
+RAD01-07-12
+
+SDS 7.12
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMStorage
+
+DICOM Configuration Error
+
+- Can’t connect with DICOM Server
+
+TSU-07-013
+
+TSU-07-014
+
+TSU-07-015
+
+TSU-07-016
+
+TSU-07-017
+
+RAD01-07-13
+
+SDS 7.13
+
+SRS 7.3
+
+UID 6
+
+CSetDICOMPrint
+
+DICOM Configuration Error
+
+- Can’t connect with Print Server
+
+TSU-07-018
+
+TSU-07-019
+
+TSU-07-020
+
+TSU-07-021
+
+TSU-07-022
+
+RAD01-08-01
+
+SDS 8.1
+
+SRS 8.1
+
+UID 6
+
+Same SDS 7.11 ~ 7.13
+
+N/A
+
+RAD01-08-02
+
+SDS 8.2
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusSending
+
+NIC error or PACS server error
+
+- Can’t send image
+
+TSI-04-004
+
+RAD01-08-03
+
+SDS 8.3
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusWorklist
+
+NIC error or PACS server error
+
+- Can’t get order information
+
+TSI-02-001
+
+TSI-02-002
+
+TSI-02-003
+
+RAD01-08-04
+
+SDS 8.4
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMStatusPrinting
+
+NIC error or Print server error
+
+- Can’t send image
+
+TSI-04-005
+
+RAD01-08-05
+
+SDS 8.5
+
+SRS 8.2
+
+UID 2/3/4/5
+
+CDCMQueImgSending
+
+Communication Error
+
+- Can’t send desired PACS destination
+
+TSI-04-004
+
+RAD01-08-06
+
+SDS 8.6
+
+SRS 8.2
+
+UID 1
+
+CLogin
+
+Security
+
+- Missing Operating
+
+TSI-01-002
+
+TSI-01-003
+
+TSI-01-004
+
+RAD01-08-07
+
+SDS 8.7
+
+SRS 8.2
+
+UID 2
+
+CMain
+
+System error or Miss installation
+
+- Don’t operation
+
+TSI-01-001
+
+TSI-01-005
+
+RAD01-09-01
+
+SDS 9.1
+
+SRS 9.1
+
+UID 4
+
+CGenConStatus
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSI-03-001
+
+TSU-04-002
+
+TSU-04-003
+
+TSU-04-004
+
+TSU-04-005
+
+TSU-04-006
+
+RAD01-09-01
+
+SDS 9.2
+
+SRS 9.1
+
+UID 4
+
+CGenGetParameter
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSI-03-001
+
+TSU-04-002
+
+TSU-04-003
+
+TSU-04-004
+
+TSU-04-005
+
+TSU-04-006
+
+RAD01-09-01
+
+SDS 9.3
+
+SRS 9.1
+
+UID 4
+
+CGenGetParamterPost
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSI-03-001
+
+TSU-04-002
+
+TSU-04-003
+
+TSU-04-004
+
+TSU-04-005
+
+TSU-04-006
+
+RAD01-09-01
+
+SDS 9.4
+
+SRS 9.1
+
+UID 4
+
+CGenSetParameter
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSI-03-001
+
+TSU-04-002
+
+TSU-04-003
+
+TSU-04-004
+
+TSU-04-005
+
+TSU-04-006
+
+RAD01-10-01
+
+SDS 10.1
+
+SRS 10.1
+
+SRS 10.3
+
+UID 4/13
+
+CDetCallBack
+
+Communication Error
+
+Can’t get image from Detector.
+
+TSU-04-001
+
+TSI-03-002
+
+RAD01-10-02
+
+SDS 10.2
+
+SRS 10.2
+
+SRS 10.3
+
+UID 4/13
+
+CGenCallBack
+
+Communication Error
+
+- Can’t get a value from generator and can’t display a value
+
+TSI-03-001
+
+TSU-04-002
+
+TSU-04-003
+
+TSU-04-004
+
+TSU-04-005
+
+TSU-04-006
+
+RAD01-10-03
+
+SDS 10.3
+
+SRS 10.3
+
+SRS 10.4
+
+UID 4/5/13
+
+feelTK_GetLastErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSU-04-008
+
+TSU-04-009
+
+TSU-04-001
+
+TSU-04-011
+
+RAD01-10-04
+
+SDS 10.4
+
+SRS 10.3
+
+SRS 10.5
+
+UID 2/13
+
+CDicomWorkListErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSU-03-001
+
+TSU-03-002
+
+TSU-03-003
+
+TSU-03-004
+
+TSU-03-005
+
+TSU-03-006
+
+TSU-03-007
+
+TSU-03-008
+
+TSU-07-012
+
+TSI-02-001
+
+TSI-02-002
+
+TSI-02-003
+
+RAD01-10-05
+
+SDS 10.5
+
+SRS 10.3
+
+SRS 10.6
+
+UID 3/13
+
+CBrowserErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSI-05-001
+
+TSI-05-002
+
+TSI-05-003
+
+TSI-05-004
+
+TSI-05-005
+
+RAD01-10-06
+
+SDS 10.6
+
+SRS 10.3
+
+SRS 10.7
+
+UID 4/13
+
+CExposureErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSI-03-001
+
+TSI-03-002
+
+RAD01-10-07
+
+SDS 10.7
+
+SRS 10.3
+
+SRS 10.8
+
+UID 5/13
+
+CReviewErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSI-04-001
+
+TSI-04-002
+
+TSI-04-003
+
+RAD01-10-08
+
+SDS 10.8
+
+SRS 10.3
+
+SRS 10.9
+
+UID 2/3/4/5
+
+CDcmNetErr
+
+Log Create Error
+
+- Can’t creating log when happen error
+
+TSI-04-004
+
+TSI-04-005
+
+TSI-04-006
+
+TSI-04-007
+
+PEMS List for Traceability Matrix
+
+No.
+
+PEMS Items
+
+RISK No.
+
+SDS Reference
+
+SRS Reference
+
+UID Reference
+
+1
+
+Integrated with X-ray Detector
+
+RAD01-01-01
+
+SDS 1.1
+
+SRS 1.1
+
+SRS 5.1
+
+UID 4
+
+2
+
+Integrated with X-ray Detector
+
+RAD01-01-02
+
+SDS 1.2
+
+SRS 1.2
+
+SRS 5.1
+
+UID 4
+
+3
+
+Integrated with X-ray Detector
+
+RAD01-01-03
+
+SDS 1.3
+
+SRS 1.5
+
+UID 4
+
+4
+
+Integrated with X-ray Detector
+
+RAD01-01-04
+
+SDS 1.4
+
+SRS 1.4
+
+SRS 5.1
+
+UID 4
+
+5
+
+Integrated with X-ray Detector
+
+RAD01-01-05
+
+SDS 1.5
+
+SRS 1.3
+
+SRS 5.1
+
+UID 4
+
+6
+
+Integrated with X-ray Detector
+
+RAD01-01-06
+
+SDS 1.6
+
+SRS 1.6
+
+SRS 5.1
+
+UID 4
+
+7
+
+Integrated with X-ray Detector
+
+RAD01-01-07
+
+SDS 1.7
+
+SRS 1.7
+
+SRS 5.1
+
+UID 4
+
+8
+
+Integrated with Hospital PACS Network
+
+RAD01-03-01
+
+SDS 3.1
+
+SRS 3.1
+
+UID 2
+
+9
+
+Integrated with Hospital PACS Network
+
+RAD01-03-02
+
+SDS 3.2
+
+SRS 3.2
+
+UID 2
+
+10
+
+Integrated with Hospital PACS Network
+
+RAD01-04-04
+
+SDS 4.4
+
+SRS 4.4
+
+UID 3
+
+11
+
+Integrated with Hospital PACS Network
+
+RAD01-04-05
+
+SDS 4.5
+
+SRS 4.4
+
+UID 3/15
+
+12
+
+Integrated with Hospital PACS Network
+
+RAD01-04-06
+
+SDS 4.6
+
+SRS 4.4
+
+UID 3/15
+
+13
+
+Integrated with X-ray Detector
+
+RAD01-05-01
+
+SDS 5.1
+
+SRS 5.1
+
+UID 4
+
+UID 14
+
+14
+
+Integrated with X-ray Detector
+
+RAD01-05-15
+
+SDS 5.15
+
+SRS 5.4
+
+SRS 6.1
+
+UID 4/5
+
+15
+
+Integrated with X-ray Detector
+
+RAD01-05-16
+
+SDS 5.16
+
+SRS 5.4
+
+UID 4/5
+
+16
+
+Integrated with X-ray Detector
+
+RAD01-05-17
+
+SDS 5.17
+
+SRS 5.5
+
+UID 4/5
+
+17
+
+Integrated with X-ray Detector
+
+RAD01-05-18
+
+SDS 5.18
+
+SRS 5.6
+
+UID 4/5
+
+18
+
+Integrated with X-ray Detector
+
+RAD01-05-19
+
+SDS 5.19
+
+SRS 5.6
+
+UID 4/5
+
+19
+
+Integrated with Hospital PACS Network
+
+RAD01-05-31
+
+SDS 5.31
+
+SRS 5.7
+
+UID 4/5
+
+20
+
+Integrated with Hospital PACS Network
+
+RAD01-05-41
+
+SDS 5.41
+
+SRS 5.7
+
+UID 4/5
+
+21
+
+Integrated with X-ray Detector
+
+RAD01-05-47
+
+SDS 5.47
+
+SRS 1.8
+
+UID 4/5
+
+22
+
+Integrated with Hospital PACS Network
+
+RAD01-06-02
+
+SDS 6.2
+
+SRS 6.2
+
+UID 5
+
+23
+
+Integrated with Hospital PACS Network
+
+RAD01-06-03
+
+SDS 6.3
+
+SRS 6.2
+
+UID 5
+
+24
+
+Integrated with Hospital PACS Network
+
+RAD01-07-11
+
+SDS 7.11
+
+SRS 7.3
+
+UID 6
+
+25
+
+Integrated with Hospital PACS Network
+
+RAD01-07-12
+
+SDS 7.12
+
+SRS 7.3
+
+UID 6
+
+26
+
+Integrated with Hospital PACS Network
+
+RAD01-07-13
+
+SDS 7.13
+
+SRS 7.3
+
+UID 6
+
+27
+
+Integrated with Hospital PACS Network
+
+RAD01-08-02
+
+SDS 8.2
+
+SRS 8.2
+
+UID 2/3/4/5
+
+28
+
+Integrated with Hospital PACS Network
+
+RAD01-08-03
+
+SDS 8.3
+
+SRS 8.2
+
+UID 2/3/4/5
+
+29
+
+Integrated with Hospital PACS Network
+
+RAD01-08-04
+
+SDS 8.4
+
+SRS 8.2
+
+UID 2/3/4/5
+
+30
+
+Integrated with Hospital PACS Network
+
+RAD01-08-05
+
+SDS 8.5
+
+SRS 8.2
+
+UID 2/3/4/5
+
+31
+
+Integrated with X-ray Detector
+
+RAD01-10-01
+
+SDS 10.1
+
+SRS 10.1
+
+SRS 10.3
+
+UID 4/13
+
+32
+
+Integrated with Hospital PACS Network
+
+RAD01-10-08
+
+SDS 10.8
+
+SRS 10.3
+
+SRS 10.9
+
+UID 2/3/4/5
+
+Verification & Validation Test Results
+
+Appendix 1.
+
+Status : Core Review
+
+Date : 2021.05.22
+
+Version : 2.1.255.60
+
+Name
+
+Related Module name
+
+Source UID
+
+Performance
+
+(Source Class)
+
+Ref. SDS
+
+Implemented
+
+(Yes/No)
+
+Note
+
+Login
+
+ETC:Login
+
+Logging and Error
+
+UID 0
+
+UID 13
+
+CClassLogin
+
+CClassLogErr
+
+SDS 8.XXX
+
+Yes
+
+Should be able to log in only if the registered ID and password match. If it’s not match, open the message box.
+
+And the CClassLogin is essential performance. Because this system can not use everyone without Authorized person. No risk was found in the code review.
+
+Main
+
+ETC:Main
+
+ETC:Exit
+
+Logging and Error
+
+UID 1
+
+UID 13
+
+CClassMain
+
+CClassExit
+
+CClassLogErr
+
+SDS.8.XXX
+
+Yes
+
+After accept login, open the main UI and main command bar(each tab) and exit icon. And default tab is worklist tab after log in, it’s ok. No risk was found in the code review.
+
+Worklist
+
+Worklist
+
+DICOM Standard
+
+Logging and Error
+
+UID 2
+
+UID 13
+
+CClassWorklist
+
+CClassDCM
+
+CClassLogErr
+
+SDS 3.XXX
+
+Yes
+
+In Worklist tab, checked DICOM class and manual entry of order study. And checked related button for Exposure, Refresh, Delete. It’s ok. No risk was found in the code review.
+
+Browser
+
+Browser
+
+DICOM Standard
+
+Logging and Error
+
+UID 3
+
+UID 13
+
+CClassBrowser
+
+CClassDCM
+
+CClassLogErr
+
+SDS 4.XXX
+
+Yes
+
+In Browser tab, checked DICOM class and query and list patient with study in the local DB. It’s ok. No risk was found in the code review.
+
+Exposure
+
+Acquisition
+
+Image Processing
+
+Exposure
+
+DICOM Standard
+
+Logging and Error
+
+UID 4
+
+UID 5
+
+UID 8
+
+UID 9
+
+UID 13
+
+CClassDet
+
+CClassAcq
+
+CClassImgProc
+
+CClassContorlPanel
+
+CClassExp
+
+CClassGen
+
+CClassDCM
+
+CClassLogErr
+
+SDS 1.XXX
+
+SDS 5.XXX
+
+Yes
+
+In Exposure tab, it is related many class. Two class(CClassDet, CClassAcq, CClassDCM) is essential performance. Because if any of them are missing, the Feel-DRCS is impossible for operating with intended use.
+
+Detector Control : Connect/ Initialize/ Acquire image/ Disconnect/ Callback logging is ok.
+
+Generator control : kVp/ mA/ mAs/ sec/ AEC setting and reading is ok.
+
+DICOM : Check is OK for Patient information and study information into the DICOM TAG.
+
+And No risk was found in the code review.
+
+Review
+
+Image Processing
+
+DICOM Standard
+
+Logging and Error
+
+UID 5
+
+UID 13
+
+CClassImgProc
+
+CClassRev
+
+CClassDCM
+
+CClassLogErr
+
+SDS 5.XXX
+
+Yes
+
+In review tab, checked patient information of DICOM with local DB and related value. It’s ok.
+
+And No risk was found in the code review.
+
+Config
+
+Setting
+
+Logging and Error
+
+UID 6
+
+UID 13
+
+CClassSetup
+
+CClassLogErr
+
+SDS 6.XXX
+
+Yes
+
+In config tab, check various environment information setting. It’s ok. And No risk was found in the code review.
+
+DICOM
+
+DICOM Standard
+
+Logging and Error
+
+UID 5
+
+UID 6
+
+UID 7(Print View)
+
+CClassDCM
+
+CClassLogErr
+
+SDS 7.XXX
+
+Yes
+
+In DICOM Module, check loading and unloading DICOM Library. Check DICOM network service code. Everything is ok. And No risk was found in the code review.
+
+Image Processing
+
+Image Processing
+
+Logging and Error
+
+UID 4
+
+CClassImgProc
+
+CClassLogErr
+
+SDS 2.XXX
+
+Yes
+
+In image processing module, check loading and unloading class. It’s OK.
+
+And No risk was found in the code review.
+
+Acceptance: Pass Fail
+
+Summary: Base on the Core Review Result, The Code assessment has been completed successful based on the SDS specifications. It is determined that all code have been implemented properly and therefore it is recommended to proceed to the text step : Unit Test. I certify that the Code Review has been completed correctly. And I did verification for essential performance. And I can’t find any hazard in reviewing.
+
+Inspected by : __________김 완 수 __________________
+
+Reviewed by : _ 이 동 진 ____
+
+Appendix 2.
+
+Status : 🗹 Unit Test / 🞎 Integration Test / 🞎 System Test / 🗹 Regression Test
+
+Date : 2021.05.22
+
+Version : 2.1.255.60
+
+Group Name
+
+Item
+
+Test No.
+
+Ref. SDS
+
+Procedure
+
+Pass/Fail Criteria
+
+Result
+
+Start screen
+
+Log-In
+
+TSU-01-001
+
+SDS 8.6
+
+Select your user account (Supervisor/company/user) to the user account combo box.
+
+Registered user accounts to the setting tab are updated normally.
+
+Registered the account to the setting tab is selected normally.
+
+Pass
+
+TSU-01-002
+
+SDS 8.6
+
+Insert the authorized password from your administrator.
+
+Change the screen from Log-In to worklist tab.
+
+Administrator – All function are made available. (worklist, Exposure, Review, browser, config)
+
+Operator – Partial function (setting tab) is constrictive.
+
+Manager – Only setting tab are made available.
+
+Pass
+
+Main Control
+
+Exit
+
+TSU-02-001
+
+SDS 8.7
+
+Click Exit Button of right top Main UI. And click the OK and then close feel-DRCS software.
+
+After click, open the message box for exit software. And click and exit program.
+
+Pass
+
+Control Tab
+
+TSU-02-002
+
+SDS 8.7
+
+Click each tab(worklist/ browser/ exposure/ review/ config),
+
+Check change tab and mode by click control bar.
+
+Pass
+
+Worklist Tab
+
+Search Order
+
+TSU-03-001
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the patient ID in the Patient ID edit box and click Search button.
+
+The order matching the input ID will be retrieved and displayed in the list. Total number of labels is displayed in the list as well.
+
+Pass
+
+TSU-03-002
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the patient name in the Patient Name edit box and click Search button.
+
+The order containing the letter string of the name matching the Patient Name will be retrieved and displayed in the list. Total number of labels is displayed in the list as well.
+
+Pass
+
+TSU-03-003
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the accession number in the Accession No. edit box and click Search button.
+
+The order matching the Accession Number will be retrieved and displayed in the list. Total number of labels is displayed in the list as well.
+
+Pass
+
+TSU-03-004
+
+SDS 3.1
+
+SDS 3.2
+
+Enter the Modality name in the Modality edit box and click Search button.
+
+The order matching the Modality will be retrieved and displayed in the list. Total number of labels is displayed in the list as well.
+
+Pass
+
+TSU-03-005
+
+SDS 3.1
+
+SDS 3.2
+
+Click From Date button on the From Date Control Box and Click To Date on the To Date Control Box.
+
+The order matching the from date to date will be list and display. Total number of labels is displayed in the list as well.
+
+Pass
+
+TSU-03-006
+
+SDS 3.3
+
+Can special characters \ / : * ? " < > | that are not allowed in the window folder creation be entered in the Name item?
+
+Cannot be entered for special character by auto.
+
+Pass
+
+TSU-03-007
+
+SDS 3.3
+
+Click the OK button after entering the information in the Manual Entry window.
+
+The information is listed to the worklist Tab.
+
+Pass
+
+TSU-03-008
+
+SDS 3.3
+
+Click the EXAM button after entering the information in the Manual Entry window.
+
+Change worklist tab to Exposure tab for acquisition image by auto.
+
+Pass
+
+Search Result List
+
+TSU-03-009
+
+SDS 3.1
+
+SDS 3.2
+
+Restart the program properly after randomly rearranging the column headers of the list.
+
+The column headers are listed in the order which they are rearranged randomly.
+
+Pass
+
+TSU-03-010
+
+SDS 3.1
+
+SDS 3.2
+
+Restart the program properly after randomly increasing or decreasing the width of the column headers.
+
+The width of the column headers randomly adjusted is displayed.
+
+Pass
+
+TSU-03-011
+
+SDS 3.1
+
+SDS 3.2
+
+Double click on any item of the list
+
+The order of the subject item is transitioned to the exposure tab.
+
+Pass
+
+TSU-03-015
+
+SDS 3.5
+
+Click right button of mouse and select Export to Excel popup menu.
+
+Check worklistXXX.xls file
+
+Pass
+
+Buttons
+
+TSU-03-012
+
+SDS 3.1
+
+SDS 3.2
+
+The procedure step item of the Exposure tab when the EMERGENCY button is clicked and transitioned to the exposure tab?
+
+Listed view position by pre define Code Emergency.
+
+Pass
+
+TSU-03-013
+
+SDS 3.1
+
+SDS 3.2
+
+Click the EXAM button.
+
+The order of the subject item is transitioned to the Exposure tab.
+
+Pass
+
+TSU-03-014
+
+SRS 3.4
+
+Click the DELETE button after selected study in the list.
+
+Check delete in the list about selected study.
+
+Pass
+
+Exposure Tab
+
+Detector Status
+
+TSU-04-001
+
+SDS 5.1
+
+Push the EMERGENCY mode in worklist.
+
+Check LED of detector status. “R” is on.
+
+Pass
+
+Generator Panel
+
+TSU-04-002
+
+SDS 5.2
+
+SDS 5.3
+
+Click kV Up / Down button
+
+The kV level increases / decreases
+
+Pass
+
+TSU-04-003
+
+SDS 5.4
+
+SDS 5.5
+
+Click mA Up / Down button
+
+The mA level increases / decreases
+
+Pass
+
+TSU-04-004
+
+SDS 5.6
+
+SDS 5.7
+
+Click sec Up / Down button
+
+Sec level is set to a value predefined for next / previous step.
+
+Pass
+
+TSU-04-005
+
+SDS 5.8
+
+SDS 5.9
+
+Click mAs Up / Down button
+
+mAs level is set to a value predefined for next / previous step.
+
+Pass
+
+TSU-04-006
+
+SDS 5.10
+
+SDS 5.11
+
+Click AEC button
+
+Check Activated AEC mode
+
+Pass
+
+TSU-04-007
+
+SDS 5.12
+
+SDS 5.13
+
+Click Density up / down button
+
+The density level increases / decreases
+
+Pass
+
+Image Processing Panel
+
+TSU-04-008
+
+SDS 5.14
+
+SDS 2.1
+
+Click button parameter path
+
+Check display and select parameter file.
+
+Pass
+
+TSU-04-009
+
+SDS 5.14
+
+SDS 2.2
+
+Click button save parameter/Save path
+
+Check save file and path.
+
+Pass
+
+TSU-04-010
+
+SDS 5.14
+
+SDS 2.3
+
+Click Processing button
+
+Check image changed to processed image
+
+Pass
+
+TSU-04-011
+
+SDS 5.14
+
+SDS 2.4
+
+Click Cancel button
+
+Check image changed to raw image
+
+Pass
+
+Patient Information
+
+TSU-04-012
+
+SDS 5.17
+
+Possible to check the patient ID?
+
+Display at the top of Exposure View
+
+Pass
+
+TSU-04-013
+
+SDS 5.17
+
+Possible to check the patient Name?
+
+Display at the top of Exposure View
+
+Pass
+
+TSU-04-014
+
+SDS 5.17
+
+Possible to check the patient Gender?
+
+Display at the top of Exposure View
+
+Pass
+
+Study name and view position List
+
+TSU-04-015
+
+SDS 5.42
+
+SDS 5.43
+
+SDS 5.44
+
+SDS 5.45
+
+The state of the selected next view position after the image acquisition in “A” button(auto sequency)
+
+After exposure, view position have to select next view position in “A” mode.
+
+Pass
+
+Image Display
+
+TSU-04-016
+
+SDS 1.4
+
+SDS 1.5
+
+SDS 1.7
+
+SDS 5.15
+
+SDS 5.16
+
+SDS 5.18
+
+SDS 5.19
+
+SDS 5.47
+
+Select view position and take exposure and display raw binning image and corrected raw image and then processed image and thumbnail.
+
+Check two display step by step with progress bar.
+
+Pass
+
+ICON tools Panel
+
+TSU-04-017
+
+SDS 5.20
+
+SDS 5.21
+
+Click 1 X 1 layout and Click user layout
+
+Click 1 X 1 is ok. But when click user layout don’t change layout. This button is only for Review mode.
+
+Pass
+
+TSU-04-018
+
+SDS 5.22
+
+Change window width and level with right button of mouse click. And then Click WWL Reset button.
+
+Check return initial display image WWL
+
+Pass
+
+TSU-04-019
+
+SDS 5.23
+
+Click Magnification button and move mouse with right button of mouse click
+
+Check rectangular box and zoomed image in side of Rectangular box.
+
+Pass
+
+TSU-04-020
+
+SDS 5.24
+
+Click ZOOM button and move up and down mouse with right button of mouse click
+
+Check zoom in or out of full image.
+
+Pass
+
+TSU-04-021
+
+SDS 5.25
+
+Click the Panning icon.
+
+Drag the mouse inside the ROI area.
+
+The image is moving.
+
+Pass
+
+TSU-04-022
+
+SDS 5.26
+
+Click the Auto-fit icon.
+
+The image ratio is automatically adjusted to the size of the screen.
+
+Pass
+
+TSU-04-023
+
+SDS 5.27
+
+Click the ellipse crop icon.
+
+The image crop by ellipse ROI.
+
+Pass
+
+TSU-04-024
+
+SDS 5.28
+
+Click the Rectangular crop icon.
+
+The image crop by rectangle ROI
+
+Pass
+
+TSU-04-025
+
+SDS 5.29
+
+Open the 2 or 4 images.
+
+Click the Stitching icon
+
+Open the stitching windows.
+
+Pass
+
+TSU-04-026
+
+SDS 5.30
+
+Click the SAVE icon.
+
+Save the image by recent display.
+
+Pass
+
+TSU-04-027
+
+SDS 5.31
+
+Click the save and sending icon.
+
+Save and DICOM sending to PACS server.
+
+Pass
+
+TSU-04-028
+
+SDS 5.32
+
+Click the Close icon.
+
+Open the window close study.
+
+Pass
+
+TSU-04-029
+
+SDS 5.33
+
+Click the Cancel icon
+
+Delete image.
+
+Pass
+
+TSU-04-030
+
+SDS 5.34
+
+Click the Vertical Flip icon.
+
+Image becomes vertically symmetrical.
+
+Pass
+
+TSU-04-031
+
+SDS 5.35
+
+Click the Horizontal Flip icon.
+
+Image is symmetrical left and right.
+
+Pass
+
+TSU-04-032
+
+SDS 5.36
+
+Click the CCW Rotate icon.
+
+The image is rotated 90 degrees clockwise.
+
+Pass
+
+TSU-04-033
+
+SDS 5.37
+
+Click the CW Rotate icon.
+
+The image is rotated 90 degrees counter clockwise.
+
+Pass
+
+Buttons
+
+TSU-04-034
+
+SDS 5.38
+
+Click the “R” marker and Crop shutter and check Marker size.
+
+The display on the image “R” and change size by Crop size
+
+Pass
+
+TSU-04-035
+
+SDS 5.39
+
+Click the “L” marker and Crop shutter and check Marker size.
+
+The display on the image “L” and change size by Crop size
+
+Pass
+
+TSU-04-036
+
+SDS 5.40
+
+Click the TEXT button and Crop shutter and check Marker size.
+
+Open the TEXT information window and change size by Crop size
+
+Pass
+
+TSU-04-037
+
+SDS 5.41
+
+Click the PACS Button
+
+Open the predefined PACS server list window
+
+Pass
+
+Status Bar
+
+TSU-04-038
+
+SDS 5.50
+
+Click the AED button when AED button turn off
+
+Turn ON AED and Turn Off AED
+
+Pass
+
+TSU-04-039
+
+SDS 5.51
+
+Check detector temperature VS. Detector Calibration software.
+
+Compare temperature value between the detector calibration software and display valud in console software.
+
+Pass
+
+Review
+
+Tab
+
+Tools ICON
+
+TSU-05-001
+
+SDS 6.2
+
+Click PACS status Icon
+
+Open the PACS status window
+
+Check operate Pause/stop/restart/delete
+
+Pass
+
+TSU-05-002
+
+SDS 6.3
+
+Click Print status Icon
+
+Open the Print status windows
+
+Check operate Pause/stop/restart/delete
+
+Pass
+
+TSU-05-003
+
+SDS 5.48
+
+SDS 5.49
+
+SDS 6.4
+
+SDS 6.5
+
+Click the Length Icon and measure length on the image and save file and return to Browser and select stored annotation image and open the image and check it.
+
+Check can do see the annotation information on the image.
+
+Pass
+
+Browser Tab
+
+Patient Data Search
+
+TSU-06-001
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Patient ID in the Patient ID edit box and then click the Search Patient button
+
+Orders matching the ID entry are retrieved and displayed in the list. Total number of labels is displayed in the list.
+
+Pass
+
+TSU-06-002
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Patient Name in the Patient Name edit box and then click the Search Patient button
+
+Orders matching the letter string of the Name entered are retrieved and displayed in the list. Total number of labels is displayed in the list.
+
+Pass
+
+TSU-06-003
+
+SDS 4.1
+
+SDS 4.2
+
+Enter the Accession Number in the Accession Number edit box and then click the Search Patient button
+
+Orders matching the Accession Number entered are retrieved and displayed in the list. Total number of labels is displayed in the list.
+
+Pass
+
+Thumbnail List
+
+TSU-06-004
+
+SDS 4.3
+
+Select a study list item.
+
+Thumbnail images of the selected study list are seen to the thumbnail list.
+
+Pass
+
+Open
+
+TSU-06-005
+
+SDS 4.3
+
+Click the button when the Image List thumbnail item at the bottom is not selected.
+
+"Please select items" message appears.
+
+Pass
+
+TSU-06-006
+
+SDS 4,3
+
+Click the button when the Image List thumbnail item at the bottom is selected.
+
+‘Save As’ dialog box pops up.
+
+In the ‘Save As’ dialog box, click the Save button to save the image in the format selected in the storage path set.
+
+Pass
+
+DICOM Send
+
+TSU-06-007
+
+SDS 4.4
+
+Click the button when all of the items in the Study List and Image List at the bottom are not selected.
+
+“Please select an item.” message appears.
+
+Pass
+
+TSU-06-008
+
+SDS 4.4
+
+Click the button when the Study List is selected and Image List is not selected
+
+All images belong to the selected Study in the Study List are transferred.
+
+Pass
+
+TSU-06-009
+
+SDS 4.4
+
+Click the button when the Image List thumbnail at the bottom is selected.
+
+Selected images in the Image List at the bottom are transmitted.
+
+Pass
+
+Print
+
+TSU-06-010
+
+SDS 4.5
+
+SDS 4.6
+
+Click the button when the Image List thumbnail at the bottom is not selected.
+
+"No Selected Items." message appears.
+
+Pass
+
+TSU-06-011
+
+SDS 4.5
+
+SDS 4.6
+
+Click the button when the Image List thumbnail at the bottom is selected.
+
+DICOM Print dialog box appears.
+
+Pass
+
+TSU-06-015
+
+SDS 4.5
+
+SDS 4.6
+
+Click the each ICON Button. And Check it.
+
+Display various annotation on the image at print preview(Zoom, Panning, Fit, Rotation, Length, Angle, Arrow, Text)
+
+Pass
+
+TSU-06-016
+
+SDS 4.5
+
+SDS 4.6
+
+Type in font size value
+
+When display font on the print preview, have to display font size by control type in size value.
+
+Pass
+
+Button
+
+TSU-06-012
+
+SDS 4.7
+
+Click the CD Publisher
+
+Open the CD backup window
+
+Pass
+
+TSU-06-013
+
+SDS 4.8
+
+Click the Backup button
+
+Open the backup path dialog box.
+
+Check backup files to selected path.
+
+Pass
+
+TSU-06-014
+
+SDS 4.9
+
+Click the restore button
+
+Open the restore path dialog box.
+
+And check the restore and list in browser
+
+Pass
+
+Config
+
+Software /
+
+Default Setting
+
+TSU-07-001
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List – Click Add button
+
+A new window to enter an operator will be displayed.
+
+Pass
+
+TSU-07-002
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List – Click the Modify button after selecting one in the Operator List
+
+The window to change password will be displayed.
+
+Pass
+
+TSU-07-003
+
+SDS 7.1
+
+SDS 7.2
+
+Operator List - Click the Delete button after selecting one in the Operator List
+
+Delete Account Message window will be displayed.
+
+Pass
+
+TSU-07-004
+
+SDS 7.3
+
+Date Format - Click Format control
+
+List Date format
+
+Pass
+
+TSU-07-005
+
+SDS 7.3
+
+Date Format – Click delimiter control
+
+List delimiter type
+
+Pass
+
+TSU-07-006
+
+SDS 7.4
+
+Modality – Select Full/Stand/Table
+
+Select modality type. Check only one checked box. This type don’t support multi select check box.
+
+Pass
+
+TSU-07-007
+
+SDS 7.5
+
+Information – Type hospital name
+
+After exposure, check annotation hospital information matching setting value.
+
+Pass
+
+Software /
+
+Storage Setting
+
+TSU-07-008
+
+SDS 7.6
+
+Image Save Path – select DICOM file save path
+
+After exposure, check DCM file path with matching path
+
+Pass
+
+TSU-07-009
+
+SDS 7.7
+
+SDS 7.8
+
+DICOM 3.0 Save Option – select CR/DX and Bits
+
+After exposure, check DCM Tag information Modality name and Data bits.
+
+Tag (0008, 0060) Modality
+
+Tag (0028, 0101) BitsStored
+
+Pass
+
+TSU-07-010
+
+SDS 7.9
+
+Image Auto Delete – check Auto Delete
+
+Check delete by space and selected capacity or
+
+Check delete by Date and period
+
+After OK button on config tab and move to Worklsit Tab.
+
+Check auto delete list in worklist and browser.
+
+Pass
+
+TSU-07-011
+
+SDS 7.10
+
+Database – click backup button.
+
+Open the backup path window
+
+Pass
+
+DICOM /
+
+DICOM MWL
+
+TSU-07-012
+
+SDS 7.11
+
+DICOM MWL – type in AE title / IP address / Port number and then click Test Button. Before testing, run MWL SCP service by other product.
+
+Check Connect message on the Test Button
+
+Pass
+
+DICOM /
+
+DICOM Storage
+
+TSU-07-013
+
+SDS 7.12
+
+DICOM Storage – click Insert button.
+
+Open the DICOM Storage Window
+
+Pass
+
+TSU-07-014
+
+SDS 7.12
+
+DICOM Storage – type in
+
+Server : AETitle/ IP address/ Port Number
+
+Client : AETitle/ Port Numner
+
+And then click the OK button.
+
+After click OK button, check update in Server List.
+
+Pass
+
+TSU-07-015
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then Click the Select Button.
+
+Check Connected Message. For this testing, have to prepare Storage SCP software and start Service storage SCP and then test it.
+
+Pass
+
+TSU-07-016
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then click the Delete button.
+
+Check delete selected item in the server list.
+
+Pass
+
+TSU-07-017
+
+SDS 7.12
+
+DICOM Storage – Select one server in the server list, and then Click the Modify button.
+
+Check open the same insert window and edit server information or client information. Check modified information in the server list.
+
+Pass
+
+DICOM /
+
+DICOM Print
+
+TSU-07-018
+
+SDS 7.13
+
+DICOM Print – click Insert button.
+
+Open the DICOM Print Window
+
+Pass
+
+TSU-07-019
+
+SDS 7.13
+
+DICOM Print – type in
+
+Print Server : AETitle/ IP address/ Port Number
+
+Client : AETitle/ Port Numner
+
+And then click the OK button.
+
+After click OK button, check update in Print Server List.
+
+Pass
+
+TSU-07-020
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then Click the Select Button.
+
+Check Connected Message. For this testing, have to prepare Print SCP software and start Service storage SCP and then test it.
+
+Pass
+
+TSU-07-021
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then click the Delete button.
+
+Check delete selected item in the Print server list.
+
+Pass
+
+TSU-07-022
+
+SDS 7.13
+
+DICOM Print – Select one Print server in the server list, and then Click the Modify button.
+
+Check open the same insert window and edit Print server information or client information. Check modified information in the Print server list.
+
+Pass
+
+Acceptance: Pass Fail
+
+Summary: Base on the Unit Test Result, The unit assessment has been completed successful based on the Unit Test Criteria. It is determined that all unit functions have been implemented properly and therefore it is recommended to proceed to the text step : Integration Test. I certify that the Unit Test has been completed correctly. And we can’t find any hazard in testing.
+
+Inspected by : 김 완 수 ___________________
+
+Reviewed by : _ ______이 동 진_
+
+Appendix 3.
+
+Status : 🞎Unit Test / 🗹 Integration Test / 🞎 System Test / 🗹 Regression Test
+
+Date : 2021.05.22
+
+Version : 2.1.255.60
+
+Item
+
+Test No.
+
+Procedure
+
+Pass/Fail Criteria
+
+Result
+
+Main Control
+
+Avoid Redundant Execution
+
+TSI-01-001
+
+Run Feel-DRCS.
+
+Execute Feel-DRCS again while Feel-DRCS is running.
+
+The second Feel-DRCS execution is ignored and the first Feel-DRCS execution is activated.
+
+Pass
+
+Log-in
+
+TSI-01-002
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the correct user ID/Password which are registered.
+
+Click OK button.
+
+Feel-DRCS is normally running.
+
+Pass
+
+TSI-01-003
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the user account /Password which are not registered.
+
+Click OK button.
+
+“Password is invalid! Check password.” message pops up.
+
+Pass
+
+TSI-01-004
+
+Run Feel-DRCS.
+
+Login window pops up.
+
+Enter the correct user account /Password which are registered.
+
+Click Cancel button.
+
+Feel-DRCS is closed normally.
+
+Pass
+
+Exit
+
+TSI-01-005
+
+Move to the Login screen through the log off.
+
+Click ShutDown button at the bottom right.
+
+Feel-DRCS is closed normally.
+
+Pass
+
+Worklist Tab
+
+Order Search
+
+TSI-02-001
+
+Enter the patient ID in the Patient ID input box.
+
+Click the Search button.
+
+If the corresponding order exists for the Patient ID entered, the order appears in the Order List.
+
+Pass
+
+TSI-02-002
+
+Enter the patient name in the Patient Name input box.
+
+Click the Search button.
+
+If the corresponding order exists for the patient name entered, the order appears in the Order List.
+
+Pass
+
+TSI-02-003
+
+Enter the Accession No. in the Accession Number input box.
+
+Click the Search button.
+
+If the corresponding order exists for the Accession Number entered, the order appears in the Order List..
+
+Pass
+
+Manual Entry
+
+TSI-02-004
+
+Enter the patient information on the Manual Study Panel
+
+Click the OK button.
+
+The patient information entered is registered in the Order List.
+
+Pass
+
+TSI-02-005
+
+Enter the patient information on the Manual Study Panel
+
+Click the EXAM button.
+
+The exposure tab is ready automatically based on the patient information entered which is switched to the Exposure tab.
+
+Pass
+
+Exposure Tab
+
+Procedure Add
+
+Exposure Ready
+
+TSI-03-001
+
+Push Study button.
+
+Add and edit body part + view position.
+
+Push the OK button
+
+Check study name and view position list on the right bottom.
+
+Pass
+
+Check Detector Status
+
+TSI-03-002
+
+Select View position
+
+Check WIFI and Battery Status
+
+Check battery capacity and WIFI sensitivity by Detector SDK Log value of Battery and WIFI
+
+Pass
+
+Check DAP Value
+
+TSI-03-003
+
+Select View position
+
+Take Exposure
+
+Check display DAP Value on the image annotation.
+
+Check DAP value on the image.
+
+Pass
+
+TSI-03-004
+
+Select DAP Unit before run feel-DRCS
+
+Take exposure
+
+Check display DAP Value by selected unit.
+
+Check DAP Unit on the image by selected Unit.
+
+Pass
+
+Review Tab
+
+Layout Change
+
+TSI-04-001
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Change to the desired layout by using the Layout Tool.
+
+Changed to the desired layout and the image is displayed normally.
+
+Pass
+
+Image View Change
+
+TSI-04-002
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Change to the desired View mode.
+
+Changed to the desired View mode and the image is displayed normally.
+
+Pass
+
+Apply Image Control
+
+TSI-04-003
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Apply the desired Image Control.
+
+The desired Image Control is applied and the image is displayed normally.
+
+Pass
+
+DICOM Send
+
+TSI-04-004
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Select the image in the thumbnail panel to transfer.
+
+Click the Send button.
+
+Images are transferred to the Storage Server normally.
+
+Pass
+
+DICOM Print
+
+TSI-04-005
+
+Open the desired Study in the Browser Tab.
+
+The corresponding Study is open in the Review tab.
+
+Click the Print button.
+
+DICOM Print preview dialog box appears..
+
+Pass
+
+Browser Tab
+
+Patient Search
+
+TSI-05-001
+
+Enter the patient ID to the Patient ID input box.
+
+Click the Search Patient button.
+
+If there is a patient with the same patient ID entered, the patient is displayed on the Patient List.
+
+Pass
+
+TSI-05-002
+
+Enter the patient name in the Patient Name input box.
+
+Click the Search Patient button.
+
+If there is a patient with the same patient name entered, the patient is displayed on the Patient List..
+
+Pass
+
+TSI-05-003
+
+Enter the Accession No. in the Accession Number input box.
+
+Click the Search Patient button.
+
+If there is a patient with the same Accession No entered, the patient is displayed on the Patient List
+
+Pass
+
+Study Open
+
+TSI-05-004
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Click the Open button.
+
+The corresponding Study is switched to the Review tab automatically and all images in the study are listed on the thumbnails and the first image is displayed.
+
+Pass
+
+TSI-05-005
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Double click the desired Study.
+
+The corresponding Study is switched to the Review tab automatically and all images in the study are listed on the thumbnails and the first image is displayed.
+
+Pass
+
+DICOM Send
+
+TSI-05-006
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Images are listed in the Thumbnail List.
+
+Select the image to transfer.
+
+Click the send button.
+
+Images are transferred to the Storage Server normally.
+
+Pass
+
+DICOM Print
+
+TSI-05-007
+
+Search a patient.
+
+The searched patient’s Study is listed in the Study List.
+
+Select the desired Study.
+
+Images are listed in the Thumbnail List.
+
+Select the image to transfer.
+
+Click the Print button.
+
+DICOM print preview dialog box pops up.
+
+Pass
+
+Config
+
+Save setting
+
+TSI-06-001
+
+Change the setting.
+
+Click the OK button.
+
+Restart Feel-DRCS
+
+Move to the Config Tab
+
+Setting is set up normally.
+
+Pass
+
+Acceptance: Pass Fail
+
+Summary: From the Integration Test result, the Integration Assessment has been completed successfully based on the Integration Test Criteria. It is determined that all featured functions have been implemented properly and therefore it is recommended to proceed to the next step : system Test. I certify that the Integration Test has been completed correctly.
+
+And we can’t find any hazard in the Integration Test.
+
+Inspected by : 김 완 수 ___________________
+
+Reviewed by : _ ______이 동 진_
+
+Appendix 4.
+
+Status : 🞎Unit Test / 🞎 Integration Test / 🗹 System Test / 🗹 Regression Test
+
+Date : 2021.05.22
+
+Version : 2.1.255.60
+
+Item
+
+Identify
+
+Procedure
+
+Pass/Fail Criteria
+
+Result
+
+Image Acquisition
+
+TSS-01-01
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure
+
+Wait for the completion of image acquisition
+
+Wait until the image processing is completed
+
+Image is displayed on the screen after obtained and processed normally.
+
+Pass
+
+TSS-01-02
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure.
+
+Force the PC to shut down.
+
+The image is not acquired. In this case, it must be retaken.
+
+Pass
+
+TSS-01-03
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Make New order by Manual Entry.
+
+Move to Exposure Tab.
+
+Add or modify View position.
+
+Select one View position of view position list.
+
+Take Exposure.
+
+Force the Feel-DRCS to terminate.
+
+The image is not acquired. Raw data in stored in Detector backup folder.
+
+Pass
+
+Review
+
+TSS-02-01
+
+Run Feel-DRCS
+
+Move to the Browser tab.
+
+Search patient.
+
+Select the desired Study.
+
+Double-click the desired image.
+
+Review tab is moved.
+
+As the button of Brightness, Rotate and Zoom In/Out is clicked, image feature is changed.
+
+Image process, such as brightness, rotate, zoom in/out is applied to the image.
+
+Pass
+
+Worklist
+
+TSS-03-01
+
+Run Feel-DRCS
+
+Click the Search Patient button.
+
+Connect to DICOM Worklist server.
+
+Display capture order list.
+
+Display order list with Schedule, Patient ID, Patient Name and Study Description and etc.
+
+Pass
+
+TSS-03-02
+
+Run Feel-DRCS
+
+Insert patient Information on the Manual Study Panel
+
+Click the Exposure button.
+
+Move to Exposure tab.
+
+After Manual Entry, it moves to Exposure tab.
+
+Pass
+
+Browser
+
+TSS-04-01
+
+Run Feel-DRCS.
+
+Move to Browser tab.
+
+Select terms in calendar.
+
+Click the Search Patient button.
+
+Select the one of the Patient List.
+
+Select the one of the Study List.
+
+Click one image or select multiple images in thumb nail list.
+
+View or Delete the image or images.
+
+When double clicking one of the study list, Review tab is moved from Browser tab and image is displayed in Review tab.
+
+When deleting one or multiple images in the thumbnail list, image(s) is removed from Study.
+
+Pass
+
+DICOM Send
+
+TSS-05-01
+
+Run Feel-DRCS.
+
+Move to the Browser tab.
+
+Search the desired patient.
+
+Select the desired Study.
+
+Select the desired image.
+
+Click the Send button.
+
+The send process display Que table on the right bottom.
+
+Send has been performed successfully and verified in the PACS Storage Server that the corresponding images were transmitted successfully.
+
+Pass
+
+DICOM Print
+
+TSS-06-01
+
+Run Feel-DRCS.
+
+Move to the Browser tab.
+
+Search the desired patient.
+
+Select the desired Study.
+
+Select the desired image.
+
+Click the Print button.
+
+The Print Preview window pops up.
+
+Set the print setting.
+
+Click the Print button.
+
+Print is performed successfully and the corresponding images were printed from the DICOM Printer correctly.
+
+Pass
+
+Config
+
+TSS-07-01
+
+Run Feel-DRCS.
+
+Move to the config tab.
+
+Change Configuration setting.
+
+Click the OK button.
+
+After changing setting information it applied to feel-DRCS software.
+
+Pass
+
+Acceptance: Pass Fail
+
+Summary: From the System Test result, the System Assessment has been completed successfully based on the System Test Criteria. It is determined that all system functions have been implemented properly. I certify that the System Test has been completed correctly. And we can’t find any hazard in the Integration Test.
+
+Inspected by : 김 완 수 ___________________
+
+Reviewed by : _ ______이 동 진_
+
+Appendix 5.
+
+Status :🞎Unit Test/ 🞎Integration Test / 🞎 System Test /🗹 Security Test /🞎 Regression Test
+
+Date : 2021.05.22
+
+Version :2.1.255.60
+
+Item
+
+Identify
+
+Procedure
+
+Pass/Fail Criteria
+
+Result
+
+식별번호
+
+TSSe-01-01
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+Supervisor로 로그인한다.
+
+Configure 로 들어가서 일반 사용자 계정을 생성한다.
+
+Log-out을 한다.
+
+프로그램을 다시 시작하여 생성한 일반 계정으로 로그인한다.
+
+로그인 후 Configure 탭이 보이는지 확인한다.
+
+Brower 탭으로 이동하여 Study를 하나 선택한 후에 edit 나 delete 버튼을 누른다.
+
+소프트웨어를 유지한 채, 추가적으로 Run the feel-DRCS를 실행한다.
+
+SUPERVISIOR로 로그인 시에 명령 탭에 CONFIG가 보여야 하며, BROWSER의 검사목록의 삭제나 수정이 되어야 한다.
+
+또한, 일반 사용자 계정으로 로그인 시에 CONFIG 탭이 보이지 않아야 하며, BROWSER의 검사목록의 삭제나 수정버튼 클릭 시 관리자 아이디 및 암호를 요구하는 메시지 창이 나타나야 한다.
+
+동일한 소프트웨어가 실행이 되지 않아야 한다.
+
+Pass
+
+TSSe-01-02
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+TSSe-01-01에서 생성한 사용자 계정을 선택한 후에 다른 암호를 입력한다.
+
+암호는 숫자, 영문 대소문자 및 특수문자를 각각 포함하여 1자리 이상으로 입력한다.
+
+다른 암호 입력시에 암호가 틀리다는 메시지가 나타난다.
+
+Pass
+
+TSSe-01-03
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+일반 사용자로 로그인을 한다.
+
+프로그램을 종료한다.
+
+프로그램을 종료하면 PC가 자동으로 셧다운이 되어야 한다.
+
+Pass
+
+TSSe-01-04
+
+Power On PC.
+
+Administrator로 로그인 한다.
+
+Feel-DRCS 폴더안의 aceview.mdb를 오픈한다.
+
+Operator 테이블의 내용중 생성한 사용자 아이디를 확인한다.
+
+DB Table상에서만 사용자 아이디랑 비밀번호를 확인할 수 있어야 한다.
+
+Pass
+
+TSSe-01-05
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+일반 사용자로 로그인을 한다.
+
+암호 입력 시 암호 글자가* 형태로 나타나야 한다.
+
+Pass
+
+TSSe-01-06
+
+Power On PC.
+
+기존에 설치된 버전이 있으면 OS의 프로그램 추가/삭제에서 프로그램을 삭제한다.
+
+전달할 소프트웨어 설치 버전의 setup.exe 를 실행한다.
+
+전달 받은 암호를 입력하여 설치를 완료한다.
+
+(1)설치시에 설치암호를 요구하는 메시지창이 보여져야 하며, 암호가 맞지 않는 경우에는 확인 버튼이 활성화되지 않아야 한다.
+
+(2) 암호가 정상적으로 입력되어 진행이 되면 설치할 소프트웨어의 버전을 표시하며 계속 설치를 할 것인지에 대한 확인 요청 메시지 창이 나타나야 한다.
+
+Pass
+
+TSSe-01-07
+
+다른 test 서버용 PC의 전원을 켠다
+
+테스트용 CSDicomServerDemo_Original.exe DICOM Storage SCP 서버를 실행한다.
+
+아이콘 메뉴 중 option을 선택한다.
+
+AETitle를 입력한다. (ex. SecurityServer)
+
+획득될 이미지 파일의 저장 경로를 지정한다.
+
+PORT 번호를 입력한다.(해당 포트번호 기록해 둔다)
+
+Use Secure TLS Communication 체크박스를 체크한 후에 OK를 눌러서 저장한다.
+
+Users 탭을 클릭한다.
+
+아이콘 버튼 중 ADD 버튼을 클릭한다.
+
+Test용 PC의 AETitle을 입력한다.(ex : Client)
+
+Test용 PC의 IP address를 입력한다.
+
+PORT 번호를 입력한다.
+
+OK 버튼을 눌러서 추가된 것을 확인한다.
+
+Test용 PC의 전원을 켠다.
+
+Run the Feel-DRCS.
+
+Configure 탭을 클릭한 후 DICOM 설정부분으로 들어간다.
+
+DICOM Storage 부분에서 ADD 버튼을 누른다.
+
+Server 정보는 방금 입력한 서버용 PC의 test 프로그램의 정보와 같이 입력한다.
+
+Brower 탭으로 이동하여 Test PACs Server로 DICOM 전송한다.
+
+- 에러 없이 정상적으로 전송되어야 하며, 서버 프로그램의 database 탭을 눌러서 방금 전송한 이미지의 정보가 보여야 한다.
+
+- 만약 서버PC의 서버 프로그램에서 Use Secure TLS Communication 가 체크가 되어 있지 않으면 전송되지 않아야 한다.
+
+Pass
+
+TSS-01-08
+
+Power On PC.
+
+Run the Feel-DRCS.
+
+가상의 환자 정보를 입력한 후에 한 장의 영상을 촬영하여 저장한다.
+
+BROWER 모드를 클릭한다.
+
+방금 촬영한 영상을 클릭하여 오픈한다.
+
+저장된 DCM 폴더안에서 해당 파일에 대하여 test용 다른 DICOM 파일을 동일한 이름으로 저장한다.
+
+BROWER 모드를 클릭한다.
+
+방금 촬영한 영상을 클릭하여 오픈한다.
+
+(1) 파일을 강제로 수정하기 전에는 영상이 정상적이 표시되어야 한다.
+
+(2) 파일을 강제로 수정한 후에는 영상을 오픈하는 경우에는 “There are no digital signatures in this DICOM data set.” 이라는 메시지박스가 나타나야 하며, OK 버튼을 누르면 영상이 보이지 않아야 한다.
+
+Pass
+
+TSS-01-09
+
+Power On PC.
+
+시스템 날짜 1년 뒤로 변경한다.
+
+Run the Feel-DRCS.
+
+등록된 ID를 입력한다.
+
+유효기간이 지났다는 메시지가 나타나는 확인한다.
+
+Pass
+
+TSS-01-10
+
+연결할 수 있는 통신 포트를 확인한다.
+
+-물리적인 접근 포트가 없어야 한다.
+
+Pass
+
+탐지,대응,복구
+
+TSS-01-11
+
+Run Feel-DRCS
+
+촬영모드로진입하여 영상을 촬영하고 전송한다.
+
+Browser 탭을 클릭한다.
+
+Study를 하나 선택하고 삭제한다.
+
+Analysis 버튼을 클릭한다.
+
+-log 폴더에 영상획득 및 전송에 대한 기록을 확인한다.
+
+- Analysis 창에 각종 정보들의 통계를 확인한다.
+
+Pass
+
+Acceptance: Pass Fail
+
+Summary: 위의 표와 같이 각 보안관련시험항목에 대하여 유효성을 확인하였다.
+
+Inspected by : 김 완 수 ___________________
+
+Reviewed by : _ ______이 동 진_
+
+Appendix 6.
+
+Version History
+
+Version
+
+Description
+
+2.1.140.0
+
+Function Updates
+
+Available multi Language
+
+Support Patient Age
+
+2.1.150.0
+
+Function Updates
+
+Toshiba Detector interface
+
+Available AEC 5 field in CPI Generator
+
+Support Interpolation viewing
+
+Available Auto Stitching with SYFM Machine
+
+Available REM generator interface
+
+Available Day/Month/Year in Date items
+
+Support DAP meter of VacuDAP standard Model
+
+2.1.159.0
+
+Function Updates
+
+Upgrade interface with Ralco collimator
+
+Upgrade software for Podiatry
+
+Upgrade interface with varian detector.
+
+Support interface with Vieworks Detector
+
+Add AUX Mode in interfacing with generator.
+
+2.1.169.0
+
+Function Updates
+
+Add Rejected Analysis
+
+Add EI(Exposure Index) Value
+
+Upgrade Stitching Function
+
+Technix Generator Interface
+
+SMAM Generator Interface
+
+2.1.180.0
+
+Function Updates
+
+Add AutoCrop
+
+DRGEM Generator upgrade
+
+2.1.200.0
+
+Function Updates
+
+Update local date
+
+Add Duplicate image
+
+Delete images in DICOM send status
+
+Update InstanceUID when send DICOM file
+
+Add LPCI 7250 IO Board
+
+2.1.210.0
+
+Function Updates
+
+Update Management of memory in DICOM Worklist
+
+Add WIFI Module and Battery when use wifi detector.
+
+2.1.220.0
+
+Function Updates
+
+Update DICOM MPPS
+
+ADD Ecoray generator
+
+ADD iBA DAP
+
+2.1.230.0
+
+Function Updates
+
+ADD Film Composer
+
+ADD Paper Print
+
+2.1.247.0
+
+Function Updates
+
+ADD Select font size on the Film Composer
+
+Edit image information
+
+Interface with GBT portable generator
+
+Interface with IMD generator
+
+Setup DAP unit
+
+2.1.252.5
+
+Function Updates
+
+EMD generator Integration modification
+
+Card Reader function is added for Kanda Installation
+
+For CD Write function, Folder name is changed from PatID to PatScheduled and File name is changed to SOPInstanceUID (To prevent Error of creation and Read only)
+
+Length tool figure change from Arrow to normal
+
+Delete function is added in Print Status window
+
+Fix the locking error of viewposition for 3rd detector (only F600 model)
+
+Fix the error that preview image is disappear too fast
+
+Fix the error of Series No. when the user move the image of thumbnail
+
+Modify function for R, L marker will not display in Preview
+
+Modify function for auto saving latest image when the user move to thumbnail focus during acquisition
+
+Fix the series No. error for SG Healthcare
+
+Modify the input of Date in Worklist. It is available from 1900 to 2100.
+
+2.1.254.20
+
+Add Function
+
+Added function that adjust Annotation size automatically
+
+Added function that set Code value as CodeMeaning value (CodeValue replace with CodeMeaning)
+
+Added function that expert shot image list as a Excel file
+
+Added option of Description when enter Worklist information manually
+
+Added function of image rotation
+
+Added function of image acquisition option for phantom
+
+Added option of NoHistoMM(=2) in Aceview.ini (2 is new, 1 is default)
+
+Fix Bugs or Logical Error
+
+Fixed workflow method when error has been occurred after worklist query in DB input process
+
+Fixed patient input option that is not able to input order When Patient ID is same with existed patient in worklist even though Patient Name is not same
+
+Fixed bug of searching Patient Information in image merging routine
+
+Prevent Generator Reconnect by double clicking
+
+Fixed error of delete process that is when delete image after acquisition image, worklist information also delete in exam window
+
+Fixed that Patient information display on BPM and JPG when save it
+
+Fixed ‘HIDE_DEV_INFO = 1’
+
+Fixed Angle function error
+
+Fixed Annotation saving function – apply to palette
+
+Fixed that Create Patient ID automatically (apply to date)
+
+Fixed Image Reset button error
+
+Fixed changing hospital name in IsMobile mode
+
+Apply Requested term about Codematching and Special character
+
+Fixed that Changing operator change immediately in Exam mode
+
+Fixed that File name and folder path can be set as you please
+
+Fixed that File name of bmp image is set as you please
+
+2.1.254.180
+
+Add function
+
+Print Font Size control
+
+Move Text position for annotation(Measurement/Angle/Cobb angle)
+
+Add SutdyPhysicianRef name when manual entry.
+
+Fix bugs or Logical Error
+
+When Add Code Manager, fix Sequency.
+
+Fix PACS Communication service delay.
+
+Edit support dual detector mode although used single detector.
+
+Enhancement DICOM Networking.
+
+Modify Auto Delete items.(10% - 90&, 1Day – 30Day)
+
+Modify Length Unit : inch, cm, mm
+
+Modify Marker Size Control.
+
+Edit Patient Age : Year/Week/Day
+
+2.1.254.210
+
+Add Function
+
+Add text box of DICOM Storage Server Name
+
+Add option for DICOM Character Set
+
+Add H&abyz HAD1717M detector
+
+Fix Bugs or Logical Error
+
+Modify searching list for adding study information at yesterday.
+
+Modify two CAN communication
+
+2.1.255.40
+
+Add Function
+
+Add H&abyz ADD(HAD1417MCW) detector
+
+Add encoding for several charchacter set for DICOM tag
+
+Fix Bugs or Logical Error
+
+Optimized logging method.
+
+Exception for DICOM printer at communication error.
+
+Modify to available changing DICOM Storage Server name.
+
+2.1.255.44
+
+Add Function
+
+Add AED button
+
+Display the detector temperature
+
+2.1.255.60
+
+Add Function
+
+Add H&abyz ADD(HAD1717MCW) detector

@@ -1,0 +1,396 @@
+queueId: ingest-1781569954371-21x
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/260119 MC, 23G 캐나다 등록서류 요청- IDC/260119/1. Quality Manual & Procedures/AQP707 Product Software Validation Regulation/AQP707_Product Software Validation Regulation.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/431d01ffc7b4/AQP707_Product Software Validation Regulation__431d01ffc7b4_combined.txt
+canonicalGroupId: aa56f46c53da
+productSignal: Unclassified
+authoritySignal: FDA
+pilotRank: 123
+
+SOURCE_TEXT
+제품 Software Validation 규정
+(Product Software Validation
+Regulation)
+Distinguishment ■ Controlled □ Uncontrolled
+H&abyz 41-16, 2Dong, Cheoinseong-ro, Namsa-eup,
+Cheoin-gu, Yongin-si, Gyeonggi-do
+This document is effective from the date of appro.
+Name Team Name Date Sign
+Written
+Jeong
+Gyeong
+gyun
+Quality Management
+Team 2024.04.01.
+Reviewed - - -
+Approved Hur
+Nam kyu
+Quality Management
+Team 2024.04.01.
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 2 / 12
+Index
+0. Revision History .................................오류! 책갈피가 정의되어 있지 않습니다.
+1. Purpose ............................................오류! 책갈피가 정의되어 있지 않습니다.
+2. Applied Area .....................................오류! 책갈피가 정의되어 있지 않습니다.
+3. Terms and Definitions .......................오류! 책갈피가 정의되어 있지 않습니다.
+4. Responsibility and Authority ..............오류! 책갈피가 정의되어 있지 않습니다.
+5. Work procedures ..............................오류! 책갈피가 정의되어 있지 않습니다.
+6. Related Form ....................................오류! 책갈피가 정의되어 있지 않습니다.
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 3 / 12
+0. Revision History
+No Revision
+date Reasons for revision and major revisions Approver
+0 2017.12.20.
+Newly established in accordance with the application
+of EN ISO 13485:2012+AC2012 & EN ISO
+9001:2008 quality management system
+-
+1 2019.04.02. Revisions to comply with KGMP
+Simplified Standard/OPLS Forms removed -
+2 2021.10.14. Correction of typos -
+3 2022.10.18. Comprehensive revision (supplementation of
+procedural contents) -
+4 2024.04.01.
+1) Change in document name and number
+Computer Software Validation Regulation (AQP717)
+→ Product Software Validation Regulation (AQP707)
+2) Comprehensive revision to comply with KGMP, EN
+ISO 13485:2016+A11:2021, FDA 21 CFR Part 820,
+and MDR (EU) 2017/745 Article 10 requirements
+Namkyu.Hur
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 4 / 12
+1. Purpose
+This standard aims to integrate and support general design control
+requirements throughout the product development process. Quality
+assurance managers and product managers use this standard as a tool to
+manage software development activities throughout the project lifecycle.
+2. Applied Area
+This regulation defines the software development processes and activities
+employed by our company. Software is one of the components we use when
+designing and developing our products. To ensure software quality, this
+regulation outlines requirements for software design control, verification,
+and validation.
+3. Terms and Definitions
+No. Terms Definition
+1 Medical Software
+Software developed for use as a medical device, including
+standalone software, embedded software, and mobile
+medical apps
+2 standalone software
+Medical device software that has functions that are suitable
+for the purpose of use of the medical device as a software
+itself and operates in an environment equivalent to a
+general-purpose computer
+3 embedded software Medical device software that is embedded and operated
+within a separate medical device system
+4 commercial software Software that has already been developed and
+commercialized separately from medical device software
+5 designation A designation or name given to medical software to identify
+medical software
+6 Version Number assigned according to the numbering system for
+configuration management of medical software
+7 Main features Functions of medical software implemented for the purpose
+of using medical devices
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 5 / 12
+7 structure
+The internal configuration status of medical software and
+the structure of medical software can be expressed in the
+form of functional module units and state diagrams, etc. in
+the main function of medical software
+8 Algorithm
+This refers to the procedures and methods by which
+medical software operates within a medical device. The
+inputs and outputs at each step of the procedure must be
+clear
+9 Operating
+environment
+Hardware requirements for proper operation of medical
+software
+10 Validation
+The act of verifying and documenting that an operation,
+process, machine, material, operation, or system actually
+produces the expected results
+11 Revalidation
+Validation conducted when changes that may affect quality
+are made to raw materials, manufacturing processes,
+machinery, or manufacturing systems
+12 Protocol
+A document specifying the criteria for producing
+satisfactory test results by verifying the test parameters
+and product characteristics of software included in
+manufacturing facilities and inspection equipment
+13 verification Confirming that specific requirements have been met by
+providing objective evidence
+14 Safety Freedom from unacceptable risks
+4. Responsibility and Authority
+4.1 CEO
+1) Approval of protocol and report
+4.2 Development Team Leader
+1) Overall planning, implementation, and validation of the project
+2) Protocol and report preparation
+3) Validation activities
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 6 / 12
+5. Work procedures
+5.1 Development Design
+5.1.1 Software Requirements Specification Analysis and Writing
+1) The developer investigates and understands recent software technology
+trends based on software development requirements.
+2) When writing software specifications, the software development
+environment and development tools required to implement the function
+are described in detail as follows, and the contents are included in the
+development plan.
+① Computer model to be used for software development
+② Name of operating system required for software development
+③ Programming language name to be used in software development
+④ Various software tools required during development, etc
+5.1.2 Software General Information and Basic Structure Design
+1) General information on software development
+① The developer analyzes the development requirements to realize the
+software function.
+② The developer understands the data flow and structure and prepares
+the basics for development.
+③ The developer defines basic functions, performance, and interfaces as
+basic data for review during software design or verification after
+development is complete.
+④ Developers acquire the skills to use software development tools used
+in the software design implementation phase when necessary..
+2) Implementation and review of software basic structure design
+① Software basic architecture design is the process by which developers
+translate requirements into software representations. It is the first step
+in codifying the interfaces between internal and external software
+elements. A rough software basic architecture design involves the
+following steps.
+– The basic software design includes the following.
+ Development task name, software version, and creation date
+ System configuration, software development environment
+ Software structure and functional classification
+ Data flow information between all functional modules
+ Module function description
+ Programming guidelines: names, coding, comments, etc
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 7 / 12
+– The developer must go through a process of logically checking
+whether there are any abnormalities in the completed basic design
+and review reasonable measures for each functional module.
+– The developer reviews whether the basic design is suitable for the
+user's development requirements.
+5.1.3 Implementation and review of detailed software design
+1) Software detailed design procedure
+① Detailed software design involves the detailed design of each work unit
+and subroutine that composes the entire software, based on a
+previously designed basic structure, and is defined as a process that
+extends all the way to the coding stage. Detailed software program
+design involves the following processes.
+– After completing the basic design and review stages of the software
+program to suit the user’s system software specifications, the
+developer subdivides it into functional unit modules and concretizes
+it.
+– Define the functional characteristics and input/output format of
+each subroutine function, and describe the processing procedure
+accordingly.
+– The software detailed design includes the following.
+ Definition of module functions by work unit
+ Function classification regarding processing procedures by
+module
+ Input and output processing of each subroutine function
+ Definition of variables to be used when writing a program
+ Detailed designer name and reviewer name
+– The developer reviews the specified functional modules to ensure
+they meet the initial requirements and checks for any logical
+anomalies.
+5.2 Software Function Implementation
+5.2.1 Software developers complete verification work on the basic structure design
+and detailed design based on the user's requirements, and then code it into
+a software program that the computer can understand.
+5.2.2 Developers perform coding tasks while adhering to the syntax rules of the
+programming language.
+5.2.3 Developers should recognize that the program coding format is an important
+property of the source code and an important factor in determining the ease
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 8 / 12
+of program understanding, and should choose a method that makes the
+software program efficient and easy to understand, even for non-developers.
+5.2.4 It is necessary to recognize that the efficiency of the source code is directly
+related to the efficiency of the algorithm defined at the development design
+stage, and when programming the detailed design, the following guidelines
+should be taken into consideration when coding.
+1) Simplify formulas.
+2) Minimize the use of multidimensional arrays when possible.
+3) Avoid nested loops and conditions.
+4) Use parentheses to clarify formulas.
+5) Use fast arithmetic operations.
+6) Simplify input data.
+7) Clarify error handling.
+5.2.5 Developers code with consideration for efficiency in data input and output
+between processes.
+5.2.6 The program developer must consider software maintenance and provide
+comments for each functional module as a rule.
+5.3 Software Testing
+5.3.1 Software Test Plan
+1) Developers create software test plans for each software development
+stage.
+2) Software testing indicates step-by-step test items, test methods, and test
+organization.
+5.3.2 Integrated Testing
+1) It is a systematic step to integrate the program developed separately by
+work unit module into one program after testing each program unit
+module and to detect errors related to the interface, and it is a procedure
+that must be performed to be recognized as a software product.
+2) To test the entire integrated program, the developer generates input
+information based on the detailed design and simulates whether the
+processing process and output results are suitable for the user's
+development requirements.
+3) After integrating the modules of the software program, the test contents
+and results are recorded in the integrated module test results report.
+4) The integrated test results for each module are prepared including the
+following items.
+① Software integration test purpose and test contents
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 9 / 12
+② Software integration testing method and procedure, tester name, test
+date
+③ Test evaluation criteria, test results
+5) Errors that occur during software module integration testing are recorded
+in the integrated test results, and for test items that are identified as
+problematic in the test results, corrective action is taken and a retest is
+conducted.
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 10 / 12
+5.3.3 System Testing
+1) The developer conducts a full system-level linkage test that includes not
+only the software developed based on the user's requirements but also
+the hardware.
+2) System testing is the final testing performed before the developed
+product is provided to users.
+3) The development team leader can decide on the type of test, test
+method, test institution, test schedule, etc. according to the development
+plan schedule.
+4) In the case of in-house testing, the developer oversees and evaluates the
+test demonstration activities.
+5) A functional and safety evaluation meeting is held under the supervision
+of the developer based on the results of the system test, and if any
+improvement or functional supplementation work is required, it is
+modified and supplemented.
+5.4 Quality Certification
+5.4.1 The developer obtains approval from the development team leader to verify
+that the software program developed according to the design specifications
+is suitable for the conditions of use.
+5.5 Development Completion Report
+5.5.1 Writing a Development Completion Report
+1) The development team leader completes the development presented in
+the development plan, writes up the results, and reports them to the CEO.
+5.5.2 Transfer of development-related data
+1) All data and documents generated during the development process based
+on the user's requirements are transferred to the relevant department in
+accordance with the Design and Development Management Regulations
+(AQP704).
+2) For software that has been developed, training on the development
+system is provided for a certain period of time to related personnel
+(production, quality, sales).
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 11 / 12
+5.6 Design Changes
+5.6.1 When a user discovers a significant software error while using the
+development system or requests the addition of a new function, the
+developer reviews the change and reports it to the development team leader
+to determine suitability before changing the design.
+5.6.2 Design changes may be unavoidable due to changes in external
+environmental factors as well as software issues.
+5.6.3 When reviewing design changes, the overall quality impact of the
+development system resulting from the software change is considered and
+decided.
+5.7 Software Version Management
+5.7.1 Software version change
+1) The version number is assigned as version 1.0.0.0 as the initial version
+number when first transferred after development is completed.
+2) Version number changes after the initial version are implemented in the
+following cases
+① When a major function changes: Change the Major number
+② When a minor function changes: Change the Minor number
+3) Changed previous versions are backed up and stored in the DB.
+4) Records and archives the history of changes.
+5) If a software version number is assigned to the introduced equipment,
+the version number of the introducing company is used as is.
+
+Product Software
+Validation Regulation
+Document No AQP707
+Revision date 2024.04.01.
+Rev. No 4
+P a g e 12 / 12
+5.7.2 Version number assignment
+1) The version number assignment method is as follows, and a higher
+number is assigned sequentially according to the change content
+whenever a change occurs.
+표기) 버전 1. 0. 0. 0 Minor features and bug fixes (Hotfix)
+Minor features and bug fixes (Release)
+Compatibility, interface changes
+Changes to major features
+5.7.3 Software versions are recorded and managed in the Software Version
+Management Register (707-2).
+6. Related Form
+No Record name Form
+number
+Management
+Department
+Storage
+period
+1 Software Validation Report 707-1 Development
+Team 10 years
+2 Software Version Control
+Register 707-2 Development
+Team 10 years

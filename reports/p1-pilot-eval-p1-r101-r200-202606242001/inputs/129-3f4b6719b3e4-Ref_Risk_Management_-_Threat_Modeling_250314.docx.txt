@@ -1,0 +1,520 @@
+queueId: ingest-1781569954389-iwx
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 국내 제조인증/2. 250402 보완/기술문서_수정중/2. 첨부자료/2. Cybersecurity/참고자료/Ref) Risk Management - Threat Modeling_250314.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/544f5e9772c2/Ref) Risk Management - Threat Modeling_250314__544f5e9772c2_combined.txt
+canonicalGroupId: 3f4b6719b3e4
+productSignal: Unclassified
+authoritySignal: MFDS/domestic
+pilotRank: 129
+
+SOURCE_TEXT
+Cybersecurity
+
+Risk Management
+
+– Threat Modeling
+
+Manufacturer:
+
+H&abyz Co., Ltd.
+
+Product name:
+
+Digital Flat Panel X-ray Detector
+
+Model Name:
+
+G1417CW/G1717CW/G1417FW/G1717FW/
+
+G1417CWP/G1717CWP/G1417FWP/G1717FWP
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+R&D team
+
+Reviewed by
+
+Hur, Namkyu
+
+Quality Management Representative
+
+Approved by
+
+Lee, Dongho
+
+R&D manager
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+First Establishment
+
+Contents
+
+1. Overview 4
+
+2. Threat modeling Summary 5
+
+3. Data-Flow Diagram 5
+
+4. Threat Identification and Methodology 6
+
+5. Identification of Cybersecurity Risks 6
+
+6. Risks Assessment 7
+
+7. Mitigation Implementation 9
+
+8. Identified Risks by Vulnerability category 10
+
+Overview
+
+Document Overview
+
+This document provides cybersecurity risk analysis with a structured threat modeling analysis for the Digital Flat Panel X-ray Detector. The STRIDE methodology is used to identify and mitigate potential threats to the device’s security and integrity.
+
+Medical Device Overview
+
+Product name: Digital Flat Panel X-ray Detector
+
+Model name: G1417CW/G1717CW/G1417FW/G1717FW/
+
+G1417CWP/G1717CWP/G1417FWP/G1717FWP
+
+Manufacturer: H&abyz Co., Ltd.
+
+This Digital Flat Panel X-ray Detector (Model: G1417CW/G1717CW/G1417FW/G1717FW/
+
+G1417CWP/G1717CWP/G1417FWP/G1717FWP) consists of a scintillator-based digital X-ray imaging panel, an image processing board, a wireless communication module, batteries and a protective enclosure.
+
+The detector is designed to capture X-ray images and transmit them to an image acquisition workstation via wired or wireless communication.
+
+This device is a battery-powered Digital Flat Panel X-ray Detector, designed and manufactured by H&abyz Co., Ltd. Compared with conventional imaging methods, this device offers a lightweight, compact design, high image resolution, and fast image acquisition, making it suitable for use in various clinical and mobile environments.
+
+The major components of the detector include the Scintillator Panel, Image Processing board, Batteries, Communicatiuon Module, and Protective Enclosure.
+
+The detector operates in conjunction with an X-ray generator, image acquisition software, and a computer workstation for image processing and analysis. The cybersecurity risks associated with the G Series Detectors have been evaluated to ensure no new or increased risks are introduced. Identified risks have been mitigated through risk management measures outlined in the system’s cybersecurity framework.
+
+Assets
+
+A1: Configuration - Receiving X-ray exposure settings (kV, mAs, APR values) from the generator
+
+A2: Calibration - Gain Correction, offset correction, and pixel sensitivity adjustment
+
+A3: Data acquisition - Capturing and converting X-ray signals into digital data
+
+A4: Image storage - Storing acquired images in internal memory before transmission
+
+A5: Wireless Communication – Data Transfer via Wi-Fi module for remote image transmission
+
+A6: Wired Communication – Ethernet-based data transmission to workstations
+
+A7: Battery Management – Monitoring charge levels, voltage, and power efficiency
+
+A8: Error Monitoring – Detecting abnormal voltage, overheating, and communication failures
+
+A9: Synchronization – Coordinating exposure timing with the X-ray generator
+
+A10: Display Interface – LED indicators for power, battery status, and connection status
+
+A11: SID (Source-to-Image Distance) – Calibration reference for accurate distance measurements
+
+A12: Hardware Interfaces - Physical connection ports
+
+//추후 수정 예정
+
+Threat modeling Summary
+
+The threat modeling document for the Medical Device, G Series Detector (Manufacture: H&abyz Co., Ltd) aims to evaluate potential cybersecurity threats and pinpoint vulnerabilities within the device. This comprehensive assessment identifies possible attack vectors, evaluates the likelihood and impact of various threats, and proposes mitigations to enhance the security posture. By systematically analyzing the device's architecture, data flow, and interfaces, the document ensures that security measures are robust and aligned with industry standards. In total NN initial risks have been identified during the threat modeling process:
+
+The key findings and outcomes of each test are summarized below:
+
+a) IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity (NN initial risks)
+
+b) CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber threats (NN initial risks)
+
+c) Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in systems. (N initial risks)
+
+Data-Flow Diagram
+
+A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system. It highlights how data moves between devices, systems, and users, identifying points where data is input, processed, stored, and output. By visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission, and storage, ensuring the security and integrity of medical imaging data.
+
+The report's diagram contains the following views:
+
+Global System View - Provides an overview of how data flows across the entire system, including connections between the detector, workstation, and PACS.
+
+Multi-Patient Harm View - Assesses cybersecurity risks that could impact multiple patients, such as unauthorized access to stored X-ray images.
+
+Updateability/Patchability View - Analyzes how firmware and software updates are managed to mitigate vulnerabilities.
+
+Security Use Case View(s) - Focuses on specific security scenarios, such as data encryption during image transmission or access control mechanisms for the detector.
+
+These views are visually represented in the diagram and are explained in detail through the accompanying legend. The legend helps to clarify the purpose and scope of the depicted views in the diagram.
+
+Threat Identification and Methodology
+
+Threat Methodology: The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege, which are relevant to the G Series Detector security needs.
+
+Rationale for STRIDE: STRIDE provides a structured approach to identifying threats that could compromise the confidentiality, integrity, and availability of the system, making it suitable for complex systems where multiple interaction points exist, such as medical devices.
+
+Identification of Cybersecurity Risks
+
+Requirements
+
+Risk ID
+
+Asset
+
+STRIDE
+
+Threat Description
+
+SI-01
+
+If integrity protection is not sufficient during data transmission, data is at risk of being tampered with due to man-in-the-middle (MITM) attacks.
+
+SI-02
+
+Risk of system control due to execution of malicious code when malware detection and blocking are insufficient
+
+SI-05
+
+Insufficient validation of external input exposes you to various attacks such as SQL injection and script injection.
+
+SI-07
+
+If sensitive information is exposed in error messages, there is a risk of providing internal structure or configuration information.
+
+SI-08
+
+If regular updates are not provided, there is a risk of known vulnerabilities being exposed for a long time.
+
+SI-09
+
+Risk of installing firmware or software containing malicious code if update files are not verified
+
+SI-11
+
+Insufficient integrity check at boot time, risk of malware injection from the early stage
+
+DC-01
+
+Lack of encryption for stored and transmitted data can lead to data leaks and exposure risks
+
+DC-03
+
+If patient identification information is not de-identified, there is a risk of personal information leakage and privacy violation.
+
+RA-01
+
+If there is insufficient response to DoS attacks, device availability is significantly reduced, which risks service interruption.
+
+RA-02
+
+If backup function is not provided, there is a risk of data loss and inability to recover.
+
+RA-03
+
+If recovery functions are not implemented after a failure occurs, there is a risk of long-term system downtime and reduced security.
+
+RA-04
+
+Lack of monitoring of network and security settings changes can lead to vulnerability exposure due to configuration errors.
+
+RA-05
+
+If unused features are left enabled, the attack surface expands and the risk of exploitation increases.
+
+Risks Assessment
+
+Likelihood
+
+Frequent (F)
+
+Exploitation is very easy and likely to occur frequently (e.g. public vulnerability)
+
+Very Likely (VL)
+
+Exploitation is possible and likely to be exploited by malicious attackers
+
+Likely (L)
+
+Exploitation is possible under certain conditions, but technically difficult
+
+Unlikely (U)
+
+Exploitation is difficult and requires advanced technical knowledge
+
+Very Unlikely (VU)
+
+Exploitation is practically impossible (e.g. hardware access required)
+
+Impact
+
+Very High (VH)
+
+Critical to system safety and possible legal and regulatory violations
+
+High (H)
+
+Major device function failure, possible direct risk to patient safety
+
+Medium (M)
+
+Possible to degrade system performance or impact data integrity
+
+Low (L)
+
+Possible to cause partial function failure or some inconvenience to user experience
+
+Very Low (VL)
+
+Limitless to system operation
+
+Risk Level
+
+Critical (C)
+
+Extremely hazardous, requiring immediate security action. Potential direct threat to patient safety.
+
+High (H)
+
+High risk, requiring rapid security action. System performance degradation, high potential for data leakage.
+
+Medium (M)
+
+Medium risk, requiring long-term security enhancements but may not be urgent.
+
+Low (L)
+
+Low risk, not operationally impactful but may require additional improvements.
+
+Very Low (VL)
+
+Negligible low risk. Not likely to cause problems in normal operating environments.
+
+Risk assessment
+
+Risk ID
+
+Likelihood
+
+(Before)
+
+Impact
+
+(Before)
+
+Risk Level
+
+(Before)
+
+CVSS Score
+
+SI-01
+
+Very Likely (VL)
+
+High (H)
+
+High
+
+8.0
+
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:M/A:L)
+
+SI-02
+
+Very Likely (VL)
+
+High (H)
+
+High
+
+9.0
+
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+
+SI-05
+
+Likely (L)
+
+Medium (M)
+
+Medium
+
+9.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+
+SI-07
+
+Likely (L)
+
+Medium (M)
+
+Medium
+
+6.0
+
+(AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N)
+
+SI-08
+
+Very Likely (VL)
+
+High (H)
+
+High
+
+4.0 (AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N)
+
+SI-09
+
+Likely (L)
+
+Low (L)
+
+Medium
+
+8.5 (AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H)
+
+SI-11
+
+Likely (L)
+
+Medium (M)
+
+Medium
+
+8.5 (AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+
+DC-01
+
+Frequent (F)
+
+High (H)
+
+Critical
+
+8.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N)
+
+DC-03
+
+Likely (L)
+
+Medium (M)
+
+Medium
+
+8.0
+
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L)
+
+RA-01
+
+Very Likely (VL)
+
+High (H)
+
+High
+
+7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)
+
+RA-02
+
+Likely (L)
+
+Low (L)
+
+Medium
+
+3.5 (AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N)
+
+RA-03
+
+Likely (L)
+
+Medium (M)
+
+Medium
+
+7.0 (AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H)
+
+RA-04
+
+Frequent (F)
+
+Very High (VH)
+
+Critical
+
+8.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L)
+
+RA-05
+
+Frequent (F)
+
+Very High (VH)
+
+Critical
+
+8.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L)
+
+Mitigation Implementation
+
+Risk ID
+
+Mitigation
+
+Likelihood
+
+(After)
+
+Impact
+
+(After)
+
+Risk Level
+
+(After)
+
+Very Unlikely (VU)
+
+Low (L)
+
+Low
+
+Very Unlikely (VU)
+
+Low (L)
+
+Low
+
+Very Unlikely (VU)
+
+Very Low (VL)
+
+Low
+
+Very Unlikely (VU)
+
+Very Low (VL)
+
+Low
+
+Identified Risks by Vulnerability category
+
+After mitigation measures were taken for a total of NN risks (Medium: NN / High: NN / Critical: NN), the residual risk was reduced to a total of Low: NN.

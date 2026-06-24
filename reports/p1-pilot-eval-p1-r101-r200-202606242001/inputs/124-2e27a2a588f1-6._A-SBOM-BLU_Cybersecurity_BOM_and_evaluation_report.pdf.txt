@@ -1,0 +1,432 @@
+queueId: ingest-1781569954418-171y
+sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/91_인증 - 국내/02. G series + CYAN/3. 보완(제출)★/★보완제출문서/03 기술문서 심사에 관한 자료/03 제품의 성능 및 안전을 확인하기 위한 자료 (Rev)/04 성능에 관한 자료 (Rev)/2. 사이버보안/6. A-SBOM-BLU_Cybersecurity BOM and evaluation report.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/675027d626a5/6. A-SBOM-BLU_Cybersecurity BOM and evaluation report__675027d626a5_combined.txt
+canonicalGroupId: 2e27a2a588f1
+productSignal: HnX
+authoritySignal: MFDS/domestic
+pilotRank: 124
+
+SOURCE_TEXT
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 1 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation Report
+Product name Digital Flat Panel X-ray Detector
+Model no.
+G series
+Detector
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+G1717CW, G1717CWP, G1717FW, G1717FWP
+GT series
+Detector GT1717C, GT1717CP
+Name Position Date Signature
+Prepared by Jimin HAN RA team April 14,
+2026
+Reviewed by Kyungsoo LEE R&D Manager April 14,
+2026
+Approved by Namkyu HUR
+Quality
+Management
+Representative
+April 14,
+2026
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 2 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision History
+Revision No. Rev. Date Revision Description
+0 August 06, 2025 Initial
+1 April 14, 2026 Revision due to the addition of wired-only derivative models
+(GT1717C, GT1717CP).
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 3 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Contents
+1. Overview ····················································································································· 4
+2. SBOM list and Support Lifecycle ························································································· 6
+3. Machine Readable Format in Cyclone DX (JSON) ····································································· 7
+4. SW Supply Chain Security System Diagnosis and SBOM Analysis Results Report ····························· 11
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 4 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Overview
+1.1 Document Overview
+This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Digital
+X-ray Imaging System (HnX-R1).
+1.2 Medical Device Overview
+Product name Digital Flat Panel X-ray Detector
+Model
+name
+G series
+Detector
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+G1717CW, G1717CWP, G1717FW, G1717FWP
+GT series
+Detector GT1717C, GT1717CP
+Manufacturer H&abyz Co., Ltd.
+Manufacturer address 2-dong, 41-16 Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-
+si, Gyeonggi-do, 17118, Republic of Korea
+Intended use The G/GT series Digital Flat Panel X-ray Detector is indicated for
+digital imaging solution designed for providing general
+radiographic diagnosis of human anatomy targeting both adult and
+children. It is intended to replace film based radiographic
+diagnostic systems and provide more precise case diagnosis and
+treatment planning on a real time basis for physicians and
+radiologists.
+The G/GT series wired/wireless digital flat panel X-ray detector consists of the detector, power
+supply box, battery pack, battery charger, other accessories, and software (SDK and firmware) for
+image acquisition and image processing, and does not include the X-ray generator or console
+application software. The detectors are of wired/wireless type, and there are 8 types in the G series
+(G1417CW, G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW, G1717FWP)
+and 2 types in the GT series (GT1717C, GT1717CP) as a wired type.
+This device is used to capture images by receiving X-ray transmitted through a patient’s body. The
+X-ray passing through a patient’s body is sent to detector and then converted into electrical signals.
+These signals go through the process of amplification and digital data conversion in the signal
+processing device before being transmitted to the host console application via Ethernet of WiFi
+interface using the SDK. The console application, which handles DICOM formatting, image display,
+and communication with the Picture Archiving & Communication System (PACS) server, is not
+included in this device's configuration. (A cybersecurity-compliant console application must be
+used)
+The cybersecurity risk of the G/GT series detector have been addressed to assure that no new or
+increased cybersecurity risks were introduced as a part of device risk analysis. These risks are
+defined as sequence of events leading to a hazardous situation, and the control for their risks were
+treated and implemented as proposed in the risk analysis (e.g., requirements, verification).
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 5 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+The wired and wireless G series detectors are functionally identical in terms of software and
+firmware. The wired GT series detector is a derivative of the G series, with wireless features and
+other auxiliary functions removed. Therefore, cybersecurity testing and related documentation were
+primarily conducted and prepared based on the G series. For the GT series, WiFi-related threats and
+controls are not applicable.
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 6 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2. SBOM list and Support Lifecycle
+No Software
+name
+Component
+name Supplier Software level of support
+by manufacturer version
+Time
+stamp
+(Release
+date)
+EOS date Author Description Function
+1 Detector Gen2.Imaging H&abyz actively maintained 1.0.0 22. 5.
+22.
+Until the product
+life cycle (The
+end of support
+date is
+unknown.)
+H&abyz Acquisition image preprocessing tool package
+of detector. Application
+2 Gen2.Core H&abyz actively maintained 1.0.0 22. 5.
+22.
+Until the product
+life cycle (The
+end of support
+date is
+unknown.)
+H&abyz Software development kit (SDK) of detector. Application
+3 Gen2Server H&abyz Actively maintained 1.0.0 25. 07.
+07.
+Until the product
+life cycle (The
+end of support
+date is
+unkonown)
+H&abyz
+Firmware of detector
+(G1417CW, G1417CWP, G1417FW,
+G1417FWP, G1717CW, G1717CWP,
+G1717FW, G1717FWP)
+Application
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 7 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3. Machine Readable Format in Cyclone DX (JSON)
+JSON of XAS3
+{
+"bomFormat": "CycloneDX",
+"specVersion": "1.6",
+"serialNumber": "urn:uuid:2605c3eb-af61-4609-a0db-588e1716b792",
+"version": 1,
+"metadata": {
+"timestamp": "2025-07-24T07:31:27Z",
+"tools": [
+{
+"vendor": "CycloneDX",
+"name": "CycloneDX module for .NET",
+"version": "5.0.1.0"
+}
+],
+"component": {
+"type": "application",
+"bom-ref": "Gen2Demo@0.0.0",
+"name": "Gen2Demo",
+"version": "0.0.0"
+}
+},
+"components": [
+{
+"type": "library",
+"bom-ref": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+"authors": [
+{
+"name": "Microsoft"
+}
+],
+"name": "Microsoft.Win32.SystemEvents",
+"version": "8.0.0",
+"description": "Provides access to Windows system event notifications.\n\nCommonly Used
+Types:\nMicrosoft.Win32.SystemEvents",
+"scope": "required",
+"hashes": [
+{
+"alg": "SHA-512",
+"content":
+"25016C508653FBF463C52D8FC3D2773B7C211C2402C4EA7B4AA987FB29C851D3F80C5E7ABBCACE2
+D4D5E061AE290524E8029AFBC49A37D7E5186FE06AA4609B2"
+}
+],
+"licenses": [
+{
+"license": {
+"id": "MIT"
+}
+}
+],
+"copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 8 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+"purl": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+"externalReferences": [
+{
+"url": "https://dot.net/",
+"type": "website"
+},
+{
+"url": "https://github.com/dotnet/runtime",
+"type": "vcs"
+}
+]
+},
+{
+"type": "library",
+"bom-ref": "pkg:nuget/System.Drawing.Common@8.0.7",
+"authors": [
+{
+"name": "Microsoft"
+}
+],
+"name": "System.Drawing.Common",
+"version": "8.0.7",
+"description": "Provides access to GDI\u002B graphics functionality.\n\nCommonly Used
+Types:\nSystem.Drawing.Bitmap\nSystem.Drawing.BitmapData\nSystem.Drawing.Brush\nSystem.Drawing.Fo
+nt\nSystem.Drawing.Graphics\nSystem.Drawing.Icon\n\nSince .NET 7, non-Windows platforms are not
+supported, even with the runtime configuration switch. See https://aka.ms/systemdrawingnonwindows for more
+information.",
+"scope": "required",
+"hashes": [
+{
+"alg": "SHA-512",
+"content":
+"1A527AFAC8C5DC6C622F98F6F2E9815734DA515E3A11428B69FCD0A4726883918C0942B2A54653BA
+1381BDD1CB5985EBA5090C81E9BE3087D72E51308D40E7FD"
+}
+],
+"licenses": [
+{
+"license": {
+"id": "MIT"
+}
+}
+],
+"copyright": "\u00A9 Microsoft Corporation. All rights reserved.",
+"purl": "pkg:nuget/System.Drawing.Common@8.0.7",
+"externalReferences": [
+{
+"url": "https://github.com/dotnet/winforms",
+"type": "website"
+},
+{
+"url": "https://github.com/dotnet/winforms",
+"type": "vcs"
+}
+]
+},
+{
+"type": "library",
+"bom-ref": "Gen2.Imaging@1.0.0",
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 9 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+"name": "Gen2.Imaging",
+"version": "1.0.0",
+"scope": "required"
+}
+],
+"dependencies": [
+{
+"ref": "Gen2Demo@0.0.0",
+"dependsOn": [
+"pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+"pkg:nuget/System.Drawing.Common@8.0.7"
+]
+},
+{
+"ref": "pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0",
+"dependsOn": []
+},
+{
+"ref": "pkg:nuget/System.Drawing.Common@8.0.7",
+"dependsOn": [
+"pkg:nuget/Microsoft.Win32.SystemEvents@8.0.0"
+]
+},
+{
+"ref": "Gen2.Core@0.0.0",
+"dependsOn": [
+"Gen2.Imaging@1.0.0"
+]
+},
+{
+"ref": "Gen2.Imaging@1.0.0",
+"dependsOn": []
+}
+]
+}
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 10 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+JSON of Detector
+{
+"bomFormat": "CycloneDX",
+"specVersion": "1.6",
+"serialNumber": "urn:uuid:6f912eb8-2a32-49f5-ac94-68079e7fe9f6",
+"version": 1,
+"metadata": {
+"timestamp": "2025-07-24T07:08:49Z",
+"tools": [
+{
+"vendor": "CycloneDX",
+"name": "CycloneDX module for .NET",
+"version": "5.0.1.0"
+}
+],
+"component": {
+"type": "application",
+"bom-ref": "Gen2Server@0.0.0",
+"name": "Gen2Server",
+"version": "0.0.0"
+}
+},
+"components": [],
+"dependencies": [
+{
+"ref": "Gen2Server@0.0.0",
+"dependsOn": []
+}
+]
+}
+
+Technical Documentation Document No. A-SBOM-BLU
+Rev. No. 1
+Cybersecurity Risk Management –
+Software Bill of Materials and
+Evaluation report
+Rev. Date April 14, 2026
+Page 11 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. SW Supply Chain Security System Diagnosis and
+SBOM Analysis Results Report
+The above Software library (2. SBOM list and Support Lifecycle), which includes both the library and open source
+used in the console application and the detector/firmware, was evaluated for commonly known vulnerabilities and
+CVE (Common Vulnerabilities and Exposures) on a site that can be verified as open source using the three tools
+below, and it was confirmed that "there are no known vulnerabilities." This analysis was conducted through the
+Korea Internet & Security Agency (KISA) Software Supply Chain Department.
+Diagnostic tool: 3 types of diagnostic tools
+Sparrow SCA, BlackDuck, Mend
+Diagnostic result: No weakest content in the diagnostic result
+4.1 Diagnostic Results
+-. Number of detected components: Total number of components discovered
+-. Number of vulnerable components: Number of components with 1 or more CVE vulnerabilities discovered
+-. Number of security vulnerabilities: Total number of security vulnerabilities discovered (based on CVE)
+-. Ratio of vulnerable components: (Number of vulnerable components/Number of detected components)*100(%)
+4.2 Detection Results (No Results)
+4.3 Vulnerability Component items(no results)

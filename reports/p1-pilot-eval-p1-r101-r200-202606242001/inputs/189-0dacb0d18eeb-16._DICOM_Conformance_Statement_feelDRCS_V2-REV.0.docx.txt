@@ -1,0 +1,5294 @@
+queueId: ingest-1781569954392-lu9
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ 국내 제조인증/1.차 KGMP 등록 문서/console sw validation/16. DICOM Conformance Statement feelDRCS V2-REV.0.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/6a7b8511fc13/16. DICOM Conformance Statement feelDRCS V2-REV.0__6a7b8511fc13_combined.txt
+canonicalGroupId: 0dacb0d18eeb
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 189
+
+SOURCE_TEXT
+DICOM Conformance Statement
+
+feel-DRCS
+
+Rev. 0
+
+2020/09/24
+
+Manufacturer : H&abyz Co., LTD.
+
+All Right Reserved
+
+Feel-DRCS Digital Radiography Operation Console
+
+DICOM Conformance Statement REV. 0
+
+CONFORMANCE STATEMENT OVERVIEW
+
+This feel-DRCS implement the necessary DICOM services to download work lists from an information system, save acquired Digital X-ray images and associated Presentation States to a network storage device, print to a networked hardcopy device and inform the information system about the work actually done.
+
+Table. 1 provides an overview of the network services supported by feel-DRCS
+
+Table. 1 : Network Services
+
+SOP Classes
+
+User of Service (SCU)
+
+Provider of Service (SCP)
+
+Transfer
+
+DICOM Storage
+
+Yes
+
+Option
+
+DICOM Query and Retrieve
+
+Option(see Note 1)
+
+No
+
+DICOM Storage Commitment
+
+Option(see Note 1)
+
+No
+
+Workflow Management
+
+DICOM Modality Worklist Management
+
+Yes
+
+No
+
+DICOM Modality Performed Procedure Step
+
+Option(see Note 1)
+
+No
+
+Print Management
+
+DICOM Print Management
+
+Yes
+
+No
+
+NOTE 1: Support for the DICOM Query/Retrieve / Modality Performed Procedure Step/Storage Commitment Services is a separately licensable option.
+
+CONTENTS
+
+1. CONFORMANCE STATEMENT OVERVIEW 2
+
+2. CONTENTS 3
+
+3. INTRODUCTION 6
+
+3.1. Revision History 6
+
+3.2. Purpose 6
+
+3.3. Scope 6
+
+3.4. Audience 6
+
+3.5. Remarks 7
+
+3.6. Equipment/materials 7
+
+3.7. Responsibilities 8
+
+3.8. TERMS and Definitions 8
+
+3.9. Abbreviations 8
+
+3.10. REFERENCES 9
+
+3.11. Instructions 10
+
+3.11. Document update 10
+
+4. NETWORKING 11
+
+4.1 IMPLEMENTATION MODEL 11
+
+4.1.1 Application Data Flow 12
+
+4.1.2. Functional Definition of AE’s 15
+
+4.1.3. Sequencing of Real-World Activities 17
+
+4.2. AE SPECIFICATIONS 18
+
+4.2.1. Storage SCU Application Entity Specification 18
+
+4.2.2. Workflow Application Entity Specification 27
+
+4.2.3. Hardcopy Application Entity Specification 36
+
+4.2.4. STORAGE-SCP Application Entity Specification 40
+
+4.2.5. FIND-SCU Application Entity Specification 44
+
+4.2.6. MOVE-SCU Application Entity Specification 50
+
+4.3. NETWORK INTERFACES 54
+
+4.3.1. Physical Network Interface 54
+
+4.3.2. Additional Protocols 54
+
+4.3.3. IPv4 and IPv6 Support 55
+
+4.3.4 standard EXTENSded / SPECIALIZed / PRIVATe SOP Classes 55
+
+4.3.5 PRIVATE TRANSFER SYNTAXES 55
+
+4.4. CONFIGURATION 56
+
+4.4.1. AE Title/Presentation Address Mapping 56
+
+5. SUPPORT OF CHARACTER SETS 58
+
+ANNEX A – DICOM Data Element Supported 59
+
+MODULES COMMON TO Digital X-ray Image IODs 59
+
+ANNEX B – Worklist AE Attributes 66
+
+ANNEX C – MPPS AE Attributes 69
+
+ANNEX D – Attribute Mapping between Modality Worklist, Image and MPPS 71
+
+ANNEX E – Print AE Attribute 73
+
+ANNEX F – STORAGE COMMITEMENT Attribute 78
+
+Figure Contents
+
+Figure 4.1. : Storage SCU Application Data Flow Diagram 12
+
+Figure 4.2. : Worklist and mpps scU Application Data Flow Diagram 13
+
+Figure 4.3. : PRINT SCU Application Data Flow Diagram 14
+
+Figure 4.4. : DICOM Query and Retrieve SCU Application Data Flow Diagram 14
+
+Figure 4.5. : Sequencing Constraints 17
+
+Figure 4.6 : Sequencing of Activity – send images 20
+
+Figure 4.8 : Sequencing of Activity – Worklist Update 29
+
+Figure 4.9 : Sequencing of Activity – ACQuire images 33
+
+Figure 4.10 : Sequencing of Activity – film images 37
+
+Table Contents
+
+Table. 1 : Network Services 2
+
+Table.4-1 : SOP Classes for AE 18
+
+Table.4-2 : DICOM Implementation Class UID 19
+
+Table.4-3 : Proposed Presentation Contexts for Activity Send Images 21
+
+Table.4-4 : Storage C-STORE Response Status Handling Behavior 22
+
+Table.4-5 : Storage Communication Failure Behavior 23
+
+Table.4-6 : Storage Commitment N-ACTION Response Status Handling Behavior 23
+
+Table.4-7 : Storage Commitment Communication Failure Behavior 24
+
+Table.4-8 : Storage Commitment N-EVENT-REPORT Behavior 24
+
+Table.4-9 : Storage Commitment N-EVENT-REPORT Response Status Reasons 25
+
+Table.4-10 : SOP Classes for AE Workflow 27
+
+Table.4-11 : DICOM Application Context for AE Workflow 27
+
+Table.4-12 : Proposed Presentation Contexts for Activity Worklist Update 30
+
+Table.4-13 : Modality Worklist C-FIND Response Status Handling Behavior 30
+
+Table.4-14 : Modality Worklist Communication Failure Behavior 31
+
+Table.4-15 : Proposed Presentation Contexts for Real-World Activity Acquire Images 34
+
+Table.4-16 : MPPS N-CREATE / N-SET Response Status Handling Behavior 34
+
+Table.4-17 : MPPS Communication Failure Behavior 35
+
+Table.4-18 : SOP Classes for AE Hardcopy 36
+
+Table.4-19 : DICOM Application Context for AE Hardcopy 36
+
+Table.4-20 : Proposed Presentation Contexts for Activity Film Images 39
+
+Table.4-21 : Hardcopy Communication Failure Behavior 39
+
+Table.4-22 : SOP Classes supported by STORAGE-SCP 40
+
+Table.4-23 : Maximum PDU size received as a SCP for STORAGE-SCP 41
+
+Table.4-24 : Number of Associations as a SCP for STORAGE-SCP 41
+
+Table.4-25 : Acceptable Presentation Contexts for STORAGE-SCP and Receive Storage Request 42
+
+Table.4-26 : Response Status for STORAGE-SCP and Receive Storage Request 43
+
+Table.4-27 : SOP Classes supported by FIND-SCU 44
+
+Table.4-28 : Maximum PDU size received as a SCP for FIND-SCU 44
+
+Table.4-29 : Number of Associations as a SCP for FIND-SCU 44
+
+Table.4-30 : Proposed Presentation Contexts for FIND-SCU and Query Remote AE 46
+
+Table.4-18 : Study Root Request Identifier for FIND-SCU 47
+
+Table.4-32 : Response Status for FIND-SCU and Query Remote AE Request 49
+
+Table.4-33 : SOP Classes supported by MOVE-SCU 50
+
+Table.4-34 : Maximum PDU size received as a SCP for MOVE-SCU 50
+
+Table.4-35 : Number of Associations as a SCP for MOVE-SCU 50
+
+Table.4-36 : Proposed Presentation Contexts for MOVE-SCU and Retrieve From Remote AE 51
+
+Table.4-37 : Study Root Request Identifier for MOVE-SCU 52
+
+Table.4-38 : Response Status for MOVE-SCU and Retrieve From Remote AE Request 53
+
+INTRODUCTION
+
+3.1. Revision History
+
+Document Version
+
+Date of Issue
+
+Description
+
+1.0
+
+Sep 24, 2020
+
+New Release
+
+3.2. Purpose
+
+Define the DICOM Conformance statement associated with H&abyz feel-DRCS.
+
+3.3. Scope
+
+This document describes the DICOM Conformance statement in accordance with the document DICOM PS 3.2 Conformance.
+
+3.4. Audience
+
+The user of this document is involved with system integration and/or software design. We assume that the reader is familiar with the terminology and concepts that are used in the DICOM 3.0 standard.
+
+Readers not familiar with DICOM 3.0 terminology should first read the appropriate parts of the DICOM standard itself, prior to reading this conformance statement.
+
+Although the use of this conformance statement in conjunction with the DICOM 3.0 standard is intended to facilitate communication with other imaging software, it is not sufficient to guarantee, by itself, the inter- operation of the connection. The following issues need to be considered:
+
+Integration
+
+The integration of any device into a system of interconnected software goes beyond the scope of the DICOM 3.0 standard and this conformance statement when interoperability is desired.
+
+The responsibility for analyzing the applications requirements and developing a solution that integrates the
+
+H&abyz software with other vendors’ systems is the user’s responsibility and should not be underestimated.
+
+Validation
+
+Testing the complete range of possibilities between the H&abyz software and non- H&abyz software, before the connection is declared operational, is deemed to be a necessity. The user should ensure that any non- H&abyz provider accepts full responsibility for all validation required for their connection with the H&abyz software.
+
+The accuracy of image data once it has crossed the interface between the H&abyz software and the non- H&abyz software as well as the stability of the image data for the intended applications is the responsibility of the non- H&abyz provider.
+
+Future Evolution
+
+As the DICOM 3.0 standard evolves to meet the user’s growing requirements and to incorporate new features and technologies, H&abyz will follow the evolution of the standard.
+
+This evolution of the standard may require changes to software that have implemented DICOM 3.0. The user should ensure that any non- H&abyz provider, who connects with H&abyz software, also plans future evolution of the DICOM standard.
+
+A refusal to do so may reflect in the loss of functionality and/or connectivity between the different products.
+
+3.5. Remarks
+
+The scope of this DICOM Conformance Statement is to facilitate integration between feel-DRCS and other DICOM products. The Conformance Statement should be read and understood in conjunction with the DICOM Standard. DICOM by itself does not guarantee interoperability. The Conformance Statement does, however, facilitate a first-level comparison for interoperability between different applications supporting compatible DICOM functionality.
+
+This Conformance Statement is not supposed to replace validation with other DICOM equipment to ensure proper exchange of intended information. In fact, the user should be aware of the following important issues:
+
+— The comparison of different Conformance Statements is just the first step towards assessing interconnectivity and interoperability between the product and other DICOM conformant equipment.
+
+— Test procedures should be defined and executed to validate the required level of interoperability with specific compatible DICOM equipment, as established by the healthcare facility.
+
+3.6. Equipment/materials
+
+N/A
+
+3.7. Responsibilities
+
+N/A
+
+3.8. TERMS and Definitions
+
+AE – Application Entity
+
+FSC – File Set Creator
+
+FSR – File Set Reader
+
+FSU – File Set Updater
+
+IOD – Information Object Definition
+
+SCU – Service Class User
+
+SCP – Service Class Provider
+
+SOP – Service Object Pair
+
+UID – Unique Identifier
+
+3.9. Abbreviations
+
+Abbreviations should be listed here. These may be taken from the following list, deleting terms that are not used within the Conformance Statement and adding any additional terms that are used:
+
+AE Application Entity
+
+AET Application Entity Title
+
+CD-R Compact Disk Recordable
+
+CSE Customer Service Engineer
+
+DHCP Dynamic Host Configuration Protocol
+
+DICOM Digital Imaging and Communications in Medicine
+
+DIT Directory Information Tree (LDAP)
+
+DN Distinguished Name (LDAP)
+
+DX Digital X-ray
+
+FSC File-Set Creator
+
+FSU File-Set Updater
+
+FSR File-Set Reader
+
+HIS Hospital Information System
+
+HL7 Health Level 7 Standard
+
+IOD Information Object Definition
+
+ISO International Organization for Standards
+
+LDAP Lightweight Directory Access Protocol
+
+LDIF LDAP Data Interchange Format
+
+LUT Look-up Table
+
+MAR Medication Administration Record
+
+MPPS Modality Performed Procedure Step
+
+MSPS Modality Scheduled Procedure Step
+
+MTU Maximum Transmission Unit (IP)
+
+MWL Modality Worklist
+
+NTP Network Time Protocol
+
+PACS Picture Archiving and Communication System
+
+PDU Protocol Data Unit
+
+RIS Radiology Information System.
+
+SCP Service Class Provider
+
+SCU Service Class User
+
+SOP Service-Object Pair
+
+SPS Scheduled Procedure Step
+
+TCP/IP Transmission Control Protocol/Internet Protocol
+
+UL Upper Layer
+
+VL Visible Light
+
+VR Value Representation
+
+3.10. REFERENCES
+
+DICOM PS 3.2 Conformance
+
+DICOM PS 3.3 Information Object Definitions
+
+DICOM PS 3.4 Service Class Specifications
+
+DICOM PS 3.5 Data Structures and Encoding
+
+DICOM PS 3.6 Data Dictionary
+
+DICOM PS 3.7 Message Exchange
+
+DICOM PS 3.8 Network Communication Support for Message Exchange
+
+DICOM PS 3.10 Media Storage and File Format for Media Interchange
+
+DICOM PS 3.11 Media Storage Application Profiles
+
+DICOM PS 3.12 Media Formats and Physical Media for Media Interchange
+
+3.11. Instructions
+
+The rest of this document is written in the format specified for DICOM Conformance statements in the DICOM PS 3.2 Conformance standard document.
+
+3.11. Document update
+
+This document is updated when modify or add function of feel-DRCS DICOM by DICOM 3.0 standard(EN ISO 12052:2017)
+
+NETWORKING
+
+4.1 IMPLEMENTATION MODEL
+
+DICOM capabilities of the feel-DRCS system include:
+
+The feel-DRCS system can send images to a remote AE by initiating the DICOM C-STORE request as a SCU.
+
+The feel-DRCS system can act as a Storage Commitment SCU to request commitment for images transferred to a remote AE.
+
+The feel-DRCS system supports the DICOM Verification operation as a SCU.
+
+The feel-DRCS system can query DICOM Modality Worklist SCP systems for patient/study information using the Modality Worklist Management Service Class.
+
+The feel-DRCS system can report back Performed Procedure information to a Modality Worklist SCP using the Modality Performed Procedure Step service.
+
+The feel-DRCS system can send images to a DICOM Print Server AE by utilizing the services of the Basic Grayscale Print Management Meta SOP Class as a SCU.
+
+4.1.1 Application Data Flow
+
+Figure 4.1. : Storage SCU Application Data Flow Diagram
+
+ The Storage Application Entity sends images and Presentation States to a remote AE. It is associated with the local real-world activity “Send Images & Storage Commitment”. “Send Images & Storage Commitment” is performed upon user request for each study completed or for specific images selected. When activated by user’s settings (auto-send), each marked set of images and associated Presentation States can be immediately stored to a preferred destination whenever a Patient/Study is closed by the user. If the remote AE is configured as an archive device the Storage AE will request Storage Commitment and if a commitment is successfully obtained will record this information in the local database.
+
+Figure 4.2. : Worklist and mpps scU Application Data Flow Diagram
+
+ The Workflow Application Entity receives Worklist information from and sends MPPS information to a remote AE. It is associated with the local real-world activities “Update Worklist” and “Acquire Images”. When the “Update Worklist” local real-world activity is performed the Workflow Application Entity queries a remote AE for worklist items and provides the set of worklist items matching the query request. ”Update Worklist” is performed as a result of an operator request or can be performed automatically at specific time intervals. When the “Acquire Images” local real-world activity is performed the Workflow Application Entity creates and updates Modality Performed Procedure Step instances managed by a remote AE. Acquisition of images will result in automated creation of an MPPS Instance. Completion of the MPPS is performed as the result of an operator action.
+
+Figure 4.3. : PRINT SCU Application Data Flow Diagram
+
+ The Hardcopy Application Entity prints images on a remote AE (Printer). It is associated with the local real-world activity “Film Images”. “Film Images” creates a print-job within the print queue containing one or more virtual film sheets composed from images selected by the user.
+
+Figure 4.4. : DICOM Query and Retrieve SCU Application Data Flow Diagram
+
+ Conceptually the network services may be modeled as the following separate AE’s, though in fact all the AE’s share a single (configurable) AE Title:
+
+ — STORAGE-SCP, which receives incoming images and other composite instances
+
+ — FIND-SCU, which queries remote AE’s for lists of studies, series and instances
+
+ — MOVE-SCU, which retrieves selected studies, series or instances
+
+4.1.2. Functional Definition of AE’s
+
+4.1.2.1. Functional Definition of Storage Application Entity
+
+The existence of a send-job queue entry with associated network destination will activate the Storage AE. An association request is sent to the destination AE and upon successful negotiation of a Presentation Context the image transfer is started. If the association cannot be opened, the related send-job is set to an error state and can be restarted by the user via job control interface. By default, the Storage AE will not try to initiate another association for this send-job automatically. However, an automatic retry (retry-timer, retry­-count) can be configured by a CSE.
+
+4.1.2.2. Functional Definition of STORAGE-SCU Application Entity
+
+The STORAGE-SCU AE can be invoked by the QUERY-RETRIEVE-SCP AE to trigger the transfer of specific images to a remote destination AE. The STORAGE-SCU AE must be correctly configured with the host and port number of any external DICOM AE’s that are to be C-MOVE retrieval destinations. The Presentation Contexts to use are determined from the headers of the DICOM files to be transferred. Some conversion of the DICOM image objects is possible if the original Presentation Context is not supported by the remote destination AE or if compression is preferred.
+
+4.1.2.3. Functional Definition of Workflow Application Entity
+
+Worklist Update attempts to download a Worklist from a remote node. If the Workflow AE establishes an Association to a remote AE, it will transfer all worklist items via the open Association. During receiving the worklist response items are counted and the query processing is canceled if the configurable limit of items is reached. The results will be displayed in a separate list, which will be cleared with the next Worklist Update.
+
+The Workflow AE performs the creation of a MPPS Instance automatically whenever images are acquired. Further updates on the MPPS data can be performed interactively from the related MPPS user interface. The MPPS “Complete” or “Discontinued” states can only be set from the user interface.
+
+4.1.2.4. Functional Definition of Hardcopy Application Entity
+
+The existence of a print-job in the print queue will activate the Hardcopy AE. An association is established with the printer and the printer’s status determined. If the printer is operating normally, the film sheets described within the print-job will be printed. Changes in printer status will be detected (e.g. out of film) and reported to the user. If the printer is not operating normally, the print-job will set to an error state and can be restarted by the user via the job control interface.
+
+4.1.2.5. Functional Definition of STORAGE-SCP
+
+STORAGE-SCP waits in the background for connections, will accept associations with Presentation Contexts for SOP Classes of the Storage Service Class, and will store the received instances to the local database where they may subsequently be listed and viewed through the user interface.
+
+4.1.2.6. Functional Definition of FIND-SCU
+
+FIND-SCU is activated through the user interface when a user selects a remote AE to query (from a pre-configured list), then initiates a query. Queries are performed recursively from the study through the series and instance levels until all matching instances have been listed.
+
+4.1.2.7. Functional Definition of MOVE-SCU
+
+MOVE-SCU is activated through the user interface when a user selects a study, series or instance for retrieval. A connection to the remote AE is established to initiate and monitor the retrieval and the STORAGE-SCP AE receives the retrieved instances.
+
+4.1.3. Sequencing of Real-World Activities
+
+Figure 4.5. : Sequencing Constraints
+
+1. Query Worklist
+
+2. Receive Worklist of Modality Scheduled Procedure Steps (MSPS)
+
+3. Select Work item (MSPS) from Worklist
+
+4. Start acquisition and create MPPS
+
+5. Acquire Images
+
+6. Complete acquisition and finalize MPPS
+
+8. Store acquired images.
+
+9. If the Image Manager is configured as an archive device the Storage AE will request Storage Commitment for the images.
+
+10. Print acquired images (optional step)
+
+Other workflow situations (e.g. unscheduled procedure steps) will have other sequencing constraints. Printing could equally take place after the acquired images have been stored. Printing could be omitted completely if no printer is connected or hardcopies are not required.
+
+4.2. AE SPECIFICATIONS
+
+4.2.1. Storage SCU Application Entity Specification
+
+4.2.1.1. Storage SOP Classes
+
+The feel-DRCS provides Standard Conformance to the following SOP Classes:
+
+Table.4-1 : SOP Classes for AE
+
+SOP Class Name
+
+SOP Class UID
+
+SCU
+
+SCP
+
+Verification SOP Class
+
+1.2.840.10008.1.1
+
+Yes
+
+No
+
+Standard Digital X-Ray Image Storage
+
+(For Presentation)
+
+1.2.840.10008.5.1.4.1.1.1.1
+
+Yes
+
+No
+
+Storage Commitment Push Model
+
+1.2.840.10008.1.20.1
+
+Yes
+
+No
+
+4.2.1.2. Association Policies
+
+4.2.1.2.1. General
+
+The DICOM standard application context name for DICOM 3.0 is always proposed:
+
+DICOM Application Context for AE Storage
+
+Application Context Name
+
+1.2.840.10008.3.1.1.1
+
+The AE Title of the each AE is a configurable parameter. The default title is “OEM Product Name”.
+
+The Send AE establishes an association whenever a transfer job comes to the top of the transfer queue.
+
+If the remote AE that stores the images is configured for the Storage Commit service then the Send AE establishes an association after a transfer job is successfully completed to request storage commitment.
+
+The Send AE establishes an association whenever the user attempts to verify the DICOM connection with a remote AE.
+
+The maximum PDU size is 16384 bytes.
+
+4.2.1.2.2. Number of Associations
+
+The Send AE attempts only one Association establishment at a time.
+
+4.2.1.2.3. Asynchronous Nature
+
+feel-DRCS does not support asynchronous communication (multiple outstanding transactions over a single Association).
+
+4.2.1.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is :
+
+Table.4-2 : DICOM Implementation Class UID
+
+Implementation Class UID
+
+1.2.410.200048
+
+Implementation Version Name
+
+feel-DRCS
+
+4.2.1.3 Association Initiation Policy
+
+4.2.1.3.1 Activity – Send Images
+
+4.2.1.3.1.1 Description and Sequencing of Activities
+
+A user can select images and presentation states and request them to be sent to multiple destinations (up to 3). Each request is forwarded to the job queue and processed individually.
+
+The Storage AE is invoked by the job control interface that is responsible for processing network archival tasks. The job consists of data describing the instances marked for storage and the destination. An internal daemon process triggered by a job for a specific network destination initiates a C-STORE request to store images. If the process successfully establishes an Association to a remote Application Entity, it will transfer each marked instance one after another via the open Association. Status of the transfer is reported through the job control interface. Only one job will be active at a time. If the C-STORE Response from the remote Application contains a status other than Success or Warning, the Association is aborted and the related Job is switched to a failed state. It can be restarted any time by user interaction or, if configured, by automated retry.
+
+The Storage AE attempts to initiate a new Association in order to issue a C-STORE request. If the job contains multiple images then multiple C-STORE requests will be issued over the same Association.
+
+If the Remote AE is configured as an archive device the Storage AE will, after all images and presentation states have been sent, transmit a single Storage Commitment request (N-ACTION) over the same Association. Upon receiving the N-ACTION response the Storage AE will delay releasing the Association for a configurable amount of time. If no N-EVENT-REPORT is received within this time period the Association will be immediately released (i.e. notification of Storage Commitment success or failure will be received over a separate association). However, the Storage AE is capable of receiving an N-EVENT-REPORT request at any time during an association provided a Presentation Context for the Storage Commitment Push Model has been successfully negotiated (i.e. the N-ACTION is sent at the end of one association and the N-EVENT-REPORT is received during an association initiated for a subsequent send job or during an association initiated by the Remote AE for the specific purpose of sending the N-EVENT-REPORT).
+
+Figure 4.6 : Sequencing of Activity – send images
+
+A possible sequence of interactions between the Storage AE and an Image Manager (e.g. a storage or archive device supporting the Storage and Storage Commitment SOP Classes as an SCP) is illustrated in Figure 4.6
+
+ 1. The Storage AE opens an association with the Image Manager
+
+ 2. An acquired DX image is transmitted to the Image Manager using a C-STORE request and the Image Manager replies with a C-STORE response (status success).
+
+ 3. Another acquired DX image is transmitted to the Image Manager using a C-STORE request and the Image Manager replies with a C-STORE response (status success).
+
+ 4. An N-ACTION request is transmitted to the Image Manager to obtain storage commitment of previously transmitted RF images and GSPS instances. The Image Manager replies with a N-ACTION response indicating the request has been received and is being processed.
+
+ 5. The Image Manager immediately transmits an N-EVENT-REPORT request notifying the Storage AE of the status of the Storage Commitment Request (sent in step 6 using the N-ACTION message). The Storage AE replies with a N-EVENT-REPORT response confirming receipt. The Image Manager could send this message at any time or omit it entirely in favor of transmitting the N-EVENT-REPORT over a separate dedicated association.
+
+ 6. The Storage AE closes the association with the Image Manager.
+
+4.2.1.3.1.2. Proposed Presentation Contexts
+
+feel-DRCS is capable of proposing the Presentation Contexts shown in the following table.
+
+Table.4-3 : Proposed Presentation Contexts for Activity Send Images
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Ext.
+
+Neg.
+
+Name
+
+UID
+
+Name List
+
+UID List
+
+Digital X-Ray Image Storage –
+
+For Presentation
+
+1.2.840.10008.5.1.4.1.1.1.1
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCU
+
+None
+
+Storage Commitment Push Model
+
+1.2.840.10008.1.20.1
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCU
+
+None
+
+Verification
+
+1.2.840.10008.1.1
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCU
+
+None
+
+Presentation Contexts for Digital X-ray Image Storage will only be proposed if the Send Job contains instances for these SOP Classes.
+
+A Presentation Context for the Storage Commitment Push Model will only be proposed if the Remote AE is configured as an archive device.
+
+4.2.1.3.1.3. SOP Specific Conformance Image & Pres State Storage SOP Classes
+
+All Image & Presentation State Storage SOP Classes supported by the Storage AE exhibit the same behavior, except where stated, and are described together in this section.
+
+If Digital X-Ray Image Storage SOP Instances are included in the Send Job and a corresponding Presentation Context is not accepted then the Association is aborted using AP-ABORT and the send job is marked as failed. The job failure is logged and reported to the user via the job control application.
+
+The behavior of Storage AE when encountering status codes in a C-STORE response is summarized in the Table below:
+
+Table.4-4 : Storage C-STORE Response Status Handling Behavior
+
+Service Status
+
+Further Meaning
+
+Error Code
+
+Behavior
+
+Success
+
+Success
+
+0000
+
+The SCP has successfully stored the SOP Instance. If all SOP Instances in a send job have status success then the job is marked as complete.
+
+Refused
+
+Out of Resources
+
+A700-A7FF
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The status meaning is logged and the job failure is reported to the user via the job control application. This is a transient failure.
+
+Error
+
+Data Set does not match SOP Class
+
+A900-A9FF
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The status meaning is logged and the job failure is reported to the user via the job control application.
+
+Error
+
+Cannot Understand
+
+C000-CFFF
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The status meaning is logged and the job failure is reported to the user via the job control application.
+
+Warning
+
+Coercion of Data Elements
+
+B000
+
+Image transmission is considered successful but the status meaning is logged.
+
+Warning
+
+Data Set does not match SOP Class
+
+B007
+
+Image transmission is considered successful but the status meaning is logged.
+
+Warning
+
+Elements Discarded
+
+B006
+
+Image transmission is considered successful but the status meaning is logged.
+
+*
+
+*
+
+Any other status code.
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The status code is logged and the job failure is reported to the user via the job control application.
+
+The behavior of Storage AE during communication failure is summarized in the Table below:
+
+Table.4- : Storage Communication Failure Behavior
+
+Exception
+
+Behavior
+
+Timeout
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+Association aborted by the SCP or network layers
+
+The send job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+A failed send job can be restarted by user interaction. The system can be configured to automatically resend failed jobs if a transient status code is received. The delay between resending failed jobs and the number of retries is also configurable.
+
+The contents of Digital X-ray Image Storage SOP Instances created by feel-DRCS conform to the DICOM Digital X-ray Image IOD definition.
+
+4.2.1.3.1.4. SOP Specific Conformance for Storage Commitment SOP Class
+
+4.2.1.3.1.4.1. Storage Commitment Operations (N-ACTION)
+
+The Storage AE will request storage commitment for instances of the Digital X-ray Image Storage SOP Class and Grayscale Softcopy Presentation State Storage SOP Class if the Remote AE is configured as an archive device and a presentation context for the Storage Commitment Push Model has been accepted.
+
+The Storage AE will consider Storage Commitment failed if no N-EVENT-REPORT is received for a Transaction UID within a configurable time period after receiving a successful N-ACTION response (duration of applicability for a Transaction UID).
+
+The Storage AE does not send the optional Storage Media File­Set ID & UID Attributes or the Referenced Study Component Sequence Attribute in the N-ACTION
+
+The behavior of Storage AE when encountering status codes in a N-ACTION response is summarized in the Table below:
+
+Table.4- : Storage Commitment N-ACTION Response Status Handling Behavior
+
+Service Status
+
+Further Meaning
+
+Error Code
+
+Behavior
+
+Success
+
+Success
+
+0000
+
+The request for storage comment is considered successfully sent. A timer is started which will expire if no N-EVENT-REPORT for the Transaction UID is received within a configurable timeout period.
+
+*
+
+*
+
+Any other status code.
+
+The Association is aborted using A-ABORT and the request for storage comment is marked as failed. The status meaning is logged and reported to the user.
+
+The behavior of Storage AE during communication failure is summarized in the Table below:
+
+Table.4- : Storage Commitment Communication Failure Behavior
+
+Exception
+
+Behavior
+
+Timeout
+
+The Association is aborted using A-ABORT and the send job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+Association aborted by the SCP or network layers
+
+The send job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+4.2.1.3.1.4.2. Storage Commitment Notifications (N-EVENT-REPORT)
+
+The Storage AE is capable of receiving an N-EVENT-REPORT notification if it has successfully negotiated a Presentation Context for the Storage Commitment Push Model (i.e. only associations established with archive devices).
+
+Upon receipt of a N-EVENT-REPORT the timer associated with the Transaction UID will be canceled.
+
+The behavior of Storage AE when receiving Event Types within the N-EVENT-REPORT is summarized in the Table below.
+
+Table.4- : Storage Commitment N-EVENT-REPORT Behavior
+
+Event Type Name
+
+Event Type ID
+
+Behavior
+
+Storage Commitment Request Successful
+
+1
+
+The Referenced SOP Instances under Referenced SOP Sequence (0008,1199) are marked within the database as “Stored & Committed (SC)” to the value of Retrieve AE Title (0008,0054). Successfully committed SOP Instances are candidates for automatic deletion from the local database if local resources become scarce. The conditions under which automatic deletion is initiated and the amount of space freed are site configurable. SOP Instances will not be deleted if they are marked with a lock flag. The least recently accessed SOP Instances are deleted first.
+
+Storage Commitment Request Complete – Failures Exist
+
+2
+
+The Referenced SOP Instances under Referenced SOP Sequence (0008,1199) are treated in the same way as in the success case (Event Type 1). The Referenced SOP Instances under Failed SOP Sequence (0008,1198) are marked within the database as “Store & Commit Failed (Sf)”. The Failure Reasons are logged and the job failure is reported to the user via the job control application. A send job that failed storage commitment will not be automatically restarted but can be restarted by user interaction.
+
+The reasons for returning specific status codes in a N-EVENT-REPORT response are summarized in the Table below.
+
+Table.4- : Storage Commitment N-EVENT-REPORT Response Status Reasons
+
+Service Status
+
+Further Meaning
+
+Error Code
+
+Reasons
+
+Success
+
+Success
+
+0000
+
+The storage commitment result has been successfully received.
+
+Failure
+
+Unrecognized Operation
+
+0211H
+
+The Transaction UID in the N-EVENT-REPORT request is not recognized (was never issued within an N-ACTION request).
+
+Failure
+
+Resource Limitation
+
+0213H
+
+The Transaction UID in the N-EVENT-REPORT request has expired (no N-EVENT-REPORT was received within a configurable time limit).
+
+Failure
+
+No Such Event Type
+
+0113H
+
+An invalid Event Type ID was supplied in the N-EVENT-REPORT request.
+
+Failure
+
+Processing Failure
+
+0110H
+
+An internal error occurred during processing of the N-EVENT-REPORT. A short description of the error will be returned in Error Comment (0000,0902).
+
+Failure
+
+Invalid Argument Value
+
+0115H
+
+One or more SOP Instance UIDs with the Referenced SOP Sequence (0008,1199) or Failed SOP Sequence (0008,1198) was not included in the Storage Commitment Request associated with this Transaction UID. The unrecognized SOP Instance UIDs will be returned within the Event Information of the N-EVENT-REPORT response.
+
+4.2.1.4. Association Acceptance Policy
+
+Not applicable because the feel-DRCS( SCU ) cannot accept an Association
+
+4.2.2. Workflow Application Entity Specification
+
+4.2.2.1. SOP Classes
+
+feel-DRCS provides Standard Conformance to the following SOP Classes:
+
+Table.4- : SOP Classes for AE Workflow
+
+SOP Class Name
+
+SOP Class UID
+
+SCU
+
+SCP
+
+Modality Worklist Information Model – FIND
+
+1.2.840.10008.5.1.4.31
+
+Yes
+
+No
+
+Modality Performed Procedure Step
+
+1.2.840.10008.3.1.2.3.3
+
+Yes
+
+No
+
+4.2.2.2. Association Policies
+
+4.2.2.2.1. General
+
+The DICOM standard application context name for DICOM 3.0 is always proposed:
+
+Table.4- : DICOM Application Context for AE Workflow
+
+Application Context Name
+
+1.2.840.10008.3.1.1.1
+
+The AE Title of the Modality Worklist AE is a configurable parameter. The default title is “OEM_WorklistSCU”.
+
+The Modality Worklist AE establishes associations under the following conditions:
+
+1. When the user initiates a manual query.
+
+2. To create a Modality Performed Procedure Step notification object
+
+3. When the user attempts to verify the DICOM connection with a remote Worklist AE
+
+The maximum PDU size is 16384 bytes.
+
+4.2.2.2.2. Number of Associations
+
+feel-DRCS initiates one Association at a time for a Worklist request.
+
+The Modality Worklist AE can have one Association open at one time.
+
+4.2.2.2.3. Asynchronous Nature
+
+feel-DRCS does not support asynchronous communication (multiple outstanding transactions over a single Association).
+
+4.2.2.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is : Table 4.2
+
+4.2.2.3. Association Initiation Policy
+
+4.2.2.3.1. Activity – Worklist Update
+
+4.2.2.3.1.1. Description and Sequencing of Activities
+
+The request for a Worklist Update is initiated by user interaction, i.e. pressing the buttons ”Search” or automatically at specific time intervals(“A” button), configurable by the user. With “A” the automated query mechanism is performed immediately on request, while with “Search” a dialog to enter search criteria is opened and an interactive query can be performed.
+
+The interactive Patient Worklist Query will display a dialog for entering data as search criteria. When the Query is started on user request, only the data from the dialog will be inserted as matching keys into the query.
+
+With automated worklist queries the feel-DRCS always requests all items for a Scheduled Procedure Step Start Date (actual date), Modality (CR or DX) and Scheduled Station AE Title. Query for the Scheduled Station AE Title is configurable by a Service Engineer.
+
+Upon initiation of the request, the feel-DRCS will build an Identifier for the C-FIND request, will initiate an Association to send the request and will wait for Worklist responses. After retrieval of all responses, feel-DRCS will access the local database to add or update patient demographic data. To protect the system from overflow, the feel-DRCS will limit the number of processed worklist responses to a configurable maximum. During receiving the worklist response items are counted and the query processing is canceled by issuing a C-FIND-CANCEL if the configurable limit of items is reached. The results will be displayed in a separate list, which will be cleared with the next worklist update.
+
+feel-DRCS will initiate an Association in order to issue a C-FIND request according to the Modality Worklist Information Model.
+
+Figure 4.7 : Sequencing of Activity – Worklist Update
+
+A possible sequence of interactions between the Workflow AE and a Departmental Scheduler (e.g. a device such as a RIS or HIS which supports the Modality Worklist SOP Class as an SCP) is illustrated in the Figure above:
+
+ 1. The Worklist AE opens an association with the Departmental Scheduler
+
+ 2. The Worklist AE sends a C-FIND request to the Departmental Scheduler containing the Worklist Query attributes.
+
+ 3. The Departmental Scheduler returns a C-FIND response containing the requested attributes of the first matching Worklist Item.
+
+ 4. The Departmental Scheduler returns another C-FIND response containing the requested attributes of the second matching Worklist Item.
+
+ 5. The Departmental Scheduler returns another C-FIND response with status Success indicating that no further matching Worklist Items exist. This example assumes that only 2 Worklist items match the Worklist Query.
+
+ 6. The Worklist AE closes the association with the Departmental Scheduler.
+
+ 7. The user selects a Worklist Item from the Worklist and prepares to acquire new images.
+
+4.2.2.3.1.2. Proposed Presentation Contexts
+
+feel-DRCS will propose Presentation Contexts as shown in the following table:
+
+Table.4- : Proposed Presentation Contexts for Activity Worklist Update
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Ext.
+
+Neg.
+
+Name
+
+UID
+
+Name List
+
+UID List
+
+Modality Worklist Information Model – FIND
+
+1.2.840.10008.5.1.4.31
+
+Implicit VR Little Endian
+
+Explicit VR Little Endian
+
+1.2.840.10008.1.2
+
+1.2.840.10008.1.2.1
+
+SCU
+
+None
+
+4.2.2.3.1.3. SOP Specific Conformance for Modality Worklist
+
+The behavior of feel-DRCS when encountering status codes in a Modality Worklist C-FIND response is summarized in the Table below. If any other SCP response status than "Success" or "Pending" is received by feel-DRCS, a message “query failed” will appear on the user interface.
+
+Table.4- : Modality Worklist C-FIND Response Status Handling Behavior
+
+Service Status
+
+Further Meaning
+
+Error Code
+
+Behavior
+
+Success
+
+Matching is complete
+
+0000
+
+The SCP has completed the matches. Worklist items are available for display or further processing.
+
+Refused
+
+Out of Resources
+
+A700
+
+The Association is aborted using A-ABORT and the worklist query is marked as failed. The status meaning is logged and reported to the user if an interactive query. Any additional error information in the Response will be logged.
+
+Failed
+
+Identifier does not match SOP Class
+
+A900
+
+The Association is aborted using A-ABORT and the worklist query is marked as failed. The status meaning is logged and reported to the user if an interactive query. Any additional error information in the Response will be logged.
+
+Failed
+
+Unable to Process
+
+C000 – CFFF
+
+The Association is aborted using A-ABORT and the worklist query is marked as failed. The status meaning is logged and reported to the user if an interactive query. Any additional error information in the Response will be logged.
+
+Cancel
+
+Matching terminated due to Cancel request
+
+FE00
+
+If the query was cancelled due to too may worklist items then the SCP has completed the matches. Worklist items are available for display or further processing. Otherwise, the Association is aborted using A-ABORT and the worklist query is marked as failed. The status meaning is logged and reported to the user if an interactive query.
+
+Pending
+
+Matches are continuing
+
+FF00
+
+The worklist item contained in the Identifier is collected for later display or further processing.
+
+Pending
+
+Matches are continuing – Warning that one or more Optional Keys were not supported
+
+FF01
+
+The worklist item contained in the Identifier is collected for later display or further processing. The status meaning is logged only once for each C-FIND operation.
+
+*
+
+*
+
+Any other status code.
+
+The Association is aborted using A-ABORT and the worklist is marked as failed. The status meaning is logged and reported to the user if an interactive query. Any additional error information in the Response will be logged.
+
+The behavior of feel-DRCS during communication failure is summarized in the Table below.
+
+Table.4- : Modality Worklist Communication Failure Behavior
+
+Exception
+
+Behavior
+
+Timeout
+
+The Association is aborted using A-ABORT and the worklist query marked as failed. The reason is logged and reported to the user if an interactive query.
+
+Association aborted by the SCP or network layers
+
+The worklist query is marked as failed. The reason is logged and reported to the user if an interactive query.
+
+Acquired images will always use the Study Instance UID specified for the Scheduled Procedure Step (if available). If an acquisition is unscheduled, a Study Instance UID will be generated locally.
+
+4.2.2.3.2. Activity – Acquire Images
+
+4.2.2.3.2.1. Description and Sequencing of Activities
+
+After Patient registration, the feel-DRCS is awaiting the 1st application of X-Ray Dose to the patient. The trigger to create a MPPS SOP Instance is derived from this event. An Association to the configured MPPS SCP system is established immediately and the related MPPS SOP Instance will be created.
+
+A manual update can be performed with the MPPS user interface where is it possible to set the final state of the MPPS to “COMPLETED” or “DISCONTINUED”. In the “Discontinued” case the user can also select the discontinuation reason from a list corresponding to Context Group 9300. A MPPS Instance that has been sent with a state of “COMPLETED” or “DISCONTINUED” can no longer be updated.
+
+The feel-DRCS will support creation of “unscheduled cases” by allowing MPPS Instances to be communicated for locally registered Patients.
+
+The feel-DRCS only supports a 0-to-1 relationship between Scheduled and Performed Procedure Steps.
+
+feel-DRCS will initiate an Association to issue an:
+
+ — N-CREATE request according to the CREATE Modality Performed Procedure Step SOP Instance Operation or a
+
+ — N-SET request to update the contents and state of the MPPS according to the SET Modality Performed Procedure Step Information operation.
+
+Figure 4.8 : Sequencing of Activity – ACQuire images
+
+A possible sequence of interactions between the Workflow AE and a Departmental Scheduler (e.g. a device such as a RIS or HIS which supports the MPPS SOP Class as an SCP) is illustrated in up Figure:
+
+ 1. The Worklist AE opens an association with the Departmental Scheduler
+
+ 2. The Worklist AE sends an N-CREATE request to the Departmental Scheduler to create an MPPS instance with status of “IN PROGRESS” and create all necessary attributes. The Departmental Scheduler acknowledges the MPPS creation with an N-CREATE response (status success).
+
+ 3. The Worklist AE closes the association with the Departmental Scheduler.
+
+ 4. All images are acquired and stored in the local database.
+
+ 5. The Worklist AE opens an association with the Departmental Scheduler.
+
+ 6. The Worklist AE sends an N-SET request to the Departmental Scheduler to update the MPPS instance with status of “COMPLETED” and set all necessary attributes. The Departmental Scheduler acknowledges the MPPS update with an N-SET response (status success).
+
+ 7. The Worklist AE closes the association with the Departmental Scheduler.
+
+4.2.2.3.2.2. Proposed Presentation Contexts
+
+feel-DRCS will propose Presentation Contexts as shown in the following table:
+
+Table.4- : Proposed Presentation Contexts for Real-World Activity Acquire Images
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Ext.
+
+Neg.
+
+Name
+
+UID
+
+Name List
+
+UID List
+
+Modality Performed Procedure Step
+
+1.2.840.10008.3.1.2.3.3
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCU
+
+None
+
+4.2.2.3.2.3. SOP Specific Conformance for MPPS
+
+The behavior of feel-DRCS when encountering status codes in an MPPS N-CREATE or N–SET response is summarized in Table B.4.2-26. If any other SCP response status than "Success" or “Warning” is received by feel-DRCS, a message “MPPS update failed” will appear on the user interface.
+
+Table.4- : MPPS N-CREATE / N-SET Response Status Handling Behavior
+
+Service Status
+
+Further Meaning
+
+Error Code
+
+Behavior
+
+Success
+
+Success
+
+0000
+
+The SCP has completed the operation successfully.
+
+Failure
+
+Processing Failure – Performed Procedure Step Object may no longer be updated
+
+0110
+
+The Association is aborted using A-ABORT and the MPPS is marked as failed. The status meaning is logged and reported to the user. Additional information in the Response will be logged (i.e. Error Comment and Error ID).
+
+Warning
+
+Attribute Value Out of Range
+
+0116H
+
+The MPPS operation is considered successful but the status meaning is logged. Additional information in the Response identifying the attributes out of range will be logged (i.e. Elements in the Modification List/Attribute List)
+
+*
+
+*
+
+Any other status code.
+
+The Association is aborted using A-ABORT and the MPPS is marked as failed. The status meaning is logged and reported to the user.
+
+The behavior of feel-DRCS during communication failure is summarized in the Table below:
+
+Table.4- : MPPS Communication Failure Behavior
+
+Exception
+
+Behavior
+
+Timeout
+
+The Association is aborted using A-ABORT and MPPS marked as failed. The reason is logged and reported to the user.
+
+Association aborted by the SCP or network layers
+
+The MPPS is marked as failed. The reason is logged and reported to the user.
+
+4.2.2.4. Association Acceptance Policy
+
+The Workflow Application Entity does not accept Associations.
+
+4.2.3. Hardcopy Application Entity Specification
+
+4.2.3.1 SOP Classes
+
+feel-DRCS provides Standard Conformance to the following SOP Classes:
+
+Table.4- : SOP Classes for AE Hardcopy
+
+SOP Class Name
+
+SOP Class UID
+
+SCU
+
+SCP
+
+Basic Grayscale Print Management Meta
+
+1.2.840.10008.5.1.1.9
+
+Yes
+
+No
+
+SOP Class Name
+
+SOP Class UID
+
+Basic Film Session SOP Class
+
+1.2.840.10008.5.1.1.1
+
+Basic Film Box SOP Class
+
+1.2.840.10008.5.1.1.2
+
+Basic Gray Scale Image Box SOP Class
+
+1.2.840.10008.5.1.1.4
+
+Printer SOP Class
+
+1.2.840.100085.1.1.16
+
+4.2.3.2 Association Policies
+
+4.2.3.2.1. General
+
+The DICOM standard application context name for DICOM 3.0 is always proposed:
+
+Table.4- : DICOM Application Context for AE Hardcopy
+
+Application Context Name
+
+1.2.840.10008.3.1.1.1
+
+4.2.3.2.2. Number of Associations
+
+feel-DRCS initiates one Association at a time for a Worklist request.
+
+The Modality Worklist AE can have one Association open at one time.
+
+4.2.3.2.3. Asynchronous Nature
+
+feel-DRCS does not support asynchronous communication (multiple outstanding transactions over a single Association).
+
+4.2.3.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is : Table 4.2
+
+4.2.3.3. Association Initiation Policy
+
+4.2.3.3.1. Activity – Film Images
+
+4.2.3.3.1.1. Description and Sequencing of Activities
+
+A user composes images onto film sheets and requests them to be sent to a specific hardcopy device. The user can select the desired film format and number of copies. Each print-job is forwarded to the job queue and processed individually.
+
+The Hardcopy AE is invoked by the job control interface that is responsible for processing network tasks. The job consists of data describing the images and graphics to be printed as well as the requested layout and other parameters. The film sheet is internally processed, converted to a STANDARD/1, 1 page and then the page image is sent. If no association to the printer can be established, the print-job is switched to a failed state and the user informed.
+
+Figure 4.9 : Sequencing of Activity – film images
+
+A typical sequence of DIMSE messages sent over an association between Hardcopy AE and a Printer is illustrated in up Figure:
+
+ 1. Hardcopy AE opens an association with the Printer
+
+ 2. N-GET on the Printer SOP Class is used to obtain current printer status information. If the Printer reports a status of FAILURE, the print-job is switched to a failed state and the user informed.
+
+ 3. N-CREATE on the Film Session SOP Class creates a Film Session.
+
+ 4. N-CREATE on the Film Box SOP Class creates a Film Box linked to the Film Session. A single Image Box will be created as the result of this operation (Hardcopy AE only uses the format STANDARD\1,1)
+
+ 5. N-SET on the Image Box SOP Class transfers the contents of the film sheet to the printer. If the printer does not support the Presentation LUT SOP Class, the image data will be passed through a printer-specific correction LUT before being sent.
+
+ 6. N-ACTION on the Film Box SOP Class instructs the printer to print the Film Box
+
+ 7. The printer prints the requested number of film sheets
+
+ 8. The Printer asynchronously reports its status via N-EVENT-REPORT notification (Printer SOP Class). The printer can send this message at any time. Hardcopy AE does not require the N-EVENT-REPORT to be sent. Hardcopy AE is capable of receiving an N-EVENT-REPORT notification at any time during an association. If the Printer reports a status of FAILURE, the print-job is switched to a failed state and the user informed.
+
+ 9. N-DELETE on the Film Session SOP Class deletes the complete Film Session SOP Instance hierarchy.
+
+ 10. Hardcopy AE closes the association with the Printer
+
+Status of the print-job is reported through the job control interface. Only one job will be active at a time for each separate hardcopy device. If any Response from the remote Application contains a status other than Success or Warning, the Association is aborted and the related Job is switched to a failed state. It can be restarted any time by user interaction or, if configured, by automated retry.
+
+4.2.3.3.1.2. Proposed Presentation Contexts
+
+The feel-DRCS is capable of proposing the Presentation Contexts shown in the Table below:
+
+Table.4- : Proposed Presentation Contexts for Activity Film Images
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Ext.
+
+Neg.
+
+Name
+
+UID
+
+Name List
+
+UID List
+
+Basic Grayscale Print Management Meta
+
+1.2.840.10008.5.1.1.9
+
+Implicit VR Little Endian
+
+Explicit VR Little Endian
+
+1.2.840.10008.1.2
+
+1.2.840.10008.1.2.1
+
+SCU
+
+None
+
+4.2.3.3.1.3. Common SOP Specific Conformance for all Print SOP Classes
+
+The general behavior of Hardcopy AE during communication failure is summarized in the Table below. This behavior is common for all SOP Classes supported by Hardcopy AE.
+
+Table.4- : Hardcopy Communication Failure Behavior
+
+Exception
+
+Behavior
+
+Timeout
+
+The Association is aborted using A-ABORT and the print-job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+Association aborted by the SCP or network layers
+
+The print-job is marked as failed. The reason is logged and the job failure is reported to the user via the job control application.
+
+4.2.3.4. Association Acceptance Policy
+
+The Hardcopy Application Entity does not accept Associations.
+
+4.2.4. STORAGE-SCP Application Entity Specification
+
+4.2.4.1. SOP Classes
+
+STORAGE-SCP provide Standard Conformance to the following SOP Class(es):
+
+Table.4- : SOP Classes supported by STORAGE-SCP
+
+SOP Class Name
+
+SOP Class UID
+
+Computed Radiography Image Storage
+
+1.2.840.10008.5.1.4.1.1.1
+
+Digital X-Ray Image Storage – For Presentation
+
+1.2.840.10008.5.1.4.1.1.1.1
+
+Digital X-Ray Image Storage – For Processing
+
+1.2.840.10008.5.1.4.1.1.1.1.1
+
+Digital Mammography X-Ray Image Storage – For Presentation
+
+1.2.840.10008.5.1.4.1.1.1.2
+
+Digital Mammography X-Ray Image Storage – For Processing
+
+1.2.840.10008.5.1.4.1.1.1.2.1
+
+Digital Intra-oral X-Ray Image Storage – For Presentation
+
+1.2.840.10008.5.1.4.1.1.1.3
+
+Digital Intra-oral X-Ray Image Storage – For Processing
+
+1.2.840.10008.5.1.4.1.1.1.3.1
+
+CT Image Storage
+
+1.2.840.10008.5.1.4.1.1.2
+
+Ultrasound Multi-frame Image Storage (Retired)
+
+1.2.840.10008.5.1.4.1.1.3
+
+Ultrasound Multi-frame Image Storage
+
+1.2.840.10008.5.1.4.1.1.3.1
+
+MR Image Storage
+
+1.2.840.10008.5.1.4.1.1.4
+
+Enhanced MR Image Storage
+
+1.2.840.10008.5.1.4.1.1.4.1
+
+MR Spectroscopy Storage
+
+1.2.840.10008.5.1.4.1.1.4.2
+
+Standalone Modality LUT Storage
+
+1.2.840.10008.5.1.4.1.1.10
+
+Standalone VOI LUT Storage
+
+1.2.840.10008.5.1.4.1.1.11
+
+Grayscale Softcopy Presentation State Storage
+
+1.2.840.10008.5.1.4.1.1.11.1
+
+X-Ray Angiographic Image Storage
+
+1.2.840.10008.5.1.4.1.1.12.1
+
+X-Ray Radiofluoroscopic Image Storage
+
+1.2.840.10008.5.1.4.1.1.12.2
+
+X-Ray Angiographic Bi-Plane Image Storage (Retired)
+
+1.2.840.10008.5.1.4.1.1.12.3
+
+Nuclear Medicine Image Storage
+
+1.2.840.10008.5.1.4.1.1.20
+
+Raw Data Storage
+
+1.2.840.10008.5.1.4.1.1.66
+
+VL Image Storage (Retired)
+
+1.2.840.10008.5.1.4.1.1.77.1
+
+VL Multi-frame Image Storage (Retired)
+
+1.2.840.10008.5.1.4.1.1.77.2
+
+VL Endoscopic Image Storage
+
+1.2.840.10008.5.1.4.1.1.77.1.1
+
+VL Microscopic Image Storage
+
+1.2.840.10008.5.1.4.1.1.77.1.2
+
+VL Slide-Coordinates Microscopic Image Storage
+
+1.2.840.10008.5.1.4.1.1.77.1.3
+
+VL Photographic Image Storage
+
+1.2.840.10008.5.1.4.1.1.77.1.4
+
+Basic Text SR
+
+1.2.840.10008.5.1.4.1.1.88.11
+
+Enhanced SR
+
+1.2.840.10008.5.1.4.1.1.88.22
+
+Comprehensive SR
+
+1.2.840.10008.5.1.4.1.1.88.33
+
+Mammography CAD SR
+
+1.2.840.10008.5.1.4.1.1.88.50
+
+Key Object Selection Document
+
+1.2.840.10008.5.1.4.1.1.88.59
+
+Positron Emission Tomography Image Storage
+
+1.2.840.10008.5.1.4.1.1.128
+
+Standalone PET Curve Storage
+
+1.2.840.10008.5.1.4.1.1.129
+
+RT Image Storage
+
+1.2.840.10008.5.1.4.1.1.481.1
+
+RT Dose Storage
+
+1.2.840.10008.5.1.4.1.1.481.2
+
+RT Structure Set Storage
+
+1.2.840.10008.5.1.4.1.1.481.3
+
+RT Beams Treatment Record Storage
+
+1.2.840.10008.5.1.4.1.1.481.4
+
+RT Plan Storage
+
+1.2.840.10008.5.1.4.1.1.481.5
+
+RT Brachy Treatment Record Storage
+
+1.2.840.10008.5.1.4.1.1.481.6
+
+RT Treatment Summary Record Storage
+
+1.2.840.10008.5.1.4.1.1.481.7
+
+4.2.4.2. Association Policies
+
+4.2.4.2.1. General
+
+STORAGE-SCP accepts but never initiates associations.
+
+Table.4- : Maximum PDU size received as a SCP for STORAGE-SCP
+
+Maximum PDU size received
+
+Unlimited
+
+4.2.4.2.2. Number of Associations
+
+Table.4- : Number of Associations as a SCP for STORAGE-SCP
+
+Maximum number of simultaneous associations
+
+Unlimited
+
+4.2.4.2.3. Asynchronous Nature
+
+STORAGE-SCP will only allow a single outstanding operation on an Association. Therefore, STORAGE-SCP will not perform asynchronous operations window negotiation.
+
+4.2.4.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is : Table 4.2
+
+4.2.4.3. Association Initiation Policy
+
+STORAGE-SCP does not initiate associations.
+
+4.2.4.4 Association Acceptance Policy
+
+When STORAGE-SCP accepts an association, it will respond to storage requests. If the Called AE Title does not match the pre-configured AE Title shared by all the SCPs of the application, the association will be rejected.
+
+4.2.4.4.1. Activity – Receive Storage Request
+
+4.2.4.4.1.1 Description and Sequencing of Activities
+
+As instances are received they are copied to the local file system and a record inserted into the local database. If the received instance is a duplicate of a previously received instance, the old file and database record will be overwritten with the new one.
+
+4.2.4.4.1.2. Accepted Presentation Contexts
+
+Table.4- : Acceptable Presentation Contexts for STORAGE-SCP and Receive Storage Request
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Extended
+
+Negotiation
+
+Name
+
+UID
+
+Name
+
+UID
+
+See Table D.4.2-6
+
+See Table D.4.2-6
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCP
+
+None
+
+Explicit VR Little Endian
+
+1.2.840.10008.1.2.1
+
+SCP
+
+None
+
+4.2.4.4.1.2.1 Extended Negotiation
+
+No extended negotiation is performed, though STORAGE-SCP:
+
+ — is a Level 2 Storage SCP (Full – does not discard any data elements)
+
+ — does not support digital signatures
+
+ — does not coerce any received data elements
+
+4.2.4.4.1.3 SOP Specific Conformance
+
+4.2.4.4.1.3.1 SOP Specific Conformance to Storage SOP Classes
+
+STORAGE-SCP provides standard conformance to the Storage Service Class.
+
+4.2.4.4.1.3.2 Presentation Context Acceptance Criterion
+
+STORAGE-SCP will always accept any Presentation Context for the supported SOP Classes with the supported Transfer Syntaxes. More than one proposed Presentation Context will be accepted for the same Abstract Syntax if the Transfer Syntax is supported, whether or not it is the same as another Presentation Context.
+
+4.2.4.4.1.3.3 Transfer Syntax Selection Policies
+
+STORAGE-SCP prefers explicit Transfer Syntaxes. If offered a choice of Transfer Syntaxes in a Presentation Context, it will apply the following priority to the choice of Transfer Syntax:
+
+first encountered explicit Transfer Syntax,
+
+default Transfer Syntax.
+
+STORAGE-SCP will accept duplicate Presentation Contexts, that is, if it is offered multiple Presentation Contexts, each of which offers acceptable Transfer Syntaxes, it will accept all Presentation Contexts, applying the same priority for selecting a Transfer Syntax for each.
+
+4.2.4.4.1.3.4 Response Status
+
+STORAGE-SCP will behave as described in the Table below when generating the C-STORE response command message.
+
+Table.4- : Response Status for STORAGE-SCP and Receive Storage Request
+
+Service Status
+
+Further Meaning
+
+Status
+
+Codes
+
+Reason
+
+Refused
+
+Out of Resources
+
+A7xx
+
+Never sent
+
+Error
+
+Data Set does not match SOP Class
+
+A9xx
+
+Never sent – data set is not checked prior to storage
+
+Cannot understand
+
+Cxxx
+
+Never sent
+
+Warning
+
+Coercion of Data Elements
+
+B000
+
+Never sent - no coercion is ever performed
+
+Data Set does not match SOP Class
+
+B007
+
+Never sent - data set is not checked prior to storage
+
+Elements Discarded
+
+B006
+
+Never sent – all elements are always stored
+
+Success
+
+0000
+
+4.2.5. FIND-SCU Application Entity Specification
+
+4.2.5.1. SOP Classes
+
+FIND-SCU provide Standard Conformance to the following SOP Class(es):
+
+Table.4- : SOP Classes supported by FIND-SCU
+
+SOP Class Name
+
+SOP Class UID
+
+SCU
+
+SCP
+
+Study Root Query/Retrieve Information Model – FIND
+
+1.2.840.10008.5.1.4.1.2.2.1
+
+Yes
+
+No
+
+4.2.5.2. Association Policies
+
+4.2.5.2.1. General
+
+FIND-SCU initiates but never accepts associations.
+
+Table.4- : Maximum PDU size received as a SCP for FIND-SCU
+
+Maximum PDU size received
+
+Unlimited
+
+4.2.5.2.2. Number of Associations
+
+Table.4- : Number of Associations as a SCP for FIND-SCU
+
+Maximum number of simultaneous associations
+
+1
+
+4.2.5.2.3. Asynchronous Nature
+
+FIND-SCU will only allow a single outstanding operation on an Association. Therefore, FIND-SCU will not perform asynchronous operations window negotiation.
+
+4.2.5.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is : Table 4.2
+
+4.2.5.3. Association Initiation Policy
+
+FIND-SCU attempts to initiate a new association when the user performs the query action from the user interface. If this involves recursive queries for lower query levels in the hierarchy, these will be performed on the same association.
+
+4.2.5.3.1. Activity – Query Remote AE
+
+4.2.5.3.1.1. Description and Sequencing of Activities
+
+A single attempt will be made to query the remote AE. If the query fails, for whatever reason, no retry will be performed.
+
+4.2.5.3.1.2 Proposed Presentation Contexts
+
+Table.4- : Proposed Presentation Contexts for FIND-SCU and Query Remote AE
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Extended
+
+Negotiation
+
+Name
+
+UID
+
+Name
+
+UID
+
+Study Root Query/Retrieve Information Model – FIND
+
+1.2.840.10008.5.1.4.1.2.2.1
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCU
+
+None
+
+Explicit VR Little Endian
+
+1.2.840.10008.1.2.1
+
+SCU
+
+None
+
+FIND-SCU will propose multiple Presentation Contexts, one for each of the supported Transfer Syntaxes, and an additional Presentation Context with all of the supported Transfer Syntaxes, in order to determine which Transfer Syntaxes the remote SCP supports, and which it prefers.
+
+4.2.5.3.1.2.1. Extended Negotiation
+
+No extended negotiation is performed.
+
+In particular, relational queries are not supported.
+
+4.2.5.3.1.3. SOP Specific Conformance
+
+4.2.5.3.1.3.1. SOP Specific Conformance to C-FIND SOP Classes
+
+FIND-SCU provides standard conformance to the supported C-FIND SOP Classes.
+
+Only a single information model, Study Root, is supported.
+
+All queries are initiated at the highest level of the information model (the STUDY level), and then for each response received, recursively repeated at the next lower levels (the SERIES and then IMAGE levels), in order to completely elucidate the “tree” of instances available on the remote AE (from which the user may subsequently request a retrieval at any level).
+
+No CANCEL requests are ever issued.
+
+Unexpected attributes returned in a C-FIND response (those not requested) are listed in the browser at the appropriate level if present in the dictionary. Requested return attributes not returned by the SCP are ignored. Non-matching responses returned by the SCP due to unsupported (hopefully optional) matching keys are not filtered locally by the FIND-SCU and thus will still be presented in the browser. No attempt is made to filter out duplicate responses.
+
+Specific Character Set will always be included at every query level. If present in the response, Specific Character Set will be used to identify character sets other than the default character set for display of strings in the browser.
+
+Table.4- : Study Root Request Identifier for FIND-SCU
+
+Name
+
+Tag
+
+Types of Matching
+
+STUDY Level
+
+Patient’s ID
+
+(0010,0020)
+
+S,*,U
+
+Patient’s Name
+
+(0010,0010)
+
+S,*,U
+
+Patient's Birth Date
+
+(0010,0030)
+
+S,*,U,R
+
+Patient's Sex
+
+(0010,0040)
+
+S,*,U
+
+Patient's Birth Time
+
+(0010,0032)
+
+S,*,U,R
+
+Other Patient's ID's
+
+(0010,1000)
+
+S,*,U
+
+Other Patient's Names
+
+(0010,1001)
+
+S,*,U
+
+Ethnic Group
+
+(0010,2160)
+
+S,*,U
+
+Patient Comments
+
+(0010,4000)
+
+S,*,U
+
+Study ID
+
+(0020,0010)
+
+S,*,U
+
+Study Description
+
+(0008,1030)
+
+S,*,U
+
+Modalities In Study
+
+(0008,0061)
+
+S,*,U
+
+Study Date
+
+(0008,0020)
+
+S,*,U,R
+
+Study Time
+
+(0008,0030)
+
+S,*,U,R
+
+Referring Physician's Name
+
+(0008,0090)
+
+S,*,U
+
+Accession Number
+
+(0008,0050)
+
+S,*,U
+
+Physician of Record
+
+(0008,1048)
+
+S,*,U
+
+Name of Physician(s) Reading Study
+
+(0008,1060)
+
+S,*,U
+
+Admitting Diagnoses Description
+
+(0008,1080)
+
+S,*,U
+
+Patient's Age
+
+(0010,1010)
+
+S,*,U
+
+Patient's Size
+
+(0010,1020)
+
+S,*,U
+
+Patient's Weight
+
+(0010,1030)
+
+S,*,U
+
+Occupation
+
+(0010,2180)
+
+S,*,U
+
+Additional Patient History
+
+(0010,21B0)
+
+S,*,U
+
+Study Instance UID
+
+(0020,000D)
+
+UNIQUE
+
+SERIES Level
+
+Series Number
+
+(0020,0011)
+
+S,*,U
+
+Series Description
+
+(0008,103E)
+
+S,*,U
+
+Modality
+
+(0008,0060)
+
+S,*,U
+
+Series Date
+
+(0008,0021)
+
+S,*,U
+
+Series Time
+
+(0008,0031)
+
+S,*,U
+
+Performing Physician's Name
+
+(0008,1050)
+
+S,*,U
+
+Protocol Name
+
+(0018,1030)
+
+S,*,U
+
+Operator's Name
+
+(0008,1070)
+
+S,*,U
+
+Laterality
+
+(0020,0060)
+
+S,*,U
+
+Body Part Examined
+
+(0018,0015)
+
+S,*,U
+
+Manufacturer
+
+(0008,0070)
+
+S,*,U
+
+Manufacturer's Model Name
+
+(0008,1090)
+
+S,*,U
+
+Station Name
+
+(0008,1010)
+
+S,*,U
+
+Institution Name
+
+(0008,0080)
+
+S,*,U
+
+Institutional Department Name
+
+(0008,1040)
+
+S,*,U
+
+Series Instance UID
+
+(0020,000E)
+
+UNIQUE
+
+IMAGE Level
+
+Instance Number
+
+(0020,0013)
+
+S,*,U
+
+Image Comments
+
+(0020,4000)
+
+S,*,U
+
+Content Date
+
+(0008,0023)
+
+S,*,U,R
+
+Content Time
+
+(0008,0033)
+
+S,*,U,R
+
+Image Type
+
+(0008,0008)
+
+S,*,U
+
+Acquisition Number
+
+(0020,0012)
+
+S,*,U
+
+Acquisition Date
+
+(0008,0022)
+
+S,*,U,R
+
+Acquisition Time
+
+(0008,0032)
+
+S,*,U,R
+
+Acquisition Date Time
+
+(0008,002a)
+
+S,*,U,R
+
+Derivation Description
+
+(0008,2111)
+
+S,*,U
+
+Contrast/Bolus Agent
+
+(0018,0010)
+
+S,*,U
+
+Quality Control Image
+
+(0028,0300)
+
+S,*,U
+
+Burned In Annotation
+
+(0028,0301)
+
+S,*,U
+
+Lossy Image Compression
+
+(0028,2110)
+
+S,*,U
+
+Lossy Image Compression Ratio
+
+(0028,2112)
+
+S,*,U
+
+Number of Frames
+
+(0028,0008)
+
+S,*,U
+
+SOP Instance UID
+
+(0008,0018)
+
+UNIQUE
+
+SOP Class UID
+
+(0008,0016)
+
+NONE
+
+Common to all query levels
+
+Specific Character Set
+
+(0008,0005)
+
+S,*,U
+
+Types of Matching:
+
+The types of Matching supported by the C-FIND SCU. An "S" indicates the identifier attribute uses Single Value Matching, an “R” indicates Range Matching, a n“*”indicates wildcard matching, a ‘U’ indicates Universal Matching, and an ‘L’ indicates that UID lists are sent. “NONE” indicates that no matching is supported, but that values for this Element are requested to be returned (i.e. universal matching), and “UNIQUE” indicates that this is the Unique Key for that query level, in which case Universal Matching or Single Value Matching is used depending on the query level.
+
+4.2.5.3.1.3.2. Presentation Context Acceptance Criterion
+
+FIND-SCU does not accept associations.
+
+4.2.5.3.1.3.3. Transfer Syntax Selection Policies
+
+FIND-SCU prefers explicit Transfer Syntaxes. If offered a choice of Transfer Syntaxes in the accepted Presentation Contexts, it will apply the following priority to the choice of Presentation Context to use for the C-STORE operation:
+
+first encountered explicit Transfer Syntax,
+
+default Transfer Syntax.
+
+4.2.5.3.1.3.4. Response Status
+
+FIND-SCU will behave as described in Table D.4.2-24 in response to the status returned in the C-FIND response command message(s).
+
+Table.4- : Response Status for FIND-SCU and Query Remote AE Request
+
+Service Status
+
+Further Meaning
+
+Status Codes
+
+Behavior
+
+Refused
+
+Out of Resources
+
+A700
+
+Current query is terminated; remaining queries continue
+
+Error
+
+Identifier does not match SOP Class
+
+A900
+
+Current query is terminated; remaining queries continue
+
+Unable to process
+
+Cxxx
+
+Current query is terminated; remaining queries continue
+
+Cancel
+
+Matching terminated due to Cancel request
+
+FE00
+
+Ignored (should never occur, since cancels never issued)
+
+Success
+
+Matching is complete - No final Identifier is supplied
+
+0000
+
+Current query is terminated; remaining queries continue
+
+Pending
+
+Matches are continuing - Current Match is supplied and any Optional Keys were supported in the same manner as Required Keys
+
+FF00
+
+Identifier used to populate browser and trigger recursive lower level queries
+
+Matches are continuing - Warning that one or more Optional Keys were not supported for existence and/or matching for this Identifier
+
+FF01
+
+Identifier used to populate browser and trigger recursive lower level queries
+
+4.2.5.4. Association Acceptance Policy
+
+FIND-SCU does not accept associations.
+
+4.2.6. MOVE-SCU Application Entity Specification
+
+4.2.6.1. SOP Classes
+
+MOVE-SCU provide Standard Conformance to the following SOP Class(es):
+
+Table.4- : SOP Classes supported by MOVE-SCU
+
+SOP Class Name
+
+SOP Class UID
+
+SCU
+
+SCP
+
+Study Root Query/Retrieve Information Model – MOVE
+
+1.2.840.10008.5.1.4.1.2.2.2
+
+Yes
+
+No
+
+4.2.6.2. Association Policies
+
+4.2.6.2.1. General
+
+MOVE-SCU initiates but never accepts associations.
+
+Table.4- : Maximum PDU size received as a SCP for MOVE-SCU
+
+Maximum PDU size received
+
+Unlimited
+
+4.2.6.2.2. Number of Associations
+
+Table.4- : Number of Associations as a SCP for MOVE-SCU
+
+Maximum number of simultaneous associations
+
+1
+
+4.2.6.2.3. Asynchronous Nature
+
+MOVE-SCU will only allow a single outstanding operation on an Association. Therefore, MOVE-SCU will not perform asynchronous operations window negotiation.
+
+4.2.6.2.4. Implementation Identifying Information
+
+The implementation information for this Application Entity is : Table 4.2
+
+4.2.6.3. Association Initiation Policy
+
+MOVE-SCU attempts to initiate a new association when the user performs the retrieve action from the user interface.
+
+4.2.6.3.1 Activity – Retrieve From Remote AE
+
+4.2.6.3.1.1 Description and Sequencing of Activities
+
+For the entity (study, series or instance) selected from the user interface to be retrieved, a single attempt will be made to retrieve it from the selected remote AE. If the retrieve fails, for whatever reason, no retry will be performed.
+
+4.2.6.3.1.2 Proposed Presentation Contexts
+
+Table.4- : Proposed Presentation Contexts for MOVE-SCU and Retrieve From Remote AE
+
+Presentation Context Table
+
+Abstract Syntax
+
+Transfer Syntax
+
+Role
+
+Extended
+
+Negotiation
+
+Name
+
+UID
+
+Name
+
+UID
+
+Study Root Query/Retrieve Information Model – MOVE
+
+1.2.840.10008.5.1.4.1.2.2.2
+
+Implicit VR Little Endian
+
+1.2.840.10008.1.2
+
+SCP
+
+None
+
+Explicit VR Little Endian
+
+1.2.840.10008.1.2.1
+
+SCP
+
+None
+
+MOVE-SCU will propose multiple Presentation Contexts, one for each of the supported Transfer Syntaxes, and an additional Presentation Context with all of the supported Transfer Syntaxes, in order to determine which Transfer Syntaxes the remote SCP supports, and which it prefers.
+
+4.2.6.3.1.2.1. Extended Negotiation
+
+No extended negotiation is performed.
+
+In particular, relational retrievals are not supported.
+
+4.2.6.3.1.3. SOP Specific Conformance
+
+4.2.6.3.1.3.1. SOP Specific Conformance to C-FIND SOP Classes
+
+MOVE-SCU provides standard conformance to the supported C-MOVE SOP Classes.
+
+Only a single information model, Study Root, is supported.
+
+Retrieval will be performed at the STUDY, SERIES or IMAGE level depending on what level of entity has been selected by the user in the browser.
+
+No CANCEL requests are ever issued.
+
+The retrieval is performed from the AE that was specified in the Retrieve AE attribute returned from the query performed by FIND-SCU. The instances are retrieved to the current application’s local database by specifying the destination as the AE Title of the STORE-SCP AE of the local application. This implies that the remote C-MOVE SCP must be preconfigured to determine the presentation address corresponding to the STORE-SCP AE. The STORE-SCP AE will accept storage requests addressed to it from anywhere, so no pre-configuration of the local application to accept from the remote AE is necessary (except in so far as it was necessary to configure FIND-SCU).
+
+Table.4- : Study Root Request Identifier for MOVE-SCU
+
+Name
+
+Tag
+
+Unique, Matching or Return Key
+
+STUDY level
+
+Study Instance UID
+
+(0020,000D)
+
+U
+
+SERIES level
+
+Series Instance UID
+
+(0020,000E)
+
+U
+
+IMAGE level
+
+SOP Instance UID
+
+(0008,0018)
+
+U
+
+4.2.6.3.1.3.2. Presentation Context Acceptance Criterion
+
+MOVE-SCU does not accept associations.
+
+4.2.6.3.1.3.3. Transfer Syntax Selection Policies
+
+MOVE-SCU prefers explicit Transfer Syntaxes. If offered a choice of Transfer Syntaxes in the accepted Presentation Contexts, it will apply the following priority to the choice of Presentation Context to use for the C-STORE operation:
+
+first encountered explicit Transfer Syntax,
+
+4.2.6.3.1.3.4. Response Status
+
+MOVE-SCU will behave as described in the Table below in response to the status returned in the C-MOVE response command message(s).
+
+Table.4- : Response Status for MOVE-SCU and Retrieve From Remote AE Request
+
+Service Status
+
+Further Meaning
+
+Status Codes
+
+Related Fields
+
+Behavior
+
+Refused
+
+Out of Resources - Unable to calculate number of matches
+
+A701
+
+(0000,0902)
+
+Retrieval is terminated
+
+Out of Resources - Unable to perform sub-operations
+
+A702
+
+(0000,1020)(0000,1021)(0000,1022)(0000,1023)
+
+Retrieval is terminated
+
+Move Destination unknown
+
+A801
+
+(0000,0902)
+
+Retrieval is terminated
+
+Failed
+
+Identifier does not match SOP Class
+
+A900
+
+(0000,0901)(0000,0902)
+
+Retrieval is terminated
+
+Unable to process
+
+Cxxx
+
+(0000,0901)(0000,0902)
+
+Retrieval is terminated
+
+Cancel
+
+Sub-operations terminated due to Cancel Indication
+
+FE00
+
+(0000,1020)(0000,1021)(0000,1022)(0000,1023)
+
+Retrieval is terminated (should never occur, since cancels never issued)
+
+Warning
+
+Sub-operations Complete - One or more Failures
+
+B000
+
+(0000,1020)(0000,1022)(0000,1023)
+
+Retrieval is terminated
+
+Success
+
+Sub-operations Complete - No Failures
+
+0000
+
+(0000,1020)(0000,1021)(0000,1022)(0000,1023)
+
+Retrieval is terminated
+
+Pending
+
+Sub-operations are continuing
+
+FF00
+
+(0000,1020)(0000,1021)(0000,1022)(0000,1023)
+
+Retrieval continues
+
+4.2.6.3.1.3.5. Sub-operation dependent behavior
+
+Since the C-MOVE operation is dependent on completion of C-STORE sub-operations that are occurring on a separate association, the question of failure of operations on the other association(s) must be considered.
+
+MOVE-SCU completely ignores whatever activities are taking place in relation to the STORAGE-SCP AE that is receiving the retrieved instances. Once the C-MOVE has been initiated it runs to completion (or failure) as described in the C-MOVE response command message(s). There is no attempt by MOVE-SCU to confirm that instances have actually been successfully received or locally stored.
+
+Whether or not completely or partially successfully retrievals are made available in the local d atabase to the user is purely dependent on the success or failure of the C-STORE sub-operations, not on any explicit action by MOVE-SCU.
+
+Whether or not the remote AE attempts to retry any failed C-STORE sub-operations is beyond the control of MOVE-SCU.
+
+If the association on which the C-MOVE was issued is aborted for any reason, whether or not the C-STORE sub-operations continue is dependent on the remote AE; the local STORAGE-SCP will continue to accept associations and storage operations regardless.
+
+4.2.6.4. Association Acceptance Policy
+
+MOVE-SCU does not accept associations.
+
+4.3. NETWORK INTERFACES
+
+4.3.1. Physical Network Interface
+
+feel-DRCS supports a single network interface. One of the following physical network interfaces will be available depending on installed hardware options:
+
+Ethernet 1000BaseT/100BaseT/10BaseT
+
+4.3.2. Additional Protocols
+
+The feel-DRCS conforms to the System Management Profiles listed in the Table below. All requested transactions for the listed profiles and actors are supported. Supports for optional transactions are listed in the Table below:
+
+Profile Name
+
+Actor
+
+Protocols Used
+
+Optional Transactions
+
+Security Support
+
+Network Address Management
+
+DHCP Client
+
+DHCP
+
+N/A
+
+DNS Client
+
+DNS
+
+N/A
+
+Time Synchronization
+
+NTP Client
+
+NTP
+
+Find NTP Server
+
+DHCP Client
+
+DHCP
+
+N/A
+
+DICOM Application Configuration Management
+
+LDAP Client
+
+LDAP
+
+Client Update LDAP Server
+
+See Section
+
+4.3.3. IPv4 and IPv6 Support
+
+This product only supports IPv4 connections.
+
+4.3.4 standard EXTENSded / SPECIALIZed / PRIVATe SOP Classes
+
+No Specialized or Private SOP Classes are supported.
+
+4.3.5 PRIVATE TRANSFER SYNTAXES
+
+No Private Transfer Syntaxes are supported.
+
+4.4. CONFIGURATION
+
+4.4.1. AE Title/Presentation Address Mapping
+
+The presentation address mapping is defined in the configuration database. The destination AETitle, host name, listen port and service list for each remote AE that the feel-DRCS can connect to are defined in this file. The mapping of the hostname to an IP address is defined in the “aceview.ini” file
+
+4.4.1.1 Configurable Parameters
+
+The following parameters may be configured:
+
+DICOM Modality Worklist Management
+
+Remote AEs(Server)
+
+AE Title
+
+IP Address
+
+Port Number
+
+DICOM Storage
+
+Local AE Titles(Client)
+
+AE Title
+
+Port Number
+
+Remote AEs(Server)
+
+AE Title
+
+IP Address
+
+Port Number
+
+DICOM Print
+
+Local AE Titles(Client)
+
+AE Title
+
+Port Number
+
+Remote AEs(Server)
+
+AE Title
+
+IP Address
+
+Port Number
+
+ Print Setting
+
+Medium Type : Selects the type of film.
+
+Film Orientation : Selects the direction of film.
+
+Film Size : Selects the size of film.
+
+Smoothing : Selects the process type of printer.
+
+Boarder Density : Selects the boarder density of film.
+
+Min Density : Selects the minimum density area of film.
+
+Max Density : Selects the maximum density area of film
+
+Overlay Information : Selects information parameter of image and patient
+
+SUPPORT OF CHARACTER SETS
+
+All feel-DRCS DICOM applications support the
+
+ISO_IR 6
+
+ANNEX A – DICOM Data Element Supported
+
+MODULES COMMON TO Digital X-ray Image IODs
+
+Attribute Name
+
+Tag
+
+DICOM
+
+Type
+
+feel-DRCS
+
+Type
+
+Attribute Description
+
+Patient Module
+
+Patient (Reference PS3.3 section C.7.1.1)
+
+Patient's Name
+
+(0010,0010)
+
+2
+
+2
+
+Patient's full name.
+
+Patient ID
+
+(0010,0020)
+
+2
+
+2
+
+Primary hospital identification number or code for the patient.
+
+Patient's Birth Date
+
+(0010,0030)
+
+2
+
+2
+
+Birth date of the patient.
+
+Patient's Sex
+
+(0010,0040)
+
+2
+
+2
+
+Sex of the named patient. Enumerated Values: M = male F = female O = other
+
+Patient's Birth Time
+
+(0010,0032)
+
+3
+
+3
+
+Birth time of the Patient.
+
+Other Patient IDs
+
+(0010,1000)
+
+3
+
+3
+
+Other identification numbers or codes used to identify the patient.
+
+Other Patient Names
+
+(0010,1001)
+
+3
+
+3
+
+Other names used to identify the patient.
+
+Patient Comments
+
+(0010,4000)
+
+3
+
+3
+
+User-defined additional information about the patient.
+
+Responsible Person
+
+(0010,2297)
+
+2C
+
+2C
+
+For Veterinary
+
+Responsible Person Role
+
+(0010,2298)
+
+1C
+
+1C
+
+For Veterinary
+
+Study Module
+
+General Study (Reference PS3.3 section C.7.2.1)
+
+Study Instance UID
+
+(0020,000D)
+
+1
+
+1
+
+Study Date
+
+(0008,0020)
+
+2
+
+2
+
+Study Time
+
+(0008,0030)
+
+2
+
+2
+
+Referring Physician's Name
+
+(0008,0090)
+
+2
+
+2
+
+Study ID
+
+(0020,0010)
+
+2
+
+2
+
+Accession Number
+
+(0008,0050)
+
+2
+
+2
+
+Study Description
+
+(0008,1030)
+
+3
+
+3
+
+Patient Study (Reference PS3.3 section C.7.2.2)
+
+Patient's Age
+
+(0010,1010)
+
+3
+
+3
+
+Patient's Size
+
+(0010,1020)
+
+3
+
+3
+
+Patient's Weight
+
+(0010,1030)
+
+3
+
+3
+
+Patient’s Sex Neutered
+
+(0010,2203)
+
+2C
+
+In case of Animal,
+
+ALTERED = Altered/Neutered
+
+UNALTERED = Unaltered/intact
+
+Series Module
+
+General Series (Reference PS3.3 section C.7.3.1)
+
+Modality
+
+(0008,0060)
+
+1
+
+1
+
+Series Instance UID
+
+(0020,000E)
+
+1
+
+1
+
+Series Number
+
+(0020,0011)
+
+2
+
+2
+
+Laterality
+
+(0020,0060)
+
+2C
+
+2C
+
+Series Date
+
+(0008,0021)
+
+3
+
+3
+
+Series Time
+
+(0008,0031)
+
+3
+
+3
+
+Series Description
+
+(0008,103E)
+
+3
+
+3
+
+Body Part Examined
+
+(0018,0015)
+
+3
+
+3
+
+Patient Position
+
+(0018,5100)
+
+2C
+
+2C
+
+Anatomical Orientation Type
+
+(0010,2210)
+
+1C
+
+1C
+
+DX Series (Reference PS3.3 section C.8.11.1)
+
+Modality
+
+(0008,0060)
+
+1
+
+1
+
+Referenced Performed Procedure Step Sequence
+
+(0008,1111)
+
+1C
+
+1C
+
+Equipment
+
+General Equipment (Reference PS3.3 section C.7.5.1)
+
+Manufacturer
+
+(0008,0070)
+
+2
+
+2
+
+H&abyz Co.,LTD. or Configurable
+
+Institution Name
+
+(0008,0080)
+
+3
+
+3
+
+Institution Address
+
+(0008,0081)
+
+3
+
+3
+
+Station Name
+
+(0008,1010)
+
+3
+
+3
+
+Institutional Department Name
+
+(0008,1040)
+
+3
+
+3
+
+Manufacturer's Model Name
+
+(0008,1090)
+
+3
+
+3
+
+Configurable
+
+Device Serial Number
+
+(0018,1000)
+
+3
+
+3
+
+Configurable
+
+Software Versions
+
+(0018,1020)
+
+3
+
+3
+
+Image
+
+General Image (Reference PS3.3 section C.7.6.1)
+
+Instance Number
+
+(0020,0013)
+
+2
+
+2
+
+Patient Orientation
+
+(0020,0020)
+
+2C
+
+2C
+
+Image (Content) Date
+
+(0008,0023)
+
+2C
+
+2C
+
+Image (Content) Time
+
+(0008,0033)
+
+2C
+
+2C
+
+Image Type
+
+(0008,0008)
+
+3
+
+3
+
+Acquisition Number
+
+(0020,0012)
+
+3
+
+3
+
+Acquisition Date
+
+(0008,0022)
+
+3
+
+3
+
+Acquisition Time
+
+(0008,0032)
+
+3
+
+3
+
+Acquisition DateTime
+
+(0008,002A)
+
+3
+
+3
+
+Purpose of Reference Code Sequence
+
+(0040,A170)
+
+1
+
+1
+
+Images in Acquisition
+
+(0020,1002)
+
+3
+
+3
+
+Image Comments
+
+(0020,4000)
+
+3
+
+3
+
+Lossy Image Compression
+
+(0028,2110)
+
+3
+
+3
+
+Lossy Image Compression Ratio
+
+(0028,2112)
+
+3
+
+3
+
+Lossy Image Compression Method
+
+(0028,2114)
+
+3
+
+3
+
+Icon Image Sequence
+
+(0088,0200)
+
+3
+
+3
+
+Image Pixel (Reference PS3.3 section C.7.6.3)
+
+Samples per Pixel
+
+(0028,0002)
+
+1
+
+1
+
+Photometric Interpretation
+
+(0028,0004)
+
+1
+
+1
+
+Rows
+
+(0028,0010)
+
+1
+
+1
+
+Columns
+
+(0028,0011)
+
+1
+
+1
+
+Bits Allocated
+
+(0028,0100)
+
+1
+
+1
+
+Bits Stored
+
+(0028,0101)
+
+1
+
+1
+
+High Bit
+
+(0028,0102)
+
+1
+
+1
+
+Pixel Representation
+
+(0028,0103)
+
+1
+
+1
+
+Pixel Data
+
+(7FE0,0010)
+
+1C
+
+1C
+
+Planar Configuration
+
+(0028,0006)
+
+1C
+
+1C
+
+Pixel Aspect Ratio
+
+(0028,0034)
+
+1C
+
+1C
+
+Contrast/Bolus (Reference PS3.3 section C.7.6.4)
+
+Contrast/Bolus Agent
+
+(0018,0010)
+
+2
+
+2
+
+DX Anatomy Imaged (Reference PS3.3 section C.8.11.2)
+
+Image Laterality
+
+(0020,0062)
+
+1
+
+1
+
+Enumerated Values: R = right L = left U = unpaired B = both left and right
+
+DX Image (Reference PS3.3 section C.8.11.3)
+
+Image Type
+
+(0008,0008)
+
+1
+
+1
+
+Samples per Pixel
+
+(0028,0002)
+
+1
+
+1
+
+Photometric Interpretation
+
+(0028,0004)
+
+1
+
+1
+
+Bits Allocated
+
+(0028,0100)
+
+1
+
+1
+
+Bits Stored
+
+(0028,0101)
+
+1
+
+1
+
+High Bit
+
+(0028,0102)
+
+1
+
+1
+
+Pixel Representation
+
+(0028,0103)
+
+1
+
+1
+
+Pixel Intensity Relationship
+
+(0028,1040)
+
+1
+
+1
+
+Pixel Intensity Relationship Sign
+
+(0028,1041)
+
+1
+
+1
+
+Rescale Intercept
+
+(0028,1052)
+
+1
+
+1
+
+Rescale Slope
+
+(0028,1053)
+
+1
+
+1
+
+Rescale Type
+
+(0028,1054)
+
+1
+
+1
+
+Presentation LUT Shape
+
+(2050,0020)
+
+1
+
+1
+
+Lossy Image Compression
+
+(0028,2110)
+
+1
+
+1
+
+Lossy Image Compression Ratio
+
+(0028,2112)
+
+1C
+
+1C
+
+Patient Orientation
+
+(0020,0020)
+
+1C
+
+1C
+
+Burned In Annotation
+
+(0028,0301)
+
+1
+
+1
+
+VOI LUT Sequence
+
+(0028,3010)
+
+1C
+
+1C
+
+>LUT Descriptor
+
+(0028,3002)
+
+1
+
+1
+
+>LUT Data
+
+(0028,3006)
+
+1
+
+1
+
+Window Center
+
+(0028,1050)
+
+1C
+
+1C
+
+Window Width
+
+(0028,1051)
+
+1C
+
+1C
+
+DX Detector (Reference PS3.3 section C.8.11.4)
+
+Field of View Origin
+
+(0018,7030)
+
+1C
+
+1C
+
+Field of View Rotation
+
+(0018,7032)
+
+1C
+
+1C
+
+Field of View Horizontal Flip
+
+(0018,7034)
+
+1C
+
+1C
+
+Imager Pixel Spacing
+
+(0018,1164)
+
+1
+
+1
+
+X-ray Generation (Reference PS3.3 section C.8.7.9)
+
+KVP
+
+(0018,0060)
+
+3
+
+3
+
+X-Ray Tube Current
+
+(0018,1151)
+
+3
+
+3
+
+X-Ray Tube Current in µA
+
+(0018,8151)
+
+3
+
+3
+
+Exposure Time
+
+(0018,1150)
+
+3
+
+3
+
+Exposure Time in µS
+
+(0018,8150)
+
+3
+
+3
+
+Exposure
+
+(0018,1152)
+
+3
+
+3
+
+Exposure in µAs
+
+(0018,1153)
+
+3
+
+3
+
+Exposure Control Mode
+
+(0018,7060)
+
+3
+
+3
+
+Exposure Control Mode Description
+
+(0018,7062)
+
+3
+
+3
+
+Exposure Status
+
+(0018,7064)
+
+3
+
+3
+
+Photo timer Setting
+
+(0018,7065)
+
+3
+
+3
+
+Image Area Dose Products
+
+(0018.115E)
+
+3
+
+3
+
+dGy*cm*cm
+
+Focal Spot
+
+(0018,1190)
+
+3
+
+3
+
+Anode Target Material
+
+(0018,1191)
+
+3
+
+3
+
+Rectification Type
+
+(0018,1156)
+
+3
+
+3
+
+Generator ID
+
+(0018,1005)
+
+3
+
+3
+
+X-ray Grid (Reference PS3.3 section C.8.7.11)
+
+Grid
+
+(0018,1166)
+
+3
+
+ 3
+
+Identifies the grid. May be multi-valued.
+
+Defined Terms are:
+
+ FIXED FOCUSED RECIPROCATING PARALLEL CROSSED NONE
+
+VOI LUT (Reference PS3.3 section C.11.2)
+
+VOI LUT Sequence
+
+(0028,3010)
+
+1C
+
+1C
+
+>LUT Descriptor
+
+(0028,3002)
+
+1
+
+1
+
+>LUT Data
+
+(0028,3006)
+
+1
+
+1
+
+Window Center
+
+(0028,1050)
+
+1C
+
+1C
+
+Window Width
+
+(0028,1051)
+
+1C
+
+1C
+
+Acquisition Context (Reference PS3.3 section C.7.6.14)
+
+Acquisition Context
+
+Sequence
+
+(0040,0555)
+
+2
+
+2
+
+>Value Type
+
+(0040,A040)
+
+3
+
+3
+
+>Concept Name Code
+
+Sequence
+
+(0040,A043)
+
+1
+
+1
+
+>Referenced Frame
+
+Numbers
+
+(0040,A136)
+
+1C
+
+1C
+
+>Numeric Value
+
+(0040,A30A)
+
+1C
+
+1C
+
+>Measurement Units Code
+
+Sequence
+
+(0040,08EA)
+
+1C
+
+1C
+
+>Date
+
+(0040,A121)
+
+1C
+
+1C
+
+>Time
+
+(0040,A122)
+
+1C
+
+1C
+
+>Person Name
+
+(0040,A123)
+
+1C
+
+1C
+
+>Text Value
+
+(0040,A160)
+
+1C
+
+1C
+
+>Concept Code Sequence
+
+(0040,A168)
+
+1C
+
+1C
+
+Acquisition Context
+
+Description
+
+(0040,0556)
+
+3
+
+3
+
+SOP Common (Reference PS3.3 section C.12.1)
+
+SOP Class UID
+
+(0008,0016)
+
+1
+
+1
+
+SOP Instance UID
+
+(0008,0018)
+
+1
+
+1
+
+Specific Character Set
+
+(0008,0005)
+
+1C
+
+1C
+
+ANNEX B – Worklist AE Attributes
+
+Module Name
+
+Attribute Name
+
+Tag
+
+VR
+
+M
+
+R
+
+Q
+
+D
+
+IOD
+
+SOP Common Specific Character Set
+
+(0008,0005)
+
+CS
+
+x
+
+Scheduled Procedure Step Scheduled Procedure Step Sequence > Scheduled Station AET > Scheduled Procedure Step Start Date > Scheduled Procedure Step Start Time > Modality > Scheduled Performing Physician’s Name > Scheduled Procedure Step Description > Scheduled Station Name > Scheduled Procedure Step Location > Scheduled Protocol Code Sequence > Pre-Medication > Scheduled Procedure Step ID > Requested Contrast Agent
+
+(0040,0100)(0040,0001)(0040,0002)(0040,0003)(0008,0060)(0040,0006)(0040,0007)(0040,0010)(0040,0011)(0040,0008)(0040,0012)(0040,0009)(0032,1070)
+
+SQAEDATMCSPNLOSHSHSQLOSHLO
+
+(S)SS
+
+xxxxxxxxxxx
+
+x
+
+xxxxxxxx
+
+xxxx
+
+Requested Procedure Requested Procedure ID Requested Procedure Description Study Instance UID Requested Procedure Priority Patient Transport Arrangements Referenced Study Sequence Requested Procedure Code Sequence
+
+(0040,1001)(0032,1060)(0020,000D)(0040,1003)(0040,1004)(0008,1110)(0032,1064)
+
+SHLOUISHLOSQSQ
+
+xxxxxxx
+
+x
+
+xx
+
+xxxxx
+
+Imaging Service Request Accession Number Requesting Physician Referring Physician's Name
+
+(0008,0050)(0032,1032)(0008,0090)
+
+SHPNPN
+
+xxx
+
+xx
+
+xxx
+
+xxx
+
+Visit Identification Admission ID
+
+(0038,0010)
+
+LO
+
+x
+
+Visit Status Current Patient Location
+
+(0038,0300)
+
+LO
+
+x
+
+x
+
+Visit Admission Admitting Diagnosis Description
+
+(0008,1080)
+
+LO
+
+x
+
+x
+
+Patient Identification Patient Name Patient ID
+
+(0010,0010)(0010,0020)
+
+PNLO
+
+xx
+
+xx
+
+xx
+
+xx
+
+Patient Demographic Patient’s Birth Date Patient’s Sex Patient’s Weight Confidentiality constraint on patient data
+
+(0010,0030)(0010,0040)(0010,1030)(0040,3001)
+
+DACSDSLO
+
+xxxx
+
+xx
+
+xxxx
+
+xxx
+
+Patient Medical Patient State Pregnancy Status Medical Alerts Allergies Special Needs
+
+(0038,0500)(0010,21C0)(0010,2000)(0010,2110)(0038,0050)
+
+LOUSLOLOLO
+
+xxxxx
+
+xxxxx
+
+The above table should be read as follows:
+
+Module Name: The name of the associated module for supported worklist attributes.
+
+Attribute Name: Attributes supported to build an feel-DRCS Worklist Request Identifier.
+
+Tag: DICOM tag for this attribute.
+
+VR: DICOM VR for this attribute.
+
+M: Matching keys for (automatic) Worklist Update. A "S" will indicate that feel-DRCS will supply an attribute value for Single Value Matching, a “R” will indicate Range Matching and a “*” will denote wildcard matching. It can be configured if “Scheduled Station AE Title” is additionally supplied “(S)” and if Modality is set to CR or DX
+
+R: Return keys. An "x" will indicate that feel-DRCS will supply this attribute as Return Key with zero length for Universal Matching. The feel-DRCS will support retired date format (yyyy.mm.dd) for "Patient’s Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components is supported.
+
+Q: Interactive Query Key. An “x” " will indicate that feel-DRCS will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
+
+D: Displayed keys. An “x” indicates that this worklist attribute is displayed to the user during a patient registration dialog. For example, Patient Name will be displayed when registering the patient prior to an examination.
+
+IOD: An "x" indicates that this Worklist attribute is included into all Object Instances created during performance of the related Procedure Step.
+
+The default Query Configuration is set to "Modality" (CR or DX) and "Date" (date of today). Optionally, additional matching for the own AET is configurable.
+
+ANNEX C – MPPS AE Attributes
+
+Attribute Name
+
+Tag
+
+VR
+
+N-CREATE
+
+Specific Character Set
+
+(0008,0005)
+
+CS
+
+Zero Lenght(Required if an extended or replacement character set is used : “ISO_IR 6”)
+
+Modality
+
+(0008,0060)
+
+CS
+
+CR or DX(User selectable in Configuration mode)
+
+Procedure Code Sequence
+
+(0008,1032)
+
+SQ
+
+Zero length
+
+Referenced Patient Sequence
+
+(0008,1120)
+
+SQ
+
+Zero length
+
+Patient’s Name
+
+(0010,0010)
+
+PN
+
+From Modality Worklist or user input (all 5 components). The user can modify values provided via Modality Worklist.
+
+Patient ID
+
+(0010,0020)
+
+LO
+
+From Modality Worklist or user input. The user can modify values provided via Modality Worklist.
+
+Patient’s Birth Date
+
+(0010,0030)
+
+DA
+
+Zero length
+
+Patient’s Sex
+
+(0010,0040)
+
+CS
+
+From Modality Worklist or user input. The user can modify values provided via Modality Worklist.
+
+Study ID
+
+(0020,0010)
+
+SH
+
+From Modality Worklist or user input. The user can modify values provided via Modality Worklist.
+
+Performed Station AE Title
+
+(0040,0241)
+
+AE
+
+MPPS AE Title, User Define
+
+Performed Station Name
+
+(0040,0242)
+
+SH
+
+“feel” Fixed value
+
+Performed Location
+
+(0040,0243)
+
+SH
+
+Zero Length
+
+Performed Procedure Step Start Date
+
+(0040,0244)
+
+DA
+
+Actual start date
+
+Performed Procedure Step Start Time
+
+(0040,0245)
+
+TM
+
+Actual start time
+
+Performed Procedure Step End Date
+
+(0040,0250)
+
+DA
+
+Zero length
+
+Performed Procedure Step End Time
+
+(0040,0251)
+
+TM
+
+Zero length
+
+Performed Procedure Step Status
+
+(0040,0252)
+
+CS
+
+IN PROGRESS/DISCONTINUED/COMPLETE
+
+Performed Procedure Step ID
+
+(0040,0253)
+
+SH
+
+Automatically created but can be modified by the user.
+
+Performed Procedure Step Description
+
+(0040,0254)
+
+LO
+
+Zero length
+
+Performed Procedure Type Description
+
+(0040,0255)
+
+LO
+
+Zero length
+
+Performed Protocol Code Sequence
+
+(0040,0260)
+
+SQ
+
+Zero length
+
+Scheduled Step Attributes Sequence
+
+(0040,0270)
+
+SQ
+
+If 1st dose applied results in an Instance
+
+> Accession Number
+
+(0008,0050)
+
+SH
+
+Zero length
+
+> Referenced Study Sequence
+
+(0008,1110)
+
+SQ
+
+Zero length
+
+> Study Instance UID
+
+(0020,000D)
+
+UI
+
+From Modality Worklist or Local creation
+
+> Requested Procedure Description
+
+(0032,1060)
+
+LO
+
+Zero length
+
+> Scheduled Procedure Step Description
+
+(0040,0007)
+
+LO
+
+Zero length
+
+> Scheduled Protocol Code Sequence
+
+(0040,0008)
+
+SQ
+
+Zero length
+
+> Scheduled Procedure Step ID
+
+(0040,0009)
+
+SH
+
+Zero length
+
+> Requested Procedure ID
+
+(0040,1001)
+
+SH
+
+Zero length
+
+Performed Series Sequence
+
+(0040,0340)
+
+SQ
+
+if 1st dose applied results in an instance
+
+ANNEX D – Attribute Mapping between Modality Worklist, Image and MPPS
+
+Modality Worklist
+
+Image IOD
+
+MPPS IOD
+
+Patient Name
+
+Patient Name
+
+Patient Name
+
+Patient ID
+
+Patient ID
+
+Patient ID
+
+Patient’s Birth Date
+
+Patient’s Birth Date
+
+Patient’s Birth Date
+
+Patient’s Sex
+
+Patient’s Sex
+
+Patient’s Sex
+
+Patient’s Weight
+
+Patient’s Weight
+
+Referring Physician’s Name
+
+Referring Physician’s Name
+
+----
+
+----
+
+Scheduled Step Attributes Sequence
+
+Study Instance UID
+
+Study Instance UID
+
+>Study Instance UID
+
+Referenced Study Sequence
+
+Referenced Study Sequence
+
+>Referenced Study Sequence
+
+Accession Number
+
+Accession Number
+
+>Accession Number
+
+----
+
+Request Attributes Sequence
+
+----
+
+Requested Procedure ID
+
+>Requested Procedure ID
+
+>Requested Procedure ID
+
+Requested Procedure Description
+
+>Requested Procedure Description
+
+Scheduled Procedure Step ID
+
+>Scheduled Procedure Step ID
+
+>Scheduled Procedure Step ID
+
+Scheduled Procedure Step Description
+
+>Scheduled Procedure Step Description
+
+>Scheduled Procedure Step Description
+
+Scheduled Protocol Code Sequence
+
+>Scheduled Protocol Code Sequence
+
+----
+
+----
+
+Performed Protocol Code Sequence
+
+Performed Protocol Code Sequence
+
+----
+
+Study ID
+
+Study ID
+
+----
+
+Performed Procedure Step ID
+
+Performed Procedure Step ID
+
+----
+
+Performed Procedure Step Start Date
+
+Performed Procedure Step Start Date
+
+----
+
+Performed Procedure Step Start Time
+
+Performed Procedure Step Start Time
+
+----
+
+Performed Procedure Step Description
+
+Performed Procedure Step Description
+
+----
+
+Comments on the Performed Procedure Step
+
+Comments on the Performed Procedure Step
+
+----
+
+----
+
+Performed Series Sequence
+
+Scheduled Performing Physician’s Name
+
+Performing Physician’s Name
+
+>Performing Physician’s Name
+
+Requested Procedure Code Sequence
+
+----
+
+Procedure Code Sequence
+
+----
+
+Referenced Study Component Sequence
+
+----
+
+----
+
+>Referenced SOP Class UID
+
+SOP Class UID
+
+----
+
+>Referenced SOP Instance UID
+
+SOP Instance UID
+
+----
+
+Protocol Name
+
+Protocol Name
+
+Note : This table is a only referring table. If you want to know our value of MPPS AE Attribute, pls check ANNEX C.
+
+ANNEX E – Print AE Attribute
+
+BASIC FILM SESSION PRESENTATION MODULE ATTRIBUTES
+
+Attribute name
+
+Tag
+
+Default Value
+
+Number of Copies
+
+(2000,0010)
+
+1
+
+Print Priority
+
+(2000,0020)
+
+MED
+
+Medium Type
+
+(2000,0030)
+
+BLUE FILM
+
+Film Destination
+
+(2000,0040)
+
+MAGAZINE
+
+Film Session Label
+
+(2000,0050)
+
+Memory Allocation
+
+(2000,0060)
+
+Owner ID
+
+(2100,0160)
+
+BASIC FILM SESSION RELATIONSHIP MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Referenced Film Box Sequence
+
+(2000,0500)
+
+BASIC FILM BOX PRESENTATION MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Image Display Format
+
+(2010,0010)
+
+Standard\C,R – Configurable
+
+Annotation Display Format ID
+
+(2010,0030)
+
+Film Orientation
+
+(2010,0040)
+
+PORTRAIT = vertical film position
+
+Film Size ID
+
+(2010,0050)
+
+14 X 17 IN
+
+Magnification Type
+
+(2010,0060)
+
+CUBIC
+
+Smoothing Type
+
+(2010,0080)
+
+CUBIC
+
+Border Density
+
+(2010,0100)
+
+BLACK
+
+Empty Image Density
+
+(2010,0110)
+
+BLACK
+
+Min Density
+
+(2010,0120)
+
+0
+
+Max Density
+
+(2010,0130)
+
+4095
+
+Trim
+
+(2010,0140)
+
+NO
+
+Configuration Information
+
+(2010,0150)
+
+Illumination
+
+(2010,015E)
+
+Reflected Ambient Light
+
+(2010,0160)
+
+Requested Resolution ID
+
+(2020,0050)
+
+ICC Profile
+
+(0028,2000)
+
+BASIC FILM BOX RELATIONSHIP MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Referenced Film Session Sequence
+
+(2010,0500)
+
+Referenced Image Box Sequence
+
+(2010,0510)
+
+Referenced Basic Annotation Box Sequence
+
+(2010,0520)
+
+Referenced Presentation LUT Sequence
+
+(2050,0500)
+
+IMAGE BOX PIXEL PRESENTATION MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Image Box Position
+
+(2020,0010)
+
+Polarity
+
+(2020,0020)
+
+Magnification Type
+
+(2010,0060)
+
+Smoothing Type
+
+(2010,0080)
+
+Configuration Information
+
+(2010,0150)
+
+Requested Image Size
+
+(2020,0030)
+
+Requested Decimate/Crop Behavior
+
+(2020,0040)
+
+Basic Grayscale Image Sequence
+
+(2020,0110)
+
+>Samples Per Pixel
+
+(0028,0002)
+
+>Photometric Interpretation
+
+(0028,0004)
+
+>Rows
+
+(0028,0010)
+
+>Columns
+
+(0028,0011)
+
+>Pixel Aspect Ratio
+
+(0028,0034)
+
+>Bits Allocated
+
+(0028,0100)
+
+>Bits Stored
+
+(0028,0101)
+
+>High Bit
+
+(0028,0102)
+
+>Pixel Representation
+
+(0028,0103)
+
+>Pixel Data
+
+(7FE0,0010)
+
+Basic Color Image Sequence
+
+(2020,0111)
+
+>Samples Per Pixel
+
+(0028,0002)
+
+>Photometric Interpretation
+
+(0028,0004)
+
+>Planar Configuration
+
+(0028,0006)
+
+>Rows
+
+(0028,0010)
+
+>Columns
+
+(0028,0011)
+
+>Pixel Aspect Ratio
+
+(0028,0034)
+
+>Bits Allocated
+
+(0028,0100)
+
+>Bits Stored
+
+(0028,0101)
+
+>High Bit
+
+(0028,0102)
+
+>Pixel Representation
+
+(0028,0103)
+
+>Pixel Data
+
+(7FE0,0010)
+
+BASIC ANNOTATION PRESENTATION MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Annotation Position
+
+(2030,0010)
+
+Text String
+
+(2030,0020)
+
+PRINT JOB MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Execution Status
+
+(2100,0020)
+
+Execution Status Info
+
+(2100,0030)
+
+Creation Date
+
+(2100,0040)
+
+Creation Time
+
+(2100,0050)
+
+Print Priority
+
+(2000,0020)
+
+Printer Name
+
+(2110,0030)
+
+Originator
+
+(2100,0070)
+
+PRINTER MODULE ATTRIBUTES
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Printer Status
+
+(2110,0010)
+
+Printer Status Info
+
+(2110,0020)
+
+Printer Name
+
+(2110,0030)
+
+Manufacturer
+
+(0008,0070)
+
+Manufacturer Model Name
+
+(0008,1090)
+
+Device Serial Number
+
+(0018,1000)
+
+Software Versions
+
+(0018,1020)
+
+Date Of Last Calibration
+
+(0018,1200)
+
+Time Of Last Calibration
+
+(0018,1201)
+
+PRINTER CONFIGURATION MODULE
+
+Attribute Name
+
+Tag
+
+Default Value
+
+Printer Configuration Sequence
+
+(2000,001E)
+
+>SOP Classes Supported
+
+(0008,115A)
+
+>Maximum Memory Allocation
+
+(2000,0061)
+
+>Memory Bit Depth
+
+(2000,00A0)
+
+>Printing Bit Depth
+
+(2000,00A1)
+
+>Media Installed Sequence
+
+(2000,00A2)
+
+>>Item Number
+
+(0020,0019)
+
+>>Medium Type
+
+(2000,0030)
+
+>>Film Size ID
+
+(2010,0050)
+
+>>Min Density
+
+(2010,0120)
+
+>>Max Density
+
+(2010,0130)
+
+>Other Media Available Sequence
+
+(2000,00A4)
+
+>>Medium Type
+
+(2000,0030)
+
+>>Film Size ID
+
+(2010,0050)
+
+>>Min Density
+
+(2010,0120)
+
+>>Max Density
+
+(2010,0130)
+
+>Supported Image Display Formats Sequence
+
+(2000,00A8)
+
+>>Rows
+
+(0028,0010)
+
+>>Columns
+
+(0028,0011)
+
+>>Image Display Format
+
+(2010,0010)
+
+>>Film Orientation
+
+(2010,0040)
+
+>>Film Size ID
+
+(2010,0050)
+
+>>Printer Resolution ID
+
+(2010,0052)
+
+>>Printer Pixel Spacing
+
+(2010,0376)
+
+>>Requested Image Size Flag
+
+(2020,00A0)
+
+>Default Printer Resolution ID
+
+(2010,0054)
+
+>Default Magnification Type
+
+(2010,00A6)
+
+>Other Magnification Types Available
+
+(2010,00A7)
+
+>Default Smoothing Type
+
+(2010,00A8)
+
+>Other Smoothing Types Available
+
+(2010,00A9)
+
+>Configuration Information Description
+
+(2010,0152)
+
+>Maximum Collated Films
+
+(2010,0154)
+
+>Decimate/Crop Result
+
+(2020,00A2)
+
+ANNEX F – STORAGE COMMITEMENT Attribute
+
+Attribute Name
+
+Tag
+
+Transaction UID
+
+(0008,1195)
+
+Retrieve AE Title
+
+(0008,0054)
+
+Storage Media File-Set ID
+
+(0088,0130)
+
+Storage Media File-Set UID
+
+(0088,0140)
+
+Referenced SOP Sequence
+
+(0008,1199)
+
+>Retrieve AE Title
+
+(0008,0054)
+
+>Storage Media File-Set ID
+
+(0088,0130)
+
+>Storage Media File-Set UID
+
+(0088,0140)
+
+Failed SOP Sequence
+
+(0008,1198)
+
+>Failure Reason
+
+(0008,1197)

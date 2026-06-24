@@ -308,3 +308,14 @@ Latest P1 extraction bundle:
 
 Next step: commit/push the P1 ranks 1-100 extraction checkpoint, then continue
 with the next P1 representative rank range.
+
+Latest P1 extraction bundle queued next:
+
+- bundle: `reports/p1-pilot-eval-p1-r101-r200-202606242001`
+- script: `scripts/prepare-priority-pilot-eval.js`
+- representative rank range: 101-200
+- selected representatives: 100
+- total available P1 representatives: 2,275
+- total normalized chars: 6,199,536
+- estimated tokens chars/4: 1,549,884
+- output status: extraction not started at this checkpoint

@@ -222,3 +222,11 @@ Latest P1 extraction bundle:
   missing evidence 0, page marker leakage 0
 - note: rank 9 and rank 34 required chunked fallback because their source text
   exceeded the Codex CLI context window
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r101-r200-202606242001`
+- rank range: 101-200
+- selected representatives: 100
+- total normalized chars: 6,199,536
+- extraction status: not started at this checkpoint

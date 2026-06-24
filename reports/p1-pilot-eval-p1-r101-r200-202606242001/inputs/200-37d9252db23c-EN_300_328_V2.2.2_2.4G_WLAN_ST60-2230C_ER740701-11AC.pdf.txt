@@ -1,0 +1,2577 @@
+queueId: ingest-1781569954407-wh1
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/EN_60SIPT-602230C/EN 300 328 V2.2.2_2.4G WLAN_ST60-2230C_ER740701-11AC.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/bc1938ffafab/EN 300 328 V2.2.2_2.4G WLAN_ST60-2230C_ER740701-11AC__bc1938ffafab_combined.txt
+canonicalGroupId: 37d9252db23c
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 200
+
+SOURCE_TEXT
+Report No.: ER740701-11AC Page : 1 of 220
+Report Version: Rev. 01
+CE Test Report
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+(Please refer to section 1.1.1 for more details)
+Model No. : ST60-2230C
+(Please refer to section 1.1.1 for more details)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : EN 300 328 V2.2.2 (2019-07)
+Received Date : Jun. 05, 2020
+Tested Date : Apr. 24 ~ Jun. 01, 2017 (for original test)
+Jun. 05, 2020 (for new test)
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: ER740701-11AC Page : 2 of 220
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List ................................................................................................................ 9
+1.3 Test Setup Chart .................................................................................................................................. 10
+1.4 Test Equipment List and Calibration Data............................................................................................ 11
+1.5 Testing Applied Standards ................................................................................................................... 13
+1.6 Deviation from Test Standard and Measurement Procedure............................................................... 13
+1.7 Measurement Uncertainty .................................................................................................................... 13
+2 TEST CONFIGURATION ..................................................................................................................... 14
+2.1 Testing Condition ................................................................................................................................. 14
+2.2 Testing Facility ..................................................................................................................................... 14
+2.3 The Worst Test Modes and Channel Details ....................................................................................... 15
+3 TRANSMITTER TEST RESULTS ....................................................................................................... 16
+3.1 RF Output Power .................................................................................................................................. 16
+3.2 Power Spectral Density ........................................................................................................................ 23
+3.3 Occupied Channel Bandwidth .............................................................................................................. 25
+3.4 Transmitter Unwanted Emissions in the Out-Of-Band Domain............................................................ 27
+3.5 Transmitter Unwanted Emissions in the Spurious Domain .................................................................. 40
+4 RECEIVER TEST RESULTS .............................................................................................................138
+4.1 Receiver Spurious Emissions.............................................................................................................138
+5 ADAPTIVITY TEST RESULTS ..........................................................................................................204
+5.1 Adaptivity and Unwanted Signal Parameters .....................................................................................204
+6 RECEIVER BLOCKING TEST RESULTS.........................................................................................210
+6.1 Receiver Blocking ...............................................................................................................................210
+7 PHOTOGRAPHS OF THE TEST CONFIGURATION .......................................................................215
+8 TEST LABORATORY INFORMATION .............................................................................................220
+
+Report No.: ER740701-11AC Page : 3 of 220
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+ER740701-11AC Rev. 01 Initial issue Feb. 25, 2021
+
+Report No.: ER740701-11AC Page : 4 of 220
+Report Version: Rev. 01
+Summary of Test Results
+Ref. Std.
+Clause Test Items Measured Result
+4.3.2.2 RF Output Power 19.86 dBm. Pass
+4.3.2.3 Power Spectral Density Meet the requirement of limit. Pass
+4.3.2.4 Duty Cycle, Tx-sequence, Tx-gap Only for non-adaptive equipment. N/A
+4.3.2.5 Medium Utilisation (MU) factor Only for non-adaptive equipment. N/A
+4.3.2.6 Adaptivity Meet the requirement of limit. Pass
+4.3.2.7 Occupied Channel Bandwidth Meet the requirement of limit. Pass
+4.3.2.8 Transmitter unwanted emissions in the
+out of band domain Meet the requirement of limit. Pass
+4.3.2.9 Transmitter unwanted emissions in the
+spurious domain Meet the requirement of limit. Pass
+4.3.2.10 Receiver spurious emissions Meet the requirement of limit. Pass
+4.3.2.11 Receiver Blocking Meet the requirement of limit. Pass
+4.3.2.12 Geo-location Capability The device has no this capability. N/A
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: ER740701-11AC Page : 5 of 220
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. ER740701-08AC. The modification
+is
+1. Additional model and product names
+2. Resistance of CONFIG_HOST0/1/2 are different to switch interface
+3. Update to the latest SW version
+After verification, above changes does not impact to original test results. Thus test results remain the same.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module with carrier board
+ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/UART interface PCIe/UART interface
+ST60-2230C-PU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/USB interface PCIe/USB interface
+ST60-2230C-SS 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module SDIO/SDIO Interface SDIO/SDIO Interface
+ST60-2230C-U 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/UART Interface USB/UART Interface
+ST60-2230C-UU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/USB interface USB/USB interface
+ST60-2230C-Q 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module,ST60-2230C-Q
+The difference
+between
+ST60-2230C and
+ST60-2230C-Q the
+OTP parameter is
+different for ID
+recognition. SW is
+exactly the same.
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+
+Report No.: ER740701-11AC Page : 6 of 220
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency
+Range (MHz)
+IEEE Std.
+802.11 Ch. Freq. (MHz) Channel
+Number
+Transmit
+Chains (NTX)
+Data Rate /
+MCS
+2400-2483.5 b 2412-2472 1-13 [13] 1 1-11 Mbps
+2 1-11 Mbps
+2400-2483.5 g 2412-2472 1-13 [13] 1 6-54 Mbps
+2 6-54 Mbps
+2400-2483.5 n (HT20) 2412-2472 1-13 [13]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+2400-2483.5 n (HT40) 2422-2462 3-11 [9]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+Note 1: 802.11b uses a combination of DSSS-DBPSK, DQPSK, CCK modulation.
+Note 2: 802.11g/n uses a combination of OFDM-BPSK, QPSK, 16QAM, 64QAM modulation.
+Note 3: The device supports TX antenna diversity function. The conducted power of single chain is same for
+1TX and 2TX operating mode. Therefore, Ant1 + Ant 2 configuration is chosen for final testing.
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+6
+Laird/MIMO
+FlexPIFA
+Antenna
+PIFA IPEX U.FL 2 3 3 3 3
+
+Report No.: ER740701-11AC Page : 7 of 220
+Report Version: Rev. 01
+1.1.4 EUT Operational Condition
+Power Supply Type DC 3.3V from host
+SW Version laird-backport-7.0.0.136 (only for ST60-2230C-UU)
+laird-backport-7.0.0.70 (others)
+Operational Climatic Tnom (20°C) Tmax (85°C) Tmin (-30°C)
+1.1.5 Accessories
+N/A
+1.1.6 Adaptive Equipment
+Adaptive Equipment
+non-Adaptive Equipment:
+The maximum RF Output Power (e.i.r.p.): dBm
+The maximum (corresponding) Duty Cycle: %
+Adaptive Equipment without the possibility to switch to a non-adaptive mode:
+The equipment has implemented an LBT based DAA mechanism:
+The equipment is Frame Based equipment
+The equipment is Load Based equipment
+The equipment can switch dynamically between Frame Based and Load Based equipment
+The equipment has implemented an non-LBT based DAA mechanism
+The equipment can operate in more than one adaptive mode
+Adaptive Frequency Hopping using other forms of DAA (non-LBT based)/without Short Control
+Signaling Transmissions
+Adaptive Equipment which can also operate in a non-adaptive mode
+
+Report No.: ER740701-11AC Page : 8 of 220
+Report Version: Rev. 01
+1.1.7 Channel List
+Frequency band (MHz) 2400~2483.5
+802.11 b / g / n HT20 802.11n HT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+1 2412 3 2422
+2 2417 4 2427
+3 2422 5 2432
+4 2427 6 2437
+5 2432 7 2442
+6 2437 8 2447
+7 2442 9 2452
+8 2447 10 2457
+9 2452 11 2462
+10 2457 --- ---
+11 2462 --- ---
+12 2467 --- ---
+13 2472 --- ---
+1.1.8 Test Tool and Duty Cycle
+Test tool Command
+Duty Cycle Of Test Signal (%)
+100% - IEEE 802.11b
+100% - IEEE 802.11g
+100% - IEEE 802.11n (HT20)
+100% - IEEE 802.11n (HT40)
+Duty Factor
+0.00 - IEEE 802.11b
+0.00 - IEEE 802.11g
+0.00 - IEEE 802.11n (HT20)
+0.00 - IEEE 802.11n (HT40)
+
+Report No.: ER740701-11AC Page : 9 of 220
+Report Version: Rev. 01
+1.1.9 Power Setting
+Configuration 1 : Dipole Antenna
+Modulation Mode
+Test Frequency (MHz)
+b / g / n HT20 n HT40
+2412 2442 2472 2422 2442 2462
+b 14 14 14 --- --- ---
+g 14 14 14 --- --- ---
+n (HT20) 14 14 14 --- --- ---
+n (HT40) --- --- --- 14 14 14
+Configuration 2 : PCB Dipole Antenna
+Modulation Mode
+Test Frequency (MHz)
+b / g / n HT20 n HT40
+2412 2442 2472 2422 2442 2462
+b 13 13 13 --- --- ---
+g 13 13 13 --- --- ---
+n (HT20) 13 13 13 --- --- ---
+n (HT40) --- --- --- 13 13 13
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation Mode
+Test Frequency (MHz)
+b / g / n HT20 n HT40
+2412 2442 2472 2422 2442 2462
+b 13 13 13 --- --- ---
+g 13 13 13 --- --- ---
+n (HT20) 13 13 13 --- --- ---
+n (HT40) --- --- --- 13 13 13
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 1m non-shielded
+2 Notebook Lenovo T430 DoC RJ45, 1m non-shielded
+3 Fixture --- --- --- ---
+4 AP D-LINK DIR-818LW --- ---
+Note: No2 and 3 were provided by applicant.
+
+Report No.: ER740701-11AC Page : 10 of 220
+Report Version: Rev. 01
+1.3 Test Setup Chart
+Test Setup Diagram
+
+Report No.: ER740701-11AC Page : 11 of 220
+Report Version: Rev. 01
+1.4 Test Equipment List and Calibration Data
+Test Item Radiated Emissions
+Test Site Fully-anechoic chamber 2 / (05CH02-WS)
+Tested Date Apr. 25, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer Agilent N9010A MY52221474 Oct. 14, 2016 Oct. 13, 2017
+Bilog Antenna
+30-1000MHz SCHWARZBECK VULB9168 9168-563 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D 9120D-1205 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170508 Dec. 29, 2016 Dec. 28, 2017
+Preamplifier Agilent 83017A MY53270013 Jan. 10, 2017 Jan. 09, 2018
+Preamplifier
+30-1000MHz EMC EMC02325 980188 Dec. 13, 2016 Dec. 12, 2017
+Preamplifier EMC EMC184045B 980192 Aug. 24, 2016 Aug. 23, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22622/4 Dec. 13, 2016 Dec. 12, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22623/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22621/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX104 MY22579/4 Dec. 14, 2016 Dec. 13, 2017
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-002 Dec. 14, 2016 Dec. 13, 2017
+LF cable-3M EMC EMC8D-NM-NM-3000 131102 Dec. 14, 2016 Dec. 13, 2017
+LF cable-10M EMC EMC8D-NM-NM-10000 131101 Dec. 14, 2016 Dec. 13, 2017
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: ER740701-11AC Page : 12 of 220
+Report Version: Rev. 01
+Test Item RF Conducted
+Test Site (TH01-WS)
+Tested Date May 06, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Mar. 15, 2017 Mar. 14, 2018
+Spectrum Analyzer Agilent N9010A MY53400091 Sep. 09, 2016 Sep. 08, 2017
+TEMP&HUMIDITY
+CHAMBER GIANT FORCE GCT-225-40-SP-SD MAF1212-002 Nov. 21, 2016 Nov. 20, 2017
+Power Meter Anritsu ML2495A 1241002 Oct. 06, 2016 Oct. 05, 2017
+Power Sensor Anritsu MA2411B 1207366 Oct. 06, 2016 Oct. 05, 2017
+Signal Generator R&S SMB100A 175727 Oct. 19, 2016 Oct. 18, 2017
+Radio
+Communication
+Analyzer
+Anritsu MT8820C 6201465544 Aug. 19, 2016 Aug. 18, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53050081 Apr. 15, 2017 Apr. 14, 2018
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 20, 2016 Oct. 19, 2017
+AC POWER
+SOURCE APC AFC-500W F312060012 Oct. 28, 2016 Oct. 27, 2017
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Adaptivity
+Test Site (TH01-WS)
+Tested Date Jun. 01, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Keysight N9010A MY54200247 Aug. 30, 2016 Aug. 29, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX_104 MY15686/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.5M HUBER+SUHNER SUCOFLEX_104 296081/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329021/4 Dec. 16, 2016 Dec. 15, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53051912 Nov. 21, 2016 Nov. 20, 2017
+Preamplifier Burgeon BPA-530 100219 Nov. 02, 2016 Nov. 01, 2017
+Oscilloscope National Instruments USB-5133 F651FF Jun. 22, 2016 Jun. 21, 2017
+Measurement
+Software Sporton Sporton_3 2.2.0.0 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: ER740701-11AC Page : 13 of 220
+Report Version: Rev. 01
+Test Item Receiver Blocking
+Test Site (05CH02-WS)
+Tested Date Jun. 05, 2020
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Wireless
+connectivity tester ROHDE&SCHWARZ CMW270 100856 Oct. 24, 2019 Oct. 23, 2020
+Signal Generator ROHDE&SCHWARZ SMB100A 175727 Dec. 27, 2019 Dec. 26, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 500202/4 Oct. 16, 2019 Oct. 15, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 296088/4 Oct. 16, 2019 Oct. 15, 2020
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Oct. 16, 2019 Oct. 15, 2020
+Combiner(1X2) WOKEN 2WAYDIV 12101200003 Oct. 16, 2019 Oct. 15, 2020
+Note: Calibration Interval of instruments listed above is one year.
+1.5 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+EN 300 328 V2.2.2 (2019-07)
+1.6 Deviation from Test Standard and Measurement Procedure
+None
+1.7 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty Limit
+Occupied Channel Bandwidth ±0.0034 % ±5 %
+RF output power, conducted ±0.537 dB ±1.5 dB
+Power Spectral Density, conducted ±0.463 dB ±3 dB
+Unwanted Emissions, conducted ±2.505 dB ±3 dB
+All emissions, radiated ±3.401 dB ±6 dB
+Temperature ±0.6 oC ±3 °C
+Supply voltages ±0.16 % ±3 %
+Time ±0.1 % ±5 %
+
+Report No.: ER740701-11AC Page : 14 of 220
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+RF Conducted TH01-WS 23°C / 62% Jack Li
+Radiated Emission 05CH02-WS 24°C / 65% Penguin Jiang
+Adaptivity TH01-WS 23°C / 67% Jack Li
+Receiver Blocking 05CH02-WS 25°C / 65% Ryan Lee
+2.2 Testing Facility
+Test Laboratory International Certification Corp.
+Test Site TH01-WS
+Address of Test Site
+(Kwei Shan)
+No. 3-1, Lane 6, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333, Taiwan,
+R.O.C.
+Test Laboratory International Certification Corp.
+Test Site 05CH02-WS
+Address of Test Site
+(Kwei Shan II)
+No. 14-1, Lane 19, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333,
+Taiwan, R.O.C.
+
+Report No.: ER740701-11AC Page : 15 of 220
+Report Version: Rev. 01
+2.3 The Worst Test Modes and Channel Details
+Test item Modulation
+Mode
+Test Frequency
+(MHz) Data Rate Test
+Configuration
+RF Output Power
+Power Spectral Density
+11b
+11g
+HT20
+HT40
+2412 / 2442 / 2472
+2412 / 2442 / 2472
+2412 / 2442 / 2472
+2422 / 2442 / 2462
+1 Mbps
+6 Mbps
+MCS 0
+MCS 0
+1, 2, 3, 4
+Occupied Channel Bandwidth
+Transmitter unwanted emissions in the out
+of band domain
+11b
+11g
+HT20
+HT40
+2412 / 2472
+2412 / 2472
+2412 / 2472
+2422 / 2462
+1 Mbps
+6 Mbps
+MCS 0
+MCS 0
+1, 2, 3, 4
+Transmitter Spurious Emissions
+≤ 1GHz
+11g
+HT40
+2412 / 2472
+2422 / 2462
+6 Mbps
+MCS 0 1, 2, 3, 4
+Transmitter Spurious Emissions
+> 1GHz
+11b
+11g
+HT20
+HT40
+2412 / 2472
+2412 / 2472
+2412 / 2472
+2422 / 2462
+1 Mbps
+6 Mbps
+MCS 0
+MCS 0
+1, 2, 3, 4
+Receiver Spurious Emissions 11g
+HT40
+2412 / 2472
+2422 / 2462
+6 Mbps
+MCS 0 1, 2, 3, 4
+Adaptivity
+11b
+11g
+HT20
+HT40
+2412 / 2472
+2412 / 2472
+2412 / 2472
+2422 / 2462
+1 Mbps
+6 Mbps
+MCS 0
+MCS 0
+1
+Receiver Blocking 11b 2412 / 2472 1 Mbps 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y,
+and Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The device can be operated under adapter mode and charging mode. Each mode was selected for related
+test items as below configuration.
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4: Isolated Magnetic Dipole Antenna
+
+Report No.: ER740701-11AC Page : 16 of 220
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 RF Output Power
+3.1.1 Limit of RF Output Power
+For adaptive equipment using wide band modulations other than FHSS, the maximum RF output power shall
+be 20 dBm.
+3.1.2 Test Procedures
+Reference to clause 5.4.2.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.1.3 Test Setup
+
+Report No.: ER740701-11AC Page : 17 of 220
+Report Version: Rev. 01
+3.1.4 Test Result of RF Output Power
+Configuration 1 : Dipole Antenna
+RF Output Power (dBm)
+Modulation Mode 11b/1Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.96 20 Pass
+TminVnom 2412 19.68 20 Pass
+TmaxVnom 2412 18.43 20 Pass
+TnomVnom 2442 18.89 20 Pass
+TminVnom 2442 19.69 20 Pass
+TmaxVnom 2442 18.23 20 Pass
+TnomVnom 2472 18.95 20 Pass
+TminVnom 2472 19.79 20 Pass
+TmaxVnom 2472 18.28 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode 11g/6Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.89 20 Pass
+TminVnom 2412 19.70 20 Pass
+TmaxVnom 2412 18.24 20 Pass
+TnomVnom 2442 18.96 20 Pass
+TminVnom 2442 19.80 20 Pass
+TmaxVnom 2442 18.33 20 Pass
+TnomVnom 2472 18.97 20 Pass
+TminVnom 2472 19.71 20 Pass
+TmaxVnom 2472 18.42 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 18 of 220
+Report Version: Rev. 01
+RF Output Power (dBm)
+Modulation Mode HT20/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 19.04 20 Pass
+TminVnom 2412 19.85 20 Pass
+TmaxVnom 2412 18.28 20 Pass
+TnomVnom 2442 19.02 20 Pass
+TminVnom 2442 19.86 20 Pass
+TmaxVnom 2442 18.27 20 Pass
+TnomVnom 2472 19.04 20 Pass
+TminVnom 2472 19.78 20 Pass
+TmaxVnom 2472 18.35 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode HT40/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2422 18.92 20 Pass
+TminVnom 2422 19.66 20 Pass
+TmaxVnom 2422 18.13 20 Pass
+TnomVnom 2442 18.93 20 Pass
+TminVnom 2442 19.56 20 Pass
+TmaxVnom 2442 18.06 20 Pass
+TnomVnom 2462 18.91 20 Pass
+TminVnom 2462 19.52 20 Pass
+TmaxVnom 2462 18.10 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 19 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+RF Output Power (dBm)
+Modulation Mode 11b/1Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.81 20 Pass
+TminVnom 2412 19.53 20 Pass
+TmaxVnom 2412 18.28 20 Pass
+TnomVnom 2442 18.78 20 Pass
+TminVnom 2442 19.58 20 Pass
+TmaxVnom 2442 18.12 20 Pass
+TnomVnom 2472 18.71 20 Pass
+TminVnom 2472 19.55 20 Pass
+TmaxVnom 2472 18.04 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode 11g/6Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.71 20 Pass
+TminVnom 2412 19.52 20 Pass
+TmaxVnom 2412 18.06 20 Pass
+TnomVnom 2442 18.73 20 Pass
+TminVnom 2442 19.57 20 Pass
+TmaxVnom 2442 18.10 20 Pass
+TnomVnom 2472 18.76 20 Pass
+TminVnom 2472 19.50 20 Pass
+TmaxVnom 2472 18.21 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 20 of 220
+Report Version: Rev. 01
+RF Output Power (dBm)
+Modulation Mode HT20/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.93 20 Pass
+TminVnom 2412 19.74 20 Pass
+TmaxVnom 2412 18.17 20 Pass
+TnomVnom 2442 18.86 20 Pass
+TminVnom 2442 19.70 20 Pass
+TmaxVnom 2442 18.11 20 Pass
+TnomVnom 2472 18.85 20 Pass
+TminVnom 2472 19.59 20 Pass
+TmaxVnom 2472 18.16 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode HT40/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2422 18.77 20 Pass
+TminVnom 2422 19.51 20 Pass
+TmaxVnom 2422 17.98 20 Pass
+TnomVnom 2442 18.76 20 Pass
+TminVnom 2442 19.39 20 Pass
+TmaxVnom 2442 17.89 20 Pass
+TnomVnom 2462 18.78 20 Pass
+TminVnom 2462 19.39 20 Pass
+TmaxVnom 2462 17.97 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 21 of 220
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+RF Output Power (dBm)
+Modulation Mode 11b/1Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.52 20 Pass
+TminVnom 2412 19.24 20 Pass
+TmaxVnom 2412 17.99 20 Pass
+TnomVnom 2442 18.49 20 Pass
+TminVnom 2442 19.29 20 Pass
+TmaxVnom 2442 17.83 20 Pass
+TnomVnom 2472 18.42 20 Pass
+TminVnom 2472 19.26 20 Pass
+TmaxVnom 2472 17.75 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode 11g/6Mbps
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.42 20 Pass
+TminVnom 2412 19.23 20 Pass
+TmaxVnom 2412 17.77 20 Pass
+TnomVnom 2442 18.44 20 Pass
+TminVnom 2442 19.28 20 Pass
+TmaxVnom 2442 17.81 20 Pass
+TnomVnom 2472 18.47 20 Pass
+TminVnom 2472 19.21 20 Pass
+TmaxVnom 2472 17.92 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 22 of 220
+Report Version: Rev. 01
+RF Output Power (dBm)
+Modulation Mode HT20/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2412 18.64 20 Pass
+TminVnom 2412 19.45 20 Pass
+TmaxVnom 2412 17.88 20 Pass
+TnomVnom 2442 18.57 20 Pass
+TminVnom 2442 19.41 20 Pass
+TmaxVnom 2442 17.82 20 Pass
+TnomVnom 2472 18.56 20 Pass
+TminVnom 2472 19.30 20 Pass
+TmaxVnom 2472 17.87 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+RF Output Power (dBm)
+Modulation Mode HT40/MCS 0
+Condition Freq. (MHz) EIRP Power Limit (dBm) Results
+TnomVnom 2422 18.48 20 Pass
+TminVnom 2422 19.22 20 Pass
+TmaxVnom 2422 17.69 20 Pass
+TnomVnom 2442 18.47 20 Pass
+TminVnom 2442 19.10 20 Pass
+TmaxVnom 2442 17.60 20 Pass
+TnomVnom 2462 18.49 20 Pass
+TminVnom 2462 19.10 20 Pass
+TmaxVnom 2462 17.68 20 Pass
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: ER740701-11AC Page : 23 of 220
+Report Version: Rev. 01
+3.2 Power Spectral Density
+3.2.1 Limit of Power Spectral Density
+For equipment using wide band modulations other than FHSS, the maximum Power Spectral Density is
+limited to 10 dBm per MHz.
+3.2.2 Test Procedures
+Reference to clause 5.4.3.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.2.3 Test Setup
+3.2.4 Test Result of Power Spectral Density
+Configuration 1 : Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+11b/1Mbps 2412 9.88 10 Pass
+11b/1Mbps 2442 9.83 10 Pass
+11b/1Mbps 2472 9.91 10 Pass
+11g/6Mbps 2412 7.81 10 Pass
+11g/6Mbps 2442 7.79 10 Pass
+11g/6Mbps 2472 7.76 10 Pass
+HT20/MCS 0 2412 7.38 10 Pass
+HT20/MCS 0 2442 7.34 10 Pass
+HT20/MCS 0 2472 7.37 10 Pass
+HT40/MCS 0 2422 4.40 10 Pass
+HT40/MCS 0 2442 4.43 10 Pass
+HT40/MCS 0 2462 4.39 10 Pass
+
+Report No.: ER740701-11AC Page : 24 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+11b/1Mbps 2412 9.81 10 Pass
+11b/1Mbps 2442 9.76 10 Pass
+11b/1Mbps 2472 9.78 10 Pass
+11g/6Mbps 2412 7.68 10 Pass
+11g/6Mbps 2442 7.58 10 Pass
+11g/6Mbps 2472 7.56 10 Pass
+HT20/MCS 0 2412 7.22 10 Pass
+HT20/MCS 0 2442 7.10 10 Pass
+HT20/MCS 0 2472 7.07 10 Pass
+HT40/MCS 0 2422 4.33 10 Pass
+HT40/MCS 0 2442 4.28 10 Pass
+HT40/MCS 0 2462 4.30 10 Pass
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation Mode Freq. (MHz) Power Density
+(dBm/1MHz)
+Limit
+(dBm/1MHz) Results
+11b/1Mbps 2412 9.56 10 Pass
+11b/1Mbps 2442 9.51 10 Pass
+11b/1Mbps 2472 9.48 10 Pass
+11g/6Mbps 2412 7.53 10 Pass
+11g/6Mbps 2442 7.54 10 Pass
+11g/6Mbps 2472 7.52 10 Pass
+HT20/MCS 0 2412 6.98 10 Pass
+HT20/MCS 0 2442 6.91 10 Pass
+HT20/MCS 0 2472 6.88 10 Pass
+HT40/MCS 0 2422 3.96 10 Pass
+HT40/MCS 0 2442 3.91 10 Pass
+HT40/MCS 0 2462 3.85 10 Pass
+
+Report No.: ER740701-11AC Page : 25 of 220
+Report Version: Rev. 01
+3.3 Occupied Channel Bandwidth
+3.3.1 Limit of Occupied Channel Bandwidth
+The Occupied Channel Bandwidth shall fall completely within 2.4~2.4835 GHz.
+In addition, for non-adaptive equipment using wide band modulations other than FHSS and with e.i.r.p
+greater than 10 dBm, the occupied channel bandwidth shall be less than 20 MHz.
+3.3.2 Test Procedures
+Reference to clause 5.4.7.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.3.3 Test Setup
+
+Report No.: ER740701-11AC Page : 26 of 220
+Report Version: Rev. 01
+3.3.4 Test Result of Occupied Channel Bandwidth
+Configuration 1 : Dipole Antenna
+Modulation
+Mode
+Frequency
+(MHz)
+99% Bandwidth
+(MHz)
+FL at 99% BW
+(MHz)
+FH at 99% BW
+(MHz)
+Limit FL / FH
+(MHz)
+11b/1Mbps 2412 13.83 2405.11 2418.94 2400.0
+11b/1Mbps 2472 13.71 2464.64 2478.36 2483.5
+11g/6Mbps 2412 17.36 2403.37 2420.74 2400.0
+11g/6Mbps 2472 17.13 2463.60 2480.74 2483.5
+HT20/MCS 0 2412 18.11 2403.08 2421.20 2400.0
+HT20/MCS 0 2472 17.71 2463.54 2481.26 2483.5
+HT40/MCS 0 2422 36.70 2403.70 2440.40 2400.0
+HT40/MCS 0 2462 36.58 2443.82 2480.40 2483.5
+Configuration 2 : PCB Dipole Antenna
+Modulation
+Mode
+Frequency
+(MHz)
+99% Bandwidth
+(MHz)
+FL at 99% BW
+(MHz)
+FH at 99% BW
+(MHz)
+Limit FL / FH
+(MHz)
+11b/1Mbps 2412 13.83 2405.11 2418.94 2400.0
+11b/1Mbps 2472 13.71 2464.64 2478.36 2483.5
+11g/6Mbps 2412 17.36 2403.37 2420.74 2400.0
+11g/6Mbps 2472 17.13 2463.60 2480.74 2483.5
+HT20/MCS 0 2412 18.11 2403.08 2421.20 2400.0
+HT20/MCS 0 2472 17.71 2463.54 2480.12 2483.5
+HT40/MCS 0 2422 36.70 2403.70 2440.40 2400.0
+HT40/MCS 0 2462 36.58 2443.82 2480.40 2483.5
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation
+Mode
+Frequency
+(MHz)
+99% Bandwidth
+(MHz)
+FL at 99% BW
+(MHz)
+FH at 99% BW
+(MHz)
+Limit FL / FH
+(MHz)
+11b/1Mbps 2412 13.83 2405.11 2418.94 2400.0
+11b/1Mbps 2472 13.71 2464.64 2478.36 2483.5
+11g/6Mbps 2412 17.36 2403.37 2420.74 2400.0
+11g/6Mbps 2472 17.13 2463.60 2480.74 2483.5
+HT20/MCS 0 2412 18.11 2403.08 2421.20 2400.0
+HT20/MCS 0 2472 17.71 2463.54 2480.12 2483.5
+HT40/MCS 0 2422 36.70 2403.70 2440.40 2400.0
+HT40/MCS 0 2462 36.58 2443.82 2480.40 2483.5
+
+Report No.: ER740701-11AC Page : 27 of 220
+Report Version: Rev. 01
+3.4 Transmitter Unwanted Emissions in the Out-Of-Band Domain
+3.4.1 Limit of Transmitter Unwanted Emissions in the Out-Of-Band Domain
+3.4.2 Test Procedures
+Reference to clause 5.4.8.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+3.4.3 Test Setup
+
+Report No.: ER740701-11AC Page : 28 of 220
+Report Version: Rev. 01
+3.4.4 Test Result of Transmitter Unwanted Emissions in the Out-Of-Band Domain
+Configuration 1 : Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11b/1Mbps 2412 2396.50 -36.13 -10.00
+TnomVnom 11b/1Mbps 2412 2385.67 -42.62 -20.00
+TnomVnom 11b/1Mbps 2472 2487.00 -36.13 -10.00
+TnomVnom 11b/1Mbps 2472 2497.71 -42.91 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 29 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11g/6Mbps 2412 2399.50 -34.17 -10.00
+TnomVnom 11g/6Mbps 2412 2382.14 -41.85 -20.00
+TnomVnom 11g/6Mbps 2472 2484.00 -30.74 -10.00
+TnomVnom 11g/6Mbps 2472 2501.13 -41.76 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 30 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT20/MCS 0 2412 2399.50 -33.76 -10.00
+TnomVnom HT20/MCS 0 2412 2381.39 -41.89 -20.00
+TnomVnom HT20/MCS 0 2472 2484.00 -32.48 -10.00
+TnomVnom HT20/MCS 0 2472 2501.71 -41.31 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 31 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT40/MCS 0 2422 2398.50 -29.10 -10.00
+TnomVnom HT40/MCS 0 2422 2362.80 -39.38 -20.00
+TnomVnom HT40/MCS 0 2462 2484.00 -34.40 -10.00
+TnomVnom HT40/MCS 0 2462 2520.58 -42.56 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 32 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11b/1Mbps 2412 2396.50 -35.37 -10.00
+TnomVnom 11b/1Mbps 2412 2385.67 -41.87 -20.00
+TnomVnom 11b/1Mbps 2472 2487.00 -35.39 -10.00
+TnomVnom 11b/1Mbps 2472 2497.71 -42.18 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 33 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11g/6Mbps 2412 2399.50 -33.38 -10.00
+TnomVnom 11g/6Mbps 2412 2382.14 -41.07 -20.00
+TnomVnom 11g/6Mbps 2472 2484.00 -29.97 -10.00
+TnomVnom 11g/6Mbps 2472 2501.13 -40.96 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 34 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT20/MCS 0 2412 2399.50 -33.03 -10.00
+TnomVnom HT20/MCS 0 2412 2381.39 -41.09 -20.00
+TnomVnom HT20/MCS 0 2472 2484.00 -31.82 -10.00
+TnomVnom HT20/MCS 0 2472 2501.71 -40.57 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 35 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT40/MCS 0 2422 2397.50 -28.28 -10.00
+TnomVnom HT40/MCS 0 2422 2362.80 -38.55 -20.00
+TnomVnom HT40/MCS 0 2462 2484.00 -33.60 -10.00
+TnomVnom HT40/MCS 0 2462 2520.58 -41.80 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 36 of 220
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna & Configuration 4: Isolated Magnetic Dipole Antenna
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11b/1Mbps 2412 2396.50 -36.55 -10.00
+TnomVnom 11b/1Mbps 2412 2385.67 -42.10 -20.00
+TnomVnom 11b/1Mbps 2472 2487.00 -35.69 -10.00
+TnomVnom 11b/1Mbps 2472 2510.42 -42.32 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 37 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom 11g/6Mbps 2412 2399.50 -33.68 -10.00
+TnomVnom 11g/6Mbps 2412 2382.14 -41.37 -20.00
+TnomVnom 11g/6Mbps 2472 2484.00 -30.30 -10.00
+TnomVnom 11g/6Mbps 2472 2501.13 -41.25 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 38 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT20/MCS 0 2412 2399.50 -32.86 -10.00
+TnomVnom HT20/MCS 0 2412 2381.39 -41.23 -20.00
+TnomVnom HT20/MCS 0 2472 2484.00 -31.96 -10.00
+TnomVnom HT20/MCS 0 2472 2501.71 -40.82 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 39 of 220
+Report Version: Rev. 01
+Condition Modulation
+Mode Freq. (MHz) OOB Freq.
+(MHz)
+OOB
+Emissions
+(dBm)
+Limit (dBm)
+TnomVnom HT40/MCS 0 2422 2397.50 -28.56 -10.00
+TnomVnom HT40/MCS 0 2422 2362.80 -38.87 -20.00
+TnomVnom HT40/MCS 0 2462 2484.00 -33.89 -10.00
+TnomVnom HT40/MCS 0 2462 2520.58 -42.09 -20.00
+Low Band Up Band
+
+Report No.: ER740701-11AC Page : 40 of 220
+Report Version: Rev. 01
+3.5 Transmitter Unwanted Emissions in the Spurious Domain
+3.5.1 Limit of Transmitter Unwanted Emissions in the Spurious Domain
+Frequency Range (MHz) Maximum power (dBm) Bandwidth (kHz)
+30 to 47 -36 100
+47 to 74 -54 100
+74 to 87,5 -36 100
+87,5 to 118 -54 100
+118 to 174 -36 100
+174 to 230 -54 100
+230 to 470 -36 100
+470 to 694 -54 100
+694 to 1000 -36 100
+1000 to 12750 -30 1000
+3.5.2 Test Procedures
+Reference to clause 5.4.9.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-11AC Page : 41 of 220
+Report Version: Rev. 01
+3.5.3 Test Setup
+Below 1GHz
+Above 1 GHz
+
+Report No.: ER740701-11AC Page : 42 of 220
+Report Version: Rev. 01
+Configuration 1 : Dipole Antenna
+3.5.4 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 43 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 44 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 45 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 46 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 47 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 48 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 49 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 50 of 220
+Report Version: Rev. 01
+3.5.5 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11b
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 51 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 52 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 53 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 54 of 220
+Report Version: Rev. 01
+3.5.6 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11g
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 55 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 56 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 57 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 58 of 220
+Report Version: Rev. 01
+3.5.7 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT20
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 59 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 60 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 61 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 62 of 220
+Report Version: Rev. 01
+3.5.8 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT40
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 63 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 64 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 65 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 66 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+3.5.9 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 67 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 68 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 69 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 70 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 71 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 72 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 73 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 74 of 220
+Report Version: Rev. 01
+3.5.10 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11b
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 75 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 76 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 77 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 78 of 220
+Report Version: Rev. 01
+3.5.11 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11g
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 79 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 80 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 81 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 82 of 220
+Report Version: Rev. 01
+3.5.12 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT20
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 83 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 84 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 85 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 86 of 220
+Report Version: Rev. 01
+3.5.13 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT40
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 87 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 88 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 89 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 90 of 220
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+3.5.14 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 91 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 92 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 93 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 94 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 95 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 96 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 97 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 98 of 220
+Report Version: Rev. 01
+3.5.15 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11b
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 99 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 100 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 101 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 102 of 220
+Report Version: Rev. 01
+3.5.16 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11g
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 103 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 104 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 105 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 106 of 220
+Report Version: Rev. 01
+3.5.17 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT20
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 107 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 108 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 109 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 110 of 220
+Report Version: Rev. 01
+3.5.18 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT40
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 111 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 112 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 113 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 114 of 220
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+3.5.19 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 115 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 116 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 117 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 118 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 119 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 120 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 121 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 122 of 220
+Report Version: Rev. 01
+3.5.20 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11b
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 123 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 124 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 125 of 220
+Report Version: Rev. 01
+Modulation 11b Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 126 of 220
+Report Version: Rev. 01
+3.5.21 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11g
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 127 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 128 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 129 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 130 of 220
+Report Version: Rev. 01
+3.5.22 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT20
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 131 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 132 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 133 of 220
+Report Version: Rev. 01
+Modulation HT20 Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 134 of 220
+Report Version: Rev. 01
+3.5.23 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 802.11n HT40
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 135 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 136 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 137 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 138 of 220
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -57 100
+Above 1 GHz to 12.75 GHz -47 1000
+4.1.2 Test Procedures
+Reference to clause 5.4.10.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-11AC Page : 139 of 220
+Report Version: Rev. 01
+4.1.3 Test Setup
+Below 1GHz
+Above 1 GHz
+
+Report No.: ER740701-11AC Page : 140 of 220
+Report Version: Rev. 01
+Configuration 1 : Dipole Antenna
+4.1.4 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 141 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 142 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 143 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 144 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 145 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 146 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 147 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 148 of 220
+Report Version: Rev. 01
+4.1.5 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 149 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 150 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 151 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 152 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 153 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 154 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 155 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 156 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+4.1.6 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 157 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 158 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 159 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 160 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 161 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 162 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 163 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 164 of 220
+Report Version: Rev. 01
+4.1.7 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 165 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 166 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 167 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 168 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 169 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 170 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 171 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 172 of 220
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+4.1.8 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 173 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 174 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 175 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 176 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 177 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 178 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 179 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 180 of 220
+Report Version: Rev. 01
+4.1.9 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 181 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 182 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 183 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 184 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 185 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 186 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 187 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 188 of 220
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+4.1.10 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 189 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 190 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 191 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 192 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 193 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 194 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 195 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 196 of 220
+Report Version: Rev. 01
+4.1.11 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 197 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2412
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 198 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 199 of 220
+Report Version: Rev. 01
+Modulation 11g Test Freq. (MHz) 2472
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 200 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 201 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2422
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 202 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 203 of 220
+Report Version: Rev. 01
+Modulation HT40 Test Freq. (MHz) 2462
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: ER740701-11AC Page : 204 of 220
+Report Version: Rev. 01
+5 Adaptivity Test Results
+5.1 Adaptivity and Unwanted Signal Parameters
+5.1.1 Limit of Adaptivity and Unwanted Signal Parameters
+Adaptivity and Unwanted Signal Limit
+Only for adaptive systems and RF Output Power > 10 dBm
+Non-LBT based Detect and Avoid:
+ minimum remain unavailable = 1sec;
+ minimum Idle Period time = 100us;
+ maximum Channel Occupancy Time (COT) = 40ms
+ detection threshold level = -70 dBm/MHz + 10 x log10(100mW / Pout) (Pout in mW e.i.r.p);
+LBT based Detect and Avoid (Frame Based Equipment):
+ minimum Clear Channel Assessment (CCA) time = 18 us;
+ COT = 1 ms to 10 ms
+ Idle Period = 5% of COT
+ detection threshold level = -70 dBm/MHz + 10 x log10(100mW / Pout) (Pout in mW e.i.r.p);
+LBT based Detect and Avoid (Load Based Equipment with spectrum sharing mechanism IEEE Std.):
+ LBT based spectrum sharing mechanism may implement IEEE 802.11™-2012 [i.3] clause 9,
+clause 10, clause 16,clause 17, clause 19 and clause 20, or in IEEE 802.15.4™-2011 [i.4], clause
+4, clause 5 and clause 8
+ detection threshold level = -70 dBm/MHz + 10 x log10(100mW / Pout) (Pout in mW e.i.r.p);
+Short Control Signalling Transmissions:
+ Short Control Signalling Transmissions shall have a maximum duty cycle of 10 % within an
+observation period of 50 ms.
+Unwanted Signal Parameters
+Equipment Type
+Wanted Signal
+Mean Power from
+Companion Device
+Blocking Signal
+Frequency (MHz)
+Blocking Signal
+Mean power (dBm)
+Type of Interfering
+Signal
+LBT sufficient to maintain
+the link (see note 2) 2395 or 2488,5
+(see note 1)
+-35
+(see note 3) CW
+Non-LBT -30 dBm
+Note 1: The highest frequency shall be used for testing operating channels within the range 2 400 MHz to 2 442 MHz,
+while the lowest frequency shall be used for testing operating channels within the range 2 442 MHz to 2 483,5
+MHz.
+Note 2: A typical value which can be used in most cases is -50 dBm/MHz.
+Note 3: The level specified is the level in front of the UUT antenna. In case of conducted measurements, this level has to
+be corrected by the actual antenna assembly gain.
+5.1.2 Test Procedures
+Reference to clause 5.4.6.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-11AC Page : 205 of 220
+Report Version: Rev. 01
+5.1.3 Test Setup
+5.1.4 Test Result of Adaptivity、Unwanted Signal and Short Control Signalling
+Transmissions
+Adaptivity and Unwanted Signal Result
+Adaptivity Detection Threshold Level (dBm) -67.86
+Unwanted Signal Level (dBm) -32.21
+Modulation Mode Freq.
+(MHz)
+Short Control
+Signalling
+Transmissions
+(ms)
+Channel
+Occupancy
+Time (ms)
+Idle Period
+Time (μs) Adaptivity
+Unwanted
+Signal
+Test Status
+802.11b 2412 4.666 6.346 53
+Pass Pass
+802.11b 2472 4.249 6.347 52
+802.11g 2412 3.421 12.498 39
+802.11g 2472 3.240 12.498 39
+802.11n (HT20) 2412 4.434 6.492 39
+802.11n (HT20) 2472 3.003 6.575 39
+802.11n (HT40) 2422 4.182 6.230 40
+802.11n (HT40) 2462 2.74 6.322 36
+Limit < 5 ms < 13 ms >18μs
+Result Complied
+
+Report No.: ER740701-11AC Page : 206 of 220
+Report Version: Rev. 01
+5.1.5 Test Result of Adaptivity and Unwanted Signal Plots
+Adaptivity & Unwanted Signal Result Plots
+Unwanted signal: 2488.5 MHz Unwanted signal: 2395 MHz
+802.11b - 2412MHz 802.11b - 2472MHz
+802.11g - 2412MHz 802.11g - 2472MHz
+802.11n (HT20) - 2412MHz 802.11n (HT20) - 2472MHz
+802.11n (HT40) - 2422MHz 802.11n (HT40) – 2462MHz
+
+Report No.: ER740701-11AC Page : 207 of 220
+Report Version: Rev. 01
+5.1.6 Test Result of Short Control Signalling Transmissions Plots
+Short Control Signalling Transmissions Plots
+802.11b - 2412MHz 802.11b - 2472MHz
+802.11g - 2412MHz 802.11g - 2472MHz
+802.11n (HT20) - 2412MHz 802.11n (HT20) - 2472MHz
+802.11n (HT40) - 2422MHz 802.11n (HT40) – 2462MHz
+
+Report No.: ER740701-11AC Page : 208 of 220
+Report Version: Rev. 01
+Channel Occupancy Time
+802.11b - 2412MHz 802.11b - 2472MHz
+802.11g - 2412MHz 802.11g - 2472MHz
+802.11n (HT20) - 2412MHz 802.11n (HT20) - 2472MHz
+802.11n (HT40) - 2422MHz 802.11n (HT40) – 2462MHz
+
+Report No.: ER740701-11AC Page : 209 of 220
+Report Version: Rev. 01
+Idle Period Time
+802.11b - 2412MHz 802.11b - 2472MHz
+802.11g - 2412MHz 802.11g - 2472MHz
+802.11n (HT20) - 2412MHz 802.11n (HT20) - 2472MHz
+802.11n (HT40) - 2422MHz 802.11n (HT40) – 2462MHz
+
+Report No.: ER740701-11AC Page : 210 of 220
+Report Version: Rev. 01
+6 Receiver Blocking Test Results
+6.1 Receiver Blocking
+6.1.1 Limit of Receiver Blocking
+Receiver Blocking Parameters for Receiver Category 1 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 4)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 4)
+Type of Blocking
+Signal
+(-133 dBm + 10 ×
+log10(OCBW)) or -68
+dBm whichever is less
+(see note 2)
+2 380
+2 504
+-34 CW
+(-139 dBm + 10 ×
+log10(OCBW)) or -74
+dBm whichever is less
+(see note 3)
+2 300
+2 330
+2 360
+2 524
+2 584
+2 674
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative test may be performed using a wanted signal
+up to Pmin + 26 dB where Pmin is the minimum level of wanted signal required to meet the minimum
+performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 3: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative test may be performed using a wanted signal
+up to Pmin + 20 dB where Pmin is the minimum level of wanted signal required to meet the minimum
+performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 4: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+
+Report No.: ER740701-11AC Page : 211 of 220
+Report Version: Rev. 01
+Receiver Blocking Parameters for Receiver Category 2 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 3)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 3)
+Type of Blocking
+Signal
+(-139 dBm + 10 ×
+log10(OCBW) + 10 dB) or
+(-74 dBm + 10 dB)
+whichever is less
+(see note 2)
+2 380
+2 504
+2 300
+2 584
+-34 CW
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative test may be performed using a wanted signal
+up to Pmin + 26 dB where Pmin is the minimum level of wanted signal required to meet the minimum
+performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal.
+Note 3: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+Receiver Blocking Parameters for Receiver Category 3 Equipment Limit
+Wanted Signal Mean
+Power from Companion
+Device (dBm)
+(see notes 1 and 3)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm)
+(see note 3)
+Type of Blocking
+Signal
+(-139 dBm + 10 ×
+log10(OCBW) + 20 dB) or
+(-74 dBm + 20 dB)
+whichever is less
+2 380
+2 504
+2 300
+2 584
+-34 CW
+Note 1: OCBW is in Hz.
+Note 2: In case of radiated measurements using a companion device and the level of the wanted signal from
+the companion device cannot be determined, a relative the test may be performed using a wanted
+signal up to Pmin + 30 dB where Pmin is the minimum level of wanted signal required to meet the
+minimum performance criteria as defined in clause 4.3.1.12.3 in the absence of any blocking signal
+Note 3: The level specified is the level at the UUT receiver input assuming a 0 dBi antenna assembly gain. In
+case of conducted measurements, this level has to be corrected for the (in-band) antenna assembly
+gain (G). In case of radiated measurements, this level is equivalent to a power flux density (PFD) in
+front of the UUT antenna with the UUT being configured/positioned.
+6.1.2 Test Procedures
+Reference to clause 5.4.11.2 of ETSI EN 300 328 V2.2.2 (2019-07).
+
+Report No.: ER740701-11AC Page : 212 of 220
+Report Version: Rev. 01
+6.1.3 Test Setup
+
+Report No.: ER740701-11AC Page : 213 of 220
+Report Version: Rev. 01
+6.1.4 Test Result of Receiver Blocking
+11b / 2412 MHz
+Without Interference Signal Sensitivity Level
+Receiver Category 1
+Performance Criteria
+Limit PER ≤ 10 %
+Wanted Signal Mean
+Power from
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-65.21 2380 -31.21 Pass
+-65.21 2504 -31.21 Pass
+-71.21 2300 -31.21 Pass
+-71.21 2330 -31.21 Pass
+-71.21 2360 -31.21 Pass
+-71.21 2524 -31.21 Pass
+-71.21 2584 -31.21 Pass
+-71.21 2674 -31.21 Pass
+
+Report No.: ER740701-11AC Page : 214 of 220
+Report Version: Rev. 01
+11b / 2472 MHz
+Without Interference Signal Sensitivity Level
+Receiver Category 1
+Performance Criteria
+Limit PER ≤ 10 %
+Wanted Signal Mean
+Power from
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-65.21 2380 -31.21 Pass
+-65.21 2504 -31.21 Pass
+-71.21 2300 -31.21 Pass
+-71.21 2330 -31.21 Pass
+-71.21 2360 -31.21 Pass
+-71.21 2524 -31.21 Pass
+-71.21 2584 -31.21 Pass
+-71.21 2674 -31.21 Pass
+
+Report No.: ER740701-11AC Page : 215 of 220
+
+Report Version: Rev. 01
+7 Photographs of the Test Configuration
+Configuration 1 : Dipole Antenna
+Spurious Emission Test
+
+Report No.: ER740701-11AC Page : 216 of 220
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Spurious Emission Test
+
+Report No.: ER740701-11AC Page : 217 of 220
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Spurious Emission Test
+
+Report No.: ER740701-11AC Page : 218 of 220
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Spurious Emission Test
+
+Report No.: ER740701-11AC Page : 219 of 220
+Report Version: Rev. 01
+Adaptivity, Unwanted Signal and Short Control Signalling Transmissions Test
+Receiver Blocking Test
+
+Report No.: ER740701-11AC Page : 220 of 220
+Report Version: Rev. 01
+8 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

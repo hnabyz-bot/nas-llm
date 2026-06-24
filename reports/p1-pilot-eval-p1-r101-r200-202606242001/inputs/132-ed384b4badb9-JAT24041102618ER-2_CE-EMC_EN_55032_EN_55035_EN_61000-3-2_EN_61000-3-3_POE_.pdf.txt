@@ -1,0 +1,1119 @@
+queueId: ingest-1781569954420-1918
+sourcePath: raw/sources/DHF (인허가)/04_G1717CW 외 7종/90_규격 Test report/1. 신청서 및 제출서류/11. 부품인증서_사양서 (추가 자료는 제품 검토 후 요청)/POE Injector/EMC/JAT24041102618ER-2 CE-EMC报告 EN 55032 EN 55035 EN 61000-3-2 EN 61000-3-3 POE供电器.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/dcb6bcd48591/JAT24041102618ER-2 CE-EMC报告 EN 55032 EN 55035 EN 61000-3-2 EN 61000-3-3 POE供电器__dcb6bcd48591_combined.txt
+canonicalGroupId: ed384b4badb9
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 132
+
+SOURCE_TEXT
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 1 of 49
+SDAPO Communication Co., Ltd.
+EMC REPORT
+Prepared For :
+SDAPO Communication Co., Ltd.
+5F, W2, Chengxin Building , Tian An Shen Chuang Valley Industrial
+Center, Fenggang Town, Dongguan City, Guangdong Province,China
+Product Name: POE injector
+Prepared By : Dongguan Jun’an Testing and Certification Co., Ltd.
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town,
+Dongguan City, Guangdong Province
+Test Date: 2024-04-01 to 2024-04-10
+Date of Report : 2024-04-10
+Report No.: JAT24041102618ER-2
+Model : PSE30,PSE801,PSE30G,PSE801G,PSE30TG,PSE802G,PSE60G,PSE
+156G,PSE90G,POE4805
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 2 of 49
+TABLE OF CONTENTS
+TEST REPORT DECLARATION ........................................................................................................ 5
+1. TEST RESULTS SUMMARY ......................................................................................................... 6
+2. GENERAL INFORMATION .......................................................................................................... 7
+2.1. Report information ..................................................................................................................................7
+2.2. Measurement Uncertainty .......................................................................................................................7
+3. PRODUCT DESCRIPTION ............................................................................................................ 8
+3.1. EUT Description......................................................................................................................................8
+3.2. Block Diagram of EUT Configuration ....................................................................................................8
+3.3. Operating Condition of EUT ...................................................................................................................8
+3.4. Test Conditions........................................................................................................................................8
+3.5. Modifications...........................................................................................................................................8
+3.6. Abbreviations ..........................................................................................................................................9
+3.7. Performance Criterion .............................................................................................................................9
+4. TEST EQUIPMENT USED ........................................................................................................... 10
+4.1. For Conducted Emission Test ...............................................................................................................10
+4.2. For Radiated Emission Measurement ....................................................................................................10
+4.3. For Harmonic / Flicker Test ..................................................................................................................10
+4.4. For Electrostatic Discharge Immunity Test ...........................................................................................10
+4.5. For RF Strength Susceptibility Test ......................................................................................................10
+4.6. For Electrical Fast Transient/Burst Immunity Test ...............................................................................11
+4.7. For Surge Test .......................................................................................................................................11
+4.8. For Injected Currents Susceptibility Test ..............................................................................................11
+4.9. For Magnetic Field Immunity Test........................................................................................................11
+4.10. For Voltage Dips and Interruptions Test ...............................................................................................11
+5. POWER LINE CONDUCTED EMISSION TEST ...................................................................... 12
+5.1. Block Diagram of Test Setup ................................................................................................................12
+5.2. Test Standard .........................................................................................................................................12
+5.3. Power Line Conducted Emission Limit ................................................................................................12
+5.4. EUT Configuration on Test ...................................................................................................................12
+5.5. Operating Condition of EUT .................................................................................................................13
+5.6. Test Procedure .......................................................................................................................................13
+5.7. Test Result .............................................................................................................................................13
+6. RADIATED EMISSION TEST ..................................................................................................... 14
+6.1. Setup Diagram .......................................................................................................................................14
+6.2. Test Standard .........................................................................................................................................14
+6.3. Radiated Emission Limit .......................................................................................................................14
+6.4. EUT Configuration on Test ...................................................................................................................14
+6.5. Operating Condition of EUT .................................................................................................................15
+6.6. Test Procedure .......................................................................................................................................15
+6.7. Test Results ...........................................................................................................................................15
+7. HARMONIC CURRENT EMISSION TEST .............................................................................. 16
+7.1. Block Diagram of Test Setup ................................................................................................................16
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 3 of 49
+7.2. Test Standard and Limit ........................................................................................................................16
+7.3. Test Procedure .......................................................................................................................................17
+7.4. Test Results ...........................................................................................................................................17
+8. VOLTAGE FLUCTUATIONS & FLICKER TEST ................................................................... 18
+8.1. Block Diagram of Test Setup ................................................................................................................18
+8.2. Test Standard .........................................................................................................................................18
+8.3. Operating Condition of EUT .................................................................................................................18
+8.4. Test Results ...........................................................................................................................................18
+9. ELECTROSTATIC DISCHARGE TEST.................................................................................... 19
+9.1. Block Diagram of ESD Test Setup ........................................................................................................19
+9.2. Test Standard .........................................................................................................................................19
+9.3. Severity Levels and Performance Criterion...........................................................................................19
+9.4. EUT Configuration on Test ...................................................................................................................19
+9.5. Operating Condition of EUT .................................................................................................................19
+9.6. Test Procedure .......................................................................................................................................20
+9.7. Test Results ...........................................................................................................................................20
+10. RF FIELD STRENGTH SUSCEPTIBILITY TEST ................................................................... 22
+10.1. R/S Test Setup .......................................................................................................................................22
+10.2. Test Standard .........................................................................................................................................22
+10.3. Severity Levels and Performance Criterion...........................................................................................22
+10.4. EUT Configuration on Test ...................................................................................................................23
+10.5. Operating Condition of EUT .................................................................................................................23
+10.6. Test Procedure .......................................................................................................................................23
+10.7. Test Results ...........................................................................................................................................23
+11. ELECTRICAL FAST TRANSIENT/BURST TEST ................................................................... 25
+11.1. EFT Test Setup ......................................................................................................................................25
+11.2. Test Standard .........................................................................................................................................25
+11.3. Severity Levels and Performance Criterion...........................................................................................25
+11.4. EUT Configuration on Test ...................................................................................................................25
+11.5. Operating Condition of EUT .................................................................................................................25
+11.6. Test Procedure .......................................................................................................................................26
+11.7. Test Results ...........................................................................................................................................26
+12. SURGE TEST.................................................................................................................................. 28
+12.1. Surge Test Setup ....................................................................................................................................28
+12.2. Test Standard .........................................................................................................................................28
+12.3. Severity Levels and Performance Criterion...........................................................................................28
+12.4. EUT Configuration on Test ...................................................................................................................28
+12.5. Operating Condition of EUT .................................................................................................................28
+12.6. Test Procedure .......................................................................................................................................29
+12.7. Test Results ...........................................................................................................................................29
+13. INJECTED CURRENTS SUSCEPTIBILITY TEST.................................................................. 31
+13.1. Block Diagram of Test AC Mains Setup ...............................................................................................31
+13.2. Test Standard .........................................................................................................................................31
+13.3. Severity Levels and Performance Criterion...........................................................................................31
+13.4. EUT Configuration on Test ...................................................................................................................31
+13.5. Operating Condition of EUT .................................................................................................................31
+13.6. Test Procedure .......................................................................................................................................32
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 4 of 49
+13.7. Test Results ...........................................................................................................................................32
+14. MAGNETIC FIELD IMMUNITY TEST ..................................................................................... 34
+14.1. Block Diagram of Test Setup ................................................................................................................34
+14.2. Test Standard .........................................................................................................................................34
+14.3. Severity Levels and Performance Criterion...........................................................................................34
+14.4. EUT Configuration on Test ...................................................................................................................34
+14.5. Operating Condition of EUT .................................................................................................................35
+14.6. Test Procedure .......................................................................................................................................35
+14.7. Test Results ...........................................................................................................................................35
+15. VOLTAGE DIPS AND INTERRUPTIONS TEST ..................................................................... 37
+15.1. Voltage Dips and Interruptions Test Setup............................................................................................37
+15.2. Test Standard .........................................................................................................................................37
+15.3. Severity Levels and Performance Criterion...........................................................................................37
+15.4. EUT Configuration on Test ...................................................................................................................37
+15.5. Operating Condition of EUT .................................................................................................................37
+15.6. Test Procedure .......................................................................................................................................38
+15.7. Test Result .............................................................................................................................................38
+APPENDIX I ......................................................................................................................................... 40
+APPENDIX II ........................................................................................................................................ 45
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 5 of 49
+TEST REPORT DECLARATION
+
+Applicant : SDAPO Communication Co., Ltd.
+Address
+: 5F, W2, Chengxin Building , Tian An Shen Chuang Valley
+Industrial Center, Fenggang Town, Dongguan City, Guangdong
+Province,China
+Trade Mark
+:
+SDAPO
+EUT Description : POE injector
+Model Number
+: PSE802G
+Test Standards:
+EN 55032:2015+A11:2020
+EN IEC 61000-3-2:2019+A1:2021
+EN 61000-3-3:2013+A2:2021+AC:2022-01
+EN 55035:2017+A11:2020
+The EUT described above is tested by Dongguan Jun’an Testing and Certification Co., Ltd. to
+determine the maximum emissions from the EUT and ensure the EUT to be compliance with the
+immunity requirements of the EUT. Dongguan Jun’an Testing and Certification Co., Ltd. is assumed
+full responsibility for the accuracy of the test results. Also, this report shows that the EUT technically
+complies with the 2014/30/EU directive and its amendment requirements.
+The test report is valid for above tested sample only and shall not be reproduced in part without
+written approval of the laboratory.
+Tested by:
+Tanac / Test Engineer
+Reviewer :
+Roger Zheng / Supervisor
+Approved & Authorized Signer :
+Tim You / Manager
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 6 of 49
+1. TEST RESULTS SUMMARY
+Table 1 Test Results Summary
+Test Items Test Results
+Conducted Disturbance PASS
+Radiated Emission PASS
+Harmonic Current PASS
+Voltage Fluctuation and Flicker PASS
+Electrostatic Discharge Immunity PASS
+Radiated Electromagnetic Fields Immunity PASS
+Electric Fast Transient Burst Immunity PASS
+Surge Immunity PASS
+Injected currents susceptibility test PASS
+Magnetic Field Immunity Test PASS
+Voltage dips and interruptions Immunity PASS
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 7 of 49
+2. GENERAL INFORMATION
+2.1. Report information
+2.1.1.This report is not a certificate of quality; it only applies to the sample of the specific
+product/equipment given at the time of its testing. The results are not used to indicate or
+imply that they are application to the similar items. In addition, such results must not be
+used to indicate or imply that JAT approves recommends or endorses the manufacture,
+supplier or use of such product/equipment, or that JAT in any way guarantees the later
+performance of the product/equipment.
+2.1.2.The sample/s mentioned in this report is/are supplied by Applicant, JAT therefore
+assumes no responsibility for the accuracy of information on the brand name, model
+number, origin of manufacture or any information supplied.
+2.1.3.Additional copies of the report are available to the Applicant at an additional fee. No third
+part can obtain a copy of this report through JAT, unless the applicant has authorized JAT
+in writing to do so.
+2.2. Measurement Uncertainty
+(95% confidence levels, k=2)
+Test Item Uncertainty
+Uncertainty for Conduction emission test 3.2dB
+Uncertainty for Radiation emission test
+(30MHz to 1GHz) 2.4dB
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 8 of 49
+3. PRODUCT DESCRIPTION
+3.1. EUT Description
+Description : POE injector
+Applicant : SDAPO Communication Co., Ltd.
+5F, W2, Chengxin Building , Tian An Shen Chuang Valley Industrial
+Center, Fenggang Town, Dongguan City, Guangdong Province,China
+Manufacturer : SDAPO Communication Co., Ltd.
+5F, W2, Chengxin Building , Tian An Shen Chuang Valley Industrial
+Center, Fenggang Town, Dongguan City, Guangdong Province,China
+Model Number : PSE802G
+3.2. Block Diagram of EUT Configuration
+3.3. Operating Condition of EUT
+Test mode 1: ON
+3.4. Test Conditions
+Temperature: 23-26 ℃
+Relative Humidity: 55-68 %
+3.5. Modifications
+No modification was made.
+EUT DC Power
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 9 of 49
+3.6. Abbreviations
+AC Alternating Current
+AMN Artificial Mains Network
+DC Direct Current
+EM ElectroMagnetic
+EMC ElectroMagnetic Compatibility
+EUT Equipment Under Test
+IF Intermediate Frequency
+RF Radio Frequency
+rms root mean square
+EMI Electromagnetic Interference
+EMS Electromagnetic Susceptibility
+3.7. Performance Criterion
+Criterion A: The equipment shall continue to operate as intended without operator
+intervention. No degradation of performance of loss of function is allowed below a
+performance level specified by the manufacturer when the equipment is used as intended.
+Criterion B: After the test, the equipment shall continue to operate as intended without
+operator intervention. No degradation of performance or loss of function is allowed, after the
+application of the phenomena below a performance level specified by the manufacturer,
+when the equipment is used as intended.
+Criterion C: Loss of function is allowed, provided the function is self-recoverable, or can be
+restored by the operation of the controls by the user in accordance with the manufacturer’s
+instructions.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 10 of 49
+4. TEST EQUIPMENT USED
+4.1. For Conducted Emission Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Test Receiver Rohde & Schwarz ESHS30 828985/018 Oct. 1, 23 1 Year
+2. Pulse Limiter Rohde & Schwarz ESH3-Z2 100006 Oct. 1, 23 1 Year
+3. L.I.S.N. Rohde & Schwarz ESH2-Z5 834549/005 Oct. 1, 23 1 Year
+4. Conical Emtek N/A N/A N/A N/A
+5. Voltage Probe Schwarzbeck TK9416 N/A Oct. 1, 23 1 Year
+6. Coaxial POE injector Anritsu MP59B 6100214550 Oct. 1, 23 1 Year
+4.2. For Radiated Emission Measurement
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Spectrum Analyzer ANRITSU MS2661C 6200140915 Oct. 1, 23 1 Year
+2. Test Receiver Rohde&Schwarz ESC830 828982/018 Oct. 1, 23 1 Year
+3. Bilog Antenna Schwarzbeck VULB9163 142 Oct. 1, 23 1 Year
+4. 50 Coaxial POE injector Anritsu Corp MP59B 6100237248 Oct. 1, 23 1 Year
+5. Cable Schwarzbeck AK9513 ACRX1 Oct. 1, 23 1 Year
+6. Cable Rosenberger N/A FR2RX2 Oct. 1, 23 1 Year
+7. Cable Schwarzbeck AK9513 CRRX2 Oct. 1, 23 1 Year
+8. Cable Schwarzbeck AK9513 CRRX2 Oct. 1, 23 1 Year
+9. Signal Generator HP 864A 3625U00573 Oct. 1, 23 1 Year
+4.3. For Harmonic / Flicker Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Harmonic and Flicker
+analyzer
+Laplace AC2000A 309709 Oct. 1, 23 1 Year
+4.4. For Electrostatic Discharge Immunity Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. ESD Tester HAEFELY PSD 1600 H911’292 Oct. 1, 23 1 Year
+4.5. For RF Strength Susceptibility Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Signal Generator HP 8648A 3633A02081 Oct. 1, 23 1 Year
+2. Amplifier A&R 500A100 17034 NCR NCR
+3. Amplifier A&R 100W/1000M1 17028 NCR NCR
+4. Isotropic Field Monitor A&R FM2000 16829 NCR NCR
+5. Isotropic Field Probe A&R FLW220100 16755 Oct. 1, 23 1 Year
+6. Biconic Antenna EMCO 3108 9507-2534 NCR NCR
+7. Log-periodic Antenna A&R AT1080 16812 NCR NCR
+8. PC N/A 486DX2 N/A N/A N/A
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 11 of 49
+4.6. For Electrical Fast Transient/Burst Immunity Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Burst Tester HAEFELY PEFT 4010 080981-16 Oct. 1, 23 1 Year
+4.7. For Surge Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Surge Tester HAEFELY PSURGE4.1 080107-04 Oct. 1, 23 1 Year
+4.8. For Injected Currents Susceptibility Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Simulator EMTEST CWS 500C 0900-12 Oct. 1, 23 1 Year
+2. CDN EMTEST CDN-M2 510010010010 Oct. 1, 23 1 Year
+3. VDN EMTEST CDN-M3 0900-11 Oct. 1, 23 1 Year
+4. Injection Clamp EMTEST F-2031-23MM 368 Oct. 1, 23 1 Year
+5. Attenuator EMTEST ATT6 0010222a Oct. 1, 23 1 Year
+4.9. For Magnetic Field Immunity Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Magnetic Field Tester HEAFELY MAG100.1 083858-10 Oct. 1, 23 1 Year
+4.10.For Voltage Dips and Interruptions Test
+Item Equipment Manufacturer Model No. Serial No. Last Cal. Cal. Interval
+1. Dips Tester HEAFELY PLINE 1610 083732-18 Oct. 1, 23 1 Year
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 12 of 49
+5. POWER LINE CONDUCTED EMISSION TEST
+5.1.Block Diagram of Test Setup
+AC Mains
+5.2. Test Standard
+EN 55032:2015+A11:2020
+5.3. Power Line Conducted Emission Limit
+Frequency
+MHz
+Limits dB(V)
+Quasi-peak Level Average Level
+0.15 ~ 0.50 66 ~ 56* 56 ~ 46*
+0.50 ~ 5.00 56 46
+5.00 ~ 30.00 60 50
+Notes: 1. *Decreasing linearly with logarithm of frequency.
+2. The lower limit shall apply at the transition frequencies.
+5.4. EUT Configuration on Test
+The following equipments are installed on conducted emission test to meet EN55032
+requirement and operating in a manner, which tends to maximize its emission characteristics
+in a normal application.
+5.4.1.EUT Information
+Model Number : PSE802G
+Serial Number : N/A
+Manufacturer : SDAPO Communication Co., Ltd.
+Test Receiver
+L.I.S.N. #1 EUT
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 13 of 49
+5.5. Operating Condition of EUT
+5.5.1.Setup the EUT and simulators as shown in Section 5.1.
+5.5.2.Turn on the power of all equipments.
+5.5.3.Let the EUT work in test modes (ON) and test it.
+5.6. Test Procedure
+The EUT is put on the ground and connected to the AC mains through a Artificial Mains
+Network (AMN). This provided 50ohm-coupling impedance for the tested equipments.
+Both sides of AC line are checked to find out the maximum conducted emission levels
+according to the EN55032 regulations during conducted emission test.
+The bandwidth of the test receiver is set at 9kHz.
+The frequency range from 150 KHz to 30 MHz is investigated. and all the scanning
+waveform is put in Appendix .
+5.7. Test Result
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 14 of 49
+6. RADIATED EMISSION TEST
+6.1. Setup Diagram
+ANTENNA TOWER
+GROUND PLANE
+6.2. Test Standard
+EN 55032:2015+A11:2020
+6.3. Radiated Emission Limit
+All emanations from a Class B computing devices or system, including any network of
+conductors and apparatus connected thereto, shall not exceed the level of field strengths
+specified below:
+FREQUENCY
+(MHz)
+DISTANCE
+(Meters)
+FIELD STRENGTHS LIMITS
+(dBV/m)
+30 ~ 230 3 40
+230 ~ 1000 3 47
+Note:(1) The tighter limit shall apply at the edge between two frequency bands.
+(2) Distance refers to the distance in meters between the measuring instruments
+antenna and the closed point of any part of the EUT.
+6.4. EUT Configuration on Test
+The EN55032 Class B regulations test method must be used to find the maximum emission
+during radiated emission test.
+TURN TABLE
+ANTENNA ELEVATION VARIES FROM 1 TO 4 METERS
+3 METERS
+EUT
+0.8 METER
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 15 of 49
+6.5. Operating Condition of EUT
+6.5.1.Setup the EUT as shown on Section 6.1.
+6.5.2.Turn on the power of all equipments.
+6.5.3.Let the EUT work in test mode (on) and measure it.
+6.6. Test Procedure
+The EUT is placed on a turn table which is 0.8 meter above ground. The turn table can
+rotate 360 degrees to determine the position of the maximum emission level. The EUT is
+set 3 meters away from the receiving antenna which is mounted on a antenna tower. The
+antenna can move up and down between 1 to 4 meters to find out the maximum emission
+level. Broadband antenna (calibrated by dipole antenna) are used as a receiving antenna.
+Both horizontal and vertical polarization of the antenna are set on test.
+The bandwidth setting on the test receiver is 120 KHz.
+The EUT is tested in Semi-Anechoic Chamber. and all the scanning waveform is put in
+Appendix I.
+6.7. Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 16 of 49
+7. HARMONIC CURRENT EMISSION TEST
+7.1.Block Diagram of Test Setup
+AC Mains
+7.2. Test Standard and Limit
+7.2.1.Test Standard
+EN IEC 61000-3-2:2019
+7.2.2.Limits
+Table 12 Harmonic Current Test Limit (Class A)
+Harmonic order
+(n)
+Maximum permissible harmonic current
+(A)
+Odd harmonics
+3 2.30
+5 1.14
+7 0.77
+9 0.40
+11 0.33
+13 0.21
+15n39 0.1515/n
+Even harmonics
+2 1.08
+4 0.43
+6 0.30
+8n40 0.238/n
+EUT AC Source Power Analyzer
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 17 of 49
+7.3. Test Procedure
+The power cord of the EUT is connected to the output of the test system. Turn on the Power
+of the EUT and use the test system to test the harmonic current level.
+7.4. Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 18 of 49
+8. VOLTAGE FLUCTUATIONS & FLICKER TEST
+8.1. Block Diagram of Test Setup
+Same as Section 7.1.
+8.2. Test Standard
+EN 61000-3-3:2013+A1:2019
+8.3. Operating Condition of EUT
+Same as Section7.3.. The power cord of the EUT is connected to the output of the test system.
+Turn on the power of the EUT and use the test system to test.
+Flicker Test Limit
+Test items Limits
+Pst 1.0
+dc 3.3%
+dmax 4.0%
+dt Not exceed 3.3% for 500ms
+8.4. Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 19 of 49
+9. ELECTROSTATIC DISCHARGE TEST
+9.1. Block Diagram of ESD Test Setup
+9.2. Test Standard
+EN 55035:2017+A11:2020(EN61000-4-2:2009)
+Severity Level 3 for Air Discharge at 8KV
+Severity Level 2 for Contact Discharge at 4KV
+9.3. Severity Levels and Performance Criterion
+9.3.1.Severity level
+Level Test Voltage
+Contact Discharge (KV)
+Test Voltage
+Air Discharge (KV)
+1. 2 2
+2. 4 4
+3. 6 8
+4. 8 15
+X. Special Special
+9.3.2.Performance criterion: B
+9.4. EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2.
+9.5. Operating Condition of EUT
+9.5.1.Setup the EUT as shown in Section 9.1.
+9.5.2.Turn on the power of all equipments.
+9.5.3.Let the EUT work in test mode (on) and test it.
+EUT ESD
+Tester
+0.8 m DC Power
+AC Mains
+Remark: is Discharge Electrode
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 20 of 49
+9.6. Test Procedure
+9.6.1.Air Discharge:
+This test is done on a non-conductive surfaces. The round discharge tip of the discharge
+electrode shall be approached as fast as possible to touch the EUT.
+After each discharge, the discharge electrode shall be removed from the EUT.
+The generator is then re-triggered for a new single discharge and repeated 10 times
+for each pre-selected test point. This procedure shall be repeated until all the air discharge
+completed.
+9.6.2.Contact Discharge:
+All the procedure shall be same as Section 9.6.1. except that the tip of the discharge electrode
+shall touch the EUT before the discharge POE injector is operated.
+9.6.3.Indirect discharge for horizontal coupling plane
+At least 20 single discharges shall be applied to the horizontal coupling plane, at points on
+each side of the EUT. The discharge electrode positions vertically at a distance of 0.1m from
+the EUT and with the discharge electrode touching the coupling plane.
+9.6.4.Indirect discharge for vertical coupling plane
+At least 20 single discharge shall be applied to the center of one vertical edge of the coupling
+
+plane. The coupling plane, of dimensions 0.5m X 0.5m, is placed parallel to, and positioned
+at a distance of 0.1m from the EUT. Discharges shall be applied to the coupling plane, with
+this plane in sufficient different positions that the four faces of the EUT are completely
+illuminated.
+9.7. Test Results
+PASS.
+Please refer to the following page.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 21 of 49
+Electrostatic Discharge Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply: 240VAC Test Mode : on
+Air Discharge:
+±8KV For each point positive 10 times and negative 10 times discharge.
+Contact Discharge:
+±4KV
+Location Kind
+A-Air Discharge
+C-Contact Discharge
+Result
+Slots A PASS
+Metal Parts C PASS
+HCP C PASS
+VCP C PASS
+Discharge should be considered on Contact and Air and Horizontal Coupling Plane (HCP) and Vertical
+Coupling Plane (VCP).
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 22 of 49
+10. RF FIELD STRENGTH SUSCEPTIBILITY TEST
+10.1.R/S Test Setup
+10.2.Test Standard
+EN 55035:2017+A11:2020 (EN 61000-4-3:2006 + A1:2008 + A2:2010)
+Severity Level 2 at 3V / m
+10.3.Severity Levels and Performance Criterion
+10.3.1.Severity level
+Level Field Strength V/m
+1. 1
+2. 3
+3. 10
+X. Special
+10.3.2.Performance criterion : A
+Signal
+Generator
+3 Meters
+Semi-Anechoic
+Chamber
+EUT and
+Simulators System
+0.8 Meter
+Measurement
+Room
+Power Amp
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 23 of 49
+10.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2
+10.5.Operating Condition of EUT
+Setup the EUT as shown in Section 10.1.. The operating condition of EUT are listed
+in section 3.3.
+10.6.Test Procedure
+The EUT and its simulators are placed on a turn table which is 0.8ter above the ground.
+The EUT is set 3 meters away from the transmitting antenna which is mounted on an antenna
+tower. Both horizontal and vertical polarization of the antenna are set on test. Each of the
+four sides of EUT must be faced this transmitting antenna and measured individually.
+In order to judge the EUT performance, a CCD camera is used to monitor the EUT.
+All the scanning conditions are as follows :
+Condition of Test Remarks
+---------------------------------------------- ----------------------------------
+1. Fielded Strength 3 V/m (Severity Level 2)
+2. Radiated Signal Modulated
+3. Scanning Frequency 80 - 1000 MHz, 1.4GHz-2.7GHz
+4. Sweeping time of radiated 0.0015 decade/s
+5. Dwell Time 1 Sec.
+10.7.Test Results
+PASS.
+Please refer to the following page.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 24 of 49
+RF Field Strength Susceptibility Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power Supply: 240VAC Test Mode : on
+Frequency
+Range : 80 MHz to 1000 MHz
+，1.4GHz-2.7GHz
+Modulation:
+ AM
+ Pulse
+none 1 KHz 80%
+Criterion : A
+Frequency Rang :
+80-1000MHZ, 1.4GHz-2.7GHz
+Steps 1% 1%
+Horizontal Vertical
+Front Pass Pass
+Right Pass Pass
+Rear Pass Pass
+Left Pass Pass
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 25 of 49
+EUT EFT/B Tester
+11. ELECTRICAL FAST TRANSIENT/BURST TEST
+11.1.EFT Test Setup
+DC Power
+0.8 m AC Mains
+11.2.Test Standard
+EN 55035:2017+A11:2020 (EN61000-4-4:2012)
+Severity Level 2 at 1KV
+11.3.Severity Levels and Performance Criterion
+11.3.1.Severity level
+Open Circuit Output Test Voltage ±10％
+Level On POWER SUPPLY
+Lines
+On I/O (Input/Output) Signal
+data and control lines
+1. 0.5 KV 0.25 KV
+2. 1 KV 0.5 KV
+3. 2 KV 1 KV
+4. 4 KV 2 KV
+X Special Special
+11.3.2.Performance criterion : B
+11.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2..
+11.5.Operating Condition of EUT
+Setup the EUT as shown in Section 11.1.. The operating condition of EUT are listed
+in section 3.3.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 26 of 49
+11.6.Test Procedure
+The EUT is put on the table which is 1 meter high above the ground. This reference ground
+plane shall project beyond the EUT by at least 0.1m on all sides and the minimum distance
+between the EUT and all other conductive structure, except the ground plane beneath the
+EUT, shall be more than 0.5m.
+11.6.1.For input and output AC power ports:
+The EUT is connected to the power mains by using a coupling device which couples the EFT
+interference signal to AC power lines. Both polarities of the test voltage should be applied
+during compliance test and the duration of the test is 2 mins.
+11.6.2.For signal lines and control lines ports:
+It’s unnecessary to test.
+11.6.3.For DC output line ports:
+It’s unnecessary to test.
+11.7.Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 27 of 49
+Electrical Fast Transient/Burst Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply : 240VAC
+Test Mode : -
+Inject Place : AC Mains
+Inject Line Voltage
+KV
+Inject
+Time(s)
+Inject
+Method
+Results Inject
+Line
+Voltage
+KV
+Inject
+Time(s)
+Inject
+Method
+Results
+L ±1 120 Direct Pass
+N ±1 120 Direct Pass
+L-N ±1 120 Direct Pass
+PE ±1 120 Direct Pass
+L-PE ±1 120 Direct Pass
+N-PE ±1 120 Direct Pass
+L-N-PE ±1 120 Direct Pass
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 28 of 49
+EUT Test Generator
+12. SURGE TEST
+12.1.Surge Test Setup
+AC Mains
+0.8 m AC Mains
+12.2.Test Standard
+EN 55035:2017+A11:2020 (EN61000-4-5:2014)
+Severity Level 2 for Line to Neutral at 1.0KV
+12.3.Severity Levels and Performance Criterion
+12.3.1.Severity level
+Severity Level Open-Circuit Test Voltage
+KV
+1
+2
+3
+4
+*
+0.5
+1.0
+2.0
+4.0
+Special
+Performance criterion : B
+12.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2.
+12.5.Operating Condition of EUT
+12.5.1.Setup the EUT as shown in Section 12.1..
+12.5.2.Turn on the power of all equipments.
+12.5.3.Let the EUT work in test mode (on) and test it.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 29 of 49
+12.6.Test Procedure
+1) Setup the EUT and test generator as shown on Section 12.1.
+2) For line to line coupling mode, provide a 1.0KV 1.2/50us voltage surge (at open-circuit
+condition) and 8/20us current surge to EUT selected points.
+3) At least 5 positive and 5 negative (polarity) tests with a maximum 1/min repetition rate are
+conducted during test.
+4) Different phase angles are done individually.
+5) Record the EUT operating situation during compliance test and decide the EUT immunity
+criterion for above each test.
+12.7.Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 30 of 49
+Surge Immunity Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply : 240VAC Test Mode : -
+Location Polarity Phase Angle No of Pulse Pulse Voltage (KV) Result
+L-N + 0 5 1.0 Pass
++ 90 5 1.0 Pass
++ 180 5 1.0 Pass
++ 270 5 1.0 Pass
+- 0 5 1.0 Pass
+- 90 5 1.0 Pass
+- 180 5 1.0 Pass
+- 270 5 1.0 Pass
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 31 of 49
+13. INJECTED CURRENTS SUSCEPTIBILITY TEST
+13.1.Block Diagram of Test AC Mains Setup
+13.2.Test Standard
+EN 55035:2017+A11:2020 (EN61000-4-6:2014)
+Severity Level 2 at 3 V (rms), 0.15MHz ~ 80MHz
+13.3.Severity Levels and Performance Criterion
+13.3.1.Severity level
+Level Field Strength V/m
+1. 1
+2. 3
+3. 10
+X Special
+13.3.2.Performance criterion: A
+13.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2
+13.5.Operating Condition of EUT
+Setup the EUT as shown in Section 13.1.. The operating condition of EUT are listed
+in section 3.3
+EUT
+Signal
+Generator
+Power
+Amplifier
+Personal Computer Control System
+CDN AC Mains
+0.1 m
+Ground Reference Support
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 32 of 49
+13.6.Test Procedure
+1) Set up the EUT, CDN and test generators as shown on Section 13.1.
+2) Let the EUT work in test mode and test it.
+3) The EUT are placed on an insulating support 0.8m high above a ground reference plane.
+CDN (coupling and decoupling device) is placed on the ground plane about 0.3m from
+EUT. Cables between CDN and EUT are as short as possible, and their height above the
+ground reference plane shall be between 30 and 50 mm (where possible).
+4) The disturbance signal described below is injected to EUT through CDN.
+5) The EUT operates within its operational mode(s) under intended climatic conditions after
+power on.
+6) The frequency range is swept from 150KHz to 80MHz using 3V signal level, and with the
+disturbance signal 80% amplitude modulated with a 1KHz sine wave.
+7) The rate of sweep shall not exceed 1.5*10-3decades/s. Where the frequency is swept
+incrementally, the step size shall not exceed 1% of the start and thereafter 1% of the
+preceding frequency value.
+8) Recording the EUT operating situation during compliance testing and decide the EUT
+immunity criterion.
+13.7.Test Results
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 33 of 49
+Injected Currents Susceptibility Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply : 240VAC Test Mode : -
+Frequency Range
+(MHz)
+Injected Position Strength Criterion Result
+0.15 ~ 20 AC Line 3V(rms),
+Unmodulated A Pass
+20 ~ 80 AC Line 3V(rms),
+Unmodulated A Pass
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 34 of 49
+EUT Magnetic Field Tester AC Mains
+wood
+14. MAGNETIC FIELD IMMUNITY TEST
+14.1.Block Diagram of Test Setup
+14.1.1.Block Diagram of the EUT
+DC Power
+(EUT: POE injector)
+14.1.2.Block Diagram of Test Setup
+Induction Coil
+0.8 m
+14.2.Test Standard
+Ground Reference Support
+EN 55035:2017+A11:2020 (EN61000-4-8: 2010)
+Severity Level 1 at 1A/m
+14.3.Severity Levels and Performance Criterion
+14.3.1.Severity level
+Level Magnetic Field Strength A/m
+1. 1
+2. 3
+3. 10
+4. 30
+5. 100
+X. Special
+14.3.2.Performance criterion : A
+14.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2.
+EUT
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 35 of 49
+14.5.Operating Condition of EUT
+14.5.1.Setup the EUT as shown in Section 14.1
+14.5.2.Turn on the power of all equipments.
+14.5.3.Let the EUT work in test mode (ON) and test it.
+14.6.Test Procedure
+The EUT shall be subjected to the test magnetic field by using the induction coil of standard
+dimensions (1m*1m) and shown in Section 14.1. The induction coil shall then be rotated
+by 90°in order to expose the EUT to the test field with different orientations.
+14.7.Test Results
+PASS.
+Please refer to the following page.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 36 of 49
+Magnetic Field Immunity Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply : 240VAC Test Mode : -
+Test Level Testing Duration Coil Orientation Criterion Result
+1A/M 5 mins Horizontal A Pass
+1A/M 5 mins Vertical A Pass
+Remark: Test Equipment :
+Magnetic Field Tester MAG100.1
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 37 of 49
+EUT
+15. VOLTAGE DIPS AND INTERRUPTIONS TEST
+15.1.Voltage Dips and Interruptions Test Setup
+DC Power
+Main Interference
+Simulator
+0.8 m AC Mains
+Remark: Combination wave generator and decoupling network are included in test
+generator.
+15.2.Test Standard
+EN 55035:2017+A11:2020 (EN61000-4-11:2004)
+15.3.Severity Levels and Performance Criterion
+15.3.1.Severity level
+Test Level
+%UT
+Voltage dip and short
+interruptions
+%UT
+Duration
+(in period)
+0 100 250p
+40 60 5p
+70 30 0.5p
+15.3.2.Performance criterion : C & B
+15.4.EUT Configuration on Test
+The configuration of EUT are listed in Section 3.2.
+15.5.Operating Condition of EUT
+15.5.1.Setup the EUT as shown in Section 15.1.
+15.5.2.Turn on the power of all equipments.
+15.5.3.Let the EUT work in test mode (On) and test it.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 38 of 49
+15.6.Test Procedure
+1) Set up the EUT and test generator as shown on Section 15.1.
+2) The interruptions is introduced at selected phase angles with specified duration.
+3) Record any degradation of performance.
+15.7.Test Result
+PASS.
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 39 of 49
+Voltage Dips And Interruptions Test Results
+Applicant : SDAPO Communication Co., Ltd. Test Date : 2024-04-01
+EUT : POE injector Temperature : 22
+℃
+M/N : PSE802G Humidity : 50
+％
+Power supply : 240VAC Test Mode : -
+Test Level
+% UT
+Voltage Dips &
+Short Interruptions
+% UT
+Duration (in
+period)
+Phase Angle Criterion Result
+0 100 250P
+。 。
+0 ~360 C Pass
+40 60 5P
+。 。
+0 ~360 C Pass
+70 30 0.5P
+。 。
+0 ~360 B Pass
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 40 of 49
+APPENDIX I
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 41 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 42 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 43 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 44 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 45 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 46 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 47 of 49
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 48 of 49
+APPENDIX II
+
+Dongguan Jun’an Testing and Certification Co., Ltd. Report No. JAT24041102618ER-2
+Room 303, Building 1, No.316, Renzhou Road, Shatian Town, Dongguan City, Guangdong Province
+Tel: 0769-81710286 E-mail: youshengwei@junantest.com Website: www.junantest.com
+Page 49 of 49
+Photo of the EUT
+===End of Report ===

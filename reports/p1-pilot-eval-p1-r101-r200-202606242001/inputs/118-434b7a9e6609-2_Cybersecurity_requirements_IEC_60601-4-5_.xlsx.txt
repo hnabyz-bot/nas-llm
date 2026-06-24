@@ -1,0 +1,175 @@
+queueId: ingest-1781569954375-4ws
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/이경수 팀장님/정재민 프로님/2) Cybersecurity requirements (IEC 60601-4-5).xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/9fbc58407b75/2) Cybersecurity requirements (IEC 60601-4-5)__9fbc58407b75_combined.txt
+canonicalGroupId: 434b7a9e6609
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 118
+
+SOURCE_TEXT
+,,IEC60601-4-5,,,,,,,,,,,
+,,,,portable threat model에 있던 항목 가져옴,F열을 보고을 한글로 해석,G열을 보고 requirement로 해석함,Portable KTR 보고서의 4.1 table 가져옴,Portable KTR 보고서의 4.1 table 해석,console적용 여부,Detector 적용 여부,console mitigation 대응책,Detector mitigation 대응책,
+CRM-30,IA-01,"User Identification
+And Authentication",Spoofing,"Authentication procedures can be bypassed, allowing attackers to access the system by impersonating legitimate users. CMR-8, CRM-16, CRM-18",,인증 과정을 우회하여 권한이 없는 사용자가 시스템에 접근할 수 없도록 시스템을 제어합니다.,every interface accessible by user must include functionality for identifying and authenicating users. This functionality may be provided by the idenficiation and authentication system of the parent system or implemented directly withing the medical device. ,"사용자가 접근 가능한 모든 인터페이스는 사용자 식별 및 인증 기능을 포함해야 합니다.
+이 기능은 상위 시스템의 식별 및 인증 시스템을 통해 제공되거나, 의료기기 자체에 직접 구현될 수 있습니다.",,"N/A
+디텍터는 사용자 인터페이스를 제공하지 않습니다.","CRM-8, crm-16",,
+CRM-31,IA-02,Account Management,Spoofing,There is a risk that an attacker can access the system by impersonating a trusted user through credential theft.,공격자가 신원 정보 도용을 통해 신뢰할 수 있는 사용자로 가장하여 시스템에 접근할 위험이 있습니다.,로그인 신원확인 보안성대책이 있는가 Account Management,"medical devices must either have the capability to manage all accounts or utilize the account management functionality of a parent system.
+There must be functionality to manage all accounts(e.g. adding, activaging, modifying, deactivating, and deleting accounts) by authorized users","의료기기는 모든 계정을 관리할 수 있는 기능을 갖추거나, 상위 시스템의 계정 관리 기능을 활용해야 합니다.
+권한 있는 사용자는 계정 추가, 활성화, 수정, 비활성화, 삭제 등 계정 전반을 관리할 수 있어야 합니다.",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-32,IA-03,"Identification
+Information
+Management",Spoofing,"Since user identification is not properly verified, an attacker can infiltrate the system with a forged identity.",사용자 신원 확인이 제대로 이루어지지 않기 때문에 공격자는 위조된 신원을 사용하여 시스템에 침투할 수 있습니다.,"로그인 신원확인 보안성대책이 있는가 Identification
+Information Management","Medical devices must either utilize a system with identification information management functionality or have the capability to directly manage identification information.
+Accounts created through account management (IA-02) must use one or more unique identifiers to clearly distinguish each account.","의료기기는 식별 정보 관리 기능을 갖춘 시스템을 사용하거나, 직접 식별 정보를 관리할 수 있는 기능을 갖추어야 합니다.
+계정 관리(IA-02)를 통해 생성된 계정은 각 계정을 명확히 구분할 수 있도록 하나 이상의 고유 식별자를 사용해야 합니다.",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-33,IA-04,"Authentication
+Information
+Management",Spoofing,Vulnerabilities in the authentication mechanism can be exploited to illegally steal identities and escalate privileges.,인증 메커니즘의 취약점을 악용하여 불법적으로 신원을 도용하고 권한을 상승시킬 수 있습니다.,인증 취약성을 악용하지 못하도록 신뢰도를 높인다. Authentication Information Management,"Initial authentication methods must be available.
+After installation, there must be functionality to enforce changes to default authentication information or to notify users if the default authentication information has not been changed.
+There must be functionality to allow periodic changes to authentication information.
+Authentication information must not be exposed or altered during storage, usage, or transmission.","초기 인증 방법이 제공되어야 합니다.
+설치 후에는 기본 인증 정보 변경을 강제하거나, 기본 인증 정보가 변경되지 않았을 경우 이를 사용자에게 알리는 기능이 있어야 합니다.
+인증 정보는 주기적으로 변경할 수 있는 기능도 필요합니다.
+인증 정보는 저장, 사용, 전송 중 노출되거나 변경되어서는 안 됩니다.",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-34,IA-05,"Password
+Strength
+Configuration",Spoofing,There is a possibility of an attacker accessing the system by submitting false credentials.,공격자가 허위 신원 정보를 제출하여 시스템에 접근할 가능성이 있습니다.,허위 신원 정보로 시스템 접근하는 방법을 차단한다. 비밀번호 강도 조절 기능이 있는가. ,"For medical devices with password-based authentication functionality, there must be a capability to enforce password strength according to password setting guidelines or utilize a system that provides such configuration capabilities.","비밀번호 기반 인증 기능이 있는 의료기기의 경우, 비밀번호 설정 가이드라인에 따라 비밀번호 강도를 적용하거나, 이를 구성할 수 있는 기능이 있는 시스템을 사용해야 합니다.
+",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-35,IA-06,"Feedback on
+Authentication
+Information",Spoofing,"Due to the absence of an identity verification procedure, a malicious user can inappropriately access system resources.",신원 확인 절차가 없기 때문에 악의적인 사용자가 시스템 리소스에 부적절하게 접근할 수 있습니다.,"로그인 신원확인 보안성을 높인다. Feedback on
+Authentication Information","For medical devices with authentication functionality, feedback regarding authentication information during the authentication process must not be explicit.","인증 기능이 있는 의료기기의 경우, 인증 과정 중 인증 정보에 대한 피드백은 명시적으로 제공되어서는 안 됩니다.",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-36,IA-07,"Login Restriction
+After Consecutive
+Failed Login Attemps",Spoofing,There is a risk that an attacker can illegally use system functions by forging legitimate user credentials.CRM-16,공격자가 합법적인 사용자 자격 증명을 위조하여 시스템 기능을 불법적으로 사용할 위험이 있습니다. CRM-16,"로그인 신원확인 보안성을 높인다. Login Restriction
+After Consecutive Failed Login Attemps","For medical devices with authentication functionality, the following features must be included:
+The number of login attempts should be limited for all users (individuals, software, devices) if consecutive failed access attempts occur within a specified timeframe.
+Upon reaching the attempt limit, access must be denied for a predetermined period or until unlocked by an administrator. Administrators should also have the ability to unlock accounts before the timeout expires.","인증 기능이 있는 의료기기는 다음과 같은 기능을 반드시 포함해야 합니다:
+일정 시간 내 연속된 로그인 실패가 발생하면 모든 사용자(개인, 소프트웨어, 장치)에 대해 로그인 시도 횟수를 제한해야 합니다.
+시도 횟수 제한에 도달하면 사전 정의된 기간 동안 접근을 차단하거나 관리자에 의해 잠금 해제될 때까지 접근이 차단되어야 합니다.
+또한, 관리자는 제한 시간이 만료되기 전에 계정을 해제할 수 있는 기능을 가져야 합니다.",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",CRM-16,,
+CRM-37,IA-08,"System Usage
+Notification Message",Spoofing,"Due to insufficient authentication methods, there is a high possibility of identity theft attacks. CMR-8, CRM-18","인증 방법이 부족하여 신원 도용 공격 가능성이 높습니다. CMR-8, CRM-18",로그인 신원확인 보안성을 높인다. 시스템 사용에 대한 norticiation message,"If a user (person) can directly operate the user interface of a medical device, the system must display a usage notification message during the authentication process. The usage notification message must be configurable by authorized personnel.","사용자(사람)가 의료기기의 사용자 인터페이스를 직접 조작할 수 있는 경우, 시스템은 인증 과정 중에 사용 알림 메시지를 표시해야 합니다.
+이 사용 알림 메시지는 권한 있는 인원이 구성할 수 있어야 합니다.
+",,"N/A
+디텍터는 사용자 인터페이스를 제공하지 않습니다.","CMR-8, CRM-18",,
+CRM-38,UC-01,Authorization,Repudiation,There is a risk that users can deny the actions they have performed due to the lack of behavior tracking records.,행동 추적 기록이 부족하여 사용자가 수행한 작업을 부인할 위험이 있습니다.,허위 신원 정보로 시스템 접근하는 방법을 차단한다. Authorization,"The medical device must have the functionality to grant permissions to all users who are identified and authenticated, based on their assigned responsibilities.
+",의료기기는 식별되고 인증된 모든 사용자에게 해당 사용자의 역할에 따라 권한을 부여할 수 있는 기능을 갖추어야 합니다.,,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-39,UC-02,"Mobile Code Usage
+Control",Repudiation,"Due to insufficient auditing and logging functions, it may be difficult to trace responsibility for user actions later.",감사 및 로깅 기능이 부족하여 추후 사용자 작업에 대한 책임을 추적하기 어려울 수 있습니다.,"감사로그 구비되었는가, Mobile Code Usage
+Control","If a medical device utilizes mobile code technology, the device must have at least the following usage control features regarding the use of mobile code:
+Control of mobile code execution
+Control over allowing or denying the transmission and reception of mobile code by users (people, software, devices)
+Control of mobile code execution based on integrity check results prior to execution","의료기기가 모바일 코드 기술을 사용하는 경우, 다음과 같은 최소한의 사용 제어 기능을 갖추어야 합니다:
+모바일 코드 실행 제어
+사용자(사람, 소프트웨어, 장치)에 의한 모바일 코드의 전송 및 수신 허용 또는 거부에 대한 제어
+실행 전에 무결성 검사 결과를 기반으로 한 모바일 코드 실행 제어
+",,"N/A
+디텍터는 모바일 코드 기능을 포함하지 않습니다.",,,
+CRM-40,UC-03,Session Lock,Repudiation,"There is a possibility of denial of user actions, making it difficult to secure truthfulness during follow-up investigations.",사용자 작업이 거부될 가능성이 있어 후속 조사에서 진실성을 확보하기 어렵습니다.,"사용자 작업거부 사후 이력이 있는가, 로그인 시원확인 보안성을 높인다.Session Lock","when a user(person) accessed a medical device locally or via a network, the deive must have the following functionalities,
+- initiate session locking to prevent futher access if the device is not used within a configured time or if the user(persion, software, device) does not manually resume the sesstion.
+- once the session is locked, it should remain locked until the user who was using the session or another authorized user re-estabblshes access through the appropriate login procedures.","사용자(사람)가 의료기기에 로컬 또는 네트워크를 통해 접근할 경우, 장치는 다음 기능들을 갖추어야 합니다:
+장치가 일정 시간 동안 사용되지 않거나 사용자(사람, 소프트웨어, 장치)가 수동으로 세션을 재개하지 않으면 세션 잠금을 시작하여 추가 접근을 방지해야 합니다.
+세션이 잠긴 후에는 이전 사용자 또는 다른 권한 있는 사용자가 적절한 로그인 절차를 통해 접근을 다시 설정할 때까지 세션은 잠긴 상태를 유지해야 합니다.",,해당,,"Detector : 일정 시간(설정 가능) 사용이 없는 경우 연결 해제 후 슬립 모드 진입 (~6/18 적용 예정)
+슬립모드 진입 -> 자동에서 수동으로 변경되었습니다.
+콘솔에서 세션타임아웃될 때 Detector에 슬립 명령을 보내줘야 합니다.",
+CRM-41,UC-04,"Audit Log
+Generation",Repudiation,"There is no clear record of user activities within the system, making it vulnerable to denial attacks.",시스템 내 사용자 활동에 대한 명확한 기록이 없어 거부 공격에 취약합니다.,"사용자 작업거부 사후 이력이 있는가, 로그인 시원확인 보안성을 높인다.""Audit Log Generation""","The medical device must have the functionality to generate audit records related to security types such as ""access control, request errors, medical device events, backup and recovery events, configuration changes, and audit log events.""
+Each individual audit record must include details such as:
+Timestamp
+Source
+Category
+Type
+Event ID
+Event outcome","의료기기는 보안과 관련된 유형(예: 접근 제어, 요청 오류, 의료기기 이벤트, 백업 및 복구 이벤트, 구성 변경, 감사 로그 이벤트)의 감사 기록을 생성할 수 있는 기능을 갖추어야 합니다.
+각 개별 감사 기록에는 다음과 같은 세부 정보가 포함되어야 합니다:
+타임스탬프
+소스
+범주
+유형
+이벤트 ID
+이벤트 결과",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-42,UC-05,"Countermeasure
+for Audit Processing
+Failure",Repudiation,"There is a vulnerability that allows users to deny system activities, making it difficult to identify legal/security responsibilities.",사용자가 시스템 활동을 거부할 수 있는 취약점이 존재하여 법적/보안적 책임을 파악하기 어렵습니다.,"Countermeasure
+for Audit Processing
+Failure","The medical device must have the functionality to generate audit records related to security types such as ""access control, request errors, medical device events, backup and recovery events, configuration changes, and audit log events.""
+Each individual audit record must include details such as:
+Timestamp
+Source
+Category
+Type
+Event ID
+Event outcome","의료기기는 보안과 관련된 유형(예: 접근 제어, 요청 오류, 의료기기 이벤트, 백업 및 복구 이벤트, 구성 변경, 감사 로그 이벤트)의 감사 기록을 생성할 수 있는 기능을 갖추어야 합니다.
+각 개별 감사 기록에는 다음과 같은 세부 정보가 포함되어야 합니다:
+타임스탬프
+소스
+범주
+유형
+이벤트 ID
+이벤트 결과",,"N/A
+디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.
+",,,
+CRM-43,UC-06,Timestamp,Repudiation,"Due to insufficient logging of user actions, it is difficult to track and respond when an accident occurs.",사용자 동작에 대한 로깅이 부족하여 사고 발생 시 추적 및 대응이 어렵습니다.,"사용자 작업거부 사후 이력이 있는가, 로그인 시원확인 보안성을 높인다. Time stamp 기능이 있는가",The medical device must have the functionality to generate timestamps (including date and time) used in audit records.,의료기기는 감사 기록에 사용되는 타임스탬프(날짜 및 시간 포함)를 생성할 수 있는 기능을 갖추어야 합니다.,,해당,,연결 수립 절차에서 PC환경의 시간을 전달받아 사용. 로그 기록시 타임스탬프 함께 기록.,
+CRM-44,UC-07,Non Repudiation,Repudiation,"Due to insufficient authentication and record keeping, the possibility of user denial increases, which may lead to security issues.",인증 및 기록 관리가 부족하여 사용자 거부 가능성이 높아져 보안 문제가 발생할 수 있습니다.,"사용자 작업거부 사후 이력이 있는가, 로그인 시원확인 보안성을 높인다. Non Repudiation","If a medical device has a user (person) interface, the device must have the functionality to determine whether the user (person) has performed a specific action.","의료기기에 사용자(사람) 인터페이스가 있는 경우, 해당 사용자가 특정 작업을 수행했는지 확인할 수 있는 기능을 갖추어야 합니다.",,"N/A
+디텍터는 사용자 인터페이스를 제공하지 않습니다.",,,
+CRM-45,SI-01,Integrity Checking of Communication,Tampering,There is a risk that system components or data may be tampered with by attacks.,공격으로 인해 시스템 구성 요소 또는 데이터가 변조될 위험이 있습니다.,공격으로 시스템 구성요소 및 데이터 변조에 대한 대응장치 필요 Integrity Checking of Communication,"The medical device must have the functionality to protect the integrity of transmitted information.
+",의료기기는 전송되는 정보의 무결성을 보호할 수 있는 기능을 갖추어야 합니다.,,해당,,송수신되는 데이터에 대해 무결성 검증을 수행함.,
+CRM-46,SI-02,Protection against Malware,Tampering,Malicious users may modify software or firmware to disrupt normal functions.,악의적인 사용자가 소프트웨어 또는 펌웨어를 수정하여 정상적인 기능을 방해할 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(소프트웨어 펌웨어)에 대한 대응장치 필요 Protection against Malware,"Applicable to Software as a Medical Device (SaMD):
+The manufacturer of the software medical device (including SaMD) must verify and document the compatibility of the device with malware protection features.
+If there are settings or conditions required for malware protection, these must be recorded.
+※ Protection from malware may be provided by external services or applications.
+Applicable to Medical Devices other than SaMD:
+The medical device must have the functionality to protect against the installation and execution of unauthorized software(which may include malware). *example of malware, viruss, worms, trojans, spyware etc","소프트웨어 의료기기(SaMD)에 해당하는 경우:
+소프트웨어 의료기기(SaMD 포함)의 제조업체는 해당 장치가 악성코드 보호 기능과 호환되는지를 확인하고 문서화해야 합니다.
+악성코드 보호를 위해 필요한 설정이나 조건이 있다면 이를 기록해야 합니다.
+※ 악성코드로부터의 보호는 외부 서비스나 애플리케이션을 통해 제공될 수 있습니다.
+SaMD 이외의 의료기기에 해당하는 경우:
+의료기기는 무단 소프트웨어(예: 바이러스, 웜, 트로이 목마, 스파이웨어 등)의 설치 및 실행을 방지할 수 있는 기능을 갖추어야 합니다.",,해당,,훼손된 펌웨어는 업데이트 과정 중 무결성 검사 단계에서 발견 및 거부 처리됨.,
+CRM-47,SI-03,Security Function Verification,Tampering,Unexpected functional failures or security vulnerabilities may occur through modification of system settings.,시스템 설정 변경으로 인해 예상치 못한 기능 장애나 보안 취약점이 발생할 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Security Function Verification,The medical device must have the functionality to verify the intended operation of security features.,의료기기는 보안 기능이 의도한 대로 작동하는지를 검증할 수 있는 기능을 갖추어야 합니다.,,해당,,외부에서 펌웨어의 설정 값을 임의로 위/변조할 수 없음. ,
+CRM-48,SI-04,Integrity Checking of Software and Information,Tampering,Attackers may tamper with internal data to undermine the reliability of the system.,공격자는 내부 데이터를 변조하여 시스템 안정성을 저해할 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Integrity Checking of Software and Information,"The medical device must have the functionality to perform or support integrity checks on software and information (including recording the results of integrity checks), or it must be able to utilize a system that can perform or support integrity checks.","의료기기는 소프트웨어 및 정보에 대한 무결성 검사를 수행하거나 지원할 수 있어야 하며 (무결성 검사 결과를 기록하는 것을 포함), 또는 그러한 검사를 수행하거나 지원할 수 있는 시스템을 사용할 수 있어야 합니다.",,해당,,외부에서 펌웨어의 설정 값을 임의로 위/변조할 수 없음. ,
+CRM-49,SI-05,Input Validation,Tampering,"If important configuration information is changed by an attack, the stability of the entire system may be threatened.",중요한 구성 정보가 공격으로 인해 변경되면 전체 시스템의 안정성이 위협받을 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요Input Validation,"The medical device must validate the syntax, length, and content of all input data received through external interfaces that directly affect the operation of the device, or input data used for controlling the medical device.","의료기기는 외부 인터페이스를 통해 수신된 입력 데이터 중 장치의 작동에 직접적인 영향을 미치거나 장치를 제어하는 데 사용되는 데이터의 구문, 길이, 내용을 검증할 수 있어야 합니다.
+",,해당,,통신 패킷은 암호화되며 패킷의 내용 뿐만 아니라 패킷의 길이를 나타내는 정보까지를 모두 포함하여 무결성 검사를 수행하므로 데이터가 위/변조되었음을 감지할 수 있음.,
+CRM-50,SI-06,Output to a Pre-determined State in Case of Error,Tampering,"If system files or logs are tampered with, it may be difficult to respond to and track security incidents.",시스템 파일이나 로그가 변조되면 보안 사고에 대응하고 추적하기 어려울 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Output to a Pre-determined State in Case of Error,Medical devices connected to automated processes must have the functionality to output to a predefined state if they are unable to maintain the normal operation defined by the manufacturer.,"자동화된 프로세스에 연결된 의료기기는 제조업체가 정의한 정상 작동을 유지할 수 없을 경우, 사전에 정의된 상태로 출력을 전환할 수 있는 기능을 갖추어야 합니다.",,해당,,Acquisition 중 오류 발생시 리셋 후 다시 다음 Acquisition을 위한 대기 상태로 복귀.,
+CRM-51,SI-07,Error Handling,Tampering,"If system components are modified without permission, the reliability and operational continuity of the service may be damaged.",시스템 구성 요소가 허가 없이 수정되면 서비스의 안정성과 운영 연속성이 손상될 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Error Handling,The medical device must identify and handle error conditions in a manner that does not provide information that could be exploited by an attacker to target the medical device or the medical IT network.,"의료기기는 공격자가 의료기기나 의료 IT 네트워크를 타겟팅할 수 있는 정보를 제공하지 않도록, 오류 상태를 식별하고 처리할 수 있어야 합니다.",,해당,,발생 가능한 오류 사항에 대해 식별하고 로그를 기록함.,
+CRM-52,SI-08,Update,Tampering,There is a risk that external intruders may affect the normal operation of the entire system by manipulating internal data.,외부 침입자가 내부 데이터를 조작하여 전체 시스템의 정상적인 작동을 방해할 위험이 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Update,The medical device must have an update or upgrade functionality.,의료기기는 업데이트 또는 업그레이드 기능을 갖추어야 합니다.,,해당,,"디텍터: 암호화된 패치 파일을 전달하고, 디텍터의 FW에서 이 파일을 받아 복호화한 후 무결성을 검증한 다음 패치 적용.",
+CRM-53,SI-09,Verification of Authenticity and Integrity of Updates,Tampering,"If data or settings that should not be changed are tampered with, the system security system may collapse.",변경해서는 안 되는 데이터나 설정이 변조될 경우 시스템 보안 시스템이 마비될 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Verification of Authenticity and Integrity of Updates,The medical device must verify the authenticity and integrity of software updates or upgrades before installation.,의료기기는 소프트웨어 업데이트 또는 업그레이드를 설치하기 전에 해당 소프트웨어의 진위성과 무결성을 검증해야 합니다.,,해당,,Detector : 업데이트 파일에 대한 무결성 검증(SHA-256) 시행,SI-09증거
+CRM-54,SI-10,Physical Tamper Prevention,Tampering,Unauthorized changes to system components may cause unexpected malfunctions and security risks.,시스템 구성 요소의 무단 변경은 예상치 못한 오작동 및 보안 위험을 초래할 수 있습니다.,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Physical Tamper Prevention,"The medical device must have physical tamper-resistant features (e.g., locks, encapsulation, security screws with non-standard heads) to prevent unauthorized physical access.","의료기기는 무단 물리적 접근을 방지하기 위해 물리적 변조 방지 기능(예: 자물쇠, 캡슐화, 특수 나사 등)을 갖추어야 합니다.",,해당,,디텍터의 체결 나사는 일반적인 십자/일자 형태가 아님.,
+CRM-55,SI-11,Boot Process Integrity Verification,Tampering,"Due to data integrity violations, there is a possibility that an attacker may induce abnormal system operation. CRM-9",데이터 무결성 위반으로 인해 공격자가 비정상적인 시스템 작동을 유도할 가능성이 있습니다. CRM-9,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Boot Process Integrity Verification,"The medical device must verify the integrity of the firmware, software, and configuration data required for the device’s boot and runtime processes before use.","의료기기는 장치의 부팅 및 실행 중 필요한 펌웨어, 소프트웨어, 구성 데이터의 무결성을 사용 전에 검증해야 합니다.",,해당,,디텍터의 펌웨어는 초기 설정 과정 이후 발생하는 업데이트 과정에서 무결성 검증을 수행하므로 비정상적인 펌웨어가 실행될 가능성을 사전에 차단함.,
+CRM-56,DC-01,Confidentiality Assurance for Information,Information Disclosure,Sensitive information may be inappropriately exposed and leaked to unauthorized users. CRM-17,민감한 정보가 부적절하게 노출되어 권한이 없는 사용자에게 유출될 수 있습니다. CRM-17,공격으로 시스템 구성요소 및 데이터 변조(시스템 설정)에 대한 대응장치 필요 Confidentiality Assurance for Information,medical devices must have confidentialiy protection features for stored information with read access premissions and for information in transit.,의료기기는 저장된 정보에 대한 읽기 접근 권한과 전송 중인 정보에 대한 기밀성 보호 기능을 갖추어야 합니다.,,해당,CRM-17,디텍터 내부 OS로의 접근을 막기 위해 정상적 통신을 위한 포트를 제외한 모든 포트 차단.,
+CRM-57,DC-02,De-identification of Healthcare Information,Information Disclosure,"Due to insufficient data encryption and access control, important information may be leaked to the outside. CRM-5",데이터 암호화 및 접근 제어 미흡으로 인해 중요 정보가 외부로 유출될 수 있습니다. CRM-5,데이터 암호화 및 접근 제한 control 장치가 있는가 De-identification of Healthcare Information,"If unauthorized individuals can identify a patient through healthcare information stored on a medical device, the device must include features to de-identify such information (e.g., application software, additional tools, etc.).","의료기기에 저장된 의료 정보를 통해 무단자가 환자를 식별할 수 있는 경우, 해당 정보를 비식별화할 수 있는 기능(예: 애플리케이션 소프트웨어, 추가 도구 등)을 포함해야 합니다.
+",," N/A
+디텍터는 식별 가능한 환자 정보를 저장하지 않습니다.",CRM-5,,
+CRM-58,DC-03,Use of Secure Encryption,Information Disclosure,There is a risk that sensitive data being stored and transmitted may be exposed by attacks.,저장 및 전송 중인 민감한 데이터가 공격에 노출될 위험이 있습니다.,데이터 암호화 및 접근 제한 control 장치가 있는가 Use of Secure Encryption,"When encryption is required, medical devices must use cryptographic security features recommended domestically or internationally, and the encryption keys used must be securely managed.","암호화가 필요한 경우, 의료기기는 국내외에서 권장되는 암호화 보안 기능을 사용해야 하며, 사용되는 암호화 키는 안전하게 관리되어야 합니다.
+",,해당,,"AES, RSA, SHA-256 등의 보안 알고리즘 사용.
+암호화 키는 매번 무작위로 생성됨.",
+CRM-59,TRE-01,Restriction of Unauthorized Access to Audit Logs,Denial of Service,"There is a risk that normal service provision may be interrupted due to concentrated attacks on system resources., CRM-6, CRM-10, CRM-11","시스템 리소스에 대한 집중 공격으로 정상적인 서비스 제공이 중단될 위험이 있습니다. CRM-6, CRM-10, CRM-11",서비스 제공 중단에 대한 대책이 있는가 Restriction of Unauthorized Access to Audit Logs,Medical devices must allow only authorized users to access audit logs in read-only mode.,"의료기기는 감사 로그에 대해 읽기 전용 모드로 오직 권한 있는 사용자만 접근할 수 있도록 해야 합니다.
+",,해당," CRM-6, CRM-10, CRM-11",별도의 엔지니어 전용 툴을 통해서만 내부 로그를 불러올 수 있음.,
+CRM-60,RA-01,Prevention of Denial of Service (DoS),Elevation of Privilege,"Due to privilege management vulnerabilities, there is a risk that low-privileged users may illegally obtain high-privileges.",권한 관리 취약점으로 인해 권한이 낮은 사용자가 높은 권한을 불법적으로 획득할 위험이 있습니다.,권한 관리 도용에 대한 대응책이 있난가 Prevention of Denial of Service (DoS),"Medical devices must have the capability to maintain essential functions during DoS (Denial of Service) events.
+In the case of DDoS, it applies to devices that connect to public networks to control medical devices in real time or transmit and receive information directly related to patient lives in real time, and countermeasures against DDoS attacks must be established.
+","서비스 거부 공격(DoS/DDoS) 대응 관련
+의료기기는 DoS(서비스 거부) 공격 중에도 핵심 기능을 유지할 수 있는 능력을 갖추어야 합니다.
+DDoS(분산 서비스 거부)의 경우, 이는 공용 네트워크에 연결되어 실시간으로 의료기기를 제어하거나 환자 생명과 관련된 정보를 전송 또는 수신하는 장치에 적용되며, DDoS 공격에 대한 대응책이 수립되어야 합니다.
+",,해당,,"연결 절차에서 적합한 절차에 어긋나는 경우 해당 연결은 즉시 종료됨.
+정상적 절차로 연결된 경우에만 연결용 포트를 통해 통신 가능.",
+CRM-61,RA-02,Medical Device Backup,Elevation of Privilege,"Due to inappropriate access control, there is a possibility of system misuse through user privilege escalation.",부적절한 접근 제어로 인해 사용자 권한 상승을 통한 시스템 악용 가능성이 있습니다.,권한 관리 도용에 대한 대응책이 있난가 Medical Device Backup,"Medical devices must have a backup function, and the backup process must not affect the normal operation of the medical device.","의료기기는 백업 기능을 갖추어야 하며, 백업 과정이 의료기기의 정상 작동에 영향을 미쳐서는 안 됩니다.",,해당,,디텍터는 엔지니어가 필드에서 구성하는 설정값을 초기 설정값으로 되돌릴 수 있는 기능이 있음.,
+CRM-62,RA-03,Medical Device Recovery and Reconfiguration,Elevation of Privilege,"Due to weak privilege separation, there is a risk that an attacker may control the entire system beyond limited privileges.",권한 분리가 취약하면 공격자가 제한된 권한을 넘어 전체 시스템을 제어할 위험이 있습니다.,권한 관리 도용에 대한 대응책이 있난가 Medical Device Recovery and Reconfiguration,Medical devices must have the capability to safely recover and reconfigure after an interruption or failure.,의료기기는 중단 또는 장애 발생 이후에도 안전하게 복구하고 재구성할 수 있는 기능을 갖추어야 합니다.,,해당,,엔지니어는 디텍터의 시스템 환경을 공장 초기화 상태로 되돌릴 수 있음.,
+CRM-63,RA-04,Network and Security Configuration Settings,Elevation of Privilege,"An attack that started with low privileges may lead to privilege escalation, potentially affecting the entire system.",낮은 권한으로 시작된 공격은 권한 상승으로 이어져 전체 시스템에 영향을 미칠 수 있습니다.,권한 관리 도용에 대한 대응책이 있난가 Network and Security Configuration Settings,"Medical devices must provide configuration settings and interfaces in accordance with the network and security configurations recommended in the user manual, and must be able to monitor and control changes to these configurations.","의료기기는 사용자 설명서에 명시된 네트워크 및 보안 구성에 따라 구성 설정 및 인터페이스를 제공해야 하며, 이 설정 변경 사항을 모니터링하고 제어할 수 있어야 합니다.",,해당,,"SDK 를 통해 네트워크와 보안 구성 등을 설정할 수 있으며, 설정 내역은 내부 로그에 기록됨.",
+CRM-64,RA-05,Disabling Unnecessary Functions,Elevation of Privilege,Failure to authenticate users and manage permissions could allow attackers to gain unauthorized privileges.,사용자 인증 및 권한 관리에 실패하면 공격자가 무단 권한을 획득할 수 있습니다.,로그인 신원확인 보안성을 높인다. Disabling Unnecessary Functions,"Medical devices must have a feature that restricts the use of unnecessary functions, ports, protocols, and services (functions other than the default configuration must be disabled).
+","의료기기는 불필요한 기능, 포트, 프로토콜, 서비스(기본 설정 외의 기능 등)의 사용을 제한하는 기능을 갖추어야 합니다.",,해당,,"불필요한 기능, 포트 등은 모두 접근이 차단됨.",

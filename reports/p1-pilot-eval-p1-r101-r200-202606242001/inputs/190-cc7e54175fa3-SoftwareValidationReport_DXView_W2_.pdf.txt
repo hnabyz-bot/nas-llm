@@ -1,0 +1,3412 @@
+queueId: ingest-1781569954370-x9
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/SoftwareValidationReport(DXView_W2).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/1cbcb3beaa3b/SoftwareValidationReport(DXView_W2)__1cbcb3beaa3b_combined.txt
+canonicalGroupId: cc7e54175fa3
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 190
+
+SOURCE_TEXT
+1/105
+Software Validation Report
+(DXView_W2)
+
+2/105
+작성자/Written by: ______________________________________________________
+(name)김완수 / (title) 차장 Date: 2021.05.27
+검토자/Reviewed by: ______________________________________________________
+(name) 이동진 / (title) 부장 Date: 2021.05.27
+승인자/Written by: ______________________________________________________
+(name) 허남규 / (title) 부장 Date: 2021.05.28
+제품명 DXView_W2
+버전 1.0.18.1213
+재개정버전 Rv.1
+
+3/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+목 차
+1. purpose(목적)
+2. Scope(적용범위)
+3. Level of Concern(우려수준)
+3.1 Level of Concern: Major(우려수준 : 중대)
+3.2 Level of Concern: Moderate(우려수준 : 보통)
+3.3 Level of Concern: Minor(우려수준 : 경미)
+4. Software Description(소프트웨어 설명)
+4.1 Device Feature(장치기능)
+4.2 Operational Environment(운영환경)
+5. Software Requirement Specification<SRS>(소프트웨어 요구사항)
+5.1 User Interface Specification(사용자 인터페이스 사양)
+5.1.1 Description(설명)
+5.2 Functional Specification(기능 사양)
+5.3 Performance and functional requirements(성능 및 기능 요구사항)
+5.3.1 Applied Algorithm(적용된 알고리즘)
+5.3.1.1 Applied Principle(적용된 원리)
+5.3.1.2 Algorithm Architecture(알고리즘 구조)
+5.3.2 Device Limitation due to software(소프트웨어에 의한 장치 제한)
+5.3.3 Recovery characteristics(복구특성)
+5.3.4 Internal Check(내부 확인)
+5.3.5 Error Handling(오류처리)
+5.3.6 Timing and memory(타이밍과 메모리)
+5.3.7 Safety Requirements(안전 요구사항)
+5.4 Design Description(디자인 설명)
+5.4.1 Programming language and program size(s)(프로그래밍 언어 및 크기)
+5.4.2 Programming tools and library(프로그래밍 툴과 라이브러리)
+5.4.2.1 Main MCU(메인 MCU)
+5.4.2.2 Sub MCU(서브 MCU)
+5.4.2.3 Program size(프로그램 크기)
+6. Architecture Design Chart(구조 디자인 차트)
+6.1 Software Diagram and Description(소프트웨어 다이어그램 및 설명)
+7. Software Design Specification(소프트웨어 설계사양)
+7.1 Main Module(메인 모듈)
+7.2 Communication Module(통신 모듈)
+7.3 Modules(기타 모듈)
+7.4 Test Module(테스트 모듈)
+7.5 Data Structure(데이터 구조)
+7.6 User Interface Design(사용자 인터페이스 디자인
+8. Software Design and Development Procedure(소프트웨어 설계 및 개발절차)
+8.1 Development Life Cycle(개발 수명주기)
+8.1.1 Development Life Cycle Procedure(개발 수명주기 절차)
+8.1.2 Description of Development Life Cycle(개발 수명주기에 대한 설명)
+8.2 Software Maintenance Life Cycle(소프트웨어 유지보수 수명주기)
+
+4/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8.2.1 Software Maintenance Life Cycle Procedure
+(소프트웨어 유지보수 수명주기 절차)
+8.2.2 Description of Software Maintenance Life Cycle Procedure
+(소프트웨어 유지보수 수명주기 절차 설명)
+8.3 Software Configuration Management Life Cycle
+(소프트웨어 형상관리 수명주기)
+8.3.1 Software Configuration Management Life Cycle Procedure
+(소프트웨어 형상관리 수명주기 절차)
+8.3.2 Description of Software Configuration Management Life Cycle Procedure
+(소프트웨어 형상관리 수명주기 절차 설명)
+9. Verification & Validation Test Plan(검증 및 타당성 확인 테스트 계획)
+9.1 Abbreviations and Symbols(약어 및 기호)
+9.2 Definitions(정의)
+9.3 Reference(참고)
+9.3.1 Regulatory Standards and Guidance(규제 표준 및 지침)
+9.3.2 Industry Standards and Guidance(산업 표준 및 지침)
+9.3.3 Internal Standards and Guidance(내부 표준 및 지침)
+9.4 Roles and Responsibilities(역할과 책임)
+9.4.1 Management Members(관리 멤버)
+9.4.2 Hazard Analysis Members(위험분석 멤버)
+9.4.3 Verification & Validation Testing Team(검증 및 타당성 확인 테스트 팀)
+9.4.4 Documentation Review(문서검토)
+9.4.5 Qualifications(자격)
+9.5 Verification & Validation Item and Methods
+(검증 및 타당성 확인 항목과 방법)
+9.5.1 Static Analysis(정적 분석)
+9.6 Documentation Handling(문서 처리)
+10. Verification & Validation Test Results(검증 및 타당성 확인테스트 결과)
+11. Hazard Analysis(위험 분석)
+11.1 Hazard Analysis Plan(위험 분석 계획)
+11.1.1 Scope of Analysis Plan(분석 계획의 범위)
+11.1.2 Hazard Analysis Activities and outputs(위험 분석 활동 및 출력)
+11.1.3 Hazard Category(위험 범주)
+11.2 Hazard Analysis Result(위험 분석 결과)
+12. Unsolved Anomalies(미해결 이상 현상)
+12.1 Scope(범위)
+12.2 Unresolved Software Anomalies(해결되지 않은 소프트웨어 변칙)
+
+5/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+1. Purpose(목적)
+This document defines the Software Validation Report(SVR) for DXView_W2 on verified software
+2. Scope(적용범위)
+This document applies to DXView_W2 and addresses the software validation activities. The SVR
+describes software validation of requirements in the software development process.
+3. Level of Concern(우려 수준)
+The Software Validation uses a level of three units - 1, 2, and 3, to classify Level of Concern
+3.1 Level of Concern: Major(우려 수준 : 중대)
+If the answer to any one question below is "Yes", the Level of Concern for the software device
+is likely to be "Major"
+3.2 Level of Concern: Moderate(우려 수준 : 보통)
+If the Software Device is not Major Level of Concern and the answer to any one question below
+is "Yes", the Level of Concern is likely to be "Moderate"
+No Questions Yes/No
+1 Does the Software Device qualify as Blood Establishment Computer
+Software? No
+2 Is the Software Device intended to be used in combination with a
+drug or biologic? No
+3 Is the Software Device an accessory to a medical device that has a
+Major Level of Concern? No
+4
+Prior to mitigation of hazards, could a failure of the Software
+Device result in death or serious injury, either to a patient or to
+a user of the device? Examples of this include the following:
+No
+a. Does the Software Device control a life supporting or life
+sustaining function? No
+b. Does the Software Device control the delivery of potentially
+harmful energy that could result in death or serious injury, such as
+radiation treatment systems, defibrillators, and ablation generators?
+No
+c. Does the Software Device control the delivery of treatment or
+therapy such that an error or malfunction could result in death or
+serious injury?
+No
+d. Does the Software Device provide diagnostic information that
+directly drives a decision regarding treatment or therapy, such that
+if misapplied it could result in serious injury or death?
+No
+e. Does the Software Device provide vital signs monitoring and
+alarms for potentially life threatening situations in which medical
+intervention is necessary?
+No
+No Questions Yes/No
+1 Is the Software Device an accessory to a medical device that has a
+Moderate Level of Concern? No
+2 Prior to mitigation of hazards, could a failure of the Software Device
+result in Minor Injury, either to a patient or to a user of the device? No
+3
+Could a malfunction of, or a latent design flaw in, the Software
+Device lead to an erroneous diagnosis or a delay in delivery of
+appropriate medical care that would likely lead to Minor Injury?
+No
+
+6/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+3.3 Level of Concern: Minor(우려 수준 : 경미)
+If the answers to all of the question in Tables 1 and 2 above are "No", the Level of Concern is
+likely to be "Minor"
+
+7/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+4. Software Description(소프트웨어 설명)
+4.1 Device Feature(장치기능)
+Main window
+① Acquisition : 환자정보와 촬영부위를 선택하여 디텍터로부터
+영상 획득
+② Display : 영상 후처리 및 도구를 이용한 영상조정
+③ DICOM 전송
+④ DICOM 인쇄
+Worklist window
+① 환자등록
+② 검사 전 환자목록 관리
+③ 워크리스트 서버로부터 검색
+④ RIS 코드 등록 및 관리
+Browser window
+① 검사 후 환자목록 관리
+② DICOM 전송 및 DICOM DIR
+③ 백업/복원
+④ 영상 Stitch
+Configuration window
+① PACS/DICOM Printer/Worklist 서버 목록 관리
+② 정보표시 관리
+③ 시스템 설정 관리
+④ 작업자/의사명 목록 등 관리
+
+8/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+4.2 Operational Environment(운영환경)
+1) Program language(프로그램 언어) :
+-MS Visual C++ .NET 2002 and 2008
+2) Hardware Platform(하드웨어 플랫폼)
+3) Operating system(운영 시스템) : Microsoft Windows 7 or 10 32비트 이상
+4) Off-the-shelf(구매하여 사용하는 프로그램)
+-Leadtools 13.0 (DICOM 통신 툴)
+System Category Description
+Hardware
+CPU Intel® Core™ i3 6세대 이상(i5이상 추천)
+Memory 4G Byte RAM이상(8GB 추천)
+HDD 100GB이상(Data disk 별도 사용 추천)
+VGA 1920x1080x32bit color이상 지원
+Monitor 23 inch Full HD지원 이상
+ETC
+RS-232C지원 port1개 이상
+Gigabit LAN카드 2개 이상(PACS+Detector)
+확장slot 2개 이상
+
+9/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+5. Software Requirement Specification<SRS>(소프트웨어 요구사항)
+5.1 User Interface Specification(사용자 인터페이스 사양)
+5.1.1 Description(설명)
+1)물리적 특성, 기능 및 성능 요구사항
+① 소프트웨어가 수행할 모든 기능, 신뢰성 및 시간성
+가. Main Function
+a) Modality Worklist
+- RIS/HIS connection
+b) Acquisition function
+- Anatomical programmed database
+c) Image Processing
+- Post-processing (enhancement)
+d) Image Measurement
+- Measure angle/length
+- Image histogram
+e) Image Control
+- Window Width/Level
+- Image invert
+- Pixel information display
+- LUT control
+f) DICOM image sending to PACS
+g) DICOM header information
+h) DICOM film printing
+i) Image manipulation
+- Image zoom In/Out
+- Magnification glass
+- Rotate(±90˚), Flip(Vertical, Horizontal)
+- Panning
+- Image reset
+- ROI(Region Of Interesting) Select : square/ellipse
+- Layout : 1x1, 1x2, 2x1, 2x2
+- Thumbnail image preview
+j) Local Disk Data Backup
+k) DICOM 3.0 Interface
+- Modality Worklist Management SCU
+- Modality Performed Procedure Step SCU
+- Print Management Service Class
+- Storage Service Class
+나. 신뢰성
+고객으로부터의 요구 사항을 수행하는데 있어 성숙성, 결함허용성, 회복성 및
+준수성을 만족하여야한다.
+다. 시간성
+고객으로부터의 요구 사항을 수행하는데 있어 프로그램이 작업을 처리할 때 적절
+한 시간내에 작업을 완료하여야 한다.
+② 요구되는 응답시간
+- 영상을 획득 시 10초 이내에 해당영상을 획득하여 화면에 표시하여야 한다.
+- 영상을 오픈 시 3초 이내에 해당영상을 읽어 화면에 표시하여야 한다.
+
+10/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ 물리적 특성
+- 인텔 계열 CPU상에서 구동되어야 한다.
+- 운영체제는 마이크로소프트사의 윈도우즈 7 또는 10 이상에서 구동되어야한다.
+- 코드언어는 제품의 반응속도를 고려하여 C++언어를 사용한다.
+④ 소프트웨어의 사용 환경
+- 운영체제는 마이크로소프트사의 윈도우즈 7 또는 10 이상이어야 한다.
+- 시스템 메모리는 4GB 이상이어야 한다.
+- CPU는 인텔 Core i3 6세대 이상 (i5이상 추천)이어야 한다.
+- 모니터 해상도는 1920x1080을 지원해야 한다.
+⑤ 제어논리를 포함한 논리적 구조와 논리적 처리단계
+- 사용자가 환자정보를 검색하여 원하는 환자에 대한 영상을 획득하여, 영상을
+조작하고 저장할 수 있어야 한다.
+- 저장한 영상을 서버에 전송할 수 있어야한다.
+⑥ 하드웨어, 소프트웨어 및 사용 환경과의 관계를 포함하여 소프트웨어 시스템의
+동작의도를 설명한 소프트웨어의 시스템의 개관
+- 본 시스템은 PC에서 구동되어 네트워크 통신을 통해 환자정보 및 획득한 영상
+정보를 통합관리 할 수 있어야 한다.
+⑦ 복수 SOUP 또는 기타 장비와의 호환성
+- DICOM 3.0규격을 지원하는 장비와 네트워크 통신을 통해 환자정보 및 영상
+정보를 전송할 수 있어야 한다.
+5.2 Functional Specification(기능 사양)
+1) Communication and Data Flows
+① 모든 내부 소프트웨어와 시스템간의 인터페이스 및 모든 외부와 사용자 인터페이스 정의
+② 링크
+-내부 링크
+구분 설명 비고
+키보드 입력상자에 텍스트 입력, 단축키 및 기능키
+마우스 이동, 클릭(왼쪽, 오른쪽 버튼), 더블클릭(왼쪽, 오른쪽 버튼), 마우스 휠
+이동, 드래그 앤 드롭
+클립보드 클립보드 복사, 붙여넣기
+통신 DICOM 3.0 규격에 따름, 영상전송(C-STORE), 환자정보 찾기(C-FIND)
+
+11/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+-외부 링크
+2) Required Functionality
+Identif
+ier
+Module Level of
+Concern
+Function Description Remark
+SRS 1 Main Module Minor - 시스템 로그 저장
+- 다국어 지원
+- 시스템 설정 정보 불러오기/저장
+- 사용자 로그인/로그아웃
+- 영상 읽어오기
+- 워크리스트 호출
+- 브라우저 호출
+- 영상 저장/전송하기
+- BODYPART/VIEWPOSITION
+설정하기
+- 프로그램 종료하기
+프로그램을 시작하여 종료 할 때까
+지의 전체적인 구조를 설명한다.
+DICOM 3.0 규격을 준수하는 시스템
+과의 호환성을 가진다. 영상전송과
+Worklist Find를 지원한다.
+SRS 2 Worklist
+Module
+Minor - 검색 : 워크리스트 서버에서 환
+자목록을 검색하여 데이터베이스에
+추가한다.
+- 편집 : 특정한 환자를 선택 후
+이를 편집하여 저장 한다
+- 삭제 : 선택한 환자를 데이터
+베이스에서 삭제한다.
+- 모두 삭제 : 데이터베이스에
+있는 워크리스트를 모두 삭제
+한다.
+- CLEAR : 검색 박스를 초기화
+한다
+- EXAM : 선택된 환자를 촬영한
+다.
+- 코드매니저 : OCS코드와
+BODYPART/VIEWPOSITION을 연
+결 해 주는 관리 설정 모드
+- 등록 : 새로운 환자를 등록한다.
+DXView_W2는 병원정보시스템(HIS)
+과 연동하기 위해 필요한 DICOM 워
+크리스트 매니지먼트 (Worklist
+Management) 기능도 기본적으로
+설치되어 있다. 따라서 병원정보시스
+템에 입력한 환자와 진찰정보를
+PACS를 통해 Worklist Mode로 직접
+불러낼 수 있다. 긴급환자 발생 시
+신속하게 새로운 환자정보를 입력하
+여 촬영할 수 있도록 하거나 환자목
+록의 정보를 수정하는 기능을 포함
+한다.
+SRS 3 Acquisition
+Module
+Minor - 디텍터로부터 영상 획득
+- 획득한 영상을 Display(Image)
+Module로 전송
+영상센서(디텍터)로부터 영상을 가져
+오는 기능을 수행한다.
+
+12/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+SRS 4 Display
+(Image)
+Module
+Minor - View/Process/Tool
+i. VIEW
+1. 영상 좌우 바꾸기
+2. 영상 상하 바꾸기
+3. 영상 왼쪽으로 90도 회전
+4. 영상 오른쪽으로 90도 회전
+5. Marker/Label/Annotation –
+영상에 표시되는 항목을 선택하거
+나 보임/숨김 기능을 수행한다.
+6. Shutter Size – 셔터 사이즈를
+조절하고, 셔터를 보이거나 숨기거
+나 한다.
+7. Auto ROI window/level - ROI
+영역내의 윈도우 값을 전체영상에
+적용한다.
+8. Window/Level – 영상의 윈도우
+/레벨을 조절한다.
+ii. PROCESS
+1. Edge/Frequency/Contrast/LUT
+– 프로세싱을 위한 파라미터를 설
+정한다.
+2. Shutter Size – 셔터 사이즈를
+조절하고, 셔터를 보이거나 숨기거
+나 한다.
+3. PROCESS – 선택된 파라미터로
+프로세싱 기능을 수행한다.
+4. SET – 해당된 VIEW POSITION
+의 파라미터를 현재 값으로 설정
+한다.
+5. UNDO(Init.) – 프로세싱 결과
+를 취소하고 원본영상으로 돌아간
+다.
+iii. TOOL
+1. Layout 1x1 – 영상의 레이아웃
+을 1x1로 설정한다.
+2. Layout 1x2 – 영상의 레이아
+웃을 1x2로 설정한다.
+3. Layout 2x1 – 영상의 레이아
+웃을 2x1로 설정한다.
+4. Layout 2x2 – 영상의 레이아
+웃을 2x2로 설정한다.
+5. Panning – 영상을 이동한다.
+6. Zoom In/Out – 영상을 확대
+축소한다.
+7. Magnify Glass – 돋보기 기능을
+수행한다.
+8. Fitting – 확대 또는 이동된 영상
+을 화면에 맞춰서 보여준다.
+9. Measure Angle – 각도 측정
+10. Measure Length – 길이 측정
+11. Measure Delete - 측정된 값
+을 지운다.
+12. Invert window/level - 영상의
+흑백을 반전한다.
+획득된 영상 혹은 브라우저에서 불
+러온 영상을 프로세싱 하거나, 영
+상 조작을 하여 이를 저장하거나
+DICOM 서버로 전송하는 기능을 수
+행한다.
+
+13/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+13. ROI모양 변경 - 사각셔터와 원
+형셔터 모양을 변경한다.
+14. Expert Image - 선택된 영상
+을 그림파일로 저장한다.
+15. 히스토그램 - 히스토그램을 측
+정한다.
+16. 설정창 - 설정창으로 전환한
+다.
+- 저장 및 전송모드
+i. 저장 – 데이터베이스에 영상을
+저장한다.
+ii. 저장 후 전송 – 데이터베이스에
+영상을 저장한 후 선택된 서버로
+영상을 전송한다.
+iii. All send - 검사중인 모든 영상
+을 전송한다.
+- 공통기능
+I. Film 인쇄 – DICOM 프린터로 인
+쇄 한다.
+ii. 브라우저 모드 - 브라우저 모드
+로 전환한다.
+iii. Reject/Cancel – 촬영모드에서
+는 영상을 삭제한다.(Reject)
+브라우저에서 오픈한 화면에서는
+영상을 닫는다.
+SRS 5 Browser
+Module
+Minor - 환자 목록
+i. SEARCH – 특정 환자를 ID,
+NAME 으로 검색한다.
+ii. CLEAR – 검색 조건을 초기화
+한다.
+iii. EDIT – 선택된 환자 정보를
+편집한다.
+iv. DELETE – 선택된 환자 정보를
+영상을 포함하여 데이터베이스에서
+삭제한다.
+v. DELETE ALL – 데이터베이스의
+모든 정보를 영상을 포함하여 삭제
+한다.
+vi. SELECT ALL - 전송이 완료되
+지 않은 모든 환자 목록을 선택한
+다.
+- 스터디 목록
+i. EDIT – 선택된 스터디 정보를 편
+집한다.
+ii. DELETE – 선택된 스터디 정보
+를 영상을 포함하여 데이터베이스
+에서 삭제한다.
+iii. SEARCH – 특정 스터디를
+ACCESSION NUMBER, STUDY
+DATE를 이용하여 검색한다.
+iv. CLEAR – 검색 조건을 초기화
+한다.
+검사가 완료된 환자의 촬영정보를
+검색한 후 선택한 영상을 PACS서
+버로 전송하거나 Display Mode로
+불러들여 세부 작업을 완료 후에 인
+쇄/전송작업을 수행한다.
+
+14/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+- 시리즈 목록
+i. REARRANGE – 선택된 시리즈의
+영상 순서를 재배열 한다.
+ii. EDIT – 선택된 시리즈 정보를
+편집한다.
+iii. DELETE - 선택된 시리즈 정보
+를 영상을 포함하여 데이터베이스
+에서 삭제한다.
+- 이미지 목록
+i. Image On/Off – 이미지 미리보
+기를 보여줌/보여주지 않음
+ii. Inverse – 선택된 항목과 선택되
+지 않은 항목을 서로 뒤바꾼다.
+iii. EDIT - 선택된 영상 정보를
+편집한다.
+iv. DELETE - 선택된 영상 정보를
+영상을 포함하여 데이터베이스에서
+삭제한다.
+- 기타
+i. Open – 선택된 영상을 오픈
+한다.
+ii. Send – 선택된 영상을 선택된
+서버로 전송한다.
+iii. Backup – 선택된 영상을 특정
+경로 또는 CD-WRITER로 저장한
+다.
+iv. Restore – 백업된 영상을 데이
+터베이스로 복원한다.
+v. DICOMDIR – 선택된 영상을
+DICOM CD로 백업한다.(Option)
+vi. MERGE – 선택된 영상을 병합
+하여 하나의 영상으로 제작한다.
+(Option)
+vii. Worklist – 워크리스트 대화상
+자로 이동한다.
+viii. Close – 브라우저 대화상자를
+종료한다.
+SRS 6 Database
+Module
+Minor - Database Connection
+- Select/Insert/Edit/Delete
+- Database Backup
+DXView_W2는 내부적으로 Microsoft
+Access(로컬용)를 데이터베이스
+엔진으로 사용하며, 각 기능 별 요청
+에 따라 해당하는 작업을 수행한다.
+SRS 7 Configuration
+Module
+Minor - PACS : PACS 서버 연결 설정
+- Annotation : 영상 화면에 표시
+되는 정보 설정
+- System : 이미지 경로 및 시스
+템 정보 설정
+- Setup : 병원 정보 및 오퍼레이
+터 정보 설정
+- Print : 프린터 연결 설정 및 기
+타 옵션 설정
+- Worklist :Worklist 서버 연결 설
+Configuration의 PACS,
+Annotation, System, Setup, Print,
+Worklist 설정을 통해 병원 환경에
+맞는 시스템을 구축하도록 할 수
+있다.
+
+15/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+5.3 Performance and functional requirements(성능 및 기능 요구사항)
+5.3.1 Applied Algorithm(적용된 알고리즘)
+5.3.1.1 Applied Principle(적용된 원리)
+본 의료영상전송장치소프트웨어는 의료영상획득장치로부터 디지털로 변환된 의료용 영상을 취득하여 저
+장, 확대, 축소, 조회, 전송 처리를 하는 소프트웨어로 환자의 의료영상을 진단함에 있어 필름을 발생
+시키지 않고 의사의 진단을 용이하게 하는 목적으로 한다.
+5.3.1.2 Algorithm Architecture(알고리즘 구조)
+정 및 기타 옵션 설정
+SRS 8 DICOM
+Module
+Minor - DICOM Modality Worklist Find
+- DICOM Image SCU
+- DICOM CD Support
+DICOM 3.0 규격을 통해 영상정보의
+전송을 제어 및 관리 한다.
+
+16/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+환자 및 영상 정보를 조회, 저장 관리하고 선택하여 영상을 촬영(획득)하며, 촬영된 영상들을 편집,
+마커 입력, 거리 측정 등을 할 수 있고 외부로 저장하거나 전송한다.
+1) Main module
+프로그램을 시작하여 종료 할 때까지의 전체적인 구조를 설명한다.
+DICOM 3.0 규격을 준수하는 시스템과의 호환성을 가진다. 영상전송과 Worklist Find를 지원한다.
+2) Worklist module
+DXView_W2는 병원정보시스템(HIS)과 연동하기 위해 필요한 DICOM 워크리스트 매니지먼트(Worklist
+Management) 기능도 기본적으로 설치되어 있다. 따라서 병원정보시스템에 입력한 환자와 진찰정보를
+PACS를 통해 Worklist Mode로 직접 불러낼 수 있다. 긴급환자 발생 시 신속하게 새로운 환자정보를
+입력하여 촬영할 수 있도록 하거나 환자목록의 정보를 수정하는 기능을 포함한다.
+3) Acquisition module
+영상센서(디텍터)로부터 영상을 가져오는 기능을 수행한다.
+4) Display module
+획득된 영상 혹은 브라우저에서 불러온 영상을 프로세싱 하거나, 영상조작을 하여 이를 저장하거나
+DICOM서버로 전송하는 기능을 수행한다.
+5) Browser module
+검사가 완료된 환자의 촬영정보를 검색한 후 선택한 영상을 PACS서버로 전송하거나 Display mode로
+불러들여 세부 작업을 완료 후에 인쇄/전송작업을 수행한다.
+6) Database module
+DXView_W2는 내부적으로 Microsoft Access(로컬용)를 데이터베이스 엔진으로 사용하며, 각 기능 별
+요청에 따라 해당하는 작업을 수행한다.
+7) Configuration module
+Configuration의 PACS, Annotation, System, Setup, Print, Worklist 설정을 통해 병원 환경에 맞는
+시스템을 구축하도록 할 수 있다.
+8) DICOM module
+DICOM 3.0 규격을 통해 영상정보의 전송을 제어 및 관리 한다.
+
+17/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+
+5.3.2 Device Limitation due to software(소프트웨어에 의한 장치 제한)
+해당사항 없음
+5.3.3 Recovery characteristics(복구특성)
+5.3.4 Internal Check(내부 확인)
+① 측정 또는 기록되는 변수 특성
+모든 정보는 정보 형식에 따라 영문, 숫자, 날짜 및 ASCII 기호를 지원하여야 한다.
+Integer Type : 정수 형식의 값에 대한 정보를 기억한다.
+Real Type : 소수점을 포함하는 실수 값에 대한 정보를 기억한다.
+Byte Type : 바이트단위(0~255) 값에 대한 정보를 기억한다.
+String Type : 문자열 값에 대한 정보를 기억한다.
+Date & Time Type : 일자 및 시간 정보를 기억한다.
+② 소프트웨어가 수용할 수 있는 모든 범위, 한계 및 기본 값
+Recovery Parameter Description Module
+Database Restore
+검사자세, 영상처리파라미터등 영상획득 후 적용
+되는 기본 파라미터값을 백업해두었던 데이터베이
+스로 복구할 수 있다.
+Configuration
+Module - System항목
+Image Restore 백업해놓은 DICOM영상을 데이터베이스로 복원할
+수 있다.
+Browser Module
+- Restore
+형식명 바이트수 다른 이름 값의 범위
+int * signed, signed int 시스템에 종속됨(기본값 0)
+unsigned int * unsigned 시스템에 종속됨(기본값 0)
+__int8 1 char, signed char –128 to 127(기본값 0)
+__int16 2 short, short int, signed
+short int
+–32,768 to 32,767(기본값 0)
+__int32 4 signed, signed int –2,147,483,648 to 2,147,483,647(기본
+값 0)
+__int64 8 none –9,223,372,036,854,775,808 to
+9,223,372,036,854,775,807(기본값 0)
+bool 1 none false or true(기본값false)
+char 1 signed char –128 to 127(기본값 0)
+unsigned char 1 none 0 to 255(기본값 0)
+short 2 short int, signed short int –32,768 to 32,767(기본값 0)
+unsigned short 2 unsigned short int 0 to 65,535(기본값 0)
+long 4 long int, signed long int –2,147,483,648 to 2,147,483,647(기본
+값 0)
+unsigned long 4 unsigned long int 0 to 4,294,967,295(기본값 0)
+enum * none Same as int(기본값 0)
+float 4 none 3.4E +/- 38 (7 digits)(기본값 0)
+double 8 none 1.7E +/- 308 (15 digits)(기본값 0)
+
+18/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ 데이터베이스 요구사항 및 데이터 흐름도
+- 데이터 추가/편집/삭제가 가능하여야 한다.
+- 데이터를 저장하기위한 공간이 충분하여야 한다.
+- 데이터 검색결과가 신속하게 나와야 한다.
+5.3.5 Error Handling(오류처리)
+long double same as
+double
+none same as double(기본값 0)
+wchar_t 2 wchar_t 0 to 65,535(기본값 0)
+No. Error message Description
+1 E001:"Cannot end program during print
+process execution."
+Print Server로 전송중엔 프로그램을 종료할
+수 없습니다.
+2
+E002:"Cannot end program during
+storage/trans-mission process
+execution."
+영상을 저장하거나 PACS로 전송 중에는 종료
+할 수 없습니다.
+3 E003:"Cannot end program during
+transmission process execution." PACS로 전송 중에는 종료할 수 없습니다.
+4 E008:"Cannot save the Raw Image"
+영상 저장 시 RAW Image가 제대로 저장 되
+지 않은 경우입니다. Image가 저장되는 Local
+Disc의 용량을 확인하십시오.
+5 E009:"Cannot update database, check
+database."
+Database의 내용을 참조하지 못한 경우입니
+다. 관리자에게 문의하십시오.
+6 E012:"Image type error." 지원하는 RAW/DCM Image가 아닌 다른 type
+의 Image를 Open하는 경우입니다.
+7 E013:"Invalid path." Image Open이나 Backup 또는 Restore시에
+Image경로가 올바르지 못한 경우입니다.
+8 E014:"Invalid patient information. Please
+check correctly."
+환자정보가 잘못 입력되어있는지 확인하십시
+오.
+9 E015:"Invalid RAW file path." RAW Image Data의 경로를 확인하세요.
+10 E022:"This is not RAW Image. Can't
+Save Image." RAW영상이 아닌 영상을 저장하려 하는 경우.
+11 E023:"Unconnected to server."
+서버와 접속할 수 없습니다.
+Menu/Configuration/PACS의 설정 내용을 확
+인해 보십시오.
+12 E024:"There is no Patient"
+Worklist 또는 Browser에서 환자(검사) 목록
+이 선택 되지 않은 상태에서 다른 작업을 수행
+한 경우입니다.
+13 E025:"Destination disk drive is full."
+Worklist에서 검사 실행 시 Local Disc의 용
+량이 가득 차있는 경우 입니다. Local Disc의
+용량을 확보한 후 촬영하십시오.
+14 E027:"Please, select view position." View Position을 선택하지 않고 영상을
+획득하려는 경우입니다.
+15 E030:"Backup drive is empty." Browser에서 Backup시 Disc Drive가 없는
+경우.
+16 E031:"Backup failed, check CD-RW." Backup이 실패한 경우. CD-RW 디스크 또는
+CD-R 미디어를 확인하십시오.
+17 E035:"Failed in patient information Database의 경로가 잘못 입력되어있거나
+
+19/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+delete." Image가 없을 때 Browser에서 Patient List를
+삭제할 수 없는 경우입니다.
+18 E036:"Failed in series information delete."
+Database의 경로가 잘못 입력되어있거나
+Image가 없을 때 Browser에서 Series List를
+삭제할 수 없는 경우입니다.
+19 E037:"Failed in study information delete."
+Database의 경로가 잘못 입력되어있거나
+Image가 없을 때 Browser에서 Study List를
+삭제할 수 없는 경우입니다.
+20 E038:"Image dose not exist." Browser에서 Image Open시 Database의 저장
+된 경로에 Image가 없는 경우입니다.
+21 E040:"Select patient/study." Browser에서 Patient List를 선택하지 않은 경
+우입니다.
+22 E041:"Selected image does not exist."
+Browser에서 Image Information Edit 또는
+Delete시 Image List가 선택되어 있지 않은 경
+우. 또는 Backup시 Patient List를 선택하지
+않은 경우입니다.
+23 E042:"Selected series does not exist." Browser에서 Series Information Edit시 Series
+List가 선택되어 있지 않은 경우입니다.
+24 E043:"Selected study does not exist." Browser에서 Study Information Edit시 Study
+List가 선택되어 있지 않은 경우입니다.
+25 E045:"There is no image data." Image가 존재하지 않습니다.
+26 E046:"Invalid patient name." Browser에서 Patient List를 Edit하는 경우
+Patient name을 입력하지 않은 경우입니다.
+27 E047:"Password is invalid! Check
+Password"
+Operator Login Password가 틀린 경우 또는
+Menu/Configuration/Setup에서 Operator
+Modify시 Password가 틀린 경우입니다.
+28 E048:"Can't delete operator:Default."
+Menu/Configuration/Setup에 있는 Operator
+List중 Guest는 기본 값으로 삭제 할 수 없습
+니다.
+29 E049:"Can't modify operator:Default."
+Menu/Configuration/Setup에 있는 Operator
+List중 Guest는 기본 값으로 변경 할 수 없습
+니다.
+30 E051:"Invalid parameter value."
+Menu/Configuration의 PACS 또는 Print에서
+새로운 Server추가 시 Information을 올바로
+입력하지 않고 "OK"하는 경우입니다.
+Information을 다시 확인하시기 바랍니다.
+31 E054:"Shutter size is between 1 inch and
+17 inch"
+Menu/Examined Part & View Position 설정에
+서 Parameter항목에서 Shutter Size가 1~17인
+치 사이를 벗어난 경우입니다.
+32 E055:"Server AE title is not correct."
+PACS 또는 Printer Server의 AE Title이 잘 못
+입력되어 있는 경우. Server 또는 Printer 관리
+자에게 정확한 AE Title을 확인하시고 다시 입
+력하십시오.
+33 E056:"Server IP is not correct."
+PACS 또는 Printer Server의 IP Address가 잘
+못 입력되어 있는 경우. Server 또는 Printer
+관리자에게 정확한 IP Address를 확인하시고
+다시 입력하십시오.
+34 E057:"Server is connecting. End server Menu/Configuration/PACS에서 PACS Server
+
+20/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+connection."
+에 접속되어있는 List를 Modify하고자 하는 경
+우. 우선 PACS Server와의 연결을 해제하신
+후 변경하십시오.
+35 E059:"Local AE title is not correct."
+Menu/Configuration/PACS의 Local AE Title을
+확인하세요. PACS 또는 Print Server에서
+Client의 AE Title을 요청할 수 있습니다.
+36 E062:Acquired or opened images are
+available now. Discard this image?(Y/N)
+Browser에서 Open한 Image를 저장/전송 또는
+취소하지 않고 Worklist로 변경하려는 경우입니
+다.
+37
+E063:"Can't start print because Film ROI
+Setting is not selected. Do you select
+Film ROI Setting?(Y/N)"
+Film Print 버튼을 누른 경우 ROI(Shutter
+Size)가 활성화가 되지 않은 경우에 뜨는
+Message입니다. "Y"를 선택하시고 ROI Size를
+조절해서 Print 하십시오.
+38 E064:"Can't start sending because
+memory is not enough."
+Local Disc Memory(용량)가 부족해서 전송을
+할 수 없습니다. Local Disc의 용량을 확보하
+세요.
+39 E065:"Can't Create Directory
+([ERROR NUM-BER]):[IMAGE PATH]"
+Image 저장 시 저장경로를 생성하지 못 한 경
+우입니다. Local Disc용량을 확보하고 OS의
+사용권한을 확인해 보십시오.
+40 E072:"Do you close present patient
+information? (Y/N)"
+촬영중인 study가 있는 경우 정상적으로
+Worklist로 돌아가지 않고 다시 다른 study를
+시행하고자 할 경우.
+41 E073:"Shutter Size Larger then Film Size!
+Please Resize Shutter Size."
+Film Print 시 ROI(Shutter) Size가 출력될
+Film Size보다 큰 경우 Shutter Size를 Film
+Size에 맞게 조절해 주십시오.
+42 "Cannot read file : IPP_1.txt" 실행 시 IPP_1.txt 파일이 C:\FUMA\DR\폴
+더에 없는 경우입니다.
+43 "Cannot read file : IPP_2.txt" 실행 시 IPP_2.txt 파일이 C:\FUMA\DR\폴
+더에 없는 경우입니다.
+44 "Cannot read file : LINEA.txt" 실행 시 LINEA.txt 파일이 C:\FUMA\DR\폴
+더에 없는 경우입니다.
+45 "Cannot read file : LINEB.txt" 실행 시 LINEB.txt 파일이 C:\FUMA\DR\폴
+더에 없는 경우입니다.
+46 "Can't Execute the DICOMSEND, Please,
+Check Execution File."
+실행 시 DXSM.exe(Send Management)가
+C:\FUMA\DR 폴더 경로에 없는 경우입니다.
+47 "Connect MWL Server Fail"
+M e n u / C o n f i g u r a t i o n / W o r k l i s t 에 서
+Modality(HIS/RIS) Worklist Server 연결정보
+및 네트워크 상태를 확인하십시오.
+48 "Invalid Register Key!" Install후 처음 실행 시 Registration Serial
+Number를 잘못 입력하였을 경우입니다.
+49 "LAN card check failed!"
+실행 시 LAN(Local Area Network)이 연결 되
+지 않았거나 사용하지 않음으로 되어있는 경우
+로 LAN Card와 LAN 선의 연결상태를 확인하
+고 Workstation의 네트워크 환경을 Check 하
+십시오.
+50 "Memory Allocation Error."
+한번에 너무 많은 Image를 띄우거나 다른 프
+로그램들이 실행 되어있는 경우 Memory 부족
+에 의한 Error가 발생 할 수 있습니다.
+
+21/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+5.3.6 Timing and memory(타이밍과 메모리)
+5.3.7 Safety Requirements(안전 요구사항)
+1) 소프트웨어 구동 경보, 경고 및 메시지
+① 오류 생성 요인과 처리방법
+오류 생성 요인에 따른 처리방법을 서비스 매뉴얼을 작성하여 이를 해결 가능
+하도록 하여야 한다.
+② 오류, 경보 및 경고 메시지
+중요한 작업 시에는 이를 사용자에게 확인을 요청하여야 한다.
+삭제와 같은 작업을 수행할 때에는 경고 메시지를 출력하여야 한다.
+중대한 문제가 발생하였을 때 이를 즉시 사용자에게 알려야 한다.
+2) 물리적 및 논리적인 보안 요구사항
+51 "Out of memory!" IPP_1 or IPP_2.txt를 정상적으로 불러들이지
+못하였을 때 Process를 시행한 경우.
+52 "Please enter integer between 1900 and
+2100."
+Browser에서 Study information Edit시 Study
+or Schedule Date Time이 1900~2100사이를
+벗어난 경우입니다.
+53 "Server port number is not correct."
+PACS 또는 Printer Server의 Port number가
+잘 못 입력되어 있는 경우. Server 또는
+Printer 관리자에게 정확한 Port number를 확
+인하시고 다시 입력하십시오.
+54 "The Image Path, [IMAGE PATH], is
+invalid"
+Image경로가 Database에 저장되어있는 경우
+와 다른 경우입니다. Image 경로를 확인하십
+시오.
+55 "View Position cannot be empty."
+Menu/Examined Part & View Position 설정
+시 View Position항목에서 View Position을 입
+력하지 않고 Add버튼을 누른 경우입니다.
+56 Max Open Image Limited.\nOpen this
+Image?(Y/N)
+DXView.ini파일 [SYSTEM]항목
+MaxOpenImage에서 설정한 수를 초과하여
+영상을 open한 경우입니다.
+57 Already Exist PATIENT ID New patient or Browser에서 Patient Edit시
+중복된 Patient ID를 입력한 경우입니다.
+58 Already Exist ACCESSION NUMBER New patient or Browser에서 Study Edit시 중
+복된Accession Number를 입력한 경우입니다.
+59
+E026 : Wrong ViewPosition Parameter./
+nPlease Press A.R. Button and
+/nResetting ViewPosition Parameters.
+Examined part & View position의 X-ray
+Parameter값이 Generator와 일치하지 않는 값
+이 입력되어있는 경우.
+Parameter Description Module
+영상획득시간 디텍터로부터 영상획득시간이 10초를 넘지 않
+아야 한다. Acquisition/Display module
+영상오픈시간 Browser모드에서 영상 오픈 시 한 장당 3초
+이내에 Display모드 화면에 표시하여야 한다. Browser/Display module
+
+22/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+① 중요 정보의 노출 위험에 관련되는 요구사항
+중요 정보가 노출되지 않도록 로그인 과정이 필요함.
+시스템 잠금기능이 있어 권한이 없는 유저가 시스템을 사용할 수 없도록 하여야
+한다.
+② 보안 수단
+- 접근 권한자
+사용권한을 단계에 따라 차등을 두어 사용 시 접근을 제한하여야 한다.
+- 인가
+등록된 사용자만 사용할 수 있도록 사용자 관리가 되어야 하며, 사용자 인증과
+정이 있어야 한다.
+- 통신 무결성
+통신과정에서 오류 발생여부를 검증하여 오류발생시 이를 수정하여 작업이 원활
+이 수행할 수 있도록 처리하여야 한다.
+3) 사람으로 인하여 발생하는 오류와 훈련에 민감한 인체공학적 요구사항
+① 수동 운영 지원
+사용자 매뉴얼 및 서비스 매뉴얼을 제공하여야 한다.
+② 인간-장치 상호작용(사용자가 시스템에 상호작용 할 수 있는 방법)
+기본 상호작용을 위한 장치로 모니터, 키보드 및 마우스를 기본적으로 지원하여
+야 한다.
+③ 담당자에 대한 제약사항
+허락된 담당자만이 기능을 사용할 수 있어야 한다.
+④ 사람의 집중적인 주의가 요구되는 영역
+환자정보 삭제
+환자정보 편집
+Safety
+Parameter Safety requirement Module
+General safety 사용자 생성 시 로그인 암호 설정기능 Configuration module
+Error safety Browser모드에서 영상을 삭제할 수 있는 사용
+자 권한을 System 사용자로 제한함. Browser/Database module
+Error safety 사용자 실수로 acquisition mode에서 영상을
+삭제하지 못하도록 영상 획득 후 자동 저장함. Configuration module
+General safety 사용 시 주의사항 매뉴얼 제공
+General safety PACS/Worklist/Printer 서버와의 통신 상태 확
+인을 위한 LED 표시 Main/Worklist module
+General safety 잘못 입력된 환자/검사정보를 수정할 수 있는
+편집기능 Browser module
+General safety 영상 저장 공간 부족으로 인한 Error를 방지하
+기 위하여 영상 저장 공간 사용량 표시 Worklist module
+General safety 환자정보 편집 시 사용자 로그인을 통한 인증
+강화 Browser module
+
+23/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+5.4 Design Description(디자인 설명)
+5.4.1 Programming language and program size(s)
+(프로그래밍 언어 및 크기)
+5.4.2 Programming tools and library(프로그래밍 툴과 라이브러리)
+5.4.2.1 Main MCU(메인 MCU)
+5.4.2.2 Sub MCU(서브 MCU)
+-해당사항 없음
+5.4.2.3 Program size(프로그램 크기)
+-DXView_W2 : 13.4MB
+개발언어 C++
+편집기 MS Visual C++ .NET 2002 and 2008
+컴파일러 MS Visual C++ .NET 2002 and 2008
+링커 MS Visual C++ .NET 2002 and 2008
+디버거 MS Visual C++ .NET 2002 and 2008
+라이브러리 Leadtools Medical Imaging Suite 13.0
+디텍터통신 RS232
+영상전송 Ethernet 통신, DICOM 3.0 protocol
+DXView_W2 size 13.4MB
+개발언어 C++
+편집기 MS Visual C++ .NET 2002 and 2008
+컴파일러 MS Visual C++ .NET 2002 and 2008
+링커 MS Visual C++ .NET 2002 and 2008
+디버거 MS Visual C++ .NET 2002 and 2008
+
+24/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+6. Architecture Design Chart(구조 디자인 차트)
+6.1 Software Diagram and Description(소프트웨어 다이어그램 및 설명)
+1) Software Diagram
+Main window
+① Acquisition : 환자정보와 촬영부위를 선택하여 디텍터로부터 영상
+획득
+② Display : 영상 후처리 및 도구를 이용한 영상조정
+③ DICOM 전송
+④ DICOM 인쇄
+Worklist window
+① 환자등록
+② 검사 전 환자목록 관리
+③ 워크리스트 서버로부터 검색
+④ RIS 코드 등록 및 관리
+Browser window
+① 검사 후 환자목록 관리
+② DICOM 전송 및 DICOM DIR
+③ 백업/복원
+④ 영상 Stitch
+Configuration window
+① PACS/DICOM Printer/Worklist 서버 목록 관리
+② 정보표시 관리
+③ 시스템 설정 관리
+④ 작업자/의사명 목록 등 관리
+
+25/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+2) Flow Chart
+① Main module
+프로그램을 시작하여 종료 할 때까지의 전체적인 구조를 설명한다.
+
+26/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+② Worklist module
+병원정보시스템(HIS)과 연동하기 위해 필요한 DICOM 워크리스트 매니지먼트(Worklist Management) 기
+능으로서 병원정보시스템에 입력한 환자와 진찰정보를 Worklist server를 통해 Worklist Mode로 직접
+불러낼 수 있다. 또한 긴급환자 발생 시 신속하게 새로운 환자정보를 입력하여 촬영할 수 있도록 하거
+나 환자목록의 정보를 수정하는 기능을 포함한다.
+
+27/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ Acquisition module
+영상센서(디텍터)로부터 영상을 가져오는 기능을 수행한다.
+
+28/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+④ Display(Image) module
+획득된 영상 혹은 브라우저에서 불러온 영상을 프로세싱 하거나, 영상 조작을 하여 이를 저장하거나
+DICOM 서버로 전송하는 기능을 수행한다.
+
+29/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑤ Browser module
+검사가 완료된 환자의 촬영정보를 검색한 후 선택한 영상을 PACS서버로 전송하거나 Display Mode로
+불러들여 세부 작업을 완료 후에 인쇄/전송작업을 수행한다.
+
+30/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑥ Database module
+내부적으로 Microsoft Access(로컬용)를 데이터베이스 엔진으로 사용하며, 각 기능 별 요청에 따라 해
+당하는 작업을 수행한다.
+
+31/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑦ Configuration module
+Configuration의 PACS, Annotation, System, Setup, Print, Worklist 설정을 통해 병원 환경에 맞는 시
+스템을 구축하도록 할 수 있다.
+
+32/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑧ DICOM module
+DICOM 3.0 protocol을 통해 영상정보의 전송을 제어 및 관리 한다.
+
+33/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7. Software Design Specification(소프트웨어 설계 사양)
+7.1 Main Module(메인 모듈)
+No 명칭 Function Description
+1 CXViewApp 메인 어플리케이션 메인 어플리케이션 클래스
+2 CMainFrame 메인바 메인 프로그램 클래스
+3 CMyConfig Configuration화면 설정파일(ini) 클래스
+4 CBaseDialog 기본 대화상자화면 기본 대화상자
+5 CLoginDlg 로그인 기능 로그인 대화상자 클래스
+6 CdbDatabase 환자정보 DB 환자정보 데이터베이스 클래스
+7 CdbDatabase2 영상파라미터 DB 파라미터 데이터베이스 클래스
+8 OtherInstance 단독실행 단독실행 클래스
+9 CToken 토큰분리 토큰 분리 클래스
+10 CXViewDoc 메인 도큐먼트화면 메인 도큐먼트 클래스
+11 CXViewView Display화면 메인 뷰 클래스
+12 CImgDisp 영상 display화면 이미지 디스플레이 클래스
+13 CAnnoObjectManager 마커/라벨/아노테이션 아노테이션 매니저 클래스
+14 CBarMain 메인바 대화상자화면 메인 바 대화상자 클래스
+15 MCButton 메인 버튼 버튼 클래스
+16 CViewDlg 뷰탭 대화상자 뷰탭 대화상자 클래스
+17 CProcessDlg 프로세스탭 대화상자 프로세스탭 대화상자 클래스
+18 CPrintDlg 툴탭 대화상자 툴탭 대화상자 클래스
+19 CBarWLControl 윈도우/레벨 조정 Window/Level조정 클래스
+20 CLBImages 미리보기창 이미지 미리보기 클래스
+21 CStaticEx 텍스트 출력 텍스트 출력 클래스
+22 CDlgSvSend 저장 및 전송 이미지 저장 및 전송 클래스
+23 CImageEach 영상 정보 환자 및 이미지 정보 클래스
+24 CBaseImage 영상 조작 이미지 조작 클래스
+25 CDScanInfo 촬영 정보 촬영 정보 클래스
+26 CDPatInfo 환자 정보 환자 정보 클래스
+27 CDStuInfo 스터디 정보 스터디 정보 클래스
+28 CDSerInfo 시리즈 정보 시리즈 정보 클래스
+29 CDImgInfo 이미지 정보 이미지 정보 클래스
+30 CDCMModule DICOM정보 DICOM 태그 정보 클래스
+31 CxLog 로그 저장 로그저장 클래스
+
+34/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7.2 Communication Module(통신 모듈)
+7.3 Modules(기타 모듈)
+7.4 Test Module(테스트 모듈)
+-해당사항 없음
+No 명칭 Function Description
+1 CxDicomNet 워크리스트 검색 DICOM C-FIND 통신 클래스
+2 CxDicomDS 검색 정보 가져오기 DICOM C-FIND 데이터 클래스
+3 CDlgSvSend DICOM 전송 이미지 저장 및 전송 클래스
+4 CDCMModule DICOM 태그정보 DICOM 태그 정보 클래스
+5 CExposureProgressDlg 영상획득 영상 획득 시 진행상황 클래스
+No 명칭 Function Description
+1 CDlgWorkList 워크리스트 목록관리 워크리스트 목록 관리 클래스
+2 CTextProgressCtrl 저장공간 용량표시 디스크 용량 표시 클래스
+3 CDateTimeCtrlEx 날짜 선택창 날짜 선택 클래스
+4 CCodeManagerDlg 코드 매니저창 코드 매니저 대화상자 클래스
+5 CDlgPatReg 워크리스트 정보 편집창 환자 정보 추가 편집 대화상자 클래스
+6 CExposureProgressDlg 검색 프로그래스바 검색진행 표시 대화상자 클래스
+7 CTray 트레이 아이콘표시 트레이 아이콘 클래스
+8 CPrintPreview2Dlg 인쇄 미리보기 필름 프린트 미리보기 클래스
+9 MCLinkedList 목록과 DB링크 링크드 리스트 클래스
+10 CBackupDlg 브라우저 백업 백업 대화상자 클래스
+11 CInfoEditDlg 브라우저 편집 정보 편집 대화상자 클래스
+12 CCDWriter2Dlg 브라우저 CD백업 CD백업 대화상자 클래스
+13 CCDWriterDICOMDIRDlg 브라우저 DICOM CD백업 DICOM CD 대화상자 클래스
+14 CXViewApp::DBBackup() 파라미터 DB백업 파라미터 DB백업
+15 CXViewApp::DBRestore() 파라미터 DB복원 파라미터 DB복원
+16 CNetworkListDlg Configuration-PACS PACS 설정 대화상자 클래스
+17 CSetAnnotaionDlg Configuration-Annotation Annotation 설정 대화상자 클래스
+18 CSystemDlg Configuration-System System 설정 대화상자 클래스
+19 CSetupDlg Configuration-Setup Setup 설정 대화상자 클래스
+20 CPrintListDlg Configuration-Print Print 설정 대화상자 클래스
+21 CWorklistDlg Configuration-Worklist Worklist 설정 대화상자 클래스
+
+35/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7.5 Data Structure(데이터 구조)
+No Module DB명칭 Description
+1
+Body part & View
+position
+(Database Module)
+AnatomicalRegionSeque
+nce Body part 명칭 참조 값
+PatientOrientationSequen
+ce 환자 상태 자세 참조 값
+
+ViewCodeSequence View position 자세 참조 값
+tVP View position 명칭 및 정보
+tEP Body part 명
+2 Database Module tBS 환자 size
+(Child/Small/Normal/Large)
+3 Database Module tEC 촬영정보/셔터사이즈등 파라미터
+4 Database Module tMT 모달리티 정보
+5 Code Manager
+(Database Module)
+tOCS OCS(RIS) Code값
+tCode OCS Code와 연계된 View position
+
+36/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+No Module DB명칭 Description
+1 Configuration Module
+Equipment DXView_W2 설정기본값
+Network PACS 서버 설정 값
+NetworkWorklist Worklist 서버 설정 값
+tPrinter 프린터목록
+Print Printer 서버 설정 값
+Operator 사용자(검사자) 정보
+Physician 의사 정보
+2 Worklist Module Worklist 검색된 환자목록 관리
+WorklistOCS 검색된 환자의 검사목록 관리
+3 Browser Module
+PatInfo 환자정보 관리
+StuInfo 검사정보 관리
+SerInfo 시리즈정보 관리
+ImgInfo 이미지정보 관리
+4 DICOM Module SOP DICOM SOP Instance정보
+
+37/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7.6 User Interface Design(사용자 인터페이스 디자인)
+1) Main Module
+프로그램의 주요기능을 포함하고 있는 메인 바.
+< 화면구성>
+① 메인 메뉴 & 버튼
+버튼 내용 서브창
+DICOM 파일 열기
+윈도우 파일선택 창으로 전환
+
+38/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+도구버튼
+-영상의 Histogram 측정
+-각도 측정
+-길이 측정
+-길이 측정값 보정
+-영상 흑백 반전
+DICOM 헤더정보 보기
+영상의 좌표값과 밸류값 보기
+X=가로위치 좌표
+Y=세로위치 좌표
+V=현재위치 밸류값
+1)전송상태 확인창 숨기기
+2)DICOM파일 추가 전송
+3)전송 멈춤
+4)선택된목록 최상단으로 이동
+5)선택된목록 한단계 위로 이동
+6)선택된목록 한단계 아래로 이동
+7)선택된목록 최하위 단계로 이동
+8)선택된목록 삭제
+(목록 이동 및 삭제는 전송멈춤 상태
+에서만 가능)
+1)프린터 서버정보
+2)확인
+3)상태 갱신
+4)인쇄상태 창 닫기
+설정모드로 전환 F.설정화면 참조
+
+39/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+검사부위 & 촬영부위 프로토콜 설정
+1)등록된 RIS(OCS)코드 검색
+2)코드설명 표시
+3)등록된 코드명 표시
+4)코드 등록 및 편집
+5)코드별 등록된 촬영부위 표시
+6)등록된 촬영부위 순서 변경
+7)등록된 촬영부위 모두 삭제
+8)등록된 촬영부위 선택 삭제
+9)검사부위 표시
+10)검사부위 순서 변경
+11)검사부위 추가
+12)검사부위 편집저장
+13)검사부위 삭제
+14)검사부위에 등록된 촬영부위 표시
+15)촬영부위 순서 변경
+16)촬영부위 추가
+17)촬영부위 편집저장
+18)촬영부위 삭제
+19)선택된 촬영부위를 코드에 등록
+20)프로토콜 저장 또는 불러오기
+21)환자크기선택(소아/소/중/대)
+22)영상처리파라미터
+23)ROI셔터크기
+24)파라미터 저장
+25)프로토콜 창 닫기
+검사자 변경
+서비스모드 영상처리 파라미터 세부설정모드(On/Off가능)
+등록된 시리얼번호와 라이센스코드
+보기
+버전정보 확인
+프로그램 종료
+-Shutdown the workstation 체크시
+PC와 함께 종료
+워크리스트 모드로 전환 B.워크리스트모드 참조
+
+40/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+② 뷰(View)/영상처리(Process) 탭
+브라우저 모드로 전환 E.브라우저모드 참조
+주요항목 아이콘 & 명칭 내용
+R 마커 삽입
+L 마커 삽입
+마커.라벨 초기화
+Shutter크기만큼 영상 잘라내기
+영상에 라벨 삽입
+셔터크기 선택
+영상 좌우방향 반전
+영상 상하방향 반전
+왼쪽 90도 회전
+오른쪽 90도 회전
+자유각도 회전기능 On/Off
+왼쪽, 오른쪽으로 1도씩 영상 회전
+자유각도 회전 초기화
+Edge 영상의 선예도 처리
+Frequency 영상의 노이즈 처리
+Contrast 영상의 대조도 처리
+LUT 영상의 밝기 조정(Look up table)
+셔터크기 선택
+설정된 파라미터값 적용
+설정된 파라미터값을 촬영부위에 저장
+
+41/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ 공통 버튼
+④ 삭제 및 전송
+영상처리 해제
+RAW영상 확인
+아이콘 내용
+ROI영역내의 윈도우 값을 전체영상에 적용
+윈도우 값 조절
+레벨 값 조절
+윈도우/레벨 값 초기화
+영상 이동
+영상 확대/축소
+돋보기 기능
+확대 또는 이동된 영상 화면에 맞춤
+각도 측정
+길이 측정
+각도, 길이 측정 값 모두 지우기
+영상 흑백 반전
+디스플레이화면 레이아웃 변경
+(1x1, 1x2, 2x1, 2x2)
+아이콘 내용
+*촬영(X-ray control)모드에서는 영상 삭제(Reject)
+*디스플레이 모드에서는 영상 닫기
+DICOM 프린터 전송
+선택된 영상 전송
+순서대로 저장/프린터서버 연결/PACS서버 연결 표시 램프
+영상 저장시 파란색으로 표시
+서버 연결시 노란색으로 표시
+영상 전송시 녹색으로 표시
+
+42/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+2) Worklist Module
+DXView_W2는 병원정보시스템(HIS)과 연동하기 위해 필요한 DICOM 워크리스트 매니지먼트(Worklist
+Management) 기능도 기본적으로 설치되어 있다. 따라서 병원정보시스템에 입력한 환자와 진찰정보를
+PACS를 통해 Worklist Mode로 직접 불러낼 수 있다. 긴급환자 발생 시 신속하게 새로운 환자정보를 입
+력하여 촬영할 수 있도록 하거나 환자목록의 정보를 수정하는 기능을 포함한다.
+< 화면구성 >
+① 상단 바
+
+43/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+버튼 내용 서브창
+새로운 환자등록
+1) 환자정보 : 환자 ID, 성명, 생년월
+일, 성별정보를 입력
+*표시는 필수입력사항
+2) 검사정보 : 검사번호, 설명,
+Access. No., 의사명, 검사자명,
+검사일시, 메모정보를 입력
+3) 검사부위 : 검사를 시행할 부위를
+그림을 참조하여 선택
+4) 촬영부위 : 검사부위내의 촬영부
+위를 선택하여 등록.
+5) 시리즈모드 : 검사부위내의 시리즈
+를 선택하여 미리 입력된 촬영부위
+를 한번에 등록할 수 있습니다.
+6) 등록된 촬영부위 : 등록된 촬영부위
+를 Delete버튼을 이용하여 삭제할 수
+있습니다.
+7) 입력된 정보를 워크리스트 목록에
+추가
+8) 환자등록 취소
+9) 환자정보 입력 없이 촬영모드로
+전환
+10) 입력된 환자정보로 검사 시행
+선택된 환자목록 편집
+새로운 환자등록창과 동일합니다.
+(환자 ID는 변경되지 않음)
+선택된 환자목록 삭제
+모든 환자목록 삭제
+디텍터 초기화
+PACS서버 연결 확인 버튼 PACS서버와 연결시 색상
+Worklist 모드창 닫기
+촬영모드로 전환
+Browser 화면 전환 버튼
+
+44/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+② 검색
+Patient ID, Patient Name, Accession No. 조건으로 검색이 가능
+버튼 내용
+환자정보 입력 없이 촬영모드로 전환
+검색창에 입력된 내용 제거
+워크리스트 서버목록 선택
+서버 검색
+③ 정렬 & 저장공간 용량 표시
+버튼 내용
+기간을 설정하여 검색된 목록을 정렬
+상태, 환자ID, 환자이름, Access. No., 성별, 환자생년월
+일, 검사설명, 검사스케줄, 촬영된 수, 모달리티 정보를
+선택하여 환자목록을 정렬
+검사 전, 검사 후, 모두보기를 선택하여 환자목록을 정렬
+CR, DX, 모든 모달리티보기를 선택하여 환자목록을 정
+렬
+Add버튼을 이용하여 다른 모달리티를 추가할 수 있습니
+다.
+모달리티/Scheduled AE Add버튼 서브창
+모달리티 또는 Scheduled AE를 입력하고 OK버튼으로
+추가
+워크리스트 서버의 Scheduled AE를 선택하여 환자목록
+을 정렬
+Add버튼을 이용하여 다른 AE를 추가할 수 있습니다.
+영상저장공간(디스크) 용량 표시
+
+45/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+④환자목록
+환자 목록을 표시
+Column 내용 및 순서 변경 가능
+버튼 내용 서브창
+환자목록 선택 후 마우스 우클
+릭 메뉴
+1.Worklist Item : 모든
+column항목표시
+2.Selected Item : 환자목록
+표시화면에 보이는 Column내
+용
+3.Top/Up/Down/Bottom 버튼
+으로 순서 변경, Default 버튼
+으로 기본 column값 설정 가
+능
+1)등록된 코드검색
+2)등록된 코드표시
+3)엑셀파일로 코드 가져오기
+4)코드설명 표시
+5)선택된 코드에 등록된 촬영
+부위 표시
+6)등록된 촬영부위 삭제 및 순
+서 변경
+7)스탠드/테이블 변경
+8)검사부위 선택
+9)촬영부위 선택
+10)검사부위 편집
+11)촬영부위 편집
+12)확인
+
+46/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+3) Acquisition Module
+영상센서(디텍터)로부터 영상을 가져오는 기능을 수행한다.
+< 화면구성 >
+① 'A.메인 바' 와 동일
+② 환자정보 표시화면
+주요항목 내용
+환자성명
+환자 ID / 생년월일(성별)
+Access. No / 작업자
+③ 주요 버튼
+아이콘 내용
+스탠드 검사
+테이블 검사
+검사중인 환자의 모든 영상을 PACS서버로 전송
+촬영 부위 선택창을 미리보기 화면으로 전환
+
+47/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+④ 촬영부위 선택 창
+⑤ 편집 버튼
+아이콘 내용
+촬영부위 편집
+환자등록 화면으로 전환
+메인 바 메뉴의 검사부위 & 촬영부위 프로토콜 설정화면으로 전환
+버튼 내용
+촬영부위 표시 및 선택
+디텍터로부터 영상을 획득하면 촬영부위에 영상이 표시됨
+
+48/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+4) Display Module
+획득된 영상 혹은 브라우저에서 불러온 영상을 프로세싱 하거나, 영상 조작을 하여 이를 저장하거나
+DICOM 서버로 전송하는 기능을 수행한다.
+< 화면구성 >
+① 환자정보 및 영상 방향 표시
+주요항목 내용
+환자ID
+환자성명
+성별(생년월일)
+Access. No.
+디텍터로부터 획득된 영상의 방향 표시
+왼쪽으로 90도 회전
+오른쪽으로 90도 회전
+좌우 반전
+상하 반전
+② 검사 조건 및 영상번호 표시
+주요항목 내용
+촬영부위에 저장된 촬영조건 값 표시
+EI(Exposure Index)값 표시
+시리즈번호
+이미지번호
+영상획득번호
+
+49/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ 촬영 부위 및 영상 획득시간 표시
+주요항목 내용
+촬영부위
+영상획득 날짜
+영상획득 시간
+④ 작업자/병원명 및 윈도우/레벨 값 표시
+주요항목 내용
+작업자
+병원명
+윈도우/레벨 값
+⑤ 팝업 메뉴
+주요항목 내용
+디스플레이 화면에 영상 맞추기
+100%(Real size)영상으로 보기
+200% 영상으로 확대 보기
+400% 영상으로 확대 보기
+자유각도 회전
+자유각도 회전 취소
+원형 셔터모양으로 변경
+영상처리 적용
+셔터사이즈 8x10
+.
+.
+.
+.
+.
+.
+.
+.
+.
+셔터사이즈 7x7
+셔터사이즈 편집창 전환
+촬영부위 기본값 셔터사이즈 적용
+촬영부위에 셔터사이즈 저장
+윈도우/레벨 값 초기화
+촬영부위에 윈도우/레벨 값 저장(옵션기능)
+선택된 영상 그림파일로 저장
+
+50/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+5) Browser Module
+검사가 완료된 환자의 촬영정보를 검색한 후 선택한 영상을 PACS서버로 전송하거나 Display Mode로
+불러들여 세부 작업을 완료 후에 인쇄/전송 작업을 수행한다.
+< 화면구성 >
+① 상단 바
+버튼 내용
+프로그램 종료
+검색된 총 환자 수 / 영상 수 / 전송된 영상 수
+체크 시 시리즈창을 숨기고 검사정보창을 확장
+썸네일 영상선택 반전
+썸네일 영상 보기 / 숨기기
+② 환자 목록창
+버튼 내용
+환자 ID와 성명을 입력하여 검색
+환자목록 중 전송이 완료되지 않은 목록 모두 선택
+환자 목록 검색
+선택된 환자목록 편집
+Edit서브창
+1)환자 ID / 성명 / 생년월일 / 성별 입력
+2)워크리스트 목록으로부터 환자정보 가져오기
+3)편집된 정보로 저장
+4)편집 취소
+Edit버튼 클릭 시 보이며, 환자 ID와 성명 입력창에 입력된 내
+용을 제거
+Complete : Image수와 send수가 같으면 Y로 표기 그 외에는 N으로 표기
+Patient ID/Name/Sex/BirthDate 정보
+Send : 전송된 수 / Print : 인쇄된 수 / Image count : 촬영된 영상 수
+
+51/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ 검사정보 목록창
+버튼 내용
+Access. No.를 입력하여 검색
+날짜 검색 표시
+Today : 오늘 날짜 검색
+Yesterday : 어제 날짜 검색
+2 days ago : 2일전부터 오늘까지 검색
+3 days age : 3일전부터 오늘까지 검색
+All : 모든 날짜 검색
+선택된 검사목록 편집
+Edit서브창
+1)환자정보 편집창과 동일
+2)검사번호/Access. No/검사설명/작업자/검사시간/의사명 입력
+3)워크리스트 목록으로부터 환자정보 가져오기
+4)편집된 정보로 저장
+5)편집 취소
+Edit버튼 클릭 시 보이며, Access. No.창에 입력된 내용을 제
+거
+환자 목록 검색
+Study ID/Access. No./Study Time/Study Description 정보
+Send : 전송된 수 / Print : 인쇄된 수 / Image count : 촬영된 영상 수
+④ 시리즈정보 목록창
+버튼 내용
+시리즈 번호 재 정렬
+선택된 검사목록 편집
+Edit서브창
+1)환자정보 편집창과 동일
+2)검사정보 편집창과 동일
+3)시리즈 번호/검사부위 입력
+4)워크리스트 목록으로부터 환자정보 가져오기
+5)편집된 정보로 저장
+6)편집 취소
+(시리즈)No/Body part 정보 표시
+
+52/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑤ 이미지정보 목록창
+⑥ 주요 버튼
+Send : 전송된 수 / Print : 인쇄된 수 / Image count : 촬영된 영상 수
+선택된 검사목록 삭제(관리자 로그인 시)
+버튼 내용
+선택된 영상 정보 편집
+Edit서브창
+1)환자정보 편집창과 동일
+2)검사정보 편집창과 동일
+3)시리즈정보 편집창과 동일
+4)검사방향/환자자세/촬영부위 입력
+5)워크리스트 목록으로부터 환자정보 가져오기
+6)편집된 정보로 저장
+7)편집 취소
+선택된 영상 삭제(관리자 로그인 시)
+이전 썸네일 페이지 보기
+다음 썸네일 페이지 보기
+썸네일 영상 보기
+썸네일 영상을 선택하면 노란색 테두리로 표시
+버튼 내용 서브창
+선택된 영상 보기
+디스플레이모드로 전환
+선택된 영상 PACS 서버로 전송
+PACS 서버 목록 선택
+연결 성공 시 체크버튼이 활성화 됨
+
+53/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+6) Database Module
+DXView_W2는 내부적으로 Microsoft Access(로컬용)를 데이터베이스 엔진으로 사용하며, 각 기능별 요
+청에 따라 해당하는 작업을 수행한다.
+① 주요 기능
+-Database Connection
+-Select/Insert/Edit/Delete
+-Database Backup/Restore
+선택된 영상을 다른 디스크 또는 CD로
+복사
+1)경로 설정
+2)복사시작
+3)DICOM DIR 형태로 복사
+4)취소
+DICOM영상을 브라우저로 목록에 추가
+1)경로 설정
+2)복원 시작
+3)취소
+DICOM DIR 형태로 CD로 복사
+1)CD드라이브 경로
+2)CD용량
+3)CD라벨네임 입력
+4)CD 복사 시작
+5)취소
+*옵션기능으로 숨기기 가능
+2장 이상 5장 이하의 영상을 선택하여
+한 장의 영상으로 생성
+*옵션기능으로 숨기기 가능
+워크리스트 모드로 화면전환
+브라우저 모드 닫기
+이전모드로 전환
+
+54/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7) Configuration Module
+Configuration의 PACS/Annotation/System/Setup/Print/Worklist 설정을 통해 병원 환경에 맞는 시스템
+을 구축하도록 할 수 있다.
+① PACS 서버 설정
+버튼 내용 서브창
+PACS 서버정보 입력
+1)서버명칭(별칭)
+2)PACS 서버 정보 입력
+3)Client(Local PC) 정보 입력
+4)저장 후 닫기
+5)취소
+선택된 PACS 서버 목록 삭제
+선택된 PACS 서버 목록 수정 Insert 서브창과 동일
+선택된 PACS 서버 목록 연결 시도
+-연결성공시 : Connected...
+-연결실패시 : Disconnected..
+설정창 닫기(공통버튼)
+
+55/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+② Annotation 설정
+버튼 내용 서브창
+디스플레이 모드에 출력되는 1~4 정보 표시 선택
+-Full : 모든 항목 보기
+-Custom : 선택 항목 보기
+-None : 모든 항목 숨기기
+환자정보 표시
+영상획득 날짜 & 시간 표시
+병원정보 표시
+촬영부위에 저장된 촬영조건 표시
+검사부위, 검사설명 표시
+시리즈번호 정보 표시
+
+56/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+③ System 설정
+버튼 내용
+브라우저 모드에서 백업기능 사용 시 기본 경로 지정
+디텍터로부터 획득 또는 브라우저모드에서 복원기능으로 영상 저장 시
+기본 경로 지정
+모달리티 선택
+-스탠드 [1디텍터 연결 시]
+-테이블 [1디텍터 연결 시]
+-풀 [2디텍터 연결 시]
+브라우저 모드의 환자목록 데이터베이스 관리
+-Compress : 데이터베이스를 압축하여 파일 공간 확보
+-백업 : 현재 데이터베이스를 복사
+-복원 : 백업한 데이터베이스를 가져오기
+저장되는 영상의 비트 수 설정(12/14/15/16 비트)
+디텍터로부터 영상 획득 시 영상 방향을 설정
+-Flip H : 좌우 방향 반전 획득
+-Flip V : 상하 방향 반전 획득
+-0 : 원본 그대로 획득
+-90 : 오른쪽 90도 회전하여 획득
+-180 : 오른쪽 180도 회전하여 획득
+-270 : 오른쪽 270도 회전하여 획득
+
+57/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+디텍터로부터 영상획득 후 데이터베이스로 자동 저장
+DICOM영상 저장 옵션(0008:0060 모달리티 값)
+-CR or DX로 저장
+영상 자동 삭제
+-Delete by Space : 영상 저장 디스크를 확인하여 설정된 %를
+초과하면 Old영상부터 자동 삭제(30~90%)
+-Delete by Date : 설정된 일자를 초과하면 Old 영상부터 자동 삭제
+(1~7day)
+
+58/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+④ Setup 설정
+버튼 내용 서브창
+작업자 목록 추가 및 삭제
+-작업자 목록 입력창에 추가할 작업자를 입
+력한 후 Add버튼을 클릭하여 작업자를 추가
+(비밀번호 설정가능)
+-선택된 작업자 목록 수정
+-선택된 작업자 목록 삭제
+-모든 작업자 목록 삭제
+(Guest는 삭제되지 않습니다)
+의사명 목록 추가 및 삭제
+(작업자 목록 추가 및 삭제와 동일)
+병원 명
+병원 주소(Location)
+날짜의 표시 방법 선택
+-DateDelimiter의 설정에 따라 구분기호 변
+경
+
+59/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑤ Print 설정
+버튼 내용 서브창
+DICOM프린터 서버목록 추가
+1)프린터 서버목록 명칭(별칭)
+2)PACS 서버 정보 입력
+3)Client(Local PC) 정보 입력
+4)프린터 제조사 선택
+5)저장 후 닫기
+6)취소
+선택된 프린터 서버 목록 삭제
+선택된 프린터 서버 목록 수정 Insert 서브창과 동일
+선택된 프린터 서버 목록 연결 시도
+-연결성공시 : Connected...
+-연결실패시 : Disconnected..
+프린터 제조사 추가 및 삭제
+-프린터 목록 추가 시 서브창
+영상 크기를 선택된 필름 크기로 맞춤
+
+60/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+마커/라벨/주석을 필름에 인쇄
+인쇄 미리보기창 사용
+1)썸네일 창
+2)썸네일 순서변경 버튼
+3)인쇄 미리보기 창
+4)필름 크기와 방향 선택
+5)도구들
+레이아웃 변경도구(1x1~4x4)
+선택된 실제크기로 보기
+선택된 미리보기창에 맞춤
+모든 영상 선택
+영상 선택 도구
+선택된 영상 확대 축소
+선택된 영상 이동
+필름 인쇄
+인쇄 취소
+인쇄 시 필름 방향 선택
+프린터 설정 정보 선택
+-필름 타입 : 블루/클리어
+-필름 방향 : 가로/세로
+-플름 크기 :8x10~14x17
+-필름 타입 : 정보표시 타입
+-스무딩 필터 : Shrap/Smooth/Medium
+-필름 여백농도 : 검정/흰색
+-최소/최대농도 : 프린터 값에 따름
+환자정보 표시(방향 선택)
+방향 :Top Left
+Top Right
+Bottom Left
+
+61/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Bottom Right
+촬영조건 표시(방향 선택)
+검사정보 표시(방향 선택)
+병원정보 표시(방향 선택)
+자 표시
+마커 표시
+
+62/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+⑥ Worklist 설정
+버튼 내용 서브창
+워크리스트 서버목록 추가
+1)워크리스트 서버목록 명칭(별칭)
+2)워크리스트 서버 정보 입력
+3)Client(Local PC) 정보 입력
+4)저장 후 닫기
+5)취소
+선택된 프린터 서버 목록 삭제
+선택된 프린터 서버 목록 수정 Insert 서브창과 동일
+선택된 프린터 서버 목록 연결 시도
+-연결성공시 : Connected...
+-연결실패시 : Disconnected..
+워크리스트 서버와 Ping 테스트
+-성공시 Connected 버튼으로 변경
+-실패시 Not Connected 버튼으로 변경
+DICOM 형식으로 가져오기
+Text 형식으로 가져오기
+-Auto Refresh : 1분마다 워크리스트 목록
+자동 검색
+워크리스트 서버에서 Scheduled AE를 지원
+하는 경우 입력
+PACS 서버에서 MPPS기능을 지원하는 경우
+선택
+-No send : MPPS정보 보내지 않음
+-Worklist : 워크리스트 서버로 보냄
+-PACS : PACS 서버로 보냄
+
+63/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8) DICOM Module
+DICOM 3.0 protocol을 통해 영상정보의 전송을 제어 및 관리 한다.
+① 주요기능
+-DICOM Modality Worklist Find
+-DICOM Image SCU
+-DICOM CD Support
+모달리티명 추가 및 삭제
+
+64/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8. Software Design and Development Procedure
+(소프트웨어 설계 및 개발 절차)
+8.1 Development Life Cycle(개발 수명주기)
+8.1.1 Development Life Cycle Procedure(개발 수명주기 절차)
+- 프로젝트 정의
+신규 시스템의 개발 범위와 내용, 시스템을 개발하는 일정, 관리 활동, 품질 활동, 테스트 등에 대한
+전반적인 계획을 기술한 문서이다.
+- 설계
+설계 및 디자인 단계에서는 기능구현에 필요한 프로그램언어, 개발환경 등 요구사항들을 정리하여,
+요구사항 분석을 토대로 프로그램 설계를 작성하고 제품개발이 효율적으로 완료될 수 있도록 구체적인
+일정표와 개발내용을 작성한다.
+- 개발
+개발 단계는 개발자(프로그래머와 문서 작성자)에 의해 수행되며, 제품설명, 구조 상세서, 사용자
+문서가 필요하다. 개발 문서는 최종 제품의 기술적인 설명으로 구성되며, 정확한 상세서는 진행 되는
+결과에 따라 갱신이 될 수 있다. 사용자 문서는 사용자 매뉴얼, 설치 매뉴얼, 서비스 매뉴얼로 구성
+
+65/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+된다.
+추가적으로 모든 부수적인 문서는 교육(훈련)과 소개 글 같은 외부적인 주문이 요구됨에 따라 추가
+될 수 있다.
+- 테스트 및 평가
+사용자 문서를 토대로 System의 전체적인 부분을 확인한다. Error나 버그 발생 시 개발단계로
+피드백(feed back)하며, 구조적인 문제발생시 설계 및 디자인 단계로 거슬러 올라가 문제를 해결해야
+한다. 테스트는 제품 출시 전 가장 중요한 단계로 개발자 외에 품질 관리부서를 통하여 평가지침서에
+준한 검증을 한다.
+- 유지보수
+소프트웨어 문제해결은 소프트웨어 유지 활동의 중요한 부분이다. 릴리즈된 소프트웨어에 문제가
+발생하거나 개선의 필요성 때문에 소프트웨어의 코드 및 관련 문서가 수정되는 경우 유지보수 활동이
+시작된다. 목적은 릴리즈된 소프트웨어 완전성(integrity)을 보존하면서 소프트웨어를 수정하는 것이다.
+8.1.2 Description of Development Life Cycle
+(개발 수명주기에 대한 설명)
+정의 설계 개발 테스트 및 평가 유지보수
+Task *분석 계획 *기본설계
+*상세설계
+*단위테스트
+*통합테스트
+*Verification &
+Validation test *모니터링
+Input *요구사항 *요구명세서
+*설계기술서
+*소스코드테스트 계
+획 *V&V test plan *사용자 불만
+*제품문제
+Output *소프트웨어명세서 *소스코드 *테스트실행문서 *V&V report
+*Risk management
+report
+*설계변경 report
+Activity
+*요구기능 정의
+*개발환경 정의
+*사용자환경 정의
+*개발계획
+*소프트웨어 설계
+(모듈, 기능) *소스코드 검증 *V&V test * 설계변경
+Risk
+Manageme
+nt Activity
+*위험관리 계획
+*위험관리 실행
+*위험평가
+*기록 및 조치
+*잔여위험 평가 *위험관리 report *새로운 위험 관리
+Documenta
+tion
+*요구사항명세서
+*설계기술서
+*위험관리 계획
+*테스트 report *V&V report
+*위험관리 report
+*설계변경 report
+*위험관리 report
+
+66/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8.2 Software Maintenance Life Cycle(소프트웨어 유지 보수 수명주기)
+8.2.1 Software Maintenance Life Cycle Procedure
+(소프트웨어 유지 보수 수명주기 절차)
+
+67/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8.2.2 Description of Software Maintenance Life Cycle Procedure
+(소프트웨어 유지 보수 수명주기 절차 설명)
+8.3 Software Configuration Management Life Cycle
+(소프트웨어 유지 보수 수명주기 절차 설명)
+8.3.1 Software Configuration Management Life Cycle Procedure
+(소프트웨어 유지 보수 수명주기 절차 설명 절차)
+유지보수 요구 유지보수 계획 수립 문제와 수정 분석 수정 실현
+Task *요구 수렴 *계획 *분석 평가
+*분석 - 계획 - 기본설계 - 상세설계 -
+개발단위테스트 - 통합테스트 - V&V 테
+스트 - 모니터링
+Input *사용자의 의견 *고객불만 *고객불만 *고객불만
+Output *고객불만 접수대장 *소프트웨어 유지보
+수 계획 *설계변경기록 *설계기술서 - 소스코드 - 테스트 report
+Activity *유지보수 계획 수
+립
+*피드백
+*설계변경승인
+*요구기능정의 - 개발환경정의 - 사용자환
+경 정의 - 개발계획 - 소프트웨어 설계(모
+듈, 기능) - V&V 테스트 - 설계변경
+Risk
+Manageme
+nt Activity
+*소프트웨어 유지보
+수 계획에 대한 위
+험 평가
+*설계검토기록 작성
+*잔여위험 평가
+*위험관리 계획 - 위험관리 실행 - 위험평
+가 - 기록 및 조치 - 잔여위험 평가 - 위
+험관리 report - 새로운 위험 관리
+Documenta
+tion *고객불만 접수대장 *설계검토기록 *설계변경기록
+(Revision history)
+*요구사항명세서 - 설계기술서 - 위험관리
+계획 - 테스트 report - V&V report -
+위험관리 report - 설계변경 report
+
+68/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+8.3.2 Description of Software Configuration Management
+(소프트웨어 형상 관리 설명)
+Software Revision Configuration
+Identification Change Control Configuration Status accounting
+Task *계획 *분석 평가 *확인
+Input *Revision 요청 *형상 관리 계획 *Release history
+Output *소프트웨어 형상
+관리 계획 *Release history *변경 된 Release history 기록
+Activity *형상 관리 계획 수
+립
+*설계변경승인
+*변경내용을 추적할
+수 있는 기록
+*기록 보관
+Risk
+Manageme
+nt Activity
+*형상 관리 계획에
+대한 위험 평가
+*소프트웨어 변경에
+대한 위험 평가 *소프트웨어 변경에 대한 위험 평가
+Documenta
+tion
+*형상 관리 계획 기
+록 *Release history *Release history
+
+69/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+9. Verification & Validation Test Plan
+(검증 및 타당성 확인 테스트 계획)
+9.1 Abbreviations and Symbols(약어 및 기호)
+ISO: International Organization for Standardization
+SOP: Standard Operating Procedure
+QM: Abbreviation for Quality Manual Document
+QR: Abbreviation for Quality Record
+QWI: Abbreviation for Quality Work Instruction
+SRS: Abbreviation for Software Requirements Specification
+SDS: Abbreviation for Software Design Specification
+SVVP: Abbreviation for Software Verification and Validation Plan
+SVVR: Abbreviation for Software Verification and Validation Report
+OCS: Oder Communication System
+PACS: Picture Archiving and Communications System
+RIS: Radiology Information System
+
+HIS: Hospital Information System
+9.2 Definitions(정의)
+• 단위테스트 : 단위 테스트를 통하여 요구사항 명세서에 맞도록 개발되었는지 확인한다.
+단위 테스트를 통과해야 다음 단계인 통합 테스트로 진행한다.
+• 통합테스트: 개발이 완성된 모듈이 통합 된 환경에서 유기적으로 동작하는지 확인한다.
+• 시스템테스트: 생산 환경에서 통합 된 시스템을 테스트하는 절차는 시스템의 특정
+요구 사항을 만족하는지 확인한다.
+• 사용자테스트 : 실제 사용자가 소프트웨어를 설치하여 사용하는 것과 동일한 환경에서 소프트웨어
+가 정상 동작하는지 확인한다.
+9.3 Reference(참고)
+9.3.1 Regulatory Standards Guidance(규제 표준 및 지침)
+- FDA 지침 S/W 시판전 신고(2005) Guidance for the Content of Premarket
+Submissions for Software Contained in Medical Devices
+- FDA 지침 SW Validation 원칙(2002) General Principles of Software Validation
+- FDA Quality System Regulation21 CFR, Part 820
+- FDA Quality System Regulation21 CFR, Part 803
+- CDRH Guidance : General Principles of Software Validation
+9.3.2 Industry Standards Guidance(산업 표준 및 지침)
+- ISO 14971:2007 의료기기에 대한 위험관리의 적용
+- ISO 13485:2003 의료기기에 대한 품질경영시스템 적용
+- IEEE Std 828-1998 소프트웨어 형상 관리 계획 표준
+- IEEE Std 830-1993 소프트웨어 요구사양(SRS)에 대한 권고기준
+- IEEE Std 1012:1998 소프트웨어 검증 및 밸리데이션에 관한 IEEE 표준
+- IEEE Std 1012A:1998 소프트웨어 검증 및 밸리데이션에 대한 IEEE 표준 추가사항
+- IEC 62304 : 의료용 소프트웨어 - 소프트웨어 수명주기 절차
+
+70/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+9.3.3 Internal Standards Guidance(내부 표준 및 지침)
+- 설계 및 개발관리 절차서(PVOP-702)
+- 식별 및 추적관리 절차서(PVOP-707)
+- 위험관리 절차서(PVOP-708)
+- 소프트웨어관리 절차서(PVOP-709)
+9.4 Roles and Responsibilities(역할과 책임)
+9.4.1 Management Members(관리 멤버)
+9.4.2 Hazard Analysis Members(위험분석 멤버)
+9.4.3 Verification & Validation Testing Team
+(검증 및 타당성 확인 테스트 팀)
+9.4.4 Documentation Review(문서검토)
+9.4.5 Qualifications(자격)
+9.5 Verification & Validation Item and Methods
+(검증 및 타당성 확인 항목과 방법)
+9.5.1 Static Analysis(정적 분석)
+a. 단위테스트(30) : 테스트 절차에 따라 적합하게 테스트되었습니다.
+b. 통합테스트(30) : 테스트 절차에 따라 적합하게 테스트되었습니다.
+c. 시스템테스트(30) : 테스트 절차에 따라 적합하게 테스트되었습니다.
+d. 사용자테스트(30) : 테스트 절차에 따라 적합하게 테스트되었습니다.
+부서 성명 책임
+연구개발부 이동진 관리책임자
+연구개발부 김완수 SRS/SDS
+부서 성명 책임
+품질부 허남규 위험관리
+부서 성명 책임
+연구개발부 김완수, 임용빈 단위테스트/통합테스트/시스템테스트
+품질부 허남규 사용자테스트
+부서 성명 책임
+품질부 허남규 문서검토1
+부서 성명 자격
+연구개발부 김완수 개발자
+품질부 허남규 품질관리책임자
+부서 성명 자격
+연구개발부 김완수 개발자
+품질부 허남규 품질관리책임자
+
+71/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+9.6 Documentation Handling(문서 처리)
+- 설계 및 개발관리 절차서(PVOP-702)
+- 소프트웨어관리 절차서(PVOP-709)
+
+72/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+10. Verification & Validation Test Results
+(검증 및 타당성 확인 테스트 결과)
+- Appendix 1,2,3,4 참조
+
+73/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+11. Hazard Analysis(위험 분석)
+11.1 Hazard Analysis Plan(위험 분석 계획)
+11.1 Scope of Analysis Plan(분석 계획의 범위)
+피닉스비전은 당사의 제품에 대하여 설계단계에서부터 생산 후 모니터링등 전반적인 프로세스에
+대하여 발생 가능한 위험을 분석, 평가, 통제, 잔여위험평가 및 생산 후 제품에 대한 위험관리를
+계획한다.
+1) 법적인 요구사항
+- 의료기기법 한국의 의료기기법 및 관련 규정
+- KGMP 인허가 목적의 의료기기품질경영시스템
+2) 일반적인 규격 요구사항
+- IEC 60601-1 General requirement of safety
+- ISO 14971-(2007) Medical device-Risk Management
+- ISO 13485 Medical Device-Quality Management System
+- DICOM 3.0-(2003) Digital Imaging Communication in Medicine
+11.1.2 Hazard Analysis Activities and outputs(위험 분석 활동 및 출력)
+단계 Activity description Responsibility Output
+위험 식별
+ISO 14971:2007에 따라 의료기기의 정상
+및 고장상태에서 이미 알고 있으며 예측 가
+능한 위해요인들에 대하여 기록한다.
+연구개발부 위험관리 보고서
+위험 산정
+위해상황을 초래할 수 있는 예측 가능한 사
+건들을 조합하여 각 위해요인에 대한 위험을
+산정하도록 한다.
+연구개발부 위험관리 보고서
+위험 평가
+식별된 각 위해 상황에 대하여 위험관리 계
+획서에 정의된 위험허용기준을 사용하여 위
+험 감소가 필요한지를 결정하여야 한다.
+연구개발부 위험관리 보고서
+위험 통제 위험감소가 요구되는 경우 위험통제활동을
+수행하고 기록한다. 연구개발부 위험관리 보고서
+잔여위험분석
+모든 위험통제조치가 실시되고 검증된 후 위
+험관리 계획에서 정의된 위험허용기준을 사
+용하여 해당 의료기기에서 식별된 전체 잔여
+위험이 허용가능한지 여부를 결정하고 기록
+한다.
+연구개발부 위험관리 보고서
+FEMA표 FMEA(고장형태 영향분석) 기법을 이요하여
+기록한다. 연구개발부 위험관리 보고서
+
+74/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+11.1.3 Hazard Category(위험 범주)
+1)물리적 특성, 기능 및 성능 요구사항
+① 소프트웨어가 수행할 모든 기능, 신뢰성 및 시간성
+가. Main Module
+a) 시스템 로그 저장 : 평가등급 하
+b) 다국어 지원 : 평가등급 하
+c) 시스템 설정 정보 불러오기/저장 : 평가등급 하
+d) 사용자 로그인/로그아웃: 평가등급 하
+e) 영상 읽어오기 : 평가등급 하
+f) 워크리스트 호출 : 평가등급 하
+g) 브라우저 호출 : 평가등급 하
+h) 영상 저장/전송하기 : 평가등급 하
+i) Body part/View position 설정하기 : 평가등급 하
+j) 프로그램 종료하기 : 평가등급 하
+나. Worklist Module
+a) 검색 - 워크리스트 서버에서 환자목록을 검색하여 데이터베이스에 추가한다.
+: 평가등급 하
+b) 편집 - 특정한 환자를 선택 후 이를 편집하여 저장한다. : 평가등급 하
+c) 삭제 - 선택한 환자를 데이터베이스에서 삭제한다. : 평가등급 하
+d) 모두삭제 - 데이터베이스에 있는 워크리스트를 모두 삭제한다.: 평가등급 하
+e) CLEAR - 검색 박스를 초기화 한다. : 평가등급 하
+f) EXAM - 선택된 환자를 영상획득 모드로 전환한다. : 평가등급 하
+g) 코드매니저 - 병원수가코드와 Body part/View position을 연결 해 주는
+관리설정 모드 : 평가등급 하
+h) 등록 - 새로운 환자를 등록 한다. : 평가등급 하
+다. Acquisition Module
+a) 영상센서(디텍터)로부터 영상을 가져오는 기능을 수행한다.: 평가등급 하
+b) 획득한 영상을 Display Module로 전송 : 평가등급 하
+등 급 설 명
+하(Minor) 고장, 잠재적 설계 결함으로 환자나 조작자에게 어떤 부상이나 신체적 피해
+가 발생할 가능성이 없는 경우
+중(Moderate)
+고장이나 잠재적 설계 결함이 직접적 원인이 되어 환자나 조작자에게 경상
+을 입힌 경우, 또는 고장 또는 잠재적 결함이 간접적인 원인으로 작용하여
+부정확하거나 지연된 정보로 환자나 조작자에게 경상을 입힌 경우
+상(Major)
+고장이나 잠재적인 결함이 직접적인 원인으로 환자나 조작자에게 사망 또
+는 중상을 입힌 경우, 또는 고장이나 잠재적 결함이 간접적 원인으로 작용
+하여 부정확하거나 지연된 정보로 인하여 환자나 조작자에게 사망이나 중
+상을 입힌 경우
+
+75/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+라. Display Module
+a) 영상 상하좌우 바꾸기 : 평가등급 하
+b) 영상 왼쪽/오른쪽으로 90도 회전 : 평가등급 하
+c) Marker/Label/Annotation – 영상에 표시되는 항목을 선택하거나 보임/숨김
+기능을 수행한다. : 평가등급 하
+d) Shutter Size – 셔터 사이즈를 조절하고, 셔터를 보이거나 숨기거나 한다.
+: 평가등급 하
+e) Auto ROI window/level – ROI 영역내의 윈도우 값을 전체영상에 적용한다.
+: 평가등급 하
+f) Edge/Frequency/Contrast/LUT – 프로세싱을 위한 파라미터를 설정한다.
+: 평가등급 하
+g) PROCESS – 선택된 파라미터로 프로세싱 기능을 수행한다. : 평가등급 하
+h) SET – 선택된 VIEW POSITION의 파라미터를 현재 값으로 설정한다.
+: 평가등급 하
+i) INIT. – 프로세싱 결과를 취소하고 원본영상으로 돌아간다. : 평가등급 하
+j) 영상의 레이아웃을 1x1~2x2로 설정한다. : 평가등급 하
+k) Panning - 영상을 이동한다. : 평가등급 하
+l) Zoom In/Out – 영상을 확대 축소한다. : 평가등급 하
+m) Magnify Glass – 돋보기 기능을 수행한다. : 평가등급 하
+n) Fitting – 확대 또는 이동된 영상을 화면에 맞춰서 보여준다. : 평가등급 하
+o) Measure Angle/Length – 각도와 길이를 측정한다. : 평가등급 하
+p) Measure Delete - 측정된 값을 지운다. : 평가등급 하
+q) Invert window/level - 영상의 흑백 반전한다. : 평가등급 하
+r) ROI 모양 변경 – 사각셔터와 원형셔터 모양을 변경한다. : 평가등급 하
+s) Expert image – 선택된 영상 그림파일로 저장한다. : 평가등급 하
+t) 히스토그램 – 히스토그램 측정한다. : 평가등급 하
+u) 저장 – 데이터베이스에 영상을 저장한다. : 평가등급 하
+v) 저장 후 전송 – 데이터베이스에 영상을 저장한 후 선택된 서버로 영상을
+전송한다. : 평가등급 하
+w) All send – 검사중인 모든 영상을 전송한다. : 평가등급 하
+x) Film 인쇄 – DICOM 프린터로 인쇄한다. : 평가등급 하
+y) 브라우저 모드 – 브라우저 모드로 전환한다. : 평가등급 하
+z) Reject/Cancel – 촬영모드에서는 영상을 삭제한다.(Reject) : 평가등급 하
+- 디스플레이모드에서는 영상을 닫는다. : 평가등급 하
+마. Browser Module
+a) SEARCH – 특정 환자를 ID, NAME으로 검색한다. : 평가등급 하
+b) CLEAR – 검색 조건을 초기화 한다. : 평가등급 하
+c) EDIT – 선택된 환자 정보를 편집한다. : 평가등급 하
+d) DELETE – 선택된 환자 정보를 영상을 포함하여 데이터베이스에서 삭제한다. : 평가등급 하
+e) DELETE ALL – 데이터베이스의 모든 정보를 영상을 포함하여 삭제한다. : 평가등급 하
+f) SELECT ALL – 전송이 완료되지 않은 모든 환자 목록을 선택한다. : 평가등급 하
+g) REARRANGE – 선택된 시리즈의 영상 순서를 재배열 한다. : 평가등급 하
+h) Image On/Off – 이미지 미리보기를 보여줌/보여주지 않음 : 평가등급 하
+i) Inverse – 선택된 항목과 선택되지 않은 항목을 서로 뒤바꾼다. : 평가등급 하
+j) Open – 선택된 영상을 오픈 한다. : 평가등급 하
+
+76/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+k) Send – 선택된 영상을 선택된 서버로 전송한다. : 평가등급 하
+l) Backup – 선택된 영상을 특정 경로 또는 CD-WRITER로 저장한다. : 평가등급 하
+m) Restore – 백업된 영상을 데이터베이스에 저장한다. : 평가등급 하
+n) DICOMDIR – 선택된 영상을 DICOM CD로 백업한다.(Option) : 평가등급 하
+o) MERGE – 선택된 영상을 병합하여 하나의 영상으로 제작한다.(Option) : 평가등급 하
+p) Worklist – 워크리스트 대화상자로 이동한다. : 평가등급 하
+q) Close – 브라우저 대화상자를 종료한다. : 평가등급 하
+바. Database Module
+a) Database Connection. : 평가등급 하
+b) Select/Insert/Edit/Delete. : 평가등급 하
+c) Databse Backup/Restore. : 평가등급 하
+사. Configuration Module
+a) PACS 서버 연결 설정 : 평가등급 하
+b) 영상 화면에 표시되는 정보 설정. : 평가등급 하
+c) 이미지 경로 및 시스템 정보 설정. : 평가등급 하
+d) 병원 정보 및 사용자 정보 설정. : 평가등급 하
+e) 프린터 연결 설정 및 기타 옵션 설정. : 평가등급 하
+f) Worklist 서버 연결 설정 및 기타 옵션 설정. : 평가등급 하
+아. DICOM Module
+a) DICOM Modality Worklist Find : 평가등급 하
+b) DICOM Image SCU : 평가등급 하
+c) DICOM CD Support : 평가등급 하
+② 요구되는 응답시간
+평가등급 : 하
+③ 물리적 특성
+평가등급 : 하
+④ 소프트웨어의 사용 환경
+평가등급 : 하
+⑤ 제어논리를 포함한 논리적 구조와 논리적 처리단계
+평가등급 : 하
+⑥ 하드웨어, 소프트웨어 및 사용 환경과의 관계를 포함하여 소프트웨어 시스템의
+동작의도를 설명한 소프트웨어의 시스템의 개관
+평가등급 : 하
+⑦ 복수 SOUP 또는 기타 장비와의 호환성
+평가등급 : 하
+
+77/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+2) 소프트웨어 시스템 입력과 출력
+① 측정 또는 기록되는 변수 특성
+평가등급 : 하
+② 소프트웨어가 수용할 수 있는 모든 범위, 한계 및 기본 값
+평가등급 : 하
+③ 데이터베이스 요구사항 및 데이터 흐름도
+평가등급 : 하
+3) 소프트웨어 시스템 내 ․ 외부의 연계성
+① 모든 내부 소프트웨어와 시스템간의 인터페이스 및 모든 외부와 사용자 인터페이스
+정의
+평가등급 : 하
+② 링크
+평가등급 : 하
+4) 소프트웨어 구동 경보, 경고 및 메시지
+① 오류 생성 요인과 처리방법
+평가등급 : 하
+② 오류, 경보 및 경고 메시지
+평가등급 : 하
+5) 물리적 및 논리적인 보안 요구사항
+① 중요 정보의 노출 위험에 관련되는 요구사항
+평가등급 : 하
+② 보안 수단
+평가등급 : 하
+6) 사람으로 인하여 발생하는 오류와 훈련에 민감한 인체공학적 요구사항
+① 수동 운영 지원
+평가등급 : 하
+② 인간-장치 상호작용(사용자가 시스템에 상호작용 할 수 있는 방법)
+평가등급 : 하
+③ 담당자에 대한 제약사항
+평가등급 : 하
+④ 사람의 집중적인 주의가 요구되는 영역
+평가등급 : 하
+
+78/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+7) 운영 및 유지보수 현장에 인도되는 의료기기 소프트웨어의 설치 및 인수 요구
+사항
+평가등급 : 하
+8) 운영 및 유지보수 방법과 관련된 요구사항
+① 사용자 운영 및 실행과 관련하여 개발할 사용자 설명서
+평가등급 : 하
+② 사용자 유지보수 요구사항
+평가등급 : 하
+11.2 Hazard Analysis Result(위험 분석 결과)
+ID No 위험 원인 영향 위험
+수준 위험감소조치
+조치
+후
+위험
+수준
+비
+고
+E1-3-1
+환자정보
+데이터
+손실
+영상데이터 삭제
+기능
+저장된 정
+보 손실 하 데이터를 삭제할 수 있
+는 권한을 제한함. 하
+E1-3-2
+환자정보
+데이터
+손실
+환자정보 편집
+기능
+환 자 정 보
+혼란초래 하
+데이터를 편집할 때 사
+용자 로그인창을 표시
+하여 사용자가 한번 더
+확인할 수 있도록 조치
+함.
+하
+E1-3-4 기능의
+상실
+저장공간 부족으
+로 인한 영상
+손실
+업무프로세
+스 지연 하 워크리스트모드에 저장
+공간 사용량을 표시함. 하
+E1-3-5 사용오류 사용규칙 위반 환 자 정 보
+혼란초래 하 사용자 매뉴얼제공 하
+E1-4-1
+불완전한
+사용법
+설명 매뉴얼에 작동법
+등 불완전한
+기재 및 기술
+업무프로세
+스 지연 하 사용자 매뉴얼제공 하
+E1-4-2
+기능적특성
+의 불완전
+한 기술
+E1-4-3
+사용목적에
+부적절한
+사양 권장 사용자환경
+에 맞지않는
+컴퓨터 또는
+모니터 사용
+업무프로세
+스 지연 하
+공인인증 또는 그에 준
+하는 인증을 받은 컴퓨
+터를 사용함
+하
+E1-4-5
+의료기기와
+함께 사용
+하는 부품
+의 사양 불
+량
+E1-4-6
+사용전 점
+검의 사양
+불량
+-저장공간 부족
+-디텍터 연결
+문제
+업무프로세
+스 지연 하 서비스매뉴얼 제공 하
+
+79/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+E1-4-7
+지나치게
+복잡한 운
+용법
+사용법 숙련의
+어려움으로 혼란
+초래
+업무프로세
+스 지연 하 간략한 사용법 매뉴얼
+제공 하
+E1-4-10
+점검과 유
+지보수의
+사양
+바이러스로 인한
+컴퓨터 운용문제
+업무프로세
+스 지연 하 백신프로그램 설치 하
+E1-5-1 장시간
+사용
+장시간 사용으로
+인한 VDT 증후
+군 발생위험
+V D T 증 후
+군 하
+“VDT증후군 보건관리
+_대한산업보건협회”제
+공
+하
+E1-5-2 바르지
+못한 자세
+바르지 못한 자
+세로 장시간 작
+업시 VDT 증후
+군 발생위험
+V D T 증 후
+군 하
+“VDT증후군 보건관리
+_대한산업보건협회”제
+공
+하
+
+80/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+12. Unsolved Anomalies(미해결 이상 현상)
+12.1 Scope(범위)
+해당없음
+12.2 Unresolved Software Anomalies(해결되지 않은 소프트웨어 변칙)
+해당없음
+
+81/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Appendix 1 Verification & Validation Test Report(Unit Test)
+제품명 : DXView_W2 테스트명 : 단위 테스트
+작성자 : 김완수 작성일 : 2021.05.27 결제자 : 이동진 결제일 : 2021.05.28.
+구분 기능 코드 실행
+횟수
+성공
+횟수
+적합/
+부적
+합
+Main
+Module
+Log 저장기능
+: 로그폴더(C:\FUMA\LOG\)에 로그파일이 저장되는지 확인한다.
+CxLog::LogInfo()
+CxLog::LogError() 30 30 적합
+다국어 지원
+: 설정대화상자에서 언어를 변경하고 프로그램을 재시작하면 언어가 변
+경되는지 확인한다.(C:\FUMA\DR\LANG_English.ini)
+SetStringLanguage() 30 30 적합
+설정정보 읽기/저장
+: 설정을 변경하고 종료한 다음 다시 시작했을 때 변경된 내용이 제대
+로 설정되어있는지 확인
+CMyConfig::ReadData()
+CMyConfig::WriteData() 30 30 적합
+사용자 로그인/로그아웃
+: 사용자아이디와 암호를 입력하여 로그인 되는지 확인 CLoginDlg::OnOK() 30 30 적합
+영상 읽기
+: 메뉴에서 Image Open을 선택하여 RAW파일이나 DCM파일을 제대로
+읽어오는지 확인
+CMainFrame::OnBarmainBtnimgopn() 30 30 적합
+Worklilst/Browser 호출
+: Worklist/Browser 버튼 클릭 시 모드 전환이 되는 지 확인
+CMainFrame::OnBnClickedBtWorklist()
+CMainFrame::OnBnClickedDlgwBtBrowser() 30 30 적합
+영상 저장/전송하기
+: Browser모드에서 오픈한 영상을 저장 또는 전송이 되는지 확인
+CBarMain::OnImageSave()
+CBarMain::OnImageSend() 30 30 적합
+뷰포지션파라미터 설정
+: 메뉴에서 Examined Part & View Position을 선택하여 제대로 설정되
+는지 확인
+CMainFrame::OnMainToolPart() 30 30 적합
+프로그램 종료하기 CMainFrame::OnMainExit() 30 30 적합
+Worklist
+Module
+환자 검색
+: 환자 ID, 환자명, Access.No으로 검색하고자 하는 환자가 검색되는지
+확인.
+CDlgWorkList::OnDlgwBtRefresh()
+CDlgWorkList::OnDlgwBtRefresh() 30 30 적합
+환자 편집
+: 목록에서 선택한 환자를 Edit 버튼을 눌러 편집 가능한지 확인하고 수
+정된 내용이 목록에 반영되는 지 확인
+CDlgWorkList::OnDlgwBtEdit() 30 30 적합
+삭제
+: 목록선택 후 Delete 버튼을 눌러 데이터베이스에서 삭제하는지 확인
+한다. 삭제된 목록이 검색되지 않는 것을 확인한다.
+CDlgWorkList::OnDlgwBtDel() 30 30 적합
+
+82/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+모두삭제
+: Delete All 버튼을 눌러 모든 환자 정보가 데이터베이스에서 삭제되는
+지 확인 한다. 삭제된 목록이 검색되지 않는 것을 확인한다.
+CDlgWorkList::OnDlgwBtDelall() 30 30 적합
+검색조건 클리어
+: 환자 ID, 환자명, Access.No에 입력된 내용을 초기화하는 지 확인. CDlgWorkList::OnDlgwBtClear() 30 30 적합
+Exam 실행
+: 환자를 선택하고 Exam 버튼을 누르거나 환자목록을 더블클릭하여 컨
+트롤 패널창이 출력되는 지 확인
+CDlgWorkList::OnOK() 30 30 적합
+코드매니저
+: 환자목록을 선택하고 마우스 우클릭 메뉴에서 Code manager를 선택
+하여 촬영할 뷰포지션을 등록 또는 제거한다.
+30 30 적합
+환자목록 등록
+: New patient버튼을 클릭하여 환자목록을 등록 한다. CDlgWorkList::OnDlgwBtAdd() 30 30 적합
+Acquisition
+Module
+디텍터로부터 영상획득
+: Exposure 시 영상을 잘 가져오는지 확인한다. CACQXDlg::ACQ_X() 30 30 적합
+획득한 영상을 Display모드로 전송
+: 디텍터로부터 획득한 영상을 Image 모드에 출력하는지 확인한다. 30 30 적합
+Image
+Module
+View 모드
+영상 좌우 바꾸기 CViewDlg::OnFH() 30 30 적합
+영상 상하 바꾸기 CViewDlg::OnFV() 30 30 적합
+영상 왼쪽으로 90도 회전 CViewDlg::OnRR() 30 30 적합
+영상 오른쪽으로 90도 회전 CViewDlg::OnRL() 30 30 적합
+영상에 표시되는 항목을 선택하거나 보임/숨김 기능을
+수행한다.
+CViewDlg::OnBnClickedCheckAnnotation()
+CViewDlg::OnBnClickedCheckLabel()
+CViewDlg::OnBnClickedCheckMarker()
+CViewDlg::OnCbnEditupdateLat()
+CViewDlg::OnCbnEditupdatePo()
+CViewDlg::OnCbnEditupdateVp2()
+30 30 적합
+셔터 사이즈를 조절하고, 셔터를 보이거나 숨기거나
+한다.
+CViewDlg::OnBnClickedCheckRoi()
+CViewDlg::OnCbnEditupdateFilmsizex()
+CViewDlg::OnCbnEditupdateFilmsizey() 30 30 적합
+ROI영역내의 윈도우 값을 전체영상에 적용하는지
+확인한다. CViewDlg::OnAutoWLControl() 30 30 적합
+영상의 윈도우/레벨을 조절한다. CXViewView::OnWLControl2 30 30 적합
+Process 모드 프로세싱을 위한 파라미터를 설정한다. CProcessDlg::OnEnUpdateEditA()
+CProcessDlg::OnEnUpdateEditB() 30 30 적합
+
+83/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+CProcessDlg::OnEnUpdateEditC()
+CProcessDlg::OnEnUpdateEditD()
+셔터 사이즈를 조절하고, 셔터를 보이거나 숨기거나
+한다.
+CProcessDlg::OnBnClickedCheckRoi()
+CProcessDlg::OnCbnEditupdateFilmsizex()
+CProcessDlg::OnCbnEditupdateFilmsizey() 30 30 적합
+선택된 파라미터로 프로세싱 기능을 수행한다. CProcessDlg::OnBtnProcess() 30 30 적합
+해당된 VIEW POSITION의 파라미터를 현재 값으로
+설정한다. CProcessDlg::OnBtnSave() 30 30 적합
+프로세싱 결과를 취소하고 원본영상으로 돌아간다. CProcessDlg::OnBtnCancel() 30 30 적합
+Tool 모드
+영상의 레이아웃을 1x1로 설정한다. CPrintDlg::OnLayout11() 30 30 적합
+영상의 레이아웃을 1x2로 설정한다. CPrintDlg::OnLayout12() 30 30 적합
+영상의 레이아웃을 2x1로 설정한다. CPrintDlg::OnLayout21() 30 30 적합
+영상의 레이아웃을 2x2로 설정한다. CPrintDlg::OnLayout22() 30 30 적합
+영상을 이동한다. CPrintDlg::OnBnClickedPanning() 30 30 적합
+영상을 확대 축소한다. CPrintDlg::OnBnClickedZoomin() 30 30 적합
+돋보기 기능을 수행한다. CPrintDlg::OnBnClickedMagnifyGlass() 30 30 적합
+확대 또는 이동된 영상을 화면에 맞춰서 보여준다. CPrintDlg::OnReset() 30 30 적합
+각도를 측정한다. 30 30 적합
+길이를 측정한다. 30 30 적합
+측정된 값을 지운다. 30 30 적합
+영상의 흑백을 반전한다. 30 30 적합
+셔터 모양을 변경한다. 30 30 적합
+선택된 영상을 그림파일로 저장한다. 30 30 적합
+
+84/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+히스토그램을 측정한다. 30 30 적합
+설정창으로 전환한다. CMainFrame::OnXviewConf() 30 30 적합
+저장 및 전송
+모드
+데이터베이스에 영상을 저장한다. CBarMain::OnImageSvDB() 30 30 적합
+데이터베이스에 영상을 저장한 후 선택된 서버로 영상을
+전송한다. CBarMain::OnImageSvDBSnd() 30 30 적합
+검사중인 모든영상을 전송한다. 30 30 적합
+영상을 Laser 프린터 필름으로 출력 한다. CMainFrame::OnMainDicomPrint() 30 30 적합
+공통기능
+브라우저모드로 전환한다. CMainFrame::OnBnClickedDlgwBtBrowser() 30 30 적합
+영상을 Reject한다. CBarMain::OnImageReject() 30 30 적합
+오픈 된 영상을 닫는다. CBarMain::OnImageClose() 30 30 적합
+Browser
+Module
+환자 목록
+특정 환자를 ID, NAME으로 검색한다. CDlgBrowser::QueryPat2 30 30 적합
+검색 조건을 초기화 한다. CDlgBrowser::OnClearPat() 30 30 적합
+선택된 환자 정보를 편집한다. CDlgBrowser::OnBtBrPatEdit() 30 30 적합
+선택된 환자 정보를 영상을 포함하여 데이터베이스에서
+삭제한다. CDlgBrowser::OnBtBrPatDel() 30 30 적합
+데이터베이스의 모든 정보를 영상을 포함하여 삭제한다. CDlgBrowser::OnBtBrPatDelall() 30 30 적합
+전송이 완료되지 않은 모든 환자 목록을 선택한다. CDlgBrowser::OnBtBrPatSelectAll() 30 30 적합
+스터디 목록
+선택된 스터디 정보를 편집한다. CDlgBrowser::OnBtBrStuEdit() 30 30 적합
+선택된 스터디 정보를 영상을 포함하여 데이터베이스에
+서 삭제한다. CDlgBrowser::OnBtBrStuDel() 30 30 적합
+특정 스터디를ACCESSION NUMBER, STUDY DATE를
+이용하여 검색한다. CDlgBrowser::QueryStu() 30 30 적합
+검색 조건을 초기화 한다. CDlgBrowser::OnClearStu() 30 30 적합
+
+85/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+적합 선택된 시리즈의 영상 순서를 재배열 한다. 30 30 CDlgBrowser::OnBnClickedBtBrSerEdit2()
+시리즈 목록
+선택된 시리즈의 영상 순서를 재배열 한다. CDlgBrowser::OnBtBrSerRearrange() 30 30 적합
+선택된 시리즈 정보를 편집한다. CDlgBrowser::OnBtBrSerEdit() 30 30 적합
+선택된 시리즈 정보를 영상을 포함하여 데이터베이스에
+서 삭제한다. CDlgBrowser::OnBtBrSerDel() 30 30 적합
+이미지 목록
+이미지 미리보기를 보여줌/보여주지 않음 CDlgBrowser::OnCkBrImgonoff() 30 30 적합
+선택된 항목과 선택되지 않은 항목을 서로 뒤바꾼다. CDlgBrowser::OnCkBrImgInverse() 30 30 적합
+선택된 영상 정보를 편집한다. CDlgBrowser::OnBtBrImgEdit() 30 30 적합
+선택된 영상 정보를 영상을 포함하여 데이터베이스에서
+삭제한다. CDlgBrowser::OnBtBrImgDel() 30 30 적합
+기타
+선택된 영상을 오픈 한다.
+CDlgBrowser::OnBtBrOpen()
+CDlgBrowser::OnClickBrLtPat()
+CDlgBrowser::OnClickBrLtStu()
+CDlgBrowser::OnClickBrLtSer()
+30 30 적합
+선택된 영상을 선택된 서버로 전송한다. CDlgBrowser::OnBtBrSend() 30 30 적합
+선택된 영상을 특정 경로 또는 CD-WRITER로 저장한다. CDlgBrowser::OnBtBrBackup() 30 30 적합
+백업된 영상을 데이터베이스에 저장한다. CDlgBrowser::OnBtBrRestore() 30 30 적합
+
+선택된 영상을 DICOM CD로 백업한다. CDlgBrowser::OnBnClickedBtDicomDir() 30 30 적합
+선택된 영상을 하나의 영상으로 제작한다. CDlgBrowser::OnBnClickedBtMerge() 30 30 적합
+워크리스트 대화상자로 이동한다. CDlgBrowser::OnBnClickedBtWorklist() 30 30 적합
+브라우저 대화상자를 종료한다. CDlgBrowser::OnCancel() 30 30 적합
+Database
+Module 데이터 Connection CRecordset::Open() 30 30 적합
+
+86/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+④
+데이터 선택/추가/수정/삭제 되는지 확인
+CRecordset::AddNew()
+CRecordset::Edit()
+CRecordset::Update()
+CRecordset::Delete()
+30 30 적합
+데이터 백업 CXViewApp::DBBackup() 30 30 적합
+Configuration
+Module
+PACS
+환경설정화면에서 PACS항목을 클릭했을 경우 아래쪽 화면이 제대로 변
+경되는지 확인한다.
+CConfigDlg::OnBtnCfgNetwork() 30 30 적합
+Annotation
+환경설정화면에서 Annotation항목을 클릭했을 경우 아래쪽 화면이 제대
+로 변경되는지 확인한다.
+CConfigDlg::OnBtnCfgAnnotation() 30 30 적합
+System
+환경설정화면에서 System항목을 클릭했을 경우 아래쪽 화면이 제대로
+변경되는지 확인한다.
+CConfigDlg::OnBtnCfgSystem() 30 30 적합
+Setup
+환경설정화면에서 Setup항목을 클릭했을 경우 아래쪽 화면이 제대로 변
+경되는지 확인한다.
+CConfigDlg::OnBtnCfgSetup() 30 30 적합
+Print
+환경설정화면에서 Print항목을 클릭했을 경우 아래쪽 화면이 제대로 변
+경되는지 확인한다.
+CConfigDlg::OnBtnCfgPrint() 30 30 적합
+Worklist
+환경설정화면에서 Worklist항목을 클릭했을 경우 아래쪽 화면이 제대로
+변경되는지 확인한다.
+CConfigDlg::OnBnClickedBtnCfgWorklist() 30 30 적합
+DICOM
+Module
+DICOM Worklist FIND
+클라이언트에서 검색요청이 들어왔을 경우 해당하는 환자정보를 찾아
+전달해준다. 로그에서 확인 CxDicomNet::SendCFindRequest() 30 30 적합
+DICOM Image SCU
+영상전송기능이 올바르게 작동하는지 확인한다. CxDicomNet::SendCStoreRequest() 30 30 적합
+DICOMCD Support
+백업기능 중 DICOM CD 기능을 참고한다. CD를 제작하여 CD에 포함
+된 뷰어프로그램에서 저장된 영상을 오픈하여 화면에 표시하는지 확인.
+CCDWriterDICOMDIRDlg::OnButtonWrite() 30 30 적합
+
+87/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Appendix 2 Verification & Validation Test Report(Integration Test)
+제품명 : DXView_W2 테스트명 : 통합 테스트
+작성자 : 김완수 작성일 : 2021.05.27 결제자 : 이동진 결제일 : 2021.05.28.
+구분 기능 설명 실행
+횟수
+성공
+횟수
+적합/
+부적
+합
+DICOM통신
+Worklist 검색 DICOM 3.0 규격을 지원하는 서버에 접속하여 Modality
+Worklist를 검색한 후, 검색된 결과를 데이터베이스에 저장한
+다.
+30 30 적합
+연결
+로그정보를 확인 DICOM 3.0 규격으로 통신을 접속하였는지 판단한다. 30 30 적합
+검색 C-FIND요청 전송
+로그정보를 확인 서버에 Modality Worklist를 요청함. 30 30 적합
+검색결과 전송 받음
+C:\COS폴더에 저장됨 검색결과를 전송받아 지정된 경로에 저장함 30 30 적합
+워크리스트 DATABASE 추가
+저장된 내용은 C:\COS폴더에서 삭제됨 전송받은 정보를 데이터베이스에 추가한다. 30 30 적합
+영상전송 DICOM 3.0 규격을 지원하는 서버에 접속하여 영상을 전송한
+다. 30 30 적합
+연결
+로그정보를 확인 DICOM 3.0 규격으로 통신을 접속하였는지 판단한다. 30 30 적합
+영상 전송
+DICOM Send Status를 확인하거나 브라
+우저 영상 미리보기에 표시된 정보를 확
+인한다.
+선택한 영상을 DICOM 3.0 규격으로 서버에 전송한다. 30 30 적합
+전송결과 전송받음
+전송결과 실패했을 경우 다음 영상을 전
+송하고 나중에 다시 시도 한다.
+성공했을 경우 데이터베이스에 결과를 저
+장한다.
+전송받은 정보를 데이터베이스에 추가한다. 30 30 적합
+영상 필름프린트 DICOM 3.0 규격을 지원하는 프린터 서버에 접속하여 영상을
+전송하여 프린트한다. 30 30 적합
+연결
+로그정보를 확인 DICOM 3.0 규격으로 통신을 접속하였는지 판단한다. 30 30 적합
+영상 전송
+DICOM Print Status를 확인하거나 브라우 선택한 영상을 DICOM 3.0 규격으로 프린터 서버에 전송한
+다. 30 30 적합
+
+88/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+저 영상 미리보기에 표시된 정보를 확인
+한다.
+전송결과 전송받음
+성공했을 경우 데이터베이스에 결과를 저
+장한다.
+전송결과를 전송받은 정보를 데이터베이스에 추가한다. 30 30 적합
+영상획득 X-Ray Exposure 영상 얻기 제네레이터와 연결된 핸드스위치를 눌러 X-Ray Exposure 후
+에 영상획득장치(디텍터)로부터 영상을 얻는지 확인한다. 30 30 적합
+프로세싱
+Edge 영상의 선예도를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다. 30 30 적합
+Frequency 영상의 프리퀀시를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다. 30 30 적합
+Contrast 영상의 대조도를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다. 30 30 적합
+LUT 영상의 룩업 테이블을 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다. 30 30 적합
+Process 실행 지정된 파라미터를 이용하여 영상의 변화가 있는지 확인한다. 30 30 적합
+실행취소 영상처리 전 영상으로 복원되는지 확인한다. 30 30 적합
+영상조작
+좌우 바꾸기 영상을 좌우로 바꾸는 기능이 되는지 확인한다. 30 30 적합
+상하 바꾸기 영상을 상하로 바꾸는 기능이 되는지 확인한다. 30 30 적합
+왼쪽으로 90도 회전 영상을 왼쪽으로 90도 회전하는 기능이 되는지 확인한다. 30 30 적합
+오른쪽으로 90도 회전 영상을 오른쪽으로 90도 회전하는 기능이 되는지 확인한다. 30 30 적합
+히스토그램 측정 영상의 특정 부분의 히스토그램을 측정하여 화면에 표시하는
+지 확인한다. 30 30 적합
+
+89/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+길이 측정 영상의 특정 길이를 측정하여 화면에 표시하는지 확인한다. 30 30 적합
+각도 측정 영상의 특정 부분의 각도를 측정하여 화면에 표시하는지 확인
+한다. 30 30 적합
+반전 화면의 색상을 흑백 반전 시키는지 확인한다. 30 30 적합
+Window 값 감소 Window값을 감소시키는지 확인한다. 30 30 적합
+Window 값 증가 Window값을 증가시키는지 확인한다. 30 30 적합
+Level 값 감소 Level값을 감소시키는지 확인한다. 30 30 적합
+Level 값 증가 Level값을 증가시키는지 확인한다. 30 30 적합
+Window/Level 값 초기화 Window/Level값을 초기화 해주는 지 확인한다. 30 30 적합
+Layout 1x1 화면 레이아웃을 세로x가로 1x1로 변경하는지 확인한다. 30 30 적합
+Layout 1x2 화면 레이아웃을 세로x가로 1x2로 변경하는지 확인한다. 30 30 적합
+Layout 2x1 화면 레이아웃을 세로x가로 2x1로 변경하는지 확인한다. 30 30 적합
+Layout 2x2 화면 레이아웃을 세로x가로 2x2로 변경하는지 확인한다. 30 30 적합
+Panning 영상을 마우스로 이동하는 기능이 정상적으로 동작하는지 확
+인한다. 30 30 적합
+Zoom In/Out 영상을 마우스로 확대/축소하는 기능이 정상적으로 동작하는
+지 확인한다. 30 30 적합
+Magnify Glass 영상을 돋보기로 확대하는 기능이 정상적으로 동작하는지 확
+인한다. 30 30 적합
+Fitting 영상을 화면에 맞추어 디스플레이 하는지 확인한다. 30 30 적합
+데이터베이스
+검색 지정된 검색 조건 혹은 모든 내용을 검색하는지 확인한다. 30 30 적합
+편집 선택된 내용을 수정하여 업데이트 하는지 확인한다. 30 30 적합
+
+90/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+삭제 선택된 내용을 삭제하여 같은 내용이 출력되지 않는지 확인한
+다. 30 30 적합
+백업 데이터베이스를 백업하는지 확인한다. 30 30 적합
+복원 데이터베이스를 복원하는지 확인한다. 30 30 적합
+설정(Configuration)
+PACS
+Insert 목록에 새로운 서버정보를 추가하는지 확인한다. 30 30 적합
+Delete 목록에서 선택된 서버정보를 삭제하는지 확인한다.
+(접속중인 목록은 삭제되지 않습니다.) 30 30 적합
+Modify 목록에서 선택된 서버정보를 수정하는지 확인한다.
+(접속중인 목록은 수정되지 않습니다.) 30 30 적합
+Select 목록에서 선택된 서버로 연결을 시도하는지 확인한다. 30 30 적합
+Annotation
+Full 모든 Annotation을 화면에 보여주는지 확인한다. 30 30 적합
+Custom Annotation항목 중 원하는 항목을 선택하여 화면에 보여주는
+지 확인한다. 30 30 적합
+None Annotation항목을 화면에 보여주지 않는지 확인한다. 30 30 적합
+System
+Backup Drive 브라우저에서 백업 시 지정된 경로가 선택되는지 확인한다. 30 30 적합
+Image Save Path 영상이 지정된 경로에 저장되는지 확인한다. 30 30 적합
+Modality 모달리티 장비 타입을 Stand/Table/Full(Stand/Table) 중에
+서 설정하여 작동 되는지 확인한다. 30 30 적합
+Database
+Compress - 데이터베이스를 압축하는지 확인한다.
+Backup - 데이터베이스를 백업 하는지 확인한다.
+Restore - 백업된 데이터베이스를 복원 하는지 확인한다.
+30 30 적합
+
+91/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Image Pixel 영상의 최대 비트수를 지정하여 DICOM영상에 실제로 해당
+비트수로 저장되는 지 확인한다. 30 30 적합
+Image Stand/Table에 따라 Flip H/Flip V/Rotate 를 각각 설정하
+여 촬영 시 이를 적용하는지 확인한다. 30 30 적합
+Auto Save 촬영 시 자동으로 저장할지 체크하여 이를 수행하는지 확인
+한다. 30 30 적합
+DICOM 3.0 Save Option DICOM 영상을 저장 시 CR/DX로 구분하여 저장한다. 30 30 적합
+Image Auto Delete 용량별 혹은 일자별로 구분하여 자동으로 삭제가 가능한 지
+확인한다. 30 30 적합
+Setup
+Operator List 오퍼레이터 목록에 오퍼레이터를 추가 관리하여 해당 오퍼레
+이터로 로그인 할 수 있는지 확인한다. 30 30 적합
+Physician List 의사명 목록을 관리하여 해당 의사목록을 사용할 수 있는지
+확인한다. 30 30 적합
+Hospital Information 병원명과 주소를 입력하여 DICOM정보에 저장되는지 확인한
+다. 30 30 적합
+Date Format 날짜포맷을 지정하여 지정된 형식으로 보이는 지 확인한다. 30 30 적합
+Print
+Insert 목록에 새로운 프린터서버정보가 추가되는지 확인한다. 30 30 적합
+Delete 목록에서 선택된 프린터서버정보를 삭제하는지 확인한다.
+(접속중인 목록은 삭제되지 않습니다.) 30 30 적합
+Modify 목록에서 선택된 프린터서버정보를 수정하는지 확인한다.
+(접속중인 목록은 수정되지 않습니다.) 30 30 적합
+Select 목록에서 선택된 프린터서버로 연결을 시도하는 지 확인한
+다. 30 30 적합
+Printer List 프린터목록에서 프린터 제조사를 선택하여 지정하는지 확인
+한다. 30 30 적합
+View Marker/Label/Annotation 항목을 Film Print할 때에 출력할
+것인지 체크하여 적용되는지 확인한다. 30 30 적합
+Overlay Film Print시 영상위에 출력할 내용을 선택하여 적용되는지
+확인한다. 30 30 적합
+Preview Film Print 미리보기창 사용여부를 체크하여 적용되는지 확
+인한다. 30 30 적합
+
+92/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Auto Set Orientation Portrait/Landscape를 지정하고 체크된 방향이 적용되는지
+확인한다. 30 30 적합
+Fit Film Size 영상을 필름크기에 맞추어 출력하는지 여부를 체크하고 적용
+되는지 확인한다. 30 30 적합
+프린터 속성
+Medium Type
+Film Orientation
+Film Size
+Print Type
+Smoothing
+Border Density
+Min Density
+Max Density
+(프린터 속성정보는 프린터 사양에 따라 달라집니다.)
+30 30 적합
+Worklist
+Insert 목록에 새로운 서버정보를 추가하는지 확인한다. 30 30 적합
+Delete 목록에서 선택된 서버정보를 삭제하는지 확인한다.
+(접속중인 목록은 삭제되지 않습니다.) 30 30 적합
+Modify 목록에서 선택된 서버정보를 수정하는지 확인한다.
+(접속중인 목록은 수정되지 않습니다.) 30 30 적합
+Select 목록에서 선택된 서버로 연결을 시도하는지 확인한다. 30 30 적합
+Network Test 서버 컴퓨터와 네트워크 테스트를 하여 네트워크에 이상이
+없는지 확인한다.(Ping test) 30 30 적합
+OCS DICOM통신을 사용할지 Text파일을 사용할지 선택하여 적용
+되는지 확인한다. 30 30 적합
+Station Name 워크리스트 서버에서 검색하고자하는 스테이션 AE명을 입력
+한다. 30 30 적합
+MPPS Send MPPS를 전송할 서버를 선택하여 적용되는지 확인한다.
+(PACS서버에서 지원되는 경우만 사용이 가능하다.) 30 30 적합
+Modality 검색하고자 하는 Modality를 추가/편집/삭제 하여 Worklist모
+드에서 적용되는지 확인한다. 30 30 적합
+
+93/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Appendix 3 Verification & Validation Test Report(System Test)
+제품명 : DXView_W2 테스트명 : 시스템 테스트
+작성자 : 김완수 작성일 : 2021.05.27 결제자 : 이동진 결제일 : 2021.05.28.
+Worklist mode 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+워크리스트 서버에서 가져오기
+서버 목록에서 원하는 서버를 선택한 후 Refresh 버튼을 눌러 워크리스트 정보를 가져오는 지 확인 30 30 적합
+환자 검색
+환자 ID, 환자명, Access.No으로 검색하고자 하는 환자가 검색되는지 확인. 30 30 적합
+환자 편집
+목록에서 선택한 환자를 Edit 버튼을 눌러 편집 가능한지 확인하고 수정된 내용이 목록에 반영되는 지
+확인
+30 30 적합
+브라우저 호출
+Browser 버튼을 눌러 브라우저 창이 출력되는 지 확인 30 30 적합
+Exam 실행
+환자를 선택하고 Exam 버튼을 누르거나 환자목록을 더블클릭하여 컨트롤 패널창이 출력되는 지 확인 30 30 적합
+삭제
+선택된 목록을 Delete 버튼을 눌러 데이터베이스에서 삭제하는지 확인한다. 삭제된 목록이 검색되지 않
+는 것을 확인한다.
+30 30 적합
+모두삭제
+Delete All 버튼을 눌러 모든 환자 정보가 데이터베이스에서 삭제 되는지 확인 한다. 삭제된 목록이 검색
+되지 않는 것을 확인한다.
+30 30 적합
+검색조건 클리어
+환자 ID, 환자명, Access.No에 입력된 내용을 초기화하는 지 확인. 30 30 적합
+Acquisition & Display(Image) mode 실행
+횟수 성공
+횟수 적합/
+부적합 remark
+Access No. 목록표시
+워크리스트에서 선택된 환자목록의 Access No.가 제대로 목록에 표시되는지 확인한다. 30 30 적합
+Study Body Part 목록 표시
+Access No. 목록을 선택했을 때 해당하는 환자의 촬영 부위목록이 제대로 목록에 표시되는지 확인한다. 30 30 적합
+환자 정보 표시
+워크리스트에서 선택된 환자정보가 제대로 표시되는지 확인한다. 30 30 적합
+
+94/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Bodypart/Viewposition 변경
+Body part와 View position을 추가 또는 삭제 할 수 있는지 확인한다. 30 30 적합
+워크리스트로 이동
+촬영 중인 환자를 닫고 워크리스트 창으로 돌아가는 것을 확인한다. 30 30 적합
+Browser로 이동
+촬영한 영상을 확인하기위한 브라우저 창으로 이동하는 것을 확인한다. 30 30 적합
+촬영된 영상 가져오기
+촬영된 영상을 디텍터로부터 가져와서 디스플레이 모드에 영상을 출력하는지 확인 한다. 30 30 적합
+Browser mode 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+환자 목록
+특정 환자를 ID, NAME으로 검색되는지 확인한다. 30 30 적합
+검색 조건을 초기화 하는 것을 확인한다. 30 30 적합
+선택된 환자 정보가 편집되는지 확인한다. 30 30 적합
+선택된 환자 정보를 영상을 포함하여 데이터베이스에서 삭제되는지 확인한다. 30 30 적합
+데이터베이스의 모든 정보를 영상을 포함하여 삭제되는지 확인한다. 30 30 적합
+스터디 목록
+선택된 스터디 정보가 편집되는지 확인한다. 30 30 적합
+선택된 스터디 정보를 영상을 포함하여 데이터베이스에서 삭제되는지 확인한다. 30 30 적합
+특정 스터디를 ACCESSION NUMBER, STUDY DATE를 이용하여 검색되는지 확인한다. 30 30 적합
+검색 조건을 초기화 하는 것을 확인한다. 30 30 적합
+시리즈 목록 선택된 시리즈의 영상 순서를 재배열 하는 것을 수행하여 업데이트 되는지 확인한다. 30 30 적합
+선택된 시리즈 정보가 편집되는지 확인한다. 30 30 적합
+
+95/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+선택된 시리즈 정보를 영상을 포함하여 데이터베이스에서 삭제되는지 확인한다. 30 30 적합
+이미지 목록
+이미지 미리보기를 보여줌/보여주지 않음을 체크하여 미리보기가 보이거나 해제되는지 확
+인한다. 30 30 적합
+선택된 항목과 선택되지 않은 항목을 서로 반전하는지 확인한다. 30 30 적합
+선택된 영상 정보를 편집하여 업데이트 되는지 확인한다. 30 30 적합
+선택된 영상 정보를 영상을 포함하여 데이터베이스에서 삭제되는지 확인한다. 30 30 적합
+기타
+Open
+선택된 영상을 오픈하여 디스플레이 되는지 확인한다. 30 30 적합
+Send
+선택된 영상을 선택된 서버로 전송되는지 확인한다. 30 30 적합
+Backup
+선택된 영상을 특정 경로 또는CD-WRITER로 저장하는지 확인한다. 30 30 적합
+Restore
+백업된 영상을 데이터베이스로 복원되는지 확인한다. 30 30 적합
+DICOMDIR(option)
+선택된 영상을 DICOM CD로 백업되는지 확인한다. 30 30 적합
+Merge(option)
+선택된 영상을 병합하여 하나의 영상으로 제작되는지 확인한다. 30 30 적합
+Worklist
+워크리스트 대화상자로 이동하는지 확인한다. 30 30 적합
+Close
+브라우저 대화상자를 종료하는지 확인한다. 30 30 적합
+Main Bar 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+Worklist
+워크리스트 창을 표시 하는 지 확인한다. 30 30 적합
+View
+View/Process/Tool 탭 중에서 View탭을 활성화 하는지 확인한다. 30 30 적합
+Process
+View/Process/Tool 탭 중에서 Process탭을 활성화 하는지 확인한다. 30 30 적합
+Tool
+View/Process/Tool 탭 중에서 Tool탭을 활성화 하는지 확인한다. 30 30 적합
+
+96/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+SaveDB
+촬영 모드에서 영상을 DB에 저장하는 지 확인한다. 30 30 적합
+SaveDB&Send
+촬영 모드에서 영상을 DB에 저장하고 DICOM 서버로 전송하는지 확인한다. 30 30 적합
+Save
+브라우저 모드에서 오픈된 영상을 DB에 저장하는 지 확인한다. 30 30 적합
+Send
+브라우저 모드에서 오픈된 영상을 DB에 저장하고 DICOM 서버로 전송하는지 확인한다. 30 30 적합
+Film Print
+필름 프린트 미리보기창을 표시하고 인쇄가 되는지 확인한다. 10 10 적합
+Browser
+브라우저 창을 표시 하는 지 확인한다. 30 30 적합
+Close
+열려진 모든 영상을 닫는지 확인한다. 30 30 적합
+Main Menu
+메인 메뉴가 표시되는지 확인한다. 30 30 적합
+Main Menu 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+Image Open
+지정된 경로에 있는 RAW파일이나 DICOM파일을 불러들여 영상을 표시하는지 확인한다. 30 30 적합
+Tool
+Histogram
+영상의 특정 부분의 히스토그램을 측정하여 화면에 표시하는지 확인한다. 30 30 적합
+Measure Length
+영상의 특정 길이를 측정하여 화면에 표시하는지 확인한다. 30 30 적합
+Measure Angle
+영상의 특정 부분의 각도를 측정하여 화면에 표시하는지 확인한다. 30 30 적합
+Calibration Length
+미리 측정한 Measure Length의 측정 길이를 변경하여 다음 측정 시 변경된 길이로 측정 되
+는지 확인한다.
+30 30 적합
+Invert
+화면의 색상을 흑백 반전 시키는지 확인한다. 30 30 적합
+DICOM Header
+DICOM 영상의 헤더 정보를 대화상자에 표시하여 출력할 수 있는지 확인한다. 30 30 적합
+Pixel Information
+특정부분의 픽셀 값 정보를 출력할 수 있는지 확인한다. 30 30 적합
+Merge Tool(Option)
+여러 개의 영상을 하나의 영상으로 만들어 저장할 수 있는지 확인한다. 30 30 적합
+Send Status
+DICOM 서버로 영상을 전송하는 상태를 확인한다. 30 30 적합
+Print Status
+Film Print 서버로 영상을 전송하는 상태를 확인한다. 30 30 적합
+
+97/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Configuration
+설정정보를 변경할 수 있는지 확인한다. 30 30 적합
+Examined Part & View Position
+촬영하고자하는 촬영부위와 뷰포지션에 대한 설정값을 변경할 수 있는지 확인한다. 30 30 적합
+Change Operator
+로그인한 오퍼레이터를 변경할 수 있는 지 확인한다. 30 30 적합
+Service
+Line Data
+영상처리 시 사용할 라인데이터를 편집할 수 있는지 확인한다. 30 30 적합
+IPP Data
+영상처리 시 사용할 프로세싱 파라미터를 편집할 수 있는지 확인한다. 30 30 적합
+LUT Data
+영상처리 시 사용할 Lookup Table 값을 편집할 수 있는지 확인한다. 30 30 적합
+Registration
+제품을 등록할 수 있는지 확인한다. 30 30 적합
+Exit
+프로그램을 정상적으로 종료할 수 있는지 확인한다. 30 30 적합
+Main Bar - View Mode 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+Flip Horz
+영상을 좌우로 바꾸는 기능이 되는지 확인한다. 30 30 적합
+Flip Vert
+영상을 상하로 바꾸는 기능이 되는지 확인한다. 30 30 적합
+Rotate Left 90
+영상을 왼쪽으로 90도 회전하는 기능이 되는지 확인한다. 30 30 적합
+Rotate Right 90
+영상을 오른쪽으로 90도 회전하는 기능이 되는지 확인한다. 30 30 적합
+Decrease Window
+Window값을 감소시키는지 확인한다. 30 30 적합
+Increase Window
+Window값을 증가시키는지 확인한다. 30 30 적합
+Decrease Level
+Level값을 감소시키는지 확인한다. 30 30 적합
+Increase Level
+Level값을 증가시키는지 확인한다. 30 30 적합
+Reset Window/Level
+Window/Level값을 초기화 해주는 지 확인한다. 30 30 적합
+Marker
+Marker를 표시하거나 숨기는 기능이 작동하는지 확인한다. Marker에 표시되는 텍스트를 선택하거나 수
+정하는 기능이 정상적으로 작동하는지 확인한다.
+30 30 적합
+Label
+Label를 표시하거나 숨기는 기능이 작동하는지 확인한다. Label에 표시되는 텍스트를 선택하거나 수정하 30 30 적합
+
+98/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+는 기능이 정상적으로 작동하는지 확인한다.
+Annotation
+Annotation을 표시하거나 숨기는 기능이 작동하는지 확인한다. Annotation에 표시되는 텍스트를 선택하
+거나 수정하는 기능이 정상적으로 작동하는지 확인한다.
+30 30 적합
+Shutter
+Film Shutter를 보여주거나 Image ROI를 보여주는 지 확인한다. 가로/세로 크기를 지정하여 정상적으로
+변경 되는 지 확인한다.
+30 30 적합
+Main Bar - Process Mode 실행
+횟수 성공
+횟수 적합/
+부적합 remark
+Edge
+영상의 프리퀀시를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다.
+30 30 적합
+Frequency
+영상의 대조도를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다.
+30 30 적합
+Contrast
+영상의 관용도를 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다.
+30 30 적합
+LUT
+영상의 룩업 테이블을 변경한다.
+영상이 변경된 사항이 적용되는지 확인한다.
+30 30 적합
+Shutter
+Film Shutter를 보여주거나 Image ROI를 보여주는 지 확인한다. 가로/세로 크기를 지정하여 정상적으로
+변경 되는 지 확인한다.
+30 30 적합
+PROCESS
+프로세싱이 지정된 Edge/Frequency/Contrast/LUT 파라미터와 Shutter Size대로 처리되는지 확인한다. 30 30 적합
+SET
+현재 설정된 Edge/Frequency/Contrast/LUT 파라미터를 촬영부위에 저장하여 같은 촬영 부위의 영상에
+서도 적용되는지 확인한다.
+30 30 적합
+UNDO(Init.)
+프로세싱 결과를 취소하고 원본 영상을 보여주는 지 확인한다. 30 30 적합
+Main Bar - Tool Mode 실행
+횟수 성공
+횟수 적합/
+부적합 remark
+Layout 1x1
+화면 레이아웃을 세로x가로 1x1로 변경하는지 확인한다. 30 30 적합
+Layout 1x2
+화면 레이아웃을 세로x가로 1x2로 변경하는지 확인한다. 30 30 적합
+Layout 2x1
+화면 레이아웃을 세로x가로 2x1로 변경하는지 확인한다. 30 30 적합
+Layout 2x2
+화면 레이아웃을 세로x가로 2x2로 변경하는지 확인한다. 30 30 적합
+
+99/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Panning
+영상을 마우스로 이동하는 기능이 정상적으로 동작하는지 확인한다. 30 30 적합
+Zoom In/Out
+영상을 마우스로 확대/축소하는 기능이 정상적으로 동작하는지 확인한다. 30 30 적합
+Magnify Glass
+영상을 돋보기로 확대하는 기능이 정상적으로 동작하는지 확인한다. 30 30 적합
+Image Reset
+영상을 원래 초기값으로 설정하는지 확인한다. 30 30 적합
+Film ROI Display
+Film Shutter를 보여주거나 Image ROI를 보여주는 지 확인한다. 가로/세로 크기를 지정하여 정상적으로
+변경 되는 지 확인한다.
+30 30 적합
+Window
+Window값을 증가/감소하거나 지정된 값을 설정하여 영상의 밝기 값이 변경되는지 확인한다. 30 30 적합
+Level
+Level값을 증가/감소하거나 지정된 값을 설정하여 영상의 밝기 값이 변경되는지 확인한다. 30 30 적합
+Reset Window/Level
+현재 설정된 Window/Level 값 대신 기본 초기값을 설정하는지 확인한다. 30 30 적합
+Viewer Mode - Popup Menu 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+View Fit Size
+영상을 화면 크기에 맞게 비율을 조정하는지 확인한다. 30 30 적합
+View Full Size
+영상을 실제 크기에 맞게 비율을 조정하는지 확인한다. 30 30 적합
+ROI Ellipse
+ROI를 사각형에서 타원으로 설정하는지 확인한다. 체크 해제를 하면 ROI가 사각형으로 설정되는지 확인
+한다.
+30 30 적합
+FilmSize 8x10
+Film ROI크기를 8인치x10인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 10x10
+Film ROI크기를 10인치x10인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 10x12
+Film ROI크기를 10인치x12인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 12x12
+Film ROI크기를 12인치x12인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 12x14
+Film ROI크기를 12인치x14인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 14x17
+Film ROI크기를 14인치x17인치로 설정하는지 확인한다. 30 30 적합
+FilmSize 17x17
+Film ROI크기를 17인치x17인치로 설정하는지 확인한다. 30 30 적합
+
+100/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+FilmSize Customize
+Film ROI크기 선택 메뉴를 사용자 정의 할 수 있는지 확인한다. 30 30 적합
+Reset Window/Level
+현재 설정된 Window/Level 값 대신 기본 초기값을 설정하는지 확인한다. 30 30 적합
+Export Image
+현재 선택된 영상을 JPG/BMP/TIF 파일 형식으로 저장할 수 있는지 확인한다. 30 30 적합
+Configuration mode 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+PACS
+Insert
+목록에 새로운 서버정보를 추가하는지 확인한다. 30 30 적합
+Delete
+목록에서 선택된 서버정보를 삭제하는지 확인한다. 30 30 적합
+Modify
+목록에서 선택된 서버정보를 수정하는지 확인한다. 30 30 적합
+Select
+목록에서 선택된 서버를 DICOM전송할 서버로 지정하는지 확인한다. 30 30 적합
+Annotation
+Full
+모든 Annotation을 화면에 보여주는지 확인한다. 30 30 적합
+Custom
+Annotation항목 중 원하는 항목을 선택하여 화면에 보여주는지 확인한다. 30 30 적합
+None
+Annotation항목을 화면에 보여주지 않는지 확인한다. 30 30 적합
+System
+Backup Drive
+
+지정된 경로에 영상이 백업되는지 확인한다. 30 30 적합
+Image Save Path
+영상이 지정된 경로에 저장되는지 확인한다. 30 30 적합
+Modality
+모달리티 장비 타입을 Stand/Table/Full(Stand/Table)/Multi 중에서 설정하여 작동 되는지
+확인한다.
+30 30 적합
+Database
+Compress - 데이터베이스를 압축하는지 확인한다.
+Backup - 데이터베이스를 백업 하는지 확인한다.
+Restore - 백업된 데이터베이스를 복원 하는지 확인한다.
+30 30 적합
+Image Pixel
+영상의 최대 비트수를 지정하여 DICOM영상에 실제로 해당 비트수로 저장되는 지 확인한
+다.
+30 30 적합
+Image
+Stand/Table에 따라 Flip H/V Flip, Rotate를 각각 설정하여 촬영 시 이를 적용하는지 확
+인한다.
+30 30 적합
+Auto Save
+촬영 시 자동으로 저장할지 체크하여 이를 수행하는지 확인한다. 30 30 적합
+
+101/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+DICOM 3.0 Save Option
+DICOM 영상을 저장 시 CR/DX로 구분하여 저장한다. 30 30 적합
+Image Auto Delete
+용량별 혹은 일자별로 구분하여 자동으로 삭제가 가능한 지 확인한다. 30 30 적합
+Setup
+Operator List
+오퍼레이터 목록에 시스템을 사용할 오퍼레이터를 추가 관리하여 해당 오퍼레이터로 로그인
+할 수 있는지 확인한다.
+30 30 적합
+Physician List
+의사명 목록을 관리하여 해당 의사목록을 사용할 수 있는지 확인한다. 30 30 적합
+Hospital Information
+병원명과 주소를 입력하여 DICOM정보에 저장되는지 확인한다. 30 30 적합
+Date Format
+날짜포맷을 지정하여 지정된 형식으로 보이는 지 확인한다. 30 30 적합
+Print
+Insert
+목록에 새로운 프린터서버정보를 추가하는지 확인한다. 30 30 적합
+Delete
+목록에서 선택된 프린터서버정보를 삭제하는지 확인한다. 30 30 적합
+Modify
+목록에서 선택된 프린터서버정보를 수정하는지 확인한다. 30 30 적합
+Select
+목록에서 선택된 프린터서버를 DICOM Film Print할 프린터서버로 지정하는지 확인한다. 30 30 적합
+Printer List
+프린터목록에서 프린터를 선택하여 지정하는지 확인한다. 30 30 적합
+View
+Marker/Label/Annotation 항목을 Film Print할 때에 출력할 것인지 체크하여 적용되는지 확
+인한다.
+30 30 적합
+Overlay
+Film Print시 영상위에 출력할 내용을 선택하여 적용되는지 확인한다. 30 30 적합
+Preview
+Film Print 미리보기여부를 체크하여 적용되는지 확인한다. 30 30 적합
+Auto Set Orientation
+Portrait/Landscape를 자동으로 선택할 것인지 수동으로 지정할 것인지 체크하고 적용되는
+지 확인한다.
+30 30 적합
+Fit Film Size
+영상을 필름크기에 맞추어 출력하는지 여부를 체크하고 적용되는지 확인한다. 30 30 적합
+프린터 속성
+Medium Type
+Film Orientation
+30 30 적합
+
+102/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Film Size
+Print Type
+Smoothing
+Border Density
+Min Density
+Max Density
+을 변경하여 프린트 시 적용 되는지 확인한다.
+Worklist
+Insert
+목록에 새로운 서버정보를 추가하는지 확인한다. 30 30 적합
+Delete
+목록에서 선택된 서버정보를 삭제하는지 확인한다. 30 30 적합
+Modify
+목록에서 선택된 서버정보를 수정하는지 확인한다. 30 30 적합
+Select
+목록에서 선택된 서버를 DICOM전송할 서버로 지정하는지 확인한다. 30 30 적합
+Network Test
+서버에 연결가능한지 테스트하여 연결 여부를 확인한다. 30 30 적합
+OCS
+DICOM통신을 사용할지 Text파일을 사용할지 선택하여 적용되는지 확인한다. 30 30 적합
+Station Name
+워크리스트 서버에서 검색하고자하는 스테이션AE명을 입력한다. 30 30 적합
+MPPS Send(MPPS기능을 지원하는 PACS시스템에서만 사용함)
+MPPS를 전송할 서버를 선택하여 적용되는지 확인한다. 30 30 적합
+Modality
+검색하고자 하는 Modality를 추가/편집/삭제 하여 적용되는지 확인한다. 30 30 적합
+
+103/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+Appendix 4 Verification & Validation Test Report(User Test)
+제품명 : DXView_W2 테스트명 : 사용자 테스트
+작성자 : 김완수 작성일 : 2021.05.27 결제자 : 이동진 결제일 : 2021.05.28.
+항목 실행
+횟수
+성공
+횟수
+적합/
+부적합 remark
+영상의 확대 축소가 가능해야 한다.
+뷰어에서 Zoom기능을 이용하여 마우스 클릭한 상대로 이동하여 영상이 확대/축소가 제대로 되는지 확인
+한다.
+30 30 적합
+영상의 Window/Level 조절이 가능해야 한다.
+뷰어에서 Window/Level기능을 이용하여 마우스 클릭한 상대로 이동하여 영상이 변화되는지 확인한다. 30 30 적합
+영상의 Flip/Rotation 이 가능해야 한다.
+영상이 상하, 좌우로 바뀌고 시계방향 및 시계반대방향으로 회전하는지 확인한다. 30 30 적합
+영상의 거리 및 각도에 대해서 측정이 가능해야한다.
+측정도구를 이용해 거리 및 각도가 화면에 제대로 표시되는지 확인한다. 30 30 적합
+영상의 흑백 반전이 가능해야한다.
+Invert기능을 이용하여 색상반전기능이 정상적으로 되는지 확인한다. 30 30 적합
+영상 내에 주석 삽입 기능을 제공해야 한다.
+영상 내에 텍스트 입력이 가능한지 확인한다. 30 30 적합
+화면 분할기능을 제공해야 한다.
+Layout변경을 통해 화면분할기능이 정상적으로 사용가능한지 확인한다. 1x1~2x2까지 확인. 30 30 적합
+검색조건에 따라 검색이 가능해야 한다.
+환자목록에서 환자 아이디, 성명, 성별 등 원하는 환자가 검색되어 목록에 출력되는지 확인한다. 30 30 적합
+정렬이 가능해야 한다.
+정렬하고자하는 컬럼을 클릭하여 오름차순 혹은 내림차순으로 정렬되는지 확인한다. 30 30 적합
+영상을 초기화 할 수 있는 리셋기능이 가능 하여야 한다.
+툴탭의 Fitting버튼을 눌러 영상회전이나 이동된 영상을 화면에 맞춰서 보여주는지 확인한다.
+뷰탭의 윈도우/레벨 Reset버튼을 눌러 윈도우/레벨을 변경하기 전과 같이 변경되는지 확인한다.
+프로세스탭의 Process버튼을 눌러 영상이 초기화 되는지 확인한다.
+30 30 적합
+영상을 전송 가능 하여야 한다.
+서버를 선택하여 영상이 DICOM통신으로 전송되는지 확인한다. 30 30 적합
+촬영하고자하는 환자의 여러 검사에 대해서 일괄적으로 촬영이 가능해야한다.
+워크리스트에서 환자를 선택하면 해당 환자의 검사목록이 정상적으로 화면에 표시 되는지 확인하고 촬영
+시 자동으로 다음 검사를 선택하여 촬영이 이루어지는 지 확인한다. 30 30 적합
+DICOM Header정보를 확인할 수 있어야 한다.
+해당영상을 클릭하여 DICOM Header정보 대화상자가 표시되고 해당영상의 헤더 정보가 표시되는지 확인
+한다. 30 30 적합
+
+104/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
+필름 프린트가 가능해야 한다.
+미리보기 지원과 필름인쇄가 화면과 똑같이 출력되는지 확인한다. 30 30 적합
+브라우저 환자정보의 편집이 가능해야한다.
+브라우저에서 환자/스터디/시리즈/이미지 정보에 대한 편집과 이미지 재정렬 기능이 정상적으로 동작하고
+원하는 대로 저장되는지 확인한다. 30 30 적합
+브라우저 환자정보를 워크리스트의 다른 환자로 대치가 가능해야 한다.
+브라우저에서 편집하는 환자에 대한 영상정보에 다른 환자정보를 대치하여 저장할 수 있는지 확인한다. 30 30 적합
+여러 개의 영상을 하나의 이미지로 합칠 수 있어야한다.
+브라우저에서 Merge기능을 사용하여 하나의 이미지로 만들어 새로운 영상이 기존 정보에 추가되는지 확
+인한다. 10 10 적합
+영상의 백업과 복원이 가능해야 한다.
+브라우저에서 Backup과 Restore기능이 정상적으로 동작하는지 확인한다. 30 30 적합
+DICOM CD제작이 가능해야한다.
+브라우저에서 DICOMDIR기능이 정상적으로 동작하는지 확인한다. 30 30 적합
+각종 시스템 설정 정보를 수정 가능해야한다.
+메인메뉴의 Configuration창에서 PACS/Annotation/Setup/System/Print/Worklist탭에서 해당하는 기능을
+설정하고 이것이 반영되는지 확인한다. 특정기능은 프로그램을 다시 시작해야만 적용되며 이를 따라 했을
+시 해당기능이 수행되는 지 확인한다.
+30 30 적합
+프로세싱 시 실행취소가 가능해야 하며 설정 파라미터를 저장할 수 있어야 한다.
+메인 바에 Process탭의 Process 버튼과 Cancel버튼을 파라미터를 조절해 가면서 실행해보고 적당한 파라
+미터를 Save버튼을 통해 저장하고 같은 촬영부위영상일 경우 똑같이 파라미터가 설정되는지 확인한다.
+30 30 적합
+브라우저 이미지 자동 삭제기능이 동작해야 한다.
+시스템 설정에서 용량별/일자별 자동 삭제 옵션에 따라 환자정보와 영상이 자동으로 삭제되는지 확인한다. 30 30 적합
+
+105/105
+A-TCF-5-077(DXView_W2) A4(210×297mm)
