@@ -304,3 +304,8 @@ P0 meaningful-content triage result:
 - Revised operating rule: do not proceed to P1/P2 as the default next step until
   P0 staging outputs are published to `D:\vault\llm-wiki-vault\wiki\` through an
   app-compatible gate and the vault `wiki/` changes are committed and pushed.
+- P0 vault publish dry-run: `reports/p0-vault-publish-plan-202606241407`
+  covered 1,775/1,775 representative outputs and 9,027/9,027 P0 disposition
+  rows with 0 failures. It planned 70,647 wiki contributions across 41,145
+  unique file paths; apply remains blocked on deterministic merge handling and
+  the stale live queue `processing` item.

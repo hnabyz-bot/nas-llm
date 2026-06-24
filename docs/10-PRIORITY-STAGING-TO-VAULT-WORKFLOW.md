@@ -82,6 +82,24 @@ Before opening app ingest or publishing P0 to the service vault:
 9. apply only after dry-run approval.
 10. commit and push vault `wiki/`.
 
+Latest dry-run:
+
+- report: `reports/p0-vault-publish-plan-202606241407`
+- representative outputs loaded: 1,775/1,775
+- P0 disposition rows covered: 9,027/9,027
+- planned wiki contributions: 70,647
+- unique planned wiki file paths: 41,145
+- unique create paths: 40,967
+- unique update-or-merge paths: 178
+- dry-run failures: 0
+- dry-run warnings: 2
+  - planned path collisions requiring merge: 5,921
+  - live queue has processing items: 1
+
+Interpretation: the publish set is complete enough for the next implementation
+step, but the apply step must first resolve the stale live `processing` item and
+must implement deterministic merge handling for colliding page targets.
+
 ## Vault Git Rule
 
 The vault repo is separate from this operations repo.

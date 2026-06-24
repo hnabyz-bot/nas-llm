@@ -150,3 +150,24 @@ identity, evidence, or acceptable review-flag handling.
 After P0 is published, commit and push the vault repo with only `wiki/` staged.
 Then commit and push the operations repo checkpoint. Record both commit hashes
 before starting P1.
+
+## P0 Publish Dry-Run
+
+Latest dry-run bundle:
+
+- `reports/p0-vault-publish-plan-202606241407`
+- script: `scripts/plan-p0-vault-publish.js`
+- representative outputs loaded: 1,775/1,775
+- P0 disposition rows covered: 9,027/9,027
+- planned wiki contributions: 70,647
+- unique planned wiki file paths: 41,145
+- unique create paths: 40,967
+- unique update-or-merge paths: 178
+- dry-run failures: 0
+- dry-run warnings: 2
+  - planned path collisions requiring merge: 5,921
+  - live queue has processing items: 1
+
+Next implementation step: build the deterministic apply/materialize path with
+merge handling, resolve the stale queue `processing` item, then run another
+dry-run before writing vault `wiki/`.
