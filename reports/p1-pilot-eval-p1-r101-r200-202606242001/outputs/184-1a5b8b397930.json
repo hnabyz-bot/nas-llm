@@ -1,0 +1,279 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954372-2om",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ 국내 제조인증/3. HAD1717MCW 모델 추가_210723/성적서, 소프트웨어 밸리데이션/임포유_콘솔_문서/국내 사이버보안 체크리스트_Rev.1_210618.docx",
+    "canonicalGroupId": "1a5b8b397930"
+  },
+  "document": {
+    "title": "국내 사이버보안 체크리스트_Rev.1_210618",
+    "documentType": "의료기기 사이버 보안 특성 기재 및 필수원칙 체크리스트",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "MFDS/domestic"
+    ],
+    "revisionOrVersion": "Rev.1",
+    "documentDate": "210618",
+    "standards": [
+      "의료기기의 사이버 보안 허가심사 가이드라인(민원인 안내서)",
+      "의료기기의 사이버 보안 적용방법 및 사례집(민원인 안내서)",
+      "개인정보의 기술적, 관리적 보호조치 기준"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "국내 의료기기 사이버보안 특성, 필수원칙 적용 여부, 적합성 입증 방법 및 보안 시험 결과를 정리한 체크리스트이다.",
+    "officialUse": "국내 제조인증 자료에서 의료기기 사이버보안 허가심사 가이드라인 및 적용방법 사례집에 따른 보안 요구사항 적합성 입증 자료로 사용된다.",
+    "keyPoints": [
+      "사이버 보안 안전성 등급은 중으로 표시되어 있다.",
+      "사용되는 통신 기술은 네트워크이며, 공용 네트워크망 사용여부는 O로 표시되어 있다.",
+      "통신 목적은 환자의 생체정보 등의 개인의료정보 송수신으로 표시되어 있다.",
+      "접근 통제, 인증, 비밀번호 정책, 소프트웨어 업데이트, 네트워크 통신 기밀성 및 무결성, 로그 기록 등 보안 필수원칙이 적용 항목으로 기재되어 있다.",
+      "Appendix 1의 Security Test는 Date 2021.05.22, Version 2.1.255.60이며 각 보안관련시험항목에 대하여 유효성을 확인하였고 Acceptance는 Pass로 기재되어 있다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Feel-DRCS",
+      "type": "software",
+      "evidence": "Run the Feel-DRCS."
+    },
+    {
+      "name": "DICOM",
+      "type": "technology",
+      "evidence": "DICOM Storage 부분에서 ADD 버튼을 누른다."
+    },
+    {
+      "name": "Software Test Report",
+      "type": "document",
+      "evidence": "Software Test Report : Appendix 1.(TSSe-01-01)"
+    },
+    {
+      "name": "User Manual",
+      "type": "document",
+      "evidence": "User Manual"
+    },
+    {
+      "name": "Verification Protocol DICOM Proxy 4.2.0_005",
+      "type": "document",
+      "evidence": "Verification Protocol DICOM Proxy 4.2.0_005"
+    },
+    {
+      "name": "Software Validation Report",
+      "type": "document",
+      "evidence": "Software Validation Report 3.4. 사이버보안위험 탐지 시 대처방안"
+    },
+    {
+      "name": "김 완 수",
+      "type": "person",
+      "evidence": "Inspected by : 김 완 수 ___________________"
+    },
+    {
+      "name": "이 동 진",
+      "type": "person",
+      "evidence": "Reviewed by : _ ______이 동 진_"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "사이버 보안 안전성 등급",
+      "pageTarget": "Cybersecurity Safety Classification",
+      "evidence": "1) 사이버 보안 안전성 등급 : □상 ■중 □하"
+    },
+    {
+      "name": "공용 네트워크망",
+      "pageTarget": "Public Network Use",
+      "evidence": "4) 공용 네트워크망 사용여부 : O"
+    },
+    {
+      "name": "접근 통제 및 인증",
+      "pageTarget": "Access Control and Authentication",
+      "evidence": "1.1 접근 통제 및 인증"
+    },
+    {
+      "name": "비밀번호 작성 규칙",
+      "pageTarget": "Password Policy",
+      "evidence": "비밀번호 작성규칙은 ‘개인정보의 기술적, 관리적 보호조치 기준’을 만족하여야 한다."
+    },
+    {
+      "name": "소프트웨어 업데이트 인가",
+      "pageTarget": "Software Update Authorization",
+      "evidence": "펌웨어 또는 소프트웨어 업데이트 시 관리자의 인가를 요청 및 확인하는 절차가 있거나 관리자 또는 사용자가 인지할 수 있는 거리에서 보안이 보장되는 방법으로 수행되어야 한다."
+    },
+    {
+      "name": "개인의료정보 전송 기밀성 및 무결성",
+      "pageTarget": "Personal Medical Information Transmission Confidentiality and Integrity",
+      "evidence": "네트워크를 통하여 개인의료정보를 주고받을 경우 적절한 암호화 및 복호화 방식을 활용하여 기밀성과 무결성을 보장하여야 한다."
+    },
+    {
+      "name": "시스템 로그 기록",
+      "pageTarget": "System Log Recording",
+      "evidence": "사용자의 의료기기에 접속 시 접속기록, 환자정보 조회, 데이터 생성, 변경, 삭제 등과 같은 로그가 기록되어야 한다."
+    },
+    {
+      "name": "DDoS 공격 대응",
+      "pageTarget": "DDoS Attack Defense",
+      "evidence": "2.4 DDoS 공격에 대한 방어"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The cybersecurity safety class is medium.",
+      "evidenceText": "1) 사이버 보안 안전성 등급 : □상 ■중 □하",
+      "pageTarget": "Cybersecurity Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device uses network communication technology.",
+      "evidenceText": "2) 사용되는 통신 기술 : 네트워크",
+      "pageTarget": "Network Communication Technology",
+      "confidence": "high"
+    },
+    {
+      "claim": "The communication purpose is transmission and reception of personal medical information such as patient biometric information.",
+      "evidenceText": "■ 환자의 생체정보 등의 개인의료정보 송수신",
+      "pageTarget": "Personal Medical Information Transmission",
+      "confidence": "high"
+    },
+    {
+      "claim": "Public network use is marked as applicable.",
+      "evidenceText": "4) 공용 네트워크망 사용여부 : O",
+      "pageTarget": "Public Network Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "Access rights are granted only to authenticated users through ID/password input.",
+      "evidenceText": "ID/PW 입력을 통해 인증된 사용자에 한해서 접근 권한을 부여.",
+      "pageTarget": "Access Control and Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized users cannot access the product software.",
+      "evidenceText": "인가되지 않은 사용자는 제품의 소프트웨어에 접근할 수 없다.",
+      "pageTarget": "Unauthorized User Access Restriction",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized network access to the product software is restricted.",
+      "evidenceText": "비인가된 네트워크를 통해서 제품의 소프트웨어에 접근할 수 없다.",
+      "pageTarget": "Unauthorized Network Access Restriction",
+      "confidence": "high"
+    },
+    {
+      "claim": "There is no remote access account.",
+      "evidenceText": "1.6 원격접속 차단 ... 해당없음 ... 원격접속 계정 없음",
+      "pageTarget": "Remote Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Password generation is allowed only when the configured composition and length rules are met.",
+      "evidenceText": "다음의 규칙을 만족하는 경우에만 비밀번호를 생성할 수 있도록 설정",
+      "pageTarget": "Password Policy",
+      "confidence": "high"
+    },
+    {
+      "claim": "User-defined passwords are stored in an encrypted configuration file inaccessible to users.",
+      "evidenceText": "사용자 정의 암호는 사용자가 액세스할 수 없고 암호화된 설정 파일에 저장된다.",
+      "pageTarget": "Password Storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "Passwords are masked when entered.",
+      "evidenceText": "비밀번호는 ****와 같이 노출되지 않는 형태로 사용된다.",
+      "pageTarget": "Password Masking",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software installation requires an installation password, and installation cannot proceed if the password is incorrect.",
+      "evidenceText": "소프트웨어 설치 시, 설치 암호를 요구하며, 올바르지 않은 암호가 입력되는 경우, 업데이트 설치를 진행할 수 없다.",
+      "pageTarget": "Software Update Authorization",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network transmission of personal medical information must use appropriate encryption and decryption to ensure confidentiality and integrity.",
+      "evidenceText": "네트워크를 통하여 개인의료정보를 주고받을 경우 적절한 암호화 및 복호화 방식을 활용하여 기밀성과 무결성을 보장하여야 한다.",
+      "pageTarget": "Personal Medical Information Transmission Confidentiality and Integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cryptographic algorithms or modules used for data transmission and storage must have at least 112-bit security strength.",
+      "evidenceText": "데이터 전송 및 저장 시 사용되는 암호 알고리즘은 112비트 이상 보안강도를 가진 암호 알고리즘 또는 모듈을 사용하여야 하며, 암호화 시 사용되는 암호키는 안전하게 관리되어야 한다.",
+      "pageTarget": "Cryptographic Algorithm Strength",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ports for firmware update are disabled before release.",
+      "evidenceText": "펌웨어 업데이트를 위한 포트는 출고 시 비활성화 한다.",
+      "pageTarget": "Physical Communication Port Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unnecessary external access port services are disabled by default, and maintenance ports are accessed with IP restrictions.",
+      "evidenceText": "불필요한 외부 접속 포트등의 서비스 비활성화를 기본값으로 설정하고, 유지보수를 위한 포트는 ip를 제한하여 접속한다.",
+      "pageTarget": "Unnecessary Service Deactivation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The medical device is used only in medical institutions.",
+      "evidenceText": "해당의료기기는 의료기관에서만 사용된다.",
+      "pageTarget": "Medical Institution Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "Login access logs are recorded, but patient information viewing logs are not recorded.",
+      "evidenceText": "로그인 시 접속기록에 대한 로그가 남지만, 환자 정보 조회에 대한 로그는 기록되지 않는다.",
+      "pageTarget": "System Log Recording",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manual provided with the product includes contact information for consultation with the manufacturer.",
+      "evidenceText": "제품과 함께 제공되는 매뉴얼에는 제조자와 상담할 수 있는 연락처가 함께 기재되어 있다.",
+      "pageTarget": "Cybersecurity Incident Response Information",
+      "confidence": "high"
+    },
+    {
+      "claim": "DDoS defense is marked not applicable because the device connects to the hospital closed network only when transmitting data to the hospital information server.",
+      "evidenceText": "해당사항 없음. 병원정보서버에 데이터 전송시에만 병원정보폐쇄망에 접속하며 그 외에는 접속하지 않음.",
+      "pageTarget": "DDoS Attack Defense",
+      "confidence": "high"
+    },
+    {
+      "claim": "Appendix 1 is marked as a Security Test dated 2021.05.22 with version 2.1.255.60.",
+      "evidenceText": "Appendix 1. Status :🞎Unit Test/ 🞎Integration Test / 🞎 System Test /🗹 Security Test /🞎 Regression Test Date : 2021.05.22 Version :2.1.255.60",
+      "pageTarget": "Software Test Report Appendix 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The security test summary states that validity was confirmed for each security-related test item.",
+      "evidenceText": "Summary: 위의 표와 같이 각 보안관련시험항목에 대하여 유효성을 확인하였다.",
+      "pageTarget": "Software Test Report Appendix 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The appendix acceptance result is Pass.",
+      "evidenceText": "Acceptance: Pass Fail",
+      "pageTarget": "Software Test Report Appendix 1",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document title, Rev.1, and 210618 date are taken from the sourcePath filename rather than an explicit title block in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "ProductSignal indicates HAD/A/F 1417-1717, but the source text does not explicitly state product model names; productModels is left empty."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority signal is MFDS/domestic and Korean cybersecurity guidance documents are cited, but the source text does not explicitly name MFDS."
+    },
+    {
+      "severity": "info",
+      "reason": "Some OCR or conversion artifacts are present, including checkbox glyphs and plus signs in guideline titles."
+    },
+    {
+      "severity": "warning",
+      "reason": "Acceptance line reads 'Acceptance: Pass Fail', which is ambiguous even though individual listed test results are Pass."
+    }
+  ]
+}

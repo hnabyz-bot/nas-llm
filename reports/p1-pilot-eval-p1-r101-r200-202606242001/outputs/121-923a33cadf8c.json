@@ -1,0 +1,292 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954375-5en",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/이경수 팀장님/2) Cybersecurity requirements (IEC 60601-4-5)_guideRef.xlsx",
+    "canonicalGroupId": "923a33cadf8c"
+  },
+  "document": {
+    "title": "Cybersecurity requirements (IEC 60601-4-5)_guideRef",
+    "documentType": "Cybersecurity requirements guide reference spreadsheet",
+    "productModels": [
+      "HnX-R1"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-4-5"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet mapping IEC 60601-4-5 cybersecurity requirement items to Detector applicability, N/A rationale, and mitigation evidence.",
+    "officialUse": "Reference material for FDA 510(k) K252912 cybersecurity documentation for HnX-R1, based on the source path and authority signal.",
+    "keyPoints": [
+      "User identification, account management, password, and login-related requirements are marked N/A for the Detector because it does not provide a user interface, user account management, login, or password-based authentication.",
+      "Several system integrity and communication protections are marked applicable, including AES-128, SHA-256, RSA, packet integrity checks, and encrypted communication.",
+      "Audit logging requirements are marked applicable, with logs generated for requests and responses and including timestamp, source/type, event content, and event outcome.",
+      "The Detector update process is described as using encrypted patch files and integrity verification before applying firmware or software updates.",
+      "The Detector is described as blocking unnecessary ports, services, and direct OS access except for normal communication ports."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/..."
+    },
+    {
+      "name": "Detector",
+      "type": "device component",
+      "evidence": "디텍터는 사용자 인터페이스를 제공하지 않습니다."
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "authoritySignal: FDA"
+    },
+    {
+      "name": "FDA 510(k) K252912",
+      "type": "regulatory submission reference",
+      "evidence": "sourcePath: .../★ FDA 510(k) - K252912/..."
+    },
+    {
+      "name": "IEC 60601-4-5",
+      "type": "standard",
+      "evidence": "SOURCE_TEXT begins with IEC60601-4-5"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "User Identification and Authentication",
+      "pageTarget": "User Identification and Authentication",
+      "evidence": "every interface accessible by user must include functionality for identifying and authenicating users."
+    },
+    {
+      "name": "Account Management",
+      "pageTarget": "Account Management",
+      "evidence": "medical devices must either have the capability to manage all accounts or utilize the account management functionality of a parent system."
+    },
+    {
+      "name": "Authentication Information Management",
+      "pageTarget": "Authentication Information Management",
+      "evidence": "Authentication information must not be exposed or altered during storage, usage, or transmission."
+    },
+    {
+      "name": "Audit Log Generation",
+      "pageTarget": "Audit Log Generation",
+      "evidence": "The medical device must have the functionality to generate audit records related to security types such as \"access control, request errors, medical device events, backup and recovery events, configuration changes, and audit log events.\""
+    },
+    {
+      "name": "Timestamp",
+      "pageTarget": "Timestamp",
+      "evidence": "The medical device must have the functionality to generate timestamps (including date and time) used in audit records."
+    },
+    {
+      "name": "Integrity Checking of Communication",
+      "pageTarget": "Integrity Checking of Communication",
+      "evidence": "The medical device must have the functionality to protect the integrity of transmitted information."
+    },
+    {
+      "name": "Protection against Malware",
+      "pageTarget": "Protection against Malware",
+      "evidence": "The medical device must have the functionality to protect against the installation and execution of unauthorized software(which may include malware)."
+    },
+    {
+      "name": "Input Validation",
+      "pageTarget": "Input Validation",
+      "evidence": "The medical device must validate the syntax, length, and content of all input data received through external interfaces that directly affect the operation of the device, or input data used for controlling the medical device."
+    },
+    {
+      "name": "Verification of Authenticity and Integrity of Updates",
+      "pageTarget": "Verification of Authenticity and Integrity of Updates",
+      "evidence": "The medical device must verify the authenticity and integrity of software updates or upgrades before installation."
+    },
+    {
+      "name": "Use of Secure Encryption",
+      "pageTarget": "Use of Secure Encryption",
+      "evidence": "When encryption is required, medical devices must use cryptographic security features recommended domestically or internationally, and the encryption keys used must be securely managed."
+    },
+    {
+      "name": "Prevention of Denial of Service",
+      "pageTarget": "Prevention of Denial of Service",
+      "evidence": "Medical devices must have the capability to maintain essential functions during DoS (Denial of Service) events."
+    },
+    {
+      "name": "Disabling Unnecessary Functions",
+      "pageTarget": "Disabling Unnecessary Functions",
+      "evidence": "Medical devices must have a feature that restricts the use of unnecessary functions, ports, protocols, and services."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a guide reference for IEC 60601-4-5 cybersecurity requirements.",
+      "evidenceText": "SOURCE_TEXT begins with IEC60601-4-5 and sourcePath ends with 2) Cybersecurity requirements (IEC 60601-4-5)_guideRef.xlsx",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector does not provide a user interface, so user interface authentication requirements are treated as N/A.",
+      "evidenceText": "N/A\n디텍터는 사용자 인터페이스를 제공하지 않습니다.",
+      "pageTarget": "User Identification and Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector does not provide user account management or login functions.",
+      "evidenceText": "N/A\n디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.",
+      "pageTarget": "Account Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector has one internal OS administrator account and cannot add other accounts.",
+      "evidenceText": "디텍터 내부 OS에는 관리자 계정 하나만 존재하며, 다른 계정은 추가할 수 없다.",
+      "pageTarget": "Account Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector does not provide a separate login procedure or password-based authentication.",
+      "evidenceText": "디텍터는 별도의 로그인 절차 또는 비밀번호 기반의 인증 기능을 제공하지 않는다.",
+      "pageTarget": "Password Strength Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector generates audit records for all requests and responses.",
+      "evidenceText": "디텍터는 모든 요청과 응답에 대해 감사 기록을 생성한다. 다음과 같은 내용을 포함한다.\n타임스탬프, 출처, 유형, 이벤트 내용, 이벤트 결과",
+      "pageTarget": "Audit Log Generation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector audit log files are date-based, capped at 100MB per file, and oldest logs are deleted when total log capacity exceeds 2GB.",
+      "evidenceText": "1) 날짜별로 다른 파일을 생성한다. 파일명 포맷은 다음과 같다. log_yyyyMMdd_nn.log\n2) 파일별 최대 용량은 100MB를 초과하지 않는다.\n3) 전체 로그 파일의 용량이 2GB를 초과하면 가장 오래된 로그 파일부터 순차적으로 삭제된다.",
+      "pageTarget": "Countermeasure for Audit Processing Failure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector records timestamps in logs using time received from the PC environment during connection setup.",
+      "evidenceText": "디텍터는 연결 수립 절차에서 PC환경의 시간을 전달받도록 되어있으며, 로그 기록시 타임스탬프를 함께 기록한다.",
+      "pageTarget": "Timestamp",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector uses AES-128 and SHA-256 for encryption and integrity verification.",
+      "evidenceText": "디텍터는 AES128 및 SHA256으로 암호화, 무결성 검증을 수행한다.",
+      "pageTarget": "Integrity Checking of Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector uses AES-128, SHA-256, and RSA cryptographic algorithms.",
+      "evidenceText": "디텍터는 AES-128, SHA-256, RSA 암호 알고리즘을 사용한다.",
+      "pageTarget": "Use of Secure Encryption",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector only performs predefined commands received through encrypted communication, and firmware updates can occur only through integrity verification.",
+      "evidenceText": "디텍터는 암호화된 통신으로 주고받는 미리 정의된 명령에 대해서만 수행하며, 펌웨어 업데이트는 무결성 검증을 통해서만 이뤄질 수 있다.",
+      "pageTarget": "Protection against Malware",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector disconnects inappropriate connection attempts and does not process packets that fail integrity verification or cannot be decrypted.",
+      "evidenceText": "디텍터는 적절하지 않은 연결 시도에 대해서 즉각적 연결 해제가 이뤄지며, 무결성이 검증되지 않거나 복호화할 수 없는 패킷에 대한 처리를 하지 않는다. 이 과정에서 모든 행위는 감사 로그에 기록된다.",
+      "pageTarget": "Security Function Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector communication packet integrity check includes packet content and packet length information.",
+      "evidenceText": "디텍터의 통신 패킷은 암호화되며 패킷의 내용 뿐만 아니라 패킷의 길이를 나타내는 정보까지를 모두 포함하여 무결성 검사를 수행하므로 데이터가 위/변조되었음을 감지할 수 있음.",
+      "pageTarget": "Input Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector responds to errors or rejected work with only minimal error codes, while detailed error contents are recorded only in internal audit logs.",
+      "evidenceText": "디텍터는 요청에 대해 오류가 발생하였거나 작업을 거부하는 경우 엔지니어에게 지원을 요청하기 위한 최소한의 오류 코드만으로 응답하며, 세부적인 오류 내용은 디텍터 내부의 감사 로그에만 기록된다.",
+      "pageTarget": "Error Handling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector update process passes an encrypted patch file, decrypts it in Detector firmware, verifies integrity, and then applies the patch.",
+      "evidenceText": "디텍터: 암호화된 패치 파일을 전달하고, 디텍터의 FW에서 이 파일을 받아 복호화한 후 무결성을 검증한 다음 패치 적용.",
+      "pageTarget": "Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector verifies update file integrity with SHA-256 before installation.",
+      "evidenceText": "Detector : 업데이트 파일에 대한 무결성 검증(SHA-256) 시행",
+      "pageTarget": "Verification of Authenticity and Integrity of Updates",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector blocks direct internal OS access by blocking all ports except ports for normal communication.",
+      "evidenceText": "디텍터 내부 OS로의 접근을 막기 위해 정상적 통신을 위한 포트를 제외한 모든 포트 차단.",
+      "pageTarget": "Confidentiality Assurance for Information",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector does not store personally identifiable information.",
+      "evidenceText": "디텍터는 개인식별정보를 저장하지 않는다.",
+      "pageTarget": "De-identification of Healthcare Information",
+      "confidence": "high"
+    },
+    {
+      "claim": "Audit logs cannot be accessed directly by user login and can be loaded through a separate engineer-only tool, but cannot be modified.",
+      "evidenceText": "디텍터는 사용자 계정으로 로그인 등의 방법으로 감사 로그에 직접 접근을 허용하지 않으며, 별도의 엔지니어 전용 툴을 통해 감사 로그를 불러올 수 있다. 이러한 경우에도 감사 로그의 수정은 불가능하다.",
+      "pageTarget": "Restriction of Unauthorized Access to Audit Logs",
+      "confidence": "high"
+    },
+    {
+      "claim": "For DoS prevention, the Detector immediately terminates connections that deviate from the appropriate connection procedure.",
+      "evidenceText": "디텍터는 연결 절차에서 적합한 절차에 어긋나는 경우 해당 연결은 즉시 종료된다.",
+      "pageTarget": "Prevention of Denial of Service",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector allows communication through a randomly issued communication port only after normal connection procedures.",
+      "evidenceText": "정상적 절차로 연결된 경우에만 무작위로 발급되는 통신용 포트를 통해 통신이 가능하다.",
+      "pageTarget": "Prevention of Denial of Service",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector has a function to restore field-configured engineer settings to initial settings.",
+      "evidenceText": "디텍터는 엔지니어가 필드에서 구성하는 설정값을 초기 설정값으로 되돌릴 수 있는 기능이 있음.",
+      "pageTarget": "Medical Device Backup",
+      "confidence": "high"
+    },
+    {
+      "claim": "The engineer can return the Detector system environment to factory initialization state.",
+      "evidenceText": "엔지니어는 디텍터의 시스템 환경을 공장 초기화 상태로 되돌릴 수 있음.",
+      "pageTarget": "Medical Device Recovery and Reconfiguration",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network and security configuration can be set through the SDK, and setting details are recorded in internal logs.",
+      "evidenceText": "SDK 를 통해 네트워크와 보안 구성 등을 설정할 수 있으며, 설정 내역은 내부 로그에 기록됨.",
+      "pageTarget": "Network and Security Configuration Settings",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector blocks access to unnecessary functions and ports.",
+      "evidenceText": "디텍터는 불필요한 기능, 포트 등은 모두 접근이 차단하고 있다.",
+      "pageTarget": "Disabling Unnecessary Functions",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is inferred from authoritySignal and sourcePath FDA 510(k) folder; source text itself primarily references IEC60601-4-5 and a medical device cybersecurity guideline without naming the issuing authority."
+    },
+    {
+      "severity": "info",
+      "reason": "Spreadsheet text contains informal Korean notes, typos, and mixed English/Korean wording; some rows have incomplete mitigation cells."
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954394-ofd",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/4. Risk Management/수정완료_ARMR-FMEA-0-001 IEC60601-1 Risk Table.xlsx",
+    "canonicalGroupId": "0911358eb52c"
+  },
+  "document": {
+    "title": "수정완료_ARMR-FMEA-0-001 IEC60601-1 Risk Table",
+    "documentType": "Risk management / FMEA risk table",
+    "productModels": [
+      "HAD1717MC(MG)",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "ISO 3864-1:2002",
+      "ISO 7010:20030W001"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "IEC 60601-1 risk table mapping ISO 14971 risk management clauses to hazards, risk controls, residual risk, and verification evidence for the product.",
+    "officialUse": "Supports medical electrical equipment risk management by documenting applicable IEC 60601-1 clauses, hazards, risk evaluation, controls, verification, and residual risk acceptance.",
+    "keyPoints": [
+      "Essential performance includes image acquisition within 5 seconds and acquired image quality without specified display defects.",
+      "Electrical risks such as leakage current, connector separation, unauthorized cables, fuse replacement, and component fixing are evaluated and controlled.",
+      "Software and PEMS-related risks are addressed through software design, software validation, requirements, architecture, verification, and PEMS validation.",
+      "The product is described as detecting emitted X-rays for image processing and not generating X-rays or therapeutic/diagnostic radiation.",
+      "Estimated service life is stated as 5 years based on AC-DC Power Converter component life assumptions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC(MG)",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/..."
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "\"ISO 14971 Clause\""
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "\"IEC 60601-1 Clause\",\"IEC60601-1 Requirements\""
+    },
+    {
+      "name": "ISO 3864-1:2002",
+      "type": "standard",
+      "evidence": "ISO 3864-1:2002 7절에 대응하는 표지"
+    },
+    {
+      "name": "ISO 7010:20030W001",
+      "type": "standard / symbol reference",
+      "evidence": "ISO 7010:20030W001 심벌 적용"
+    },
+    {
+      "name": "AC-DC Power Converter(RPS-200-12",
+      "type": "component",
+      "evidence": "part key: AC-DC Power Converter(RPS-200-12"
+    },
+    {
+      "name": "Software Validation Report",
+      "type": "verification record",
+      "evidence": "소프트웨어 벨리데이션 레포트(Software Validation Report)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Essential Performance",
+      "pageTarget": "Essential Performance",
+      "evidence": "Must be able to acquire image within 5 seconds"
+    },
+    {
+      "name": "Single Fault Condition",
+      "pageTarget": "IEC 60601-1 Single Fault Condition",
+      "evidence": "13.2에 설명된 단일고장조건이 적용됨."
+    },
+    {
+      "name": "Leakage Current",
+      "pageTarget": "Leakage Current Risk Control",
+      "evidence": "누설전류를 방지하기 위하여, 승인된 AC-DC 변압기, AC 케이블, 퓨즈를 사용하도록 설계"
+    },
+    {
+      "name": "Safety Signs",
+      "pageTarget": "Medical Device Safety Signs",
+      "evidence": "ISO 3864-1:2002 7절에 대응하는 표지 및 ISO 7010:20030W001 심벌 적용"
+    },
+    {
+      "name": "Fuse and Power Cord Replacement",
+      "pageTarget": "Fuse and Power Cord Replacement Instructions",
+      "evidence": "제품 외장 및 사용설명서에 사용 가능한 FUSE 사양 및 교체 방법을 기재"
+    },
+    {
+      "name": "PEMS Software Validation",
+      "pageTarget": "PEMS Software Validation",
+      "evidence": "소프트웨어 벨리데이션 레포트(Software Validation Report)"
+    },
+    {
+      "name": "Network/Data Coupling Hazards",
+      "pageTarget": "PEMS Network Data Coupling Hazards",
+      "evidence": "네트워크/데이터 커플링의 고장"
+    },
+    {
+      "name": "Electromagnetic Compatibility",
+      "pageTarget": "IEC 60601-1 Electromagnetic Compatibility",
+      "evidence": "본 제품은 일반적인 진료실에서 사용하며 진료실내의 다양한 ME 기기들에게 전자파 영향을 줄 수 있다."
+    },
+    {
+      "name": "Life Expectancy",
+      "pageTarget": "Medical Device Life Expectancy",
+      "evidence": "∴ ESL =,5,years"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The table is organized around ISO 14971 risk management clauses and IEC 60601-1 requirements.",
+      "evidenceText": "\"ISO 14971 Clause\" and \"IEC60601-1 Requirements\" are column headings in the source.",
+      "pageTarget": "Risk Management File",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes image acquisition within 5 seconds.",
+      "evidenceText": "Must be able to acquire image within 5 seconds",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes avoiding two Line Adjacent, Line Block, or No Display in acquired images.",
+      "evidenceText": "The acquired image should not have two Line Adjacent, Line Block, or No Display.",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Single fault electrical conditions are applicable and include supply conductor interruption and protective earth disconnection considerations.",
+      "evidenceText": "13.2.2. 전기적 단일고장상태 -> Interruption of any one supply conductor -> ME 시스템의 한 전원도선의 단선, 극성 교환, 보호접지 단선",
+      "pageTarget": "IEC 60601-1 Single Fault Condition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current risk is controlled by using approved AC-DC transformers, AC cables, and fuses.",
+      "evidenceText": "누설 전류를 방지하기 위하여, 승인된 AC-DC 변압기, AC 케이블, 퓨즈를 사용하도록 설계",
+      "pageTarget": "Leakage Current Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product has no parts that contact the patient during use.",
+      "evidenceText": "사용시 환자에게 접촉하는 부분이 없음.",
+      "pageTarget": "Patient Contact",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product does not use batteries.",
+      "evidenceText": "배터리를 사용하지 않음.",
+      "pageTarget": "Battery Safety",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective packaging includes operating condition markings for temperature, humidity, and pressure.",
+      "evidenceText": "작동 조건이 외부 포장재에 표시됨 온도, 습도,압력",
+      "pageTarget": "Protective Packaging Marking",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety signs are based on ISO 3864-1:2002 and an ISO 7010 symbol reference.",
+      "evidenceText": "ISO 3864-1:2002 7절에 대응하는 표지 및 ISO 7010:20030W001 심벌 적용",
+      "pageTarget": "Medical Device Safety Signs",
+      "confidence": "medium"
+    },
+    {
+      "claim": "FUSE and AC power cable can be user-replaceable items.",
+      "evidenceText": "FUSE와 AC 전원 케이블은 사용자가 교체 할 수 있음",
+      "pageTarget": "Fuse and Power Cord Replacement Instructions",
+      "confidence": "high"
+    },
+    {
+      "claim": "User instructions include usable fuse specifications and replacement methods.",
+      "evidenceText": "제품 외장 및 사용설명서에 사용 가능한 FUSE 사양 및 교체 방법을 기재",
+      "pageTarget": "Fuse and Power Cord Replacement Instructions",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is not an X-ray generator; it detects emitted X-rays and processes images.",
+      "evidenceText": "X선을 발생시키는 제품이 아님. (방사된 X선을 감지하여 영상처리하는 제품)",
+      "pageTarget": "X-Ray Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device converts X-rays into electrical signals and does not emit radiation.",
+      "evidenceText": "X선을 전기적 신호로 전환하는 제품으로, 방사하는 제품이 아님.",
+      "pageTarget": "X-Ray Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software is described as satisfying essential performance and storing acquired image data through a network.",
+      "evidenceText": "소프트웨어는 필수성능을 만족하며, 네트워크를 통해 획득한 영상 이미지를 저장 할 수 있음",
+      "pageTarget": "PEMS Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS software hazards include network/data coupling failure, unavailable data, lack of data integrity, incorrect data, and incorrect timing.",
+      "evidenceText": "1. 네트워크/데이터 커플링의 고장 2. 입수 불가능한 데이터 3. 데이터의 무결성 결여 4. 잘못된 데이터 5. 데이터의 잘못된 타이밍",
+      "pageTarget": "PEMS Network Data Coupling Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software validation is used as verification evidence for PEMS and software risk controls.",
+      "evidenceText": "소프트웨어 벨리데이션 레포트(Software Validation Report)",
+      "pageTarget": "PEMS Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is used in a general clinic and can affect other ME equipment electromagnetically.",
+      "evidenceText": "본 제품은 일반적인 진료실에서 사용하며 진료실내의 다양한 ME 기기들에게 전자파 영향을 줄 수 있다.",
+      "pageTarget": "IEC 60601-1 Electromagnetic Compatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "Estimated service life is 5 years.",
+      "evidenceText": "∴ ESL =,5,years",
+      "pageTarget": "Medical Device Life Expectancy",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not explicitly identified; ARMR-FMEA-0-001 appears in the filename but is not confirmed as a revision."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority or jurisdiction is ambiguous; authoritySignal is 'general' and the source path references CE MDD, but no official authority is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Possible OCR or extraction quality issue: standard reference appears as 'ISO 7010:20030W001'."
+    },
+    {
+      "severity": "warning",
+      "reason": "RM No. RM-10 appears for both over-temperature risk and PEMS software risk, which may indicate duplicate numbering or table extraction ambiguity."
+    }
+  ]
+}

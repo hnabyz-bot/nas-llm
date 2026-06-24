@@ -1,0 +1,231 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954370-x9",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/SoftwareValidationReport(DXView_W2).pdf",
+    "canonicalGroupId": "cc7e54175fa3"
+  },
+  "document": {
+    "title": "Software Validation Report (DXView_W2)",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "DXView_W2"
+    ],
+    "authorityOrJurisdiction": [
+      "MFDS/domestic",
+      "Korea"
+    ],
+    "revisionOrVersion": "Version 1.0.18.1213; Rv.1",
+    "documentDate": "2021.05.28",
+    "standards": [
+      "DICOM 3.0",
+      "ISO 14971:2007",
+      "ISO 13485:2003",
+      "IEEE Std 828-1998",
+      "IEEE Std 830-1993",
+      "IEEE Std 1012:1998",
+      "IEEE Std 1012A:1998",
+      "IEC 62304",
+      "IEC 60601-1",
+      "21 CFR Part 820",
+      "21 CFR Part 803"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for DXView_W2 covering software description, requirements, design, V&V testing, risk analysis, and unresolved anomalies.",
+    "officialUse": "Supports domestic medical device software validation and regulatory documentation for DXView_W2.",
+    "keyPoints": [
+      "DXView_W2 version 1.0.18.1213, revision Rv.1, was approved on 2021.05.28.",
+      "The software level of concern is classified as Minor.",
+      "DXView_W2 acquires medical images from a detector and supports storage, display, processing, DICOM transmission, DICOM printing, worklist, backup, restore, and DICOMDIR.",
+      "The report references software validation, risk management, quality system, DICOM, IEC, ISO, IEEE, FDA, and internal procedure documents.",
+      "Unit, integration, system, and user tests were reported as suitable, with most tests run 30 times and passed 30 times.",
+      "Unsolved anomalies and unresolved software anomalies are stated as not applicable."
+    ]
+  },
+  "entities": [
+    {
+      "name": "DXView_W2",
+      "type": "software product",
+      "evidence": "제품명 DXView_W2 / 버전 1.0.18.1213 / 재개정버전 Rv.1"
+    },
+    {
+      "name": "피닉스비전",
+      "type": "manufacturer",
+      "evidence": "피닉스비전은 당사의 제품에 대하여 설계단계에서부터 생산 후 모니터링등 전반적인 프로세스에 대하여 발생 가능한 위험을 분석, 평가, 통제, 잔여위험평가 및 생산 후 제품에 대한 위험관리를 계획한다."
+    },
+    {
+      "name": "PACS",
+      "type": "external system",
+      "evidence": "PACS: Picture Archiving and Communications System"
+    },
+    {
+      "name": "RIS",
+      "type": "external system",
+      "evidence": "RIS: Radiology Information System"
+    },
+    {
+      "name": "HIS",
+      "type": "external system",
+      "evidence": "HIS: Hospital Information System"
+    },
+    {
+      "name": "Microsoft Access",
+      "type": "database engine",
+      "evidence": "DXView_W2는 내부적으로 Microsoft Access(로컬용)를 데이터베이스 엔진으로 사용하며, 각 기능 별 요청에 따라 해당하는 작업을 수행한다."
+    },
+    {
+      "name": "Leadtools Medical Imaging Suite 13.0",
+      "type": "software library",
+      "evidence": "라이브러리 Leadtools Medical Imaging Suite 13.0"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Validation Report",
+      "pageTarget": "Software validation report",
+      "evidence": "This document defines the Software Validation Report(SVR) for DXView_W2 on verified software"
+    },
+    {
+      "name": "Level of Concern: Minor",
+      "pageTarget": "Medical device software level of concern",
+      "evidence": "If the answers to all of the question in Tables 1 and 2 above are \"No\", the Level of Concern is likely to be \"Minor\""
+    },
+    {
+      "name": "DICOM 3.0",
+      "pageTarget": "DICOM 3.0",
+      "evidence": "DICOM 3.0 규격을 통해 영상정보의 전송을 제어 및 관리 한다."
+    },
+    {
+      "name": "Modality Worklist",
+      "pageTarget": "DICOM Modality Worklist",
+      "evidence": "DXView_W2는 병원정보시스템(HIS)과 연동하기 위해 필요한 DICOM 워크리스트 매니지먼트(Worklist Management) 기능도 기본적으로 설치되어 있다."
+    },
+    {
+      "name": "Verification & Validation Test",
+      "pageTarget": "Software verification and validation",
+      "evidence": "Verification & Validation Test Report(Unit Test)"
+    },
+    {
+      "name": "Hazard Analysis",
+      "pageTarget": "Medical device hazard analysis",
+      "evidence": "11. Hazard Analysis(위험 분석)"
+    },
+    {
+      "name": "Unresolved Software Anomalies",
+      "pageTarget": "Unresolved software anomalies",
+      "evidence": "12.2 Unresolved Software Anomalies(해결되지 않은 소프트웨어 변칙) 해당없음"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a Software Validation Report for DXView_W2.",
+      "evidenceText": "This document defines the Software Validation Report(SVR) for DXView_W2 on verified software",
+      "pageTarget": "Software validation report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document applies to DXView_W2 and addresses software validation activities.",
+      "evidenceText": "This document applies to DXView_W2 and addresses the software validation activities.",
+      "pageTarget": "DXView_W2",
+      "confidence": "high"
+    },
+    {
+      "claim": "DXView_W2 version is 1.0.18.1213 and revision is Rv.1.",
+      "evidenceText": "제품명 DXView_W2 / 버전 1.0.18.1213 / 재개정버전 Rv.1",
+      "pageTarget": "DXView_W2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The approval date shown in the signature block is 2021.05.28.",
+      "evidenceText": "승인자/Written by: ... Date: 2021.05.28",
+      "pageTarget": "Software validation report",
+      "confidence": "high"
+    },
+    {
+      "claim": "DXView_W2 is classified as Minor level of concern.",
+      "evidenceText": "SRS 1 Main Module Minor ... SRS 8 DICOM Module Minor",
+      "pageTarget": "Medical device software level of concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "DXView_W2 acquires medical images from a detector and supports storage, enlargement, reduction, viewing, and transmission.",
+      "evidenceText": "본 의료영상전송장치소프트웨어는 의료영상획득장치로부터 디지털로 변환된 의료용 영상을 취득하여 저장, 확대, 축소, 조회, 전송 처리를 하는 소프트웨어",
+      "pageTarget": "DXView_W2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operating system requirement is Microsoft Windows 7 or 10, 32-bit or higher.",
+      "evidenceText": "Operating system(운영 시스템) : Microsoft Windows 7 or 10 32비트 이상",
+      "pageTarget": "DXView_W2 operating environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The program language and tools include C++ and MS Visual C++ .NET 2002 and 2008.",
+      "evidenceText": "개발언어 C++ / 편집기 MS Visual C++ .NET 2002 and 2008",
+      "pageTarget": "DXView_W2 software design",
+      "confidence": "high"
+    },
+    {
+      "claim": "DXView_W2 supports DICOM Modality Worklist Find, DICOM Image SCU, and DICOM CD Support.",
+      "evidenceText": "DICOM Module Minor - DICOM Modality Worklist Find - DICOM Image SCU - DICOM CD Support",
+      "pageTarget": "DXView_W2 DICOM functions",
+      "confidence": "high"
+    },
+    {
+      "claim": "DXView_W2 uses Microsoft Access as a local database engine.",
+      "evidenceText": "DXView_W2는 내부적으로 Microsoft Access(로컬용)를 데이터베이스 엔진으로 사용하며",
+      "pageTarget": "DXView_W2 database module",
+      "confidence": "high"
+    },
+    {
+      "claim": "Image acquisition time must not exceed 10 seconds and image open time must display within 3 seconds per image.",
+      "evidenceText": "영상획득시간 디텍터로부터 영상획득시간이 10초를 넘지 않아야 한다. ... 영상오픈시간 Browser모드에서 영상 오픈 시 한 장당 3초 이내에 Display모드 화면에 표시하여야 한다.",
+      "pageTarget": "DXView_W2 performance requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report references FDA software submission guidance, FDA software validation principles, 21 CFR Parts 820 and 803, ISO 14971:2007, ISO 13485:2003, IEEE standards, and IEC 62304.",
+      "evidenceText": "9.3 Reference ... FDA ... 21 CFR, Part 820 ... 21 CFR, Part 803 ... ISO 14971:2007 ... ISO 13485:2003 ... IEEE Std ... IEC 62304",
+      "pageTarget": "Medical device software standards",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hazard analysis legal requirements identify Korean Medical Device Act and KGMP for authorization purposes.",
+      "evidenceText": "법적인 요구사항 - 의료기기법 한국의 의료기기법 및 관련 규정 - KGMP 인허가 목적의 의료기기품질경영시스템",
+      "pageTarget": "Korean medical device regulation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hazard analysis general standards include IEC 60601-1, ISO 14971, ISO 13485, and DICOM 3.0.",
+      "evidenceText": "일반적인 규격 요구사항 - IEC 60601-1 General requirement of safety - ISO 14971-(2007) Medical device-Risk Management - ISO 13485 Medical Device-Quality Management System - DICOM 3.0-(2003)",
+      "pageTarget": "Medical device risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unsolved anomalies and unresolved software anomalies are not applicable.",
+      "evidenceText": "12. Unsolved Anomalies(미해결 이상 현상) ... 해당없음 ... 12.2 Unresolved Software Anomalies(해결되지 않은 소프트웨어 변칙) 해당없음",
+      "pageTarget": "Unresolved software anomalies",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unit, integration, system, and user test reports are included as appendices.",
+      "evidenceText": "Appendix 1 Verification & Validation Test Report(Unit Test) ... Appendix 2 ... Integration Test ... Appendix 3 ... System Test ... Appendix 4 ... User Test",
+      "pageTarget": "Software verification and validation",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority is partly inferred from source metadata and path: authoritySignal is MFDS/domestic and sourcePath indicates 국내 제조인증, while the document text also references FDA/CDRH and Korean legal requirements."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is taken from the approval signature date 2021.05.28; author and reviewer dates are 2021.05.27."
+    },
+    {
+      "severity": "info",
+      "reason": "The source text includes OCR or table-order artifacts, including repeated headings and some misplaced table rows, but key metadata and claims are readable."
+    }
+  ]
+}

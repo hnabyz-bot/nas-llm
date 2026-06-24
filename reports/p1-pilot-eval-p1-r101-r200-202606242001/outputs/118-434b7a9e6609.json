@@ -1,0 +1,247 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954375-4ws",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/이경수 팀장님/정재민 프로님/2) Cybersecurity requirements (IEC 60601-4-5).xlsx",
+    "canonicalGroupId": "434b7a9e6609"
+  },
+  "document": {
+    "title": "Cybersecurity requirements (IEC 60601-4-5)",
+    "documentType": "Cybersecurity requirements spreadsheet",
+    "productModels": [
+      "HnX-R1",
+      "Detector"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-4-5"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet mapping IEC 60601-4-5 cybersecurity requirements to HnX-R1 Detector applicability and mitigation notes.",
+    "officialUse": "Supports cybersecurity requirement traceability for FDA 510(k) K252912 reference materials.",
+    "keyPoints": [
+      "The source lists IEC 60601-4-5 cybersecurity controls including identification and authentication, use control, system integrity, data confidentiality, threat response, and recovery functions.",
+      "Many user-account and user-interface controls are marked N/A for the Detector because it does not provide a user interface or user account/login functionality.",
+      "Detector controls marked applicable include session timeout/sleep behavior, timestamping, integrity checks, malware protection through firmware integrity verification, encrypted updates, secure algorithms, restricted ports, audit log access, DoS connection handling, backup/recovery, and disabling unnecessary functions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "IEC 60601-4-5",
+      "type": "standard",
+      "evidence": "IEC60601-4-5"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "07_Retrofit (HnX-R1)"
+    },
+    {
+      "name": "Detector",
+      "type": "device/component",
+      "evidence": "Detector 적용 여부"
+    },
+    {
+      "name": "FDA 510(k) K252912",
+      "type": "regulatory submission reference",
+      "evidence": "★ FDA 510(k) - K252912"
+    },
+    {
+      "name": "KTR",
+      "type": "test/report organization reference",
+      "evidence": "Portable KTR 보고서의 4.1 table 가져옴"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "User Identification and Authentication",
+      "pageTarget": "IEC 60601-4-5 User Identification and Authentication",
+      "evidence": "every interface accessible by user must include functionality for identifying and authenicating users."
+    },
+    {
+      "name": "Account Management",
+      "pageTarget": "IEC 60601-4-5 Account Management",
+      "evidence": "medical devices must either have the capability to manage all accounts or utilize the account management functionality of a parent system."
+    },
+    {
+      "name": "Session Lock",
+      "pageTarget": "IEC 60601-4-5 Session Lock",
+      "evidence": "initiate session locking to prevent futher access if the device is not used within a configured time"
+    },
+    {
+      "name": "Audit Log Generation",
+      "pageTarget": "IEC 60601-4-5 Audit Log Generation",
+      "evidence": "The medical device must have the functionality to generate audit records related to security types"
+    },
+    {
+      "name": "Integrity Checking of Communication",
+      "pageTarget": "IEC 60601-4-5 Integrity Checking of Communication",
+      "evidence": "The medical device must have the functionality to protect the integrity of transmitted information."
+    },
+    {
+      "name": "Verification of Authenticity and Integrity of Updates",
+      "pageTarget": "IEC 60601-4-5 Update Integrity Verification",
+      "evidence": "The medical device must verify the authenticity and integrity of software updates or upgrades before installation."
+    },
+    {
+      "name": "Use of Secure Encryption",
+      "pageTarget": "IEC 60601-4-5 Secure Encryption",
+      "evidence": "When encryption is required, medical devices must use cryptographic security features recommended domestically or internationally"
+    },
+    {
+      "name": "Prevention of Denial of Service",
+      "pageTarget": "IEC 60601-4-5 Denial of Service Prevention",
+      "evidence": "Medical devices must have the capability to maintain essential functions during DoS (Denial of Service) events."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a cybersecurity requirements spreadsheet associated with IEC 60601-4-5.",
+      "evidenceText": "2) Cybersecurity requirements (IEC 60601-4-5).xlsx",
+      "pageTarget": "Cybersecurity Requirements IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source is associated with FDA 510(k) K252912 reference materials.",
+      "evidenceText": "★ FDA 510(k) - K252912/참고자료",
+      "pageTarget": "FDA 510(k) K252912",
+      "confidence": "medium"
+    },
+    {
+      "claim": "User-accessible interfaces must include user identification and authentication functionality.",
+      "evidenceText": "every interface accessible by user must include functionality for identifying and authenicating users.",
+      "pageTarget": "IEC 60601-4-5 User Identification and Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector is marked N/A for user identification and authentication because it does not provide a user interface.",
+      "evidenceText": "N/A 디텍터는 사용자 인터페이스를 제공하지 않습니다.",
+      "pageTarget": "Detector Cybersecurity Applicability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices must manage accounts or use parent-system account management functionality.",
+      "evidenceText": "medical devices must either have the capability to manage all accounts or utilize the account management functionality of a parent system.",
+      "pageTarget": "IEC 60601-4-5 Account Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector is marked N/A for account management because it does not provide user account management and login functionality.",
+      "evidenceText": "N/A 디텍터는 사용자 계정 관리 및 로그인 기능을 제공하지 않습니다.",
+      "pageTarget": "Detector Cybersecurity Applicability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices with authentication functionality must limit consecutive failed login attempts and deny access after the limit is reached.",
+      "evidenceText": "Upon reaching the attempt limit, access must be denied for a predetermined period or until unlocked by an administrator.",
+      "pageTarget": "IEC 60601-4-5 Login Restriction",
+      "confidence": "high"
+    },
+    {
+      "claim": "For session locking, the Detector mitigation notes describe entering sleep mode after a configurable period of no use.",
+      "evidenceText": "Detector : 일정 시간(설정 가능) 사용이 없는 경우 연결 해제 후 슬립 모드 진입",
+      "pageTarget": "Detector Session Lock",
+      "confidence": "high"
+    },
+    {
+      "claim": "Audit records should include timestamp, source, category, type, event ID, and event outcome.",
+      "evidenceText": "Each individual audit record must include details such as: Timestamp Source Category Type Event ID Event outcome",
+      "pageTarget": "IEC 60601-4-5 Audit Log Generation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector records timestamps by receiving PC environment time during the connection establishment process.",
+      "evidenceText": "연결 수립 절차에서 PC환경의 시간을 전달받아 사용. 로그 기록시 타임스탬프 함께 기록.",
+      "pageTarget": "Detector Timestamp",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices must protect the integrity of transmitted information.",
+      "evidenceText": "The medical device must have the functionality to protect the integrity of transmitted information.",
+      "pageTarget": "IEC 60601-4-5 Integrity Checking of Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector mitigation states that integrity verification is performed for transmitted and received data.",
+      "evidenceText": "송수신되는 데이터에 대해 무결성 검증을 수행함.",
+      "pageTarget": "Detector Communication Integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector rejects damaged firmware during the update process through an integrity check step.",
+      "evidenceText": "훼손된 펌웨어는 업데이트 과정 중 무결성 검사 단계에서 발견 및 거부 처리됨.",
+      "pageTarget": "Detector Malware Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices must verify authenticity and integrity of software updates or upgrades before installation.",
+      "evidenceText": "The medical device must verify the authenticity and integrity of software updates or upgrades before installation.",
+      "pageTarget": "IEC 60601-4-5 Update Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector performs SHA-256 integrity verification on update files.",
+      "evidenceText": "Detector : 업데이트 파일에 대한 무결성 검증(SHA-256) 시행",
+      "pageTarget": "Detector Update Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "When encryption is required, medical devices must use domestically or internationally recommended cryptographic security features and securely manage encryption keys.",
+      "evidenceText": "When encryption is required, medical devices must use cryptographic security features recommended domestically or internationally, and the encryption keys used must be securely managed.",
+      "pageTarget": "IEC 60601-4-5 Secure Encryption",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector mitigation notes identify AES, RSA, and SHA-256 security algorithms and randomly generated encryption keys.",
+      "evidenceText": "AES, RSA, SHA-256 등의 보안 알고리즘 사용. 암호화 키는 매번 무작위로 생성됨.",
+      "pageTarget": "Detector Secure Encryption",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices must allow only authorized users to access audit logs in read-only mode.",
+      "evidenceText": "Medical devices must allow only authorized users to access audit logs in read-only mode.",
+      "pageTarget": "IEC 60601-4-5 Audit Log Access",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector mitigation notes say internal logs can be loaded only through a separate engineer-only tool.",
+      "evidenceText": "별도의 엔지니어 전용 툴을 통해서만 내부 로그를 불러올 수 있음.",
+      "pageTarget": "Detector Audit Log Access",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical devices must maintain essential functions during DoS events.",
+      "evidenceText": "Medical devices must have the capability to maintain essential functions during DoS (Denial of Service) events.",
+      "pageTarget": "IEC 60601-4-5 Denial of Service Prevention",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector mitigation notes say connections are immediately terminated when they deviate from the proper connection procedure.",
+      "evidenceText": "연결 절차에서 적합한 절차에 어긋나는 경우 해당 연결은 즉시 종료됨.",
+      "pageTarget": "Detector Denial of Service Prevention",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "FDA authority is inferred from source metadata/path rather than the spreadsheet body."
+    },
+    {
+      "severity": "info",
+      "reason": "Source appears to be a spreadsheet export with mixed English/Korean text and some typographical/OCR-like errors such as 'authenicating', 'deive', and 'norticiation'."
+    }
+  ]
+}

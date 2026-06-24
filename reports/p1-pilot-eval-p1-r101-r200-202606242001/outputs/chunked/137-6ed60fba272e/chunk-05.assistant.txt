@@ -1,0 +1,210 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954409-yhh",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/260520 우크라이나(Licarno) 23G, P1 - 이창민 팀장님/260527 1차 제출본/3.2 [Digital Flat Panel X-ray Detector] Technical Document/A-TCF-5-156 Test Reports/1. [23G series] IEC 60601-1 CB Certi & Test report (ed. 3.2).pdf",
+    "canonicalGroupId": "6ed60fba272e"
+  },
+  "document": {
+    "title": "IEC 60601-1 Report No. 269183",
+    "documentType": "CB test report excerpt",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "general",
+      "Canada"
+    ],
+    "revisionOrVersion": "TRF No. IEC60601_1J",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-1",
+      "ISO 14971",
+      "IEC 60320-1",
+      "IEC 60384-14",
+      "IEC 62304",
+      "IEC 60529",
+      "IEC 60695-11-10",
+      "IEC 61058-1",
+      "IEC 60127-2",
+      "IEC 60950-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "IEC 60601-1 test report pages covering electrical safety, leakage current, insulation, fire, mechanical hazards, PEMS, EMC, and critical component evidence for a component-level power supply.",
+    "officialUse": "Supports regulatory submissions by documenting IEC 60601-1 clause-by-clause pass, not-applicable, and end-product-evaluation conclusions with measured test values and critical component certifications.",
+    "keyPoints": [
+      "The equipment is repeatedly described as a power supply unit requiring additional evaluation in the end product application for several clauses.",
+      "Operator protection is provided from mains to secondary; no MOPP, patient applied parts, defibrillation-proof parts, or PEMS are identified in this chunk.",
+      "Leakage current, protective earth impedance, dielectric strength, residual voltage, ball pressure, transformer overheating, and critical component tables are included.",
+      "The report marks many electrical safety clauses as pass, including MOOP, protective earthing, leakage currents, insulation, mains isolation, fuses, and transformer overheating."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Report No. 269183",
+      "type": "test_report_identifier",
+      "evidence": "Pages identify the document as 'Page 35 of 138 Report No. 269183' and subsequent IEC 60601-1 report pages."
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "Each page header states 'IEC 60601-1' with clause requirements and test result verdicts."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "risk_management_standard",
+      "evidence": "Multiple risk management file references cite ISO 14971 clauses, including Cl. 4.2-4.4, 5, and 6.2-6.5."
+    },
+    {
+      "name": "IEC 62304",
+      "type": "software_lifecycle_standard",
+      "evidence": "Clause 14 references IEC 62304 software classification, development, risk management, configuration management, and problem resolution."
+    },
+    {
+      "name": "Schurter AG 6220 appliance inlet",
+      "type": "critical_component",
+      "evidence": "Critical components table lists Appliance Inlet / INLET, Schurter AG, type 6220, 250 Vac, 10 A, IEC 60320-1 and UL 498."
+    },
+    {
+      "name": "Samwha Y1 capacitors C1, C2, C12",
+      "type": "critical_component",
+      "evidence": "Critical components table lists Y-capacitor C1, C2 and bridging capacitor C12 as Samwha SD Y1 capacitors certified to IEC 60384-14 and UL 60384-14."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Means of Operator Protection (MOOP)",
+      "pageTarget": "Pages 36-38, 112",
+      "evidence": "Operator protection was provided from mains to secondary; MOOP insulation passed dielectric strength testing with no breakdown."
+    },
+    {
+      "name": "No Means of Patient Protection (MOPP)",
+      "pageTarget": "Pages 36-38",
+      "evidence": "Clause 8.5.1.2 states 'No MOPP' and multiple patient-connection clauses are N/A."
+    },
+    {
+      "name": "Protective earth impedance",
+      "pageTarget": "Pages 40-42, 107",
+      "evidence": "Protective earth connection used an IEC 60320 appliance inlet and impedance measurements were below the 100 mΩ limit."
+    },
+    {
+      "name": "Leakage current compliance",
+      "pageTarget": "Pages 42-43, 108-111",
+      "evidence": "Earth leakage and touch current measurements are reported as passing normal and single fault limits."
+    },
+    {
+      "name": "Component-level end product evaluation",
+      "pageTarget": "Pages 35-92",
+      "evidence": "Many clauses state the equipment is a power supply unit and shall be additionally evaluated in the end product application."
+    },
+    {
+      "name": "No PEMS / software lifecycle applicability",
+      "pageTarget": "Pages 76-80",
+      "evidence": "Clause 14 states no programmable electrical medical system, with IEC 62304 software lifecycle items marked N/A."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The equipment is treated as a component-level power supply requiring additional end product evaluation for multiple safety clauses.",
+      "evidenceText": "Several remarks state: 'The equipment is a power supply unit, shall be additionally evaluated in the end product application.'",
+      "pageTarget": "Pages 36, 41, 48, 65, 76, 91",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report found no MOPP and considered MOOP for mains-to-secondary operator protection.",
+      "evidenceText": "Clause 8.5.1.1 says operator protection (MOOP) provided from mains to secondary; Clause 8.5.1.2 says 'No MOPP'; Clause 8.5.1.3 says 'MOOP considered.'",
+      "pageTarget": "Pages 36-37",
+      "confidence": "high"
+    },
+    {
+      "claim": "No F-type or Type B applied parts were present in the evaluated equipment.",
+      "evidenceText": "Clause 8.5.2.1 states 'No Type F-type applied part' and Clause 8.5.2.2 states 'No Type B applied part.'",
+      "pageTarget": "Pages 37-38",
+      "confidence": "high"
+    },
+    {
+      "claim": "Residual voltage after mains plug disconnection complied with the 60 V limit.",
+      "evidenceText": "Clause 8.4.3 states worst-case voltage did not exceed 60 V one second after disconnecting the plug; appended Table 8.4.3 shows 0 V between plug pins and earth.",
+      "pageTarget": "Pages 35, 104",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth impedance complied with the 100 mΩ requirement.",
+      "evidenceText": "Table 8.6.4 measured 0.019 mΩ from ground pin to potential equalization connector and 0.012 mΩ from ground pin to metal enclosure, against a 100 mΩ allowable limit.",
+      "pageTarget": "Page 107",
+      "confidence": "high"
+    },
+    {
+      "claim": "The appliance inlet is the protective earth terminal and mains disconnecting device.",
+      "evidenceText": "Clause 8.6.2 says the earth pin of the appliance inlet is considered the protective earth terminal; Clause 8.11.1 says the appliance inlet is used as the mains disconnecting device.",
+      "pageTarget": "Pages 40, 48-49",
+      "confidence": "high"
+    },
+    {
+      "claim": "Earth leakage current complied with IEC 60601-1 normal and single fault limits.",
+      "evidenceText": "Table 8.7 lists earth leakage values up to 292 μA normal condition and 572 μA single fault condition, passing 5 mA NC and 10 mA SFC limits.",
+      "pageTarget": "Page 108",
+      "confidence": "high"
+    },
+    {
+      "claim": "Touch current complied with IEC 60601-1 normal and single fault limits.",
+      "evidenceText": "Table 8.7 lists touch current values up to 6 μA normal condition and 287 μA single fault condition, passing 100 μA NC and 500 μA SFC limits.",
+      "pageTarget": "Page 110",
+      "confidence": "high"
+    },
+    {
+      "claim": "MOOP dielectric strength testing passed without breakdown.",
+      "evidenceText": "Table 8.8.3 lists insulation areas A through E with 1 MOOP or 2 MOOP test voltages up to 3000 V r.m.s. and 'No' dielectric breakdown.",
+      "pageTarget": "Page 112",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ball pressure test for thermoplastic parts complied with the 2 mm impression limit.",
+      "evidenceText": "Table 8.8.4.1 reports 1.3 mm for core caps and 1.2 mm for AC connector parts at 125 °C, with allowed impression diameter ≤ 2 mm.",
+      "pageTarget": "Page 113",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment does not produce X-radiation according to this report chunk.",
+      "evidenceText": "Clause 10.1.1 states 'Equipment does not produce X-radiation' and Clause 12.4.5.2 repeats this for diagnostic imaging X-radiation.",
+      "pageTarget": "Pages 64, 72",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment has no programmable electrical medical system in the evaluated configuration.",
+      "evidenceText": "Clause 14.1 states 'No programmable electrical medical system' and marks PEMS and IEC 62304 software lifecycle requirements N/A.",
+      "pageTarget": "Pages 76-80",
+      "confidence": "high"
+    },
+    {
+      "claim": "Critical mains input components include certified appliance inlet, switch, fuses, Y capacitors, X capacitors, wiring, and varistors.",
+      "evidenceText": "Critical components table lists Schurter appliance inlet to IEC 60320-1/UL 498, Everel switch to IEC/UL 61058-1, ORISEL fuses to IEC 60127-2/UL 248-1, Samwha Y1 capacitors, Pilkor X capacitors, and Amotech varistors.",
+      "pageTarget": "Pages 116-117",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformer overheating and post-test dielectric strength requirements passed.",
+      "evidenceText": "Clause 15.5.1 states transformers are protected against overheating, windings did not open, no hazardous situation occurred, and dielectric strength was conducted after short circuit and overload tests.",
+      "pageTarget": "Page 86",
+      "confidence": "high"
+    },
+    {
+      "claim": "EMC compliance was not considered in this test report and is to be determined in the end product.",
+      "evidenceText": "Clause 17 states 'Not considered EMC. Compliance in this test report; To be determined in the end product.'",
+      "pageTarget": "Page 91",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 5 of 8, so title page, certificate details, model list, manufacturer, and issue date may appear outside this excerpt."
+    },
+    {
+      "severity": "warning",
+      "reason": "Many clauses are marked N/A or require additional evaluation in the end product application because the evaluated item is a component-level power supply."
+    },
+    {
+      "severity": "warning",
+      "reason": "The chunk reports no PEMS and no EMC consideration in this IEC 60601-1 report; software/cybersecurity and EMC evidence should be verified in separate applicable reports if required for submission."
+    }
+  ]
+}
