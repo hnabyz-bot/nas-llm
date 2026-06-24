@@ -125,46 +125,23 @@ Generated: 2026-06-23
   - evidence records: 1,725
   - review flags: 360
   - chunked fallback: 0
+- Final ranks 1701-1775 passed:
+  `reports/p0-pilot-eval-p0-r1701-r1775-202606240843`
+  - final outputs: 75/75
+  - validation errors: 0
+  - page-marker leakage: 0
+  - evidence records: 1,148
+  - review flags: 291
+  - chunked fallback: 0
 
-## Next Resume Point
+## Next Decision Point
 
-Prepare and run the final ranks 1701-1775 checkpoint.
+P0 representative staging extraction is complete: 1,775/1,775 representatives
+have final QA-passed outputs. Decide whether to open the app ingest path behind
+a disposition gate.
 
-```powershell
-$bundle = "reports\p0-pilot-eval-p0-r1701-r1775-$(Get-Date -Format yyyyMMddHHmm)"
-node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1701 --count 75 --out-dir $bundle
-node scripts/run-p0-pilot-extraction.js --bundle-dir $bundle --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
-```
+## App Ingest Gate
 
-After that command finishes, classify failures:
-
-```powershell
-node scripts/run-p0-chunked-extraction.js --bundle-dir $bundle --failed --chunk-chars 180000 --timeout-ms 900000 --run
-```
-
-Then aggregate QA:
-
-```powershell
-node scripts/summarize-p0-eval.js --bundle-dir $bundle
-```
-
-Expected QA gate:
-
-- JSON parse pass for all 100 final outputs.
-- `source.queueId`, `source.sourcePath`, `source.canonicalGroupId` preserved.
-- validation errors: 0 target.
-- page-marker leakage: 0 target.
-- every output has evidence.
-- review flags are recorded.
-
-## Documentation After 1701-1775 QA
-
-Update these after the final 1701-1775 checkpoint is complete:
-
-- `README.md`
-- `Plans.md`
-- `docs/08-RA-INGEST-PRIORITY-REVIEW.md`
-- `docs/09-P0-PILOT-EVALUATION.md`
-- GitHub issue #17
-
-Then decide whether to open the app ingest path behind a disposition gate.
+Before app auto-ingest or bulk ingest, require a disposition gate that consumes
+the QA-passed staging outputs and rejects sources without preserved source
+identity, evidence, or acceptable review-flag handling.

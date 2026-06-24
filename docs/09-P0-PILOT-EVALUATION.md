@@ -1035,6 +1035,69 @@ Interpretation: the ranks 1601-1700 expansion checkpoint passed the same
 staging QA gate as prior P0 checkpoints. Continue P0 representative extraction
 with the final checkpoint starting at rank 1701.
 
+## P0 Final Checkpoint: Ranks 1701-1775
+
+Codex CLI extraction was run for the final 75 P0 representative candidates from
+the full ranked representative set. The app was not started.
+
+Bundle:
+
+- `reports/p0-pilot-eval-p0-r1701-r1775-202606240843`
+- representative rank range: 1701-1775
+- selected representatives: 75
+- estimated input size: 459,967 chars/4 tokens
+- product distribution:
+  - HAD/A/F 1417-1717: 53
+  - HnX: 11
+  - CYAN: 4
+  - HnVUE: 4
+  - ADD/AspenView: 3
+- authority distribution:
+  - general: 33
+  - MFDS/domestic: 26
+  - FDA: 9
+  - CE/MDR: 6
+  - overseas: 1
+
+Command pattern:
+
+```powershell
+node scripts/prepare-p0-pilot-eval.js --triage-dir reports\p0-meaningful-triage-20260618153500 --source full --start-rank 1701 --count 75 --out-dir reports\p0-pilot-eval-p0-r1701-r1775-202606240843
+node scripts/run-p0-pilot-extraction.js --bundle-dir reports\p0-pilot-eval-p0-r1701-r1775-202606240843 --provider codex --start 1 --limit 100 --timeout-ms 900000 --run
+node scripts/summarize-p0-eval.js --bundle-dir reports\p0-pilot-eval-p0-r1701-r1775-202606240843
+```
+
+Result:
+
+- completed outputs: 75
+- JSON parse pass: 75
+- JSON/required-field/source-field validation pass: 75
+- failures after retry: 0
+- chunked fallback passes: 0
+- validation errors after final QA: 0
+- page-marker leakage after final QA: 0
+- outputs missing evidence: 0
+- total extracted evidence records: 1,148
+- average evidence records/source: 15.3
+- minimum evidence records/source: 5
+- total review flags: 291
+- average review flags/source: 3.9
+- recorded runtime: 4,646.4 seconds total, 62.0 seconds/source average
+
+Observed quality:
+
+- all final outputs are parseable JSON and preserve `queueId`, `sourcePath`,
+  and `canonicalGroupId`.
+- no preprocessing page-marker wrappers leaked into final outputs.
+- every output has at least five evidence records.
+- review flags captured missing or inferred metadata, OCR/text quality issues,
+  and document/source-path ambiguity without blocking extraction.
+
+Interpretation: the final ranks 1701-1775 checkpoint passed the same staging QA
+gate as prior P0 checkpoints. P0 representative staging extraction now covers
+1,775/1,775 representatives. The next step is deciding whether to open the app
+ingest path behind a disposition gate.
+
 ## Expansion Gate
 
 Run 30 representatives first. Do not expand to 300 until all of these are true:

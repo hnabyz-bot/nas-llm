@@ -295,3 +295,8 @@ P0 meaningful-content triage result:
   JSON/source validation without chunked fallback; final QA found 0 validation
   errors, 0 page-marker leakage items, 1,725 evidence records, and 360 review
   flags
+- P0 final checkpoint ranks 1701-1775: 75/75 final outputs passed
+  JSON/source validation without chunked fallback; final QA found 0 validation
+  errors, 0 page-marker leakage items, 1,148 evidence records, and 291 review
+  flags. P0 representative staging extraction now covers 1,775/1,775
+  representatives; app ingest remains behind the disposition gate.
