@@ -1,5 +1,5 @@
 param(
-  [string]$ResumeAt = "2026-06-25 17:50:00"
+  [string]$ResumeAt = "2026-06-25T17:50:00"
 )
 
 $ErrorActionPreference = "Stop"
