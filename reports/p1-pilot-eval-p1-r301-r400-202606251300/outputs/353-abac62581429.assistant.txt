@@ -1,0 +1,180 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954418-167e",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management - SBOM End of Support.pdf",
+    "canonicalGroupId": "abac62581429"
+  },
+  "document": {
+    "title": "AspenView-Cybersecurity-Risk-Management-SBOM",
+    "documentType": "Cybersecurity Risk Management SBOM",
+    "productModels": [
+      "AspenView"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev 2",
+    "documentDate": "2024.06.30",
+    "standards": [
+      "DICOM standards"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "AspenView internal cybersecurity risk management SBOM section listing software component support lifecycle, component categories, and security assessment notes.",
+    "officialUse": "HAEA Internal Use Only",
+    "keyPoints": [
+      "The document identifies an SBOM and support lifecycle section with module names, versions, and level of support.",
+      "Listed modules are categorized as commercial, open-source, and off-the-shelf software components.",
+      "All listed software components, whether commercial or open-source, are considered off-the-shelf because they are pre-developed and ready for use.",
+      "The security assessment notes monitoring of updates, patches, and security vulnerabilities for selected components."
+    ]
+  },
+  "entities": [
+    {
+      "name": "AspenView",
+      "type": "software product",
+      "evidence": "Doc. Name: AspenView-Cybersecurity-Risk-Management-SBOM"
+    },
+    {
+      "name": "HAEA",
+      "type": "organization",
+      "evidence": "HAEA Internal Use Only"
+    },
+    {
+      "name": "Microsoft",
+      "type": "software vendor",
+      "evidence": "Regular updates are provided by Microsoft, which often include security patches."
+    },
+    {
+      "name": "Apache Software Foundation",
+      "type": "software foundation",
+      "evidence": "log4net XML External Entity(XXE) vulnerability, which has been patched by Apache Software Foundation"
+    },
+    {
+      "name": "GitHub",
+      "type": "software repository platform",
+      "evidence": "any security vulnerabilities might be discussed in the project's official repositories on GitHub"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "SBOM and Support Lifecycle",
+      "pageTarget": "Software Bill of Materials Support Lifecycle",
+      "evidence": "3. SBOM and Support Lifecycle"
+    },
+    {
+      "name": "SBOM Component Categorization",
+      "pageTarget": "SBOM Component Categorization",
+      "evidence": "3.1 SBOM Component Categorization"
+    },
+    {
+      "name": "Commercial Software Components",
+      "pageTarget": "Commercial Software Components",
+      "evidence": "3.1.1 Commercial Software Components"
+    },
+    {
+      "name": "Open-Source Software Components",
+      "pageTarget": "Open-Source Software Components",
+      "evidence": "3.1.2 Open-Source Software Components"
+    },
+    {
+      "name": "Off-the-Shelf Software Components",
+      "pageTarget": "Off-the-Shelf Software Components",
+      "evidence": "3.1.3 Off-the-Shelf Software Components"
+    },
+    {
+      "name": "Security Assessment of Component Modules",
+      "pageTarget": "Software Component Security Assessment",
+      "evidence": "4. Security Assessment of Component Modules"
+    },
+    {
+      "name": "DICOM standards",
+      "pageTarget": "DICOM Standards",
+      "evidence": "DICOM standards ensure that the patients’ sensitive data are encrypted"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document name is AspenView-Cybersecurity-Risk-Management-SBOM.",
+      "evidenceText": "Doc. Name: AspenView-Cybersecurity-Risk-Management-SBOM",
+      "pageTarget": "AspenView Cybersecurity Risk Management SBOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document initiate date is 2024.06.30 and the revision is Rev 2.",
+      "evidenceText": "Initiate date: 2024.06.30 /Rev 2",
+      "pageTarget": "AspenView Cybersecurity Risk Management SBOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is marked HAEA Internal Use Only.",
+      "evidenceText": "HAEA Internal Use Only",
+      "pageTarget": "HAEA Internal Use Only",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SBOM lists module names, versions, and level of support.",
+      "evidenceText": "Module Name Version Level of Support",
+      "pageTarget": "Software Bill of Materials Support Lifecycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SBOM component categorization section categorizes listed modules into commercial, open-source, and off-the-shelf types.",
+      "evidenceText": "This section will categorize the listed modules into commercial, open-source, and off-the-shelf types.",
+      "pageTarget": "SBOM Component Categorization",
+      "confidence": "high"
+    },
+    {
+      "claim": "Commercial software components include Microsoft Visual Studio 2022 and Intel Integrated Performance Primitives.",
+      "evidenceText": "1. Microsoft Visual Studio, 2022 - Commercial 2. Intel(R) Integrated Performance Primitives, 8.1.1 - Commercial",
+      "pageTarget": "Commercial Software Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "Open-source software components include BitMiracle.LibTiff.NET, ClosedXML, fo-dicom, log4net, Newtonsoft.Json, opencv, PdfSharp, protobuf-net, SixLabors.ImageSharp, and StructureMap.",
+      "evidenceText": "3.1.2 Open-Source Software Components",
+      "pageTarget": "Open-Source Software Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "All listed commercial and open-source software components are considered off-the-shelf.",
+      "evidenceText": "Generally, all listed software components, whether commercial or open-source, are considered off-the-shelf as they are pre-developed and ready for use",
+      "pageTarget": "Off-the-Shelf Software Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "AspenView will regularly monitor BitMiracle LibTiff.NET and LibJpeg.NetCore repositories for patches that mention security fixes.",
+      "evidenceText": "AspenView will regularly monitor for any patches that mention security fixes.",
+      "pageTarget": "Software Component Security Assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "AspenView uses logging methods only to record user activity for security monitoring and the logging is not customer facing.",
+      "evidenceText": "AspenView uses logging methods within the software only to record user activity for security monitoring purposes, and these loggings are not customer facing",
+      "pageTarget": "AspenView Security Monitoring",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states that DICOM standards ensure patient sensitive data are encrypted.",
+      "evidenceText": "DICOM standards ensure that the patients’ sensitive data are encrypted",
+      "pageTarget": "DICOM Standards",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority metadata/source path indicates FDA, but the source text does not contain an FDA authority statement; authority or jurisdiction is therefore left empty."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text excerpt begins at AspenView Document 33/37 and may not include earlier title or regulatory metadata pages."
+    },
+    {
+      "severity": "warning",
+      "reason": "Potential conflicting version evidence for Newtonsoft.Json: module list shows 13.0.3, while open-source categorization shows 13.0.0.0."
+    },
+    {
+      "severity": "info",
+      "reason": "Product metadata indicates HnVUE, but the provided source text identifies AspenView and does not mention HnVUE."
+    }
+  ]
+}

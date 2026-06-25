@@ -1,0 +1,308 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954369-f4",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/04_2G & 3G (A1417MCW, A1717MCW, F1417MCW)/▶ CE MDR/230706 ★ 1차 제출/A-TCF-5-160 Software Verification and Validation/1_5.소프트웨어 밸리데이션 관련자료 (1)/1.[NCS] 소프트웨어 설계제작 및 검증-2017.pdf",
+    "canonicalGroupId": "acf941658cb5"
+  },
+  "document": {
+    "title": "의료기기 소프트웨어 설계제작 학습모듈",
+    "documentType": "NCS 학습모듈",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "식품의약품안전처",
+      "한국직업능력개발원",
+      "NCS 국가직무능력표준"
+    ],
+    "revisionOrVersion": "1903090405_15v1",
+    "documentDate": "2017",
+    "standards": [
+      "ISO 14971:2007",
+      "ISO/IEC 25000:2014",
+      "ISO/IEC 25010:2011",
+      "ISO/IEC TR 25060:2010",
+      "ISO/IEC/IEEE 29119-1:2013",
+      "ISO/IEC/IEEE 29119-2:2013",
+      "ISO/IEC/IEEE 29119-3:2013",
+      "ISO/IEC/IEEE 29119-4:2015",
+      "ISO/IEC 646:1991",
+      "IEEE-1012",
+      "ISO/IEC 9126"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "NCS 학습모듈은 의료기기 소프트웨어의 기술 정보 수집, 시스템 구성, 프로그램 작성, 검증 및 검증 보고서 작성 절차를 교육용으로 정리한다.",
+    "officialUse": "의료기기 소프트웨어 개발 및 밸리데이션 관련 요구사항 분석, 아키텍처 설계, 테스트 계획, 검증 보고서 작성 시 참고 가능한 교육·훈련 자료이다.",
+    "keyPoints": [
+      "소프트웨어 밸리데이션은 실제 또는 모의 사용 환경에서 소프트웨어의 적절한 작동 점검을 포함한다.",
+      "의료기기 소프트웨어 요구 사항에는 기능·성능, 입력·출력, 인터페이스, 경보·경고, 보안, 인체공학, 설치·인수, 운영·유지보수, 규제 요구 사항이 포함된다.",
+      "제조업체는 ISO 14971을 준수하는 위험 관리 프로세스를 적용해야 한다.",
+      "소프트웨어 안전성 등급은 환자나 작업자에 대한 위해 영향에 따라 A, B, C 또는 상·중·하로 분류된다.",
+      "소프트웨어 검증 보고서는 시스템 정보, 검사 장비와 도구, 검증 및 유효성확인 결과, 미해결 오류를 포함한다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "식품의약품안전처",
+      "type": "authority",
+      "evidence": "출처: 식품의약품안전처(2007).『의료 기기 소프트웨어 밸리데이션 가이드라인』참조"
+    },
+    {
+      "name": "한국직업능력개발원",
+      "type": "institution",
+      "evidence": "※ 이 학습모듈은 자격기본법 시행령(제8조 국가직무능력표준의 활용)에 의거하여 개발하였으며, NCS 국가직무능력표준 통합포털사이트(http://www.ncs.go.kr)에서 다운로드 할 수 있습니다."
+    },
+    {
+      "name": "NCS 국가직무능력표준",
+      "type": "framework",
+      "evidence": "학습모듈의 내용체계 학습 학습 내용 NCS 능력단위 요소 코드 번호 요소 명칭"
+    },
+    {
+      "name": "의료기기 소프트웨어 밸리데이션 가이드라인",
+      "type": "guidance",
+      "evidence": "식품의약품안전처에서는 제조업체의 의료 기기 소프트웨어 개발에 필요한 사항을 참조할 수 있도록 “의료 기기 소프트웨어 밸리데이션 가이드라인(2007)”을 발표하였다."
+    },
+    {
+      "name": "의료 기기 소프트웨어 허가·심사 가이드라인",
+      "type": "guidance",
+      "evidence": "출처: 식품의약품안전처(2015). 의료 기기 소프트웨어 허가·심사 가이드라인"
+    },
+    {
+      "name": "소프트웨어공학센터",
+      "type": "institution",
+      "evidence": "소프트웨어공학센터(2016). 『소프트웨어 테스팅 도구 지표 가이드』. 미래창조과학부."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "소프트웨어 밸리데이션",
+      "pageTarget": "Software Validation",
+      "evidence": "소프트웨어 밸리데이션은 의료 기기에 소프트웨어를 결합시킨 후 실제 또는 모의 사용 환경에서 소프트웨어의 적절한 작동에 대한 점검을 포함하는 것이다."
+    },
+    {
+      "name": "소프트웨어 요구 사항 분석",
+      "pageTarget": "Medical Device Software Requirements",
+      "evidence": "소프트웨어 요구 사항은 다음과 같은 사항들을 포함하고 있으며, 의료 기기 소프트웨어의 요구 사항을 이와 같이 정의하고 문서화한다."
+    },
+    {
+      "name": "소프트웨어 안전성 등급",
+      "pageTarget": "Medical Device Software Safety Classification",
+      "evidence": "소프트웨어 시스템에서 발생할 수 있는 환자나 작업자에 대한 위해의 영향에 따라 각 소프트웨어 시스템에 소프트웨어 안전성 등급(등급 A-부상이나 건강 피해가 없는 경우, 등급 B-등급 A를 제외하고 중상이 가능하지 않는 경우, 등급 C-사망이나 중상이 가능할 경우)을 할당하여야 한다."
+    },
+    {
+      "name": "소프트웨어 아키텍처",
+      "pageTarget": "Software Architecture",
+      "evidence": "제조업체는 의료 기기 소프트웨어 요구 사항을 소프트웨어 구조(structure)로 설명하며 소프트웨어 항목(item)을 식별하는 아키텍처로 변환하여야 한다."
+    },
+    {
+      "name": "품질 속성 시나리오",
+      "pageTarget": "Quality Attribute Scenario",
+      "evidence": "품질 속성 시나리오란 특정 품질에 대한 요구 사항을 명시한 것으로써, 소프트웨어 아키텍처 설계 관점으로 명확히 이해하여 시스템의 품질 속성에 대한 요구 사항을 반영하기 위한 것이다."
+    },
+    {
+      "name": "SOUP",
+      "pageTarget": "Software of Unknown Provenance",
+      "evidence": "개발 프로세서에 대한 적절한 기록이 없거나 확인되지 않은 소프트웨어(SOUP, software of unknown provenance)"
+    },
+    {
+      "name": "소프트웨어 테스트 계획서",
+      "pageTarget": "Software Test Plan",
+      "evidence": "소프트웨어 테스트 계획서는 해당 소프트웨어에 대하여 테스트 활동의 범위, 접근 방법, 자원, 일정 등을 규정하고, 테스트 항목, 테스트할 특성, 수행할 테스트 작업, 각 작업 담당자 등을 식별하고 있다."
+    },
+    {
+      "name": "소프트웨어 검증 보고서",
+      "pageTarget": "Software Verification Report",
+      "evidence": "소프트웨어 검증 보고서에는 소프트웨어의 목적 및 사용에 대한 개요와 시스템의 정보 그리고 검사장비나 도구가 명시되어야 한다."
+    },
+    {
+      "name": "정적 테스트와 동적 테스트",
+      "pageTarget": "Software Static and Dynamic Testing",
+      "evidence": "정적 테스트는 프로그램의 코드를 실행하지 않는 것으로 여러 참여자가 모여 소프트웨어 개발 중에 생성되는 모든 명세나 코드를 검토하여 결함을 찾아내는 방법이다. 동적 테스트는 데이터를 이용하여 실제 프로그램을 실행하여 원시 코드의 동작을 살피는 방법으로 블랙박스 테스트와 화이트박스 테스트로 세분화된다."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The learning module objective is to collect software technical information, configure systems using suitable tools, write programs, and perform verification.",
+      "evidenceText": "소프트웨어 기술 정보를 수집하고 알맞은 도구를 이용하여 시스템을 구성하고 프로그램 작성 후 검증을 수행할 수 있다.",
+      "pageTarget": "Medical Device Software Development Training",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software in the medical device context includes not only programs controlling hardware but all outputs from the development process.",
+      "evidenceText": "소프트웨어는 하드웨어를 제어하고 구동시키는 프로그램(program)뿐만 아니라 개발과정에서의 모든 산출물을 포함하는 포괄적인 개념이다.",
+      "pageTarget": "Medical Device Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software validation includes checking proper software operation in actual or simulated use environments after combining software with a medical device.",
+      "evidenceText": "소프트웨어 밸리데이션은 의료 기기에 소프트웨어를 결합시킨 후 실제 또는 모의 사용 환경에서 소프트웨어의 적절한 작동에 대한 점검을 포함하는 것이다.",
+      "pageTarget": "Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Verification means confirming that specified requirements have been met through objective evidence.",
+      "evidenceText": "검증이란 “특정 요구 사항이 충족되었음을 객관적인 증거의 제공을 통하여 확인하는 것”을 의미하며",
+      "pageTarget": "Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Design validation means demonstrating by objective evidence that a medical device conforms to user needs and intended use.",
+      "evidenceText": "설계 밸리데이션은 “의료 기기가 사용자의 요구 및 사용 목적에 일치함을 객관적 증거로 입증하는 것”을 의미한다.",
+      "pageTarget": "Design Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical device software requiring validation is classified by the intended use of the medical device.",
+      "evidenceText": "의료 기기에서 밸리데이션을 필요로 하는 소프트웨어는 의료 기기의 사용목적에 따라 분류한다.",
+      "pageTarget": "Medical Device Software Validation Scope",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software subject to design validation includes standalone medical device software, software affecting or controlling device functions, and software analyzing patient data from analytical or monitoring medical devices.",
+      "evidenceText": "소프트웨어 자체가 의료 기기이거나 의료 기기의 구성품 또는 부속품으로 사용되는 소프트웨어 ... 의료 기기 목적으로 독립적(stand-alone)으로 사용되는 소프트웨어 ... 의료 기기의 기능에 영향을 주거나 조절하는 소프트웨어 ... 환자의 데이터를 분석하는 소프트웨어",
+      "pageTarget": "Medical Device Software Validation Scope",
+      "confidence": "high"
+    },
+    {
+      "claim": "Process validation software includes software used for automated process equipment or quality system operation.",
+      "evidenceText": "자동화 설비(automated process equipment)나 품질 시스템(quality system) 운영에 사용되는 소프트웨어",
+      "pageTarget": "Process Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical device software requirements should include related laws and regulatory requirements.",
+      "evidenceText": "관련 법규, 규제 요구 사항",
+      "pageTarget": "Medical Device Software Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical device software requirements analysis should include risk management methods.",
+      "evidenceText": "의료 기기 소프트웨어의 요구 사항 분석에서는 위험 관리 방법을 포함하여야 한다",
+      "pageTarget": "Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manufacturers should apply a risk management process conforming to ISO 14971.",
+      "evidenceText": "제조업체는 ISO 14971을 준수하는 위험 관리 프로세스를 적용해야 한다.",
+      "pageTarget": "ISO 14971",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety classes A, B, and C are assigned based on possible harm to patients or operators from the software system.",
+      "evidenceText": "소프트웨어 시스템에서 발생할 수 있는 환자나 작업자에 대한 위해의 영향에 따라 각 소프트웨어 시스템에 소프트웨어 안전성 등급(등급 A-부상이나 건강 피해가 없는 경우, 등급 B-등급 A를 제외하고 중상이 가능하지 않는 경우, 등급 C-사망이나 중상이 가능할 경우)을 할당하여야 한다.",
+      "pageTarget": "Medical Device Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety classification should be determined during the early design and development stage of the medical device.",
+      "evidenceText": "소프트웨어 안전성 분류 및 안전성 등급의 결정은 의료 기기의 설계 및 개발의 초기 단계에서 결정되어야 한다.",
+      "pageTarget": "Medical Device Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "A software requirements analysis specification should be evaluated by a responsible person before software design work begins.",
+      "evidenceText": "소프트웨어의 분석 명세서는 요구 사항이 충분하게 명시되어 있고 적절하다는 것을 확인하기 위하여 책임자가 소프트웨어 설계 작업을 시작하기 전에 소프트웨어 요구 사항을 평가해야 한다.",
+      "pageTarget": "Software Requirements Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Quality attribute scenarios define requirements for a specific quality attribute and support software architecture design.",
+      "evidenceText": "품질 속성 시나리오란 특정 품질에 대한 요구 사항을 명시한 것으로써, 소프트웨어 아키텍처 설계 관점으로 명확히 이해하여 시스템의 품질 속성에 대한 요구 사항을 반영하기 위한 것이다.",
+      "pageTarget": "Quality Attribute Scenario",
+      "confidence": "high"
+    },
+    {
+      "claim": "Quality attribute scenarios are written using six elements: source of stimulus, stimulus, artifact, environment, response, and response measure.",
+      "evidenceText": "각 품질 속성에 한정하여 6개의 항목(자극 유발원, 자극, 대상체, 환경, 응답, 응답 측정)으로 정의된 테이블을 사용하여 작성한다.",
+      "pageTarget": "Quality Attribute Scenario",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software architecture should transform medical device software requirements into a software structure identifying software items.",
+      "evidenceText": "제조업체는 의료 기기 소프트웨어 요구 사항을 소프트웨어 구조(structure)로 설명하며 소프트웨어 항목(item)을 식별하는 아키텍처로 변환하여야 한다.",
+      "pageTarget": "Software Architecture",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manufacturers should develop and document architecture for interfaces between software items and external software or hardware components.",
+      "evidenceText": "소프트웨어 항목과 소프트웨어 항목 외부의 구성 요소(소프트웨어와 하드웨어) 간의 연계성과 소프트웨어 항목 간 연계성을 위한 아키텍처를 개발하고 문서화하여야 한다.",
+      "pageTarget": "Software Architecture Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "If a software item is identified as SOUP, the manufacturer should specify functions, performance requirements, and needed system hardware and software for intended use.",
+      "evidenceText": "소프트웨어 항목이 SOUP로 식별된 경우 제조업체는 의도한 사용에 필요한 SOUP 항목에 대한 기능, 성능 요구 사항 및 적절한 운영 지원에 필요한 시스템 하드웨어와 소프트웨어 ... 를 명시하여야 한다.",
+      "pageTarget": "Software of Unknown Provenance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software coding should address correctness, conformity to requirements, safety requirements, detailed design consistency, coding standards, verification strategy, test procedure accuracy, integration and testability, and maintainability.",
+      "evidenceText": "소프트웨어 코딩의 경우 다음과 같은 요구 사항을 취급하여야 한다 ... 코드가 정확하며 요구 사항에 부합 ... 안전 요구 사항 ... 상세 설계 ... 코딩 표준 ... 검증 전략 ... 시험 절차 ... 소프트웨어 통합 및 시험 가능성 ... 유지 보수 가능성",
+      "pageTarget": "Software Unit Implementation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software verification procedures are divided into planning, design, execution and evaluation, result analysis, and error correction.",
+      "evidenceText": "검증의 절차는 계획, 설계, 시행 및 평가, 결과 분석 그리고 오류 수정 등으로 구분하여 시행한다.",
+      "pageTarget": "Software Verification Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Static testing reviews specifications or code without executing program code to find defects.",
+      "evidenceText": "정적 테스트는 프로그램의 코드를 실행하지 않는 것으로 여러 참여자가 모여 소프트웨어 개발 중에 생성되는 모든 명세나 코드를 검토하여 결함을 찾아내는 방법이다.",
+      "pageTarget": "Static Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic testing uses data to execute the actual program and observe source code behavior, and is subdivided into black-box and white-box testing.",
+      "evidenceText": "동적 테스트는 데이터를 이용하여 실제 프로그램을 실행하여 원시 코드의 동작을 살피는 방법으로 블랙박스 테스트와 화이트박스 테스트로 세분화된다.",
+      "pageTarget": "Dynamic Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "A software test plan should include purpose and scope, test scope, detailed schedule, prerequisite and completion criteria, error and defect reporting procedures, and related documents and forms.",
+      "evidenceText": "테스트 계획서에 포함하여야 할 사항은 다음과 같다 ... 목적 및 범위 ... 테스트 범위 ... 세부 일정 ... 실시에 따른 선행/완료 기준 ... 오류 및 결함의 보고 절차 ... 관련 문서 및 서식",
+      "pageTarget": "Software Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "A medical device software conformity confirmation report should include item name, software name and version, use form, functional characteristics, safety class, intended use, operating environment, development, maintenance/problem solving, risk management, and configuration management.",
+      "evidenceText": "의료 기기 소프트웨어 적합성 확인 보고서 ... 품목명 ... 소프트웨어 명칭 및 버전 ... 소프트웨어 사용 형태 ... 소프트웨어 기능적 특성 ... 소프트웨어 안전성 등급 ... 소프트웨어의 사용 목적 ... 소프트웨어 운영 환경 ... 소프트웨어 개발 ... 소프트웨어 유지 보수 및 문제 해결 ... 소프트웨어 위험 관리 ... 소프트웨어 형상관리",
+      "pageTarget": "Medical Device Software Conformity Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software V&V documentation should include unit implementation and verification, unit integration and integration testing, software system testing, procedures, anomaly lists, test results, and retest results when software changes occur during testing or verification.",
+      "evidenceText": "해당 문서는 소프트웨어의 유닛 구현 및 검증, 유닛 통합 및 통합 시험, 소프트웨어 시스템 시험에 대한 내용을 포함하여야 하며, 시험 및 검증 절차, 이상 현상(anomalies) 목록을 포함한 시험 결과, 시험 및 검증 도중 소프트웨어 변경이 발생한 경우 재시험 결과를 포함하여야 한다.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software verification reports should identify item name, system information, test equipment and tools, verification and validation results, and unresolved anomalies.",
+      "evidenceText": "소프트웨어 검증 보고서에는 소프트웨어의 목적 및 사용에 대한 개요와 시스템의 정보 그리고 검사장비나 도구가 명시되어야 한다 ... 품목명 ... 시스템 정보 ... 검사 장비 & 도구 ... 검증 & 유효성 확인 ... 미해결 오류",
+      "pageTarget": "Software Verification Report",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The source path and authoritySignal indicate CE/MDR, but the extracted text is an NCS Korean learning module that cites MFDS guidance rather than CE MDR requirements."
+    },
+    {
+      "severity": "warning",
+      "reason": "No specific device product model from the source metadata productSignal is described in the document body; productModels is left empty."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is taken from the source filename containing 2017; the body includes example dates and references but no clear publication date field."
+    },
+    {
+      "severity": "info",
+      "reason": "The document contains some OCR or typographical issues, including misspellings such as '기증 검증', '접급법', and inconsistent terms in example tables."
+    },
+    {
+      "severity": "warning",
+      "reason": "The document mixes official guidance citations, training content, examples, and Wikipedia/software tool references; authority differs by section."
+    }
+  ]
+}

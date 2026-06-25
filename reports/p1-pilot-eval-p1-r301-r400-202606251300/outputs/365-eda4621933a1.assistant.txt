@@ -1,0 +1,331 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17hi",
+    "sourcePath": "raw/sources/DHF (인허가)/04_G1717CW 외 7종/90_규격 Test report/1. 신청서 및 제출서류/08. Software Validation 문서/A-SDP-CYN_Software Development Plan (Rev.0 250520).pdf",
+    "canonicalGroupId": "eda4621933a1"
+  },
+  "document": {
+    "title": "Software Development Plan for GT Series Digital Flat Panel X-ray Detector",
+    "documentType": "Software Development Plan",
+    "productModels": [
+      "GT1717C",
+      "GT1717CP"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Rev.0",
+    "documentDate": "May 25, 2025",
+    "standards": [
+      "EN 62304",
+      "ISO 14971",
+      "EN ISO13485:2016",
+      "EN ISO14971:2019",
+      "EN 62304:2006/AC:2008"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software development plan for GT1717C and GT1717CP Digital Flat Panel X-ray Detector software.",
+    "officialUse": "Defines software development process, classification approach, requirements, risk management, verification and validation, release, configuration management, and problem resolution activities.",
+    "keyPoints": [
+      "Document No. A-SDP-CYN, Rev. No. 0, Rev. Date May 25, 2025.",
+      "Software classification is described using FDA Level of Concern categories and EN 62304 software safety classes.",
+      "Development follows a classic waterfall methodology with stages from analysis through software release.",
+      "Verification and validation are confirmed through software test including unit test, integration, and system test.",
+      "Software release requires completed verification, residual abnormality assessment, documented releasing version, and controlled distribution."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd."
+    },
+    {
+      "name": "GT Series Digital Flat Panel X-ray Detector",
+      "type": "device",
+      "evidence": "Software Development Plan for GT Series Digital Flat Panel X-ray Detector"
+    },
+    {
+      "name": "GT1717C",
+      "type": "productModel",
+      "evidence": "Model name: GT1717C, GT1717CP"
+    },
+    {
+      "name": "GT1717CP",
+      "type": "productModel",
+      "evidence": "Model name: GT1717C, GT1717CP"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatoryAuthority",
+      "evidence": "3.1 Software classification comply with FDA Guide Line"
+    },
+    {
+      "name": "R&D team",
+      "type": "organizationalUnit",
+      "evidence": "Prepared R&D team Jinsun Song May 25, 2025"
+    },
+    {
+      "name": "Quality Manager",
+      "type": "role",
+      "evidence": "Approval Quality Manager Namkyu Hur May 25, 2025"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Level of Concern",
+      "pageTarget": "Software Level of Concern",
+      "evidence": "S/W is classified into Major, Moderate and Minor by its level of concern"
+    },
+    {
+      "name": "EN 62304 software safety class",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "evidence": "The software safety classes shall initially be assigned based on concern as follows: -. Class A... -. Class B... -. Class C..."
+    },
+    {
+      "name": "Classic waterfall methodology",
+      "pageTarget": "Software Development Lifecycle - Waterfall",
+      "evidence": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\""
+    },
+    {
+      "name": "Software Verification and Validation",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Software verification and validation shall be confirmed through the software test."
+    },
+    {
+      "name": "Software Risk Management",
+      "pageTarget": "Software Risk Management",
+      "evidence": "As for the software risk management, personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software."
+    },
+    {
+      "name": "Software Configuration Management",
+      "pageTarget": "Software Configuration Management",
+      "evidence": "In case the software configuration is changed, it should be validated before it is applied to the software."
+    },
+    {
+      "name": "Software Release",
+      "pageTarget": "Software Release Controls",
+      "evidence": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software."
+    },
+    {
+      "name": "Traceability analysis",
+      "pageTarget": "Software Traceability Analysis",
+      "evidence": "do clear traceability analysis between the related document and development activities."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is Document No. A-SDP-CYN, Rev. No. 0.",
+      "evidenceText": "Technical Documentation Document No. A-SDP-CYN Rev. No. 0",
+      "pageTarget": "A-SDP-CYN Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision date is May 25, 2025.",
+      "evidenceText": "Software Development Plan Rev. Date May 25, 2025",
+      "pageTarget": "A-SDP-CYN Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision history lists Rev. 0 as Initial Release.",
+      "evidenceText": "Revision history Rev. Revision date The reason & content for establishment and amendment 0 May 25, 2025 Initial Release",
+      "pageTarget": "A-SDP-CYN Software Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document applies to GT1717C and GT1717CP models.",
+      "evidenceText": "Model name: GT1717C, GT1717CP",
+      "pageTarget": "GT Series Digital Flat Panel X-ray Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The purpose is to develop software that can manipulate and utilize the Digital Flat Panel X-ray Detector product functions.",
+      "evidenceText": "it aims at developing software that can manipulate and utilize the product function.",
+      "pageTarget": "Software Development Plan Purpose",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software classification section uses FDA Level of Concern categories Major, Moderate, and Minor.",
+      "evidenceText": "S/W is classified into Major, Moderate and Minor by its level of concern",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Major Level of Concern includes failures or latent flaws that could directly result in death or serious injury.",
+      "evidenceText": "The level of concern is “Major” if a failure or latent flaw could directly result in death or serious injury to the patient or operator.",
+      "pageTarget": "Major Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Moderate Level of Concern includes failures or latent design flaws that could directly result in minor injury.",
+      "evidenceText": "The level of concern is “Moderate” if a failure or latent design flaw could directly result in minor injury to the patient or operator.",
+      "pageTarget": "Moderate Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Minor Level of Concern applies when failures or latent design flaws are unlikely to cause injury.",
+      "evidenceText": "The level of concern is “Minor” if failures or latent design flaws are unlikely to cause any injury to the patient or operator.",
+      "pageTarget": "Minor Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document describes EN 62304 software safety classes A, B, and C.",
+      "evidenceText": "Class A: There is no injury nor health damage. -. Class B: The possible harm is non-serious injury. -. Class C: The possible harm is death or serious injury.",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software safety classification may be reduced from C to B if death or serious injury risk is reduced to an acceptable level by hardware risk control measures.",
+      "evidenceText": "the software safety classification may be reduced from C to B.",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Until a software safety class is assigned, Class C requirements apply.",
+      "evidenceText": "For each software system, until a software safety class is assigned, Class C requirements applied.",
+      "pageTarget": "EN 62304 Software Safety Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz software development follows classic waterfall methodology.",
+      "evidenceText": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\"",
+      "pageTarget": "Software Development Lifecycle - Waterfall",
+      "confidence": "high"
+    },
+    {
+      "claim": "The planned development schedule includes analysis from 2025.05.20 to 2025.05.22 and planning from 2025.05.23 to 2025.05.25.",
+      "evidenceText": "Analysis ... 2025.05.20~ 2025.05.22 Planning ... 2025.05.23~ 2025.05.25",
+      "pageTarget": "Software Development Schedule",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development resources list Microsoft Visual Professional 2022 and C# as the program language environment.",
+      "evidenceText": "Program language Microsoft Visual Professional 2022, C#",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The executable SDK file is libxd2.dll and the executable firmware file is upimage_G2_DET_xxxx.bin.",
+      "evidenceText": "Execute SDK file name: libxd2.dll ... Execute F/W file name: upimage_G2_DET_xxxx.bin",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Functional requirements include common functions, image acquisition, calibration, firmware update, iMX8 firmware functions, and error control.",
+      "evidenceText": "Common functions Module ... Image acquisition Module ... Calibration Module ... Firmware Update Module ... iMX8 Module ... Error control",
+      "pageTarget": "Software Requirements Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software risk analysis references EN ISO14971:2019 and produces a Software Validation Report.",
+      "evidenceText": "Software risk analysis ... EN ISO14971:2019 Software Validation Report Quality manager",
+      "pageTarget": "Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software development planning references EN ISO13485:2016 and produces a Software development plan.",
+      "evidenceText": "Software development Devise a plan for the software development and put it in writing EN ISO13485:2016 Software development plan",
+      "pageTarget": "Software Development Planning",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk management requires deciding and analyzing potential risk, reason, probability, and severity.",
+      "evidenceText": "personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software.",
+      "pageTarget": "Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "If risk remains in the non-acceptable zone after risk reduction or removal measures, design work is stopped.",
+      "evidenceText": "If the risk still remains on the non-acceptable zone even after taking measures to reduce or remove the risk, stop the design work.",
+      "pageTarget": "Risk Acceptability",
+      "confidence": "high"
+    },
+    {
+      "claim": "If a hazard could arise from software system failure to behave as specified, the probability of such failure is assumed to be 100 percent.",
+      "evidenceText": "If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the probability of such failure shall be assumed to be 100 percent",
+      "pageTarget": "EN 62304 Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Verification means confirmation that specific requirements are met by objective evidence and inspection.",
+      "evidenceText": "Verification means “confirmation that specific requirements are met by presentation of objective evidence and inspection”.",
+      "pageTarget": "Software Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software validation proves with objective evidence that user requirements and intended use are consistent with the software.",
+      "evidenceText": "The software validation is to prove with objective evidence that both the user requirements and use purpose on the function whose software has been used are consistent with the software.",
+      "pageTarget": "Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software verification and validation are confirmed through software testing, including unit test, integration, and system test.",
+      "evidenceText": "Software verification and validation shall be confirmed through the software test. The software test shall conduct the unit test, integration and system test.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Traceability analysis links SRS, SDS, hazard mitigations, and software verification and validation.",
+      "evidenceText": "Software Requirements Specification(SRS) Software Design Specification(SDS) Hazard Mitigations Software Verification & Validation(SVV)",
+      "pageTarget": "Software Traceability Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software release requires verification completion and evaluation before release.",
+      "evidenceText": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software.",
+      "pageTarget": "Software Release Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "All identified residual abnormalities should be documented and evaluated for unacceptable risks.",
+      "evidenceText": "All identified residual abnormalities should be documented. In order to ensure that all identified residual abnormalities are not causing unacceptable risks, It should be ensured that such abnormal conditions have been evaluated.",
+      "pageTarget": "Software Release Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The deployed software version should be documented.",
+      "evidenceText": "The version of the software product being deployed should be documented.",
+      "pageTarget": "Software Release Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration version names follow Version X.Y.Z, with Major X, Minor Y, and Patch Z categories.",
+      "evidenceText": "it should be able to distinguish by a version name and write as the following type. Version. X.Y.Z",
+      "pageTarget": "Software Configuration Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration changes should be validated before application to the software.",
+      "evidenceText": "In case the software configuration is changed, it should be validated before it is applied to the software.",
+      "pageTarget": "Software Configuration Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Customer dissatisfaction items are received under the Customer complaints Procedure, and needed software changes are notified to the R&D team.",
+      "evidenceText": "The customer dissatisfaction item should be received pursuant to Customer complaints Procedure and if a software change is needed, it should quickly be notified to R&D team.",
+      "pageTarget": "Software Problem Resolution",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software is used only after required validation has completed when correcting software issues.",
+      "evidenceText": "The software shall be used only after the required validation has completed.",
+      "pageTarget": "Software Problem Resolution",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority signal is FDA, but the source text only references 'FDA Guide Line' for software classification and does not identify a submission authority, jurisdiction, or FDA document title."
+    },
+    {
+      "severity": "warning",
+      "reason": "The document provides FDA Level of Concern and EN 62304 class criteria, but no completed answers or final assigned software classification are visible in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The release section requires documenting the deployed software version, but the actual released software version is not present in the source text."
+    }
+  ]
+}

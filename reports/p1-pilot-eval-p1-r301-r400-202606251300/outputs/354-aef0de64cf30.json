@@ -1,0 +1,187 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954420-18nf",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management - Threat Modeling.pdf",
+    "canonicalGroupId": "aef0de64cf30"
+  },
+  "document": {
+    "title": "AspenView-Security-Threat-Modeling",
+    "documentType": "Cyber Security Threat Modeling",
+    "productModels": [
+      "AspenView software",
+      "Radiological Image Processing System(AspenView)"
+    ],
+    "authorityOrJurisdiction": [
+      "Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X"
+    ],
+    "revisionOrVersion": "Rev 0",
+    "documentDate": "2024.04.01",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Threat modeling document for AspenView software cybersecurity risks from external sources.",
+    "officialUse": "Identifies and analyzes potential cybersecurity risks for the AspenView system throughout its lifecycle and points to mitigation details in the Cybersecurity Risk Management Report.",
+    "keyPoints": [
+      "AspenView interfaces with an X-ray detector through on-board Wi-Fi to display diagnostic images.",
+      "STRIDE is selected to identify spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats.",
+      "Lifecycle risk areas include supply chain, manufacturing and deployment, maintenance and update, and decommissioning risks.",
+      "Mitigations include supplier audits, secure SDLC, cryptographic signatures, secure configuration, encrypted update channels, role-based access controls, monitoring maintenance sessions, and decommissioning procedures."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Aspen Imaging Healthcare Inc",
+      "type": "manufacturer",
+      "evidence": "1.1 Manufacturer Aspen Imaging Healthcare Inc"
+    },
+    {
+      "name": "AspenView Software",
+      "type": "software application",
+      "evidence": "AspenView Software: Application used by healthcare providers."
+    },
+    {
+      "name": "X-ray Detector",
+      "type": "system component",
+      "evidence": "X-ray Detector: Captures images and communicates with AspenView."
+    },
+    {
+      "name": "Wi-Fi Module",
+      "type": "system component",
+      "evidence": "Wi-Fi Module: Facilitates wireless data transfer between the detector and software."
+    },
+    {
+      "name": "STRIDE",
+      "type": "threat methodology",
+      "evidence": "The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege"
+    },
+    {
+      "name": "Medical Device Directive 93/42/EEC",
+      "type": "directive",
+      "evidence": "It meets the requirements of the Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity threat modeling",
+      "pageTarget": "Cybersecurity Threat Modeling",
+      "evidence": "This cybersecurity document is to model the potential threat against the AspenView software from external sources."
+    },
+    {
+      "name": "STRIDE methodology",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege"
+    },
+    {
+      "name": "Cybersecurity risk assessment",
+      "pageTarget": "Cybersecurity Risk Assessment",
+      "evidence": "This document aims to identify and analyze potential cybersecurity risks associated with the AspenView system throughout its lifecycle, providing pre- and post-mitigation risk assessments."
+    },
+    {
+      "name": "Secure software development lifecycle",
+      "pageTarget": "Secure Software Development Lifecycle",
+      "evidence": "Implement a secure software development lifecycle (SDLC) that includes vetting of third-party components."
+    },
+    {
+      "name": "Update integrity",
+      "pageTarget": "Medical Device Software Update Integrity",
+      "evidence": "Updates might be intercepted or replaced with malicious versions if not properly secured."
+    },
+    {
+      "name": "Device decommissioning",
+      "pageTarget": "Medical Device Decommissioning",
+      "evidence": "Establish and follow strict decommissioning procedures, including data deletion and hardware disposal."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is named AspenView-Security-Threat-Modeling.",
+      "evidenceText": "Doc. Name: AspenView-Security-Threat-Modeling",
+      "pageTarget": "AspenView-Security-Threat-Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date and revision are 2024.04.01 and Rev 0.",
+      "evidenceText": "Initiate date: 2024.04.01 /Rev 0",
+      "pageTarget": "AspenView-Security-Threat-Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The modeled product is AspenView software.",
+      "evidenceText": "Model: AspenView software",
+      "pageTarget": "AspenView Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "AspenView is described as radiological image processing system technical documentation.",
+      "evidenceText": "This Technical File consists of technical documentation relating to development of Radiological Image Processing System(AspenView).",
+      "pageTarget": "AspenView Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document cites compliance with Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annexes II, IX, and X.",
+      "evidenceText": "It meets the requirements of the Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X.",
+      "pageTarget": "Medical Device Directive 93/42/EEC",
+      "confidence": "high"
+    },
+    {
+      "claim": "AspenView interfaces with an X-ray detector through on-board Wi-Fi for diagnostic image display.",
+      "evidenceText": "AspenView is a medical software application that interfaces with an X-ray detector through on-board Wi-Fi to display images for diagnostic purposes.",
+      "pageTarget": "AspenView System Architecture",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document aims to identify and analyze cybersecurity risks throughout the AspenView lifecycle.",
+      "evidenceText": "This document aims to identify and analyze potential cybersecurity risks associated with the AspenView system throughout its lifecycle, providing pre- and post-mitigation risk assessments.",
+      "pageTarget": "AspenView Cybersecurity Risk Assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The system components listed are AspenView Software, X-ray Detector, and Wi-Fi Module.",
+      "evidenceText": "AspenView Software: Application used by healthcare providers. X-ray Detector: Captures images and communicates with AspenView. Wi-Fi Module: Facilitates wireless data transfer between the detector and software.",
+      "pageTarget": "AspenView System Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hospital networks are assumed to be hostile environments where adversaries may control network traffic.",
+      "evidenceText": "Assume that hospital networks are hostile environments where adversaries may control network traffic, enabling them to alter, drop, and replay packets.",
+      "pageTarget": "Hospital Network Threat Model",
+      "confidence": "high"
+    },
+    {
+      "claim": "STRIDE is selected as the threat methodology.",
+      "evidenceText": "The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege",
+      "pageTarget": "STRIDE Threat Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "Identified cybersecurity risk areas include supply chain, manufacturing and deployment, maintenance and update, and decommission risks.",
+      "evidenceText": "Supply Chain Risks; Manufacturing and Deployment Risks; Maintenance and Update Risks; Decommission Risks",
+      "pageTarget": "AspenView Cybersecurity Risks",
+      "confidence": "high"
+    },
+    {
+      "claim": "Comprehensive implemented mitigation measures are referenced in the AspenView Cybersecurity Risk Management Report section 7.",
+      "evidenceText": "Please refer to AspenView Cybersecurity Risk Management Report section 7. Cyber Security Risk Mitigation for the comprehensive, mitigating measures that have been implemented against the identified risks in 2.5",
+      "pageTarget": "AspenView Cybersecurity Risk Management Report",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source metadata authoritySignal is FDA, but the provided source text does not mention FDA; it cites Medical Device Directive 93/42/EEC as amended by 2007/47/EC."
+    },
+    {
+      "severity": "info",
+      "reason": "No explicit standards are identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision table shows prepared by information but reviewed by and approved by fields are not populated in the provided text."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text contains typographical/OCR-like wording such as 'Cyber Security Theat Modeling'."
+    }
+  ]
+}

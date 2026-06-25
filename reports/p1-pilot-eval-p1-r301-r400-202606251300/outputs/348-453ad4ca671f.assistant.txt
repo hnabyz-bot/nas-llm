@@ -1,0 +1,285 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954418-16pn",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management Metrics.pdf",
+    "canonicalGroupId": "453ad4ca671f"
+  },
+  "document": {
+    "title": "Cyber Security Risk Management Report",
+    "documentType": "Report",
+    "productModels": [
+      "AspenView software"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Revision No. 3",
+    "documentDate": "2024.09.01",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Cyber Security Risk Management Report for AspenView software documenting FMEA-based cybersecurity risks, controls, verification evidence, and residual acceptability.",
+    "officialUse": "Supports cybersecurity risk management documentation for AspenView software, including hazard analysis, risk controls, software verification evidence, and residual risk acceptability.",
+    "keyPoints": [
+      "The document identifies potential failure modes within AspenView software and analyzes consequences of those failures.",
+      "Cybersecurity hazards include unauthorized access, account misuse, weak authentication, illegal software execution, information leakage or forgery, ransomware, unauthorized updates, missing logs, and communication denial or delay.",
+      "Risk controls include access control, authentication, multiple-access restriction, session termination, password rules, encryption, integrity checks, logging, threat alarms, and user manual response procedures.",
+      "Listed residual risk assessments are marked acceptable in the provided FMEA rows."
+    ]
+  },
+  "entities": [
+    {
+      "name": "AspenView software",
+      "type": "product model",
+      "evidence": "Model : AspenView software"
+    },
+    {
+      "name": "AspenView-RMF",
+      "type": "document number",
+      "evidence": "Document No. AspenView-RMF"
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "authoritySignal: FDA"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cyber Security Risk Management",
+      "pageTarget": "Cyber Security Risk Management",
+      "evidence": "Cyber Security Risk Management Report"
+    },
+    {
+      "name": "FMEA report",
+      "pageTarget": "Failure Modes and Effects Analysis",
+      "evidence": "11. FMEA report (Failure Modes & Effects Analysis)"
+    },
+    {
+      "name": "Access control and authentication",
+      "pageTarget": "Access Control and Authentication",
+      "evidence": "Implementation of access control and authentication function for each user through design change"
+    },
+    {
+      "name": "Unauthorized access detection and restriction",
+      "pageTarget": "Unauthorized Access Detection",
+      "evidence": "Implementing unauthorized access detection and restriction function through design change"
+    },
+    {
+      "name": "Automatic session termination",
+      "pageTarget": "Session Termination",
+      "evidence": "Implementation of automatic session termination function through design change"
+    },
+    {
+      "name": "Password creation rules and masking",
+      "pageTarget": "Password Controls",
+      "evidence": "Password creation rule through design change Implementation of rules, encryption, masking, and no feedback"
+    },
+    {
+      "name": "Encryption of transmitted information",
+      "pageTarget": "Transmission Encryption",
+      "evidence": "Implementation of encryption function of transmitted information through design change"
+    },
+    {
+      "name": "Update authentication",
+      "pageTarget": "Software Update Authentication",
+      "evidence": "Implementation of authentication function when updating through design change"
+    },
+    {
+      "name": "Integrity check",
+      "pageTarget": "Software Integrity Check",
+      "evidence": "Implement integrity check function when updating through design change"
+    },
+    {
+      "name": "System access and information management log",
+      "pageTarget": "System Logging",
+      "evidence": "System access and information management through design change"
+    },
+    {
+      "name": "Security threat detection alarm",
+      "pageTarget": "Cybersecurity Threat Detection",
+      "evidence": "Implementation of security threat detection alarm function through design change"
+    },
+    {
+      "name": "Communication error detection and alarm",
+      "pageTarget": "Communication Error Detection",
+      "evidence": "Communication error detection and alarm function implementation"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cyber Security Risk Management Report.",
+      "evidenceText": "Cyber Security Risk Management Report",
+      "pageTarget": "Cyber Security Risk Management Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number is AspenView-RMF.",
+      "evidenceText": "Document No. AspenView-RMF",
+      "pageTarget": "AspenView-RMF",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Revision No. 3.",
+      "evidenceText": "Revision No. 3",
+      "pageTarget": "AspenView-RMF",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model identified in the document is AspenView software.",
+      "evidenceText": "Model : AspenView software",
+      "pageTarget": "AspenView Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision date shown in the document is 2024.09.01.",
+      "evidenceText": "Revision Date. 2024.09.01",
+      "pageTarget": "AspenView-RMF",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA section identifies potential failure modes within AspenView software and analyzes consequences of those failures.",
+      "evidenceText": "This is our step-by-step approach used to identify potential failure modes within AspenView software, and analyze the consequences of those failures.",
+      "pageTarget": "Failure Modes and Effects Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized access to product information may manipulate image calibration data and lead to misdiagnosis, incorrect treatment, or deprivation of treatment opportunities.",
+      "evidenceText": "Manipulation of image calibration data due to unauthorized access to information on this product",
+      "pageTarget": "Unauthorized Access Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "The risk control for unauthorized access includes access control and authentication for each user.",
+      "evidenceText": "Implementation of access control and authentication function for each user through design change",
+      "pageTarget": "Access Control and Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Multiple simultaneous users on one account are controlled by a same-account multiple access restriction function.",
+      "evidenceText": "Implementation of the same account multiple access restriction function through design change",
+      "pageTarget": "Account Access Restriction",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized access attempts are controlled by unauthorized access detection and restriction functions.",
+      "evidenceText": "Implementing unauthorized access detection and restriction function through design change",
+      "pageTarget": "Unauthorized Access Detection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document specifies authentication when accessing through a network as a control for weak router or Wi-Fi-related stolen access rights.",
+      "evidenceText": "Implementation of authentication function when accessing through network through design change",
+      "pageTarget": "Network Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Automatic session termination is used to reduce unauthorized account use when the user is away.",
+      "evidenceText": "Implementation of automatic session termination function through design change",
+      "pageTarget": "Session Termination",
+      "confidence": "high"
+    },
+    {
+      "claim": "Password-related controls include password creation rules, encryption, masking, and no feedback.",
+      "evidenceText": "Password creation rule through design change Implementation of rules, encryption, masking, and no feedback",
+      "pageTarget": "Password Controls",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The document uses ambiguous response messages to avoid revealing whether an ID exists during login.",
+      "evidenceText": "Implementing the use of ambiguous expressions in response messages through design changes",
+      "pageTarget": "Authentication Error Messages",
+      "confidence": "high"
+    },
+    {
+      "claim": "Only necessary services such as ports and permissions are activated to address unauthorized installation or illegal software execution.",
+      "evidenceText": "Activate only necessary services (port, permission, etc.) through design change",
+      "pageTarget": "Service Hardening",
+      "confidence": "high"
+    },
+    {
+      "claim": "Encryption of transmitted information is used as a control for leakage or forgery of transmitted control or medical information.",
+      "evidenceText": "Implementation of encryption function of transmitted information through design change",
+      "pageTarget": "Transmission Encryption",
+      "confidence": "high"
+    },
+    {
+      "claim": "For stored medical information forgery risks, the document specifies transmitting without storing medical information in the product.",
+      "evidenceText": "Implementation of the function to transmit without storing medical information in this product through design change",
+      "pageTarget": "Medical Information Storage Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ransomware infection is identified as a possible case where patient information cannot be viewed during treatment.",
+      "evidenceText": "Ransomware infection Patient information cannot be viewed during treatment",
+      "pageTarget": "Ransomware Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized updates are controlled by authentication during updates.",
+      "evidenceText": "Implementation of authentication function when updating through design change",
+      "pageTarget": "Software Update Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Updates with no guaranteed integrity are controlled by an integrity check function when updating.",
+      "evidenceText": "Implement integrity check function when updating through design change",
+      "pageTarget": "Software Integrity Check",
+      "confidence": "high"
+    },
+    {
+      "claim": "Updates from any provider are controlled by an update provider authentication procedure function.",
+      "evidenceText": "Implementation of update provider authentication procedure function through design change",
+      "pageTarget": "Update Provider Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Absence of system log is addressed by system access and information management logging.",
+      "evidenceText": "Verify system access and information management log function implementation with software verification data",
+      "pageTarget": "System Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "Executable files and configuration files without guaranteed integrity are controlled by an integrity check before execution.",
+      "evidenceText": "Implementation of integrity check function before execution of executable file through design change",
+      "pageTarget": "Executable Integrity Check",
+      "confidence": "high"
+    },
+    {
+      "claim": "Security threat detection alarm functions and user manual response procedures are controls for cybersecurity threat response.",
+      "evidenceText": "Confirmation of security threat detection alarm function implementation with software verification data and provision of response procedures to users through user manual",
+      "pageTarget": "Cybersecurity Threat Response",
+      "confidence": "high"
+    },
+    {
+      "claim": "Communication service denial or delay is controlled by communication error detection, alarm functions, and user manual response procedures.",
+      "evidenceText": "Confirmation of communication error detection and implementation of alarm functions with software verification data and provision of response procedures to users through user manual",
+      "pageTarget": "Communication Error Detection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The provided FMEA rows show residual risk acceptability as acceptable.",
+      "evidenceText": "Acceptable / Not allowed ... Acceptable",
+      "pageTarget": "Residual Risk Acceptability",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is inferred from source metadata authoritySignal and sourcePath; the extracted SOURCE_TEXT itself does not state FDA."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the provided SOURCE_TEXT."
+    },
+    {
+      "severity": "warning",
+      "reason": "The provided text appears to be OCR or table extraction with broken words and line wrapping, which may affect exact wording."
+    },
+    {
+      "severity": "info",
+      "reason": "Only pages 29 through 38 of a 46-page document are present in the provided SOURCE_TEXT."
+    }
+  ]
+}

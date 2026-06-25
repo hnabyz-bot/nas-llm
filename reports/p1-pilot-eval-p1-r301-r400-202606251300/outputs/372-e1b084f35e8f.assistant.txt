@@ -1,0 +1,269 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954415-13kc",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/12. Software Valiadtion Report/Stitching 평가보고서/006_Smart Stitching Auto Stitching Performance Report.docx",
+    "canonicalGroupId": "e1b084f35e8f"
+  },
+  "document": {
+    "title": "Auto Stitching Performance Report",
+    "documentType": "Performance report",
+    "productModels": [
+      "Smart Stitching"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Performance report for Smart Stitching auto stitching using images acquired by X-ray systems.",
+    "officialUse": "Supports assessment of Smart Stitching image stitching performance and acceptance criteria.",
+    "keyPoints": [
+      "S/W Title is Smart Stitching.",
+      "Test title is Smart Stitching performance per X-ray System.",
+      "Test item is assessment of stitching performance for image acquired by X-ray system.",
+      "The number of stitching images should be 2~5.",
+      "Auto stitching acceptance requires error range less than 15 pixels in both horizontal and vertical directions compared with manual stitching.",
+      "Manual stitching images are obtained from radiologist Kim Joo-Young.",
+      "Based on 2 input images, the auto stitching time is about 1 second.",
+      "If the subject moves conspicuously, the alignment is incorrect.",
+      "Auto stitching result is greatly affected by the auto stitching parameter."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Smart Stitching",
+      "type": "Software",
+      "evidence": "S / W Title Smart Stitching"
+    },
+    {
+      "name": "Hyun Ji Cho",
+      "type": "Person",
+      "evidence": "Author Hyun Ji Cho"
+    },
+    {
+      "name": "Kim Joo-Young",
+      "type": "Radiologist",
+      "evidence": "Obtain manual stitching images from radiologist(Kim Joo-Young)."
+    },
+    {
+      "name": "Kodak CR975",
+      "type": "X-ray system model",
+      "evidence": "X-ray Mfr Kodak; Type CR; Model CR975"
+    },
+    {
+      "name": "Konica 0817",
+      "type": "X-ray system model",
+      "evidence": "X-ray Mfr Konica; Type DR; Model 0817"
+    },
+    {
+      "name": "GE Thunder Platform",
+      "type": "X-ray system model",
+      "evidence": "GE DR Thunder Platform"
+    },
+    {
+      "name": "GE Discovery XR656",
+      "type": "X-ray system model",
+      "evidence": "GE CR Discovery XR656"
+    },
+    {
+      "name": "DRTECH EVS4343",
+      "type": "X-ray system model",
+      "evidence": "DRTECH DR EVS4343"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Auto stitching performance",
+      "pageTarget": "Auto Stitching Performance",
+      "evidence": "Test Title - Smart Stitching performance per X-ray System"
+    },
+    {
+      "name": "Stitching performance assessment",
+      "pageTarget": "Stitching Performance Assessment",
+      "evidence": "Test Items - Assessment of stitching performance for image acquired by X-ray system"
+    },
+    {
+      "name": "Auto stitching acceptance criteria",
+      "pageTarget": "Auto Stitching Acceptance Criteria",
+      "evidence": "Compared with manual stitching, the error range for auto stitching should be less than 15 pixels each in the horizontal and vertical direction."
+    },
+    {
+      "name": "Manual stitching comparison",
+      "pageTarget": "Manual Stitching Comparison",
+      "evidence": "Compared with manual stitching, the error range for auto stitching should be less than 15 pixels each in the horizontal and vertical direction."
+    },
+    {
+      "name": "DICOM image import",
+      "pageTarget": "DICOM Image Import",
+      "evidence": "Download the DICOM image to a local storage. Import the locally stored image and perform the test."
+    },
+    {
+      "name": "Auto stitching parameters",
+      "pageTarget": "Auto Stitching Parameters",
+      "evidence": "The auto stitching result is greatly affected by the auto stitching parameter and the optimized parameter value may be different depending on the location of the redundant area of the image."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is Auto Stitching Performance Report.",
+      "evidenceText": "Auto Stitching Performance Report",
+      "pageTarget": "Auto Stitching Performance Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software title is Smart Stitching.",
+      "evidenceText": "S / W Title Smart Stitching",
+      "pageTarget": "Smart Stitching",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number is SMCW-P0801-F05.",
+      "evidenceText": "Document No SMCW-P0801-F05",
+      "pageTarget": "SMCW-P0801-F05",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report author is Hyun Ji Cho.",
+      "evidenceText": "Author Hyun Ji Cho",
+      "pageTarget": "Hyun Ji Cho",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test title is Smart Stitching performance per X-ray System.",
+      "evidenceText": "Test Title - Smart Stitching performance per X-ray System",
+      "pageTarget": "Smart Stitching Performance Per X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test item assesses stitching performance for images acquired by an X-ray system.",
+      "evidenceText": "Test Items - Assessment of stitching performance for image acquired by X-ray system",
+      "pageTarget": "Stitching Performance Assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test method uses DICOM images downloaded to local storage and imported for testing.",
+      "evidenceText": "Download the DICOM image to a local storage. Import the locally stored image and perform the test.",
+      "pageTarget": "DICOM Image Import",
+      "confidence": "high"
+    },
+    {
+      "claim": "The number of stitching images should be 2 to 5.",
+      "evidenceText": "The number of stitching images should be 2~5.",
+      "pageTarget": "Stitching Image Count",
+      "confidence": "high"
+    },
+    {
+      "claim": "Auto stitching acceptance requires less than 15 pixels error in both horizontal and vertical directions compared with manual stitching.",
+      "evidenceText": "Compared with manual stitching, the error range for auto stitching should be less than 15 pixels each in the horizontal and vertical direction.",
+      "pageTarget": "Auto Stitching Acceptance Criteria",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manual stitching images are obtained from radiologist Kim Joo-Young.",
+      "evidenceText": "Obtain manual stitching images from radiologist(Kim Joo-Young).",
+      "pageTarget": "Kim Joo-Young",
+      "confidence": "high"
+    },
+    {
+      "claim": "For spine image capture, the number of vertebrae should be correct: C-Spine 7, T-Spine 12, L-Spine 5.",
+      "evidenceText": "For Spine image capture, the number of vertebrae (C-Spine: 7, T-Spine: 12, L-Spine: 5) should be correct.",
+      "pageTarget": "Spine Image Capture Vertebrae Count",
+      "confidence": "high"
+    },
+    {
+      "claim": "Radiologist confirmation is required.",
+      "evidenceText": "Get confirmation from the radiologist",
+      "pageTarget": "Radiologist Confirmation",
+      "confidence": "high"
+    },
+    {
+      "claim": "If there is a tape measure, it should be evenly aligned.",
+      "evidenceText": "If there is a tape measure, it should be evenly aligned.",
+      "pageTarget": "Tape Measure Alignment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Failure is assigned if any one of the listed acceptance conditions is not met.",
+      "evidenceText": "If any one of 1~3 conditions is not met, it is regarded as failure.",
+      "pageTarget": "Auto Stitching Failure Criteria",
+      "confidence": "high"
+    },
+    {
+      "claim": "Based on 2 input images, the auto stitching time is about 1 second.",
+      "evidenceText": "Based on 2 input images, the auto stitching time is about 1 second.",
+      "pageTarget": "Auto Stitching Operating Time",
+      "confidence": "high"
+    },
+    {
+      "claim": "Conspicuous subject movement causes incorrect alignment.",
+      "evidenceText": "If the subject moves conspicuously, the alignment is incorrect.",
+      "pageTarget": "Auto Stitching Alignment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Auto stitching result is greatly affected by the auto stitching parameter.",
+      "evidenceText": "The auto stitching result is greatly affected by the auto stitching parameter and the optimized parameter value may be different depending on the location of the redundant area of the image.",
+      "pageTarget": "Auto Stitching Parameters",
+      "confidence": "high"
+    },
+    {
+      "claim": "Input parameters affect stitching speed.",
+      "evidenceText": "Input parameters affect the stitching speed.",
+      "pageTarget": "Stitching Speed Parameters",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test condition operating system is Microsoft Windows 10 Pro 64-bit.",
+      "evidenceText": "OS : Microsoft Windows 10 Pro(64bit)",
+      "pageTarget": "Smart Stitching Test Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test condition CPU is Intel Core i5-6500 CPU at 3.20GHz.",
+      "evidenceText": "CPU : Intel(R) Core(™) i5-6500 CPU @3.20GHz 3.19GHz",
+      "pageTarget": "Smart Stitching Test Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test condition RAM is 8GB.",
+      "evidenceText": "RAM : 8GB",
+      "pageTarget": "Smart Stitching Test Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test condition graphic card is NVIDIA Geforce GT 730.",
+      "evidenceText": "Graphic Card : NVIDIA Geforce GT 730",
+      "pageTarget": "Smart Stitching Test Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test condition HDD is 1TB.",
+      "evidenceText": "HDD : 1TB",
+      "pageTarget": "Smart Stitching Test Environment",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Date of Report is shown as '-' and no document date is provided."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version is identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority signal indicates FDA in metadata, but the source text does not identify FDA or another authority or jurisdiction."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several figure/log OCR lines contain low-quality or garbled text and were not used for factual extraction."
+    }
+  ]
+}
