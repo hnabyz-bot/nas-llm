@@ -1,0 +1,324 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954370-16j",
+    "sourcePath": "raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/2.2 A-CFMEA-HNXR1_Cybersecurity FMEA table(Rev.0 250806).pdf",
+    "canonicalGroupId": "68e555d0b6a2"
+  },
+  "document": {
+    "title": "Cybersecurity FMEA Report",
+    "documentType": "Cybersecurity FMEA Report",
+    "productModels": [
+      "HnX-R1"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "IEC 60601-4-5",
+      "CVSS:3.1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity FMEA report for the HnX-R1 Digital X-ray Imaging System identifying threats, CVSS scores, security controls, and residual risks.",
+    "officialUse": "Supports cybersecurity risk analysis, risk evaluation, and risk control documentation for the HnX-R1 design history file.",
+    "keyPoints": [
+      "The document identifies the product as Digital X-ray Imaging System, model HnX-R1, Doc No. A-CFMEA-HNXR1, Rev.0.",
+      "Threat analysis uses STRIDE categories, CVSS:3.1 vectors, likelihood, impact, and before/after risk levels.",
+      "Security controls include authentication, authorization, cryptography, confidentiality, audit logging, recovery, integrity verification, and firmware/software update controls.",
+      "HnVUE performs integrity verification on 49 files required for operation using FileName, FileSize, LastWriteDate, and FileVersion.",
+      "Detector-HnVUE communication is described as encrypted using AES 128 after initial TCP communication."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Digital X-ray Imaging System",
+      "type": "product",
+      "evidence": "Product Name : Digital X-ray Imaging System"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "Model Name : HnX-R1"
+    },
+    {
+      "name": "A-CFMEA-HNXR1",
+      "type": "document number",
+      "evidence": "Doc No. : A-CFMEA-HNXR1"
+    },
+    {
+      "name": "HnVUE",
+      "type": "software",
+      "evidence": "HnVUE performs integrity verification when running."
+    },
+    {
+      "name": "Detector",
+      "type": "device component",
+      "evidence": "Check communication between the detector and HnVUE SW"
+    },
+    {
+      "name": "PACS server",
+      "type": "external system",
+      "evidence": "HnVUE SW and PACS server communicate using DICOM protocol and plaintext."
+    },
+    {
+      "name": "Worklists server",
+      "type": "external system",
+      "evidence": "HnVUE SW and Worklists server communicate using DICOM protocol and plaintext."
+    },
+    {
+      "name": "H&abyz engineers",
+      "type": "service role",
+      "evidence": "The user manual clearly states that SW installation can only be performed by H&abyz engineers."
+    },
+    {
+      "name": "Blue Engineering Tool v0.20.1",
+      "type": "manufacturer tool",
+      "evidence": "Manufacturer's exclusive tool: Blue Engineering Tool v0.20.1"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity FMEA",
+      "pageTarget": "Cybersecurity FMEA",
+      "evidence": "Cybersecurity FMEA Report"
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "STRIDE Likelihood (After) Impack (After) Risk Level"
+    },
+    {
+      "name": "CVSS 3.1",
+      "pageTarget": "CVSS 3.1",
+      "evidence": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    },
+    {
+      "name": "IEC 60601-4-5 Cybersecurity Requirement",
+      "pageTarget": "IEC 60601-4-5",
+      "evidence": "Cybersecurity FMEA table 2. (IEC 60601-4-5 Cybersecurity Requirement)"
+    },
+    {
+      "name": "Authentication",
+      "pageTarget": "Authentication",
+      "evidence": "This medical device provides user identification and authentication functions using ID and password methods."
+    },
+    {
+      "name": "Authorization",
+      "pageTarget": "Authorization",
+      "evidence": "Available functions vary by Administrator, Engineer, and User role."
+    },
+    {
+      "name": "Cryptography",
+      "pageTarget": "Cryptography",
+      "evidence": "Encrypted communication between HnVUE and the Detector using AES 128 encryption"
+    },
+    {
+      "name": "Audit log",
+      "pageTarget": "Audit Logging",
+      "evidence": "Audit log: DateTime, UserID, Code, Message"
+    },
+    {
+      "name": "Integrity verification",
+      "pageTarget": "Software Integrity Verification",
+      "evidence": "Integrity verification is performed on 49 files required for HnVUE operation."
+    },
+    {
+      "name": "DICOM data protection",
+      "pageTarget": "DICOM Data Protection",
+      "evidence": "DICOM (.dcm) files contain personal data such as patient names and birthdates and must be protected from leakage."
+    },
+    {
+      "name": "Firmware and Software Updates",
+      "pageTarget": "Firmware and Software Updates",
+      "evidence": "When updating FW, the manufacturer encrypts the update file with AES 128 and generates a SHA 256 hash value for the corresponding file, which is used for integrity verification."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a Cybersecurity FMEA Report for the HnX-R1 Digital X-ray Imaging System.",
+      "evidenceText": "Product Name : Digital X-ray Imaging System\nModel Name : HnX-R1\nDoc No. : A-CFMEA-HNXR1\nCybersecurity FMEA Report",
+      "pageTarget": "HnX-R1 Cybersecurity FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report revision is Rev.0 dated August 06, 2025.",
+      "evidenceText": "Revision date : August 06, 2025\nRevision No. : Rev.0",
+      "pageTarget": "HnX-R1 Cybersecurity FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision history records revision 0 as establishment on 06-Aug-25.",
+      "evidenceText": "Revision Date Contents of revision\n0 06-Aug-25 Establishment",
+      "pageTarget": "HnX-R1 Cybersecurity FMEA Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA table includes risk analysis, risk evaluation, and risk control steps.",
+      "evidenceText": "Risk analysis (Step 1)\nRisk evaluation (Step 2)\nRisk control (Step 3)",
+      "pageTarget": "Cybersecurity FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The cybersecurity FMEA uses STRIDE threat categories and CVSS:3.1 vectors.",
+      "evidenceText": "STRIDE Likelihood (After) Impack (After) Risk Level\nCVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "pageTarget": "STRIDE Threat Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes an IEC 60601-4-5 cybersecurity requirement table.",
+      "evidenceText": "Cybersecurity FMEA table 2. (IEC 60601-4-5 Cybersecurity Requirement)",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE provides user identification and authentication using ID and password methods.",
+      "evidenceText": "This medical device provides user identification and authentication functions using ID and password methods.",
+      "pageTarget": "HnVUE Authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE roles include Administrator, Engineer, and User with different available functions.",
+      "evidenceText": "Available functions vary by Administrator, Engineer, and User role.\n1) Administrator: All configuration functions are available.\n2) Engineer: Configuration functions except account management are available.\n3) User: Configuration functions are not available.",
+      "pageTarget": "HnVUE User Roles",
+      "confidence": "high"
+    },
+    {
+      "claim": "The account ID is used as a unique identifier and duplicate IDs cannot be used to create accounts.",
+      "evidenceText": "The account ID is used as a unique identifier.\n- If the same ID is used, account creation will not be possible.",
+      "pageTarget": "HnVUE Account Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The system can lock an account after 5 consecutive failed login attempts and allow Administrator unlocking.",
+      "evidenceText": "Confirm that the account will be locked after 5 consecutive failed login attempts.\n- Message: \"Your account has been locked due to 5 incorrect password attempts. Please contact the administrator.\"\nConfirm that a locked account can be unlocked by a user with Administrator privileges.",
+      "pageTarget": "HnVUE Login Lockout",
+      "confidence": "high"
+    },
+    {
+      "claim": "Password strength can be set to Medium or Strong with documented length and composition requirements.",
+      "evidenceText": "Medium: 8 characters or more, including at least 1 special character.\nStrong: 12 characters or more, including at least 1 special character, and at least 1 uppercase letter.",
+      "pageTarget": "HnVUE Password Policy",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE account passwords are encrypted and stored using Bcrypt on the PC where HnVUE is installed.",
+      "evidenceText": "Confirm that the HnVUE account password is encrypted and stored on the PC where HnVUE is installed.\n1) Verify that it is encrypted and stored using Bcrypt through the source code.",
+      "pageTarget": "HnVUE Password Storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE performs integrity verification on 49 files required for operation.",
+      "evidenceText": "HnVUE performs integrity verification when running.\n1) Integrity verification is performed on 49 files required for HnVUE operation.",
+      "pageTarget": "HnVUE Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE integrity verification checks FileName, FileSize, LastWriteDate, and FileVersion.",
+      "evidenceText": "Integrity verification principle: Check if the FileName, FileSize, LastWriteDate, and FileVersion of the 49 files match.",
+      "pageTarget": "HnVUE Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector does not provide an integrity check function, according to the source text.",
+      "evidenceText": "Check if Detector has an integrity check function.\n(1) Detector does not provide an integrity check function.",
+      "pageTarget": "Detector Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector-HnVUE communication is described as AES 128 encrypted after initial communication.",
+      "evidenceText": "Encrypted communication between the Detector and HnVUE\n- During initial communication, a TCP connection is attempted between the Detector's port 7000 and the PC on which the HnVUE software is installed.\n- If the connection is successful, the Detector closes port 7000 and initiates encrypted communication with the HnVUE software through a random port.\n> Encryption algorithm: AES 128",
+      "pageTarget": "HnVUE Detector Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE and PACS server communication is documented as DICOM protocol and plaintext.",
+      "evidenceText": "HnVUE SW and PACS server communicate using DICOM protocol and plaintext.",
+      "pageTarget": "HnVUE PACS Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE and Worklists server communication is documented as DICOM protocol and plaintext.",
+      "evidenceText": "HnVUE SW and Worklists server communicate using DICOM protocol and plaintext.",
+      "pageTarget": "HnVUE Worklist Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "DICOM files are identified as containing personal data such as patient names and birthdates.",
+      "evidenceText": "DICOM (.dcm) files contain personal data such as patient names and birthdates and must be protected from leakage.",
+      "pageTarget": "DICOM Data Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Audit logs include DateTime, UserID, Code, and Message fields.",
+      "evidenceText": "Audit log: DateTime, UserID, Code, Message",
+      "pageTarget": "HnVUE Audit Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "System logs include DateTime and Message fields.",
+      "evidenceText": "System log: DateTime, Message",
+      "pageTarget": "HnVUE System Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The default session timeout is set to 30 minutes through source code.",
+      "evidenceText": "The default session timeout value of this medical device is set to 30 minutes through the source code",
+      "pageTarget": "HnVUE Session Timeout",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE SW installation is stated to be performed only by H&abyz engineers.",
+      "evidenceText": "The user manual clearly states that SW installation can only be performed by H&abyz engineers.",
+      "pageTarget": "HnVUE Software Installation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector firmware updates are performed by H&abyz engineers using the manufacturer's tool.",
+      "evidenceText": "Detector firmware updates are performed by H&abyz engineers using the manufacturer's tool.\n> Update Tool: Blue Engineering Tool v0.20.1",
+      "pageTarget": "Detector Firmware Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE software update integrity verification uses a distributed installation file and corresponding SHA-256 hash file.",
+      "evidenceText": "When updating HnVUE SW, perform integrity verification.\n1) Distribute the installation file and the hash file of the corresponding file together.\n- Hash function: SHA-256",
+      "pageTarget": "HnVUE Software Update Integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector firmware update files are encrypted with AES 128 and verified with a SHA 256 hash value.",
+      "evidenceText": "When updating FW, the manufacturer encrypts the update file with AES 128 and generates a SHA 256 hash value for the corresponding file, which is used for integrity verification.",
+      "pageTarget": "Detector Firmware Update Integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Detector only provides port 7000 as the initial communication port in the cited port scan result.",
+      "evidenceText": "The port scan results confirm that Detector only provides port 7000, the initial communication port.",
+      "pageTarget": "Detector Network Ports",
+      "confidence": "high"
+    },
+    {
+      "claim": "The disabled USB-C port is physically blocked.",
+      "evidenceText": "The disabled USB-C port is physically blocked.",
+      "pageTarget": "Detector Physical Port Control",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "authoritySignal indicates FDA, but the source text does not mention FDA or another regulatory authority/jurisdiction."
+    },
+    {
+      "severity": "info",
+      "reason": "The source text provides document date and revision metadata, but no page numbers are available in the preprocessed text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR or extraction artifacts appear in the text, including misspellings such as 'Impack', inconsistent 'HnUVE/HnVUE', and repeated wording."
+    },
+    {
+      "severity": "info",
+      "reason": "Some manufacturer identity evidence is indirect: the text names H&abyz engineers and H&abyz Co., Ltd., but does not provide a formal manufacturer field."
+    }
+  ]
+}
