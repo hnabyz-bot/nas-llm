@@ -1,0 +1,1079 @@
+queueId: ingest-1781569954413-11zw
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/ISED_ST60-2230C/IC RSS-247 BT EDR - 60-2230C - CR740701AD R02.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/e67d689e53f9/IC RSS-247 BT EDR - 60-2230C - CR740701AD R02__e67d689e53f9_combined.txt
+canonicalGroupId: 43b7a6189e7d
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 498
+
+SOURCE_TEXT
+Report No.: CR740701AD Page : 1 of 58
+Report Version: Rev. 02
+IC Test Report
+IC : 3147A-602230C
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+Model No. : ST60-2230C
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Technologies
+Applicant : Laird Technologies
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : RSS-247 Issue 2 February 2017
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 12 ~ May 10, 2017
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+Along Chen / Assistant Manager Gary Chang / Manager
+
+Report No.: CR740701AD Page : 2 of 58
+Report Version: Rev. 02
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List ................................................................................................................ 7
+1.3 Test Setup Chart .................................................................................................................................... 7
+1.4 The Equipment List ................................................................................................................................ 8
+1.5 Test Standards ....................................................................................................................................... 9
+1.6 Measurement Uncertainty ...................................................................................................................... 9
+2 TEST CONFIGURATION .....................................................................................................................10
+2.1 Testing Condition .................................................................................................................................10
+2.2 The Worst Test Modes and Channel Details .......................................................................................10
+3 TRANSMITTER TEST RESULTS........................................................................................................11
+3.1 Conducted Emissions ...........................................................................................................................11
+3.2 Unwanted Emissions into Restricted Frequency Bands ......................................................................14
+3.3 Unwanted Emissions into Non-Restricted Frequency Bands ..............................................................42
+3.4 Conducted Output Power .....................................................................................................................47
+3.5 Number of Hopping Frequency ............................................................................................................49
+3.6 20dB and Occupied Bandwidth ............................................................................................................51
+3.7 Channel Separation ..............................................................................................................................53
+3.8 Number of Dwell Time ..........................................................................................................................55
+4 TEST LABORATORY INFORMATION ...............................................................................................58
+
+Report No.: CR740701AD Page : 3 of 58
+Report Version: Rev. 02
+Release Record
+Report No. Version Description Issued Date
+CR740701AD Rev. 01 Initial issue Jul. 13, 2017
+CR740701AD Rev. 02 Revised model name Jul. 21, 2017
+
+Report No.: CR740701AD Page : 4 of 58
+Report Version: Rev. 02
+Summary of Test Results
+IC Rules Test Items Measured Result
+RSS-Gen Section 8.8 Conducted Emissions [dBuV]: 4.646MHz
+48.88 (Margin -7.12dB) - QP Pass
+RSS-247 Section 5.5
+RSS-Gen Section 8.9 Radiated Emissions Meet the requirement of limit Pass
+RSS-247 Section 5.5 Band Edge Meet the requirement of limit Pass
+RSS-247 Section 5.1(b)
+RSS-247 Section 5.4(b) Conducted Output Power Power [dBm]: 10.83 Pass
+RSS-247 Section 5.1(d) Number of Hopping Channels Meet the requirement of limit Pass
+RSS-247 Section 5.1(b) Hopping Channel Separation Meet the requirement of limit Pass
+RSS-247 Section 5.1(d) Dwell Time Meet the requirement of limit Pass
+N/A Antenna Requirement Meet the requirement of limit Pass
+
+Report No.: CR740701AD Page : 5 of 58
+Report Version: Rev. 02
+1 General Description
+1.1 Information
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Technologies ST60-2230C 802.11 ac/a/b/g/n M.2 2230 + Bluetooth
+4.2 module For marketing purpose
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency Range
+(MHz)
+Bluetooth
+Mode
+Ch. Frequency
+(MHz) Channel Number Data Rate
+2400-2483.5 BR 2402-2480 0-78 [79] 1 Mbps
+2400-2483.5 EDR 2402-2480 0-78 [79] 2 Mbps
+2400-2483.5 EDR 2402-2480 0-78 [79] 3 Mbps
+Note 1: RF output power specifies that Maximum Peak Conducted Output Power.
+Note 2: Bluetooth BR uses a GFSK.
+Note 3: Bluetooth EDR uses a combination of π/4-DQPSK and 8DPSK.
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+
+Report No.: CR740701AD Page : 6 of 58
+Report Version: Rev. 02
+1.1.4 Power Supply Type of Equipment under Test (EUT)
+Power Supply Type DC 3.3V from host
+1.1.5 Accessories
+N/A
+1.1.6 Channel List
+Frequency band (MHz) 2400~2483.5
+Channel Frequency
+(MHz) Channel Frequency
+(MHz) Channel Frequency
+(MHz) Channel Frequency
+(MHz)
+0 2402 20 2422 40 2442 60 2462
+1 2403 21 2423 41 2443 61 2463
+2 2404 22 2424 42 2444 62 2464
+3 2405 23 2425 43 2445 63 2465
+4 2406 24 2426 44 2446 64 2466
+5 2407 25 2427 45 2447 65 2467
+6 2408 26 2428 46 2448 66 2468
+7 2409 27 2429 47 2449 67 2469
+8 2410 28 2430 48 2450 68 2470
+9 2411 29 2431 49 2451 69 2471
+10 2412 30 2432 50 2452 70 2472
+11 2413 31 2433 51 2453 71 2473
+12 2414 32 2434 52 2454 72 2474
+13 2415 33 2435 53 2455 73 2475
+14 2416 34 2436 54 2456 74 2476
+15 2417 35 2437 55 2457 75 2477
+16 2418 36 2438 56 2458 76 2478
+17 2419 37 2439 57 2459 77 2479
+18 2420 38 2440 58 2460 78 2480
+19 2421 39 2441 59 2461 --- ---
+
+Report No.: CR740701AD Page : 7 of 58
+Report Version: Rev. 02
+1.1.7 Test Tool and Duty Cycle
+Test tool Dut labtool, version: 1.0.0.133
+1.1.8 Power Setting
+Modulation Mode Test Frequency (MHz)
+2402 2441 2480
+GFSK/1Mbps Default Default Default
+π/4-DQPSK /2Mbps Default Default Default
+8DPSK/3Mbps Default Default Default
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 10m non-shielded
+2 Notebook Lenovo T430 DoC ---
+3 50Ω terminator --- --- --- ---
+4 Fixture --- --- --- Fixture, 0.2m non-shielded
+Note: No2. & No. 4 were provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram
+
+Report No.: CR740701AD Page : 8 of 58
+Report Version: Rev. 02
+1.4 The Equipment List
+Test Item Conducted Emission
+Test Site Conduction room 1 / (CO01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Receiver R&S ESR3 101657 Dec. 21, 2016 Dec. 20, 2017
+LISN SCHWARZBECK Schwarzbeck 8127 8127-667 Nov. 08, 2016 Nov. 07, 2017
+RF Cable-CON EMC EMCCFD300-BM-BM-6000 50821 Dec. 20, 2016 Dec. 19, 2017
+Measurement
+Software AUDIX e3 6.120210k NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Radiated Emission
+Test Site 966 chamber 3 / (03CH03-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration
+Until
+Spectrum Analyzer Agilent N9010A MY53400091 Sep. 09, 2016 Sep. 08, 2017
+Receiver Agilent N9038A MY53290044 Oct. 06, 2016 Oct. 05, 2017
+Bilog Antenna SCHWARZBECK VULB9168 VULB9168-522 Aug. 04, 2016 Aug. 03, 2017
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D BBHA 9120 D 1206 Feb. 09, 2017 Feb. 08, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170517 Oct. 25, 2016 Oct. 24, 2017
+Loop Antenna R&S HFH2-Z2 100330 Nov. 10, 2016 Nov. 09, 2017
+Loop Antenna
+Cable KOAX KABEL 101354-BW 101354-BW Dec. 09, 2016 Dec. 08, 2017
+Preamplifier EMC EMC02325 980187 Sep. 08, 2016 Sep. 07, 2017
+Preamplifier Agilent 83017A MY53270014 Aug. 22, 2016 Aug. 21, 2017
+Preamplifier EMC EMC184045B 980192 Aug. 24, 2016 Aug. 23, 2017
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22620/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-8M HUBER+SUHNER SUCOFLEX104 MY22600/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22624/4 Feb. 04, 2017 Feb. 03, 2018
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-001 Feb. 04, 2017 Feb. 03, 2018
+LF cable-3M EMC EMC8D-NM-NM-3000 131103 Feb. 04, 2017 Feb. 03, 2018
+LF cable-13M EMC EMC8D-NM-NM-13000 131104 Feb. 04, 2017 Feb. 03, 2018
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: CR740701AD Page : 9 of 58
+Report Version: Rev. 02
+Test Item RF Conducted
+Test Site (TH01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Mar. 15, 2017 Mar. 14, 2018
+Power Meter Anritsu ML2495A 1241002 Oct. 06, 2016 Oct. 05, 2017
+Power Sensor Anritsu MA2411B 1207366 Oct. 06, 2016 Oct. 05, 2017
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 20, 2016 Oct. 19, 2017
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+1.5 Test Standards
+According to the specification of EUT, the EUT must comply with following standards and KDB documents.
+RSS-247 Issue 2 February 2017
+RSS-Gen Issue 4 November 2014
+ANSI C63.10-2013
+ANSI C63.4-2014
+1.6 Measurement Uncertainty
+ISO/IEC 17025 requires that an estimate of the measurement uncertainties associated with the emissions test
+results be included in the report. The measurement uncertainties given below are based on a 95% confidence
+level (based on a coverage factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty
+Bandwidth ±34.134 Hz
+Conducted power ±0.808 dB
+Power density ±0.463 dB
+Conducted emission ±2.670 dB
+AC conducted emission ±2.90 dB
+Radiated emission ≤ 1GHz ±3.66 dB
+Radiated emission > 1GHz ±5.37 dB
+
+Report No.: CR740701AD Page : 10 of 58
+Report Version: Rev. 02
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+AC Conduction CO01-WS 20°C / 57% Alex Tsai
+Radiated Emissions 03CH03-WS 22-24°C / 66-67% Aska Huang
+RF Conducted TH01-WS 22°C / 64% Brad Wu
+ FCC Designation No.: TW0009
+ FCC site registration No.: 207696
+ IC site registration No.: 10807C-1
+2.2 The Worst Test Modes and Channel Details
+Test item Mode Test Frequency
+(MHz) Data Rate (Mbps) Test Configuration
+Conducted Emissions GFSK 2402 1Mbps ---
+Radiated Emissions ≤ 1GHz GFSK 2402 1Mbps ---
+Radiated Emissions > 1GHz GFSK
+8DPSK
+2402, 2441, 2480
+2402, 2441, 2480
+1Mbps
+3Mbps ---
+Conducted Output Power
+GFSK
+л/4 QDPSK
+8DPSK
+2402, 2441, 2480
+2402, 2441, 2480
+2402, 2441, 2480
+1Mbps
+2Mbps
+3Mbps
+---
+Number of Hopping Channels GFSK
+8DPSK
+2402~2480
+2402~2480
+1Mbps
+3Mbps ---
+Hopping Channel Separation
+20dB and Occupied bandwidth
+GFSK
+8DPSK
+2402, 2441, 2480
+2402, 2441, 2480
+1Mbps
+3Mbps ---
+Dwell Time GFSK
+8DPSK
+2402
+2402
+1Mbps
+3Mbps ---
+NOTE:
+The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y,
+and Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+
+Report No.: CR740701AD Page : 11 of 58
+Report Version: Rev. 02
+3 Transmitter Test Results
+3.1 Conducted Emissions
+3.1.1 Limit of Conducted Emissions
+Conducted Emissions Limit
+Frequency Emission (MHz) Quasi-Peak Average
+0.15-0.5 66 - 56 * 56 - 46 *
+0.5-5 56 46
+5-30 60 50
+Note 1: * Decreases with the logarithm of the frequency.
+3.1.2 Test Procedures
+1. The device is placed on a test table, raised 80 cm above the reference ground plane. The vertical
+conducting plane is located 40 cm to the rear of the device.
+2. The device is connected to line impedance stabilization network (LISN) and other accessories are
+connected to other LISN. Measured levels of AC power line conducted emission are across the 50 Ω
+LISN port.
+3. AC conducted emission measurements is made over frequency range from 150 kHz to 30 MHz.
+4. This measurement was performed with AC 120V/60Hz
+3.1.3 Test Setup
+
+Report No.: CR740701AD Page : 12 of 58
+Report Version: Rev. 02
+3.1.4 Test Result of Conducted Emissions
+Modulation Mode GFSK Test Freq. (MHz) 2402
+Power Phase Line
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: CR740701AD Page : 13 of 58
+Report Version: Rev. 02
+Modulation Mode GFSK Test Freq. (MHz) 2402
+Power Phase Neutral
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: CR740701AD Page : 14 of 58
+Report Version: Rev. 02
+3.2 Unwanted Emissions into Restricted Frequency Bands
+3.2.1 Limit of Unwanted Emissions into Restricted Frequency Bands
+Restricted Band Emissions Limit
+Frequency Range (MHz) Field Strength (uV/m) Field Strength (dBuV/m) Measure Distance (m)
+0.009~0.490 2400/F(kHz) 48.5 - 13.8 300
+0.490~1.705 24000/F(kHz) 33.8 - 23 30
+1.705~30.0 30 29 30
+30~88 100 40 3
+88~216 150 43.5 3
+216~960 200 46 3
+Above 960 500 54 3
+Note 1:
+Qusai-Peak value is measured for frequency below 1GHz except for 9–90 kHz, 110–490 kHz frequency band. Peak and
+average value are measured for frequency above 1GHz. The limit on average radio frequency emission is as above
+table. The limit on peak radio frequency emissions is 20 dB above the maximum permitted average emission limit
+Note 2:
+Measurements may be performed at a distance other than what is specified provided. When performing measurements
+at a distance other than that specified, the results shall be extrapolated to the specified distance using an extrapolation
+factor as below, Frequency at or above 30 MHz: 20 dB/decade Frequency below 30 MHz: 40 dB/decade.
+3.2.2 Test Procedures
+1. Measurement is made at a semi-anechoic chamber that incorporates a turntable allowing a EUT
+rotation of 360°. A continuously-rotating, remotely-controlled turntable is installed at the test site to
+support the EUT and facilitate determination of the direction of maximum radiation for each EUT
+emission frequency. The EUT is placed at test table. For emissions testing at or below 1 GHz, the table
+height is 80 cm above the reference ground plane. For emission measurements above 1 GHz, the table
+height is 1.5 m
+2. Measurement is made with the antenna positioned in both the horizontal and vertical planes of
+polarization. The measurement antenna is varied in height (1m ~ 4m) above the reference ground plane
+to obtain the maximum signal strength. Distance between EUT and antenna is 3 m.
+3. This investigation is performed with the EUT rotated 360°, the antenna height scanned between 1 m
+and 4 m, and the antenna rotated to repeat the measurements for both the horizontal and vertical
+antenna polarizations.
+Note:
+1. 120kHz measurement bandwidth of test receiver and Quasi-peak detector is for radiated emission below 1GHz.
+2. Radiated emission above 1GHz / Peak value
+RBW=1MHz, VBW=3MHz and Peak detector
+3.
+Radiated emission above 1GHz / Average value for harmonics
+The average value is: Average = Peak value + 20log(Duty cycle) Where the duty factor is calculated from following
+formula for DH5 packet type which has worst duty factor:
+20log (Duty cycle) = 20log = -30.1dB
+4. Radiated emission above 1GHz / Average value for other emissions
+RBW=1MHz, VBW=1/T and Peak detector
+100 ms
+1s / 1600 * 5
+
+Report No.: CR740701AD Page : 15 of 58
+Report Version: Rev. 02
+3.2.3 Test Setup
+Radiated Emissions below 1 GHz
+Radiated Emissions above 1 GHz
+Conducted Emissions
+
+Report No.: CR740701AD Page : 16 of 58
+Report Version: Rev. 02
+3.2.4 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation GFSK Test Freq. (MHz) 2441
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701AD Page : 17 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2441
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701AD Page : 18 of 58
+Report Version: Rev. 02
+3.2.5 Transmitter Radiated Unwanted Emissions (Above 1GHz) for GFSK
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 19 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 20 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2441
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 21 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2441
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 22 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 23 of 58
+Report Version: Rev. 02
+Modulation GFSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 24 of 58
+Report Version: Rev. 02
+3.2.6 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 8DPSK
+Modulation 8DPSK Test Freq. (MHz) 2402
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 25 of 58
+Report Version: Rev. 02
+Modulation 8DPSK Test Freq. (MHz) 2402
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 26 of 58
+Report Version: Rev. 02
+Modulation 8DPSK Test Freq. (MHz) 2441
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 27 of 58
+Report Version: Rev. 02
+Modulation 8DPSK Test Freq. (MHz) 2441
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 28 of 58
+Report Version: Rev. 02
+Modulation 8DPSK Test Freq. (MHz) 2480
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 29 of 58
+Report Version: Rev. 02
+Modulation 8DPSK Test Freq. (MHz) 2480
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701AD Page : 30 of 58
+Report Version: Rev. 02
+3.2.7 Transmitter Conducted Unwanted Emissions (Below 1 GHz)
+Modulation Mode GFSK Frequency 2402MHz
+Range
+(MHz)
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+GRF
+(dB)
+EIRP
+(dBm)
+Min
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+30~1000MHz -78.49 2.79 4.70 -71.00 -55.20 -15.80
+Note:
+1. GRF = Ground Reflection Factor.
+2. DG = Directional Gain.
+3. Worst case of emission limit below 1GHz is selected to be limit.
+2402MHz
+
+Report No.: CR740701AD Page : 31 of 58
+Report Version: Rev. 02
+3.2.8 Transmitter Conducted Unwanted Emissions (Above 1GHz)
+Full Range Scan Test Plot
+2402MHz 2402MHz
+2441MHz 2441MHz
+2480MHz 2480MHz
+
+Report No.: CR740701AD Page : 32 of 58
+Report Version: Rev. 02
+GFSK
+Transmitter Conducted Unwanted Emissions Results in Band Edge
+Test ch.
+Freq.
+(MHz)
+Range
+(MHz)
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+Remark
+2402
+2310~2390 -45.41 2.79 -42.62 -21.20 -21.42 PK
+2310~2390 -56.43 2.79 -53.64 -41.20 -12.44 AV
+2483.5~2500 -41.12 2.79 -38.33 -21.20 -17.13 PK
+2483.5~2500 -52.79 2.79 -50.00 -41.20 -8.80 AV
+2441
+2310~2390 -40.63 2.79 -37.84 -21.20 -16.64 PK
+2310~2390 -51.69 2.79 -48.90 -41.20 -7.70 AV
+2483.5~2500 -47.58 2.79 -44.79 -21.20 -23.59 PK
+2483.5~2500 -58.76 2.79 -55.97 -41.20 -14.77 AV
+2480
+2310~2390 -40.50 2.79 -37.71 -21.20 -16.51 PK
+2310~2390 -51.60 2.79 -48.81 -41.20 -7.61 AV
+2483.5~2500 -40.21 2.79 -37.42 -21.20 -16.22 PK
+2483.5~2500 -55.23 2.79 -52.44 -41.20 -11.24 AV
+8DPSK
+Transmitter Conducted Unwanted Emissions Results in Band Edge
+Test ch.
+Freq.
+(MHz)
+Range
+(MHz)
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+Remark
+2402
+2310~2390 -47.03 2.79 -44.24 -21.20 -23.04 PK
+2310~2390 -58.85 2.79 -56.06 -41.20 -14.86 AV
+2483.5~2500 -45.07 2.79 -42.28 -21.20 -21.08 PK
+2483.5~2500 -58.58 2.79 -55.79 -41.20 -14.59 AV
+2440
+2310~2390 -45.55 2.79 -42.76 -21.20 -21.56 PK
+2310~2390 -57.99 2.79 -55.20 -41.20 -14.00 AV
+2483.5~2500 -47.97 2.79 -45.18 -21.20 -23.98 PK
+2483.5~2500 -59.49 2.79 -56.70 -41.20 -15.50 AV
+2480
+2310~2390 -44.11 2.79 -41.32 -21.20 -20.12 PK
+2310~2390 -58.22 2.79 -55.43 -41.20 -14.23 AV
+2483.5~2500 -40.07 2.79 -37.28 -21.20 -16.08 PK
+2483.5~2500 -56.06 2.79 -53.27 -41.20 -12.07 AV
+
+Report No.: CR740701AD Page : 33 of 58
+Report Version: Rev. 02
+GFSK
+Band Edge Test Plot
+2402MHz - AV 2402MHz - PK
+2441MHz - AV 2441MHz - PK
+2480MHz - AV 2480MHz - PK
+
+Report No.: CR740701AD Page : 34 of 58
+Report Version: Rev. 02
+8DPSK
+Band Edge Test Plot
+2402MHz - AV 2402MHz - PK
+2441MHz - AV 2441MHz - PK
+2480MHz - AV 2480MHz - PK
+
+Report No.: CR740701AD Page : 35 of 58
+Report Version: Rev. 02
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode GFSK Frequency 2402MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4804.00 PK -58.05 2.79 -55.26 -21.20 -34.06
+4804.00 AV note1 - - - -41.20 -
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode GFSK Frequency 2441MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4882.00 PK -59.65 2.79 -56.86 -21.20 -35.66
+4882.00 AV note1 - - - -41.20 -
+7323.00 PK -66.82 2.79 -64.03 -21.20 -42.83
+7323.00 AV note1 - - - -41.20 -
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode GFSK Frequency 2480MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4960.00 PK -62.71 2.79 -59.92 -21.20 -38.72
+4960.00 AV note1 - - - -41.20 -
+7440.00 PK -64.75 2.79 -61.96 -21.20 -40.76
+7440.00 AV note1 - - - -41.20 -
+16006.00 PK -66.61 2.79 -63.82 -21.20 -42.62
+16006.00 AV note1 - - - -41.20 -
+
+Report No.: CR740701AD Page : 36 of 58
+Report Version: Rev. 02
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode 8DPSK Frequency 2402MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4804.00 PK -59.71 2.79 -56.92 -21.20 -35.72
+4804.00 AV note1 - - - -41.20 -
+15587.35 PK -66.71 2.79 -63.92 -21.20 -42.72
+15587.35 AV note1 - - - -41.20 -
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode 8DPSK Frequency 2441MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4882.00 PK -61.23 2.79 -58.44 -21.20 -37.24
+4882.00 AV note1 - - - -41.20 -
+7323.00 PK -68.51 2.79 -65.72 -21.20 -44.52
+7323.00 AV note1 - - - -41.20 -
+Transmitter Conducted Unwanted Emissions Results in Restricted Frequency Band
+Modulation Mode 8DPSK Frequency 2480MHz
+Freq.
+(MHz) Remark
+Max Value
+chain0
+(dBm)
+DG
+(dBi)
+EIRP
+(dBm)
+E-Field
+Limit
+(dBm)
+E-Field
+Margin
+(dB)
+4960.00 PK -63.63 2.79 -60.84 -21.20 -39.64
+4960.00 AV note1 - - - -41.20 -
+7440.00 PK -66.45 2.79 -63.66 -21.20 -42.46
+7440.00 AV note1 - - - -41.20 -
+15579.00 PK -66.52 2.79 -63.73 -21.20 -42.53
+15579.00 AV note1 - - - -41.20 -
+Note:
+1. If the PK margin greater than 20 dB, there is no need to get AVG reading.
+2. DG = Directional Gain.
+
+Report No.: CR740701AD Page : 37 of 58
+Report Version: Rev. 02
+GFSK
+Test Plots
+4804 MHz - PK
+4882 MHz - PK
+7323 MHz - PK
+
+Report No.: CR740701AD Page : 38 of 58
+Report Version: Rev. 02
+GFSK
+Test Plots
+4960 MHz - PK
+7440 MHz - PK
+16015 MHz - PK
+
+Report No.: CR740701AD Page : 39 of 58
+Report Version: Rev. 02
+8DPSK
+Test Plots
+4804 MHz - PK
+15587 MHz - PK
+4882 MHz - PK
+
+Report No.: CR740701AD Page : 40 of 58
+Report Version: Rev. 02
+8DPSK
+Test Plots
+7323 MHz - PK
+4960 MHz - PK
+7440 MHz - PK
+
+Report No.: CR740701AD Page : 41 of 58
+Report Version: Rev. 02
+8DPSK
+Test Plot
+15579 MHz - PK
+
+Report No.: CR740701AD Page : 42 of 58
+Report Version: Rev. 02
+3.3 Unwanted Emissions into Non-Restricted Frequency Bands
+3.3.1 Limit of Unwanted Emissions into Non-Restricted Frequency Bands
+The peak output power measured in any 100 kHz bandwidth outside of the authorized frequency band shall
+be attenuated by at least 20 dB relative to the maximum in-band peak PSD level in 100 kHz.
+3.3.2 Test Procedures
+Reference Level Measurement
+1. Set the RBW = 100 kHz, VBW = 300 kHz, Detector = peak.
+2. Set Sweep time = auto couple, Trace mode = max hold.
+3. Allow trace to fully stabilize.
+4. Use the peak marker function to determine the maximum amplitude level.
+Unwanted Emissions Level Measurement
+1. Set RBW = 100 kHz, VBW = 300 kHz, Detector = peak.
+2. Trace Mode = max hold, Sweep = auto couple.
+3. Allow the trace to stabilize.
+4. Use peak marker function to determine maximum amplitude of all unwanted emissions within any
+100 kHz bandwidth.
+3.3.3 Test Setup
+
+Report No.: CR740701AD Page : 43 of 58
+Report Version: Rev. 02
+3.3.4 Unwanted Emissions into Non-Restricted Frequency Bands
+GFSK
+Hopping on Hopping off
+30MHz~25GHz (down 20dBc) TX Freq 2402MHz / 30MHz~25GHz (down 20dBc)
+
+Report No.: CR740701AD Page : 44 of 58
+Report Version: Rev. 02
+Hopping off Hopping off
+TX Freq 2441MHz / 30MHz~25GHz (down 20dBc) TX Freq 2480MHz / 30MHz~25GHz (down 20dBc)
+
+Report No.: CR740701AD Page : 45 of 58
+Report Version: Rev. 02
+8DPSK
+Hopping on Hopping off
+30MHz~25GHz (down 20dBc) TX Freq 2402MHz / 30MHz~25GHz (down 20dBc)
+
+Report No.: CR740701AD Page : 46 of 58
+Report Version: Rev. 02
+Hopping off Hopping off
+TX Freq 2441MHz / 30MHz~25GHz (down 20dBc) TX Freq 2480MHz / 30MHz~25GHz (down 20dBc)
+
+Report No.: CR740701AD Page : 47 of 58
+Report Version: Rev. 02
+3.4 Conducted Output Power
+3.4.1 Limit of Conducted Output Power
+1 Watt
+For frequency hopping systems operating in the 2400–2483.5 MHz band employing at least 75 non
+overlapping hopping channels, and all frequency hopping systems in the 5725–5850 MHz band.
+0.125 Watt
+For all other frequency hopping systems in the 2400–2483.5 MHz band.
+0.125 Watt
+For Frequency hopping systems operating in the 2400–2483.5 MHz band have hopping channel carrier
+frequencies that are separated by two-thirds of the 20 dB bandwidth of the hopping channel.
+3.4.2 Test Procedures
+1. A wideband power meter is used for power measurement. Bandwidth of power senor and meter is
+50MHz
+2 If duty cycle of test signal is not 100 %, trigger and gating function of power meter will be enabled to
+capture transmission burst for measuring output power
+3.4.3 Test Setup
+
+Report No.: CR740701AD Page : 48 of 58
+Report Version: Rev. 02
+3.4.4 Test Result of Conducted Output Power
+Modulation Mode Freq. (MHz) Output Power
+(mW)
+Output Power
+(dBm) Limit (mW)
+GFSK 2402 12.11 10.83 125
+GFSK 2441 11.48 10.60 125
+GFSK 2480 10.35 10.15 125
+л/4 DQPSK 2402 10.35 10.15 125
+л/4 DQPSK 2441 9.35 9.71 125
+л/4 DQPSK 2480 8.36 9.22 125
+8DPSK 2402 11.09 10.45 125
+8DPSK 2441 9.93 9.97 125
+8DPSK 2480 8.95 9.52 125
+Modulation Mode Freq. (MHz) AV Output Power (mW) AV Output Power (dBm)
+GFSK 2402 11.99 10.79
+GFSK 2441 11.35 10.55
+GFSK 2480 10.26 10.11
+л/4 DQPSK 2402 5.96 7.75
+л/4 DQPSK 2441 5.35 7.28
+л/4 DQPSK 2480 4.76 6.78
+8DPSK 2402 5.92 7.72
+8DPSK 2441 5.31 7.25
+8DPSK 2480 4.74 6.76
+Note: Average power is for reference only.
+
+Report No.: CR740701AD Page : 49 of 58
+Report Version: Rev. 02
+3.5 Number of Hopping Frequency
+3.5.1 Limit of Number of Hopping Frequency
+Frequency hopping systems in the 2400–2483.5 MHz band shall use at least 15 channels.
+3.5.2 Test Procedures
+1. Set RBW = 100kHz, VBW = 300kHz, Sweep time = Auto, Detector = Peak Trace max hold.
+2 Allow trace to stabilize.
+3.5.3 Test Setup
+
+Report No.: CR740701AD Page : 50 of 58
+Report Version: Rev. 02
+3.5.4 Test Result of Number of Hopping Frequency
+GFSK 8DPSK
+
+Report No.: CR740701AD Page : 51 of 58
+Report Version: Rev. 02
+3.6 20dB and Occupied Bandwidth
+3.6.1 Test Procedures
+20dB Bandwidth
+1. Set RBW=30kHz, VBW=100kHz,Sweep time = Auto, Detector=Peak, Trace max hold
+2 Allow trace to stabilize
+3 Measure the maximum width of the emission that is constrained by the frequencies associated with the
+two outermost amplitude points (upper and lower) that are attenuated by 20 dB relative to the maximum
+level measured in the fundamental emission.
+Occupied Bandwidth
+1. Set RBW=30kHz, VBW=100kHz,Sweep time = Auto, Detector=Sample, Trace max hold
+2 Allow trace to stabilize
+3. Use Occupied bandwidth function of spectrum analyzer to measuring 99% occupied bandwidth
+3.6.2 Test Setup
+
+Report No.: CR740701AD Page : 52 of 58
+Report Version: Rev. 02
+3.6.3 Test result of 20dB and Occupied Bandwidth
+Modulation Mode Freq. (MHz) 20dB Bandwidth (MHz) Occupied Bandwidth
+(MHz)
+GFSK 2402 0.957 0.872
+GFSK 2441 0.957 0.873
+GFSK 2480 0.957 0.874
+8DPSK 2402 1.300 1.175
+8DPSK 2441 1.300 1.174
+8DPSK 2480 1.296 1.174
+Worst Plot of 20dB Bandwidth Worst Plot of Occupied Bandwidth
+
+Report No.: CR740701AD Page : 53 of 58
+Report Version: Rev. 02
+3.7 Channel Separation
+3.7.1 Limit of Channel Separation
+Frequency hopping systems shall have hopping channel carrier frequencies separated by a minimum
+of 25 kHz or the 20 dB bandwidth of the hopping channel, whichever is greater.
+Frequency hopping systems operating in the 2400–2483.5 MHz band may have hopping channel
+carrier frequencies that are separated by 25 kHz or two-thirds of the 20 dB bandwidth of the hopping
+channel, whichever is greater.
+3.7.2 Test Procedures
+1. Set RBW=100kHz, VBW=300kHz,Sweep time = Auto, Detector=Peak Trace max hold
+2 Allow trace to stabilize
+3 Use the marker-delta function to determine the separation between the peaks of the adjacent channels.
+The EUT shall show compliance with the appropriate regulatory limit
+3.7.3 Test Setup
+
+Report No.: CR740701AD Page : 54 of 58
+Report Version: Rev. 02
+3.7.4 Test result of Channel Separation
+Modulation Mode Freq. (MHz) Channel
+Separation (MHz)
+20dB Bandwidth
+(MHz)
+Minimum Limit
+(MHz)
+GFSK 2402 1.003 0.957 0.638
+GFSK 2441 1.003 0.957 0.638
+GFSK 2480 1.003 0.957 0.638
+8DPSK 2402 1.003 1.300 0.867
+8DPSK 2441 1.003 1.300 0.867
+8DPSK 2480 1.003 1.296 0.864
+Worst Plot
+
+Report No.: CR740701AD Page : 55 of 58
+Report Version: Rev. 02
+3.8 Number of Dwell Time
+3.8.1 Limit of Dwell time
+The average time of occupancy on any channel shall not be greater than 0.4 seconds within a period of 0.4
+seconds multiplied by the number of hopping channels employed.
+3.8.2 Test Procedures
+1. Set RBW=100kHz,VBW=300kHz,Sweep time = 500us(DH1),2ms(DH3),4ms(DH5), Detector=Peak,
+Span=0Hz,Trace max hold
+2 Enable gating and trigger function of spectrum analyzer to measure burst on time.
+3. The DH1 packet can cover a single time slot. A maximum length packet has duration of 1 time slots.
+The hopping rate is 1600 hops/second so the maximum dwell time is 1/1600 seconds, or 0.625ms. DH1
+Packet permit maximum 1600 / 79 /2 = 10.12 hops per second in each channel (1 time slot TX, 1 time
+slot RX). So, the dwell time is the time duration of the pulse times 10.12 x 31.6 = 320 within 31.6
+seconds.
+4. The DH3 packet can cover up to 3 time slots. A maximum length packet has duration of 3 time slots.
+The hopping rate is 1600 hops/second so the maximum dwell time is 3/1600 seconds, or 1.875ms. DH3
+Packet permit maximum 1600 / 79 / 4 = 5.06 hops per second in each channel (3 time slots TX, 1 time
+slot RX). So, the dwell time is the time duration of the pulse times 5.06 x 31.6 = 160 within 31.6
+seconds.
+5 The DH5 packet can cover up to 5 time slots. Operate DH5 at maximum dwell time and maximum duty
+
+cycle. A maximum length packet has duration of 5 time slots. The hopping rate is 1600 hops/second so
+the maximum dwell time is 5/1600 seconds, or 3.125ms. DH5 Packet permit maximum 1600/ 79 / 6 =
+3.37 hops per second in each channel (5 time slots TX, 1 time slot RX). So, the dwell time is the time
+duration of the pulse times 3.37 x 31.6 = 106.6 within 31.6 seconds
+3.8.3 Test Setup
+
+Report No.: CR740701AD Page : 56 of 58
+Report Version: Rev. 02
+3.8.4 Test Result of Dwell Time
+Modulation
+Mode Freq. (MHz)
+Length of
+Transmission
+Time (msec)
+Number of
+Transmission
+in a 31.6 (79
+Hopping*0.4)
+Result
+(s) Limit (s)
+GFSK-DH1 2402 0.45362 320 0.145 0.4
+GFSK-DH3 2402 1.69130 160 0.271 0.4
+GFSK-DH5 2402 2.96087 106.6 0.316 0.4
+8DPSK-DH1 2402 0.43623 320 0.140 0.4
+8DPSK-DH3 2402 1.69710 160 0.272 0.4
+8DPSK-DH5 2402 2.93913 106.6 0.313 0.4
+GFSK
+DH1 DH5
+DH3 --
+--
+
+Report No.: CR740701AD Page : 57 of 58
+Report Version: Rev. 02
+8DPSK
+3DH1 3DH5
+3DH3 --
+--
+
+Report No.: CR740701AD Page : 58 of 58
+Report Version: Rev. 02
+4 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+If you have any suggestion, please feel free to contact us as below information.
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

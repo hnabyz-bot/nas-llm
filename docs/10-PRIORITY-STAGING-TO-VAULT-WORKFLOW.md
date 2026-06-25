@@ -252,4 +252,17 @@ Next P1 bundle:
 - rank range: 301-400
 - selected representatives: 100
 - total normalized chars: 5,115,899
+- extraction status: 95/100 pass checkpoint pushed; 5 rows pending quota reset
+- QA summary: 100/100 JSON outputs, 95 pass, 5 fail, validation invalid 5,
+  missing evidence 5, page marker leakage 0
+- pending rows: rank 392, 396, 397, 398, and 400
+- scheduled resume: `scripts/resume-p1-r301-r400-final-after-quota.ps1`
+  for `2026-06-26T03:55:00`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r401-r500-202606252307`
+- rank range: 401-500
+- selected representatives: 100
+- total normalized chars: 7,050,726
 - extraction status: not started at this checkpoint

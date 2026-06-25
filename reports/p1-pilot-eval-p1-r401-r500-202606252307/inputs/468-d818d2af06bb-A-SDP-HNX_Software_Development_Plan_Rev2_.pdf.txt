@@ -1,0 +1,941 @@
+queueId: ingest-1781569954376-5p0
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/07_Software Validation/250504 파생모델 추가 및 v00.12/A-SDP-HNX_Software Development Plan (Rev2).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/b84b487d4a49/A-SDP-HNX_Software Development Plan (Rev2)__b84b487d4a49_combined.txt
+canonicalGroupId: d818d2af06bb
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 468
+
+SOURCE_TEXT
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 1 / 2
+Software Development Plan
+for
+HnX-P1, HnX-PB
+Portable X-ray System
+Report No.: A-SDP-HNX (Rev.2)
+Dept. / Title Name Date Signature
+Prepared Software team Song, Jinseon May 05, 2025
+Review Software team
+manager Lee, kyungSoo May 05, 2025
+Approval Quality Manager Hur Namkyu May 05, 2025
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 2 / 3
+Table of contents
+1. Purpose of the software development plan ..........................................................................................................................4
+2. Work that should be performed in the development stage ............................................................................................4
+3. Classification of software and its application .....................................................................................................................5
+3.1 Software classification comply with FDA Guide Line ...........................................................................................5
+3.2 Software classification in accordance with EN 62304 ............................................................................................6
+4. Software Development ................................................................................................................................................................8
+4.1 Software Life Cycle Overview........................................................................................................................................8
+4.2 Software development resources ...................................................................................................................................2
+5. Software Requirements Specification....................................................................................................................................2
+6. Software Architectural Design .................................................................................................................................................4
+7. Software Design Specification ..................................................................................................................................................4
+8. Software Risk Management ......................................................................................................................................................5
+9. Software Verification & Validation ........................................................................................................................................7
+10. Software release................................................................................................................................................................ 10
+11. Software Configuration Management ...................................................................................................................... 11
+12. Problem settlement and support in the software development activities ..................................................... 12
+13. Maintenance ...................................................................................................................................................................... 13
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 3 / 4
+Revision history
+Rev. Revision date The reason & content for establishment and amendment
+0 October 01, 2024 New Installation
+1 February 18, 2025 Added detailed maintenance procedures.(Chapter 13.)
+2 May 04, 2025 Add variant model (HnX-PB)
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 4 / 5
+1. Purpose of the software development plan
+To use the Portable X-ray system(HnX-P1, HnX-PB) developed, produced and sold by this company according
+to intention, it aims at developing software that can manipulate and utilize the product function.
+(HnX_P1 and HnX_PB, the software for HnX-P1 and HnX-PB, are the same software with different names.)
+2. Work that should be performed in the development stage
+(1) Determine which product will be developed, and forward the requirements to the R&D team so get it
+developed according to intention.
+(2) Stage of the development work (time frame)
+1) First stage : Select the product to be developed.
+2) Second stage : Gather material on the selected product.
+3) Third stage : Based on the gathered material, select and contract with a development firm which will
+realize the product development.
+4) Fourth stage : Forward the requirements necessary for the product development to the selected firm.
+5) Fifth stage : Once the development firm get started the product development, this company shall forward
+the development direction, changed requirements, etc to the development firm aside from a relevant
+meeting and support the product development positively.
+6) Sixth stage : If the development is finished, conduct testing and verification for the product realization
+jointly with the development firm, and adjust, complement so make the completed product a reality.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 5 / 6
+3. Classification of software and its application
+3.1 Software classification comply with FDA Guide Line
+(1) S/W is classified and applied in accordance with the table as follows. :
+“Major” Level of
+Concern
+The level of concern is “Major” if a failure or latent flaw could directly result in death or
+serious injury to the patient or operator. The level of concern is also “Major” if a failure
+or latent flaw could indirectly result in death or serious injury of the patient or
+operator through incorrect or delayed information.
+“Moderate” Level
+of Concern
+The level of concern is “Moderate” if a failure or latent design flaw could directly result
+in minor injury to the patient or operator. The level of concern is also “Moderate” if a
+failure or latent flaw could indirectly result in minor injury to the patient or operator
+through incorrect or delayed information.
+“Minor” Level of
+Concern
+The level of concern is “Minor” if failures or latent design flaws are unlikely to cause any
+injury to the patient or operator.
+(2) S/W is classified into Major, Moderate and Minor by its level of concern, which is determined by
+answer to the questions listed in the table as follows:
+Table 1 “Major” Level of Concern
+If the answer to any one question below is Yes, the Level of Concern for the Software Device is
+likely to be “Major”. Answer
+1. Does the Software Device qualify as Blood Establishment Computer Software? □Y ■N
+2. Is the Software Device intended to be used in combination with a drug or biologic? □Y ■N
+3. Is the Software Device an accessory to a medical device that has a ‘Major’ Level of Concern? □Y ■N
+4. Prior to mitigation of hazards, could a failure of the Software Device result in death or serious
+injury, either to a patient or to a user of the device? □Y ■N
+a. Does the Software Device control a life supporting or life sustaining function? □Y ■N
+b. Does the Software Device control the delivery of potentially harmful energy that could result in
+death or serious injury, such as radiation treatment systems, defibrillators, and ablation generators? □Y ■N
+c. Does the Software Device control the delivery of treatment or therapy such that an error or
+malfunction could result in death or serious injury? □Y ■N
+d. Does the Software Device provide diagnostic information that directly drives a decision
+regarding treatment or therapy, such that if misapplied it could result in serious injury or death? □Y ■N
+e. Does the Software Device provide vital signs monitoring and alarms for potentially life
+threatening situations in which medical intervention is necessary? □Y ■N
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 6 / 7
+Table 2 “Moderate” Level of Concern
+If the Software Device is not Major Level of Concern and the answer to any one question below is
+Yes, the Level of Concern is likely to be Moderate . Answer
+1. Is the Software Device an accessory to a medical device that has a Moderate Level of Concern? ■Y □N
+2. Prior to mitigation of hazards, could a failure of the Software Device result in Minor Injury, either to
+a patient or to a user of the device? ■Y □N
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to an erroneous diagnosis
+or a delay in delivery of appropriate medical care that would likely lead to Minor Injury? ■Y □N
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is Minor.
+3.2 Software classification in accordance with EN 62304
+(1) S/W is classified and applied in accordance with as follows. :
+1) This company shall assign software safety class to each software system originated by our
+software system and based on the impact of the harm on the patient, the worker, or others.
+The software safety classes shall initially be assigned based on concern as follows:
+-. Class A : There is no injury nor health damage.
+-. Class B : The possible harm is non-serious injury.
+-. Class C : The possible harm is death or serious injury.
+In case harm is caused by that Software system is not operate by designated, the possibility of such
+defectiveness should be regarded as 100%.
+(2) If the risk of death or serious injury arising from a software failure is subsequently reduced to an
+acceptable level (as defined by ISO 14971) by a hardware risk control measure, either by reducing
+the consequences of the failure or by reducing the probability of death or serious injury arising from
+that failure, the software safety classification may be reduced from C to B. and If the risk of non-
+serious injury arising from a software failure is similarly reduced to an acceptable level by a hardware
+risk control measure, the software safety classification may be reduced from B to A. The our company
+assigned to each software system that contributes to the implementation of a risk control measure a
+software safety class based on the possible effects of the hazard that the risk control measure is
+controlling.
+(3) [If applicable] The company documented the software safety class assigned to each software system
+in the risk management file.
+(4) [If applicable] When a software system is decomposed into software items, and when a software item
+is decomposed into further software items, such software items inherit the software safety
+classification of the original software item (or software system) unless the our company documents a
+rationale for classification into a different software safety class. Such A rationale explains how the
+new software items are segregated so that they may be classified separately.
+(5) [If applicable] The our company documented the software safety class of each software item if that
+class is different from the class of the software item from which it was created by decomposition.
+(6) [If applicable] For compliance with standard, wherever a process is required for software items of a
+specific classification and the process is necessarily applied to a group of software items, the our
+company used the processes and tasks which are required by the classification of the highest-classified
+software item in the group unless the our company documents in the risk management file a rationale
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 7 / 8
+for using a lower classification.
+(7) [If applicable] For each software system, until a software safety class is assigned, Class C
+requirements applied.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 8 / 9
+4. Software Development
+4.1 Software Life Cycle Overview
+(1) Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology", as illustrated in
+the following chart.
+• Definition
+Construct software development plan. This plan outlines the tasks, responsibilities, resources, and other items
+pertinent to the specific development project. Establish requirements for as much as possible before the design
+phase. The requirements are documented in the software specific requirements and design notes.
+• Design
+Construct software structure.
+- Construct data structure.
+- Construct software architecture.
+- Compose software functionalities.
+- Characterize interfaces.
+• Implementation
+Convert the design into a machine readable form. The software source code is created in accordance with
+H&abyz’s coding conventions to verify that the code created is consistent with H&abyz’s standards, design
+reviews/ inspections are held.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 2
+Software Development Plan Rev. Date May 04, 2025
+Page 9 / 10
+• Qualification
+Verify the design and code implemented meet the requirements.
+• Maintenance
+Verified software is installed as a firmware in system at manufacturing time.
+After release, all VOC (Voice of Customer) are collected and chose carefully to reflect to change software.
+Figure: “V” Model of Software Development depicts the relationship between requirements and test
+documents and reports.
+System Test & Integration Test Process
+Requirement
+Specification
+(R1)
+System Realization
+Concept
+(R2)
+Subsystem Realization
+Concept
+(M200/R3)
+System Test
+Spec/Report
+(R4)
+System
+Validation
+Report
+(R5)
+Subsystem
+Test
+System Verification
+Test
+System
+Validation Test
+Requirements --- Test Plan --- Test Spec --- Test -- Report
+Component Spec
+(R3)
+Subsystem Test Spec/
+Report
+(R3)
+Component Test
+Spec/Report
+(R3)
+Traceability
+Component
+Test
+Product Risk Hazard
+Analysis
+Figure: “V” Model of Software Development
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 1 / 11
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+(2) The details of the development process and schedule of each software are presented in the table below.
+Step Main Contents
+Analysis
+The activity consists of establishing requirements for as much as possible
+before the design phase. The requirements are documented in the
+software-specific requirements and design notes.
+Planning
+This activity constructs the software development plan. This plan outlines
+the tasks, responsibilities, resource, and other items pertinent to the
+specific development project.
+Design
+The activity considers four functional attribute of the software: data
+structure, software architecture, functionality, and interface
+characterization. The design is documented in design documents.
+Implementation
+The implementation phase converts the design into a machine readable
+form. The software source code is created in accordance with H&abyz
+Co., Ltd.‘s coding conventions.
+To verify that the code created is consistent with H&abyz Co., Ltd.
+standard, reviews/inspections are held.
+Qualification
+The qualification phase verifies that the design and code implemented
+meet the requirements. Testing ensures that defined input will produce
+actual results that agree with required results.
+Maintenance
+Once the software enters a released state, the only software changes
+allowed are to fix identified defects in the code or to support approved
+enhancements.
+Software
+release
+Software verification has been completed and the software prior to
+release of the software should verify the evaluation results.
+Development
+plan updated
+UI can be updated or completely replaced to satisfy customer requirement
+or revision s/w.
+(3) The input requirements and verification results (outputs) required at each development step of each
+software are presented in the table below.
+Step Input requirements Responsible person Verification Results (Outputs)
+Analysis and
+Planning Investigating similar products Song, Jinseon,
+Lee, kyungSoo
+Software Development Plan,
+Software Requirements
+Specification
+Design
+Software Development Plan,
+Software Requirements
+Specification
+Song, Jinseon,
+Lee, kyungSoo
+Architecture Design,
+Design Technique Specification
+Implementation Software design Song, Jinseon,
+Lee, kyungSoo Source code
+Qualification Measuring instrument for
+certification validation
+Song, Jinseon,
+Lee, kyungSoo
+Test, Software Risk Management,
+Software Validation Report
+Maintenance Measuring instrument for output
+validation
+Song, Jinseon,
+Lee, kyungSoo
+Software Configuration
+Management Plan
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 2 / 12
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.2 Software development resources
+(1) Resources
+Section Resource
+Program Language C/C++
+MCU Model STM32H7A3VG
+(2) Human Resources
+Team Person Responsibilities (produced or processed documents)
+SW Team SW Engineer
+(1 person)
+SRS (design)
+Software architecture (design) Implementation, coding
+SDS (design)
+User Manual (design) Hazards analysis (design)
+Software static test report (perform) Software dynamic test report
+(verification)
+Team Manager
+(1 person)
+SRS (approval)
+Software architecture (design, approval) SDS (approval)
+Hazards analysis (verification) User Manual (verification) Software
+
+test plan (verification) Software test report (verification) Traceability
+analysis (design) Validation report (design)
+Test Engineers
+(1 person)
+Software test report
+Application
+Software Team
+SW Engineers
+(1 person) User Manual (verification)
+Proprietary application Design and implementation. Casual Software
+test
+Team Manager
+(1 person)
+SDS (verification)
+User Manual (verification)
+Quality
+Management
+Team
+Team Manager
+(1 person)
+SRS (approval) SDS (approval)
+Hazards analysis (approval) User Manual (approval) Hazards
+Analysis (approval) Software test report (approval) Traceability
+analysis (approval) Validation report (approval)
+Marketing
+Team
+Team Manager
+(1 person) SRS (verification)
+Hazards analysis (verification)
+Customer
+Support Team
+Team Manager
+(1 person)
+SDS (verification)
+User Manual (verification) Hazards analysis (verification) Validation
+report (verification)
+5. Software Requirements Specification
+(1) Functional Requirement
+Function by each module and essential factor that each function must equip in software are as below
+• Development Portable X-ray system which name is HnX_P1.
+• Development Configuration module (Setting up data and error detection criteria
+required for X-ray investigation)
+• Development Calibration module
+• Development Data acquisition module
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 3 / 13
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+• Development APR module
+• Development Filament preheating and X-ray irradiation, Lamp control module
+• Development Charger module
+• Development Battery module
+• Development Checking error module
+• Development Bluetooth function module
+• Development Display control module
+• Development SID module
+(2) Verification activities
+1) Prior to development of the software, concrete items thereof should be planned/devised, and based
+on this the software development should be done.
+2) The software requirements should analyze the risk to examine the safety and reliability and
+subsequently manage toward the software developed as an input material for the software
+development so evaluate whether it is legitimate to use.
+Category Description Reference Result responsible
+person
+Software
+development
+Devise a plan for the software
+development and put it in writing EN ISO13485:2016 Software development
+plan
+R&D
+manager
+Software risk
+analysis
+Identification of the characteristics
+and hazards associated with the
+intended use and the safety of the
+device, risk assessment
+EN ISO14971:2019 Software Validation
+Report
+Quality
+manager
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 4 / 14
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6. Software Architectural Design
+The software architectural design is a structure that explains the software requirements by the software
+structure and identifies the software item. The software architectural design includes a similar description etc
+on the relation between the primary functions of the software inclusive of the relation with the data flow such
+as a typical flow chart, hardware and networking. That does not need to include every function call of this
+document and module in general. However, there should be sufficient information to allow review by an
+organization on the functionality and intended use of the software equipment.
+7. Software Design Specification
+The software design specification explains materialization of the requirements on the software device. In the
+aspect of the relation between the Software Requirements Specification (SRS) and the Software Design
+Specification (SDS), SRS explains how the software device will be worked while SDS explains how the
+requirements will be materialized to SRS. The information presented to SDS should be enough to confirm the
+job conducted by a software engineer who made the software device is clear and not vague along with a
+temporary design decision at least. SDS can include a reference on the other document like the Software
+Detailed Design.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 5 / 15
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+8. Software Risk Management
+(1) As for the software risk management, personnel who participated in the program development process
+shall decide, analyze potential risk, reason, probability and severity of the software.
+(2) As to the analyzed risk, make out a risk evaluation and present, verify the risk control method thereof.
+(3) Software risk management
+1) Risk evaluation matrix
+Severity
+Probability
+Not Entirely Ha
+rmful (1)
+Slight
+(2)
+Severe
+(3)
+Very Severe
+(4)
+Paralysis State
+(5)
+Frequent
+(5) 5 10 15 20 25
+Probable
+(4) 4 8 12 16 20
+Occasional
+(3) 3 6 9 12 15
+Remote
+(2) 2 4 6 8 10
+Improbable
+(1) 1 2 3 4 5
+2) Explanation of the risk evaluation zone
+① Acceptable zone (Green Zone)
+As severity and probability on hazard is quite low, the risk is a level which is acceptable and
+negligible when compared with the risk of other hazard. But risk control measures for the risk
+reduction are needed as far as possible.
+② Non-acceptable zone (Red Zone)
+If the risk still remains on the non-acceptable zone even after taking measures to reduce or remove
+the risk, stop the design work.
+3) Risk estimation level
+① Severity
+Step Severity Definition
+5 Paralysis State Potential failure mode affects safe system operation
+4 Very Severe System inoperable with equipment damage
+3 Severe System inoperable without damage
+2 Slight System operable with some degradation of performance
+1 Not Entirely Harmful None
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 6 / 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+② Probability
+Step Probability Definition
+5 Frequent
+Daily, 1 / 1 day (usually)
+Likely to occur often in the life of an item, with a likelihood of
+occurrence greater than 10^-2 in any one mission
+4 Probable
+Weekly, 1 / 1 week (often)
+Will occur several times in the life of an item, with a likelihood of
+occurrence less than 10^-2 but greater than 10^-3 in any one mission
+3 Occasional
+Monthly, 1 / 1 month (sometimes)
+Likely to occur sometime in the life of an item, with likelihood of
+occurrence less than 10^-3 but greater than 10^-5 in any one mission
+2 Remote
+Quarterly, 1 / 1 quarter (a few times while its life cycle)
+Unlikely but possible to occur in the life of an item, with a likelihood
+of occurrence less than 10^-5 but greater than 10^-6 in any one
+mission
+1 Improbable
+Annually, 1 / 1 (might occur but hardly does)
+So unlikely, it can be assumed occurrence may not be experienced,
+with a likelihood of occurrence less than 10^-6 in any one mission.
+※ If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the
+probability of such failure shall be assumed to be 100 percent [∵EN 62304:2006/AC:2008, Cl. 4.3 a)].
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 7 / 17
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+9. Software Verification & Validation
+(1) Work of verification and Validation
+1) Definition
+Verification means “confirmation that specific requirements are met by presentation of objective evidence
+and inspection”. The software verification in the software development environment is confirmation that
+the output in the specific stage of development meets every input requisite of the said stage. The software
+test is one of the several verification activities to confirm that the output in the software development stage
+meets the input requisite. The software validation is to prove with objective evidence that both the user
+requirements and use purpose on the function whose software has been used are consistent with the
+software.
+Software verification and validation shall be confirmed through the software test. The software test shall
+conduct the unit test, integration and system test.
+Type Item Yardstick Criteria Alternative
+X-ray control
+Module
+Control X-ray tube
+voltage & mAs
+function
+Setting values can be
+converted using the
+button.
+Every error found should be
+removed
+Debugging
+X-ray Irradiation
+Module
+One shot Fluoroscopy
+function
+X-ray output control
+operates as a deadman
+type.
+Debugging
+Error check
+Module
+Display Error Message
+function
+Displays error messages
+due to abnormal
+operation
+Debugging
+APR memory
+Module
+Setting value saving
+function 10 output value storage Debugging
+Option Module Option setting function Features work reliably Debugging
+Calibration
+Module
+voltage & mA &
+preheating correction
+functions
+Check standard
+deviation Debugging
+DR interface
+Module
+Bluetooth & UART
+interface function
+Bluetooth &UART
+control
+Interface
+checking
+Battery Protection
+Module
+Battery overvoltage and
+low voltage management
+function
+Block battery charging
+and discharging Debugging
+Image preview
+Module
+Captured image
+confirmation function
+Display image on LCD
+screen Debugging
+SID Measurement
+Module
+Source-Image receptor
+Distance measurement
+function
+Measurement value
+display Debugging
+Status message
+Module
+Operation status display
+function Status message display Debugging
+firmware update
+Module
+Firmware update and
+version control function
+Firmware write and
+firmware version check Debugging
+Cyber Security
+Wireless communication
+account control and
+encryption capabilities
+Account management
+and communication
+encryption control
+Debugging
+① X-ray control Module
+Implements the tube voltage and tube current value setting function.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 8 / 18
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+② X-ray Irradiation Module
+Implements a function that prevents continuous exposure or next exposure while holding down
+the Survey button.
+③ Error check Module
+Implementation of a function that notifies the type of error
+④ APR memory Module
+Implementation of 10 memory functions
+⑤ Option Module
+Implementation of operation option setting function
+⑥ Calibration Module
+Implementation of tube voltage, current, and heating value correction functions.
+⑦ DR interface Module
+Implementation of wired and wireless communication control functions.
+⑧ Battery Protection Module
+Implementation of battery overcharge and over discharge protection functions.
+⑨ Image preview Module
+Implementation of the function to display captured images on the LCD screen
+⑩ SID Measurement Module
+Implementation of SID distance measurement and display function.
+⑪ Status message Module
+Implementation of operation status display function.
+⑫ firmware update Module
+Implementation of firmware update version check function.
+⑬ Cyber security
+Implements wireless communication account creation and management and encryption
+processing functions.
+(2) Time frame and resources for the work activities of Software Verification & Validation
+1) Time frame
+Primary stage Date of the test case
+preparation Date of beginning Date of completion
+X-ray control Module
+After confirming specifications
+and designing the tube voltage
+and current control structure
+Upon completion of function
+implementation 2 days after the test
+X-ray Irradiation
+Module
+After creating design
+specifications for the irradiation
+structure
+Upon completion of
+irradiation function
+implementation
+2 days after the start of
+the exam
+Error check Module After writing the error check
+function design specification
+Upon completion of each
+module implementation
+2 days after the start of
+the exam
+APR memory Module
+After writing memory
+functional specifications and
+design specifications
+Upon completion of memory
+module implementation
+2 days after the start of
+the exam
+Option Module
+After writing option functional
+specifications and design
+specifications
+Upon completion of option
+module implementation
+3 days after the start of
+the exam
+Calibration Module After writing the calibration
+processing specification
+Upon completion of device
+control module
+implementation
+3 days after the start of
+the exam
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 9 / 19
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+DR interface Module After signal processing and
+parameter requirements
+Upon completion of signal
+processing module
+implementation
+3 days after the start of
+the exam
+Battery Protection
+Module
+After creating battery
+management and monitoring
+requirements
+Upon completion of each
+module implementation
+3 days after the start of
+the exam
+Image preview Module After writing the interface
+requirements
+Upon completion of interface
+module implementation
+2 days after the start of
+the exam
+SID Measurement
+Module
+After designing the distance
+measurement module
+Upon completion of module
+implementation
+2 days after the start of
+the exam
+Status message
+Module
+After writing the Status
+message specification
+Upon completion of the
+control module
+implementation
+3 days after the start of
+the exam
+firmware update
+Module
+After writing the file system and
+update specification
+When the update module
+implementation is complete
+3 days after the start of
+the exam
+Cyber security After filling out the
+requirements
+Upon completion of module
+implementation
+2 days after the start of
+the exam
+2) Resource
+Item Detail item Resource
+MCU
+MCU STM32H7A3VG
+Core 32-bit Arm® Cortex®-M7
+FLASH Program Memory 2M byte
+Frequency up to 280 MHz
+Compiler STM32CUBE IDE
+※ Traceability analysis
+As the traceability analysis is an essential element on comprehension of the effective product
+development, product design, development, testing and risk alleviation, do clear traceability
+analysis between the related document and development activities.
+Software
+Requirements
+Specification(SRS)
+Software Design
+Specification(SDS) Hazard Mitigations Software Verification
+& Validation(SVV)
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 10 / 20
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+10. Software release
+(1) Confirmation of the integrity of software verification
+It should be ensured that the software verification is completed and that the results are
+evaluated before releasing the software.
+(2) Documentation of identified residual abnormal conditions
+All identified residual abnormalities should be documented.
+(3) Assessment of identified residual abnormal conditions
+In order to ensure that all identified residual abnormalities are not causing unacceptable risks,
+It should be ensured that such abnormal conditions have been evaluated.
+(4) Documentation of the releasing version
+The version of the software product being deployed should be documented.
+(5) Document how you created the distributed software
+The procedures and environment used to create the deployed software should be documented.
+(6) Confirmation of activity and work completion
+Ensure that all activities and tasks are completed with all relevant documentation.
+(7) Software storage
+Either a period of time determined by the manufacturer's defined minimum life time of the
+equipment or the time specified by the relevant regulatory requirements, the following shall
+be stored for longer period:
+1) Software products and configuration items
+2) Document
+(8) Ensure repetition accuracy of software release
+Procedures to ensure that the deployed software product is reliably delivered to the point of
+use without modification or unauthorized modification should be established. This procedure
+should address the production and handling of media containing software products, including:
+1) Replication
+2) Media labeling
+3) Packing
+4) Protection
+5) Storage
+6) Delivery
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 11 / 21
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+11. Software Configuration Management
+(1) Purpose of the configuration management plan
+Software should include a function that can materialize the optimum performance on the
+product developed by this company. To this end, continual upgrade from the previously
+launched version should be available.
+(2) How to manage configuration
+1) The development request firm shall conduct monitoring continually the customer
+requirements, item for performance improvement and other problematic issue, etc on the
+
+software-applied product so settle through the software upgrade based on the immediate
+foregoing.
+2) In case the software upgrade have settled the performance improvement, application of the
+customer request and bug matter, etc, it should be able to distinguish by a version name and
+write as the following type.
+Major : A significant change (for example : the change of PCB or other basic functional
+frame)
+Internal management: Slight change
+If Ver. was upgraded for the change of customer requirements and performance improvement,
+it will be changed accordingly.
+(However, the upgrade item of Ver. will be limited to the one that does not affect the product's
+basic performance.)
+3) In case the software configuration is changed, it should be recorded, managed on 12.
+Software Configuration Management of the Software Validation Report .
+(3) In case the software configuration is changed, it should be validated before it is applied to the
+software.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 12 / 22
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+12. Problem settlement and support in the software development activities
+(1) Software's problem-solving procedure
+(2) The customer dissatisfaction item should be received pursuant to Customer complaints
+Procedure and if a software change is needed, it should quickly be notified to R&D team.
+(3) To settle the software's problem, a top priority should be given to improving the problem under
+mutual cooperation between Production team and R&D team and it should promptly be applied
+to the product.
+(4) Any issues identified with the software shall be recorded and applicable corrective measures
+shall be conducted.
+(5) In addition, when correcting the issues of software, the company shall examine the issues,
+notify them to relevant personnel, and analyze any trend of issues. The software shall be used
+only after the required validation has completed.
+(6) As for the software's preservation, R&D team should keep the same version against the original,
+and whenever the version changes the two firms should put it in a separate backup file (CD,
+hard disk) so keep in the system.
+
+Technical Documentation Document No. A-SDP-HNX
+Rev. No. 1
+Software Development Plan Rev. Date Feb 18, 2025
+Page 13 / 22
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+13. Maintenance
+This chapter provides a recommended schedule for periodic maintenance of the HnX-P1
+(1) Maintenance Schedule
+1) Maintenance Frequency Description of Preventative Maintenance :
+Maintenance items Period Note
+Software Security Patch Every 1years or When a security
+vulnerability is discovered
+Bug fixes and performance
+improvements updates
+Every 1-2 years or as needed
+Regulatory Compliance Update When changes in related regulations
+occur
+User manual and maintenance
+documentation updates
+When needed (e.g. after an update)
+Self-Check & Validation Every 1 years or as needed
+Updates based on customer
+feedback
+If necessary
+(2) Claim report
+This claim form should be submitted prior to user’s request of returning or replacing for the
+problem product.
+* HnX_P1 software cannot be changed or troubleshooted in the field. If a problem occurs,
+software change or troubleshooting must be done through the service center or manufacturer.
+Field Problem Report
+Distributor Issuing No.
+Reporter Model Name
+Date Serial No.
+Tel/Fax Date of problem
+occurred
+E-mail
+Problem of Description
+1) Phenomenon
+2) Cause of failure
+3) Requirement

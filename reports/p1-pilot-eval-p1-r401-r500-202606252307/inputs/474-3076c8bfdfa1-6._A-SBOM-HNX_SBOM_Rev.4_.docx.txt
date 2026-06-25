@@ -1,0 +1,746 @@
+queueId: ingest-1781569954377-7lk
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/6. A-SBOM-HNX_SBOM(Rev.4).docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/f685fb9bfe47/6. A-SBOM-HNX_SBOM(Rev.4)__f685fb9bfe47_combined.txt
+canonicalGroupId: 3076c8bfdfa1
+productSignal: HnX
+authoritySignal: general
+pilotRank: 474
+
+SOURCE_TEXT
+Cybersecurity Risk Management – Software Bill of Materials
+
+Product name: Portable X-ray System
+
+Model name: HnX-P1, HnX-PB
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+Han, Jimin
+
+R&D team
+
+December 10, 2025
+
+Reviewed by
+
+Jeon, Jeu
+
+R&D manager
+
+December 10, 2025
+
+Approved by
+
+Hur, Namkyu
+
+Quality Management Representative
+
+December 10, 2025
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+December 05, 2024
+
+Initial
+
+1
+
+April 02, 2025
+
+Added description of SBOM's security and vulnerability assessment method.
+
+2
+
+June 05, 2025
+
+Revision due to addition of risk analysis method for components (firmware and open source).
+
+3
+
+June 20, 2025
+
+Revision according to Add variant model (HnX-PB)
+
+4
+
+December 10, 2025
+
+Revision according to the device overview
+
+Contents
+
+1. Overview 4
+
+2. SBOM and Support Lifecycle 5
+
+3. SBOM security and vulnerability assessment method. 7
+
+Overview
+
+Document Overview
+
+This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Portable X-ray System(HnX-P1, HnX-PB).
+
+Medical Device Overview
+
+Product name: Portable X-ray System
+
+Model name: HnX-P1, HnX-PB
+
+Manufacturer: H&abyz Co., Ltd.
+
+This product is a battery-powered portable X-ray system designed and manufactured by H&abyz. This portable X-ray system (model: HnX-P1, HnX-PB) consists of an LCD display with up and down soft keys for kV control, an X-ray generator (power transformer), an X-ray tube assembly, and a collimator.
+
+Compared to conventional X-ray products, this device boasts a sophisticated structure, compact design, light weight, and easy operation.
+
+The main components of the X-ray unit are the handle, enclosure, main control panel, system control board, high-voltage tank, inverter, collimator (beam limiter), and system control software running on the system control board. The system control software interacts with and controls the various circuit modules within the X-ray generator in real time. This software responds to user input from the control panel. Users can adjust and control kV and mAs parameters, and the software can display these parameters or directly load APR parameters. This software loads control data for the X-ray output into the high-voltage generation control circuit on the system control board, controls the high-voltage tank to generate high voltage, excite the internal X-ray tube, and emit X-rays. It also controls the collimator switch, monitors the device's operating status, and controls the display of status indicators.
+
+It also allows users to view thumbnails of acquired images on the LCD via Bluetooth.
+
+This product is intended for X-ray imaging and diagnosis in facilities with mobile or fixed locations. It can be mounted on a cart or stand and used with a film cassette or flat panel detector, a computer for signal reception and detection, and image processing software. (The cart, stand, film cassette, flat panel detector, and image processing software are not included in the basic product components.)
+
+To ensure the mechanical stability and efficiency of the device, the recommended maximum load that the stand can safely withstand is 6 kg.
+
+The cybersecurity risk of the HnX-P1 & HnX-PB have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis. These risks are defined as sequence of events leading to a hazardous situation, and the control for their risks were treated and implemented as proposed in the risk analysis (e.g., requirements, verification).
+
+The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.Therefore, no additional cybersecurity risk management is performed due to the addition of the variant model (HnX-PB).
+
+SBOM and Support Lifecycle
+
+2.1 HnX_P1
+
+No
+
+Software name
+
+Component name
+
+Supplier
+
+Software level of support by manufacturer
+
+version
+
+Timestamp
+
+End-of-support (‘EOS’) date
+
+Author
+
+Function
+
+1
+
+HnX_P1,
+
+HnX_PB
+
+HnX_P1.hex
+
+HnX_PB.hex
+
+H&abyz
+
+actively maintained
+
+00.12
+
+25-05-04
+
+Until the product life cycle
+
+H&abyz
+
+Application
+
+2
+
+startup_stm32h7a3vgtx.s
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Start-up
+
+3
+
+kisa_sha256.c
+
+KISA
+
+actively maintained
+
+1.00
+
+25-02-18
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+KISA
+
+Hash code generator
+
+4
+
+syscalls.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-06-15
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+System file
+
+5
+
+sysmem.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-06-15
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+System file
+
+6
+
+system_stm32h7xx.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+7
+
+stm32h7xx_hal.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+8
+
+stm32h7xx_hal_adc.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+9
+
+stm32h7xx_hal_adc_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+0(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+10
+
+stm32h7xx_hal_cortex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+11
+
+stm32h7xx_hal_dma.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+12
+
+stm32h7xx_hal_dma_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+13
+
+stm32h7xx_hal_exti.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle
+
+(The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+14
+
+stm32h7xx_hal_flash.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+15
+
+stm32h7xx_hal_flash_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+16
+
+stm32h7xx_hal_gpio.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+17
+
+stm32h7xx_hal_hsem.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+18
+
+stm32h7xx_hal_i2c.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+19
+
+stm32h7xx_hal_i2c_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+20
+
+stm32h7xx_hal_iwdg.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+21
+
+stm32h7xx_hal_mdma.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+22
+
+stm32h7xx_hal_pwr.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+23
+
+stm32h7xx_hal_pwr_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+24
+
+stm32h7xx_hal_rcc.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+25
+
+stm32h7xx_hal_rcc_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+26
+
+stm32h7xx_hal_spi.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+27
+
+stm32h7xx_hal_spi_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+28
+
+stm32h7xx_hal_tim.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+29
+
+stm32h7xx_hal_tim_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+30
+
+stm32h7xx_hal_uart.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+31
+
+stm32h7xx_hal_uart_ex.c
+
+STMicroelectronics
+
+actively maintained
+
+1.00
+
+24-05-03
+
+Until the product life cycle (The end of support date is unknown.)
+
+STMicroelectronics
+
+Hardware driver
+
+2.2 EOL, EOS
+
+ HnX_P1 and HnX_PB software does not have a specific EOL/EOS due to the nature of the product. The end date is determined by software changes or the product life cycle (7 years).
+
+SBOM security and vulnerability assessment method.
+
+Security and vulnerability assessment method.
+
+‘HnX_P1.hex’ and ‘HnX_PB.hex’ are the device firmware; threat modeling was conducted for each function, and both penetration testing and static code analysis were performed.
+
+For all off‑the‑shelf and open‑source software and firmware components listed in this SBOM (e.g. STMicroelectronics, KISA), we performed threat modeling and Cybersecurity Risk Management. In addition, all COTS and open‑source components were cross‑checked against NIST’s NVD and the CISA KEV Catalog; no publicly known vulnerabilities affecting this product were identified to date.

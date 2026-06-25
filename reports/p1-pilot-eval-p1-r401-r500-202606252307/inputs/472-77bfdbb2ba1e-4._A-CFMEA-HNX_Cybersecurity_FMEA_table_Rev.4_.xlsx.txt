@@ -1,0 +1,182 @@
+queueId: ingest-1781569954377-7n3
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/4. A-CFMEA-HNX_Cybersecurity FMEA table(Rev.4).xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/f7f65c58d4cd/4. A-CFMEA-HNX_Cybersecurity FMEA table(Rev.4)__f7f65c58d4cd_combined.txt
+canonicalGroupId: 77bfdbb2ba1e
+productSignal: HnX
+authoritySignal: general
+pilotRank: 472
+
+SOURCE_TEXT
+,,,Cybersecurity FMEA Report,,,,,,,,,,,,
+,-,,, □ Controlled ■ Uncontrolled ,,,,,,,,,,,
+,Product Name,:,Portable X-Ray system,,,,,,,,,,,,
+,Model Name,:,HnX-P1 & HnX-PB,,,,,,,,,,,,
+,Doc No.,:,A-CFMEA-HNX,,,,,,,,,,,,
+,Revision date,:,"July 26, 2025",,,,,,,,,,,,
+,Revision No.,:,Rev.4,,,,,,,,,,,,
+,,,Position,,,Name,,,Date,,,Signature,,,
+,Prepared by,,R&D team,,,"Han, Jimin",,,"July 26, 2025",,,,,,
+,Reviewed by,,Quality Management Representative,,,"Hur, Namkyu",,,"July 26, 2025",,,,,,
+,Approved by,,R&D manager,,,"Jeon, Jeu",,,"July 26, 2025",,,,,,
+
+History of Revision,,
+Revision,Date,Contents of revision
+0,2024.12.05,Establishment
+1,2025.04.02,Added threat identification to the IEC 60601-4-5 cybersecurity requirements list.
+2,2025.06.02,Revisions to add risk management for open source software
+3,2025.06.20,Revision according to Add variant model (HnX-PB)
+4,2025.07.20,Added physical controls to mitigate threats to User Identification and Authentication.
+
+Risk analysis (Step 1),,,,Risk evaluation (Step 2),,,,Risk control (Step 3),,,,,APPENDX : Implementation of risk control measures ,,
+Hazard No.,Asset / Requirement ID,STRIDE,Threat ,Likelihood (Before),Impact (Before),Risk Level,CVSS,Assignment by Security control,Mitigation,Likelihood (After),Impack (After),Risk Level,"IEC 60601-4-5
+Requirement test",Source Code Static Analysis,Penetration Test
+ Cybersecurity FMEA table 1. (Asset & Data Flow Diagram),,,,,,,,,,,,,,,
+CRM-01,A1: Configuration,Tampering,"Malicious modification of configuration settings, resulting in unsafe operational parameters.",Very Likely (VL),High (H),High,8.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),"Code, Data, and Execution Integrity",Use digital signatures and integrity verification for configuration settings.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for configuration data)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-1"
+CRM-02,A2: Calibration,Tampering,Unauthorized alteration of calibration values causing improper X‑ray output.,Very Likely (VL),High (H),High,7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Implement cryptographic integrity verification for calibration values.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for calibration data)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-1"
+CRM-03,A3: Data Acquisition,Tampering,Modification of acquired sensor data during transmission or storage that affects diagnostic integrity.,Frequent (F),High (H),High,7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Apply encryption and integrity verification on sensor data.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for sensor data)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-2"
+CRM-04,A4: APR,Tampering,Unauthorized modification of stored APR values resulting in inappropriate exposure parameters.,Very Likely (VL),High (H),High,7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),"Code, Data, and Execution Integrity",Implement digital signatures and restricted access for APR values.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for APR values)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-1"
+CRM-05,A5: X ray Control,Tampering,Alteration of X‑ray control signals causing damage to the X‑ray output.,Very Likely (VL),Very High (VH),High,8.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H),Cryptography,Apply cryptographic validation to prevent unauthorized X-ray signal modifications.,Very Unlikely (VU),Very High (VH),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for X‑ray control signals)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-3"
+CRM-06,A6: Battery Charging,Tampering,Unauthorized alteration of charging parameters affecting battery performance.,Very Likely (VL),High (H),High,7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Enforce cryptographic checks on battery charging parameters.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for charging parameters)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-07,A7: Battery Monitoring,Tampering,Modification of battery monitoring data leading to false readings and power management failures.,Likely (L),Medium (M),Medium,6.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:M/I:M/A:N),Cryptography,Apply cryptographic validation on battery monitoring data.,Very Unlikely (VU),Medium (M),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for battery monitoring data)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-08,A8: Error Checking,Tampering,Manipulation of error-checking thresholds/signals resulting in failure to detect critical faults.,Very Likely (VL),High (H),High,7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Implement secure calibration verification and real-time error checking.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for error‑checking circuits)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-09,A9: Bluetooth,Spoofing,"Impersonation of a trusted Bluetooth device, compromising secure pairing and data integrity.",Frequent (F),High (H),High,7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Enforce Bluetooth device whitelisting and strong pairing protocols.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+IA‑04: Secure Authentication for Bluetooth Pairing",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-2"
+CRM-10,A9: Bluetooth,Tampering,Alteration of data transmitted via Bluetooth affecting the integrity of images or configuration data.,Frequent (F),High (H),High,7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Use end-to-end encryption and authentication for Bluetooth communication.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for Bluetooth data)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-2"
+CRM-11,A9: Bluetooth,Information Disclosure,Exposure of sensitive data transmitted over Bluetooth due to insufficient encryption.,Very Likely (VL),High (H),High,7.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N),Cryptography,Encrypt all Bluetooth data transmissions with SHA-256,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+DC‑01: Encryption of Sensitive Data (for Bluetooth communications)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-2"
+CRM-12,A10: Display,Tampering,Unauthorized modification of display outputs leading to misrepresentation of device status.,Likely (L),Medium (M),Medium,6.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:M/A:N),"Code, Data, and Execution Integrity",Implement secure display rendering with integrity verification.,Very Unlikely (VU),Medium (M),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for display outputs)",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-13,A11: SID,Tampering,Manipulation of distance measurement data affecting device alignment and calibration accuracy.,Likely (L),Medium (M),Medium,6.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:M/A:N),"Code, Data, and Execution Integrity",Validate and cross-check SID measurement data before usage.,Very Unlikely (VU),Medium (M),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for SID measurements)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-14,A12: Hardware Interfaces,Spoofing,Unauthorized peripheral emulation on physical ports leading to illegitimate connections.,Very Likely (VL),High (H),High,7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),"Code, Data, and Execution Integrity",Restrict unauthorized hardware access and enforce strict authentication.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+IA‑03: Physical Access Controls for Hardware Ports",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-15,A12: Hardware Interfaces,Tampering,"Interception or alteration of data transmitted via physical interfaces, compromising firmware updates or control signals.",Very Likely (VL),High (H),High,8.0 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),Cryptography,Validate and cryptographically sign firmware updates and hardware communications.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI‑09: Data Integrity Verification (for data via hardware interfaces)",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-16,A12: Hardware Interfaces,Elevation of Privilege,Exploitation of hardware interface vulnerabilities to gain unauthorized system access.,Very Likely (VL),High (H),High,7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N),"Code, Data, and Execution Integrity",Enforce strict access controls and authentication for hardware interfaces.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+IA‑04: Secure Authentication for Physical Interface Access",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-4"
+CRM-17,A13: Open source 1 –STMicroelectronics Open-Source Bundle,Tampering,"• Inject malicious code into the HAL driver code (.c/.h) to modify the exposure value or SID calculation logic during X-ray shooting
+• As a result, incorrect diagnostic data is generated or the device malfunctions",Likely,Very High,Critical,"9.1
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N)","Cryptography, Firmware and Software Updates","1. Integrity Verification (Checksum): Perform SHA-256 verification on all update files to block installation of tampered binaries
+2. Static Analysis (MISRA-C:2004): Perform static analysis based on the MISRA-C ruleset on production code before compilation to ensure that no unintended code insertions or CWE patterns (e.g. CWE-94) are included
+3. SBOM-based vulnerability scan (using CycloneDX format): Create SBOM in CycloneDX format and periodically review whether each component has CVE using automated tools such as Snyk/Syft",Unlikely,Medium,Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-18,A13: Open source 1 –STMicroelectronics Open-Source Bundle,Spoofing,"• Attackers distribute malicious firmware by disguising ST official servers through OTA/local update paths
+• Disguised images can be easily installed if the bootloader does not perform signature verification",Likely ,High,High,"7.5
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N)","Code, Data, and Execution Integrity, Firmware and Software Updates","1. Access Control (1:1 Registration): Unregistered devices cannot connect when BLE is updated
+2. Integrity Verification (Checksum): If the downloaded file does not match the hash recorded in advance, it cannot be installed
+3. SBOM-based Vulnerability Scan: COTS/open source components in SBOM are managed in CycloneDX format, and dependencies from disguised paths are also verified with an automated tool",Very Unlikely,Medium,Low,-,-,-
+CRM-19,A13: Open source 1 –STMicroelectronics Open-Source Bundle,Info Disclosure,"• Obtaining permission to read memory areas (Flash/variables) by exploiting known HAL vulnerabilities (CVE)
+• Device settings (voltage, exposure values, etc.) or internal logic may be leaked to the outside, leading to secondary attacks",Likely,High,High,"7.8
+(AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N)",Cryptography,"1. AES-128 encryption: All Bluetooth communications are encrypted with AES-128, protecting data even in the event of unauthorized sniffing
+2. Static analysis (MISRA-C:2004): Prevents unintentional insertion of memory dump routines (e.g. I2C buffer overflow) in advance
+3. SBOM-based vulnerability scanning: Periodically review HAL driver versions in SBOM, and apply patches immediately when known CVEs are found",Unlikely,Low,Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-20,A13: Open source 1 –STMicroelectronics Open-Source Bundle,Elevation,"• If the MPU configuration is incorrect at the HAL level, user space code can overwrite the bootloader area, resulting in privilege escalation.
+• As a result, it becomes possible to inject malware that controls the entire firmware.",Unlikely,Medium,Medium,"6.8
+(AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N)","Code, Data, and Execution Integrity","1. Access Control (1:1 registration): Unregistered devices cannot access the firmware path itself
+2. Integrity Verification (Checksum): Blocks installation of modified bootloaders or HAL codes
+3. Static Analysis (MISRA-C:2004): Checks for privilege escalation attack patterns (e.g. interrupt bypass, missing MPU settings) at the code level",Very Unlikely,Low,Very low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-21,A14: Open source 2 - KISA Crypto Module,Tempering,"• Modified the kisa_sha256.c source code so that the correct SHA-256 hash is not generated. • As a result, the firmware integrity verification routine is broken, allowing malicious binaries to pass normally.",Very Likely,Very High,Critical,"9.4
+(AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H)",Cryptography,"1. Integrity Verification (Checksum): SHA-256 integrity verification is performed on the entire firmware including kisa_sha256.c to prevent the execution of a tampered hash module
+2. Static Analysis (MISRA-C:2004): Statically checks whether there are any unintended changes (such as CWE-94) in the encryption module code
+3. SBOM-based Vulnerability Scan: kisa_sha256.c version information is recorded on SBOM (CycloneDX), and an automated tool monitors whether there are any known encryption vulnerabilities.",Unlikely,Low,Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-22,A14: Open source 2 - KISA Crypto Module,Spoofing,"• The module is modified to forge the hash value itself, so that the malicious firmware provided by the attacker is recognized as a “valid signature”.
+• In this case, the cryptographic integrity verification is completely disabled.",Likely,Very High,Critical,"9.0
+(AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H)",Cryptography,"1. Access Control (1:1 Registration): SHA-256 module updates are only possible on registered devices
+2. Integrity Verification (Checksum): Block forgery by verifying the hash value itself with a checksum
+3. SBOM-based vulnerability scan: Manage the hash algorithm library version with SBOM (CycloneDX), and automatically block forged versions",Very Unlikely,Medium,Very Low,-,-,-
+CRM-23,A14: Open source 2 - KISA Crypto Module,DoS,"• Insertion of a vulnerability that causes the SHA-256 calculation routine to enter an infinite loop or stack overflow when certain inputs (e.g., excessively long data) are used.
+• As a result, the system hangs during hash calculations during firmware updates or operations.",Likely,Medium,Medium,"5.8
+(AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H)",Cryptography,"1. Boundary value test (Unit Test): Performs a boundary test to prevent an infinite loop from occurring even when “abnormal input” is entered into the SHA-256 module.
+2. Fail-Safe mode when integrity verification fails: Enters recovery mode immediately when integrity verification (checksum) fails.
+3. SBOM-based vulnerability scan: The encryption module implementation version is recorded in SBOM (CycloneDX), and is updated when a known DoS vulnerability is discovered.",Unlikely,Very Low,Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-24,A14: Open source 2 - KISA Crypto Module,Info Disclosure,"• Modification of hash intermediate state or internal buffer values to leak to the log.
+• Attackers can collect these and use them for hash collision attacks or encryption key deduction.",Unlikely,High,High,"7.2
+(AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N)",Cryptography,"1. AES-128 encryption: Prevents sensitive information leakage by encrypting internal logs with AES-128 when storing and transmitting them
+2. Debug Symbol Strip: Removes debug symbols to prevent exposure of intermediate states during release builds
+3. SBOM-based vulnerability scan: Periodically checks whether the dual hash algorithm is included in SBOM (CycloneDX) to prepare for collision attacks",Unlikely,Low,Very Low,-,-,-
+ Cybersecurity FMEA table 2. (IEC 60601-4-5 Cybersecurity Requirement),,,,,,,,,,,,,,,
+CRM-25,IA-01,Spoofing,"Authentication procedures can be bypassed, allowing attackers to access the system by impersonating legitimate users.",Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity","1) The LCD of this product is a non-touch display, so the following physical controls have been implemented to mitigate threats.
+a) The user and usage environment have been restricted through warnings in the user manual.
+- Page 13, ‘Warning – Operation’
+- Page 11, ‘Warning’
+- Page 28, 4.8.2 Use and Maintenance User, 4.8.3 Environment of use Settings of use
+b) A warning label for X-Ray output is attached to the product.
+2) The Impact of Risk was mitigated by applying the following:
+a) No important data such as patient personal information or diagnostic information is stored in the device.
+b) The device is intended for use by trained users only in designated locations.
+c) It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices.
+",Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-26,IA-02,Spoofing,There is a risk that an attacker can access the system by impersonating a trusted user through credential theft.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-27,IA-03,Spoofing,"Since user identification is not properly verified, an attacker can infiltrate the system with a forged identity.",Likely (L),High (H),Medium,7,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-28,IA-04,Spoofing,Vulnerabilities in the authentication mechanism can be exploited to illegally steal identities and escalate privileges.,Likely (L),High (H),Medium,7.5,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-29,IA-05,Spoofing,There is a possibility of an attacker accessing the system by submitting false credentials.,Likely (L),High (H),Medium,7.5,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-30,IA-06,Spoofing,"Due to the absence of an identity verification procedure, a malicious user can inappropriately access system resources.",Likely (L),High (H),Medium,7,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-31,IA-07,Spoofing,There is a risk that an attacker can illegally use system functions by forging legitimate user credentials.,Likely (L),High (H),Medium,7.5,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-32,IA-08,Spoofing,"Due to insufficient authentication methods, there is a high possibility of identity theft attacks.",Likely (L),High (H),Medium,7,Authentication,(Same as above.),Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-33,UC-01,Repudiation,There is a risk that users can deny the actions they have performed due to the lack of behavior tracking records.,Unlikely (U),Medium (M),Low,5,Event Detection and Logging,(Same as above.),Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-34,UC-02,Repudiation,"Due to insufficient auditing and logging functions, it may be difficult to trace responsibility for user actions later.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,"The Impact of Risk was mitigated by applying the following:
+1) No important data such as patient personal information or diagnostic information is stored in the device.
+2) The device is intended for use by trained users only in designated locations.
+3) It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices.
+",Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-35,UC-03,Repudiation,"There is a possibility of denial of user actions, making it difficult to secure truthfulness during follow-up investigations.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,Enforce Bluetooth device whitelisting and strong pairing protocols.,Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-36,UC-04,Repudiation,"There is no clear record of user activities within the system, making it vulnerable to denial attacks.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,Use end-to-end encryption and authentication for Bluetooth communication.,Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-37,UC-05,Repudiation,"There is a vulnerability that allows users to deny system activities, making it difficult to identify legal/security responsibilities.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,Encrypt all Bluetooth data transmissions with SHA-256,Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-38,UC-06,Repudiation,"Due to insufficient logging of user actions, it is difficult to track and respond when an accident occurs.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,Implement secure display rendering with integrity verification.,Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-39,UC-07,Repudiation,"Due to insufficient authentication and record keeping, the possibility of user denial increases, which may lead to security issues.",Unlikely (U),Medium (M),Low,5,Event Detection and Logging,Validate and cross-check SID measurement data before usage.,Unlikely (U),Very Low (VL),Very Low,-,-,-
+CRM-40,SI-01,Tampering,There is a risk that system components or data may be tampered with by attacks.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Restrict unauthorized hardware access and enforce strict authentication.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-01: Ensuring integrity of communications",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-2"
+CRM-41,SI-02,Tampering,Malicious users may modify software or firmware to disrupt normal functions.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Validate and cryptographically sign firmware updates and hardware communications.,Very Unlikely (VU),High (H),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-42,SI-03,Tampering,Unexpected functional failures or security vulnerabilities may occur through modification of system settings.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Enforce strict access controls and authentication for hardware interfaces.,Very Unlikely (VU),High (H),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-43,SI-04,Tampering,Attackers may tamper with internal data to undermine the reliability of the system.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Apply encryption and integrity verification on sensor data.,Very Unlikely (VU),High (H),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-44,SI-05,Tampering,"If important configuration information is changed by an attack, the stability of the entire system may be threatened.",Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Implement cryptographic integrity verification for calibration values.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-05: Input Validation",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-45,SI-06,Tampering,"If system files or logs are tampered with, it may be difficult to respond to and track security incidents.",Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Apply encryption and integrity verification on sensor data.,Very Unlikely (VU),High (H),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-46,SI-07,Tampering,"If system components are modified without permission, the reliability and operational continuity of the service may be damaged.",Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity",Implement digital signatures and restricted access for APR values.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-07: Error Handling",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-47,SI-08,Tampering,There is a risk that external intruders may affect the normal operation of the entire system by manipulating internal data.,Likely (L),High (H),Medium,7,"Code, Data, and Execution Integrity, Firmware and Software Updates",Apply cryptographic validation to prevent unauthorized X-ray signal modifications.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-08: Update",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-3"
+CRM-48,SI-09,Tampering,"If data or settings that should not be changed are tampered with, the system security system may collapse.",Likely (L),High (H),Medium,7.5,"Code, Data, and Execution Integrity, Firmware and Software Updates",Enforce cryptographic checks on battery charging parameters.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-09: Authenticity and integrity verification for updates",Source Code Static Analysis (Report no. EBB-2025-000021),"Penetration Test (Report no. EBB-2025-000021)
+PT-1"
+CRM-49,SI-10,Tampering,Unauthorized changes to system components may cause unexpected malfunctions and security risks.,Likely (L),High (H),Medium,7.5,"Code, Data, and Execution Integrity, Firmware and Software Updates",Apply cryptographic validation on battery monitoring data.,Very Unlikely (VU),High (H),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-50,SI-11,Tampering,"Due to data integrity violations, there is a possibility that an attacker may induce abnormal system operation.",Likely (L),High (H),Medium,7.5,"Code, Data, and Execution Integrity",Implement secure calibration verification and real-time error checking.,Likely (L),Very Low (VL),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+SI-11: Verifying boot process integrity",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-51,DC-01,Information Disclosure,Sensitive information may be inappropriately exposed and leaked to unauthorized users.,Likely (L),High (H),Medium,7,Confidentiality,Enforce Bluetooth device whitelisting and strong pairing protocols.,Very Unlikely (VU),Very Low (VL),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+DC-01: Ensuring confidentiality of information",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-52,DC-02,Information Disclosure,"Due to insufficient data encryption and access control, important information may be leaked to the outside.",Likely (L),High (H),Medium,7,Confidentiality,Use end-to-end encryption and authentication for Bluetooth communication.,Likely (L),Very Low (VL),Very Low,-,Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-53,DC-03,Information Disclosure,There is a risk that sensitive data being stored and transmitted may be exposed by attacks.,Likely (L),High (H),Medium,7,Confidentiality,Encrypt all Bluetooth data transmissions with SHA-256,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+DC-03: Use secure encryption",Source Code Static Analysis (Report no. EBB-2025-000021),-
+CRM-54,TRE-01,Denial of Service,There is a risk that normal service provision may be interrupted due to concentrated attacks on system resources.,Very Likely (VL),Very High (VH),Critical,9,Resiliency and Recovery,Implement secure display rendering with integrity verification.,Very Unlikely (VU),Very High (VH),Very Low,-,-,-
+CRM-55,RA-01,Elevation of Privilege,"Due to privilege management vulnerabilities, there is a risk that low-privileged users may illegally obtain high-privileges.",Likely (L),High (H),Medium,7.5,Authorization,Validate and cross-check SID measurement data before usage.,Very Unlikely (VU),High (H),Very Low,-,-,-
+CRM-56,RA-02,Elevation of Privilege,"Due to inappropriate access control, there is a possibility of system misuse through user privilege escalation.",Likely (L),High (H),Medium,7.5,Authorization,Restrict unauthorized hardware access and enforce strict authentication.,Likely (L),Very Low (VL),Very Low,-,-,-
+CRM-57,RA-03,Elevation of Privilege,"Due to weak privilege separation, there is a risk that an attacker may control the entire system beyond limited privileges.",Likely (L),High (H),Medium,7.5,"Authorization, Resiliency and Recovery",Validate and cryptographically sign firmware updates and hardware communications.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+RA-03: Medical Device Repair and Reconstruction",-,-
+CRM-58,RA-04,Elevation of Privilege,"An attack that started with low privileges may lead to privilege escalation, potentially affecting the entire system.",Likely (L),High (H),Medium,7.5,"Authorization, Resiliency and Recovery",Enforce strict access controls and authentication for hardware interfaces.,Very Unlikely (VU),High (H),Very Low,-,-,-
+CRM-59,RA-05,Elevation of Privilege,Failure to authenticate users and manage permissions could allow attackers to gain unauthorized privileges.,Likely (L),High (H),Medium,7.5,"Authentication, Resiliency and Recovery",Apply encryption and integrity verification on sensor data.,Very Unlikely (VU),High (H),Very Low,"Cybersecurity Requirements Testing (Report no. EBB-2025-000021)
+RA-05: Disable unnecessary features",-,-

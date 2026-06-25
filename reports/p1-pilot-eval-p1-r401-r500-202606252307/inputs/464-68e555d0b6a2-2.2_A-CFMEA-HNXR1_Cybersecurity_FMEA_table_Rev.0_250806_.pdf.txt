@@ -1,0 +1,950 @@
+queueId: ingest-1781569954370-16j
+sourcePath: raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/2.2 A-CFMEA-HNXR1_Cybersecurity FMEA table(Rev.0 250806).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/24c25f351497/2.2 A-CFMEA-HNXR1_Cybersecurity FMEA table(Rev.0 250806)__24c25f351497_combined.txt
+canonicalGroupId: 68e555d0b6a2
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 464
+
+SOURCE_TEXT
+Product Name : Digital X-ray Imaging System
+Model Name : HnX-R1
+Doc No. : A-CFMEA-HNXR1
+Revision date : August 06, 2025
+Revision No. : Rev.0
+Cybersecurity FMEA Report
+- □ Controlled ■ Uncontrolled
+Position Name Date Signature
+Reviewed by R&D Manager Kyungsoo LEE August 06, 2025
+Prepared by RA team Jimin HAN August 06, 2025
+Approved by Quality Management Representative Namkyu HUR August 06, 2025
+A-CFMEA-HNX H＆abyz Co., Ltd.
+
+Revision Date Contents of revision
+0 06-Aug-25 Establishment
+History of Revision
+
+CRM-01 A1: Console SQL
+database(Store) Tampering Malicious attacker manipulates database to tamper with diagnostic
+information Likely (L) High (H) High (H) 7.5 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Code, Data, and Execution
+Integrity Maintaining backups allows you to recover your original data Unlikely Low Very Low
+CRM-02 A2: Console SQL
+database(Store) Denial of service Risk of losing important image data and the database due to system failures
+or attacks. Likely (L) Middle (M) Middle (M) 6.5 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Resiliency and Recovery Regular backups allow for quick recovery in case of failure. Unlikely Low Very Low
+CRM-03 A3: Console SQL
+database(Store) Tampering An attacker can manipulate the database to change passwords. Unlikely (U) High(H) Medium(M) 6.4 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+Reduce the risk of account information leaks through encrypted storage
+Ensure that all accounts are managed by authorized users.
+The console blocks access to the database without going through the
+console, as the database implements the Bcrypt algorithm.
+Unlikely Low Very Low
+CRM-04 A4: Console SQL
+database(Store)
+Information
+disclosure An attacker hacks the database to steal account information. Likely (L) High(H) Medium(M) 7.6 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L Cryptography Reduce the risk of account information leaks through encrypted storage Unlikely Low Very Low
+CRM-05 A5: Console SQL
+database(Store)
+Information
+disclosure
+Sensitive data such as patient personal information, medical records, license
+keys, and user settings stored in the database files must be protected. Likely (L) Low(L) Medium(M) 6.4 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:L Cryptography
+Logging in without informing
+the reason for login failure
+Protect the DB file with a password to prevent it from being opened
+without authorization.
+For dicom files stored on a PC, the information subject's name, date of
+birth, and shooting location information are not exposed.
+Unlikely Low Very Low
+CRM-06 A6: Console SQL
+database(Store)
+Information
+disclosure
+Internal information such as user authentication data must be protected from
+internal staff and malicious users to prevent data leakage. Very Likely (VL) High (H) High (H) 8.9 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:H/A:H Confidentiality
+Ensure that all accounts are managed by authorized users.
+Maintaining backups allows you to recover your original data
+Restricts input characters in the input field
+Medical devices have read-only access to audit logs for authorized users
+only.
+Unlikely Low Very Low
+CRM-07 A7:Console User
+user interface Spoofing If account information is exposed, an attacker may impersonate another user. Unlikely (U) Medium (M) Low (L) 4.3 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L Authentication
+Ensure that all accounts are managed by authorized users.
+Reduce the risk of account information leakage by storing data in
+encrypted form.
+Unlikely Low Very Low
+CRM-08
+A8: Console
+Application
+(Process)
+Information
+disclosure Revealing login failure reasons may help attackers infer account information. Unlikely (U) Medium (M) Medium(M) 6.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:L Confidentiality
+System notification message pop-up required after login
+Example of system usage notification message (when logging in)
+"This system is a personal asset, and only authorized users are allowed
+to access it. System usage history is monitored and recorded for security
+purposes, and may be subject to audit if necessary. Unauthorized access
+or unauthorized use is strictly prohibited, and may be subject to civil and
+criminal punishment. Using this system means that you agree to these
+terms." Does not inform the reason for login failure, and only leaves a log
+Unlikely Low Very Low
+Cybersecurity FMEA table 1. (Asset & Data Flow Diagram)
+Likelihood
+(Before) Risk Level
+Impact
+(Before) Mitigation
+Risk analysis (Step 1)
+Hazard No. Threat
+Asset /
+Requirement ID CVSS
+Risk evaluation (Step 2)
+STRIDE Likelihood
+(After)
+Impack
+(After) Risk Level
+Risk control (Step 3)
+Assignment by Security control
+
+CRM-09
+A9: Console
+Application
+(Process)
+Elevation of
+privilege Attacker executes malicious code (SQL Injection, XSS, etc.) Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Authorization
+Integrity verification process is equipped at the console level
+1. Files that have problems during integrity check are logged
+2. If there is a problem during integrity check, a message is generated
+and the program is terminated upon confirmation.
+* To test integrity check, copy the previous version file of HnVue.exe,
+which is in the check list, and run it. The integrity check will fail and a
+message will appear.
+Unlikely Low Very Low
+CRM-10
+A10: Console
+Application
+(Process)
+Repudiation Attackers attempt to commit malicious acts without leaving any evidence
+behind. Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Event Detection and Logging
+Leave an Audit Log and make it visible only to authorized people
+It is stored in the Audit Log and the user of the PC where the product is
+installed is controlled so that the log cannot be read and only authorized
+people can view it.
+- It should be saved as a .txt file and cannot be viewed or viewed.
+Unlikely Low Very Low
+CRM-11
+A11: Console
+Application
+(Process)
+Information
+disclosure Exposing audit logs can expose security vulnerabilities Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Confidentiality
+Ensure that all accounts are
+managed by authorized users.
+Leave an Audit Log and make it visible only to authorized people
+It is stored in the Audit Log and the user of the PC where the product is
+installed is controlled so that the log cannot be read and only authorized
+people can view it.
+- It should be saved as a .txt file and cannot be viewed or viewed.
+Unlikely Low Very Low
+CRM-12
+A12: Console
+Application
+(Process)
+Tampering Risk of system files being tampered with - Malware or hackers can tamper
+with system files to insert backdoors. Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Code, Data, and Execution
+Integrity
+Integrity check is performed at system startup when updating.
+Make sure all accounts are managed by authorized users.
+Regular backups allow for quick recovery in case of failure.
+Integrity verification process is provided at console level
+1. Files that have problems during integrity check are logged.
+2. If there is a problem during integrity check, a message is generated
+and the program is terminated upon confirmation.
+* To test integrity check, copy the previous version file of HnVue.exe,
+which is in the checklist, and run it. If integrity check fails, a message will
+be displayed.
+Unlikely Low Very Low
+CRM-13
+A13: Console
+Application
+(Process)
+Denial of service Critical system files are damaged or deleted, causing service failures. Likely (L) Medium (M) Medium (M) 6.4 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Resiliency and Recovery
+Integrity check is performed at system startup when updating.
+Make sure all accounts are managed by authorized users.
+Regular backups allow for quick recovery in case of failure.
+Integrity verification process is provided at console level
+1. Files that have problems during integrity check are logged.
+2. If there is a problem during integrity check, a message is generated
+and the program is terminated upon confirmation.
+* To test integrity check, copy the previous version file of HnVue.exe,
+which is in the checklist, and run it. If integrity check fails, a message will
+be displayed.
+Unlikely Low Very Low
+CRM-14
+A14: Console
+Application
+(Process)
+Spoofing
+Unauthorized users with administrative privileges put the system at risk -a
+normal user can gain administrative privileges and take over or delete other
+accounts.
+Likely (L) Medium (M) Medium (M) 6.4 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Authentication
+All accounts are managed by authorized users. Make sure all
+permissions are granted to users. Manage accounts by granting them
+different levels of system access by granting them different levels of trust
+in terms of permissions. For example, you can grant different levels of
+permissions to general users, service engineers, and administrators.
+Unlikely Low Very Low
+
+CRM-15
+A15: Console
+Application
+(Process)
+Elevation of
+privilege
+Attackers can take over a system if they gain administrative privileges -
+insiders access unauthorized accounts and manipulate account information
+without authorization
+Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Authorization
+All accounts are managed by authorized users. Make sure all
+permissions are granted to users. Manage accounts by granting them
+different levels of system access by granting them different levels of trust
+in terms of permissions. For example, you can grant different levels of
+permissions to general users, service engineers, and administrators.
+Unlikely Low Very Low
+CRM-16
+A16: Console
+Application
+(Process)
+Elevation of
+privilege
+If you leave your password unchangeable for too long, any stolen credentials
+will remain valid for a long time, allowing the attacker to continue accessing
+your account as a legitimate user.
+Likely (L) Medium (M) Low (L) 6.2 CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:L Authorization Notify users to change their password after a certain period of time Unlikely Low Very Low
+CRM-17
+A17: Console
+Application
+(Process)
+Spoofing Random password attempts should be blocked to delay or prevent brute-
+force attacks. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Authentication
+If you fail to log in consecutively for a set number of times, you will be
+blocked from logging in. If you fail to log in consecutively for 5 times, you
+will be blocked from logging in for 10 minutes or until the administrator
+unlocks the login.
+Unlikely High Very Low
+CRM-18
+A18: Console
+Application
+(Process)
+Spoofing If you fail to log in consecutively for a set number of times, you will be
+blocked from logging in. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Authentication If you fail to log in consecutively for a set number of times, you will be
+blocked from logging in. Unlikely High Very Low
+CRM-19
+A19: Console
+Application
+(Process)
+Information
+Disclosure
+DICOM (.dcm) files contain personal data such as patient names and
+birthdates and must be protected from leakage. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Confidentiality
+Encrypt the header information required for DICOM file security and
+decrypt it only during transmission. In the case of DICOM files, manage
+the information so that the subject's name, date of birth, and shooting site
+information are not exposed.
+Unlikely Low Very Low
+CRM-20
+A20: Console
+Application
+(Process)
+Repudiation Users must be made aware that their actions are traceable and subject to
+legal accountability. Likely (L) High (H) High (H) 8.3 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H Event Detection and Logging
+Explicitly displaying a warning when logging in: **"Your access is logged
+and you are responsible for it"**
+Example of system usage notification message (when logging in)
+-> "This system is a private property and only authorized users are
+allowed to access it. System usage is monitored and logged for security
+purposes and may be subject to audit if necessary. Unauthorized access
+or unauthorized use is strictly prohibited and may result in civil and
+criminal penalties. By using this system, you agree to these terms."
+Likely Medium Very Low
+CRM-21
+A21: Console
+Application
+(Process)
+Denial of Service Prevent issues caused by insufficient disk space during data storage. Likely (L) High (H) Medium (M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Resiliency and Recovery
+While the program is running, it continuously checks the minimum
+storage space required for execution and displays it to the user, and if it
+falls below the minimum storage space, it automatically deletes old data.
+There is an auto delete function, so the period or maximum capacity is
+set, and when this is exceeded, there is an auto delete function.
+Unlikely Medium Low
+CRM-22
+A22: Communication
+with PACS/worklist
+server(Ethernet)
+Information
+Disclosure
+Patient information, patient identification information, and patient data may be
+exposed during transmission. Very Likely (VL) High (H) High (H) 8.3 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H Cryptography Encrypt patient information, patient identifiers, and patient data during
+transmission to prevent exposure. Unlikely Medium Low
+
+CRM-23
+A23: Console -
+Detector interface
+connected with
+console
+(process)
+Tampering A malicious attacker intrudes into the detector through the console and
+modifies the detector connection information. Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Code, Data, and Execution
+Integrity Maintaining backups allows recovery of detector connection information. Likely Low Low
+CRM-24
+A24: Console -
+detector
+interface(data flow)
+Tampering Risk of loss of important diagnostic information and DB due to system failure,
+attack, etc. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Code, Data, and Execution
+Integrity Maintaining backups allows recovery of original data. Unlikely Medium Low
+CRM-25
+A25: Console -
+detector
+interface(data flow)
+Information
+Disclosure
+Risk of losing critical diagnostic information and database due to system
+failures or attacks. Likely (L) High (H) Medium (M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Confidentiality Maintaining backups allows recovery of original data. Unlikely High Very Low
+CRM-26
+A26: Firmware
+Process in
+detector(Process)
+Tampering An attacker may tamper with or alter the firmware patch data, allowing the
+device to run malicious firmware that includes malware or other harmful code. Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Code, Data, and Execution
+Integrity
+The firmware patch data is encrypted using AES, and its integrity can be
+verified with SHA-256 before the patch is applied. Likely Low Low
+CRM-27
+A27: Firmware
+Process in
+detector(Process)
+Denial of service An attacker may generate a large volume of traffic to overload the firmware,
+potentially disrupting or blocking access for legitimate users. Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Resiliency and Recovery
+If a malformed packet that does not follow the proper protocol is received
+on the connection request port, the connection is immediately terminated
+and the system waits for the next request. If a valid connection procedure
+is completed on the connection request port, a random port is then
+opened for service communication and provided to the user. The user
+then establishes a new connection through this port to continue
+communication.
+Likely Low Low
+CRM-28
+A28: Detector
+System
+Storage(store)
+Information
+disclosure
+Data stored in internal storage may be leaked externally or accessed and
+tampered with by unauthorized users. Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Confidentiality
+All communication ports and physical interfaces that allow direct access
+to internal storage, such as FTP and SSH, are blocked to prevent
+unauthorized access by attackers.
+Likely Low Low
+CRM-29
+A29: Detector
+System
+Storage(store)
+Elevation of
+privilege
+An attacker may attempt to access the system by using the root account or by
+creating additional user accounts and granting them elevated privileges. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Authorization All ports except those opened through a legitimate connection procedure
+are blocked, and system access through them is not allowed. Likely Low Low
+
+CRM-30
+A31: Communication
+(data flow) Information
+disclosure
+Communication packets may be exposed through tools such as network
+
+interface capture tools, potentially leaking sensitive data to an attacker. Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Confidentiality
+Communication packets are encrypted using symmetric key encryption
+based on an AES key that is randomly generated during the initial
+connection phase. As a result, even if packets are captured externally,
+their contents cannot be interpreted. Additionally, a random IV
+(Initialization Vector) is included with each transmission, ensuring that
+even if the same data is sent again, the encrypted output differs each
+time, making inference impossible.
+Likely Medium Low
+CRM-31
+A31: Communication
+(data flow) Tampering An attacker may intercept a packet, modify its contents, and forward it. Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+Every packet includes an HMAC-SHA256 value for integrity verification,
+which allows detection of any tampering. The HMAC-SHA256 key is
+randomly generated during the initial connection establishment.
+Likely Low Low
+CRM-32
+A32: Request
+(data flow) Tampering An attacker may intercept a packet, modify its contents, and forward it. Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+Every packet includes an HMAC-SHA256 value for integrity verification,
+which allows detection of any tampering. The HMAC-SHA256 key is
+randomly generated during the initial connection establishment.
+Likely Low Low
+CRM-33 IA-01 Spoofing Authentication procedures can be bypassed, allowing attackers to access the
+system by impersonating legitimate users. CMR-8, CRM-16, CRM-18 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication This medical device provides user identification and authentication
+functions using ID and password methods. Likely Very Low Very Low
+CRM-34 IA-02 Spoofing There is a risk that an attacker can access the system by impersonating a
+trusted user through credential theft. Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication
+(1) Available functions vary by Administrator, Engineer, and User role.
+1) Administrator: All configuration functions are available.
+2) Engineer: Configuration functions except account management are
+available.
+3) User: Configuration functions are not available.
+(2) This medical device provides functions for adding, deleting, and
+modifying accounts.
+1) Provides an account type confirmation function.
+2) Provides an account addition function.
+- Click the "Add" icon, enter your ID and password, and then click the
+"Save" icon to add the entered account.
+3) Provides an account password modification function.
+- Click the "Edit" icon for a selected account to change the password.
+- Changing the account ID is not possible.
+4) Provides an account deletion function.
+- Select an account and click the "Remove" icon to delete the selected
+account.
+- Login with a deleted account will be disabled.
+Likely Very Low Very Low
+CRM-35 IA-03 Spoofing Since user identification is not properly verified, an attacker can infiltrate the
+system with a forged identity. Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication
+(1) The account ID is used as a unique identifier.
+- If the same ID is used, account creation will not be possible.
+- If you attempt to create a new account using an existing User ID, you
+will be informed that account creation with that ID is not possible.
+Likely Very Low Very Low
+Cybersecurity FMEA table 2. (IEC 60601-4-5 Cybersecurity Requirement)
+
+CRM-36 IA-04 Spoofing Vulnerabilities in the authentication mechanism can be exploited to illegally
+steal identities and escalate privileges. Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication
+Check whether the default authentication information change notification
+function is enabled.
+(1) When connecting with the default account and default password
+provided by the manufacturer, a default password change notification
+message is provided.
+- Please change the default password to a new one.
+Would you like to change it now?
+- After selecting Yes, you can apply the password change.
+Check if the authentication information change period is set.
+(1) The PW Change Duration feature provides a message recommending
+a password change after a set period of time.
+- PW Change Duration: Can be set from 1 to 12 months. Setting it to 0
+will not apply.
+- When attempting to log in after the set period has elapsed, the user will
+be logged in successfully and a PW change message will be displayed.
+> The PW change duration for the account "ktruser" was set to 1 (1
+month) and the account was created on July 10.
+> The OS date was changed to 1 month later (07.10 -> 08.11).
+> Upon logging in after the change, a message recommending a
+password change is displayed to the user.
+> Message: The password change period has expired. Please update
+your password. Verify that authentication information is kept confidential
+during storage, use, and transmission.
+(1) HnVUE is a standalone program installed on a PC. The password is
+not transmitted to a specific PC or server, but is encrypted and stored in
+the database on the PC where it is installed.
+Likely Very Low Very Low
+CRM-37 IA-05 Spoofing There is a possibility of an attacker accessing the system by submitting false
+credentials. Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L Authentication
+1. You can set the password strength when setting up an account.
+2. Check that the set password strength is applied.
+1) Medium: 8 characters or more, including at least 1 special character.
+- Unable to set message: Password must be at least 8
+characters long and contain at least one special
+character.
+- ktrktr!: Passwords less than 8 characters cannot be set.
+- ktr13579: Passwords that do not contain special characters cannot be
+set.
+2) Strong: 12 characters or more, including at least 1 special character,
+and at least 1 uppercase letter.
+- Unable to set message: Password must be at least 12
+characters long, containing at least one special character,
+and one uppercase letter.
+- Ktrsoft135!: 11 characters cannot be set.
+- Ktrsoftware1: Passwords that do not contain special characters cannot
+be set.
+- ktrsoft13!@#: Passwords that do not contain uppercase letters cannot
+be set.
+Likely Very Low Very Low
+CRM-38 IA-06 Spoofing Due to the absence of an identity verification procedure, a malicious user can
+inappropriately access system resources. Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L Authentication
+(1) When authentication fails, the message provided to the user does not
+provide any information that could be used to infer authentication
+information.
+- A message is provided asking for ID or password confirmation.
+- Message content: Check the ID or password
+Likely Very Low Very Low
+CRM-39 IA-07 Spoofing There is a risk that an attacker can illegally use system functions by forging
+legitimate user credentials.CRM-16 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication
+Check if the system provides a feature to limit the number of login
+attempts.
+(1) Confirm that the account will be locked after 5 consecutive failed login
+attempts.
+- After 5 consecutive failed login attempts, an account lock message will
+appear.
+- Message: "Your account has been locked due to 5 incorrect password
+attempts. Please contact the administrator."
+Check if the locked account can be unlocked.
+(1) Confirm that a locked account can be unlocked by a user with
+Administrator privileges.
+- Click the "unlock" icon to the right of the locked account to unlock it.
+Likely Very Low Very Low
+CRM-40 IA-08 Spoofing Due to insufficient authentication methods, there is a high possibility of
+identity theft attacks. CMR-8, CRM-18 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Authentication
+(1) This medical device provides the following system notification
+message to the user when logging in.
+- System notification message: This system is private
+property, and only authorized users are permitted
+access. All system usage is monitored and
+recorded for security purposes and may be
+subject to audit if necessary. Unauthorized access
+or unauthorized users is strictly prohibited and may
+result in civil and criminal penalties. Use of this
+system constitutes acceptance of these items.
+> Access is only permitted to authorized users, and it is stated that
+unauthorized access is subject to criminal penalties.
+Likely Very Low Very Low
+
+CRM-41 UC-01 Repudiation There is a risk that users can deny the actions they have performed due to
+the lack of behavior tracking records. Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L Event Detection and Logging
+(1) HnVUE account permissions are divided into three categories:
+1) User
+2) Administrator
+3) Engineer
+(2) Check the functions available for each permission.
+1) User: Access all functions except the Settings function.
+- When logged in with User permissions, the "Settings" icon in the upper
+right corner is not visible.
+2) Administrator: Access all functions, including the Settings function.
+- When logged in with Administrator permissions, the "Settings" icon in
+the upper right corner is visible.
+- 11 settings are available.
+> System, Account, Detector, Generator, PACS,
+Worklist, Print, Option, Display, DicomSet, RIS
+Code
+- Engineer permissions: Access all functions of this medical device
+except the Account function, which is an account setting function.
+Unlikely Very Low Very Low
+CRM-42 UC-02 Repudiation Due to insufficient auditing and logging functions, it may be difficult to trace
+responsibility for user actions later. Likely (L) Low(L) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L Event Detection and Logging This medical device does not use mobile code technology. Unlikely Very Low Very Low
+CRM-43 UC-03 Repudiation There is a possibility of denial of user actions, making it difficult to secure
+truthfulness during follow-up investigations. Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Event Detection and Logging
+(1) The default session timeout value of this medical device is set to 30
+minutes through the source code, and it is confirmed that the session is
+out when the time is exceeded
+Unlikely Very Low Very Low
+CRM-44 UC-04 Repudiation There is no clear record of user activities within the system, making it
+vulnerable to denial attacks. Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Event Detection and Logging
+1) Check the audit records of this medical device.
+- Select Settings > System > Audit log/System log
+- You can check the event details that occurred for each account through
+the Audit log and System log.
+(2) Check that the Audit log and System log specify the event occurrence
+time, event details, and event occurrence subject.
+- Audit log: DateTime, UserID, Code, Message
+- System log: DateTime, Message
+> Message: Displays detailed event details
+Unlikely Very Low Very Low
+CRM-45 UC-05 Repudiation There is a vulnerability that allows users to deny system activities, making it
+difficult to identify legal/security responsibilities. Unlikely (UL) Low(L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Event Detection and Logging
+(1) Provide users with the ability to set an automatic log deletion period
+or threshold.
+1) Set the Automatic deleting capacity in the system settings to 68%.
+2) Ensure that logs are deleted when the allowed log capacity reaches
+69%.
+- 69%
+- Ensure that logs are automatically deleted when the log storage
+capacity reaches 69%, maintaining the log storage capacity at 68%.
+Unlikely Very Low Very Low
+CRM-46 UC-06 Repudiation Due to insufficient logging of user actions, it is difficult to track and respond
+when an accident occurs. Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Event Detection and Logging
+(1) Logs recorded by this medical device are recorded with a timestamp.
+- Audit log: DateTime, UserID, Code, Message
+- System log: DateTime, Message
+> Message: Displays detailed event information.
+Unlikely Very Low Very Low
+CRM-47 UC-07 Repudiation Due to insufficient authentication and record keeping, the possibility of user
+denial increases, which may lead to security issues. Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Event Detection and Logging
+(1) The audit log stored by this medical device records the event
+originator.
+- Audit log: DateTime, UserID, Code, Message
+- System log: DateTime, Message
+> Message: Displays detailed event information
+> Message records the login account and the event details for that
+account.
+Unlikely Very Low Very Low
+CRM-48 SI-01 Tampering There is a risk that system components or data may be tampered with by
+attacks. Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Code, Data, and Execution
+Integrity
+Check whether the communication between the detector and HnVUE SW
+is encrypted.
+(1) Encrypted communication between the Detector and HnVUE
+- During initial communication, a TCP connection is attempted between
+the Detector's port 7000 and the PC on which the HnVUE software is
+installed.
+> Detector IP:Port: 192.168.197.54:7000
+> HnVUE SW IP:Port: 192.168.197.3:62869
+- If the connection is successful, the Detector closes port 7000 and
+initiates encrypted communication with the HnVUE software through a
+random port.
+> Encryption algorithm: AES 128
+> Detector's changed communication port: 42045
+- Transmits information such as the Detector's battery status.
+Check communication between HnVUE SW and PACS server
+(1) HnVUE SW and PACS server communicate using DICOM protocol
+and plaintext.
+Check communication between HnVUE SW and Worklists server
+(1) HnVUE SW and Worklists server communicate using DICOM
+protocol and plaintext.
+Very Unlikely High Very Low
+
+CRM-49 SI-02 Tampering Malicious users may modify software or firmware to disrupt normal functions. Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L Code, Data, and Execution
+Integrity
+(1) The HnVUE user manual states that an anti-malware protection
+program must be installed.
+- HnVUE SW is a program that is installed on the PC alone, and can
+protect the SW from malicious codes depending on whether a virus
+protection program is installed on the PC.
+(2) Users cannot install malicious files in Detector.
+- In the case of Detector, FW updates are only possible using the
+manufacturer's exclusive tool.
+> Manufacturer's exclusive tool: Blue Engineering Tool v0.20.1
+- Users cannot access the Detector internal system using commercial
+access tools (Putty, MobaXterm, etc.).
+Very Unlikely High Very Low
+CRM-50 SI-03 Tampering Unexpected functional failures or security vulnerabilities may occur through
+modification of system settings. Very Unlikely(VU) High(H) Very
+Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+When attempting to access an unauthorized account, verify that login is
+not possible.
+(1) Login attempts with unregistered accounts are not possible.
+- Check accounts registered to HnVUE
+> admin
+> ktruser
+> ktreng
+> ktradmin
+- Login attempts with an unregistered account, testuser, are not possible.
+Check event log recording and storage.
+(1) Check the audit records of this medical device.
+- Select Settings > System > Audit log/System log
+- You can check the details of events generated by each account through
+the Audit log and System log.
+(2) Verify that the Audit log and System log specify the time of the event,
+the details of the event, and the person who generated the event.
+- Audit log: DateTime, UserID, Code, Message
+- System log: DateTime, Message
+> Message: Displays detailed event details.
+Very Unlikely High Very Low
+CRM-51 SI-04 Tampering Attackers may tamper with internal data to undermine the reliability of the
+system. Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+Check if integrity verification is performed when HnVUE runs.
+(1) HnVUE performs integrity verification when running.
+1) Integrity verification is performed on 49 files required for HnVUE
+operation.
+- Integrity verification principle: Check if the FileName, FileSize,
+LastWriteDate, and FileVersion of the 49 files match.
+> The integrity verification table in integrity.db contains four parameters:
+FileName, FileSize, LastWriteDate, and FileVersion.
+
+2) Verify that integrity verification is performed on HnVUE by checking
+the source code for consistency between these four parameters.
+3) Verify that integrity verification is performed preemptively when
+HnVUE runs through the event log.
+Check if Detector has an integrity check function.
+(1) Detector does not provide an integrity check function. (2) Based on
+the RA-05 test results, the Detector does not provide users with
+unnecessary external port usage, and users cannot access the Detector's
+internal system through the Detector's USB Type-C port.
+1) Port scan results show that only the Detector's initial communication
+port is active.
+2) When the Detector's USB Type-C port is connected to a PC, the PC
+does not recognize it.
+(3) Based on the results of (2), unauthorized persons cannot access the
+Detector's internal system through the Detector's external interfaces and
+ports. Therefore, the possibility of damage to the Detector by
+unauthorized persons is low. Therefore, the Detector does not require an
+integrity check function.
+(4) In the event of damage to the Detector, the Detector manufacturer is
+responsible for repairs, as outlined in the Detector manual.
+Very Unlikely High Very Low
+CRM-52 SI-05 Tampering If important configuration information is changed by an attack, the stability of
+the entire system may be threatened. Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+The input fields in this medical device's user manual do not define input
+value limits or valid ranges. Very Unlikely High Very Low
+CRM-53 SI-06 Tampering If system files or logs are tampered with, it may be difficult to respond to and
+track security incidents. Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity This medical device does not implement automated process functions. Very Unlikely High Very Low
+CRM-54 SI-07 Tampering If system components are modified without permission, the reliability and
+operational continuity of the service may be damaged. Very Unlikely(VU) High(H) Very
+Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity This medical device does not implement automated process functions. Very Unlikely High Very Low
+CRM-55 SI-08 Tampering There is a risk that external intruders may affect the normal operation of the
+entire system by manipulating internal data. Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Firmware and Software
+Updates
+(1) HnVUE SW
+- The previously installed HnVUE SW was deleted by H&abyz engineers
+and the updated SW was installed.
+- The user manual clearly states that SW installation can only be
+performed by H&abyz engineers.
+> HnVUE SW is software installed independently on a PC.
+(2) Detector
+- Detector firmware updates are performed by H&abyz engineers using
+the manufacturer's tool.
+> Update Tool: Blue Engineering Tool v0.20.1
+> Select Update File: F_v_0_20_0.bpd
+Very Unlikely High Very Low
+
+CRM-56 SI-09 Tampering If data or settings that should not be changed are tampered with, the system
+security system may collapse. Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Firmware and Software
+Updates
+When updating HnVUE SW, check whether the update file is verified for
+integrity
+(1) When updating HnVUE SW, perform integrity verification.
+1) Distribute the installation file and the hash file of the corresponding file
+together.
+- Hash function: SHA-256
+2) When creating an installation file, if the hash value created from the
+installation file and the hash value of the distributed hash file are not the
+same,
+check that the installation is not possible with an integrity check failure
+message.
+When updating FW of Detector, check whether the update file has an
+integrity verification function
+(1) When updating FW, the manufacturer encrypts the update file with
+AES 128 and generates a SHA 256 hash value for the corresponding file,
+which is used for integrity verification.
+- Encryption of the FW update file can only be performed on the
+manufacturer's designated PC where the encryption key is stored.
+(2) When updating FW, updates are only possible using the
+manufacturer's dedicated tool, and integrity verification is performed
+during the update process.
+Very Unlikely High Very Low
+CRM-57 SI-10 Tampering Unauthorized changes to system components may cause unexpected
+malfunctions and security risks. Very Unlikely(VU) High(H) Very
+Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Firmware and Software
+Updates
+The disabled USB-C port is physically blocked.
+The bolt for opening the product is also covered with a deco sheet.
+Very Unlikely High Very Low
+CRM-58 SI-11 Tampering Due to data integrity violations, there is a possibility that an attacker may
+induce abnormal system operation. CRM-9 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Code, Data, and Execution
+Integrity
+(1) The Detector does not perform integrity verification upon boot.
+- Based on the SI-10 test results, the Detector's internal system cannot
+be accessed through the Detector's external interface, reducing the risk
+of internal system damage by unauthorized parties.
+- In the event of a Detector malfunction, the manufacturer provides repair
+service.
+(2) HnVUE performs integrity verification upon software execution.
+1) Integrity verification is performed on 49 files required for HnVUE
+operation.
+- Integrity verification principle: Checking whether the FileName,
+FileSize, LastWriteDate, and FileVersion of the 49 files match.
+> The integrity verification table in integrity.db contains four parameters:
+FileName, FileSize, LastWriteDate, and FileVersion.
+2) The source code confirms that integrity verification is performed on
+HnVUE based on the consistency of these four parameters.
+3) Verify that integrity verification is performed first when running HnVUE
+through the event log.
+Likely Very Low Very Low
+CRM-59 DC-01 Information
+Disclosure
+Sensitive information may be inappropriately exposed and leaked to
+unauthorized users. CRM-17 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Confidentiality
+(1) Confirm that the HnVUE account password is encrypted and stored
+on the PC where HnVUE is installed.
+1) Verify that it is encrypted and stored using Bcrypt through the source
+code.
+2) Confirm that the password is encrypted and stored on the PC.
+Very Unlikely Very Low Very Low
+
+CRM-60 DC-02 Information
+Disclosure
+Due to insufficient data encryption and access control, important information
+may be leaked to the outside. CRM-5 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Confidentiality
+Verify that patient identification information is available within the stored
+medical information.
+(1) Register patient information in HnVUE and capture the image.
+1) Enter date of birth, gender, etc. and save.
+- Name: ktr2 security2 test2
+- Age: 20
+- Gender: F
+- Date of Birth: 2015/07/01
+- Details: test patient, working mon
+2) Capture the image as a registered patient.
+(2) Verify whether patient identification information is included in the
+captured DICOM file.
+- Upon checking the captured DICOM file, patient identification
+information and personal information were not available.
+> Check the DICOM file storage location.
+> Upon checking the DICOM file contents, patient identification and
+personal information were not available.
+The database containing patient information is inaccessible to
+unauthorized persons.
+(1) The database of this medical device containing patient information is
+inaccessible to unauthorized persons.
+- Based on the test results from PT-07 of the 6.2 Penetration Test,
+unauthorized access to important information is prohibited. > The
+database containing important information such as HnVUE settings and
+patient information is inaccessible to unauthorized persons.
+> For detailed test results, refer to PT-07 in Section 6.2 Penetration Test.
+Likely Very Low Very Low
+CRM-61 DC-03 Information
+Disclosure
+There is a risk that sensitive data being stored and transmitted may be
+exposed by attacks. Very Unlikely(VU) High(H) Very
+Low(VL) 6.6 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L Cryptography
+Check the encryption used by this medical device
+(1) Encrypted communication between HnVUE and the Detector using
+AES 128 encryption
+1)
+- During initial communication, a TCP connection is attempted between
+the Detector's port 7000 and the PC on which the HnVUE software is
+installed.
+> Detector IP:Port: 192.168.197.54:7000
+> HnVUE SW IP:Port: 192.168.197.3:62869
+- If the connection is successful, the Detector closes port 7000 and
+communicates encrypted with the HnVUE software through a random
+port.
+> Encryption Algorithm: AES 128
+> Detector's changed communication port: 42045
+- Transmits the Detector's battery information, etc.
+2) The encryption key used for encrypted communication between the
+Detector and HnVUE is protected as follows: - HnVUE generates an RSA
+key (2048 bit) and transmits the public key to the detector.
+- The detector generates an AES 128 symmetric key used for
+communication encryption, encrypts it with the RSA public key, and
+transmits it to HnVUE.
+- The received key is decrypted and used for encrypted communication
+with the detector.
+(2) The HnVUE account password is encrypted and stored using Bcrypt.
+1) Verify that the password is encrypted and stored using Bcrypt through
+the source code.
+2) Verify that the password is encrypted and stored on the PC.
+Identify the keys managed by this medical device and verify their
+protection methods.
+(1) The keys stored in the medical device are as follows:
+1) Detector: Key for decrypting encrypted FW update files.
+- An AES 128 key is injected into the detector upon shipment.
+2) HnVUE: None.
+(2) Verify the protection method for the keys managed by this medical
+Very Unlikely High Very Low
+CRM-62 TRE-01 Denial of Service There is a risk that normal service provision may be interrupted due to
+concentrated attacks on system resources., CRM-6, CRM-10, CRM-11 Very Likely (VL) High (H) High (H) 8.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:H Resiliency and Recovery
+(1) Confirm that the audit log of this medical device can only be accessed
+as read-only.
+- Do not grant write permission to the user.
+- Check the audit record of this medical device.
+- Select Settings > System > Audit log/System log
+- You can check the event details that occurred for each account through
+the Audit log and System log.
+Very Unlikely Very High Very Low
+
+CRM-63 RA-01 Elevation of
+Privilege
+Due to privilege management vulnerabilities, there is a risk that low-
+privileged users may illegally obtain high-privileges. Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Authorization
+(1) Functional Isolation: Network/ management functions are logically
+separated from core medical functions, ensuring essential functions are
+maintained even in the event of a network failure or DoS attack.
+Specifically, the database containing patient medical information within
+the console is encrypted, protected, and backed up, ensuring protection
+and recovery even in the event of loss.
+(2) Network-layer blocking of attack traffic through integration with
+dedicated DDoS defense equipment/services (firewall, WAF, IPS, cloud-
+based DDoS defense service): Real-time traffic monitoring and logging
+via Windows Defender, real-time monitoring of network traffic and device
+operation status for early detection of abnormalities.
+(3) Preliminary testing: Actual overload traffic (using a DDoS generator)
+was generated to verify that core functions were maintained properly
+(verification completed). The verification sequence is detailed below.
+> Verify that the detector maintains its functionality even when sending a
+large number of packets using hping3 provided by Kali Linux.
+- Even when sending a large number of packets, the detector and HnVUE
+functions are maintained, and photos are captured normally and saved
+normally on the PC where HnVUE is installed.
+> Verify the detector IP: 192.168.197.54
+> Send a large number of packets to the detector using hping3 in Kali
+Linux.
+> Confirm that X-ray photos are captured normally using the detector and
+HnVUE during the large number of packets transmitted.
+> Confirm that the captured photos are normally saved along with
+DICOM files on the PC where HnVUE is installed.
+Very Unlikely High Very Low
+CRM-64 RA-02 Elevation of
+Privilege
+Due to inappropriate access control, there is a possibility of system misuse
+through user privilege escalation. Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Authorization
+Check if backup function is provided
+(1) This medical device provides backup function to the user.
+1) Create BackUP file
+- Click the Manual Back Up icon to create a backup file
+Check if the created backup file can be applied and if there is no product
+failure when applied
+(1) Check if the product operates normally when backing up the software
+with the created backup file.
+1) Click the “Restore” icon to select a backup file
+- Select a backup file on 2025.07.18
+2) Click “Select Folder” to check if HnVUE is normally backed up to the
+corresponding folder.
+- Comparison before and after backup
+> Before backup: ktruser3 account exists
+> After backup: ktruser3 does not exist in the account list.
+Likely Very Low Very Low
+CRM-65 RA-03 Elevation of
+Privilege
+Due to weak privilege separation, there is a risk that an attacker may control
+the entire system beyond limited privileges. Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Authorization
+(1) HnVUE provides users with a backup function, allowing them to
+restore HnVUE settings and other information.
+1) Click the "Restore" icon to select a backup file.
+- Select the backup file as of July 18, 2025.
+2) Click "Select Folder" to confirm that HnVUE has been successfully
+backed up to the selected folder.
+- Comparison of before and after backup
+> Before backup: ktruser3 account exists.
+> After backup: ktruser3 does not appear in the account list.
+(2) In the user manual, the manufacturer confirms that it directly supports
+repairs in the event of a Detector malfunction.
+Very Unlikely High Very Low
+CRM-66 RA-04 Elevation of
+Privilege
+An attack that started with low privileges may lead to privilege escalation,
+potentially affecting the entire system. Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Authorization
+Check if the user manual includes network configuration instructions.
+(1) The Detector manual includes information on Detector network
+settings.
+Check if HnVUE provides a network connection configuration function for
+the Detector.
+(1) Enter the Detector IP address through the HnVUE Settings > Detector
+menu.
+- Detector model: Blue
+- Detector IP: 192.168.197.54
+Check if the Detector network configuration log is recorded.
+(1) You can check the Detector network configuration log through the
+HnUVE Settings > System > Audit Log/System Log function.
+Check the communication log between HnVUE and the Detector when
+taking X-ray images through the Detector.
+(1) When taking X-ray images through the Detector, you can check the
+communication log between HnVUE and the Detector through the HnUVE
+Settings > System > Audit Log/System Log function.
+Very Unlikely High Very Low
+CRM-67 RA-05 Elevation of
+Privilege
+Failure to authenticate users and manage permissions could allow attackers
+to gain unauthorized privileges. Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Authorization
+(1) Use a port scan tool to verify that Detector provides unnecessary
+service ports.
+- The port scan results confirm that Detector only provides port 7000, the
+initial communication port.
+Very Unlikely High Very Low

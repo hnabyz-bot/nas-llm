@@ -1,0 +1,777 @@
+queueId: ingest-1781569954384-dql
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/MIC_60-2230C/STD-T66 BT LE_JR740701-11AE_ST60-2230C.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/2d0d8ecd46ab/STD-T66 BT LE_JR740701-11AE_ST60-2230C__2d0d8ecd46ab_combined.txt
+canonicalGroupId: 756c629eb25a
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 499
+
+SOURCE_TEXT
+Report No.: JR740701-11AE Page No. : 1 of 18
+Report Version: Rev. 01
+Japan Test Report
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+(Please refer to section 1.1.1 for more details)
+Model No. : ST60-2230C
+(Please refer to section 1.1.1 for more details)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : Article 2 Paragraph 1 Item 19
+Received Date : Apr. 19, 2017
+Tested Date : Jun. 09 ~ Jun. 15, 2017
+Measurement was conducted by the following test method:
+the test method of Ordinance Concerning Technical Regulations Conformity Certification
+etc. of Specified Radio Equipment in Annex 1, the Ministry of Internal Affairs and
+Communications notification in Annex “43” of Article 88, Paragraph 1 and ARIB STD-T66.
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: JR740701-11AE Page No. : 2 of 18
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Test Equipment and Calibration Data .................................................................................................... 9
+1.3 Testing Applied Standards ..................................................................................................................... 9
+1.4 Deviation from Test Standard and Measurement Procedure................................................................. 9
+1.5 Measurement Uncertainty .................................................................................................................... 10
+2 TEST CONFIGURATION ..................................................................................................................... 11
+2.1 Testing Location and Conditions .......................................................................................................... 11
+2.2 Testing Facility ..................................................................................................................................... 11
+2.3 Supporting Units ................................................................................................................................... 11
+2.4 The Worst Test Modes and Channel Details ....................................................................................... 11
+3 TRANSMITTER TEST RESULTS ....................................................................................................... 12
+3.1 Antenna Power ..................................................................................................................................... 12
+3.2 Frequency Tolerance ........................................................................................................................... 13
+3.3 Occupied Bandwidth ............................................................................................................................ 14
+3.4 Transmitter Spurious Emissions........................................................................................................... 15
+3.5 Interference Prevention Function ......................................................................................................... 16
+4 RECEIVER TEST RESULTS ............................................................................................................... 17
+4.1 Receiver Spurious Emissions............................................................................................................... 17
+5 TEST LABORATORY INFORMATION ............................................................................................... 18
+APPENDIX A.1 TEST RESULTS FOR ANTENNA POWER
+APPENDIX A.2 TEST RESULTS FOR ANTENNA POWER
+APPENDIX A.3 TEST RESULTS FOR ANTENNA POWER
+APPENDIX B. TEST RESULTS FOR FREQUENCY TOLERANCE
+APPENDIX C. TEST RESULTS FOR OCCUPIED BANDWIDTH
+APPENDIX D. TEST RESULTS FOR TRANSMITTER SPURIOUS EMISSIONS
+APPENDIX E. TEST RESULTS FOR INTERFERENCE PREVENTION FUNCTION
+APPENDIX F. TEST RESULTS FOR RECEIVER SPURIOUS EMISSIONS
+
+Report No.: JR740701-11AE Page No. : 3 of 18
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+JR740701-11AE Rev. 01 Initial issue Feb. 25, 2021
+
+Report No.: JR740701-11AE Page No. : 4 of 18
+Report Version: Rev. 01
+Summary of Test Results
+Ref. Std. Clause Description Result
+3.2(2)(3) Antenna Power Pass
+3.2(4) Frequency Tolerance Pass
+3.2(6) Transmitter Spurious Emission Pass
+3.2(7) Occupied Bandwidth Pass
+3.3(1) Receiver Emission Pass
+3.4.1 Interference prevention function Pass
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: JR740701-11AE Page No. : 5 of 18
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. JR740701-01AE.
+The modification is
+1. Additional model and product names, changing applicant and brand name.
+2. Resistance of CONFIG_HOST0/1/2 are different to switch interface
+3. Update to the latest SW version
+After verification, above changes does not impact to original test results. Thus test results remain the same.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module with carrier board
+ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/UART interface PCIe/UART interface
+ST60-2230C-PU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/USB interface PCIe/USB interface
+ST60-2230C-SS 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module SDIO/SDIO Interface SDIO/SDIO Interface
+ST60-2230C-U 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/UART Interface USB/UART Interface
+ST60-2230C-UU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/USB interface USB/USB interface
+ST60-2230C-Q 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module,ST60-2230C-Q
+The difference
+between
+ST60-2230C and
+ST60-2230C-Q the
+OTP parameter is
+different for ID
+recognition. SW is
+exactly the same.
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+
+Report No.: JR740701-11AE Page No. : 6 of 18
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+Power Type DC 3.3V from host
+Type(s) of Modulation /
+Technology GFSK = 1Mbps
+Frequency Range (MHz) 2402 ~ 2480 MHz
+Total Channel Number 40
+HW Version 1.0
+SW Version laird-backport-7.0.0.136 (only for ST60-2230C-UU)
+laird-backport-7.0.0.70 (others)
+1.1.3 Accessories
+N/A
+1.1.4 Antenna Details
+Ant.
+No. Band/ Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR / 001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird /
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird /
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR / FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics /
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Note: Please refer to antenna report for more details about antenna pattern and other information.
+1.1.5 Antenna Power
+Operating Mode Rated Power (mW) Measured Conducted
+Power (mW) Radiated Power (mW)
+BT-LE(1Mbps) 8.6 8.22 15.63
+
+Report No.: JR740701-11AE Page No. : 7 of 18
+Report Version: Rev. 01
+1.1.6 Channel List
+Frequency band (MHz) 2400~2483.5
+Channel Frequency
+(MHz) Channel Frequency
+(MHz) Channel Frequency
+(MHz) Channel Frequency
+(MHz)
+37 2402 9 2422 18 2442 28 2462
+0 2404 10 2424 19 2444 29 2464
+1 2406 38 2426 20 2446 30 2466
+2 2408 11 2428 21 2448 31 2468
+3 2410 12 2430 22 2450 32 2470
+4 2412 13 2432 23 2452 33 2472
+5 2414 14 2434 24 2454 34 2474
+6 2416 15 2436 25 2456 35 2476
+7 2418 16 2438 26 2458 36 2478
+8 2420 17 2440 27 2460 39 2480
+
+Report No.: JR740701-11AE Page No. : 8 of 18
+Report Version: Rev. 01
+1.1.7 Test Tool and Power Index
+Test Tool
+Hardware v. 2.10
+Power Index
+Modulation Mode Test Frequency (MHz)
+2402 2440 2480
+BT-LE(1Mbps) 8 8 8
+1.1.8 Test Voltage
+Test Voltage Vnom (3.3 Vdc) Vmax (3.63 Vdc) Vmin (2.97 Vdc)
+1.1.9 Protection Method for High Frequency and Modulation Section
+Protected Method Description
+Shielding Case RF and Modulation components are covered with shielding case and this
+shielding case is soldered
+
+Report No.: JR740701-11AE Page No. : 9 of 18
+Report Version: Rev. 01
+1.2 Test Equipment and Calibration Data
+Test Item RF Conducted
+Test Site (TH01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration
+Authority
+Calibration
+Date
+Calibration
+Until Cal Method
+Spectrum
+Analyzer R&S FSV40 101063 Electronics
+Testing Center Mar. 15, 2017 Mar. 14, 2018 D
+Power Meter Anritsu ML2495A 1241002 Electronics
+Testing Center Oct. 06, 2016 Oct. 05, 2017 D
+Power Sensor Anritsu MA2411B 1207366 Electronics
+Testing Center Oct. 06, 2016 Oct. 05, 2017 D
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Electronics
+Testing Center Oct. 20, 2016 Oct. 19, 2017 D
+Datalogging
+True RMS PROVA 903 12150054 Electronics
+Testing Center Jan. 04, 2017 Jan. 03, 2018 D
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA NA -
+Note 1: Calibration Interval of instruments listed above is one year
+Note 2: Calibration Method
+a)：Calibration conducted by the National Institute of Information and Communications Technology NICT or a designated calibration
+agency under Article 102-18 paragraph (1) TELEC EngeneeringCenter, Intertek Japan K.K., Keysight Technologies, Inc.
+b)：Correction conducted pursuant to the provisions of Article 135 or Article 144 of the MeasurementLaw (Law No. 51 of 1992) Japan
+Calibration Service Syste
+c)：Calibration conducted in foreign countries, which shall be equivalent to the calibration conducted bythe NICT or a designated
+calibration agency under Article 102-18 paragraph (1) TELEC EngeneeringCenter, Intertek Japan K.K., Keysight Technologies, Inc.
+d)：Calibration conducted by using other equipment that listed above from a) to c
+1.3 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+Article 2 Paragraph 1 Item 19
+1.4 Deviation from Test Standard and Measurement Procedure
+None
+
+Report No.: JR740701-11AE Page No. : 10 of 18
+Report Version: Rev. 01
+1.5 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)).
+Measurement Uncertainty
+Parameters Uncertainty
+Bandwidth ±34.139 Hz
+Conducted power ±0.808 dB
+Frequency error ±1x10-9
+TX Conducted emission ±2.680 dB
+RX Conducted emission ±3.034 dB
+
+Report No.: JR740701-11AE Page No. : 11 of 18
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Location and Conditions
+Test Site Site Category Ambient Condition Tested By
+TH01-WS OVEN Room 23.1℃ / 58％ Chris Zeng
+2.2 Testing Facility
+Test Laboratory International Certification Corp.
+Test Site TH01-WS
+Address of Test Site
+(Kwei Shan)
+No. 3-1, Lane 6, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333, Taiwan,
+R.O.C.
+2.3 Supporting Units
+Support Unit Brand Model FCC ID
+Notebook DELL Latitude E5420 DoC
+Notebook DELL Insprion 3000 DoC
+Bluetooth Tester ROHDE&SCHWARZ CBT ---
+2.4 The Worst Test Modes and Channel Details
+Test item Mode Test Frequency
+(MHz)
+Antenna Power
+Frequency Tolerance
+Occupied Bandwidth
+Interference prevention function
+Transmitter Spurious Emission
+Receiver Spurious Emissions
+BT-LE 2402 / 2440 / 2480
+
+Report No.: JR740701-11AE Page No. : 12 of 18
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Antenna Power
+3.1.1 Limit of Antenna Power
+Mode Limit Tolerance
+1) FH, FH+DS, FH+OFDM 3 mW / MHz
++20 % , -80 %
+2) OFDM(Narrow- bandwidht), DS 10 mW / MHz
+3) Other than 1) & 2) 10mW
+4) OFDM (Wide-band) 5 mW / MHz
+3.1.2 Test Procedures
+Measure the total power by Power Meter
+3.1.3 Test Setup
+3.1.4 Test Result of Maximum Transmit Power
+Refer to Appendix A1, A2, A3
+
+Report No.: JR740701-11AE Page No. : 13 of 18
+Report Version: Rev. 01
+3.2 Frequency Tolerance
+3.2.1 Limit of Frequency Tolerance
+Frequency tolerance shall be +/- 50ppm.
+3.2.2 Test Procedures
+1. Set Span = 500kHz, RBW = 1kHz, VBW = 3kHz, Sweep time = Auto, detector = Peak.
+2. Use Peak search function to find the max peak value and record this value (RF).
+3. Calculate frequency tolerance by below formula
+FT(ppm) = { (RF) – (MF) / (MF) } × 1000000
+(FT: Frequency Tolerance, RF: Reading Frequency, MF: Measurement Frequency.)
+3.2.3 Test Setup
+3.2.4 Test Result of Frequency Tolerance
+Refer to Appendix B
+
+Report No.: JR740701-11AE Page No. : 14 of 18
+Report Version: Rev. 01
+3.3 Occupied Bandwidth
+3.3.1 Limit of Occupied Bandwidth
+Mode Limit (MHz)
+FH 83.5
+FH+DS 83.5
+FH+OFDM 83.5
+OFDM(Narrow- bandwidht), DS 26
+Others 26
+OFDM (Wide-band) 38
+3.3.2 Test Procedures
+1. Set Span = 40MHz, RBW = VBW = 300kHz, detector = Peak, Sweep time = Auto.
+2. Enable OBW function of spectrum analyzer to measure OBW and capture test plot.
+3.3.3 Test Setup
+3.3.4 Test Result of Occupied Bandwidth
+Refer to Appendix C
+
+Report No.: JR740701-11AE Page No. : 15 of 18
+Report Version: Rev. 01
+3.4 Transmitter Spurious Emissions
+3.4.1 Limit of Transmitter Spurious Emissions
+Item Limits
+Tx Spurious Emission
+≤ 2.5 μW (2387MHz > f ; 2496.5MHz < f ).
+≤ 25 μW.
+(2387MHz ≤ f < 2400MHz) and (2483.5MHz < f ≤ 2496.5MHz).
+3.4.2 Test Procedures
+1. Set EUT to transmit at rated power and channel to perform test.
+2. Set RBW = VBW = 1MHz, Detector type = Peak, Sweep time = Auto.
+3. Following above setting of spectrum analyzer to measure spurious emission of 30~12500 MHz.
+3.4.3 Test Setup
+3.4.4 Test Result of Transmitter Spurious Emissions
+Refer to Appendix D
+
+Report No.: JR740701-11AE Page No. : 16 of 18
+Report Version: Rev. 01
+3.5 Interference Prevention Function
+3.5.1 Limit of Interference Prevention Function
+Limits
+The identification code shall be 48 bits long
+3.5.2 Test Procedures
+1. Set EUT under operating mode and link up with companion equipment
+2. Check communication status between EUT and companion equipment is normal
+3. Confirm the MAC address of EUT
+3.5.3 Test Setup
+3.5.4 Test Result of Interference Prevention Function
+Refer to Appendix E
+
+Report No.: JR740701-11AE Page No. : 17 of 18
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Item Limits
+Rx Spurious Emission ≤ 4nW (f < 1GHz).
+≤ 20nW (1GHz ≤ f).
+4.1.2 Test Procedures
+1. Set EUT under receiving condition to perform test
+2. Set RBW = VBW = 100kHz, detector = Peak, Sweep time = Auto for emission measurement below
+1GHz.
+3. Set RBW = VBW=1MHz, detector = Peak, Sweep time = Auto for emission measurement above 1GHz.
+4.1.3 Test Setup
+4.1.4 Test Result of Receiver Spurious Emissions
+Refer to Appendix F
+
+Report No.: JR740701-11AE Page No. : 18 of 18
+Report Version: Rev. 01
+5 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin Kou
+District, New Taipei City, Taiwan,
+R.O.C.
+No. 3-1, Lane 6, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══
+
+Power-DSSS Result Appendix A.1
+International Certification Corp. Page No. : 1 of 1
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Power Power EIRP EIRP
+(dBm/MHz) (mW/MHz) (dBm/MHz) (mW/MHz)
+BT-LE(1Mbps) - - - -
+2.4-2.4835GHz 7.17 5.21666 9.96 9.91727
+PD = Antenna Power (Power Density)sum by P1~PN;
+P1 = Port 1 PD; P2 = Port 2 PD; P3 = Port 3 PD; P4 = Port 4 PD; ENBF = Equivalent Noise Bandwidth Factor;
+Result
+Mode Result Gain ENBF Power Power Power Lim. EIRP EIRP EIRP Lim. P1
+
+(dBi) (dB) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz)
+BT-LE(1Mbps) - - - - - - - - - -
+2402MHz_Vnom Pass 2.79 0.49 7.13 5.16154 10 9.92 9.81250 16.368 7.13
+2402MHz_Vmin Pass 2.79 0.49 7.17 5.21666 10 9.96 9.91727 16.368 7.17
+2402MHz_Vmax Pass 2.79 0.49 6.92 4.92188 10 9.71 9.35688 16.368 6.92
+2440MHz_Vnom Pass 2.79 0.49 6.36 4.32181 10 9.15 8.21610 16.368 6.36
+2440MHz_Vmin Pass 2.79 0.49 7.14 5.17623 10 9.93 9.84041 16.368 7.14
+2440MHz_Vmax Pass 2.79 0.49 6.73 4.70936 10 9.52 8.95287 16.368 6.73
+2480MHz_Vnom Pass 2.79 0.49 6.67 4.64053 10 9.46 8.82201 16.368 6.67
+2480MHz_Vmin Pass 2.79 0.49 6.47 4.43768 10 9.26 8.43637 16.368 6.47
+2480MHz_Vmax Pass 2.79 0.49 6.85 4.83723 10 9.64 9.19596 16.368 6.85
+PD = Antenna Power (Power Density)sum by P1~PN;
+P1 = Port 1 PD; P2 = Port 2 PD; P3 = Port 3 PD; P4 = Port 4 PD; ENBF = Equivalent Noise Bandwidth Factor;
+
+Power Tolerance-DTS Result Appendix A.2
+International Certification Corp Page No. : 1 of 1
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result Power Power Declare Declare Tolerance Limit+ Limit-
+(dBm) (mW) (dBm) (mW) (%) (%) (%)
+BT-LE(1Mbps) - - - - - - - -
+2.4-2.4835GHz Pass 9.15 8.22243 9.345 8.60 -8.64 20 -80
+Result
+Mode Result Power Power Declare Declare Tolerance Limit+ Limit-
+(dBm) (mW) (dBm) (mW) (%) (%) (%)
+BT-LE(1Mbps) - - - - - - - -
+2402MHz_Vnom Pass 9.11 8.14704 9.345 8.60 -5.27 20 -80
+2402MHz_Vmin Pass 9.10 8.12831 9.345 8.60 -5.48 20 -80
+2402MHz_Vmax Pass 9.15 8.22243 9.345 8.60 -4.39 20 -80
+2440MHz_Vnom Pass 8.91 7.78037 9.345 8.60 -9.53 20 -80
+2440MHz_Vmin Pass 8.88 7.72681 9.345 8.60 -10.15 20 -80
+2440MHz_Vmax Pass 8.91 7.78037 9.345 8.60 -9.53 20 -80
+2480MHz_Vnom Pass 8.64 7.31139 9.345 8.60 -14.98 20 -80
+2480MHz_Vmin Pass 8.60 7.24436 9.345 8.60 -15.76 20 -80
+2480MHz_Vmax Pass 8.64 7.31139 9.345 8.60 -14.98 20 -80
+
+Total Power-DTS Result Appendix A.3
+International Certification Corp. Page No. : 1 of 1
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Power Power EIRP EIRP
+(dBm) (mW) (dBm) (mW)
+BT-LE(1Mbps) - - - -
+2.4-2.4835GHz 9.15 8.22 11.94 15.63
+P1 = Port 1 output power; P2 = Port 2 output power; P3 = Port 3 output power; P4 = Port 4 output power;
+Power = Total power sum by P1~PN;
+Result
+Mode Result Gain Power Power Power
+Lim. EIRP EIRP EIRP Lim. P1
+(dBi) (dBm) (mW) (mW) (dBm) (mW) (mW) (dBm)
+BT-LE(1Mbps) - - - - - - - - -
+2402MHz_Vnom Pass 2.79 9.11 8.148 10 11.90 15.489 16.368 9.11
+2402MHz_Vmin Pass 2.79 9.10 8.128 10 11.89 15.453 16.368 9.10
+2402MHz_Vmax Pass 2.79 9.15 8.225 10 11.94 15.636 16.368 9.15
+2440MHz_Vnom Pass 2.79 8.91 7.784 10 11.70 14.799 16.368 8.91
+2440MHz_Vmin Pass 2.79 8.88 7.731 10 11.67 14.697 16.368 8.88
+2440MHz_Vmax Pass 2.79 8.91 7.786 10 11.70 14.802 16.368 8.91
+2480MHz_Vnom Pass 2.79 8.64 7.308 10 11.43 13.893 16.368 8.64
+2480MHz_Vmin Pass 2.79 8.60 7.253 10 11.39 13.788 16.368 8.60
+2480MHz_Vmax Pass 2.79 8.64 7.307 10 11.43 13.892 16.368 8.64
+P1 = Port 1 output power; P2 = Port 2 output power; P3 = Port 3 output power; P4 = Port 4 output power;
+Power = Total power sum by P1~PN;
+
+Frequency Tolerance-DTS Result Appendix B
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result Ch Center ppm Limit Port Remark
+(Hz) (Hz) (ppm)
+BT-LE(1Mbps) - - - - - - -
+2.4-2.4835GHz Pass 2.44G 2.44000061G + 0.25 + / - 50 1 -
+
+Frequency Tolerance-DTS Result Appendix B
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result Ch Center ppm Limit Port Remark
+(Hz) (Hz) (ppm)
+BT-LE(1Mbps) - - - - - - -
+2402MHz_Vnom Pass 2.402G 2.40200059G + 0.244 + / - 50 1 -
+2402MHz_Vmin Pass 2.402G 2.40200059G + 0.244 + / - 50 1 -
+2402MHz_Vmax Pass 2.402G 2.40200059G + 0.244 + / - 50 1 -
+2440MHz_Vnom Pass 2.44G 2.44000061G + 0.249 + / - 50 1 -
+2440MHz_Vmin Pass 2.44G 2.44000061G + 0.25 + / - 50 1 -
+2440MHz_Vmax Pass 2.44G 2.44000061G + 0.25 + / - 50 1 -
+2480MHz_Vnom Pass 2.48G 2.48000059G + 0.239 + / - 50 1 -
+2480MHz_Vmin Pass 2.48G 2.48000059G + 0.239 + / - 50 1 -
+2480MHz_Vmax Pass 2.48G 2.4800006G + 0.24 + / - 50 1 -
+
+Occupied Bandwidth-DTS Result Appendix C
+International Certification Corp. Page No. : 1 of 4
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Max-OBW ITU-Code Min-OBW
+(MHz) (MHz)
+BT-LE(1Mbps) - - -
+2.4-2.4835GHz 1.232 1H23F1D 1.222
+Max-OBW = Maximum99% occupied bandwidth; Min-OBW = Minimum99% occupied bandwidth;
+Result
+Mode Result Limit P1-OBW
+(MHz) (MHz)
+BT-LE(1Mbps) - - -
+2402MHz_Vnom Pass 26 1.222
+2402MHz_Vmin Pass 26 1.223
+2402MHz_Vmax Pass 26 1.222
+2440MHz_Vnom Pass 26 1.227
+2440MHz_Vmin Pass 26 1.227
+2440MHz_Vmax Pass 26 1.227
+2480MHz_Vnom Pass 26 1.232
+2480MHz_Vmin Pass 26 1.227
+2480MHz_Vmax Pass 26 1.229
+P1-OBW = Port 1 99% occupied bandwidth;P2-OBW = Port 299% occupied bandwidth;P3-OBW = Port 399% occupied
+bandwidth;P4-OBW = Port 499% occupied bandwidth;
+
+Occupied Bandwidth-DTS Result Appendix C
+International Certification Corp. Page No. : 2 of 4
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth-DTS Result Appendix C
+International Certification Corp. Page No. : 3 of 4
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth-DTS Result Appendix C
+International Certification Corp. Page No. : 4 of 4
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 1 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2.4-2.4835GHz Pass 2.387G 2.4G 1M 2399.974 -31.53 0.7029 -16.02 25 -15.51 1.47 -31.53 0.7029
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 2 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2402MHz_Vnom Pass 30M 2.387G 1M 2333.968 -47.12 0.0194 -26.02 2.5 -21.10 1.44 -47.12 0.0194
+2402MHz_Vnom Pass 2.387G 2.4G 1M 2399.974 -31.53 0.7029 -16.02 25 -15.51 1.47 -31.53 0.7029
+2402MHz_Vnom Pass 2.4835G 2.4965G 1M 2494.706 -53.47 0.0045 -16.02 25 -37.45 1.49 -53.47 0.0045
+2402MHz_Vnom Pass 2.4965G 12.5G 1M 4803.557 -50.48 0.00895 -26.02 2.5 -24.46 1.72 -50.48 0.00895
+2402MHz_Vnom Pass 2.4965G 12.5G 1M 10541.815 -45.26 0.02977 -26.02 2.5 -19.24 4.62 -45.26 0.02977
+2402MHz_Vmin Pass 30M 2.387G 1M 2333.968 -48.04 0.01572 -26.02 2.5 -22.01 1.44 -48.04 0.01572
+2402MHz_Vmin Pass 2.387G 2.4G 1M 2399.974 -31.86 0.65097 -16.02 25 -15.84 1.47 -31.86 0.65097
+2402MHz_Vmin Pass 2.4835G 2.4965G 1M 2484.02 -53.35 0.00463 -16.02 25 -37.33 1.49 -53.35 0.00463
+2402MHz_Vmin Pass 2.4965G 12.5G 1M 4803.557 -50.61 0.00868 -26.02 2.5 -24.59 1.72 -50.61 0.00868
+2402MHz_Vmin Pass 2.4965G 12.5G 1M 12496.249 -45.32 0.02936 -26.02 2.5 -19.30 5.68 -45.32 0.02936
+2402MHz_Vmax Pass 30M 2.387G 1M 2333.968 -47.13 0.01938 -26.02 2.5 -21.10 1.44 -47.13 0.01938
+2402MHz_Vmax Pass 2.387G 2.4G 1M 2399.974 -32.03 0.62731 -16.02 25 -16.00 1.47 -32.03 0.62731
+2402MHz_Vmax Pass 2.4835G 2.4965G 1M 2491.742 -53.41 0.00456 -16.02 25 -37.39 1.49 -53.41 0.00456
+2402MHz_Vmax Pass 2.4965G 12.5G 1M 4804.808 -50.06 0.00985 -26.02 2.5 -24.04 1.72 -50.06 0.00985
+2402MHz_Vmax Pass 2.4965G 12.5G 1M 12496.249 -45.40 0.02887 -26.02 2.5 -19.38 5.68 -45.40 0.02887
+2440MHz_Vnom Pass 30M 2.387G 1M 2368.144 -47.46 0.01794 -26.02 2.5 -21.44 1.46 -47.46 0.01794
+2440MHz_Vnom Pass 2.387G 2.4G 1M 2397.114 -53.89 0.00408 -16.02 25 -37.87 1.47 -53.89 0.00408
+2440MHz_Vnom Pass 2.4835G 2.4965G 1M 2487.634 -53.78 0.00419 -16.02 25 -37.76 1.49 -53.78 0.00419
+2440MHz_Vnom Pass 2.4965G 12.5G 1M 4879.834 -51.24 0.00751 -26.02 2.5 -25.22 1.72 -51.24 0.00751
+2440MHz_Vnom Pass 2.4965G 12.5G 1M 12474.991 -45.13 0.03066 -26.02 2.5 -19.11 5.67 -45.13 0.03066
+2440MHz_Vmin Pass 30M 2.387G 1M 2368.144 -46.55 0.02214 -26.02 2.5 -20.53 1.46 -46.55 0.02214
+2440MHz_Vmin Pass 2.387G 2.4G 1M 2397.14 -53.78 0.00419 -16.02 25 -37.76 1.47 -53.78 0.00419
+2440MHz_Vmin Pass 2.4835G 2.4965G 1M 2484.67 -53.82 0.00415 -16.02 25 -37.80 1.49 -53.82 0.00415
+2440MHz_Vmin Pass 2.4965G 12.5G 1M 4879.834 -51.16 0.00765 -26.02 2.5 -25.14 1.72 -51.16 0.00765
+2440MHz_Vmin Pass 2.4965G 12.5G 1M 12494.998 -45.26 0.02976 -26.02 2.5 -19.24 5.68 -45.26 0.02976
+2440MHz_Vmax Pass 30M 2.387G 1M 2368.144 -47.32 0.01854 -26.02 2.5 -21.30 1.46 -47.32 0.01854
+2440MHz_Vmax Pass 2.387G 2.4G 1M 2397.4 -53.78 0.00419 -16.02 25 -37.76 1.47 -53.78 0.00419
+2440MHz_Vmax Pass 2.4835G 2.4965G 1M 2484.696 -53.80 0.00417 -16.02 25 -37.78 1.49 -53.80 0.00417
+2440MHz_Vmax Pass 2.4965G 12.5G 1M 4879.834 -51.00 0.00795 -26.02 2.5 -24.98 1.72 -51.00 0.00795
+2440MHz_Vmax Pass 2.4965G 12.5G 1M 12491.247 -45.31 0.02946 -26.02 2.5 -19.29 5.68 -45.31 0.02946
+2480MHz_Vnom Pass 30M 2.387G 1M 2328.075 -53.05 0.00495 -26.02 2.5 -27.03 1.44 -53.05 0.00495
+2480MHz_Vnom Pass 2.387G 2.4G 1M 2388.664 -53.21 0.00477 -16.02 25 -37.19 1.46 -53.21 0.00477
+2480MHz_Vnom Pass 2.4835G 2.4965G 1M 2487.66 -51.41 0.00723 -16.02 25 -35.39 1.49 -51.41 0.00723
+2480MHz_Vnom Pass 2.4965G 12.5G 1M 4959.862 -50.73 0.00845 -26.02 2.5 -24.71 1.73 -50.73 0.00845
+2480MHz_Vnom Pass 2.4965G 12.5G 1M 12500 -45.04 0.03135 -26.02 2.5 -19.02 5.68 -45.04 0.03135
+2480MHz_Vmin Pass 30M 2.387G 1M 2384.643 -52.51 0.00561 -26.02 2.5 -26.49 1.46 -52.51 0.00561
+2480MHz_Vmin Pass 2.387G 2.4G 1M 2388.43 -53.22 0.00476 -16.02 25 -37.20 1.46 -53.22 0.00476
+2480MHz_Vmin Pass 2.4835G 2.4965G 1M 2487.738 -51.21 0.00756 -16.02 25 -35.19 1.49 -51.21 0.00756
+2480MHz_Vmin Pass 2.4965G 12.5G 1M 4961.112 -50.58 0.00876 -26.02 2.5 -24.56 1.73 -50.58 0.00876
+2480MHz_Vmin Pass 2.4965G 12.5G 1M 10538.064 -45.38 0.029 -26.02 2.5 -19.36 4.62 -45.38 0.029
+2480MHz_Vmax Pass 30M 2.387G 1M 2321.004 -53.10 0.0049 -26.02 2.5 -27.08 1.44 -53.10 0.0049
+2480MHz_Vmax Pass 2.387G 2.4G 1M 2388.664 -53.20 0.00478 -16.02 25 -37.18 1.46 -53.20 0.00478
+2480MHz_Vmax Pass 2.4835G 2.4965G 1M 2487.764 -51.34 0.00735 -16.02 25 -35.32 1.49 -51.34 0.00735
+2480MHz_Vmax Pass 2.4965G 12.5G 1M 4961.112 -50.87 0.00818 -26.02 2.5 -24.85 1.73 -50.87 0.00818
+2480MHz_Vmax Pass 2.4965G 12.5G 1M 10584.33 -45.45 0.02853 -26.02 2.5 -19.43 4.64 -45.45 0.02853
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 3 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 4 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 5 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 1 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2.4-2.4835GHz Pass 2.387G 2.4G 1M 2399.974 -31.53 0.7029 -16.02 25 -15.51 1.47 -31.53 0.7029
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 2 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2402MHz_Vnom Pass 30M 2.387G 1M 2333.968 -47.12 0.0194 -26.02 2.5 -21.10 1.44 -47.12 0.0194
+2402MHz_Vnom Pass 2.387G 2.4G 1M 2399.974 -31.53 0.7029 -16.02 25 -15.51 1.47 -31.53 0.7029
+2402MHz_Vnom Pass 2.4835G 2.4965G 1M 2494.706 -53.47 0.0045 -16.02 25 -37.45 1.49 -53.47 0.0045
+2402MHz_Vnom Pass 2.4965G 12.5G 1M 4803.557 -50.48 0.00895 -26.02 2.5 -24.46 1.72 -50.48 0.00895
+2402MHz_Vnom Pass 2.4965G 12.5G 1M 10541.815 -45.26 0.02977 -26.02 2.5 -19.24 4.62 -45.26 0.02977
+2402MHz_Vmin Pass 30M 2.387G 1M 2333.968 -48.04 0.01572 -26.02 2.5 -22.01 1.44 -48.04 0.01572
+2402MHz_Vmin Pass 2.387G 2.4G 1M 2399.974 -31.86 0.65097 -16.02 25 -15.84 1.47 -31.86 0.65097
+2402MHz_Vmin Pass 2.4835G 2.4965G 1M 2484.02 -53.35 0.00463 -16.02 25 -37.33 1.49 -53.35 0.00463
+2402MHz_Vmin Pass 2.4965G 12.5G 1M 4803.557 -50.61 0.00868 -26.02 2.5 -24.59 1.72 -50.61 0.00868
+2402MHz_Vmin Pass 2.4965G 12.5G 1M 12496.249 -45.32 0.02936 -26.02 2.5 -19.30 5.68 -45.32 0.02936
+2402MHz_Vmax Pass 30M 2.387G 1M 2333.968 -47.13 0.01938 -26.02 2.5 -21.10 1.44 -47.13 0.01938
+2402MHz_Vmax Pass 2.387G 2.4G 1M 2399.974 -32.03 0.62731 -16.02 25 -16.00 1.47 -32.03 0.62731
+2402MHz_Vmax Pass 2.4835G 2.4965G 1M 2491.742 -53.41 0.00456 -16.02 25 -37.39 1.49 -53.41 0.00456
+2402MHz_Vmax Pass 2.4965G 12.5G 1M 4804.808 -50.06 0.00985 -26.02 2.5 -24.04 1.72 -50.06 0.00985
+2402MHz_Vmax Pass 2.4965G 12.5G 1M 12496.249 -45.40 0.02887 -26.02 2.5 -19.38 5.68 -45.40 0.02887
+2440MHz_Vnom Pass 30M 2.387G 1M 2368.144 -47.46 0.01794 -26.02 2.5 -21.44 1.46 -47.46 0.01794
+2440MHz_Vnom Pass 2.387G 2.4G 1M 2397.114 -53.89 0.00408 -16.02 25 -37.87 1.47 -53.89 0.00408
+2440MHz_Vnom Pass 2.4835G 2.4965G 1M 2487.634 -53.78 0.00419 -16.02 25 -37.76 1.49 -53.78 0.00419
+2440MHz_Vnom Pass 2.4965G 12.5G 1M 4879.834 -51.24 0.00751 -26.02 2.5 -25.22 1.72 -51.24 0.00751
+2440MHz_Vnom Pass 2.4965G 12.5G 1M 12474.991 -45.13 0.03066 -26.02 2.5 -19.11 5.67 -45.13 0.03066
+2440MHz_Vmin Pass 30M 2.387G 1M 2368.144 -46.55 0.02214 -26.02 2.5 -20.53 1.46 -46.55 0.02214
+2440MHz_Vmin Pass 2.387G 2.4G 1M 2397.14 -53.78 0.00419 -16.02 25 -37.76 1.47 -53.78 0.00419
+2440MHz_Vmin Pass 2.4835G 2.4965G 1M 2484.67 -53.82 0.00415 -16.02 25 -37.80 1.49 -53.82 0.00415
+2440MHz_Vmin Pass 2.4965G 12.5G 1M 4879.834 -51.16 0.00765 -26.02 2.5 -25.14 1.72 -51.16 0.00765
+2440MHz_Vmin Pass 2.4965G 12.5G 1M 12494.998 -45.26 0.02976 -26.02 2.5 -19.24 5.68 -45.26 0.02976
+2440MHz_Vmax Pass 30M 2.387G 1M 2368.144 -47.32 0.01854 -26.02 2.5 -21.30 1.46 -47.32 0.01854
+2440MHz_Vmax Pass 2.387G 2.4G 1M 2397.4 -53.78 0.00419 -16.02 25 -37.76 1.47 -53.78 0.00419
+2440MHz_Vmax Pass 2.4835G 2.4965G 1M 2484.696 -53.80 0.00417 -16.02 25 -37.78 1.49 -53.80 0.00417
+2440MHz_Vmax Pass 2.4965G 12.5G 1M 4879.834 -51.00 0.00795 -26.02 2.5 -24.98 1.72 -51.00 0.00795
+2440MHz_Vmax Pass 2.4965G 12.5G 1M 12491.247 -45.31 0.02946 -26.02 2.5 -19.29 5.68 -45.31 0.02946
+2480MHz_Vnom Pass 30M 2.387G 1M 2328.075 -53.05 0.00495 -26.02 2.5 -27.03 1.44 -53.05 0.00495
+2480MHz_Vnom Pass 2.387G 2.4G 1M 2388.664 -53.21 0.00477 -16.02 25 -37.19 1.46 -53.21 0.00477
+2480MHz_Vnom Pass 2.4835G 2.4965G 1M 2487.66 -51.41 0.00723 -16.02 25 -35.39 1.49 -51.41 0.00723
+2480MHz_Vnom Pass 2.4965G 12.5G 1M 4959.862 -50.73 0.00845 -26.02 2.5 -24.71 1.73 -50.73 0.00845
+2480MHz_Vnom Pass 2.4965G 12.5G 1M 12500 -45.04 0.03135 -26.02 2.5 -19.02 5.68 -45.04 0.03135
+2480MHz_Vmin Pass 30M 2.387G 1M 2384.643 -52.51 0.00561 -26.02 2.5 -26.49 1.46 -52.51 0.00561
+2480MHz_Vmin Pass 2.387G 2.4G 1M 2388.43 -53.22 0.00476 -16.02 25 -37.20 1.46 -53.22 0.00476
+2480MHz_Vmin Pass 2.4835G 2.4965G 1M 2487.738 -51.21 0.00756 -16.02 25 -35.19 1.49 -51.21 0.00756
+2480MHz_Vmin Pass 2.4965G 12.5G 1M 4961.112 -50.58 0.00876 -26.02 2.5 -24.56 1.73 -50.58 0.00876
+2480MHz_Vmin Pass 2.4965G 12.5G 1M 10538.064 -45.38 0.029 -26.02 2.5 -19.36 4.62 -45.38 0.029
+2480MHz_Vmax Pass 30M 2.387G 1M 2321.004 -53.10 0.0049 -26.02 2.5 -27.08 1.44 -53.10 0.0049
+2480MHz_Vmax Pass 2.387G 2.4G 1M 2388.664 -53.20 0.00478 -16.02 25 -37.18 1.46 -53.20 0.00478
+2480MHz_Vmax Pass 2.4835G 2.4965G 1M 2487.764 -51.34 0.00735 -16.02 25 -35.32 1.49 -51.34 0.00735
+2480MHz_Vmax Pass 2.4965G 12.5G 1M 4961.112 -50.87 0.00818 -26.02 2.5 -24.85 1.73 -50.87 0.00818
+2480MHz_Vmax Pass 2.4965G 12.5G 1M 10584.33 -45.45 0.02853 -26.02 2.5 -19.43 4.64 -45.45 0.02853
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 3 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 4 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TX Unwanted Emission Strength-DTS Result Appendix D
+International Certification Corp. Page No. : 5 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RX Secondary Radiated Emissions-DTS Result Appendix F
+International Certification Corp. Page No. : 1 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (nW) (dBm) (nW) (dB) (dB) (dBm) (nW)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2.4-2.4835GHz Pass 1G 12.5G 1M 5830 -70.81 0.08297 -46.99 20 -23.82 2.07 -70.81 0.08297
+
+CSE-RX Secondary Radiated Emissions-DTS Result Appendix F
+International Certification Corp. Page No. : 2 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1
+(Hz) (Hz) (Hz) (MHz) (dBm) (nW) (dBm) (nW) (dB) (dB) (dBm) (nW)
+BT-LE(1Mbps) - - - - - - - - - - - - -
+2402MHz_Vnom Pass 30M 1G 100k 951.985 -90.75 0.00084 -53.98 4 -36.77 0.85 -90.75 0.00084
+2402MHz_Vnom Pass 1G 12.5G 1M 10542.125 -75.27 0.02973 -46.99 20 -28.28 4.62 -75.27 0.02973
+2402MHz_Vmin Pass 30M 1G 100k 951.985 -90.79 0.00083 -53.98 4 -36.81 0.85 -90.79 0.00083
+2402MHz_Vmin Pass 1G 12.5G 1M 12162.187 -75.51 0.02811 -46.99 20 -28.52 5.50 -75.51 0.02811
+2402MHz_Vmax Pass 30M 1G 100k 951.985 -91.59 0.00069 -53.98 4 -37.61 0.85 -91.59 0.00069
+
+2402MHz_Vmax Pass 1G 12.5G 1M 12489.937 -75.64 0.0273 -46.99 20 -28.65 5.67 -75.64 0.0273
+2440MHz_Vnom Pass 30M 1G 100k 951.985 -92.39 0.00058 -53.98 4 -38.41 0.85 -92.39 0.00058
+2440MHz_Vnom Pass 1G 12.5G 1M 10545 -75.28 0.02963 -46.99 20 -28.29 4.62 -75.28 0.02963
+2440MHz_Vmin Pass 30M 1G 100k 951.985 -89.55 0.00111 -53.98 4 -35.57 0.85 -89.55 0.00111
+2440MHz_Vmin Pass 1G 12.5G 1M 12482.75 -75.47 0.02837 -46.99 20 -28.48 5.67 -75.47 0.02837
+2440MHz_Vmax Pass 30M 1G 100k 951.985 -90.68 0.00086 -53.98 4 -36.70 0.85 -90.68 0.00086
+2440MHz_Vmax Pass 1G 12.5G 1M 12146.375 -75.46 0.02842 -46.99 20 -28.47 5.49 -75.46 0.02842
+2480MHz_Vnom Pass 30M 1G 100k 951.985 -89.30 0.00118 -53.98 4 -35.32 0.85 -89.30 0.00118
+2480MHz_Vnom Pass 1G 12.5G 1M 12182.312 -75.68 0.02701 -46.99 20 -28.70 5.51 -75.68 0.02701
+2480MHz_Vmin Pass 30M 1G 100k 951.985 -89.31 0.00117 -53.98 4 -35.33 0.85 -89.31 0.00117
+2480MHz_Vmin Pass 1G 12.5G 1M 5830 -70.81 0.08297 -46.99 20 -23.82 2.07 -70.81 0.08297
+2480MHz_Vmax Pass 30M 1G 100k 951.985 -92.09 0.00062 -53.98 4 -38.11 0.85 -92.09 0.00062
+2480MHz_Vmax Pass 1G 12.5G 1M 10517.687 -75.43 0.02862 -46.99 20 -28.44 4.61 -75.43 0.02862
+
+CSE-RX Secondary Radiated Emissions-DTS Result Appendix F
+International Certification Corp. Page No. : 3 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RX Secondary Radiated Emissions-DTS Result Appendix F
+International Certification Corp. Page No. : 4 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RX Secondary Radiated Emissions-DTS Result Appendix F
+International Certification Corp. Page No. : 5 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155

@@ -1,0 +1,247 @@
+queueId: ingest-1781569954376-6k9
+sourcePath: raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/0. HnX-R1 사이버보안 체크리스트 (Rev.1 250918).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/d52ba831cf9f/0. HnX-R1 사이버보안 체크리스트 (Rev.1 250918)__d52ba831cf9f_combined.txt
+canonicalGroupId: 3e4a121972b9
+productSignal: HnX
+authoritySignal: general
+pilotRank: 475
+
+SOURCE_TEXT
+항목 요구사항번호 요구사항 해당기기
+적용여부 적합성 적합성
+입증 방법
+해당 첨부자료
+또는 문서번호
+IA-01 사용자 식별 및 인증 A 본 의료기기는 ID 및 PW 방식의 사용자 식별
+및 인증 방식을 제공함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-02 계정 관리 A 본 의료기기는 특정 권한을 가진 사용자에게
+계정 관리 기능(등록, 삭제, 수정)을 제공함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-03 식별정보 관리 A 본 의료기기의 경우 계정 ID가 고유한 식별
+정보임을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-04 인증정보 관리 A
+본 의료기기의 경우 디폴트 인증정보 변경
+권고 알림 메시지와 인증정보 사용 만료 메
+시지를 사용자에게 제공하며, 인증정보는 암
+호화되어 저장됨.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-05 비밀번호 강도 설정 A 본 의료기기는 패스워드 강도 설정 기능을
+적용함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-06 인증정보에 대한 피드백 A
+사용자 인증 실패 시, 사용자에게 제공하는
+메시지는 인증정보를 유추할 수 있는 정보를
+포함하지 않음.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-07 연속적인 로그인 시도 실
+패 시 로그인 제한 A 본 의료기기는 연속 로그인 실패 계정에 대
+한 잠금 및 해제 기능을 제공 함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+IA-08 시스템 사용 알림 메시지 A 본 의료기기는 시스템 알림 메시지를 제공함
+을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-01 권한 부여 A
+본 의료기기는 Administrator, Engineer,
+User으로 권한을 구분하며 각 권한마다 사용
+할 수 있는 기능이 다름.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-02 모바일 코드 사용 통제 N/A 본 의료기기는 모바일 코드 기술을 사용하지
+않으므로 적용 제외됨.
+Cybersecurity Risk
+management
+Threat Modeling Report (Doc No. A-
+CTMR-HNXR1)
+Cybersecurity Risk Management Report
+(Doc no. _A-CRMR-HNXR1)
+Cybersecurity FMEA table (Doc no. A-
+CFMEA-HNXR1)
+UC-03 세션 잠금 A 본 의료기기는 세션 타임 아웃을 설정하여
+적용함을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-04 감사기록 생성 A
+본 의료기기는 이벤트 시간, 이벤트 발생 주
+체, 이벤트 발생 내용을 기록한 감사 로그를
+사용자에게 제공함.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-05 감사 처리 실패 대응 A
+본 의료기기는 감사로그 저장 용량이 설정한
+임계치를 초과할 시, 이전 로그를 삭제함을
+확인함.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-06 타임스탬프 A 본 의료기기의 감사기록은 이벤트 시간을 포
+함함 Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+UC-07 부인 방지 A 본 의료기기가 제공하는 감사기록을 통해 이
+벤트 주체를 확인할 수 있음. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+< 의료기기 사이버보안 특성 기재 >
+1) 사용되는 통신 기술: 무선통신(Wi-Fi), DICOM 표준 통신 프로토콜
+2) 사용 환경: 병원 내 사용
+3) 공용 네트워크망 사용 여부: N/A
+[ 의료기기 사이버보안 요구사항 체크리스트 ]
+식별 및 인증(IA)
+사용 통제(UC)
+품목명: 의료영상획득장치
+모델명: HnX-R1
+Rev 1. 250918
+
+SI-01 통신에 대한 무결성 보장 A
+HnVUE SW와 Detector 간 암호화 통신함을
+확인함. HnVUE SW는 PACS, Worklists 서버
+와 각각 DICOM 프로토콜 및 평문 통신함을
+확인함.
+또한 PACS, Worklists 서버 모두 폐쇄망에서
+운영됨.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-02 악성코드로부터 보호 A
+HnVUE SW는 사용자 PC에 단독으로 설치되
+는 소프트웨어로써 사용자 매뉴얼 내 해당
+소프트웨어가 설치된 PC에 안티 바이러스 제
+품을 설치할 것을 명시하고 있음. Detector의
+경우 제조사 전용 도구 없이는 사용자가 내
+부 시스템에 접근하여 악성 파일을 설치할
+수 없음.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-03 보안 기능 검증 A 본 의료기기의 보안 기능이 정상적으로 동작
+함을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-04 소프트웨어 및 정보에 대
+한 무결성 점검 A
+본 의료기기의 경우 HnVUE는 무결성 점검
+기능을 제공함. Detector의 경우 시험 결과
+무결성 점검 기능을 필수로 제공할 필요가
+없다고 판단됨.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-05 입력값 검증 A 본 의료기기는 입력필드에 대한 입력 값 제
+한 및 유효범위를 정의하지 않음. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-06 오류 시 사전 결정된 상태
+로 출력 N/A 본 의료기기의 자동화 프로세스 기능은 없으
+므로 적용 제외됨.
+Cybersecurity Risk
+management
+Threat Modeling Report (Doc No. A-
+CTMR-HNXR1)
+Cybersecurity Risk Management Report
+(Doc no. _A-CRMR-HNXR1)
+Cybersecurity FMEA table (Doc no. A-
+CFMEA-HNXR1)
+SI-07 오류 처리 A 본 의료기기의 오류 메시지 내 공격자에 의
+해 악용될 정보가 존재하지 않음. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-08 업데이트 A 본 의료기기는 업데이트가 가능함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-09 업데이트에 대한 진본성
+및 무결성 검증 A 본 의료기기는 업데이트 시, 무결성 검증 기
+능(SHA-256) Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+SI-10 물리적 변조 방지 A
+비활성화된 USB C-port에 대해 물리적 구조
+를 통해 막음.
+또한 제품의 개봉을 위한 볼트는 deco sheet
+를 통해 가려져 있음.
+Cybersecurity Risk
+management
+Threat Modeling Report (Doc No. A-
+CTMR-HNXR1)
+Cybersecurity Risk Management Report
+(Doc no. _A-CRMR-HNXR1)
+Cybersecurity FMEA table (Doc no. A-
+CFMEA-HNXR1)
+SI-11 부트 프로세스 무결성 검
+증 A 본 의료기기는 부팅 시, 무결성 검증을 수행
+함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+DC-01 정보에 대한 기밀성 보장 A 본 의료기기가 저장하는 중요정보는 암호화
+되어 저장됨을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+DC-02 보건의료정보 비식별화 A
+본 의료기기가 저장하는 환자 정보에 대해
+비인가자 접근이 불가하며, 접근 가능한
+DICOM 파일의 경우 파일 내 환자 정보를 포
+함하지 않음.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+DC-03 안전한 암호화 사용 A
+본 의료기기는 안전한 암호화 방식(AES-
+128)을 활용하고 있음을 확인함. 의료기기에
+저장된 암호키는 비인가자의 접근을 통제하
+는 방식으로 보호되고 있음을 확인함.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+시스템 무결성(SI)
+데이터 기밀성
+(DC)
+
+이벤트 적시 대응
+(TRE) TRE-01 감사로그에 대한 비인가
+된 접근 제한 A 사용자는 본 의료기기의 감사로그에 대해 읽
+기 권한만 가질 수 있음. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+RA-01 서비스 거부(Denial of
+Service, DoS) 방지 A
+(1) 기능 격리: 네트워크/관리 기능은 핵심 의
+료 기능과 논리적으로 분리되어 네트워크 장
+애 또는 DoS 공격 발생 시에도 필수 기능이
+유지됩니다. 특히 콘솔 내 환자 의료 정보가
+포함된 데이터베이스는 암호화, 보호 및 백업
+되어 손실 발생 시에도 보호 및 복구를 보장
+합니다.
+(2) 전용 DDoS 방어 장비/서비스(방화벽,
+WAF, IPS, 클라우드 기반 DDoS 방어 서비스)
+와의 연동을 통한 네트워크 계층 공격 트래
+픽 차단: Windows Defender를 통한 실시간
+트래픽 모니터링 및 로깅, 네트워크 트래픽
+및 장비 작동 상태 실시간 모니터링을 통해
+이상 징후 조기 감지
+(3) 예비 테스트: DDoS 생성기를 이용한 실제
+과부하 트래픽을 생성하여 핵심 기능이 정상
+적으로 유지되는지 검증했습니다
+Cybersecurity Risk
+management
+Threat Modeling Report (Doc No. A-
+CTMR-HNXR1)
+Cybersecurity Risk Management Report
+(Doc no. _A-CRMR-HNXR1)
+Cybersecurity FMEA table (Doc no. A-
+CFMEA-HNXR1)
+RA-02 의료기기 백업 A
+본 의료기기는 사용자에게 백업 기능을 제공
+하고 백업 적용 시 제품의 정상작동에 영향
+을 미치지 않음.
+Cybersecurity Risk
+management
+Threat Modeling Report (Doc No. A-
+CTMR-HNXR1)
+Cybersecurity Risk Management Report
+(Doc no. _A-CRMR-HNXR1)
+Cybersecurity FMEA table (Doc no. A-
+CFMEA-HNXR1)
+RA-03 의료기기 복구 및 재구성 A
+본 의료기기는 기기 작동의 중단 또는 장애
+시 안전한 상태로 복구 및 재구성할 수 있는
+기능을 사용자에게 제공함.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+RA-04 네트워크 및 보안 구성 설
+정 A
+본 의료기기의 사용자 매뉴얼 내 네트워크
+설정 방법을 기재하고 있으며, HnVUE는
+Detector에 대한 네트워크 설정 및 통신에 대
+한 로그를 기록하고 있음을 확인함.
+Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+RA-05 불필요한 기능 비활성화 A 본 의료기기는 초기 통신 포트외 불필요한
+서비스 포트를 제공하지 않음을 확인함. Cybersecurity test report Cybersecurity Requirements Test report
+(Report no. EBB-2025-000109)
+자원 가용성(RA)

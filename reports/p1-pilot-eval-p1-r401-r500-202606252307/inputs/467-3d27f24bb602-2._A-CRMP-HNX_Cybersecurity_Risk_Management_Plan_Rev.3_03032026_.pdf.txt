@@ -1,0 +1,780 @@
+queueId: ingest-1781569954377-6wy
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/2. A-CRMP-HNX_Cybersecurity Risk Management Plan (Rev.3, 03032026).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/e0f2b525630b/2. A-CRMP-HNX_Cybersecurity Risk Management Plan (Rev.3, 03032026)__e0f2b525630b_combined.txt
+canonicalGroupId: 3d27f24bb602
+productSignal: HnX
+authoritySignal: CE/MDR
+pilotRank: 467
+
+SOURCE_TEXT
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 1 / 2
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Cybersecurity
+Risk Management Plan
+Product name: Portable X-ray System
+Model name: HnX-P1, HnX-PB
+Name Position Date Signature
+Prepared by Han, Jimin R&D team March 03,
+2026
+Reviewed by Hur, Namkyu
+Quality
+Management
+Representative
+March 03,
+2026
+Approved by Jeon, Jeu R&D manager March 03,
+2026
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 2 / 3
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision History
+Revision No. Rev. Date Revision Description
+0 June 05, 2025 Initial
+1 June 20, 2025 Revision according to Add variant model (HnX-PB)
+2 December 10,
+2025 Revision according to the intended purpose
+3 March 03, 2026 Revision according to the intended purpose
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 3 / 4
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Contents
+1. Introduction ·················································································································· 4
+2. Scope of the Planned Cybersecurity Risk Management Activities ···················································· 4
+3. Reference ····················································································································· 6
+4. Cybersecurity Risk management process················································································· 7
+5. Personnel responsible ····································································································· 10
+6. Sources, methods, and frequency for monitoring and identifying vulnerabilites ·································· 11
+7. Identify and address vulnerabilities identified in CISA Known Exploited Vulnerabilities Catalog ············· 12
+8. Periodic security testing ·································································································· 15
+9. Timeline to develop and release patches················································································ 15
+10. Update process ··········································································································· 16
+11. Patching capability ······································································································· 17
+12. Coordinated vulnerability disclosure and related processes ························································ 17
+13. How you intend to communicate forthcoming remediations, patches, and updates to customers. ············ 18
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 4 / 5
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Introduction
+This is a document for the H&abyz Co., Ltd. to establish and document a Cybersecurity risk
+management plan in accordance with the risk management procedure.
+This plan includes the following:
+a) Personnel responsible
+b) Sources, methods, and frequency for monitoring and identifying vulnerabilities
+c) Identify and address vulnerabilities identified in CISA Known Exploited Vulnerabilities
+Catalog
+d) Periodic security testing
+e) Timeline to develop and release patches
+f) Update processes
+g) Patching capability
+h) Description of their coordinated vulnerability disclosure process
+i) Description of how the manufacturer intends to communicate forthcoming remediations,
+patches, and updates to customers.
+2. Scope of the Planned Cybersecurity Risk Management
+Activities
+This Cybersecurity Risk management plan is applicable to all stages of the life cycle of the HnX-
+P1. This document also describes risk management process, assignment for responsibilities and
+authorities.
+2.1 General Description of the product
+(1) General details
+This portable x-ray system (Model: HnX-P1, HnX-PB) consists of an LCD display with up
+and down soft-keys for controlling kV, an X-ray generator (line-powered transformer), an X-
+ray tube assembly, a collimator and a cart. It can also use a stand instead of a cart. The HnX-
+P1 and HnX-PB are used with a film-cassette or flat-panel detector.
+This device is a battery-powered portable X-ray System, designed and manufactured by
+H&abyz.
+Compared with traditional X-ray products, this device has exquisite structure, compact design,
+light weight and easy operation.
+The major components of the X-ray main unit include handle, enclosure, main control panel,
+system control board, high-voltage tank, inverter, collimator (beam limiter), and system
+control software running on the system control board. The system control software is for real-
+time interaction and control with various circuit modules inside the X-ray generator. The
+software responds to user operations on the control panel. The user can adjust and control the
+kV and mAs parameters, and the software will display the parameters or directly load the APR
+parameters. The software loads the control data from X-ray output into the high-voltage
+generation control circuit of the system control board, and control the high-voltage tank to
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 5 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+generate high-voltage to excite the X-ray tube inside to emit X-rays, control the switch of the
+collimator, and monitor the working status of the device, and control the display of the status
+indicators.
+The system is for X-ray imaging and diagnosis in facilities with portable or fixing sites.
+This portable x-ray system is not intended for mammography.
+The device can be used with an X-ray flat panel detector, a computer for receiving and
+detecting signal results and an image processing software. This portable X-ray System is
+designed for handheld or stand-mounted imaging. Model HnX-P1 can be configured to an
+optional portable stand that complies with IEC 60601- 1 safety standard. The recommended
+maximum load that the stand can safely carry is 6kgs to ensure the mechanical stability and
+effectiveness of the device.
+The cybersecurity risk of the HnX-P1 have been addressed to assure that no new or increased
+cybersecurity risks were introduced as a part of device risk analysis. These risks are defined
+as sequence of events leading to a hazardous situation, and the control for their risks were
+treated and implemented as proposed in the risk analysis (e.g., requirements, verification).
+The variant model HnX-PB has only changed the exterior design compared to the main model
+HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the
+same. Therefore, no additional cybersecurity risk management is performed due to the
+addition of the variant model (HnX-PB).
+Product Name Portable X-ray system
+Model Name HnX-P1, HnX-PB
+Classification Class ll
+Expected service life Approximately 7 years
+(2) Intended Purpose
+The HnX-P1 (and HnX-PB) is a battery-powered portable X-ray system intended for
+generating radiographic images of human anatomy.
+(3) Operating Principle
+A device that is built by generating high voltage and adding it to both ends of the tube, heating
+the bulb filament, shooting the electron cloud of the filament o the target of the tube to
+generate X-rays, and the irradiation range of X-ray is limited by the collimator.
+A. Operating steps
+• The patient is prepped and provided some form of radiation shielding.
+• The unit is positioned around the patient, who is asked to remain motionless while the
+image is being taken.
+• The operator takes the image by activating the X-ray beam using an exposure switch.
+• The operator repositions the patient or unit if needed. Multiple images may be taken.
+B. Use and maintenance User(s):
+• Surgeon; physician; radiographer or radiology technician; other medical staff
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 6 / 7
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+• Maintenance: Biomedical engineering staff and/ or service contract with the
+manufacturer or third-party organization
+• Training: Initial training by manufacturer, operator’s manuals, user’s guide
+C. Environment of use Settings of use:
+• Intensive and critical care units; operating and emergency rooms; some units designed
+for private home, clinic, correctional facility, military field hospital radiography;
+physician office.
+3. Reference
+Standard Title
+ISO 14971 Medical devices - Application of risk management to medical devices
+IEC 60601-1 Medical electrical equipment - General requirements for basic safety and
+essential performance
+IEC 60601-1-2
+Medical electrical equipment – Part 1-2: General requirements for basic safety
+and essential performance – Collateral standard: Electromagnetic disturbances
+– Requirements and tests
+IEC 60601-1-3
+Medical electrical equipment - Part 1-3: General requirements for basic safety
+and essential performance - Collateral Standard: Radiation protection in
+diagnostic X-ray equipment
+IEC 60601-2-28
+Medical electrical equipment - Part 2-28: Particular requirements for the basic
+safety and essential performance of X-ray tube assemblies for medical
+diagnosis
+IEC 60601-2-54
+Medical electrical equipment -- Part 2-54: Particular requirements for the basic
+safety and essential performance of X ray equipment for radiography and
+radioscopy
+IEC 62304 Medical device software - Software life-cycle processes
+IEC 62366-1 Medical devices - Application of usability engineering to medical devices
+IEC 60601-1-6 Medical electrical equipment - Part 1-6: General requirements for basic safety
+and essential performance - Collateral standard: Usability
+ISO 15223-1 Medical devices—Symbols to be used with medical device labels, labeling and
+information to be supplied -Part 1:General requirements
+AAMI TIR 57 Principles for medical device security
+NIST Special
+Publication 800-30 Guide for Conducting Risk Assessments
+Cybersecurity in
+Medical Devices
+Cybersecurity in Medical Devices: Quality System Considerations and Content
+of Premarket Submissions
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 7 / 8
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. Cybersecurity Risk management process
+Cybersecurity Risk management process needs to be iterative, covering each risk in turn, and
+returning to earlier steps if risk control measures introduce new hazards or if new information
+becomes available.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 8 / 9
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.1 Resource Allocation
+Effective resource allocation is critical for a successful cybersecurity implementation, which
+includes establishing dedicated cybersecurity roles and assigning specific responsibilities to each
+member.
+4.2 Policy
+Cybersecurity management policies should outline the management strategies and protocols for
+maintaining cybersecurity during the development, deployment, and maintenance of the medical
+device. policies should include guidelines for secure coding practices, regular security assessments,
+incident response, and compliance with regulatory requirements.
+4.3 Threat modeling
+Threat modeling is the process of systematically identifying potential threats and vulnerabilities
+that could affect a medical device. This involves creating a comprehensive model that maps out all
+possible attack vectors, entry points, and weaknesses in the device's architecture. The goal is to
+understand how an attacker might exploit these vulnerabilities and the potential impact on the
+device's functionality, data integrity, and patient safety. Techniques such as STRIDE (Spoofing,
+Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) can be
+used to categorize and analyze threats.
+* STRIDE
+The STRIDE algorithm primarily focuses on the security and integrity of the product itself, rather
+than its interaction with the surrounding environment. This makes it especially suitable for
+medical devices, where the main concern is the device's security. By concentrating on the device,
+STRIDE enables a more comprehensive analysis of its inherent security risks.
+4.4 Risk assessment
+Once potential threats and vulnerabilities have been identified through threat modeling, the next
+step is to evaluate the impact and likelihood of each threat. Risk analysis involves assessing the
+severity of the impact if a threat were to be realized and the probability of its occurrence.
+As a method for risk assessment, we apply CVSS (Common Vulnerability Scoring System).
+1) The CVSS measurement site and used version.
+: NVD – CVSS c3 Calculator / CVSS version 3.1
+2) The severity levels by CVSS score
+Severity level CVSS score range
+None 0
+Low 0.1 ~ 3.9
+Medium 4.0 ~ 6.9
+High 7.0 ~ 8.9
+Critical 9.0 ~ 10.0
+3) We could get a base score by entering the CVSS result value from that site.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 9 / 10
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.5 Risk Mitigation Plan
+After analyzing the risks, a risk mitigation plan is developed to outline the security controls and
+measures needed to reduce the identified risks to an acceptable level. This plan should detail specific
+actions to be taken, such as implementing encryption, access controls, regular security updates, and
+continuous monitoring. The mitigation strategies should address both the likelihood and impact of
+the risks, ensuring that vulnerabilities are minimized, and the device is protected against potential
+threats.
+4.6 Security requirements
+Deriving security requirements is a critical step in the design and development phase. This involves
+identifying both functional and non-functional security requirements based on the IEC 60601-4-5.
+The requirements specify the security features that the device must have, such as user authentication,
+access control, and secure communication protocols.
+4.7 Security design
+Designing a secure system involves creating the device and its components to meet specific security
+requirements. This requires developing a detailed security architecture that specifies how data will
+be protected, how secure communication will be maintained, and how access to the device will be
+controlled.
+4.8 Secure Coding Practices
+Following secure coding practices is crucial to prevent vulnerabilities in the development of
+medical devices. Developers should comply with established secure coding standards, such as those
+provided by CWE, to avoid common security pitfalls.
+4.9 Testing and Verification
+During the Testing and Verification phase, we use a thorough approach to guarantee the security of
+the medical device. We employ static analysis tools to identify code vulnerabilities early in the
+development process, which helps in detecting and fixing issues before they escalate. Additionally,
+dynamic analysis is conducted to test the device in a runtime environment and uncover
+vulnerabilities that may not be apparent through static analysis alone.
+Cyber tests are divided into cyber tests when developing new products and existing ones according
+to internal guidelines.
+In the case of new products, cybersecurity requirements are developed and tested in the entire
+process from product design input to output and transfer, and if necessary, a third-party testing
+agency will conduct it.
+In the case of products currently being sold, a cyber security expert monitors cyber issues in the
+market quarterly, and if there are any related cyber risks, analyze them through cooperation with
+other departments such as the quality team, and develop product changes if necessary.
+After the change, conduct a cybersecurity test internally and update the product to the market after
+the test verification.
+Additionally, cybersecurity modeling as a legal requirement is tested through a third-party agency
+when work is required overall.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 10 / 11
+
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.10 Deployment and operation
+In the Deployment and Operation phase, the system is securely deployed with all necessary security
+configurations applied to ensure a fortified environment. Continuous operational monitoring is
+conducted to maintain the security status, including managing and analyzing logs for any
+suspicious activity. Effective vulnerability management is critical; this involves swiftly patching
+and updating the system upon the discovery of new vulnerabilities to prevent potential security
+breaches. This proactive approach ensures that the medical device remains secure and resilient
+against evolving threats throughout its operational lifecycle.
+4.11 Maintenance
+In the Maintenance phase, regular updates and patches are managed to address new security threats
+promptly, ensuring the system remains secure. Continuous security monitoring is essential to detect
+and respond to potential incidents swiftly, supported by a well-defined incident response plan.
+Additionally, user education is crucial; providing security awareness training helps users recognize
+and prevent security breaches, reinforcing the overall cybersecurity posture of the medical device
+system. This comprehensive maintenance strategy ensures ongoing protection and resilience
+against emerging threats.
+5. Personnel responsible
+The following section outlines the roles and responsibilities of key personnel involved in the
+medical device cybersecurity process. It defines the duties of software development team staff,
+software testing team staff, project manager, project manager, quality assurance manager, product
+manager and cybersecurity manager to ensure comprehensive security compliance and effective
+collaboration.
+Team Position Responsibilities
+R&D R&D Manager 1) Approval of Cyber Security Risk Management
+2) Approval to proceed with the cybersecurity test
+3) Approval of cyber risk countermeasures
+R&D R&D Team 1) Cyber Security Risk Management Plan and Risk
+Management Proceedings
+2) Supervising Cybersecurity Testing
+3) Establish guidelines for cyber security risk response
+4) Review Cyber Security Risk Management Documents
+5) Development of security methods against cyber risks
+6) Identify and analyze cyber risks
+7) Proceed with cyber risk management and create documents
+8) Cybersecurity Design and Development
+9) Conducting a Cybersecurity Test
+10) Identifying Cybersecurity Hazards
+11) Cybersecurity Hazard Analysis and Reporting
+12)Proceed with CAPA for Cybersecurity
+R&D RA 1) Conducting and managing third-party testing related to
+cybersecurity testing
+2) Monitoring of the latest standards related to cyber security
+and internal announcements
+Quality
+Control
+QMR 1) Monitoring cyber hazards and reporting to regulators
+2) Proceed with CAPA for Cyber Hazard
+3) Identification of cyber issues related to design changes and
+notification of changes
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 11 / 12
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6. Sources, methods, and frequency for monitoring and
+identifying vulnerabilites
+6.1 Sources
+• SBOM & Component Inventories
+- Maintain an up-to-date Software Bill of Materials listing all third-party libraries, firmware
+modules, and hardware components.
+- Track vendor support status (EOS/EOL) and subscribe to vendor advisories for any new
+security notices.
+• Public Vulnerability Feeds
+- Check NVD (National Vulnerability Database) monthly for CVEs that affect embedded
+Linux, Bluetooth stacks, MCU firmwares, and relevant third-party components.
+- Review CERT/ICS-CERT bulletins and CISA advisories quarterly to capture any medical-
+device–specific or industry-wide alerts.
+• Internal Testing & Reports
+- Collect scheduled static analysis (SAST) results, dynamic vulnerability-scanner outputs,
+and periodic penetration-test reports.
+- Log and review any firmware integrity failures (checksum mismatches) from
+manufacturing or field updates.
+• Field Feedback & Incident Reports
+- Monitor customer-reported issues via support tickets for any unexpected behavior that
+could indicate a vulnerability.
+- Track security incidents involving similar portable X-ray or other medical imaging
+devices to identify potential exploit patterns.
+6.2 Methods
+• Scheduled Static Application Security Testing (SAST)
+- Focus on CWE-identified weaknesses such as buffer overflows, injection points, and
+improper authentication.
+• Dynamic Scanning
+- Use a vulnerability scanner against firmware images to detect known CVEs,
+misconfigurations, and open ports (e.g., Bluetooth SDP, UART debug interfaces).
+• Hardware Security Assessment
+- Conduct penetration tests on the MCU and peripheral interfaces (e.g., side-channel
+analysis, physical tampering attempts) to detect hardware backdoors or weak protections.
+- Review bootloader and firmware update routines to ensure integrity checks (AES-128–
+based encryption and checksum) are enforced.
+• SBOM Review & Lifecyle Management
+- Cross-reference SBOM entries against public CVE feeds. Flag any component
+approaching end-of-support and plan for replacement or upgrade.
+• Coordinated Vulnerability Disclosure (CVD) Process
+- Maintain a public point of contact for researchers to report bugs. Track all disclosures
+from initial report through remediation, retest, and documentation.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 12 / 13
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.3 Frequency
+• Continuous/Real-Time
+- Checksum & Integrity Monitoring: Every firmware update (via C-port), verify digital
+signature and AES-128 decryption. Any failure triggers an immediate alert.
+- Field Incident Monitoring: Support team escalates any security-related customer reports
+immediately.
+• Monthly
+- Query NVD for new CVEs affecting any SBOM component.
+- Update SBOM and verify component versions against known-vulnerable lists.
+• Quarterly
+- Review CERT/ICS-CERT and CISA advisories for industry-specific alerts.
+- Run a scheduled SAST scan on the codebase at the end of each quarter, focusing on new
+commits since the last scan.
+• Annually
+- Conduct a full penetration test (hardware + firmware) to catch any issues not covered by
+automated tools.
+- Reevaluate the entire risk-management file, incorporating new threat models or changes
+in regulatory guidance.
+• Ad Hoc
+- If a critical CVE is published for a component in use (e.g., a Bluetooth stack), initiate an
+urgent risk assessment and patch rollout within 30 days.
+- Trigger a vulnerability review if a customer-reported anomaly suggests a potential exploit.
+7. Identify and address vulnerabilities identified in CISA
+Known Exploited Vulnerabilities Catalog
+7.1 Overview
+The CISA KEV Catalog provides a list of CVEs with confirmed exploits in the wild. Check the
+software and firmware components used by the HnX-P1 and HnX-PB portable X-ray system
+quarterly for vulnerabilities included in the KEV Catalog, so that you can quickly implement
+patches or mitigations to prepare for real-world attacks.
+7.2 Process
+7.2.1 KEV Catalog Retrieval (Quarterly)
+• Method:
+o Once every quarter, a security team member manually downloads the latest KEV
+Catalog (CSV or JSON) from CISA’s official site (https://www.cisa.gov/known-
+exploited-vulnerabilities-catalog).
+7.2.2 SBOM-Based Mapping (Quarterly Mapping)
+• Prepare the SBOM:
+o Refer to our “Cybersecurity BOM” document, which lists every software/firmware
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 13 / 14
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+component (third-party libraries and in-house modules) used in HnX-P1 and HnX-PB.
+o
+• Mapping Procedure:
+o Parse each CVE entry (CVE-YYYY-XXXX) in the KEV list and compare its affected
+versions against our SBOM.
+o Compare those names and versions against the SBOM entries.
+ Example A: If KEV includes “CVE-2025-1234: stm32h7xx_hal_uart.c version
+1.2.3 and below is vulnerable to remote code execution,” check whether our
+SBOM shows stm32h7xx_hal_uart.c version 1.2.3 in use. If it does, mark it as
+“Applicable.”
+ Example B: If KEV lists “CVE-2025-2345: KISA SHA256 library r1.0 and
+below has an integrity bypass vulnerability,” verify whether our SBOM
+indicates kisa_sha256.c/.h at version 1.0 or earlier. If so, mark as “Applicable.”
+• Record Results:
+o Document the results in a risk management report.
+7.2.3 Vulnerability Assessment & Prioritization
+• Assessment Criteria:
+- CVSS Base Score: If score ≥ 9.0 → classify as “Critical” (must remediate within 30
+days).
+- Public PoC Availability: If a proof-of-concept exploit exists, raise the priority.
+- Healthcare Exploitation History: If similar medical devices have been attacked, assign
+higher priority.
+• Priority Levels:
+- Critical: Remediate (patch or mitigation) within 30 days.
+- High: Remediate within 60 days.
+- Medium/Low: Schedule for the next regular software release or continue monitoring.
+7.2.4 Remediation Planning
+• Patch Verification & Integration:
+- Check if the vendor (e.g., STMicroelectronics, KISA) has released an official patch or
+version upgrade for the affected component.
+- If so, update the component in our firmware build (for example, upgrade
+stm32h7xx_hal_uart.c from v1.2.3 to v1.2.4). Then perform an AES-128 encryption +
+Checksum integrity check on the new firmware.
+• Backport & Mitigation:
+If no official patch exists, choose one of the following:
+- Backport: Extract and integrate only the security fix into our codebase, then rebuild.
+- Feature Disablement: Temporarily disable the vulnerable functionality (e.g., disable a
+specific serial interface or wireless feature).
+• Verification:
+- Build the patched firmware and run AES-128 encryption + Checksum verification.
+- Perform internal testing (including results from penetration tests and static analysis) plus
+regression testing to ensure all major features (APR save/load, SID distance measurement,
+X-ray output control, etc.) still operate correctly.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 14 / 15
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7.2.5 Deployment & Field Verification
+• Deployment:
+- The Customer Support (CS) team uses C-Port (USB-C) to install the patched firmware or
+dispatches a field engineer to update on-site.
+- After updating, verify on the device’s LCD that the firmware version number matches the
+new build.
+• Field Verification:
+- CS monitors logs from the field (Checksum checks, error logs, unexpected reboots).
+- If no issues arise, mark the CVE item as “Closed.” If problems appear, either roll back or
+apply additional measures immediately.
+7.2.6 Documentation & Internal Reporting
+• Risk Management Report Updates:
+- CVE ID – Mapped Component – Current Version
+- Assessment Result (Priority Level)
+- Patched Version & Date Applied
+- Verification Results (Test Cases & Summary)
+- Deployment Method (C-Port or Field Engineer)
+- CS Team Field Verification Results
+• Internal Reporting:
+- Submit a summary report to the Security, Development, and Regulatory Affairs (RA)
+teams, including all relevant documentation for audits or regulatory submissions.
+7.3 Post-Deployment Monitoring & Review
+7.3.1 Quarterly Review Meetings
+• Review KEV CVEs identified and their remediation status over the past quarter.
+• For any items not yet completed, reassign priorities and allocate resources to avoid rollover
+to the next quarter.
+7.3.2 Annual Process Assessment
+• Evaluate whether this quarterly KEV monitoring process remains practical and effective.
+• Adjust documentation formats, testing procedures, or deployment workflows to improve
+efficiency.
+• Incorporate any updates from FDA or local regulatory guidance on cybersecurity.
+7.3.3 Ad Hoc Customer Incident Response
+• If the CS team or field engineers report anomalies after an update (e.g., unexpected reboots,
+feature malfunctions), immediately re-run the SBOM-to-KEV mapping to see if additional
+CVEs apply.
+• If a new vulnerability is found, develop an emergency response plan and accelerate patch
+deployment.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 15 / 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+8. Periodic security testing
+Cybersecurity testing is performed after updates as follows:
+- Regular: N/A (No need for regular updates as it is an offline-only product)
+- Immediate: When new cybersecurity requirements arise or cybersecurity threats occur.
+Updates are made when software is changed, such as when product specifications are
+changed.
+9. Timeline to develop and release patches
+No. Step Timeline Key Activities & Deliverables
+1 Vulnerability
+Identification (Day 0) Day 0 Verify CVE in KEV Catalog → Begin
+applicability assessment
+2 Assessment & Planning
+(Day 1–3) Days 1–3
+Review CVSS, PoC, healthcare exploitation cases
+→ Classify priority (Critical/High/Medium) →
+Define roles & milestones
+3 Patch Development (Day
+4–14) Days 4–14 Apply vendor patch or backport/disable feature →
+Code modification and basic compile testing
+4 Integrated Build &
+Verification (Day 15–20) Days 15–20
+Full firmware build → AES-128 encryption +
+Checksum → Rerun static analysis tool → Smoke
+testing
+5 Regression Test &
+Penetration Test (Day 21–
+25)
+Days 21–25 QA team regression tests (main functions) →
+Security team/penetration test results review
+6 Documentation & Internal
+Approval (Day 26–28) Days 26–28 Prepare Risk Management Report and obtain
+internal approvals → Final approval by RA team
+7 Patch Deployment (Day
+29–30) Days 29–30 CS team or field engineer updates device via C-
+Port → Verify firmware version & Checksum
+8 Field Monitoring (Day
+31–35) Days 31–35
+Monitor field logs (one week) → Prepare
+completion report and mark Risk Management
+Report as “Closed”
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 16 / 17
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+10. Update process
+* If communication is interrupted or a failure occurs during the update, it may cause damage to the
+product's hardware and update files. Therefore, the product's software and firmware updates cannot
+be performed directly by users in the field, and must be performed by authorized service personnel
+or by returning the product to the manufacturer or service center.
+10.1 Preparation
+• Obtain security patches from trusted sources
+- You should download patches required for vulnerability fixes or feature improvements
+from the manufacturer or an authorized software vendor. This ensures the integrity of the
+patch itself and effectively eliminates known security risks.
+• Patch file encryption
+- Encrypt the patch file using a strong encryption algorithm such as AES-128 to prevent the
+contents of the patch file from being exposed during transmission.
+• Apply digital signature
+- Add a digital signature to the patch file using the manufacturer's private key so that the
+device can "verify that the patch has not been tampered with" before installation.
+10.2 Update Deployment
+• Accessing the update interface
+- Run an update tool such as STM32CubeProgrammer on a PC connected to the HnX-P1,
+HnX-PB product. It is provided in GUI or CLI form, and select the update mode according
+to the instructions in the provided manual.
+• Digital signature verification
+- Just before installing the patch, the device verifies the digital signature of the transmitted
+patch file to verify “whether there is a valid manufacturer signature” and “whether there
+was any tampering during transmission.”
+• Patch installation
+- If the signature is valid, the patch file is written to the flash memory area. At this time, the
+bootloader is run to replace the firmware by overwriting it.
+• Integrity verification
+- Once the installation is complete, AES-128 decryption is performed to check whether the
+patch file is installed normally, and file integrity is guaranteed through checksum (hash)
+comparison.
+• Verification of version after reboot
+- After the update is complete, reboot the device, and check the firmware version
+information displayed on the LCD screen to verify once again “whether it is the expected
+new version.”
+• How to recover if an abnormality occurs
+- If a communication failure or failure occurs during the update, use
+STM32CubeProgrammer and ST-Link to enter “Forced Recovery Mode” and try to roll
+back to the previous version or reinstall.
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 17 / 18
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+11. Patching capability
+The device does not connect to the internet or external servers, and therefore does not support
+remote or automatic updates.
+A regular patching schedule has not been established. Instead, firmware updates are provided as
+needed in response to identified issues or vulnerabilities.
+Firmware patches are applied manually via a physical connection (e.g., USB Type-C port), and the
+update file is verified for integrity prior to installation.
+All patches are managed under the company’s internal software maintenance and change control
+procedures, in accordance with the secure software development lifecycle (SSDLC).
+12. Coordinated vulnerability disclosure and related
+processes
+H&abyz recognizes that early identification and remediation of security flaws—even those
+discovered by external parties—is essential to patient safety and regulatory compliance. To that
+end, our CVD process is designed to align with FDA guidance (“Pre- and Postmarket Management
+of Cybersecurity in Medical Devices,” 2016) and IEC 81001-5-1 requirements, ensuring that
+vulnerabilities are responsibly reported, analyzed, and resolved.
+1. Purpose and Scope
+• Goal: Provide a clear, secure channel for researchers, customers, and other stakeholders to
+report potential vulnerabilities in the HnX-P1 and HnX-PB.
+• Benefit: Enables H&abyz to address issues before they can be exploited in clinical
+environments and to maintain transparency with regulators and users.
+2. Reporting Channels
+• Primary Contact: Security team email (e.g., sales@abyzr.com) or a dedicated web form on
+our official site.
+• Acknowledgment: Every submission receives an automated receipt with a unique tracking ID
+upon arrival.
+3. Triage and Analysis
+• Initial Review (Day 0–1): The security team confirms receipt, assigns a preliminary severity
+(Critical/High/Medium/Low), and validates whether the reported issue affects the HnX-P1’s
+SBOM components.
+• Prioritization Criteria:
+- CVSS base score ≥ 9.0 or public proof-of-concept → Critical
+- Evidence of industry-wide exploitation → High
+- Potential misconfigurations or low-impact bugs → Medium/Low
+4. Remediation Process
+• Patch Development:
+- If an official vendor (e.g., STMicroelectronics, KISA) patch exists, integrate it into the
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 18 / 19
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+next firmware build.
+- If not, backport necessary fixes or implement temporary mitigations (e.g., disabling
+vulnerable features).
+• Verification: Run internal static analysis, smoke tests, and regression tests to confirm that the
+patch resolves the issue without introducing new defects.
+5. Deployment and Disclosure
+• Distribution: Deliver updated firmware via CS-team-managed C-Port updates or on-site
+engineer visits.
+• Public Advisory: Once patches are fully tested, release a concise security advisory
+summarizing:
+- Affected versions (e.g., “Firmware v00.12 and earlier”)
+- Nature of the vulnerability
+- Severity rating (e.g., CVSS score, industry context)
+- Upgrade instructions and fallback options
+• Regulatory Reporting: Submit required details to ICS-CERT (CISA) and, if applicable, FDA
+postmarket reports.
+6. Closure and Continuous Improvement
+• Documentation: Record every step—from initial report to patch release—in the Risk
+Management File.
+• Lessons Learned: Periodically review CVD cases to refine our processes, improve triage
+speed, and update user guidance.
+13. How you intend to communicate forthcoming
+remediations, patches, and updates to customers.
+1. Notice Channel
+• Email: A simple security advisory prepared by the security team or CS team is sent to the
+email address of the customer's contact person
+2. Notice Main Content
+• Vulnerability Summary: Affected firmware version and brief description
+• Patch Method: Download link via C-Port (USB-C) and installation guide summary
+• Response Deadline: In case of a critical vulnerability, the phrase "Must update within 30 days"
+is included
+• Contact: CS team security contact email and phone number(sales@abyzr.com / +82 70 4658
+9300)
+3. Notice Period
+• Regular Notice (Quarterly): If there is a patch prepared after the quarterly KEV inspection, it
+will be notified via email notice at the end of the quarter
+• Urgent Notice: If a critical vulnerability occurs, an emergency notice will be sent via email
+
+Technical Documentation Document No. A-CRMP-HNX
+Rev. No. 3
+Cybersecurity Risk
+Management Plan
+Rev. Date March 03, 2026
+Page 19 / 19
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+and text message (SMS) within 24 hours after the patch is prepared
+4. Follow-up
+• The CS team manages the list of target devices for the patch and makes additional contact
+only for devices that have not been applied
+• If necessary, coordinate the schedule for dispatching a field engineer and confirm installation

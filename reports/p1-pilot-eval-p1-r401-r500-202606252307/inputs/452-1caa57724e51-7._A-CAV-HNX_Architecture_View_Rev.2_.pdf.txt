@@ -1,0 +1,120 @@
+queueId: ingest-1781569954377-715
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/7. A-CAV-HNX_Architecture View(Rev.2).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/e49601c215e5/7. A-CAV-HNX_Architecture View(Rev.2)__e49601c215e5_combined.txt
+canonicalGroupId: 1caa57724e51
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 452
+
+SOURCE_TEXT
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 1 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Cybersecurity
+Architecture View
+Product name: Portable X-ray System
+Model name: HnX-P1, HnX-PB
+Name Position Date Signature
+Prepared by Han, Jimin R&D team June 20,
+2025
+Reviewed by Hur, Namkyu
+Quality
+Management
+Representative
+June 20,
+2025
+Approved by Jeon, Jeu R&D manager June 20,
+2025
+
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 2 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision History
+Revision No. Rev. Date Revision Description
+0 December 05,
+2024 Initial
+1 June 05, 2025 Revised due to addition of 2.2 Multi-Patient Harm View contents.
+2 June 20, 2025 Add variant model (HnX-PB)
+
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 3 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Contents
+1. Overview ····················································································································· 4
+2. Architecture view ············································································································ 4
+
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 4 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Overview
+1.1 Purpose
+The purpose of this document is to show a cyber security architecture view for Portable X-ray
+System(HnX-P1, HnX-PB).
+1.2 Scope
+This document is limited to HnX-P1 and HnX-PB, the Portable X-ray System.
+In addition, three of the four architectural views corresponding to the FDA requirements are Global
+system view, Updateability/Patchability view, and Security use case view. Multi patient harm view
+is excluded because it is not our product.
+2. Architecture view
+2.1 Data Flow Diagram (Global System View)
+• A1: Configuration - Receive kV, mAs, APR setting value information.
+• A2: Calibration - kV, mAs, filament current (pre-heat) compensation value settings.
+• A3: Data acquisition - Digital & analog data collection.
+• A4: APR - Saving kV and mAs in 10 channels
+• A5: X-ray control - Control power on/off for X-ray output, error status output on/off.
+• A6: Battery charging - Battery charge current/voltage regulation and monitoring.
+• A7: Battery monitoring - Battery charging status monitoring
+• A8: Error checking - Checking for occurrence of low voltage, overvoltage, low current,
+
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 5 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+overcurrent, and overheating
+• A9: Bluetooth - For setting up medical devices and receiving x-ray images via Bluetooth
+communication
+• A10: Display - Setting value setting status, X-ray image display.
+• A11: SID - Distance measurement.
+• A12: Hardware Interfaces - Physical ports, including USB type C(For power charging and
+receiving firmware update data.) and RJ-11(For connecting a hand switch).
+• A13: Open source 1 – STMicroelectronics Open-Source Bundle
+• A14: Open source 2 - KISA Crypto Module
+2.2 Multi-Patient Harm View
+This product does not correspond to Multi-Patient Harm because it only matches 1:1 with the
+specified console software via Bluetooth.
+2.3 Updateability and Patchability View
+• Firmware update is possible through the USB C type port. (However, direct updates in the
+field are not possible, and the product must be returned to the manufacturer or service
+center for updates.)
+• The port only functions for charging the battery inside the product and for firmware
+updates, and does not function for any other functions.
+• Important information cannot be acquired or functional operations cannot be impaired
+during firmware updates. (Test report no. KTR-QI-Y10053-F10(00), Penetration test PT-
+1)
+• The RJ-11 port is a hand switch connection port, and all other unnecessary interfaces are
+blocked. . (Test report no. KTR-QI-Y10053-F10(00), Penetration test PT-4)
+
+Technical Documentation Document No. A-CAV-HNX
+Rev. No. 2
+Cybersecurity Architecture View Rev. Date June 20, 2025
+Page 6 / 6
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2.4 Security Use Case View
+• Communicates with external products (console software) via Bluetooth function.
+• Integrity check is used to reject tampered packets and abnormal file transfers. (Test report
+no. KTR-QI-Y10053-F10(00), Penetration test PT-2, PT-3)

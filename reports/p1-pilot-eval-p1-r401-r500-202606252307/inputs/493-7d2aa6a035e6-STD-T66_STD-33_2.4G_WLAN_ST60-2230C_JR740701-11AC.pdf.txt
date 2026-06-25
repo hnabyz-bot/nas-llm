@@ -1,0 +1,1556 @@
+queueId: ingest-1781569954416-14s0
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/MIC_60-2230C/STD-T66_STD-33_2.4G WLAN_ST60-2230C_JR740701-11AC.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/fc207d4858a4/STD-T66_STD-33_2.4G WLAN_ST60-2230C_JR740701-11AC__fc207d4858a4_combined.txt
+canonicalGroupId: 7d2aa6a035e6
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 493
+
+SOURCE_TEXT
+Report No.: JR740701-11AC Page No. : 1 of 22
+Report Version: Rev. 01
+Japan Test Report
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+(Please refer to section 1.1.1 for more details)
+Model No. : ST60-2230C
+(Please refer to section 1.1.1 for more details)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : Article 2 Paragraph 1 Item 19
+Article 2 Paragraph 1 Item 19-2
+Received Date : Apr. 19, 2017
+Tested Date : Jun. 09 ~ Jun. 15, 2017
+Measurement was conducted by the following test method:
+the test method of Ordinance Concerning Technical Regulations Conformity Certification
+etc. of Specified Radio Equipment in Annex 1, the Ministry of Internal Affairs and
+Communications notification in Annex “43” and “44” of Article 88, Paragraph 1 and ARIB
+STD-T66 / RCR STD-33
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: JR740701-11AC Page No. : 2 of 22
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 6
+1.1 Information.............................................................................................................................................. 6
+1.2 Test Equipment and Calibration Data .................................................................................................. 10
+1.3 Testing Applied Standards ................................................................................................................... 11
+1.4 Deviation from Test Standard and Measurement Procedure............................................................... 11
+1.5 Measurement Uncertainty .................................................................................................................... 11
+2 TEST CONFIGURATION ..................................................................................................................... 12
+2.1 Testing Location and Conditions .......................................................................................................... 12
+2.2 Testing Facility ..................................................................................................................................... 12
+2.3 Supporting Units ................................................................................................................................... 12
+2.4 The Worst Test Modes and Channel Details ....................................................................................... 12
+3 TRANSMITTER TEST RESULTS ....................................................................................................... 13
+3.1 Antenna Power ..................................................................................................................................... 13
+3.2 Frequency Tolerance ........................................................................................................................... 15
+3.3 Occupied Bandwidth ............................................................................................................................ 16
+3.4 Spreading Bandwidth and Factor ......................................................................................................... 17
+3.5 Transmitter Spurious Emissions........................................................................................................... 18
+3.6 Carrier Sense Measurement ................................................................................................................ 19
+3.7 Interference Prevention Function ......................................................................................................... 20
+4 RECEIVER TEST RESULTS ............................................................................................................... 21
+4.1 Receiver Spurious Emissions............................................................................................................... 21
+5 TEST LABORATORY INFORMATION ............................................................................................... 22
+
+Report No.: JR740701-11AC Page No. : 3 of 22
+Report Version: Rev. 01
+APPENDIX A.1 TEST RESULTS FOR ANTENNA POWER
+APPENDIX A.2 TEST RESULTS FOR ANTENNA POWER
+APPENDIX A.3 TEST RESULTS FOR ANTENNA POWER
+APPENDIX B. TEST RESULTS FOR FREQUENCY TOLERANCE
+APPENDIX C. TEST RESULTS FOR OCCUPIED BANDWIDTH
+APPENDIX D. TEST RESULTS FOR SPREADING BANDWIDTH AND FACTOR
+APPENDIX E. TEST RESULTS FOR TRANSMITTER SPURIOUS EMISSIONS
+APPENDIX F. TEST RESULTS FOR CARRIER SENSE MEASUREMENT
+APPENDIX G. TEST RESULTS FOR INTERFERENCE PREVENTION FUNCTION
+APPENDIX H. TEST RESULTS FOR RECEIVER SPURIOUS EMISSIONS
+\
+
+Report No.: JR740701-11AC Page No. : 4 of 22
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+JR740701-11AC Rev. 01 Initial issue Feb. 25, 2021
+
+Report No.: JR740701-11AC Page No. : 5 of 22
+Report Version: Rev. 01
+Summary of Test Results
+Ref. Std. Clause
+(STD-T66) Description Result
+3.2(2)(3) Antenna Power Pass
+3.2(4) Frequency Tolerance Pass
+3.2(6) Transmitter Spurious Emission Pass
+3.2(7) Occupied Bandwidth Pass
+3.2(8) Spreading Bandwidth Pass
+3.2(9) Spreading Factor Pass
+3.3(1) Receiver Emission Pass
+3.4.1 Interference prevention function Pass
+3.4.1(3) Carrier Sense N/A*
+Ref. Std. Clause
+(STD-33) Description Result
+3.2(1)(2) Antenna Power Pass
+3.2(1)(3) Frequency Tolerance Pass
+3.2(6) Transmitter Spurious Emission Pass
+3.2(7) Occupied Bandwidth Pass
+3.2(8) Spreading Bandwidth Pass
+3.2(9) Spreading Factor Pass
+3.3(1) Receiver Emission Pass
+3.4.1 Interference prevention function Pass
+3.4.3 Carrier Sense Pass
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: JR740701-11AC Page No. : 6 of 22
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. JR740701-01AC.
+The modification is
+1. Additional model and product names, changing applicant and brand name.
+2. Resistance of CONFIG_HOST0/1/2 are different to switch interface
+3. Update to the latest SW version
+After verification, above changes does not impact to original test results. Thus test results remain the same.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module with carrier board
+ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/UART interface PCIe/UART interface
+ST60-2230C-PU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/USB interface PCIe/USB interface
+ST60-2230C-SS 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module SDIO/SDIO Interface SDIO/SDIO Interface
+ST60-2230C-U 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/UART Interface USB/UART Interface
+ST60-2230C-UU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/USB interface USB/USB interface
+ST60-2230C-Q 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module,ST60-2230C-Q
+The difference
+between
+ST60-2230C and
+ST60-2230C-Q the
+OTP parameter is
+different for ID
+recognition. SW is
+exactly the same.
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+
+Report No.: JR740701-11AC Page No. : 7 of 22
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+Power Type DC 3.3V from host
+Type(s) of Modulation /
+Technology
+DBPSK, DQPSK, CCK / DSSS
+64QAM, 16QAM, QPSK, BPSK / OFDM
+Frequency Range (MHz) 2412~2472MHz, 2484MHz
+Total Channel Number 802.11b: 14
+802.11g / n HT20: 13
+Operating Mode:
+IEEE Std. 802.11 /
+Data rate (Mbps/MCS)
+802.11b: Up to 11 Mbps
+802.11g: Up to 54 Mbps
+802.11n HT 20 (MCS 0~15)
+802.11n HT 40 (MCS 0~15)
+HW Version 1.0
+SW Version laird-backport-7.0.0.136 (only for ST60-2230C-UU)
+laird-backport-7.0.0.70 (others)
+1.1.3 Accessories
+N/A
+1.1.4 Antenna Details
+Ant.
+No. Band/ Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR / 001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird /
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird /
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR / FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics /
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Note: Please refer to antenna report for more details about antenna pattern and other information.
+1.1.5 Antenna Power
+Operating Mode Rated Power
+(mW/MHz)
+Measured Conducted
+Power (mW/MHz)
+Radiated Power
+(mW/MHz)
+11b (CH 1~13) 8.6 8.53 16.22
+11b (CH 14) 8 7.68 14.60
+11g 8.6 8.61 16.37
+11n HT20 8.6 8.48 16.10
+11n HT40 4 3.65 6.93
+
+Report No.: JR740701-11AC Page No. : 8 of 22
+Report Version: Rev. 01
+1.1.6 Channel List
+Frequency band (MHz) 2400~2483.5
+802.11b / g / n HT 20 802.11n HT 40
+Channel Frequency(MHz) Channel Frequency(MHz)
+1 2412 3 2422
+2 2417 4 2427
+3 2422 5 2432
+4 2427 6 2437
+5 2432 7 2442
+6 2437 8 2447
+7 2442 9 2452
+8 2447 10 2457
+9 2452 11 2462
+10 2457 - -
+11 2462 - -
+12 2467 - -
+13 2472 - -
+Frequency band (MHz)
+802.11b
+Channel Frequency(MHz)
+14 2484
+1.1.7 Test Tool and Power Index
+Test Tool
+Hardware v. 2.10
+Power Setting
+Channel Frequency
+(MHz) 802.11b 802.11g 802.11n
+HT20 Channel Frequency
+(MHz)
+802.11n
+HT40
+1 2412 17 19 19 3 2422 19
+7 2442 17 19 19 7 2442 19
+13 2472 17 19 19 11 2462 19
+14 2484 16 --- --- --- --- ---
+
+Report No.: JR740701-11AC Page No. : 9 of 22
+Report Version: Rev. 01
+1.1.8 Test Voltage
+Test Voltage Vnom (3.3 Vdc) Vmax (3.63 Vdc) Vmin (2.97 Vdc)
+1.1.9 Protection Method for High Frequency and Modulation Section
+Protected Method Description
+Shielding Case RF and Modulation components are covered with shielding case and this
+shielding case is soldered
+
+Report No.: JR740701-11AC Page No. : 10 of 22
+Report Version: Rev. 01
+1.2 Test Equipment and Calibration Data
+Test Item RF Conducted
+Test Site (TH01-WS)
+Tested Date Jun. 09 ~ Jun. 15, 2017
+Instrument Brand Model No. Serial No. Calibration
+Authority
+Calibration
+Date
+Calibration
+Until Cal Method
+Spectrum
+Analyzer R&S FSV40 101063 Electronics
+Testing Center Mar. 15, 2017 Mar. 14, 2018 D
+Power Meter Anritsu ML2495A 1241002 Electronics
+Testing Center Oct. 06, 2016 Oct. 05, 2017 D
+Power Sensor Anritsu MA2411B 1207366 Electronics
+Testing Center Oct. 06, 2016 Oct. 05, 2017 D
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Electronics
+Testing Center Oct. 20, 2016 Oct. 19, 2017 D
+Datalogging
+True RMS PROVA 903 12150054 Electronics
+Testing Center Jan. 04, 2017 Jan. 03, 2018 D
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA NA -
+Note 1: Calibration Interval of instruments listed above is one year
+Note 2: Calibration Method
+a)：Calibration conducted by the National Institute of Information and Communications Technology NICT or a designated calibration
+agency under Article 102-18 paragraph (1) TELEC EngeneeringCenter, Intertek Japan K.K., Keysight Technologies, Inc.
+b)：Correction conducted pursuant to the provisions of Article 135 or Article 144 of the MeasurementLaw (Law No. 51 of 1992) Japan
+Calibration Service Syste
+c)：Calibration conducted in foreign countries, which shall be equivalent to the calibration conducted bythe NICT or a designated
+calibration agency under Article 102-18 paragraph (1) TELEC EngeneeringCenter, Intertek Japan K.K., Keysight Technologies, Inc.
+d)：Calibration conducted by using other equipment that listed above from a) to c
+
+Report No.: JR740701-11AC Page No. : 11 of 22
+Report Version: Rev. 01
+1.3 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+Article 2 Paragraph 1 Item 19
+Article 2 Paragraph 1 Item 19-2
+1.4 Deviation from Test Standard and Measurement Procedure
+None
+1.5 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty
+Bandwidth ±34.139 Hz
+Conducted power ±0.808 dB
+Frequency error ±1x10-9
+TX Conducted emission ±2.680 dB
+RX Conducted emission ±3.034 dB
+
+Report No.: JR740701-11AC Page No. : 12 of 22
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Location and Conditions
+Test Site Site Category Ambient Condition Tested By
+TH01-WS OVEN Room 23.1℃ / 58％ Chris Zeng
+2.2 Testing Facility
+Test Laboratory International Certification Corp.
+Test Site TH01-WS
+Address of Test Site
+(Kwei Shan)
+No. 3-1, Lane 6, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333, Taiwan,
+R.O.C.
+2.3 Supporting Units
+Support Unit Brand Model FCC ID
+Notebook DELL Latitude E5420 DoC
+Notebook DELL Insprion 3000 DoC
+Bluetooth Tester ROHDE&SCHWARZ CBT ---
+2.4 The Worst Test Modes and Channel Details
+Test item Mode Test channel
+Antenna Power
+Frequency Tolerance
+Occupied Bandwidth
+Spreading Bandwidth
+Interference prevention function
+Transmitter Spurious Emission
+Receiver Spurious Emissions
+11g, 11n HT20 1 / 7 / 13
+11b 1 / 7 / 13 / 14
+11n HT40 3 / 7 / 11
+Spreading Factor 11b 1 / 7 / 13 / 14
+Carrier Sense Capability 11b 14
+11n HT40 3 / 7 / 11
+
+Report No.: JR740701-11AC Page No. : 13 of 22
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Antenna Power
+3.1.1 Limit of Antenna Power
+Mode Limit Tolerance
+1) FH, FH+DS, FH+OFDM 3 mW / MHz
++20 % , -80 %
+2) OFDM(Narrow- bandwidht), DS 10 mW / MHz
+3) Other than 1) & 2) 10mW
+4) OFDM (Wide-band) 5 mW / MHz
+3.1.2 Test Procedures
+1. A power meter is connected on the IF output port of the spectrum analyzer. Adjust the spectrum
+analyzer to have the center frequency the same with the measured carrier.RBW=VBW=1MHz, detector
+mode is positive peak. Turn off the averaging function and use zero span.
+2. The calibrating signal power shall be reduced to 0 dBm and it shall be verified that the power meter
+reading also reduces by 10 dB. Connect the equipment to be measured. Using the following settings of
+the spectrum analyzer in combination with "max hold" function, find the frequency of highest power
+output in the power envelope: center frequency equal to operating frequency; RBW & VBW: 1 MHz;
+detector mode: positive peak; averaging: off; span: 3 times the spectrum width; amplitude: adjust for
+middle of the instrument's range. The frequency found shall be recorded.
+3. Set the center frequency of the spectrum analyzer to the found frequency and switch to zero span. The
+power meter indicates the measured power density “E”. Remove the EUT and put the replacing
+standard signal generator (SSG). Set the standard signal generator (SSG) at same frequency and
+transmit on, then set SSG output power at Pt to give the equivalent output level of “E”.
+4. Calculate antenna power density by the formula below PD = Pt + 10*log(1/x).
+x: The duty cycle of the EUT in continuously transmitting mode.
+Pt: Output power of the SSG.
+5. Antenna Power Error is definition that actual measure antenna power tolerance between + 20% to -
+80% power range that base on manufacturer declare the conducted power density.
+3.1.3 Test Setup
+
+Report No.: JR740701-11AC Page No. : 14 of 22
+Report Version: Rev. 01
+3.1.4 Test Result of Maximum Transmit Power
+Refer to Appendix A1, A2, A3
+
+Report No.: JR740701-11AC Page No. : 15 of 22
+Report Version: Rev. 01
+3.2 Frequency Tolerance
+3.2.1 Limit of Frequency Tolerance
+Frequency tolerance shall be +/- 50ppm.
+3.2.2 Test Procedures
+1. Set Span = 150kHz, RBW = 1kHz, VBW = 30kHz, Sweep time = Auto, detector = Peak.
+2. Use Peak search function to find the max peak value and record this value (RF).
+3. Calculate frequency tolerance by below formula
+FT(ppm) = { (RF) – (MF) / (MF) } × 1000000
+(FT: Frequency Tolerance, RF: Reading Frequency, MF: Measurement Frequency.)
+3.2.3 Test Setup
+3.2.4 Test Result of Frequency Tolerance
+Refer to Appendix B
+
+Report No.: JR740701-11AC Page No. : 16 of 22
+Report Version: Rev. 01
+3.3 Occupied Bandwidth
+3.3.1 Limit of Occupied Bandwidth
+Mode Limit (MHz)
+FH 83.5
+FH+DS 83.5
+FH+OFDM 83.5
+OFDM(Narrow- bandwidht), DS 26
+Others 26
+OFDM (Wide-band) 38
+3.3.2 Test Procedures
+1. Set Span = 40MHz, RBW = VBW = 300kHz, detector = Peak, Sweep time = Auto.
+2. Enable OBW function of spectrum analyzer to measure OBW and capture test plot.
+3.3.3 Test Setup
+3.3.4 Test Result of Occupied Bandwidth
+Refer to Appendix C
+
+Report No.: JR740701-11AC Page No. : 17 of 22
+Report Version: Rev. 01
+3.4 Spreading Bandwidth and Factor
+3.4.1 Limit of Spreading Bandwidth and Factor
+Item Limit
+Spreading bandwidth ≥ 500kHz
+Spreading factor for DSSS (operates at 2400~2483.5 MHz) ≥ 5
+Spreading factor for DSSS (operates at 2471~2497 MHz) ≥ 10
+3.4.2 Test Procedures
+1. Set Span = 20MHz, RBW = VBW = 300kHz, detector = Peak, Sweep time = Auto.
+2. Enable OBW (90%) function of spectrum analyzer to measure OBW (90%) and capture test plot.
+3.4.3 Test Setup
+
+3.4.4 Test Result of Spreading Bandwidth and Factor
+Refer to Appendix D
+
+Report No.: JR740701-11AC Page No. : 18 of 22
+Report Version: Rev. 01
+3.5 Transmitter Spurious Emissions
+3.5.1 Limit of Transmitter Spurious Emissions
+Item Limits
+Tx Spurious Emission
+≤ 2.5 μW (2387MHz > f ; 2496.5MHz < f ).
+≤ 25 μW.
+(2387MHz ≤ f < 2400MHz) and (2483.5MHz < f ≤ 2496.5MHz).
+3.5.2 Test Procedures
+1. Set EUT to transmit at rated power and channel to perform test.
+2. Set RBW = VBW = 1MHz, Detector type = Peak, Sweep time = Auto.
+3. Following above setting of spectrum analyzer to measure spurious emission of 30~12500 MHz.
+3.5.3 Test Setup
+3.5.4 Test Result of Transmitter Spurious Emissions
+Refer to Appendix E
+
+Report No.: JR740701-11AC Page No. : 19 of 22
+Report Version: Rev. 01
+3.6 Carrier Sense Measurement
+3.6.1 Limit of Carrier Sense Measurement
+Limits
+EUT shall not transmit any waves when carrier wave inject into EUT
+3.6.2 Test Procedures
+1. Set RBW = VBW = 1MHz, Detector type = Peak, Sweep time = Auto, Span = 50 MHz.
+2. Set EUT to normal operating mode and link up with companion equipment
+3. Turn off the EUT transmission
+4. Turn on the Signal Generator output to send carrier wave to EUT then turn on the EUT transmission
+Power level of carrier wave at EUT is as below
+Pcs (dBm) = 22.79 + Gr – 20log(F)
+Gr: Antenna gain (dBi)
+F : Transmission Frequency (MHz)
+5. Check the EUT does not transmit any waves
+3.6.3 Test Setup
+3.6.4 Test Result of Carrier Sense
+Refer to Appendix N
+
+Report No.: JR740701-11AC Page No. : 20 of 22
+Report Version: Rev. 01
+3.7 Interference Prevention Function
+3.7.1 Limit of Interference Prevention Function
+Limits
+The identification code shall be 48 bits long
+3.7.2 Test Procedures
+1. Set EUT under operating mode and link up with companion equipment
+2. Check communication status between EUT and companion equipment is normal
+3. Confirm the MAC address of EUT
+3.7.3 Test Setup
+3.7.4 Test Result of Interference Prevention Function
+Refer to Appendix G
+
+Report No.: JR740701-11AC Page No. : 21 of 22
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Item Limits
+Rx Spurious Emission ≤ 4nW (f < 1GHz).
+≤ 20nW (1GHz ≤ f).
+4.1.2 Test Procedures
+1. Set EUT under receiving condition to perform test
+2. Set RBW = VBW = 100kHz, detector = Peak, Sweep time = Auto for emission measurement below
+1GHz.
+3. Set RBW = VBW=1MHz, detector = Peak, Sweep time = Auto for emission measurement above 1GHz.
+4.1.3 Test Setup
+4.1.4 Test Result of Receiver Spurious Emissions
+Refer to Appendix H
+
+Report No.: JR740701-11AC Page No. : 22 of 22
+Report Version: Rev. 01
+5 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin Kou
+District, New Taipei City, Taiwan,
+R.O.C.
+No. 3-1, Lane 6, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══
+
+Power Result Appendix A.1
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Power Power EIRP EIRP
+(dBm/MHz) (mW/MHz) (dBm/MHz) (mW/MHz)
+802.11b_Nss1_2TX - - - -
+2.4-2.4835GHz 9.31 8.53364 12.10 16.22311
+802.11g_Nss1_2TX - - - -
+2.4-2.4835GHz 9.35 8.60845 12.14 16.36533
+802.11n HT20_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz 9.28 8.46501 12.07 16.09266
+802.11n HT40_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz 5.62 3.64754 8.41 6.93425
+PD = Antenna Power (Power Density)sum by P1~PN;
+P1 = Port 1 PD; P2 = Port 2 PD; P3 = Port 3 PD; P4 = Port 4 PD; ENBF = Equivalent Noise Bandwidth Factor;
+Result
+Mode Result Gain ENBF Power Power Power
+Lim. EIRP EIRP EIRP Lim. P1 P2
+(dBi) (dB) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz) (dBm/MHz)
+802.11b_Nss1_2TX - - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 0.49 9.31 8.53364 10 12.10 16.22311 16.368 6.21 6.39
+2412MHz_Vmin Pass 2.79 0.49 9.16 8.23899 10 11.95 15.66297 16.368 6.12 6.18
+2412MHz_Vmax Pass 2.79 0.49 9.13 8.17744 10 11.92 15.54596 16.368 6.06 6.17
+2442MHz_Vnom Pass 2.79 0.49 9.10 8.12754 10 11.89 15.45109 16.368 6.13 6.04
+2442MHz_Vmin Pass 2.79 0.49 9.06 8.04710 10 11.85 15.29816 16.368 6.07 6.02
+2442MHz_Vmax Pass 2.79 0.49 8.96 7.86178 10 11.75 14.94587 16.368 5.99 5.90
+2472MHz_Vnom Pass 2.79 0.49 8.60 7.24758 10 11.39 13.77822 16.368 5.65 5.53
+2472MHz_Vmin Pass 2.79 0.49 8.53 7.12742 10 11.32 13.54978 16.368 5.58 5.45
+2472MHz_Vmax Pass 2.79 0.49 8.48 7.03927 10 11.27 13.38219 16.368 5.60 5.32
+802.11g_Nss1_2TX - - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 0.49 8.65 7.33519 10 11.44 13.94478 16.368 5.78 5.51
+2412MHz_Vmin Pass 2.79 0.49 8.73 7.47187 10 11.52 14.20462 16.368 5.81 5.64
+2412MHz_Vmax Pass 2.79 0.49 8.68 7.38131 10 11.47 14.03245 16.368 5.70 5.64
+2442MHz_Vnom Pass 2.79 0.49 8.65 7.32421 10 11.44 13.92390 16.368 5.68 5.60
+2442MHz_Vmin Pass 2.79 0.49 8.67 7.36558 10 11.46 14.00254 16.368 5.70 5.63
+2442MHz_Vmax Pass 2.79 0.49 8.70 7.41466 10 11.49 14.09585 16.368 5.79 5.59
+2472MHz_Vnom Pass 2.79 0.49 9.30 8.52075 10 12.09 16.19861 16.368 6.48 6.10
+2472MHz_Vmin Pass 2.79 0.49 9.35 8.60845 10 12.14 16.36533 16.368 6.44 6.23
+2472MHz_Vmax Pass 2.79 0.49 9.25 8.41215 10 12.04 15.99216 16.368 6.37 6.10
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 0.49 9.06 8.04778 10 11.85 15.29947 16.368 6.15 5.94
+2412MHz_Vmin Pass 2.79 0.49 9.08 8.09276 10 11.87 15.38497 16.368 6.15 5.99
+2412MHz_Vmax Pass 2.79 0.49 9.03 7.99107 10 11.82 15.19165 16.368 6.11 5.91
+2442MHz_Vnom Pass 2.79 0.49 9.25 8.42161 10 12.04 16.01014 16.368 6.35 6.13
+2442MHz_Vmin Pass 2.79 0.49 9.22 8.35722 10 12.01 15.88774 16.368 6.31 6.10
+2442MHz_Vmax Pass 2.79 0.49 9.28 8.46501 10 12.07 16.09266 16.368 6.35 6.18
+2472MHz_Vnom Pass 2.79 0.49 9.27 8.45370 10 12.06 16.07114 16.368 6.39 6.12
+2472MHz_Vmin Pass 2.79 0.49 9.28 8.47881 10 12.07 16.11889 16.368 6.42 6.12
+2472MHz_Vmax Pass 2.79 0.49 9.25 8.40855 10 12.04 15.98531 16.368 6.37 6.10
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - - -
+
+Power Result Appendix A.1
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result Gain ENBF Power Power Power
+Lim. EIRP EIRP EIRP Lim. P1 P2
+(dBi) (dB) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (mW/MHz) (dBm/MHz) (dBm/MHz)
+2422MHz_Vnom Pass 2.79 0.49 5.55 3.58884 5 8.34 6.82266 8.184 2.59 2.49
+2422MHz_Vmin Pass 2.79 0.49 5.48 3.53234 5 8.27 6.71525 8.184 2.28 2.65
+2422MHz_Vmax Pass 2.79 0.49 5.51 3.55795 5 8.30 6.76394 8.184 2.34 2.65
+2442MHz_Vnom Pass 2.79 0.49 5.53 3.57422 5 8.32 6.79487 8.184 2.47 2.57
+2442MHz_Vmin Pass 2.79 0.49 5.52 3.56488 5 8.31 6.77712 8.184 2.50 2.52
+2442MHz_Vmax Pass 2.79 0.49 5.46 3.51463 5 8.25 6.68159 8.184 2.36 2.54
+2462MHz_Vnom Pass 2.79 0.49 5.60 3.63472 5 8.39 6.90989 8.184 2.54 2.65
+2462MHz_Vmin Pass 2.79 0.49 5.59 3.61845 5 8.38 6.87896 8.184 2.53 2.62
+2462MHz_Vmax Pass 2.79 0.49 5.62 3.64754 5 8.41 6.93425 8.184 2.55 2.67
+PD = Antenna Power (Power Density)sum by P1~PN;
+P1 = Port 1 PD; P2 = Port 2 PD; P3 = Port 3 PD; P4 = Port 4 PD; ENBF = Equivalent Noise Bandwidth Factor;
+
+Power Tolerance Result Appendix A.2
+International Certification Corp Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result Power Power Declare Declare Tolerance Limit+ Limit-
+(dBm/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (%) (%) (%)
+802.11b_Nss1_2TX - - - - - - - -
+2.4-2.4835GHz Pass 9.31 8.53100 9.345 8.60 -0.80 20 -80
+802.11g_Nss1_2TX - - - - - - - -
+2.4-2.4835GHz Pass 9.35 8.60994 9.345 8.60 0.12 20 -80
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - -
+2.4-2.4835GHz Pass 9.28 8.47227 9.345 8.60 -1.49 20 -80
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - -
+2.4-2.4835GHz Pass 5.62 3.64754 6.021 4.00 -8.81 20 -80
+Result
+Mode Result Power Power Declare Declare Tolerance Limit+ Limit-
+(dBm/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (%) (%) (%)
+802.11b_Nss1_2TX - - - - - - - -
+2412MHz_Vnom Pass 9.31 8.53100 9.345 8.60 -0.80 20 -80
+2412MHz_Vmin Pass 9.16 8.24138 9.345 8.60 -4.17 20 -80
+2412MHz_Vmax Pass 9.13 8.18465 9.345 8.60 -4.83 20 -80
+2442MHz_Vnom Pass 9.10 8.12831 9.345 8.60 -5.48 20 -80
+2442MHz_Vmin Pass 9.06 8.05378 9.345 8.60 -6.35 20 -80
+2442MHz_Vmax Pass 8.96 7.87046 9.345 8.60 -8.48 20 -80
+2472MHz_Vnom Pass 8.60 7.24436 9.345 8.60 -15.76 20 -80
+2472MHz_Vmin Pass 8.53 7.12853 9.345 8.60 -17.11 20 -80
+2472MHz_Vmax Pass 8.48 7.04693 9.345 8.60 -18.06 20 -80
+802.11g_Nss1_2TX - - - - - - - -
+2412MHz_Vnom Pass 8.65 7.32825 9.345 8.60 -14.79 20 -80
+2412MHz_Vmin Pass 8.73 7.46449 9.345 8.60 -13.20 20 -80
+2412MHz_Vmax Pass 8.68 7.37904 9.345 8.60 -14.20 20 -80
+2442MHz_Vnom Pass 8.65 7.32825 9.345 8.60 -14.79 20 -80
+2442MHz_Vmin Pass 8.67 7.36207 9.345 8.60 -14.39 20 -80
+2442MHz_Vmax Pass 8.70 7.41310 9.345 8.60 -13.80 20 -80
+2472MHz_Vnom Pass 9.30 8.51138 9.345 8.60 -1.03 20 -80
+2472MHz_Vmin Pass 9.35 8.60994 9.345 8.60 0.12 20 -80
+2472MHz_Vmax Pass 9.25 8.41395 9.345 8.60 -2.16 20 -80
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - -
+2412MHz_Vnom Pass 9.06 8.05378 9.345 8.60 -6.35 20 -80
+2412MHz_Vmin Pass 9.08 8.09096 9.345 8.60 -5.92 20 -80
+2412MHz_Vmax Pass 9.03 7.99834 9.345 8.60 -7.00 20 -80
+2442MHz_Vnom Pass 9.25 8.41395 9.345 8.60 -2.16 20 -80
+2442MHz_Vmin Pass 9.22 8.35603 9.345 8.60 -2.84 20 -80
+2442MHz_Vmax Pass 9.28 8.47227 9.345 8.60 -1.49 20 -80
+2472MHz_Vnom Pass 9.27 8.45279 9.345 8.60 -1.71 20 -80
+
+Power Tolerance Result Appendix A.2
+International Certification Corp Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result Power Power Declare Declare Tolerance Limit+ Limit-
+(dBm/MHz) (mW/MHz) (dBm/MHz) (mW/MHz) (%) (%) (%)
+2472MHz_Vmin Pass 9.28 8.47227 9.345 8.60 -1.49 20 -80
+2472MHz_Vmax Pass 9.25 8.41395 9.345 8.60 -2.16 20 -80
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - -
+2422MHz_Vnom Pass 5.55 3.58922 6.021 4.00 -10.27 20 -80
+2422MHz_Vmin Pass 5.48 3.53183 6.021 4.00 -11.70 20 -80
+2422MHz_Vmax Pass 5.51 3.55631 6.021 4.00 -11.09 20 -80
+2442MHz_Vnom Pass 5.53 3.57273 6.021 4.00 -10.68 20 -80
+2442MHz_Vmin Pass 5.52 3.56451 6.021 4.00 -10.89 20 -80
+2442MHz_Vmax Pass 5.46 3.51560 6.021 4.00 -12.11 20 -80
+2462MHz_Vnom Pass 5.60 3.63078 6.021 4.00 -9.23 20 -80
+2462MHz_Vmin Pass 5.59 3.62243 6.021 4.00 -9.44 20 -80
+2462MHz_Vmax Pass 5.62 3.64754 6.021 4.00 -8.81 20 -80
+
+Total Power Result Appendix A.3
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Power Power EIRP EIRP
+(dBm) (mW) (dBm) (mW)
+802.11b_Nss1_2TX - - - -
+2.4-2.4835GHz 19.21 83.37 22.00 158.49
+802.11g_Nss1_2TX - - - -
+2.4-2.4835GHz 21.94 156.31 24.73 297.17
+802.11n HT20_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz 22.20 165.96 24.99 315.50
+802.11n HT40_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz 21.01 126.18 23.80 239.88
+P1 = Port 1 output power; P2 = Port 2 output power; P3 = Port 3 output power; P4 = Port 4 output power;
+Power = Total power sum by P1~PN;
+Result
+Mode Result Gain Power Power Power
+Lim. EIRP EIRP EIRP
+Lim. P1 P2
+(dBi) (dBm) (mW) (mW) (dBm) (mW) (dBm) (dBm) (dBm)
+802.11b_Nss1_2TX - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 19.03 79.931 Inf 21.82 151.955 Inf 15.80 16.22
+2412MHz_Vmin Pass 2.79 19.01 79.628 Inf 21.80 151.379 Inf 15.79 16.20
+2412MHz_Vmax Pass 2.79 18.99 79.336 Inf 21.78 150.824 Inf 15.76 16.19
+2442MHz_Vnom Pass 2.79 18.93 78.130 Inf 21.72 148.531 Inf 15.77 16.06
+2442MHz_Vmin Pass 2.79 18.92 78.073 Inf 21.71 148.422 Inf 15.77 16.06
+2442MHz_Vmax Pass 2.79 18.92 77.974 Inf 21.71 148.234 Inf 15.76 16.05
+2472MHz_Vnom Pass 2.79 19.21 83.372 Inf 22.00 158.496 Inf 16.13 16.27
+2472MHz_Vmin Pass 2.79 19.20 83.161 Inf 21.99 158.096 Inf 16.12 16.26
+2472MHz_Vmax Pass 2.79 19.19 83.069 Inf 21.98 157.921 Inf 16.11 16.25
+802.11g_Nss1_2TX - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 21.80 151.403 Inf 24.59 287.829 Inf 18.70 18.88
+2412MHz_Vmin Pass 2.79 21.77 150.422 Inf 24.56 285.964 Inf 18.67 18.85
+2412MHz_Vmax Pass 2.79 21.75 149.558 Inf 24.54 284.322 Inf 18.64 18.84
+2442MHz_Vnom Pass 2.79 21.84 152.903 Inf 24.63 290.680 Inf 18.78 18.89
+2442MHz_Vmin Pass 2.79 21.84 152.594 Inf 24.63 290.093 Inf 18.77 18.88
+2442MHz_Vmax Pass 2.79 21.81 151.738 Inf 24.60 288.465 Inf 18.74 18.86
+2472MHz_Vnom Pass 2.79 21.94 156.405 Inf 24.73 297.339 Inf 18.92 18.95
+2472MHz_Vmin Pass 2.79 21.93 156.133 Inf 24.72 296.821 Inf 18.91 18.94
+2472MHz_Vmax Pass 2.79 21.91 155.349 Inf 24.70 295.331 Inf 18.89 18.91
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - - - -
+2412MHz_Vnom Pass 2.79 22.04 159.800 Inf 24.83 303.793 Inf 18.95 19.10
+2412MHz_Vmin Pass 2.79 22.01 158.906 Inf 24.80 302.093 Inf 18.92 19.08
+2412MHz_Vmax Pass 2.79 21.99 158.229 Inf 24.78 300.806 Inf 18.91 19.06
+2442MHz_Vnom Pass 2.79 22.07 161.249 Inf 24.86 306.548 Inf 19.04 19.09
+2442MHz_Vmin Pass 2.79 22.06 160.598 Inf 24.85 305.309 Inf 19.02 19.07
+2442MHz_Vmax Pass 2.79 22.04 159.863 Inf 24.83 303.913 Inf 19.00 19.06
+
+Total Power Result Appendix A.3
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result Gain Power Power Power
+Lim. EIRP EIRP EIRP
+Lim. P1 P2
+(dBi) (dBm) (mW) (mW) (dBm) (mW) (dBm) (dBm) (dBm)
+2472MHz_Vnom Pass 2.79 22.20 166.021 Inf 24.99 315.618 Inf 19.20 19.18
+2472MHz_Vmin Pass 2.79 22.18 165.148 Inf 24.97 313.960 Inf 19.18 19.15
+2472MHz_Vmax Pass 2.79 22.17 164.921 Inf 24.96 313.528 Inf 19.18 19.15
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - -
+2422MHz_Vnom Pass 2.79 20.98 125.207 Inf 23.77 238.029 Inf 17.81 18.11
+2422MHz_Vmin Pass 2.79 20.94 124.274 Inf 23.73 236.255 Inf 17.78 18.08
+2422MHz_Vmax Pass 2.79 20.93 123.758 Inf 23.72 235.274 Inf 17.75 18.08
+2442MHz_Vnom Pass 2.79 20.79 119.987 Inf 23.58 228.104 Inf 17.88 17.67
+2442MHz_Vmin Pass 2.79 20.78 119.707 Inf 23.57 227.573 Inf 17.86 17.68
+2442MHz_Vmax Pass 2.79 20.76 119.100 Inf 23.55 226.418 Inf 17.84 17.66
+2462MHz_Vnom Pass 2.79 21.01 126.166 Inf 23.80 239.852 Inf 17.91 18.09
+2462MHz_Vmin Pass 2.79 21.01 126.058 Inf 23.80 239.646 Inf 17.89 18.09
+2462MHz_Vmax Pass 2.79 21.00 125.770 Inf 23.79 239.099 Inf 17.89 18.08
+P1 = Port 1 output power; P2 = Port 2 output power; P3 = Port 3 output power; P4 = Port 4 output power;
+Power = Total power sum by P1~PN;
+
+Frequency Tolerance Result Appendix B
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result Ch Center ppm Limit Port Remark
+(MHz) (MHz) (ppm)
+802.11b_Nss1_2TX - - - - - - -
+2.4-2.4835GHz Pass 2.412G 2.41199114G -3.674 + / - 50 1 -
+
+Frequency Tolerance Result Appendix B
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result Ch Center ppm Limit Port Remark
+(MHz) (MHz) (ppm)
+802.11b_Nss1_2TX - - - - - - -
+2412MHz_Vnom Pass 2.412G 2.41199115G -3.671 + / - 50 1 -
+2412MHz_Vmin Pass 2.412G 2.41199114G -3.672 + / - 50 1 -
+2412MHz_Vmax Pass 2.412G 2.41199114G -3.674 + / - 50 1 -
+2442MHz_Vnom Pass 2.442G 2.44199148G -3.491 + / - 50 1 -
+2442MHz_Vmin Pass 2.442G 2.44199145G -3.501 + / - 50 1 -
+2442MHz_Vmax Pass 2.442G 2.44199143G -3.508 + / - 50 1 -
+2472MHz_Vnom Pass 2.472G 2.47199153G -3.427 + / - 50 1 -
+2472MHz_Vmin Pass 2.472G 2.4719915G -3.439 + / - 50 1 -
+2472MHz_Vmax Pass 2.472G 2.47199147G -3.45 + / - 50 1 -
+802.11g_Nss1_2TX - - - - - - -
+2412MHz_Vnom Pass 2.412G 2.41199114G -3.673 + / - 50 1 -
+2412MHz_Vmin Pass 2.412G 2.41199114G -3.672 + / - 50 1 -
+2412MHz_Vmax Pass 2.412G 2.41199114G -3.672 + / - 50 1 -
+2442MHz_Vnom Pass 2.442G 2.44199142G -3.514 + / - 50 1 -
+2442MHz_Vmin Pass 2.442G 2.44199141G -3.52 + / - 50 1 -
+2442MHz_Vmax Pass 2.442G 2.4419914G -3.523 + / - 50 1 -
+2472MHz_Vnom Pass 2.472G 2.47199145G -3.458 + / - 50 1 -
+2472MHz_Vmin Pass 2.472G 2.47199144G -3.464 + / - 50 1 -
+2472MHz_Vmax Pass 2.472G 2.47199142G -3.469 + / - 50 1 -
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - -
+2412MHz_Vnom Pass 2.412G 2.41199115G -3.671 + / - 50 1 -
+2412MHz_Vmin Pass 2.412G 2.41199114G -3.674 + / - 50 1 -
+2412MHz_Vmax Pass 2.412G 2.41199114G -3.674 + / - 50 1 -
+2442MHz_Vnom Pass 2.442G 2.44199139G -3.528 + / - 50 1 -
+2442MHz_Vmin Pass 2.442G 2.44199138G -3.532 + / - 50 1 -
+2442MHz_Vmax Pass 2.442G 2.44199137G -3.534 + / - 50 1 -
+2472MHz_Vnom Pass 2.472G 2.47199141G -3.474 + / - 50 1 -
+2472MHz_Vmin Pass 2.472G 2.4719914G -3.479 + / - 50 1 -
+2472MHz_Vmax Pass 2.472G 2.47199139G -3.483 + / - 50 1 -
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - -
+2422MHz_Vnom Pass 2.422G 2.42199186G -3.359 + / - 50 1 -
+2422MHz_Vmin Pass 2.422G 2.42199183G -3.374 + / - 50 1 -
+2422MHz_Vmax Pass 2.422G 2.4219918G -3.387 + / - 50 1 -
+2442MHz_Vnom Pass 2.442G 2.44199136G -3.537 + / - 50 1 -
+2442MHz_Vmin Pass 2.442G 2.44199137G -3.536 + / - 50 1 -
+2442MHz_Vmax Pass 2.442G 2.44199137G -3.533 + / - 50 1 -
+2462MHz_Vnom Pass 2.462G 2.46199197G -3.264 + / - 50 1 -
+2462MHz_Vmin Pass 2.462G 2.46199192G -3.283 + / - 50 1 -
+
+2462MHz_Vmax Pass 2.462G 2.46199188G -3.298 + / - 50 1 -
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 1 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Max-OBW ITU-Code Min-OBW
+(MHz) (MHz)
+802.11b_Nss1_2TX - - -
+2.4-2.4835GHz 13.373 13H4G1D 13.313
+802.11g_Nss1_2TX - - -
+2.4-2.4835GHz 16.852 16H9D1D 16.752
+802.11n HT20_Nss1,(MCS0)_2TX - - -
+2.4-2.4835GHz 17.711 17H7D1D 17.691
+802.11n HT40_Nss1,(MCS0)_2TX - - -
+2.4-2.4835GHz 36.622 36H6D1D 36.422
+Max-OBW = Maximum99% occupied bandwidth; Min-OBW = Minimum99% occupied bandwidth;
+Result
+Mode Result Limit P1-OBW P2-OBW
+(MHz) (MHz) (MHz)
+802.11b_Nss1_2TX - - - -
+2412MHz_Vnom Pass 26 13.313 13.373
+2412MHz_Vmin Pass 26 13.333 13.373
+2412MHz_Vmax Pass 26 13.313 13.373
+2442MHz_Vnom Pass 26 13.333 13.353
+2442MHz_Vmin Pass 26 13.333 13.333
+2442MHz_Vmax Pass 26 13.353 13.333
+2472MHz_Vnom Pass 26 13.373 13.373
+2472MHz_Vmin Pass 26 13.373 13.353
+2472MHz_Vmax Pass 26 13.373 13.373
+802.11g_Nss1_2TX - - - -
+2412MHz_Vnom Pass 26 16.772 16.852
+2412MHz_Vmin Pass 26 16.772 16.852
+2412MHz_Vmax Pass 26 16.772 16.852
+2442MHz_Vnom Pass 26 16.752 16.852
+2442MHz_Vmin Pass 26 16.752 16.852
+2442MHz_Vmax Pass 26 16.772 16.852
+2472MHz_Vnom Pass 26 16.792 16.832
+2472MHz_Vmin Pass 26 16.792 16.852
+2472MHz_Vmax Pass 26 16.752 16.832
+802.11n HT20_Nss1,(MCS0)_2TX - - - -
+2412MHz_Vnom Pass 26 17.691 17.711
+2412MHz_Vmin Pass 26 17.691 17.711
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 2 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result Limit P1-OBW P2-OBW
+(MHz) (MHz) (MHz)
+2412MHz_Vmax Pass 26 17.691 17.711
+2442MHz_Vnom Pass 26 17.691 17.711
+2442MHz_Vmin Pass 26 17.691 17.711
+2442MHz_Vmax Pass 26 17.691 17.711
+2472MHz_Vnom Pass 26 17.691 17.711
+2472MHz_Vmin Pass 26 17.691 17.711
+2472MHz_Vmax Pass 26 17.691 17.711
+802.11n HT40_Nss1,(MCS0)_2TX - - - -
+2422MHz_Vnom Pass 38 36.422 36.582
+2422MHz_Vmin Pass 38 36.422 36.542
+2422MHz_Vmax Pass 38 36.502 36.582
+2442MHz_Vnom Pass 38 36.462 36.542
+2442MHz_Vmin Pass 38 36.462 36.542
+2442MHz_Vmax Pass 38 36.462 36.542
+2462MHz_Vnom Pass 38 36.502 36.622
+2462MHz_Vmin Pass 38 36.462 36.622
+2462MHz_Vmax Pass 38 36.462 36.622
+P1-OBW = Port 1 99% occupied bandwidth;P2-OBW = Port 299% occupied bandwidth;P3-OBW = Port 399% occupied
+bandwidth;P4-OBW = Port 499% occupied bandwidth;
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 3 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 4 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 5 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 6 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 7 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 8 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 9 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 10 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 11 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 12 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 13 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Occupied Bandwidth Result Appendix C
+International Certification Corp. Page No. : 14 of 14
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Spread Bandwidth Result Appendix D
+International Certification Corp. Page No. : 1 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Max-SBW Min-SBW Max-SF Min-SF
+(MHz) (MHz)
+802.11b_Nss1_2TX - - - -
+2.4-2.4835GHz 9.695 9.655 7.051 7.022
+Max-SBW = Maximumspreading bandwidth; Min-SBW = Minimumspreading bandwidth;
+Max-SF = Maximumspreading factor; Min-SF = Minimumspreading factor;
+
+Spread Bandwidth Result Appendix D
+International Certification Corp. Page No. : 2 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result SBW
+Limit Symbol Rate SF Limit P1-SBW P1-SF P2-SBW P2-SF
+(MHz) (Msps) (MHz) (MHz)
+802.11b_Nss1_2TX - - - - - - - -
+2412MHz_Vnom Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+2412MHz_Vmin Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+2412MHz_Vmax Pass 0.5 1.375 5 9.655 7.022 9.675 7.036
+2442MHz_Vnom Pass 0.5 1.375 5 9.655 7.022 9.675 7.036
+2442MHz_Vmin Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+2442MHz_Vmax Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+2472MHz_Vnom Pass 0.5 1.375 5 9.675 7.036 9.695 7.051
+2472MHz_Vmin Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+2472MHz_Vmax Pass 0.5 1.375 5 9.675 7.036 9.675 7.036
+P1-SBW = Port 1 spreading bandwidth;P2-SBW = Port 2spreading bandwidth;P3-SBW = Port 3spreading bandwidth;
+P4-OBW = Port 4spreading bandwidth;
+P1-SF = Port 1 spreading factor;P2-SF = Port 2spreading factor;P3-SF = Port 3spreading factor;P4-SF = Port 4spreading factor;
+
+Spread Bandwidth Result Appendix D
+International Certification Corp. Page No. : 3 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Spread Bandwidth Result Appendix D
+International Certification Corp. Page No. : 4 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Spread Bandwidth Result Appendix D
+International Certification Corp. Page No. : 5 of 5
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 1 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz) (dBm) (uW/MHz)
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2.4-2.4835GHz Pass 2496.5 12500 1M 2497.75 -32.51 0.56047 -26.02 2.5 -6.49 1.50 -36.42 0.22827 -34.79 0.3322
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 2 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz) (dBm) (uW/MHz)
+802.11b_Nss1_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 2387 1M 2387 -41.50 0.07082 -26.02 2.5 -15.48 1.53 -44.58 0.03481 -44.44 0.03601
+2412MHz_Vnom Pass 2387 2400 1M 2399.974 -37.64 0.17235 -16.02 25 -21.62 1.54 -40.02 0.0996 -41.38 0.07275
+2412MHz_Vnom Pass 2483.5 2496.5 1M 2485.814 -41.88 0.06493 -16.02 25 -25.85 1.56 -44.88 0.03253 -44.89 0.0324
+2412MHz_Vnom Pass 2496.5 12500 1M 4814.811 -39.17 0.12111 -26.02 2.5 -13.15 1.79 -42.67 0.05403 -41.73 0.06708
+2412MHz_Vnom Pass 2496.5 12500 1M 12498.75 -33.82 0.41542 -26.02 2.5 -7.79 5.75 -37.44 0.18043 -36.29 0.23499
+2412MHz_Vmin Pass 30 2387 1M 2387 -41.14 0.07684 -26.02 2.5 -15.12 1.53 -44.59 0.03478 -43.76 0.04206
+2412MHz_Vmin Pass 2387 2400 1M 2399.974 -37.60 0.17386 -16.02 25 -21.58 1.54 -39.99 0.10029 -41.33 0.07357
+2412MHz_Vmin Pass 2483.5 2496.5 1M 2490.338 -41.87 0.06494 -16.02 25 -25.85 1.56 -44.83 0.03286 -44.94 0.03209
+2412MHz_Vmin Pass 2496.5 12500 1M 4814.811 -38.92 0.12817 -26.02 2.5 -12.90 1.79 -41.88 0.06487 -41.99 0.0633
+2412MHz_Vmin Pass 2496.5 12500 1M 10534.312 -33.88 0.4093 -26.02 2.5 -7.86 4.69 -36.85 0.20666 -36.93 0.20265
+2412MHz_Vmax Pass 30 2387 1M 2387 -41.54 0.0701 -26.02 2.5 -15.52 1.53 -45.21 0.03014 -43.98 0.03995
+2412MHz_Vmax Pass 2387 2400 1M 2399.948 -37.65 0.17177 -16.02 25 -21.63 1.54 -40.02 0.09953 -41.41 0.07223
+2412MHz_Vmax Pass 2483.5 2496.5 1M 2485.424 -41.92 0.06423 -16.02 25 -25.90 1.56 -44.84 0.03278 -45.02 0.03145
+2412MHz_Vmax Pass 2496.5 12500 1M 4826.065 -38.96 0.12717 -26.02 2.5 -12.94 1.79 -42.07 0.0621 -41.87 0.06507
+2412MHz_Vmax Pass 2496.5 12500 1M 12462.487 -33.89 0.40827 -26.02 2.5 -7.87 5.73 -37.11 0.19469 -36.70 0.21358
+2442MHz_Vnom Pass 30 2387 1M 2306.862 -41.81 0.06587 -26.02 2.5 -15.79 1.50 -44.84 0.03281 -44.81 0.03305
+2442MHz_Vnom Pass 2387 2400 1M 2394.02 -42.03 0.06267 -16.02 25 -26.01 1.54 -44.94 0.03206 -45.14 0.03061
+2442MHz_Vnom Pass 2483.5 2496.5 1M 2483.89 -41.64 0.06852 -16.02 25 -25.62 1.56 -44.71 0.03378 -44.59 0.03474
+2442MHz_Vnom Pass 2496.5 12500 1M 4878.583 -38.98 0.12638 -26.02 2.5 -12.96 1.79 -41.83 0.06562 -42.16 0.06076
+2442MHz_Vnom Pass 2496.5 12500 1M 12491.247 -33.68 0.42836 -26.02 2.5 -7.66 5.75 -36.57 0.22019 -36.82 0.20816
+2442MHz_Vmin Pass 30 2387 1M 2357.537 -41.86 0.06515 -26.02 2.5 -15.84 1.52 -44.89 0.03246 -44.86 0.03269
+2442MHz_Vmin Pass 2387 2400 1M 2393.968 -42.00 0.06305 -16.02 25 -25.98 1.54 -45.01 0.03152 -45.01 0.03153
+2442MHz_Vmin Pass 2483.5 2496.5 1M 2483.994 -41.67 0.06804 -16.02 25 -25.65 1.56 -44.57 0.03494 -44.80 0.03311
+2442MHz_Vmin Pass 2496.5 12500 1M 4884.836 -39.33 0.11666 -26.02 2.5 -13.31 1.79 -42.57 0.05536 -42.13 0.06129
+2442MHz_Vmin Pass 2496.5 12500 1M 12467.489 -33.59 0.43729 -26.02 2.5 -7.57 5.73 -36.48 0.22474 -36.73 0.21255
+2442MHz_Vmax Pass 30 2387 1M 2346.931 -41.68 0.0679 -26.02 2.5 -15.66 1.52 -44.72 0.03371 -44.66 0.03419
+2442MHz_Vmax Pass 2387 2400 1M 2394.202 -41.99 0.06327 -16.02 25 -25.97 1.54 -44.90 0.03236 -45.10 0.03091
+2442MHz_Vmax Pass 2483.5 2496.5 1M 2484.02 -41.68 0.06788 -16.02 25 -25.66 1.56 -44.69 0.03395 -44.69 0.03392
+2442MHz_Vmax Pass 2496.5 12500 1M 4884.836 -39.02 0.12545 -26.02 2.5 -12.99 1.79 -42.07 0.06208 -41.98 0.06337
+2442MHz_Vmax Pass 2496.5 12500 1M 12494.998 -33.65 0.4312 -26.02 2.5 -7.63 5.75 -36.47 0.22518 -36.86 0.20602
+2472MHz_Vnom Pass 30 2387 1M 1235.605 -41.74 0.06696 -26.02 2.5 -15.72 1.05 -44.58 0.03481 -44.93 0.03215
+2472MHz_Vnom Pass 2387 2400 1M 2392.434 -42.36 0.05804 -16.02 25 -26.34 1.54 -45.34 0.02926 -45.41 0.02878
+2472MHz_Vnom Pass 2483.5 2496.5 1M 2484.93 -33.90 0.40781 -16.02 25 -17.87 1.56 -36.61 0.21837 -37.23 0.18944
+2472MHz_Vnom Pass 2496.5 12500 1M 4936.104 -38.79 0.13208 -26.02 2.5 -12.77 1.80 -42.38 0.05782 -41.29 0.07426
+2472MHz_Vnom Pass 2496.5 12500 1M 10511.804 -33.83 0.41446 -26.02 2.5 -7.80 4.68 -36.77 0.21018 -36.90 0.20427
+2472MHz_Vmin Pass 30 2387 1M 2325.718 -41.73 0.06715 -26.02 2.5 -15.71 1.51 -45.25 0.02983 -44.28 0.03732
+2472MHz_Vmin Pass 2387 2400 1M 2388.976 -42.35 0.05818 -16.02 25 -26.33 1.53 -45.44 0.02856 -45.28 0.02962
+2472MHz_Vmin Pass 2483.5 2496.5 1M 2483.526 -33.81 0.41558 -16.02 25 -17.79 1.56 -36.41 0.2287 -37.28 0.18688
+2472MHz_Vmin Pass 2496.5 12500 1M 4936.104 -39.17 0.12116 -26.02 2.5 -13.15 1.80 -42.68 0.054 -41.73 0.06715
+2472MHz_Vmin Pass 2496.5 12500 1M 10548.067 -33.89 0.40821 -26.02 2.5 -7.87 4.69 -36.91 0.20382 -36.90 0.20439
+2472MHz_Vmax Pass 30 2387 1M 2343.396 -41.74 0.06705 -26.02 2.5 -15.72 1.52 -44.37 0.0366 -45.16 0.03045
+2472MHz_Vmax Pass 2387 2400 1M 2388.716 -42.39 0.05769 -16.02 25 -26.37 1.53 -45.57 0.02774 -45.24 0.02995
+2472MHz_Vmax Pass 2483.5 2496.5 1M 2484.982 -33.77 0.4193 -16.02 25 -17.75 1.56 -36.44 0.22699 -37.16 0.19231
+2472MHz_Vmax Pass 2496.5 12500 1M 4947.358 -39.14 0.12187 -26.02 2.5 -13.12 1.80 -41.89 0.06477 -42.43 0.0571
+2472MHz_Vmax Pass 2496.5 12500 1M 12497.499 -33.93 0.40454 -26.02 2.5 -7.91 5.75 -37.16 0.1924 -36.73 0.21215
+802.11g_Nss1_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 2387 1M 2387 -36.94 0.20221 -26.02 2.5 -10.92 1.54 -39.07 0.12385 -41.06 0.07835
+2412MHz_Vnom Pass 2387 2400 1M 2399.974 -26.61 2.18406 -16.02 25 -10.59 1.55 -30.19 0.95616 -29.11 1.22789
+2412MHz_Vnom Pass 2483.5 2496.5 1M 2484.8 -41.60 0.06921 -16.02 25 -25.58 1.57 -44.47 0.03572 -44.75 0.03349
+2412MHz_Vnom Pass 2496.5 12500 1M 4813.561 -38.84 0.13077 -26.02 2.5 -12.81 1.80 -42.26 0.05946 -41.47 0.07131
+2412MHz_Vnom Pass 2496.5 12500 1M 10519.307 -34.07 0.39177 -26.02 2.5 -8.05 4.69 -37.12 0.194 -37.04 0.19777
+2412MHz_Vmin Pass 30 2387 1M 2387 -36.19 0.2403 -26.02 2.5 -10.17 1.54 -37.84 0.16443 -41.20 0.07587
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 3 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz) (dBm) (uW/MHz)
+2412MHz_Vmin Pass 2387 2400 1M 2399.974 -26.68 2.1466 -16.02 25 -10.66 1.55 -30.20 0.95553 -29.24 1.19107
+2412MHz_Vmin Pass 2483.5 2496.5 1M 2484.072 -41.61 0.06901 -16.02 25 -25.59 1.57 -44.51 0.03537 -44.73 0.03364
+2412MHz_Vmin Pass 2496.5 12500 1M 4821.063 -39.09 0.12337 -26.02 2.5 -13.07 1.80 -41.90 0.06458 -42.31 0.0588
+2412MHz_Vmin Pass 2496.5 12500 1M 10528.06 -33.62 0.43468 -26.02 2.5 -7.60 4.69 -37.15 0.19297 -36.17 0.24171
+2412MHz_Vmax Pass 30 2387 1M 2387 -35.44 0.28597 -26.02 2.5 -9.42 1.54 -37.11 0.19434 -40.38 0.09163
+2412MHz_Vmax Pass 2387 2400 1M 2399.87 -26.69 2.14466 -16.02 25 -10.67 1.55 -30.35 0.9219 -29.13 1.22277
+2412MHz_Vmax Pass 2483.5 2496.5 1M 2485.58 -41.61 0.06906 -16.02 25 -25.59 1.57 -44.52 0.0353 -44.72 0.03376
+2412MHz_Vmax Pass 2496.5 12500 1M 4814.811 -38.80 0.13191 -26.02 2.5 -12.78 1.80 -42.02 0.06281 -41.61 0.0691
+2412MHz_Vmax Pass 2496.5 12500 1M 10535.563 -33.66 0.4307 -26.02 2.5 -7.64 4.70 -36.56 0.22056 -36.78 0.21013
+2442MHz_Vnom Pass 30 2387 1M 1221.464 -41.58 0.06955 -26.02 2.5 -15.56 1.05 -44.85 0.0327 -44.34 0.03685
+2442MHz_Vnom Pass 2387 2400 1M 2399.818 -41.20 0.07586 -16.02 25 -25.18 1.55 -44.18 0.03822 -44.24 0.03764
+2442MHz_Vnom Pass 2483.5 2496.5 1M 2483.734 -40.29 0.09358 -16.02 25 -24.27 1.57 -43.10 0.04898 -43.51 0.0446
+2442MHz_Vnom Pass 2496.5 12500 1M 4887.337 -39.13 0.12214 -26.02 2.5 -13.11 1.81 -42.66 0.0542 -41.68 0.06794
+2442MHz_Vnom Pass 2496.5 12500 1M 10528.06 -33.72 0.42496 -26.02 2.5 -7.70 4.69 -36.62 0.21757 -36.83 0.20739
+2442MHz_Vmin Pass 30 2387 1M 2385.822 -41.16 0.07658 -26.02 2.5 -15.14 1.54 -44.09 0.03901 -44.25 0.03757
+2442MHz_Vmin Pass 2387 2400 1M 2399.922 -41.17 0.0764 -16.02 25 -25.15 1.55 -44.07 0.03914 -44.29 0.03726
+2442MHz_Vmin Pass 2483.5 2496.5 1M 2483.812 -40.44 0.09042 -16.02 25 -24.42 1.57 -43.43 0.04537 -43.46 0.04504
+2442MHz_Vmin Pass 2496.5 12500 1M 4879.834 -38.93 0.12783 -26.02 2.5 -12.91 1.80 -41.66 0.06828 -42.25 0.05955
+2442MHz_Vmin Pass 2496.5 12500 1M 12497.499 -33.82 0.41479 -26.02 2.5 -7.80 5.76 -36.44 0.22695 -37.26 0.18784
+2442MHz_Vmax Pass 30 2387 1M 2349.288 -41.60 0.0692 -26.02 2.5 -15.58 1.53 -44.60 0.03465 -44.62 0.03455
+2442MHz_Vmax Pass 2387 2400 1M 2399.402 -41.26 0.07483 -16.02 25 -25.24 1.55 -44.07 0.03918 -44.48 0.03565
+2442MHz_Vmax Pass 2483.5 2496.5 1M 2483.734 -40.38 0.09164 -16.02 25 -24.36 1.57 -43.41 0.04557 -43.37 0.04606
+2442MHz_Vmax Pass 2496.5 12500 1M 4883.585 -38.94 0.12758 -26.02 2.5 -12.92 1.80 -41.67 0.06815 -42.26 0.05943
+2442MHz_Vmax Pass 2496.5 12500 1M 12496.249 -33.81 0.41613 -26.02 2.5 -7.79 5.76 -36.32 0.23355 -37.39 0.18258
+2472MHz_Vnom Pass 30 2387 1M 2313.933 -41.70 0.06761 -26.02 2.5 -15.68 1.51 -45.01 0.03155 -44.43 0.03606
+2472MHz_Vnom Pass 2387 2400 1M 2398.648 -42.12 0.06138 -16.02 25 -26.10 1.55 -45.04 0.0313 -45.22 0.03007
+2472MHz_Vnom Pass 2483.5 2496.5 1M 2483.864 -25.98 2.52324 -16.02 25 -9.96 1.57 -28.66 1.36106 -29.35 1.16218
+2472MHz_Vnom Pass 2496.5 12500 1M 2496.5 -33.59 0.43712 -26.02 2.5 -7.57 1.57 -34.84 0.32773 -39.61 0.10939
+2472MHz_Vnom Pass 2496.5 12500 1M 4952.359 -39.21 0.11995 -26.02 2.5 -13.19 1.81 -41.94 0.06397 -42.52 0.05598
+2472MHz_Vmin Pass 30 2387 1M 1235.605 -41.65 0.06835 -26.02 2.5 -15.63 1.06 -44.84 0.03278 -44.49 0.03557
+2472MHz_Vmin Pass 2387 2400 1M 2396.1 -42.11 0.06147 -16.02 25 -26.09 1.55 -45.10 0.03093 -45.15 0.03054
+2472MHz_Vmin Pass 2483.5 2496.5 1M 2483.526 -26.02 2.50181 -16.02 25 -10.00 1.57 -28.85 1.30319 -29.21 1.19862
+2472MHz_Vmin Pass 2496.5 12500 1M 4936.104 -39.09 0.12324 -26.02 2.5 -13.07 1.81 -42.07 0.0621 -42.14 0.06114
+2472MHz_Vmin Pass 2496.5 12500 1M 12500 -33.90 0.40717 -26.02 2.5 -7.88 5.76 -36.74 0.21196 -37.09 0.19521
+2472MHz_Vmax Pass 30 2387 1M 2308.041 -41.64 0.0686 -26.02 2.5 -15.62 1.51 -44.27 0.03745 -45.06 0.03116
+2472MHz_Vmax Pass 2387 2400 1M 2390.588 -42.11 0.06157 -16.02 25 -26.09 1.55 -45.07 0.03113 -45.17 0.03043
+2472MHz_Vmax Pass 2483.5 2496.5 1M 2483.526 -26.05 2.48533 -16.02 25 -10.03 1.57 -28.80 1.31836 -29.33 1.16697
+2472MHz_Vmax Pass 2496.5 12500 1M 4953.61 -38.89 0.12911 -26.02 2.5 -12.87 1.81 -42.33 0.05847 -41.51 0.07064
+2472MHz_Vmax Pass 2496.5 12500 1M 12500 -33.83 0.41436 -26.02 2.5 -7.81 5.76 -36.66 0.21596 -37.02 0.1984
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 2387 1M 2385.822 -37.70 0.17001 -26.02 2.5 -11.67 1.53 -40.08 0.09812 -41.43 0.07189
+2412MHz_Vnom Pass 2387 2400 1M 2399.974 -29.62 1.09188 -16.02 25 -13.60 1.54 -33.34 0.46371 -32.02 0.62817
+2412MHz_Vnom Pass 2483.5 2496.5 1M 2486.724 -41.60 0.06916 -16.02 25 -25.58 1.56 -44.53 0.03523 -44.69 0.03393
+2412MHz_Vnom Pass 2496.5 12500 1M 4818.562 -38.81 0.13166 -26.02 2.5 -12.78 1.79 -41.93 0.0641 -41.70 0.06756
+2412MHz_Vnom Pass 2496.5 12500 1M 10535.563 -33.95 0.40234 -26.02 2.5 -7.93 4.69 -37.38 0.183 -36.59 0.21934
+2412MHz_Vmin Pass 30 2387 1M 2385.822 -37.74 0.16812 -26.02 2.5 -11.72 1.53 -40.39 0.09135 -41.15 0.07677
+2412MHz_Vmin Pass 2387 2400 1M 2399.922 -29.75 1.05822 -16.02 25 -13.73 1.54 -33.45 0.45195 -32.17 0.60627
+
+2412MHz_Vmin Pass 2483.5 2496.5 1M 2484.696 -41.61 0.06901 -16.02 25 -25.59 1.56 -44.61 0.03463 -44.64 0.03439
+2412MHz_Vmin Pass 2496.5 12500 1M 4824.815 -38.62 0.13751 -26.02 2.5 -12.60 1.79 -41.39 0.07264 -41.88 0.06486
+2412MHz_Vmin Pass 2496.5 12500 1M 12483.744 -33.86 0.41104 -26.02 2.5 -7.84 5.74 -36.54 0.22203 -37.24 0.18901
+2412MHz_Vmax Pass 30 2387 1M 2387 -37.41 0.18149 -26.02 2.5 -11.39 1.53 -40.02 0.09955 -40.87 0.08194
+2412MHz_Vmax Pass 2387 2400 1M 2399.662 -29.73 1.06426 -16.02 25 -13.71 1.54 -33.54 0.44214 -32.06 0.62212
+2412MHz_Vmax Pass 2483.5 2496.5 1M 2483.708 -41.63 0.06875 -16.02 25 -25.61 1.56 -44.65 0.03427 -44.62 0.03448
+2412MHz_Vmax Pass 2496.5 12500 1M 4824.815 -38.62 0.13729 -26.02 2.5 -12.60 1.79 -41.98 0.06341 -41.31 0.07389
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 4 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz) (dBm) (uW/MHz)
+2412MHz_Vmax Pass 2496.5 12500 1M 10540.564 -33.80 0.41659 -26.02 2.5 -7.78 4.69 -36.95 0.2018 -36.68 0.21479
+2442MHz_Vnom Pass 30 2387 1M 2350.466 -41.68 0.06795 -26.02 2.5 -15.66 1.52 -44.40 0.0363 -45.00 0.03165
+2442MHz_Vnom Pass 2387 2400 1M 2399.792 -41.20 0.07581 -16.02 25 -25.18 1.54 -44.05 0.03936 -44.38 0.03646
+2442MHz_Vnom Pass 2483.5 2496.5 1M 2484.566 -40.72 0.08475 -16.02 25 -24.70 1.56 -43.50 0.04463 -43.97 0.04012
+2442MHz_Vnom Pass 2496.5 12500 1M 4891.088 -39.26 0.11857 -26.02 2.5 -13.24 1.80 -41.85 0.06529 -42.73 0.05328
+2442MHz_Vnom Pass 2496.5 12500 1M 12467.489 -33.89 0.40869 -26.02 2.5 -7.87 5.73 -37.55 0.17586 -36.33 0.23284
+2442MHz_Vmin Pass 30 2387 1M 2323.361 -41.64 0.06861 -26.02 2.5 -15.62 1.51 -44.89 0.03243 -44.42 0.03618
+2442MHz_Vmin Pass 2387 2400 1M 2399.428 -41.22 0.07543 -16.02 25 -25.20 1.54 -44.14 0.03857 -44.33 0.03686
+2442MHz_Vmin Pass 2483.5 2496.5 1M 2483.76 -40.75 0.08414 -16.02 25 -24.73 1.56 -43.69 0.04274 -43.83 0.04139
+2442MHz_Vmin Pass 2496.5 12500 1M 4877.333 -39.21 0.12006 -26.02 2.5 -13.19 1.79 -41.66 0.06817 -42.85 0.05189
+2442MHz_Vmin Pass 2496.5 12500 1M 10536.813 -33.47 0.45001 -26.02 2.5 -7.45 4.69 -36.74 0.21184 -36.23 0.23817
+2442MHz_Vmax Pass 30 2387 1M 2332.789 -41.71 0.06749 -26.02 2.5 -15.69 1.51 -44.73 0.03365 -44.71 0.03384
+2442MHz_Vmax Pass 2387 2400 1M 2399.974 -41.25 0.075 -16.02 25 -25.23 1.54 -44.07 0.03914 -44.45 0.03586
+2442MHz_Vmax Pass 2483.5 2496.5 1M 2483.76 -40.75 0.0842 -16.02 25 -24.73 1.56 -43.60 0.04365 -43.92 0.04055
+2442MHz_Vmax Pass 2496.5 12500 1M 4889.837 -39.30 0.11759 -26.02 2.5 -13.28 1.80 -42.28 0.05917 -42.33 0.05842
+2442MHz_Vmax Pass 2496.5 12500 1M 12463.737 -33.72 0.42462 -26.02 2.5 -7.70 5.73 -36.66 0.216 -36.81 0.20862
+2472MHz_Vnom Pass 30 2387 1M 2318.647 -41.74 0.06702 -26.02 2.5 -15.72 1.50 -44.92 0.03223 -44.59 0.03479
+2472MHz_Vnom Pass 2387 2400 1M 2399.74 -42.08 0.06201 -16.02 25 -26.05 1.54 -44.96 0.03193 -45.22 0.03008
+2472MHz_Vnom Pass 2483.5 2496.5 1M 2483.552 -28.04 1.56964 -16.02 25 -12.02 1.56 -32.20 0.60248 -30.15 0.96715
+2472MHz_Vnom Pass 2496.5 12500 1M 4937.354 -38.88 0.12931 -26.02 2.5 -12.86 1.80 -42.18 0.06049 -41.62 0.06882
+2472MHz_Vnom Pass 2496.5 12500 1M 10545.566 -33.80 0.41668 -26.02 2.5 -7.78 4.69 -36.90 0.2041 -36.72 0.21258
+2472MHz_Vmin Pass 30 2387 1M 2381.108 -41.59 0.06933 -26.02 2.5 -15.57 1.53 -44.53 0.03524 -44.67 0.03409
+2472MHz_Vmin Pass 2387 2400 1M 2392.772 -42.12 0.06135 -16.02 25 -26.10 1.54 -45.07 0.03114 -45.20 0.0302
+2472MHz_Vmin Pass 2483.5 2496.5 1M 2483.552 -28.06 1.5638 -16.02 25 -12.04 1.56 -32.29 0.59024 -30.12 0.97356
+2472MHz_Vmin Pass 2496.5 12500 1M 4948.608 -39.16 0.1213 -26.02 2.5 -13.14 1.80 -41.88 0.0648 -42.48 0.0565
+2472MHz_Vmin Pass 2496.5 12500 1M 10529.31 -33.51 0.44576 -26.02 2.5 -7.49 4.68 -37.09 0.19525 -36.01 0.25051
+2472MHz_Vmax Pass 30 2387 1M 2341.039 -41.62 0.06881 -26.02 2.5 -15.60 1.51 -44.66 0.03417 -44.60 0.03464
+2472MHz_Vmax Pass 2387 2400 1M 2395.944 -42.05 0.06244 -16.02 25 -26.02 1.54 -45.23 0.03001 -44.89 0.03243
+2472MHz_Vmax Pass 2483.5 2496.5 1M 2483.526 -28.18 1.52103 -16.02 25 -12.16 1.56 -32.40 0.57491 -30.24 0.94612
+2472MHz_Vmax Pass 2496.5 12500 1M 4944.857 -38.87 0.12962 -26.02 2.5 -12.85 1.80 -42.15 0.0609 -41.63 0.06872
+2472MHz_Vmax Pass 2496.5 12500 1M 10521.808 -33.66 0.43056 -26.02 2.5 -7.64 4.68 -36.83 0.20754 -36.52 0.22302
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2422MHz_Vnom Pass 30 2387 1M 2384.643 -34.48 0.35681 -26.02 2.5 -8.45 1.47 -38.63 0.1371 -36.58 0.21971
+2422MHz_Vnom Pass 2387 2400 1M 2399.948 -31.21 0.75615 -16.02 25 -15.19 1.48 -35.09 0.30966 -33.50 0.44649
+2422MHz_Vnom Pass 2483.5 2496.5 1M 2483.968 -39.81 0.10446 -16.02 25 -23.79 1.50 -42.77 0.05283 -42.87 0.05162
+2422MHz_Vnom Pass 2496.5 12500 1M 4852.324 -38.90 0.12892 -26.02 2.5 -12.88 1.73 -42.19 0.06044 -41.64 0.06848
+2422MHz_Vnom Pass 2496.5 12500 1M 12453.734 -33.86 0.41107 -26.02 2.5 -7.84 5.66 -36.78 0.21 -36.97 0.20108
+2422MHz_Vmin Pass 30 2387 1M 2384.643 -34.67 0.34084 -26.02 2.5 -8.65 1.47 -38.10 0.15501 -37.31 0.18583
+2422MHz_Vmin Pass 2387 2400 1M 2399.974 -31.32 0.73791 -16.02 25 -15.30 1.48 -35.16 0.30458 -33.63 0.43332
+2422MHz_Vmin Pass 2483.5 2496.5 1M 2484.748 -39.85 0.1034 -16.02 25 -23.83 1.50 -42.98 0.05039 -42.76 0.05301
+2422MHz_Vmin Pass 2496.5 12500 1M 4856.076 -39.19 0.12044 -26.02 2.5 -13.17 1.73 -41.94 0.06394 -42.48 0.0565
+2422MHz_Vmin Pass 2496.5 12500 1M 12487.496 -33.87 0.41062 -26.02 2.5 -7.85 5.68 -37.11 0.19433 -36.65 0.21629
+2422MHz_Vmax Pass 30 2387 1M 2385.822 -34.47 0.35722 -26.02 2.5 -8.45 1.47 -39.36 0.11595 -36.18 0.24127
+2422MHz_Vmax Pass 2387 2400 1M 2399.974 -31.45 0.71671 -16.02 25 -15.43 1.48 -35.56 0.27769 -33.58 0.43902
+2422MHz_Vmax Pass 2483.5 2496.5 1M 2483.812 -39.94 0.10135 -16.02 25 -23.92 1.50 -42.96 0.05058 -42.94 0.05077
+2422MHz_Vmax Pass 2496.5 12500 1M 4832.317 -38.91 0.12857 -26.02 2.5 -12.89 1.73 -41.70 0.06754 -42.14 0.06103
+2422MHz_Vmax Pass 2496.5 12500 1M 12484.995 -33.88 0.4091 -26.02 2.5 -7.86 5.68 -36.60 0.21872 -37.20 0.19038
+2442MHz_Vnom Pass 30 2387 1M 2385.822 -40.06 0.09859 -26.02 2.5 -14.04 1.47 -42.95 0.05074 -43.20 0.04785
+2442MHz_Vnom Pass 2387 2400 1M 2399.792 -36.31 0.23388 -16.02 25 -20.29 1.48 -40.39 0.09136 -38.46 0.14252
+2442MHz_Vnom Pass 2483.5 2496.5 1M 2483.604 -34.86 0.32655 -16.02 25 -18.84 1.50 -38.44 0.14336 -37.37 0.1832
+2442MHz_Vnom Pass 2496.5 12500 1M 4872.331 -39.24 0.11901 -26.02 2.5 -13.22 1.73 -41.75 0.06677 -42.82 0.05225
+2442MHz_Vnom Pass 2496.5 12500 1M 12500 -33.88 0.4097 -26.02 2.5 -7.85 5.69 -36.93 0.20281 -36.84 0.20689
+2442MHz_Vmin Pass 30 2387 1M 2387 -40.12 0.0973 -26.02 2.5 -14.10 1.47 -42.56 0.05545 -43.78 0.04184
+2442MHz_Vmin Pass 2387 2400 1M 2399.922 -36.46 0.22579 -16.02 25 -20.44 1.48 -40.38 0.09164 -38.72 0.13415
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 5 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (uW/MHz) (dBm) (uW/MHz) (dB) (dB) (dBm) (uW/MHz) (dBm) (uW/MHz)
+2442MHz_Vmin Pass 2483.5 2496.5 1M 2483.578 -34.88 0.32479 -16.02 25 -18.86 1.50 -38.27 0.14893 -37.55 0.17586
+2442MHz_Vmin Pass 2496.5 12500 1M 4876.083 -39.17 0.12113 -26.02 2.5 -13.15 1.73 -41.98 0.06342 -42.39 0.05771
+2442MHz_Vmin Pass 2496.5 12500 1M 10529.31 -33.51 0.44544 -26.02 2.5 -7.49 4.62 -36.50 0.22385 -36.54 0.22159
+2442MHz_Vmax Pass 30 2387 1M 2387 -40.08 0.09818 -26.02 2.5 -14.06 1.47 -42.93 0.05096 -43.26 0.04722
+2442MHz_Vmax Pass 2387 2400 1M 2399.558 -36.42 0.22792 -16.02 25 -20.40 1.48 -40.40 0.09129 -38.64 0.13663
+2442MHz_Vmax Pass 2483.5 2496.5 1M 2483.656 -34.95 0.3201 -16.02 25 -18.93 1.50 -38.63 0.13703 -37.37 0.18308
+2442MHz_Vmax Pass 2496.5 12500 1M 4901.091 -39.09 0.12329 -26.02 2.5 -13.07 1.74 -41.86 0.06515 -42.36 0.05814
+2442MHz_Vmax Pass 2496.5 12500 1M 10560.571 -33.79 0.41736 -26.02 2.5 -7.77 4.64 -37.09 0.19536 -36.54 0.222
+2462MHz_Vnom Pass 30 2387 1M 2376.394 -41.69 0.06777 -26.02 2.5 -15.67 1.47 -44.36 0.03664 -45.07 0.03113
+2462MHz_Vnom Pass 2387 2400 1M 2399.818 -40.70 0.0851 -16.02 25 -24.68 1.48 -43.96 0.0402 -43.48 0.0449
+2462MHz_Vnom Pass 2483.5 2496.5 1M 2483.526 -28.65 1.36593 -16.02 25 -12.63 1.50 -32.38 0.57825 -31.04 0.78768
+2462MHz_Vnom Pass 2496.5 12500 1M 2497.75 -32.60 0.54891 -26.02 2.5 -6.58 1.50 -37.42 0.18128 -34.35 0.36763
+2462MHz_Vnom Pass 2496.5 12500 1M 4903.592 -39.11 0.1227 -26.02 2.5 -13.09 1.74 -41.97 0.06352 -42.28 0.05918
+2462MHz_Vmin Pass 30 2387 1M 2382.286 -41.61 0.06909 -26.02 2.5 -15.59 1.47 -45.18 0.03031 -44.11 0.03878
+2462MHz_Vmin Pass 2387 2400 1M 2399.454 -40.73 0.08458 -16.02 25 -24.71 1.48 -43.81 0.04157 -43.66 0.04301
+2462MHz_Vmin Pass 2483.5 2496.5 1M 2483.526 -28.57 1.38857 -16.02 25 -12.55 1.50 -32.31 0.58808 -30.97 0.80049
+2462MHz_Vmin Pass 2496.5 12500 1M 2497.75 -32.51 0.56047 -26.02 2.5 -6.49 1.50 -36.42 0.22827 -34.79 0.3322
+2462MHz_Vmin Pass 2496.5 12500 1M 4924.85 -39.06 0.12422 -26.02 2.5 -13.04 1.74 -41.44 0.07179 -42.80 0.05243
+2462MHz_Vmax Pass 30 2387 1M 1230.891 -41.44 0.07181 -26.02 2.5 -15.42 0.99 -44.46 0.03583 -44.44 0.03598
+2462MHz_Vmax Pass 2387 2400 1M 2399.818 -40.69 0.08532 -16.02 25 -24.67 1.48 -43.80 0.04166 -43.60 0.04367
+2462MHz_Vmax Pass 2483.5 2496.5 1M 2483.526 -28.64 1.3684 -16.02 25 -12.62 1.50 -32.34 0.58305 -31.05 0.78535
+2462MHz_Vmax Pass 2496.5 12500 1M 2496.5 -32.52 0.55993 -26.02 2.5 -6.50 1.50 -37.05 0.19742 -34.41 0.36251
+2462MHz_Vmax Pass 2496.5 12500 1M 4904.843 -39.07 0.12387 -26.02 2.5 -13.05 1.74 -42.08 0.06201 -42.09 0.06186
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 6 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 7 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 8 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 9 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 10 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 11 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 12 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 13 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 14 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 15 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 16 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-TXUnwanted Emission StrengthResult Appendix E
+International Certification Corp. Page No. : 17 of 17
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+Carrier Sensing Function Result Appendix F
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result Interference Pin Function
+(dBm)
+802.11b_Nss1_2TX - - -
+2.4-2.4835GHz Pass OBW<26MHz w/o test
+802.11g_Nss1_2TX - - -
+2.4-2.4835GHz Pass OBW<26MHz w/o test
+802.11n HT20_Nss1,(MCS0)_2TX - - -
+2.4-2.4835GHz Pass OBW<26MHz w/o test
+802.11n HT40_Nss1,(MCS0)_2TX - - -
+2.4-2.4835GHz Pass -42.25 Good
+
+Carrier Sensing Function Result Appendix F
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result Interference Pin Function
+(dBm)
+802.11b_Nss1_2TX - - -
+2412MHz_Vnom Pass OBW<26MHz w/o test
+2412MHz_Vmin Pass OBW<26MHz w/o test
+2412MHz_Vmax Pass OBW<26MHz w/o test
+2442MHz_Vnom Pass OBW<26MHz w/o test
+2442MHz_Vmin Pass OBW<26MHz w/o test
+2442MHz_Vmax Pass OBW<26MHz w/o test
+2472MHz_Vnom Pass OBW<26MHz w/o test
+2472MHz_Vmin Pass OBW<26MHz w/o test
+2472MHz_Vmax Pass OBW<26MHz w/o test
+802.11g_Nss1_2TX - - -
+2412MHz_Vnom Pass OBW<26MHz w/o test
+2412MHz_Vmin Pass OBW<26MHz w/o test
+2412MHz_Vmax Pass OBW<26MHz w/o test
+2442MHz_Vnom Pass OBW<26MHz w/o test
+2442MHz_Vmin Pass OBW<26MHz w/o test
+2442MHz_Vmax Pass OBW<26MHz w/o test
+2472MHz_Vnom Pass OBW<26MHz w/o test
+2472MHz_Vmin Pass OBW<26MHz w/o test
+2472MHz_Vmax Pass OBW<26MHz w/o test
+802.11n HT20_Nss1,(MCS0)_2TX - - -
+2412MHz_Vnom Pass OBW<26MHz w/o test
+2412MHz_Vmin Pass OBW<26MHz w/o test
+2412MHz_Vmax Pass OBW<26MHz w/o test
+2442MHz_Vnom Pass OBW<26MHz w/o test
+2442MHz_Vmin Pass OBW<26MHz w/o test
+2442MHz_Vmax Pass OBW<26MHz w/o test
+2472MHz_Vnom Pass OBW<26MHz w/o test
+2472MHz_Vmin Pass OBW<26MHz w/o test
+2472MHz_Vmax Pass OBW<26MHz w/o test
+802.11n HT40_Nss1,(MCS0)_2TX - - -
+2422MHz_Vnom Pass -42.10 Good
+2422MHz_Vmin Pass -42.10 Good
+2422MHz_Vmax Pass -42.10 Good
+2442MHz_Vnom Pass -42.17 Good
+2442MHz_Vmin Pass -42.17 Good
+2442MHz_Vmax Pass -42.17 Good
+2462MHz_Vnom Pass -42.25 Good
+2462MHz_Vmin Pass -42.25 Good
+2462MHz_Vmax Pass -42.25 Good
+
+Interference Prevention Function Result Appendix G
+International Certification Corp. Page No. : 1 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result ID Length ID Limit Function
+802.11b_Nss1_2TX - - - -
+2.4-2.4835GHz Pass C0:EE:40:40:02:7C 48 bits Good
+802.11g_Nss1_2TX - - - -
+2.4-2.4835GHz Pass C0:EE:40:40:02:7C 48 bits Good
+802.11n HT20_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz Pass C0:EE:40:40:02:7C 48 bits Good
+802.11n HT40_Nss1,(MCS0)_2TX - - - -
+2.4-2.4835GHz Pass C0:EE:40:40:02:7C 48 bits Good
+
+Interference Prevention Function Result Appendix G
+International Certification Corp. Page No. : 2 of 2
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result ID Length ID Limit Function
+802.11b_Nss1_2TX - - - -
+2412MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+802.11g_Nss1_2TX - - - -
+2412MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+802.11n HT20_Nss1,(MCS0)_2TX - - - -
+2412MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2412MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2472MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+802.11n HT40_Nss1,(MCS0)_2TX - - - -
+2422MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2422MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2422MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2442MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+2462MHz_Vnom Pass C0:EE:40:40:02:7C 48 bits Good
+2462MHz_Vmin Pass C0:EE:40:40:02:7C 48 bits Good
+2462MHz_Vmax Pass C0:EE:40:40:02:7C 48 bits Good
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 1 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Summary
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (nW) (dBm) (nW) (dB) (dB) (dBm) (nW) (dBm) (nW)
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2.4-2.4835GHz Pass 1000 12500 1M 2460.5 -58.12 1.54016 -46.99 20 -11.13 1.49 -58.13 1.53684 -84.79 0.00332
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 2 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Result
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (nW) (dBm) (nW) (dB) (dB) (dBm) (nW) (dBm) (nW)
+802.11b_Nss1_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 1000 100k 772.05 -84.19 0.00381 -53.98 4 -30.21 0.88 -84.46 0.00358 -96.35 0.00023
+2412MHz_Vnom Pass 1000 12500 1M 10524.875 -69.07 0.12381 -46.99 20 -22.08 4.61 -69.87 0.10309 -76.84 0.02072
+2412MHz_Vmin Pass 30 1000 100k 777.385 -85.25 0.00299 -53.98 4 -31.27 0.88 -85.56 0.00278 -96.90 0.0002
+2412MHz_Vmin Pass 1000 12500 1M 10524.875 -68.10 0.15472 -46.99 20 -21.11 4.61 -68.61 0.13784 -77.73 0.01688
+2412MHz_Vmax Pass 30 1000 100k 771.565 -85.72 0.00268 -53.98 4 -31.74 0.88 -87.02 0.00199 -91.60 0.00069
+2412MHz_Vmax Pass 1000 12500 1M 10526.312 -73.56 0.04408 -46.99 20 -26.57 4.61 -76.51 0.02236 -76.63 0.02172
+2442MHz_Vnom Pass 30 1000 100k 776.9 -85.78 0.00264 -53.98 4 -31.80 0.88 -86.10 0.00245 -97.23 0.00019
+
+2442MHz_Vnom Pass 1000 12500 1M 12497.125 -73.41 0.04559 -46.99 20 -26.42 5.68 -76.82 0.02077 -76.05 0.02481
+2442MHz_Vmin Pass 30 1000 100k 775.93 -86.20 0.0024 -53.98 4 -32.22 0.88 -86.62 0.00218 -96.62 0.00022
+2442MHz_Vmin Pass 1000 12500 1M 12143.5 -73.40 0.04574 -46.99 20 -26.41 5.49 -76.33 0.02326 -76.48 0.02248
+2442MHz_Vmax Pass 30 1000 100k 774.475 -90.93 0.00081 -53.98 4 -36.95 0.88 -95.53 0.00028 -92.78 0.00053
+2442MHz_Vmax Pass 1000 12500 1M 10506.187 -73.60 0.04368 -46.99 20 -26.61 4.60 -76.23 0.02383 -77.02 0.01985
+2472MHz_Vnom Pass 30 1000 100k 776.9 -84.88 0.00325 -53.98 4 -30.90 0.88 -86.07 0.00247 -91.08 0.00078
+2472MHz_Vnom Pass 1000 12500 1M 10524.875 -71.67 0.06806 -46.99 20 -24.68 4.61 -73.55 0.04416 -76.22 0.02389
+2472MHz_Vmin Pass 30 1000 100k 776.415 -88.60 0.00138 -53.98 4 -34.62 0.88 -90.86 0.00082 -92.52 0.00056
+2472MHz_Vmin Pass 1000 12500 1M 10524.875 -70.20 0.09553 -46.99 20 -23.21 4.61 -76.85 0.02066 -71.26 0.07487
+2472MHz_Vmax Pass 30 1000 100k 775.93 -85.08 0.0031 -53.98 4 -31.10 0.88 -85.40 0.00288 -96.64 0.00022
+2472MHz_Vmax Pass 1000 12500 1M 10530.625 -73.50 0.04466 -46.99 20 -26.51 4.62 -76.75 0.02112 -76.28 0.02354
+802.11g_Nss1_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 1000 100k 770.11 -89.39 0.00115 -53.98 4 -35.41 0.88 -94.93 0.00032 -90.81 0.00083
+2412MHz_Vnom Pass 1000 12500 1M 10526.312 -73.44 0.04524 -46.99 20 -26.46 4.61 -76.96 0.02013 -76.00 0.0251
+2412MHz_Vmin Pass 30 1000 100k 771.08 -88.17 0.00152 -53.98 4 -34.19 0.88 -95.16 0.0003 -89.14 0.00122
+2412MHz_Vmin Pass 1000 12500 1M 10526.312 -71.49 0.07099 -46.99 20 -24.50 4.61 -74.48 0.03562 -74.51 0.03538
+2412MHz_Vmax Pass 30 1000 100k 772.05 -89.00 0.00126 -53.98 4 -35.02 0.88 -94.53 0.00035 -90.42 0.00091
+2412MHz_Vmax Pass 1000 12500 1M 10553.625 -73.30 0.04679 -46.99 20 -26.31 4.63 -76.64 0.02167 -76.00 0.02512
+2442MHz_Vnom Pass 30 1000 100k 771.565 -84.98 0.00318 -53.98 4 -31.00 0.88 -86.34 0.00233 -90.70 0.00085
+2442MHz_Vnom Pass 1000 12500 1M 10517.687 -73.08 0.04924 -46.99 20 -26.09 4.61 -76.06 0.02478 -76.12 0.02446
+2442MHz_Vmin Pass 30 1000 100k 771.565 -86.18 0.00241 -53.98 4 -32.20 0.88 -86.52 0.00223 -97.39 0.00018
+2442MHz_Vmin Pass 1000 12500 1M 10516.25 -73.30 0.04679 -46.99 20 -26.31 4.61 -76.52 0.02227 -76.10 0.02452
+2442MHz_Vmax Pass 30 1000 100k 772.05 -85.26 0.00298 -53.98 4 -31.28 0.88 -86.50 0.00224 -91.33 0.00074
+2442MHz_Vmax Pass 1000 12500 1M 10550.75 -73.30 0.04679 -46.99 20 -26.31 4.63 -76.63 0.02173 -76.01 0.02506
+2472MHz_Vnom Pass 30 1000 100k 776.9 -88.92 0.00128 -53.98 4 -34.94 0.88 -89.74 0.00106 -96.54 0.00022
+2472MHz_Vnom Pass 1000 12500 1M 10523.437 -72.80 0.05243 -46.99 20 -25.81 4.61 -77.42 0.01812 -74.65 0.03431
+2472MHz_Vmin Pass 30 1000 100k 766.715 -87.03 0.00198 -53.98 4 -33.05 0.88 -87.52 0.00177 -96.80 0.00021
+2472MHz_Vmin Pass 1000 12500 1M 10524.875 -69.01 0.12566 -46.99 20 -22.02 4.61 -77.14 0.01932 -69.73 0.10634
+2472MHz_Vmax Pass 30 1000 100k 772.05 -84.05 0.00393 -53.98 4 -30.07 0.88 -84.77 0.00334 -92.23 0.0006
+2472MHz_Vmax Pass 1000 12500 1M 10524.875 -73.38 0.0459 -46.99 20 -26.39 4.61 -76.52 0.02231 -76.27 0.02359
+802.11n HT20_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2412MHz_Vnom Pass 30 1000 100k 766.715 -88.15 0.00153 -53.98 4 -34.17 0.88 -88.71 0.00135 -97.35 0.00018
+2412MHz_Vnom Pass 1000 12500 1M 10520.562 -73.56 0.04401 -46.99 20 -26.57 4.61 -76.59 0.0219 -76.55 0.02211
+2412MHz_Vmin Pass 30 1000 100k 766.715 -89.33 0.00117 -53.98 4 -35.36 0.88 -90.00 0.001 -97.82 0.00017
+2412MHz_Vmin Pass 1000 12500 1M 10526.312 -73.52 0.04451 -46.99 20 -26.53 4.61 -77.63 0.01726 -75.65 0.02725
+2412MHz_Vmax Pass 30 1000 100k 774.475 -87.42 0.00181 -53.98 4 -33.44 0.88 -89.87 0.00103 -91.07 0.00078
+2412MHz_Vmax Pass 1000 12500 1M 10520.562 -73.24 0.04737 -46.99 20 -26.26 4.61 -76.47 0.02252 -76.05 0.02485
+2442MHz_Vnom Pass 30 1000 100k 775.445 -86.09 0.00246 -53.98 4 -32.11 0.88 -86.45 0.00227 -97.17 0.00019
+2442MHz_Vnom Pass 1000 12500 1M 12497.125 -73.15 0.04847 -46.99 20 -26.16 5.68 -75.95 0.0254 -76.37 0.02307
+2442MHz_Vmin Pass 30 1000 100k 772.05 -85.59 0.00276 -53.98 4 -31.61 0.88 -85.95 0.00254 -96.49 0.00022
+2442MHz_Vmin Pass 1000 12500 1M 12497.125 -73.07 0.04936 -46.99 20 -26.08 5.68 -76.54 0.0222 -75.66 0.02715
+2442MHz_Vmax Pass 30 1000 100k 772.535 -85.76 0.00265 -53.98 4 -31.79 0.88 -86.10 0.00245 -97.02 0.0002
+2442MHz_Vmax Pass 1000 12500 1M 10524.875 -66.26 0.23645 -46.99 20 -19.27 4.61 -74.17 0.03824 -67.03 0.19821
+2472MHz_Vnom Pass 30 1000 100k 951.985 -90.76 0.00084 -53.98 4 -36.78 0.88 -92.05 0.00062 -96.66 0.00022
+2472MHz_Vnom Pass 1000 12500 1M 10524.875 -72.47 0.05657 -46.99 20 -25.48 4.61 -77.33 0.01847 -74.19 0.0381
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 3 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+Mode Result F-Start F-Stop RBW Freq Psum Psum Limit Limit Margin Loss P1 P1 P2 P2
+(MHz) (MHz) (Hz) (MHz) (dBm) (nW) (dBm) (nW) (dB) (dB) (dBm) (nW) (dBm) (nW)
+2472MHz_Vmin Pass 30 1000 100k 776.9 -83.95 0.00403 -53.98 4 -29.97 0.88 -84.50 0.00355 -93.15 0.00048
+2472MHz_Vmin Pass 1000 12500 1M 10524.875 -71.06 0.07826 -46.99 20 -24.08 4.61 -72.16 0.06078 -77.58 0.01747
+2472MHz_Vmax Pass 30 1000 100k 771.565 -83.15 0.00484 -53.98 4 -29.17 0.88 -85.23 0.003 -87.35 0.00184
+2472MHz_Vmax Pass 1000 12500 1M 10524.875 -70.14 0.09676 -46.99 20 -23.15 4.61 -77.21 0.019 -71.09 0.07775
+802.11n HT40_Nss1,(MCS0)_2TX - - - - - - - - - - - - - - -
+2422MHz_Vnom Pass 30 1000 100k 772.535 -83.46 0.00451 -53.98 4 -29.48 0.88 -84.51 0.00354 -90.11 0.00097
+2422MHz_Vnom Pass 1000 12500 1M 10526.312 -72.05 0.06231 -46.99 20 -25.06 4.61 -73.79 0.04175 -76.87 0.02056
+2422MHz_Vmin Pass 30 1000 100k 772.05 -85.29 0.00296 -53.98 4 -31.31 0.88 -86.23 0.00238 -92.40 0.00058
+2422MHz_Vmin Pass 1000 12500 1M 10530.625 -73.36 0.04615 -46.99 20 -26.37 4.62 -76.09 0.02461 -76.67 0.02153
+2422MHz_Vmax Pass 30 1000 100k 770.11 -86.70 0.00214 -53.98 4 -32.72 0.88 -88.12 0.00154 -92.25 0.0006
+2422MHz_Vmax Pass 1000 12500 1M 10539.25 -73.35 0.04621 -46.99 20 -26.36 4.62 -76.53 0.02223 -76.20 0.02398
+2442MHz_Vnom Pass 30 1000 100k 772.05 -90.16 0.00096 -53.98 4 -36.18 0.88 -94.57 0.00035 -92.12 0.00061
+2442MHz_Vnom Pass 1000 12500 1M 10569.437 -73.41 0.04563 -46.99 20 -26.42 4.64 -77.01 0.01991 -75.90 0.02572
+2442MHz_Vmin Pass 30 1000 100k 772.05 -86.90 0.00204 -53.98 4 -32.93 0.88 -87.25 0.00188 -98.02 0.00016
+2442MHz_Vmin Pass 1000 12500 1M 10527.75 -73.53 0.04437 -46.99 20 -26.54 4.61 -76.64 0.02166 -76.44 0.02272
+2442MHz_Vmax Pass 30 1000 100k 766.715 -90.08 0.00098 -53.98 4 -36.10 0.88 -90.92 0.00081 -97.66 0.00017
+2442MHz_Vmax Pass 1000 12500 1M 12487.062 -73.58 0.04389 -46.99 20 -26.59 5.67 -76.93 0.02028 -76.27 0.02361
+2462MHz_Vnom Pass 30 1000 100k 776.9 -86.73 0.00213 -53.98 4 -32.75 0.88 -88.05 0.00157 -92.54 0.00056
+2462MHz_Vnom Pass 1000 12500 1M 10516.25 -73.44 0.04532 -46.99 20 -26.45 4.61 -76.11 0.02452 -76.82 0.02081
+2462MHz_Vmin Pass 30 1000 100k 777.385 -85.31 0.00294 -53.98 4 -31.33 0.88 -86.34 0.00233 -92.09 0.00062
+2462MHz_Vmin Pass 1000 12500 1M 2460.5 -58.12 1.54016 -46.99 20 -11.13 1.49 -58.13 1.53684 -84.79 0.00332
+2462MHz_Vmax Pass 30 1000 100k 775.445 -86.05 0.00248 -53.98 4 -32.07 0.88 -87.40 0.00182 -91.79 0.00066
+2462MHz_Vmax Pass 1000 12500 1M 12155 -73.23 0.04757 -46.99 20 -26.24 5.49 -76.09 0.02461 -76.39 0.02296
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 4 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 5 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 6 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 7 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 8 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 9 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 10 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 11 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 12 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 13 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 14 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155
+
+CSE-RXSecondary Radiated EmissionsResult Appendix H
+International Certification Corp. Page No. : 15 of 15
+TEL : 886-3-227-8666
+FAX : 886-3-318-0155

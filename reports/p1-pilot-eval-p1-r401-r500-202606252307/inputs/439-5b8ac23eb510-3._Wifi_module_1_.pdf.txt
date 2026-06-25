@@ -1,0 +1,2075 @@
+queueId: ingest-1781569954390-jg6
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 국내 제조인증/2. 250402 보완/기술문서_수정중/2. 첨부자료/성능 시험성적서/[첨부 3.] Wifi module 사양서1 .pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/586fb5a27575/[첨부 3.] Wifi module 사양서1__586fb5a27575_combined.txt
+canonicalGroupId: 5b8ac23eb510
+productSignal: ADD/AspenView
+authoritySignal: MFDS/domestic
+pilotRank: 439
+
+SOURCE_TEXT
+A
+Version 1.26
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+2
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Version Date Notes Contributor(s) Approver
+1.0 06 Apr 2018 Initial version Andrew Chen Jay White
+1.1 15 Jun 2018 Updated block diagram. Changed pin type and description to
+NC on pin 54 Kai Wei Jay White
+1.2 07 Nov 2018 Removed 802.11s reference Jay White
+1.3 14 Nov 2018 Fixed channels for KC Andrew Chen
+1.4 07 Feb 2019 Revised FCC and IC ID numbers Tom Smith Jay White
+1.5 13 Feb 2019 Updated logos and URLs; corrected Korea ID # Connie Linn Sue White
+1.6 17 Apr 2019 Removed DFS Radar Detection references Jay White
+1.7 23 July 2019
+Corrected Table 20: Pin Definitions. Pin 76, 77 do not exist.
+Updated Peak Current consumption
+Corrected I/O Signalling Voltage
+Kai Wei Jay White
+1.8 26 Sept 2019 Removed AoA/DoA references Jay White
+1.9 11 Oct 2019 Removed Android version numbers Joe Conley Jay White
+1.10 14 Oct 2019
+Removed advertising extension references…
+LE Advertising Length Extension
+Updated warranty information (one year vs.
+three)
+Jonathan Kaye Jay White
+1.11 12 Dec 2019
+Corrected Table 20: Pin Definitions.
+Pin12 from PCM_IN to PCM_OUT
+Pin14 from PCM_OUT to PCM_IN
+Kai Wei Jay White
+1.12 20 Jan 2020 Corrected Table 21: Pin Definitions.
+Pin53 should be N/C.if not used. Kai Wei Jay White
+1.13 25 Feb 2020 Added ST to all part numbers Derek Wong Jay White
+1.14 24 Aug 2020 Update block diagram (antenna description)
+Updated Figure 5 (Stand-off Dimension) Kai Wei Jay White
+1.15 10 Sep 2020 Add second source for M.2 connector and stand-off Kai Wei Jay White
+1.16 18 Nov 2020 Updated all regulatory information Ryan Urness Jay White
+1.17 16 Dec 2020 Updated certified antenna and other regulatory info Bob Monroe Jonathan Kaye
+1.18 22 July 2021 Updated Bluetooth version number to 5.1 Miles Chung Dan Kephart
+1.19 23 Aug 2021 Added EN 300 440 support Maggie Teng Dave Drogowski
+1.20 24 Aug 2021 Updated supported security types Dan Kephart Dave Drogowski
+1.21 16 Nov 2021 Removed CCX / WFA Certifications info Dan Kephart Dave Drogowski
+1.22 12 Jan 2022 Added note of .1μF capacitor on pins 41 and 43 in Pin
+Definitions Andrew Chen Dave Drogowski
+1.23 2 May 2022 Updated to latest Wi-Fi/BT specifications Dave
+Drogowski Dan Kephart
+1.24 12 May 2022 EU supported 5GHz U-NII-3 band
+EU and JP do not support CH144 Kai Wei Andrew Chen
+1.25 1 June 2022 Updated weight in Specifications Dave
+Drogowski Andrew Chen
+1.26 3 Aug 2022 Updated dimensions of module in Mechanical Specifications
+Added recommendation for Mounting screw Dan Kephart Andrew Chen
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+3
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+1 Scope ................................................................................................................................................................................... 5
+2 Introduction ........................................................................................................................................................................ 5
+General Description ................................................................................................................................................... 5
+3 Features Summary .............................................................................................................................................................. 6
+4 Specifications ...................................................................................................................................................................... 7
+5 WLAN Functional Description ........................................................................................................................................... 12
+6 Bluetooth Functional Description ..................................................................................................................................... 15
+7 Block Diagram ................................................................................................................................................................... 16
+8 Electrical Characteristics ................................................................................................................................................... 17
+Absolute Maximum Ratings ..................................................................................................................................... 17
+Recommended Operating Conditions ..................................................................................................................... 17
+DC Electrical Characteristics .................................................................................................................................... 17
+WLAN Radio Receiver Characteristics ...................................................................................................................... 18
+WLAN Transmitter Characteristics ........................................................................................................................... 19
+9 Bluetooth Radio Characteristics ........................................................................................................................................ 21
+10 PCIE Specifications ............................................................................................................................................................ 23
+Differential Tx Output Electricals ............................................................................................................................. 23
+Differential Rx Input Electricals................................................................................................................................ 24
+11 USB Specifications ............................................................................................................................................................. 26
+USB LS Driver and Receiver Parameters .................................................................................................................. 26
+USB FS Driver and Receiver Parameters .................................................................................................................. 27
+USB HS Driver and Receiver Parameters ................................................................................................................. 28
+12 PCM Interface Specifications ............................................................................................................................................ 29
+13 Pin Definitions ................................................................................................................................................................... 30
+14 Mechanical Specifications ................................................................................................................................................. 33
+15 Mounting........................................................................................................................................................................... 34
+Mounting screw ....................................................................................................................................................... 35
+16 RF Layout Design Guidelines / Precautions ....................................................................................................................... 36
+17 Regulatory ......................................................................................................................................................................... 37
+Current Regulatory Certifications ............................................................................................................................ 37
+Certified Antennas ................................................................................................................................................... 37
+FCC Regulatory ......................................................................................................................................................... 38
+17.3.1 Antenna Information ......................................................................................................................................... 38
+17.3.2 FCC Documentation Requirements .................................................................................................................... 38
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+4
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+ISED Canada ............................................................................................................................................................. 39
+17.4.1 Antenna Information.......................................................................................................................................... 39
+17.4.2 ISED (Canada) Statement ................................................................................................................................... 40
+Japan (MIC) Regulatory ......................................................................................................................................................... 41
+17.4.3 Antenna Information ......................................................................................................................................... 41
+17.4.4 Labeling Requirements ...................................................................................................................................... 42
+Korea (KC) Regulatory .............................................................................................................................................. 42
+Australia and New Zealand Regulatory .................................................................................................................... 42
+China (SRRC) Regulatory .......................................................................................................................................... 42
+European Union ....................................................................................................................................................... 43
+17.8.1 Antenna Information ......................................................................................................................................... 43
+17.8.2 User’s Guide Requirements ............................................................................................................................... 43
+17.8.3 EU Declaration of Conformity ............................................................................................................................ 45
+18 Ordering Information ........................................................................................................................................................ 46
+19 Additional Assistance ........................................................................................................................................................ 46
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+5
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+This document describes key hardware aspects of the Laird Connectivity ST60-2230C-P/ ST60-2230C-PU M.2 module
+providing either PCIe bus interface for WLAN connection and UART(ST60-2230C-P)/USB (ST60-2230C-PU) for Bluetooth®
+(including Low Energy or LE) connection. This document is intended to assist device manufacSQGturers and related parties
+with the integration of this module into their host devices. Data in this document is drawn from the Marvell 88W8997
+datasheet issued in April 25, 2016.
+Note that the information in this document is subject to change. Please contact Laird Connectivity to obtain the most
+recent version of this document.
+The ST60-2230C-P/ST60-2230C-PU module is a dual band 2x2 802.11ac WLAN plus
+Bluetooth 5.1 dual mode adapter; it complies with M.2 2230 E-Key standard. The module
+provides both simultaneous and independent operation of the following:
+▪ IEEE 802.11ac, 2x2 MIMO spatial stream multiplexing with data rates up to MCS9
+(866.7 Mbps)
+▪ Bluetooth (Class 1)
+▪ Bluetooth 5.1 (with Low Energy or LE)
+▪ Bluetooth Smart Ready operation
+▪ Three-way coexistence for WLAN and Bluetooth
+Note: The Bluetooth® word mark and logos are registered trademarks owned by
+Bluetooth SIG, Inc. and any use of such marks by Laird Connectivity is under license. Other trademarks and trade
+names are those of their respective owners.
+Internal coexistence arbitration and a Mobile Wireless System (MWS) serial transport interface provide the functionality for
+connecting an external Long Term Evolution (LTE).
+The module integrates all WLAN and Bluetooth functionality into a single package which supports low-cost and simple
+implementation along with flexibility for platform-specific customization. In addition, it has low power consumption radio
+architecture and proprietary power save technologies to extended battery life.
+WLAN interface:
+▪ PCIe – Supports PCIe V2.0 Gen 1/Gen 2 rate (2.5/5 Gbps) interface
+Bluetooth Interfaces:
+▪ USB 2.0 – ST60-2230C-PU only
+▪ High-Speed UART – ST60-2230C-P only
+The ST60-2230C-P/ST60-2230C-PU modules also provide a PCM interface for master or slave mode – with the option of an
+8-bit or 16-bit width size. Pins CON[0], CON[1], and CON[2] are used to configure the operation interface.
+▪ ST60-2230C-P – The interfaces are PCIe/UART (WLAN/Bluetooth) with configuration setting to 011.
+▪ ST60-2230C-PU – The interfaces are PCIe/USB (WLAN/Bluetooth) with configuration setting to 010.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+6
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The Laird Connectivity ST60-2230C-P/ST60-2230C-PU device features are described in Table 1.
+Table 1: ST60-2230C-P/ST60-2230C-PU features
+Feature Description
+Radio Front End
+▪ Integrates the complete transmit/receive RF paths including band pass filter, diplexer, switches, reference
+crystal oscillator, and power manage unit (PMU)
+▪ Supports 20/40/80 MHz channel bandwidth
+▪ WLAN/Bluetooth share one antenna
+Coexistence Coexistence arbitration for WLAN, Bluetooth, and LTE operation
+Power Management Dynamic Voltage Scaling (DVS) and Adaptive Voltage Scaling (AVS) feature supports the latest Marvell SoC and
+processor power control scheme.
+Pre-Calibration RF system-tested and calibrated in production.
+Sleep Clock An external sleep clock of 32.768 KHz is required during power save mode.
+Host Interface
+▪ PCIe V2.0 Gen 1/Gen 2 for WLAN
+▪ USB 2.0, HS-UART for Bluetooth HCI (compatible with any upper layer Bluetooth stack)
+▪ PCM digital audio interface for Bluetooth audio application.
+Strap Value CONFIG_HOST[2-0] WLAN Bluetooth/BLE ROM Notes
+010 PCIe USB 2.0 -
+011 PCIe UART -
+Reference Frequency
+▪ Incorporates a 40 MHz reference frequency source in package
+▪ An external sleep clock is recommended for minimal current consumption. If no sleep clock input is provided,
+an internal sleep clock (derived from the reference clock) is used. An approximate 50 uA current increase on
+the 3.3V rail.
+Advanced WLAN
+▪ A-MPDU RX (de-aggregation) and TX (aggregation) supports 802.11ac single-MPDU A-MPDU
+▪ Multi-BSS/Station
+▪ Transmit rate adaption, transmit power control
+▪ Modulation and coding scheme (MCS):
+– 802.11ac—MCS0-9 Nsts=1 and 2
+– 802.11n—MCS0-15
+▪ 20/40/80 MHz channel bandwidths support
+▪ On-chip gain selectable LNA with optimized noise figure and power consumption
+▪ Internal PA with optimized gain distribution for linearity and noise performance
+▪ Support Wild variety of WLAN encryption: TKIP/WEP/AES
+Advanced Bluetooth
+▪ Bluetooth 5.1 (BDR/EDR/LE), Bluetooth Class 1
+▪ Bluetooth 5 ready
+▪ Supports the following data rates: 1 Mbps (GFSK), 2 Mbps (π/4-DQPSK), 3 Mbps (8-DPSK)
+▪ Digital audio interface with PCM/TDM interface for voice application
+▪ Adaptive Frequency Hopping (AFH) using Package Error Rate (PER)
+▪ Standard SDIO or UART HCI transport layer
+▪ WLAN/Bluetooth coexistence protocol support
+▪ Shared LNA with WLAN/Bluetooth
+▪ Encryption (AES) support
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+7
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 2: Specifications
+Feature Description
+Physical Interface 84-pin LGA package (including 16 thermal ground pad under the package)
+Wi-Fi Interface 1-bit or 4-bit Secure Digital I/O; PCIe v2.0 Gen1/Gen2 (2.5/5 Gbps); USB 2.0
+Bluetooth/
+BLE Interface
+Host Controller Interface (HCI) using High Speed UART, USB 2.0
+Strap Value
+CONFIG_HOST[2-0] WLAN Bluetooth/
+BLE ROM Notes
+010 PCIe USB 2.0 -
+011 PCIe UART -
+Main Chip Marvell 88W8997 (WLAN/BT); Marvell 88PG823 (PMU)
+Input Voltage
+Requirements DC 3.3 V ±10%
+I/O Signalling Voltage DC 1.8 V ± 10%
+Peak Current
+consumption,
+VCC= 3.3 volts
+VIO= 1.8 volts
+(At maximum transmit
+power setting)
+(Measured transmit
+current under 99% duty
+cycle)
+Note: Reset refers to
+the radio are in reset,
+both Wi-fi and BT reset
+are asserted.
+MIMO 2x 2 operations.
+802.11b (with BT in standby) @ 18 dBm 1 Mbps
+Transmit: 1050 mA Receive: 520 mA
+802.11g (with BT in standby) @ 18 dBm 6 Mbps
+Transmit: 980 mA Receive: 520 mA
+802.11a (with BT in standby) @ 18 dBm 6 Mbps
+Transmit: 1100 mA Receive: 580 mA
+
+802.11n (2.4 GHz/40 MHz) (with BT in standby) @ 16 dBm MCS0
+Transmit: 850 mA Receive: 520 mA
+802.11n (5.0 GH/40 MHz) (with BT in standby) @ 16 dBm MCS0
+Transmit: 900 mA Receive: 600 mA
+802.11ac (5.0 GH/80 MHz) (with BT in standby) @ 14 dBm MCS0
+Transmit: 850 mA Receive: 600 mA
+Bluetooth (with Wi-Fi in standby)
+Transmit: 120 mA Receive: 100 mA
+Reset: 90 mA
+Operating
+Temperature
+-30° to 85°C (-22° to 185°F)
+Operating Humidity 10 to 90% (non-condensing)
+Storage Temperature -40° to 85°C (-40° to 185°F)
+Storage Humidity 10 to 90% (non-condensing)
+Maximum
+Electrostatic
+Discharge
+Conductive 4KV; Air coupled 8KV follow EN61000-4-2
+Size 22 mm (length) x 30 mm (width) x 3.3 mm (thickness)
+Weight 2.5 g
+Wi-Fi Media Direct Sequence-Spread Spectrum (DSSS)
+Complementary Code Keying (CCK)
+Orthogonal Frequency Divisional Multiplexing (OFDM)
+Bluetooth Media Frequency Hopping Spread Spectrum (FHSS)
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+8
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+Wi-Fi Media Access
+Protocol
+Carrier sense multiple access with collision avoidance (CSMA/CA)
+A-MPDU Rx (De-aggregation) and Tx (aggregation) (802.11ac single-MPDU A-MPDU)
+Network Architecture
+Types
+Infrastructure and ad-hoc
+Wi-Fi Standards IEEE 802.11a, 802.11b, 802.11d*, 802.11e, 802.11g, 802.11h, 802.11i, 802.11k*, 802.11n, 802.11r, 802.11v*,
+802.11ac
+* Summit version only
+Bluetooth Standards Bluetooth version 2.1 with Enhanced Data Rate
+Bluetooth 5.1 (Bluetooth Low Energy or BLE)
+Wi-Fi Data Rates
+Supported
+Support 802.11 ac/a/b/g/n 2X2 MIMO
+MIMO/802.11ac
+802.11b (DSSS, CCK) 1, 2, 5.5, 11 Mbps
+802.11a/g (OFDM) 6, 9, 12, 18, 24, 36, 48, 54 Mbps
+802.11n (OFDM, HT20/HT40, MCS 0-15)
+802.11ac (OFDM, HT20, MCS0-8; OFDM HT40/HT80, MCS 0-9)
+Modulation Table BPSK, QPSK, CCK, 16-QAM, 64-QAM, and 256-QAM.
+802.11ac HT
+MCS
+Index
+VHT
+MCS
+Inde
+x
+Spatial
+Stream
+s
+Modulation Codin
+g
+20 MHz 40 MHz 80 MHz
+802.11n No
+SGI SGI No
+SGI SGI No
+SGI SGI
+0 0 1 BPSK 1/2 6.5 7.2 13.5 15 29.3 32.5
+1 1 1 QPSK 1/2 13 14.4 27 30 58.5 65
+2 2 1 QPSK 3/4 19.5 21.7 40.5 45 87.8 97.5
+3 3 1 16-QAM 1/2 26 28.9 54 60 117 130
+4 4 1 16-QAM 3/4 39 43.3 81 90 175.5 195
+5 5 1 64-QAM 2/3 52 57.8 108 120 234 260
+6 6 1 64-QAM 3/4 58.5 65 121.5 135 263.3 292.5
+7 7 1 64-QAM 5/6 65 72.2 135 150 292.5 325
+8 1 256-QAM 3/4 78 86.7 162 180 351 390
+9 1 256-QAM 5/6 N/A N/A 180 200 390 433.3
+8 0 2 BPSK 1/2 13 14.4 27 30 58.5 65
+9 1 2 QPSK 1/2 26 28.9 54 60 117 130
+10 2 2 QPSK 3/4 39 43.3 81 90 175.5 195
+11 3 2 16-QAM 1/2 52 57.8 108 120 234 260
+12 4 2 16-QAM 3/4 78 86.7 162 180 351 390
+13 5 2 64-QAM 2/3 104 115.6 216 240 468 520
+14 6 2 64-QAM 3/4 117 130.3 243 270 526.5 585
+15 7 2 64-QAM 5/6 130 144.4 270 300 585 650
+8 2 256-QAM 3/4 156 173.3 324 360 702 180
+9 2 256-QAM 5/6 N/A N/A 360 400 780 866.7
+802.11ac/n
+Spatial Streams
+2 (2x2 MIMO)
+Bluetooth Data Rates
+Supported
+1, 2, 3 Mbps
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+9
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+Bluetooth Modulation GFSK@ 1 Mbps
+Pi/4-DQPSK@ 2 Mbps
+8-DPSK@ 3 Mbps
+Regulatory Domain
+Support
+FCC
+EU
+ISED (Canada)
+MIC (Japan)
+KC (Korea)
+2.4 GHz Frequency
+Bands
+EU: 2.4 GHz to 2.483 GHz
+FCC: 2.4 GHz to 2.473 GHz
+MIC: 2.4 GHz to 2.495 GHz
+KC: 2.4 GHz to 2.483 GHz
+2.4 GHz Operating
+Channels
+(Wi-Fi)
+EU: 13 (3 non-overlapping)
+FCC: 11 (3 non-overlapping)
+MIC: 14 (4 non-overlapping)
+KC: 13 (3 non-overlapping)
+5 GHz Frequency
+Bands
+EU
+5.15 GHz to 5.35 GHz (Ch 36/40/44/48/52/56/60/64)
+5.47 GHz to 5.725 GHz (Ch 100/104/108/112/116/120/124/128/132/136/140)
+5.725 GHz to 5.825 GHz(Ch 149/153/157/161/165)
+FCC
+5.15 GHz to 5.35 GHz (Ch 36/40/44/48/52/56/60/64)
+5.47 GHz to 5.725 GHz (Ch 100/104/108/112/116/120/124/128/132/136/140/144)
+5.725 GHz to 5.825 GHz(Ch 149/153/157/161/165)
+MIC
+5.15 GHz to 5.35 GHz (Ch 36/40/44/48/52/56/60/64)
+5.47 GHz to 5.725 GHz (Ch 100/104/108/112/116/120/124/128/132/136/140)
+KC
+5.15 GHz to 5.35 GHz (Ch 36/40/44/48/52/56/60/64)
+5.47 GHz to 5.725 GHz (Ch 100/104/108/112/116/120/124)
+5.725 GHz to 5.825 GHz (Ch 149/153/157/161/165)
+5 GHz Operating
+Channels (Wi-Fi)
+EU: 24 non-overlapping; FCC: 25 non-overlapping
+MIC: 19 non-overlapping; KC: 20 non-overlapping
+Transmit Power
+Note: Transmit power
+on each channel varies
+according to individual
+country regulations. All
+values are nominal with
++/-2 dBm tolerance at
+room temperature.
+Tolerance could be up
+to +/-2.5 dBm across
+operating temperature.
+Note:
+HT20 – 20 MHz-wide
+channels
+802.11a
+6 Mbps 18 dBm (63 mW)
+54 Mbps 16 dBm (40 mW)
+802.11b
+1 Mbps 18 dBm (63 mW)
+11 Mbps 18 dBm (63 mW)
+802.11g
+6 Mbps 18 dBm (63 mW)
+54 Mbps 16 dBm (40 mW)
+802.11n (2.4/5 GHz)
+6.5 Mbps (MCS0-5/MCS8-13;HT20) 18 dBm (63 mW)
+65 Mbps (MCS6-7/MCS14-15;HT20)
+13.5Mbps(MCS0-5/MCS8-13;HT40)
+135Mbps (MCS6-7/MCS14-15;HT40)
+16 dBm (40 mW)
+16 dBm (40 mW)
+14 dBm (25 mW)
+802.11ac (5 GHz)
+6.5/13 Mbps (MCS0-6;Ntst=1,2;HT20) 18 dBm (63 mW)
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+10
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+HT40 – 40 Mhz-wide
+channels
+HT80 – 80 MHz-wide
+channels
+78/156 Mbps (MCS7-8;Ntst=1,2;HT20)
+13.5/27Mbps (MCS0-6;Ntst=1,2;HT40)
+180/360Mbps (MCS7-9;Ntst=1,2;HT40)
+29.3/58.5 Mbps (MCS0-5;Ntst=1,2;HT80)
+263.3/526.5 Mbps (MCS6-8;Ntst=1,2;HT80)
+390/780 Mbps (MCS9;Ntst=1,2;HT80)
+16 dBm (40 mW)
+16 dBm (40 mW)
+14 dBm (25 mW)
+14 dBm (25 mW)
+12 dBm (15.8 mW)
+10 dBm (10 mW)
+Bluetooth
+1 Mbps (1DH5) 10 dBm (12.5 mW)
+2 Mbps 7 dBm (6.3 mW)
+3 Mbps
+BLE (1 Mbps)
+7 dBm (6.3 mW)
+7 dBm (6.3 mW)
+Typical Receiver
+Sensitivity
+(PER <= 10%)
+Note: All values
+nominal, +/-3 dBm.
+Sensitivity on CH13
+(WLAN)/CH78 (BT) will
+decade up to 4-6dB.
+802.11a:
+6 Mbps -89 dBm
+54 Mbps -74 dBm
+802.11b:
+1 Mbps -95 dBm
+11 Mbps -90 dBm (PER<8%)
+802.11g:
+6 Mbps -91 dBm
+54 Mbps -75 dBm
+802.11n (2.4 GHz)
+6.5 Mbps (MCS0;HT20) -91 dBm
+65 Mbps (MCS7;HT20)
+13.5Mbps(MCS0;HT40)
+135Mbps (MCS7;HT40)
+-73 dBm
+-85 dBm
+-70 dBm
+802.11n (5 GHz)
+6.5 Mbps (MCS0;HT20) -89 dBm
+65 Mbps (MCS7;HT20)
+13.5Mbps(MCS0;HT40)
+135Mbps (MCS7;HT40)
+-70 dBm
+-86 dBm
+-69 dBm
+802.11ac (5 GHz)
+6.5 Mbps (MCS0;HT20) -89 dBm
+78 Mbps (MCS8;HT20)
+13.5 Mbps (MCS0;HT40)
+180 Mbps (MCS9;HT40)
+29.3 Mbps (MCS0;HT80)
+390/780 Mbps (MCS9;HT80)
+-67 dBm
+-86 dBm
+-63 dBm
+-81 dBm
+-60 dBm
+Bluetooth:
+1 Mbps (1DH5)
+2Mbps (2DH5)
+-95 dBm
+-94 dBm
+3 Mbps (3DH5) -88 dBm
+BLE -95 dBm
+Operating Systems
+Supported
+Linux Kernel
+Android
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+11
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+Security Standards
+Wireless Equivalent Privacy (WEP)
+Wi-Fi Protected Access (WPA)
+WPA2-Personal
+WPA2-Enterprise
+WPA3-Personal
+WPA3-Enterprise
+Encryption
+Wireless Equivalent Privacy (WEP, RC4 Algorithm)
+Temporal Key Integrity Protocol (TKIP, RC4 Algorithm)
+Advanced Encryption Standard (AES, Rijndael Algorithm)
+Encryption Key Provisioning
+Static (40-bit and 128-bit lengths)
+Pre-Shared (PSK)
+Dynamic
+802.1X Extensible Authentication Protocol Types
+EAP-FAST
+EAP-TLS
+EAP-TTLS
+PEAP-GTC
+PEAP-MSCHAPv2
+PEAP-TLS
+LEAP
+Note: EAP types are supplicant software dependent.
+Compliance EU
+EN 300 328
+EN 300 440
+EN 301 489-1
+EN 301 489-17
+EN 301 893
+62311:2008
+EN 50665:2017
+EN 50385:2017
+EU 2015/863 (RoHS 3)
+FCC ISED Canada
+47 CFR FCC Part 15.247
+47 CFR FCC Part 15.407
+47 CFR FCC Part 2.1091
+FCC Part 15 Subpart B Class B
+ICES-003
+ANSI C63.4:2014
+RSS-247
+AS/NZS MIC
+AS/NZS 2772.2:2011
+AS/NZS 4268:2017
+ARIB STD-T66/RCR STD-33 (2.4 GHz)
+ARIB STD-T71 (5 GHz)
+KC (Korea) SRRC (China)
+Certifications Bluetooth® SIG Qualification
+Warranty One Year Warranty
+All specifications are subject to change without notice
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+12
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The ST60-2230C-P/ST60-2230C-PU M.2 module is designed based on the 60-SIPT SiP. It is optimized for high-speed, reliable,
+and low-power embedded applications. It is integrated with dual-band WLAN (2.4 GHz/5 GHz) and Bluetooth 5.1. Its
+functionality includes the following:
+▪ Improved throughput on the link due to frame aggregation, RIFS (reduced inter-frame spacing), and half-guard
+intervals.
+▪ Support for STBC (Space Time Block Codes) and LDPC (Low Density Parity Check) codes.
+▪ Improved 11n performance due to features such as 11n frame aggregation (A-MPDU and A-MSDU) and low-overhead
+host-assisted buffering (RX A-MSDU and RX A-MPDU). These techniques can improve performance and efficiency of
+applications involving large bulk data transfers such as file transfers or high-resolution video streaming.
+▪ IEEE 802.11 ac, 2X2 MIMO spatial stream multiplexing with data rate up to MCS9 (866.7 Mbps).
+Additional functionality is listed in Table 3.
+Table 3: WLAN functions
+Feature Description
+WLAN MAC ▪ Frame Exchange at the MAC level to deliver data
+▪ Received frame filtering and validation (Cyclic Redundancy Check (CRC))
+▪ Generation of MAC header and trailer information (MAC protocol Data Units (MPDUs))
+▪ Fragmentation of data frames (MAC Service Data Units (MSDUs)
+▪ Access Mechanism support for fair access to shared wireless medium through (DCF and EDCA)
+▪ A-MPDU Aggregation/Deaggregation (support 802.11ac single –MPDU A-MPDU)
+▪ 20/40/80 MHz channel Coexistence
+▪ RIFS Burst Receive
+▪ Management Information Base
+▪ Radio Resource Measurement
+▪ Quality of Service
+▪ Block Acknowledgement
+▪ 802.11ac MIMO
+▪ Dynamic Frequency Selection
+▪ Beamforming
+▪ TIM Frame TX and RX
+▪ Multi-BSS/Station
+▪ Transmit Rate Adaptation.
+▪ Transmit Power Control
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+13
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+WLAN Base Band ▪ 802.11ac 2x2 MIMO (with on-chip Marvell RF radio)
+▪ Backward compatibility with legacy 802.11 n/a/b/g technology
+▪ WLAN/Bluetooth LNA sharing
+▪ PHY rate up to 866.7Mbps
+▪ 20MHz bandwidth/channel, 40MHz bandwidth/channel, upper/lower 20MHz packets in 40MHz
+channel, 20MHz duplicate legacy packets in 40MHz channel operation
+▪ 80MHz bandwidth/channel, 4 positions of 20MHz packets in 80MHz channel, upper/lower
+40MHz packets in 80MHz channel, 20MHz quadruplicate legacy packets in 80MHz channel mode
+operation
+▪ Modulation and Coding Scheme (MCS): 802.11 ac (MCS0-9. Nsts=1/2); 802.11n (MCS0-15)
+▪ 802.11 K Radio Resource Measurement
+▪ 802.11ac /802.11n optional MIMO features:
+– 20/40/80 MHz Coexistence with middle-packaged detection (GI detection) for enhanced CCA.
+– 1 spatial stream STBC reception and transmission
+– LDPC transmission and reception for 802.11ac and 802.11n
+– 256 QAM (MCS8-9) modulations supported
+– Short guard interval
+– RIFS on receive path for 802.11n packets
+– 802.11n Greenfield TX/RX
+▪ Power Save Feature
+WLAN Security WLAN Encryption features supported include:
+▪ Temporal Key Integrity Protocol (TKIP)/Wired Equivalent Privacy (WEP)
+▪ Advanced Encryption Standard (AES)/Counter-Mode/CBC-MAC Protocol (CCMP)
+▪ Advanced Encryption Standard (AES)/Cipher-Based Message Authentication Code (CMAC)
+▪ Advanced Encryption Standard (AES)/Galois/Counter Mode Protocol (GCMP)
+▪ WLAN Authentication and Private Infrastructure (WPAI)
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+14
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Feature Description
+WLAN Channel Channel frequency supported.
+20 MHz 40 MHz 80 MHz
+Channel Freq.
+(MHz) Channel Freq.
+(MHz) Channel Freq.
+(MHz) Channel Freq.
+(MHz)
+1 2412 36 5180 1-5 2422 42 5210
+2 2417 40 5200 2-6 2427 58 5290
+3 2422 44 5220 3-7 2432 74 5370
+4 2427 48 5240 4-8 2437 90 5410
+5 2432 52 5260 5-9 2422 106 5530
+6 2437 56 5280 6-10 2447 122 5610
+7 2422 60 5300 7-11 2452 138 5690
+8 2447 64 5320 36-40 5190 155 5775
+9 2452 100 5500 44-48 5230
+10 2457 104 5520 52-56 5270
+11 2462 108 5540 60-64 5310
+12 2467 112 5560 68-72 5350
+13 2472 116 5580 76-80 5390
+120 5600 84-88 5430
+124 5620 92-96 5470
+128 5640 100-104 5510
+132 5660 108-112 5550
+136 5680 116-120 5590
+140 5700 124-128 5630
+144 5720 132-136 5670
+149 5745 140-144 5710
+153 5765 149-153 5755
+157 5785 157-161 5795
+161 5805
+165 5825
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+15
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The ST60-2230C-P/ST60-2230C-PU Bluetooth (BT) block is based on the 60-SIPT SiP that already has fully-integrated
+Bluetooth baseband and radio. Several features and functions are listed in Table 4.
+Table 4: Bluetooth functions
+Feature Description
+Bluetooth Interface
+Voice interface:
+▪ Hardware support for continual PCM data transmission/reception without processor
+overhead.
+▪ Standard PCM clock rates from 64 kHz to 2.048 MHz with multi-slot handshake and
+synchronization.
+▪ A-law, U-law, and linear voice PCM encoding/decoding.
+▪ High-Speed UART interface – ST60-2230C-P only
+▪ USB 2.0 – ST60-2230C-PU only
+Bluetooth Core
+functionality
+▪ Bluetooth 5.1
+▪ Bluetooth Class 1
+▪ WLAN and Bluetooth share same LNA and antenna
+▪ Digital audio interfaces with PCM/TDM interface for voice application
+▪ Baseband and radio BDR and EDR package type: 1Mbps, 2Mbps, 3Mbps
+▪ Fully functional Bluetooth baseband: AFH, forward error correction, header error control,
+access code correction, CRC, encryption bit stream generation, and whitening
+▪ Adaptive Frequency Hopping (AFH) using Packet Error Rate (PER)
+▪ Interlaced scan for faster connection setup
+▪ Simultaneous active ACL connection setup
+▪ Automatic ACL package type selection
+▪ Full master and slave piconet support
+▪ Scatter net support
+▪ SCO/eSCO links with hardware accelerated audio signal processing and hardware supported
+PPEC algorithm for speech quality improvement
+▪ All standard SCO/eSCO voice coding
+▪ All standard pairing, authentication, link key, and encryption operations
+▪ Encryption (AES) support
+Bluetooth Low Energy
+(BLE) Core functionality
+▪ Advertiser, Scanner, Initiator, Master, and Slave roles support (connects up to 16 links)
+▪ WLAN/Bluetooth Coexistence (BCA) protocol support
+▪ Shared RF with BDR/EDR
+▪ Encryption (AES) support
+▪ Intelligent Adaptive Frequency Hopping (AFH)
+▪ LE privacy 1.2
+▪ LE Secure Connection
+▪ LE Data Length Extension
+▪ 2 Mbps LE
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+16
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Figure 1: Block Diagram of ST60-2230C-P/ST60-2230C-PU
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+17
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 5 summarizes the absolute maximum ratings and Table 6 lists the recommended operating conditions for the ST60-
+2230C-P/ST60-2230C-PU. Absolute maximum ratings are those values beyond which damage to the device can occur.
+Functional operation under these conditions, or at any other condition beyond those indicated in the operational sections
+of this document, is not recommended.
+Note: Maximum rating for signals follows the supply domain of the signals.
+Table 5: Absolute maximum ratings
+Symbol (Domain) Parameter Max Rating Unit
+VIO I/O configuration power supply (1.8V system) 2.2 V
+3V3 External 3.3V power supply 4.0 V
+Storage Storage Temperature -40 to +85 °C
+ANT0; ANT1 Maximum RF input (reference to 50-Ω input) +10 dBm
+ESD Electrostatic discharge tolerance 2000 V
+Table 6: Recommended Operating Conditions
+Symbol (Domain) Parameter Min Typ Max Unit
+VIO WLAN and BT GPIO I/O power supply 1.62 1.8 1.98 V
+3V3 External 3.3V power supply 2.97 3.30 3.63 V
+T-ambient Ambient temperature -30 25 85 °C
+Table 7 list the general DC electrical characteristics over recommended operating conditions (unless otherwise specified).
+Table 7: General DC electrical characteristics (For 1.8V operation VIO)
+Symbol Parameter Conditions Min Typ Max Unit
+VIH High Level Input Voltage -- 0.7 x 1V8 1V8+0.4 V
+VIL Low Level Input Voltage -- -0.4 0.3 x 1V8 V
+VHYS Input Hysteresis -- 100 mV
+VOH Output high Voltage -- 1V8-0.4 V
+VOL Output low Voltage -- 0.4 V
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+18
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 8 and Table 9 summarize the WLAN ST60-2230C-P/ST60-2230C-PU receiver characteristics.
+Table 8: WLAN receiver characteristics for 2.4 GHz signal chain operation
+Symbol Parameter Conditions Min Typ Max Unit
+Frx Receive input frequency range 2.412 2.484 GHz
+Srf Sensitivity
+CCK, 1 Mbps
+See Note3
+-95
+dBm
+CCK, 11 Mbps -90
+OFDM, 6 Mbps -91
+OFDM, 54 Mbps -75
+HT20, MCS0 -91
+HT20, MCS7 -73
+Radj Adjacent channel rejection
+OFDM, 6 Mbps
+See Note4
+TBD
+dB
+OFDM, 54 Mbps TBD
+HT20, MCS0 TBD
+HT20, MCS7 TBD
+3Performance data are measured under signal chain operation.
+4Performance data are measured under signal chain operation.
+Table 9: WLAN receiver characteristics for 5 GHz dual chain operation
+Symbol Parameter Conditions Min Typ Max Unit
+Frx Receive input frequency range 5.15 5.825 GHz
+Srf Sensitivity
+OFDM, 6 Mbps
+See Note5
+-89
+dBm
+OFDM, 54 Mbps -74
+HT20, MCS0 -89
+HT20, MCS7 -70
+HT40, MCS0 -86
+HT40, MCS7 -69
+Radj Adjacent channel rejection
+OFDM, 6 Mbps
+See Note6
+TBD
+dB
+
+OFDM, 54 Mbps TBD
+HT20, MCS0 TBD
+HT20, MCS7 TBD
+5Performance data are measured under signal chain operation
+6Performance data are measured under signal chain operation.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+19
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 10: WLAN transmitter characteristics for 2.4 GHz per chain operation
+Symbol Parameter Conditions Min Typ Max Unit
+Ftx Transmit output frequency range 2.412 2.484 GHz
+Pout Output power See Note7
+11b mask compliant 1-11Mbps 18
+dBm
+11g mask compliant 6-36Mbps 18
+11g EVM compliant 48-54Mbps 16
+11n HT20 mask compliant MCS0-5/MCS8-13 18
+11n HT20 EVM compliant MCS6-7/MCS14-15 16
+11n HT40 mask compliant MCS0-5/MCS8-13 16
+11n HT40 EVM compliant MCS6-7/MCS14-15 14
+ATx Transmit power accuracy at 25 ℃ - - + 2.0 dB
+Freq. Mode/Rate (Mbps) Output Power Per
+Chain (dBm)
+Max. Current Consumption
+Single Chain (mA)8 Dual Chains (mA)8
+2412 MHz
+1 Mbps 18dBm 340 620
+54 Mbps 16dBm 280 500
+HT20 MCS7 16dBm 280 510
+2442 MHz
+1 Mbps 18dBm 340 620
+54 Mbps 16dBm 280 500
+HT20 MCS7 16dBm 280 510
+2472 MHz
+1 Mbps 18dBm 340 620
+54 Mbps 16dBm 280 500
+HT20 MCS7 16dBm 280 510
+Table 11: WLAN transmitter characteristics for 5 GHz per chain operation
+Symbol Parameter Conditions Min Typ Max Unit
+Ftx Transmit output frequency range 5.15 5.925 GHz
+Pout Output power See Note3
+11a mask compliant 6-36Mbps 18
+dBm
+11a EVM compliant 48-54Mbps 16
+11n HT20 mask compliant MCS0-5/MCS8-13 18
+11n HT20 EVM compliant MCS6-7/MCS14-15 16
+11n HT40 mask compliant MCS0-5/MCS8-13 16
+11n HT40 EVM compliant MCS6-7/MCS14-15 16
+11ac HT20 mask compliant MCS0-6 (Ntst=1,2) 18
+11ac HT20 EVM compliant MCS7-8(Ntst=1,2) 16
+11ac HT40 mask compliant MCS0-5 (Ntst=1,2) 16
+11ac HT40 EVM compliant MCS6-9(Ntst=1,2) 14
+11ac HT80 mask compliant MCS0-5 (Ntst=1,2) 14
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+20
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Symbol Parameter Conditions Min Typ Max Unit
+11ac HT80 EVM compliant MCS6-8(Ntst=1,2) 12
+11ac HT80 EVM compliant MCS9(Ntst=1,2) 10
+ATx Transmit power accuracy at 25 ℃ - - + 2.0 dB
+Freq. Mode/Rate [Mbps] Output Power Per
+Chain [dBm]
+Max. Current Consumption
+Single Chain (mA)8 Dual Chains (mA)8
+5180 MHz
+5190 MHz
+6 Mbps 18 dBm 400 710
+54 Mbps 16 dBm 330 610
+HT20 MCS0 18 dBm 400 720
+HT20 MCS7 16 dBm 360 620
+HT40 MCS7 14 dBm 320 550
+5500 MHz
+5510 MHz
+6 Mbps 18 dBm 380 680
+54 Mbps 16 dBm 330 600
+HT20 MCS0 18 dBm 370 690
+HT20 MCS7 16 dBm 320 600
+HT40 MCS7 14 dBm 300 530
+5825 MHz
+5795 MHz
+6 Mbps 18 dBm 380 690
+54 Mbps 16 dBm 310 600
+HT20 MCS0 18 dBm 360 710
+HT20 MCS7 16 dBm 340 550
+HT40 MCS7 14 dBm 300 530
+7Performance data are measured under single chain operation.
+Note: Final TX power values on each channel are limited by the regulatory certification test limit.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+21
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 11 through Table 14 describe the basic rate transmitter performance, enhanced data transmitter performance, basic
+rate receiver performance, enhanced rate receiver performance, and current consumption conditions at 25°C.
+Table 11: Basic rate transmitter performance temperature at 25°C (1.8V)
+Test Parameter Min Typ Max BT Spec. Unit
+Maximum RF Output Power 8 10 11 0 ~ +20 dBm
+Frequency Range 2.4 — 2.4835 2.4 ≤ f ≤ 2.4835 GHz
+20 dB Bandwidth — 919.5 — ≤ 1000 KHz
+Δf1avg Maximum Modulation 140 165 175 140 < Δf1avg < 175 KHz
+Δf2max Minimum Modulation — 135 — ≥ 115 KHz
+Δf2avg/Δf1avg — 0.9 — ≥ 0.80 —
+Initial Carrier Frequency — +/-5 — ≤±75 KHz
+Drift Rate (DH1 package) — 4 — ≤ 20 KHz/50 μs
+Drift (DH3 packet) — 8 — ≤25 KHz
+Drift (DH5 packet) — 7 — ≤ 40 KHz
+Adjacent Channel Power
+F≥ ± 3MHz — –50 — < –40 dBm
+F = ± 2MHz — -46 — ≤ –20 dBm
+F = ± 1MHz — -15 — N/A dBm
+Table 12: Enhanced data rate transmitter performance 25°C (1.8V)
+Test Parameter Min Typ Max BT Spec. Unit
+Relative Transmit Power 5 7 9 dBm
+Max Carrier Frequency
+Stability |wo|
+2-DH5 — 1 — ≤ ±10 KHz
+3-DH5 — 1 —
+Max Carrier Frequency
+Stability |wi|
+2-DH5 — 4 — ≤ ±75 KHz
+3-DH5 — 4 —
+Max Carrier Frequency
+Stability |w0+wi|
+2-DH5 — 5 — ≤ ±75 KHz
+3-DH5 — 5 —
+RMS DEVM 2-DH5 — 4 — ≤ 20 %
+3-DH5 — 4 — ≤13 %
+Peak DEVM 2-DH5 — 9 — ≤ 35 %
+3-DH5 — 9 — ≤ 25 %
+99% DEVM 2-DH5 — 12 — ≤ 30 %
+3-DH5 — 12 — ≤ 20 %
+EDR Differential Phase Encoding — 99 — ≥ 99 %
+Adjacent Channel Power F≥ ± 3MHz — TBD — < –40 dBm
+F = ± 2MHz — TBD — ≤ –20 dBm
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+22
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 13: Basic rate receiver performance at 1.8V
+Test Parameter Min Typ Max BT Spec. Unit
+Sensitivity (1DH5) BER ≤ 0.1% — –95 -92 ≤ –70 dBm
+Maximum Input BER ≤ 0.1% –20 -10 — ≥ –20 dBm
+Carrier-to-Interferer Ratio
+(C/I)
+Co-Channel — 10 11 11
+C/I (± 1 MHz) — -4 0 0 dB
+C/I (± 2 MHz) — -45 — –30 dB
+C/I (± 3 MHz) — -49 — –40 dB
+Maximum Level of Intermodulation Interferers –39 -30 - ≥ –39 dBm
+Table 14: Enhanced data rate receiver performance 1.8V
+Test Parameter Min Typ Max Bluetooth
+Specification Unit
+Sensitivity (BER ≤0.01%)
+π/4 DQPSK — -94 -91 ≤ –70 dBm
+8 DPSK — -88 -85 ≤ –70 dBm
+Maximum Input (BER ≤0.1%) π/4 DQPSK –20 — — ≥ –20 dBm
+8 DPSK –20 — — ≥ –20 dBm
+Co-Channel C/I (BER ≤0.1%) π/4 DQPSK — 10 13 ≤ ±13 dB
+8 DPSK — 16 20 ≤ ±20 dB
+Adjacent Channel C/I (1 MHz) π/4 DQPSK — -9 0 ≤ 0 dB
+8 DPSK — -6 5 ≤5 dB
+Second Adjacent Channel C/I (2
+MHz)
+π/4 DQPSK — -47 –30 ≤ –30 dB
+8 DPSK — -42 –25 ≤ –25 dB
+Third Adjacent Channel C/I
+(3 MHz)
+π/4 DQPSK — -51 –40 ≤ –40 dB
+8 DPSK — -48 –33 ≤ –33 dB
+Out-of-band blocking
+30-2000MHz — -12.5 — — dBm
+2-2.399GHz — -12.4 — — dBm
+2.484-3GHz — -18 — — dBm
+3-12.75GHz — -2.6 — — dBm
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+23
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The ST60-2230C-P/ST60-2230C-PU PCIe host interface pins are powered from the AVDD18 voltage supply. The PCI Express
+interface supports a x1 PCI Express interface (one Lane). A Lane consists of an input and an output high-speed differential
+pair. Also supported is a PCI Express reference clock. Refer to the PCI Express Base Specification for more details on the
+functional requirements for the PCI Express interface signals.
+NOTE: In accordance with PCI Express Base Specification, Revision 2.1 March 4, 2009.
+Table 15: PCI Express Tx Output Specifications—2.5 GT/s
+Symbol Parameter Min Typ Max Units
+UI Unit interval (UI)
+The specified UI is equivalent to a tolerance of
+±300 ppm for each Refclk source. Period does not
+account for SSC induced variations.
+399.88 -- 400.12 ps
+VTx-DIFF-PP Differential peak-to-peak Tx voltage swing VTx-DIFFpp
+= 2*|VTXD+ - VTXD-|
+0.8 -- 1.2 V
+VTx-DIFF-PP-LOW Low power differential peak-to-peak Tx voltage swing
+VTx-DIFFpp = 2*|VTXD+ - VTXD-|
+0.4 -- 1.2 V
+VTx-DE-RATIO-3.5dB Tx de-emphasis level ratio (3.5 dB) 3.0 -- 4.0 dB
+TTx-EYE Tx eye including all jitter sources 0.75 -- -- UI
+TTx-EYE-MEDIAN-to-MAX-
+JITTER
+Maximum time between jitter median and maximum
+deviation from median
+-- -- 0.125 UI
+TTx-RISE-FALL Tx rise/fall time
+Measured differentially from 20% to 80% of swing.
+0.125 -- -- UI
+RLTx-DIFF Tx package plus Si differential return loss 10 -- -- dB
+RLTx-CM Tx package plus Si common mode return loss 6 -- -- dB
+VTx-CM-AC-P Tx AC common mode voltage -- 20 -- mV
+ITx-SHORT Tx short circuit current limit -- -- 90 mA
+VTx-DC-CM Tx DC common mode voltage 0 -- 3.6 V
+VTx-CM-DC-ACTIVE-IDLE-
+DELTA
+Absolute delta of DC common mode voltage during L0
+and electrical idle
+0 -- 100 mV
+VTx-IDLE-DIFF-AC-p Electrical idle differential peak output voltage 0 -- 20 mV
+VTx-RCV-DETECT Voltage change allowed during receiver detection -- -- 600 mV
+TTx-IDLE-MIN Minimum time spent in electrical idle 20 -- -- ns
+TTx-IDLE-SET-TO-IDLE Maximum time to transition to a valid electrical idle
+after sending an electrical idle ordered set
+-- -- 8 ns
+TTx-IDLE-TO-DIFF-DATA Maximum time to transition to valid diff signaling after
+leaving electrical idle
+-- -- 8 ns
+TCROSSLINK Crosslink random timeout -- -- 1.0 ms
+CTx AC coupling capacitor 75 -- 200 nF
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+24
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 16: PCI Express Tx Output Specifications—5 GT/s
+Symbol Parameter Min Typ Max Units
+UI Unit interval (UI)
+The specified UI is equivalent to a tolerance of
+±300 ppm for each Refclk source. Period does not
+account for SSC induced variations.
+199.94 -- 200.06 Ps
+VTx-DIFFpp Differential peak-to-peak Tx voltage swing VTx-DIFFpp =
+2*|VTXD+ - VTXD-|
+0.8 -- 1.2 V
+VTx-DIFFpp-LOW Low power differential peak-to-peak Tx voltage swing
+VTx-DIFFpp = 2*|VTXD+ - VTXD-|
+0.4 -- 1.2 V
+VTx-DE-RATIO-3.5dB Tx de-emphasis level ratio (3.5 dB) 3.0 -- 4.0 dB
+VTx-DE-RATIO-6dB Tx de-emphasis level ratio (6 dB) 5.5 -- 6.5 dB
+TMIN-PULSE Instantaneous lone pulse width Measured relative to
+rising/falling pulse.
+0.9 -- -- UI
+TTx-EYE Tx eye including all jitter sources 0.75 -- -- UI
+TTx-HF-DJ-DD Tx deterministic jitter > 1.5 MHz Deterministic jitter
+only.
+-- -- 0.15 UI
+TTx-LF-RMS Tx RMS jitter < 1.5 MHz
+Total energy measured over a 10 kHz–1.5 MHz range.
+-- 3.0 -- Ps
+RMS
+TTx-RISE-FALL Tx rise/fall time
+Measured differentially from 20% to 80% of swing.
+0.15 -- -- UI
+RLTx-DIFF Tx package plus Si differential return loss (0.05–1.25
+GHz)
+10 -- -- dB
+Tx package plus Si differential return loss (1.25–2.5
+GHz)
+8 -- --
+RLTx-CM Tx package plus Si common mode return loss dB
+VTx-CM-AC-PP Tx AC common mode voltage mVPP
+ITx-SHORT Tx short circuit current limit mA
+VTx-DC-CM Tx DC common mode voltage V
+VTx-CM-DC-ACTIVE-IDLE-
+DELTA
+Absolute delta of DC common mode voltage during L0
+and electrical idle
+mV
+VTx-IDLE-DIFF-AC-p Electrical idle differential peak output voltage
+VTx-IDLE-DIFF-DC = |VTx-Idle-D+ - VTx-Idle-D-| ≤ 20 mV
+mV
+VTx-IDLE-DIFF-DC DC electrical idle differential output voltage
+VTx-IDLE-DIFF-DC = |VTx-Idle-D+ - VTx-Idle-D-| ≤ 5 mV
+mV
+VTx-RCV-DETECT Voltage change allowed during receiver detection mV
+TTx-IDLE-MIN Minimum time spent in electrical idle ns
+TTx-IDLE-SET-TO-IDLE Maximum time to transition to a valid electrical idle
+after sending an electrical idle ordered set
+-- -- 8 ns
+TTx-IDLE-TO-DIFF-DATA Maximum time to transition to valid differential
+signaling after leaving electrical idle
+-- -- 8 ns
+TCROSSLINK Crosslink random timeout -- -- 1.0 ms
+CTx AC coupling capacitor 75 -- 200 nF
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+25
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+NOTE: In accordance with PCI Express Base Specification, Revision 2.1 March 4, 2009.
+Table 17: PCI Express Rx Input Specifications—2.5 GT/s
+Symbol Parameter Min Typ Max Units
+UI Unit Interval (UI)
+UI does not account for SSC induced variations.
+399.88 -- 400.12 ps
+VRx-DIFF-PP-CC Differential Rx peak-to-peak voltage for common Refclk
+Rx architecture
+0.175 -- 1.2 V
+VRx-DIFF-PP-DC Differential Rx peak-to-peak voltage for data clocked Rx
+architecture
+0.175 -- 1.2 V
+TRx-EYE Rx eye time opening
+Minimum eye time at Rx pins to yield a 10-12 BER.
+0.40 -- -- UI
+TRx-EYE-MEDIAN-to-MAX-
+JITTER
+Maximum time delta between median and deviation
+from median
+-- -- 0.3 UI
+VRx-CM-ACp AC peak common mode input voltage -- -- 150 mV
+RLRx-DIFF Differential return loss 15 -- -- dB
+RLRx-CM Common mode return loss 0 -- 3.6 dB
+ZRx-DIFF-DC DC differential input impedance 80 100 120 W
+ZRx-DC DC input impedance 40 50 60 W
+ZRx-HIGH-IMP-DC Powered down DC input impedance 200 -- -- k
+VRx-IDLE-DET-DIFF-p-p Electrical idle detect threshold 65 -- 175 mV
+TRx-IDLE-DET-DIFF-
+ENTERTIME
+Unexpected electrical idle enter detect threshold
+integration time
+-- -- 10 ms
+LRx-SKEW Total skew -- -- 20 ns
+Table 18: PCI Express Rx Input Specifications—5 GT/s
+Symbol Parameter Min Typ Max Units
+UI Unit Interval (UI)
+UI does not account for SSC induced variations.
+199.94 -- 200.06 ps
+VRx-DIFF-PP-CC Differential Rx peak-to-peak voltage for common Refclk
+Rx architecture
+0.120 -- 1.2 V
+VRx-DIFF-PP-DC Differential Rx peak-to-peak voltage for data clocked Rx
+architecture
+0.100 -- 1.2 V
+TRx-TJ-CC Maximum Rx inherent total timing error for common
+Refclk Rx architecture
+-- -- 0.40 UI
+TRx-TJ-DC Maximum Rx inherent total timing error for data
+clocked Rx architecture
+-- -- 0.34 UI
+TRx-DJ-DD-CC Maximum Rx inherent deterministic timing error for
+common Refclk Rx architecture
+-- -- 0.30 UI
+TRx-DJ-DD-DC Maximum Rx inherent deterministic timing error for
+data clocked Rx architecture
+-- -- 0.24 UI
+TRx-MIN-PULSE Minimum width pulse at Rx 0.6 -- -- UI
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+26
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Symbol Parameter Min Typ Max Units
+Measured to account for worst Tj at 10-12 BER.
+VRx-CM-ACp AC peak common mode input voltage -- -- 150 mV
+RLRx-DIFF Differential return loss 15 -- -- dB
+RLRx-CM Common mode return loss 0 -- 3.6 dB
+ZRx-DIFF-DC DC differential input impedance 80 100 120 W
+ZRx-DC DC input impedance 40 50 60 W
+ZRx-HIGH-IMP-DC Powered down DC input impedance 200 -- -- k
+VRx-IDLE-DET-DIFF-p-p Electrical idle detect threshold 65 -- 175 mV
+TRx-IDLE-DET-DIFF-
+ENTERTIME
+Unexpected electrical idle enter detect threshold
+integration time
+-- -- 10 ms
+LRx-SKEW Total skew -- -- 20 ns
+Notes: Over full range of values specified in the Recommended Operating Conditions unless otherwise specified.
+The load is 100Ω differential for these parameters, unless other specified.
+Table 15: USB LS Driver and Receiver Specifications
+Symbol Parameter Min. Typ. Max. Unit
+BR Baud rate - 1.5 - Mbps
+BRPPM Baud rate tolerance -15000 - 15000 ppm
+Driver Specifications
+VOH Output signal ended high
+Defined with 1.425KΩ pull-up resistor to 3.6V 2.8 - 3.6 V
+VOL Output signal ended low
+Defined with 1.425KΩ pull-up resistor to ground 0.0 - 0.3 V
+VCRS Output signal crossover voltage 1.3 2.0 V
+TLR
+Data fall time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+75.0 - 300.0 ns
+TLF
+Data risel time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+75.0 - 300.0 ns
+TLRFM Rise and fall time matching 80.0 - 125.0 %
+TUDJ1
+Source jitter total: to next transition
+*Including frequency tolerance. Timing difference between
+the differential data signals.
+*Defined at crossover point of differential signals
+-95 - 95 ns
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+27
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Symbol Parameter Min. Typ. Max. Unit
+TUDJ2
+Source jitter total: for paired transitions
+*Including frequency tolerance. Timing difference between
+the differential data signals.
+*Defined at crossover point of differential signals
+-150 - 150 ns
+Receiver Specifications
+VIH Input signal ended high 2.0 - - V
+VIL Input signal ended low - - 0.8 V
+VDI Differential input sensitivity 0.2 - - V
+Notes: Over full range of values specified in the Recommended Operating Conditions unless otherwise specified.
+The load is 100Ω differential for these parameters, unless other specified.
+Table 16: USB FS Driver and Receiver Specifications
+Symbol Parameter Min. Typ. Max. Unit
+BR Baud rate - 12.0 - Mbps
+BRPPM Baud rate tolerance -2500 - 2500 ppm
+Driver Specifications
+VOH Output signal ended high
+Defined with 1.425KΩ pull-up resistor to 3.6V 2.8 - 3.6 V
+VOL Output signal ended low
+Defined with 1.425KΩ pull-up resistor to ground 0.0 - 0.3 V
+VCRS Output signal crossover voltage 1.3 2.0 V
+TFR
+Output raise time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+-4.0 - 20.0 ns
+TFL
+Output fall time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+-4.0 - 20.0 ns
+TDJ1
+Source jitter total: to next transition
+*Including frequency tolerance. Timing difference between
+the differential data signals.
+*Defined at crossover point of differential signals
+-3.5 - 3.5 ns
+TDJ2
+Source jitter total: for paired transitions
+*Including frequency tolerance. Timing difference between
+the differential data signals.
+*Defined at crossover point of differential signals
+-4.0 - 4.0 ns
+TFDEOP Source jitter for differential transition to SE0 transition.
+Defined at crossover point of differential signals -2.0 - 5.0 ns
+Receiver Specifications
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+28
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Symbol Parameter Min. Typ. Max. Unit
+VIH Input signal ended high 2.0 - - V
+VIL Input signal ended low - - 0.8 V
+VDI Differential input sensitivity 0.2 - - V
+TJR1 Receiver jitter: to next transition
+Defined at crossover point of differential data signals -18.5 - 18.5 ns
+TJR2 Receiver jitter: for paired transitions
+Defined at crossover point of differential data signals -9.0 - 9.0 ns
+Notes: Over full range of values specified in the Recommended Operating Conditions unless otherwise specified.
+The load is 100Ω differential for these parameters, unless other specified.
+Table 17: USB HS Driver and Receiver Specifications
+Symbol Parameter Min. Typ. Max. Unit
+BR Baud rate - 480 - Mbps
+BRPPM Baud rate tolerance -500 - 500 ppm
+Driver Specifications
+VHSOH Data signal high 360 - 440 mV
+
+VHSOL Data signal low -10 - 10 mV
+THSR
+Data rise time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+500 - - ns
+THSF
+Data fall time
+Defined from 10% to 90% for raise time and 90% to 10% for
+fall time
+-500 - - ns
+Receiver Specifications
+VHSCM Input signal ended low -50 - 500 mV
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+29
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Figure 2: PCM Timing Specification – Master Mode
+Table 18:PCM Timing Specification – Master Mode
+Symbol Parameter Min. Typ. Max. Unit
+FBCLK - - 2/2.048 - MHz
+Duty CycleBCLK - 0.4 0.5 0.6 -
+TBCLK rise/fall - - 3 - ns
+TDO - - - 15 ns
+TDISU - 20 - - ns
+TDIHO - 15 - - ns
+TBF - - - 15 ns
+Figure 3: PCM Timing Specification – Slave Mode
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+30
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Table 19: PCM Timing Specification – Slave Mode
+Symbol Parameter Min. Typ. Max. Unit
+FBCLK - - 2/2.048 - MHz
+Duty CycleBCLK - 0.4 0.5 0.6 -
+TBCLK rise/fall - - 3 - ns
+TDO - - - 30 ns
+TDISU - 15 - - ns
+TDIHO - 10 - - ns
+TBFSU - 15 - - ns
+TBFHO - 10 - - ns
+Table 20: Pin definitions
+Pin # Name Type Voltage
+Ref. Description If Not
+Used
+1 GND - - Ground GND
+2 3.3V Power - 3.3V module power supply -
+3 USB_D+ I/O 3.3V USB Differential Data-Positive
+ST60-2230C-PU only N/C
+4 3.3V Power - 3.3V module power supply -
+5 USB_D- I/O 3.3V USB Differential Data-Negative
+ST60-2230C-PU only N/C
+6 LED1# O,PU 3.3V LED indicator for WLAN with 10mA drive capability N/C
+7 GND - - Ground GND
+8 PCM_CLK I/O 1.8V
+PCM Clock Signal (Optimal)
+Optimal clock used for some codecs.
+Output if Master mode; Input if Slave mode.
+N/C
+9 SDIO CLK N/C 1.8V SDIO 4-bit Mode Clock Input N/C
+10 PCM_SYNC I/O 1.8V PCM Sync Pulse Signal
+Output if Master mode; Input if Slave mode. N/C
+11 SDIO CMD N/C 1.8V SDIO 4-bit Mode Command/Response N/C
+12 PCM_OUT O 1.8V PCM Data N/C
+13 SDIO DATA0 N/C 1.8V SDIO 4-bit Mode DATA line Bit[0] N/C
+14 PCM_IN I 1.8V PCM Data N/C
+15 SDIO DATA1 N/C 1.8V SDIO 4-bit Mode DATA line Bit[1] N/C
+16 LED2# N/C N/C N/C N/C
+17 SDIO DATA2 N/C 1.8V SDIO 4-bit Mode DATA line Bit[2] N/C
+18 GND - - Ground GND
+19 SDIO DATA3 N/C 1.8V SDIO 4-bit Mode DATA line Bit[3] N/C
+20 UART WAKE# O 3.3V Reserved for BT to wakeup Host N/C
+21 SDIO WAKE# O 1.8V Reserved for Wake-On-WLAN N/C
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+31
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Pin # Name Type Voltage
+Ref. Description If Not
+Used
+22 UART TXD O 1.8V UART Serial Data Output
+ST60-2230C-P only N/C
+23 SDIO RESET# N/C N/C N/C N/C
+32 UART RXD I 1.8V UART Serial Data Input
+ST60-2230C-P only N/C
+33 GND - - Ground GND
+34 UART RTS O,WPU 1.8V UART Request To Send (Active low)
+ST60-2230C-P only N/C
+35 PERp0 I 1.8V PCIe Receive Data-Positive N/C
+36 UART CTS I, PU 1.8V UART Clear To Send (Active low)
+ST60-2230C-P only N/C
+37 PERn0 I 1.8V PCIe Receive Data-Negative N/C
+38 VENDOR
+DEFINED38 N/C N/C N/C N/C
+39 GND - - Ground GND
+40 VENDOR
+DEFINED40 N/C N/C N/C N/C
+41 PETp0 O 1.8V PCIe Transmit Data-Positive; 0.1μF capacitor included in
+module N/C
+42 VENDOR
+DEFINED42 N/C N/C N/C N/C
+43 PETn0 O 1.8V PCIe Transmit Data-Negative; 0.1μF capacitor included
+in module N/C
+44 COEX3 N/C 1.8V General purpose I/O pin. N/C
+45 GND - - Ground GND
+46 COEX2 O,PD 1.8V Serial data to external LTE device/ N/C
+47 REFCLKp0 I 1.8V PCIe Differential Clock input-Positive N/C
+48 COEX1 I,PD 1.8V Serial data from external LTE device/ N/C
+49 REFCLKn0 I 1.8V PCIe Differential Clock input-Negative N/C
+50 SUSCLK(32KHz) I,PU 3.3V
+Sleep Clock Input
+An external sleep clock of 32.768KHz with minimum +/-
+250ppm is required for power saving mode
+-
+51 GND - - Ground GND
+52 PERST0# I,PD 3.3V PCIe host indication to reset the device (input) (active
+low) N/C
+53 CLKREQ0# I/O 3.3V PCIe clock request (input/output) (active low) N/C
+54 W_DISABLE2# N/C N/C N/C N/C
+55 PEWAKE0# I/O 3.3V PCIe wake signal (input/output) (active low) N/C
+56 W_DISABLE1# I,PU 3.3V Reserved N/C
+57 GND - - Ground GND
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+32
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Pin # Name Type Voltage
+Ref. Description If Not
+Used
+58 I2C DATA
+(I/O)(0/3.3V) N/C N/C N/C N/C
+59 RESERVED/PETp1 N/C N/C N/C N/C
+60 I2C CLK (0/3.3V) N/C N/C N/C N/C
+61 RESERVED/PETn1 N/C N/C N/C N/C
+62 ALERT# (0/3.3V) O 3.3V N/C N/C
+63 GND - - Ground GND
+64 RESERVED N/C N/C N/C N/C
+65 RESERVED/PERp1 N/C N/C N/C N/C
+66 UIM_SWP/PERST1# N/C N/C N/C N/C
+67 RESERVED/PERn1 N/C N/C N/C N/C
+68 UIM_POWER_SNK/
+CLKREQ1# N/C N/C N/C N/C
+69 GND - - Ground GND
+70 UIM_POWER_SRC/
+GPIO1/PEWAKE1# N/C N/C N/C N/C
+71 RESERVED/REFCLKp
+1 N/C N/C N/C N/C
+72 3.3V Power - 3.3V module power supply -
+73 RESERVED/REFCLKn
+1 N/C N/C N/C N/C
+74 3.3V Power - 3.3V module power supply -
+75 GND - - Ground GND
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+33
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Module dimensions of ST60-2230C-P/ST60-2230C-PU are 22 mm x 30 mm x 2.66 mm. Detail drawings are shown in Figure
+4.
+Figure 4: Module dimension of ST60-2230C-P/ST60-2230C-PU
+Note: The Wi-Fi MAC address is located on the product label.
+The last digit of Wi-Fi MAC address will be assigned to either “0”, “4”, “8”, or “C”.
+The BT MAC address will be the Wi-Fi MAC on the label plus 3.
+6±0.15
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+34
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The ST60-2230C-P/ST60-2230C-PU connects to the host via a standard PCI EXPRESS M2 connector. The Kyocera’s
+(www.Kyocera-connector.com) 6411 series provide 1.8 mm, 2.3 mm and 3.2 mm connector heights and JAE’s
+(https://www.jae.com/en/) SM3 series provide 1.2 mm, 2.15 mm, 3.1 mm and 4.1 mm connector heights.
+Because the ST60-2230C-P/ST60-2230C-PU is a single-side component module, we recommend the following part numbers
+which have 2.3 mm and 3.1 mm connector height):
+M.2 Key-E Connector Connector Height
+KYOCERA 24-6411-067-101-894E 2.3 mm
+JAE SM3ZS067U310AERxxxx 3.1 mm
+The stand-off mating to the recommend 2.3 mm connector from EMI STOP (www.EMISTOP.com) is part number F50M16-
+041525P1D4M and 3.1mm from JAE (https://www.jae.com/en/) is part number SM3ZS067U310-NUT1-Rxxxx.
+M.2 Key-E Connector Stand-off
+KYOCERA 24-6411-067-101-894E EMI STOP F50M16-041525P1D4M
+JAE SM3ZS067U310AERxxxx JAE SM3ZS067U310-NUT1-Rxxxx
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+35
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Figure 5: Mounting information of the ST60-2230C-P/ST60-2230C-PU and recommended layout pattern for the stand-off
+The ST60-2230C modules are secured in their mounting position with a mounting screw. Laird Connectivity recommends
+the use of the Hama Naka Shoukin Industry Co. FPHM1.6-0.35x3.5(5,0.5)CR3-Zn screw. Contact peggy@hnsco.com.tw for
+more information.
+Figure 6: Mechanical drawing of FPH M1.6-0.35x3.5(5,0.5)CR3-Zn
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+36
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The following is a list of RF layout design guidelines and recommendation when installing a Laird Connectivity radio into
+your device.
+▪ Do not run antenna cables directly above or directly below the radio.
+▪ Do not place any parts or run any high speed digital lines below the radio.
+▪ If there are other radios or transmitters located on the device (such as a Bluetooth radio), place the devices as far
+apart from each other as possible. Also, make sure there is at least 25 dB isolation between the Bluetooth antenna
+and the Wi-Fi antenna.
+▪ Ensure that there is the maximum allowable spacing separating the antenna connectors on the Laird Connectivity
+radio from the antenna. In addition, do not place antennas directly above or directly below the radio.
+▪ Laird Connectivity recommends the use of a double-shielded cable for the connection between the radio and the
+antenna elements.
+▪ Be sure to put the capacitor on the power pin as close as possible to reduce the radiation issue.
+▪ Use proper electro-static-discharge (ESD) procedures when installing the Laird Connectivity radio module.
+▪ To get maximum throughput when operate at MIMO 2x2, two antennas with at least 25 dB isolation are
+recommended.
+▪ To avoid negatively impacting Tx power and receiver sensitivity, do not cover the antennas with metallic objects or
+components.
+▪ Opening/handing/removing must be done on an anti-ESD treated workbench. All workers must be also have
+undergone anti-ESD treatment.
+▪ The devices should be mounted within one year of the date of delivery.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+37
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+The ST60-2230C holds current certifications in the following countries:
+Country/Region Regulatory ID
+USA (FCC) SQG-60SIPT
+EU N/A
+Canada (ISED) 3147A-602230C
+Japan (MIC) 003-170090
+Korea (KC) MSIP-CRM-LAI-60-2230C
+Australia N/A
+New Zealand N/A
+China (SRRC) 2017DJ2473
+The antennas listed below were tested for use with the ST60-2230C. The OEM can choose a different manufacturer’s
+antenna but must make sure it is of same type and that the gain is less than or equal to the antenna that is approved for
+use.*
+*Note: Japan (MIC) lists applicable antennas on its certificates. If your antenna is not on the approved list, regardless of
+whether it is comparative, it must be added to the certificate before it can be used in Japan.
+Model Type Connector
+Maximum Gain
+2400-2483.5 5150-5250 5250-5350 5470-5725 5725-5850
+Laird Connectivity (LSR) 001-0009 Dipole IPEX U.FL 2.0 2.0 2.0 2.0 2.0
+Laird Connectivity NanoBlade-IP04 PCB dipole IPEX U.FL 2.0 3.9 3.9 4.0 4.0
+Laird Connectivity
+MAF95310 Mini NanoBlade Flex PCB Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+Laird Connectivity (LSR) FlexPIFA PIFA IPEX U.FL 2.5 3.0 3.0 3.0 3.0
+Ethertronics WLAN_1000146 Magnetic
+dipole IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Laird Connectivity MIMO FlexPIFA PIFA IPEX U.FL 2.0 3.0 3.0 3.0 3.0
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+38
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+To ensure regulatory compliance, when integrating the ST60-2230C into a host device, it is necessary to meet the
+documentation requirements set forth by the applicable regulatory agencies. The following sections (FCC, ISED Canada,
+European Union, and others) outline the information that may be included in the user’s guide and external labels for the
+host devices into which the ST60-2230C is integrated.
+The ST60-2230C family has been designed to operate with the antennas listed below.
+Model Type Connector
+Maximum Gain
+2400-2483.5 5150-5250 5250-5350 5470-5725 5725-5850
+Laird Connectivity (LSR) 001-0009 Dipole IPEX U.FL 2.0 2.0 2.0 2.0 2.0
+Laird Connectivity NanoBlade-IP04 PCB dipole IPEX U.FL 2.0 3.9 3.9 4.0 4.0
+Laird Connectivity
+MAF95310 Mini NanoBlade Flex PCB Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+Laird Connectivity (LSR) FlexPIFA PIFA IPEX U.FL 2.5 3.0 3.0 3.0 3.0
+Ethertronics WLAN_1000146 Magnetic
+dipole IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Laird Connectivity MIMO FlexPIFA PIFA IPEX U.FL 2.0 3.0 3.0 3.0 3.0
+Note: The OEM is free to choose another vendor’s antenna of like type and equal or lesser gain as an antenna appearing
+in the table and still maintain compliance. Reference FCC Part 15.204(c)(4) for further information on this topic.
+This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the
+FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential
+installation. This equipment generates, uses, and can radiate radio frequency energy and, if not installed and used in
+accordance with the instructions, may cause harmful interference to radio communications.
+However, there is no guarantee that interference will not occur in an installation. If this equipment does cause harmful
+interference to radio or television reception, which can be determined by turning the equipment off and on, the user is
+encouraged to try to correct the interference by one of the following measures:
+▪ Reorient or relocate the receiving antenna.
+▪ Increase the separation between the equipment and receiver.
+▪ Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
+▪ Consult the dealer or an experienced radio/TV technician for help.
+FCC Caution: Any changes or modifications not expressly approved by the party responsible for compliance could void the
+user's authority to operate this equipment.
+This device complies with Part 15 of the FCC Rules. Operation is subject to the following two conditions:
+1. This device may not cause harmful interference; and
+2. This device must accept any interference received, including interference that may cause undesired operation.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+39
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+This product complies with the US portable RF exposure limit set forth for an uncontrolled environment and is safe for
+intended operation as described in this manual. Further RF exposure reduction can be achieved if the product is kept as far
+as possible from the user body or is set to a lower output power if such function is available.
+This transmitter must not be co-located or operated in conjunction with any other antenna or transmitter.
+This device is intended only for OEM integrators under the following condition:
+1. The transmitter module may not be co-located with any other transmitter or antenna,
+If the condition above is met, further transmitter testing is not required. However, the OEM integrator is still responsible for
+testing their end-product for any additional compliance requirements required with this installed module.
+IMPORTANT NOTE:
+If this condition cannot be met (for example, certain laptop configurations or co-location with another transmitter), then
+the FCC authorization is no longer considered valid and the FCC ID cannot be used on the final product. In these
+circumstances, the OEM integrator is responsible for re-evaluating the end product (including the transmitter) and
+obtaining a separate FCC authorization.
+The end product must be labeled in a visible area with the following: Contains FCC ID: SQG-60SIPT
+The OEM integrator must be aware not to provide information to the end user regarding how to install or remove this RF
+module in the user’s manual of the end product which integrates this module.
+The end user manual shall include all required regulatory information/warning as show in this manual.
+Model MIC ID
+ST60-2230C 3147A-602230C
+This radio transmitter (IC: 3147A-602230C) was approved by Innovation, Science and Economic Development (ISED)
+Canada to operate with the antenna types listed below, with the maximum permissible gain indicated. Antenna types not
+included in this list that have a gain greater than the maximum gain indicated for any type listed are strictly prohibited for
+use with this device.
+Le présent émetteur radio (IC: 3147A-602230C) a été approuvé par Innovation, Sciences et Développement
+économique Canada pour fonctionner avec les types d'antenne énumérés ci-dessous et ayant un gain admissible
+maximal. Les types d'antenne non inclus dans cette liste, et dont le gain est supérieur au gain maximal indiqué
+pour tout type figurant sur la liste, sont strictement interdits pour l'exploitation de l'émetteur.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+40
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Model Type Connector
+Maximum Gain
+2400-2483.5 5150-5250 5250-5350 5470-5725 5725-5850
+Laird Connectivity (LSR) 001-0009 Dipole IPEX U.FL 2.0 2.0 2.0 2.0 2.0
+Laird Connectivity NanoBlade-IP04 PCB dipole IPEX U.FL 2.0 3.9 3.9 4.0 4.0
+Laird Connectivity
+MAF95310 Mini NanoBlade Flex PCB Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+Laird Connectivity (LSR) FlexPIFA PIFA IPEX U.FL 2.5 3.0 3.0 3.0 3.0
+Ethertronics WLAN_1000146 Magnetic
+dipole IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Laird Connectivity MIMO FlexPIFA PIFA IPEX U.FL 2.0 3.0 3.0 3.0 3.0
+The end user manual shall include all required regulatory information/warning as shown in this manual.
+This device complies with Industry Canada’s license-exempt RSSs. Operation is subject to the following two conditions:
+1. This device may not cause interference; and
+2. This device must accept any interference, including interference that may cause undesired operation of the device.
+Le présent appareil est conforme aux CNR d’Industrie Canada applicables aux appareils radio exempts de licence.
+L’exploitation est autorisée aux deux conditions suivantes:
+1. l’appareil ne doit pas produire de brouillage;
+
+2. l’utilisateur de l’appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d’en
+compromettre le fonctionnement.
+The product complies with the Canada portable RF exposure limit set forth for an uncontrolled environment and are safe
+for intended operation as described in this manual. The minimum separation distance for portable use is limited to 15mm
+assuming use of antenna with 2 dBi of gain. The further RF exposure reduction can be achieved if the product can be kept
+as far as possible from the user body or set the device to lower output power if such function is available.
+Le produit est conforme aux limites d'exposition pour les appareils portables RF pour les Etats-Unis et le Canada établies
+pour un environnement non contrôlé. La distance de séparation minimale pour l'utilisation portative est limitée à 15mm en
+supposant l'utilisation de l'antenne avec 2 dBi de gain. Le produit est sûr pour un fonctionnement tel que décrit dans ce
+manuel. La réduction aux expositions RF peut être augmentée si l'appareil peut être conservé aussi loin que possible du
+corps de l'utilisateur ou que le dispositif est réglé sur la puissance de sortie la plus faible si une telle fonction est disponible.
+This device is intended only for OEM integrators under the following conditions:
+1. The transmitter module may not be co-located with any other transmitter or antenna.
+If the condition above is met, further transmitter testing is not required. However, the OEM integrator is still responsible for
+testing their end-product for any additional compliance requirements required with this module installed.
+Cet appareil est conçu uniquement pour les intégrateurs OEM dans les conditions suivantes:
+1. Le module émetteur peut ne pas être coïmplanté avec un autre émetteur ou antenne.
+Tant que les 1 condition ci-dessus sont remplies, des essais supplémentaires sur l'émetteur ne seront pas nécessaires.
+Toutefois, l'intégrateur OEM est toujours responsable des essais sur son produit final pour toutes exigences de conformité
+supplémentaires requis pour ce module installé.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+41
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+IMPORTANT NOTE:
+If this condition cannot be met (for example, certain laptop configurations or co-location with another transmitter), then
+the Canada authorization is no longer considered valid and the IC ID cannot be used on the final product. In these
+circumstances, the OEM integrator is responsible for re-evaluating the end product (including the transmitter) and
+obtaining a separate Canada authorization.
+NOTE IMPORTANTE:
+Dans le cas où ces conditions ne peuvent être satisfaites (par exemple pour certaines configurations d'ordinateur portable ou
+de certaines co-localisation avec un autre émetteur), l'autorisation du Canada n'est plus considéré comme valide et l'ID IC ne
+peut pas être utilisé sur le produit final. Dans ces circonstances, l'intégrateur OEM sera chargé de réévaluer le produit final (y
+compris l'émetteur) et l'obtention d'une autorisation distincte au Canada.
+The final end product must be labeled in a visible area with the following: Contains IC: xxx
+Le produit final doit être étiqueté dans un endroit visible avec l'inscription suivante: Contient des IC: xxx
+The OEM integrator has to be aware not to provide information to the end user regarding how to install or remove this RF
+module in the user’s manual of the end product which integrates this module.
+The end user manual shall include all required regulatory information/warning as show in this manual.
+L'intégrateur OEM doit être conscient de ne pas fournir des informations à l'utilisateur final quant à la façon d'installer ou de
+supprimer ce module RF dans le manuel de l'utilisateur du produit final qui intègre ce module.
+Le manuel de l'utilisateur final doit inclure toutes les informations réglementaires requises et avertissements comme indiqué
+dans ce manuel.
+The ST60-2230C is approved for use in the Japanese market. The part numbers listed below hold WW type certification.
+Refer to ARIB-STD-T66 for further guidance on OEM’s responsibilities.
+Model MIC ID
+ST60-2230C 003-170090
+The ST60-2230C was tested with antennas listed below.
+Note: Japan (MIC) lists applicable antennas on its certificates. If your antenna is not on the approved list, regardless of
+whether it is comparative, it must be added to the certificate before it can be used in Japan.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+42
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Model Type Connector
+Maximum Gain
+2400-2483.5 5150-5250 5250-5350 5470-5725 5725-5850
+Laird Connectivity (LSR) 001-0009 Dipole IPEX U.FL 2.0 2.0 2.0 2.0 2.0
+Laird Connectivity NanoBlade-IP04 PCB dipole IPEX U.FL 2.0 3.9 3.9 4.0 4.0
+Laird Connectivity
+MAF95310 Mini NanoBlade Flex PCB Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+Laird Connectivity (LSR) FlexPIFA PIFA IPEX U.FL 2.5 3.0 3.0 3.0 3.0
+Ethertronics WLAN_1000146 Magnetic
+dipole IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+It is recommended that the host device bears a label showing the Japanese “GITEKI” mark and the certification number
+accompanied by the following statement:
+当該機器には電波法に基づく、技術基準適合証明等を受けた特定無線設備を装着している
+Translation: “This equipment contains specified radio equipment that has been certified to the Technical Regulation
+Conformity Certification under the Radio Law.”
+003-170090
+The 60-2230C is approved for use in the Korean market.
+Model Certificate Number
+60-2230C MSIP-CRM-LAI-60-2230C
+RCM: Pending Compliant to standards EN 300 328 V1.9.1, AS/NZS 4268: 2012-A1:2013, and EN 55022:2010/AC:2011
+If this device is used in a product, the OEM has responsibility to verify compliance of the final end product to the
+Australia/New Zealand (RCM) Standards. All end-products require their own certification (SDoc). You will not be able to
+leverage the module certification and ship product into the country.
+The 60-SOM is approved for use in the China market.
+Model CMIIT ID
+60-2230C 2017DJ2473
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+43
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Model Type Connector
+Maximum Gain
+2400-2483.5 5150-5250 5250-5350 5470-5725 5725-5850
+Laird Connectivity (LSR) 001-0009 Dipole IPEX U.FL 2.0 2.0 2.0 2.0 2.0
+Laird Connectivity NanoBlade-IP04 PCB dipole IPEX U.FL 2.0 3.9 3.9 4.0 4.0
+Laird Connectivity
+MAF95310 Mini NanoBlade Flex PCB Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+Laird Connectivity (LSR) FlexPIFA PIFA IPEX U.FL 2.5 3.0 3.0 3.0 3.0
+Ethertronics WLAN_1000146 Magnetic
+dipole IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+Laird Connectivity MIMO FlexPIFA PIFA IPEX U.FL 2.0 3.0 3.0 3.0 3.0
+The integrator must include specific information in the user’s guide for the device into which the ST60-2230C is integrated.
+In addition to the required FCC and IC statements outlined above, the following Radio Equipment Directive (RED)
+statements must be added in their entirety and without modification into a prominent place in the user’s guide for the
+device into which the ST60-2230C is integrated:
+This device complies with the essential requirements of the 2014/53/EU – Radio Equipment Directive (RED). The
+following test methods have been applied in order to prove presumption of conformity with the essential requirements
+of the 2014/53/EU – Radio Equipment Directive (RED):
+▪ EN 62368-1:2014/A11:2017
+Safety requirements for audio/video, information, and technology equipment
+▪ EN 300 328 v2.2.2 (2019-07)
+Electromagnetic compatibility and Radio Spectrum Matters (ERM); Wideband Transmission systems; Data
+transmission equipment operating in the 2,4 GHz ISM band and using spread spectrum modulation techniques;
+Harmonized EN covering essential requirements under article 3.2 of the R&TTE Directive
+▪ EN 62311:2008 | EN 50665:2017 | EN 50385:2017
+RF exposure
+▪ EN 301 489-1 v2.2.0 (2017-03)
+Electromagnetic compatibility and Radio Spectrum Matters (ERM); ElectroMagnetic Compatibility (EMC) standard
+for radio equipment and services; Part 1: Common technical requirements
+▪ EN 301 489-17 V3.2.0 (2017-03)
+Electromagnetic compatibility and Radio spectrum Matters (ERM); ElectroMagnetic Compatibility (EMC) standard
+for radio equipment and services; Part 17: Specific conditions for 2,4 GHz wideband transmission systems and 5
+GHz high performance RLAN equipment
+▪ EN 301 893 V2.1.1 (2017-05)
+Electromagnetic compatibility and Radio spectrum Matters (ERM); Broadband Radio Access Networks (BRAN);
+Specific conditions for 5 GHz high performance RLAN equipment
+▪ EU 2015/863 (RoHS 3)
+Declaration of Compliance – EU Directive 2015/863; Reduction of Hazardous Substances (RoHS)
+This device is a 2.4 GHz wideband transmission system (transceiver), intended for use in all EU member states and EFTA
+countries, except in France and Italy where restrictive use applies.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+44
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+In Italy the end-user should apply for a license at the national spectrum authorities in order to obtain authorization to
+use the device for setting up outdoor radio links and/or for supplying public access to telecommunications and/or
+network services.
+This device may not be used for setting up outdoor radio links in France and in some areas the RF output power may be
+limited to 10 mW EIRP in the frequency range of 2454 – 2483.5 MHz. For detailed information the end-user should
+contact the national spectrum authority in France.
+български [Bulgarian] С настоящото [име на производителя] декларира, че това устройство [вид оборудване] е в съответствие със съществените
+изисквания и други приложими разпоредби на Директиви 2014/53/EC
+Hrvatski [Croatian] [naziv proizvođača] ovim putem izjavljuje da je ovaj uređaj [vrsta opreme] sukladan osnovnim zahtjevima i ostalim bitnim odredbama
+Direktiva 2014/53/EU
+Česky [Czech] [Jméno výrobce] tímto prohlašuje, že tento [typ zařízení] je ve shodě se základními požadavky a dalšími příslušnými ustanoveními směrnice
+2014/53/EU.
+Dansk [Danish] Undertegnede [fabrikantens navn] erklærer herved, at følgende udstyr [udstyrets typebetegnelse] overholder de væsentlige krav og øvrige
+relevante krav i direktiv 2014/53/EU.
+Deutsch [German] Hiermit erklärt [Name des Herstellers], dass sich das Gerät [Gerätetyp] in Übereinstimmung mit den grundlegenden Anforderungen und den
+übrigen einschlägigen Bestimmungen der Richtlinie 2014/53/EU befindet.
+Eesti [Estonian] Käesolevaga kinnitab [tootja nimi] seadme [seadme tüüp] vastavust direktiivi 2014/53/EL põhinõuetele ja nimetatud direktiivist tulenevatele
+teistele asjakohastele sätetele.
+English Hereby, [name of manufacturer], declares that this [type of equipment] is in compliance with the essential requirements and other relevant
+provisions of Directive 2014/53/EU.
+Español [Spanish] Por medio de la presente [nombre del fabricante] declara que el [clase de equipo] cumple con los requisitos esenciales y cualesquiera otras
+disposiciones aplicables o exigibles de la Directiva 2014/53/UE.
+Ελληνική [Greek] ΜΕ ΤΗΝ ΠΑΡΟΥΣΑ [όνομα του κατασκευαστή] ΔΗΛΩΝΕΙ ΟΤΙ [εξοπλισμού] ΣΥΜΜΟΡΦΩΝΕΤΑΙ ΠΡΟΣ ΤΙΣ ΟΥΣΙΩΔΕΙΣ ΑΠΑΙΤΗΣΕΙΣ ΚΑΙ
+ΤΙΣ ΛΟΙΠΕΣ ΣΧΕΤΙΚΕΣ ΔΙΑΤΑΞΕΙΣ ΤΗΣ ΟΔΗΓΙΑΣ 2014/53/EE.
+Français [French] Par la présente [nom du fabricant] déclare que l'appareil [type d'appareil] est conforme aux exigences essentielles et aux autres dispositions
+pertinentes de la directive 2014/53/UE.
+Íslenska [Icelandic] Hér, [Nafn framleiðanda], því yfir að þetta [gerð búnaðar] tæki er í samræmi við grunnkröfur og önnur viðeigandi ákvæði tilskipana 2014/53/
+ESB
+Italiano [Italian] Con la presente [nome del costruttore] dichiara che questo [tipo di apparecchio] è conforme ai requisiti essenziali ed alle altre disposizioni
+pertinenti stabilite dalla direttiva 2014/53/UE.
+Latviešu valoda [Latvian] Aršo[izgatavotājanosaukums] deklarē, ka [iekārtas tips] atbilstDirektīvas 2014/53/ES būtiskajāmprasībām un citiemar to
+saistītajiemnoteikumiem.
+Lietuvių kalba [Lithuanian] Šiuo [gamintojo pavadinimas] deklaruoja, kad šis [įrangos tipas] atitinka esminius reikalavimus ir kitas 2014/53/ES Direktyvos nuostatas.
+Nederlands [Dutch] Hierbij verklaart [naam van de fabrikant] dat het toestel [type van toestel] in overeenstemming is met de essentiële eisen en de andere
+relevante bepalingen van richtlijn 2014/53/EU.
+Malti [Maltese] Hawnhekk, [isem tal-manifattur], jiddikjara li dan [il-mudel tal-prodott] jikkonforma mal-ħtiġijiet essenzjali u ma provvedimenti oħrajn relevanti
+li hemm fid-Dirrettiva 2014/53/UE.
+Magyar [Hungarian] Alulírott, [gyártó neve] nyilatkozom, hogy a [... típus]megfelel a vonatkozó alapvetõ követelményeknek és az 2014/53/EU irányelv egyéb
+elõírásainak.
+Norsk [Norwegian] Herved [navnet på produsenten], erklærer at denne [type utstyr] enheten, er i samsvar med de grunnleggende kravene og andre relevante
+bestemmelser i direktivene 2014/53/EU
+Polski [Polish] Niniejszym [nazwa producenta] oświadcza, że [nazwa wyrobu] jest zgodny z zasadniczymi wymogami oraz pozostałymi stosownymi
+postanowieniami Dyrektywy 2014/53/UE.
+Português [Portuguese] [Nome do fabricante] declara que este [tipo de equipamento] está conforme com os requisitos essenciais e outras disposições da Directiva
+2014/53/UE.
+Română [Romanian] Prin prezenta, [numele producătorului] declară că acest dispozitiv [tipul de echipament] este în conformitate cu cerințele esențiale și alte
+prevederi relevante ale Directivelor 2014/53/UE
+Slovenščina [Slovenian] [Ime proizvajalca] izjavlja, da je ta [tip opreme] v skladu z bistvenimi zahtevami in ostalimi relevantnimi določili direktive 2014/53/EU.
+Slovenčina [Slovak] [Menovýrobcu] týmtovyhlasuje, že [typzariadenia] spĺňazákladnépožiadavky a všetkypríslušnéustanovenia Smernice 2014/53/EU.
+Suomi [Finnish] [Valmistaja] vakuuttaa täten että [laitteen tyyppimerkintä] tyyppinen laite on direktiivin 2014/53/EU oleellisten vaatimusten ja sitä koskevien
+direktiivin muiden ehtojen mukainen.
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+45
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Svenska [Swedish] Härmed intygar [företag] att denna [utrustningstyp] står I överensstämmelse med de väsentliga egenskapskrav och övriga relevanta
+bestämmelser som framgår av direktiv 2014/53/EU.
+Manufacturer Laird Connectivity
+Products ST60-2230C
+Product Description Dual band 2x2 802.11ac WLAN plus Bluetooth 5.1 dual mode adapter
+EU Directives 2014/53/EU – Radio Equipment Directive (RED)
+Reference standards used for presumption of conformity:
+Article Number Requirement Reference standard(s)
+3.1a
+Safety requirements for audio/video, information,
+and technology equipment EN 62368-1:2014/A11:2017
+RF Exposure
+EN 62311:2008
+EN 50665:2017
+EN 50385:2017
+3.1b Protection requirements with respect to electromagnetic
+compatibility
+EN 301 489-1 v2.2.0 (2017-03)
+EN 301 489-17 v3.2.0 (2017-03)
+3.2 Protection requirements – Electromagnetic compatibility EN 300 328 v2.2.2 (2019-07)
+EN 301 893 v2.1.1 (2017-05)
+Declaration:
+We, Laird, declare under our sole responsibility that the essential radio test suites have been carried out and that the above
+product to which this declaration relates is in conformity with all the applicable essential requirements of Article 3 of the EU
+Directive 2014/53/EU, when used for its intended purpose.
+Place of Issue:
+Laird Connectivity
+W66N220 Commerce Court, Cedarburg, WI 53012 USA
+tel: +1-262-375-4400 fax: +1-262-364-2649
+Date of Issue: August 2020
+Name of Authorized Person: Ryan Urness, Director of Test Services
+Signature of Authorized Person:
+
+https://www.lairdconnect.com/wireless-modules/
+wi-fi-bt-modules
+46
+© Copyright 2022 Laird Connectivity
+All Rights Reserved
+Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Part Number Description
+ST60-2230C-P 2X2 802.11 a/b/g/n with Bluetooth 5.1 dual mode module with PCIe bus interface for
+WLAN connection and UART for Bluetooth (including Low Energy) connection
+ST60-2230C-PU 2X2 802.11 a/b/g/n with Bluetooth 5.1 dual mode module with PCIe bus interface for
+WLAN connection and USB for Bluetooth (including Low Energy) connection
+DVK-ST60-2230C Development kit for the ST60-2230C
+Please contact your local sales representative or our support team for further assistance:
+Laird Connectivity
+Support Centre: https://www.lairdconnect.com/resources/support
+Email: wireless.support@lairdconnectivity.com
+Phone: Americas: +1-800-492-2320
+Europe: +44-1628-858-940
+Hong Kong: +852 2762 4823
+Web: https://www.lairdconnect.com/products
+Note: Information contained in this document is subject to change.
+© Copyright 2022 Laird Connectivity. All Rights Reserved. Any information furnished by Laird Connectivity and its agents is believed to be accurate and
+reliable. All specifications are subject to change without notice. Responsibility for the use and application of Laird Connectivity materials or products rests
+with the end user since Laird Connectivity and its agents cannot be aware of all potential uses. Laird Connectivity makes no warranties as to non-
+infringement nor as to the fitness, merchantability, or sustainability of any Laird Connectivity materials or products for any specific or general uses. Laird
+Connectivity or any of its affiliates or agents shall not be liable for incidental or consequential damages of any kind. All Laird Connectivity products are sold
+
+pursuant to the Laird Connectivity Terms and Conditions of Sale in effect from time to time, a copy of which will be furnished upon request. Nothing herein
+provides a license under any Laird Connectivity or any third-party intellectual property right.

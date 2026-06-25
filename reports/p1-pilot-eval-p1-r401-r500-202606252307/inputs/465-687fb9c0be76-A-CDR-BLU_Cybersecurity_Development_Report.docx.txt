@@ -1,0 +1,1150 @@
+queueId: ingest-1781569954372-2wm
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 국내 제조인증/2. 250402 보완/기술문서_수정중/2. 첨부자료/2. Cybersecurity/A-CDR-BLU_Cybersecurity Development Report.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/5e20dd6ec982/A-CDR-BLU_Cybersecurity Development Report__5e20dd6ec982_combined.txt
+canonicalGroupId: 687fb9c0be76
+productSignal: Unclassified
+authoritySignal: MFDS/domestic
+pilotRank: 465
+
+SOURCE_TEXT
+Cybersecurity Development Report
+
+Product name: Digital Flat Panel X-ray Detector
+
+Model name: G1417CW/G1717CW/G1417FW/G1717FW/
+
+G1417CWP/G1717CWP/G1417FWP/G1717FWP
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+Han, Jimin
+
+R&D team
+
+December 05, 2024
+
+Reviewed by
+
+Hur, Namkyu
+
+Quality Management Representative
+
+December 05, 2024
+
+Approved by
+
+Jeon, Jeu
+
+R&D manager
+
+December 05, 2024
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+December 05, 2024
+
+Initial
+
+Contents
+
+1. Overview 4
+
+2. Terms and Definitions 5
+
+3. General Product Description 8
+
+4. Cybersecurity Development Plan 9
+
+5. Responsibilities and Roles 11
+
+6. Medical Device Architecture 12
+
+7. Identification of Vulnerabilities 13
+
+8. Identified Risks by Vulnerability category 15
+
+9. Verification Activities 19
+
+10. Production and Post-production Activities 19
+
+11. Interoperability functionality 21
+
+12. Update Management 21
+
+13. Security Incident Response Activities 22
+
+Overview
+
+Scope
+
+The Cybersecurity Development Report for the G Series Detector documents all the activities and procedures taken to ensure the cybersecurity of this specific device, in accordance with the IEC 81001-5-1 standard. This report includes detailed records of architecture analysis, threat modeling, vulnerability analysis, identification of security requirements, risk assessment, and mitigation. Additionally, it covers the security frameworks and protocols adhered to during the development of the G Series Detector as well as the security features integrated into its software and hardware components. By thoroughly documenting these aspects, the report provides a comprehensive overview of the cybersecurity measures implemented throughout the development lifecycle of the G Series Detector.
+
+This document applies to all software under development or in progress, or which was completed, but not to the following cases:
+
+① Research activities
+
+② Initial technical feasibility assessment activities
+
+③ Activities to support prototypes that are not intended to be provided to customers
+
+Purpose
+
+The purpose of the Cybersecurity Development Report for G Series Detector is to demonstrate compliance with the IEC 81001-5-1 standard, ensuring that this specific device meets all cybersecurity requirements. This report aims to confirm that the G Series Detector is equipped with appropriate protective measures against cyber threats, thus safeguarding patient safety and maintaining data integrity. Furthermore, the report provides precise and reliable cybersecurity information to regulatory bodies and other stakeholders, facilitating the approval and certification process. By presenting detailed documentation of the cybersecurity practices followed during the development of the G Series Detector, the report also aims to enhance the device's credibility and marketability, ensuring that it meets the high standards required for safe and secure operation in the healthcare environment.
+
+standards required for safe and secure operation in the healthcare environment.
+
+The target audience of this document is as follows:
+
+① Software Development Team Staff
+
+② Software Testing Team Staff
+
+③ Project Manager
+
+④ Quality Assurance Manager
+
+⑤ Product Manager
+
+⑥ Cybersecurity Manager
+
+Terms and Definitions
+
+Accompanying documentation
+
+documentation intended to be used for a health software or a health IT system or an accessory, containing information for the responsible organization or operator.
+
+Architecture
+
+fundamental concepts or properties of a system in its environment, embodied in its elements,
+
+relationships, and in the principles of its design and evolution.
+
+Asset
+
+physical or digital entity that has value to an individual, an organization or a government
+
+a) data and information;
+
+b) health software and software needed for its operation;
+
+c) hardware components such as computers, mobile devices, servers, databases, and networks;
+
+d) services, including security, software development, IT operations and externally provided services such as data centers, internet and software-as-a-service and cloud solutions;
+
+e) people, and their qualifications, skills and experience;
+
+f) technical procedures and documentation to manage and support the health IT infrastructure;
+
+g) health IT systems that are configured and implemented to address organizational objectives by leveraging the assets; and
+
+h) intangibles, such as reputation and image.
+
+Attack
+
+attempt to destroy, expose, alter, disable, steal or gain unauthorized access to or make unauthorized use of an asset
+
+Attack surface
+
+physical and functional interfaces of a system that can be accessed and, therefore, potentially
+
+exploited by an attacker
+
+Authentication
+
+verification of the claimed identity of an entity
+
+Authenticity
+
+property that an entity is what it claims to be through authentication of origin and verification of
+
+integrity
+
+Availability
+
+property of being accessible and usable on demand by an authorized entity
+
+Confidentiality
+
+property that information is not made available or disclosed to unauthorized individuals, entities,
+
+or processes
+
+Essential function
+
+function or capability that is required to maintain basic safety, essential performance, a minimum
+
+of clinical functionality as specified by the manufacturer, and operational availability for the
+
+medical device. essential functions include, but are not limited to, the safety instrumented
+
+function (basic safety and essential performance), the control function and the availability of
+
+urgently needed functions and such allowing the operator to view and manipulate the medical
+
+device safely with the most urgently needed performance (operational availability). the loss of
+
+essential function is commonly termed loss of protection, loss of control and loss of view
+
+respectively.
+
+Exploit
+
+defined way to breach the security of information systems through some vulnerability
+
+Firecall
+
+method established to provide emergency access to a secure medical device. in an emergency
+
+situation, unprivileged users can gain access to key systems to correct the problem.
+
+Health IT infrastructure
+
+combined set of IT assets available to the individual or organization for developing, configuring,
+
+i ntegrating, maintaining, and using it services and supporting health, patient care and other
+
+organizational objectives
+
+Health IT system
+
+a combination of interacting health information elements (including health software, medical
+
+devices, IT hardware, interfaces, data, procedures and documentation) that is configured and
+
+implemented to support and enable an individual or organization s specific health objective
+
+Health software
+
+software intended to be used specifically for managing, maintaining, or improving health of
+
+individual persons, or the delivery of care, or which has been developed for the purpose of
+
+being incorporated into a medical device
+
+Healthcare delivery organization (HDO)
+
+facility or enterprise such as a clinic or hospital that provides healthcare services
+
+Integrity
+
+property of accuracy and completeness
+
+Intended environment of use
+
+conditions and setting in which users interact with the health software as specified by the
+
+manufacture
+
+Intended use
+
+use for which a product, process or service is intended according to the specifications,
+
+instructions and information provided by the manufacturer
+
+Least privilege
+
+basic principle that holds that users (humans, software processes or devices) should be assigned
+
+the fewest privilege s consistent with their assigned duties and functions
+
+Life cycle
+
+series of all phases in the life of a product or system, from the initial conception to final
+
+decommissioning and disposal
+
+Manufacturer
+
+organization with responsibility for design or manufacture of a product
+
+Medical IT-network
+
+IT network that incorporates at least one medical device
+
+Residual risk
+
+risk remaining after risk control measures have been implemented
+
+Risk control
+
+process in which decisions are made and measures implemented by which risks are reduced to,
+
+or maintained within, specified levels
+
+Risk management
+
+systematic application of management policies, procedures and practices to the tasks of
+
+analyzing, evaluating, controlling and monitoring risk
+
+Security capability
+
+broad category of technical, administrative or organizational controls to manage risks to
+
+confidentiality, integrity, availability and accountability of data and systems
+
+Software composition analysis
+
+(electronic) analysis of binaries
+
+Software item
+
+identifiable part of a computer program, i.e. source code, object code, control code, control data,
+
+or a collection of these items
+
+Software maintenance
+
+modification of health software after release maintenance keeps the intended use and is done
+
+for one or more of the following reasons:
+
+a) corrective, as fixing faults;
+
+b) adaptive, as adapting to new hardware or software platform;
+
+c) perfective, as implementing new requirements;
+
+d) preventive, as making the product more maintainable.
+
+Supported software
+
+Software item for which the manufacturer will notify the customer regarding known risks related
+
+to security
+
+Threat
+
+potential for violation of security, which exists when there is a circumstance, capability, action, or
+
+event that could breach security and cause damage to confidentiality, integrity, availability of
+
+information assets
+
+Threat modelling
+
+systematic exploration technique to expose any circumstance or event having the potential to
+
+cause damage to a system in the form of destruction, disclosure, modific ation of data, or denial
+
+of service
+
+Trust boundary
+
+element of a threat model that depicts a boundary where authentication is required or a change
+
+in trust level occurs (higher to lower or vice versa)
+
+1) trust boundary enforcement mechanisms for product users typically include authentication (for example, challenge/response, passwords, biometrics or digital signatures) and associated
+
+authorization (for example, access control rules).
+
+2) trust boundary enforcement mechanisms for data typically include source
+
+authentication (for
+
+example, message authentication codes and digital signatures) and/or content validation. USE
+
+ENVIRONMENT actual conditions and setting in which users interact with the health software
+
+Vulnerability
+
+flaw or weakness in a systems design, implementation, or operation and management that could
+
+be exploited to violate the system s security policy
+
+Weakness
+
+kind of deficiency
+
+General Product Description
+
+Product description
+
+Product name
+
+Digital Flat Panel X-ray Detector
+
+Model name
+
+G1417CW/G1717CW/G1417FW/G1717FW/
+
+G1417CWP/G1717CWP/G1417FWP/G1717FWP
+
+Manufacturer
+
+H&abyz Co., Ltd.
+
+Manufacturer address
+
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si, Gyeonggi-do, Republic of Korea
+
+Intended use
+
+G1417/G1717 Series are digital flat panel detectors that is used for screening and diagnosis of disease of injury. These detectors are intended for use by a qualified/trained doctor or technician on both adult subjects for taking diagnostic radiographic exposures of the skull, spinal column, chest, abdomen, extremities, and other body parts.
+
+These detectors are not intended to be used for mammography applications.
+
+Operational Environment
+
+• Program Language: Microsoft Visual Professional 2022, C#
+
+• Off-the-shelf: None
+
+• Software name: AXD
+
+• Version: Ver 1.0.0
+
+Cybersecurity Development Plan
+
+Resource Allocation
+
+Effective resource allocation is critical for a successful cybersecurity implementation, which includes establishing dedicated cybersecurity roles and assigning specific responsibilities to each member.
+
+Policy
+
+Cybersecurity management policies should outline the management strategies and protocols for maintaining cybersecurity during the development, deployment, and maintenance of the medical device. policies should include guidelines for secure coding practices, regular security assessments, incident response, and compliance with regulatory requirements.
+
+Threat modeling
+
+Threat modeling is the process of systematically identifying potential threats and vulnerabilities that could affect a medical device. This involves creating a comprehensive model that maps out all possible attack vectors, entry points, and weaknesses in the device's architecture. The goal is to understand how an attacker might exploit these vulnerabilities and the potential impact on the device's functionality, data integrity, and patient safety. Techniques such as STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) can be used to categorize and analyze threats.
+
+* STRIDE
+
+The STRIDE algorithm primarily focuses on the security and integrity of the product itself, rather than its interaction with the surrounding environment. This makes it especially suitable for medical devices, where the main concern is the device's security. By concentrating on the device, STRIDE enables a more comprehensive analysis of its inherent security risks.
+
+Risk analysis
+
+Once potential threats and vulnerabilities have been identified through threat modeling, the next step is to evaluate the impact and likelihood of each threat. Risk analysis involves assessing the severity of the impact if a threat were to be realized and the probability of its occurrence.
+
+Risk Mitigation Plan
+
+After analyzing the risks, a risk mitigation plan is developed to outline the security controls and measures needed to reduce the identified risks to an acceptable level. This plan should detail specific actions to be taken, such as implementing encryption, access controls, regular security updates, and continuous monitoring. The mitigation strategies should address both the likelihood and impact of the risks, ensuring that vulnerabilities are minimized, and the device is protected against potential threats.
+
+Security requirements
+
+Deriving security requirements is a critical step in the design and development phase. This involves identifying both functional and non-functional security requirements based on the IEC 60601-4-5. The requirements specify the security features that the device must have, such as user authentication, access control, and secure communication protocols.
+
+Security design
+
+Designing a secure system involves creating the device and its components to meet specific security requirements. This requires developing a detailed security architecture that specifies how data will be protected, how secure communication will be maintained, and how access to the device will be controlled.
+
+Secure Coding Practices
+
+Following secure coding practices is crucial to prevent vulnerabilities in the development of medical devices. Developers should comply with established secure coding standards, such as those provided by CWE, to avoid common security pitfalls.
+
+Testing and Verification
+
+During the Testing and Verification phase, we use a thorough approach to guarantee the security of the medical device. We employ static analysis tools to identify code vulnerabilities early in the development process, which helps in detecting and fixing issues before they escalate. Additionally, dynamic analysis is conducted to test the device in a runtime environment and uncover vulnerabilities that may not be apparent through static analysis alone.
+
+Cyber tests are divided into cyber tests when developing new products and existing ones according to internal guidelines.
+
+In the case of new products, cybersecurity requirements are developed and tested in the entire process from product design input to output and transfer, and if necessary, a third-party testing agency will conduct it.
+
+In the case of products currently being sold, a cyber security expert monitors cyber issues in the market quarterly, and if there are any related cyber risks, analyze them through cooperation with other departments such as the quality team, and develop product changes if necessary.
+
+After the change, conduct a cybersecurity test internally and update the product to the market after the test verification.
+
+Additionally, cybersecurity modeling as a legal requirement is tested through a third-party agency when work is required overall.
+
+Deployment and operation
+
+In the Deployment and Operation phase, the system is securely deployed with all necessary security configurations applied to ensure a fortified environment. Continuous operational monitoring is conducted to maintain the security status, including managing and analyzing logs for any suspicious activity. Effective vulnerability management is critical; this involves swiftly patching and updating the system upon the discovery of new vulnerabilities to prevent potential security breaches. This proactive approach ensures that the medical device remains secure and resilient against evolving threats throughout its operational lifecycle.
+
+Maintenance
+
+In the Maintenance phase, regular updates and patches are managed to address new security threats promptly, ensuring the system remains secure. Continuous security monitoring is essential to detect and respond to potential incidents swiftly, supported by a well-defined incident response plan. Additionally, user education is crucial; providing security awareness training helps users recognize and prevent security breaches, reinforcing the overall cybersecurity posture of the medical device system. This comprehensive maintenance strategy ensures ongoing protection and resilience against emerging threats.
+
+Responsibilities and Roles
+
+The following section outlines the roles and responsibilities of key personnel involved in the medical device cybersecurity process. It defines the duties of software development team staff, software testing team staff, project manager, project manager, quality assurance manager, product manager and cybersecurity manager to ensure comprehensive security compliance and effective collaboration.
+
+Team
+
+Position
+
+Responsibilities
+
+R&D
+
+R&D Manager
+
+1) Approval of Cyber Security Risk Management
+
+2) Approval to proceed with the cybersecurity test
+
+3) Approval of cyber risk countermeasures
+
+R&D
+
+R&D Team
+
+1) Cyber Security Risk Management Plan and Risk Management Proceedings
+
+2) Supervising Cybersecurity Testing
+
+3) Establish guidelines for cyber security risk response
+
+4) Review Cyber Security Risk Management Documents
+
+5) Development of security methods against cyber risks
+
+6) Identify and analyze cyber risks
+
+7) Proceed with cyber risk management and create documents
+
+8) Cybersecurity Design and Development
+
+9) Conducting a Cybersecurity Test
+
+10) Identifying Cybersecurity Hazards
+
+11) Cybersecurity Hazard Analysis and Reporting
+
+12) Proceed with CAPA for Cybersecurity
+
+R&D
+
+RA
+
+1) Conducting and managing third-party testing related to cybersecurity testing
+
+2) Monitoring of the latest standards related to cyber security and internal announcements
+
+Quality Control
+
+QMR
+
+1) Monitoring cyber hazards and reporting to regulators
+
+2) Proceed with CAPA for Cyber Hazard
+
+3) Identification of cyber issues related to design changes and notification of changes
+
+Medical Device Architecture
+
+The architecture of this medical device comprises four main components: data assets, technical assets, trust boundaries, and shared runtime environments. Each component plays a crucial role in ensuring the cybersecurity and operational integrity of the device.
+
+This architecture outlines four key perspectives for cybersecurity in medical devices, as recommended by the FDA. Each perspective addresses different aspects of cybersecurity. Instead of creating individual Data Flow Diagrams (DFDs) for each perspective, a unified DFD will be used with tags to represent each perspective. This approach provides a comprehensive visualization while clearly differentiating between the various aspects of cybersecurity.
+
+Data-Flow Diagram
+
+A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system. It highlights how data moves between devices, systems, and users, identifying points where data is input, processed, stored, and output. By visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission, and storage.
+
+ Asset:
+
+A1: Configuration - Receive kV, mAs, APR setting value information.
+
+A2: Calibration - kV, mAs, filament current (pre-heat) compensation value settings.
+
+A3: Data acquisition - Digital & analog data collection.
+
+A4: APR - Saving kV and mAs in 10 channels
+
+A5: X-ray control - Control power on/off for X-ray output, error status output on/off.
+
+A6: Battery charging - Battery charge current/voltage regulation and monitoring.
+
+A7: Battery monitoring - Battery charging status monitoring
+
+A8: Error checking - Checking for occurrence of low voltage, overvoltage, low current, overcurrent, and overheating
+
+Identification of Vulnerabilities
+
+Vulnerability monitoring and scanning
+
+It is crucial to monitor and scan for vulnerabilities to ensure the cybersecurity of medical devices. The process of identifying and addressing vulnerabilities depends on whether the technical asset is primarily software or hardware. Utilizing the Common Weakness Enumeration (CWE) framework can systematically help in identifying and mitigating vulnerabilities in both software and hardware components.
+
+Cybersecurity Requirements (IEC 60601-4-5)
+
+The requirements outlined in IEC 60601-4-5 emphasize the importance of device integrity, patient safety, and the protection of sensitive data throughout the device's lifecycle. These requirements have been thoroughly analyzed and organized according to the IEC 60601-4-5 standard, which offers guidance on safety-related technical security specifications for medical electrical equipment. This structured approach ensures that the devices comply with regulatory expectations and meet international standards.
+
+Software components
+
+Vulnerability assessment for software components can be effectively performed using Static Application Security Testing (SAST). SAST involves analyzing the software's source code, bytecode, or binary code to identify potential security weaknesses without executing the code. This method is aligned with the CWE framework, which categorizes common software vulnerabilities such as buffer overflows (CWE-119), SQL injection (CWE-89), and cross-site scripting (CWE-79). Integrating CWE identifiers into SAST tools helps systematically detect and address these vulnerabilities throughout the cybersecurity development lifecycle.
+
+Hardware Components
+
+In order to assess hardware components for vulnerabilities, a collaborative effort between developers and cybersecurity experts is necessary. This may involve working with accredited testing laboratories. Identifying hardware vulnerabilities often requires detailed discussions and evaluations, which can include physical penetration testing and firmware analysis. While the Common Weakness Enumeration (CWE) primarily focuses on software, it also includes categories for hardware vulnerabilities, such as those related to physical tampering. By using CWE identifiers, developers and testers can ensure comprehensive coverage of potential hardware weaknesses.
+
+SBOM (Software Bill of Materials)
+
+Managing an SBOM (Software Bill of Materials) for medical device cybersecurity involves creating a detailed inventory of all software components, continuously monitoring for vulnerabilities. Key actions include regular updates and maintenance of the SBOM, conducting risk assessments, and integrating it into incident response plans.
+
+When End of Support (EOS) or End of Life (EOL) information for software components in the SBOM is not available, it's important to take proactive measures to ensure ongoing cybersecurity. The following steps outline a strategy for effectively managing such components:
+
+1) Regular Vulnerability Analysis – Manual scanning and reviews
+
+2) Risk Mitigation - Patching and Updates
+
+3) Documentation and Justification - Risk Assessment, Justification for Use
+
+Continuous Monitoring
+
+To ensure the cybersecurity of medical devices, manufacturers should develop, document, and maintain secure health software designs by implementing best practices. Continuous monitoring is essential in this approach and includes regular vulnerability scans, static application security testing analysis, and internal reviews to identify and address security risks.
+
+Analysis tools, manufacturers can proactively mitigate potential vulnerabilities. Any issues identified are promptly managed through updates and patches. Additionally, integrating threat intelligence helps the device remain resilient against emerging threats. Comprehensive documentation of all activities and findings supports regulatory compliance, thereby safeguarding both patient safety and data integrity
+
+Evaluating Vulnerabilities
+
+Our method of evaluating vulnerabilities involves analyzing technical assets using the CVSS 3.1 method, while excluding out-of-scope items. This systematic process assesses the severity and potential impact of security flaws in our software and hardware systems. By using CVSS 3.1, we can measure risk levels through a detailed evaluation of exploitability and impacts on confidentiality, integrity, and availability. This method ensures that we accurately identify and prioritize vulnerabilities for remediation, ultimately enhancing our security posture. Specially for medical devices, this approach aligns with regulatory standards, ensuring patient safety and compliance. However, as this evaluation is for medical devices, neither Temporal scores nor environmental scores are not considered.
+
+Identified Risks by Vulnerability category
+
+Managing cybersecurity risks for G Series Detector starts with reviewing the completed or updated risk management processes at every design phase. In the end, a Cybersecurity Risk Management document will be created to show the final review of all risk management documents, risk acceptability, and residual risk. This process is crucial for systematically analyzing and handling cybersecurity threats related to the product.
+
+Risk Identification
+
+Cybersecurity risks for G SERIES DETECTOR will be identified, analyzed, and evaluated according to the objectives of the risk management process and the ranking system for security risk analysis. This will be done with reference to ISO 14971:2019, TR 24971:2020, AAMI TIR 57 standards, and the latest international guidelines, including those from the FDA. This ensures a comprehensive and systematic approach to managing and mitigating cybersecurity threats, aligning with global best practices and standards.
+
+Identification of Assets
+
+An asset is anything of value for the manufacturer or the end-user. Assets can include hardware, software, data, and other tangible or intangible items. For G SERIES DETECTOR, identifying assets is crucial for comprehensive cybersecurity risk management. Assets are categorized and analyzed as follows:
+
+1) Data Assets
+
+2) Technical Assets
+
+3) Trust Boundaries
+
+4) Shared Runtime
+
+Identification of Threats
+
+For medical device cybersecurity, threats are identified by analyzing potential vulnerabilities in hardware, software, data, and network communications. This includes assessing risks such as unauthorized access, data breaches, malware, and system tampering.
+
+Identification of Vulnerabilities
+
+For medical device cybersecurity, vulnerabilities in technical assets are identified using the CVSS methodology. This involves assessing weaknesses in hardware, software, and network components that could be exploited.
+
+STRIDE Classification of identified risks
+
+During the threat modeling process for medical device cybersecurity, potential risks were identified. These risks are classified according to STRIDE categories as follows: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege. Identifying these risks plays a crucial role in ensuring the safety and data protection of medical devices.
+
+Risk Identification
+
+In medical device cybersecurity, risk estimation involves evaluating the impact and likelihood of identified threats and vulnerabilities. According to the NIST 800-30 guidelines, each risk is assessed based on:
+
+CVSS Score
+
+The CVSS measurement site and used version.
+
+: NVD – CVSS c3 Calculator / CVSS version 3.0
+
+The severity levels by CVSS score
+
+Severity level
+
+CVSS score range
+
+None
+
+0
+
+Low
+
+0.1 ~ 3.9
+
+Medium
+
+4.0 ~ 6.9
+
+High
+
+7.0 ~ 8.9
+
+Critical
+
+9.0 ~ 10.0
+
+We could get a base score by entering the CVSS result value from that site.
+
+Impact
+
+This refers to the potential consequences of a threat exploiting a vulnerability, taking into account patient safety, data integrity, and operational continuity.
+
+Very High (VH)
+
+Critical to system safety and possible legal and regulatory violations
+
+High (H)
+
+Major device function failure, possible direct risk to patient safety
+
+Medium (M)
+
+Possible to degrade system performance or impact data integrity
+
+Low (L)
+
+Possible to cause partial function failure or some inconvenience to user experience
+
+Very Low (VL)
+
+Limitless to system operation
+
+Likelihood
+
+This is the probability of the threat occurring, considering the existing security controls and the threat landscape.
+
+Frequent (F)
+
+Exploitation is very easy and likely to occur frequently (e.g. public vulnerability)
+
+Very Likely (VL)
+
+Exploitation is possible and likely to be exploited by malicious attackers
+
+Likely (L)
+
+Exploitation is possible under certain conditions, but technically difficult
+
+Unlikely (U)
+
+Exploitation is difficult and requires advanced technical knowledge
+
+Very Unlikely (VU)
+
+Exploitation is practically impossible (e.g. hardware access required)
+
+Risk Evaluation
+
+In medical device cybersecurity, risk evaluation follows the NIST 800-30 guideline and ISO 14971:2019 standard. This is done by multiplying the impact and likelihood to classify risk levels. The levels include, critical, high, medium, low, and very low, and they determine the acceptability of the risk. Risks at critical, High and Medium levels are deemed unacceptable and require immediate mitigation. On the other hand, Low, Very Low are acceptable with regular monitoring. This method ensures that every risk is meticulously assessed and managed, leaving no room for cyber threats to cause harm.
+
+Risk Levels
+
+In medical device cybersecurity, risk evaluation is conducted by assessing the impact and likelihood of identified threats. The process involves calculating the risk level and classifying it into predefined categories.
+
+Assessment scale – Level of risk
+
+Critical (C)
+
+Extremely hazardous, requiring immediate security action. Potential direct threat to patient safety.
+
+High (H)
+
+High risk, requiring rapid security action. System performance degradation, high potential for data leakage.
+
+Medium (M)
+
+Medium risk, requiring long-term security enhancements but may not be urgent.
+
+Low (L)
+
+Low risk, not operationally impactful but may require additional improvements.
+
+Very Low (VL)
+
+Negligible low risk. Not likely to cause problems in normal operating environments.
+
+Risk matrix – Level of risk
+
+Likelihood (Threat Event Occurs and Results in Adverse Impact)
+
+Level of Impact
+
+Very Low
+
+Low
+
+Medium
+
+High
+
+Very High
+
+Frequent
+
+Very low
+
+Low
+
+Medium
+
+High
+
+Critical
+
+Very likely
+
+Very low
+
+Low
+
+Medium
+
+High
+
+High
+
+Likely
+
+Very low
+
+Low
+
+Low
+
+Medium
+
+Medium
+
+Unlikely
+
+Very low
+
+Very low
+
+Low
+
+Low
+
+Low
+
+Very unlikely
+
+Very low
+
+Very low
+
+Very low
+
+Very low
+
+Very low
+
+Risk Acceptance Criteria
+
+Risk Acceptance Criteria help in making informed decisions about which risks can be accepted and which need to be mitigated. By systematically combining the likelihood and impact, it provides a clear and consistent method for evaluating risk acceptability, ensuring that high-risk scenarios are prioritized for action, while lower risks are managed appropriately within acceptable limits.
+
+Assessment scale – Acceptable/Unacceptable
+
+Qualitative Values
+
+Semi-Quantitative Values
+
+Description
+
+Critical
+
+21 - 25
+
+Unacceptable; Critical risk means that a threat event could be expected to have multiple severe or catastrophic adverse effects
+
+High
+
+16 - 20
+
+Unacceptable; High risk means that a threat event could be expected to have a severe or catastrophic adverse effect
+
+Medium
+
+11 – 15
+
+Unacceptable; Medium risk means that a threat event could be expected to have a serious adverse effect
+
+Low
+
+6 – 10
+
+Acceptable; Low risk means that a threat event could be expected to have a limited adverse effect
+
+Very Low
+
+1 - 5
+
+Acceptable; Very low risk means that a threat event could be expected to have a negligible adverse effect
+
+Risk matrix – Acceptable/Unacceptable
+
+Likelihood (Threat Event Occurs and Results in Adverse Impact)
+
+Level of Impact
+
+Very Low
+
+Low
+
+Medium
+
+High
+
+Very High
+
+Frequent
+
+Acceptable
+
+Acceptable
+
+Unacceptable
+
+Unacceptable
+
+Unacceptable
+
+Very likely
+
+Acceptable
+
+Acceptable
+
+Unacceptable
+
+Unacceptable
+
+Unacceptable
+
+Likely
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Unacceptable
+
+Unacceptable
+
+Unlikely
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Very unlikely
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Acceptable
+
+Risk Control
+
+Risk control in medical device cybersecurity involves implementing strategies to reduce identified risks. This can be achieved by taking preventative action to lower the likelihood of a threat occurring, or by taking contingency action to minimize the impact if a threat does occur. The key components of risk control include:
+
+1) Access Control: Implement strong authentication and authorization mechanisms
+
+2) Network Security: Use firewalls, intrusion detection/prevention systems (IDS/IPS), and secure communication protocols (e.g., TLS, HTTPS)
+
+3) Data Encryption: Encrypt sensitive data to protect its confidentiality and integrity
+
+4) Regular Updates and Patching: Ensure timely updates and patches to address known vulnerabilities
+
+5) Redundancy: Design systems with redundancy
+
+6) Security Guidelines: Step-by-step instructions on how to securely operate the device
+
+7) Warning Labels: Include labels on how to protect the device from common cybersecurity threats
+
+Residual Risk Assessment After Risk Control
+
+In medical device cybersecurity, residual risk assessment involves evaluating the remaining risks after implementing risk controls. This process, based on NIST 800-30 and ISO 14971, includes reassessing the likelihood and impact of identified threats to ensure they meet acceptable levels, and it ensures patient safety and data integrity. Continuous risk management and compliance with regulatory standards are ensured through this process
+
+Risk Arising from Risk Control Measure
+
+In medical device cybersecurity, implementing risk control measures may introduce new risks. According to NIST 800-30 and ISO 14971, these risks may include potential system incompatibilities, performance degradation, or unforeseen vulnerabilities. It is essential to continuously monitor and reassess these emerging risks for effective management.
+
+Risk/Benefit analysis
+
+In the medical device cybersecurity, a risk/benefit analysis evaluates the potential risks associated with security measures in comparison to the advantages of safeguarding patient data and maintaining device integrity. Drawing from NIST 800-30 and ISO 14971, this analysis guarantees that cybersecurity controls do not bring about undue risks and that the overall benefits to patient safety and data security warrant the implementation of these measures.
+
+Verification Activities
+
+It's crucial to carry out verification activities to ensure that the cybersecurity measures for medical devices are strong and reliable. These activities involve various tests aimed at identifying vulnerabilities and confirming that security controls comply with regulatory standards such as NIST 800-30 and ISO 14971.
+
+Verification activities (Example)
+
+Test
+
+Description
+
+Static Application Security Testing (SAST)
+
+SAST involves analyzing the source code of the software to identify security vulnerabilities without executing the program.
+
+Requirement testing
+
+Requirement testing ensures that the implemented security controls and features meet the IEC 60601-4-5 standard.
+
+Vulnerability testing
+
+Vulnerability testing process involves scanning the system and its components for known vulnerabilities
+
+Fuzzing testing
+
+Fuzzing involves inputting random or unexpected data into the software to uncover security vulnerabilities and bugs.
+
+Penetration testing
+
+Penetration testing simulates real-world cyberattacks to evaluate the security of the medical device.
+
+Production and Post-production Activities
+
+The Risk Management File for cybersecurity of medical devices will be systematically reviewed and updated, especially in the following situations:
+
+1) Product Modification: Any changes made to the product, such as updates or new features, may introduce new vulnerabilities or modify existing ones. It's important to thoroughly review these changes to assess the cybersecurity risks involved.
+
+2) Context Changes: Any changes in the operating environment, regulatory requirements, or advancements in cybersecurity threats may require a reevaluation of risks.
+
+3) Timeline to develop and release patches, H&abyz will review cybersecurity risks once every two years and update them if they believe there is a threat to cybersecurity.
+
+4) When updates occur due to new risks, legal requirements, and product changes, they can be reflected in the field as quickly as possible, taking into account their importance and severity.
+
+5) When a cyber issue arises in the market, the CS Team checks the situation on the spot, prepares a customer complaint report, and delivers the contents to the research institute. In Korea, the CS-Team communicates directly with customers on the spot or by phone, and in overseas, communicates with customers through e-mail.
+
+6) CISA monitoring (Cybersecurity and Infrastructure Security Agency)
+
+H&abyz monitors the CISA catalog by cybersecurity officers within the quarterly one-time lab to identify cyber risks associated with H&abyz's harm. After identifying cyber risks, the research institute analyzes them to come up with measures to prevent harm. If necessary, we prepare for software cyberattacks through design changes.
+
+7) CVD process (Coordinated Vulnerability Disclosure)
+
+H&abyz plans to actively participate in the CVD process to monitor the Cybersecurity Vulnerability report issued by CISA or CERT and apply the patch, update, and other mitigation related to the Vulnerability if necessary.
+
+Confirmed vulnerabilities must result in a direct report into government agencies such as the U.S. DHS (ICS-CERT program) and then communication through the press to the public. The FDA’s Pre and Postmarket Management of Cybersecurity in Medical Devices guidance documents, published in October 2023, provide direction on key principals that are globally applicable in practice and in cooperation with other governmental entities and processes.
+
+8) Patching capability
+
+H&abyz prepares to do once-a-quarter Cyber Security Patch. However, if there is no issue cyberattack, monitor it and prepare for the next quarter patch.
+
+Production and Post-production Activities
+
+Category
+
+Descriptions
+
+Issue Resolution
+
+Prior to Release
+
+Address all issues found during system testing through a structured problem resolution process (Software development documents)
+
+Release Documentation
+
+IFU include:
+
+1) Instructions for securely operating the software in medical environment, assisting
+
+end users in maintaining cybersecurity during use.
+
+2) Clear and sufficient information about any residual risks that could not be fully mitigated is provided to end users, ensuring they are informed and can take appropriate precautions.
+
+File Integrity
+
+Verifies the integrity of scripts, executables, and security related files used with medical device.
+
+Private Key Control
+
+Procedural and technical controls to protect code
+
+signing private keys from unauthorized access or modification.
+
+Security Issue Assessment
+
+and Resolution
+
+Ensure no software release until all security issues are addressed, tracked, and confirmed resolved.
+
+Completion of Activities
+
+Verify and document the completion of all applicable security processes before release.
+
+Secure Disposal
+
+Guidelines
+
+IFU with instructions for the secure disposal of medical device.
+
+Interoperability functionality
+
+Medical devices need to consider cybersecurity due to their ability to interact with other medical or IT devices, as well as functions related to healthcare infrastructure such as networks, Electronic Medical Records (EMR), and medical imaging systems. It is crucial to implement strong cybersecurity measures in these interfaces to ensure the safety and effectiveness of the medical device system. To verify interoperability functionality, we have added the MDS2 (Manufacturer Disclosure Statement for Medical Device Security) checklist.
+
+The MDS2 provides a standardized framework for manufacturers to disclose the security features of their devices. It helps identify and address potential cybersecurity risks associated with interoperability by detailing how devices handle data security, user authentication, and other security controls. This facilitates thorough evaluation and management of cybersecurity in medical device systems
+
+Update Management
+
+It's crucial to manage updates for medical devices as part of cybersecurity to promptly address vulnerabilities and safeguard patient safety and device integrity. Following guidelines from the FDA and NIST, update management includes identifying, acquiring, testing, and deploying software updates to fix vulnerabilities or enhance functionality.
+
+Update Target
+
+Update targets for medical device cybersecurity include software components, firmware, security patches, and configuration files to ensure the device remains secure and functional.
+
+1) Firmware: Microcontroller firmware, device drivers, and other low-level system software.
+
+2) Security Patches: Specific updates aimed at addressing known vulnerabilities.
+
+3) Configuration Files: Updates to security settings and configurations.
+
+Update process
+
+The update can only be done by a CS Team representative on the H&abyz with permissions and can be executed by changing the configuration file during installation.
+
+(* Updates cannot be performed directly in the field; you must return the product to the manufacturer or service center to perform the update.)
+
+Preparation
+
+Secure patches are obtained from trusted and verified sources to address specific vulnerabilities or improvements required for the medical device. This ensures the patches are reliable and mitigate known security risks.
+
+- Encrypting the patch file to protect its contents during transfer, ensuring confidentiality.
+
+- Applying a digital signature to verify the patch’s integrity and authenticity, ensuring it has not been tampered with.
+
+Update Deployment
+
+Access the device's update interface, which may be a graphical user interface (GUI) or command-line interface (CLI). Follow the specific instructions to initiate the update process.
+
+- Before installing the patch, the device verifies the digital signature to ensure the patch's authenticity and integrity.
+
+Assessment of Unresolved Anomalies
+
+H&abyz never had an Unresolved Animals issue. However, if the issue arises, it will
+
+be resolved by analyzing and documenting it according to the quality system procedure.
+
+Security Incident Response Activities
+
+The Security Incident Response Plan outlines a structured approach for handling cybersecurity incidents related to G SERIES DETECTOR. It has been developed in accordance with FDA and NIST guidelines, ensuring effective management of security incidents to protect patient safety and maintain device integrity. The plan incorporates the Incident Response Life Cycle, which includes preparation, detection and analysis, containment, eradication and recovery, and post-incident activities, to systematically address and mitigate cybersecurity threats.
+
+Preparation
+
+In order to effectively manage cybersecurity incidents, it is essential to continuously monitor. Incident detection involves automated alerts, user reports, and proactive monitoring. An initial analysis is conducted to assess the nature, scope, and impact of the incident, which includes data collection and analysis. Incidents are then categorized based on severity and their impact on device functionality and patient safety. Comprehensive documentation of all findings, including the incident timeline, initial observations, and analysis results, is also undertaken.
+
+Detection and Analysis
+
+Implement continuous monitoring using IDS/IPS, SIEM systems, and other security tools to detect anomalies and potential incidents. Identify incidents through automated alerts, user reports, and proactive monitoring. Conduct an initial analysis to determine the nature, scope, and impact of the incident by collecting and analyzing logs, alerts, and other relevant data. Classify the incident based on its severity and impact on device functionality and patient safety. Document all findings, including the incident timeline, initial observations, and analysis results, to ensure comprehensive understanding and effective response.
+
+Containment, Eradication, and Recovery
+
+To effectively contain an incident, take immediate actions to limit its spread and impact. This includes isolating affected systems or devices for short-term containment. Then, develop and execute a long-term containment strategy to fully control the incident. Eradicate the root cause by removing malware, closing vulnerabilities, and applying patches. During the recovery phase, restore affected systems and devices to normal operation and validate that they are fully operational and secure through thorough testing to ensure no residual issues remain
+
+Post-Incident Activity
+
+Conduct a detailed root cause analysis to identify the cause of the incident and understand how it occurred. Implement corrective actions to address the immediate issue and mitigate its impact, and develop preventive actions to prevent similar incidents in the future, including process improvements, enhanced monitoring, and additional training. Document all aspects of the incident response, including findings, actions taken, and lessons learned.

@@ -1,0 +1,4141 @@
+queueId: ingest-1781569954388-hxt
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/FCC - ST60/FR740701-19AN_ST60-2230C_FCC 15.407, 5G B1-B4.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/4ca90c86d5d9/FR740701-19AN_ST60-2230C_FCC 15.407, 5G B1-B4__4ca90c86d5d9_combined.txt
+canonicalGroupId: e384ab597bf3
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 488
+
+SOURCE_TEXT
+Report No.: FR740701-19AN Page : 1 of 397
+Report Version: Rev. 01
+FCC Test Report
+FCC ID : SQG-60SIPT
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-SIPT
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity LLC
+Address : W66N220 Commerce Court, Cedarburg, WI
+53012 United States Of America
+Standard : 47 CFR FCC Part 15.407
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 12 ~ May 10, 2017
+We, International Certification Corporation, would like to declare that the tested sample has
+been evaluated and in compliance with the requirement of the above standards. The test
+results contained in this report refer exclusively to the product. It shall not be reproduced
+except in full without the written approval of our laboratory.
+Reviewed by: Approved by:
+Along Chen / Assistant Manager Gary Chang / Manager
+
+Report No.: FR740701-19AN Page : 2 of 397
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List .............................................................................................................. 12
+1.3 Test Setup Chart .................................................................................................................................. 12
+1.4 The Equipment List .............................................................................................................................. 13
+1.5 Test Standards ..................................................................................................................................... 14
+1.6 Reference Guidance ............................................................................................................................ 14
+1.7 Deviation from Test Standard and Measurement Procedure............................................................... 14
+1.8 Measurement Uncertainty .................................................................................................................... 14
+2 TEST CONFIGURATION ..................................................................................................................... 15
+2.1 Testing Facility ..................................................................................................................................... 15
+2.2 Testing Condition ................................................................................................................................. 15
+2.3 The Worst Test Modes and Channel Details ....................................................................................... 16
+3 TRANSMITTER TEST RESULTS ....................................................................................................... 18
+3.1 Conducted Emissions........................................................................................................................... 18
+3.2 Emission Bandwidth ............................................................................................................................. 23
+3.3 RF Output Power .................................................................................................................................. 28
+3.4 Peak Power Spectral Density ............................................................................................................... 34
+3.5 Transmitter Radiated and Band Edge Emissions ................................................................................ 39
+3.6 Frequency Stability .............................................................................................................................394
+4 TEST LABORATORY INFORMATION .............................................................................................397
+
+Report No.: FR740701-19AN Page : 3 of 397
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+FR740701-19AN Rev. 01 Initial issue Nov. 28, 2023
+
+Report No.: FR740701-19AN Page : 4 of 397
+Report Version: Rev. 01
+Summary of Test Results
+FCC Rules Test Items Measured Result
+15.207 Conducted Emissions [dBuV]: 4.494MHz
+50.88(Margin -5.12dB) - QP Pass
+15.407(b)
+15.209 Radiated Emissions [dBuV/m at 3m]: 3883.33MHz
+53.86 (Margin -0.14dB) - AV Pass
+15.407(a) Emission Bandwidth Meet the requirement of limit Pass
+15.407(e) 6dB bandwidth Meet the requirement of limit Pass
+15.407(a) RF Output Power
+Max Power [dBm]:
+5150~5250MHz: 21.60
+5250~5350MHz: 18.92
+5470~5725MHz: 21.01
+5725~5850MHz: 21.28
+Pass
+15.407(a) Peak Power Spectral Density Meet the requirement of limit Pass
+15.407(g) Frequency Stability Meet the requirement of limit Pass
+15.203 Antenna Requirement Meet the requirement of limit Pass
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: FR740701-19AN Page : 5 of 397
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a duplicate report to original report no. FR740701AN. The modifications are changing
+brand name and applicant.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-SIPT 802.11 ac/a/b/g/n +
+Bluetooth 4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+
+Report No.: FR740701-19AN Page : 6 of 397
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency
+Range (MHz)
+IEEE Std.
+802.11 Ch. Freq. (MHz) Channel
+Number
+Transmit
+Chains (NTX)
+Data Rate /
+MCS
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+a
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [12]
+149-165 [5]
+1 6-54 Mbps
+2 6-54 Mbps
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+n (HT20)
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [12]
+149-165 [5]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+n (HT40)
+5190-5230
+5270-5310
+5510-5710
+5755-5795
+38-46 [2]
+54-62 [2]
+102-142 [6]
+151-159 [2]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT20)
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [12]
+149-165 [5]
+1
+MCS 0-9
+2
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT40)
+5190-5230
+5270-5310
+5510-5710
+5755-5795
+38-46 [2]
+54-62 [2]
+102-142 [6]
+151-159 [2]
+1
+MCS 0-9
+2
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT80)
+5210
+5290
+5530~5690
+5775
+42 [1]
+58 [1]
+106-138 [3]
+155 [1]
+1
+MCS 0-9
+2
+Note 1: RF output power specifies that Maximum Conducted Output Power.
+Note 2: 802.11a/n/ac uses a combination of OFDM-BPSK, QPSK, 16QAM, 64QAM, 256QAM modulation.
+Note 3: The device supports TX antenna diversity function. The conducted power of single chain is same for
+1TX and 2TX operating mode. Therefore, Ant1 + Ant 2 configuration is chosen for final testing.
+
+Report No.: FR740701-19AN Page : 7 of 397
+Report Version: Rev. 01
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+1.1.4 Power Supply Type of Equipment under Test (EUT)
+Power Supply Type DC 3.3V from host
+1.1.5 Accessories
+N/A
+
+Report No.: FR740701-19AN Page : 8 of 397
+Report Version: Rev. 01
+1.1.6 Channel List
+802.11 a / HT20 / VHT20 HT40 / VHT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+36 5180 38 5190
+40 5200 46 5230
+44 5220 54 5270
+48 5240 62 5310
+52 5260 102 5510
+56 5280 110 5550
+60 5300 118 5590
+64 5320 126 5630
+100 5500 134 5670
+104 5520 142 5710
+108 5540 151 5755
+112 5560 159 5795
+116 5580 VHT80
+120 5600 42 5210
+124 5620 58 5290
+128 5640 106 5530
+132 5660 122 5610
+136 5680 138 5690
+140 5700 155 5775
+144 5720 --- ---
+149 5745 --- ---
+153 5765 --- ---
+157 5785 --- ---
+161 5805 --- ---
+165 5825 --- ---
+1.1.7 Test Tool and Duty Cycle
+Test Tool DutApiMimoBT, Version: 1.0.0.133
+Duty Cycle and Duty Factor
+Mode Duty cycle (%) Duty factor (dB)
+11a 100.00% 0.00
+VHT20 100.00% 0.00
+VHT40 100.00% 0.00
+VHT80 100.00% 0.00
+
+Report No.: FR740701-19AN Page : 9 of 397
+Report Version: Rev. 01
+1.1.8 Power Setting
+For Frequency band 5150-5250 MHz
+Modulation Mode Test Frequency (MHz) Power Set
+11a 5180 17
+11a 5200 19
+11a 5240 19
+HT20 5180 17
+HT20 5200 19
+HT20 5240 19
+HT40 5190 15
+HT40 5230 17
+VHT20 5180 17
+VHT20 5200 19
+VHT20 5240 19
+VHT40 5190 15
+VHT40 5230 17
+VHT80 5210 12
+For Frequency band 5250~5350 MHz
+Modulation Mode Test Frequency (MHz) Power Set
+11a 5260 16
+11a 5300 16
+11a 5320 15
+HT20 5260 16
+HT20 5300 16
+HT20 5320 16
+HT40 5270 16
+HT40 5310 14
+VHT20 5260 16
+VHT20 5300 16
+VHT20 5320 16
+VHT40 5270 16
+VHT40 5310 14
+VHT80 5290 12
+
+Report No.: FR740701-19AN Page : 10 of 397
+Report Version: Rev. 01
+For Frequency band 5470~5725 MHz
+Modulation Mode Test Frequency (MHz) Power Set
+11a 5500 17
+11a 5580 19
+11a 5700 15
+HT20 5500 17
+HT20 5580 19
+HT20 5700 16
+HT40 5510 14
+HT40 5550 17
+HT40 5670 17
+VHT20 5500 17
+VHT20 5580 19
+VHT20 5700 16
+VHT40 5510 14
+VHT40 5590 17
+VHT40 5670 17
+VHT80 5530 12
+VHT80 5610 15
+Channel that extends across the 5.725 GHz boundary
+For Frequency band 5470~5725 MHz
+Modulation Mode Test Frequency (MHz) Power Set
+11a 5720 19
+HT20 5720 19
+HT40 5710 18
+VHT20 5720 19
+VHT40 5710 18
+VHT80 5690 15
+
+Report No.: FR740701-19AN Page : 11 of 397
+Report Version: Rev. 01
+For Frequency band 5725~5850 MHz
+Modulation Mode Test Frequency (MHz) Power Set
+11a 5745 19
+11a 5785 19
+11a 5825 20
+HT20 5745 19
+HT20 5785 19
+HT20 5825 20
+HT40 5755 18
+HT40 5795 18
+VHT20 5745 19
+VHT20 5785 19
+VHT20 5825 20
+VHT40 5755 18
+VHT40 5795 18
+VHT80 5775 15
+
+Report No.: FR740701-19AN Page : 12 of 397
+Report Version: Rev. 01
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 10m non-shielded
+2 Notebook Lenovo T430 DoC ---
+3 50Ω terminator --- --- --- ---
+4 Fixture --- --- --- Fixture, 0.2m non-shielded
+Note: No2. & No. 4 were provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram
+
+Report No.: FR740701-19AN Page : 13 of 397
+Report Version: Rev. 01
+1.4 The Equipment List
+Test Item Conducted Emission
+Test Site Conduction room 1 / (CO01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Receiver R&S ESR3 101657 Dec. 21, 2016 Dec. 20, 2017
+LISN SCHWARZBECK Schwarzbeck 8127 8127-667 Nov. 08, 2016 Nov. 07, 2017
+RF Cable-CON EMC EMCCFD300-BM-BM-6000 50821 Dec. 20, 2016 Dec. 19, 2017
+Measurement
+Software AUDIX e3 6.120210k NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Radiated Emission
+Test Site 966 chamber 3 / (03CH03-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration
+Until
+Spectrum Analyzer Agilent N9010A MY53400091 Sep. 09, 2016 Sep. 08, 2017
+Receiver Agilent N9038A MY53290044 Oct. 06, 2016 Oct. 05, 2017
+Bilog Antenna SCHWARZBECK VULB9168 VULB9168-522 Aug. 04, 2016 Aug. 03, 2017
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D BBHA 9120 D 1206 Feb. 09, 2017 Feb. 08, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170517 Oct. 25, 2016 Oct. 24, 2017
+Loop Antenna R&S HFH2-Z2 100330 Nov. 10, 2016 Nov. 09, 2017
+Loop Antenna
+Cable KOAX KABEL 101354-BW 101354-BW Dec. 09, 2016 Dec. 08, 2017
+Preamplifier EMC EMC02325 980187 Sep. 08, 2016 Sep. 07, 2017
+Preamplifier Agilent 83017A MY53270014 Aug. 22, 2016 Aug. 21, 2017
+Preamplifier EMC EMC184045B 980192 Aug. 24, 2016 Aug. 23, 2017
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22620/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-8M HUBER+SUHNER SUCOFLEX104 MY22600/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22624/4 Feb. 04, 2017 Feb. 03, 2018
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-001 Feb. 04, 2017 Feb. 03, 2018
+LF cable-3M EMC EMC8D-NM-NM-3000 131103 Feb. 04, 2017 Feb. 03, 2018
+LF cable-13M EMC EMC8D-NM-NM-13000 131104 Feb. 04, 2017 Feb. 03, 2018
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: FR740701-19AN Page : 14 of 397
+Report Version: Rev. 01
+Test Item RF Conducted
+Test Site (TH01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Mar. 15, 2017 Mar. 14, 2018
+Power Meter Anritsu ML2495A 1241002 Oct. 06, 2016 Oct. 05, 2017
+Power Sensor Anritsu MA2411B 1207366 Oct. 06, 2016 Oct. 05, 2017
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 20, 2016 Oct. 19, 2017
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+1.5 Test Standards
+47 CFR FCC Part 15.407
+ANSI C63.10-2013
+1.6 Reference Guidance
+FCC KDB 412172 D01 Determining ERP and EIRP v01r01
+FCC KDB 662911 D01 Multiple Transmitter Output v02r01
+FCC KDB 789033 D02 General UNII Test Procedures New Rules v02r01
+1.7 Deviation from Test Standard and Measurement Procedure
+None
+1.8 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)).
+Measurement Uncertainty
+Parameters Uncertainty
+Bandwidth ±34.134 Hz
+Conducted power ±0.808 dB
+Frequency error ±34.134 Hz
+Power density ±0.463 dB
+Conducted emission ±2.670 dB
+AC conducted emission ±2.90 dB
+Radiated emission ≤ 1GHz ±3.66 dB
+Radiated emission > 1GHz ±5.37 dB
+Time ±0.1%
+Temperature ±0.6 oC
+
+Report No.: FR740701-19AN Page : 15 of 397
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Facility
+Test Laboratory International Certification Corporation
+Test Site CO01-WS, TH01-WS
+Address of Test Site No.3-1, Lane 6, Wen San 3rd St., Kwei Shan Dist., Tao Yuan City 33381, Taiwan
+(R.O.C.)
+Test Site 03CH03-WS
+Address of Test Site No.14-1, Lane 19, Wen San 3rd St., Kwei Shan Dist., Tao Yuan City 33381,
+Taiwan (R.O.C.)
+➢ FCC Designation No.: TW0009
+➢ FCC site registration No.: 207696
+➢ ISED#: 10807C
+➢ CAB identifier: TW2732
+2.2 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+AC Conduction CO01-WS 20°C / 57% Alex Tsai
+Radiated Emissions 03CH03-WS 22-24°C / 66-67% Aska Huang
+RF Conducted TH01-WS 22°C / 64% Brad Wu
+➢ FCC Designation No.: TW0009
+➢ FCC site registration No.: 207696
+➢ IC site registration No.: 10807C-1
+
+Report No.: FR740701-19AN Page : 16 of 397
+Report Version: Rev. 01
+2.3 The Worst Test Modes and Channel Details
+Frequency band 5150~5250 MHz / 5250~5350 MHz / 5470~5725 MHz
+Test item Modulation
+Mode
+Test Frequency
+(MHz)
+Data Rate
+(Mbps) / MCS
+Test
+Configuration
+Conducted Emissions VHT20 5240 MCS 0 2
+Radiated Emissions ≤1GHz VHT20 5240 MCS 0 1, 2, 3, 4
+RF Output Power
+11a 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 6 Mbps
+2
+HT20 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 MCS 0
+HT40 5190 / 5230/ 5270 / 5310 / 5510
+5590 / 5670 / 5710 MCS 0
+VHT20 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 MCS 0
+VHT40 5190 / 5230/ 5270 / 5310 / 5510
+5590 / 5670 / 5710 MCS 0
+VHT80 5210 / 5290 / 5530 / 5610 / 5690 MCS 0
+Emission Bandwidth
+Peak Power Spectral Density
+11a 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 6 Mbps
+2
+VHT20 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 MCS 0
+VHT40 5190 / 5230/ 5270 / 5310 / 5510
+5590 / 5670 / 5710 MCS 0
+VHT80 5210 / 5290 / 5530 / 5610 / 5690 MCS 0
+Radiated Emissions >1GHz
+11a 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 6 Mbps
+1, 2, 3, 4
+VHT20 5180 / 5200 / 5240 / 5260 / 5300
+5320 / 5500 / 5580 / 5700 / 5720 MCS 0
+VHT40 5190 / 5230/ 5270 / 5310 / 5510
+5590 / 5670 / 5710 MCS 0
+VHT80 5210 / 5290 / 5530 / 5610 / 5690 MCS 0
+Frequency Stability Un-modulation 5320 --- 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y, and
+Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The test configurations are listed as follows:
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4 : Isolated Magnetic Dipole Antenna
+
+Report No.: FR740701-19AN Page : 17 of 397
+Report Version: Rev. 01
+Frequency band 5725-5850 MHz
+Test item Modulation
+Mode
+Test Frequency
+(MHz)
+Data Rate
+(Mbps) / MCS
+Test
+Configuration
+Conducted Emissions VHT20 5825 MCS 0 2
+Radiated Emissions ≤1GHz VHT20 5825 MCS 0 1, 2, 3, 4
+RF Output Power
+11a 5745 / 5785 / 5825 6 Mbps
+2
+HT20 5745 / 5785 / 5825 MCS 0
+HT40 5755 / 5795 MCS 0
+VHT20 5745 / 5785 / 5825 MCS 0
+VHT40 5755 / 5795 MCS 0
+VHT80 5775 MCS 0
+Emission Bandwidth
+6dB bandwidth
+Peak Power Spectral Density
+11a 5745 / 5785 / 5825 6 Mbps
+2
+VHT20 5745 / 5785 / 5825 MCS 0
+VHT40 5755 / 5795 MCS 0
+VHT80 5775 MCS 0
+Radiated Emissions >1GHz
+
+11a 5745 / 5785 / 5825 6 Mbps
+1, 2, 3, 4
+VHT20 5745 / 5785 / 5825 MCS 0
+VHT40 5755 / 5795 MCS 0
+VHT80 5775 MCS 0
+Frequency Stability Un-modulation 5785 --- 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y, and
+Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The test configurations are listed as follows:
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4 : Isolated Magnetic Dipole Antenna
+
+Report No.: FR740701-19AN Page : 18 of 397
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Conducted Emissions
+3.1.1 Limit of Conducted Emissions
+Conducted Emissions Limit
+Frequency Emission (MHz) Quasi-Peak Average
+0.15-0.5 66 - 56 * 56 - 46 *
+0.5-5 56 46
+5-30 60 50
+Note 1: * Decreases with the logarithm of the frequency.
+3.1.2 Test Procedures
+1. The device is placed on a test table, raised 80 cm above the reference ground plane. The vertical
+conducting plane is located 40 cm to the rear of the device.
+2. The device is connected to line impedance stabilization network (LISN) and other accessories are
+connected to other LISN. Measured levels of AC power line conducted emission are across the 50 Ω
+LISN port.
+3. AC conducted emission measurements is made over frequency range from 150 kHz to 30 MHz.
+4. This measurement was performed with AC 120V/60Hz
+3.1.3 Test Setup
+
+Report No.: FR740701-19AN Page : 19 of 397
+Report Version: Rev. 01
+3.1.4 Test Result of Conducted Emissions
+Modulation VHT20 Test Freq. (MHz) 5240
+Power Phase Line
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: FR740701-19AN Page : 20 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Power Phase Neutral
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: FR740701-19AN Page : 21 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Power Phase Line
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: FR740701-19AN Page : 22 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Power Phase Neutral
+Note 1: Level (dBuV) = Read Level (dBuV) + LISN Factor (dB) + Cable Loss (dB).
+2: Over Limit (dB) = Level (dBuV) – Limit Line (dBuV).
+
+Report No.: FR740701-19AN Page : 23 of 397
+Report Version: Rev. 01
+3.2 Emission Bandwidth
+3.2.1 Limit of Emission Bandwidth
+Within the 5.725-5.85 GHz band, the minimum 6 dB bandwidth of U-NII devices shall be at least 500 kHz.
+3.2.2 Test Procedures
+26dB Bandwidth
+1. c Set RBW = approximately 1% of the emission bandwidth.
+2. Set the VBW > RBW, Detector = Peak.
+3. Trace mode = max hold.
+4. Measure the maximum width of the emission that is 26 dB down from the peak of the emission.
+Occupied Bandwidth
+1. Set RBW = 1 % to 5 % of the OBW
+2. Set VBW ≥ 3 RBW
+3. Sample detection and single sweep mode shall be used
+4. Use the 99 % power bandwidth function of the instrument
+6dB Bandwidth
+1. Set RBW = 100kHz, VBW = 300kHz
+2. Detector = Peak,Trace mode = max hold.
+3. Allow the trace to stabilize.
+4. Measure the maximum width of the emission that is constrained by the frequencies associated with the
+two outermost amplitude points (upper and lower frequencies) that are attenuated by 6 dB relative to the
+maximum level measured in the fundamental emission
+3.2.3 Test Setup
+
+Report No.: FR740701-19AN Page : 24 of 397
+Report Version: Rev. 01
+3.2.4 Test Result of Emission Bandwidth
+For Frequency band 5150~5250 MHz
+Emission Bandwidth
+Mode NTX Freq.
+(MHz)
+26dB Bandwidth (MHz) 99% Bandwidth (MHz)
+Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5180 19.88 20.00 --- --- 16.83 16.76 --- ---
+11a 2 5200 28.12 26.78 --- --- 17.01 16.90 --- ---
+11a 2 5240 28.70 27.42 --- --- 17.01 16.90 --- ---
+VHT20 2 5180 20.29 20.12 --- --- 17.69 17.66 --- ---
+VHT20 2 5200 21.39 20.12 --- --- 17.75 17.69 --- ---
+VHT20 2 5240 20.75 20.12 --- --- 17.75 17.69 --- ---
+VHT40 2 5190 41.62 41.51 --- --- 36.44 36.40 --- ---
+VHT40 2 5230 41.74 41.39 --- --- 36.46 36.40 --- ---
+VHT80 2 5210 81.86 81.62 --- --- 76.48 76.40 --- ---
+For Frequency band 5250~5350 MHz
+Mode NTX Freq.
+(MHz)
+26dB Bandwidth (MHz) 99% Bandwidth (MHz) Power
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5260 20.00 19.88 --- --- 16.81 16.73 --- --- 24.00
+11a 2 5300 19.94 19.88 --- --- 16.81 16.71 --- --- 24.00
+11a 2 5320 20.00 19.88 --- --- 16.80 16.74 --- --- 24.00
+VHT20 2 5260 20.29 20.06 --- --- 17.69 17.66 --- --- 24.00
+VHT20 2 5300 20.29 20.12 --- --- 17.69 17.66 --- --- 24.00
+VHT20 2 5320 20.23 20.06 --- --- 17.69 17.65 --- --- 24.00
+VHT40 2 5270 41.62 41.51 --- --- 36.48 36.38 --- --- 24.00
+VHT40 2 5310 41.62 41.39 --- --- 36.48 36.40 --- --- 24.00
+VHT80 2 5290 82.09 81.62 --- --- 76.48 76.40 --- --- 24.00
+
+Report No.: FR740701-19AN Page : 25 of 397
+Report Version: Rev. 01
+For Frequency band 5470~5725 MHz
+Mode NTX Freq.
+(MHz)
+26dB Bandwidth (MHz) 99% Bandwidth (MHz) Power
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5500 20.06 20.00 --- --- 16.84 16.74 --- --- 24.00
+11a 2 5580 28.58 25.04 --- --- 17.01 16.88 --- --- 24.00
+11a 2 5700 20.00 19.88 --- --- 16.80 16.71 --- --- 24.00
+VHT20 2 5500 20.29 20.12 --- --- 17.69 17.66 --- --- 24.00
+VHT20 2 5580 20.41 20.17 --- --- 17.74 17.68 --- --- 24.00
+VHT20 2 5700 20.29 20.17 --- --- 17.68 17.66 --- --- 24.00
+VHT40 2 5510 41.62 41.39 --- --- 36.46 36.36 --- --- 24.00
+VHT40 2 5590 41.86 41.51 --- --- 36.50 36.38 --- --- 24.00
+VHT40 2 5670 41.86 41.39 --- --- 36.48 36.38 --- --- 24.00
+VHT80 2 5530 82.09 81.39 --- --- 76.48 76.36 --- --- 24.00
+VHT80 2 5610 82.32 81.39 --- --- 76.48 76.40 --- --- 24.00
+Worst Plot of 26dB Bandwidth Worst Plot of 99% Bandwidth
+
+Report No.: FR740701-19AN Page : 26 of 397
+Report Version: Rev. 01
+Channel that extends across the 5.725 GHz boundary
+Frequency band UNII Emission Bandwidth Result ( Within 5470-5725MHz band )
+Mode NTX Freq.
+(MHz)
+26dB Bandwidth (MHz) 99% Bandwidth (MHz) Power
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5720 19.89 19.77 --- --- 13.57 13.46 --- --- 23.96
+VHT20 2 5720 15.09 15.09 --- --- 13.89 13.89 --- --- 22.79
+VHT40 2 5710 36.01 35.71 --- --- 33.25 33.19 --- --- 24.00
+VHT80 2 5690 75.87 75.65 --- --- 73.22 73.18 --- --- 24.00
+Frequency band UNII Emission Bandwidth Result (Extends across 5725MHz band )
+Mode NTX Freq.
+(MHz)
+26dB Bandwidth (MHz) 99% Bandwidth (MHz) Power
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5720 9.13 7.20 --- --- 3.46 3.42 --- --- 30.00
+VHT20 2 5720 5.39 5.04 --- --- 3.85 3.80 --- --- 30.00
+VHT40 2 5710 5.97 5.80 --- --- 3.25 3.21 --- --- 30.00
+VHT80 2 5690 6.17 5.91 --- --- 3.26 3.14 --- --- 30.00
+Worst Plots
+Within 5470-5725MHz band Extends across 5725MHz band
+
+Report No.: FR740701-19AN Page : 27 of 397
+Report Version: Rev. 01
+For Frequency band 5725-5850 MHz
+Emission Bandwidth
+Mode NTX Freq.
+(MHz)
+OBW Bandwidth (MHz) 6dB Bandwidth (MHz)
+Chain 0 Chain 1 Chain 2 Chain 3 Chain 0 Chain 1 Chain 2 Chain 3
+6dB BW
+Limit
+(MHz)
+11a 2 5745 17.01 16.99 --- --- 16.58 16.58 --- --- 0.5
+11a 2 5785 17.01 16.96 --- --- 16.64 16.58 --- --- 0.5
+11a 2 5825 17.20 17.17 --- --- 16.64 16.58 --- --- 0.5
+VHT20 2 5745 17.73 17.71 --- --- 17.68 17.68 --- --- 0.5
+VHT20 2 5785 17.75 17.71 --- --- 17.74 17.68 --- --- 0.5
+VHT20 2 5825 17.83 17.76 --- --- 17.68 17.68 --- --- 0.5
+VHT40 2 5755 36.56 36.45 --- --- 36.41 36.41 --- --- 0.5
+VHT40 2 5795 36.53 36.45 --- --- 36.41 36.41 --- --- 0.5
+VHT80 2 5775 76.48 76.43 --- --- 76.52 76.52 --- --- 0.5
+Worst Plot of 99% Bandwidth Worst Plot of 6dB Bandwidth
+
+Report No.: FR740701-19AN Page : 28 of 397
+Report Version: Rev. 01
+3.3 RF Output Power
+3.3.1 Limit of RF Output Power
+Frequency band 5150-5250 MHz
+Operating Mode Limit
+Outdoor access point Conducted Power: 1 W
+The maximum e.i.r.p. at any elevation angle above 30 degrees
+as measured from the horizon must not exceed 125 mW (21
+dBm)
+Indoor access point Conducted Power: 1 W
+Fixed point-to-point access points Conducted Power: 1 W
+Client devices Conducted Power: 250 mW
+Frequency Band (MHz) Limit
+5250 ~ 5350 250mW or 11dBm+10 log B
+5470 ~ 5725 250mW or 11dBm+10 log B
+5725 ~ 5850 1 W
+Note: “B” is the 26dB emission bandwidth in MHz.
+3.3.2 Test Procedures
+Power meter ( For channel that does not extends across the 5.725 GHz boundary )
+Measurements is performed using a wideband gated RF power meter provided that the gate
+parameters are adjusted such that the power is measured only when the EUT is transmitting at its
+maximum power control level. Since the measurement is made only during the ON time of the
+transmitter, no duty cycle correction factor is required
+Spectrum analyzer ( For channel that extends across the 5.725 GHz boundary )
+1. Set RBW=1MHz, VBW=3MHz , Sweep time= Auto, Detector = RMS
+2. Trace average at least 100 traces in power averaging mode
+3. Compute power by integrating the spectrum across the 26 dB EBW
+
+Report No.: FR740701-19AN Page : 29 of 397
+Report Version: Rev. 01
+3.3.3 Test Setup
+
+Report No.: FR740701-19AN Page : 30 of 397
+Report Version: Rev. 01
+3.3.4 Test Result of Maximum Conducted Output Power
+For Frequency band 5150~5250 MHz
+Mode NTX Freq. (MHz)
+Conducted Power (dBm) Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5180 16.61 16.5 --- --- 90.483 19.57 24.00
+11a 2 5200 18.56 18.12 --- --- 136.643 21.36 24.00
+11a 2 5240 18.65 18.41 --- --- 142.625 21.54 24.00
+HT20 2 5180 16.52 16.41 --- --- 88.627 19.48 24.00
+HT20 2 5200 18.45 18.02 --- --- 133.371 21.25 24.00
+HT20 2 5240 18.53 18.39 --- --- 140.309 21.47 24.00
+HT40 2 5190 14.71 14.35 --- --- 56.807 17.54 24.00
+HT40 2 5230 16.91 16.18 --- --- 90.586 19.57 24.00
+VHT20 2 5180 16.65 16.52 --- --- 91.113 19.60 24.00
+VHT20 2 5200 18.58 18.14 --- --- 137.274 21.38 24.00
+VHT20 2 5240 18.66 18.52 --- --- 144.573 21.60 24.00
+VHT40 2 5190 14.82 14.48 --- --- 58.393 17.66 24.00
+VHT40 2 5230 17.02 16.31 --- --- 93.106 19.69 24.00
+VHT80 2 5210 12.15 11.88 --- --- 31.823 15.03 24.00
+For Frequency band 5250~5350 MHz
+Mode NTX Freq. (MHz)
+Conducted Power (dBm) Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5260 15.94 15.59 --- --- 75.489 18.78 23.99
+11a 2 5300 15.81 15.52 --- --- 73.752 18.68 23.99
+11a 2 5320 14.56 14.38 --- --- 55.992 17.48 23.99
+HT20 2 5260 15.89 15.63 --- --- 75.375 18.77 24.00
+HT20 2 5300 15.71 15.54 --- --- 73.049 18.64 24.00
+HT20 2 5320 15.95 15.41 --- --- 74.109 18.70 24.00
+HT40 2 5270 15.82 15.31 --- --- 72.157 18.58 24.00
+HT40 2 5310 13.52 13.24 --- --- 43.577 16.39 24.00
+VHT20 2 5260 16.06 15.76 --- --- 78.035 18.92 24.00
+VHT20 2 5300 15.84 15.68 --- --- 75.354 18.77 24.00
+VHT20 2 5320 16.1 15.52 --- --- 76.383 18.83 24.00
+VHT40 2 5270 15.98 15.42 --- --- 74.462 18.72 24.00
+VHT40 2 5310 13.64 13.38 --- --- 44.898 16.52 24.00
+VHT80 2 5290 12.21 12.05 --- --- 32.667 15.14 24.00
+
+Report No.: FR740701-19AN Page : 31 of 397
+Report Version: Rev. 01
+For Frequency band 5470~5725 MHz
+Mode NTX Freq. (MHz)
+Conducted Power (dBm) Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5500 16.15 15.76 --- --- 78.880 18.97 24.00
+11a 2 5580 18.04 17.72 --- --- 122.836 20.89 24.00
+11a 2 5700 13.86 13.35 --- --- 45.949 16.62 23.99
+HT20 2 5500 16.12 15.74 --- --- 78.423 18.94 24.00
+HT20 2 5580 18.03 17.72 --- --- 122.689 20.89 24.00
+HT20 2 5700 14.85 14.26 --- --- 57.218 17.58 24.00
+HT40 2 5510 13.38 12.81 --- --- 40.876 16.11 24.00
+HT40 2 5590 16.14 15.63 --- --- 77.674 18.90 24.00
+HT40 2 5670 15.55 14.86 --- --- 66.512 18.23 24.00
+VHT20 2 5500 16.24 15.86 --- --- 80.620 19.06 24.00
+VHT20 2 5580 18.16 17.84 --- --- 126.277 21.01 24.00
+VHT20 2 5700 14.98 14.39 --- --- 58.956 17.71 24.00
+VHT40 2 5510 13.49 12.96 --- --- 42.105 16.24 24.00
+VHT40 2 5590 16.28 15.74 --- --- 79.959 19.03 24.00
+VHT40 2 5670 15.68 15.05 --- --- 68.972 18.39 24.00
+VHT80 2 5530 11.42 11.62 --- --- 28.389 14.53 24.00
+VHT80 2 5610 14.92 14.21 --- --- 57.409 17.59 24.00
+
+Report No.: FR740701-19AN Page : 32 of 397
+Report Version: Rev. 01
+Channel that extends across the 5.725 GHz boundary
+Maximum Conducted Output Power (Within 5470-5725MHz band)
+RF Output Power (dBm)
+Mode NTX Freq.
+(MHz) Chain 0 Chain 1 Chain 2 Chain 3
+Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+11a 2 5720 16.20 16.08 --- --- 82.238 19.15 23.96
+HT20 2 5720 15.86 15.94 --- --- 77.812 18.91 22.79
+HT40 2 5710 16.00 15.44 --- --- 74.805 18.74 24.00
+VHT20 2 5720 16.36 15.81 --- --- 81.358 19.10 22.79
+VHT40 2 5710 16.00 15.45 --- --- 74.886 18.74 24.00
+VHT80 2 5690 13.83 13.39 --- --- 45.982 16.63 24.00
+Maximum Conducted Output Power (Extends across 5725MHz band)
+RF Output Power (dBm)
+Mode NTX Freq.
+(MHz) Chain 0 Chain 1 Chain 2 Chain 3
+Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+11a 2 5720 10.22 9.90 --- --- 20.292 13.07 30.00
+HT20 2 5720 10.40 10.37 --- --- 21.854 13.40 30.00
+HT40 2 5710 6.42 5.65 --- --- 8.0580 9.06 30.00
+VHT20 2 5720 10.91 10.95 --- --- 24.776 13.94 30.00
+VHT40 2 5710 6.43 5.93 --- --- 8.3130 9.20 30.00
+VHT80 2 5690 0.34 -0.13 --- --- 2.0520 3.12 30.00
+Worst Channel Power Plots
+Within 5470-5725MHz band Extends across 5725MHz band
+Note: Above plots are without duty factor.
+
+Report No.: FR740701-19AN Page : 33 of 397
+Report Version: Rev. 01
+For Frequency band 5725-5850 MHz
+Mode NTX Freq. (MHz)
+Conducted Power (dBm) Total
+Power
+(mW)
+Total
+Power
+(dBm)
+Limit
+(dBm) Chain 0 Chain 1 Chain 2 Chain 3
+11a 2 5745 17.18 17.06 --- --- 103.056 20.13 30.00
+11a 2 5785 17.02 17.11 --- --- 101.754 20.08 30.00
+11a 2 5825 18.06 18.32 --- --- 131.894 21.20 30.00
+HT20 2 5745 17.12 17.04 --- --- 102.105 20.09 30.00
+HT20 2 5785 17.06 16.85 --- --- 99.233 19.97 30.00
+HT20 2 5825 18.06 18.21 --- --- 130.195 21.15 30.00
+HT40 2 5755 16.13 15.89 --- --- 79.835 19.02 30.00
+HT40 2 5795 16.08 16.31 --- --- 83.307 19.21 30.00
+VHT20 2 5745 17.24 17.15 --- --- 104.846 20.21 30.00
+VHT20 2 5785 17.12 17.03 --- --- 101.989 20.09 30.00
+VHT20 2 5825 18.19 18.34 --- --- 134.151 21.28 30.00
+VHT40 2 5755 16.25 16.03 --- --- 82.256 19.15 30.00
+VHT40 2 5795 16.22 16.45 --- --- 86.036 19.35 30.00
+VHT80 2 5775 14.25 14.43 --- --- 54.340 17.35 30.00
+
+Report No.: FR740701-19AN Page : 34 of 397
+Report Version: Rev. 01
+3.4 Peak Power Spectral Density
+3.4.1 Limit of Peak Power Spectral Density
+Frequency band 5150-5250 MHz
+Operating Mode Limit
+Outdoor access point 17 dBm / MHz
+Indoor access point 17 dBm / MHz
+Fixed point-to-point access points 17 dBm / MHz
+Client devices 11 dBm / MHz
+Frequency Band (MHz) Limit
+5250 ~ 5350 11 dBm / MHz
+5470 ~ 5725 11 dBm / MHz
+5725 ~ 5850 30 dBm /500 kHz
+
+Report No.: FR740701-19AN Page : 35 of 397
+Report Version: Rev. 01
+3.4.2 Test Procedures
+For 5150~5250 MHz, 5250~5350 MHz, 5470~5725 MHz
+Method SA-1
+1. Set RBW = 1 MHz, VBW = 3 MHz, Sweep time = auto, Detector = RMS.
+2. Trace average 100 traces.
+3. Use the peak marker function to determine the maximum amplitude level.
+Method SA-2 Alternative
+1. Set RBW = 1 MHz, VBW = 3 MHz, Detector = RMS.
+2. Set sweep time ≥ 10 * (number of points in sweep) * (total on/off period of the transmitted signal).
+3. Perform a single sweep.
+4. Use the peak marker function to determine the maximum amplitude level.
+5. Add 10 log(1/x), where x is the duty cycle.
+For 5725~5850 MHz
+Method SA-1
+1. Set RBW = 500 kHz, VBW = 2 MHz, Sweep time = auto, Detector = RMS.
+2. Trace average 100 traces.
+3. Use the peak marker function to determine the maximum amplitude level.
+Method SA-2 Alternative
+1. Set RBW = 500 kHz, VBW = 2 MHz, Detector = RMS.
+2. Set sweep time ≥ 10 * (number of points in sweep) * (total on/off period of the transmitted signal).
+3. Perform a single sweep.
+4. Use the peak marker function to determine the maximum amplitude level.
+5. Add 10 log(1/x), where x is the duty cycle.
+3.4.3 Test Setup
+
+Report No.: FR740701-19AN Page : 36 of 397
+Report Version: Rev. 01
+3.4.4 Test Result of Peak Power Spectral Density
+Frequency band 5150~5250 MHz / 5250~5350 MHz
+Condition Peak Power Spectral Density (dBm/MHz)
+Mode NTX Freq. (MHz)
+PPSD
+w/o D.F
+(dBm/MHz)
+Duty Factor
+(dB)
+PPSD
+with D.F
+(dBm/MHz)
+PPSD Limit
+(dBm/MHz)
+11a 2 5180 6.83 0.00 6.83 10.09
+11a 2 5200 8.76 0.00 8.76 10.09
+11a 2 5240 8.78 0.00 8.78 10.09
+VHT20 2 5180 8.75 0.00 8.75 10.09
+VHT20 2 5200 8.78 0.00 8.78 10.09
+VHT20 2 5240 8.83 0.00 8.83 10.09
+VHT40 2 5190 2.42 0.00 2.42 10.09
+VHT40 2 5230 3.73 0.00 3.73 10.09
+VHT80 2 5210 -4.51 0.00 -4.51 10.09
+11a 2 5260 6.10 0.00 6.10 10.09
+11a 2 5300 5.94 0.00 5.94 10.09
+11a 2 5320 4.99 0.00 4.99 10.09
+VHT20 2 5260 5.99 0.00 5.99 10.09
+VHT20 2 5300 5.95 0.00 5.95 10.09
+VHT20 2 5320 5.85 0.00 5.85 10.09
+VHT40 2 5270 3.10 0.00 3.10 10.09
+VHT40 2 5310 0.97 0.00 0.97 10.09
+VHT80 2 5290 -4.29 0.00 -4.29 10.09
+Note:
+1. Test result is bin-by-bin summing measured value of each TX port.
+2. D.F is duty factor.
+3. Directional gain = 3.9 dBi + 10 * log(2/1) = 6.91 dBi > 6dBi
+Limit shall be reduced to 11 dBm – ( 6.91 dBi – 6 dBi )= 10.09 dBm
+
+Report No.: FR740701-19AN Page : 37 of 397
+Report Version: Rev. 01
+Frequency band 5470~5725 MHz
+Condition Peak Power Spectral Density (dBm/MHz)
+Mode NTX Freq. (MHz)
+PPSD
+w/o D.F
+(dBm/MHz)
+Duty Factor
+(dB)
+PPSD
+with D.F
+(dBm/MHz)
+PPSD Limit
+(dBm/MHz)
+11a 2 5500 6.03 0.00 6.03 9.99
+11a 2 5580 8.29 0.00 8.29 9.99
+11a 2 5700 4.03 0.00 4.03 9.99
+11a 2 5720 7.84 0.00 7.84 9.99
+VHT20 2 5500 5.94 0.00 5.94 9.99
+
+VHT20 2 5580 7.71 0.00 7.71 9.99
+VHT20 2 5700 5.04 0.00 5.04 9.99
+VHT20 2 5720 8.05 0.00 8.05 9.99
+VHT40 2 5510 -0.02 0.00 -0.02 9.99
+VHT40 2 5590 2.92 0.00 2.92 9.99
+VHT40 2 5670 2.65 0.00 2.65 9.99
+VHT40 2 5710 4.05 0.00 4.05 9.99
+VHT80 2 5530 -5.22 0.00 -5.22 9.99
+VHT80 2 5610 -2.51 0.00 -2.51 9.99
+VHT80 2 5690 -2.34 0.00 -2.34 9.99
+Note:
+1. Test result is bin-by-bin summing measured value of each TX port.
+2. D.F is duty factor.
+3. Directional gain = 4 dBi + 10 * log(2/1) = 7.01 dBi > 6dBi
+Limit shall be reduced to 11 dBm – ( 7.01 dBi – 6 dBi )= 9.99 dBm
+Worst Plot
+
+Report No.: FR740701-19AN Page : 38 of 397
+Report Version: Rev. 01
+For Frequency band 5725-5850 MHz
+Condition Peak Power Spectral Density (dBm/500kHz)
+Modulation
+Mode NTX Freq.
+(MHz)
+PPSD
+w/o D.F
+(dBm/500kHz)
+Duty Factor
+(dB)
+PPSD
+with D.F
+(dBm/500kHz)
+PPSD Limit
+(dBm/500kHz)
+11a 2 5745 5.48 0.00 5.48 28.99
+11a 2 5785 5.57 0.00 5.57 28.99
+11a 2 5825 6.24 0.00 6.24 28.99
+VHT20 2 5745 5.85 0.00 5.85 28.99
+VHT20 2 5785 5.65 0.00 5.65 28.99
+VHT20 2 5825 6.23 0.00 6.23 28.99
+VHT40 2 5755 1.58 0.00 1.58 28.99
+VHT40 2 5795 1.71 0.00 1.71 28.99
+VHT80 2 5775 -4.60 0.00 -4.60 28.99
+Note:
+1. Test result is bin-by-bin summing measured value of each TX port.
+2. D.F is duty factor.
+3. Directional gain = 4 dBi + 10 * log(2/1) = 7.01 dBi > 6dBi
+Limit shall be reduced to 30 dBm – ( 7.01 dBi – 6 dBi )= 28.99 dBm
+Worst Plot
+
+Report No.: FR740701-19AN Page : 39 of 397
+Report Version: Rev. 01
+3.5 Transmitter Radiated and Band Edge Emissions
+3.5.1 Limit of Transmitter Radiated and Band Edge Emissions
+Restricted Band Emissions Limit
+Frequency Range (MHz) Field Strength (uV/m) Field Strength (dBuV/m) Measure Distance (m)
+0.009~0.490 2400/F(kHz) 48.5 - 13.8 300
+0.490~1.705 24000/F(kHz) 33.8 - 23 30
+1.705~30.0 30 29 30
+30~88 100 40 3
+88~216 150 43.5 3
+216~960 200 46 3
+Above 960 500 54 3
+Note 1:
+Qusai-Peak value is measured for frequency below 1GHz except for 9–90 kHz, 110–490 kHz frequency band. Peak and
+average value are measured for frequency above 1GHz. The limit on average radio frequency emission is as above
+table. The limit on peak radio frequency emissions is 20 dB above the maximum permitted average emission limit
+Note 2:
+Measurements may be performed at a distance other than what is specified provided. When performing measurements
+at a distance other than that specified, the results shall be extrapolated to the specified distance using an extrapolation
+factor as below, Frequency at or above 30 MHz: 20 dB/decade Frequency below 30 MHz: 40 dB/decade.
+Un-restricted band emissions above 1GHz Limit
+Operating Band Limit
+5.15 - 5.25 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.25 - 5.35 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.47 - 5.725 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.725 - 5.850 GHz 15.407(b)(4)(i)
+All emissions shall be limited to a level of −27 dBm/MHz at 75 MHz or more
+above or below the band edge increasing linearly to 10 dBm/MHz at 25 MHz
+above or below the band edge, and from 25 MHz above or below the band
+edge increasing linearly to a level of 15.6 dBm/MHz at 5 MHz above or
+below the band edge, and from 5 MHz above or below the band edge
+increasing linearly to a level of 27 dBm/MHz at the band edge.
+15.407(b)(4)(ii) ,compliance with the emission limits in § 15.247(d)
+Shall be at least 30dB below that in the 100 kHz bandwidth within the band
+that contains the highest level of the desired power,. Attenuation below the
+general limits specified in §15.209(a) is not required. In addition,radiated
+emissions which fall in the restricted bands, as defined in §15.205(a), must
+also comply with the radiated emission limits specified in §15.209(a) (see §
+15.205(c))
+Note 1: Measurements may be performed at a distance other than the limit distance provided they are not
+performed in the near field and the emissions to be measured can be detected by the measurement
+equipment. When performing measurements at a distance other than that specified, the results shall
+be extrapolated to the specified distance using an extrapolation factor of 20 dB/decade (inverse of
+linear distance for field-strength measurements, inverse of linear distance-squared for power-density
+measurements).
+
+Report No.: FR740701-19AN Page : 40 of 397
+Report Version: Rev. 01
+3.5.2 Test Procedures
+1. Measurement is made at a semi-anechoic chamber that incorporates a turntable allowing a EUT
+rotation of 360°. A continuously-rotating, remotely-controlled turntable is installed at the test site to
+support the EUT and facilitate determination of the direction of maximum radiation for each EUT
+emission frequency. The EUT is placed at test table. For emissions testing at or below 1 GHz, the table
+height is 80 cm above the reference ground plane. For emission measurements above 1 GHz, the table
+height is 1.5 m
+2. Measurement is made with the antenna positioned in both the horizontal and vertical planes of
+polarization. The measurement antenna is varied in height (1m ~ 4m) above the reference ground plane
+to obtain the maximum signal strength. Distance between EUT and antenna is 3 m.
+3. This investigation is performed with the EUT rotated 360°, the antenna height scanned between 1 m
+and 4 m, and the antenna rotated to repeat the measurements for both the horizontal and vertical
+antenna polarizations.
+Note:
+1. 120kHz measurement bandwidth of test receiver and Quasi-peak detector is for radiated emission below 1GHz.
+2. RBW=1MHz, VBW=3MHz and Peak detector is for peak measured value of radiated emission above 1GHz.
+3. RBW=1MHz, VBW=1/T and Peak detector is for average measured value of radiated emission above 1GHz.
+
+Report No.: FR740701-19AN Page : 41 of 397
+Report Version: Rev. 01
+3.5.3 Test Setup
+Radiated Emissions below 1 GHz
+Radiated Emissions above 1 GHz
+
+Report No.: FR740701-19AN Page : 42 of 397
+Report Version: Rev. 01
+Configuration 1 : Dipole Antenna
+3.5.4 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 43 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 44 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 45 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 46 of 397
+Report Version: Rev. 01
+3.5.5 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 11a
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 47 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 48 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 49 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 50 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 51 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 52 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 53 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 54 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 55 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 56 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 57 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 58 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 59 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 60 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 61 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 62 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 63 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 64 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 65 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 66 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 67 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 68 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 69 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 70 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 71 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 72 of 397
+Report Version: Rev. 01
+3.5.6 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT20
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 73 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 74 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 75 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 76 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 77 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 78 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 79 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 80 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 81 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 82 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 83 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 84 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 85 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 86 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 87 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 88 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 89 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 90 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 91 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 92 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 93 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 94 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 95 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 96 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 97 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 98 of 397
+Report Version: Rev. 01
+3.5.7 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT40
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 99 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 100 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 101 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 102 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 103 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 104 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 105 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 106 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 107 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 108 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 109 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 110 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 111 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 112 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 113 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 114 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 115 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 116 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 117 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 118 of 397
+Report Version: Rev. 01
+3.5.8 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT80
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 119 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 120 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 121 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 122 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 123 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 124 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 125 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 126 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 127 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Vertical
+
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 128 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 129 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 130 of 397
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+3.5.9 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 131 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 132 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 133 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 134 of 397
+Report Version: Rev. 01
+3.5.10 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 11a
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 135 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 136 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 137 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 138 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 139 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 140 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 141 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 142 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 143 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 144 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 145 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 146 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 147 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 148 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 149 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 150 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 151 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 152 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 153 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 154 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 155 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 156 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 157 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 158 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 159 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 160 of 397
+Report Version: Rev. 01
+3.5.11 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT20
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 161 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 162 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 163 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 164 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 165 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 166 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 167 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 168 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 169 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 170 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 171 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 172 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 173 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 174 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 175 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 176 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 177 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 178 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 179 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 180 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 181 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 182 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 183 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 184 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 185 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 186 of 397
+Report Version: Rev. 01
+3.5.12 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT40
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 187 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 188 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 189 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 190 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 191 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 192 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 193 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 194 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 195 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 196 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 197 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 198 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 199 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 200 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 201 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 202 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 203 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 204 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 205 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 206 of 397
+Report Version: Rev. 01
+3.5.13 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT80
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 207 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 208 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 209 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 210 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 211 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 212 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 213 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 214 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 215 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 216 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 217 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 218 of 397
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+3.5.14 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 219 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 220 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 221 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 222 of 397
+Report Version: Rev. 01
+3.5.15 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 11a
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 223 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 224 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 225 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 226 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 227 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 228 of 397
+Report Version: Rev. 01
+
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 229 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 230 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 231 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 232 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 233 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 234 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 235 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 236 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 237 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 238 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 239 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 240 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 241 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 242 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 243 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 244 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 245 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 246 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 247 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 248 of 397
+Report Version: Rev. 01
+3.5.16 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT20
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 249 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 250 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 251 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 252 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 253 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 254 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 255 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 256 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 257 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 258 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 259 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 260 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 261 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 262 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 263 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 264 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 265 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 266 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 267 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 268 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 269 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 270 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 271 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 272 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 273 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 274 of 397
+Report Version: Rev. 01
+3.5.17 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT40
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 275 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 276 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 277 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 278 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 279 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 280 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 281 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 282 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 283 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 284 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 285 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 286 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 287 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 288 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 289 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 290 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 291 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 292 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 293 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 294 of 397
+Report Version: Rev. 01
+3.5.18 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT80
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 295 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 296 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 297 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 298 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 299 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 300 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 301 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 302 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 303 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 304 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 305 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 306 of 397
+Report Version: Rev. 01
+Configuration 4 : Isolated Magnetic Dipole Antenna
+3.5.19 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 307 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 308 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 309 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: FR740701-19AN Page : 310 of 397
+Report Version: Rev. 01
+3.5.20 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 11a
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 311 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 312 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 313 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 314 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 315 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 316 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 317 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 318 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 319 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 320 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 321 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 322 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 323 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 324 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 325 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 326 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 327 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 328 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 329 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 330 of 397
+Report Version: Rev. 01
+
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 331 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 332 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 333 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 334 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 335 of 397
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 336 of 397
+Report Version: Rev. 01
+3.5.21 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT20
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 337 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 338 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 339 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5200
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 340 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 341 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 342 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 343 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5260
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 344 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 345 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5300
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 346 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 347 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 348 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 349 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 350 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 351 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5580
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 352 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 353 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 354 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 355 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5720
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 356 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 357 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 358 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 359 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5785
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 360 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 361 of 397
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 362 of 397
+Report Version: Rev. 01
+3.5.22 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT40
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 363 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 364 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 365 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5230
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 366 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 367 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5270
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 368 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 369 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 370 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 371 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 372 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 373 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5590
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 374 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 375 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 376 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 377 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5710
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 378 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 379 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 380 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 381 of 397
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 382 of 397
+Report Version: Rev. 01
+3.5.23 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT80
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 383 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 384 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 385 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5290
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 386 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 387 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5530
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 388 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 389 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 390 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 391 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5690
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 392 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 393 of 397
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5775
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: FR740701-19AN Page : 394 of 397
+Report Version: Rev. 01
+3.6 Frequency Stability
+3.6.1 Limit of Frequency Stability
+Manufacturers of U-NII devices are responsible for ensuring frequency stability such that an emission is
+maintained within the band of operation under all conditions of normal operation as specified in the user’s
+manual.
+3.6.2 Test Procedures
+1. The EUT is installed in an environment test chamber with external power source.
+2. Set the chamber to operate at 50 centigrade and external power source to output at nominal voltage of
+EUT.
+3. A sufficient stabilization period at each temperature is used prior to each frequency measurement.
+4. When temperature is stabled, measure the frequency stability.
+5. The test shall be performed under -30 to 85 centigrade and 85 to 115 percent of the nominal voltage.
+Change setting of chamber and external power source to complete all conditions.
+3.6.3 Test Setup
+
+Report No.: FR740701-19AN Page : 395 of 397
+Report Version: Rev. 01
+3.6.4 Test Result of Frequency Stability
+Frequency:
+5320 MHz Frequency Drift (ppm)
+Temperature (oC) 0 minute 2 minutes 5 minutes 10 minutes
+T20°CVmax 15.83 16.17 16.30 15.87
+T20°CVmin 13.23 13.29 13.69 13.43
+T85°CVnom 13.51 14.34 13.64 13.86
+T80°CVnom 11.46 12.06 11.81 11.28
+T70°CVnom 11.44 11.91 11.40 11.20
+T60°CVnom 10.72 11.33 10.76 11.17
+T50°C Vnom 11.63 11.76 11.25 11.90
+T40°CVnom 8.52 8.20 8.35 9.09
+T30°CVnom 8.66 9.02 9.07 9.14
+T20°CVnom 9.47 9.77 9.63 9.13
+T10°CVnom 7.42 8.03 7.64 7.67
+T0°CVnom 9.67 10.01 10.03 9.58
+T-10°CVnom 7.47 7.42 7.14 7.55
+T-20°CVnom 7.84 8.49 7.96 8.08
+T-30°CVnom 7.30 8.14 7.82 7.76
+Vnom [Vac]: 120 Vmax [Vac]: 138 Vmin [Vac]: 102
+Tnom [°C]: 20 Tmax [°C]: 85 Tmin [°C]: -30
+
+Report No.: FR740701-19AN Page : 396 of 397
+Report Version: Rev. 01
+Frequency:
+5785 MHz Frequency Drift (ppm)
+Temperature (oC) 0 minute 2 minutes 5 minutes 10 minutes
+T20°CVmax 14.54 14.84 14.91 15.11
+T20°CVmin 12.32 12.03 11.69 12.53
+T85°CVnom 12.76 12.40 12.68 12.16
+T80°CVnom 11.28 11.48 11.05 11.07
+T70°CVnom 10.64 11.29 11.30 10.57
+T60°CVnom 10.24 9.63 9.85 10.14
+T50°C Vnom 11.05 10.77 10.80 11.39
+T40°CVnom 8.44 8.24 8.48 8.06
+T30°CVnom 8.61 8.72 8.72 8.64
+T20°CVnom 9.85 10.11 9.41 9.72
+T10°CVnom 7.17 7.41 7.53 7.41
+T0°CVnom 8.99 8.46 8.45 8.67
+T-10°CVnom 6.77 6.58 7.41 7.30
+T-20°CVnom 7.83 7.91 7.40 7.97
+T-30°CVnom 7.06 7.50 7.60 7.07
+Vnom [Vac]: 120 Vmax [Vac]: 138 Vmin [Vac]: 102
+Tnom [°C]: 20 Tmax [°C]: 85 Tmin [°C]: -30
+
+Report No.: FR740701-19AN Page : 397 of 397
+Report Version: Rev. 01
+4 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corporation (EMC and Wireless Communication Laboratory), it is our definitive
+objective is to institute long term, trust-based associations with our clients. The expectation we set up with our
+clients is based on outstanding service, practical expertise and devotion to a certified value structure. Our
+passion is to grant our clients with best EMC / RF services by oriented knowledgeable and accommodating
+staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No.30-2, Ding Fwu Tsuen, Lin Kou
+District, New Taipei City, Taiwan
+(R.O.C.)
+No.3-1, Lane 6, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+No.2-1, Lane 6, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+No.14-1, Lane 19, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+If you have any suggestion, please feel free to contact us as below information.
+Tel: 886-3-271-8666
+Fax: 886-3-318-0345
+Email: ICC_Service@icertifi.com.tw
+══END══

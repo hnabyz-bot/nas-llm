@@ -1,0 +1,3008 @@
+queueId: ingest-1781569954371-1f7
+sourcePath: raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/4. A-CTMR-HNXR1_Threat Modeling Report 250806.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/2dc472e17e3d/4. A-CTMR-HNXR1_Threat Modeling Report 250806__2dc472e17e3d_combined.txt
+canonicalGroupId: 45486e7d0a6c
+productSignal: HnX
+authoritySignal: CE/MDR
+pilotRank: 457
+
+SOURCE_TEXT
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 1 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Cybersecurity Risk Management –
+Threat Modeling
+Product name: Digital X-ray Imaging System
+Model name: HnX-R1
+Ref no.
+Detector 1
+(G series)
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+G1717CW, G1717CWP, G1717FW, G1717FWP
+Detector 2
+(2/3G series) A1717MCW, A1417MCW, F1417MCW
+Console software HnVUE
+Name Position Date Signature
+Prepared by Jimin HAN RA team August 06,
+2025
+Reviewed by Kyungsoo LEE R&D Manager August 06,
+2025
+Approved by Namkyu HUR
+Quality
+Management
+Representative
+August 06,
+2025
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 2 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision History
+Revision No. Rev. Date Revision Description
+0 August 06, 2025 Initial
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 3 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Contents
+1. Overview ····················································································································· 4
+2. Threat modeling Summary ································································································· 6
+3. Data-Flow Diagram ········································································································· 6
+4. Threat Identification and Methodology ··················································································· 7
+5. Identification of Cybersecurity Risks ····················································································· 7
+6. Risks Assessment ·········································································································· 12
+7. Mitigation Implementation ······························································································· 14
+8. Identified Risks by Vulnerability category ············································································· 32
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 4 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Overview
+1.1 Document Overview
+This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Digital
+X-ray Imaging System (Model: HnX-R1)
+1.2 Medical Device Overview
+Product name Digital X-ray Imaging System
+Model name HnX-R1
+Ref. No. Detector 1
+(G series)
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+G1717CW, G1717CWP, G1717FW, G1717FWP
+Detector 2
+(2/3G series) A1717MCW, A1417MCW, F1417MCW
+Console
+software HnVUE
+Manufacturer H&abyz Co., Ltd.
+Manufacturer address 1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-eup, Cheoin-gu,
+Yongin-si, Gyeonggi-do, Republic of Korea
+Intended use HnX-R1 (Digital X-ray Imaging System) is indicated for digital
+imaging solution designed for providing general radiographic
+diagnosis of human anatomy targeting both adult and children. It
+is intended to replace film based radiographic diagnostic systems.
+Not to be used for mammography.
+The HnX-R1 wired/wireless digital X-ray imaging system consists of Detector, Power supply box,
+Battery pack, Battery charger, Other Accessories and software for image acquisition and image
+processing and does not include the X-ray generator. The detector is a wired/wireless type, and
+there are 8 types of G series (G1417CW, G1417CWP, G1417FW, G1417FWP, G1717CW,
+G1717CWP, G1717FW, G1717FWP) and 3 types of 2/3G series (A1717MCW, A1417MCW,
+F1417MCW). The name of the image acquisition and image processing software (Console
+software) is HnVUE.
+This system is used to capture images by transmitting X-ray to a patient’s body. The X-ray passing
+through a patient’s body is sent to the detector and then converted into electrical signals. These
+signals go through the process of amplification and digital data conversion in the signal process
+device before being sent to the HnVUE (Console Software) and saved in DICOM file, a standard
+for medical imaging. The captured images are sent to the Picture Archiving & Communication
+System (PACS) server, and can be used for reading images.
+The cybersecurity risk of the HnX-R1 have been addressed to assure that no new or increased
+cybersecurity risks were introduced as a part of device risk analysis. These risks are defined as
+sequence of events leading to a hazardous situation, and the control for their risks were treated and
+implemented as proposed in the risk analysis (e.g., requirements, verification)
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 5 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1.3 Assets
+A1~A25: These assets are entities implemented in the console application and consist of a database,
+data manipulation process, detector, and communication interface between PACS/worklist servers and
+a GUI interface for the console program to implement its functions.
+A1~A6: Console Subcomponents, SQL database structure implemented in Console
+application
+A7:User interface with console accessing by console user(keyboards, Display interfacing, IO
+device etc)
+A8~A21: Console Subcomponents, Console Application Process : The console application
+process is comprised of functions responsible for the image acquisition station, such as post-
+processing images acquired from the detector, matching them with the worklist, transmitting
+this information to an independent PACS server within the hospital, and communicating with
+the detector.
+A22: Console – PACS/Worklist server ethernet communication interface
+A23-25: Console – Detector ethernet communication interface
+A26~A32: These assets are entities implemented in the detector inside and consist of a database, data
+manipulation process, interface for the console program to communication its image data.
+A26~27: Detector subcomponents, The detector firmware process is a stand-alone board that
+acts as the CPU in the detector, manages the detector storage system and communication
+modules, and configures overall image communication and detector settings.
+A28~29: Detector subcomponents, Detector System Storage (store) serves as the memory
+required to store and communicate images from the detector.
+A30~A31 : communication interface between Detector and console implementation by
+software communication protocol(Socket API)
+A32: Detector subcomponents, Communication and data requests are communication
+protocols for image data and transmission between firmware processes, communication
+interfaces, and data system storage, and are passages for transmitting images and data.
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 6 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2. Threat modeling Summary
+The threat modeling document for the Medical Device HnX-R1 (Manufacture: H&abyz Co., Ltd)
+aims to evaluate potential cybersecurity threats and pinpoint vulnerabilities within the device. This
+comprehensive assessment identifies possible attack vectors, evaluates the likelihood and impact
+of various threats, and proposes mitigations to enhance the security posture. By systematically
+analyzing the device's architecture, data flow, and interfaces, the document ensures that security
+measures are robust and aligned with industry standards. In total 67 risks have been identified
+during the threat modeling process:
+The key findings and outcomes of each test are summarized below:
+a) IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for
+cybersecurity (35 initial risks)
+b) CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber
+threats (94initial risks)
+c) Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in
+systems. (7 initial risks)
+3. Data-Flow Diagram
+A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that
+maps out the flow of data within a medical system. It highlights how data moves between devices,
+systems, and users, identifying points where data is input, processed, stored, and output. By
+visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission,
+and storage.
+The report's diagram contains the following views: Global System View, Multi-Patient Harm View,
+Updateability/Patch-ability View, and Security Use Case View(s). These views are visually
+represented in the diagram and are explained in detail through the accompanying legend. The
+legend helps to clarify the purpose and scope of the depicted views in the diagram.
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 7 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. hreat Identification and Methodology
+Threat Methodology: The STRIDE methodology is selected for its comprehensiveness in
+identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and
+Elevation of Privilege, which are relevant to the HnX-P1 security needs.
+Rationale for STRIDE: STRIDE provides a structured approach to identifying threats that could
+compromise the confidentiality, integrity, and availability of the system, making it suitable for
+complex systems where multiple interaction points exist, such as medical devices.
+5. Identification of Cybersecurity Risks
+1) Risk identification according to Data-Flow Diagram
+Risk ID Asset STRIDE Threat Description
+CRM-01 A1: Console SQL
+database(Store) Tampering Malicious attacker manipulates database
+to tamper with diagnostic information
+CRM-02 A2: Console SQL
+database(Store) Denial of service
+Risk of losing important image data and
+the database due to system failures or
+attacks.
+CRM-03 A3: Console SQL
+database(Store) Tampering An attacker can manipulate the database
+to change passwords.
+CRM-04 A4: Console SQL
+database(Store)
+Information
+disclosure
+An attacker hacks the database to steal
+account information.
+CRM-05 A5: Console SQL
+database(Store)
+Information
+disclosure
+Sensitive data such as patient personal
+information, medical records, license
+keys, and user settings stored in the
+database files must be protected.
+CRM-06 A6: Console SQL
+database(Store)
+Information
+disclosure
+Internal information such as user
+authentication data must be protected
+from internal staff and malicious users to
+prevent data leakage.
+CRM-07 A7:Console User
+user interface Spoofing If account information is exposed, an
+attacker may impersonate another user.
+CRM-08
+A8: Console
+Application
+(Process)
+Information
+disclosure
+Revealing login failure reasons may help
+attackers infer account information.
+CRM-09
+A9: Console
+Application
+(Process)
+Elevation of privilege Attacker executes malicious code (SQL
+Injection, XSS, etc.)
+CRM-10
+A10: Console
+Application
+(Process)
+Repudiation
+Attackers attempt to commit malicious
+acts without leaving any evidence
+behind.
+CRM-11 A11: Console
+Application
+Information
+disclosure
+Exposing audit logs can expose security
+vulnerabilities
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 8 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+(Process)
+CRM-12
+A12: Console
+Application
+(Process)
+Tampering
+Risk of system files being tampered
+with - Malware or hackers can tamper
+with system files to insert backdoors.
+CRM-13
+A13: Console
+Application
+(Process)
+Denial of service Critical system files are damaged or
+deleted, causing service failures.
+CRM-14
+A14: Console
+Application
+(Process)
+Spoofing
+Unauthorized users with administrative
+privileges put the system at risk -a
+normal user can gain administrative
+privileges and take over or delete other
+accounts.
+CRM-15
+A15: Console
+Application
+(Process)
+Elevation of privilege
+Attackers can take over a system if they
+gain administrative privileges -insiders
+access unauthorized accounts and
+manipulate account information without
+authorization
+CRM-16
+A16: Console
+Application
+(Process)
+Elevation of privilege
+If you leave your password
+unchangeable for too long, any stolen
+credentials will remain valid for a long
+time, allowing the attacker to continue
+accessing your account as a legitimate
+user.
+CRM-17
+A17: Console
+Application
+(Process)
+Spoofing
+Random password attempts should be
+blocked to delay or prevent brute-force
+attacks.
+CRM-18
+A18: Console
+Application
+(Process)
+Spoofing
+If you fail to log in consecutively for a
+set number of times, you will be blocked
+from logging in.
+CRM-19
+A19: Console
+Application
+(Process)
+Information
+Disclosure
+DICOM (.dcm) files contain personal
+data such as patient names and birthdates
+and must be protected from leakage.
+CRM-20
+A20: Console
+Application
+(Process)
+Repudiation
+Users must be made aware that their
+actions are traceable and subject to legal
+accountability.
+CRM-21
+A21: Console
+Application
+(Process)
+Denial of Service Prevent issues caused by insufficient
+disk space during data storage.
+CRM-22
+A22:
+Communication with
+PACS/worklist
+server(Ethernet)
+Information
+Disclosure
+Patient information, patient
+identification information, and patient
+data may be exposed during
+transmission.
+CRM-23
+A23: Console -
+Detector interface
+connected with
+console
+(process)
+Tampering
+A malicious attacker intrudes into the
+detector through the console and
+modifies the detector connection
+information.
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 9 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+CRM-24
+A24: Console -
+detector
+interface(data flow)
+Tampering
+Risk of loss of important diagnostic
+information and DB due to system
+failure, attack, etc.
+CRM-25
+A25: Console -
+detector
+interface(data flow)
+Information
+Disclosure
+Risk of losing critical diagnostic
+information and database due to system
+failures or attacks.
+CRM-26
+A26: Firmware
+Process in
+detector(Process)
+Tampering
+An attacker may tamper with or alter the
+firmware patch data, allowing the device
+to run malicious firmware that includes
+malware or other harmful code.
+CRM-27
+A27: Firmware
+Process in
+detector(Process)
+Denial of service
+An attacker may generate a large volume
+of traffic to overload the firmware,
+potentially disrupting or blocking access
+for legitimate users.
+CRM-28
+A28: Detector
+System
+Storage(store)
+Information
+disclosure
+Data stored in internal storage may be
+leaked externally or accessed and
+tampered with by unauthorized users.
+CRM-29
+A29: Detector
+System
+Storage(store)
+Elevation of privilege
+An attacker may attempt to access the
+system by using the root account or by
+creating additional user accounts and
+granting them elevated privileges.
+CRM-30
+A31:
+Communication
+(data flow)
+Information
+disclosure
+Communication packets may be exposed
+through tools such as network interface
+capture tools, potentially leaking
+sensitive data to an attacker.
+CRM-31
+A31:
+Communication
+(data flow)
+Tampering An attacker may intercept a packet,
+modify its contents, and forward it.
+CRM-32 A32: Request
+(data flow) Tampering An attacker may intercept a packet,
+modify its contents, and forward it.
+* Risk ID by Cybersecurity Controls list
+A) Authentication controls: Risk ID CRM-07, 14, 17, 18
+B) Authorization controls: Risk ID CRM-09, 15, 16, 29
+C) Cryptography controls: Risk ID CRM-04, 05, 22
+D) Code, data, and execution integrity controls: Risk ID: CRM-01, 03, 12, 23, 24, 26, 31,32
+E) Confidentiality controls: Risk ID CRM-06, 08, 11, 19, 25, 28, 30
+F) Event detection and logging controls: Risk ID CRM-10, 20
+G) Resiliency and recovery controls: Risk ID CRM-02, 13, 21, 27
+H) Firmware and software update controls: N/A
+2) Risk identification according to cybersecurity requirements (IEC 60601-4-5)
+Risk ID Requirement
+ID Requirement STRIDE Threat Description
+CRM-33 IA-01 User Identification
+
+And Authentication Spoofing Authentication procedures can be
+bypassed, allowing attackers to access
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 10 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+the system by impersonating legitimate
+users. CMR-8, CRM-16, CRM-18
+CRM-34 IA-02 Account Management Spoofing
+There is a risk that an attacker can
+access the system by impersonating a
+trusted user through credential theft.
+CRM-35 IA-03
+Identification
+Information
+Management
+Spoofing
+Since user identification is not properly
+verified, an attacker can infiltrate the
+system with a forged identity.
+CRM-36 IA-04
+Authentication
+Information
+Management
+Spoofing
+Vulnerabilities in the authentication
+mechanism can be exploited to
+illegally steal identities and escalate
+privileges.
+CRM-37 IA-05
+Password
+Strength
+Configuration
+Spoofing
+There is a possibility of an attacker
+accessing the system by submitting
+false credentials.
+CRM-38 IA-06
+Feedback on
+Authentication
+Information
+Spoofing
+Due to the absence of an identity
+verification procedure, a malicious
+user can inappropriately access system
+resources.
+CRM-39 IA-07
+Login Restriction
+After Consecutive
+Failed Login Attemps
+Spoofing
+There is a risk that an attacker can
+illegally use system functions by
+forging legitimate user
+credentials.CRM-16
+CRM-40 IA-08 System Usage
+Notification Message Spoofing
+Due to insufficient authentication
+methods, there is a high possibility of
+identity theft attacks. CMR-8, CRM-18
+CRM-41 UC-01 Authorization Repudiation
+There is a risk that users can deny the
+actions they have performed due to the
+lack of behavior tracking records.
+CRM-42 UC-02 Mobile Code Usage
+Control Repudiation
+Due to insufficient auditing and
+logging functions, it may be difficult to
+trace responsibility for user actions
+later.
+CRM-43 UC-03 Session Lock Repudiation
+There is a possibility of denial of user
+actions, making it difficult to secure
+truthfulness during follow-up
+investigations.
+CRM-44 UC-04 Audit Log
+Generation Repudiation
+There is no clear record of user
+activities within the system, making it
+vulnerable to denial attacks.
+CRM-45 UC-05
+Countermeasure
+for Audit Processing
+Failure
+Repudiation
+There is a vulnerability that allows
+users to deny system activities, making
+it difficult to identify legal/security
+responsibilities.
+CRM-46 UC-06 Timestamp Repudiation
+Due to insufficient logging of user
+actions, it is difficult to track and
+respond when an accident occurs.
+CRM-47 UC-07 Non Repudiation Repudiation
+Due to insufficient authentication and
+record keeping, the possibility of user
+denial increases, which may lead to
+security issues.
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 11 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+CRM-48 SI-01
+Integrity
+Assurance for
+Communication
+Tampering
+There is a risk that system components
+or data may be tampered with by
+attacks.
+CRM-49 SI-02 Protection against
+Malware Tampering
+Malicious users may modify software
+or firmware to disrupt normal
+functions.
+CRM-50 SI-03 Security Function
+Verification Tampering
+Unexpected functional failures or
+security vulnerabilities may occur
+through modification of system
+settings.
+CRM-51 SI-04
+Integrity Checking of
+Software and
+Information
+Tampering
+Attackers may tamper with internal
+data to undermine the reliability of the
+system.
+CRM-52 SI-05 Input
+Validation Tampering
+If important configuration information
+is changed by an attack, the stability of
+the entire system may be threatened.
+CRM-53 SI-06
+Output to a
+Pre-determined
+State in Case of Error
+Tampering
+If system files or logs are tampered
+with, it may be difficult to respond to
+and track security incidents.
+CRM-54 SI-07 Error Handling Tampering
+If system components are modified
+without permission, the reliability and
+operational continuity of the service
+may be damaged.
+CRM-55 SI-08 Update Tampering
+There is a risk that external intruders
+may affect the normal operation of the
+entire system by manipulating internal
+data.
+CRM-56 SI-09
+Verification of
+Authenticity and
+Integrity of Updates
+Tampering
+If data or settings that should not be
+changed are tampered with, the system
+security system may collapse.
+CRM-57 SI-10 Physical Tamper
+Prevention Tampering
+Unauthorized changes to system
+components may cause unexpected
+malfunctions and security risks.
+CRM-58 SI-11 Boot Process Integrity
+Verification Tampering
+Due to data integrity violations, there is
+a possibility that an attacker may
+induce abnormal system operation.
+CRM-9
+CRM-59 DC-01
+Confidentiality
+Assurance for
+Information
+Information
+Disclosure
+Sensitive information may be
+inappropriately exposed and leaked to
+unauthorized users. CRM-17
+CRM-60 DC-02
+De-identification
+of Healthcare
+Information
+Information
+Disclosure
+Due to insufficient data encryption and
+access control, important information
+may be leaked to the outside. CRM-5
+CRM-61 DC-03 Use of Secure
+Encryption
+Information
+Disclosure
+There is a risk that sensitive data being
+stored and transmitted may be exposed
+by attacks.
+CRM-62 TRE-01
+Restriction of
+Unauthorized
+Access to Audit Logs
+Denial of
+Service
+There is a risk that normal service
+provision may be interrupted due to
+concentrated attacks on system
+resources., CRM-6, CRM-10, CRM-11
+CRM-63 RA-01 Prevention of Elevation of Due to privilege management
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 12 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Denial of Service
+(DoS)
+Privilege vulnerabilities, there is a risk that low-
+privileged users may illegally obtain
+high-privileges.
+CRM-64 RA-02 Medical Device
+Backup
+Elevation of
+Privilege
+Due to inappropriate access control,
+there is a possibility of system misuse
+through user privilege escalation.
+CRM-65 RA-03
+Medical Device
+Recovery and
+Reconfiguration
+Elevation of
+Privilege
+Due to weak privilege separation, there
+is a risk that an attacker may control the
+entire system beyond limited
+privileges.
+CRM-66 RA-04
+Network and
+Security Configuration
+Settings
+Elevation of
+Privilege
+An attack that started with low
+privileges may lead to privilege
+escalation, potentially affecting the
+entire system.
+CRM-67 RA-05
+Disabling
+Unnecessary
+Functions
+Elevation of
+Privilege
+Failure to authenticate users and
+manage permissions could allow
+attackers to gain unauthorized
+privileges.
+* Risk ID by Cybersecurity Controls list
+A) Authentication controls: Risk ID CRM-33-40
+B) Authorization controls: Risk ID CRM-63-67
+C) Cryptography controls: Risk ID CRM-61
+D) Code, data, and execution integrity controls: Risk ID: CRM-48-54, 58
+E) Confidentiality controls: Risk ID CRM-59-60
+F) Event detection and logging controls: Risk ID CRM-41-47
+G) Resiliency and recovery controls: Risk ID CRM-62
+H) Firmware and software update controls: Risk ID CRM-55,56, 57
+6. Risks Assessment
+6.1 Likelihood
+Frequent (F) Exploitation is very easy and likely to occur frequently (e.g. public vulnerability)
+Very Likely (VL) Exploitation is possible and likely to be exploited by malicious attackers
+Likely (L) Exploitation is possible under certain conditions, but technically difficult
+Unlikely (U) Exploitation is difficult and requires advanced technical knowledge
+Very Unlikely (VU) Exploitation is practically impossible (e.g. hardware access required)
+6.2 Impact
+Very High (VH) Critical to system safety and possible legal and regulatory violations
+High (H) Major device function failure, possible direct risk to patient safety
+Medium (M) Possible to degrade system performance or impact data integrity
+Low (L) Possible to cause partial function failure or some inconvenience to user experience
+Very Low (VL) Limitless to system operation
+6.3 Risk Level
+Critical (C) Extremely hazardous, requiring immediate security action. Potential direct threat to
+patient safety.
+High (H) High risk, requiring rapid security action. System performance degradation, high
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 13 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+potential for data leakage.
+Medium (M) Medium risk, requiring long-term security enhancements but may not be urgent.
+Low (L) Low risk, not operationally impactful but may require additional improvements.
+Very Low (VL) Negligible low risk. Not likely to cause problems in normal operating environments.
+6.4 Risk assessment
+1) Data Flow Diagram
+Risk ID Likelihood
+(Before)
+Impact
+(Before)
+Risk Level
+(Before) CVSS Score
+CRM-1 Likely (L) High (H) High (H) 7.5 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+CRM-2 Likely (L) Middle (M) Middle (M) 6.5 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+CRM-3 Unlikely (U) High(H) Medium(M) 6.4 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L
+CRM-4 Likely (L) High(H) Medium(M) 7.6 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L
+CRM-5 Likely (L) Low(L) Medium(M) 6.4 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:L
+CRM-6 Very Likely
+(VL) High (H) High (H) 8.9 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:H/A:H
+CRM-7 Unlikely (U) Medium (M) Low (L) 4.3 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L
+CRM-8 Unlikely (U) Medium (M) Medium(M) 6.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:L
+CRM-9 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-10 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-11 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-12 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-13 Likely (L) Medium (M) Medium (M) 6.4 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H
+CRM-14 Likely (L) Medium (M) Medium (M) 6.4 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H
+CRM-15 Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-16 Likely (L) Medium (M) Low (L) 6.2 CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:L
+CRM-17 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-18 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-19 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-20 Likely (L) High (H) High (H) 8.3 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H
+CRM-21 Likely (L) High (H) Medium (M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-22 Very Likely
+(VL) High (H) High (H) 8.3 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H
+CRM-23 Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-24 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-25 Likely (L) High (H) Medium (M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-26 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-27 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-28 Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-29 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-30 Likely (L) High (H) High (H) 8.0 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H
+CRM-31 Likely (L) Medium (M) Low (L) 5.9 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+CRM-32 Likely (L) Low (M) Low (M) 5.6 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L
+2) Cybersecurity Requirement(IEC60601-4-5)
+Risk ID Likelihood
+(Before)
+Impact
+(Before)
+Risk Level
+(Before) CVSS Score
+CRM-33 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-34 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-35 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-36 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-37 Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 14 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+CRM-38 Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L
+CRM-39 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-40 Unlikely (U) High(H) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-41 Likely (L) High (H) Medium (M) 7.7 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L
+CRM-42 Likely (L) Low(L) Medium(M) 7.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L
+CRM-43 Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-44 Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-45 Unlikely (UL) Low(L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-46 Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-47 Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-48 Unlikely (UL) Medium (M) Low (L) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CMR-49 Unlikely (UL) Low (L) Medium (M) 5.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L
+CRM-50 Very
+Unlikely(VU) High(H) Very Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-51 Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-52 Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-53 Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-54 Very
+Unlikely(VU) High(H) Very Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-55 Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-56 Likely (L) Low(L) Medium(M) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-57 Very
+Unlikely(VU) High(H) Very Low(VL) 6.8 CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-58 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-59 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-60 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-61 Very
+Unlikely(VU) High(H) Very Low(VL) 6.6 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-62 Very Likely
+(VL) High (H) High (H) 8.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:H
+CRM-63 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-64 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-65 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-66 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+CRM-67 Likely (L) High (H) Medium (M) 7.3 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L
+7. Mitigation Implementation
+7.1 Assignment by Security control
+Security control Risk ID
+Authentication CRM-7, CRM-14, CRM-17, CRM-18, CRM-33, CRM-
+34, CRM-35,CRM-36, CRM-37,CRM-38, CRM-39,
+CRM-40
+Authorization CRM-9, CRM-15, CMR-16, CRM-29, CRM-63, CRM-
+64, CRM-65, CRM-66, CRM-67
+Cryptography CRM-4, CRM-5, CRM-22, CRM-61
+Code, Data, and Execution Integrity CRM-01, CRM-03, CRM-12, CRM-23, CRM-24, CRM-
+26, CRM-31, CRM-32, CRM-48, CRM-49, CRM-50,
+CRM-51, CRM-52, CRM-53, CRM-54, CRM-58
+Confidentiality CRM-6, CRM-8, CRM-11, CRM-19, CRM-25, CRM-28
+CRM-30, CRM-59, CRM-60
+Event Detection and Logging CRM-10, CRM-20, CRM-41, CRM-42, CRM-43, CRM-
+44, CRM-45, CRM-46, CRM-47
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 15 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Resiliency and Recovery CRM-2, CRM-13, CRM-21, CRM-27, CRM-62
+Firmware and Software Updates CRM-55, CRM-56, CRM-57
+7.2 Mitigation
+1) Data-Flow Diagram
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+CRM-1
+A technique is needed to prevent a brute force
+attacker from connecting to the database and
+truncating the database to prevent diagnostic
+information. The manufacturer should
+consider how the device would interface with
+other devices or networks. Interfaces may
+include hardwired connections and/or
+wireless communications. Examples of
+interface methods include Wi-Fi, Ethernet,
+
+Bluetooth, USB, etc. The manufacturer
+should consider how data transfer to and
+from the device is secured to prevent
+unauthorized access, modification, or replay.
+For example, manufacturers should
+determine: how the communications between
+devices/systems will authenticate each other;
+if encryption is required; how unauthorized
+replay of previously transmitted commands
+or data will be prevented; and if terminating
+communication sessions after a pre-defined
+time is appropriate.
+Maintaining backups allows you to
+recover your original data
+Unlikel
+y Low Very
+Low
+CRM-2
+The manufacturer should establish and
+communicate a process for implementation
+and deployment of regular updates.
+Regular backups allow for quick
+recovery in case of failure.
+Unlikel
+y Low Very
+Low
+CRM-3
+The manufacturer should consider if safety-
+related data that is stored on or transferred
+to/from the device requires some level of
+protection such as encryption. For example,
+passwords should be stored as
+cryptographically secure hashes. The
+manufacturer should consider controls to
+prevent an unauthorized person from
+accessing the device.
+For example, controls could include physical
+locks or physically restricting access to ports,
+or not allowing access with a physical cable
+without requiring authentication.
+Reduce the risk of account information
+leaks through encrypted storage
+Ensure that all accounts are managed by
+authorized users.
+The console blocks access to the database
+without going through the console, as the
+database implements the Bcrypt
+algorithm.
+Unlikel
+y Low Very
+Low
+CRM-4
+The manufacturer should consider if safety-
+related data that is stored on or transferred
+to/from the device requires some level of
+protection such as encryption. For example,
+passwords should be stored as
+cryptographically secure hashes.
+The manufacturer should consider how data
+transfer to and from the device is secured to
+prevent unauthorized access, modification,
+or replay.
+For example, manufacturers should
+determine: how the communications between
+devices/systems will authenticate each other;
+if encryption is required; how unauthorized
+replay of previously transmitted commands
+Reduce the risk of account information
+leaks through encrypted storage
+Unlikel
+y Low Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 16 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+or data will be prevented; and if terminating
+communication sessions after a pre-defined
+time is appropriate.
+The manufacturer should consider how the
+device would interface with other devices or
+networks. Interfaces may include hardwired
+connections and/or wireless
+communications. Examples of interface
+methods include Wi-Fi, Ethernet, Bluetooth,
+USB, etc.
+CRM-5
+The manufacturer should consider user
+access controls that validate who can use the
+device or allows granting of privileges to
+different user roles or allow users access in
+an emergency. Additionally, the same
+credentials should not be shared across
+devices and customers.
+Examples of authentication or access
+authorization include passwords, hardware
+keys, or biometrics, or a signal of intent that
+cannot be produced by another device.
+Sensitive data such as patient personal
+information, medical records, license keys,
+and user settings stored in the database files
+must be protected.
+Logging in without informing
+the reason for login failure
+Protect the DB file with a password to
+prevent it from being opened without
+authorization.
+For dicom files stored on a PC, the
+information subject's name, date of birth,
+and shooting location information are not
+exposed.
+Unlikel
+y Low Very
+Low
+CRM-6
+Internal information such as user
+authentication data must be protected from
+internal staff and malicious users to prevent
+data leakage.
+The manufacturer should consider user
+access controls that validate who can use the
+device or allows granting of privileges to
+different user roles or allow users access in
+an emergency. Additionally, the same
+credentials should not be shared across
+devices and customers.
+Examples of authentication or access
+authorization include passwords, hardware
+keys, or biometrics, or a signal of intent that
+cannot be produced by another device.
+Ensure that all accounts are managed by
+authorized users.
+Maintaining backups allows you to
+recover your original data
+Restricts input characters in the input
+field
+Medical devices have read-only access to
+audit logs for authorized users only.
+Unlikel
+y Low Very
+Low
+CRM-7
+The manufacturer should consider controls to
+prevent an unauthorized person from
+accessing the device.
+For example, controls could include physical
+locks or physically restricting access to ports,
+or not allowing access with a physical cable
+without requiring authentication.
+Keep your account information secure so that
+it is not exposed, as attackers can
+impersonate other users if account
+information is exposed.
+Ensure that all accounts are managed by
+authorized users.
+Reduce the risk of account information
+leakage by storing data in encrypted
+form.
+Unlikel
+y Low Very
+Low
+CRM-8
+Security-appropriate measures should be
+applied to login-related notifications. That is,
+if a user (person) can directly manipulate the
+user interface of a medical device, there
+should be a function to display a system
+usage notification message during the
+authentication process, and the system usage
+System notification message pop-up
+required after login
+Example of system usage notification
+message (when logging in)
+"This system is a personal asset, and
+only authorized users are allowed to
+access it. System usage history is
+Unlikel
+y Low Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 17 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+notification message should be configurable
+by authorized personnel. In addition, if the
+reason for login failure is notified, an attacker
+can infer account information.
+monitored and recorded for security
+purposes, and may be subject to audit if
+necessary. Unauthorized access or
+unauthorized use is strictly prohibited,
+and may be subject to civil and criminal
+punishment. Using this system means
+that you agree to these terms." Does not
+inform the reason for login failure, and
+only leaves a log
+CRM-9
+Appropriate complementary measures must
+be in place to prevent malicious code
+execution (attacks such as SQL injection and
+XSS). ㅇ Medical devices must verify the
+integrity of firmware, software, and
+configuration data required for the boot and
+runtime processes of the medical device
+before use.
+* Boot process integrity supplementary
+explanation
+To ensure that the medical device does not
+boot into an unsafe or invalid operating state
+that could allow a malicious attacker to
+access the medical device, assets, or data, the
+medical device must verify the integrity of its
+firmware, software, and configuration data
+during the boot process.
+Integrity verification process is equipped
+at the console level
+1. Files that have problems during
+integrity check are logged
+2. If there is a problem during integrity
+check, a message is generated and the
+program is terminated upon
+confirmation.
+* To test integrity check, copy the
+previous version file of HnVue.exe,
+which is in the check list, and run it. The
+integrity check will fail and a message
+will appear.
+Unlikel
+y Low Very
+Low
+CRM-10
+Attackers want to do malicious acts without
+leaving any evidence
+Restrict unauthorized access to audit logs
+Leave an Audit Log and make it visible
+only to authorized people
+It is stored in the Audit Log and the user
+of the PC where the product is installed
+is controlled so that the log cannot be
+read and only authorized people can view
+it.
+- It should be saved as a .txt file and
+cannot be viewed or viewed.
+Unlikel
+y Low Very
+Low
+CRM-11
+The manufacturer should consider user
+access controls that validate who can use the
+device or allows granting of privileges to
+different user roles or allow users access in
+an emergency. Additionally, the same
+credentials should not be shared across
+devices and customers.
+Examples of authentication or access
+authorization include passwords, hardware
+keys, or biometrics, or a signal of intent that
+cannot be produced by another device.
+The manufacturer should consider controls to
+prevent an unauthorized person from
+accessing the device.
+For example, controls could include physical
+locks or physically restricting access to ports,
+or not allowing access with a physical cable
+without requiring authentication.
+Exposure of audit logs can expose security
+vulnerabilities
+Restrict unauthorized access to audit logs
+Ensure that all accounts are
+managed by authorized users.
+Leave an Audit Log and make it visible
+only to authorized people
+It is stored in the Audit Log and the user
+of the PC where the product is installed
+is controlled so that the log cannot be
+read and only authorized people can view
+it.
+- It should be saved as a .txt file and
+cannot be viewed or viewed.
+Unlikel
+y Low Very
+Low
+CRM-12
+Risk of system file tampering - Malware or
+hackers tampering with system files to insert
+backdoors
+Manufacturers should consider risks to
+Integrity check is performed at system
+startup when updating.
+Make sure all accounts are managed by
+authorized users.
+Unlikel
+y Low Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 18 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+device integrity, such as unauthorized
+modification of device software.
+Manufacturers should consider controls, such
+as anti-malware, to prevent viruses, spyware,
+ransomware, and other malicious code from
+running on the device. Manufacturers should
+establish and communicate processes for
+implementing and distributing regular
+updates. Manufacturers should consider how
+they will update or control operating system
+software, third-party software, or open
+source software. Manufacturers should also
+plan how they will respond to software
+updates or outdated operating environments
+that they cannot control (e.g., medical device
+software running on unsecured operating
+system versions). Manufacturers should also
+plan how they will respond to software
+updates or outdated operating environments
+that they cannot control (e.g., medical device
+software running on unsecured operating
+system versions).
+Regular backups allow for quick
+recovery in case of failure.
+Integrity verification process is provided
+at console level
+1. Files that have problems during
+integrity check are logged.
+2. If there is a problem during integrity
+check, a message is generated and the
+program is terminated upon
+confirmation.
+* To test integrity check, copy the
+previous version file of HnVue.exe,
+which is in the checklist, and run it. If
+integrity check fails, a message will be
+displayed.
+CRM-13
+Critical system files may be corrupted or
+deleted, resulting in service failures.
+Manufacturers should consider risks to
+device integrity, such as unauthorized
+modification of device software.
+Manufacturers should consider controls, such
+as anti-malware, to prevent viruses, spyware,
+ransomware, and other malicious code from
+running on the device. Manufacturers should
+establish and communicate processes for
+implementing and distributing regular
+updates. Manufacturers should consider how
+they will update or control operating system
+software, third-party software, or open
+source software. Manufacturers should also
+plan how they will respond to software
+updates or outdated operating environments
+that they cannot control (e.g., medical device
+software running on unsecured operating
+system versions). Manufacturers should also
+plan how they will respond to software
+updates or outdated operating environments
+that they cannot control (e.g., medical device
+software running on unsecured operating
+system versions).
+Integrity check is performed at system
+startup when updating.
+Make sure all accounts are managed by
+authorized users.
+Regular backups allow for quick
+recovery in case of failure.
+Integrity verification process is provided
+at console level
+1. Files that have problems during
+integrity check are logged.
+2. If there is a problem during integrity
+check, a message is generated and the
+program is terminated upon
+confirmation.
+* To test integrity check, copy the
+previous version file of HnVue.exe,
+which is in the checklist, and run it. If
+integrity check fails, a message will be
+displayed.
+Unlikel
+y Low Very
+Low
+CRM-14
+Unauthorized users with administrative
+privileges put the system at risk -
+Manufacturers should consider controls to
+prevent unauthorized access to the device.
+For example, controls may include physical
+locks or physical access restrictions to ports,
+or not allowing access via physical cables
+without authentication.
+All accounts are managed by authorized
+users. Make sure all permissions are
+granted to users. Manage accounts by
+granting them different levels of system
+access by granting them different levels
+of trust in terms of permissions. For
+example, you can grant different levels of
+permissions to general users, service
+engineers, and administrators.
+Unlikel
+y Low Very
+Low
+CRM-15
+Attackers can gain administrative privileges
+on internal devices - Manufacturers should
+have controls in place to prevent
+unauthorized access by insiders who access
+unauthorized accounts and manipulate
+account information without the help of a
+All accounts are managed by authorized
+users. Make sure all permissions are
+granted to users. Manage accounts by
+granting them different levels of system
+access by granting them different levels
+Unlikel
+y Low Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 19 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+cook. For example, controls can be recharged
+by locking devices or restricting memory
+access to ports, or not allowing access to
+additional memory cables.
+of trust in terms of permissions. For
+example, you can grant different levels of
+permissions to general users, service
+engineers, and administrators.
+CRM-16
+If you leave your password unchangeable for
+too long, any stolen credentials will remain
+valid for a long time, allowing the attacker to
+continue accessing your account as a
+legitimate user.
+Notify users to change their password
+after a certain period of time
+Unlikel
+y Low Very
+Low
+CRM-17
+It is necessary to delay the attempt itself by
+blocking the attacker from continuously
+trying passwords randomly
+Login restriction after consecutive failed
+login attempts
+If the medical device has an authentication
+function, it should have the following
+functions:
+The number of login attempts should be
+limited when all users (people, software,
+devices) attempt incorrect access
+consecutively for a set period of time.
+- When this limit is reached, access should be
+denied for a set period of time or until
+unlocked by an administrator. An
+administrator can also unlock the account
+before the timeout expires.
+If you fail to log in consecutively for a set
+number of times, you will be blocked
+from logging in. If you fail to log in
+consecutively for 5 times, you will be
+blocked from logging in for 10 minutes
+or until the administrator unlocks the
+login.
+Unlikel
+y High Very
+Low
+CRM-18
+Attackers delay attempts to guess passwords
+by randomly trying them over and over
+again.
+If you fail to log in consecutively for a set
+number of times, you will be blocked
+from logging in.
+Unlikel
+y High Very
+Low
+CRM-19
+Medical devices must have a confidentiality
+protection function for stored information
+that supports read permission and a
+confidentiality protection function for
+information during transmission.
+DICOM (.dcm) files contain personal
+information such as patient name and date of
+birth, so the information in the files must be
+prevented from being leaked.
+Encrypt the header information required
+for DICOM file security and decrypt it
+only during transmission. In the case of
+DICOM files, manage the information so
+that the subject's name, date of birth, and
+shooting site information are not
+exposed.
+Unlikel
+y Low Very
+Low
+CRM-20
+Users need to be made aware that their
+actions can be tracked and that they can be
+held legally accountable. If the user (human)
+can directly manipulate the user interface of
+
+the medical device, there should be a
+function to display a system usage
+notification message during the
+authentication process, and the system usage
+notification message should be configurable
+by authorized personnel.
+Explicitly displaying a warning when
+logging in: **"Your access is logged and
+you are responsible for it"**
+Example of system usage notification
+message (when logging in)
+-> "This system is a private property and
+only authorized users are allowed to
+access it. System usage is monitored and
+logged for security purposes and may be
+subject to audit if necessary.
+Unauthorized access or unauthorized use
+is strictly prohibited and may result in
+civil and criminal penalties. By using this
+system, you agree to these terms."
+Likely Mediu
+m
+Very
+Low
+CRM-21
+It is necessary to prevent problems in
+operation due to insufficient disk space
+during data storage of the system. It is
+necessary to have functions to prepare for
+loss of essential services and functions in
+case of audit processing failure event (e.g.
+audit storage capacity exceeded).
+While the program is running, it
+continuously checks the minimum
+storage space required for execution and
+displays it to the user, and if it falls below
+the minimum storage space, it
+automatically deletes old data. There is
+an auto delete function, so the period or
+maximum capacity is set, and when this
+is exceeded, there is an auto delete
+function.
+Unlikel
+y
+Mediu
+m Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 20 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation
+Likelih
+ood(Af
+ter)
+Impact
+(After)
+Risk
+Level
+(After)
+CRM-22
+Patient information, patient identifiers, and
+patient data must not be exposed during
+transmission.
+Encrypt patient information, patient
+identifiers, and patient data during
+transmission to prevent exposure.
+Unlikel
+y
+Mediu
+m Low
+CRM-23
+A malicious attacker intrudes into the
+detector through the console and modifies the
+detector connection information.
+Maintaining backups allows recovery of
+detector connection information. Likely Low Low
+CRM-24 A malicious attacker manipulates the
+database to alter diagnostic information.
+Maintaining backups allows recovery of
+original data.
+Unlikel
+y
+Mediu
+m Low
+CRM-25
+Risk of losing critical diagnostic information
+and database due to system failures or
+attacks.
+Maintaining backups allows recovery of
+original data.
+Unlikel
+y High Very
+Low
+CRM-26
+An attacker may tamper with or alter the
+firmware patch data, allowing the device to
+run malicious firmware that includes
+malware or other harmful code.
+The firmware patch data is encrypted
+using AES, and its integrity can be
+verified with SHA-256 before the patch
+is applied.
+Likely Low Low
+CRM-27
+An attacker may generate a large volume of
+traffic to overload the firmware, potentially
+disrupting or blocking access for legitimate
+users.
+If a malformed packet that does not
+follow the proper protocol is received on
+the connection request port, the
+connection is immediately terminated
+and the system waits for the next request.
+If a valid connection procedure is
+completed on the connection request
+port, a random port is then opened for
+service communication and provided to
+the user. The user then establishes a new
+connection through this port to continue
+communication.
+Likely Low Low
+CRM-28
+Data stored in internal storage may be leaked
+externally or accessed and tampered with by
+unauthorized users.
+All communication ports and physical
+interfaces that allow direct access to
+internal storage, such as FTP and SSH,
+are blocked to prevent unauthorized
+access by attackers.
+Likely Low Low
+CRM-29
+An attacker may attempt to access the system
+by using the root account or by creating
+additional user accounts and granting them
+elevated privileges.
+All ports except those opened through a
+legitimate connection procedure are
+blocked, and system access through them
+is not allowed.
+Likely Low Low
+CRM-30
+Communication packets may be exposed
+through tools such as network interface
+capture tools, potentially leaking sensitive
+data to an attacker.
+Communication packets are encrypted
+using symmetric key encryption based on
+an AES key that is randomly generated
+during the initial connection phase. As a
+result, even if packets are captured
+externally, their contents cannot be
+interpreted. Additionally, a random IV
+(Initialization Vector) is included with
+each transmission, ensuring that even if
+the same data is sent again, the encrypted
+output differs each time, making
+inference impossible.
+Likely Mediu
+m Low
+CRM-31
+An attacker may intercept a packet, modify
+its contents, and forward it.
+Every packet includes an HMAC-
+SHA256 value for integrity verification,
+which allows detection of any tampering.
+The HMAC-SHA256 key is randomly
+generated during the initial connection
+establishment.
+Likely Low Low
+CRM-32
+An attacker may intercept a packet, modify
+its contents, and forward it.
+Every packet includes an HMAC-
+SHA256 value for integrity verification,
+which allows detection of any tampering.
+The HMAC-SHA256 key is randomly
+generated during the initial connection
+establishment.
+Likely Low Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 21 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2) Cybersecurity requirements (IEC 60601-4-5)
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+CRM-33
+(IA-01)
+every interface accessible by user
+must include functionality for
+identifying and authenicating users.
+This functionality may be provided
+by the idenficiation and
+authentication system of the parent
+system or implemented directly
+withing the medical device.
+This medical device provides user
+identification and authentication functions
+using ID and password methods.
+Likely Very
+Low
+Very
+Low
+CRM-34
+(IA-02)
+medical devices must either have the
+capability to manage all accounts or
+utilize the account management
+functionality of a parent system.
+There must be functionality to
+manage all accounts(e.g. adding,
+activaging, modifying, deactivating,
+and deleting accounts) by authorized
+users
+(1) Available functions vary by Administrator,
+Engineer, and User role.
+1) Administrator: All configuration functions
+are available.
+2) Engineer: Configuration functions except
+account management are available.
+3) User: Configuration functions are not
+available.
+(2) This medical device provides functions for
+adding, deleting, and modifying accounts.
+1) Provides an account type confirmation
+function.
+2) Provides an account addition function.
+- Click the "Add" icon, enter your ID and
+password, and then click the "Save" icon to
+add the entered account.
+3) Provides an account password modification
+function.
+- Click the "Edit" icon for a selected account
+to change the password.
+- Changing the account ID is not possible.
+4) Provides an account deletion function.
+- Select an account and click the "Remove"
+icon to delete the selected account.
+- Login with a deleted account will be
+disabled.
+Likely Very
+Low
+Very
+Low
+CRM-35
+(IA-03)
+Medical devices must either utilize a
+system with identification
+information management
+functionality or have the capability to
+directly manage identification
+information.
+Accounts created through account
+management (IA-02) must use one or
+more unique identifiers to clearly
+distinguish each account.
+(1) The account ID is used as a unique
+identifier.
+- If the same ID is used, account creation will
+not be possible.
+- If you attempt to create a new account using
+an existing User ID, you will be informed that
+account creation with that ID is not possible.
+Likely Very
+Low
+Very
+Low
+CRM-36
+(IA-04)
+Initial authentication methods must
+be available.
+After installation, there must be
+functionality to enforce changes to
+default authentication information or
+to notify users if the default
+authentication information has not
+been changed.
+There must be functionality to allow
+periodic changes to authentication
+Check whether the default authentication
+information change notification function is
+enabled.
+(1) When connecting with the default account
+and default password provided by the
+manufacturer, a default password change
+notification message is provided.
+- Please change the default password to a new
+one.
+Would you like to change it now?
+- After selecting Yes, you can apply the
+password change.
+Likely Very
+Low
+Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 22 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+information.
+Authentication information must not
+be exposed or altered during storage,
+usage, or transmission.
+Check if the authentication information
+change period is set.
+(1) The PW Change Duration feature provides
+a message recommending a password change
+after a set period of time.
+- PW Change Duration: Can be set from 1 to
+12 months. Setting it to 0 will not apply.
+- When attempting to log in after the set period
+has elapsed, the user will be logged in
+successfully and a PW change message will be
+displayed.
+> The PW change duration for the account
+"ktruser" was set to 1 (1 month) and the
+account was created on July 10.
+> The OS date was changed to 1 month later
+(07.10 -> 08.11).
+> Upon logging in after the change, a message
+recommending a password change is
+displayed to the user.
+> Message: The password change period has
+expired. Please update your password. Verify
+that authentication information is kept
+confidential during storage, use, and
+transmission.
+(1) HnVUE is a standalone program installed
+on a PC. The password is not transmitted to a
+specific PC or server, but is encrypted and
+stored in the database on the PC where it is
+installed.
+CRM-37
+(IA-05)
+For medical devices with password-
+based authentication functionality,
+there must be a capability to enforce
+password strength according to
+password setting guidelines or utilize
+a system that provides such
+configuration capabilities.
+1. You can set the password strength when
+setting up an account.
+2. Check that the set password strength is
+applied.
+1) Medium: 8 characters or more, including at
+least 1 special character.
+- Unable to set message: Password must be at
+least 8
+characters long and contain at least one special
+character.
+- ktrktr!: Passwords less than 8 characters
+cannot be set.
+- ktr13579: Passwords that do not contain
+special characters cannot be set.
+2) Strong: 12 characters or more, including at
+least 1 special character, and at least 1
+uppercase letter.
+- Unable to set message: Password must be at
+least 12
+characters long, containing at least one special
+character,
+and one uppercase letter.
+- Ktrsoft135!: 11 characters cannot be set.
+- Ktrsoftware1: Passwords that do not contain
+special characters cannot be set.
+- ktrsoft13!@#: Passwords that do not contain
+uppercase letters cannot be set.
+Likely Very
+Low
+Very
+Low
+CRM-38
+(IA-06)
+For medical devices with
+authentication functionality,
+feedback regarding authentication
+information during the authentication
+process must not be explicit.
+(1) When authentication fails, the message
+provided to the user does not provide any
+information that could be used to infer
+authentication information.
+- A message is provided asking for ID or
+Likely Very
+Low
+Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 23 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+password confirmation.
+- Message content: Check the ID or password
+CRM-39
+(IA-07)
+For medical devices with
+authentication functionality, the
+following features must be included:
+The number of login attempts should
+be limited for all users (individuals,
+software, devices) if consecutive
+failed access attempts occur within a
+specified timeframe.
+Upon reaching the attempt limit,
+access must be denied for a
+predetermined period or until
+unlocked by an administrator.
+Administrators should also have the
+ability to unlock accounts before the
+timeout expires.
+Check if the system provides a feature to limit
+the number of login attempts.
+(1) Confirm that the account will be locked
+after 5 consecutive failed login attempts.
+- After 5 consecutive failed login attempts, an
+account lock message will appear.
+- Message: "Your account has been locked due
+to 5 incorrect password attempts. Please
+contact the administrator."
+Check if the locked account can be unlocked.
+(1) Confirm that a locked account can be
+unlocked by a user with Administrator
+privileges.
+- Click the "unlock" icon to the right of the
+locked account to unlock it.
+Likely Very
+Low
+Very
+Low
+CRM-40
+(IA-08)
+If a user (person) can directly operate
+the user interface of a medical device,
+the system must display a usage
+notification message during the
+authentication process. The usage
+notification message must be
+configurable by authorized
+personnel.
+(1) This medical device provides the following
+system notification message to the user when
+logging in.
+- System notification message: This system is
+private
+property, and only authorized users are
+permitted
+access. All system usage is monitored and
+recorded for security purposes and may be
+subject to audit if necessary. Unauthorized
+access
+or unauthorized users is strictly prohibited and
+may
+result in civil and criminal penalties. Use of
+this
+system constitutes acceptance of these items.
+> Access is only permitted to authorized users,
+and it is stated that unauthorized access is
+subject to criminal penalties.
+Likely Very
+Low
+Very
+Low
+CRM-41
+(UC-01)
+The medical device must have the
+functionality to grant permissions to
+all users who are identified and
+authenticated, based on their assigned
+responsibilities.
+(1) HnVUE account permissions are divided
+into three categories:
+1) User
+2) Administrator
+3) Engineer
+(2) Check the functions available for each
+permission.
+1) User: Access all functions except the
+Settings function.
+- When logged in with User permissions, the
+"Settings" icon in the upper right corner is not
+visible.
+2) Administrator: Access all functions,
+including the Settings function.
+- When logged in with Administrator
+permissions, the "Settings" icon in the upper
+right corner is visible.
+- 11 settings are available.
+> System, Account, Detector, Generator,
+PACS,
+Worklist, Print, Option, Display, DicomSet,
+RIS
+Code
+Unlikely Very
+Low
+Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 24 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+- Engineer permissions: Access all functions
+of this medical device except the Account
+function, which is an account setting function.
+CRM-42
+(UC-02)
+If a medical device utilizes mobile
+code technology, the device must
+have at least the following usage
+control features regarding the use of
+mobile code:
+Control of mobile code execution
+Control over allowing or denying the
+transmission and reception of mobile
+code by users (people, software,
+devices)
+Control of mobile code execution
+based on integrity check results prior
+to execution
+This medical device does not use mobile code
+technology. Unlikely Very
+Low
+Very
+Low
+CRM-43
+(UC-03)
+when a user(person) accessed a
+medical device locally or via a
+network, the deive must have the
+following functionalities,
+- initiate session locking to prevent
+futher access if the device is not used
+within a configured time or if the
+user(persion, software, device) does
+not manually resume the sesstion.
+- once the session is locked, it should
+remain locked until the user who was
+using the session or another
+authorized user re-estabblshes access
+through the appropriate login
+procedures.
+(1) The default session timeout value of this
+medical device is set to 30 minutes through the
+source code, and it is confirmed that the
+session is out when the time is exceeded.
+Unlikely Very
+Low
+Very
+Low
+CRM-44
+(UC-04)
+The medical device must have the
+functionality to generate audit
+records related to security types such
+as "access control, request errors,
+medical device events, backup and
+recovery events, configuration
+changes, and audit log events."
+Each individual audit record must
+include details such as:
+Timestamp
+Source
+Category
+Type
+Event ID
+
+Event outcome
+1) Check the audit records of this medical
+device.
+- Select Settings > System > Audit log/System
+log
+- You can check the event details that occurred
+for each account through the Audit log and
+System log.
+(2) Check that the Audit log and System log
+specify the event occurrence time, event
+details, and event occurrence subject.
+- Audit log: DateTime, UserID, Code,
+Message
+- System log: DateTime, Message
+> Message: Displays detailed event details
+Unlikely Very
+Low
+Very
+Low
+CRM-45
+(UC-05)
+The medical device must have the
+functionality to generate audit
+records related to security types such
+as "access control, request errors,
+medical device events, backup and
+recovery events, configuration
+changes, and audit log events."
+Each individual audit record must
+include details such as:
+(1) Provide users with the ability to set an
+automatic log deletion period or threshold.
+1) Set the Automatic deleting capacity in the
+system settings to 68%.
+2) Ensure that logs are deleted when the
+allowed log capacity reaches 69%.
+- 69%
+- Ensure that logs are automatically deleted
+when the log storage capacity reaches 69%,
+maintaining the log storage capacity at 68%.
+Unlikely Very
+Low
+Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 25 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+Timestamp
+Source
+Category
+Type
+Event ID
+Event outcome
+CRM-46
+(UC-06)
+The medical device must have the
+functionality to generate timestamps
+(including date and time) used in
+audit records.
+(1) Logs recorded by this medical device are
+recorded with a timestamp.
+- Audit log: DateTime, UserID, Code,
+Message
+- System log: DateTime, Message
+> Message: Displays detailed event
+information.
+Unlikely Very
+Low
+Very
+Low
+CRM-47
+(UC-07)
+If a medical device has a user
+(person) interface, the device must
+have the functionality to determine
+whether the user (person) has
+performed a specific action.
+(1) The audit log stored by this medical device
+records the event originator.
+- Audit log: DateTime, UserID, Code,
+Message
+- System log: DateTime, Message
+> Message: Displays detailed event
+information
+> Message records the login account and the
+event details for that account.
+Unlikely Very
+Low
+Very
+Low
+CRM-48
+(SI-01)
+The medical device must have the
+functionality to protect the integrity
+of transmitted information.
+Check whether the communication between
+the detector and HnVUE SW is encrypted.
+(1) Encrypted communication between the
+Detector and HnVUE
+- During initial communication, a TCP
+connection is attempted between the
+Detector's port 7000 and the PC on which the
+HnVUE software is installed.
+> Detector IP:Port: 192.168.197.54:7000
+> HnVUE SW IP:Port: 192.168.197.3:62869
+- If the connection is successful, the Detector
+closes port 7000 and initiates encrypted
+communication with the HnVUE software
+through a random port.
+> Encryption algorithm: AES 128
+> Detector's changed communication port:
+42045
+- Transmits information such as the Detector's
+battery status.
+Check communication between HnVUE SW
+and PACS server
+(1) HnVUE SW and PACS server
+communicate using DICOM protocol and
+plaintext.
+Check communication between HnVUE SW
+and Worklists server
+(1) HnVUE SW and Worklists server
+communicate using DICOM protocol and
+plaintext.
+Very
+Unlikely High Very
+Low
+CRM-49
+(SI-02)
+Applicable to Software as a Medical
+Device (SaMD):
+The manufacturer of the software
+medical device (including SaMD)
+must verify and document the
+compatibility of the device with
+malware protection features.
+If there are settings or conditions
+required for malware protection,
+(1) The HnVUE user manual states that an
+anti-malware protection program must be
+installed.
+- HnVUE SW is a program that is installed on
+the PC alone, and can protect the SW from
+malicious codes depending on whether a virus
+protection program is installed on the PC.
+(2) Users cannot install malicious files in
+Detector.
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 26 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+these must be recorded.
+※ Protection from malware may be
+provided by external services or
+applications.
+Applicable to Medical Devices other
+than SaMD:
+The medical device must have the
+functionality to protect against the
+installation and execution of
+unauthorized software(which may
+include malware). *example of
+malware, viruss, worms, trojans,
+spyware etc
+- In the case of Detector, FW updates are only
+possible using the manufacturer's exclusive
+tool.
+> Manufacturer's exclusive tool: Blue
+Engineering Tool v0.20.1
+- Users cannot access the Detector internal
+system using commercial access tools (Putty,
+MobaXterm, etc.).
+CRM-50
+(SI-03)
+The medical device must have the
+functionality to verify the intended
+operation of security features.
+When attempting to access an unauthorized
+account, verify that login is not possible.
+(1) Login attempts with unregistered accounts
+are not possible.
+- Check accounts registered to HnVUE
+> admin
+> ktruser
+> ktreng
+> ktradmin
+- Login attempts with an unregistered account,
+testuser, are not possible.
+Check event log recording and storage.
+(1) Check the audit records of this medical
+device.
+- Select Settings > System > Audit log/System
+log
+- You can check the details of events generated
+by each account through the Audit log and
+System log.
+(2) Verify that the Audit log and System log
+specify the time of the event, the details of the
+event, and the person who generated the event.
+- Audit log: DateTime, UserID, Code,
+Message
+- System log: DateTime, Message
+> Message: Displays detailed event details.
+Very
+Unlikely High Very
+Low
+CRM-51
+(SI-04)
+The medical device must have the
+functionality to perform or support
+integrity checks on software and
+information (including recording the
+results of integrity checks), or it must
+be able to utilize a system that can
+perform or support integrity checks.
+Check if integrity verification is performed
+when HnVUE runs.
+(1) HnVUE performs integrity verification
+when running.
+1) Integrity verification is performed on 49
+files required for HnVUE operation.
+- Integrity verification principle: Check if the
+FileName, FileSize, LastWriteDate, and
+FileVersion of the 49 files match.
+> The integrity verification table in
+integrity.db contains four parameters:
+FileName, FileSize, LastWriteDate, and
+FileVersion.
+2) Verify that integrity verification is
+performed on HnVUE by checking the source
+code for consistency between these four
+parameters.
+3) Verify that integrity verification is
+performed preemptively when HnVUE runs
+through the event log.
+Check if Detector has an integrity check
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 27 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+function.
+(1) Detector does not provide an integrity
+check function. (2) Based on the RA-05 test
+results, the Detector does not provide users
+with unnecessary external port usage, and
+users cannot access the Detector's internal
+system through the Detector's USB Type-C
+port.
+1) Port scan results show that only the
+Detector's initial communication port is active.
+2) When the Detector's USB Type-C port is
+connected to a PC, the PC does not recognize
+it.
+(3) Based on the results of (2), unauthorized
+persons cannot access the Detector's internal
+system through the Detector's external
+interfaces and ports. Therefore, the possibility
+of damage to the Detector by unauthorized
+persons is low. Therefore, the Detector does
+not require an integrity check function.
+(4) In the event of damage to the Detector, the
+Detector manufacturer is responsible for
+repairs, as outlined in the Detector manual.
+CRM-52
+(SI-05)
+The medical device must validate the
+syntax, length, and content of all
+input data received through external
+interfaces that directly affect the
+operation of the device, or input data
+used for controlling the medical
+device.
+The input fields in this medical device's user
+manual do not define input value limits or
+valid ranges.
+Very
+Unlikely High Very
+Low
+CRM-53
+(SI_06)
+Medical devices connected to
+automated processes must have the
+functionality to output to a predefined
+state if they are unable to maintain the
+normal operation defined by the
+manufacturer.
+This medical device does not implement
+automated process functions.
+Very
+Unlikely High Very
+Low
+CRM-54
+(SI-07)
+The medical device must identify and
+handle error conditions in a manner
+that does not provide information that
+could be exploited by an attacker to
+target the medical device or the
+medical IT network.
+This medical device does not implement
+automated process functions.
+Very
+Unlikely High Very
+Low
+CRM-55
+(SI-08)
+The medical device must have an
+update or upgrade functionality.
+(1) HnVUE SW
+- The previously installed HnVUE SW was
+deleted by H&abyz engineers and the updated
+SW was installed.
+- The user manual clearly states that SW
+installation can only be performed by H&abyz
+engineers.
+> HnVUE SW is software installed
+independently on a PC.
+(2) Detector
+- Detector firmware updates are performed by
+H&abyz engineers using the manufacturer's
+tool.
+> Update Tool: Blue Engineering Tool v0.20.1
+> Select Update File: F_v_0_20_0.bpd
+Very
+Unlikely High Very
+Low
+CRM-56
+(SI-09)
+The medical device must verify the
+authenticity and integrity of software
+updates or upgrades before
+installation.
+When updating HnVUE SW, check whether
+the update file is verified for integrity
+(1) When updating HnVUE SW, perform
+integrity verification.
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 28 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+1) Distribute the installation file and the hash
+file of the corresponding file together.
+- Hash function: SHA-256
+2) When creating an installation file, if the
+hash value created from the installation file
+and the hash value of the distributed hash file
+are not the same,
+check that the installation is not possible with
+an integrity check failure message.
+When updating FW of Detector, check
+whether the update file has an integrity
+verification function
+(1) When updating FW, the manufacturer
+encrypts the update file with AES 128 and
+generates a SHA 256 hash value for the
+corresponding file, which is used for integrity
+verification.
+- Encryption of the FW update file can only be
+performed on the manufacturer's designated
+PC where the encryption key is stored.
+(2) When updating FW, updates are only
+possible using the manufacturer's dedicated
+tool, and integrity verification is performed
+during the update process.
+CRM-57
+(SI-10)
+The medical device must have
+physical tamper-resistant features
+(e.g., locks, encapsulation, security
+screws with non-standard heads) to
+prevent unauthorized physical access.
+The disabled USB-C port is physically
+blocked.
+The bolt for opening the product is also
+covered with a deco sheet.
+Very
+Unlikely High Very
+Low
+CRM-58
+(SI-11)
+The medical device must verify the
+integrity of the firmware, software,
+and configuration data required for
+the device’s boot and runtime
+processes before use.
+(1) The Detector does not perform integrity
+verification upon boot.
+- Based on the SI-10 test results, the Detector's
+internal system cannot be accessed through the
+Detector's external interface, reducing the risk
+of internal system damage by unauthorized
+parties.
+- In the event of a Detector malfunction, the
+manufacturer provides repair service.
+(2) HnVUE performs integrity verification
+upon software execution.
+1) Integrity verification is performed on 49
+files required for HnVUE operation.
+- Integrity verification principle: Checking
+whether the FileName, FileSize,
+LastWriteDate, and FileVersion of the 49 files
+match.
+> The integrity verification table in
+integrity.db contains four parameters:
+FileName, FileSize, LastWriteDate, and
+FileVersion.
+2) The source code confirms that integrity
+verification is performed on HnVUE based on
+the consistency of these four parameters.
+3) Verify that integrity verification is
+performed first when running HnVUE through
+the event log.
+Likely Very
+Low
+Very
+Low
+CRM-59
+(DC-01)
+medical devices must have
+confidentialiy protection features for
+(1) Confirm that the HnVUE account
+password is encrypted and stored on the PC
+Very
+Unlikely
+Very
+Low
+Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 29 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+stored information with read access
+premissions and for information in
+transit.
+where HnVUE is installed.
+1) Verify that it is encrypted and stored using
+Bcrypt through the source code.
+2) Confirm that the password is encrypted and
+stored on the PC.
+CRM-60
+(DC-02)
+If unauthorized individuals can
+identify a patient through healthcare
+information stored on a medical
+device, the device must include
+features to de-identify such
+information (e.g., application
+software, additional tools, etc.).
+Verify that patient identification information
+is available within the stored medical
+information.
+(1) Register patient information in HnVUE
+and capture the image.
+1) Enter date of birth, gender, etc. and save.
+- Name: ktr2 security2 test2
+- Age: 20
+- Gender: F
+- Date of Birth: 2015/07/01
+- Details: test patient, working mon
+2) Capture the image as a registered patient.
+(2) Verify whether patient identification
+information is included in the captured
+DICOM file.
+- Upon checking the captured DICOM file,
+patient identification information and personal
+information were not available.
+> Check the DICOM file storage location.
+> Upon checking the DICOM file contents,
+patient identification and personal information
+were not available.
+The database containing patient information is
+inaccessible to unauthorized persons.
+(1) The database of this medical device
+containing patient information is inaccessible
+to unauthorized persons.
+- Based on the test results from PT-07 of the
+6.2 Penetration Test, unauthorized access to
+important information is prohibited. > The
+database containing important information
+such as HnVUE settings and patient
+information is inaccessible to unauthorized
+persons.
+> For detailed test results, refer to PT-07 in
+Section 6.2 Penetration Test.
+Likely Very
+Low
+Very
+Low
+CRM-61
+(DC-03)
+When encryption is required, medical
+devices must use cryptographic
+security features recommended
+domestically or internationally, and
+the encryption keys used must be
+securely managed.
+Check the encryption used by this medical
+device
+(1) Encrypted communication between
+HnVUE and the Detector using AES 128
+encryption
+1)
+- During initial communication, a TCP
+connection is attempted between the
+Detector's port 7000 and the PC on which the
+HnVUE software is installed.
+> Detector IP:Port: 192.168.197.54:7000
+> HnVUE SW IP:Port: 192.168.197.3:62869
+- If the connection is successful, the Detector
+closes port 7000 and communicates encrypted
+with the HnVUE software through a random
+port.
+> Encryption Algorithm: AES 128
+> Detector's changed communication port:
+42045
+- Transmits the Detector's battery information,
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 30 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+etc.
+2) The encryption key used for encrypted
+communication between the Detector and
+HnVUE is protected as follows: - HnVUE
+generates an RSA key (2048 bit) and transmits
+the public key to the detector.
+- The detector generates an AES 128
+symmetric key used for communication
+encryption, encrypts it with the RSA public
+key, and transmits it to HnVUE.
+
+- The received key is decrypted and used for
+encrypted communication with the detector.
+(2) The HnVUE account password is
+encrypted and stored using Bcrypt.
+1) Verify that the password is encrypted and
+stored using Bcrypt through the source code.
+2) Verify that the password is encrypted and
+stored on the PC.
+Identify the keys managed by this medical
+device and verify their protection methods.
+(1) The keys stored in the medical device are
+as follows:
+1) Detector: Key for decrypting encrypted FW
+update files.
+- An AES 128 key is injected into the detector
+upon shipment.
+2) HnVUE: None.
+(2) Verify the protection method for the keys
+managed by this medical device. - The keys
+stored in the Detector, as confirmed in (1), are
+protected by a method that restricts access to
+the encryption key by unauthorized persons
+via external interfaces.
+1) Disable the Detector's USB C-type port.
+- Connect the Detector to the PC via the USB
+C-type port.
+- After connecting, verify that the port is not
+recognized in the PC's Device Manager.
+2) The Detector does not provide SSH or
+Telnet ports for remote access by users.
+- A port scan confirmed that the Detector only
+provides port 7000, the initial communication
+port.
+CRM-62
+(TRE-01)
+Medical devices must allow only
+authorized users to access audit logs
+in read-only mode.
+(1) Confirm that the audit log of this medical
+device can only be accessed as read-only.
+- Do not grant write permission to the user.
+- Check the audit record of this medical
+device.
+- Select Settings > System > Audit log/System
+log
+- You can check the event details that occurred
+for each account through the Audit log and
+System log.
+Very
+Unlikely
+Very
+High
+Very
+Low
+CRM-63
+(RA-01)
+Medical devices must have the
+capability to maintain essential
+functions during DoS (Denial of
+Service) events.
+In the case of DDoS, it applies to
+devices that connect to public
+networks to control medical devices
+(1) Functional Isolation: Network/
+management functions are logically separated
+from core medical functions, ensuring
+essential functions are maintained even in the
+event of a network failure or DoS attack.
+Specifically, the database containing patient
+medical information within the console is
+encrypted, protected, and backed up, ensuring
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 31 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+in real time or transmit and receive
+information directly related to patient
+lives in real time, and
+countermeasures against DDoS
+attacks must be established.
+protection and recovery even in the event of
+loss.
+(2) Network-layer blocking of attack traffic
+through integration with dedicated DDoS
+defense equipment/services (firewall, WAF,
+IPS, cloud-based DDoS defense service):
+Real-time traffic monitoring and logging via
+Windows Defender, real-time monitoring of
+network traffic and device operation status for
+early detection of abnormalities.
+(3) Preliminary testing: Actual overload traffic
+(using a DDoS generator) was generated to
+verify that core functions were maintained
+properly (verification completed). The
+verification sequence is detailed below.
+> Verify that the detector maintains its
+functionality even when sending a large
+number of packets using hping3 provided by
+Kali Linux.
+- Even when sending a large number of
+packets, the detector and HnVUE functions
+are maintained, and photos are captured
+normally and saved normally on the PC where
+HnVUE is installed.
+> Verify the detector IP: 192.168.197.54
+> Send a large number of packets to the
+detector using hping3 in Kali Linux.
+> Confirm that X-ray photos are captured
+normally using the detector and HnVUE
+during the large number of packets
+transmitted.
+> Confirm that the captured photos are
+normally saved along with DICOM files on
+the PC where HnVUE is installed.
+CRM-64
+(RA-02)
+Medical devices must have a backup
+function, and the backup process
+must not affect the normal operation
+of the medical device.
+Check if backup function is provided
+(1) This medical device provides backup
+function to the user.
+1) Create BackUP file
+- Click the Manual Back Up icon to create a
+backup file
+Check if the created backup file can be applied
+and if there is no product failure when applied
+(1) Check if the product operates normally
+when backing up the software with the created
+backup file.
+1) Click the “Restore” icon to select a backup
+file
+- Select a backup file on 2025.07.18
+2) Click “Select Folder” to check if HnVUE is
+normally backed up to the corresponding
+folder.
+- Comparison before and after backup
+> Before backup: ktruser3 account exists
+> After backup: ktruser3 does not exist in the
+account list.
+Likely Very
+Low
+Very
+Low
+CRM-65
+(RA-03)
+Medical devices must have the
+capability to safely recover and
+(1) HnVUE provides users with a backup
+function, allowing them to restore HnVUE
+Very
+Unlikely High Very
+Low
+
+Technical Documentation Document No. A-CTMR-HNXP1
+Rev. No. 0
+Cybersecurity Risk Management –
+Threat Modeling
+Rev. Date August 06, 2025
+Page 32 / 32
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Risk
+ID Requirement Mitigation Likelihood
+(After)
+Impact
+(After)
+Risk
+Level
+(After)
+reconfigure after an interruption or
+failure.
+settings and other information.
+1) Click the "Restore" icon to select a backup
+file.
+- Select the backup file as of July 18, 2025.
+2) Click "Select Folder" to confirm that
+HnVUE has been successfully backed up to
+the selected folder.
+- Comparison of before and after backup
+> Before backup: ktruser3 account exists.
+> After backup: ktruser3 does not appear in the
+account list.
+(2) In the user manual, the manufacturer
+confirms that it directly supports repairs in the
+event of a Detector malfunction.
+CRM-66
+(RA-04)
+Medical devices must provide
+configuration settings and interfaces
+in accordance with the network and
+security configurations
+recommended in the user manual, and
+must be able to monitor and control
+changes to these configurations.
+Check if the user manual includes network
+configuration instructions.
+(1) The Detector manual includes information
+on Detector network settings.
+Check if HnVUE provides a network
+connection configuration function for the
+Detector.
+(1) Enter the Detector IP address through the
+HnVUE Settings > Detector menu.
+- Detector model: Blue
+- Detector IP: 192.168.197.54
+Check if the Detector network configuration
+log is recorded.
+(1) You can check the Detector network
+configuration log through the HnUVE Settings
+> System > Audit Log/System Log function.
+Check the communication log between
+HnVUE and the Detector when taking X-ray
+images through the Detector.
+(1) When taking X-ray images through the
+Detector, you can check the communication
+log between HnVUE and the Detector through
+the HnUVE Settings > System > Audit
+Log/System Log function.
+Very
+Unlikely High Very
+Low
+CRM-67
+(RA-05)
+Medical devices must have a feature
+that restricts the use of unnecessary
+functions, ports, protocols, and
+services (functions other than the
+default configuration must be
+disabled).
+(1) Use a port scan tool to verify that Detector
+provides unnecessary service ports.
+- The port scan results confirm that Detector
+only provides port 7000, the initial
+communication port.
+Very
+Unlikely High Very
+Low
+8. Identified Risks by Vulnerability category
+After mitigation measures were taken for a total of 67 risks (Very Low 42 / Low 10 / Medium: 14 /
+High: 1), the residual risk was reduced to a total of Low: 11 / Very Low: 56 .

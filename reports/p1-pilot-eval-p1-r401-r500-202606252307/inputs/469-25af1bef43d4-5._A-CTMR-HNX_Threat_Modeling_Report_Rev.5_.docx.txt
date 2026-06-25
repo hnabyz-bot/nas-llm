@@ -1,0 +1,2356 @@
+queueId: ingest-1781569954374-43o
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/5. A-CTMR-HNX_Threat Modeling Report(Rev.5) .docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/85805b99dec4/5. A-CTMR-HNX_Threat Modeling Report(Rev.5)__85805b99dec4_combined.txt
+canonicalGroupId: 25af1bef43d4
+productSignal: HnX
+authoritySignal: general
+pilotRank: 469
+
+SOURCE_TEXT
+Cybersecurity Risk Management – Threat Modeling
+
+Product name: Portable X-ray System
+
+Model name: HnX-P1, HnX-PB
+
+Name
+
+Position
+
+Date
+
+Signature
+
+Prepared by
+
+Han, Jimin
+
+R&D team
+
+December 10, 2025
+
+Reviewed by
+
+Hur, Namkyu
+
+Quality Management Representative
+
+December 10, 2025
+
+Approved by
+
+Jeon, Jeu
+
+R&D manager
+
+December 10, 2025
+
+Revision History
+
+Revision No.
+
+Rev. Date
+
+Revision Description
+
+0
+
+December 05, 2024
+
+Initial
+
+1
+
+April 02, 2025
+
+Added threat identification to the IEC 60601-4-5 cybersecurity requirements list.
+
+2
+
+June 05, 2025
+
+Revision according to additional asset identification and risk management for open source & Assignment by Security control content addition
+
+3
+
+June 20, 2025
+
+Revision according to Add variant model (HnX-PB)
+
+4
+
+July 26, 2025
+
+Added physical controls to mitigate threats to User Identification and Authentication.
+
+5
+
+December 10, 2025
+
+Revision according to the intended purpose
+
+Contents
+
+1. Overview 4
+
+2. Threat modeling Summary 5
+
+3. Data-Flow Diagram 6
+
+4. Threat Identification and Methodology 7
+
+5. Identification of Cybersecurity Risks 7
+
+6. Risks Assessment 11
+
+7. Mitigation Implementation 13
+
+8. Identified Risks by Vulnerability category 19
+
+Overview
+
+Document Overview
+
+This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Portable X-ray System(HnX-P1, HnX-PB).
+
+Medical Device Overview
+
+Product name: Portable X-ray System
+
+Model name: HnX-P1, HnX-PB
+
+Manufacturer: H&abyz Co., Ltd.
+
+This product is a battery-powered portable X-ray system designed and manufactured by H&abyz. This portable X-ray system (model: HnX-P1, HnX-PB) consists of an LCD display with up and down soft keys for kV control, an X-ray generator (power transformer), an X-ray tube assembly, and a collimator.
+
+Compared to conventional X-ray products, this device boasts a sophisticated structure, compact design, light weight, and easy operation.
+
+The main components of the X-ray unit are the handle, enclosure, main control panel, system control board, high-voltage tank, inverter, collimator (beam limiter), and system control software running on the system control board. The system control software interacts with and controls the various circuit modules within the X-ray generator in real time. This software responds to user input from the control panel. Users can adjust and control kV and mAs parameters, and the software can display these parameters or directly load APR parameters. This software loads control data for the X-ray output into the high-voltage generation control circuit on the system control board, controls the high-voltage tank to generate high voltage, excite the internal X-ray tube, and emit X-rays. It also controls the collimator switch, monitors the device's operating status, and controls the display of status indicators.
+
+It also allows users to view thumbnails of acquired images on the LCD via Bluetooth.
+
+This product is intended for X-ray imaging and diagnosis in facilities with mobile or fixed locations. It can be mounted on a cart or stand and used with a film cassette or flat panel detector, a computer for signal reception and detection, and image processing software. (The cart, stand, film cassette, flat panel detector, and image processing software are not included in the basic product components.)
+
+To ensure the mechanical stability and efficiency of the device, the recommended maximum load that the stand can safely withstand is 6 kg.
+
+The cybersecurity risk of the HnX-P1 & HnX-PB have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis. These risks are defined as sequence of events leading to a hazardous situation, and the control for their risks were treated and implemented as proposed in the risk analysis (e.g., requirements, verification).
+
+The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same. Therefore, no additional cybersecurity risk management is performed due to the addition of the variant model (HnX-PB).
+
+Assets
+
+Assets was identified for data and functions, external ports, communications, and firmware and open source of SBOM. The LCD of the product is a non-touch display, so user identification and authentication were not applied, and physical control measures were implemented through a limited environment and limited users.
+
+A1: Configuration - Receive kV, mAs, APR setting value information.
+
+A2: Calibration - kV, mAs, filament current (pre-heat) compensation value settings.
+
+A3: Data acquisition - Digital & analog data collection.
+
+A4: APR - Saving kV and mAs in 10 channels
+
+A5: X-ray control - Control power on/off for X-ray output, error status output on/off.
+
+A6: Battery charging - Battery charge current/voltage regulation and monitoring.
+
+A7: Battery monitoring - Battery charging status monitoring
+
+A8: Error checking - Checking for occurrence of low voltage, overvoltage, low current, overcurrent, and overheating
+
+A9: Bluetooth - For setting up medical devices and receiving x-ray images via Bluetooth communication
+
+A10: Display - Setting value setting status, X-ray image display.
+
+A11: SID - Distance measurement.
+
+A12: Hardware Interfaces - Physical ports, including USB type C(For power charging and receiving firmware update data.) and RJ-11(For connecting a hand switch).
+
+A13: Open source 1 – STMicroelectronics Open-Source Bundle
+
+A14: Open source 2 - KISA Crypto Module
+
+Threat modeling Summary
+
+The threat modeling document for the Medical Device HnX-P1 and HnX-PB (Manufacture: H&abyz Co., Ltd) aims to evaluate potential cybersecurity threats and pinpoint vulnerabilities within the device. This comprehensive assessment identifies possible attack vectors, evaluates the likelihood and impact of various threats, and proposes mitigations to enhance the security posture. By systematically analyzing the device's architecture, data flow, and interfaces, the document ensures that security measures are robust and aligned with industry standards. In total 16 risks have been identified during the threat modeling process:
+
+The key findings and outcomes of each test are summarized below:
+
+a) IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity (35 initial risks)
+
+b) CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber threats (56 initial risks)
+
+c) Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in systems. (4 initial risks)
+
+Data-Flow Diagram
+
+A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system. It highlights how data moves between devices, systems, and users, identifying points where data is input, processed, stored, and output. By visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission, and storage.
+
+The report's diagram contains the following views: Global System View, Multi-Patient Harm View, Updateability/Patchability View, and Security Use Case View(s). These views are visually represented in the diagram and are explained in detail through the accompanying legend. The legend helps to clarify the purpose and scope of the depicted views in the diagram.
+
+Threat Identification and Methodology
+
+Threat Methodology: The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege, which are relevant to the HnX-P1 and HnX-PB security needs.
+
+Rationale for STRIDE: STRIDE provides a structured approach to identifying threats that could compromise the confidentiality, integrity, and availability of the system, making it suitable for complex systems where multiple interaction points exist, such as medical devices.
+
+Identification of Cybersecurity Risks
+
+Risk identification according to Data-Flow Diagram
+
+Risk ID
+
+Asset
+
+STRIDE
+
+Threat Description
+
+CRM-01
+
+A1: Configuration
+
+Tampering
+
+Malicious modification of configuration settings, resulting in unsafe operational parameters.
+
+CRM-02
+
+A2: Calibration
+
+Tampering
+
+Unauthorized alteration of calibration values causing improper X‑ray output.
+
+CRM-03
+
+A3: Data Acquisition
+
+Tampering
+
+Modification of acquired data during transmission or storage that affects diagnostic integrity.
+
+CRM-04
+
+A4: APR
+
+Tampering
+
+Tampering with stored APR values.
+
+CRM-05
+
+A5: X‑ray Control
+
+Tampering
+
+Alteration of X‑ray control signals causing damage to the X‑ray output.
+
+CRM-06
+
+A6: Battery Charging
+
+Tampering
+
+Unauthorized alteration of charging parameters affecting battery performance.
+
+CRM-07
+
+A7: Battery Monitoring
+
+Tampering
+
+Modification of battery monitoring data leading to false readings and power management failures.
+
+CRM-08
+
+A8: Error Checking
+
+Tampering
+
+Manipulation of error-checking thresholds/signals resulting in failure to detect critical faults.
+
+CRM-09
+
+A9: Bluetooth
+
+Spoofing
+
+Impersonation of a trusted Bluetooth device, compromising secure pairing and data integrity.
+
+CRM-10
+
+A9: Bluetooth
+
+Tampering
+
+Alteration of data transmitted via Bluetooth affecting the integrity of images or configuration data.
+
+CRM-11
+
+A9: Bluetooth
+
+Information Disclosure
+
+Exposure of sensitive data transmitted over Bluetooth due to insufficient encryption.
+
+CRM-12
+
+A10: Display
+
+Tampering
+
+Unauthorized modification of display outputs leading to misrepresentation of device status.
+
+CRM-13
+
+A11: SID
+
+Tampering
+
+Manipulation of distance measurement data affecting device alignment and calibration accuracy.
+
+CRM-14
+
+A12: Hardware Interfaces
+
+Spoofing
+
+Unauthorized peripheral emulation on physical ports leading to illegitimate connections.
+
+CRM-15
+
+A12: Hardware Interfaces
+
+Tampering
+
+Interception or alteration of data transmitted via physical interfaces, compromising firmware updates or control signals.
+
+CRM-16
+
+A12: Hardware Interfaces
+
+Elevation of Privilege
+
+Exploitation of hardware interface vulnerabilities to gain unauthorized system access.
+
+CRM-17
+
+A13: Open source 1 –STMicroelectronics Open-Source Bundle
+
+Tampering
+
+• Inject malicious code into the HAL driver code (.c/.h) to modify the exposure value or SID calculation logic during X-ray shooting
+
+• As a result, incorrect diagnostic data is generated or the device malfunctions
+
+CRM-18
+
+A13: Open source 1 –STMicroelectronics Open-Source Bundle
+
+Spoofing
+
+• Attackers distribute malicious firmware by disguising ST official servers through OTA/local update paths
+
+• Disguised images can be easily installed if the bootloader does not perform signature verification
+
+CRM-19
+
+A13: Open source 1 –STMicroelectronics Open-Source Bundle
+
+Info Disclosure
+
+• Obtaining permission to read memory areas (Flash/variables) by exploiting known HAL vulnerabilities (CVE)
+
+• Device settings (voltage, exposure values, etc.) or internal logic may be leaked to the outside, leading to secondary attacks
+
+CRM-20
+
+A13: Open source 1 –STMicroelectronics Open-Source Bundle
+
+Elevation
+
+• If the MPU configuration is incorrect at the HAL level, user space code can overwrite the bootloader area, resulting in privilege escalation.
+
+• As a result, it becomes possible to inject malware that controls the entire firmware.
+
+CRM-21
+
+A14: Open source 2 - KISA Crypto Module
+
+Tempering
+
+• Modified the kisa_sha256.c source code so that the correct SHA-256 hash is not generated. • As a result, the firmware integrity verification routine is broken, allowing malicious binaries to pass normally.
+
+CRM-22
+
+A14: Open source 2 - KISA Crypto Module
+
+Spoofing
+
+• The module is modified to forge the hash value itself, so that the malicious firmware provided by the attacker is recognized as a “valid signature”.
+
+• In this case, the cryptographic integrity verification is completely disabled.
+
+CRM-23
+
+A14: Open source 2 - KISA Crypto Module
+
+DoS
+
+• Insertion of a vulnerability that causes the SHA-256 calculation routine to enter an infinite loop or stack overflow when certain inputs (e.g., excessively long data) are used.
+
+• As a result, the system hangs during hash calculations during firmware updates or operations.
+
+CRM-24
+
+A14: Open source 2 - KISA Crypto Module
+
+Info Disclosure
+
+• Modification of hash intermediate state or internal buffer values ​​to leak to the log.
+
+• Attackers can collect these and use them for hash collision attacks or encryption key deduction.
+
+Risk identification according to cybersecurity requirements (IEC 60601-4-5)
+
+Risk ID
+
+Requirement ID
+
+Requirement
+
+STRIDE
+
+Threat Description
+
+CRM-25
+
+IA-01
+
+User Identification
+
+and
+
+Authentication
+
+Spoofing
+
+Authentication procedures can be bypassed, allowing attackers to access the system by impersonating legitimate users.
+
+CRM-26
+
+IA-02
+
+Account
+
+Management
+
+Spoofing
+
+There is a risk that an attacker can access the system by impersonating a trusted user through credential theft.
+
+CRM-27
+
+IA-03
+
+Identification
+
+Information
+
+Management
+
+Spoofing
+
+Since user identification is not properly verified, an attacker can infiltrate the system with a forged identity.
+
+CRM-28
+
+IA-04
+
+Authentication
+
+Information
+
+Management
+
+Spoofing
+
+Vulnerabilities in the authentication mechanism can be exploited to illegally steal identities and escalate privileges.
+
+CRM-29
+
+IA-05
+
+Password
+
+Strength
+
+Configuration
+
+Spoofing
+
+There is a possibility of an attacker accessing the system by submitting false credentials.
+
+CRM-30
+
+IA-06
+
+Feedback on
+
+Authentication
+
+Information
+
+Spoofing
+
+Due to the absence of an identity verification procedure, a malicious user can inappropriately access system resources.
+
+CRM-31
+
+IA-07
+
+Login Restriction
+
+After Consecutive
+
+Failed Login Attemps
+
+Spoofing
+
+There is a risk that an attacker can illegally use system functions by forging legitimate user credentials.
+
+CRM-32
+
+IA-08
+
+System Usage
+
+Notification Message
+
+Spoofing
+
+Due to insufficient authentication methods, there is a high possibility of identity theft attacks.
+
+CRM-33
+
+UC-01
+
+Authorization
+
+Repudiation
+
+There is a risk that users can deny the actions they have performed due to the lack of behavior tracking records.
+
+CRM-34
+
+UC-02
+
+Mobile Code Usage
+
+Control
+
+Repudiation
+
+Due to insufficient auditing and logging functions, it may be difficult to trace responsibility for user actions later.
+
+CRM-35
+
+UC-03
+
+Session Lock
+
+Repudiation
+
+There is a possibility of denial of user actions, making it difficult to secure truthfulness during follow-up investigations.
+
+CRM-36
+
+UC-04
+
+Audit Log
+
+Generation
+
+Repudiation
+
+There is no clear record of user activities within the system, making it vulnerable to denial attacks.
+
+CRM-37
+
+UC-05
+
+Countermeasure
+
+for Audit Processing
+
+Failure
+
+Repudiation
+
+There is a vulnerability that allows users to deny system activities, making it difficult to identify legal/security responsibilities.
+
+CRM-38
+
+UC-06
+
+Timestamp
+
+Repudiation
+
+Due to insufficient logging of user actions, it is difficult to track and respond when an accident occurs.
+
+CRM-39
+
+UC-07
+
+Non Repudiation
+
+Repudiation
+
+Due to insufficient authentication and record keeping, the possibility of user denial increases, which may lead to security issues.
+
+CRM-40
+
+SI-01
+
+Integrity
+
+Assurance for
+
+Communication
+
+Tampering
+
+There is a risk that system components or data may be tampered with by attacks.
+
+CRM-41
+
+SI-02
+
+Protection against
+
+Malware
+
+Tampering
+
+Malicious users may modify software or firmware to disrupt normal functions.
+
+CRM-42
+
+SI-03
+
+Security Function
+
+Verification
+
+Tampering
+
+Unexpected functional failures or security vulnerabilities may occur through modification of system settings.
+
+CRM-43
+
+SI-04
+
+Integrity Checking of
+
+Software and
+
+Information
+
+Tampering
+
+Attackers may tamper with internal data to undermine the reliability of the system.
+
+CRM-44
+
+SI-05
+
+Input
+
+Validation
+
+Tampering
+
+If important configuration information is changed by an attack, the stability of the entire system may be threatened.
+
+CRM-45
+
+SI-06
+
+Output to a
+
+Pre-determined
+
+State in Case of Error
+
+Tampering
+
+If system files or logs are tampered with, it may be difficult to respond to and track security incidents.
+
+CRM-46
+
+SI-07
+
+Error Handling
+
+Tampering
+
+If system components are modified without permission, the reliability and operational continuity of the service may be damaged.
+
+CRM-47
+
+SI-08
+
+Update
+
+Tampering
+
+There is a risk that external intruders may affect the normal operation of the entire system by manipulating internal data.
+
+CRM-48
+
+SI-09
+
+Verification of
+
+Authenticity and Integrity of Updates
+
+Tampering
+
+If data or settings that should not be changed are tampered with, the system security system may collapse.
+
+CRM-49
+
+SI-10
+
+Physical Tamper
+
+Prevention
+
+Tampering
+
+Unauthorized changes to system components may cause unexpected malfunctions and security risks.
+
+CRM-50
+
+SI-11
+
+Boot Process Integrity
+
+Verification
+
+Tampering
+
+Due to data integrity violations, there is a possibility that an attacker may induce abnormal system operation.
+
+CRM-51
+
+DC-01
+
+Confidentiality Assurance for
+
+Information
+
+Information Disclosure
+
+Sensitive information may be inappropriately exposed and leaked to unauthorized users.
+
+CRM-52
+
+DC-02
+
+De-identification
+
+of Healthcare
+
+Information
+
+Information Disclosure
+
+Due to insufficient data encryption and access control, important information may be leaked to the outside.
+
+CRM-53
+
+DC-03
+
+Use of Secure
+
+Encryption
+
+Information Disclosure
+
+There is a risk that sensitive data being stored and transmitted may be exposed by attacks.
+
+CRM-54
+
+TRE-01
+
+Restriction of
+
+Unauthorized
+
+Access to Audit Logs
+
+Denial of Service
+
+There is a risk that normal service provision may be interrupted due to concentrated attacks on system resources.
+
+CRM-55
+
+RA-01
+
+Prevention of
+
+Denial of Service (DoS)
+
+Elevation of Privilege
+
+Due to privilege management vulnerabilities, there is a risk that low-privileged users may illegally obtain high-privileges.
+
+CRM-56
+
+RA-02
+
+Medical Device
+
+Backup
+
+Elevation of Privilege
+
+Due to inappropriate access control, there is a possibility of system misuse through user privilege escalation.
+
+CRM-57
+
+RA-03
+
+Medical Device
+
+Recovery and
+
+Reconfiguration
+
+Elevation of Privilege
+
+Due to weak privilege separation, there is a risk that an attacker may control the entire system beyond limited privileges.
+
+CRM-58
+
+RA-04
+
+Network and
+
+Security Configuration
+
+Settings
+
+Elevation of Privilege
+
+An attack that started with low privileges may lead to privilege escalation, potentially affecting the entire system.
+
+CRM-59
+
+RA-05
+
+Disabling
+
+Unnecessary
+
+Functions
+
+Elevation of Privilege
+
+Failure to authenticate users and manage permissions could allow attackers to gain unauthorized privileges.
+
+* Risk ID by Cybersecurity Controls list
+
+A) Authentication controls: Risk ID CRM-25-32
+
+B) Authorization controls: Risk ID CRM-33-38
+
+C) Cryptography controls: Risk ID CRM-53
+
+D) Code, data, and execution integrity controls: Risk ID: CRM-48, 50
+
+E) Confidentiality controls: Risk ID CRM-51
+
+F) Event detection and logging controls: Risk ID CRM34, 35, 55
+
+G) Resiliency and recovery controls: Risk ID CRM-57
+
+H) Firmware and software update controls: Risk ID CRM-47, 48
+
+Risks Assessment
+
+Likelihood
+
+Frequent
+
+Exploitation is very easy and likely to occur frequently (e.g. public vulnerability)
+
+Very Likely
+
+Exploitation is possible and likely to be exploited by malicious attackers
+
+Likely
+
+Exploitation is possible under certain conditions, but technically difficult
+
+Unlikely
+
+Exploitation is difficult and requires advanced technical knowledge
+
+Very Unlikely
+
+Exploitation is practically impossible (e.g. hardware access required)
+
+Impact
+
+Very High
+
+Critical to system safety and possible legal and regulatory violations
+
+High
+
+Major device function failure, possible direct risk to patient safety
+
+Medium
+
+Possible to degrade system performance or impact data integrity
+
+Low
+
+Possible to cause partial function failure or some inconvenience to user experience
+
+Very Low
+
+Limitless to system operation
+
+Risk Level
+
+Critical
+
+Extremely hazardous, requiring immediate security action. Potential direct threat to patient safety.
+
+High
+
+High risk, requiring rapid security action. System performance degradation, high potential for data leakage.
+
+Medium
+
+Medium risk, requiring long-term security enhancements but may not be urgent.
+
+Low
+
+Low risk, not operationally impactful but may require additional improvements.
+
+Very Low
+
+Negligible low risk. Not likely to cause problems in normal operating environments.
+
+Risk assessment
+
+Data flow diagram
+
+Risk ID
+
+Likelihood
+
+(Before)
+
+Impact
+
+(Before)
+
+Risk Level
+
+(Before)
+
+CVSS Score
+
+CRM-01
+
+Very Likely
+
+High
+
+High
+
+8.0
+
+CRM-02
+
+Very Likely
+
+High
+
+High
+
+7.5
+
+CRM-03
+
+Frequent
+
+High
+
+High
+
+7.0
+
+CRM-04
+
+Very Likely
+
+High
+
+High
+
+7.0
+
+CRM-05
+
+Very Likely
+
+Very High
+
+High
+
+8.5
+
+CRM-06
+
+Very Likely
+
+High
+
+High
+
+7.0
+
+CRM-07
+
+Likely
+
+Medium
+
+Medium
+
+6.0
+
+CRM-08
+
+Very Likely
+
+High
+
+High
+
+7.0
+
+CRM-09
+
+Frequent
+
+High
+
+High
+
+7.5
+
+CRM-10
+
+Frequent
+
+High
+
+High
+
+7.5
+
+CRM-11
+
+Very Likely
+
+High
+
+High
+
+7.0
+
+CRM-12
+
+Likely
+
+Medium
+
+Medium
+
+6.5
+
+CRM-13
+
+Likely
+
+Medium
+
+Medium
+
+6.5
+
+CRM-14
+
+Very Likely
+
+High
+
+High
+
+7.5
+
+CRM-15
+
+Very Likely
+
+High
+
+High
+
+8.0
+
+CRM-16
+
+Very Likely
+
+High
+
+High
+
+7.5
+
+CRM-17
+
+Likely
+
+Very High
+
+Critical
+
+9.1
+
+CRM-18
+
+Likely
+
+High
+
+High
+
+7.5
+
+CRM-19
+
+Likely
+
+High
+
+High
+
+7.8
+
+CRM-20
+
+Unlikely
+
+Medium
+
+Medium
+
+6.8
+
+CRM-21
+
+Very Likely
+
+Very High
+
+Critical
+
+9.4
+
+CRM-22
+
+Likely
+
+Very High
+
+Critical
+
+9.0
+
+CRM-23
+
+Likely
+
+Medium
+
+Medium
+
+5.8
+
+CRM-24
+
+Unlikely
+
+High
+
+High
+
+7.2
+
+Cybersecurity requirement (IEC 60601-4-5)
+
+Risk ID
+
+Likelihood
+
+(Before)
+
+Impact
+
+(Before)
+
+Risk Level
+
+(Before)
+
+CVSS Score
+
+CRM-25
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-26
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-27
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-28
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-29
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-30
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-31
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-32
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-33
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-34
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-35
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-36
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-37
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-38
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-39
+
+Unlikely
+
+Medium
+
+Low
+
+5.0
+
+CRM-40
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-41
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-42
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-43
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-44
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-45
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-46
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-47
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-48
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-49
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-50
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-51
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-52
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-53
+
+Likely
+
+High
+
+Medium
+
+7.0
+
+CRM-54
+
+Very Likely
+
+Very High
+
+Critical
+
+9.0
+
+CRM-55
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-56
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-57
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-58
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+CRM-59
+
+Likely
+
+High
+
+Medium
+
+7.5
+
+Mitigation Implementation
+
+7.1 Assignment by Security control
+
+Security control
+
+Risk ID
+
+Authentication
+
+CRM-25, CRM-26, CRM-27, CRM-28, CRM-29, CRM-30, CRM-31, CRM-32, CRM-59
+
+Authorization
+
+CRM-55, CRM-56, CRM-57, CRM-58
+
+Cryptography
+
+CRM-02, CRM-03, CRM-05, CRM-06, CRM-07, CRM-08, CRM-09, CRM-10, CRM-11, CRM-15, CRM-17, CRM-19, CRM-21, CRM-22, CRM-23, CRM-24
+
+Code, Data, and Execution Integrity
+
+CRM-01, CRM-04, CRM-12, CRM-13, CRM-14, CRM-16, CRM-18, CRM-20, CRM-25, CRM-26, CRM-40, CRM-41, CRM-42, CRM-43, CRM-44, CRM-45, CRM-46, CRM-47, CRM-48, CRM-49, CRM-50
+
+Confidentiality
+
+CRM-51, CRM-52, CRM-53
+
+Event Detection and Logging
+
+CRM-33, CRM-34, CRM-35, CRM-36, CRM-37, CRM-38, CRM-39
+
+Resiliency and Recovery
+
+CRM-54, CRM-57, CRM-58, CRM-59
+
+Firmware and Software Updates
+
+CRM-17, CRM-18, CRM-47, CRM-48, CRM-49
+
+7.2 Mitigation
+
+Data-Flow Diagram
+
+Risk ID
+
+Mitigation
+
+Likelihood
+
+(After)
+
+Impact
+
+(After)
+
+Risk Level
+
+(After)
+
+CRM-01
+
+Use digital signatures and integrity verification for configuration settings.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-02
+
+Implement cryptographic integrity verification for calibration values.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-03
+
+Apply encryption and integrity verification on sensor data.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-04
+
+Implement digital signatures and restricted access for APR values.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-05
+
+Apply cryptographic validation to prevent unauthorized X-ray signal modifications.
+
+Very Unlikely
+
+Very High
+
+Very low
+
+CRM-06
+
+Enforce cryptographic checks on battery charging parameters.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-07
+
+Apply cryptographic validation on battery monitoring data.
+
+Very Unlikely
+
+Medium
+
+Very low
+
+CRM-08
+
+Implement secure calibration verification and real-time error checking.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-09
+
+Enforce Bluetooth device whitelisting and strong pairing protocols.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-10
+
+Use end-to-end encryption and authentication for Bluetooth communication.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-11
+
+Encrypt all Bluetooth data transmissions with SHA-256
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-12
+
+Implement secure display rendering with integrity verification.
+
+Very Unlikely
+
+Medium
+
+Very low
+
+CRM-13
+
+Validate and cross-check SID measurement data before usage.
+
+Very Unlikely
+
+Medium
+
+Very low
+
+CRM-14
+
+Restrict unauthorized hardware access and enforce strict authentication.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-15
+
+Validate and cryptographically sign firmware updates and hardware communications.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-16
+
+Enforce strict access controls and authentication for hardware interfaces.
+
+Very Unlikely
+
+High
+
+Very low
+
+CRM-17
+
+1. Integrity Verification (Checksum): Perform SHA-256 verification on all update files to block installation of tampered binaries
+
+2. Static Analysis (MISRA-C:2004): Perform static analysis based on the MISRA-C ruleset on production code before compilation to ensure that no unintended code insertions or CWE patterns (e.g. CWE-94) are included
+
+3. SBOM-based vulnerability scan (using CycloneDX format): Create SBOM in CycloneDX format and periodically review whether each component has CVE using automated tools such as Snyk/Syft
+
+Unlikely
+
+Medium
+
+Low
+
+CRM-18
+
+1. Access Control (1:1 Registration): Unregistered devices cannot connect when BLE is updated
+
+2. Integrity Verification (Checksum): If the downloaded file does not match the hash recorded in advance, it cannot be installed
+
+3. SBOM-based Vulnerability Scan: COTS/open source components in SBOM are managed in CycloneDX format, and dependencies from disguised paths are also verified with an automated tool
+
+Very Unlikely
+
+Medium
+
+Low
+
+CRM-19
+
+1. AES-128 encryption: All Bluetooth communications are encrypted with AES-128, protecting data even in the event of unauthorized sniffing
+
+2. Static analysis (MISRA-C:2004): Prevents unintentional insertion of memory dump routines (e.g. I2C buffer overflow) in advance
+
+3. SBOM-based vulnerability scanning: Periodically review HAL driver versions in SBOM, and apply patches immediately when known CVEs are found
+
+Unlikely
+
+Low
+
+Low
+
+CRM-20
+
+1. Access Control (1:1 registration): Unregistered devices cannot access the firmware path itself
+
+2. Integrity Verification (Checksum): Blocks installation of modified bootloaders or HAL codes
+
+3. Static Analysis (MISRA-C:2004): Checks for privilege escalation attack patterns (e.g. interrupt bypass, missing MPU settings) at the code level
+
+Very Unlikely
+
+Low
+
+Very low
+
+CRM-21
+
+1. Integrity Verification (Checksum): SHA-256 integrity verification is performed on the entire firmware including kisa_sha256.c to prevent the execution of a tampered hash module
+
+2. Static Analysis (MISRA-C:2004): Statically checks whether there are any unintended changes (such as CWE-94) in the encryption module code
+
+3. SBOM-based Vulnerability Scan: kisa_sha256.c version information is recorded on SBOM (CycloneDX), and an automated tool monitors whether there are any known encryption vulnerabilities.
+
+Unlikely
+
+Low
+
+Very Low
+
+CRM-22
+
+1. Access Control (1:1 Registration): SHA-256 module updates are only possible on registered devices
+
+2. Integrity Verification (Checksum): Block forgery by verifying the hash value itself with a checksum
+
+3. SBOM-based vulnerability scan: Manage the hash algorithm library version with SBOM (CycloneDX), and automatically block forged versions
+
+Very Unlikely
+
+Medium
+
+Very Low
+
+CRM-23
+
+1. Boundary value test (Unit Test): Performs a boundary test to prevent an infinite loop from occurring even when “abnormal input” is entered into the SHA-256 module.
+
+2. Fail-Safe mode when integrity verification fails: Enters recovery mode immediately when integrity verification (checksum) fails.
+
+3. SBOM-based vulnerability scan: The encryption module implementation version is recorded in SBOM (CycloneDX), and is updated when a known DoS vulnerability is discovered.
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-24
+
+1. AES-128 encryption: Prevents sensitive information leakage by encrypting internal logs with AES-128 when storing and transmitting them
+
+2. Debug Symbol Strip: Removes debug symbols to prevent exposure of intermediate states during release builds
+
+3. SBOM-based vulnerability scan: Periodically checks whether the dual hash algorithm is included in SBOM (CycloneDX) to prepare for collision attacks
+
+Unlikely
+
+Low
+
+Very Low
+
+Cybersecurity requirements (IEC 60601-4-5)
+
+Risk ID
+
+Mitigation
+
+Likelihood
+
+(After)
+
+Impact
+
+(After)
+
+Risk Level
+
+(After)
+
+CRM-25
+
+1) The LCD of this product is a non-touch display, so the following physical controls have been implemented to mitigate threats.
+
+a) The user and usage environment have been restricted through warnings in the user manual.
+
+- Page 13, ‘Warning – Operation’
+
+- Page 11, ‘Warning’
+
+- Page 28, 4.8.2 Use and Maintenance User, 4.8.3 Environment of use Settings of use
+
+b) A warning label for X-Ray output is attached to the product.
+
+2) The Impact of Risk was mitigated by applying the following:
+
+a) No important data such as patient personal information or diagnostic information is stored in the device.
+
+b) The device is intended for use by trained users only in designated locations.
+
+c) It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices.
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-26
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-27
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-28
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-29
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-30
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-31
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-32
+
+(Same as above.)
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-33
+
+(Same as above.)
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-34
+
+The Impact of Risk was mitigated by applying the following:
+
+1) Does not provide functions for executing mobile code.
+
+2) When sending/receiving mobile code through Bluetooth linkage, reception is rejected based on file verification.
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-35
+
+The Impact of Risk was mitigated by applying the following:
+
+1) No important data such as patient personal information or diagnostic information is stored in the device.
+
+2) The device is intended for use by trained users only in designated locations.
+
+3) It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices.
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-36
+
+The Impact of Risk was mitigated by applying the following:
+
+1) No important data such as patient personal information or diagnostic information is stored in the device.
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-37
+
+(Same as above.)
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-38
+
+(Same as above.)
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-39
+
+(Same as above.)
+
+Unlikely
+
+Very Low
+
+Very Low
+
+CRM-40
+
+The product provides a Bluetooth communication function and provides a packet integrity protection function through data hashing (SHA-256) when transmitting/receiving Bluetooth packets.
+
+The likelihood of Risk has been mitigated through data hash (SHA-256).
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-41
+
+The Impact of Risk was mitigated by applying the following:
+
+1) No important data such as patient personal information or diagnostic information is stored in the device.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-42
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Does not provide a function that can carry out malware.
+
+2) When transmitting/receiving malware through the Bluetooth communication function, reception is rejected according to the file verification function.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-43
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) There is no self-security function such as user identification and authentication, audit record creation, etc.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-44
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) It is designed so that data outside the input range is not set,
+
+2) It is designed so that data outside the input range is not received when transmitting the setting value via Bluetooth communication.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-45
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) This product is a standalone device and does not provide automation processes or connection functions.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-46
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) It is designed so that important information is not exposed through error messages when an error occurs, and only the minimum message for error resolution is output.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-47
+
+The product provides an update function through the USB C-TYPE port, and the Likelihood for Risk is mitigated through integrity check during update.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-48
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Integrity verification is performed through parity bit check for update files before performing an update.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-49
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Disable functions other than the interface purpose specified for the USB C-type port and RJ-11 port.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-50
+
+The Impact of Risk was mitigated by applying the following:
+
+1) No patient information or other important information is stored in the device
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-51
+
+The Impact & Likelihood of Risk was mitigated by applying the following:
+
+1) Patient information or other important information is not stored in the device.
+
+2) Important information is not transmitted when transmitting/receiving data via Bluetooth communication.
+
+Very Unlikely
+
+Very Low
+
+Very Low
+
+CRM-52
+
+The Impact of Risk was mitigated by applying the following:
+
+1) Patient information or other important information is not stored in the device.
+
+2) It does not provide authorization function for device users.
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-53
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Use standardized hash algorithm (SHA-256) when verifying communication integrity.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-54
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Since audit record creation is not applied, unauthorized access restriction function for audit logs is not provided.
+
+Very Unlikely
+
+Very High
+
+Very Low
+
+CRM-55
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) No permanent network is required for device use.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-56
+
+The Impact of Risk was mitigated by applying the following:
+
+1) No information that requires data backup is stored inside the device
+
+Likely
+
+Very Low
+
+Very Low
+
+CRM-57
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) When recovery is required after a failure, the function is set to be recovered by restarting the device.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-58
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) The device is not connected to an Ethernet network, and connection is limited during Bluetooth communication.
+
+Very Unlikely
+
+High
+
+Very Low
+
+CRM-59
+
+The Likelihood of Risk was mitigated by applying the following:
+
+1) Set unnecessary functions other than the intended functions not to be provided.
+
+Very Unlikely
+
+High
+
+Very Low
+
+Identified Risks by Vulnerability category
+
+After mitigation measures were taken for a total of 59 risks (Low: 7 /Medium: 31 / High: 17 / Critical: 4), the residual risk was reduced to a total of Low 3 & Very Low: 56.
