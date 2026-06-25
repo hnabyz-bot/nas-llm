@@ -1,0 +1,690 @@
+queueId: ingest-1781569954420-18k4
+sourcePath: raw/sources/DHF (인허가)/04_G1717CW 외 7종/90_규격 Test report/1. 신청서 및 제출서류/07. Usability 문서/3. A-UEF-CYN_Usability Engineering File (Rev.0 250915).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/c06f4ed0ffe0/3. A-UEF-CYN_Usability Engineering File (Rev.0 250915)__c06f4ed0ffe0_combined.txt
+canonicalGroupId: 861ba0de72c7
+productSignal: CYAN
+authoritySignal: CE/MDR
+pilotRank: 383
+
+SOURCE_TEXT
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 1 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Usability Engineering File
+GT Series
+Digital Flat Panel X-ray Detector
+Model name: GT1717C, GT1717CP
+Report No.: A-UEF-CYN (Rev.0)
+Prepared by Reviewed by Approved by
+Name Jimin Han Kyungsoo Lee Namkyu Hur
+Position RA team R&D Manager Quality Manager
+Date September 15, 2025 September 15, 2025 September 15, 2025
+Signature
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 2 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision History
+Revision No. Rev. Date Description of changes
+0 September 15,
+2025 Initial release
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 3 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+CONTENTS
+1. INTRODUCTION .......................................................................................................................................5
+1.1 PURPOSE OF THE DOCUMENT ....................................................................................................................... 5
+1.2 SCOPE ...................................................................................................................................................... 5
+1.3 APPLICABLE STANDARDS AND GUIDELINES ....................................................................................................... 5
+1.4 ACCOMPANYING DOCUMENT OF USABILITY ENGINEERING FILE ........................................................................... 5
+2. TERMS AND DEFINITIONS ........................................................................................................................6
+2.1 ABNORMAL USE ......................................................................................................................................... 6
+2.2 ACCOMPANYING DOCUMENTATION ............................................................................................................... 6
+2.3 CORRECT USE ............................................................................................................................................ 6
+2.4 EFFECTIVENESS .......................................................................................................................................... 6
+2.5 EFFICIENCY ............................................................................................................................................... 6
+2.6 EXPECTED SERVICE LIFE ................................................................................................................................ 6
+2.7 FORMATIVE EVALUATION ............................................................................................................................. 6
+2.8 HAZARD-RELATED USE SCENARIO ................................................................................................................... 7
+2.9 NORMAL USE ............................................................................................................................................ 7
+2.10 PATIENT ................................................................................................................................................... 7
+2.11 PRIMARY OPERATING FUNCTION.................................................................................................................... 7
+2.12 RESPONSIBLE ORGANIZATION........................................................................................................................ 7
+2.13 SUMMATIVE EVALUATION ............................................................................................................................ 7
+2.14 TASK........................................................................................................................................................ 7
+2.15 UOUP ..................................................................................................................................................... 7
+2.16 USABILITY ................................................................................................................................................. 7
+2.17 USABILITY ENGINEERING .............................................................................................................................. 7
+2.18 USABILITY ENGINEERING FILE ........................................................................................................................ 7
+2.19 USABILITY TEST .......................................................................................................................................... 8
+2.20 USE ENVIRONMENT .................................................................................................................................... 8
+2.21 USE ERROR ............................................................................................................................................... 8
+2.22 USE SCENARIO ........................................................................................................................................... 8
+2.23 USE SPECIFICATION ..................................................................................................................................... 8
+2.24 USER ....................................................................................................................................................... 8
+2.25 USER GROUP ............................................................................................................................................. 8
+2.26 USER INTERFACE ........................................................................................................................................ 8
+2.27 USER INTERFACE EVALUATION....................................................................................................................... 8
+2.28 USER INTERFACE SPECIFICATION .................................................................................................................... 8
+3. USABILITY ENGINEERING PROCESS ..........................................................................................................9
+3.1 OVERVIEW OF THE USABILITY ENGINEERING PROCESS ....................................................................................... 9
+3.1.1 Usability Engineering Process ......................................................................................................... 10
+3.1.2 Risk Control as it relates to User Interface design .......................................................................... 10
+3.1.3 Information for Safety as it relates to Usability .............................................................................. 10
+3.1.4 Usability Engineering File ................................................................................................................ 10
+3.1.5 Tailoring of the Usability Engineering effort ................................................................................... 11
+3.2 KEY STEPS IN USABILITY ENGINEERING ......................................................................................................... 11
+3.2.1 Preparing the Usability Specification .............................................................................................. 11
+3.2.2 Identifying Hazard-Related Use Scenarios ...................................................................................... 11
+3.2.3 Performing Formative Evaluations ................................................................................................. 11
+3.2.4 Conducting User Interface Evaluation ............................................................................................ 11
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 4 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. USABILITY SPECIFICATION .....................................................................................................................12
+4.1 PREPARE USE SPECIFICATION ...................................................................................................................... 12
+4.1.1 Intended medical indication............................................................................................................ 12
+4.1.2 Intended patient population ........................................................................................................... 12
+4.1.3 Intended User Profile ...................................................................................................................... 12
+4.1.4 Intended part of the body or type of tissue applied to or interacted with ...................................... 12
+4.1.5 Use environment ............................................................................................................................. 12
+4.1.6 Operating principle ......................................................................................................................... 13
+4.2.2 Function related to safety ............................................................................................................... 13
+4.3.1 Identify known hazards and hazardous situations.......................................................................... 14
+4.3.2 Identify foreseeable hazards and hazardous situations.................................................................. 14
+4.4 IDENTIFY AND DESCRIBE HAZARD RELATED USE SCENARIOS ................................................................................ 15
+4.5 SELECT THE HAZARD-RELATED USE SCENARIOS FOR SUMMATIVE EVALUATION ....................................................... 16
+4.6 PERFORM SUMMATIVE EVALUATION OF THE USABILITY .................................................................................... 16
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 5 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Introduction
+1.1 Purpose of the Document
+This document specifies the usability engineering process for the Digital Flat Panel X-ray Detector
+(Model: GT1717C, GT1717CP). It consolidates all activities related to analyzing, specifying, designing,
+verifying, and validating usability. The purpose is to ensure safety by mitigating risks related to usability
+problems. This document complies with IEC 62366-1:2015.
+Variant model differences
+: The two products differ only in CsI deposition thickness, as shown below, and are identical in
+usability.
+- GT1717C : 300um
+- GT1717CP : 500um
+1.2 Scope
+This document covers the usability engineering process, including the usability specification, formative and
+summative evaluations, risk management, and validation activities for the Digital Flat Panel X-ray Detector.
+· Product name: Digital Flat Panel X-ray Detector
+· Model name: GT1717C, GT1717CP
+· Intended used: The Digital X-ray Imaging System is indicated for digital imaging solution
+designed for providing general radiographic diagnosis of human anatomy targeting both adult and
+children. It is intended to replace film based radiographic diagnostic system.
+Not to be used for mammography..
+1.3 Applicable standards and Guidelines
+Standard No. Standard Title
+IEC 60601-1-6 Medical electrical equipment - Part 1-6: General requirements for basic
+safety and essential performance - Collateral standard: Usability
+IEC 62366-1 Medical devices – Application of usability engineering to medical
+Devices
+IEC TR 62366-2 Medical devices — Part 2: Guidance on the application of usability
+engineering to medical devices
+EN ISO 14971 Medical Devices – Application of risk management to medical devices
+1.4 Accompanying Document of Usability Engineering File
+No. Usability Engineering Process Doc. No. Rev. Document title
+1 Prepare Use specification
+A-UEF-CYN 1 Usability Engineering File
+2 Identify user interface characteristics
+related to safety and potential use errors
+3 Identify known or foreseeable hazards
+and hazardous situations
+4 Identify and describe hazard-related use
+scenarios
+5 Select the hazard-related use for
+summative evaluation
+6 Establish user interface specification
+7 Establish user interface evaluation plan A-UVP-CYN 1 Usability Validation Plan
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 6 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+8 Perform User Interface design,
+implementation A-UEF-CYN 1 Usability Engineering File
+9 Perform Summative Evaluation of the
+Usability of the User Interface A-UVR-CYN 1 Usability Validation Report
+10 User Interface of Unknown Provenance - - -
+2. Terms and Definitions
+2.1 Abnormal use
+conscious, deliberate act or deliberate omission of an act that is counter to or violates NORMAL USE
+and is also beyond any further reasonable means of USER INTERFACE-related RISK CONTROL by
+the MANUFACTURER
+Figure1. Relationship of the types of use
+2.2 Accompanying documentation
+materials accompanying a MEDICAL DEVICE and containing information for the USER or those
+accountable for the installation, use, maintenance, decommissioning and disposal of the MEDICAL
+DEVICE, particularly regarding safe use
+2.3 Correct use
+normal use without use error
+2.4 Effectiveness
+accuracy and completeness with which users achieve specified goals
+2.5 Efficiency
+resources expended in relation to effectiveness
+2.6 Expected service life
+time period specified by the manufacturer during which the medical device is expected to remain safe
+for use (i.e. maintain basic safety and essential performance)
+2.7 Formative evaluation
+user interface evaluation conducted with the intent to explore user interface design strengths, weaknesses,
+and unanticipated use errors
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 7 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2.8 Hazard-related use scenario
+use scenario that could lead to a hazardous situation or harm
+2.9 Normal use
+operation, including routine inspection and adjustments by any user, and stand-by, according to the
+instructions for use or in accordance with generally accepted practice for those medical devices provided
+without instructions for use
+2.10 Patient
+living being (person) undergoing a medical, surgical or dental procedure
+2.11 Primary operating function
+function that involves user interaction that is related to the safety of the medical device
+2.12 Responsible organization
+entity accountable for the use and maintenance of a medical device or combination of medical devices
+2.13 Summative evaluation
+user interface evaluation conducted at the end of the user interface development with the intent to obtain
+objective evidence that the user interface can be used safely
+2.14 Task
+one or more user interactions with a medical device to achieve a desired result
+2.15 UOUP
+User Interface Of Unknown Provenance
+user interface or part of a user interface of a medical device previously developed for which adequate
+records of the usability engineering process of this standard are not available
+2.16 Usability
+characteristic of the user interface that facilitates use and thereby establishes effectiveness, efficiency
+and user satisfaction in the intended use environment
+2.17 Usability engineering
+Human Factors Engineering
+application of knowledge about human behaviour, abilities, limitations, and other characteristics to the
+design of medical devices (including software), systems and tasks to achieve adequate usability
+2.18 Usability engineering file
+set of records and other documents that are produced by the usability engineering process
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 8 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2.19 Usability test
+method for exploring or evaluating a user interface with intended users within a specified intended use
+environment
+2.20 Use environment
+
+actual conditions and setting in which users interact with the medical device
+2.21 Use error
+user action or lack of user action while using the medical device that leads to a different result than that
+intended by the manufacturer or expected by the user
+2.22 Use scenario
+specific sequence of tasks performed by a specific user in a specific use environment and any resulting
+response of the medical device
+2.23 Use specification
+Application Specification
+2.24 User
+person interacting with (i.e. operating or handling) the medical device
+2.25 User group
+subset of users who are differentiated from other users by factors that are likely to influence their
+interactions with the medical device
+2.26 User interface
+means by which the user and the medical device interact
+2.27 User interface evaluation
+process by which the manufacturer explores or assesses the user interactions with the user interface
+2.28 User interface specification
+collection of specifications that comprehensively and prospectively describe the user interface of a
+medical device
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 9 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3. Usability Engineering Process
+3.1 Overview of the Usability Engineering Process
+The usability engineering process involves analyzing, designing, and verifying the user interface to
+ensure it meets usability and safety requirements. This process includes formative evaluations for
+iterative improvement and summative evaluations for final validation.
+1) Organization for Usability Engineering Process
+2) Responsibility and Personnel
+No. Position Responsibility
+1 President or QA representative - Human and material resources assignment
+- Usability goals provided
+2 R&D Director - Usability engineering process planning
+- Risk management for usability engineering
+3 R&D Team - Prepare of Usability engineering File
+4 QA Manager and Sales Manager - Participation for Usability Engineering validation
+President
+Approver
+R&D Director
+Usability Engineering process
+manager
+R&D TEAM
+Usability Engineering
+Prepare
+QA Manager
+Usability Engineering
+Validation member
+Sale Manager
+Usability Engineering
+Validation member
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 10 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3.1.1 Usability Engineering Process
+We establish, document, implement and maintain a usability engineering process as defined in
+clause 5 to provide safety for the patient, user and others. We may address user interactions with
+the medical device according to the accompanying documentation, including, but not limited to;
+- Preparation Before Use;
+- Operation;
+- Maintenance;
+3.1.2 Risk Control as it relates to User Interface design
+To reduce use-related risk, the manufacturer shall use one or more of the following options, in the
+priority listed (as required by ISO 14971:2019, 7.1):
+a) Inherently safe design and manufacture;
+b) Protective measures in the medical device itself or in the manufacturing process; and
+c) Information for safety and, where appropriate, training to users.
+3.1.3 Information for Safety as it relates to Usability
+When in accordance with the priorities of 4.1.2, information for safety is used as a risk control
+measure, the manufacturer shall subject this information to the usability engineering process to
+determine that the information
+- Is perceivable by,
+- Is understandable to, and
+- Supports correct use of the medical device by
+Users of the intended user profiles in the context of the intended use environment.
+Conscious disregard of such information for safety by the user is considered to be an intentional
+act or intentional omission of an act that is counter to or violates normal use and is also beyond
+any further reasonable means of user interface-related risk control by the manufacturer (i.e.
+abnormal use).
+Compliance is checked by inspection of the information for Safety and the Usability Engineering
+File.
+3.1.4 Usability Engineering File
+The results of the Usability Engineering Process shall be stored in the Usability Engineering File. The
+records and other documents that form the Usability Engineering File may form part of other documents
+and files.
+- Manufacturer’s product design file
+- Risk management file
+Compliance is checked by inspection of the Usability Engineering File.
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 11 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3.1.5 Tailoring of the Usability Engineering effort
+The level of effort and the choice of methods and tools used to perform the Usability Engineering Process
+may vary based on:
+a) The size and complexity of the User Interface;
+b) The severity of the harm associated with the use of the Medical Device;
+c) The extent or complexity of the Use Specification;
+d) The presence of User Interface of Unknown Provenance; and
+e) The extent of the modification to an existing Medical Device User Interface that had been subjected
+to the Usability Engineering Process
+Compliance is checked by inspection of the Usability Engineering file.
+3.2 Key Steps in Usability Engineering
+3.2.1 Preparing the Usability Specification
+Define usability requirements and performance goals.
+Identify key tasks users will perform with the device.
+3.2.2 Identifying Hazard-Related Use Scenarios
+Analyze potential hazards related to device operation.
+Define scenarios where use errors may result in safety risks.
+3.2.3 Performing Formative Evaluations
+Conduct iterative testing to identify and address usability issues during development.
+Refine the user interface based on user feedback and testing results.
+3.2.4 Conducting User Interface Evaluation
+Evaluate the effectiveness and safety of the interface in realistic settings
+Summarize feedback from formative and summative evaluations
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 12 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. Usability Specification
+4.1 Prepare use specification
+4.1.1 Intended medical indication
+The Digital X-ray Imaging System is indicated for digital imaging solution designed for providing
+general radiographic diagnosis of human anatomy targeting both adult and children. It is intended
+to replace film based radiographic diagnostic system. Not to be used for mammography.
+4.1.2 Intended patient population
+No. Characteristic Description
+1 Age group
+Adult and Children (It is prohibited for the same patient (especially
+children) to receive high frequency imaging of the device for a long
+period.)
+2 Weight range No weight range
+3 Patient’s health or condition No restrictions
+4 Nationality No nationality restrictions
+5 Patient group/state except pregnant women
+6 Applications parts Part of body
+7 Disease Radiographic imaging of human body parts such as head, Chest, spinal, a
+bdominal, particular, hand, foot and other internal organs.
+4.1.3 Intended User Profile
+: Radiographer
+4.1.4 Intended part of the body or type of tissue applied to or interacted with
+a) Using part: All parts (e.g., Head, Chest, Spine, Abdomen, Hand, feet and internal organs)
+b) Symptoms: No limit
+4.1.5 Use environment
+No. Characteris
+tic Description
+1 Physical Wearing an X-ray apron
+2 Number of
+people Not relevant
+3 Equipment X-ray
+4 Temperature Operation condition: 10℃ to 40℃
+Storage condition: -20℃ to 55℃
+5 Humidity Operation condition: 15 to 90% relative humidity (non-condensing)
+Storage condition: 10 to 95% relative humidity (non-condensing)
+6 Air Pressure Operation condition: 700 hPa to 1060 hPa
+Storage condition: 500 hPa to 1060 hPa
+7 Place Hospital settings and mobile clinics.
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 13 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.1.6 Operating principle
+This is a wired digital flat panel x-ray detector, a faster and more efficient digital radiography
+system. The detector is used in combination with a TFT glass and scintillator and supports
+automatic trigger signal detection technology that can be used without generator integration.
+The incident X-rays are converted into visible light that produces electron hole pairs in a
+photometer biased by scintillator material. The charge carrier is stored in the photodiode
+capacity. By pulse processing the gates of the TFT lines in the matrix, charges in all the columns
+are transferred in parallel with the signal output. All signals on the column are amplified by a
+custom Read Out IC for further processing.
+The amplified signal is digitized using an A/D converter integrated into the ROIC. The digitized
+signal is transmitted to the PC.
+4.2 Identify user interface characteristics related to safety and potential use errors
+4.2.1 Primary Operating Functions
+Read the user manual and understand the functions and usage
+Familiarize yourself with the safety warnings.
+Connect product components
+Product calibration
+Prodcut power ON/OFF
+Check the indicator
+Product transportation.
+Place the patient's imaging area on the detector
+Cleaning method and verification of cleaning results
+4.2.2 Function related to safety
+LED that indicates the product's power ON/OFF status.
+An indicator (LED) that indicates the Ethernet connection status.
+A calibration function for initializing the product.
+Guidelines for precise positioning of the shooting area.
+A handle for convenient carrying.
+4.2.3 Identification of characteristics related to the safety and potential use errors
+Characteristics related to safety have been identified according to the questionnaire based on
+questionnaire based on ISO/TR 24971, A.2.31 to A.2.37 provides a list of questions that can be
+used to identify user interface characteristics that could impact safety.
+(Refer to Risk Management Report (Doc No. A-RMR-CYN)
+4.2.4 Use scenario
+In consideration of the primary operation function and the identified user interface
+characteristics in 4.2.1, the use scenario is identified.
+Use scenarios related to the primary operating functions
+1 Check the User manual
+2 Preparation for using the product
+3 product use
+4 Maintenance
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 14 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.2.5 Task analysis according to the Use Scenarios in section 4.2.4
+1 Check the User manual
+1.1 Read the user manual and understand the functions and usage
+1.2 Familiarize yourself with the safety warnings.
+2 Preparation for using the product
+2.1 Connect product components
+2.2 Product calibration
+3 Product use
+3.1 Prodcut power ON/OFF
+3.2 Check the indicator
+3.3 Product transportation.
+3.4 Place the patient's imaging area on the detector.
+4 Maintenance
+4.1 Cleaning method and verification of cleaning results
+4.3 Identify known or foreseeable hazards and hazardous situations
+The H&abyz Co., Ltd. identifies known or foreseeable HAZARDS and HAZARDOUS SITUATIONS,
+which could affect PATIENTS, USERS, or others, related to the use of the MEDICAL DEVICE.
+4.3.1 Identify known hazards and hazardous situations
+We investigated information about known hazards and hazardous situations in existing user
+interfaces for similar types of medical devices. However, there were no hazards and hazardous
+situations associated with use errors.
+Please refer to the A-PMS-CYN Post-market Surveillance for further information on this.
+4.3.2 Identify foreseeable hazards and hazardous situations
+Foreseeable hazards and hazardous situations were identified tasks as Performed by a Specified
+User
+Use scenarios related to risk factors 1: Check User Manual
+위해 요인 관련 사용 시나리오 1: 사용자 설명서 확인
+Task Usage Error Risk
+ID Risk Severity
+Read the user manual and
+understand the functions and
+usage 사용자 설명서를 읽고
+기능과 사용법 이해
+Not reading the instructions
+thoroughly.
+사용설명서를 충분히 숙지하지
+않음.
+UR-01 Additional X-ray
+exposure due to
+delayed diagnosis and
+re-examination of the
+patient. 환자의 진단
+지연 및 재촬영에
+따른 X-ray 추가 노출
+3
+Familiarize yourself with the
+safety warnings. 안전 경고 문구
+숙지
+The user cannot find the safety
+information.
+The user does not understand the
+precautions. (Difficult term, low
+readability)
+사용자가 안전 정보를 찾을 수
+없습니다.
+사용자가 주의사항을 이해하지
+못합니다. (어려운 용어, 낮은
+가독성)
+UR-02 Additional X-ray
+exposure due to
+delayed diagnosis and
+re-examination of the
+patient. 환자의 진단
+지연 및 재촬영에
+따른 X-ray 추가 노출
+3
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 15 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Use scenarios related to risk factors2: Preparing the product for use
+위해 요인 관련 사용 시나리오 2: 제품 사용 준비
+Connect product components.
+제품 구성품 연결
+The user is not familiar with how
+to connect the product
+components.
+사용자가 제품 구성품 연결
+방법을 숙지하지 못했습니다.
+UR-03 Delayed diagnosis
+of patients
+환자의 진단 지연
+1
+Product calibration
+제품 calibration
+The user is not familiar with the
+calibration method.
+사용자가 calibration 방법을
+숙지하지 못했습니다.
+UR-04 Additional X-ray
+exposure due to
+delayed diagnosis and
+re-examination of the
+patient. 환자의 진단
+지연 및 재촬영에
+따른 X-ray 추가 노출
+3
+Use scenarios related to risk factors 3: Product use
+위해 요인 관련 사용 시나리오 3: 제품 사용
+Product power ON/OFF
+제품 전원 ON/OFF
+The user is not familiar with how
+to turn the product on and off.
+사용자가 제품 전원 ON/OFF
+방법을 숙지하지 못했습니다.
+UR-05 Delayed diagnosis
+of patients
+1
+Check the indicator The user is not familiar with the
+product's indicator status.
+사용자가 제품의 indicator
+상태를 숙지하지 못했습니다.
+UR-06 Delayed diagnosis
+of patients
+1
+Product transportation
+제품 운반
+Dropping the product UR-07 Wound 2
+Place the patient's imaging area on
+the detector.
+환자의 촬영부위를 디텍터에
+배치.
+The user is not able to identify the
+shooting area.
+사용자가 촬영영역을 식별하지
+못합니다.
+UR-08 Delayed diagnosis
+of patients
+1
+Use scenarios related to risk factors 4: Maintenance
+위해 요인 관련 사용 시나리오 4: 유지보수
+Cleaning method and verification
+of cleaning results 청소방법 및
+청소결과 확인
+User cannot determine the
+cleaning method.
+User does not understand the
+cleaning method.
+User cleans in an inappropriate
+manner.
+UR-09 Delayed diagnosis
+of patients
+1
+4.4 Identify and describe hazard related use scenarios
+- Considering that this medical device is a Digital Flat Panel X-ray Detector, a related use scenario in
+which risk factors and risk situations can occur was constructed.
+- This hazard-related use scenario identifies possible use errors when using Digital Flat Panel X-ray
+Detector, user interfaces that require improvement, and unexpected use errors.
+It is written for identifying and analyzing the root cause of the use error for the user interface.
+- To identify the scenario, the results of the TASK analysis were selected to list all scenarios in which
+risk factors and risk situations could occur. The severity of the possible harm for each scenario is
+described.
+
+Technical Documentation Document. No. A-UEF-CYN
+Rev. No. 0
+Usability Engineering File Rev. date September 15,
+2025
+Page Page 16 of 16
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+- Severity was qualitatively classified into five stages based on our risk management, and the table is
+as follows.
+Category Severity
+Catastrophic 5 Death of patient, irreversible failure or disaster
+Critical 4 Causing permanent damage or fatal injury
+Serious 3 Injury or damage that requires professional medical technology.
+Minor 2 Temporary injury that does not require professional medical treatment.
+Negligible 1 Discomfort, temporary difficulty
+Possible hazards for each detailed task are integrated and managed in the Risk Management Report(A-RMR-
+CYN).
+4.5 Select the hazard-related use scenarios for summative evaluation
+All usage scenarios we identified in section 5.4 were used for summative evaluation.
+Please refer to Usability Validation Plan (A-UVP-CYN) for details.
+4.6 Perform Summative Evaluation of the usability
+The summative evaluation report contains the following information:
+For each hazard-related scenario, a test record be established with:
+· The hazard-related scenario and alternative evaluated,
+· The goal of the evaluation,
+· The user-profile participating to the evaluation,
+
+· The environment of evaluation,
+· The duration of the evaluation,
+· The IFU provided to the user or no IFU,
+· The results of the evaluation,
+· A rationale for setting the result to (i) OK, (ii) not OK, (iii) more information needed, given the
+goal of the evaluation.
+The summative evaluation report ends with a discussion on the overall compliance of the results obtained
+for all tests. The result of the discussion is one of the three following states:
+· Compliant:
+o All tests are OK,
+o All risks related to usability are acceptable,
+o No additional data required,
+· Partially compliant:
+o At least one test is not OK,
+o No unacceptable risk is remaining but at least one risk is tolerable,
+o Additional data shall be collected by PMS and/or PMCF,
+· Not compliant:
+o At least one test is not OK,
+o At least one unacceptable risk is remaining,
+o Additional studies or design changes are required.
+The summative evaluation report is recorded in Usability Validation Report (Doc. No. A-UVR-CYN).

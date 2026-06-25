@@ -1,0 +1,658 @@
+queueId: ingest-1781569954418-1741
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk management plan Rev.01.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/6a868847d483/AspenView Cybersecurity Risk management plan Rev.01__6a868847d483_combined.txt
+canonicalGroupId: 5cda5d40e644
+productSignal: HnVUE
+authoritySignal: MFDS/domestic
+pilotRank: 345
+
+SOURCE_TEXT
+AspenView Document 1/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+Cyber Security
+Risk Management Plan
+Model: AspenView software
+Revision Status
+Number Revision
+Date
+Rev
+No.
+Description of
+Revision
+Prepared by Reviewed by Approved by
+1 2023.02.01 0 established
+
+AspenView Document 2/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+1. Introduction
+This risk management plan consists of technical documentation relating to development of
+Radiological Image Processing System (AspenView). It is written on the basis of risk
+management standard EN ISO 14971:2019 for Medical Electrical Equipment and followed.
+1.1 Manufacturer
+Aspen Imaging Healthcare Inc
+1.2 Address of company
+Head office:
+801 Jupiter Rd Suite 200, Plano, TX 75074, USA
+(+1) 214-257-0113
+Website: http://aspenimaging.com
+1.3 Referenced product description
+Referenced product : EConsole1
+1.4 Applicable directive and annex
+This Technical File consists of technical documentation relating to development of Radiological
+Image Processing System(AspenView). It meets the requirements of the Medical Device Directive
+93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X.
+1.5 Scope
+Annex II: EC DECLARATION OF CONFORMITY (Full quality assurance system)
+1.6 GMDN code
+40866 X-ray system, diagnostic, general-purpose, application program software
+
+AspenView Document 3/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+2. Scope of risk management plan
+This risk management plan includes the legal requirement for manufacturing of Radiological
+Image Processing System (AspenView) and the overall risk management plan from the
+development to post-production.
+2.1 Standards concerned:
+EN 62304:2006/AC:2008, Medical electrical equipment
+Medical device software, Software life-cycle processes
+EN 62366:2008, Medical electrical equipment
+Application of usability engineering to medical devices
+EN ISO 14971:2019, Medical Devices
+Application of risk management to medical devices
+EN ISO 13485:2016/AC2016, Medical Device Quality Management System
+▪ Guidelines for the cyber security of medical device published by MFDS(Ministry of Food and
+Drug Safety) (Guidelines-0996-01, November 28, 2019)
+
+AspenView Document 4/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+3. Definition
+The definitions of key terms used in this report are as follows.
+2.1 Cybersecurity: Confidentiality, availability of information in cyberspace, Preserving
+integrity
+2.2 Medical Device Cyber Security: Stored in medical devices through wired or wireless
+communication Unauthorized use of programs to control transmitted/received personal
+medical information or devices, Measures to prevent denial of use, misuse, alteration,
+and unauthorized access
+2.3 Confidentiality: Personal medical information is disclosed to unauthorized persons,
+Ability to prevent use for unauthorized purposes
+2.4 Availability: Personal medical information must be provided immediately to
+authorized users. And the ability to exist in the form where it is needed when it is
+needed
+2.5 Integrity: Personal medical information is converted in an unauthorized way or
+Function to prevent destruction
+2.6 Encryption: In order to maintain information security, the information is transformed
+and stored according to specific rules so that the contents of the information cannot be
+recognized without knowing the decryption method.
+2.7 SSL: A standard security protocol that provides encryption for secure data
+transmission and reception between web browsers and web servers.
+2.8 Access control: According to the information security policy, users, programs,
+processors, so that only the subject authorized for the system, etc., can access
+information system resources Limiting
+2.9 BLE (Bluetooth low energy): suitable for small devices with limited battery Short-
+range wireless communication technology designed to consume less power
+2.10 IT-Network: A physical connection between two or more communication
+
+AspenView Document 5/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+nodes or A system consisting of a communication node and a transmission
+link to provide wireless transmission
+2.11 Security vulnerability: a system or program It means a bug (the wrong part),
+and hackers use it to break into the system and Cause leakage, system
+destruction, etc.
+2.12 DDoS: Distributed multiple attackers How to deploy and simultaneously
+perform denial of service attacks
+2.13 Forgery: Forgery (As one of the security attacks, unauthorized people
+Insertion) and alteration (as one of security attacks, not only illegal access by
+unauthorized persons, but also illegal alteration)
+2.14 Harm: Physical injury or damage or damage to property or environment
+2.15 Hazard: Potential cause of harm
+2.16 Hazardous situation: A person, property, or environment Exposure to hazards
+2.17 Intended use: according to specifications, instructions and information provided by
+the manufacturer. The intended use of the product, process or service
+2.18 Life-cycle: Life of medical devices from initial development stage to final disposal
+Every step
+2.19 Risk: The combination ratio of the product of the severity and likelihood
+of a risk
+2.20 Risk analysis: To identify hazards and estimate risks Systematic use of
+available information
+2.21 Risk control: Reducing the risk below a prescribed level or the process by which
+decisions and actions are taken to keep
+
+AspenView Document 6/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+2.22 Risk estimation: Determining the value of the likelihood and severity of a hazard
+Process used for
+2.23 Risk evaluation: To determine the acceptability of a risk, The process of comparing
+risk criteria and estimated risk
+2.24 Residual risk: The risk that remains even after risk control measures are applied.
+2.25 Evaluation of overall residual risk acceptability: After all risk control measures
+have been implemented and verified, the criteria defined in the risk management plan
+to determine whether the total residual risk posed by the medical device is
+acceptable. Decision process
+2.26 Risk management file: Created in the risk management process As a series of
+records and other documents
+2.27 Safety: Freedom from unacceptable hazards
+2.28 Severity: The degree of possible consequences of a hazard.
+2.29 Standalone Software: As the software itself It has a function that meets the
+purpose of use of a medical device, and in the same environment as a general-
+purpose computer medical device software in operation.
+
+AspenView Document 7/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+4. General description
+Refer to the Quality Management Plan.(Aspen Imaging Quality management system.)
+
+AspenView Document 8/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+5. Risk management applied to product life
+Risk management is applied to the overall procedures from planning and development of
+product to production and service.
+◼ Design & Development Planning
+At the design and development planning stage, conduct research for the intended use and
+safety of the product. Research center, sales department, service and quality assurance
+department find the risk examples of similar products and investigate the market. The
+manufacture makes a decision for the development through opened discussion.
+◼ Design & Development Input
+At the design and development input stage, the intended use, performance, safety and legal
+requirements as well as international standards and requirements should be considered. The
+risk factors expected in normal and abnormal condition shall be considered especially. The risk
+management plan shall be in line with the development planning made through reviewing by
+mechanical part manager, electrical part manager, software part manager in research center
+and QA manager, In accordance with development procedure, design specifications shall be
+decided. The risk management report will be made in accordance with risk management
+procedure.
+◼ Design & Development Output
+Design and development output shall control the risk factors analyzed in design and
+development input, Design and development output shall be in line with design specification in
+accordance with development procedure, It also include the drawings, part list, manufacturing
+process, quality management planning and manual. Design and development output documents
+shall include the intended use of product, safety, customer service and installation.
+◼ Design & Development Review
+Design and development review decides whether the residual risk is acceptable or not. Design
+and development review will be held by development meeting for the new product and renew
+the risk management repot. It also reviews the design input and output documents as well as
+practicality and reliability for the product.
+
+AspenView Document 9/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+◼ Design & Development Verification
+At design and development verification, the process in which the adequate test is implemented
+shall include the objective reporting. In accordance with product evaluation manual, conduct an
+evaluation for developments and check the risk control measures. If there are still risks, do
+analyze them and reflect on designing. At the time, evaluate whether the risks are acceptable
+◼ Design & Development Validation
+Design and development validation as a final development procedure check whether the
+product is adequate to the intended use and customer’s requirements. It also checks whether
+the residual risks are acceptable. We conduct the verification for a prototype in accordance with
+product evaluation manual. If risks are found, we take the measures against the risks and
+conduct a residual risk evaluation. QA takes a reliability test and transfer the developments to
+production line.
+◼ Product Transfer
+If the development is approved to be completed, research department enrolls the design
+document and distributes them in accordance with document management procedure.
+Production department joins in manufacturing of prototype at development stage by which they
+acquire the technology and experience the manufacturing prior to product transfer.
+◼ Control of Design Changes
+If the intended use or production process is changed, if the problems are found in use, it is
+possible to revise the product. Design changes shall be conducted for performance increase,
+cost down, production increase in accordance with design change manual.
+The department requested design changes submits the design changes proposal to research
+center. The developer who is engaged in product development checks the risks and safety. If it
+is judged not to be harmed, the technical documents shall be distributed with approval of chief
+researcher.
+◼ Traceability
+Traceability management is to clear the traceability of material, part and product, by which
+manufacture take a quick measure against the claim.
+Traceability management is conducted in accordance with identification and traceability
+procedure, inadequate product management procedure.
+The all products at ex-factory shall be through the risk control based on product test report and
+secured with traceability.
+
+AspenView Document 10/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+◼ Purchasing Control
+Purchasing control is managing the delivery date, quality and price of the import product in
+accordance with purchase management procedure. If there is a design change requirement for
+the import part from supplier, it is applied to the product through risk evaluation and safety
+evaluation from research department.
+Production & Process Control
+Manufacture control and check the production process to secure the good quality in accordance
+with production and inspection equipment management procedure.
+◼ Post Product
+For the manufactured product, take an examination for the product in accordance with measure
+and inspection management procedure. If the inadequate product is detected, take an action in
+accordance with inadequate product management procedure and correction and prevention
+procedure. The qualified product is in and out in accordance with part and product management
+procedure and delivered to customer.
+◼ Post Management
+The product delivered to customer shall be installed to qualify intended use in accordance with
+installation process manual and give a training in accordance with service procedure.
+Manufacture assigns the service worker to take a quick action against customer’s claim. Sales
+staff and service staff visit regularly.
+
+AspenView Document 11/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+A schematic representation of the risk management process
+
+AspenView Document 12/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+6. Assignment of responsibility and authority
+6.1 Risk control activity responsibility assignment
+6.1.1 Risk control investigator qualifications
+◼ Software manager in research center
+◼ QA staff
+◼ Production department
+6.1.2 Risk control approval qualifications
+◼ Chief research center
+◼ Production manager
+◼ Purchase manger
+◼ QA manager
+◼ Clinical expert(Validity Evaluator)
+6.1.3 Risk control reliability assignment
+Stage Risk management
+stage Practice Supervisor Approver
+Design and
+development
+planning
+Risk control
+planning
+Software team Software Manager Alejandro
+Design and
+development
+input
+Risk management
+report draft
+Design and
+development
+output
+Risk management
+report
+supplementary
+Design and
+development
+verification
+Risk management
+verification
+Design and
+development
+validation
+Risk management
+validation
+Software team
+Luis
+Software Manager
+Alejandro
+Clinical
+Expert(Validity
+Evaluator)
+Alejandro
+
+AspenView Document 13/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+Miguel
+Product
+transfer
+Risk control &
+management
+Software team
+Javier
+Software Manager
+Marta Alejandro
+Design
+changes
+control
+Risk control &
+management
+Software team
+Fernando
+Software Manager
+Patricia Alejandro
+Stage Risk management
+stage Practice Supervisor Approver
+Traceability Risk control &
+management
+QA parts
+Victoria Sergio Andrés
+Purchasing
+control
+Risk control &
+management
+Purchase parts
+Diego Sergio Andrés
+Production
+and process
+control
+Risk control &
+management
+Production parts
+Irene Sergio Andrés
+Post product Risk control &
+management
+QA parts
+Cristina Raúl Andrés
+Post
+management
+Data analysis &
+Risk management
+update
+QA parts
+Cristina Raúl Andrés
+Clinical Evaluator(Validity Evaluator) Information
+Name Alejandro
+Organization Aspen Imaging Healthcare Inc
+Department Quality team
+Position&Responsibility Radiologists,
+7. Check requirements for Risk management
+activity
+7.1 Duration : 2023.02.01 ~ 2023.2.28
+No. Stage Check requirement list Related material
+1
+Design &
+Development
+Planning
+◼ Conduct a research for the intended use and safety
+of the product.
+◼ Research for the intended use and the market.
+◼ The detailed data collection on standard technical
+Development
+procedure( AQP702)
+
+AspenView Document 14/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+information, engineering data, the published case,
+clinical data and the user opinions about the product.
+◼ The manufacture makes a decision for the
+development through opened discussion.
+2 Design &
+Development
+Input
+◼ Check the product meets the intended use,
+performance, safety, legal requirements and
+international standards.
+◼ Expect the risk factors in normal and abnormal
+condition.
+◼ The development planning shall be made through
+reviewing by mechanical team manager, electrical
+team manager, software team manager and QA
+manager.
+◼ Design specifications.
+◼ Risk management planning and risk management
+report.
+Development
+procedure( AQP702)
+Risk management(AQP405)
+3
+Design &
+Development
+Output
+◼ Design output documents(drawing, part list,
+manufacturing process, quality management
+planning, manual).
+◼ Risk management report.
+◼ Verification for the design input documents.
+Development
+procedure( AQP702)
+4 Design &
+Development
+Review
+◼ Decide whether the residual risk is acceptable.
+◼ Development meeting and amendment for the risk
+control measures. Check the design input/output.
+Development
+procedure( AQP702)
+5
+Design &
+Development
+Verification
+◼ Objective reporting for the risk control measures.
+◼ Evaluation for the prototype and design changes for
+the troubles and risk.
+◼ Approval test for design verification.
+Development
+procedure( AQP702)
+6
+Design &
+Development
+Validation
+◼ Check the residual risk is acceptable.
+◼ Evaluation for the prototype and design changes for
+the problems and risk.
+◼ QA takes a reliability test and safety test.
+◼ Clinical Evaluator check the residual risk is
+acceptable from the clinical point of view.
+Validation
+procedure(AQP717)
+7 Product
+Transfer
+◼ Enrollment of the design documents.
+◼ Distribution of the technical documents for
+production.
+◼ Design changes for the problems and risk found in
+production.
+Product management
+procedure(AQP706)
+8 Control of
+Design
+Changes
+◼ Design changes is conducted for performance
+increase for the product, cost down, productivity
+increase.
+Development
+procedure( AQP702)
+9 Traceability
+◼ Clear the traceability of the materials, parts, products
+requested for production.
+Identification and traceability
+procedure
+(AQP705)
+Inadequate product
+management
+procedure(AQP802)
+10 Purchasing
+Control
+◼ Management for the delivery date, quality and prices
+of them import material.
+Purchase management
+procedure(AQP703)
+11
+
+Production &
+Process
+Control
+◼ Control and check the production process to secure
+the best quality.
+Production and inspection
+equipment management
+procedure(AQP707)
+12 Post Product
+◼ Product test and management. Measure and inspection
+management
+procedure(AQP801,AQP709)
+Inadequate product
+management
+procedure(AQP802)
+Correction and prevention
+procedure(AQP803)
+Part and product
+management
+procedure(AQP801)
+
+AspenView Document 15/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+13 Post
+Management
+◼ Installation.
+◼ User training.
+◼ Quick action against the customer’s complaints.
+◼ Sales staff and service worker visit regularly and
+service before claim.
+Service procedure(AQP716)
+
+AspenView Document 16/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+8. Acceptability of risk
+Hazard is defined as the below.
+※ Hazard = Severity X Probability
+8.1 Criteria for possibility judgment
+Severity Score Possible description
+Critical 9.0~10.0 Results in patient death
+High 7.0~8.9 Result in injury or impairment requiring professional
+medical intervention
+Medium 4.0~6.9 Results in temporary injury or impairment not
+requiring professional medical intervention
+Low 0.1~3.9 Inconvenience or temporary discomfort
+8.2 Acceptability of risk
+8.2.1 Three categories of risk
+Risk is classified as following 2 categories.
+◼ Green Zone : Acceptable zone
+It is set as an acceptable risk zone, in which risks in this zone do not need risk control.
+◼ Red Zone : Unacceptable zone
+It is an unacceptable zone, in which case of product development is needed, and should be
+reduced to acceptable zone as low as possible through risk control for risk reduction.
+If residual risk still exist in an intolerable zone even after the elimination or reduction of risks, the
+manufacturer may gather and review data and literature to determine if the medical benefits of
+the intended use outweigh the residual risk.
+8.2.2 Acceptability of risk
+Severity Score
+Critical 9.0~10.0
+High 7.0~8.9
+Medium 4.0~6.9
+Low 0.1~3.9
+Acceptable risk Unacceptable risk
+◼ AspenView as operating Radiological Image Processing System will not make more than
+Serious/Catastrophic (Severity) risk included natural disaster like Power failure.
+◼ Aspen Imaging Healthcare Inc builds the criteria of risk acceptability based on the clinical
+
+AspenView Document 17/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+investigation
+9. Verification activity
+9.1 Personnel
+Activity at each stage Reference Related report PRACTICE
+Risk
+control
+Evaluate the prototype
+presentation and make a
+report for the prototype.
+After checking the
+problems, conduct design
+change.
+Development
+procedure
+(AQP702)
+Design history
+File (DHF)
+Software
+manager
+Manufacture the second
+prototype revised from
+first sample and second
+presentation to evaluate
+the product. Before
+transferring to production,
+finalize the specifications
+and functions.
+Development
+procedure
+(AQP702)
+Design history
+file (DHF)
+Software
+manager
+After product transfer,
+investigate the production
+process and
+remanufacture for the
+inadequate product in
+production process. If the
+design changes are
+required, call the design
+change proposal to the
+research department.
+Inadequate product
+management
+procedure(AQP802)
+Development
+procedure
+(AQP702)
+Production
+process
+investigation
+sheet
+Production
+manager
+The final test is
+conducted as same way
+for the product through an
+examination and
+remanufacture for the
+inadequate product.
+Measure and
+inspection
+management
+procedure
+(AQP801, AQP709)
+Product
+examination
+sheet
+QA manager
+The research center
+reflects the opinions for
+the manufacturing,
+installation, user of the
+product.
+Development
+procedure
+(AQP702)
+Design change
+proposal
+Development
+discussion
+report
+Software
+manager
+
+AspenView Document 18/18
+Doc. Name: AspenView/Doc. No.: AI-AspenView-RMP
+Initiate date: 2023.02.01 /Rev 0
+10. How to get information after post production
+The each department carries the following investigation and research activities so that they can
+see the market.
+Department Investigation activity
+Research center
+◼ Join in the academic society in inside and outside of the
+country.
+(SPIE, IEEE, Radiologist society, Korean society medical biological
+engineering, Electrical engineering society and others)
+◼ Participation in the exhibition in inside and outside of the
+country
+(KIMES, RSNA, MEDICA, CMEF and others)
+◼ Searching the website of medical devices
+(MFDS, FDA/UL, CE and others)
+◼ Investigation for the competitors
+(GE, Siemens and others)
+◼ Clinical test and cooperation work with hospital
+QA
+◼ Build the data base for the products
+◼ Management the complaint report
+◼ Host a quality meeting
+Production team ◼ Build the data base for the Production process investigation
+◼ Training for the quality increase
+Customer service team ◼ Dealing of customer’s complaints and enroll the report

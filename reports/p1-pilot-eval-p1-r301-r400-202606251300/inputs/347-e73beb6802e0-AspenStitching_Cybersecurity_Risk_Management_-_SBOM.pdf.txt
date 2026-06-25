@@ -1,0 +1,443 @@
+queueId: ingest-1781569954419-1850
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenStitching Cybersecurity Risk Management - SBOM.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/a77864f433f5/AspenStitching Cybersecurity Risk Management - SBOM__a77864f433f5_combined.txt
+canonicalGroupId: e73beb6802e0
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 347
+
+SOURCE_TEXT
+AspenStitching Document 1/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+Cyber Security Risk Management for
+Software Bill of Materials
+Model: AspenStitching software
+Revision Status
+Number Revision
+Date
+Rev
+No.
+Description of Revision Prepared by Reviewed
+by
+Approved
+by
+1 2024.10.10 1 established Dong Hyun Kim
+
+AspenStitching Document 2/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+1. Introduction
+This cybersecurity risk document for AspenStitching software is to list component-level software
+modules that compose of the AspenStitching software and analyze them for vulnerability.
+1.1 Manufacturer
+Aspen Imaging Healthcare Inc
+1.2 Address of company
+Head office:
+801 Jupiter Rd Suite 200, Plano, TX 75074, USA
+(+1) 214-257-0113
+Website: http://aspenimaging.com
+1.3 Applicable directive and annex
+This Technical File consists of technical documentation relating to the development of Radiological
+Image Processing System(AspenStitching). It meets the requirements of the Medical Device
+Directive 93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X.
+
+AspenStitching Document 3/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+2. Machine Readable Format in Cyclone DX (JSON)
+{
+"bomFormat": "CycloneDX",
+"specVersion": "1.4",
+"serialNumber": "urn:uuid:1d8c77f4-8f23-11e7-bb31-be2e44b06b34",
+"version": 1,
+"metadata": {
+"authors": [
+{
+"name": "Dong Hyun Kim"
+}
+],
+"system": {
+"type": "application",
+"name": "AspenStitching"
+}
+},
+"components": [
+{
+"type": "library",
+"name": "Crypto++ Library",
+"version": "8.3.0",
+"purl": "pkg:generic/cryptopp@8.3.0",
+"supplier": {
+"name": "Crypto++"
+},
+"licenses": ["Boost Software License 1.0"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+}
+
+AspenStitching Document 4/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+],
+"cpe": "cpe:2.3:a:cryptopp:crypto++:8.3.0",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b35",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "compiler",
+"name": "Intel C/C++/Fortran Compiler",
+"version": "17.0.0",
+"purl": "pkg:generic/intel.compiler@17.0.0",
+"supplier": {
+"name": "Intel"
+},
+"licenses": ["Intel Simplified Software License"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567891"
+}
+],
+"cpe": "cpe:2.3:a:intel:compiler:17.0.0",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b36",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Intel OpenMP Runtime Library",
+"version": "20160916",
+"purl": "pkg:generic/intel.openmp@20160916",
+"supplier": {
+"name": "Intel"
+
+AspenStitching Document 5/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+},
+"licenses": ["Intel Simplified Software License"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567892"
+}
+],
+"cpe": "cpe:2.3:a:intel:openmp:20160916",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b37",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Intel Threading Building Blocks for Windows",
+"version": "2017",
+"purl": "pkg:generic/intel.tbb@2017",
+"supplier": {
+"name": "Intel"
+},
+"licenses": ["Apache License 2.0"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567893"
+}
+],
+"cpe": "cpe:2.3:a:intel:tbb:2017",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b38",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+
+AspenStitching Document 6/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+},
+{
+"type": "library",
+"name": "Intel Cilk Plus",
+"version": "2.0.4480.0",
+"purl": "pkg:generic/intel.cilkplus@2.0.4480.0",
+"supplier": {
+"name": "Intel"
+},
+"licenses": ["Intel Simplified Software License"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567894"
+}
+],
+"cpe": "cpe:2.3:a:intel:cilkplus:2.0.4480.0",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b39",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "MFCDLL Shared Library Retail Version",
+"version": "14.16.27012.6",
+"purl": "pkg:generic/microsoft.mfcdll@14.16.27012.6",
+"supplier": {
+"name": "Microsoft"
+},
+"licenses": ["Microsoft Visual Studio Licensing"],
+"hashes": [
+{
+"alg": "SHA-256",
+
+AspenStitching Document 7/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567895"
+}
+],
+"cpe": "cpe:2.3:a:microsoft:mfcdll:14.16.27012.6",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b3a",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Microsoft C Runtime Library",
+"version": "10.0.17134.12",
+"purl": "pkg:generic/microsoft.crt@10.0.17134.12",
+"supplier": {
+"name": "Microsoft"
+},
+"licenses": ["Microsoft Software License Terms"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567896"
+}
+],
+"cpe": "cpe:2.3:a:microsoft:crt:10.0.17134.12",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b3b",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Microsoft C Runtime Library",
+"version": "14.16.27012.6",
+
+AspenStitching Document 8/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+"purl": "pkg:generic/microsoft.crt@14.16.27012.6",
+"supplier": {
+"name": "Microsoft"
+},
+"licenses": ["Microsoft Software License Terms"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567897"
+}
+],
+"cpe": "cpe:2.3:a:microsoft:crt:14.16.27012.6",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b3c",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Intel Integrated Performance Primitives. Core
+Library",
+"version": "2017.0.1.1052",
+"purl": "pkg:generic/intel.ipp.core@2017.0.1.1052",
+"supplier": {
+"name": "Intel"
+},
+"licenses": ["Intel Simplified Software License"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567898"
+}
+],
+"cpe": "cpe:2.3:a:intel:ipp.core:2017.0.1.1052",
+
+AspenStitching Document 9/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b3d",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+},
+{
+"type": "library",
+"name": "Intel Integrated Performance Primitives. Color
+Conversion",
+"version": "2017.0.1.992",
+"purl": "pkg:generic/intel.ipp.colorconversion@2017.0.1.992",
+"supplier": {
+"name": "Intel"
+},
+"licenses": ["Intel Simplified Software License"],
+"hashes": [
+{
+"alg": "SHA-256",
+"content":
+"abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567899"
+}
+],
+"cpe": "cpe:2.3:a:intel:ipp.colorconversion:2017.0.1.992",
+"unique-identifier": "bom-ref/1d8c77f4-8f23-11e7-bb31-
+be2e44b06b3e",
+"timestamp": "2024-06-30T19:00:00Z",
+"relationship": "INCLUDES"
+}
+]
+}
+
+AspenStitching Document 10/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+3. SBOM and Support Lifecycle
+Module Name Version Level of Support
+Crypto++ Library 8.3.0 Actively Maintained
+Intel C/C++/Fortran Compiler 17.0.0 Actively Maintained
+Intel OpenMP* Runtime Library 20160916 Actively Maintained
+Intel Threading Building Blocks
+for Windows
+2017 Actively Maintained
+Intel Cilk Plus 2.0.4480.0 Actively Maintained
+MFCDLL Shared Library Retail
+Version
+14.16.27012.6 Actively Maintained
+Microsoft C Runtime Library 10.0.17134.12 Actively Maintained
+Intel Integrated Performance
+Primitives. Core Library
+14.16.27012.6 Actively Maintained
+Intel Integrated Performance
+Primitives. Color Conversion
+2017.0.1.1052 Actively Maintained
+Intel Integrated Performance
+Primitives. String Manipulations
+2017.0.1.992 Actively Maintained
+Intel Integrated Performance
+Primitives. Cryptography
+2017.0.1.1016 Actively Maintained
+Intel Integrated Performance
+Primitives. Computer Vision
+2017.0.1.1043 Actively Maintained
+Intel Integrated Performance
+Primitives. Data Compression
+2017.0.1.1069 Actively Maintained
+Intel Integrated Performance
+Primitives. Image Processing
+2017.0.1.994 Actively Maintained
+Intel Integrated Performance
+Primitives. Signal Processing
+2017.0.1.1083 Actively Maintained
+Intel Integrated Performance
+Primitives. Vector Math
+2017.0.1.1087 Actively Maintained
+
+AspenStitching Document 11/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+3.1 SBOM Component Categorization
+This section will categorize the listed modules into commercial, open-source, and off-the-shelf
+types.
+3.1.1 Commercial Software Components
+1. Intel C/C++/Fortran Compiler - Commercial
+2. Intel OpenMP Runtime Library* - Commercial
+3. Intel Threading Building Blocks for Windows - Commercial
+4. Intel Cilk Plus - Commercial
+5. MFCDLL Shared Library Retail Version - Commercial
+6. Microsoft C Runtime Library - Commercial
+7. Intel Integrated Performance Primitives (IPP) - Commercial
+3.1.2 Open-Source Software Components
+1. Crypto++ Library - Open-source
+3.1.3 Off-the-Shelf Software Components
+Off-the-shelf software can be commercial, open-source, or a combination. Generally, all listed
+software components, whether commercial or open-source, are considered off-the-shelf as they
+are pre-developed and ready for use:
+1. Commercial Off-The-Shelf Components
+o All commercial components listed above.
+2. Open-Source Off-The-Shelf Components
+o All open-source components listed above.
+
+AspenStitching Document 12/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+4. Security Assessment of Component Modules
+• Crypto++ Library
+o Function: Crypto++ is an open-source library used for cryptographic
+operations.
+o Vulnerabilities: Risk of algorithm weaknesses if outdated versions are used;
+potential for buffer overflows and other coding errors.
+o Recommendations: Regularly update to the latest version; conduct thorough
+code reviews and testing for cryptographic implementations.
+• Intel C/C++/Fortran Compiler
+o Function: A commercial compiler that produces optimized binaries, often used
+in high-performance applications.
+o Vulnerabilities: Vulnerabilities in the compiler can lead to insecure code
+generation, exposing applications to security risks.
+o Recommendations: Keep the compiler updated; review compiler security
+advisories; utilize secure coding practices.
+• Intel OpenMP Runtime Library*
+o Function: A library for parallel programming in C/C++.
+o Vulnerabilities: Potential issues with race conditions and deadlocks that could
+lead to unexpected behavior or security flaws.
+o Recommendations: Implement thorough testing for concurrency issues; apply
+the principle of least privilege in multi-threaded applications.
+• Intel Threading Building Blocks (TBB) for Windows
+o Function: A C++ template library for parallel programming.
+o Vulnerabilities: Similar to OpenMP, with risks related to synchronization issues
+and resource management.
+o Recommendations: Use static and dynamic analysis tools to catch potential
+threading issues; ensure proper handling of shared resources.
+• Intel Cilk Plus
+o Function: A language extension for C and C++ that supports data parallelism.
+o Vulnerabilities: Similar concerns as with TBB and OpenMP; reliance on
+compiler optimizations could introduce vulnerabilities.
+o Recommendations: Regularly review code for correctness and security,
+especially in parallel contexts.
+• MFCDLL Shared Library Retail Version
+
+AspenStitching Document 13/13
+Doc. Name: AspenStitching-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.10.10 /Rev 1
+o Function: A Microsoft Foundation Class library for developing Windows
+applications.
+o Vulnerabilities: Vulnerable to issues like buffer overflows, especially in older
+versions.
+o Recommendations: Keep the library updated; follow secure coding practices;
+utilize security features like Address Space Layout Randomization (ASLR).
+• Microsoft C Runtime Library
+o Function: Essential for running C applications on Windows.
+o Vulnerabilities: Common vulnerabilities include buffer overflows and use-after-
+free errors.
+o Recommendations: Regularly update; utilize security features available in
+newer versions of Windows; validate all inputs rigorously.
+• Intel Integrated Performance Primitives (IPP)
+o Function: Libraries for optimized performance in various applications, including
+image processing and cryptography.
+o Vulnerabilities: Potential for buffer overflows, memory leaks, and other issues
+similar to other libraries.
+o Recommendations: Regularly review and test; monitor for security updates
+from Intel; follow best practices for memory management.

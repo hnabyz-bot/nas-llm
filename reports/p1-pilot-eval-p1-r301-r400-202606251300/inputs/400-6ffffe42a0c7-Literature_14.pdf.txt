@@ -1,0 +1,1390 @@
+queueId: ingest-1781569954385-ejs
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/260213 태국 MD Healthcard Co., Ltd/251209 보완서류/2.2 [Digital Flat Panel X-ray Detector] Technical Document/A-CSDT-23G attachment (Rev.5)/9. Validation and verification/9.6 clinical/9.6.3 literatures/Literature #14.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/33197479d046/Literature #14__33197479d046_combined.txt
+canonicalGroupId: 6ffffe42a0c7
+productSignal: Unclassified
+authoritySignal: FDA
+pilotRank: 400
+
+SOURCE_TEXT
+a- Si:H/CsI ( Tl ) flat-panel versus computed radiography for chest imaging
+applications: image quality metrics measurement
+Xinming Liu and Chris C. Shaw
+Citation: Medical Physics 31, 98 (2004); doi: 10.1118/1.1625102
+View online: http://dx.doi.org/10.1118/1.1625102
+View Table of Contents: http://scitation.aip.org/content/aapm/journal/medphys/31/1?ver=pdfcov
+Published by the American Association of Physicists in Medicine
+Articles you may be interested in
+Lag measurement in an a- Se active matrix flat-panel imager
+Med. Phys. 31, 1203 (2004); 10.1118/1.1713298
+Dosimetric IMRT verification with a flat-panel EPID
+Med. Phys. 30, 3143 (2003); 10.1118/1.1625440
+Comparison of an amorphous silicon/cesium iodide flat-panel digital chest radiography system with screen/film
+and computed radiography systems — A contrast-detail phantom study
+Med. Phys. 28, 2328 (2001); 10.1118/1.1408620
+Signal, noise, and detective quantum efficiency of a-Si:H flat-panel imagers
+Med. Phys. 25, 2250 (1998); 10.1118/1.598427
+Signal, noise power spectrum, and detective quantum efficiency of indirect-detection flat-panel imagers for
+diagnostic radiology
+Med. Phys. 25, 614 (1998); 10.1118/1.598243
+
+a-Si:HÕCsI„Tl… flat-panel versus computed radiography for chest imaging
+applications: image quality metrics measurement
+Xinming Liua) and Chris C. Shaw
+Department of Imaging Physics, University of Texas M. D. Anderson Cancer Center, Houston, Texas 77030
+~Received 12 November 2002; revised 23 July 2003; accepted for publication 5 September 2003;
+published 19 December 2003!
+Amorphous silicon (a-Si:H) flat-panel ~FP! imaging systems have recently become commercially
+available for both chest and mammographic imaging applications. It has been shown that this new
+detector technology offers better image quality and various operational advantages over the com-
+puted radiography ~CR! which to date has been the most widely implemented and used digital
+radiography technique. However, most image quality measurements reported on flat-panel systems
+have been performed on prototype systems in laboratories while those for CR systems were typi-
+cally independently performed and reported on in separate studies. To directly compare the two
+technologies, we have measured the image properties for a commercial amorphous silicon/cesium
+iodide @a-Si:H/CsI(Tl)# flat-panel based digital chest system and a commercial CR system under
+clinical imaging conditions. In this paper, measurements of image quality metrics, including the
+modulation transfer functions ~MTFs!, noise power spectra ~NPSs!, and detective quantum efficien-
+cies ~DQEs!, for the FP and CR systems are presented and compared. Methods and issues related to
+these measurements are discussed. The results show that the flat-panel system has slightly lower
+MTF but significantly higher DQEs than the CR system. The DQEs of the flat-panel system were
+found to increase with the exposure while those of the CR system decrease slightly with the
+exposure. © 2004 American Association of Physicists in Medicine. @DOI: 10.1118/1.1625102#
+Key words: a-Si:H/CsI(Tl) flat-panel detector, computed radiography, digital radiography,
+modulation transfer function, noise power spectra, noise equivalent quanta, detective quantum
+efficiency
+I. INTRODUCTION
+Despite advances in new modalities, projection x-ray imag-
+ing remains to be the primary tool for initial diagnosis of
+chest diseases. Conventional projection x-ray imaging has
+relied on the use of screen/film ~S/F! combinations for x-ray
+detection and image recording. Although the quality of S/F
+combinations has been improved and optimized over de-
+cades, there are several fundamental drawbacks. Intrinsic to
+the use of film as the image recording medium is a non-linear
+relationship between the film density and base 10 logarithm
+of the detector exposure, known as the H and D curve. Be-
+cause the curve generally becomes flatter towards the low
+and high exposure ends, good image contrast can only be
+obtained for a narrow range of exposures. This leads to a
+limited useful exposure range and results in a significant rate
+of retakes from over- or under-exposures. Another drawback
+in quality aspect is the poor compromise between the spatial
+resolution and x-ray absorption ability of the S/F combina-
+tions. To maintain reasonable spatial resolution, the phosphor
+thickness must be kept reasonably thin to contain lateral scat-
+tering and spreading of fluorescent light. However, this
+would lead to compromised x-ray absorption ability, in-
+creased noise fluctuations ~quantum mottles! and thus limited
+ability to detect low contrast objects in the S/F images. Due
+to the analog nature of S/F imaging, there are also opera-
+tional disadvantages in image storage, retrieval, distribution,
+and display. Films accumulated over years of operation can
+become increasingly difficult and expensive to store, orga-
+nize and retrieve. Retrieval and distribution of films are labor
+intensive and often lead to loss or misplacement. Although
+trans-illuminated film may still be the best image display
+technology available ~in terms of spatial resolution and
+brightness range!, it is inflexible and cannot adapt to sub-
+optimal viewing conditions, objects having too little, too
+much contrast, residing in too dark or too bright regions or
+are too small in size. The analog form of film image storage
+does not have the provision for post-acquisition processing
+for image enhancement or analysis.
+Various digital radiography techniques have been devel-
+oped and investigated over the last two decades in the hope
+of improving both the quality and utilization of x-ray image
+data.1–22 Due to the rapid advances of digital and computer
+technology, the concept of totally digital and filmless radiol-
+ogy operation has also become feasible. Thus, the incentives
+of finding a high quality yet economic digital image acqui-
+sition technique for large-scale implementation of digital ra-
+diography have grown high.
+The CR technology was first introduced in early 1980s
+and has been widely accepted as a viable candidate for large-
+scale implementation of digital radiography over past
+decades.16 –25 Due to its compatibility with existing x-ray
+equipment, the implementation of CR can be economic and
+less demanding in terms of initial cost and personnel train-
+ing. Its operational advantages have been well recognized
+98 98 Med. Phys. 31 „1…, January 2004 0094-2405Õ2004Õ31„1…Õ98Õ13Õ$22.00 © 2004 Am. Assoc. Phys. Med.
+
+and utilized in areas that can benefit most from more flex-
+ibility and convenience in operation but are less demanding
+in image quality, e.g., bedside radiography, imaging in inten-
+sive care units or emergency rooms.26 –30 Furthermore, the
+CR technology has been increasingly integrated with the Pic-
+ture Archiving and Communication Systems ~PACS! for
+filmless radiology, further increasing its installation base.
+However, despite the use of digital image processing and
+enhancement to improve the presentation of CR images, the
+fundamental quality of CR images has been measured and
+perceived to be lower than that of S/F images. Thus, there
+has been a more reserved acceptance in applications that de-
+mand high image quality, including notably primary chest
+imaging and mammographic imaging. This lower image
+quality has been attributed to the poorer x-ray absorption
+ability and several other characteristics of the storage
+phosphors.17,18,31
+In the past few years, amorphous silicon flat-panel detec-
+tors have become commercially available for primary chest
+and mammographic imaging. These detectors either use an
+x-ray scintillator plate coupled to an array of photodiodes on
+the a-Si plate or employ a selenium plate to directly convert
+x-rays into charges. The imaging properties of these two dif-
+ferent types of systems have been measured and reported on
+by various groups.1,4,6,7,9,32,33 However, most of these mea-
+surements have been performed on prototype systems in
+laboratory settings rather than commercial systems installed
+in clinical environments. Comparison to the widely used CR
+systems has been difficult because most reports have focused
+on measurements for a specific type of technologies. Since
+these measurements were often conducted under different
+conditions or using different methodologies, it is generally
+difficult to obtain a fair comparison of the FP and CR sys-
+tems based on separate studies or reports.
+In order to obtain a realistic evaluation and a fair com-
+parison of the FP and CR techniques for chest imaging, we
+have measured and compared the image properties of a com-
+mercial flat-panel system and a commercial CR system using
+the same methodology and under nearly identical exposure
+conditions. In this paper, the results from these measure-
+ments are presented and used to compare the FP and CR
+techniques. The methodology and relevant issues for the
+measurements are also described and discussed.
+II. METHODS AND MATERIALS
+A. Detector systems
+1. a-Si:HÕCsI„Tl…
+flat-panel system
+The flat-panel detector studied and compared in this in-
+vestigation was an amorphous silicon/cesium iodide
+@a-Si:H/CsI(Tl)# based system with an active area of
+40.4 cm340.4 cm (15.9 in.315.9 in.) and a pixel pitch of
+200
+mm. This system was manufactured as part of a stand-
+alone digital chest unit ~Revolution XQ/i, GE Medical Sys-
+tems, Milwaukee, WI! and integrated with a stationary anti-
+scatter grid ~13:1, 78 lines/cm!. Characteristics and
+performance of this system have been previously reported
+on.1,32,33 The active area of the detector is divided into a
+202232022 array of image elements, each of which consists
+of a photodiode covering most of the image area and a thin-
+film-transistor ~TFT! switch at one corner. This circuitry is
+fabricated with amorphous silicon multiple layers deposited
+onto a glass substrate. A thick layer of CsI~Tl! is directly
+deposited on top of the a-Si:H circuitry and grown into
+needle structures which can effectively act like light channels
+to reduce lateral scattering of the fluorescent light generated
+and improve the resulting spatial resolution as compared to a
+nonstructured CsI scintillator of the same area density
+(mg/cm2 ). 34 During the exposure, the x rays are absorbed
+and converted into fluorescent light which is then channeled
+to the photodiodes for conversion into charges. During read-
+out, the charges in the photodiodes are read out by succes-
+sively opening the gate lines of the TFT switches row by
+row. The charge signals in the corresponding row of photo-
+diodes are read out in parallel through preamplifiers and then
+digitized into 14-bits image data through sample/hold and
+multiplexing circuitry. The system provides both raw ~linear!
+and processed ~log mapped! image data for archival, display
+and printing. For this study, the raw image data were
+achieved onto a CD-R disk and then transferred to a Sun
+multiprocessor Enterprise 3000 computer system ~Sun Mi-
+crosystems, Mountain View, CA! for further processing and
+analysis.
+2. Computed radiography system
+The CR system studied and compared in this paper was a
+FCR AC-3 CR image reader used in conjunction with a stan-
+dard imaging plate ST-VN ~Fuji Medical Systems USA, Inc.,
+Stamford, CT!. This system has been widely used for general
+radiography applications and is a good representation of cur-
+rent commercial CR systems. It reads out images as 12-bits
+data but processes and converts them into 10-bits data for
+storage, printing or display. The pixel size for image readout
+depends on the size of the imaging plates used. For the
+14 in.317 in. plate used in this study, the images were read
+out with a pixel size of 200
+mm. Aiming for general radiog-
+raphy applications, the ST-VN plate has been designed for
+better x-ray absorption and modest spatial resolution, as
+compared to the high-resolution ~HR-V! imaging plate. The
+same CR imaging plate and cassette were used throughout
+the study to avoid potential inconsistency from using differ-
+ent plates. The CR reader was operated with fixed sensitivity
+(S) and latitude (L): S5200 and L53.0. With the image
+readout signals logarithmically amplified prior to digitization
+~per design by Fuji Medical System!, these parameters deter-
+mine the center and range of the digitized image signals to be
+extracted and saved for further processing. Using these pa-
+rameters, the image data were linearized and converted into
+12-bits linear data prior to analysis. A fixed 10-minute delay
+between exposure and image readout was maintained for all
+CR measurements to minimize the potential signal fluctua-
+tion due to varying decay of the latent image signals. Speci-
+fications for the two detector systems are listed and com-
+pared in Table I.
+99 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 99
+Medical Physics, Vol. 31, No. 1, January 2004
+
+B. Experimental setup
+Since the FP detector system is part of a dedicated stand-
+alone digital chest unit, the CR imaging plates were exposed
+in a separate radiography room. However, the x-ray tube and
+generator used for CR imaging were identical in make and
+model to those used in the dedicated FP chest unit, minimiz-
+ing the differences in x-ray beam quality. The source-to-
+detector distance ~SID! was maintained at 183 cm ~72 in.! for
+both FP and CR imaging. Exposures were made at 70 kVP
+and 120 kVP . The former was often used in previously re-
+ported measurements for FP or CR imaging systems for gen-
+eral radiography applications.1,19–22,32,33 The latter is often
+used in primary chest radiography procedures. A 0.5-mm
+thick copper plate was added to simulate attenuation and
+filtration by the patient. This setup allows our work to be
+compared with results obtained by other researchers.19,20,22,32
+To compare the beam quality of the FP and CR systems, the
+half value layers ~HVL, in mm Al! were measured and listed
+in Table II. The HVL differences between the two imaging
+systems were found to be 2.8% and 1.9% for 70 kVP and
+120 kVP x-rays, respectively. Notice the HVL values of 7.1
+or 6.9 mm Al for 70 kVP x-ray are similar to those chosen by
+other investigators.1,19–22 Notice that although we have used
+0.5 mm Cu rather than aluminum filters, the kVps and HVLs
+of the x-ray beams used in our measurements were very
+close to those specified in the IEC standard ~Table II!: 70
+kVp with 7.1 or 6.9 mm Al compared to 7.1 mm Al for
+RQA5 and 120 kVp with 10.6 or 10.4 mm Al compared to
+11.5 mm Al for RQA9.35
+Since the stationary antiscatter grid would attenuate the x
+rays before they reach the detector, it was removed from the
+FP system for image acquisition. The system is normally
+calibrated with the grid in to create a gain map which would
+correct for the artifacts from the stationary grids. To elimi-
+nate the effects of this gain map, the system was recalibrated
+after the grid was removed. For CR measurement, the imag-
+ing plate was placed outside the Bucky/cassette holder but at
+the same SID.
+C. Signal linearity
+Conversion of the image signals into exposure informa-
+tion, often referred to as signal linearization, is required for
+measuring the modulated transfer function ~MTF!, noise
+power spectra ~NPS!, and detective quantum efficiencies
+~DQE!. The raw image data from the FP system are ampli-
+fied linearly and should be directly proportional to the expo-
+sure at the detector input. To check the linear response of the
+FP system, uniform exposure images were acquired at vari-
+ous mAs settings while keeping the kVp fixed at 70 or 120.
+The mean image signal over a 1003100 region-of-interest
+~ROI! at the center of the image was then measured as a
+function of the exposure. The mean signals over the ROI
+were computed and averaged over four independent mea-
+surements at each mAs setting and plotted as a function of
+the measured exposure.
+All exposures were measured using a calibrated 150 CC
+ion camber and a Keithley dosimeter ~models 96035B and
+35050A, Keithly Instruments, Cleveland, OH!. The measure-
+ments had to be made with separate exposures with the
+Bucky ~for CR! or detector-grid assembly ~for FP! moved
+out of the x-ray path as the chamber would interfere with the
+linearity or NPS measurements if it were placed in the field
+during acquisition of the uniform exposure images. The
+chamber was placed at where the center of the storage phos-
+phor ~for CR! or CsI ~for FP! layer would be and used to
+measure the exposures for various mAs settings at 70 kVP
+and 120 kVP . Three or more successive exposure measure-
+ments were made for each kVP and mAs setting and aver-
+aged to reduce the fluctuations.
+With the CR system used in this study, the image readout
+signals are logarithmically amplified prior to digitization.
+Thus the digital image data need to be converted back to
+linear exposure scale prior to measurements of MTF, NPS,
+and DQE. The following relationship was used to linearize
+the CR image data:
+Q5a• log10 E1b, ~1!
+where Q is the digital value of the CR image; E is the ex-
+posure measured at the detector input; a is the gradient; and
+b is the intercept of the curve on the horizontal (log10 expo-
+sure! axis. To determine the parameters a and b, the mean
+signal, Q, was measured for various exposures, E. The rela-
+tionship between the measured values of Q and log10 E was
+then fitted to a straight line with the slope and intercept com-
+puted as a and b, respectively. The resulting values of a and
+b were then used in conjunction with Eq. ~1! to linearize the
+CR image data. To form the linearized image data, the expo-
+sure is multiplied with a constant,
+a510b/a•4095.
+a scales
+the digital exposure image data in such a way that 4095
+would be the highest linear signal corresponding to Q50.
+The use of Eq. ~1! to represent the relationship between CR
+image data and exposure was validated by evaluating the
+quality of the fit.
+TABLE II. Beam qualities for FP and CR image systems with a 0.5 mm thick
+
+copper plate added at 70 kVP and 120 kVP .
+X-ray spectrum
+Imaging
+type
+Al HVL
+~mm!
+Fluence
+(photons/mm2 /mR)
+70 kVP FP 7.1 mm 2.87310 5
+CR 6.9 mm 2.84310 5
+120 kVP FP 10.6 mm 2.85310 5
+CR 10.4 mm 2.85310 5
+TABLE I. Specifications for FP and CR chest imaging systems.
+Detector type FP CR
+Manufacturer GE Medical Systems Fuji Medical Systems
+USA, Inc.
+Model Revolution XQ/i AC-3/ST-VN
+Detector material CsI~Tl! BaF~Br,I!:Eu
+Active area (cm2 ) 40.4340.4 35.2342.8
+Image matrix 202232022 176032140
+Pixel size 200
+mm 200
+mm
+Image data depth 14 bits ~linear! 10 bits ~log!
+100 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 100
+Medical Physics, Vol. 31, No. 1, January 2004
+
+D. Modulation transfer function
+The modulation transfer function ~MTF! is often mea-
+sured to characterize and quantify the spatial resolution prop-
+erties of an image detector system. It is also required for
+computing the DQE of an imaging system. The MTFs were
+measured by using the tilted slit method. This method has
+been widely used to measure the presampling MTFs of digi-
+tal imaging systems. The measurement technique and proce-
+dure have been described in details by Fujita et al.36 With
+this method, an x-ray slit was tilted slightly from the vertical
+or horizontal directions. Signal profiles across the slit are
+used to estimate the line spread functions ~LSFs! which are
+then Fourier transformed to compute the MTFs. However,
+LSFs measured along successive lines are sampled with
+slightly shifted phases which reflect the relative position of
+the slit center with respect to the sampling points. A series of
+successive lines can be identified for the slit center to shift
+from one sampling point to the next, covering one complete
+cycle of sampling phases. Signal profiles along these lines
+can then be combined together into a single profile which
+covers one cycle of sampling phases and provides a finely
+sampled LSF. This LSF can then be used to compute the
+so-called presampling MTF as the effective sampling dis-
+tance is substantially reduced. Alternatively, the profiles
+along these lines can be used to compute MTFs correspond-
+ing to different sampling phases. The results can be averaged
+to obtain the phase-averaged or expectation MTF ~EMTF!
+which has been suggested for use in computation of the
+DQEs.37
+An x-ray slit camera ~model 07-624, Nuclear Associates,
+Carle Place, NY! was employed to measure the LSFs. The
+camera has a 10
+mm wide, 8 mm long slit ~with 4° relief
+angles on each jaw! in 1.5 mm thick tantalum. The slit cam-
+era was attached to the input of the CR cassette, or the FP
+detector assembly to minimize the image parallax and focal
+spot blurring. The slit was placed at the center of the detector
+and tilted at a slight angle (;2°) to the vertical or horizontal
+directions for measurement of the horizontal or vertical LSFs
+and MTFs. X-rays were generated with a technique of 200
+and 50 mAs at 70 and 120 kVP , respectively. The small focal
+spot ~0.6 –mm! mode was used to reduce focal spot blurring
+during image acquisition. To reduce x-ray and optical scatter,
+image areas outside the slit were shielded by closing down
+the collimator as much as possible and adding additional
+attenuators ~lead plates! around the slit. This procedure also
+helped prevent the flat-panel detector from being overex-
+posed and avoid the unwanted ghost signals which may per-
+sist for a long time and appear in images acquired later.
+Image data were corrected for spatial variation along the
+slit and across the image lines used. The biases of the signal
+profile, which might originate from the dark current noise,
+transmitted x-rays, x-ray and optical scatter, were estimated
+by averaging the signals far away from the slit and subtracted
+from the signal profiles. With the slit tilted by ;2°, a com-
+plete cycle of sampling phases were found to correspond to
+about 25 successive image lines. Signal profiles for these
+lines ~already corrected for biases from dark current noise,
+transmitted x rays, x-ray and optical scatter! were combined
+into a single finely sampled LSF, which was normalized to
+have a peak value of 1. To eliminate effects of scattered
+radiation, the signal profile below 1% of the maximum signal
+value was cut and replaced with an exponential extrapolation
+extended to 0.001% signal level.37 The corrected fine
+sampled LSF was then Fourier transformed, and the modulus
+of the transform was divided by the sinc function for the slit
+width, w, to obtain the presampling MTF as follows:
+MTF~ f !5 uFT~LSF~x !!u
+sinc~
+p• f •w ! , ~2!
+where FT represents the Fourier transform; x and f are the
+position in mm and spatial frequency in cycles/mm, respec-
+tively.
+E. Noise power spectra
+To measure the noise power spectra ~NPSs!, uniform ex-
+posure images were acquired with 70 and 120 kVp x-rays
+filtered by a 0.5 mm thick copper plate. The mAs settings
+were varied from 0.5 to 50 at 70 kVp and 0.25 to 10 at 120
+kVp to achieve a measured detector exposure of 1.34
+31028 to 1.7631026 C/kg ~0.052 to 6.84 mR! at 70 kVP
+and 5.2631028 to 2.8931026 C/kg ~0.204 to 11.21 mR! at
+120 kVP . The high exposure techniques are not clinically
+relevant for chest imaging. They were selected for this study
+to explore the entire exposure range of the FP detectors. Ex-
+posures above 11.21 mR were not selected because they be-
+gin to cause the FP image signals to saturate. Although 70
+kVp techniques are not generally used for chest imaging,
+they have been widely used in CR or FP measurements by
+other investigators. Therefore, we have chosen to include the
+70 kVp techniques as well to allow our measurements to be
+compared with those by other investigators.
+For each kVp and mAs setting, four images were ac-
+quired. With correction for x-ray fluctuations, six subtraction
+images were formed from these images to cancel out fixed
+pattern structures or noises, leaving only nonstationary
+noises in the subtraction images. With each subtraction im-
+age, the NPS was measured over 100 ROIs (1283128 pixels
+in each! which together occupy an array of 128031280 or
+25.6325.6 cm2 area in the central part of the image. With
+the six subtraction images formed, a total of 600 ROIs were
+used for computing the NPSs. Data from each of the 600
+ROIs ~100 ROIs from each of the six subtraction images! are
+Fourier transformed to compute the two-dimensional NPS,
+NPS( f x , f y), as follows:
+NPS~ f x , f y !5 uFT$I~x,y ! %u2
+2•N2 •p x•p y , ~3!
+where FT refers to two-dimensional Fourier transform;
+I(x,y) is the subtraction image data in the ROI; N is the
+dimension of the square ROI. The factor of 2 was included in
+the denominator to compensate for the noise increase due to
+image subtraction; p x and p y are the pixel sizes in mm along
+101 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 101
+Medical Physics, Vol. 31, No. 1, January 2004
+
+x and y axes ~equal in our measurements! included to nor-
+malize the NPS computation for a unit area of mm2 .
+Since the signal level may vary from one ROI or image to
+another, NPS( f x , f y) was normalized to the mean image sig-
+nal squared, S2 , computed for the ROI used, to eliminate
+direct effects of signal variation. The result, NPS( f x , f y)/S2 ,
+referred to as the normalized NPS, quantifies the square of
+noise-to-signal ratio rather than the absolute noise values and
+offers a signal-independent measure of noise level in the im-
+age. The normalized NPSs were averaged over the 600 ROIs
+used to reduce the fluctuations and obtain a reasonably
+smooth measurement at each exposure level. The two-
+dimensional normalized NPSs were converted into one-
+dimensional normalized NPS along horizontal or vertical di-
+rection by averaging the two-dimensional data over four
+lines above and four lines below the horizontal axis or four
+lines to the right of and four lines to the left of the vertical
+axis, respectively.
+F. Noise equivalent quanta and detective quanta
+efficiency
+The noise equivalent quanta ~NEQ! is defined as the ap-
+parent number of quanta per unit area contributing to an
+image if all noises originate from x-ray detection. The fre-
+quency dependent NEQ, NEQ( f ), was computed from the
+MTF, MTF( f ), and normalized NPS, NPS( f ), as follows:
+NEQ~ f !5 MTF2~ f !
+NPS~ f !/S2 5 S2•MTF2~ f !
+NPS~ f ! . ~4!
+Although the presampling MTF was measured from digital
+image data, presampling NPS cannot be measured. Instead,
+the typical NPS measurement employs an image in which
+noises are sampled with a random variety of phases. Thus, it
+has been suggested that the expectation or phase-averaged
+MTFs, denoted by EMTFs, should be used to compute the
+NEQ( f ). 37 Such MTFs were averaged from MTFs measured
+from a number of successive slit profiles in which the slit
+center shifts from one sampling point to the next. The use of
+EMTFs is consistent with the fact the NPSs were also based
+on average of measurements from digital image data which
+had been sampled with various phases and were subject to
+effects of aliasing.
+By definition, DQE( f ) was computed from the NEQ( f )
+as follows:
+DQE~ f !5 NEQ~ f !
+SNRin
+2 , ~5!
+where SNRin is the SNR of the signal at the detector input.
+However, because the input signal is the photon fluence in-
+cident to the detector, its fluctuation follows the Poisson sta-
+tistics. Thus, SNRin
+2 is equal to the mean x-ray photon flu-
+ence,
+f, and Eq. ~5! can be rewritten as follows:
+DQE~ f !5 NEQ~ f !
+f 5 S2•EMTF2~ f !
+NPS~ f !•
+f , ~6!
+where
+f is the input photon fluence.
+f was estimated by
+multiplying the measured detector exposure, R, with the con-
+version factor ~photon fluence per unit exposure!, CF, esti-
+mated for the spectrum used ~70 or 120 kVP x-rays filtered
+with a 0.5-mm thick copper plate!. CF was computed by
+dividing the integrated fluence by the integrated exposure,
+both computed from a published x-ray fluence spectrum and
+energy dependent conversion factors, c f (E), as follows:38
+integrated fluence5 E F ~E !dE, ~7!
+integrated exposure5 E F ~E !
+c f ~E ! dE, ~8!
+where F(E) is the photon fluence per unit energy at the
+photon energy, E. F(E) was estimated by correcting the
+published spectrum data for the 0.5 mm copper filtration
+used in our measurements. The published spectra, although
+rated for the same kVp and external filtration, may differ
+from the ones actually used in our measurements. Therefore,
+they were adjusted by adding or reducing aluminum filtration
+until the HVL of the resulting spectrum matched that mea-
+sured for the x-ray beam used. To determine HVL for a nu-
+merical spectrum, aluminum filtration was computed and ap-
+plied to the spectrum with the aluminum thickness increased
+until the overall exposure computed for the spectrum was
+reduced by a factor of 2. To incorporate added or reduced
+aluminum filtration, published aluminum attenuation coeffi-
+cients were interpolated and used to compute the attenuation
+factors corresponding to the added or removed aluminum
+thickness at each different photon energy. These factors were
+then used to adjust the fluence spectrum accordingly. The
+estimated CFs, calculated and measured HVLs for the CR
+and FP imaging systems are listed for both 70 and 120 kVp
+x-rays in Table II.
+III. RESULTS AND DISCUSSION
+A. Signal linearity
+Mean signals measured for uniform exposure images ac-
+quired at 70 kVP and 120 kVP are plotted as a function of the
+exposure for the FP and the CR systems for 0 – 3.28
+31026 C/kg ~0–12.72 mR! in Fig. 1. In the log–log plot,
+each group of data was well fitted to a straight line. The fitted
+lines have the same slope that indicates a linear re-
+lationship—percentage change in the image signal equals
+that in the exposure. The different intercepts of straight lines
+would indicate different gain factors. The plots show that the
+FP signal gain remained about the same from 70 to 120 kVp
+while the CR signal gain decreased slightly from 70 to 120
+kVp.
+B. Modulation transfer function
+The presampling MTFs in horizontal and vertical direc-
+tions measured at 70 and 120 kVP ’s are plotted for the FP
+and CR systems in Figs. 2~a! and 2~b!. The plots show that
+the MTFs of the FP system were measurably lower but still
+comparable to those of the CR system. At 1 cycle/mm, the
+horizontal MTFs of the CR system were about 12.3% and
+102 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 102
+Medical Physics, Vol. 31, No. 1, January 2004
+
+6.6% higher than those of the FP system ~using the MTF
+values of the FP system as the reference! for 70 kVP and
+120 kVP x rays, respectively. The difference increased to
+about 19.1% for 70 kVP and 22.2% for 120 kVP at the Ny-
+quist frequency ~2.5 cycles/mm for both systems!. These dif-
+ferences decreased in vertical direction due to decreased ver-
+tical MTFs of CR system. The MTFs remain largely the
+same for FP system in both horizontal and vertical directions.
+The plots also show that the x-ray kVP had little effect on the
+MTFs of the FP system but had measurable effect on those of
+the CR system.
+Image blurring in CR imaging occurs mainly in the read-
+out process. As the laser beam penetrates and stimulates the
+trapped electrons in the storage phosphor layer of the ex-
+posed CR imaging plate, it spreads laterally and leads to
+readout of signals from neighboring pixels. Image blurring in
+the CsI~Tl! layer of the FP detector is caused by lateral
+spreading of the fluorescent light converted from absorbed x-
+rays. This appears to be similar to the blurring process in
+conventional screen/film imaging. However, the CsI~Tl!
+layer used in a FP detector was fabricated with needle struc-
+ture ~as is the case with the one studied in this paper! which
+helps channel the fluorescent light to the photodiodes with
+reduced lateral spreading.34 Combining this feature with the
+intrinsically better absorption properties of CsI~Tl!, a better
+compromise between spatial resolution and x-ray absorption
+was achieved as compared to that for the CR system. How-
+ever, this can be used to improve the image quality in differ-
+ent ways by varying the scintillator thickness in designing
+the FP detector. Much improved MTFs can be achieved by
+selecting a thinner CsI~Tl! layer while maintaining the same
+x-ray absorption ability of the CR imaging plate. Alterna-
+tively, significantly improved x-ray absorption can be
+achieved by choosing a thicker scintillator but maintaining
+the same MTF. The FP detector studied in this paper appar-
+ently takes advantage of the needle structure of CsI~Tl! by
+going for significantly improved x-ray absorption while
+maintaining an MTF similar to that of the CR system.
+The higher kVP dependence of the MTFs with the CR
+system may be attributed to the difference in the way images
+are formed with the two detectors. With the CR system, x-ray
+information is stored as the density of trapped electrons with
+little blurring. During readout, the trapped electrons are ex-
+cited resulting emission of photons and some of which es-
+cape the phosphor are then collected and converted into elec-
+tronic signals by multiple photomultiplier tubes ~PMTs!. Due
+to the use of laser scanning readout method, scattering of the
+light emitted from stimulated trapped electrons does not
+cause blurring. The major factors that contribute to image
+blurring are the laser spot size and lateral spread of the laser
+beam inside the storage phosphor. The latter results in an
+effect highly dependent upon the depth of the trapped elec-
+trons stimulated. The deeper they are, the more the laser
+beam spread and the greater the blurring effect is. Thus, the
+x-ray kVP would have an effect on the overall blurring. At
+higher kVP ’s, the distribution of absorbed x-rays tend to be
+1.E+00
+1.E+01
+1.E+02
+1.E+03
+1.E+04
+1.E+05
+1.E-02 1.E-01 1.E+00 1.E+01 1.E+02
+Exposure (mR)
+Image signal
+ R
+FP 70kVp
+FP 120kVp
+CR 120kVp
+CR 70kVp
+F IG . 1. Linearized image signal versus exposure for FP and CR imaging
+systems plotted for full exposure range ~0–12.72 mR!. Exposures were
+made with a 0.5 mm thick copper plate added at 70 kVp and 120 kVp.
+(a)
+(b)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0 1 2 3 4 5
+Spatial Frequency (cycles/mm)
+MTF
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+Sinc(pi*0.2*f)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0 1 2 3 4 5
+Spatial Frequency (cycles/mm)
+MTF
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+Sinc(pi*0.2*f)
+F IG . 2. Comparison of presampling MTFs in ~a! horizontal and ~b! vertical
+directions for FP and CR systems measured at 70 and 120 kVp. A 0.5 mm
+thick copper plate was added for the measurements.
+103 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 103
+Medical Physics, Vol. 31, No. 1, January 2004
+
+more uniform over different depths. At lower kVP ’s, the dis-
+tribution tend to be weighted more towards the entrance side,
+resulting in a larger signal contribution from less spread laser
+beam.
+It appears that image blurring in the CsI~Tl! scintillator
+would have similar depth and therefore kVP dependence. The
+difference is that x-rays absorbed at deeper level ~closer to
+the photodiodes in the a-Si:H panel! would result in less
+blurred signals as the fluorescent light emitted would have to
+travel a shorter distance to reach the photodiodes and there-
+fore is subject to less lateral spreading. This would imply an
+increase of the MTF with higher x-ray kVP . However, the
+plots in Fig. 2 do not show such dependence. This may be
+attributed to the generally reduced light diffusion in the
+CsI~Tl! needle structures and the use of a reflective coating
+on the entrance side of the CsI~Tl! layer. Although the coat-
+ing is used to provide some protection and help collect light
+emitted in the backward direction ~opposite incident x-rays!,
+it also has the side effect of equalizing the depth dependence
+of the blurring effect. As an x-ray photon is converted to
+light in the scintillator, half of the light photons are emitted
+in the forward direction while the other half in the backward
+direction. If we add the distance traveled by the forwardly
+
+emitted photons to that traveled by the backwardly emitted
+photons, the sum is approximately equal to double of the
+scintillator thickness. Thus, the overall blurring effect would
+be less dependent on the depth of the scintillation events.
+X-rays absorbed near the exit side would result in a forward
+component subject to almost no blurring ~propagation dis-
+tance ;0) and a backward component subject to maximum
+blurring ~propagation distance ;23scintillator thickness!.
+On the other hand, x-rays absorbed on the entrance side
+would result in a forward component and a backward com-
+ponent with about the same average blurring as both forward
+and backward photons need to travel about the same distance
+(;scintillator thickness! to reach the photodiodes.
+F IG . 3. Measured 2D NPSs for ~a! FP and ~b! CR systems at 120 kVp with
+;1 mR exposure.
+(a)
+(b)
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+NPS/S
+ 2 (mm
+ 2 )
+0.216mR 0.459mR
+0.968mR 2.00mR
+5.13mR 10.42mR
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+NPS/S
+ 2 (mm
+ 2 )
+0.058mR 0.121mR
+0.256mR 0.666mR
+1.353mR 2.73mR
+6.84mR
+F IG . 4. Normalized NPSs in horizontal direction for FP system versus spatial
+frequency for various exposure levels at ~a! 70 kVp and ~b! 120 kV P . A 0.5
+mm thick copper plate was added in the measurement.
+104 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 104
+Medical Physics, Vol. 31, No. 1, January 2004
+
+C. Noise power spectra
+Figures 3~a! and 3~b! illustrate the 2D NPSs for the FP
+and CR systems measured at 120 kVp with ;1 mR expo-
+sure. The plots present different noise spectra patterns for
+two detector systems. To study the noise spectra behaviors,
+the one-dimensional normalized NPSs of the FP system in
+horizontal direction are plotted as a function of the spatial
+frequency for 70 kVp and 120 kVp in Figs. 4~a! and 4~b!,
+respectively. The normalized NPSs of the CR system in hori-
+zontal direction are plotted for 70 kVp and 120 kVp in Figs.
+5~a! and 5~b!, respectively. Notice that the normalized NPSs
+are NPSs divided by the mean signal squared. Thus the plots
+essentially show the noise ratio squared for various spatial
+frequencies and exposures for signals detected in a unit area
+of 1 mm2 . NPSs for both FP and CR systems decreased with
+the exposure. This is expected as the relative quantum noise
+would decrease with higher x-ray fluence. NPSs for both FP
+and CR systems also decreased with the spatial frequency.
+However, those for the FP system decreased with the spatial
+frequency at a significantly faster rate. Since the NPSs were
+measured for two different sets of exposures at 70 and 120
+kVp, it is hard to directly compare the two systems as to how
+the NPS varied with the exposure or the kVP in Figs. 4 and 5.
+In Fig. 6, the NPSs are plotted as a function of the exposure
+for the two different detector systems and two different
+kV P’s for ~a! 0.5 cycles/mm, ~b! 1.5 cycles/mm, and ~c! 2.5
+cycles/mm in horizontal direction, and ~d! 1.5 cycles/mm in
+vertical direction. It becomes apparent with Figs. 6~a!– 6~d!
+that the normalized NPSs at 120 kVP are slightly higher than
+those at 70 kVP for both FP and CR systems. Furthermore,
+the normalized NPSs for the CR system are significantly
+higher than those for the FP system. The difference increases
+from a factor of 2.88 at 1.3431027 C/kg ~0.052 mR! to a
+factor of 7.01 at 1.7631027 C/kg ~6.84 mR! at 1.5
+cycles/mm in horizontal direction for 70 kVP and is expected
+to be even greater at higher frequencies. The NPSs remain
+largely unchanged for FP system in both horizontal and ver-
+tical directions. The NPSs in vertical direction are slightly
+higher than that in horizontal direction for CR system.
+Figure 6 shows that the normalized noise power spectra
+(NPS/S 2 ) are approximately inversely proportional to the ex-
+posure at the detector input as indicated by the good linear fit
+and the slope of the fitted lines for the data points. This is
+expected for a quantum limited system as the noise variation
+of the signals should be proportional to the signal in quantum
+limited imaging situations. It should be noted, however, that
+this is also contributed by the use of subtracted image data
+for NPS/S2 measurements as the original image may contain
+a structure noise component whose variance may increase
+with the exposure or signal level squared rather than the
+exposure or signal themselves. The effects of the structure
+noises were demonstrated by NPS/S2 measurements using
+un-subtracted images. The results of such measurements are
+shown in Fig. 7. With these measurements, the values of
+NPS/S2 tended to decrease with the exposure at a slower rate
+and were higher than those obtained with subtracted images.
+The differences increased with the exposure level indicating
+that the structure noise is limited at higher exposure levels.
+Two subtraction methods may be used for NPS/S2 mea-
+surements. One is to subtract two identically exposed images
+to cancel out effects of structure noises. With this method,
+the noise variances in the two images are identical and su-
+perimposed in the subtracted images. Thus, the noise vari-
+ance computed in the subtracted image must be divided by 2
+to obtain the random noise component in the unsubtracted
+image. The other method is to average multiple identically
+exposed images to smooth out the random noise component
+leaving just the structure noise. This average image can then
+be subtracted from each single image to cancel out the struc-
+ture noise without introducing additional noise.1,32 Thus, the
+noise computed in the subtracted image was directly used to
+estimate the random noise component in the unsubtracted
+image. We have used both methods to measure the NPS/S2
+and the results are largely the same within linear response
+range of the detector system.
+(a)
+(b)
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+NPS/S
+ 2 (mm
+ 2 )
+0.052mR 0.111mR
+0.250mR 0.647mR
+1.323mR 2.67mR
+6.70mR
+1.E-07
+1.E-06
+1.E-05
+1.E-04
+1.E-03
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+NPS/S
+ 2 (mm
+ 2 )
+0.204mR 0.477mR
+0.993mR 2.10mR
+5.51mR 11.21mR
+F IG . 5. Normalized NPSs in horizontal direction for CR system versus spa-
+tial frequency for various exposure levels at ~a! 70 kV P and ~b! 120 kVP . A
+0.5 mm thick copper plate was added in the measurement.
+105 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 105
+Medical Physics, Vol. 31, No. 1, January 2004
+
+D. Detective quantum efficiency
+The DQEs of the FP system in horizontal direction are
+plotted as a function of the spatial frequency for various
+exposure levels at 70 and 120 kVP in Figs. 8~a! and 8~b!,
+respectively. Similarly, the DQEs of the CR system in hori-
+zontal direction are plotted for various exposure levels at 70
+and 120 kVP in Figs. 9~a! and 9~b!, respectively. The DQEs
+of the FP system increased with the exposure level while
+those of the CR system had a slight tendency to decrease
+with the exposure level. This exposure dependence is also
+shown in Fig. 10 where the DQE is plotted as a function of
+the exposure for the two different detector systems and two
+different kVP ’s for ~a! 0.5 cycles/mm, ~b! 1.5 cycles/mm,
+and ~c! 2.5 cycles/mm in horizontal direction, and ~d! 1.5
+cycles/mm in vertical direction for comparison. The plots
+show that DQEs of the FP system were higher by at least a
+factor of 2 than those of the CR system within the clinical
+exposure range (,1 mR). The difference was even greater
+as the exposure increased beyond this range.
+The higher DQEs of the flat-panel system studied are ex-
+pected as it is well known that the needle structure CsI scin-
+tillator, similar to those used in the image intensifier, is ca-
+pable of achieving more efficient x-ray absorption than the
+x-ray phosphor screens ~for general radiography! while
+maintaining similar spatial resolution. The different patterns
+of exposure dependence of the two detectors may be attrib-
+uted to their different noise properties. The FP detector is
+subject to a fixed noise which originates from the image
+readout process. Thus, the higher the exposure level, the less
+the image SNR would be degraded by this noise. Despite this
+degradation, the flat-panel detector studied still outperformed
+the CR detector by a factor of 2 or greater for the exposure
+range studied. It has often been suggested that the most flat-
+panel detectors to date may have unusable DQEs at substan-
+tially lowered exposure levels, e.g., those typical of fluoro-
+scopic applications. However, our exposures were not low
+enough to confirm these suggestions. The CR readout sys-
+tem, on the other hand, has an adjustable gain control
+~through varying the photomultiplier tube voltage and the
+electron multiplication gain! prior to image signal readout.
+Thus, the image SNR would be much less affected by the
+exposure level and does not decrease with the exposure level.
+E. Factors that may affect the DQE measurements
+The values of the DQE measured depend on the balance
+of the MTF against the normalized NPS and x-ray fluence at
+1E-07
+1E-06
+1E-05
+1E-04
+1E-03
+0.01 0.1 1 10 100
+Exposure (mR)
+NPS/S
+ 2 (mm
+ 2 )
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+1E-07
+1E-06
+1E-05
+1E-04
+1E-03
+0.01 0.1 1 10 100
+Exposure (mR)
+NPS/S
+ 2 (mm
+ 2 )
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+1E-07
+1E-06
+1E-05
+1E-04
+1E-03
+0.01 0.1 1 10 100
+Exposure (mR)
+NPS/S
+ 2 (mm
+ 2 )
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+1E-07
+1E-06
+1E-05
+1E-04
+1E-03
+0.01 0.1 1 10 100
+Exposure (mR)
+NPS/S
+ 2 (mm
+ 2 )
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+(a)
+(b)
+(c)
+(d)
+FIG . 6. Normalized NPSs versus exposure at ~a! 0.5, ~b! 1.5, and ~c! 2.5 cycles/mm in horizontal direction, and ~d! 1.5 cycles/mm in vertical direction.
+106 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 106
+Medical Physics, Vol. 31, No. 1, January 2004
+
+the detector input. It should be noted that, in this study, both
+CR and FP detectors were exposed in their commercial pack-
+aging and were subject to x-ray attenuation by the packaging
+materials in the x-ray path. This would include the ion cham-
+bers for automatic exposure control ~AEC! and front cover
+for the FP system, and front cover of the CR cassette for the
+CR system. However, this additional attenuation is relatively
+small. For instance, the attenuation by the front cover of the
+flat-panel detector was measured to be only 4.0% at 70 kVP
+and 0.25% at 120 kVP . Since the input exposures were mea-
+sured without these additional objects in the x-ray path, they
+would have been overestimated. Thus, our measurements
+should be slightly lower as compared to those performed on
+prototype units for which these additional objects could be
+removed for measurements. However, our measurements
+should better reflect the imaging situations in actual clinical
+applications as these additional objects, including various
+covers and ion chambers are all present and result in addi-
+tional x-ray attenuation which would degrade the DQE val-
+ues.
+1E-07
+1E-06
+1E-05
+1E-04
+1E-03
+0.01 0.1 1 10
+Exposure (mR)
+NPS/S
+ 2 (mm
+ 2 )
+0.5 lp/mm
+1.0 lp/mm
+1.5 lp/mm
+2.0 lp/mm
+2.5 lp/mm
+F IG . 7. Normalized NPSs plotted as the function of exposure for FP system
+measured with unsubtracted images. Exposures were made with a 0.5 mm
+thick copper plate added at 70 kVp.
+(a)
+(b)
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+DQE
+0.058mR
+0.121mR
+0.256mR
+0.666mR
+1.353mR
+2.73mR
+6.84mR
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+DQE
+0.216mR
+0.459mR
+0.968mR
+2.00mR
+5.13mR
+10.42mR
+F IG . 8. DQEs in horizontal direction for FP system versus spatial frequency
+for various exposure levels at ~a! 70 kV P and ~b! 120 kV P .
+(a)
+(b)
+0.0
+0.1
+0.2
+0.3
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+DQE
+0.052mR
+0.111mR
+0.250mR
+0.647mR
+1.323mR
+2.67mR
+6.70mR
+0.0
+0.1
+0.2
+0.3
+0.0 0.5 1.0 1.5 2.0 2.5
+Spatial frequency (cycles/mm)
+DQE
+0.204mR
+0.477mR
+0.993mR
+2.10mR
+5.51mR
+11.21mR
+F IG . 9. DQEs in horizontal direction for CR system versus spatial frequency
+for various exposure levels at ~a! 70 kV P and ~b! 120 kV P .
+107 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 107
+Medical Physics, Vol. 31, No. 1, January 2004
+
+F. Comparison with previously reported
+measurements
+MTFs, NPSs, and DQEs of both the Fuji CR and GE FP
+systems have been measured and reported by several other
+research groups.1,20–22,32,33,39 However, these measurements,
+especially those for the FP systems, have generally shown
+some disagreement with each other. These disagreements
+may be attributed to the differences in the methodology, ex-
+perimental setup and exposure factors used in these measure-
+ments, including but not limited to the kVP , filtration, alu-
+minum HVL, estimated photon fluence, and methods to
+flatten the noise images in measuring the NPS.
+Our CR measurements agree well with those by Flynn
+et al.21,22 Measurements on the GE XQ/i FP detector have
+been previously reported by Granfors, Floyd, and
+Samei.1,32,33,39 Measurements by these groups and us were
+made for different ranges of exposures. Performed at only
+one exposure, 0.321 mR, the DQE values measured by Floyd
+were very close to those by Granfors. Measurements by
+Granfors and us were both made over a wide range of expo-
+sures: 0.058 to 8.30 mR and 0.058 to 6.84 mR, respectively.
+Our measured DQE values showed the same trend of in-
+creasing with the exposure level as those by Granfors. This is
+expected as both measurements employed the subtraction
+method, although two different versions. However, our val-
+ues were significantly lower for all exposure levels and fre-
+quencies, except the one made at highest exposure, 6.84 mR,
+at zero frequency. Since our estimated photon fluence was
+very close to that by Granfors, this difference in DQE values
+may be attributed to the higher normalized NPS values we
+measured. At higher frequencies, our measured normalized
+NPS values were less different from those by Granfors.
+However, our measured MTF values were significantly lower
+than those by Granfors, thus still keeping our measured DQE
+values significantly lower than those by Granfors.
+Measurements by Samei covered a smaller range of expo-
+sures: 0.27, 1.19, and 4.9 mR. Their measured DQE values
+showed the opposite trend as they decreased, rather than in-
+creased as with those by Granfors and us, with the exposure
+levels. This may reflect the fact that Samei’s measurements
+have employed the nonsubtraction method for removing the
+non-noise signal background. Although Floyd has demon-
+strated that the subtraction and nonsubtraction methods re-
+sulted in similar DQE measurements, the measurements
+were performed at a medium exposure level, 0.321 mR, at
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.01 0.1 1 10 100
+Exposure (mR)
+DQE
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.01 0.1 1 10 100
+Exposure (mR)
+DQE
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.01 0.1 1 10 100
+Exposure (mR)
+DQE
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.01 0.1 1 10 100
+Exposure (mR)
+DQE
+FP 70kVp
+FP 120kVp
+CR 70kVp
+CR 120kVp
+(a)
+(b)
+(c)
+(d)
+F IG . 10. DQEs versus exposure at ~a! 0.5, ~b! 1.5, and ~c! 2.5 cycles/mm in horizontal direction, and ~d! 1.5 cycles/mm in vertical direction.
+108 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 108
+Medical Physics, Vol. 31, No. 1, January 2004
+
+which the effects of stationary structured noise may not be
+obvious.
+The photon fluence estimated by Samei was significantly
+lower than those by Floyd, Granfors and us ~263 180 versus
+271 500, 280 000, and 287 000 mR/mm2 , respectively!. This
+may have resulted from the different x-ray spectra used in
+these measurements and contribute to the differences in mea-
+sured DQE values especially at zero frequency. The MTF
+values measured by Samei were close to those by us but
+significantly lower than those by Granfors and Floyd. The
+zero frequency DQE value measured at 0.27 mR by Samei
+was close to that measured by Granfors and Floyd. The DQE
+value measured at 1.5 cyles/mm and 1.19 mR was close to
+that by us. However, given the differences in the trend of
+variation with the exposure, estimated photon fluences and
+measured MTF values, these agreements do not appear to be
+meaningful.
+IV. CONCLUSIONS
+We have measured the image properties of a commercial
+flat-panel digital chest radiography system and compared
+them with those of a CR system. The results show that the FP
+system has slightly lower MTF but significantly higher
+DQEs than the CR system. The NPSs of the FP system were
+found to be generally lower than those of the CR system and
+decrease at a faster rate with the spatial frequency. The DQEs
+of the FP system were found to be significantly higher than
+those of the CR system. They were found to increase with
+the exposure while those of the CR system decrease slightly
+with the exposure.
+ACKNOWLEDGMENTS
+This work was supported in part by a research Grant No.
+CA51248 from the National Cancer Institute, a research
+Grant No. DAMD17-00-1-0316 from the Department of
+Army Breast Cancer Research Program and a Research
+Grant No. EB00117 from the National Institute of Biomedi-
+cal Imaging and Bioengineering. The scientific content of
+this paper was first presented at the 86th Scientific Assembly
+and Annual Meeting of the Radiological Society of North
+America held in November 26 –December 1, 2000, Chicago,
+Illinois.
+a!Electronic mail: xliu@di.mdacc.tmc.edu
+1 P. R. Granfors and R. Aufrichtig, ‘‘Performance of a 41341 cm 2 amor-
+phous silicon flat panel x-ray detector for radiographic imaging applica-
+tions,’’ Med. Phys. 27, 1324 –1331 ~2000!.
+2 R. L. Weisfield, M. Hartney, R. Schneider, K. Aflatooni, and R. Lujan,
+‘‘High performance amorphous silicon image sensor for x-ray diagnostic
+
+medical imaging applications,’’ Proc. SPIE 3659, 307–317 ~1999!.
+3 C. Chaussat, J. Chabbal, T. Ducourant, V. Spinnler, G. Vieux, and R.
+Neyret, ‘‘New CsI/a-Si 17317-in. x-ray flat-panel detector provides su-
+perior detectivity and immediate digital output for general radiography
+systems,’’ Proc. SPIE 3336, 45–57 ~1998!.
+4 S. Vedantham, A. Karellas, S. Suryanarayanan, D. Albagli, S. Han, E. J.
+Tkaczyk, C. E. Landberg, B. Opsahl-Ong, P. R. Granfors, I. Levis, C. J.
+D’Orsi, and R. E. Hendrick, ‘‘Full breast digital mammography with an
+amorphous silicon-based flat panel detector: Physical characteristics of a
+clinical prototype,’’ Med. Phys. 27, 558 –567 ~2000!.
+5 M. Choquette, H. Rougeot, J. P. Martin, L. Laperriere, Z. Shukri, and B.
+Polischuk, ‘‘Direct selenium x-ray detector for fluoroscopy, R&F, and
+radiography,’’ Proc. SPIE 3977, 128 –136 ~2000!.
+6 H. G. Chotas, J. C. E. Floyd, and C. E. Ravin, ‘‘Technical evaluation of
+a digital chest radiography system that uses a selenium detector,’’ Radi-
+ology 195, 264 –270 ~1995!.
+7 L. Gingold, D. L. Y. Lee, L. S. Jeromin, B. Rodricks, M. G. Hoffberg,
+and C. L. Williams, ‘‘Development of a novel high-resolution direct con-
+version x-ray detector,’’ Proc. SPIE 3977, 185–193 ~2000!.
+8 A. Tsukamoto, S. Yamada, T. Tomisaki, M. Tanaka, T. Sakaguchi, H.
+Asahina, K. Suzuki, and M. Ikeda, ‘‘Development and evaluation of a
+large-area selenium-based flat-panel detector for real-time radiography
+and fluoroscopy,’’ Proc. SPIE 3659, 14 –23 ~1999!.
+9 W. Zhao and J. A. Rowlands, ‘‘X-ray imaging using amorphous sele-
+nium: Feasibility of a flat panel self-scanned detector for digital radiol-
+ogy,’’ Med. Phys. 22, 1595–1604 ~1995!.
+10 D. Lee, L. K. Cheung, B. G. Rodricks, and G. F. Powell, ‘‘Improved
+imaging performance of a 14317-in. Direct Radiography system using
+a-Se/TFT detector,’’ Proc. SPIE 3336, 14 –23 ~1998!.
+11 W. D. Jardin, C. Parks, H. Doan, N. Kurfiss, and K. Wetzel, ‘‘A large
+format, high-performance CCD sensor for medical x-ray applications,’’
+Proc. SPIE 3977, 167–175 ~2000!.
+12 G. Iinuma, K. Ushio, T. Ishikawa, S. Nawano, R. Sekiguchi, and M.
+Satake, ‘‘Diagnosis of gastric cancers: Comparison of conventional radi-
+ography and digital radiography with a 4 million-pixel charge-coupled
+device,’’ Radiology 214, 497–502 ~2000!.
+13 S. Vedantham, A. Karellas, S. Suryanarayanan, I. Levis, M. Sayag, R.
+Kleehammer, R. Heidsieck, and C. J. D’Orsi, ‘‘Mammographic imaging
+with a small format CCD-based digital cassette: Physical characteristics
+of a clinical system,’’ Med. Phys. 27, 1832–1840 ~2000!.
+14 S. T. Smith, D. R. Bednarek, D. C. Wobschall, M. Jeong, H. Kim, and S.
+Rudin, ‘‘Evaluation of a CMOS image detector for low cost and power
+medical x-ray imaging applications,’’ Proc. SPIE 3659, 952–961 ~1999!.
+15 T. Graeve and G. P. Weckler, ‘‘High-resolution CMOS imaging detector,’’
+Proc. SPIE 4320, 68 –76 ~2001!.
+16 X. Liu and C. C. Shaw, ‘‘Regional improvement of signal-to-noise and
+contrast-to-noise ratios in dual-screen CR chest imaging—a phantom
+study,’’ Med. Phys. 28, 1080–1092 ~2001!.
+17 S. Arakawa, H. Yasuda, K. Kohda, and T. Suzuki, ‘‘Improvement of
+image quality in CR mammography by detection of emissions from dual
+sides of an imaging plate,’’ Proc. SPIE 3977, 590– 600 ~2000!.
+18 S. Arakawa, W. Itoh, K. Kohda, and T. Suzuki, ‘‘Novel computed radi-
+ography system with improved image quality by detection of emission
+from both sides of an imaging plate,’’ Proc. SPIE 3659, 572–581 ~1999!.
+19 C. D. Bradford, W. W. Peppler, and J. T. D. III, ‘‘Performance character-
+istics of a Kodak computed radiography system,’’ Med. Phys. 26, 27–37
+~1999!.
+20 J. T. Dobbins, D. L. Ergun, L. Rutz, D. A. Hinshaw, H. Blume, and D. C.
+Clark, ‘‘DQE~f! of four generations of computed radiography acquisition
+devices,’’ Med. Phys. 22, 1581–1593 ~1995!.
+21 M. J. Flynn and E. Samei, ‘‘Experimental comparison of noise and reso-
+lution for 2k and 4k storage phosphor radiography systems,’’ Med. Phys.
+26, 1612–1623 ~1999!.
+22 S. M. Kengyelics, A. G. Davies, and A. R. Cowen, ‘‘A comparison of the
+physical imaging properties of Fuji ST-V, ST-VA, and ST-VN computed
+radiography image plates,’’ Med. Phys. 25, 2163–2169 ~1998!.
+23 J. Wilson, F. A. Mann, J. W. A. Murphy, B. S. Monsees, and M. R. Linn,
+‘‘Photostimulable phosphor digital radiography of the extremities: Diag-
+nostic accuracy compared with conventional radiography,’’ Am. J. Ra-
+diol. 157, 533–538 ~1989!.
+24 M. Sonoda, M. Takano, J. Miyahara, and H. Kato, ‘‘Computed radiogra-
+phy utilizing scanning laser stimulated luminescence,’’ Radiology 148,
+833– 838 ~1983!.
+25 D. S. Brettle, S. C. Ward, G. J. S. Parkin, A. R. Cowen, and H. J. Sumi-
+sion, ‘‘A clinical comparison between conventional and digital mammog-
+raphy utilizing computed radiography,’’ Br. J. Radiol. 67, 464 – 468
+~1994!.
+26 C. R. Fuhrman, D. Gur, and R. Schaetzing, ‘‘High-resolution digital im-
+aging with storage phosphors,’’ J. Thorac. Imaging 5, 21–30 ~1990!.
+27 C. M. Schaefer et al., ‘‘Improved control of image optical density with
+low-dose digital and conventional radiography in bedside imaging,’’ Ra-
+diology 173, 713–716 ~1989!.
+109 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 109
+Medical Physics, Vol. 31, No. 1, January 2004
+
+28 S. S. Sagel et al., ‘‘Digital mobile radiography,’’ J. Thorac. Imaging 5,
+36 – 48 ~1990!.
+29 H. MacMahon et al., ‘‘Direct comparison of conventional and computed
+radiography with a dual-image recording technique,’’ Radiographics 11,
+259–268 ~1991!.
+30 H. MacMahon and C. Vyborny, in Technical Advances in Chest Radiog-
+raphy, in Syllabus: A Categorical Course in Diagnostic Radiology Chest
+Radiography, edited by R. Greene ~RSNA Publications, Illinois, 1992!,
+pp. 43–56.
+31 R. Schaetzing, B. R. Whiting, A. R. Lubinsky, and J. F. Owen, ‘‘Digital
+radiography using storage phosphors,’’ in Digital Imaging in Diagnostic
+Radiology, edited by J. J. D. Newell and C. A. Kelsey ~Churchill Living-
+stone, New York, 1990!, pp. 107–138.
+32 J. C. E. Floyd, R. J. Warp, J. T. D. III, H. G. Chotas, A. H. Baydush, R.
+Vargas-Voracek, and C. E. Ravin, ‘‘Imaging characteristics of an amor-
+phous silicon flat-panel detector for digital chest radiography,’’ Radiology
+218, 683– 688 ~2001!.
+33 E. Samei and M. J. Flynn, ‘‘An experimental comparison of detector
+performance for direct and indirect digital radiography systems,’’ Med.
+Phys. 30, 608 – 622 ~2003!.
+34 V. V. Nagarkar, S. V. Tipnis, V. B. Gaysinskiy, S. R. Miller, A. Karellas,
+and S. Vedantham, ‘‘New design of a structured CsI~Tl! screen for digital
+mammography,’’ Proc. SPIE 5030, 541–546 ~2003!.
+35 IEC 1267, Medical Diagnostic X-ray Equipment—Radiation Conditions
+for Use in the Determination of Characteristics, 1st ed. ~IEC, Geneva,
+Switzerland, 1994!.
+36 H. Fujita, D.-Y. Tsai, T. Itoh, K. Doi, J. Morishita, K. Ueda, and A.
+Ohtsuka, ‘‘A simple method for determining the modulation transfer
+function in digital radiography,’’ IEEE Trans. Med. Imaging 11, 34 –39
+~1992!.
+37 J. T. Dobbins, ‘‘Effects of undersampling on the proper interpretation of
+modulation transfer function, noise power spectra, and noise equivalent
+quanta of digital imaging systems,’’ Med. Phys. 22, 171–181 ~1995!.
+38 R. M. Birch, G. M. Marshall, and G. M. Adran, Catalogue of Spectral
+Data for Diagnostic X-rays ~Hospital Physicists Association, United
+Kingdom, 1979!.
+39 E. Samei, M. J. Flynn, H. G. Chotas, and J. T. Dobbins, ‘‘DQE of direct
+and indirect digital radiographic systems,’’ Proc. SPIE 4320, 189–197
+~2001!.
+110 X. Liu and C. C. Shaw:
+a-Si:H FP vs CR 110
+Medical Physics, Vol. 31, No. 1, January 2004

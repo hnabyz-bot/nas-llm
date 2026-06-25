@@ -245,3 +245,11 @@ Next P1 bundle:
 - QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
   missing evidence 0, page marker leakage 0
 - note: all 100 rows passed direct extraction; no chunked fallback was needed
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r301-r400-202606251300`
+- rank range: 301-400
+- selected representatives: 100
+- total normalized chars: 5,115,899
+- extraction status: not started at this checkpoint

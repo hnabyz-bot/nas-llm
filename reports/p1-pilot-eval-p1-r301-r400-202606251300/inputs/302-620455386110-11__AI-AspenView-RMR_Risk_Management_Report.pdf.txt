@@ -1,0 +1,2414 @@
+queueId: ingest-1781569954421-19n2
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/05_설계개발 검증 및 유효성 확인/06_Risk Management/참고샘플 - AspenView/11_[AI-AspenView-RMR] Risk Management Report.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/ff9a68ed8a90/11_[AI-AspenView-RMR] Risk Management Report__ff9a68ed8a90_combined.txt
+canonicalGroupId: 620455386110
+productSignal: HnVUE
+authoritySignal: MFDS/domestic
+pilotRank: 302
+
+SOURCE_TEXT
+AspenView Document 1/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+Risk Management Report
+Revision Status
+Number Revision
+Date
+Revision
+Number
+Description of
+Revision Prepared by Reviewed by Approved by
+1 2022.10.02 0 Firstly prepared
+2 2023.03.01 1
+Apply the cyber
+security(To meet
+MFDS
+requirements)
+
+AspenView Document 2/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+1. Introduction
+This risk analysis is performed on Radiological Image Processing System (AspenView), we
+design and manufacture for the purpose of investigating the risk of this device. This risk analysis
+was planned at the beginning stage of device design, and report is prepared at the stage of
+initial production. In line with the change of risk and technology on the device, this analysis will
+be performed together. Main methods and procedures we selected herewith are focused on EN
+ISO 14971:2019.
+2. Terms and definitions
+◼ Harm
+physical injury or damage to the health of people, or damage to property or the
+environment
+◼ Hazard
+potential source of harm
+◼ Hazardous situation
+circumstance in which people, property, or the environment are exposed to one or
+more hazard(s)
+◼ Intended use/ intended purpose
+use for which a product, process or service is intended according to the
+specifications, instructions and information provided by the manufacturer
+◼ Residual risk
+risk remaining after risk control measures have been taken
+◼ Risk
+combination of the probability of occurrence of harm and the severity of that harm
+◼ Risk analysis
+systematic use of available information to identify hazards and to estimate the risk
+◼ Risk assessment
+overall process comprising a risk analysis and a risk evaluation
+◼ Risk control
+process in which decisions are made and measures implemented by which risks
+are reduced to, or maintained within, specified levels
+◼ Risk evaluation
+process of comparing the estimated risk against given risk criteria to determine the
+acceptability of the risk
+◼ Risk management
+systematic application of management policies, procedures and practices to the
+tasks of analyzing, evaluating, controlling and monitoring risk
+◼ Safety
+freedom from unacceptable risk
+◼ Severity
+measure of the possible consequences of a hazard
+◼ Residual risk
+Preserving the confidentiality, availability and integrity of information in cyberspace.
+◼ Cyber security for medical devices
+Measures to prevent unauthorized use, denial of use, misuse, alteration, or unauthorized
+access to personal medical information or programs to control devices stored or transmitted
+on medical devices through wired and wireless communications.
+◼ Confidentiality
+The function to prevent personal medical information from being disclosed to unauthorized
+persons or used for unauthorized use.
+◼ Availability
+
+AspenView Document 3/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+The function to ensure that personal medical information is immediately available to users
+who have been approved and that it exists in the form necessary when and where
+necessary.
+◼ Integrity
+The function that prevents personal medical information from being transformed or
+destroyed in unauthorized ways.
+◼ Encryption
+To maintain information security, this technology transforms and stores information
+according to specific rules so that the contents of information cann't be identified unless the
+deciphering method is known.
+◼ Access control
+The information security policies restrict users, programs, processors, systems, etc. access
+to information system resources only by authorized entities.
+3. Outline
+3.1 Target device
+Radiological Image Processing System (AspenView)
+3.2 Intended part of the body
+Risk investigation and reduction
+3.3 Referenced standard
+◼ EN 62304:2006/AC:2008, Medical electrical equipment
+Medical device software, Software life-cycle processes
+◼ EN 62366:2008, Medical electrical equipment
+Application of usability engineering to medical devices
+◼ EN ISO 14971:2019, Medical Devices
+Application of risk management to medical devices
+◼ EN ISO 13485:2016/AC2016, Medical Device Quality Management System
+- Requirements for regulatory purposes
+◼ Guidelines for the cyber security of medical device published by MFDS(Ministry of Food
+and Drug Safety) (Guidelines-0996-01, November 28, 2019)
+
+AspenView Document 4/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+4. Risk management process & Qualification of personnel
+4.1 Flow of Risk management
+
+AspenView Document 5/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+4.2 Personnel, Organization and date for implementation of risk analysis
+4.2.1 Duration : 2022. 10. 22 ~ 2022. 12. 29
+Activity at each stage Reference Related
+report PRACTICE
+Risk
+control
+Evaluate the prototype
+presentation and make a report for
+the prototype. After checking the
+problems, conduct design change.
+Development
+procedure( AQP702)
+Development
+history file
+(DHF)
+Software
+manager
+Pedro
+Manufacture the second prototype
+revised from first sample and
+second presentation to evaluate
+the product. Before transferring to
+production, finalize the
+specifications and functions.
+Development
+procedure( AQP702)
+Development
+history file
+(DHF)
+Software
+manager
+Luis
+After product transfer, investigate
+the production process and
+remanufacture for the inadequate
+product in production process. If
+the design changes are required,
+call the design change proposal to
+the research department.
+Inadequate product
+management
+procedure(AQP802)
+Development
+procedure( AQP702)
+Production
+process
+investigation
+sheet
+Production
+manager
+Antonio
+The final test is conducted as
+same way for the product through
+an examination and remanufacture
+for the inadequate product.
+Measure and inspection
+management
+procedure(AQP801,AQP709)
+Product
+examination
+sheet
+QA manager
+Sergio
+The research center reflects the
+opinions for the manufacturing,
+installation, user of the product.
+Development
+procedure( AQP702)
+Design change
+proposal
+Development
+discussion
+report
+Software
+manager
+Diego
+4.2.2 Qualification of personnel
+Stage Risk management
+stage Reference Responsibility Result
+Risk analysis
+Identification of intended
+use / intended purpose
+Identification and
+foreseeable of hazards
+EN ISO
+14971:2019
+R&D
+(Software team Pedro
+R&D Leader :Eduardo)
+Risk
+Management
+Report
+Risk evaluation Evaluation of risk
+acceptability
+EN ISO
+14971:2019
+Q.A
+(Luis)
+Risk
+Management
+Report
+Risk control
+Risk reduction
+Risk control option analysis
+Implementation of risk
+control measure(s)
+EN ISO
+14971:2019
+R&D
+(Software team Antonio,
+R&D Leader Eduardo)
+Risk
+Management
+Report
+Production and
+post-production
+information
+Post production information
+Review of the risk
+management information
+EN ISO
+14971:2019
+Q.A(Luis) / Production
+(Antonio)
+Risk
+Management
+Report
+
+AspenView Document 6/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+Step 0. Start
+1. Device description
+The AspenView software is designed for use by radiologists and radiology technicians for the
+acquisition of digital x-ray images. It interfaces with 3rd party digital x-ray detectors or CR
+scanners and manufacturer supplied software for the acquisition and storage of digital x-ray
+images. The AspenView software then provides a user interface for the viewing, annotating,
+and other workstation functions. AspenView includes the ability to receive patient information
+and send x-ray images to remote destinations using the DICOM 3.0 protocol.
+1.1 Common name
+Radiological Image Processing System
+1.2 Trade name
+AspenView
+2. Referenced product description
+Referenced product : EConsole1
+3. Intended use(medical indication)
+AspenView is intended to be used for radiological doctor and radiological technician for
+acquired general radiographic images.
+So, it’s used by radiological doctor or radiological technician in hospital.
+So, this system is installed by only X-ray engineer or X-ray installation engineer. It is used by
+radiological doctor.
+The AspenView is not indicated for use in mammography.
+For proper usage and safety purposes, please ensure that only legally
+qualified person (Doctor, Medical Treatment Radiological Technologist,
+Medical Treatment X-RAY Technologist) can use this product after fully
+familiarize with contents of user manual
+This medical device can’t use alone. So this product need to connect with
+X-ray detector. Sometimes, this software operates with exposure condition
+of X-ray Generator system.
+This product is a medical device, and it should only be used as digital X-ray
+radiography console software for X-ray radiography at corresponding
+hospitals.
+3.1 Intended patient profile
+a) Age : all ages
+b) Sex : male or female
+3.2 Intended part of the body
+a) head
+b) chest
+c) spine
+d) abdomen
+e) pelvis
+f) arm and leg
+g) hand and foot
+3.3 Intended user profile
+a) Age : Over 20 years old
+b) Education : Radiology
+c) Knowledge : Human anatomy and operation of X-ray machine
+
+AspenView Document 7/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+d) Permissible impairments : not allowed
+e) Sex : male or female
+f) No mental illness
+3.4 Intended conditions of use (Application)
+a) Environment :
+- General :
+Hospital use only
+- Conditions of Visibility :
+Software depends on the followings conditions:
+• Viewing Monitor’s resolution : minimum 1920 x 1080
+• Operating Windows System : Windows 10 64bit
+- Physical:
+Software depends on the PC’s physical environment
+b) Frequency of use
+- Not limited if the HDD driver in PC is allowed
+- Software depends on the installed system.
+c) Mobility
+- Software depends on the PC. It means that the desktop and laptop is both possible if the
+PC spec is satisfied.
+3.5 Operating principle
+A radiograph is an X-ray image obtained by placing a part of the patient in front of an X-ray
+detector and then illuminating it with a short X-ray pulse. To take an X-ray image, the
+operator sets the patient in front of the detector and sets the parameter values of the high
+voltage generator to control the intensity of X-ray for each body part. The detector changes
+the X-rays coming through the part of the patient to digital signals and makes digital
+images.
+An Acquisition program is to acquire, process, storage and view the taken X-ray image by
+detector or Image plate. After exposure and readout, the raw imaging data must be sent
+and processed for display on the computer. Image processing is one of the key features of
+digital radiography, greatly influencing the way the image appears to the radiologist.
+Image processing is used to improve image quality by reducing noise, removing technical
+artifacts, and optimizing contrast for viewing.
+3.6 Limit of use
+The device should be operated by the personnel who are qualified by the hospital authority.
+4. Expected Service Life
+Software expected service life is unlimited. However, If AspenView should define the
+expected service life, it could be 10 years from the point of sale. The reason why the only
+effect could be the changes of window OS. The acquisition program is usually effected by
+Workstation (especially, the changes of window OS).
+Therefore, the expected service life of our device has determined at 10 years based on the
+window OS update cycle. However, Actual life of the device may be shorter than 10 years
+due to the frequency of use and the workstation. And it does not apply to the system
+damaged due to the negligence of the user.
+5. Product description (of software AspenView)
+5.1 Product specification (AspenView)
+No. Item Specification
+1 Software Manufacturer Aspen Imaging Healthcare Inc
+2 Image Process/Store
+W/L Adjustment, W/L Store, Panning, Inverse, Zoom In/Out,
+Magnification, Fit, Rotate, Reverse, Flip, JPEG Store, Storing
+External Media, Thumbnail Display, Layout Selection (1x1, 1x2, 2x1,
+2x2, 3x3), Histogram Display
+3 Information Input/Search Patient Registration, Sort, Modification, Delete, Search(ID, Patient
+Name, Study), DAP display(uGy•m2)
+4 Transfer DICOM 3.0 Standard
+5 Manual & CD Provide as a files
+
+AspenView Document 8/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+5.2 Block diagram of operating software (AspenView)
+Step 1. Intended use and identification of characteristics
+related to the safety of the medical device
+1) Annex C of EN ISO 14971:2019(“A” means Applied. “N/A” means Not Applied.)
+Questions for EN ISO 14971 ; 2019
+A
+or
+N/
+A
+Identification
+C1) What is the intended use and how is the
+medical device to be used?
+Factors that should be considered include:
+- what is the medical device's role relative to
+diagnosis, prevention, monitoring, treatment
+alleviation of disease,
+compensation for injury or handicap or
+A
+The software is intended to be
+used for human in hospital
+environment under supervision of
+recommended medical
+practitioner.
+The purpose of the software is to
+acquire X-ray digital images of a
+<AspenView Software>
+
+AspenView Document 9/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+Replacement or modification of anatomy, or
+control of conception?
+- What are the indications for use
+(e.g. patient population)?
+- does the medical device sustain or support life?
+- is special intervention necessary in the case of
+fure of the medical device?
+patient and show the images to a
+doctor for diagnosis.
+C2) Is the medical device intended to be
+implanted?
+Factors that should be considered include the
+location of implantation, the characteristics of the
+patient population, age, weight, physical activity,
+the effect of ageing on implant performance, the
+expected lifetime of the implant, the reversibility of
+the implantation.
+N/A Not intended to implant
+C3) Is the medical device intended to be in
+contact with the patient or other persons?
+Factors that should be considered include the
+nature of the intended contact, i.e. surface contact,
+invasive contact, or implantation and, for each, the
+period and frequency of contact.
+N/A No such parts
+C4) What materials or components are utilized
+in the medical device or are used with, or are in
+contact with, the medical device?
+Factors that should be considered include:
+- compatibility with relevant substances;
+- compatibility with tissues or body fluids;
+- whether characteristics relevant to safety are
+known;
+- is the device manufactured utilizing materials of
+animal origin?
+NOTE See Annex I and also the ISO 22442 series
+of standards [19].
+N/A No such parts
+C5) Is energy delivered to or extracted from the
+patient?
+Factors that should be considered include:
+- the type of energy transferred;
+- its control, quality, quantity, intensity and duration;
+- Whether energy levels are higher than those
+currently used for similar devices.
+N/A No such parts
+C6) Are substances delivered to or extracted
+from the patient?
+Factors that should be considered include
+- whether the substance is delivered or extracted;
+- whether it is a single substance or range of
+substances;
+- the maximum and minimum transfer rates and
+control thereof.
+N/A No such parts
+
+AspenView Document 10/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C7) Are biological materials processed by the
+medical device for subsequent re-use,
+transfusion or transplantation?
+Factors that should be considered include the type
+of process and substance(s) processed (e.g.
+autotransfusion, dialysis, blood component or cell
+therapy processing).
+N/A No such parts
+C8) Is the medical device supplied sterile or
+intended to be sterilized by the user, or are
+other microbiological controls applicable?
+Factors that should be considered include
+- whether the medical device is intended for single
+use or re-use packaging;
+- shelf-life issues;
+- limitation on the number of re-use cycles;
+- method of product sterilization;
+- the impact of other sterilization methods not
+intended by the manufacturer.
+N/A No such parts
+C9) Is the medical device intended to be
+routinely cleaned and disinfected by the user?
+Factors that should be considered include the
+types of cleaning or disinfecting agents to be used
+and any limitations on the number of cleaning
+cycles. The design of the medical device can
+influence the effectiveness of routine cleaning and
+disinfection. In addition, consideration should be
+given to the effect of cleaning and disinfecting
+agents on the safety or performance of the device.
+N/A No such parts
+C10) Is the medical device intended to modify
+the patient environment?
+Factors that should be considered include:
+- temperature;
+- humidity;
+- atmospheric gas composition;
+- pressure;
+- light.
+N/A No such parts
+C11) Are measurements taken?
+Factors that should be considered include the
+variables measured and the accuracy and the
+precision of the measurement results.
+N/A No such parts
+C12) Is the medical device interpretative?
+Factors that should be considered include whether
+conclusions are presented by the medical device
+from input or acquired data, the algorithms used,
+and confidence limits. Special attention should be
+given to unintended applications of the data or
+algorithm.
+N/A Dose not interpretative
+
+AspenView Document 11/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C13) Is the medical device intended for use in
+conjunction with other medical devices,
+medicines or other medical technologies?
+Factors that should be considered include
+identifying any other medical devices, medicines or
+other medical technologies that can be involved
+and the potential problems associated with such
+interactions, as well as patient compliance with the
+therapy.
+N/A No such parts
+C14) Are there unwanted outputs of energy or
+substances?
+
+Energy-related factors that should be considered
+include noise and vibration, heat, radiation
+(including ionizing, non-ionizing, and
+ultraviolet/visible/infrared radiation), contact
+temperatures, leakage currents, and electric or
+magnetic fields.
+Substance-related factors that should be
+considered include substances used in
+manufacturing, cleaning or testing having
+unwanted physiological effects if they remain in the
+product.
+Other substance-related factors that should be
+considered include discharge of chemicals, waste
+products, and body fluids.
+N/A No such parts
+C15) Is the medical device susceptible to
+environmental influences?
+Factors that should be considered include the
+operational, transport and storage environments.
+These include light, temperature, humidity,
+vibrations, spillage, susceptibility to variations in
+power and cooling supplies, and electromagnetic
+interference.
+A Depends on the PC environment
+condition
+C16) Does the medical device influence the
+environment?
+Factors that should be considered include
+- the effects on power and cooling supplies
+- emission of toxic materials
+- the generation of electromagnetic disturbance
+N/A No such parts
+C17) Are there essential consumables or
+accessories associated with the medical
+device?
+Factors that should be considered include
+specifications for such consumables or accessories
+and any restrictions placed upon users in their
+selection of these.
+A
+Specifications and restrictive
+factors should be described
+at the product itself or packing or
+attached document
+C18) Is maintenance or calibration necessary?
+Factors that should be considered include:
+- whether maintenance or calibration are to be
+carried out by the operator or user or by a
+specialist
+- are special substances or equipment necessary
+for proper maintenance or calibration?
+A Length Calibration (Refer to
+Operation manual)
+
+AspenView Document 12/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C19) Does the medical device contain
+software?
+Factors that should be considered include whether
+software is intended to be installed, verified,
+modified or exchanged by the operator or user or
+by a specialist.
+A
+Internal and stand-alone software
+in the product is included.
+Expert in manufacturer has a
+right to install, modify and
+exchange the software for the
+intended use.
+C20) Does the medical device have a restricted
+shelf-life?
+Factors that should be considered include labelling
+or indicators and the disposal of such medical
+devices when the expiration date is reached.
+N/A No shelf-life
+C21) Are there any delayed or long-term use
+effects?
+Factors that should be considered include
+ergonomic and cumulative effects.
+Examples could include pumps for saline that
+corrode over time, mechanical fatigue, loosening of
+straps and attachments, vibration effects, labels
+that wear or fall off, long term material degradation.
+N/A No such parts
+C22) To what mechanical forces will the
+medical device be subjected?
+Factors that should be considered include whether
+the forces to which the medical device will be
+subjected are under the control of the user or
+controlled by interaction with other persons.
+N/A No such parts
+C23) What determines the lifetime of the
+medical device?
+Factors that should be considered include ageing
+and battery depletion.
+A
+Software expected service life is
+unlimited.
+However, If AspenView should
+define the expected service life, it
+could be 10 years from the point
+of sale. The reason why the only
+effect could be the changes of
+window OS.
+C24) Is the medical device intended for single
+use?
+Factors that should be considered include: does
+the medical device self-destruct after use? Is it
+obvious that the device has been used?
+N/A No single use
+C25) Is safe decommissioning or disposal of
+the medical device necessary?
+Factors that should be considered include the
+waste products that are generated during the
+disposal of the medical device itself. For example,
+does it contain toxic or hazardous material, or is
+the material recyclable?
+N/A No such parts
+C26) Does installation or use of the medical
+device require special training or special skills?
+Factors that should be considered include the
+novelty of the medical device and the likely skill
+and training of the person installing the device.
+A
+Only a physician or legally
+certified operator should use this
+product
+
+AspenView Document 13/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C27) How will information for safe use be
+provided?
+Factors that should be considered include:
+- whether information will be provided directly to
+the end user by the manufacturer or will it involve
+the participation of third parties such as installers,
+care providers, health care professionals or
+pharmacists and whether this will have implications
+for training
+- commissioning and handing over to the end user
+and whether it is likely/possible that installation can
+be carried out by people without the necessary
+skills
+- based on the expected life of the device, whether
+re-training or re-certification of operators or service
+personnel would be required.
+A Provided in Operation manual
+C28) Will new manufacturing processes need to
+be established or introduced?
+Factors that should be considered include new
+technology or a new scale of production.
+N/A No such parts
+C29) Is successful application of the medical
+device critically dependent on human factors
+such as the user interface?
+A See C29.1) to C29.8)
+C29.1) Can the user interface design features
+contribute to use error?
+Factors that should be considered are user
+interface design features that can contribute to use
+error. Examples of interface design features
+include: control and indicators, symbols used,
+ergonomic features, physical design and layout,
+hierarchy of operation, menus for software driven
+devices, visibility of warnings, audibility of alarms,
+standardization of colour coding. See IEC 60601-1-
+6[25] for additional guidance on usability and IEC
+60601-1-8[26] for guidance on alarms.
+A Provided in Operation manual
+(RS-AspenView-SCM)
+C29.2) Is the medical device used in an
+environment where distractions can cause use
+error?
+Factors that should be considered include:
+- the consequence of use error
+- whether the distractions are commonplace
+- whether the user can be disturbed by an
+infrequent distraction
+A
+Only the software is installed on
+the PC
+and it is operated with the X-ray
+system.
+C29.3) Does the medical device have
+connecting parts or accessories?
+Factors that should be considered include the
+possibility of wrong connections, similarity to other
+products' connections, connection force, feedback
+on connection integrity, and over- and under-
+tightening.
+A Only the LAN Cable is connected
+
+AspenView Document 14/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C29.4) Does the medical device have a control
+interface?
+Factors that should be considered include spacing,
+coding, grouping, mapping, modes of feedback,
+blunders, slips, control differentiation, visibility,
+direction of activation or change, whether the
+controls are continuous or discrete, and the
+reversibility of settings or actions.
+A Provided in Operation manual
+(RS-AspenView-SCM)
+C29.5) Does the medical device display
+information?
+Factors that should be considered include visibility
+in various environments, orientation, the visual
+capabilities of the user, populations and
+perspectives, clarity of the presented information,
+units, colour coding, and the accessibility of critical
+information.
+A
+Error code information in the
+software is displayed and also
+described in the manual
+C29.6) Is the medical device controlled by a
+menu?
+Factors that should be considered include
+complexity and number of layers, awareness of
+state, location of settings, navigation method,
+number of steps per action, sequence clarity and
+memorization problems, and importance of control
+function relative to its accessibility and the impact
+of deviating from specified operating procedures.
+A Controlled by menu and
+described in detail in the manual
+C29.7) Will the medical device be used by
+persons with special needs?
+Factors that should be considered include the user,
+their mental and physical abilities, skill and training,
+ergonomic aspects, the use environment,
+installation requirements, and the patient's
+capability to control or influence the use of the
+medical device. Special attention should be paid to
+users with special needs, such as handicapped
+persons, the elderly and children. The+B29ir
+special needs might include
+assistance by another person to enable the use of
+a medical device. Is the medical device intended to
+be used by individuals with various skill levels and
+cultural backgrounds?
+A Well trained radiologist or doctor
+has to use this software.
+C29.8) Can the user interface be used to initiate
+user actions?
+Factors that should be considered include the
+possibility of initiatinig a deliberate action for the
+user to enter a controlled operation mode, which
+enlarges the risks for the patient and which creates
+awareness for the user for this condition.
+A
+Before operation, preliminary
+preparation is need. Operator
+controls and check if the
+connection with the detector is
+correct or there is no any issue
+on the PC.
+C30) Does the medical device use an alarm
+system?
+Factors that should be considered are the risk of
+false alarms, missing alarms, disconnected alarm
+systems, unreliable remote alarm systems, and the
+medical staff's possibility of understanding how the
+alarm system works. Guidance for alarm systems
+is given in IEC 60601-1-8[26].
+A
+Just some message related to the
+waring or error is displayed on
+the software.
+
+AspenView Document 15/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+C31) In what way(s) might the medical device
+be deliberately misused?
+Factors that should be considered are incorrect
+use of connectors, disabling safety features or
+alarms, neglect of manufacturer's recommended
+maintenance.
+A
+In order to prevent bad
+connecting connectors, label is
+properly stick and periodic check
+and maintenance is needed.
+C32) Does the medical device hold data critical
+to patient care?
+Factors that should be considered include the
+consequence of the data being modified or
+corrupted.
+N/A No such parts
+C33) Is the medical device intended to be
+mobile or portable?
+Factors that should be considered are the
+necessary grips, handles, wheels, brakes,
+mechanical stability and durability.
+N/A This software depends on the PC
+C34) Does the use of the medical device
+depend on essential performance?
+Factors that should be considered are, for
+example, the characteristics of the output of life-
+supporting devices or the operation of an alarm.
+See IEC 60601-1[23] for a discussion of essential
+performance of medical electrical equipment and
+medical electrical systems.
+N/A No such parts
+Step 2. Identification of Possible hazards
+Refer to clause 4.3 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 3. Estimation of the risks for each hazard
+1) Severity
+The severity of harm consists of five stage;
+Score Severity Possible description
+5 Catastrophic Results in patient death
+4 Critical Results in permanent impairment or life-threatening injury
+3 Serious Result in injury or impairment requiring professional
+medical intervention
+2 Marginal Results in temporary injury or impairment not requiring
+professional medical intervention
+1 Negligible Inconvenience or temporary discomfort
+2) Probability
+The Probability of harm consists of five stages;
+The possibility of Software risk cannot be estimated refer to D.3.2.3 of EN ISO14971:2019. So,
+we assumed the software risk occur in 100% if there is no performance of risk control.
+In case of the probability could not be estimated, it will be estimated by the below table on the
+basis of the previous experience.
+Score Probability Definition
+5 Frequent Occurrence probability is whenever device works
+
+AspenView Document 16/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+4 Probable Occurrence probability is once a day
+3 Occasional Occurrence probability is once a month
+2 Remote Occurrence probability is once a year
+1 Improbable Occurrence probability is once for the device lifetime
+Refer to clause 4.4 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 4. Risk evaluation
+1) Risk evaluation
+Severity
+Probability
+Negligible
+(1)
+Marginal
+(2)
+Serious
+(3)
+Critical
+(4)
+Catastrophic
+(5)
+Frequent (5) 6 15
+Probable (4)
+Occasional (3) 2 1
+Remote (2) 3
+Improbable (1)
+Acceptable risk Unacceptable risk
+2) Results of Risk evaluation
+Grade for Risk Results
+Green Zone : Acceptable 11
+Red Zone : Unacceptable 16
+Total 27
+Refer to clause 5 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 5. Risk control
+1) Risk reduction
+Risk reduction is required Risk reduction is not required
+27 0
+2) Risk control option analysis
+Use one or more of the following risk control options in the priority order listed
+1) Inherent safety by design
+2) Protective measures in the medical device itself or in the manufacturing process
+3) Information for safety
+Refer to clause 6.2 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 6. Implementation of risk control measures
+Refer to clause 6.3 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 7. Residual risk evaluation
+1) Residual risk evaluation
+Severity
+Probability
+Negligible
+(1)
+Marginal
+(2)
+Serious
+(3)
+Critical
+(4)
+Catastrophic
+(5)
+Frequent (5)
+Probable (4)
+Occasional (3)
+Remote (2) 1
+Improbable (1) 11 15
+
+AspenView Document 17/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+2) Results of Residual risk evaluation
+Grade for Risk Results
+Green Zone : Acceptable 27
+Red Zone : Unacceptable 0
+Total 27
+Refer to clause 6.4 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 8. Risk/benefit analysis
+In the Step 11, all risks are finally in the acceptable green zone by the risk control measures.
+Risk/benefit analysis is not performed because all risks in the list are controlled and are in the
+acceptable level.
+The table, as shown below, simplifies the residual risk in order to compare and determine
+between residual risk and benefits, and describes materials for determination of benefits.
+In accordance with EN ISO 14971:2019, risk/benefit analysis was performed for all the risks that
+were treated by risk control measures. All medical benefits, according to intended use, exceed
+residual risk.
+Refer to clause 6.5 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 9. Risk arising from risk control measures
+Risk control measures cause no hazard.
+Refer to clause 6.6 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 10. Completeness of risk control
+All the hazardous situations identified before through risk control were considered.
+Grade for Risk Results
+Green Zone : Acceptable 27
+Red Zone : Unacceptable 0
+Total 27
+Risk reduction is required Risk reduction is not required
+0 27
+Refer to clause 6.7 of FMEA Table (include Annex E.2 & H.2.4 of EN ISO 14971)
+Step 11. Evaluation of overall residual risk acceptability
+Through risk control, each of all identified hazard factors fell into Acceptable Zone, and it was
+found that total residual risk was tolerable according to the criteria.
+Step 12. Risk management report
+Results of this review Assurance
+The risk management plan has been appropriately implemented Yes
+The overall residual risk is acceptable Yes
+Appropriate methods are in place to obtain relevant production and
+post-production information Yes
+Step 13. Production and post-production information
+Refer to Risk management plan (AI-AspenView-RMP)
+1) Annual surveillance information
+Year Nation(Sales amount(ea)) Incident feedback
+2019 N/A N/A
+
+AspenView Document 18/18
+Doc. Name: AspenView/Doc. No.: RS-AspenView-RMR
+Initiate date: 2022.10.02 /Revision: 1
+Total 0 0
+Step 14. Result(conclusion)
+After the analysis of risk management, there are no more risk factors and no more actions
+needed either. Risk management, during the life cycle from product planning, design process to
+follow-up management, identified foreseeable risks in accordance with EN ISO 14971:2019, EN
+62304:2006+AC:2008, EN 62366:2008 and EN ISO 13485:2016/AC2016 standards.
+The validation of risk management was performed by the radiologist who had the experience in
+clinical field according to the risk management plan. Each item of the validation was checked
+and the system had no risks.
+
+ISO
+14971:2019 5. Riskevaluation 6.6 Risks arising from risk
+control measures
+6.7
+Completene
+ss of risk
+control
+Severity Probability Risk Severity Probability Risk Result Acceptable
+residual risks
+D
+It is designed to use the
+original detector image as
+is to prevent pixel data
+corruption.
+Use detector raw image. Module Review, Dynamic
+Test
+By designing to use the
+original detector image, It
+is help to hazards
+decrease.
+SRS 2-1, SDS 201,
+Test 6.4.2 , 6.4.4 in
+the software
+Validation.
+P
+I
+It is designed to use the
+original detector image as
+is to prevent pixel data
+corruption.
+Use detector raw image. Module Review, Dynamic
+Test
+By designing to use the
+original detector image, It
+is help to hazards
+decrease.
+Test 6.4.2 , 6.4.4 in
+the software
+Validation.
+D
+If the detector setting is
+incorrect, the status bar
+will gray and display a
+Detector disconnected
+message
+Alram message are used
+to inform the user.
+Code Review Dynamic
+Test Report(AI-
+AspenView-SVR-003]
+By designing to display
+the message in the status
+bar It is help to recognize
+the user.
+SRS 8-1, SDS 504,
+Test 6.4.1, 6.4.3 in the
+software Validation.
+P
+I
+Give the information to
+user how to deal with the
+problem to check the
+
+detector settings in
+the Operation Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+6.4.3 in the software
+Validation.
+D
+If the generator settings
+are incorrect, the X-ray will
+not be examined properly.
+The software is designed
+so that it cannot control X-
+ray irradiation, dose
+adjustment, etc. if the
+Generator information
+input fails.
+Integration Module Review
+By providing the
+troubleshooting,possible
+hazards decrease.
+6.4.3 in the software
+Validation.
+P
+I
+Give the information to
+user how to deal with the
+problem to check the
+detector settings in
+the user Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+Test 6.4.1, 6.4.3 in the
+software Validation.
+D
+When a user does not
+Select patient/study. EUA
+display as following
+message box. “There is no
+exam”
+Alram message are used
+to inform the user. Function Test
+By designing to display
+the alram message, It is
+help to recognizethe user.
+So, hazards decrease.
+SRS6-1, SDS 502, Test
+6.4.5 in the software
+Validation.
+P
+I
+D
+If you use the Auto
+Stitching Condition
+incorrectly, Auto Stitching
+may not work.
+It is designed to allow
+manual stitching in cases
+where auto stitching does
+not work.
+Function Test
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+SRS 4-1, SDS 403
+Test 6.4.1, 6.4.5 in the
+software Validation.
+P
+I
+Give the information to
+user for edit functionin the
+Operation Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+Test 6.4.1, 6.4.5 in the
+software Validation.
+D
+It is designed not to
+appear in the Export path
+list if the USB is not
+inserted or the HDD path
+is incorrect.
+It is designed not to
+appear in the Export path
+list if the USB is not
+inserted or the HDD path
+is incorrect.
+Function Test
+To prevent user errors, it is
+designed to disable
+selection when an
+abnormal operation is
+performed.
+Test 6.4.5 in the software
+Validation.
+P
+I
+D
+The Delete button is
+designed not to be
+activated without a
+patient/study selection.
+Fuction key deactivated Function Test
+To prevent user errors, it is
+designed to disable
+selection when an
+abnormal operation is
+performed.
+Test 6.4.5 in the software
+Validation.
+P
+I
+D
+This is designed to gray
+out the MWL icon in the
+status bar when the MWL
+is not connected.
+Display connection status
+in status bar
+Code Review, Integration
+module review
+By designing to display
+status, It is help to
+recognizethe user.So,
+hazards
+SRS 7-1, SDS 503,
+Test 6.4.1, 6.4.3 in the
+software Validation.
+P
+I
+Give the information to
+user how to deal with the
+problem to check the MWL
+connection Error in the
+User Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+Test 6.4.1, 6.4.3 in the
+software Validation.
+D
+Designing the edit function
+to edit the patient info and
+image.
+Surpport the merge
+function
+Code Review, Function
+Test
+By designing to support
+edit function, It is help to
+edit the information
+patients easily.
+SRS4-1, SDS 401,
+Test 6.4.2, 6.4.5 in the
+software
+Validation.
+P
+I
+Give the information to
+user for edit functionin the
+Operation Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+Test 6.4.2, 6.4.5 in the
+software
+Validation.
+D
+It is designed to back up
+the Database even while it
+is in use.
+Surpport to make the
+backup database
+Code Review Function
+Test
+By designing to make the
+backup database, It is
+help to restore the
+damaged database
+file.So, hazards
+decrease.
+Test 6.4.1, 6.4.5 in the
+software Validation.
+P
+I
+Give the information to
+restore the backed up
+database files in the User
+Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod for
+engineer how to use the
+function,possible
+hazards decrease.
+Test 6.4.1, 6.4.5 in the
+software Validation.
+D
+It is designed to prompt
+the user to either delete
+the image or reject it when
+the user tries to delete the
+image.
+Alram message are used
+toi nform the user.And
+Support the restore
+function.
+Function Test
+By designing to delete
+and restore function, It
+helps to blockthe user
+error by alram
+message.Also, It helps to
+restore image for deleted
+images.So, hazards
+decrease
+SRS 10-1, SDS 508,
+510, Test 6.4.5 in the
+software Validation.
+P
+I
+Give the information for
+restore functionin the User
+Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+Test 6.4.5 in the software
+Validation.
+Yes (Refer to Step
+8.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Viewer
+Mode R05 Operational hazard
+(Use error)
+Wrong Auto Stitching
+Condition
+Second X-ray
+photographing is
+tried due to a failure
+of the first
+one(unknowable
+image)
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No Warnings
+1. The performance
+expected
+4. The clinical outcome
+expected
+Yes (Refer to Step
+10.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+10 Unacceptabl
+e 2 1 2 Acceptable No Use error- Low probability
+of use error hazards
+1. The performance
+expected
+2. The clinical outcome
+expected
+Exam Mode R03 Operational hazard
+(Use error)
+Input wrong
+information(Generator
+Setting)
+Limited usage x-ray
+caused by wrong
+input information.
+Unable to acquire
+image. Diagnosis is impossible 2 5
+Yes (Refer to Step
+15.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes 10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+9. The clinical outcome
+expected
+Viewer
+Mode R11 Operational hazard
+(Use error)
+Delete the Image by
+mistake
+Second X-ray
+photographing is
+tried due todelete
+the unintended
+image mistakenly
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5
+4.3 Identification of hazards 4.4 Estimation of the risk(s) for each hazardous situation 6.2 Risk control option analysis 6.3 Implementation of risk control measure(s) 6.4 Residual risk evaluation 6.5 Risk/benefit analysis
+Classificatio
+n(Module)
+Hazard
+ID Hazard Foreseeable hazards
+associated
+Foreseeable
+sequence of events Hazardous situation Harm
+Risk Before Control
+Result
+Risk Control
+Implementation of risk
+control measure Verification Effectiveness of risk
+control measure Verification and result
+Risk After Control
+Residual risk Benefit
+The medical benefits of
+theintended use outweigh
+the residual risk?(Yes or
+No)
+New or increased risks
+Ensure that
+the risk(s)
+fromall
+identified
+hazardous
+D: Inherent safety by design
+P: Protective measures in the
+medical device itself or in
+themanufacturing process
+Exam Mode R01 Operational hazard
+(Use error) Mismatched Pixel data
+Diagnosis is
+impossibleby wrong
+acquired image.
+The image can’t be
+acquired in the
+specified size.
+Diagnosis is impossible 1 3 3 Acceptable 1 1 1 Acceptable No Use error- None of use
+error hazards
+1. The performance
+expected
+2. The clinical outcome
+expected
+Yes (Refer to Step
+8.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Exam Mode R02 Operational hazard
+(Use error)
+Input wrong
+information(Detector
+setting)
+Second X-ray
+photographing is
+tried due to a failure
+of the first one
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No Use error- Low probability
+of use error hazards
+1. The performance
+expected
+2. The clinical outcome
+expected
+Yes (Refer to Step
+8.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Exam Mode R04 Information hazard
+Acqurie the
+unknowable image
+whitout selecting the
+patient/study
+Second X-ray
+photographing is
+tried due to a failure
+of the first
+one(unknowable
+image)
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No Warnings
+1. The performance
+expected
+3. The clinical outcome
+expected
+Yes (Refer to Step
+9.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Viewer
+Mode R06 Information hazard
+No insert the USB or
+invalid HDD Path(To
+export the images)
+Second X-ray
+photographing is
+tried due to a failure
+of the first
+one(unknowable
+image)
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No Warnings
+1. The performance
+expected
+4. The clinical outcome
+expected
+Yes (Refer to Step
+10.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Browser
+Mode R07 Information hazard
+No select the
+patient/study to delete
+images
+Mixed the patient
+information casued
+by failureof image
+delete.
+Mixed the patient
+information Diagnosis is impossible 1 5 5 Unacceptabl
+e 1 1 1 Acceptable No Warnings
+1. The performance
+expected
+5. The clinical outcome
+expected
+Yes (Refer to Step
+11.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Setting
+Module R08 Information hazard Wrong information
+(MWL)
+Limited usage(Use
+MWL function)
+cuased by wrong
+input information
+Increase the timefor
+the diagnosis
+Inconvenience (Too much
+waiting) 1 5 5 Unacceptabl
+e 1 1 1 Acceptable No Warnings
+1. The performance
+expected
+6. The clinical outcome
+expected
+Yes (Refer to Step
+12.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Database
+Module R09 Operational hazard
+(Use error)
+Failed to verify the
+patient and Studies
+Took the unintended
+images
+Mixed the patient
+information Diagnosis is impossible 1 5 5 Unacceptabl
+e 1 1 1 Acceptable No
+1. The performance
+expected
+7. The clinical outcome
+expected
+Yes (Refer to Step
+13.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Database
+Module R10 Operational hazard
+(Use error)
+PC power truns off by
+physician's mistake
+Damage the
+database Mixed the data Diagnosis is impossible 1 5
+Yes (Refer to Step
+14.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes 5 Unacceptabl
+e 1 1 1 Acceptable No
+1. The performance
+expected
+8. The clinical outcome
+expected
+
+D
+This is designed to gray
+out the PACS icon in the
+status bar when the PACS
+is not connected.
+Display connection status
+in status bar
+Code Review, Integration
+module review
+By designing to display
+status, It is help to
+recognizethe user.So,
+hazards
+SRS 9-1, SDS 505,
+Test 6.4.1, 6.4.3 in the
+software Validation.
+P
+I
+Give the information to
+user how to deal with
+PACS Error in the User
+Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+Test 6.4.1, 6.4.3 in the
+software Validation.
+D
+It is designed to not
+support DICOM
+compression.
+It is designed to not
+support DICOM
+compression.
+Module Review
+By designing don't use the
+compression option.So,
+hazards decrease.
+Test 6.4.2 in the
+software Validation.
+P
+I
+D Follow the DICOM 3.0
+standard protocol Check the Image format Module Review
+By designing follow the
+DICOM3.0 standard
+protocol.So, hazards
+decrease.
+SRS2-3 SDS 201
+Test 6.4.2 in the software
+Validation.
+P
+I
+D
+Correction of pixel artifacts
+is designed to be
+corrected from the original
+detector image.
+Check the detector raw
+image.
+Correction of pixel artifacts
+is designed to be
+corrected from the original
+detector image.
+By designing to correct the
+detector raw image. It is
+help to improve the image
+quality.
+pass
+P
+I
+D
+It is designed so that
+users can adjust three
+parameters: Edge,
+Contrast, and Smooth.
+Check the image changed
+followed by parameter.
+Integration module review,
+Function Test
+By designing to support
+the function to modify the
+parameterin the program.
+It helps to improve the
+image quality.So, hazards
+decrease.
+SRS 3, SDS 301,
+302. Test 6.4.3 ,
+6.4.5 in the software
+Validation.
+P
+I
+Give the information for
+image processing and
+parameter in the User
+Manual.
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+6.4.5 in the software
+Validation.
+D
+It is designed to
+automatically process
+images when they are
+acquired and to prevent
+the process from being
+applied even once.
+Apply auto process
+function
+Integration module review,
+Function Test
+By designing to
+automatically process
+images. It blocks the
+application of the process
+once again. So, hazards
+decrease.
+SRS 5, SDS 501,
+Test 6.4.3 , 6.4.5 in
+the software Validation.
+P
+I
+D
+It is designed so that the
+length is calculated using
+the number of pixels and
+the pixel pitch of the
+detector.
+Check the Measurement
+method and accuracy
+result report.
+Code Review, Dynamic,
+Function Test
+It is designed so that the
+length is calculated using
+the number of pixels and
+the pixel pitch of the
+detector. It blocks
+misdiagnosis.So, hazards
+decrease.
+SRS 4, SDS 403,
+Test 6.4.1, 6.4.2, 6.4.5 in
+the software Validation.
+P
+I
+Provides information on
+how to enter detector
+information in user
+manual.
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing meathod how
+to use the function,
+possible hazards
+decrease.
+Test 6.4.1, 6.4.2, 6.4.5 in
+the software Validation.
+D
+P
+It is designed to eliminate
+the risk of faulty operation
+by using a soft serial key.
+Serve the soft serial key
+During the soft serial key
+issuance process,
+randomly select one and
+check if it works normally.
+Prevents physical faults by
+using a soft serial key. So,
+hazards decrease.
+Pass
+I
+D
+P
+It is designed to eliminate
+the risk of damage by
+using a soft serial key.
+Serve the soft serial key
+During the soft serial key
+issuance process,
+randomly select one and
+check if it works normally.
+Prevents physical damage
+by using a soft serial key.
+So, hazards decrease.
+Pass
+I
+D
+It is designed to be
+installed without requiring
+engineers to set up folders
+and files.
+Check the performance Function Test
+It is designed to be
+installed without the need
+for engineers to set up
+folders and files,
+preventing mistakes during
+the installation process.
+So, hazards decrease.
+SRS 1-1, SDS 101,
+Test 6.4.5 in the software
+Validation.
+P
+I
+D
+Give the information to
+user how to deal with the
+problem to check the
+detector setting value in
+the Operation Manual
+Serve the training and
+Manual Code Review.
+By providing the
+troubleshooting,possible
+hazards decrease.
+SRS 8-1, SDS 504,
+Test 6.4.5 in the software
+Validation.
+P
+I
+Give the information to
+user how to deal with the
+problem to check the
+detector settings in
+the Operation Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+Test 6.4.5 in the software
+Validation.
+D
+Provides safety signs
+information to users in the
+manual
+Attaching safety signs on
+relevant parts Function Test
+By attaching safety
+signs,possible hazards
+decrease.
+pass
+P
+I
+Provides safety signs
+information to users in the
+manual
+Attaching safety signs on
+relevant parts
+User Manual
+(AI-AspenView-UM)
+By attaching safety
+signs,possible hazards
+decrease.
+pass
+2 1 2 Acceptable No 2 5 10 Unacceptabl
+e
+1. The performance
+expected
+15. The clinical outcome
+expected
+Yes (Refer to Step
+21.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Yes (Refer to Step
+27.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes 6 Acceptable 2 2 4 Acceptable No
+1. The performance
+expected
+21. The clinical outcome
+expected
+Usability R23 Information hazard
+(Labeling) Safety sign
+1. Using the device
+without referring
+toaccompanying
+documents
+2. Ignoring safety
+rules for X-ray
+radiation
+3. General warning
+1. Misuses of the
+device
+2. X-ray radiation
+exposures
+3. General cautions
+Electric shock:
+1) Serious burns
+2) Heart fibrillation
+3) DeathTissue damage
+2 3
+Yes (Refer to Step
+25.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Installation R22 Information hazard
+Wrong
+information(Detector
+setting value)
+Impossible to use the
+AspenView caused
+by difficult way to
+detector settings.
+unavailable to use
+AspenView
+Inconvenience (Too much
+waiting,
+unavilable to diagnosis)
+1 2 2 Acceptable 1 1 1 Acceptable No
+1. The performance
+expected
+20. The clinical outcome
+expected
+Yes (Refer to Step
+26.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+2 Acceptable 1 1 1 Acceptable No
+1. The performance
+expected
+19. The clinical outcome
+expected
+Installation R21 Operational hazard
+(Function error)
+Incorrect the
+installation
+Impossible to log in
+the AspenView
+caused by The faulty
+of dongle key(license
+key)
+unavailable to use
+AspenView
+Inconvenience (Too much
+waiting,
+unavilable to diagnosis)
+1 2
+Yes (Refer to Step
+23.Risk/benefit
+
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Transportati
+on R20 Information hazard The damage of dongle
+key(USB)
+impossible to run the
+AspenView caused
+by The faulty of
+dongle key(license
+key)
+unavailable to use
+AspenView
+Inconvenience(Too much
+waiting,unavilable to
+diagnosis)
+1 3 3 Acceptable 1 1 1 Acceptable No
+1. The performance
+expected
+18. The clinical outcome
+expected
+Yes (Refer to Step
+24.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+2 Acceptable 1 1 1 Acceptable No
+1. The performance
+expected
+17. The clinical outcome
+expected
+Production R19 Information hazard The faulty of dongle
+key(USB)
+impossible to run the
+AspenView caused
+by The faulty of
+dongle key(license
+key)
+unavailable to use
+AspenView
+Inconvenience (Too much
+waiting,
+unavilable to diagnosis)
+1 2
+Yes (Refer to Step
+21.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Viewer
+Mode R18 Operational hazard
+(Use error)
+Input wrong
+information(To set
+lengthmeasurement)
+Misdiagnosis caused
+by the wrong size of
+lesion
+Proceed
+unnecessary
+operation
+traumatism
+10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+15. The clinical outcome
+expected
+Image
+Processing
+Module
+R17 Operational hazard
+(Function error)
+Click the "Process"
+button more then one
+time
+Second X-ray
+photographing is
+occurred by
+misdiagnosis. It is
+caused by low image
+qualitycaused by
+image processing
+apply more than
+once.
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5
+Yes (Refer to Step
+19.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Image
+Processing
+Module
+R16 Operational hazard
+(Function error)
+Low image quality by
+fixed parameter
+Second X-ray
+photographing is
+occurred by
+misdiagnosis. It is
+caused by low image
+qualitycaused by
+flxed parameter.
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+14. The clinical outcome
+expected
+Yes (Refer to Step
+20.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+13. The clinical outcome
+expected
+Image
+Processing
+Module
+R15 Operational hazard
+(Function error) Pixel Artifact
+Second X-ray
+photographing is
+occurred
+bymisdiagnosis. It is
+caused by pixel
+artifact,which can be
+influedned acquired
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5
+Yes (Refer to Step
+17.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+DICOM
+Module R14 Operational hazard
+(Function error)
+Not Comply
+DICOMStandard
+Second X-ray
+photographing is
+tried due to
+don'tcompatible with
+the PACS, which
+compliesDICOM
+Standard
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+12. The clinical outcome
+expected
+Yes (Refer to Step
+18.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+11. The clinical outcome
+expected
+R13 Operational hazard
+(Function error) Image compression
+Second X-ray
+photographing is
+tried due toacquired
+wrong image (data
+loss)
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5
+Viewer
+Mode R12 Information hazard Wrong information
+(PACS)
+Limited usage(Send
+the DICOM Image to
+PACS) caused by
+wrong input
+information
+Increase the timefor
+the diagnosis
+Inconvenience (Too much
+waiting) 2 5 10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+10. The clinical outcome
+expected
+Yes (Refer to Step
+16.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+
+D
+Designing to enter
+passwords, it should be
+used in an unexposed
+form, such as ****.
+Check the performance Dynamic Test
+By designing to operate
+the When entering an
+AspenView password, it
+shall be used in an
+unexposed form, such as
+"*****",and the block shall
+be executedby an
+unapproved/registered
+operator. So, hazards
+decrease.
+SRS11-1, SDS 509,
+Test 6.4.4 in the software
+Validation.
+P
+I
+D
+It is designed so that
+unauthorized users cannot
+log in and delete images.
+Check the performance Function Test
+By designing to delete
+and restore function, It
+helps to blockthe user
+error by alram
+message.Also, It helps to
+restore image for deleted
+images.So, hazards
+decrease
+SRS 9-3, SDS 507,
+Test 6.4.5 in the software
+Validation.
+P
+I
+D
+It is designed to terminate
+and restart the program if
+the user executes it
+repeatedly.
+Check the performance Dynamic Test
+By designed to prevent
+redundant execution. So
+that is approved to block
+the program duplicately,
+hazards decrease.
+SRS 11-2, SDS510,
+Test 6.4.4, 6.4.5 in
+the software Validation.
+P
+I
+D
+It is designed to display an
+error sign on the Disk icon
+in the status bar when disk
+space is full and display a
+message asking if you
+want to delete old images.
+Alram message are used
+to inform the user. Dynamic, Function Test
+By designing the program
+Inform using the icon
+status in the status bar
+and warning message,
+hazards decrease.
+Test 6.4.2 , 6.4.5 in
+the software Validation.
+P
+I
+Give the information to
+user how to deal with
+insufficient disk space in
+the User Manual
+Serve the training and
+Manual
+User Manual
+(AI-AspenView-UM)
+By providing the
+troubleshooting,possible
+hazards decrease.
+Test 6.4.5 in the software
+Validation.
+Yes (Refer to Step
+31.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes 5 Unacceptabl
+e 1 1 1 Acceptable No
+1. The performance
+expected
+25. The clinical outcome
+expected
+Maintenanc
+e R27 Operational hazard
+(Function error) Insufficient disk space
+Impossible to run the
+AspenView caused
+by insufficient disk
+space
+unavailable to use
+AspenView
+Inconvenience (Too much
+waiting,
+unavilable to diagnosis)
+1 5
+Yes (Refer to Step
+29.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+Usability R26 Operational hazard
+(Function error)
+Software duplicate
+execution
+Second X-ray
+photographing is
+tried due to a failure
+of the first one.
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5 10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+24. The clinical outcome
+expected
+Yes (Refer to Step
+30.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes
+10 Unacceptabl
+e 2 1 2 Acceptable No
+1. The performance
+expected
+23. The clinical outcome
+expected
+Usability R25 Operational hazard
+(Function error)
+Delete the image by
+unauthorized user
+Second X-ray
+photographing is
+tried due to delete
+the image
+Unintended
+excessive X ray is
+applied toresult in an
+increase of X-ray
+radiation on a patient
+Tissue damage (X-ray
+burn)
+Cancer (DNA modification)
+2 5
+Usability R24 Operational hazard
+(Function error)
+Run the software by
+unauthorized user
+Mixed the data
+casued by
+unintended data
+Misdiagnosis by
+mixed data
+andintended data
+Diagnosis is impossible 1 5 5 Unacceptabl
+e 1 1 1 Acceptable No
+1. The performance
+expected
+22. The clinical outcome
+expected
+Yes (Refer to Step
+28.Risk/benefit
+analysis Table of Risk
+management report
+No new and increased
+risks Yes

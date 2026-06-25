@@ -1,0 +1,40 @@
+queueId: ingest-1781569954420-190q
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management - Security Assessment of cybersecurity vulnerability.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/dc067645a959/AspenView Cybersecurity Risk Management - Security Assessment of cybersecurity v__dc067645a959_combined.txt
+canonicalGroupId: b3bed2c2ea99
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 355
+
+SOURCE_TEXT
+AspenView Document 37/37
+Doc. Name: AspenView-Cybersecurity-Risk-Management-SBOM
+Initiate date: 2024.06.30 /Rev 2
+HAEA Internal Use Only
+4. Security Assessment of Component Modules
+• Microsoft Visual Studio
+o Regular updates are provided by Microsoft, which often include security
+patches. These patches will ensure that the potential threats will be defended
+even if new vulnerabilities may be discovered within the current features.
+• BitMiracle LibTiff.NET and LibJpeg.NetCore:
+o As open-source projects, any security vulnerabilities might be discussed in the
+project's official repositories on GitHub. AspenView will regularly monitor for any
+patches that mention security fixes.
+• ClosedXML and DocumentFormat.OpenXml:
+o These libraries interact with file formats that are commonly targeted by
+attackers to exploit vulnerabilities in parsing implementations. However, our
+current input and parsing validations of AspenView will defend against this
+threat.
+• log4net:
+o There was a relatively recent vulnerability discovered with log4net XML External
+Entity(XXE) vulnerability, which has been patched by Apache Software
+Foundation, who is continuing to provide regular updates for security
+enhancements. The version with the vulnerability has been updated.
+o Note, AspenView uses logging methods within the software only to record user
+activity for security monitoring purposes, and these loggings are not customer
+facing, so they cannot be exploited to harm the end users.
+• DICOM libraries (fo-dicom, Dicom.Core, etc.):
+o Given their use in medical imaging, DICOM standards ensure that the patients’
+sensitive data are encrypted so they cannot be easily exploited. There are also
+regular updates made by the project owners to monitor and protect against
+vulnerabilities.

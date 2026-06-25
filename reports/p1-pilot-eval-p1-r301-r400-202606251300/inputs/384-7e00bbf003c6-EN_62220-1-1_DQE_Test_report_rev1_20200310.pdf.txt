@@ -1,0 +1,753 @@
+queueId: ingest-1781569954379-8st
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/250116 ★인도(CDSCO)(재) MC, 23G/241230 - 인도 MC 제조소등록/Test report/EN 62220-1-1 DQE Test report rev1 20200310.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/07279458c227/EN 62220-1-1 DQE Test report rev1 20200310__07279458c227_combined.txt
+canonicalGroupId: 7e00bbf003c6
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 384
+
+SOURCE_TEXT
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 1/29
+EN 62220-1-1 DQE test report
+For
+Digital Flat Panel X-ray Detector
+HAD1717MG, HAD1717MC
+Report No.: A-PR-0-001 (Rev.1)
+Dept. / Title Name Date Signature
+Prepared R&D team Kim, Ki Hyun Mar/10/2020
+Review R&D Manager Lee, Dong Jin Mar/10/2020
+Approval Quality Manager Hur Namkyu Mar/10/2020
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 2/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+0.0 Revision history
+Revision history
+Rev.
+No. Rev. date Revision contents Remark
+0 Sep/20/2019 Establishment
+1 Mar/10/2020 Change of predicate device
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 3/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+1.0 Introduce
+Test report was provided for Solid-State X-ray Imaging Devices, which includes MTF and DQE
+measurements as tested by EN 62220-1-1(2015)
+1.1 Standard
+12-289 EN 62220-1-1 Edition 1.0 2015-03
+Medical electrical equipment-Characteristics of digital X-ray imaging devices Part 1-1: Determination of the
+detective quantum efficiency Detectors used in radiographic imaging.
+1.2 Reference
+9. Flat detectors and their clinical applications_Martin Spahn
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 4/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+Quantitative measurements
+2.1. Physical Characteristics
+2.1.1. Provide the overall dimensions including length, width, thickness and any shape characteristics
+that are unique to the device.
+Design parameter Specification
+Entire dimensions include outer short ring 470 (X) mm x 470 (Y) mm
+Panel size (outer short ring removed) 445 mm x 445 mm
+Glass thickness AN100 / 0.7mm
+Shipping size 445 mm x 445 mm
+2.1.2. Provide the sensor element dimensions and spacings including the fill factor, the fraction of
+the exposed area of the device that is sensitive to incident x-rays. Also describe any features added
+to compensate for input photon loss resulting from inactive interelement spacing. Include total
+horizontal and vertical element count if applicable.
+Design parameter Specification
+Active pixel area size 427.28 mm x 427.28 mm
+Number of active area pixel 3052 x 3052 = 9,314,704
+Number of data line 3052
+Number of gate line 3052
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 5/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.1.3. Provide the structure cross section showing schematically the elements of the device so that its
+means of x-ray conversion and signal generation are explained.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 6/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.1.4. Describe the interconnections of the elements, and any active or passive elements that are
+used to store, switch or otherwise process the electrical signals in the detector itself.
+2.1.5. Provide a schematic diagram of the elemental signal storage scheme and the overall “scanning”
+and readout mechanism. This may be included as part of “A.3.” above.
+- Refer to 2.1.3(A.3.) of the Physical characteristics.
+2.1.6. Provide the input electrical power requirements with tolerance limits and effects of power
+noise on the operation of the device.
+Electrical Inputs Unit Min Typ Max
+Gate-on Voltage
+(VGH)
+V 5 15 23
+Gate-off Voltage
+(VGL) V -12 -5 -3
+Photodiode Bias
+Voltage
+V -10 -5 -3
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 7/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.2 Operational Functions
+2.2.1. Provide the method(s) of exposure, and for fluoroscopy, rates of response (frames per second).
+Describe a typical exposure sequence from turn-on of the device to presentation of the image to
+the user.
+Part Contents
+Scintillator • Usually, two types of scintillators menstioned ; CsI & Gadox
+• Converting X-ray to Visible light to charge Phot-Diode
+TFT Panel • Basically, Pixel Arrays
+• Pixel Architecture : Passive pixel
+Frame Rate • 1 fps
+Signal
+Processing
+ROIC • To read out the charge from photo-diodes
+• Converting Analog signal (photo-diode charge) to Digital signal
+FPGA
+• Driving Panel & ROIC to get images
+• Tx image data to CPU & Rx parameters to driving ROIC & Panels from
+CPU
+CPU
+• Bridge between FPGA and PC(Acquisition S/W)
+- Delivering image data or parameters between FPGA and PC(Acquisition S/W)
+• Controlling several components
+PC
+• Performing Acquisition S/W
+- To get images & to send parameters to control the detector
+• Performing Image processing Algorithm
+- Dark level Cancellation, Defect Correction, Flat Field Correction
+X-ray
+Scintill TFT
+Read-Out IC
+Analog to Digital
+Signal
+Image Data
+Visible User
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 8/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.2.2. Provide the x-ray absorber(s), material description. Describe the primary x-ray detection
+material and its x-ray detection properties as a function of photon energy (keV) or wavelength (mm);
+including any nonlinear response characteristics.
+X-ray absorber(scintillator) is commercially available and converts x-ray energy directly to light.
+There are two types of scintillator which are CsI and Gadox. It has an extremely linear response of
+light output with x-ray exposure for a given x-ray spectrum over a wide range of x-ray exposure in
+the range appropriate for radiography.
+The X-ray passes through the substrate and interact in the scintillator. The theoretical quantum
+efficiency of the detector is a function of x-ray energy E and is given by
+)] ( 1 )[ ( ) ( E E E qe S Al
+a
+a - =
+where αAl(E) is the x-ray transmission factor through the reflector and αS(E) is the transmission
+factor through the scintillator material.
+This absorbers wavelength is 540nm(Visible region).
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 9/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.2.3. Provide a description of the energy conversion mechanisms utilized (e.g. x-ray to light to electrical
+signal). Describe all the processes in the device that involve energy conversion (e.g. x-ray to visible).
+2.2.4. Describe the readout mechanisms, and techniques used to commutate detector elements.
+Describe the means used to sequentially read-out the signal from successive elements. Include
+maximum and minimum rates, and for fluoroscopic devices the means provided for establishing
+synchronization with display or recording devices.
+<X-ray Generator>
+[TFT type X-ray Detector]
+<Scintillator> <P.D Array>
+Object
+Analog to Digital Conversion
+X-ray
+Visible light
+(450nm ~ 550nm)
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 10/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.2.5 Provide a description of the output data, and any direct access to output signals. Indicate what
+communications standard (e.g. DICOM) is used to format the data for downloading and analysis.
+- All image data shall be transmitted and stored as 16-bits little-endian (Intel bytes order) two-
+dimensional arrays without any specific header. Image’s dimension shall be passed as auxiliary
+procedure’s parameter or value in configuration file. Grayscale range assumed to be 0..1^16-1 (16
+bits non-negative integer) for saved files. That is eligible if Software internally uses either signed and
+unsigned integer types for pixels’ values.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 11/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3 Functional Characteristics
+2.3.1. For fluoroscopic devices, provide the output format of the video signal, sample waveform and
+standards applied. Provide a sketch or photograph of horizontal scan line and vertical field signals
+noting the key elements of signal.
+- This device is fixed at 1 fps because it is a static x-ray detector.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 12/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.2. Provide an estimate of Detective Quantum Efficiency (DQE) at low spatial and temporal
+frequency. Describe the method used to make the estimate, and the level of uncertainty due to
+propagation of error.
+Estimate of DQE Measured DQE
+-Criteria
+HAD1717MC :
+0.1 lp/mm(≥ 45%), 0.5 lp/mm(≥ 35%)
+1.0 lp/mm(≥ 25%), 2.0 lp/mm(≥ 20%)
+3..0 lp/mm(≥ 15%)
+HAD1717MG :
+0.1 lp/mm(≥ 35%), 0.5 lp/mm(≥ 20%)
+1.0 lp/mm(≥ 15%), 2.0 lp/mm(≥ 10%)
+3..0 lp/mm(≥ 5%)
+-Method :
+After acquiring one MTF JIG image and one bright by
+XAS, check if the measured value exceeds the test
+standard by using QC Tool or Image-J
+*Irradiation condition : RQA5(70kV, 6.4 mAS)
+SID : 150cm, Al 21mm filter
+*Measure condition : after calibration
+*Bright video image uses 1000 x 1000
+Pixel-area value based on Center
+HAD1717MC :
+0.1 lp/mm(≥ 70.1%), 0.5 lp/mm(≥ 57.4%)
+1.0 lp/mm(≥ 52.4%), 2.0 lp/mm(≥ 52.1%)
+3..0 lp/mm(≥ 28.4%)
+HAD1717MG :
+0.1 lp/mm(≥ 42.4%), 0.5 lp/mm(≥ 33.2%)
+1.0 lp/mm(≥ 27.5%), 2.0 lp/mm(≥ 15.6%)
+3..0 lp/mm(≥ 9.45%)
+The detective quantum efficiency (DQE) was evaluated as a function of spatial frequency over a
+wide range of incident exposure levels. The measurement procedure described in the report IEC
+62220-1 was used with details provided in the attached report “Measurements of the Linearity,
+Quantum Noise, Lag, Modulation Transfer Function and Detective Quantum Efficiency of the Intra-
+Oral Sensor”.
+The DQE is given by
+2
+2
+2
+2 ) (
+in a in
+out
+SNR K NPS
+MTF G
+SNR
+SNR
+DQE × ×
+×
+= = .
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 13/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+The value of Ka is the absorbed dose (μGy) in free air at the image plane measured using a solid
+state detector dosimeter (Piranha205) after making corrections for dosimeter-detector. The value
+of SNRin2 was taken from the following table for the standardized spectra used (IEC-62220-1). The
+NPS is the noise power spectrum measured at same air kerma. The value of G means the gain of
+the detector at zero spatial frequency.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 14/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.3. For quantum limited performance [i.e. The noise added by the SSXI does not exceed the x- ray
+quantum noise when operated in the normal range of exposures or frame rates.] provide data showing
+that the device operates in a quantum limited mode at the frame rates or exposure levels specified for its
+use. If not quantum limited, provide the range of exposures (for fluoroscopy: frame rates) where quantum
+limited operation is not achieved. It is expected that all predicate devices exhibit quantum limited
+behavior over their normal operating ranges.
+- The modeling of image noise in terms of pixel variance is described as
+2 2 2 2 ) ( q d i X k
+s
+s
+s + + =
+where, 2
+d
+s is “dark” noise variance meaning electronic noise of detector. The value of 2
+d
+s is
+depends on system design such as optical collection efficiency.
+X is the incident x-ray exposure (μGy). At the low exposure level, the image noise variance is
+equal to
+2
+q
+s and is independent of the x-ray exposure. At a high exposure level, the image
+noise variance is proportional to the exposure with a slope of ) ( 2 2 d k
+s + .
+In x-ray imaging systems, the additive detector noise does not exceed the quantum noise with
+the linear range of detector. The exposure at which the x-ray quantum noise equals the additive
+detector noise is called the quantum noise exposure limits or noise equivalent dose. It means
+the lowest exposure level of a detector at which the image noise is determined primarily by x-
+ray detection.
+0
+25
+50
+75
+100
+0 5 10 15 20 25 30
+Quantum Noise LSB
+μGy
+변경된 필드 코드
+변경된 필드 코드
+변경된 필드 코드
+변경된 필드 코드
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 15/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.4. Provide a plot of the modulation or contrast transfer function of the device. Indicate the device
+settings and input dose level required to obtain the measurement. If the transfer characteristic varies
+with any other function indicate how and provide the maximum and minimum transfer functions
+that the device provides when used with typical clinical exposures.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 16/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.5. Quantify the effects aliasing has on the DQE and Modulation Transfer Function (MTF) of the
+device. If aliasing is evidenced from the pre-sampled MTF, quantitatively describe how it affects the
+resulting image. If there are no aliasing effects from the device explain why.
+- Generally, the actual effects and extent of aliasing artifact in image is the integrated value
+under MTF curve above the cut-off frequency (nyquist frequency). The ideal value of MTF at cut-
+off frequency is zero. However, real measured pre-sampling MTF at cut-off frequency is over
+zero.
+The detector element determines the spatial resolution capability of the detector. Its pitch of
+this system is 0.14 mm corresponding to a sampling cut-off frequency of 3.57 lp/mm. The MTF
+value at this frequency is approximately close to zero. For average human observers, MTF values
+around 0.1 are considered barely observable. Therefore, artifacts in the image due to aliasing will
+be negligible.
+In addition, no evidence of aliasing was observed in a test pattern image acquired with this
+detector (shown below). If there is aliasing artifacts, near nyquist frequency, the white and black
+spokes may reverse - ie, white bars become black and black become white. This occurs between
+frequencies 1/(pixels width) and 2/(pixels width), and is one kind of aliasing artifact..
+HAD1717MG HAD1717MC
+LineChart
+- Test pattern image of HAD1717MG and HAD1717MC
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 17/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.6. Provide a plot of the output signal level as a function of input dose level for a specified x-ray
+spectrum. The spectrum may be defined in terms of kVp and beam filtration. Plot so that any
+nonlinearities are clearly shown. Other methods of showing the dynamic range capabilities of the
+device may also be used.
+y = 152.47x - 14.695
+0.00
+1000.00
+2000.00
+3000.00
+4000.00
+5000.00
+6000.00
+7000.00
+8000.00
+9000.00
+0.00 10.00 20.00 30.00 40.00 50.00 60.00
+HAD1717MC
+y = 70.894x - 24.26
+0.00
+500.00
+1000.00
+1500.00
+2000.00
+2500.00
+3000.00
+3500.00
+4000.00
+0.00 10.00 20.00 30.00 40.00 50.00 60.00
+HAD1717MG
+Dose
+Pixel LSB
+Pixel LSB
+Dose
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 18/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.7. Lag or residual signal level from prior exposures, short term and long term: Describe,
+quantitatively where possible, any device characteristics (often due to electron or hole trapping) that
+cause the device to include in the output, signal components attributable to one or more prior
+exposures. Indicate the relative amplitude and decay characteristics of such signals.
+Lag measurement method and sequence.
+Sequence :
+T0 : Dark Image acquisition
+T1 : Wait 10sec. And then MTF Phantom Image acquisition (70kv, 200mA,100ms)
+T2 : Wait 10sec. And then Dark Image acquisition
+MTF Phantom Image Dark Image
+lag measurement method :
+a. Measurement of ROI1 average value at T0 / Actual measurements : 7294
+b. Measurement of ROI2 average value at T0 / Actual measurements : 7287
+c. Measurement of ROI1 average value at T2 / Actual measurements : 7293
+d. Measurement of ROI2 average value at T2 / Actual measurements : 7291
+Lag = ((a-b)-(c-d)) / ((b+d)/2) / Actual measurements : 0.000171
+ROI1
+ROI2
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 19/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.8. Means provided to expose and/or readout subsections (partial areas) of the full SSXI: Describe,
+if this is a characteristic of the device, how it can be under-scanned so that only a portion of the
+total detector matrix is utilized.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 20/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.9. Describe how x-ray beam alignment and collimation to the “active” area of the device will be
+achieved to meet the requirements of 21CFR1020.31 or .32. What signal(s) will the device provide to
+indicate the size and position of the active area? If no “under-scanning” capability is provided, so
+indicate.
+
+- The active area of this device is 427.28 mm x 427.28 mm and is in full use and no under-
+scanning is possible. The X-ray system is designed to be installed with the detector input
+perpendicular to the X-ray beam axis.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 21/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.10. Describe the allowable types and quantity of defects, and any methods of compensation or
+blanking that are utilized to compensate for allowable maximum output, minimum output or
+otherwise inoperative pixel elements.
+Pixel Defect (Cluster)
+-Criteria : Normal within the criteria
+Defect Class #0 : ≤ 2,400 Pixel
+Defect Class #1 : ≤ 1,050 Pixel
+Defect Class #2 : ≤ 530 Pixel
+Defect Class #3 : ≤ 320 Pixel
+Defect Class #4 : ≤ 110 Pixel
+Defect Class #5 : ≤ 50 Pixel
+Defect Class #6 : ≤ 0 Pixel
+Defect Class #7 : ≤ 0 Pixel
+Defect Density : ≤ 60 Pixel
+-Method
+After obtaining 1 Average Dark and 5 Bright images
+for each dose by XAS, BPM images are generated by
+using them and verified whether the test criteria are
+satisfied within the Active-area(3052x3052) area by
+ADIS program.
+Defect Class checks Pixel Defect (Cluster) within 20x20
+Pixel-area.
+*Irradiation condition:
+RQA5(70kV, 32mAs, 64mAs, 100mAs, 200mAs,
+320mAs), SID : 150cm, Al 21mm filter
+HAD1717MC :
+Defect Class #0 : 6 Pixel
+Defect Class #1 : 1 Pixel
+Defect Class #2 : 0 Pixel
+Defect Class #3 : 0 Pixel
+Defect Class #4 : 0 Pixel
+Defect Class #5 : 0 Pixel
+Defect Class #6 : 0 Pixel
+Defect Class #7 : 0 Pixel
+Defect Density : 0 Pixel
+HAD1717MG :
+Defect Class #0 : 1 Pixel
+Defect Class #1 : 0 Pixel
+Defect Class #2 : 0 Pixel
+Defect Class #3 : 0 Pixel
+Defect Class #4 : 0 Pixel
+Defect Class #5 : 0 Pixel
+Defect Class #6 : 0 Pixel
+Defect Class #7 : 0 Pixel
+Defect Density : 0 Pixel
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 22/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.11. Provide data or a plot of any change in detection sensitivity as a function of time after the
+device is “ready” (e.g. biased, erased, etc.) for the next exposure. Also indicate any other changes
+such as reduction in dynamic range that take place after the device is “ready.”
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 23/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.3.12. Provide a plot of the latent image decay characteristic as a function of time and temperature.
+Also describe any impact on signal retention as a function of the number of erasures and/or
+exposures the device has experienced.
+When the X-ray exposure is ended, the image is read immediately by the TFT detector and hence
+no image decay is possible. To reduce thermal difference or variation due to surrounding conditions
+of the detector, and to maintain the offset at the same level with each image acquired, the system
+have stable power supply system. There is therefore no significant change due to changes in
+surrounding conditions.
+2.3.13. Recovery Time for radiographic devices: Indicate the time after readout is complete (including
+any preparation function) until the device is able to accept the next exposure.
+- Readout of the detector after X-ray exposure requires at least 2 seconds at which time the
+detector is ready for the next exposure. Image readout, transferring and pre-processing requires
+under 5 seconds.
+0
+2.5
+5
+7.5
+10
+20 30 40 50 60
+StDev(LSB)
+Temp(℃)
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 24/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.4 Exposure Characteristics
+2.4.1. Dose Requirements and reciprocity changes: Provide quantitative measurements of the input
+dose required to generate an image or video frame equivalent to that provided by a predicate
+device. Also indicate any changes in this characteristic that will occur with time and/or cumulative
+radiation exposure.
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 25/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.4.2. Stability of device characteristics with time (total integrated exposure): In addition to exposure
+requirement changes, indicate any other characteristics of the device that change with time and/or
+total integrated exposure
+- Stability time : 5 sec.
+2.4.3. Uniformity of device characteristics (large and small area): Describe any nonuniformity
+characteristics of the device that may cause large or small area changes such as shading.
+y = 126.32x + 1.989
+0.00
+1000.00
+2000.00
+3000.00
+4000.00
+5000.00
+6000.00
+7000.00
+0.00 10.00 20.00 30.00 40.00 50.00 60.00
+Before Collimation version
+y = 126.3x + 46.678
+0.00
+1000.00
+2000.00
+3000.00
+4000.00
+5000.00
+6000.00
+7000.00
+8000.00
+0.00 10.00 20.00 30.00 40.00 50.00 60.00
+After Collimation version
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 26/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.4.4. Frame-Rate for fluoroscopic devices: Indicate the maximum number of images that can be
+generated per unit time and any characteristics that change as a function of frame rate. For any
+characteristics that do change, indicate how they change. If the frame rate limit is a function of
+another characteristic(s) [outside the SSXI] indicate which one(s) and indicate how that
+characteristic(s) impacts the frame rate.
+- This device is fixed at 1 fps because it is a static x-ray detector.
+2.4.5. Reuse Rate for radiographic devices: Indicate the maximum number of images that can be
+generated per unit time. If limited by other than the device itself, describe.
+- This device is fixed at 1 fps because it is a static x-ray detector.
+2.5 Safety Features
+2.5.1. Indicate what means [e.g. ready signal] that are provided to indicate the SSXI is prepared to
+accept and process an x-ray input.
+5.1 REGULATORY APPROVALS
+The HAD1717MC meets the regulatory standards as outlined in the HAD1717MC safety report:
+DRMCBL1909-0016, EMC report: DREKCEE1905-0342
+5.2 ELECTRO-MAGNETIC COMPATIBILITY
+The HAD1717MC meets the IEC standards as outlined in the HAD1717MC safety report:
+DRMCBL1909-0016, EMC report: DREKCEE1905-0342
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 27/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.6 Test Results
+2.6.1. Provide samples of test pattern images (SSXI and predicate) that show the ability of the device
+to provide images equivalent to those of a predicate device(s). Each image should have with it the x-
+ray factors used and the set-up parameters of the device. The test patterns must be clearly identified
+and all characteristics indicated (e.g. lp/mm for each bar group). The geometry of the test set-up
+must be indicated as well as the focal spot size of the x-ray source. The images may be on film
+recorded from the output, or VHS videotape in the case of fluoroscopy devices. Any signal
+processing used should be described.
+HAD1717MG HAD1717MC
+LineChart
+Exposure
+Condition
+- RQA 5 : 70kV, 200mA, SID : 150cm, Al 21mm
+- 200ms
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 28/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+2.6.2. Provide sample measurements of the characteristics described in C and D above; include the
+tolerance or level of uncertainty associated with each measurement.
+Linearity & Sensitivity
+* Each manufacturer has a different performance measurement program.
+* HAD1717MC : 152.47 LSB/uGy (152.47x - 14.695)
+* HAD1717MG : 70.894 LSB/uGy (70.894x - 24.26)
+0.00
+1000.00
+2000.00
+3000.00
+4000.00
+5000.00
+6000.00
+7000.00
+8000.00
+9000.00
+0 10 20 30 40 50 60
+Linearity & Sensitivity
+HAD1717MC HAD1717MG (uGy)
+(LSB)
+
+EN 62220-1-1 DQE test
+report
+Doc. No. A-PR-0-001
+Rev. No. 1
+HAD1717MG, HAD1717MC
+Rev. Date Mar/10/2020
+Page 29/29
+A-PR-0-001(Rev.1) H&abyz Co.,Ltd. A4(210ⅹ297mm)
+MTF
+MTF Point 0.1lp 0.5lp 1lp 2lp 3lp
+Pixium 4600 94.00% 78.00% 61.00% 43.00% 16.00%
+HAD1717MC 94.90% 82.60% 65.60% 36.10% 21.50%
+HAD1717MG 93.50% 75.90% 53.30% 23.00% 11.20%
+NPS
+NPS Point 0.1lp 0.5lp 1lp 2lp 3lp
+Pixium 4600 7.0 5.1 3.5 1.4 0.6
+HAD1717MC 9.63 8.83 5.78 2.01 0.774
+HAD1717MG 14.4 12.1 7.32 2.35 0.95
+DQE
+DQE Point 0.1lp 0.5lp 1lp 2lp 3lp
+Pixium 4600 67.00% 62.00% 56.00% 41.00% 24.00%
+HAD1717MC 70.10% 57.40% 52.10% 38% 28.40%
+HAD1717MG 42.40% 33.20% 27.50% 15.60% 9.45%

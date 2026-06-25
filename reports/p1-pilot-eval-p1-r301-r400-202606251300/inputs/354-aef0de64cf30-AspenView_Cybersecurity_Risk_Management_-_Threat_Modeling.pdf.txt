@@ -1,0 +1,126 @@
+queueId: ingest-1781569954420-18nf
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management - Threat Modeling.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/c55ba394f881/AspenView Cybersecurity Risk Management - Threat Modeling__c55ba394f881_combined.txt
+canonicalGroupId: aef0de64cf30
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 354
+
+SOURCE_TEXT
+AspenView Document 1/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+Cyber Security Theat Modeling
+Model: AspenView software
+Revision Status
+Number Revision
+Date
+Rev
+No.
+Description of
+Revision
+Prepared by Reviewed by Approved by
+1 2024.04.01 0 established Dong Hyun Kim
+
+AspenView Document 2/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+1. Introduction
+This cybersecurity document is to model the potential threat against the AspenView software
+from external sources.
+1.1 Manufacturer
+Aspen Imaging Healthcare Inc
+1.2 Address of company
+Head office:
+801 Jupiter Rd Suite 200, Plano, TX 75074, USA
+(+1) 214-257-0113
+Website: http://aspenimaging.com
+1.3 Applicable directive and annex
+This Technical File consists of technical documentation relating to development of Radiological
+Image Processing System(AspenView). It meets the requirements of the Medical Device Directive
+93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X.
+
+AspenView Document 3/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+2. Comprehensive Threat Modeling
+2.1 Introduction
+• AspenView is a medical software application that interfaces with an X-ray detector
+through on-board Wi-Fi to display images for diagnostic purposes.
+• Purpose of the Document: This document aims to identify and analyze potential
+cybersecurity risks associated with the AspenView system throughout its lifecycle,
+providing pre- and post-mitigation risk assessments.
+2.2 System Description
+2.2.1 Components
+o AspenView Software: Application used by healthcare providers.
+o X-ray Detector: Captures images and communicates with AspenView.
+o Wi-Fi Module: Facilitates wireless data transfer between the detector and
+software.
+2.2.2 Block diagram of operating software (AspenView)
+
+AspenView Document 4/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+2.2.3 Architecture View of AspenView
+2.3 Assumptions
+• Environmental Assumptions: Assume that hospital networks are hostile environments
+where adversaries may control network traffic, enabling them to alter, drop, and replay
+packets.
+• System Assumptions: AspenView and its components are assumed to be targeted by
+threats due to the sensitivity of the data and the critical nature of medical diagnostics.
+2.4 Threat Identification and Methodology
+• Threat Methodology: The STRIDE methodology is selected for its comprehensiveness
+in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of
+Service, and Elevation of Privilege, which are relevant to the AspenView system's
+security needs.
+
+AspenView Document 5/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+• Rationale for STRIDE: STRIDE provides a structured approach to identifying threats
+that could compromise the confidentiality, integrity, and availability of the system,
+making it suitable for complex systems where multiple interaction points exist, such as
+medical devices.
+2.5 Identification of Cybersecurity Risks
+• Supply Chain Risks
+o Counterfeit Components: The use of counterfeit hardware components in the X-
+ray detector could lead to vulnerabilities that are hard to detect and mitigate.
+o Compromised Software Supply: Malicious or buggy code could be introduced
+into the software through third-party libraries or dependencies used within
+AspenView.
+o Mitigations:
+▪ Conduct audits and regular security assessments of all suppliers.
+▪ Implement a secure software development lifecycle (SDLC) that
+includes vetting of third-party components.
+▪ Use cryptographic signatures to verify software integrity at installation.
+• Manufacturing and Deployment Risks
+o Insecure Default Configurations: Devices shipped with insecure defaults (e.g.,
+default passwords, open ports) can be easily exploited.
+o Physical Tampering: Devices could be physically tampered with during
+assembly or shipping, including the insertion of malicious components or
+modification of firmware.
+o Mitigations:
+▪ Ensure secure configuration guides are followed during installation.
+▪ Perform security checks and audits at various stages of the
+manufacturing and deployment process.
+• Maintenance and Update Risks
+o Update Integrity: Updates might be intercepted or replaced with malicious
+versions if not properly secured.
+o Unauthorized Access: During maintenance, systems might be temporarily less
+secure and more susceptible to unauthorized access.
+o Mitigations:
+▪ Use secure, encrypted channels for transmitting updates.
+
+AspenView Document 6/6
+Doc. Name: AspenView-Security-Threat-Modeling
+Initiate date: 2024.04.01 /Rev 0
+▪ Employ role-based access controls and monitor maintenance sessions
+to prevent unauthorized activities.
+• Decommission Risks
+o Data leakage from improperly decommissioned devices.
+o Mitigations: Establish and follow strict decommissioning procedures, including
+data deletion and hardware disposal.
+2.6 Risk Assessment and Mitigation Implementation
+• Please refer to AspenView Cybersecurity Risk Management Report section 7. Cyber
+Security Risk Mitigation for the comprehensive, mitigating measures that have been
+implemented against the identified risks in 2.5 (identification of cybersecurity risks)

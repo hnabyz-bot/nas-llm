@@ -1,0 +1,3333 @@
+queueId: ingest-1781569954419-17lz
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Cybersecurity Risk Management Report (Rev3) (3).pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/8761a6c03c2c/AspenView Cybersecurity Risk Management Report (Rev3) (3)__8761a6c03c2c_combined.txt
+canonicalGroupId: 260b4c614520
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 343
+
+SOURCE_TEXT
+Cyber Security Risk Management
+Report
+Document
+No. AspenView-RMF
+Revision No. 3
+Model : AspenView software Revision Date. 2024.09.01
+Page No. 1 / 46
+Cyber Security Risk Management Report
+Model: AspenView software
+□ Controlled Copy
+□ Non-Controlled Copy
+AP
+PR
+O
+VA
+L
+Prepared Reviewed Approved
+2024.09.01 2024.09.01
+Aspen Imaging Healthcare Inc
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 2 / 46
+2 / 46
+AspenView Document
+Establishment/Revision History
+- Table of Contents -
+1. Overview and Purpose
+2. Definition of Terms
+3. General Product Description
+4. Cyber Security Diagrams
+5. Cyber Security Risk Analysis
+6. Cyber Security Risk Assessment
+7. Cyber Security Risk Mitigation
+8. Overall Residual Risk Acceptability Assessment
+9. Risk Management Report
+10. Production and Post-production Information
+11. FMEA Report
+12. Medical Device Cybersecurity Requirements and Essential
+Principles Checklist
+Rev. No. Rev. Date Effective
+Date Remarks
+00 2022.12.15 - Initial Release
+01 2024.04.29 2024.04.29 Revised Release for Security Updates
+02 2024.07.19 2024.07.19 Providing details of post-production plans
+03 2024.09.01 2024.09.01 Supplementing Security Architecture Diagrams
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 3 / 46
+3 / 46
+AspenView Document
+1. Overview and Purpose
+1.1 Overview
+As the development of medical devices increasingly utilize communication technology, medical
+devices are becoming more prone to attacks such as data leaks, data manipulation, and hacking
+that threaten the devices’ security. These cybersecurity threats can cause errors or defects on the
+software and pose potential risks to the end users. To better manage these risks and increase the
+safety and performance of Aspen Imaging’s medical devices, this risk management report will outline
+and establish a risk management system according to cybersecurity standards to identify and reduce
+any potential hazards of AspenView Software manufactured by Aspen Imaging Healthcare Inc
+(hereinafter referred to as “we”).
+1.2 Purpose
+This risk management report is intended to first satisfy regulatory requirements for medical
+image acquisition devices developed, produced and sold by our company. We identify all risk
+factors (hazard) to alleviate cyber security threats such as hacking of medical devices and
+information leakage of products manufactured by our company by establishing a risk
+management system according to the cybersecurity application of medical devices. We will
+determine the severity and risk based on it. After determining the risk as an acceptable or
+unacceptable area, risk reduction measures will be established to reduce those risks.
+2. Definition of Terms
+The definitions of key terms used in this report are as follows.
+2.1 Cybersecurity: Preservation of data integrity, confidentiality and availability of
+information in cyberspace
+2.2 Medical Device Cyber Security: Stored in medical devices through wired or wireless
+communication Unauthorized use of programs to control transmitted/received personal
+medical information or devices, Measures to prevent denial of use, misuse, alteration, and
+unauthorized access
+2.3 Confidentiality: Ability to prevent use of unauthorized purposes so that personal
+medical information is not disclosed to unauthorized persons
+2.4 Availability: Ability to exist in the form where it is needed so that personal medical
+information must be provided immediately to authorized users
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 4 / 46
+4 / 46
+AspenView Document
+2.5 Integrity: Function to prevent manipulation or destruction of data
+2.6 Encryption: the process to maintain information security by transforming information
+and storing according to specific rules so that the contents of the information cannot be
+recognized without knowing the decryption method
+2.7 SSL : A standard security protocol that provides encryption for secure data transmission
+and reception between web browsers and web servers
+2.8 Access control: According to the information security policy, users, programs,
+processors, so that only the subject authorized for the system, etc., can access information
+system resources
+2.9 BLE (Bluetooth low energy): suitable for small devices with limited battery Short-
+range wireless communication technology designed to consume less power
+2.10 IT-Network: A physical connection between two or more communication
+nodes or a system consisting of a communication node and a transmission
+link to provide wireless transmission
+2.11 Security vulnerability: a system or program It means a bug (the wrong part),
+and hackers use it to break into the system and Cause leakage, system destruction, etc.
+2.12 DDoS: Distributed multiple attackers How to deploy and simultaneously perform denial
+of service attacks
+2.13 Forgery: Forgery (as one of the security attacks, unauthorized people
+Insertion) and alteration (as one of security attacks, not only illegal access by
+unauthorized persons, but also illegal alteration)
+2.14 Harm: Physical injury or damage or damage to property or environment
+2.15 Hazard: Potential cause of harm
+2.16 Hazardous situation: A person, property, or environment Exposure to hazards
+2.17 Intended use: according to specifications, instructions and information provided by the
+manufacturer. The intended use of the product, process or service
+2.18 Lifecycle: Life of medical devices from initial development stage to final disposal
+2.19 Risk: The combination ratio of the product of the severity and likelihood
+of a risk
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 5 / 46
+5 / 46
+AspenView Document
+2.20 Risk analysis: To identify hazards and estimate risks Systematic use of
+available information
+2.21 Risk control: Reducing the risk below a prescribed level or the process by which
+decisions and actions are taken to keep risks low
+2.22 Risk estimation: Process used for determining the value of the likelihood and severity
+of a hazard
+2.23 Risk evaluation: To determine the acceptability of a risk, The process of comparing
+risk criteria and estimated risk
+2.24 Residual risk: The risk that remains even after risk control measures are applied
+2.25 Evaluation of overall residual risk acceptability: After all risk control measures
+have been implemented and verified, the criteria defined in the risk management plan to
+determine whether the total residual risk posed by the medical device is acceptable.
+Decision process
+2.26 Risk management file: Created in the risk management process as a series of
+records and other documents
+2.27 Safety: Freedom from unacceptable hazards
+2.28 Severity: The degree of possible consequences of a hazard.
+2.29 Standalone Software: As the software itself It has a function that meets the purpose
+of use of a medical device, and in the same environment as a general-purpose computer
+medical device software in operation
+3. General Product Description
+• The AspenView software is designed for use by radiologists and radiology technicians to acquire
+digital x ray images. It interfaces with 3rd party digital x-ray detectors or CR scanners and
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 6 / 46
+6 / 46
+AspenView Document
+manufacturer supplied software for the acquisition and storage of digital x-ray images. The
+AspenView software then provides a user interface for the viewing, annotating, and other
+workstation functions. AspenView includes the ability to receive patient information and send x
+ray images to remote destinations using the DICOM 3.0 protocol.
+3.1 Product name
+- Common name: Radiological Image Processing System
+- Model name: AspenView
+- Device classification: class II
+3.2 Intended Use (medical indication)
+• AspenView is a software package used with general purpose computing hardware to receive,
+store, distribute and display images and associated data throughout a clinical environment.
+• AspenView is a software application that enables the DICOM-compliant chest X-ray image from
+DR and CR, annotation and print out with patient information or send to another PACS system.
+• AspenView is intended to be used by trained medical professionals including physicians,
+radiologists, nurses and medical technicians. This device is not indicated for use in
+mammography.
+3.3 Intended patient profile
+a) Age: all ages
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 7 / 46
+7 / 46
+AspenView Document
+b) Sex: male or female
+3.4 Intended part of the body
+a) head
+b) chest
+c) spine
+d) abdomen
+e) pelvis
+f) arm and leg
+g) hand and foot
+3.5 Intended user profile
+a) Age: Over 20 years old
+b) Education : Radiology
+c) Knowledge : Human anatomy and operation of X-ray machine
+d) Permissible impairments : not allowed
+e) Sex : male or female
+f) No mental illness
+3.6 Intended conditions of use (Application)
+a) Environment :
+- General : Hospital use only
+- Conditions of Visibility : Software depends on the followings conditions:
+• Viewing Monitor’s resolution : minimum 1920 x 1080
+• Operating Windows System : Windows 10
+- Physical: Software depends on the PC’s physical environment
+b) Frequency of use
+- Not limited if the HDD driver in PC is allowed
+- Software depends on the installed system.
+c) Mobility
+- Software depends on the PC. It means that the desktop and laptop is both possible
+if the PC spec is satisfied.
+3.7 Operating principle
+• A radiograph is an X-ray image obtained by placing a part of the patient in front of an X-ray
+detector and then illuminating it with a short X-ray pulse. To take an X-ray image, the operator
+sets the patient in front of the detector and sets the parameter values of the high voltage
+generator to control the intensity of X-ray for each body part. The detector changes the X-rays
+coming through the part of the patient to digital signals and makes digital images.
+• An Acquisition program is used to acquire, process, storage and view the taken X-ray image by
+detector or Image plate. After exposure and readout, the raw imaging data must be sent and
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 8 / 46
+8 / 46
+AspenView Document
+processed for display on the computer. Image processing is one of the key features of digital
+radiography, greatly influencing the way the image appears to the radiologist. Image processing
+is used to improve image quality by reducing noise, removing technical artifacts, and optimizing
+contrast for viewing.
+3.8 Limit of use
+The device should be operated by personnels who are qualified by the hospital authority.
+3.9 Expected Service Life
+• Software expected service life is virtually unlimited. However, a software program is expected to
+perform no more than 10 years due to compatibility issue that may be enforced by the change of
+operating system that runs the program. The acquisition program is usually affected by
+Workstation (especially, the changes of window OS).
+Therefore, the expected service life of our device has been determined to be approximately 10
+years based on the window OS update cycle. However, the actual life of the device may be shorter
+than 10 years due to the frequency of use and the hardware life expectancy. And it does not apply
+to the system damaged due to the negligence of the user.
+3.10 Product specification (AspenView)
+No. Item
+Specification
+AspenView
+1 Software Manufacturer Aspen Imaging Healthcare Inc
+2 Image Process/Store
+W/L Adjustment, W/L Store, Panning, Inverse, Zoom In/Out,
+Magnification, Fit, Rotate, Reverse, Flip, JPEG Store, Storing
+External Media, Thumbnail Display, Layout Selection (1x1, 1x2, 2x1,
+2x2, 3x3), Histogram Display
+3 Information Input/Search Patient Registration, Sort, Modification, Delete, Search (ID, Patient
+Name, Study), DAP display(uGy•m2)
+4 Transfer DICOM 3.0 Standard
+5 Manual & CD Provide as a file
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 9 / 46
+9 / 46
+AspenView Document
+3.11 Block diagram of operating software (AspenView)
+3.12 Architecture view of AspenView
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 10 / 46
+10 / 46
+AspenView Document
+3.13 Software Bill of Materials for AspenView
+Module Name Version
+Microsoft Visual Studio 2022
+BitMiracle.LibTiff.NET 2.4.649.0
+BitMiracle.LibJpeg.NetCore 1.5.1.0
+ClosedXML 0.95.4.0
+CommunityToolkit.HighPerformance 8.2.0.0
+cscharls 0.1.0.0
+CSJ2K 3.0.0.0
+Dicom.Core 4.0.7.0
+DICOM-CS 0.2.3.0
+DocumentFormat.OpenXml 2.7.2.0
+fo-dicom 4.0.7.0
+fo-dicom.Portable 4.0.8.0
+fo-dicom.Drawing 4.0.8.0
+fo-dicom.ImageSharp 4.0.4.0
+fo-dicom.core 5.1.2.0
+fo-dicom.Imaging.Desktop 5.1.2.0
+fo-dicom.Imaging.ImageSharp 5.1.2.0
+GalaSoft.MvvmLight.Extras.WPF4 4.3.31.28629
+GalaSoft.MvvmLight.WPF4 4.3.31.28629
+Intel(R) Integrated Performance Primitives 8.1.1
+Intel(R) Integrated Performance Primitives 2017
+Intel(R) OpenMP Runtime Library 5.0.2014.401
+Intel(R) Threading Building Blocks Library 2017.0.2016.1004
+LiveCharts 0.9.7.0
+LiveCharts.Wpf 0.9.7.0
+log4net 1.2.10.0
+MaterialDesignColors 1.2.7.1979
+MaterialDesignThemes.Wpf 3.2.0.1979
+Microsoft.Expression.Drawing 4.5.0.0
+Microsoft.Office.Interop.Excel 15.0.0.0
+Microsoft.Surface 2.0.0.0
+Microsoft.Surface.Presentation 2.0.0.0
+Microsoft.VisualBasic 10.0.0.0
+Microsoft.Xaml.Behaviors 1.1.0.0
+Newtonsoft.Json 13.0.0.0
+nunit.framework 2.5.10.0
+opencv 2.4.13
+PdfSharp 1.50.5147.0
+PdfSharp.Charting 1.50.5147.0
+PresentationCore 4.0.0.0
+PresentationFramework 4.0.0.0
+PresentationFramework.Aero 4.0.0.0
+protobuf-net 2.0.0.602
+SixLabors.Fonts 1.0.0.0
+SixLabors.ImageSharp 2.0.0.0
+SixLabors.ImageSharp.Drawing 1.0.0.0
+StructureMap 2.6.1.0
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 11 / 46
+11 / 46
+AspenView Document
+4. Cyber Security Diagrams
+4.1 Cyber Security Risk Flow Chart
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 12 / 46
+12 / 46
+AspenView Document
+4.2 Cyber Security Architecture View of AspenView
+Security Modules Specification
+CreateAesService Module
+The AES key and IV values are generated when AspenView is first executed and are stored in the WorkList.db. The
+key and IV are generated using .NET's System.Security.Cryptography.Aes and
+System.Security.Cryptography.RandomNumberGenerator.
+EncryptDicomParameter
+This module encrypts DICOM tags. It encrypts the following tags using AES256: InstitutionName, StudyDescription,
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 13 / 46
+13 / 46
+AspenView Document
+ReferringPhysiciansName, RequestingPhysician, ReasonForTheRequestedProcedure,
+ScheduledProcedureStepDescription, InstitutionalDepartmentName, PatientsName, PatientID, PatientsBirthDate,
+PatientsSex, PatientsAge, PatientsSize, PatientsWeight, OperatorsName, and ResponsiblePerson. The encryption
+is performed using .NET's System.Security.Cryptography.Aes class.
+Decrypt DCM File
+This module decrypts the tags contained in a DCM file. It first opens the DCM file using the fo-dicom module,
+decrypts each tag, and then saves the result.
+CommonUtils.GetCryptedString
+This function is used for password encryption. It returns a hash value of the input text, utilizing .NET's
+System.Security.Cryptography.
+DecryptData, EncryptData
+Using the AES key and IV values, an Encryptor and Decryptor are created. The encryption and decryption
+processes are performed using .NET's System.IO.MemoryStream, System.Security.Cryptography.CryptoStream,
+and System.Security.Cryptography.CryptoStreamMode.
+NotiBar
+Screen saver function setting and unused session termination. The user will be automatically logged out if no
+mouse or keyboard events occur for a certain period of time (10 minutes).
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 14 / 46
+14 / 46
+AspenView Document
+5. Cyber Security Risk Analysis
+5.1 Severity evaluation criteria
+Score Severity Possible description
+1 Catastrophic Results in patient death
+2 Critical Results in permanent impairment or life-threatening injury
+3 Serious Result in injury or impairment requiring professional medical intervention
+4 Marginal Results in temporary injury or impairment not requiring professional medical intervention
+5 Negligible Inconvenience or temporary discomfort
+5.2 Definition of Security Test Methods
+Security Test
+Method Definition
+Vulnerability
+Scanning
+Type of security testing that helps perform analysis of vulnerabilities and misconfiguration
+across the operating system, web server, network, system, and application.
+White Box Test White box testing focuses on understanding how the application works, then attempt to break
+into the application through knowledge of the source code or the software behavior
+Network Security
+Test
+Type of penetration testing that focuses on evaluating a computer network's vulnerability to
+intrusion
+
+Penetration Test Penetration testing is a form of security testing wherein security engineers simulate a hack to
+check vulnerabilities present in a site, an application, or a network.
+5.3 Identification of hazards
+No. Hazard Concrete example Possible consequence to
+user or patient References
+RM-
+01 Unauthorized
+access
+Manipulation of patient information due to
+unauthorized access to this product
+information
+Misdiagnosis, incorrect
+treatment performed, or
+deprivation of treatment
+opportunities
+US FDA Recall/
+check list
+1.1~1.11
+RM-
+02
+Malfunction of this product due to
+unauthorized software installation or
+execution
+Deprivation of treatment
+opportunities
+US FDA Recall/
+Checklist 1.19
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 15 / 46
+15 / 46
+AspenView Document
+RM-
+03
+Information
+forgery
+Leak and forgery of transmitted
+information (control, medical information)
+Misdiagnosis, incorrect
+treatment performed, or
+deprivation of treatment
+opportunities
+Medical device
+Electronic and
+mechanical
+safety
+Common
+standard
+(IEC60601-1)
+14.6.1 /
+Checklist 1.15 /
+1.16/1.17
+RM-
+04
+Forgery of information stored in this
+product
+Misdiagnosis, incorrect
+treatment performed, or
+deprivation of treatment
+opportunities
+Medical device
+Electronic and
+mechanical
+safety
+Common
+standard
+(IEC60601-1)
+14.6.1 /
+Checklist 1.15 /
+1.167/1.20
+RM-
+05
+An unauthorized person falsifies the
+information stored in this product and
+transmits it to the diagnostic support
+system.
+Misdiagnosis, incorrect
+treatment performed, or
+deprivation of treatment
+opportunities
+Medical device
+Electronic and
+mechanical
+safety
+Common
+standard
+(IEC60601-1)
+14.6.1 /
+Checklist 1.15 /
+1.167/1.20
+RM-
+06 If the information stored in this product is
+encrypted in an unknown way
+Deprivation of treatment
+opportunities US FDA Recall
+RM-
+07
+Platform or
+hardware
+vulnerability
+Unauthorized update Delayed or incorrect diagnosis
+due to software malfunction
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.12
+RM-
+08
+Updates with no guaranteed integrity Delayed or incorrect diagnosis
+due to software malfunction
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.13
+RM-
+09
+Unauthorized update Delayed or incorrect diagnosis
+due to software malfunction
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.14
+RM-
+10
+Absence of system log Delayed or incorrect diagnosis
+due to software malfunction
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.21
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 16 / 46
+16 / 46
+AspenView Document
+RM-
+11
+Executable files and configuration files
+whose integrity is not guaranteed
+Delayed or incorrect diagnosis
+due to software malfunction
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.22
+RM-
+12 Lack of countermeasures when detecting
+cyber security threats
+Deprivation of treatment
+opportunities
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.23
+RM-
+13 Communication service denial,
+communication delay, etc.
+Deprivation of treatment
+opportunities
+Medical
+Equipment
+Report of
+abnormal cases
+Checklist 1.23
+※ Among related data, the US FDA Recall refers to the overseas recall of the product or similar product.
+5.4 Cyber security risk assessment in each risk phase
+• Specific examples of hazards in '5.3 Identification of Hazards' are given in '5.4 Cyber security risk
+assessment in each risk phase’, which is used as a risk factor to calculate the risk.
+No. Risk Possible Scenario Potential Situation Method of
+Assessment Severity
+RM-
+01-
+01
+Manipulation of image
+calibration data due to
+unauthorized access to
+information on this product
+In case anyone has access to
+patient information without user
+classification
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 5
+RM-
+01-
+02
+When multiple users in one
+account are connected at the
+same time, data distortion occurs
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 5
+RM-
+01-
+03
+When unauthorized access
+attempts are not detected
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 5
+RM-
+01-
+04
+When user access rights are
+stolen by using a weak router
+(Wi-Fi)
+Diagnosis with
+manipulated
+information
+Network
+Security Test 5
+RM-
+01-
+05
+When the user is away to an
+account whose session has not
+been terminated results in use by
+unauthorized person
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 5
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 17 / 46
+17 / 46
+AspenView Document
+RM-
+01-
+06
+Password exposure when
+logging in, ID • Password plain
+text storage,
+Password leak
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 5
+RM-
+01-
+07
+When attempting to log in from
+this product, this phrase is
+displayed, such as ‘The
+password is incorrect.’
+(In this case, it is not desirable
+because you know that the ID
+exists)
+Diagnosis with
+manipulated
+information
+White box
+Test 5
+RM-
+02
+Illegal use by unauthorized
+persons
+Access through the
+communication service activated
+on the device from external
+network
+Treatment
+performed with
+possible device
+malfunction
+Network
+Security Test 5
+RM-
+03
+Transmission of medical
+information
+and forgery
+Transfer via sniffing.
+Forgery and alteration through
+information leakage and man-in-
+the-middle attacks
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 4
+RM-
+04 Forgery of stored information Forgery and alteration through
+man-in-the-middle attacks
+Diagnosis with
+manipulated
+information
+Vulnerability
+Scanning 4
+RM-
+05
+Unauthorized person
+with diagnostic support
+system falsifies information
+stored in this product
+Unlicensed person deodorizes
+this product
+Diagnosis with
+manipulated
+information
+Penetration
+Test 5
+RM-
+06
+The information stored in this
+product is encrypted Ransomware infection
+Unable to read
+patient info at the
+time of need
+Penetration
+Test 4
+RM-
+07 Unauthorized update
+Attempting to update firmware
+and software without
+administrator's permission
+Treatment
+performed with
+possible device
+malfunction
+Vulnerability
+Scanning 4
+RM-
+08
+Updates with no guaranteed
+integrity
+Forged firmware or Software
+update
+Treatment
+performed with
+possible device
+malfunction
+Penetration
+Test 4
+RM-
+09 Unauthorized update
+Firmware software updates from
+unknown providers without
+authentication
+Treatment
+performed with
+possible device
+malfunction
+Penetration
+Test 4
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 18 / 46
+18 / 46
+AspenView Document
+6. Cyber Security Risk assessment
+6.1 Risk Evaluation
+(1) Risk Evaluation by Type of Test
+Security Test Method Count
+Vulnerability Scanning 9
+RM-
+10 Absence of system log
+Access by unauthorized person
+regardless of record
+device connection or
+untraceable
+state of information to
+view, create, modify or delete
+Treatment
+performed with
+possible device
+malfunction
+Penetration
+Test 4
+RM-
+11
+Integrity
+not guaranteed
+Executable and
+Configuration file
+Executable file (firmware,
+OS, SW) uploaded on device
+containing malicious code
+Treatment
+performed with
+possible device
+malfunction
+Penetration
+Test 4
+RM-
+12
+Cyber security threat
+Counter-measures in the
+absence of detection
+Cyber security threat
+In the absence of response
+procedures in case of
+occurrence
+Induce security incidents
+Treatment
+performed with
+possible device
+malfunction
+Vulnerability
+Scanning 4
+RM-
+13
+Communication denial of
+service / delay
+Disconnection of communication
+or delay occurs by sending
+continuous traffic
+Patient treatment
+information cannot
+be transmitted
+Network
+Security Test 5
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 19 / 46
+19 / 46
+AspenView Document
+White Box Test 1
+Network Security Test 3
+Penetration Test 6
+(2) Risk Evaluation by Severity
+Severity Count
+1 0
+2 0
+3 0
+4 9
+5 10
+(3) Risk Evaluation Score
+※ Risk Evaluation Score is evaluated as the summation of all severity scores
+※ Total Possible Risk Evaluation Score is 95 (higher is better)
+Severity Results
+Severity 1 0
+Severity 2 0
+Severity 3 0
+Severity 4 9
+Severity 5 10
+Total 86
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 20 / 46
+20 / 46
+AspenView Document
+7. Cyber Security Risk Mitigation
+7.1 Risk mitigation measures
+※ Add RC to the hazard ID (eg RM-01-01, etc.) to identify the item of risk mitigation measures.
+7.2 Description of risk mitigation measures
+No. Risk Control Description of risk mitigation measures
+RM-RC
+-01-01
+Access control and authentication function
+for each user
+User identification and authentication functions are implemented
+with ID/PW unique to each account.
+The authority for the information that can be accessed by each
+account is differentially granted.
+RM-RC
+-01-02
+Restriction of multiple access to the same
+account
+AspenView restricts multiple access to the same account by
+checking the session information of the account. While a given
+account is logged in, no other session can login with that account
+RM-RC
+-01-03
+Function to detect and limit unauthorized
+access
+AspenView detects continuous login attempts using an incorrect
+PW, and restricts access to the account if the PW is incorrectly
+entered more than 5 times
+RM-RC
+-01-04
+Authentication function when connecting to
+the network
+AspenView checks and validates network authentication
+information for data transmission. On-device network follows the
+strict network policy of hospitals
+RM-RC
+-01-05
+Screen saver function setting and unused
+session termination
+Session on the AspenView will terminate when losing network
+access during screen saver mode
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 21 / 46
+21 / 46
+AspenView Document
+RM-RC
+-01-06
+Password creation rules implementation,
+encryption, masking,
+No feedback provided
+Password rules have been reinforced to require at least 12 alpha-
+numeric characters and a special character when creating an
+account. Passwords are encrypted using SHA-256 hash protocol.
+When entering the password, it is displayed as *** characters.
+AX-RC
+-01-07
+Use of ambiguous expressions in response
+messages
+When the credential entered is incorrect, AspenView will provide an
+ambiguous message that the combination is incorrect
+RM-RC
+-02
+Activate only necessary services (ports,
+permissions, etc.)
+AspenView can be configured to expose and active only the ports
+the user desires using Windows OS Firewall
+RM-RC
+-03
+Encryption function of transmitted
+information
+AspenView will encrypt patient information when transmitting as
+DICOM data files, and is able to decrypt the encrypted data that
+was uploaded
+RM-RC
+-04
+Function to transmit without storing medical
+information in this product
+Upon user configuration, stale data can be deleted after
+transmitting medical information from AspenView
+RM-RC
+-05 Prevention of unauthorized data tampering No user without the knowledge of decryption methods can tamper
+the encrypted data of the patient
+RM-RC
+-06 Encryption of on-device data All sensitive patient information on AspenView is encrypted when
+converting to DICOM files from AspenView
+RM-RC
+-07 Authentication function on update
+Deployment of product updates are limited to only the
+administrators, and even the admins must have the required
+password from the manufacturer to be able to unzip and install the
+new release
+RM-RC
+-08 Integrity check function when updating Integrity of the update files are checked by the password required
+when installing the new release
+RM-RC
+-09
+Update provider authentication procedure
+function Digital signatures are required on the update files of AspenView
+RM-RC
+-10
+System access and information
+management log function
+When accessing a user's medical device, log information such as
+access records, patient information inquiry, data creation, change,
+and deletion are thoroughly recorded by AspenView on daily basis
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 22 / 46
+22 / 46
+AspenView Document
+RM-RC
+-11
+Integrity check function before executing
+executable file Digital signatures are required on the update files of AspenView
+RM-RC
+-12
+Security threat detection alarm function
+Providing response procedures to users
+through user manual
+AspenView works with the operating system’s default firewall and
+anti-virus programs to detect alarms, errors, and delays due to
+security threats. Counter measures are taken by the on-device anti-
+virus programs that must be installed along with AspenView
+RM-RC
+-13
+Communication error detection and alarm
+function
+AspenView works with the operating system’s default firewall and
+anti-virus programs to detect alarms, errors, and delays due to
+security threats. Counter measures are taken by the on-device anti-
+virus programs that must be installed along with AspenView
+7.3 Category of Mitigation Measure
+For risk mitigation measures that have been implemented in 7.2, this section will outline the
+different categories of controls that have been put in place as a result of those mitigation
+measures.
+7.3.1 Authentication Controls
+o Authentication controls have been significantly strengthened for AspenView by increasing
+the complexity of password requirement, locking users out after repeated trying to login
+unsuccessfully, and ensuring that a single account can only have a single session logged
+into the software.
+7.3.2 Authorization Controls
+o Authorization controls have been reinforced to ensure that the software integrity and the
+data integrity can be maintained. Updates to the software can only be made by an
+administrator, and an admin can only patch the software with a set of files that need to be
+validated by a password from the manufacturer.
+7.3.3 Cryptography Controls
+o Cryptography controls of AspenView have been improved to ensure that the sensitive
+data that the program handles are safe from external threats. All patient data is encrypted
+using DICOM standards, and credentials are encrypted with SHA-256 method to ensure
+decryption cannot happen without manufacturer’s decryption methods.
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 23 / 46
+23 / 46
+AspenView Document
+7.3.4 Event Detection & Logging Control
+o Traceability of data handled by AspenView have been significantly improved by collecting
+information on all login transactions, navigation history within the program, modification
+and deletion operations on files in AspenView are all recorded and organized on a day-
+to-day basis
+8. Overall residual risk acceptability assessment
+No.
+Residual risk
+assessment
+result
+Danger
+/Benefit
+analysi
+s
+Additional
+risk of
+occurrenc
+e
+Complete
+control
+Evaluation of
+overall
+residual risk
+acceptability
+Severity Acceptable / not
+allowed
+RM-RC
+-01-01 5 accept N N Y Acceptable
+RM-RC
+-01-02 5 accept N N Y Acceptable
+RM-RC
+-01-03 5 accept N N Y Acceptable
+RM-RC
+-01-04 5 accept N N Y Acceptable
+RM-RC
+-01-05 5 accept N N Y Acceptable
+RM-RC
+-01-06 5 accept N N Y Acceptable
+RM-RC
+-01-07 5 accept N N Y Acceptable
+RM-RC
+-02 5 accept N N Y Acceptable
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 24 / 46
+24 / 46
+AspenView Document
+RM-RC
+-03 5 accept N N Y Acceptable
+RM-RC
+-04 5 accept N N Y Acceptable
+RM-RC
+-05 5 accept N N Y Acceptable
+RM-RC
+-06 5 accept N N Y Acceptable
+RM-RC
+-07 5 accept N N Y Acceptable
+RM-RC
+-08 5 accept N N Y Acceptable
+RM-RC
+-09 5 accept N N Y Acceptable
+RM-RC
+-10 5 accept N N Y Acceptable
+RM-RC
+-11 5 accept N N Y Acceptable
+RM-RC
+-12 5 accept N N Y Acceptable
+RM-RC
+-13 5 accept N N Y Acceptable
+9. Risk Management Report
+9.1 This AspenView software risk management plan was properly implemented, proved that
+residual risk was acceptable, and an appropriate method was prepared to obtain relevant
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 25 / 46
+25 / 46
+AspenView Document
+production and post-production information.
+9.2 Risk management for AspenView software has been verified.
+10. Production and post-production information
+10.1 The method of obtaining information after production for Aspen Imaging Healthcare Inc
+AspenView software is performed according to the measurement, analysis and
+improvement procedures of the quality management manual, and includes the following.
+1) Customer Complaint Analysis: Refer to Customer Complaint Handling Regulation
+(RQP806)
+2) Safety information report: When new data or information related to the safety and
+effectiveness of a product is known, it shall be reported and necessary safety measures
+shall be taken as prescribed by the Commissioner of the Food and Drug Administration.
+Corrective and Preventive Action Regulations
+See (RQP803)
+3) Internal audit: The quality manager must conduct internal audit at a planned interval to
+determine the following matters. Refer to internal audit regulations (RQP804)
+10.2 Planned decisions in the quality management system, established quality management
+system requirements, and whether the requirements of this standard are met.
+10.3 Whether it is implemented and maintained effectively
+1) Process monitoring and measurement: The head of the relevant department should
+
+monitor the quality management system process and, if applicable, apply an appropriate
+method for measurement.
+This method should demonstrate the ability of the process to achieve the planned results,
+and if the planned results are not achieved, appropriate corrective and corrective action
+should be taken to ensure conformity of the product. See Corrective and Preventive Actions
+Regulation (RQP803)
+2) Product monitoring and measurement: The quality manager must monitor and measure
+the characteristics of the product to verify that the requirements for the product are satisfied.
+This should be done at an appropriate stage in the product realization process according to
+the Inspection and Testing Practices Regulation (RQP801).
+Post-production (Post-market) Cybersecurity Management Information
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 26 / 46
+26 / 46
+AspenView Document
+1. Personnel Responsible
+• Security Individual Contractor (Dong Hyun Kim): Overall responsibility for cybersecurity management,
+responsible for monitoring, identifying, and addressing vulnerabilities with the help of the development
+team.
+2. Sources, Methods, and Frequency for Monitoring and Identifying Vulnerabilities
+• Sources:
+o National Institute of Standards and Technology (NIST) National Vulnerability Database (NVD)
+o Cybersecurity and Infrastructure Security Agency (CISA) Known Exploited Vulnerabilities Catalog
+o Third-party software manufacturers
+o Independent security researchers and external cybersecurity advisories
+• Methods:
+o Continuous monitoring using automated tools (e.g., vulnerability scanners)
+o Regular manual reviews and audits by the Security Contractor
+o Collaboration with external security researchers and participation in vulnerability disclosure
+programs
+• Frequency:
+o Monthly checks for updates from NIST NVD and CISA
+o Weekly reviews of third-party software updates and advisories
+o Quarterly comprehensive security audits and assessments
+3. Identify and Address Vulnerabilities in CISA Known Exploited Vulnerabilities Catalog
+• Identification:
+o Automated tools configured to monitor the CISA Known Exploited Vulnerabilities Catalog.
+o Manual checks performed weekly by the cybersecurity team.
+• Addressing Vulnerabilities:
+o Immediate prioritization and analysis of identified vulnerabilities.
+o Development and testing of patches or mitigation strategies.
+o Deployment of patches following the established update process.
+4. Periodic Security Testing
+• Frequency:
+o Quarterly vulnerability assessments.
+o Semi-annual penetration testing.
+o Annual comprehensive security audits.
+• Methods:
+o Use of automated vulnerability scanning tools.
+o Manual penetration testing by certified cybersecurity professionals.
+o Collaboration with third-party security firms for independent assessments.
+5. Timeline to Develop and Release Patches
+• Critical Vulnerabilities: Patches developed and released within 1 week.
+• High-Risk Vulnerabilities: Patches developed and released within 2 weeks.
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 27 / 46
+27 / 46
+AspenView Document
+• Medium-Risk Vulnerabilities: Patches developed and released within 1 month.
+• Low-Risk Vulnerabilities: Patches developed and released within 3 months.
+6. Update Processes
+• Development:
+o Secure coding practices followed during patch development.
+o Thorough testing in a staging environment before release.
+• Deployment:
+o Use of automated deployment tools to ensure timely and consistent patch delivery, which can be
+only accepted by administrative users of the program. Manual deployment can also be enforced by
+releasing the new version files only to the administrative users who can install.
+o Rollback mechanisms in place to revert updates if issues are detected.
+• Verification:
+o Post-deployment verification to ensure patches are applied correctly and systems remain stable.
+7. Patching Capability
+• Rate of Delivery:
+o Automated patch management system capable of delivering updates to all devices within 24 hours
+of patch release.
+o Scalability to handle patch deployment across all customer environments efficiently.
+8. Coordinated Vulnerability Disclosure and Related Processes
+• Vulnerability Reporting:
+o Publicly accessible vulnerability disclosure policy on our website.
+o Dedicated contact point (email and web form) for receiving vulnerability reports.
+• Coordination:
+o Collaboration with independent researchers and security organizations.
+o Participation in industry forums and information sharing initiatives.
+• Response:
+o Acknowledgement of reports within 48 hours.
+o Initial assessment and triage within 240 hours.
+o Regular updates to the reporting party on the status of the investigation and remediation efforts.
+9. Communication of Remediations, Patches, and Updates to Customers
+• Pre-Release Communication:
+o Advance notifications to customers about forthcoming patches and updates, including details on
+the nature of the vulnerabilities and expected release dates.
+• Release Communication:
+o Detailed release notes accompanying patches and updates, explaining the vulnerabilities
+addressed and the steps customers need to take.
+o Use of multiple communication channels, including email, customer portals, and in-application
+notifications.
+• Post-Release Support:
+o Technical support available to assist with patch implementation and address any issues.
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 28 / 46
+28 / 46
+AspenView Document
+o Follow-up communications to confirm successful patch deployment and gather feedback.
+
+Cyber Security Risk Management
+Report
+Document
+No. AspenView-RMF
+Revision No. 3
+Model : AspenView software Revision Date. 2024.09.01
+Page No. 29 / 46
+11. FMEA report (Failure Modes & Effects Analysis)
+This is our step-by-step approach used to identify potential failure modes within AspenView software, and analyze the
+consequences of those failures.
+No.
+Risk analysis Risk
+evaluation Risk control
+Overall
+residual
+risk
+accepta
+bility
+assess
+ment
+Hazard Possible cases
+Hazardo
+us
+situation
+Harm Sever
+ity
+Evaluated
+result
+Risk
+control
+measure
+s
+Implementati
+on of risk
+control
+measures
+Seve
+rity result Escalatio
+n of Risk
+Complete
+control
+Accepta
+ble / Not
+allowed
+RM-RC
+-01-01
+Manipulation
+of image
+calibration
+data due to
+unauthorized
+access to
+information
+on this
+product
+In case anyone
+has access to
+patient
+information
+without user
+classification
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Moderate
+Implemen
+tation of
+access
+control
+and
+authentic
+ation
+function
+for each
+user
+through
+design
+change
+Confirmation
+of
+implementatio
+n of access
+control and
+authentication
+functions with
+software
+verification
+data
+5 Accepta
+ble N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 30 / 46
+30 / 46
+AspenView Document
+RM-RC
+-01-02
+When multiple
+users access
+one account at
+the same time,
+Data distortion
+occurs
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Acceptable
+Implemen
+tation of
+the same
+account
+multiple
+access
+restriction
+function
+through
+design
+change
+Confirm the
+implementatio
+n of the
+multiple
+access limit
+function with
+software
+verification
+data
+5 Accepta
+ble N Y Accepta
+ble
+RM-RC
+-01-03
+When
+unauthorized
+access attempts
+cannot be
+detected
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Acceptable
+Implemen
+ting
+unauthori
+zed
+access
+detection
+and
+restriction
+function
+through
+design
+change
+Confirm the
+implementatio
+n of
+unauthorized
+access
+detection and
+restriction
+function with
+software
+verification
+data
+5 Accepta
+ble N Y Accepta
+ble
+RM-RC
+-01-04
+When user
+access rights are
+stolen by using a
+weak router (Wi-
+Fi)
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+5 Acceptable
+Implemen
+tation of
+authentic
+ation
+function
+when
+accessin
+g through
+Verification of
+authentication
+function
+implementatio
+n when
+accessing
+through
+network with
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 31 / 46
+31 / 46
+AspenView Document
+opportuniti
+es
+network
+through
+design
+change
+software
+verification
+data
+RM-RC
+-01-05
+Unauthorized
+use of the
+account for
+which the
+session has not
+been terminated
+when the user is
+away
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Moderate
+Implemen
+tation of
+automatic
+session
+terminatio
+n function
+through
+design
+change
+Verify the
+implementatio
+n of automatic
+session
+termination
+function with
+software
+verification
+data
+5 accept N Y Accepta
+ble
+RM-RC
+-01-06
+Exposing
+password when
+logging in,
+storing ID and
+password in
+plain text,
+leaking
+password by
+using single
+character
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Moderate
+Password
+creation
+rule
+through
+design
+change
+Implemen
+tation of
+rules,
+encryptio
+n,
+masking,
+and no
+feedback
+Implementatio
+n of password
+creation rules
+with software
+verification
+data
+Confirmation
+of
+implementatio
+n without
+encryption,
+masking, and
+feedback
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 32 / 46
+32 / 46
+AspenView Document
+RM-RC
+-01-07
+When attempting
+to log in from
+this product, this
+phrase is
+displayed, such
+as ‘The
+password is
+incorrect.’
+(In this case, it is
+not desirable
+because you
+know that the ID
+exists)
+Attempt to hijack
+a specific
+account using
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Moderate
+Implemen
+ting the
+use of
+ambiguou
+s
+expressio
+ns in
+response
+message
+s through
+design
+changes
+In response
+message as
+software
+verification
+data
+Verify
+implementatio
+n of use of
+ambiguous
+expressions
+5 accept N Y Accepta
+ble
+RM-RC
+-02
+Malfunction of
+this product
+due to
+unauthorized
+installation or
+execution of
+illegal software
+Access through
+the
+communication
+service activated
+in the device
+from an external
+network
+When
+treating
+patients
+Unable to
+perform
+medical
+treatment
+due to
+device
+malfuncti
+on
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Moderate
+Activate
+only
+necessar
+y
+services
+(port,
+permissio
+n, etc.)
+through
+design
+change
+Only
+necessary
+services (port,
+authority, etc.)
+as software
+verification
+data
+Activation
+5 accept N Y Accepta
+ble
+RM-RC
+-03
+Leakage and
+forgery of
+transmitted
+information
+(control,
+Leakage of
+transmitted
+information
+through sniffing
+And forgery
+through man-in-
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+4 Acceptable
+Implemen
+tation of
+encryptio
+n function
+of
+transmitte
+Confirming
+the
+implementatio
+n of
+encryption
+function of
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 33 / 46
+33 / 46
+AspenView Document
+medical
+information)
+the-middle
+attacks
+of
+treatment
+opportuniti
+es
+d
+informatio
+n through
+design
+change
+transmitted
+information
+with software
+verification
+data
+RM-RC
+-04
+Forgery of
+information
+stored in this
+product
+Forgery and
+alteration
+through man-in-
+the-middle
+attacks
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Acceptable
+Implemen
+tation of
+the
+function
+to
+transmit
+without
+storing
+medical
+informatio
+n in this
+product
+through
+design
+change
+Confirmation
+of the
+implementatio
+n of the
+function to
+transmit
+without
+storing
+medical
+information in
+this product
+as software
+verification
+data
+4 accept N Y Accepta
+ble
+RM-RC
+-05
+An
+unauthorized
+person falsifies
+the information
+stored in this
+product and
+transmits it to
+the diagnostic
+support
+system.
+Unlicensed
+person
+deodorizes this
+product
+With
+manipulat
+ed
+informatio
+n
+Diagnosis
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+5 Acceptable
+Implemen
+tation of
+the
+function
+to
+transmit
+without
+storing
+medical
+informatio
+n in this
+product
+through
+As software
+verification
+data
+Confirmation
+of the
+implementatio
+n of the
+function to
+transmit
+without
+storing
+medical
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 34 / 46
+34 / 46
+AspenView Document
+design
+change
+information in
+this product
+RM-RC
+-06
+The
+information
+stored in this
+product
+Encrypted in
+an unknown
+way
+Ransomware
+infection
+Patient
+informatio
+n cannot
+be
+viewed
+during
+treatment
+Deprivation
+of
+treatment
+opportuniti
+es
+4 Moderate
+Implemen
+tation of
+the
+function
+to
+transmit
+without
+storing
+medical
+informatio
+n in this
+product
+through
+design
+change
+As software
+verification
+data
+Confirmation
+of the
+implementatio
+n of the
+function to
+transmit
+without
+storing
+medical
+information in
+this product
+5 accept N Y Accepta
+ble
+RM-RC
+-07
+Unauthorized
+update
+Attempting to
+update firmware
+and software
+without
+administrator's
+permission
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+performe
+d due to
+malfuncti
+on of the
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Acceptable
+Implemen
+tation of
+authentic
+ation
+function
+when
+updating
+through
+design
+change
+Confirm the
+implementatio
+n of the
+authentication
+function when
+updating with
+software
+verification
+data
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 35 / 46
+35 / 46
+AspenView Document
+device,
+and
+treatment
+is
+performe
+d with
+forged
+informatio
+n
+RM-RC
+-08
+Updates with
+no guaranteed
+integrity
+Attempting to
+update using
+forged firmware
+or software
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+performe
+d due to
+malfuncti
+on of the
+device,
+and
+treatment
+is
+performe
+d with
+forged
+informatio
+n
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Acceptable
+Implemen
+t integrity
+check
+function
+when
+updating
+through
+design
+change
+Confirm the
+implementatio
+n of the
+integrity check
+function when
+updating with
+software
+verification
+data
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 36 / 46
+36 / 46
+AspenView Document
+RM-RC
+-09
+Unauthorized
+update
+Without
+authentication
+procedure
+Firmware or
+software
+updates from
+any provider
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+performe
+d due to
+malfuncti
+on of the
+device,
+and
+treatment
+is
+performe
+d with
+forged
+informatio
+n
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Acceptable
+Implemen
+tation of
+update
+provider
+authentic
+ation
+procedur
+e function
+through
+design
+change
+Confirm the
+implementatio
+n of the
+update
+provider
+certification
+procedure
+function with
+software
+verification
+data
+5 accept N Y Accepta
+ble
+RM-RC
+-10
+Absence of
+system log
+Information can
+be viewed,
+created,
+modified, or
+deleted in a
+state where
+unauthorized
+persons cannot
+access or track
+the device
+regardless of the
+access record
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+performe
+d due to
+malfuncti
+on of the
+device,
+and
+treatment
+is
+Misdiagnos
+is, wrong
+treatment
+performed
+Or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Acceptable
+System
+access
+and
+informatio
+n
+manage
+ment
+through
+design
+change
+Verify system
+access and
+information
+management
+log function
+implementatio
+n with
+software
+verification
+data
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 37 / 46
+37 / 46
+AspenView Document
+performe
+d with
+forged
+informatio
+n
+RM-RC
+-11
+Executable
+files and
+configuration
+files whose
+integrity is not
+guaranteed
+Attempt to
+operate the
+device by
+uploading
+executable files
+(firmware, OS,
+SW) including
+malicious code
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+performe
+d due to
+malfuncti
+on of the
+device,
+and
+treatment
+is
+performe
+d with
+forged
+informatio
+n
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+of
+treatment
+opportuniti
+es
+4 Moderate
+Implemen
+tation of
+integrity
+check
+function
+before
+execution
+of
+executabl
+e file
+through
+design
+change
+Verification of
+implementatio
+n of integrity
+check function
+before
+execution of
+executable file
+with software
+verification
+data
+5 accept N Y Accepta
+ble
+RM-RC
+-12
+Lack of
+countermeasur
+es when
+detecting
+cyber security
+threats
+Induce security
+incidents in the
+absence of
+response
+procedures
+when cyber
+In case of
+patient
+treatment
+,
+treatment
+cannot be
+Misdiagnos
+is, incorrect
+treatment
+performed,
+or
+deprivation
+4 Acceptable
+Implemen
+tation of
+security
+threat
+detection
+alarm
+Confirmation
+of security
+threat
+detection
+alarm function
+implementatio
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 38 / 46
+38 / 46
+AspenView Document
+security threats
+occur
+performe
+d due to
+malfuncti
+on of the
+device,
+and
+treatment
+is
+performe
+d with
+forged
+informatio
+n
+of
+treatment
+opportuniti
+es
+function
+through
+design
+change
+and
+provision
+of
+response
+procedur
+es to
+users
+through
+user
+manual
+n with
+software
+verification
+data and
+provision of
+response
+procedures to
+users through
+user manual
+RM-RC
+-13
+Communicatio
+n service
+denial,
+communication
+delay, etc.
+Communication
+interruption or
+delay occurs by
+continuously
+transmitting
+attack traffic to
+network-
+accessible
+medical devices
+Patient
+treatment
+informatio
+n cannot
+be
+transmitte
+d
+Deprivation
+of
+diagnostic
+opportuniti
+es
+5 Moderate
+Through
+design
+change
+Communi
+cation
+error
+detection
+and
+alarm
+function
+implemen
+tation and
+response
+procedur
+es to
+users
+through
+user
+manual
+Confirmation
+of
+communicatio
+n error
+detection and
+implementatio
+n of alarm
+functions with
+software
+verification
+data and
+provision of
+response
+procedures to
+users through
+user manual
+5 accept N Y Accepta
+ble
+
+Cyber Security Risk Management
+Report
+Document
+No. AspenView-RMF
+Revision No. 3
+Model : AspenView software Revision Date. 2024.09.01
+Page No. 39 / 46
+12. Medical Device Cybersecurity Requirements and Essentials Checklist
+1) Definition and Classification of Cybersecurity Safety for Medical Devices
+Safety level and requirements of cybersecurity in medical devices with wire and wireless
+communications can be different depending on the level of harm which can be caused by
+potential defects from cybersecurity violations and affect to users.
+The cybersecurity safety level for medical devices can be divided into three as shown in the
+table 1 below: major, moderate and minor.
+Level ‘Major’ refers to the case where medical device cybersecurity breaches could cause
+serious injury or death, permanent impairment of body function or possibility of permanent
+damage to body structure. Level ‘Moderate’ refers to the case where users suffer from
+temporary and minor injuries and need medical intervention. Level ‘Minor’ refers to the case
+where users experience temporary discomfort or suffer from reversible, minor and short-
+term discomfort without the need for medical intervention.
+[Table 1. Classification of Cybersecurity Safety Level for Medical Devices]
+Classification Definition
+Major
+Medical device cybersecurity breaches could cause serious injury or death,
+permanent impairment of body function and possibility of permanent damage
+to body structure.
+Moderate Medical device cybersecurity breaches could cause temporary and minor
+injury to users and medical intervention may be necessary.
+Minor
+Medical device cybersecurity breaches could cause temporary discomfort or
+reversible, minor and short-term discomfort to users without the need for
+medical intervention
+2) Requirements for Cybersecurity of Medical Devices [○: Necessary, △ Suasion]
+No Classification Item Requirements
+Applicable scope (level)
+Major Moderate Minor
+1
+‘Identify’
+and
+‘Protect’
+Access control and
+Authentication
+It shall be possible to give
+access authority depending on
+user’s role (of medical devices)
+based on identification and
+○ ● △
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 40 / 46
+40 / 46
+AspenView Document
+authentication and make the
+user access only authorized
+data.
+2 Prohibiting
+multiple access
+The same user shall not have
+multiple access. ○ ○ ▲
+3
+Recognition of User
+access (of medical
+devices)
+The access by unauthorized
+users (of medical devices) shall
+be recognized and distinguished.
+○ ● △
+4
+Limiting the access
+of unauthorized
+users (of medical
+devices)
+The access by unauthorized
+users (of medical devices) shall
+be blocked. ○ ● △
+5
+Blocking
+unauthorized
+network
+communication
+Communication access of
+Unauthorized network shall be
+limited. ○ ○ ▲
+6
+Blocking remote
+access
+If users (of medical devices) can
+access the server of a medical
+institution, access control shall
+be given not to access to server
+in case where the user account
+or the medical devices be stolen.
+○ ○ ●
+7
+Authentication
+management of
+users (of medical
+devices)
+The expiration date of the users
+(of medical devices) account can
+be established and access shall
+be blocked after the set period of
+time.
+○ ○ ▲
+8
+Auto session close Communication among medical
+devices or access shall be
+closed after the set period of
+time.
+○ ○ ▲
+9
+Strengthening rules
+on creating
+passwords.
+Rules on creating passwords
+shall be satisfied the ‘Standard
+for Technical and Administrative
+Measures to Protect Personal
+Information’
+○ ● △
+10
+Prohibiting
+password
+hardcoding
+Hardcoding of password shall
+not be recommended. ○ ○ ▲
+11
+Prohibiting
+password exposure
+Password shall be used in a way
+not to expose password such as
+using ***.
+○ ● △
+12
+Approval for
+firmware or software
+update
+There shall be a procedure to
+request or check approval from
+administrator upon firmware or
+software update or such update
+shall be executed in a way to
+ensure security at a distance
+where administrator or user can
+recognize.
+○ ○ ●
+13
+Ensuring the
+integrity of firmware
+or software update
+Upon distributing firmware or
+software update file, version
+shall be identified and distributor
+and integrity
+○ ○ ●
+14
+Using authentication
+method upon
+Firmware or software update
+shall be limited to authorized
+code including
+○ ○ ●
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 41 / 46
+41 / 46
+AspenView Document
+firmware or software
+update
+15
+Ensuring the
+confidentiality and
+integrity for
+transferring control
+information of
+medical devices on
+network
+In case where control
+information of medical devices is
+communicated through network,
+confidentiality and integrity shall
+be ensured by using appropriate
+encryption
+○ ○ ▲
+16
+Ensuring the
+confidentiality and
+integrity for
+transferring personal
+health records on
+network
+In case where personal health
+records is communicated
+through network, confidentiality
+and integrity shall be ensured by
+using appropriate encryption and
+decryption methods.
+○ ○ ▲
+17
+Using safe
+encryption algorithm
+Encryption algorithm used for
+sending and storing data shall
+use verified encryption algorithm
+or module with security level of
+112-bit or higher and encryption
+key used for encryption shall be
+managed safely.
+○ ○ ▲
+18
+Minimizing physical
+infringement on
+communication port
+Physical locking shall be
+provided to minimize
+communication
+○ ○ ▲
+19
+Removing or
+inactivating
+unnecessary
+services
+In case of setting default value
+as inactivation of services
+including unnecessary access
+from external port, additional
+security measures such as
+setting password and IP
+restriction shall be conducted.
+○ ○ ▲
+20
+Managing personal
+health records
+storage
+It is recommended not to store
+personal health records in
+measuring device or gateway
+used outside of medical
+institutions.
+○ ○ ▲
+21
+Recording system
+log for data audit
+When a user accesses medical
+device, logs such as access log,
+patient information inquiry and
+generation, modification and
+deletion of data shall be
+recorded.
+○ ● △
+22
+‘Detect’,
+‘Respond’ and
+‘Recover’
+Verification for major
+execution and
+setting files and
+taking actions
+Integrity of major execution and
+setting files shall be verified to
+ensure the normal operation of
+medical devices and
+countermeasures shall be
+considered if integrity error
+occurs.
+○ ● △
+23
+Providing
+information on
+countermeasures to
+be taken when
+cybersecurity treat is
+detected
+Emergency contact and
+information of device
+manufacturer for consultation
+shall be provided to handle
+cybersecurity incident that may
+occur during the use of medical
+○ ○ ▲
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 42 / 46
+42 / 46
+AspenView Document
+device and measures to be
+taken when cybersecurity threat
+is detected shall be
+24
+Protection against
+DDoS attack
+Countermeasures to respond to
+DDoS attack shall be in place for
+devices which access public
+network to control medical
+device in real time, or send and
+receive information that could be
+directly related to patient’s life
+(ex: information that belongs to
+cybersecurity safety level
+‘Major’) in real time.
+○ ○ ▲
+3) Description of cyber security characteristics
+① Cyber security safety level: □Major ■Moderate □Minor
+② Communication technology used: TCP/IP Socket-based Network Interface, LAN communication
+③ Purpose of communication: □ Sending and receiving personal medical information such as patient's
+biometric information
+■ Device control
+□ Maintenance such as firmware or software update
+④ Whether public network is connected or not: used
+Essential Principles of Cybersecurity
+of Medical Devices
+Whether the
+device is
+subject to
+requirements
+Verification
+method of
+conformity
+Applicable laws and
+standards
+Attachments or
+document number
+1. ‘Identify’ and ‘Protect’
+1.1 Access control and
+authentication
+It shall be possible to give access
+authority depending on user’s role
+(of medical device) based on
+identification and authentication and
+make the user access only
+authorized data.
+apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”’
+[RS-AspenView-
+VR] Software
+Validation
+Report(6.System
+Menu2. Accounts]
+1.2 Prohibiting multiple access
+The same user shall not have
+multiple access.
+Not
+applicable
+Access via
+network - -
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 43 / 46
+43 / 46
+AspenView Document
+1.3 Recognizing Users (of medical
+devices) access
+The access by unauthorized users
+(of medical devices) shall be
+recognized and distinguished.
+apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”
+[RS-AspenView-
+SVR-003] Software
+Validation
+Report_Appendix2
+(6.4.4 Dynamic
+Test/#A Check the
+login information)
+[RS-AspenView-
+VR] Software
+Verification Report
+(1.1 Login)
+1.4 Limiting the access of
+unauthorized users (of medical
+devices)
+The access by unauthorized users
+(of medical devices) shall be
+blocked. apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”
+[RS-AspenView-
+SVR-003] Software
+Validation
+Report_Appendix2
+(6.4.4 Dynamic
+Test/#A Check the
+login information)
+[RS-AspenView-
+VR] Software
+Verification Report
+(1.1 Login)
+1.5 Blocking unauthorized network
+communication
+Unauthorized network
+communication access shall be
+limited.
+Not
+applicable
+No separate
+account
+accessed
+through the
+network
+- -
+1.6 Blocking remote access
+If users (of medical devices) can
+access the server of a medical
+institution, access control shall be
+given not to access to server in case
+where the user account or the
+medical devices be stolen.
+Not
+applicable
+No remote
+access account - -
+1.7 Authentication management of
+users (of medical devices)
+The expiration date of the users (of
+medical devices)) account can be
+established and access shall be
+blocked after the set period of time
+Not
+applicable
+No expiration
+date limit - -
+1.8 Auto session close
+Communication among medical
+devices or access shall be closed
+after the set period of time
+Not
+applicable
+No automatic
+session
+termination
+- -
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 44 / 46
+44 / 46
+AspenView Document
+1.9 Strengthening rules on creating
+passwords
+Rules on creating passwords shall
+satisfy the ‘Standard for Technical
+and Administrative Measures to
+Protect Personal Information’
+apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”
+[RS-AspenView-
+VR] Software
+Verification Report
+(6. System Menu 2.
+Accounts)
+1.10 Prohibiting passwords
+hardcoding
+Hardcoding of password shall not be
+recommended
+Not
+applicable No hard coding - -
+1.11 Prohibiting password exposure
+Password shall be used in a way not
+to expose password such as using
+***.
+apply Performance
+test -
+[RS-AspenView-
+SVR-003]
+Software Validation
+Report_Appendix2
+(6.4.4 Dynamic
+Test/#A Check the
+login information)
+[RS-AspenView-
+VR] Software
+Verification Report
+(1.1 Login)
+1.12 Approval for firmware or
+software update
+There shall be a procedure to
+request or check approval from
+administrator upon firmware or
+software update or such update
+shall be executed in a way to ensure
+security at a distance where
+administrator or user can recognize
+Not
+applicable
+No update
+function - -
+1.13 Ensuring the integrity of
+firmware or software update
+Upon distributing firmware or
+software update file, version shall be
+identified and distributor and
+integrity of the file shall be verified.
+Not
+applicable
+No update
+function - -
+1.14 Using authentication method
+upon firmware or software update
+Firmware or software update shall
+be limited to authorized code
+including check for code signing.
+Not
+applicable
+No update
+function - -
+1.15 Ensuring the confidentiality and
+integrity for transferring medical
+device control information on
+network
+In case where medical device
+control information is communicated
+through network, confidentiality and
+Not
+applicable
+No remote
+control function - -
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 45 / 46
+45 / 46
+AspenView Document
+integrity shall be ensured by using
+appropriate encryption and
+decryption methods.
+1.16 Ensuring the confidentiality and
+integrity for transferring personal
+health records on network
+In case where personal health
+records is communicated through
+network, confidentiality and integrity
+shall be ensured by using
+appropriate encryption and
+decryption methods.
+Not
+applicable
+No transmission
+function - -
+1.17 Using safe encryption
+algorithm
+Encryption algorithm used for
+sending and storing data shall use
+verified encryption algorithm or
+module with security level of 112-bit
+or higher and encryption key used
+for encryption shall be managed
+safely.
+Not
+applicable
+No transmission
+function - -
+1.18 Minimizing physical
+infringement on communication port
+Physical locking shall be provided to
+minimize infringement on
+communication port
+Not
+applicable
+No external
+connection
+function
+- -
+1.19 Removing or inactivating
+unnecessary services
+In case of setting default value as
+inactivation of services including
+unnecessary access from external
+port, additional security measures
+such as setting password and IP
+restriction shall be conducted.
+Not
+applicable
+No connection
+function -
+1.20 Managing personal health
+records storage
+It is recommended not to store
+personal health records in
+measuring device or gateway used
+outside of medical institutions. Not
+applicable
+No external
+connection
+function
+- -
+2. ‘Detect’, ‘Respond’ and ‘Recover’
+
+Cyber Security Risk Management
+Report
+Document No. AspenView-
+RMF
+Revision No. 3
+Model: AspenView software Revision Date. 2024.09.01
+Page No. 46 / 46
+46 / 46
+AspenView Document
+2.1 Recording system log for data
+audit
+When accessing medical devices of
+users, logs such as access log,
+patient information inquiry and
+generation, modification and
+deletion of data shall be recorded.
+apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”’
+SW Validation
+Report
+<installation
+folder>\LOG\Save
+the log file under
+the folder
+2.2 Verifying integrity of major
+execution and setting files and
+taking actions
+Integrity of major execution and
+setting files shall be verified to
+ensure the normal operation of
+medical devices and
+countermeasures shall be
+considered if integrity error occurs.
+apply Performance
+test
+IEC 62304’ “Smart
+Medical Cyber Security
+Guide” “Internet of
+Things Security Test
+and Certification
+Criteria Guidebook”
+SW Validation
+Report
+<installation
+folder>\LOG\Save
+the log file under
+the folder
+2.3 Providing information on
+countermeasures to be taken when
+cybersecurity treat is detected
+Emergency contact and information
+of device manufacturer for
+consultation shall be provided to
+handle cybersecurity incident that
+may occur during the use of medical
+device and measures to be taken
+when cybersecurity threat is
+detected shall be established and
+provided to users.
+apply
+No external
+network
+connection
+function
+- -
+2.4 Protection against DDoS attack
+Countermeasures to respond to
+DDoS attack shall be in place for
+devices which access public
+network to control medical device in
+real time, or send and receive
+information that could be directly
+related to patient’s life (ex:
+information that belongs to
+cybersecurity safety level ‘Major’) in
+real time.
+Not
+applicable
+No external
+network
+connection
+function
+- -

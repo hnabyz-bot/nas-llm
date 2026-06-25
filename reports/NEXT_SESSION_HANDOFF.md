@@ -339,3 +339,14 @@ Latest P1 extraction bundle queued next:
 - QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
   missing evidence 0, page marker leakage 0
 - chunked pass rows: none
+
+Latest P1 extraction bundle queued next:
+
+- bundle: `reports/p1-pilot-eval-p1-r301-r400-202606251300`
+- script: `scripts/prepare-priority-pilot-eval.js`
+- representative rank range: 301-400
+- selected representatives: 100
+- total available P1 representatives: 2,275
+- total normalized chars: 5,115,899
+- estimated tokens chars/4: 1,278,975
+- output status: extraction not started at this checkpoint
