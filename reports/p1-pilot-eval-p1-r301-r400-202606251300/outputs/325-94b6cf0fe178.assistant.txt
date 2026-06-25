@@ -1,4 +1,370 @@
-{"type":"thread.started","thread_id":"019efd07-dda7-7903-86be-5bd32f18c203"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:48 PM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:48 PM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954370-sd",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ FDA/1. FDA 510k final 수정사항 반영한 최종 문서/007_Software Validation.pdf",
+    "canonicalGroupId": "94b6cf0fe178"
+  },
+  "document": {
+    "title": "Software Validation Report for X-ray Detector HAD1717MC, HAD1717MG",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "CDRH"
+    ],
+    "revisionOrVersion": "Report No.: A-TCF-5-010 (Rev.0); Rev. No 0",
+    "documentDate": "March/15/2019",
+    "standards": [
+      "FDA Quality System Regulation 21 CFR, Part 820",
+      "FDA Quality System Regulation 21 CFR, Part 803",
+      "CDRH Guidance: General Principles of Software Validation",
+      "CDRH Guidance: Off-The-Shelf Software Use in Medical Devices",
+      "CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices",
+      "ISO 9001, December 2000 Quality System Standards",
+      "IEEE 1012-1986, Standard for Software Verification and Validation Plans",
+      "IEEE 829-1983, Standard for Software Test Documentation",
+      "IEEE 1016, Standard for software designs",
+      "IEEE 830, Standard for software requirements",
+      "ISO 13485 [2003]",
+      "IEC 60601-1 [2005]",
+      "IEC 62304 [2006]",
+      "ISO14971 [2007]",
+      "Guidance for the content of premarket submission for software contained in medical devices"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for X-ray Detector HAD1717MC and HAD1717MG covering SRS, SDS, hazards analysis, traceability, test plan, and verification/validation results.",
+    "officialUse": "Supports software validation documentation for FDA/CDRH-referenced medical device software submission and quality system records.",
+    "keyPoints": [
+      "The software level of concern is stated as Moderate (Class B).",
+      "The software is described as a middle-ware utility library between the still image detector and the End User Application.",
+      "References include FDA Quality System Regulation, CDRH software guidance, IEC 62304, IEC 60601-1, ISO 13485, ISO14971, and IEEE software documentation standards.",
+      "Static tests and dynamic tests are reported as approved or passed.",
+      "The software version history lists SW version 1.0.0 dated March/15/2019 and firmware version 1.0 dated March/12/2019."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "Product model",
+      "evidence": "Software Validation For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "Product model",
+      "evidence": "Software Validation For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "FDA",
+      "type": "Regulatory authority",
+      "evidence": "FDA Quality System Regulation 21 CFR, Part 820"
+    },
+    {
+      "name": "CDRH",
+      "type": "Regulatory authority",
+      "evidence": "CDRH Guidance: General Principles of Software Validation"
+    },
+    {
+      "name": "Dlib.dll",
+      "type": "Software module",
+      "evidence": "Sensor library (original name Dlib.dll)"
+    },
+    {
+      "name": "XAS.exe",
+      "type": "Software module",
+      "evidence": "Sample acquisition program (original name XAS.exe)"
+    },
+    {
+      "name": "End User Application",
+      "type": "Software interface entity",
+      "evidence": "End User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user."
+    },
+    {
+      "name": "HAD-MD-SW",
+      "type": "Software type",
+      "evidence": "1.0.0 March/15/2019 HAD-MD-SW Initial release, Dual polynomial fitting calibration Only for proprietary applications."
+    },
+    {
+      "name": "HAD-MD-FW",
+      "type": "Firmware type",
+      "evidence": "1.0 March/12/2019 HAD-MD-FW Initial release"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software level of concern",
+      "pageTarget": "Software Level of Concern",
+      "evidence": "1. Level of concern: Moderate (Class B)"
+    },
+    {
+      "name": "Software Requirements Specification",
+      "pageTarget": "Software Requirements Specification",
+      "evidence": "3.Software Requirements Specification (SRS)"
+    },
+    {
+      "name": "Software Design Specification",
+      "pageTarget": "Software Design Specification",
+      "evidence": "4.Software Design Specification (SDS)"
+    },
+    {
+      "name": "Hazards Analysis",
+      "pageTarget": "Software Hazards Analysis",
+      "evidence": "5.Hazards’ Analysis"
+    },
+    {
+      "name": "Failure Mode and Effects Analysis",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "evidence": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA)."
+    },
+    {
+      "name": "Traceability Analysis",
+      "pageTarget": "Software Traceability Analysis",
+      "evidence": "The Traceability Table summarizes links (cross-correlation) between enumerated (SRS x.x) or enlisted (SRS-C-xxx) items in SRS, enumerated items in SDS, enumerated potential Hazards (HZ x), respective enlisted static tests and enumerated dynamic tests (TS xxx)."
+    },
+    {
+      "name": "Verification and Validation testing",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Description of V&V activities at the unit, integration, and system level. System level test protocol, including pass/fail criteria, and tests results."
+    },
+    {
+      "name": "Waterfall Life Cycle Model",
+      "pageTarget": "Software Development Life Cycle",
+      "evidence": "Software development process follows classic methodology of Waterfall Life Cycle Model"
+    },
+    {
+      "name": "Offset/Gain Calibration",
+      "pageTarget": "Detector Offset Gain Calibration",
+      "evidence": "Offset/Gain-calibration –equalization of pixels’ transfer functions"
+    },
+    {
+      "name": "Bad Pixels Correction",
+      "pageTarget": "Detector Bad Pixel Correction",
+      "evidence": "Bad Pixels Correction This operation corrects scattered bad (dead) pixels by interpolation with good neighbors."
+    },
+    {
+      "name": "Line trigger mode",
+      "pageTarget": "Detector Trigger Modes",
+      "evidence": "When the line mode is set, an image is acquired when a signal is transmitted through the line trigger cable."
+    },
+    {
+      "name": "AED trigger mode",
+      "pageTarget": "Detector Trigger Modes",
+      "evidence": "When AED mode is set, an image is obtained by detecting a signal received from x-ray generation."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a Software Validation Report for X-ray Detector HAD1717MC and HAD1717MG.",
+      "evidenceText": "Software Validation For X-ray Detector HAD1717MC, HAD1717MG Report No.: A-TCF-5-010 (Rev.0)",
+      "pageTarget": "Software Validation Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report file number is A-TCF-5-010 and revision is Rev.0.",
+      "evidenceText": "File No A-TCF-5-010 Rev. No 0 Date March/15/2019",
+      "pageTarget": "A-TCF-5-010",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is March/15/2019.",
+      "evidenceText": "Date March/15/2019",
+      "pageTarget": "Software Validation Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was prepared by R&D team Park, Nam Ho on March/15/2019.",
+      "evidenceText": "Prepared R&D team Park, Nam Ho March/15/2019",
+      "pageTarget": "Software Validation Report Approval",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was reviewed by R&D Manager Lee, Dong jin on March/16/2019.",
+      "evidenceText": "Review R&D Manager Lee, Dong jin March/16/2019",
+      "pageTarget": "Software Validation Report Approval",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was approved by Quality Manager Hur Namkyu on March/16/2019.",
+      "evidenceText": "Approval Quality Manager Hur Namkyu March/16/2019",
+      "pageTarget": "Software Validation Report Approval",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software level of concern is Moderate (Class B).",
+      "evidenceText": "1. Level of concern: Moderate (Class B)",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The rationale states TFT-detectors use low X-ray irradiation and therefore the level of concern is defined as moderate.",
+      "evidenceText": "TFT-detectors use low X-ray irradiation that could not harm patient seriously in any way. Because of that the level of concern is defined as “moderate”.",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is an acquisition library for detectors.",
+      "evidenceText": "The term “Software” when used from uppercase “S” in respective context of this document assumes this “acquisition library for detectors”.",
+      "pageTarget": "Detector Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is middleware between a still image detector and End User Application.",
+      "evidenceText": "This is “middle-ware” utility library between still image detector (and its low-level driver) from one side and EUA from the other.",
+      "pageTarget": "Detector Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software includes setup functions for configuration, Gain/Offset-Calibration, and Bad Pixels Correction.",
+      "evidenceText": "It also contains SU to modify software and hardware configuration parameters and preparation of Gain/Offset-Calibration and Bad Pixels’ Correction.",
+      "pageTarget": "Detector Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is intended to acquire raw frames from the detector and deliver them to the EUA as images.",
+      "evidenceText": "SRS 1 Acquisition Acquire raw frame from detector and deliver it to EUA as image.",
+      "pageTarget": "Frame Acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Offset/Gain-Calibration equalizes each pixel transfer function and shall support flat-field correction.",
+      "evidenceText": "This operation equalizes transfer functions of each pixel. It shall be at least Flat-Field Correction (FFC) with one flat bright calibration point and one dark frame.",
+      "pageTarget": "Detector Offset Gain Calibration",
+      "confidence": "high"
+    },
+    {
+      "claim": "Bad Pixels Correction corrects scattered bad pixels by interpolation with good neighbors.",
+      "evidenceText": "This operation corrects scattered bad (dead) pixels by interpolation with good neighbors.",
+      "pageTarget": "Detector Bad Pixel Correction",
+      "confidence": "high"
+    },
+    {
+      "claim": "Line trigger mode acquires an image when a signal is transmitted through the line trigger cable.",
+      "evidenceText": "When the line mode is set, an image is acquired when a signal is transmitted through the line trigger cable.",
+      "pageTarget": "Detector Trigger Modes",
+      "confidence": "high"
+    },
+    {
+      "claim": "AED mode acquires an image by detecting a signal received from X-ray generation.",
+      "evidenceText": "When AED mode is set, an image is obtained by detecting a signal received from x-ray generation.",
+      "pageTarget": "Detector Trigger Modes",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development environment includes Windows 10 Pro 64-bit, MS Visual C++ 2019, Ubuntu 14 32-bit, ARM cross gcc compiler, geditor, and Source Insight 4.0.",
+      "evidenceText": "Development Environment (SRS-C-DevE): Windows 10 pro 64bit. MS Visual C++ 2019 (MS Visual Studio Professional 2019). Ubuntu 14 32bit Compiler : ARM cross gcc compiler Editor : geditor, Source insight4.0",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector operational environment includes Ubuntu 14.0 Linux, at least Intel Core 2, 4 GB RAM, and at least 500 GB hard disk.",
+      "evidenceText": "Detector Operational Environment Peripheral hardware : Window10 connected by VMware virtual machine OS : Ubuntu 14.0 Linux CPU/Motherboard : At least Intel Core 2 RAM : 4 GB RAM Hard drive : At least 500 GB hard disk",
+      "pageTarget": "Detector Operational Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software references FDA Quality System Regulation 21 CFR Part 820 and Part 803.",
+      "evidenceText": "FDA Quality System Regulation 21 CFR, Part 820; FDA Quality System Regulation 21 CFR, Part 803",
+      "pageTarget": "FDA Quality System Regulation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software references CDRH guidance documents on software validation, off-the-shelf software, and premarket notifications for medical image management devices.",
+      "evidenceText": "CDRH Guidance: General Principles of Software Validation; CDRH Guidance: Off-The-Shelf Software Use in Medical Devices; CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices",
+      "pageTarget": "CDRH Software Guidance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software references IEC 62304:2006 medical device software life-cycle processes.",
+      "evidenceText": "IEC 62304 [2006] Medical device software - Software life-cycle processes",
+      "pageTarget": "IEC 62304",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software references ISO14971:2007 risk management for medical devices.",
+      "evidenceText": "ISO14971 [2007] Medical devices - Application of risk management to medical devices",
+      "pageTarget": "ISO 14971",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development process follows the Waterfall Life Cycle Model.",
+      "evidenceText": "Software development process follows classic methodology of Waterfall Life Cycle Model",
+      "pageTarget": "Software Development Life Cycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hazard evaluation model used was Failure Mode and Effects Analysis.",
+      "evidenceText": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA).",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hazard HZ 0001 is mismatched or missing calibration file with low probability and moderate level of concern.",
+      "evidenceText": "HZ 0001 Mismatched calibration file (No calibration file) L Moderate Check for the presence of a calibration file in \"End User Application\".",
+      "pageTarget": "Software Hazards Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hazard HZ 1001 is stopped data transmission after X-ray exposure because of LAN cable disconnection with low probability and moderate level of concern.",
+      "evidenceText": "HZ 1001 Stop data-transmission after X-ray exposure because of disconnection of LAN-cable. L Moderate",
+      "pageTarget": "Software Hazards Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "The test plan classifies tests as static and dynamic.",
+      "evidenceText": "We classify the test by two groups as the next: Static– expert reviews and analysis of source code and DEBUG release of Software. Dynamic –run Software for test data acquisition and processing",
+      "pageTarget": "Software Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "Static tests and analysis were approved.",
+      "evidenceText": "Static Tests and Analysis Topic (subject) of test Result is Ok (approved)",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic tests TS 0002B, TS 0003B, TS 0004A, TS 0006A, TS 1001A, TS 1002A, and TS 1003A passed.",
+      "evidenceText": "TS 0002B Passed; TS 0003B Passed; TS 0004A Passed; TS 0006A Passed; TS 1001A Passed; TS 1002A Passed; TS 1003A Passed",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report states there were no unsolved bugs subject to safety and effectiveness.",
+      "evidenceText": "There were no found unsolved bugs that are subjected to safety and effectiveness in this software.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software version 1.0.0 dated March/15/2019 is the initial release for HAD-MD-SW.",
+      "evidenceText": "1.0.0 March/15/2019 HAD-MD-SW Initial release, Dual polynomial fitting calibration Only for proprietary applications.",
+      "pageTarget": "Software Version History",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware version 1.0 dated March/12/2019 is the initial release for HAD-MD-FW.",
+      "evidenceText": "1.0 March/12/2019 HAD-MD-FW Initial release",
+      "pageTarget": "Software Version History",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "Authority is inferred from source path authoritySignal and cited FDA/CDRH references; the document itself is a manufacturer software validation report, not an FDA-issued document."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text quality includes typographical or extraction errors such as 'Aril', 'Traceabilty', 'fuction', and inconsistent cross-reference numbering."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some referenced sections appear internally inconsistent or absent in the extracted text, including references to paragraph 9.2 and SRS 8.2."
+    },
+    {
+      "severity": "info",
+      "reason": "Signatures are indicated by column headers, but no handwritten or electronic signature content is present in the extracted text."
+    }
+  ]
+}

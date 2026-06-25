@@ -1,4 +1,177 @@
 {
-  "type": "thread.started",
-  "thread_id": "019efd07-c41c-7b63-bc1e-209d21ded6d6"
+  "source": {
+    "queueId": "ingest-1781569954418-16u3",
+    "sourcePath": "raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/05_설계개발 검증 및 유효성 확인/11_Clinical Evaluation/Clinical Image Report/009_Clinical Image Report - A1717MCW.pdf",
+    "canonicalGroupId": "2b79911a079a"
+  },
+  "document": {
+    "title": "Clinical Considerations 1",
+    "documentType": "Clinical Image Report",
+    "productModels": [
+      "A1717MCW",
+      "HAD1717MCW",
+      "HAD1417MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "Korea"
+    ],
+    "revisionOrVersion": "Rev. No 0",
+    "documentDate": "Dec/22/2022",
+    "standards": [
+      "DICOM 3.0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Clinical image comparison report for A1717MCW against comparative radiographic equipment using DICOM 3.0 image acquisition.",
+    "officialUse": "Supports clinical evaluation by comparing radiographic image quality, clinical visibility, and expert conclusions for A1717MCW.",
+    "keyPoints": [
+      "The objective device is A1717MCW by H&abyz and the comparative equipment is HAD1717MCW made by H&Abyz.",
+      "Image acquisition is stated as DICOM 3.0 across the reviewed clinical image views.",
+      "The report compares 30 plain radiographic image views and lists total average scores of 3.68 for HAD1717MCW and 3.71 for A1717MCW.",
+      "The conclusion states that images obtained with A1717MCW are comparable or superior to the same view obtained from a similar patient with HAD1717MCW.",
+      "The selected clinical evaluation expert is Professor Sung Hyun Kim, M.D., Ph.D., described as a board-certified radiologist in Korea."
+    ]
+  },
+  "entities": [
+    {
+      "name": "A1717MCW",
+      "type": "objective device model",
+      "evidence": "Model: A1717MCW - Objective Device : A1717MCW by H&abyz"
+    },
+    {
+      "name": "HAD1717MCW",
+      "type": "comparative equipment model",
+      "evidence": "Comparative Equipment : HAD1717MCW made by H&Abyz"
+    },
+    {
+      "name": "HAD1417MCW",
+      "type": "comparative equipment model appearing in Knee AP section",
+      "evidence": "29. Knee AP HAD1417MCW F1417MCW"
+    },
+    {
+      "name": "F1417MCW",
+      "type": "equipment model appearing in Knee AP section",
+      "evidence": "29. Knee AP HAD1417MCW F1417MCW"
+    },
+    {
+      "name": "H&abyz",
+      "type": "manufacturer or company",
+      "evidence": "Objective Device : A1717MCW by H&abyz"
+    },
+    {
+      "name": "Sung Hyun Kim, M.D., Ph.D.",
+      "type": "clinical evaluation expert",
+      "evidence": "The selected clinical evaluation expert, Professor Sung Hyun Kim, M.D., Ph.D., is a board-certified radiologist in Korea"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority referenced",
+      "evidence": "fulfilling the requirement set forth by the FDA that the evaluation be conducted by a U.S. radiologist or an equivalently qualified expert"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Clinical image comparison",
+      "pageTarget": "Clinical Image Comparison",
+      "evidence": "After comparing a broad review of plain radiographic images taken with the A1717MCW and the HAD1717MCW"
+    },
+    {
+      "name": "DICOM 3.0 image acquisition",
+      "pageTarget": "DICOM 3.0",
+      "evidence": "Image Acquisition DICOM 3.0 DICOM 3.0"
+    },
+    {
+      "name": "Image quality grading scale",
+      "pageTarget": "Clinical Image Grading Scale",
+      "evidence": "Grade S : Perfect=4 , A : excellent=3 , B : average=2 C : poor=1"
+    },
+    {
+      "name": "Radiologist equivalence for FDA evaluation",
+      "pageTarget": "FDA Radiologist Equivalent Clinical Evaluation Expert",
+      "evidence": "the evaluation be conducted by a U.S. radiologist or an equivalently qualified expert"
+    },
+    {
+      "name": "Plain radiographic image review",
+      "pageTarget": "Plain Radiographic Image Evaluation",
+      "evidence": "a broad review of plain radiographic images taken with the A1717MCW and the HAD1717MCW"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document identifies A1717MCW as the objective device.",
+      "evidenceText": "Objective Device : A1717MCW by H&abyz",
+      "pageTarget": "A1717MCW",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies HAD1717MCW as comparative equipment.",
+      "evidenceText": "Comparative Equipment : HAD1717MCW made by H&Abyz",
+      "pageTarget": "HAD1717MCW",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev. No 0.",
+      "evidenceText": "Rev. No 0",
+      "pageTarget": "Clinical Considerations 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision date is Dec/22/2022.",
+      "evidenceText": "Rev. Date Dec/22/2022",
+      "pageTarget": "Clinical Considerations 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report uses DICOM 3.0 for image acquisition and data formatting.",
+      "evidenceText": "output data for communications standard DICOM 3.0 is used to format at the data for downloading and analysis",
+      "pageTarget": "DICOM 3.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "The clinical comparison covers 30 image views and reports total average scores of 3.68 and 3.71.",
+      "evidenceText": "Total Average 3.68 3.71",
+      "pageTarget": "Clinical Image Comparison",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report concludes A1717MCW images are comparable or superior to HAD1717MCW images.",
+      "evidenceText": "the images obtained with the A1717MCW are comparable or superior to the same view obtained from a similar patient with the HAD1717MCW",
+      "pageTarget": "A1717MCW Clinical Image Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report states there is no difficulty evaluating anatomical structures needed for a correct conclusion.",
+      "evidenceText": "There is no difficulty in evaluating a wide range of anatomic structures necessary to provide a correct conclusion.",
+      "pageTarget": "A1717MCW Clinical Image Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The clinical evaluation expert is Professor Sung Hyun Kim, M.D., Ph.D.",
+      "evidenceText": "The selected clinical evaluation expert, Professor Sung Hyun Kim, M.D., Ph.D., is a board-certified radiologist in Korea",
+      "pageTarget": "Sung Hyun Kim",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document references an FDA requirement for evaluation by a U.S. radiologist or equivalently qualified expert.",
+      "evidenceText": "fulfilling the requirement set forth by the FDA that the evaluation be conducted by a U.S. radiologist or an equivalently qualified expert",
+      "pageTarget": "FDA Radiologist Equivalent Clinical Evaluation Expert",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: FDA is referenced as a requirement in the text, but the document appears to be an internal manufacturer clinical image report rather than an FDA-issued document."
+    },
+    {
+      "severity": "warning",
+      "reason": "Conflicting model evidence appears in the Knee AP section, which lists HAD1417MCW and F1417MCW while the document header and most sections identify A1717MCW and HAD1717MCW."
+    },
+    {
+      "severity": "info",
+      "reason": "OCR quality issues are present, including inconsistent company spelling, typographical errors such as DCIOM, and malformed wording."
+    }
+  ]
 }
