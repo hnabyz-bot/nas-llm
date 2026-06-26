@@ -1,0 +1,240 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954377-7j1",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ FDA/■ 1차 ADD_510(k)_submission_Final_201023.zip/PDF/VOL_013_Appendix L Cybersecurity/002_Cybersecurity.pdf",
+    "canonicalGroupId": "4e21168c83b4"
+  },
+  "document": {
+    "title": "Cybersecurity Documentation",
+    "documentType": "Cybersecurity documentation",
+    "productModels": [
+      "HAD/A/F 1417-1717",
+      "HAD1417MCW",
+      "ADD"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "WPA",
+      "WPAPSK",
+      "WPA2",
+      "WPA2PSK",
+      "WPAPSK+TKIP"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity documentation describing ADD cybersecurity risks, controls, traceability, update process, software integrity controls, and related instructions.",
+    "officialUse": "Supports FDA cybersecurity documentation content for a medical device submission, including hazard analysis, risk-control traceability, update and patch procedures, and cybersecurity-related instructions for use.",
+    "keyPoints": [
+      "Cybersecurity risks considered include unauthorized access by unauthorized personnel and unauthorized access to unencrypted data.",
+      "Cybersecurity controls include WiFi login password restriction and authentication/encryption using WPA, WPAPSK, WPA2, WPA2PSK, or WPAPSK+TKIP.",
+      "The risk-control traceability matrix maps CC001 to HA-0009 and CC002 to HA-0010.",
+      "Software release and design changes are made according to software development procedure Doc. No. AQP702.",
+      "ADD does not provide dynamic software updates; updates are made only by CS engineers."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADD",
+      "type": "medical device",
+      "evidence": "The ADD restrict random access by setting id / pw when connecting to Wireless network."
+    },
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "The FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity."
+    },
+    {
+      "name": "H&Abyz",
+      "type": "manufacturer",
+      "evidence": "H&Abyz recommends to use the \"Average Dark\" option to enhance image performance."
+    },
+    {
+      "name": "AQP702",
+      "type": "software development procedure",
+      "evidence": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702)."
+    },
+    {
+      "name": "Kim, Wan Soo",
+      "type": "test performer",
+      "evidence": "Test performed by Kim, Wan Soo"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Unauthorized access by unauthorized personnel",
+      "pageTarget": "Cybersecurity Risk HA-0009",
+      "evidence": "HA-0009 Unauthorized access by unauthorized personnel"
+    },
+    {
+      "name": "Unauthorized user access to unencrypted data",
+      "pageTarget": "Cybersecurity Risk HA-0010",
+      "evidence": "HA-0010 Unauthorized user can access the unencrypted data"
+    },
+    {
+      "name": "WiFi login password",
+      "pageTarget": "Cybersecurity Control CC001",
+      "evidence": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network"
+    },
+    {
+      "name": "Authentication and encryption",
+      "pageTarget": "Cybersecurity Control CC002",
+      "evidence": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc."
+    },
+    {
+      "name": "Risk-control traceability matrix",
+      "pageTarget": "Cybersecurity Risk Control Traceability Matrix",
+      "evidence": "[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]"
+    },
+    {
+      "name": "Validated software updates and patches",
+      "pageTarget": "Medical Device Software Updates and Patches",
+      "evidence": "A summary describing the plan for providing validated software updates and patches as needed throughout the lifecycle of the medical device to continue to assure its safety and effectiveness."
+    },
+    {
+      "name": "Software integrity controls",
+      "pageTarget": "Medical Device Software Integrity Controls",
+      "evidence": "A summary describing controls that are in place to assure that the medical device software will maintain its integrity (e.g. remain free of malware) from the point of origin to the point at which that device leaves the control of the manufacturer"
+    },
+    {
+      "name": "Calibration",
+      "pageTarget": "Detector Calibration",
+      "evidence": "This calibration function shall be performance once every one year for stabilized detector condition."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cybersecurity Documentation.",
+      "evidenceText": "Cybersecurity Documentation",
+      "pageTarget": "Cybersecurity Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies cybersecurity risk HA-0009 as unauthorized access by unauthorized personnel.",
+      "evidenceText": "HA-0009 Unauthorized access by unauthorized personnel",
+      "pageTarget": "Cybersecurity Risk HA-0009",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies cybersecurity risk HA-0010 as unauthorized user access to unencrypted data.",
+      "evidenceText": "HA-0010 Unauthorized user can access the unencrypted data",
+      "pageTarget": "Cybersecurity Risk HA-0010",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity control CC001 restricts random wireless network access by setting an ID and password.",
+      "evidenceText": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network",
+      "pageTarget": "Cybersecurity Control CC001",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity control CC002 protects transmission data by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, or WPAPSK+TKIP.",
+      "evidenceText": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Cybersecurity Control CC002",
+      "confidence": "high"
+    },
+    {
+      "claim": "The risk-control traceability matrix maps CC001 to HA-0009.",
+      "evidenceText": "HA-0009 HA-0010 CC001 X",
+      "pageTarget": "Cybersecurity Risk Control Traceability Matrix",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The risk-control traceability matrix maps CC002 to HA-0010.",
+      "evidenceText": "HA-0009 HA-0010 CC002 X",
+      "pageTarget": "Cybersecurity Risk Control Traceability Matrix",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Verification for CC001 and CC002 was performed on June 20, 2020 by Kim, Wan Soo.",
+      "evidenceText": "June/20/2020 Kim, Wan Soo",
+      "pageTarget": "Cybersecurity Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity.",
+      "evidenceText": "The FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity.",
+      "pageTarget": "FDA Medical Device Cybersecurity Software Changes",
+      "confidence": "high"
+    },
+    {
+      "claim": "Release and design changes are made according to software development procedure Doc. No. AQP702.",
+      "evidenceText": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702).",
+      "pageTarget": "Software Development Procedure AQP702",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operator can update firmware automatically on network connection or wireless network setting.",
+      "evidenceText": "The operator can update firmware automatically on network connection / wireless network setting.",
+      "pageTarget": "Medical Device Firmware Update Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADD restricts random access by setting an ID and password when connecting to a wireless network.",
+      "evidenceText": "The ADD restrict random access by setting id / pw when connecting to Wireless network.",
+      "pageTarget": "ADD Cybersecurity Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADD transmission data should be protected by encryption such as WPA, WPAPSK, WPA2, WPA2PSK, or WPAPSK+TKIP.",
+      "evidenceText": "And transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "ADD Cybersecurity Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADD provides calibration for detector quality assurance.",
+      "evidenceText": "Also, the ADD provide the calibration for the quality of the detector. It developed to perform quality assurance operations on the detector.",
+      "pageTarget": "Detector Calibration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The calibration function is to be performed once every year for stabilized detector condition.",
+      "evidenceText": "This calibration function shall be performance once every one year for stabilized detector condition.",
+      "pageTarget": "Detector Calibration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document instructs users to use the latest firmware and software.",
+      "evidenceText": "Use the latest FW / Software",
+      "pageTarget": "Medical Device Firmware and Software Updates",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz will provide an update when a bug in the detector device is fixed.",
+      "evidenceText": "H&abyz will provide an update when a bug in the detector device is fixed.",
+      "pageTarget": "Medical Device Software Updates and Patches",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADD does not provide dynamic software updates and updates are made only by CS engineers.",
+      "evidenceText": "ADD does not provide dynamic software updates. Updates are made only by CS engineers.",
+      "pageTarget": "Medical Device Software Updates and Patches",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date is explicitly stated in the source text; verification dates are present but are not treated as the document date."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version number is explicitly stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model details are partly derived from source metadata and source path; the source text itself mainly refers to ADD."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority is supported by source metadata and an FDA statement in the text, but the document does not identify a formal FDA guidance title or submission number."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some table text appears affected by preprocessing line breaks, including risk-control matrix alignment and dates."
+    }
+  ]
+}

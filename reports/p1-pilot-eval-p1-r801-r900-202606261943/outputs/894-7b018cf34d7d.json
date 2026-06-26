@@ -1,0 +1,221 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954373-3nv",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/3.1_A-CAV-HNX_Architecture View.docx",
+    "canonicalGroupId": "7b018cf34d7d"
+  },
+  "document": {
+    "title": "Cybersecurity Architecture View",
+    "documentType": "Cybersecurity architecture view",
+    "productModels": [
+      "HnX-R1",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Revision No. 0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "IEC 60601-4-5"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity architecture view for the HnX-R1 digital X-ray imaging system, covering FDA architectural views, data flow, updateability, and security use cases.",
+    "officialUse": "Shows a cyber security architecture view for Digital X-ray Imaging System model HnX-R1 and maps risks to STRIDE, cybersecurity controls, and IEC 60601-4-5 requirements.",
+    "keyPoints": [
+      "Scope is limited to HnX-R1, the Digital X-ray Imaging System.",
+      "The FDA architectural views addressed are Global system view, Updateability/Patchability view, and Security use case view; Multi patient harm view is excluded.",
+      "The detector update process uses the standard communication procedure, sends a *.bpd update file, decrypts patch data, performs a SHA-256 integrity check, and reboots after applying the update.",
+      "Risk identification is provided for CRM-01 through CRM-32 according to the Data-Flow Diagram and CRM-33 through CRM-67 according to IEC 60601-4-5 cybersecurity requirements.",
+      "The document refers to penetration test report no. EBB-2025-000109 for PT-1 through PT7 evaluation results."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "Model name: HnX-R1"
+    },
+    {
+      "name": "digital X-ray imaging system",
+      "type": "product type",
+      "evidence": "Product name: digital X-ray imaging system"
+    },
+    {
+      "name": "HnVUE",
+      "type": "console software",
+      "evidence": "Console software\n\nHnVUE"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "three of the four architectural views corresponding to the FDA requirements"
+    },
+    {
+      "name": "IEC 60601-4-5",
+      "type": "standard",
+      "evidence": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)"
+    },
+    {
+      "name": "PACS/worklist server",
+      "type": "external system",
+      "evidence": "Console – PACS/Worklist server ethernet communication interface"
+    },
+    {
+      "name": "Jimin HAN",
+      "type": "prepared by",
+      "evidence": "Prepared by\n\nJimin HAN\n\nRA team\n\nAugust 06, 2025"
+    },
+    {
+      "name": "Kyungsoo LEE",
+      "type": "reviewed by",
+      "evidence": "Reviewed by\n\nKyungsoo LEE\n\nR&D Manager\n\nAugust 06, 2025"
+    },
+    {
+      "name": "Namkyu HUR",
+      "type": "approved by",
+      "evidence": "Approved by\n\nNamkyu HUR\n\nQuality Management Representative\n\nAugust 06, 2025"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Global security architecture view",
+      "pageTarget": "Global security architecture view",
+      "evidence": "Data Flow Diagram (Global security architecture view)"
+    },
+    {
+      "name": "Updateability/Patchability view",
+      "pageTarget": "Updateability and patchability view",
+      "evidence": "Updateability/Patch-ability View"
+    },
+    {
+      "name": "Security use case view",
+      "pageTarget": "Security use case view",
+      "evidence": "Security Use Case View"
+    },
+    {
+      "name": "Data-Flow Diagram",
+      "pageTarget": "Data Flow Diagram",
+      "evidence": "A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system."
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE threat model",
+      "evidence": "Risk ID\n\nAsset\n\nSTRIDE\n\nThreat Description"
+    },
+    {
+      "name": "SHA-256 integrity check",
+      "pageTarget": "SHA-256 integrity check",
+      "evidence": "The detector decrypts the received patch data and performs a SHA-256 integrity check."
+    },
+    {
+      "name": "IEC 60601-4-5 cybersecurity requirements",
+      "pageTarget": "IEC 60601-4-5 cybersecurity requirements",
+      "evidence": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)"
+    },
+    {
+      "name": "Cybersecurity controls list",
+      "pageTarget": "Cybersecurity controls",
+      "evidence": "* Risk ID by Cybersecurity Controls list"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a cybersecurity architecture view for the HnX-R1 digital X-ray imaging system.",
+      "evidenceText": "The purpose of this document is to show a cyber security architecture view for Digital X-ray Imaging System (Model name: HnX-R1).",
+      "pageTarget": "HnX-R1 cybersecurity architecture view",
+      "confidence": "high"
+    },
+    {
+      "claim": "The scope of the document is limited to HnX-R1.",
+      "evidenceText": "This document is limited to HnX-R1, the Digital X-ray Imaging System.",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document addresses three FDA architectural views and excludes Multi patient harm view.",
+      "evidenceText": "three of the four architectural views corresponding to the FDA requirements are Global system view, Updateability/Patchability view, and Security use case view. Multi patient harm view is excluded because it is not our product.",
+      "pageTarget": "FDA cybersecurity architecture views",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is 0 and the revision date is August 06, 2025.",
+      "evidenceText": "Revision No.\n\nRev. Date\n\nRevision Description\n\n0\n\nAugust 06, 2025\n\nInitial",
+      "pageTarget": "Document revision history",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector update process uses only the standard communication procedure and no additional ports.",
+      "evidenceText": "The detector's update process can only proceed after a proper connection has been established through the standard communication procedure. No additional ports are used.",
+      "pageTarget": "Detector update process",
+      "confidence": "high"
+    },
+    {
+      "claim": "The console sends a *.bpd update file to the detector and initiates the patch request.",
+      "evidenceText": "The console sends the update file (*.bpd) to the detector and initiates the patch request.",
+      "pageTarget": "Detector update process",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector decrypts patch data and performs a SHA-256 integrity check during update.",
+      "evidenceText": "The detector decrypts the received patch data and performs a SHA-256 integrity check.",
+      "pageTarget": "SHA-256 integrity check",
+      "confidence": "high"
+    },
+    {
+      "claim": "After a normal update response, the detector applies the update and automatically reboots.",
+      "evidenceText": "After sending a normal response, the detector proceeds with applying the update and automatically reboots itself.",
+      "pageTarget": "Detector update process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Data-flow risk identification uses STRIDE threat categories.",
+      "evidenceText": "Risk identification according to Data-Flow Diagram\n\nRisk ID\n\nAsset\n\nSTRIDE\n\nThreat Description",
+      "pageTarget": "STRIDE threat model",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-4-5 cybersecurity requirements are used for risk identification.",
+      "evidenceText": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)",
+      "pageTarget": "IEC 60601-4-5 cybersecurity requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document maps risk IDs to cybersecurity control categories including authentication, authorization, cryptography, integrity, confidentiality, logging, recovery, and update controls.",
+      "evidenceText": "A) Authentication controls: Risk ID CRM-33-40\n\nB) Authorization controls: Risk ID CRM-63-67\n\nC) Cryptography controls: Risk ID CRM-61\n\nD) Code, data, and execution integrity controls: Risk ID: CRM-48-54, 58\n\nE) Confidentiality controls: Risk ID CRM-59-60\n\nF) Event detection and logging controls: Risk ID CRM-41-47\n\nG) Resiliency and recovery controls: Risk ID CRM-62\n\nH) Firmware and software update controls: Risk ID CRM-55,56, 57",
+      "pageTarget": "Cybersecurity controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "Penetration test evaluation results are referenced in report no. EBB-2025-000109.",
+      "evidenceText": "Please refer to the following report for the evaluation results of the penetration test\n\n(Test report no. EBB-2025-000109 - Penetration test PT-1 ~ PT7)",
+      "pageTarget": "Penetration test report EBB-2025-000109",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document ref no. field is present but blank in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority is supported by text referring to FDA requirements, but the document does not include an FDA header or direct FDA-issued identifier."
+    },
+    {
+      "severity": "info",
+      "reason": "Some OCR or source text artifacts appear in risk references, including inconsistent CRM/CMR text and misspellings such as 'Attemps'."
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19jn",
+    "sourcePath": "raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenStitching Cyberseucrity Risk Management - Testing.pdf",
+    "canonicalGroupId": "1c6c2345e2ff"
+  },
+  "document": {
+    "title": "AspenStitching-Security-Test-Report",
+    "documentType": "Cyber Security Test Report",
+    "productModels": [
+      "AspenStitching software"
+    ],
+    "authorityOrJurisdiction": [
+      "Medical Device Directive 93/42/EEC as amended by 2007/47/EC"
+    ],
+    "revisionOrVersion": "Rev 0",
+    "documentDate": "2024.10.10",
+    "standards": [
+      "Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex II, IX, X"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity vulnerability scanning and penetration test report for AspenStitching software.",
+    "officialUse": "Documents testing results, discovered vulnerabilities, and mitigation recommendations for AspenStitching software cybersecurity risk management.",
+    "keyPoints": [
+      "The document states the AspenStitching technical file relates to a Radiological Image Processing System and meets Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex II, IX, X.",
+      "Vulnerability scanning identified medium-risk weak input validation and low-risk session management, information disclosure, and SSL/TLS configuration issues.",
+      "Penetration testing found SQL injection exposure and weak encryption enabling interception of transmitted data, while remote code execution and network crawling attempts failed.",
+      "Mitigations include stronger input validation, parameterized queries, TLS/SSL secure communication, stronger authentication policies, security updates, and library upgrades or patches."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Aspen Imaging Healthcare Inc",
+      "type": "manufacturer",
+      "evidence": "Manufacturer Aspen Imaging Healthcare Inc"
+    },
+    {
+      "name": "AspenStitching software",
+      "type": "software product",
+      "evidence": "Model: AspenStitching software"
+    },
+    {
+      "name": "Dong Hyun Kim",
+      "type": "test lead / preparer",
+      "evidence": "Test Lead Dong Hyun Kim"
+    },
+    {
+      "name": "Crypto++ Library 8.3.0",
+      "type": "software component",
+      "evidence": "Crypto++ Library 8.3.0 Weak cipher algorithms low"
+    },
+    {
+      "name": "Intel C/C++/Fortran Compiler 17.0.0",
+      "type": "software component",
+      "evidence": "Intel C/C++/Fortran Compiler 17.0.0 Buffer overflow vulnerability low"
+    },
+    {
+      "name": "Microsoft C Runtime Library 10.0.17134.12",
+      "type": "software component",
+      "evidence": "Microsoft C Runtime Library 10.0.17134.12 Memory leak, remote code execution (RCE) medium"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cyber Security Test Report",
+      "pageTarget": "Cybersecurity Test Report",
+      "evidence": "Cyber Security Test Report"
+    },
+    {
+      "name": "Vulnerability Scanning Test Result",
+      "pageTarget": "Vulnerability Scanning",
+      "evidence": "2. Vulnerability Scanning Test Result"
+    },
+    {
+      "name": "Penetration Test Report",
+      "pageTarget": "Penetration Testing",
+      "evidence": "3. Penetration Test Report"
+    },
+    {
+      "name": "SQL injection",
+      "pageTarget": "SQL Injection",
+      "evidence": "Weak input validation in user-controlled parameters, leading to potential SQL injection and command injection vulnerabilities"
+    },
+    {
+      "name": "Man-in-the-middle attack",
+      "pageTarget": "Man-in-the-Middle Attack",
+      "evidence": "Weak encryption in communication protocols allowed for interception of transmitted data"
+    },
+    {
+      "name": "TLS/SSL secure communication",
+      "pageTarget": "TLS SSL Secure Communication",
+      "evidence": "Implement secure communication protocols such as TLS/SSL to encrypt data transmission between the stitching software and the imaging detector."
+    },
+    {
+      "name": "Medical Device Directive 93/42/EEC",
+      "pageTarget": "Medical Device Directive 93/42/EEC",
+      "evidence": "It meets the requirements of the Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex II, IX, X."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is named AspenStitching-Security-Test-Report.",
+      "evidenceText": "Doc. Name: AspenStitching-Security-Test-Report",
+      "pageTarget": "AspenStitching Security Test Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report is a Cyber Security Test Report for AspenStitching software.",
+      "evidenceText": "Cyber Security Test Report Model: AspenStitching software",
+      "pageTarget": "AspenStitching Cybersecurity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document initiate date is 2024.10.10 and revision is Rev 0.",
+      "evidenceText": "Initiate date: 2024.10.10 /Rev 0",
+      "pageTarget": "AspenStitching Security Test Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "Aspen Imaging Healthcare Inc is identified as the manufacturer.",
+      "evidenceText": "1.1 Manufacturer Aspen Imaging Healthcare Inc",
+      "pageTarget": "Aspen Imaging Healthcare Inc",
+      "confidence": "high"
+    },
+    {
+      "claim": "The company head office address is 801 Jupiter Rd Suite 200, Plano, TX 75074, USA.",
+      "evidenceText": "Head office: 801 Jupiter Rd Suite 200, Plano, TX 75074, USA",
+      "pageTarget": "Aspen Imaging Healthcare Inc",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical file relates to development of a Radiological Image Processing System called AspenStitching.",
+      "evidenceText": "This Technical File consists of technical documentation relating to development of Radiological Image Processing System(AspenStitching).",
+      "pageTarget": "AspenStitching",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states the technical file meets Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex II, IX, X.",
+      "evidenceText": "It meets the requirements of the Medical Device Directive 93/42/EEC as amended by 2007/47/EC and annex II, IX, X.",
+      "pageTarget": "Medical Device Directive 93/42/EEC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The vulnerability scanning test objective was to identify potential vulnerabilities in third-party libraries, runtime libraries, and compilers used within the system.",
+      "evidenceText": "Test Objective: Identify potential vulnerabilities in third-party libraries, runtime libraries, and compilers used within the system.",
+      "pageTarget": "Vulnerability Scanning",
+      "confidence": "high"
+    },
+    {
+      "claim": "Vulnerability scanning found weak input validation that could lead to SQL injection and command injection.",
+      "evidenceText": "Weak input validation in user-controlled parameters, leading to potential SQL injection and command injection vulnerabilities in database queries and system commands.",
+      "pageTarget": "SQL Injection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Low-risk vulnerability findings included session management, information disclosure, and SSL/TLS configuration issues.",
+      "evidenceText": "Lack of proper session management controls... Information disclosure vulnerability detected in error messages... SSL/TLS configuration issues identified",
+      "pageTarget": "Cybersecurity Vulnerabilities",
+      "confidence": "high"
+    },
+    {
+      "claim": "Recommended mitigations for SQL injection include stronger input validation and parameterized queries.",
+      "evidenceText": "Implement stronger input validation and parameterized queries to sanitize user inputs and mitigate the risk of injection attacks.",
+      "pageTarget": "SQL Injection Mitigation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The penetration test objective was to simulate real-world attacks against AspenStitching software.",
+      "evidenceText": "Test Objective: To simulate real-world attacks and attempt to compromise the security of the AspenStitching software",
+      "pageTarget": "Penetration Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Penetration testing used Nessus and OpenVAS for automated vulnerability scanning.",
+      "evidenceText": "Utilized automated vulnerability scanning tools Nessus and OpenVAS to identify known vulnerabilities in the AspenStitching software and associated systems.",
+      "pageTarget": "Penetration Testing Tools",
+      "confidence": "high"
+    },
+    {
+      "claim": "Penetration testing found AspenStitching search functionality vulnerable to SQL injection attacks.",
+      "evidenceText": "The search functionality of AspenStitching revealed vulnerability to SQL injection attacks, potentially exposing sensitive patient data stored in the backend database to unauthorized access.",
+      "pageTarget": "AspenStitching SQL Injection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Weak encryption in communication protocols allowed interception of transmitted data.",
+      "evidenceText": "Weak encryption in communication protocols allowed for interception of transmitted data",
+      "pageTarget": "Man-in-the-Middle Attack",
+      "confidence": "high"
+    },
+    {
+      "claim": "Remote code execution testing failed to remotely stub and execute code.",
+      "evidenceText": "Remote Code Execution • Failed to remotely stub and execute code.",
+      "pageTarget": "Remote Code Execution",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network crawling failed to find exploitable open ports.",
+      "evidenceText": "Network Crawling • Failed to find open ports that could be exploited.",
+      "pageTarget": "Network Vulnerability Assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report recommends TLS/SSL to encrypt transmission between the stitching software and imaging detector.",
+      "evidenceText": "Implement secure communication protocols such as TLS/SSL to encrypt data transmission between the stitching software and the imaging detector.",
+      "pageTarget": "TLS SSL Secure Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The penetration test sign-off identifies Dong Hyun Kim as test lead and 10/10/24 as test date.",
+      "evidenceText": "Test Lead Dong Hyun Kim Test Date 10/10/24",
+      "pageTarget": "AspenStitching Security Test Report",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority metadata and source path indicate FDA, but the source text cites Medical Device Directive 93/42/EEC as amended by 2007/47/EC and does not state FDA requirements."
+    },
+    {
+      "severity": "info",
+      "reason": "No FDA submission status, clearance status, approval status, or regulatory decision is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The revision table shows prepared by Dong Hyun Kim, but reviewed by and approved by fields are blank in the provided text."
+    },
+    {
+      "severity": "info",
+      "reason": "Minor text quality issues are present, including the source filename spelling 'Cyberseucrity' and repeated section number 3.3.3."
+    }
+  ]
+}
