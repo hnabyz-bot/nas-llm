@@ -1,0 +1,152 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-ryu",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/2023 시험소 규격업데이트/ADD/접수자료/Safety 접수자료 231219/8. 회로도/Switch_Box/SCH_SWITCH_BOX_BOARD_V1.0.pdf",
+    "canonicalGroupId": "7141035efa80"
+  },
+  "document": {
+    "title": "SCH_SWITCH_BOX_BOARD_V1.0.pdf",
+    "documentType": "circuit schematic",
+    "productModels": [
+      "iu_v2"
+    ],
+    "authorityOrJurisdiction": [
+      "SAMSUNG"
+    ],
+    "revisionOrVersion": "DV v1.0",
+    "documentDate": "",
+    "standards": [
+      "0QA-2049"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Samsung proprietary switch box board circuit schematic for iu_v2, revision/dev step DV v1.0.",
+    "officialUse": "Circuit schematic package for switch box board design and RA/safety submission traceability.",
+    "keyPoints": [
+      "Contains cover sheet and schematic sheets for power, signal, and block diagram details.",
+      "States compliance with threshold of substances specified in 0QA-2049.",
+      "Marked Samsung proprietary and confidential, not to be disclosed or duplicated except as authorized by Samsung.",
+      "Includes electronic components such as STM32F101T6U6A, FT232RL, ACPL-M61L, LT3580EMS8E#PBF, and LM1117MPX-3.3."
+    ]
+  },
+  "entities": [
+    {
+      "name": "SAMSUNG",
+      "type": "company",
+      "evidence": "SAMSUNG PROPRIETARY; THIS DOCUMENT CONTAINS CONFIDENTIAL PROPRIETARY INFORMATION THAT IS SAMSUNG ELECTRONIS CO'S PROPRIETARY."
+    },
+    {
+      "name": "iu_v2",
+      "type": "project_or_board_identifier",
+      "evidence": "iu_v2; E:\\atdm\\PROJECTS\\iu_v2\\iu_v2.cpm; way01 iu_v2"
+    },
+    {
+      "name": "MINGOO",
+      "type": "editor",
+      "evidence": "EDITED BY MINGOO"
+    },
+    {
+      "name": "STM32F101T6U6A",
+      "type": "component",
+      "evidence": "STM32F101T6U6A"
+    },
+    {
+      "name": "FT232RL",
+      "type": "component",
+      "evidence": "FT232RL"
+    },
+    {
+      "name": "ACPL-M61L",
+      "type": "component",
+      "evidence": "ACPL-M61L"
+    },
+    {
+      "name": "LM1117MPX-3.3",
+      "type": "component",
+      "evidence": "LM1117MPX-3.3"
+    },
+    {
+      "name": "LT3580EMS8E#PBF",
+      "type": "component",
+      "evidence": "LT3580EMS8E#PBF"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Substance threshold compliance",
+      "pageTarget": "Substance Threshold Compliance",
+      "evidence": "Comply with the threshold of substances which are specified in 0QA-2049"
+    },
+    {
+      "name": "Samsung proprietary information",
+      "pageTarget": "Samsung Proprietary Information",
+      "evidence": "THIS DOCUMENT CONTAINS CONFIDENTIAL PROPRIETARY INFORMATION THAT IS SAMSUNG ELECTRONIS CO'S PROPRIETARY."
+    },
+    {
+      "name": "Switch box board schematic",
+      "pageTarget": "Switch Box Board Schematic",
+      "evidence": "sourcePath: .../8. 회로도/Switch_Box/SCH_SWITCH_BOX_BOARD_V1.0.pdf"
+    },
+    {
+      "name": "Development step DV v1.0",
+      "pageTarget": "DV v1.0 Development Step",
+      "evidence": "DEV. STEP : ... DV v1.0"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a Samsung proprietary document.",
+      "evidenceText": "SAMSUNG PROPRIETARY; THIS DOCUMENT CONTAINS CONFIDENTIAL PROPRIETARY INFORMATION THAT IS SAMSUNG ELECTRONIS CO'S PROPRIETARY.",
+      "pageTarget": "Samsung Proprietary Information",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document relates to the iu_v2 project or board identifier.",
+      "evidenceText": "iu_v2; E:\\atdm\\PROJECTS\\iu_v2\\iu_v2.cpm; way01 iu_v2",
+      "pageTarget": "iu_v2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies revision or development step as DV v1.0.",
+      "evidenceText": "DEV. STEP : ... DV v1.0",
+      "pageTarget": "DV v1.0 Development Step",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states compliance with substance thresholds specified in 0QA-2049.",
+      "evidenceText": "Comply with the threshold of substances which are specified in 0QA-2049",
+      "pageTarget": "0QA-2049",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source is associated with switch box circuit schematic materials.",
+      "evidenceText": "sourcePath: .../8. 회로도/Switch_Box/SCH_SWITCH_BOX_BOARD_V1.0.pdf",
+      "pageTarget": "Switch Box Board Schematic",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The document includes last edited timestamps on multiple sheets.",
+      "evidenceText": "Fri Apr 10 16:19:54 2015; Thu May 21 17:04:47 2015; Wed Jun 27 16:10:55 2018; Wed Jun 27 16:10:56 2018",
+      "pageTarget": "Document Last Edited Time",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not set because multiple sheet timestamps appear and no single official document date is identified."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is inferred only from Samsung proprietary markings; no regulatory authority is named."
+    },
+    {
+      "severity": "info",
+      "reason": "Product signal ADD/AspenView appears in metadata but not in the source text, so it is not listed as a product model."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction quality is low: repeated headers, unknown fields, fragmented schematic text, and misspellings such as SAMSUNG ELECTRONIS and blok diagram."
+    }
+  ]
+}

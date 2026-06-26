@@ -1,0 +1,249 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954373-3oz",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - 2,3G FDA 문서/VOL_013_Appendix L Cybersecurity/002_Cybersecurity.docx",
+    "canonicalGroupId": "16fa281f9512"
+  },
+  "document": {
+    "title": "Cybersecurity Documentation",
+    "documentType": "Cybersecurity documentation",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity documentation identifies device cybersecurity risks, controls, traceability, verification, software update handling, software integrity controls, calibration steps, and PC environment requirements.",
+    "officialUse": "Supports review of cybersecurity risk controls, software update and patch planning, software integrity controls, and operating environment requirements for a medical device.",
+    "keyPoints": [
+      "Cybersecurity risks considered include unauthorized access by unauthorized personnel and unauthorized user access to unencrypted data.",
+      "Cybersecurity controls include WiFi login password restriction and authentication/encryption for transmission data.",
+      "Traceability links CC001 to HA-0009 and CC002 to HA-0010.",
+      "Verification and validation entries list SDUpdater_ReadFirmwareInfoEx, pass criteria, test date Nov/04/2022, and tester Kim, Wan Soo.",
+      "The document states release and design changes follow software development procedures Doc. No. AQP702.",
+      "The document states the device does not provide dynamic software updates and updates are made only by CS engineers."
+    ]
+  },
+  "entities": [
+    {
+      "name": "FDA",
+      "type": "Authority",
+      "evidence": "The FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity."
+    },
+    {
+      "name": "H&Abyz",
+      "type": "Organization",
+      "evidence": "H&Abyz recommends to use the \"Average Dark\" option to enhance image performance."
+    },
+    {
+      "name": "H&abyz",
+      "type": "Organization",
+      "evidence": "H&abyz will provide an update when a bug in the detector device is fixed."
+    },
+    {
+      "name": "Kim, Wan Soo",
+      "type": "Person",
+      "evidence": "Test performed by Kim, Wan Soo"
+    },
+    {
+      "name": "Doc. No. AQP702",
+      "type": "Procedure document",
+      "evidence": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702)."
+    },
+    {
+      "name": "Microsoft Windows 7/10 32-bit/64-bit",
+      "type": "Operating system requirement",
+      "evidence": "OS Microsoft® Windows 7/10 32-bit/64-bit."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity risk HA-0009",
+      "pageTarget": "Cybersecurity Risk HA-0009",
+      "evidence": "HA-0009 Unauthorized access by unauthorized personnel"
+    },
+    {
+      "name": "Cybersecurity risk HA-0010",
+      "pageTarget": "Cybersecurity Risk HA-0010",
+      "evidence": "HA-0010 Unauthorized user can access the unencrypted data"
+    },
+    {
+      "name": "Cybersecurity control CC001",
+      "pageTarget": "Cybersecurity Control CC001",
+      "evidence": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network"
+    },
+    {
+      "name": "Cybersecurity control CC002",
+      "pageTarget": "Cybersecurity Control CC002",
+      "evidence": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc."
+    },
+    {
+      "name": "Cybersecurity risk-control traceability",
+      "pageTarget": "Cybersecurity Risk Control Traceability Matrix",
+      "evidence": "[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]"
+    },
+    {
+      "name": "Software updates and patches",
+      "pageTarget": "Medical Device Software Updates and Patches",
+      "evidence": "A summary describing the plan for providing validated software updates and patches as needed throughout the lifecycle of the medical device to continue to assure its safety and effectiveness."
+    },
+    {
+      "name": "Medical device software integrity",
+      "pageTarget": "Medical Device Software Integrity Controls",
+      "evidence": "A summary describing controls that are in place to assure that the medical device software will maintain its integrity (e.g. remain free of malware) from the point of origin to the point at which that device leaves the control of the manufacturer"
+    },
+    {
+      "name": "Detector calibration",
+      "pageTarget": "Detector Calibration",
+      "evidence": "Also, this device provide the calibration for the quality of the detector. It developed to perform quality assurance operations on the detector."
+    },
+    {
+      "name": "PC environment requirements",
+      "pageTarget": "PC Environment Requirements",
+      "evidence": "2.10 Environment Requirement PC Requirement"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document identifies HA-0009 as unauthorized access by unauthorized personnel.",
+      "evidenceText": "HA-0009 Unauthorized access by unauthorized personnel",
+      "pageTarget": "Cybersecurity Risk HA-0009",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies HA-0010 as unauthorized user access to unencrypted data.",
+      "evidenceText": "HA-0010 Unauthorized user can access the unencrypted data",
+      "pageTarget": "Cybersecurity Risk HA-0010",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC001 is a WiFi login password control intended to restrict random access by requiring ID/password when connecting to the wireless network.",
+      "evidenceText": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network",
+      "pageTarget": "Cybersecurity Control CC001",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC002 is an authentication and encryption control that protects transmission data using WPA-related encryption methods.",
+      "evidenceText": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Cybersecurity Control CC002",
+      "confidence": "high"
+    },
+    {
+      "claim": "The traceability matrix links CC001 to HA-0009 and CC002 to HA-0010.",
+      "evidenceText": "HA-0009 HA-0010 CC001 X CC002 X [Cybersecurity “Risk”– “Risk Control” Traceability Matrix]",
+      "pageTarget": "Cybersecurity Risk Control Traceability Matrix",
+      "confidence": "medium"
+    },
+    {
+      "claim": "CC001 verification calls SDUpdater_ReadFirmwareInfoEx and uses confirmation of registered password information as the pass/fail criterion.",
+      "evidenceText": "CC001 WiFi Login Password ... Call the function SDUpdater_ReadFirmwareInfoEx Confirmation of registered password information.",
+      "pageTarget": "Cybersecurity Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC002 verification calls SDUpdater_ReadFirmwareInfoEx and uses confirmation of encryption algorithm application as the pass/fail criterion.",
+      "evidenceText": "CC002 Authentication and encryption ... Call the function SDUpdater_ReadFirmwareInfoEx Confirmation of encryption algorithm application.",
+      "pageTarget": "Cybersecurity Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC001 and CC002 verification entries list test date Nov/04/2022 and tester Kim, Wan Soo.",
+      "evidenceText": "Nov/04/2022 Kim, Wan Soo",
+      "pageTarget": "Cybersecurity Verification and Validation",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Release and design changes are made according to software development procedure Doc. No. AQP702.",
+      "evidenceText": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702).",
+      "pageTarget": "Software Development Procedure AQP702",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operator can update firmware automatically on network connection or wireless network setting.",
+      "evidenceText": "The operator can update firmware automatically on network connection / wireless network setting.",
+      "pageTarget": "Firmware Update Procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The update procedure instructs attaching an update file and clicking Update, with completion shown in the Log tab.",
+      "evidenceText": "Click “…” next to “Update file” to attach the file to update and click “Update”. Update completion is shown in “Log” tab.",
+      "pageTarget": "Firmware Update Procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The network configuration tab shows current network connection information and allows detector IP, MAC address, netmask, country, and wireless network settings to be changed.",
+      "evidenceText": "Configuration tab shows current network connection information. You can change detector IP, MAC address, netmask, country and wireless network settings.",
+      "pageTarget": "Network Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states software integrity controls include WiFi ID/password restriction and transmission encryption.",
+      "evidenceText": "This device restrict random access by setting id / pw when connecting to Wireless network. And transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Medical Device Software Integrity Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The calibration function is stated to be performed once every year for stabilized detector condition.",
+      "evidenceText": "This calibration function shall be performance once every one year for stabilized detector condition.",
+      "pageTarget": "Detector Calibration",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Bright images must be acquired at twenty calibration points.",
+      "evidenceText": "The bright images must be acquired at twenty calibration points.",
+      "pageTarget": "Detector Calibration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PC operating system requirement is Microsoft Windows 7/10 32-bit/64-bit.",
+      "evidenceText": "OS Microsoft® Windows 7/10 32-bit/64-bit.",
+      "pageTarget": "PC Environment Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PC requirement includes at least an Intel Core i3 6th generation CPU, with i7 recommended.",
+      "evidenceText": "CPU At least Intel Core i3 6 Generation (recommended i7)",
+      "pageTarget": "PC Environment Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PC requirement includes at least 4GB RAM, with 4GB for 32-bit OS and 8GB for 64-bit OS recommended.",
+      "evidenceText": "RAM At least 4GB of RAM requirement (4GB for 32-bit OS and 8GB for 64-bit OS recommended)",
+      "pageTarget": "PC Environment Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PC requirement includes dual 10/100/1000 network cards, one for Internet and one for DR Panel communication.",
+      "evidenceText": "Network Card Dual 10/100/1000 network card system required. One for network (Internet) and one for the DR Panel communication.",
+      "pageTarget": "PC Environment Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states the device does not provide dynamic software updates and updates are made only by CS engineers.",
+      "evidenceText": "This device does not provide dynamic software updates. Updates are made only by CS engineers.",
+      "pageTarget": "Medical Device Software Updates and Patches",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date, revision/version, and specific product model are not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: FDA is mentioned in general software-change language and appears in source metadata/path, but the source text does not provide an FDA document identifier, submission number, or formal FDA issuance metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Potentially conflicting update evidence: the text states the operator can update firmware automatically, but later states the device does not provide dynamic software updates and updates are made only by CS engineers."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text contains wording and formatting issues such as inconsistent organization spelling H&Abyz/H&abyz and grammatical errors, which may indicate OCR or preprocessing quality limitations."
+    }
+  ]
+}
