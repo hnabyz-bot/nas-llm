@@ -1,0 +1,50 @@
+queueId: ingest-1781569954421-19iv
+sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/91_인증 - 국내/02. G series + CYAN/2. 보완(예정)/확인사항(참고)X.docx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/f911a16c5772/확인사항(참고)X__f911a16c5772_combined.txt
+canonicalGroupId: 63149e6e13d2
+productSignal: CYAN
+authoritySignal: MFDS/domestic
+pilotRank: 1238
+
+SOURCE_TEXT
+1. 소프트웨어 동등성 근거서 (Software Equivalence Rationale)
+
+ - G/GT 소프트웨어 아키텍처 동일 확인
+
+ - 무선 기능 제거가 소프트웨어 변경에 미친 영향 분석
+
+ → 이상적으로는 "무선 관련 코드 제거 외 변경 없음" 확인
+
+2. 공격 표면 비교표 (Attack Surface Comparison)
+
+ - G series: 유선 인터페이스 + 무선 인터페이스
+
+ - GT series: 유선 인터페이스만 (무선 벡터 해당 없음)
+
+ - GT의 Attack Surface ⊆ G의 Attack Surface 명시
+
+3. 테스트 범위 매핑 (Test Scope Mapping)
+
+ - G series 사이버보안 테스트 항목 목록
+
+ - 각 항목이 GT에 해당/비해당 여부 표기
+
+ - 유선 관련 항목: 전부 "해당 & 동일 결과 적용"
+
+ - 무선 관련 항목: "GT는 해당 인터페이스 없음 — 불필요"
+
+4. G series 사이버보안 테스트 레포트 (원본)
+
+ - 유선 테스트 결과 포함 확인
+
+유선 인터페이스 항목이 명시적으로 분리되어 있을 시 해당 항목 직접 활용 가능
+
+5. 잔존 위험 평가
+
+ - GT 전용 환경에서 추가 위험 없음 확인
+
+6. 형상관리 동일성
+
+-G/GT가 동일 코드베이스에서 파생되었음을 보여주는 버전 이력 또는 CM 기록
+
+7. G series vs GT series SBOM 비교

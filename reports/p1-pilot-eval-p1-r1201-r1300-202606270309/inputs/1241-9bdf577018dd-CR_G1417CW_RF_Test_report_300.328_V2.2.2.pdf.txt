@@ -1,0 +1,832 @@
+queueId: ingest-1781569954389-j9d
+sourcePath: raw/sources/RA/03_제품별 인증서 & 성적서/2. 제품별 성적서/05_Blue/2. EMC/[CR]G1417CW_RF Test report_최종/[CR]G1417CW_RF Test report_300.328 V2.2.2.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/570d1e9a8b5c/[CR]G1417CW_RF Test report_300.328 V2.2.2__570d1e9a8b5c_combined.txt
+canonicalGroupId: 9bdf577018dd
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1241
+
+SOURCE_TEXT
+TEST REPORT
+Report No. : KES-RF240887
+Page 1 / 31
+KES Co., Ltd.
+#3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-gu,
+Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+Tel : +82-31-425-6200, Fax : +82-31-341-3838
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+ CE TEST REPORT
+1. Client
+○ Name : H&abyz Co., Ltd.
+○ Address : 1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea, 17118
+2. Sample Description
+○ Product item : Digital Flat Panel X-ray Detector
+○ Model name : G1417CW
+○ Variant model name : G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP,
+G1717FW, G1717FWP
+○ Manufacturer etc. : H&abyz Co., Ltd.
+3. Date of test : 2025.01.01 ~ 2025.01.06
+4. Location of Test :  Permanent Testing Lab  On Site Testing
+○ Adress : 473-21, Gayeo-ro, Yeoju-si, Gyeonggi-do, Korea
+5. Test method used : EN 300 328 V2.2.2
+6. Test result : PASS
+The results shown in this test report refer only to the sample(s) tested unless otherwise stated.
+This laboratory is not accredited for the test results marked *.
+This test report is not related to KOLAS accreditation.
+Affirmation
+Tested by Technical Manager
+Name : Myeong-Ho, Lee (Signature) Name : Yeong-Jun Cho (Signature)
+2025. 01. 20.
+KES Co., Ltd.
+Accredited by KOLAS, Republic of KOREA
+
+Report No. : KES-RF240887 Page 2 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+REPORT REVISION HISTORY
+Date Test Report No. Revision History
+2025.01.20 KES-RF240887 Initial
+This report shall not be reproduced except in full, without the written approval of KES Co., Ltd. This document may be altered or revised by
+KES Co., Ltd. personnel only, and shall be noted in the revision section of the document. Any alteration of this document not carried out by
+KES Co., Ltd. will constitute fraud and shall nullify the document.
+Use of uncertainty of measurement for decisions on conformity (decision rule):
+ No decision rule is specified by the standard, when comparing the measurement result with the
+applicable limit according to the specification in that standard. The decisions on conformity are made
+without applying the measurement uncertainty(“simple acceptance” decision rule, previously known as
+“accuracy method”).
+☐ Other (to be specified, for example when required by the standard or client)
+
+Report No. : KES-RF240887 Page 3 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+TABLE OF CONTENTS
+1. General information ................................................................................................................................... 4
+1.1. EUT description .......................................................................................................................... 4
+1.2. Frequency/channel operations ................................................................................................... 5
+1.3. Device modifications ................................................................................................................... 6
+1.4. Information about variant model ................................................................................................. 6
+1.5. Accessory information ................................................................................................................ 6
+1.6. Maximum average output power ................................................................................................ 7
+1.7 Antenna information ................................................................................................................... 7
+2. Summary of tests ....................................................................................................................................... 8
+3. Application form for testing ........................................................................................................................ 9
+3.1. Information as required by EN 300 328 V2.2.2, clause 5.4.1 ..................................................... 9
+3.2. Combination for testing (see clause 5.3.2.3 of EN 300 328 V2.2.2) (N/A) ............................... 16
+3.3. Additional information provided by the manufacturer ............................................................... 16
+4. Test results ............................................................................................................................................... 18
+4.1. Transmitter unwanted emissions in the spurious domain ........................................................ 18
+4.2. Receiver spurious emissions .................................................................................................... 22
+Appendix A. ...................................................................................................................................................... 25
+Appendix B. ..................................................................................................................................................... 27
+Appendix C. ..................................................................................................................................................... 29
+
+Report No. : KES-RF240887 Page 4 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1. General information
+Applicant: H&abyz Co., Ltd.
+Applicant address: 1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea, 17118
+Test site: KES Co., Ltd.
+Test site address: #3002, #3503, #3701, 40, Simin-daero365beon-gil,
+Dongan-gu, Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+473-21, Gayeo-ro, Yeoju-si, Gyeonggi-do, Korea
+Rule part(s): EN 300 328 V2.2.2
+Test device serial No.: Production Pre-production Engineering
+1.1. EUT description
+Equipment under test Digital Flat Panel X-ray Detector
+Frequency range &
+Number of channels
+2 412 ㎒ ~ 2 472 ㎒ (802.11b/g/n_HT20) : 13 ch
+2 422 ㎒ ~ 2 462 ㎒ (802.11/n_HT40) : 9 ch
+UNII-1
+5 180 ㎒ ~ 5 240 ㎒ (802.11a/n_HT20/ac_VHT20) : 4 ch
+5 190 ㎒ ~ 5 230 ㎒ (802.11n_HT40/ac_VHT40) : 2 ch
+5 210 ㎒ (802.11ac_VHT80) : 1 ch
+UNII-
+2A
+5 260 ㎒ ~ 5 320 ㎒ (802.11a/n_HT20/ac_VHT20) : 4 ch
+5 270 ㎒ ~ 5 310 ㎒ (802.11n_HT40/ac_VHT40) : 2 ch
+5 290 ㎒ (802.11ac_VHT80) : 1 ch
+UNII-
+2C
+5 500 ㎒ ~ 5 700 ㎒ (802.11a/n_HT20/ac_VHT20) : 11 ch
+5 510 ㎒ ~ 5 670 ㎒ (802.11n_HT40/ac_VHT40) : 5 ch
+5 530 ㎒ ~ 5 610 ㎒ (802.11ac_VHT80) : 2 ch
+UNII-3
+5 745 ㎒ ~ 5 825 ㎒ (802.11a/n_HT20/ac_VHT20) : 5 ch
+5 755 ㎒ ~ 5 795 ㎒ (802.11n_HT40/ac_VHT40) : 2 ch
+5 775 ㎒ (802.11ac_VHT80) : 1 ch
+Model G1417CW
+Modulation technique DSSS, OFDM
+Antenna specification ANT1 : PCB Antenna // Peak gain: 2.4 ㎓ band : 2.79 ㏈i / 5 ㎓ band : 3.38 ㏈i
+ANT2 : PCB Antenna // Peak gain: 2.4 ㎓ band : 2.79 ㏈i / 5 ㎓ band : 3.38 ㏈i
+Power source DC 11.55 V (Battery) * 2 EA
+Charging : AC 230 V (AC/DC Adapter output DC 15 V)
+H/W version 1.0.0.0
+S/W version 1.0.0.0
+Note:
+1. The manufacturer is declared the extremes of operating temperature range and Operating voltage range
+as follows:
+Operating voltage range DC 11.55 V (Battery) * 2 EA
+Operating temperature rang +10 ℃ to +35 ℃
+
+Report No. : KES-RF240887 Page 5 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.2. Frequency/channel operations
+Ch. Frequency (㎒) Mode
+1 2 412 802.11b/g/n_HT20
+.
+.
+.
+.
+.
+.
+7 2 442 802.11b/g/n_HT20
+.
+.
+.
+.
+.
+.
+13 2 472 802.11b/g/n_HT20
+Ch. Frequency (㎒) Mode
+3 2 422 802.11n_HT40
+.
+.
+.
+.
+.
+.
+7 2 442 802.11n_HT40
+.
+.
+.
+.
+.
+.
+9 2 462 802.11n_HT40
+UNII-1 UNII-2A UNII-2C UNII-3
+Ch. Frequency (㎒)
+36 5 180
+44 5 220
+48 5 240
+Ch. Frequency (㎒)
+52 5 260
+56 5 280
+64 5 320
+Ch. Frequency (㎒)
+100 5 500
+120 5 600
+140 5 700
+Ch. Frequency (㎒)
+149 5 745
+157 5 785
+165 5 825
+802.11a/n_HT20/ac_VHT20
+UNII-1 UNII-2A UNII-2C UNII-3
+Ch. Frequency (㎒)
+38 5 190
+46 5 230
+Ch. Frequency (㎒)
+54 5 270
+62 5 310
+Ch. Frequency (㎒)
+102 5 510
+118 5 590
+134 5 670
+Ch. Frequency (㎒)
+151 5 755
+159 5 795
+802.11n_HT40/ac_VHT40
+UNII-1 UNII-2A UNII-2C UNII-3
+Ch. Frequency (㎒)
+42 5 210
+Ch. Frequency (㎒)
+58 5 290
+Ch. Frequency (㎒)
+106 5 530
+122 5 610
+Ch. Frequency (㎒)
+155 5 775
+802.11ac_VHT80
+
+Report No. : KES-RF240887 Page 6 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.3. Device modifications
+N/A
+1.4. Information about variant model
+Item Specifications
+G1417 Series G1717 Series
+Model Name G1417CW G1417CWP G1417FW G1417FWP G1717CW G1717CWP G1717FW G1717FWP
+CsI Deposition
+Thickness 300μm 500μm 300μm 500μm 300μm 500μm 300μm 500μm
+Image Sensor PIN-TFT
+(a-Si, IGZO)
+Flexible PIN-TFT
+(a-Si, IGZO)
+PIN-TFT
+(a-Si, IGZO)
+Flexible PIN-TFT
+(a-Si, IGZO)
+X-ray Scintillator
+Type Csl
+Pixel Pitch 140㎛
+Field of View 14 x 17 inch 17 x 17 inch
+Effective Area 350 x 427.3 mm 425.6 x 425.6 mm 430.1 x 430.1 mm
+Effective Array 2500 x 3052 3040 x 3040 3072 x 3072
+Grayscale 14, 16bit
+Spatial Resolution 3.57lp/mm
+Image Acquisition
+Time
+(Wired)
+~3sec
+Image Acquisition
+Time
+(Wireless)
+~4sec
+Cycle Time 8sec
+IP Range IP68
+Power Supply
+Powered from Gender via tether interface Cable: DC 15V, Max 2.0A
+Powered via AC-DC adaptor: DC 15V, Max 6.0A
+Powered via Battery Recharger: DC 19V, Max 3.0A
+Powered via 2 battery packs: DC 9~12.6, Max 77.9W
+Power
+Consumption
+Max 22.5W (w/o battery charged)
+Max 52.5W (when recharging battery)
+Dimensions
+(H x W x D) 384.5㎜ x 460.5㎜ x 15.7㎜ 460.5㎜ x 460.5㎜ x 15.7㎜
+Weight
+(Maximum) 3.1kg 3.3kg 2.9kg 3.1kg 3.6kg 3.8kg 3.4kg 3.6kg
+Battery packs lose capacity as they age. This may reduce the operating time of the detector.
+1.5. Accessory information
+Equipment Manufacturer Model Serial No. Power source
+AC/DC Adpater Wending Jeil
+Electronics BM090S15F 02 INPUT : AC 230 V
+OUTPUT : DC 15 V
+LAN Cable - - - -
+Converter - - - -
+
+Report No. : KES-RF240887 Page 7 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1.6. Maximum average output power
+Refer to the average output power
+Note.
+1. Radiated emission were performed with the EUT set to transmit at the channel with highest
+output Power as worst-case scenario.
+2. Worst-case mode, data rates as provided by the client were:
+2.4 ㎓ : 802.11n_HT40 : MCS0
+5 ㎓ :802.11ac_VHT20 : MCS0
+1.7 Antenna information
+Mode SISO MIMO
+Antenna 1 Antenna 2 Antenna 1 + 2
+TX ✔ ✔ ✔
+RX ✔ ✔ ✔
+✔ = Support; ✕ = Not support
+
+Report No. : KES-RF240887 Page 8 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+2. Summary of tests
+Reference Parameter Test results
+EN 300 328
+4.3.2.9 Transmitter unwanted emissions in the spurious domain Pass
+EN 300 328
+4.3.2.10 Receiver spurious emissions Pass
+EN 300 328
+4.3.2.2 RF Output Power N/T Note.1
+EN 300 328
+4.3.2.3 Power Spectral Density N/T Note.1
+EN 300 328
+4.3.2.6 Adaptivity N/T Note.2
+EN 300 328
+4.3.2.7 Occupied Channel Bandwidth N/T Note.1
+EN 300 328
+4.3.2.8 Transmitter unwanted emissions in the out-of-band domain N/T Note.1
+EN 300 328
+4.3.2.11 Receiver Blocking N/T Note.1
+EN 300 328
+4.3.2.12 Geo-location capability N/T Note.3
+*N/T: Not Tested
+Note:
+1. It is equipped with an certified module and please refer to the module report for test results.
+Module report No. : ER740701-11AC
+2. This requirement does not apply for equipment with the maximum declared RF Output power level
+of less than 10 ㏈m e.i.r.p. or for equipment when operating in a mode where the RF Output power
+is less than 10 ㏈m e.i.r.p.
+3. This device has not support geo-location capability.
+4. It is also supports SISO, but This report was tested only for MIMO at the request of the applicant.
+5. The test was performed with the same power settings as the module report.
+Power setting : Default
+6. Worst-case mode, data rates as provided by the client were:
+2.4 ㎓ : 802.11n_HT40 : MCS0
+
+Report No. : KES-RF240887 Page 9 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3. Application form for testing
+3.1. Information as required by EN 300 328 V2.2.2, clause 5.4.1
+In accordance with EN 300 328, clause 5.4.1, the following information is provided by the
+manufacturer.
+a) The type of modulation used by the equipment:
+FHSS
+Other forms of modulation
+b) In case of FHSS modulation:
+ In case of non-Adaptive Frequency Hopping equipment
+The number of Hopping Frequencies:
+ In case of Adaptive Frequency Hopping equipment
+The maximum number of Hopping Frequencies:
+The minimum number of Hopping Frequencies:
+ The (average) Dwell Time:
+c) Adaptive / non-adaptive equipment:
+Non-adaptive Equipment
+Adaptive Equipment without the possibility to switch to a non-adaptive mode
+Adaptive Equipment which can also operate in a non-adaptive mode
+d) In case of adaptive equipment: (N/T)
+The maximum Channel Occupancy Time implemented by the equipment: N/T
+The equipment has implemented an LBT based DAA mechanism
+ In case of equipment using modulation different from FHSS:
+The equipment is Frame Based equipment
+The equipment is Load Based equipment
+The equipment can switch dynamically between Frame Based and Load Based
+equipment
+The CCA time implemented by the equipment: N/T
+The equipment has implemented an non-LBT based DAA mechanism
+The equipment can operate in more than one adaptive mode
+
+Report No. : KES-RF240887 Page 10 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+e) In case of non-adaptive Equipment: (N/A)
+The maximum RF Output Power (e.i.r.p.):
+The maximum (corresponding) Duty Cycle:
+Equipment with dynamic behaviour, that behaviour is described here. (e.g. the different combinations of
+duty cycle and corresponding power levels to be declared):
+f) The worst case operational mode for each of the following tests:
+ RF Output Power
+N/A
+ Power Spectral Density
+N/A
+ Duty cycle, Tx-Sequence, Tx-gap
+N/A
+ Accumulated Transmit time, Frequency Occupation & Hopping Sequence (only for FHSS
+equipment)
+N/A
+ Hopping Frequency Separation (only for FHSS equipment)
+N/A
+ Medium Utilisation:
+N/A
+ Adaptivity
+N/A
+ Receiver Blocking
+N/A
+ Nominal Channel Bandwidth
+N/A
+ Transmitter unwanted emissions in the OOB domain
+N/A
+ Transmitter unwanted emissions in the spurious domain
+802.11n_HT40
+ Receiver spurious emissions
+802.11n_HT40
+
+Report No. : KES-RF240887 Page 11 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+g) The different transmit operating modes (tick all that apply):
+Operating mode 1: Single Antenna Equipment
+Equipment with only one antenna
+Equipment with two diversity antennas but only one antenna active at any moment in time
+Smart Antenna Systems with 2 or more antennas, but operating in a (legacy) mode where only
+one antenna is used. (e.g. IEEE 802.11™ [i.3] legacy mode in smart antenna systems)
+Operating mode 2: N/A
+Single spatial stream / Standard throughput / (e.g. IEEE 802.11™ [i.3] legacy mode)
+High Throughput (> 1 spatial stream) using Nominal Channel Bandwidth 1
+High Throughput (> 1 spatial stream) using Nominal Channel Bandwidth 2
+NOTE 1: Add more lines if more channel bandwidths are supported.
+Operating mode 3: N/A
+Single spatial stream / Standard throughput (e.g. IEEE 802.11™ [i.3] legacy mode)
+High Throughput (> 1 spatial stream) using Nominal Channel Bandwidth 1
+High Throughput (> 1 spatial stream) using Nominal Channel Bandwidth 2
+NOTE 2: Add more lines if more channel bandwidths are supported.
+h) In case of Smart Antenna Systems: (N/A)
+The number of Receive chains:
+The number of Transmit chains
+symmetrical power distribution
+asymmetrical power distribution
+In case of beam forming, the maximum beam forming
+gain:
+NOTE: Beam forming gain does not include the basic gain of a single antenna.
+i) Operating Frequency Range(s) of the equipment:
+Operating Frequency Range 1: 802.11n_HT40 2 422 ㎒ to 2 462 ㎒
+Operating Frequency Range 2:
+Operating Frequency Range 3:
+NOTE: Add more lines if more Frequency Ranges are supported.
+
+Report No. : KES-RF240887 Page 12 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+j) Nominal Channel Bandwidth(s):
+Nominal Channel Bandwidth 1: 802.11n_HT40 40 ㎒
+Nominal Channel Bandwidth 2:
+Nominal Channel Bandwidth 3:
+NOTE: Add more lines if more channel bandwidths
+are supported.
+k) Type of Equipment (stand-alone, combined, plug-in radio device, etc.):
+Stand-alone
+Combined Equipment (Equipment where the radio part is fully integrated within another type
+of equipment)
+Plug-in radio device (Equipment intended for a variety of host systems)
+Other
+l) The normal and the extreme operating conditions that apply to the equipment:
+Normal operation conditions (if applicable)
+Operating temperature -
+Other (please specify if applicable) -
+Extreme operating conditions
+Operating temperature range: Minimum: 10° C Maximum: 35° C
+Other (please specify if applicable) Minimum: - Maximum: -
+Details provided are for the: stand-alone equipment
+
+combined (or host) equipment
+test jig
+m) The intended combination(s) of the radio equipment power settings and one or more
+antenna assemblies and their corresponding e.i.r.p. levels:
+ Antenna Type: PCB Antenna
+Integral Antenna (information to be provided in case of conducted measurements)
+Antenna Gain: 2.79 ㏈i
+If applicable, additional beamforming gain (excluding basic antenna gain): N/A
+Temporary RF connector provided
+No temporary RF connector provided
+Dedicated Antennas (equipment with antenna connector)
+Single power level with corresponding antenna(s)
+Multiple power settings and corresponding antenna(s)
+Number of different Power Levels:
+Power Level 1: ㏈m
+
+Report No. : KES-RF240887 Page 13 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Power Level 2: ㏈m
+Power Level 3: ㏈m
+NOTE 1: Add more lines in case the equipment has more power levels
+NOTE 2: These power levels are conducted power levels (at antenna connector).
+
+Report No. : KES-RF240887 Page 14 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+ For each of the Power Levels, provide the intended antenna assemblies, their corresponding
+gains (G)
+and the resulting e.i.r.p. levels also taking into account the beamforming gain (Y) if applicable
+Power Level 1: N/A
+Number of antenna assemblies provided for this power level: N/A
+Assembly# Gain(㏈i) e.i.r.p. (㏈m) Part number or model
+name
+1
+2
+3
+4
+NOTE 3: Add more rows in case more antenna assemblies are supported for this power level.
+Power Level 2: N/A
+Number of antenna assemblies provided for this power level: N/A
+Assembly# Gain(㏈i) e.i.r.p. (㏈m) Part number or model
+name
+1
+2
+3
+4
+NOTE 4: Add more rows in case more antenna assemblies are supported for this power level.
+Power Level 3: N/A
+Number of antenna assemblies provided for this power level: N/A
+Assembly# Gain(㏈i) e.i.r.p. (㏈m) Part number or model
+name
+1
+2
+3
+4
+NOTE 5: Add more rows in case more antenna assemblies are supported for this power level.
+
+Report No. : KES-RF240887 Page 15 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+n) The nominal voltages of the stand-alone radio equipment or the nominal voltages of the
+combined (host) equipment or test jig in case of plug-in devices:
+Details provided are for the: stand-alone equipment
+combined (or host) equipment
+test jig
+Supply Voltage AC mains State AC voltage
+DC State DC voltage DC 11.55 V (Battery) * 2EA
+In case of DC, indicate the type of power source
+Internal Power Supply
+External Power Supply or AC/DC adapter
+Battery
+Other:
+o) Describe the test modes available which can facilitate testing:
+802.11n_HT40
+p) The equipment type (e.g. Bluetooth®, IEEE 802.11™ [i.3], IEEE 802.15.4™ [i.4], proprietary,
+etc.):
+IEEE 802.11™
+q) If applicable, the statistical analysis referred to in clause 5.4.1 q)
+(to be provided as separate attachment)
+r) If applicable, the statistical analysis referred to in clause 5.4.1 r)
+(to be provided as separate attachment)
+s) Geo-location capability supported by the equipment:
+Yes
+The geographical location determined by the equipment as defined in clause 4.3.1.13.2 or
+clause 4.3.2.12.2 is not accessible to the user
+No
+t) Describe the minimum performance criteria that apply to the equipment (see clause 4.3.1.12.3 or
+clause 4.3.2.11.3):
+Receiver category 1
+
+Report No. : KES-RF240887 Page 16 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+3.2. Combination for testing (see clause 5.3.2.3 of EN 300 328 V2.2.2) (N/A)
+From all combinations of conducted power settings and intended antenna assembly(ies) specified
+in clause 3.1 m), specify the combination resulting in the highest e.i.r.p. for the radio equipment.
+Unless otherwise specified in EN 300 328, this power setting is to be used for testing against the
+requirements of EN 300 328. In case there is more than one such conducted power setting
+resulting in the same (highest) e.i.r.p. level, the highest power setting is to be used for testing. See
+also EN 300 328, clause 5.3.2.3.
+Highest overall e.i.r.p. value: ________ dBm
+Corresponding Antenna assembly gain: ________ dBi Antenna Assembly #: ________
+Corresponding conducted power setting: ________ dBm
+(also the power level to be used for testing)
+Listed as Power Setting #: ________
+3.3. Additional information provided by the manufacturer
+Modulation
+ITU Class(es) of emission: G1D,D2D
+Can the transmitter operate unmodulated? yes no
+Duty Cycle
+The transmitter is intended for Continuous duty
+Intermittent duty
+Continuous operation possible for testing purposes
+About the UUT
+The equipment submitted are representative production models
+If not, the equipment submitted are pre-production models?
+If pre-production equipment are submitted, the final production equipment will be identical in
+all respects with the equipment tested
+If not, supply full details
+
+Report No. : KES-RF240887 Page 17 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Additional items and/or supporting equipment provided
+Spare batteries (e.g. for portable equipment)
+Battery charging device
+External Power Supply or AC/DC adapter
+Test jig or interface box
+RF test fixture (for equipment with integrated antennas)
+Host System Manufacturer:
+Model #:
+Model name:
+Combined equipment Manufacturer:
+Model #:
+Model name:
+User Manual
+Technical documentation (Handbook and circuit diagrams)
+
+Report No. : KES-RF240887 Page 18 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4. Test results
+4.1. Transmitter unwanted emissions in the spurious domain
+Measurement Condition
+Ambient temperature : 22.9 ℃
+Relative humidity : 46.0 % R.H.
+Test procedure
+EN 300 328 clause 5.4.9.2
+5.4.9.2.1.2 Pre-scan
+Step 2:
+The emissions over the range 30 ㎒ to 1 000 ㎒ shall be identified.
+Spectrum analyser settings:
+1. RBW : 100 ㎑
+2. VBW : 300 ㎑
+3. Filter type : 3 ㏈ (Gaussian)
+4. Detector mode : Peak
+5. Trace mode : Max hold
+6. Sweep points : ≥19 400; for spectrum analysers not supporting this high number of sweep points,
+the frequency band may need to be segmented.
+7. Sweep time :
+For non continuous transmissions (duty cycle less than 100 %), the sweep time shall be sufficiently long, such
+that for each 100 ㎑ frequency step, the measurement time is greater than two transmissions of the UUT, on
+any channel
+For Frequency Hopping equipment operating in a normal operating (hopping not disabled) mode, the sweep
+time shall be further increased to capture multiple transmissions on the same hopping frequency in different
+hopping sequences.
+The above sweep time setting may result in long measuring times in case of frequency hopping
+equipment. To avoid such long measuring times, an FFT analyser may be used
+Allow the trace to stabilize. Any emissions identified during the sweeps above and that fall within
+The 6 ㏈ range below the applicable limit or above, shall be individually measured using the
+Procedure in clause 5.4.9.2.1.3 and compared to the limits given in table 4 or table 12.
+
+Report No. : KES-RF240887 Page 19 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Step 3:
+The emissions over the range 1 ㎓ to 12.75 ㎓ shall be identified.
+Spectrum analyser setting:
+1. RBW : 1 ㎒
+2. VBW : 3 ㎒
+3. Filter type : 3 ㏈ (Gaussian)
+4. Detector mode : Peak
+5. Trace mode : Max hold
+6. Sweep points: ≥23 500; for spectrum analysers not supporting this high number of sweep points,
+the frequency band may need to be segmented.
+7. Sweep time :
+For non continuous transmissions (duty cycle less than 100 %), the sweep time shall be sufficiently long, such
+that for each 100 ㎑ frequency step, the measurement time is greater than two transmissions of the UUT, on
+any channel
+For Frequency Hopping equipment operating in a normal operating (hopping not disabled) mode, the sweep
+time shall be further increased to capture multiple transmissions on the same hopping frequency in different
+hopping sequences.
+The above sweep time setting may result in long measuring times in case of frequency hopping
+equipment. To avoid such long measuring times, an FFT analyser may be used
+Allow the trace to stabilize. Any emissions identified during the sweeps above and that fall within
+The 6 ㏈ range below the applicable limit or above, shall be individually measured using the
+Procedure in clause 5.4.9.2.1.3 and compared to the limits given in table 4 or table 12.
+Frequency Hopping equipment may generate a block (or several blocks) of spurious emissions anywhere within
+the spurious domain. If this is the case, only the highest peak of each block of emissions shall be measured
+using the procedure in clause 5.4.9.2.1.3.
+5.4.9.2.1.3 Measurement of the emissions identified during the pre-scan
+Step 1:
+The level of the emissions shall be measured using the following spectrum analyser settings:
+1. Measurement mode : Time domain power
+2. Centre frequency : Frequency of the emission identified during the pre-scan
+3. RBW : 100 ㎑ (< 1 ㎓) / 1 ㎒ (>1 ㎓)
+4. VBW : 300 ㎑ (< 1 ㎓) / 3 ㎒ (>1 ㎓)
+5. Frequency span : Zero span
+6. Sweep mode : Single sweep
+7. Sweep time : >120 % of the duration of the longest burst detected during the measurement of the RF Output
+Power
+8. Sweep points : Sweep time [㎲] / (1 ㎲) with a maximum of 30 000
+9. Trigger : Video (for burst signals) or Manual (for continuous signals)
+10. Detector : RMS
+
+Report No. : KES-RF240887 Page 20 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test results
+Mode: 802.11n_HT40
+Distance of measurement: 3 meter
+Lowest frequency (2 422 ㎒) Highest frequency (2 462 ㎒)
+Frequency(㎒) Ant Pol Bandwidth(㎑) Level(㏈m) Frequency(㎒) Ant Pol Bandwidth(㎑) Level(㏈m)
+66.63 H 100 -60.00 66.63 H 100 -59.70
+66.67 V 100 -56.60 66.67 V 100 -56.30
+1 330.41 V 1 000 -59.70 2 826.42 V 1 000 -53.80
+
+Report No. : KES-RF240887 Page 21 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Limit (Clause 4.3.2.9.3)
+The transmitter unwanted emissions in the spurious domain shall not exceed the values given in table 12.
+In case of equipment with antenna connectors, these limits apply to emissions at the antenna port (conducted). For
+emissions radiated by the cabinet or emissions radiated by integral antenna equipment (without antenna connectors),
+these limits are e.r.p. for emissions up to 1 ㎓ and as e.i.r.p. for emissions above 1 ㎓.
+Table 12: Transmitter limits for spurious emissions
+Frequency Range Maximum power Bandwidth
+30 ㎒ to 47 ㎒ -36 ㏈m 100 ㎑
+47 ㎒ to 74 ㎒ -54 ㏈m 100 ㎑
+74 ㎒ to 87.5 ㎒ -36 ㏈m 100 ㎑
+87.5 ㎒ to 118 ㎒ -54 ㏈m 100 ㎑
+118 ㎒ to 174 ㎒ -36 ㏈m 100 ㎑
+174 ㎒ to 230 ㎒ -54 ㏈m 100 ㎑
+230 ㎒ to 470 ㎒ -36 ㏈m 100 ㎑
+470 ㎒ to 694 ㎒ -54 ㏈m 100 ㎑
+694 ㎒ to 1 ㎓ -36 ㏈m 100 ㎑
+1 ㎓ to 12.75 ㎓ -30 ㏈m 1 ㎒
+
+Report No. : KES-RF240887 Page 22 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+4.2. Receiver spurious emissions
+Measurement Condition
+Ambient temperature : 22.9 ℃
+Relative humidity : 46.0 % R.H.
+Test procedure
+EN 300 328 clause 5.4.10.2 – Step 2 and Step 3
+Step 2:
+The emissions over the range 30 ㎒ to 1 000 ㎒ shall be identified.
+Spectrum analyser settings:
+1. RBW : 100 ㎑
+2. VBW : 300 ㎑
+3. Filter type : 3 ㏈ (Gaussian)
+4. Detector mode : Peak
+5. Trace mode : Max hold
+6. Sweep points : ≥19 400
+7. Sweep time : Auto
+Wait for the trace to stabilize. Any emissions identified during the sweeps above and that fall within the 6 ㏈
+Range below the applicable limit or above, shall be individually measured using the procedure in clause
+5.4.10.2.1.3 and compared to the limits given in table 5 or table 13.
+Step 3 :
+The emissions over the range 1 ㎓ to 12.75 ㎓ shall be identified.
+Spectrum analyser settings:
+1. RBW : 1 ㎒
+2. VBW : 3 ㎒
+3. Filter type : 3 ㏈ (Gaussian)
+4. Detector mode : Peak
+5. Trace mode : Max hold
+6. Sweep points : ≥ 23 500; for spectrum analysers not supporting this high number of sweep points,
+the frequency band may be segmented
+7. Sweep time : Auto
+Wait for the trace to stabilize. Any emissions identified during the sweeps above that fall within the 6 ㏈ range
+below, the applicable limit or above, shall be individually measured using the procedure in clause 5.4.10.2.1.3
+and compared to the limits given in table 5 or table 13.
+Frequency Hopping equipment may generate a block (or several blocks) of spurious emissions anywhere within
+the spurious domain. If this is the case, only the highest peak of each block of emissions shall be measured
+using the procedure in clause 5.4.10.2.1.3.
+
+Report No. : KES-RF240887 Page 23 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Test results
+Mode: 802.11n_HT40
+Distance of measurement: 3 meter
+Lowest frequency (2 422 ㎒) Highest frequency (2 462 ㎒)
+Frequency(㎒) Ant Pol Bandwidth(㎑) Level(㏈m) Frequency(㎒) Ant Pol Bandwidth(㎑) Level(㏈m)
+66.63 H 100 -72.70 66.63 H 100 -72.60
+66.67 V 100 -69.80 66.67 V 100 -71.70
+79.97 H 100 -71.00 79.97 H 100 -71.20
+135.65 H 100 -73.00 135.65 H 100 -73.00
+891.21 V 100 -69.60 891.21 V 100 -69.70
+891.21 H 100 -69.00 891.21 H 100 -68.70
+1 799.94 H 1 000 -59.30 1 219.49 V 1 000 -61.50
+2 661.45 H 1 000 -55.40 3 049.20 V 1 000 -55.60
+
+Report No. : KES-RF240887 Page 24 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Limit (Clause 4.3.2.10.3)
+The spurious emissions of the receiver shall not exceed the values given in table 13.
+In case of equipment with antenna connectors, these limits apply to emissions at the antenna port (conducted). For
+emissions radiated by the cabinet or for emissions radiated by integral antenna equipment (without antenna connectors),
+these limits are e.r.p. for emissions up to 1 ㎓ and e.i.r.p. for emissions above 1 ㎓.
+Table 13: Spurious emission limits for receivers
+Frequency Range Maximum power Measurement bandwidth
+30 ㎒ to 1 ㎓ -57 ㏈m 100 ㎑
+1 ㎓ to 12.75 ㎓ -47 ㏈m 1 ㎒
+
+Report No. : KES-RF240887 Page 25 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Appendix A.
+Measurement equipment
+
+Report No. : KES-RF240887 Page 26 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Equipment Manufacturer Model Serial No. Calibration
+interval
+Calibration
+due.
+Spectrum analyzer R&S FSV40 101725 1 year 2025.06.12
+SIGNAL GENERATOR KEYSIGHT N5182B MY59100115 1 year 2025.04.15
+SIGNAL GENERATOR Anritsu 68369B 002118 1 year 2025.04.15
+BILOG ANTENNA Schwarzbeck VULB 9168 9168-461 2 years 2026.05.09
+Attenuator HUBER+SHHNER 6806.17.A NONE 1 year 2025.02.13
+Horn Antenna A.H. SAS-571 414 1 year 2025.01.16
+Amplifier SONOMA
+INSTRUMENT 310N 401123 1 year 2025.02.13
+RF AMPLIFIER EXYNOD ELNA18-40D 2210241 1 year 2025.10.25
+DC POWER SUPPLY SORENSEN DCS40-75E 1408A02745 1 year 2025.01.12
+* Statement of Traceability: KES Co., Ltd. attests that all calibrations have been performed, traceable to
+National Primary Standards and International System of Units (SI).
+Peripheral devices
+Device Manufacturer Model No. Serial No.
+Notebook computer LG Electronics Inc., 15U480 MSIP-RMM-LGE-
+DMLG15U47
+Test Jig Board N/A N/A N/A
+
+Report No. : KES-RF240887 Page 27 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Appendix B.
+Test setup photos
+
+Report No. : KES-RF240887 Page 28 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Below 1 ㎓
+Above 1 ㎓
+
+Report No. : KES-RF240887 Page 29 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Appendix C.
+EUT photos
+
+Report No. : KES-RF240887 Page 30 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+
+Report No. : KES-RF240887 Page 31 / 31
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+Blank
+The End.

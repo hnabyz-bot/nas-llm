@@ -1,0 +1,974 @@
+queueId: ingest-1781569954416-14vz
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ FDA/참조 문서/2. Software/1. Software Development Plan (Doc. No. SDP-01, Rev.0).docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/fcfd724aaed1/1. Software Development Plan (Doc. No. SDP-01, Rev.0)__fcfd724aaed1_combined.txt
+canonicalGroupId: 03d348c3c782
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 1281
+
+SOURCE_TEXT
+Software Development Plan
+
+According to EN 62304:2006/AC:2008
+
+Product information
+
+Product Name
+
+Model Name
+
+Document Number
+
+SDP-01
+
+Preparation, Review and Approval of the document
+
+Prepared by
+
+Reviewed by
+
+Approved by
+
+Name
+
+Position
+
+Assistant Manager
+
+CEO
+
+Date
+
+2018.02.10
+
+2018.02.10
+
+2018.02.10
+
+Signature
+
+Revision History
+
+No.
+
+Rev. No.
+
+Description of changes
+
+Date
+
+1
+
+0
+
+Initial Release
+
+Contents
+
+1. Introduction 4
+
+2. Software Development Activities 5
+
+2.1 Software development process 5
+
+2.1.1 Overview of process phases 6
+
+2.1.2 End of phases reviews 6
+
+2.1.3 Technical documentation 6
+
+2.1.4 Deliverables 6
+
+2.2 Development environment 7
+
+2.2.1 System requirements 7
+
+2.2.2 Hardware requirements 7
+
+2.3 Software development rules and standards 7
+
+3. Software Specifications (sub section sample) 8
+
+3.1 Input data 8
+
+3.2 Content 8
+
+3.3 Output data 8
+
+3.4 Review and acceptation criteria 8
+
+4. Responsibilities 9
+
+4.1 Activities and responsibilities 9
+
+4.2 Documentation of Activities and responsibilities 9
+
+5. Schedule 10
+
+5.1 Software integration and integration testing Planning 10
+
+5.2 Technique and test procedure for the test method 10
+
+5.2.1 Testing Methods 10
+
+5.2.2 Testing Description 10
+
+5.2.3 Solution process when defect occurs 10
+
+5.2.4 Roles and Responsibilities 11
+
+5.2.5 V.V & T Item & Methods 11
+
+5.2.6 Documentation Handling 12
+
+5.2.7 Process Assessment 12
+
+5.3 Software Risk Management planning 12
+
+5.4 Software configuration management planning 13
+
+5.4.1 The following table contains configuration items that are included SCM Plan. 13
+
+5.4.2 Configuration Item Identifier 13
+
+5.4.3 Software Configuration Control 14
+
+5.5 Configuration item control before verification 14
+
+5.6 Software Maintenance Plan 15
+
+6. Supporting items to be controlled 18
+
+Introduction
+
+ The software validation process is defined and managed through the use of Planning. Software validation plan should define “What” to perform through the software validation effort. Software validation plan represents the range of application of important means of quality systems, approach, resources, schedule, type of activity range (extent), work, and work items.
+
+Software Development Activities
+
+The section list and describes the software development activities of __________ Software development project.
+
+Software development process
+
+Software development process at 회사명 follows a classic waterfall methodology, as illustrated in the following chart
+
+Analysis
+
+Planning
+
+Basic Design
+
+Detailed Design
+
+Implementation, Unit Test
+
+Integration Test
+
+Validation & Verification Test
+
+Monitoring
+
+Definition
+
+Design
+
+Implementation
+
+Qualification
+
+Maintenance
+
+Quality Assessment and Planning
+
+Classic " Waterfall" Life Cycle Model
+
+Analysis.
+
+The activity consists of establishing requirements for as much as possible before the
+
+design phase. The requirements are documented in the software-specific requirements and design
+
+notes. When enough of the requirements are gathered and analyzed for this iteration of the prototype, the activities shift into the design phase.
+
+The analysis included a risk analysis.
+
+Planning.
+
+This activity constructs the software development plan. This plan outlines the tasks, responsibilities,
+
+resources, and other items pertinent to the specific development project.
+
+Design.
+
+This activity considers four functional attributes of the software: data structure, software architecture, functionality, and interface characterization. The design is documented in design documents.
+
+Implementation.
+
+The implementation phase converts the design into a machine-readable form. The software source-
+
+code is created in accordance with 회사명 coding conventions. To verify that the code created is consistent with 회사명 standards, design reviews/inspections are held.
+
+Qualification.
+
+The qualification phase verifies that the design and code implemented meet the requirements.
+
+Testing ensures that defined input will produce actual results that agree with required results.
+
+Maintenance.
+
+Once the software enters a released state, the only software changes allowed are to fix identified defects in the code or to support approved enhancements. All identified system software defects are recorded on System Discrepancy Reports forms or submitted to the Modification Request document.
+
+Overview of process phases
+
+The lifecycle of the software development project is composed of
+
+• Software specification,
+
+• Software detailed design,
+
+• Software coding and unit tests,
+
+• Software integration
+
+• Software verification tests
+
+End of phases reviews
+
+The phases of the lifecycle are ended by the following reviews
+
+• Software specification: software specification review,
+
+• Software detailed design: software detailed design review,
+
+• Software coding and unit tests: automated tests review,
+
+• Software integration: integration test review,
+
+• Software verification tests, final verification test review.
+
+Technical documentation
+
+The following documentation is produced during the design phases:
+
+• Software specification: SRS, IRS, STP,
+
+• Software detailed conception: updated SRS, SDD, IDD, updated STP, STD
+
+• Coding and unit tests: STR of unit tests
+
+• Software tests phases: STR, VDD.
+
+Deliverables
+
+The following items are delivered at the end of the process:
+
+• Technical documentation,
+
+• User documentation: user guide, administration procedures and installation procedure,
+
+• Software and its configuration files.
+
+Development environment
+
+System requirements
+
+• Operating system : Microsoft Window 7 or higher
+
+Hardware requirements
+
+1) ______________ Firmware
+
+- Program Language: C++, MFC 14.0
+
+- Memory: 16 GB or higher
+
+- Hard disk: 256 GB or higher
+
+Software development rules and standards
+
+Describe here the standards and rules used for software development, like modelling (UML), data modelling, coding rules, …
+
+Coding rules are sometimes worth a separate document.
+
+3Development Process Phases
+
+You may describe your phases in §2.2.x of project management plan or here.
+
+This document is more technical than the project management plan, so you may describe your phases with more technical information.
+
+Add subsections which detail the phases listed in §2.1.1 Overview of process phases
+
+Software Specifications (sub section sample)
+
+Input data
+
+List input data : clinical data, risk analysis, design history Etc.
+
+Content
+
+The goal of this phase is to write the software requirements with the following (but not exclusive) specifications:
+
+• Functional requirements, performances, physical characteristics, environment conditions in which the software will run,
+
+• Safety requirements including those about the exploitation and maintenance methods, the influence on the environment, the risks analysis,
+
+• Ergonomics requirements, including manual operations, man-machine interactions, human factors,
+
+• User documentation,
+
+• Exploitation by end users.
+
+Output data
+
+List output data : SRS, IRS, STP Etc.
+
+Review and acceptation criteria
+
+This phase ends with a software specifications review:
+
+• Participants : R&D Team
+
+• Data reviewed : Software Rrequirement Specification
+
+The results of this phase shall be verified with the following criteria:
+
+• Requirements traceability,
+
+• Coherence with external systems,
+
+• Internal coherence,
+
+• Testability,
+
+• Feasibility of software detailed conception,
+
+• Feasibility of exploitation and maintenance.
+
+Responsibilities
+
+Activities and responsibilities
+
+Each activity has someone responsible, mandatory. For small teams, may be always the same person.
+
+Activity
+
+Responsibility
+
+Service/Department
+
+Project management
+
+Project Manager
+
+R&D Team
+
+Configuration tools management
+
+Configuration Manager
+
+R&D Team
+
+Setting up the Development tools
+
+Configuration Manager
+
+R&D Team
+
+Software specifications
+
+Product champion
+
+R&D Team
+
+Documentation of Activities and responsibilities
+
+Document name
+
+Purpose
+
+Intended audience of document
+
+responsibilities for
+
+Development, review,
+
+approval and
+
+modification
+
+Software Development Plan
+
+Reducing the risks caused by the software, inform the procedures and the purpose, and plan for software development in order to ensure that the system meets the quality requirements for medical device software.
+
+R&D Team
+
+R&D Team
+
+Risk Management
+
+Identify the hazards associated with the product during the Life cycle of a product, and estimate/control the associated risks. Maintain the record in order to monitor the efficiency of the control.
+
+R&D Team
+
+CTO
+
+Software Requirements Specification
+
+It is written to determine what information to build in order to meet the customer’s requirements and design inputs.
+
+R&D Team
+
+R&D Team
+
+Software Design
+
+Description &
+
+Specification
+
+The document is for describing how to fulfill the requirements for the software device.
+
+R&D Team
+
+R&D Team
+
+Software Verification
+
+& Validation
+
+Determine the validity of the development stpes, and development process to see if it meets the specified requirements.
+
+R&D Team
+
+QA Team
+
+R&D Team
+
+QA Team
+
+User manual
+
+It is written to describe the information required in order to use the product efficiently and safely.
+
+Users
+
+Project Manager
+
+Schedule
+
+Software integration and integration testing Planning
+
+Once the software design is completed, TEST the interaction between the developed program and other system (Operating System) after checking that the unit program or module functions peorplery as defined in the program specification
+
+Reference: 2.1 Software development process
+
+Technique and test procedure for the test method
+
+Testing Methods
+
+Static Testing & Dynamic Testing
+
+Testing Description
+
+Static Testing Outline
+
+Static Testing is a method to find defects without executing the software. The code will be reviewed by the programmer who wrote the code and other programmers to find the problems and things that are missing, and record its result
+
+Level of testing
+
+The test is processed in a step-by-step process (from the sub-code to the module), and integration and integration verification is performed.
+
+Dynamic Testing Outline
+
+Dynamic Testing is a method to find defects by executing the software. Found defect is modified by debugging, and is a representative method of a direct test.
+
+Functional or Black box testing
+
+Functional testing is a technique in which functionality and requirements of the software are tested without looking at the internal design structure.
+
+It proceeds by performing a dynamic testing focused to the requirements and functionality.
+
+Clearly state the test criteria and the requirements of all clients to minimize errors that may occur in actual operation.
+
+Solution process when defect occurs
+
+Test process follows the following order.
+
+Error found
+
+If an error is found while performing the requirement analysis, design, and test process, please discuss with the professional testers and project teams.
+
+Error registration
+
+Register the error in the defect management report.
+
+Error analysis
+
+Analyze whether the registered error is just the simple error or the physical defect.
+
+Defect confirmation
+
+When the registered information is confirmed as a ‘defect’, set the found error to ‘defect state’
+
+Defect assignment
+
+Specifies the representative and assign the defect.
+
+Defect action
+
+Perform a corrective action of the defect, and if corrective action is completed, set the defect as the ‘defect action state.
+
+Defect action review and approval
+
+Perform verification testing of the modified defect and ensure that the defect is corrected properly. If the action is completed successfully, set the defect as ‘action complete’ state.
+
+Roles and Responsibilities
+
+Where roles and responsibilities are identified, or his/her designate is implied.
+
+Management Members
+
+Hazard Analysis Team: Members, Roles and Responsibilities
+
+V & V Testing Team: Members, Roles and Responsibilities
+
+Documentation Review: Members, Roles and Responsibilities
+
+Team Members/Qualifications
+
+General Qualifications/Requirements as described in each individual’s training file.
+
+V.V & T Item & Methods
+
+Static Analysis
+
+a. Code Review: performed by S/W engineer.
+
+b. Module Test: performed by S/W engineer.
+
+c. Integration Test: performed by S/W engineer.
+
+Dynamic Test
+
+a. Dynamic Test : performed by Q.A Team & S/W engineer
+
+Documentation Handling
+
+Documentation will be handled in accordance with 회사명
+
+outlined in QM Document Control.
+
+Documentation Handling
+
+Documentation will be handled in accordance with 회사명 standards outlined in QM Document Control.
+
+Process Assessment
+
+The assessment of process is performed by internal audits.
+
+Software Risk Management planning
+
+ - Refer the Risk Management plan(문서번호)
+
+Software configuration management planning
+
+To control the changes in the software configuration to maintain the product’s integrity and traceability throughout all steps of the software development life cycle from an early stage in the development to the maintenance.
+
+The following table contains configuration items that are included SCM Plan.
+
+Configuration Items
+
+Description/SUITE Form
+
+Responsible for placing item under control
+
+When item is put under control
+
+Software development plan
+
+Project Manager
+
+Initiation & Planning Stage Exit
+
+Software Requirements Specification
+
+Project Manager, R&D Team
+
+Requirements Stage Exit
+
+Software Design Specification
+
+R&D Team
+
+Design Stage Exit
+
+Traceability Analysis
+
+R&D Team, QA Team
+
+Requirements Stage Exit
+
+Software Validation, Verification and Testing
+
+R&D Team, QA Team
+
+System Design Stage Exit
+
+Release Documents
+
+R&D Team
+
+Implementation Stage Exit
+
+Configuration Item Identifier
+
+Configuration Item Identifiers are used to label all of the CIs that make up a particular grouping such as an application release, a project development phase or documentation changes.
+
+This identification scheme preserves all of the files that are used to create each release and exactly which versions of those files were used. This scheme works for the application installations and then for subsequent upgrades.
+
+Identifiers are used to label the documentation deliverables in a project. For instance, at the end of the system design stage, all of the approved deliverables will be labeled and preserved for future reference. After the completion of the project, many of the deliverables will need to be updated to reflect changes to the application. Those deliverables are assigned identification labels so that their current state can be identified and preserved for future reference.
+
+CM numbering convention for the development and testing items.
+
+It has a purpose to define the rules of the serial number. Functional requirements and test number is included, and front two characters are uppercase letters and back characters are numbers in principle. Revision number is used as the Revision version. Ex) SR0.0.0 (requirement), DT0-00(dynamic testing)
+
+Rules and distribution of the Software version
+
+If any or all of a design results from a modification of an earlier design then either all of applies as if it were a new design or the continued validity of any previous design documentation shall be assessed under a documented modification/change PROCEDURE.
+
+- Software Version Management
+
+Software Configuration Control
+
+Configuration control has four main processes: 1. Identification and documentation of the need for a change in a change request. 2. Analysis and evaluation of a change request and production of a change proposal. 3. Approval or disapproval of a change proposal. 4. Verification, implementation and release of a change.
+
+ <Software Configuration Management Life Cycle>
+
+Software Configuration Control includes the following objectives:
+
+Procedures for changing baselines
+
+Change requests approvals
+
+Responsibilities for change control
+
+Change control process
+
+Request for Change process
+
+Management of release documentation
+
+Configuration control tools and techniques
+
+- Design management procedure (문서번호), refer to the Software Validation Procedures (문서번호)
+
+Configuration item control before verification
+
+▪ Refer to the Software Development Plan 5.4.2 1)
+
+Software Maintenance Plan
+
+Maintenance
+
+Request
+
+Establish Software
+
+Maintenance plan
+
+Problem and modification analysis
+
+Modification Implement
+
+Task
+
+-Receive
+
+-Planning
+
+-Analysis
+
+-Evaluate
+
+-Analysis
+
+-Planning
+
+-Basic Design
+
+-Detailed Design
+
+-Implementation
+
+-Unit test
+
+-Integration test
+
+-Verification & Validation Test
+
+-Confirm development step
+
+-Monitoring
+
+Input
+
+- Voice of Customer
+
+-Customer Complain
+
+-Customer Complain
+
+-Software Maintenance
+
+Procedure
+
+-Customer Complain
+
+-Design Change Record
+
+-Revision History
+
+Output
+
+-Customer Complain Card
+
+-Customer Suggestion Card
+
+-Software Maintenance
+
+Procedure
+
+-Design Change Record
+
+-Revision History
+
+-Software specification
+
+-Source code
+
+-Executable program
+
+-Test report
+
+Activity
+
+-
+
+-Establish Software
+
+Maintenance plan
+
+-Monitor feedback
+
+-Document and Evaluate
+
+ feedback
+
+-Use software problem
+
+ resolution process
+
+-Analyze Change requests
+
+-Charge request approval
+
+-Communicate to users
+
+and regulators
+
+-Define function requirement
+
+-Define environment requirement
+
+-Define user requirement
+
+-Planning Development
+
+-Revise Software module, function,
+
+Integration
+
+-Convert source code to machine
+
+code
+
+-Verify source code
+
+-Verification executable program
+
+-Development output
+
+-Assessment design & development output
+
+-Verification report
+
+-Validation report
+
+-Conference record
+
+Risk
+
+Management
+
+Activity
+
+-
+
+-Evaluate Software
+
+Maintenance Plan on
+
+Safety;
+
+Write on Design
+
+Review History
+
+-Evaluate PROBLEM
+
+REPORT’s affects on
+
+SAFETY
+
+-Planning Risk Management
+
+-Define Characteristic
+
+-Define Hazard
+
+-Implement, record and
+
+verify appropriate Measures
+
+-Assessment residual risk
+
+-Check another now risk
+
+-Check all risk is considered
+
+-Assessment overall residual risk
+
+-Complete risk management report
+
+-Review post product information
+
+-Management new risk
+
+-Report potential or existing safety and/or performance problems
+
+-Assess of each problem for
+
+associated risks
+
+- Identify the criteria
+
+-Identify the action to be taken to
+
+resolve each problem
+
+-Identify validation methods for
+
+each action
+
+-Identify the steps taken for
+
+Verification of continuing
+
+compliance
+
+Documentation
+
+-Customer Complain
+
+-Customer Suggestion Card
+
+-Software Maintenance
+
+Procedure
+
+-Design Review History
+
+-Customer Complain
+
+-Design Change Record
+
+-Revision History
+
+-Software Requirement Specification
+
+-Software Design Specification
+
+-Development Plan
+
+-Risk Management Plan
+
+-Test report
+
+-Verification Report
+
+-Validation Report
+
+-Software release Certification
+
+-Risk management Report
+
+-Design change report
+
+-Conference report
+
+Supporting items to be controlled
+
+No
+
+Maintenance identification
+
+Supporting items
+
+Remark
+
+1
+
+Updates due to error correction
+
+Patch or Re-installation
+
+Download from the server and execute patch or re-installation
+
+1-1
+
+Updates that do not require installation
+
+Patch
+
+Compares the current file with the latest file on the server and performs the patch
+
+1-2
+
+Updates that require installation
+
+Re-installation
+
+Download the latest installation file from the server and notify the user to install it
+
+2
+
+Updates due to function addition / change
+
+Re-installation
+
+Download the latest installation file from the server and notify the user to install it.
+
+2-1
+
+Updates that do not require installation
+
+Patch
+
+Compares the current file with the latest file on the server and performs the patch
+
+2-2
+
+Updates that require installation
+
+Re-installation
+
+Download the latest installation file from the server and notify the user to install it

@@ -1,0 +1,718 @@
+queueId: ingest-1781569954420-195g
+sourcePath: raw/sources/DHF (인허가)/라우터 (Archer C64)/6. Test report/CE RF report_5.2G WiFi.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/e31dd3040756/CE RF report_5.2G WiFi__e31dd3040756_combined.txt
+canonicalGroupId: 92de7f33ddfd
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1275
+
+SOURCE_TEXT
+Note: The information marked # is provided by the applicant, the laboratory is not responsible for its authenticity and this information can affect the validity of the result in the
+test report. Customer model name, addresses, names, trademarks etc. are included.
+This report cannot be reproduced except in full, without prior written approval of the Company. Unless otherwise stated the results shown in this test report refer only to the
+sample(s) tested. This report is valid only with a valid digital signature. The digital signature may be available only under the Adobe software above version 7.0.
+Bay Area Compliance Laboratories Corp. (Shenzhen)
+5F(B-West) , 6F, 7F, the 3rd Phase of Wan Li Industrial Building D, Shihua Rd, FuTian Free Trade Zone, Shenzhen, China
+Tel: +86-755-33320018 Fax: +86-755-33320008 www.baclcorp.com.cn
+TR-EM-RF221 Page 1 of 29 Version 4.0
+TEST REPORT
+Applicant/Manufacturer: TP-Link Systems Inc.
+Address: 10 Mauchly, Irvine, CA 92618
+Report Number: 2501T32449E-RF-22B
+Test Standard (s)
+ETSI EN 301 893 V2.1.1 (2017-05)
+Sample Description
+Product Type: AC1200 MU-MIMO Wi-Fi Router
+Model No.: Archer C64
+Multiple Model(s) No.: N/A
+Trade Mark: tp-link
+Date Received: 2025-05-07
+Issue Date: 2025-06-19
+Test Result: Pass▲
+▲ In the configuration tested, the EUT complied with the standards above.
+Prepared and Checked By: Approved By:
+Wills Yu Nancy Wang
+RF Engineer RF Supervisor
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 2 of 29 Version 4.0
+TABLE OF CONTENTS
+DOCUMENT REVISION HISTORY .........................................................................................................................3
+GENERAL INFORMATION .......................................................................................................................................4
+PRODUCT D ESCRIPTION FOR EQUIPMENT UNDER TEST (EUT) .....................................................................................4
+OBJECTIVE ...................................................................................................................................................................4
+MEASUREMENT UNCERTAINTY ....................................................................................................................................5
+TEST FACILITY .............................................................................................................................................................5
+SYSTEM TEST CONFIGURATION ..........................................................................................................................6
+BLOCK DIAGRAM OF T EST S ETUP ................................................................................................................................7
+SUMMARY OF TEST RESULTS ...............................................................................................................................8
+TEST EQUIPMENT LIST ...........................................................................................................................................9
+REQUIREMENTS AND TEST PROCEDURES .....................................................................................................11
+CENTRE F REQUENCIES ...............................................................................................................................................11
+NOMINAL CHANNEL BANDWIDTH AND O CCUPIED CHANNEL BANDWIDTH ...............................................................13
+RF OUTPUT P OWER, T RANSMIT POWER C ONTROL (WITHOUT T PC) AND P OWER DENSITY .......................................15
+TRANSMITTER UNWANTED E MISSIONS OUTSIDE THE 5 G HZ RLAN B ANDS ...............................................................17
+TRANSMITTER UNWANTED EMISSIONS WITHIN THE 5 GHZ RLAN BANDS .................................................................18
+RECEIVER SPURIOUS E MISSIONS ................................................................................................................................20
+ADAPTIVITY (CHANNEL ACCESS M ECHANISM ) .........................................................................................................21
+RECEIVER BLOCKING .................................................................................................................................................22
+TEST DATA AND RESULTS ....................................................................................................................................25
+TRANSMITTER UNWANTED E MISSIONS OUTSIDE THE 5 GH Z RLAN BANDS .............................................................25
+RECEIVER SPURIOUS EMISSIONS .................................................................................................................................26
+RF CONDUCTED DATA ...............................................................................................................................................27
+EXHIBIT A - EUT PHOTOGRAPHS .......................................................................................................................28
+EXHIBIT B - TEST SETUP PHOTOGRAPHS .......................................................................................................29
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 3 of 29 Version 4.0
+DOCUMENT REVISION HISTORY
+Revision Number Report Number Description of Revision Date of Revision
+0 2501T32449E-RF-22B Original Report 2025-06-19
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 4 of 29 Version 4.0
+GENERAL INFORMATION
+Product Description for Equipment under Test (EUT)
+Product AC1200 MU-MIMO Wi-Fi Router
+Tested Model Archer C64
+Multiple Model(s) N/A
+Frequency Range 5150-5250 MHz
+Mode 802.11a/n20/n40/ac20/ac40/ac80
+Maximum EIRP 5150-5250MHz: 22.81dBm
+Modulation Technique OFDM
+TPC Function N/A
+Beamforming N/A
+Antenna Specification # Antenna1&2 gain: 5.88dBi; Beamforming gain: 1.5dB
+(It is provided by the manufacturer)
+Voltage Range DC 9V from Adapter
+Sample serial number
+32C4-1 for Radiated Emissions Test
+32C4-3 for RF Conducted Test
+(Assigned by BACL, Shenzhen)
+Sample/EUT Status Good condition
+Normal/Extreme
+Condition#
+N.V.: Nominal Voltage: 9VDC
+L.T.: Low Temperature 0℃
+N.T.: Normal Temperature 25℃
+H.T.: High Temperature 40℃
+Note: the extreme test condition was declared by manufacturer.
+Adapter Information
+EU Adapter
+Model:T090085-2C1
+Input: AC100-240V, 50/60Hz, 0.3A
+Output: DC 9.0V, 0.85A, 7.65W
+UK Adapter
+Model:T090085-2D1
+Input: AC100-240V, 50/60Hz, 0.3A
+Output: DC 9.0V, 0.85A, 7.65W
+AU Adapter
+Model:T090085-2E1
+Input: AC100-240V, 50/60Hz, 0.3A
+Output: DC 9.0V, 0.85A
+Note# : EU Adapter & UK Adapter & AU Adapter use electrically identical, just have different plug. The EU
+adapter use for testing.
+Objective
+This test report is in accordance with ETSI EN 301 893 V2.1.1 (2017-05), 5 GHz RLAN; Harmonised
+Standard covering the essential requirements of article 3.2 of Directive 2014/53/EU.
+The objective is to determine the compliance of EUT with ETSI EN 301 893 V2.1.1 (2017-05).
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 5 of 29 Version 4.0
+Measurement Uncertainty
+Item Frequency Range Expanded Measurement uncertainty
+Emissions, Radiated
+30MHz~200MHz Horizontal 5.32dB(k=2, 95% level of confidence)
+30MHz~200MHz Vertical 5.43dB(k=2, 95% level of confidence)
+200MHz~1000MHz Horizontal 5.77dB(k=2, 95% level of confidence)
+200MHz~1000MHz Vertical 5.73dB(k=2, 95% level of confidence)
+1GHz~6GHz / 5.34dB(k=2, 95% level of confidence)
+6GHz~18GHz / 5.40dB(k=2, 95% level of confidence)
+18GHz~40GHz / 5.64dB(k=2, 95% level of confidence)
+Occupied Channel
+Bandwidth / 109.2kHz(k=2, 95% level of confidence)
+Radio frequency / ±10ppm
+RF output power,
+Conducted / 0.86dB(k=2, 95% level of confidence)
+Power Spectral
+Density, conducted / 0.90dB(k=2, 95% level of confidence)
+Unwanted Emission,
+conducted / 1.60dB(k=2, 95% level of confidence)
+Temperature / ±1℃
+Time / ±10%
+Note: The extended uncertainty given in this report is obtained by combining the standard uncertainty times the
+coverage factor K with the 95% confidence interval. Otherwise required by the applicant or Product Regulations,
+Decision Rule in this report did not consider the uncertainty.
+Test Facility
+The Test site used by Bay Area Compliance Laboratories Corp. (Shenzhen) to collect test data is located
+on the 5F(B-West) , 6F, 7F, the 3rd Phase of Wan Li Industrial Building D, Shihua Rd, FuTian Free Trade
+Zone, Shenzhen, China.
+Each test item follows test standards and with no deviation
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 6 of 29 Version 4.0
+SYSTEM TEST CONFIGURATION
+Description of Test Configuration
+The device support 802.11a/n20/n40/ac20/ac40/ac80 mode, the n20/n40 mode was reduced test as
+identical parameter with ac20/ac40 mode.
+For 5150-5250MHz Band, 7 channels are provided to test:
+Channel Frequency
+(MHz) Channel Frequency
+(MHz)
+36 5180 44 5220
+38 5190 46 5230
+40 5200 48 5240
+42 5210 / /
+Note: According to the manufacturer, the EUT support the SISO/MIMO mode, all modes
+share the same power level setting under the same modulation. So the worst mode MIMO
+was selected to test.
+EUT Exercise Software
+“Secure CRTPortable.exe# ” exercise software was used. The software and power level was
+provided by the manufacturer.
+The worst case as below:
+Mode Data Rate
+Channel
+Frequency
+(MHz)
+TPC Power Level#
+Non-Beamforming Beamforming
+802.11a 6Mbps 5180 NA 73 /
+802.11n20 MSC0 5180 NA 73 /
+802.11n40 MSC0 5190 NA 75 /
+802.11ac20 MSC0 5180 NA 73 66
+802.11ac40 MSC0 5190 NA 75 69
+802.11ac80 MSC0 5210 NA 77 72
+Note: The worst-case data rates are determined to be as follows for each mode based upon
+investigation by measuring the power and PSD across all data rates bandwidths, and
+modulations.
+Note:
+1. All of modulation mode support beamforming function except 802.11 a/n20/n40 modulation mode.
+2. The EUT support Beamforming and non-beamforming mode, therefore both mode were
+inverstigated and pre-scanned, the worst case scenario was identified. The worst case (non-
+beamforming) data were presented in test report.
+Special Accessories
+No special accessory.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 7 of 29 Version 4.0
+Equipment Modifications
+No modification was made to the EUT.
+Support Equipment List and Details
+Manufacturer Description Model Serial Number
+/ / / /
+External I/O Cable
+Cable Description Length (m) From Port To
+Unshielded Un-detachable DC Cable 1.5 EUT Adapter
+Block Diagram of Test Setup
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 8 of 29 Version 4.0
+SUMMARY OF TEST RESULTS
+ETSI EN 301 893 V2.1.1 (2017-05) Description of Test Test Result
+§ 4.2.1 Centre Frequencies Compliant
+§ 4.2.2 Nominal Channel Bandwidth and Occupied
+Channel Bandwidth Compliant
+§ 4.2.3 RF output power Compliant
+§ 4.2.3 Transmit Power Control (TPC) Not Applicable
+§ 4.2.3 Power Density Compliant
+§ 4.2.4.1 Transmitter unwanted emissions outside the 5
+GHz RLAN bands Compliant
+§ 4.2.4.2 Transmitter unwanted emissions within the 5
+GHz RLAN bands Compliant
+§ 4.2.5 Receiver spurious emissions Compliant
+§ 4.2.6 Dynamic Frequency Selection (DFS) Not Applicable
+§ 4.2.7 Adaptivity (Channel Access Mechanism) Compliant
+§ 4.2.8 Receiver Blocking Compliant
+§ 4.2.9 User Access Restrictions Compliant*
+§ 4.2.10 Geo-location capability Not Applicable
+Note: Compliant*: Please refer to the product information declared by the manufacturer.
+Not Applicable: The manufacturer declared that the equipment has no this function
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 9 of 29 Version 4.0
+TEST EQUIPMENT LIST
+Manufacturer Description Model Serial Number Calibration
+Date
+Calibration Due
+Date
+Radiated Emission Test
+Rohde &
+Schwarz
+EMI Test
+Receiver ESR3 102455 2024/12/04 2025/12/03
+Sonoma
+instrument Pre-amplifier 310N 186238 2025/04/29 2026/04/28
+Sunol Sciences Broadband
+Antenna JB1 A040904-1 2023/07/20 2026/07/19
+Unknown Cable XH500C J-10M-A 2025/04/29 2026/04/28
+Unknown Cable Chamber Cable
+1 F-03-EM236 2025/04/29 2026/04/28
+Agilent Signal Generator N5183A MY50140588 2024/09/13 2025/09/12
+COM-POWER Dipole Antenna 3121C 9209-860 NCR NCR
+Rohde&Schwarz Spectrum
+Analyzer FSV40 101605 2025/03/26 2026/03/25
+A.H.System Preamplifier PAM-0118P 489 2024/11/15 2025/11/14
+Schwarzbeck Horn Antenna BBHA9120D(12
+01) 1143 2023/07/26 2026/07/25
+The Electro-
+Mechanics Co. Horn Antenna 3115 9107-3694 2024/06/06 2027/06/05
+Unknown RF Cable KMSE 0735 2024/12/06 2025/12/05
+Unknown RF Cable UFA147 219661 2024/12/06 2025/12/05
+JD Filter Switch
+Unit DT7220FSU DS79906 2024/09/09 2025/09/08
+JD Multiplex Switch
+Test Control Set DT7220SCU DS79903 2024/09/09 2025/09/08
+A.H.System Pre-amplifier PAM-1840VH 190 2025/04/29 2026/04/28
+Electro-
+Mechanics Co Horn Antenna 3116 9510-2270 2023/09/18 2026/09/17
+Electro-
+Mechanics Co Horn Antenna 3116 2026 2023/09/18 2026/09/17
+UTIFLEX RF Cable NO. 13 232308-001 2024/12/18 2025/12/17
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 10 of 29 Version 4.0
+Manufacturer Description Model Serial Number Calibration
+Date
+Calibration Due
+Date
+RF Conducted Test
+BACL
+Temperature &
+Humidity
+Chamber
+BTH-150-40 30144 2024/12/06 2025/12/05
+Rohde &
+Schwarz
+Wideband Radio
+Communication
+Tester
+CMW500 146520 2025/04/29 2026/04/28
+Tonscend RF control Unit JS0806-2 19D8060154 2024/08/06 2025/08/05
+Rohde &
+Schwarz
+Spectrum
+Analyzer FSV40 101473 2024/12/04 2025/12/03
+Keysight MXG Vector
+Signal Generator N5182B MY53051503 2024/12/04 2025/12/03
+Narda 20dB Attenuator 99899 0105 2024/06/27 2025/06/26
+* Statement of Traceability: Bay Area Compliance Laboratories Corp. (Shenzhen) attests that all calibrations have
+been performed in accordance to requirements that traceable to National Primary Standards and International System
+of Units (SI).
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 11 of 29 Version 4.0
+REQUIREMENTS AND TEST PROCEDURES
+Centre Frequencies
+Definition
+The centre frequency is the centre of the channel declared by the manufacturer as part of the declared
+channel plan(s).
+Limits
+The actual centre frequency for any given channel declared by the manufacturer shall be maintained within
+the range fc ± 20 ppm.
+Test Procedure
+Test conditions:
+These measurements shall be performed under both normal and extreme test conditions (see clause 5.1).
+The channels on which the conformance requirements in clause 4.2.1 shall be verified are defined in clause
+5.3.2.
+The UUT shall be configured to operate at a normal RF Output Power level. In addition, the UUT shall be
+configured to operate on a single channel.
+For a UUT with antenna connector(s) and using dedicated external antenna(s), or for a UUT with integral
+antenna(s) but with a temporary antenna connector(s) provided, conducted measurements shall be used.
+In case of conducted measurements on smart antenna systems (devices with multiple transmit chains) the
+measurements shall be performed on only one of the active transmit chains.
+For a UUT with integral antenna(s) and without a temporary antenna connector(s), radiated measurements
+shall be used.
+Test method:
+Conducted measurement
+1. Equipment operating without modulation
+This test method requires that the UUT can be operated in an unmodulated test mode.
+The UUT shall be connected to a suitable frequency measuring device (e.g. a frequency counter or a
+spectrum analyser) and operated in an unmodulated mode. The result shall be recorded.
+2. Equipment operating with modulation
+This method is an alternative to the above method in case the UUT cannot be operated in an un-modulated
+mode.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 12 of 29 Version 4.0
+The UUT shall be connected to spectrum analyser.
+Max Hold shall be selected and the centre frequency adjusted to that of the UUT.
+The peak value of the power envelope shall be measured and noted. The span shall be reduced and the
+marker moved in a positive frequency increment until the upper, (relative to the centre frequency), -10 dBc
+point is reached. This value shall be noted as f1.
+The marker shall then be moved in a negative frequency increment until the lower, (relative to the centre
+frequency), -10 dBc point is reached. This value shall be noted as f2.
+The centre frequency is calculated as (f1 + f2) / 2.
+Radiated measurement
+The test set up as described in annex B shall be used with a spectrum analyser of sufficient accuracy
+attached to the test antenna.
+The test procedure is as described under clause 5.4.2.2.1.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 13 of 29 Version 4.0
+Nominal Channel Bandwidth and Occupied Channel Bandwidth
+Definition
+The Nominal Channel Bandwidth is the widest band of frequencies, inclusive of guard bands, assigned to a
+single channel.
+The Occupied Channel Bandwidth is the bandwidth containing 99 % of the power of the signal.
+A device is permitted to operate in one or more adjacent or non-adjacent channels simultaneously.
+
+When equipment has simultaneous transmissions in adjacent channels, these transmissions may be
+considered as one signal with an actual Nominal Channel Bandwidth of "n" times the individual Nominal
+Channel Bandwidth where "n" is the number of adjacent channels. When equipment has simultaneous
+transmissions in non-adjacent channels, each power envelope shall be considered separately.
+Limits
+The Nominal Channel Bandwidth shall be at least 5 MHz at all times.
+The Occupied Channel Bandwidth shall be between 80 % and 100 % of the declared Nominal Channel
+Bandwidth. In case of smart antenna systems (devices with multiple transmit chains) each of the transmit
+chains shall meet this requirement.
+During an established communication, the device is allowed to operate temporarily with an Occupied
+Channel Bandwidth below 80 % of its Nominal Channel Bandwidth with a minimum of 4 MHz.
+Test Procedure
+Test conditions:
+The conformance requirements in clause 4.2.2 shall be verified only under normal operating conditions,
+and on those channels and channel bandwidths defined in clause 5.3.2.
+The measurements shall be performed using normal operation of the equipment with the test signal applied
+(see clause 5.3.1.1).
+The UUT shall be configured to operate at a typical RF power output level used for normal operation.
+When equipment has simultaneous transmissions in adjacent channels, these transmissions may be
+considered as one signal with an actual Nominal Channel Bandwidth of "n" times the individual Nominal
+Channel Bandwidth where "n" is the number of adjacent channels. When equipment has simultaneous
+transmissions in non-adjacent channels, each power envelope shall be considered separately.
+For a UUT with antenna connector(s) and using dedicated external antenna(s), or for a UUT with integral
+antenna(s) but with a temporary antenna connector(s) provided, conducted measurements shall be used.
+In case of conducted measurements on smart antenna systems (devices with multiple transmit chains)
+measurements need only to be performed on one of the active transmit chains (antenna outputs).
+For a UUT with integral antenna(s) and without a temporary antenna connector(s), radiated measurements
+shall be used.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 14 of 29 Version 4.0
+Test method:
+Conducted measurement
+The measurement procedure shall be as follows:
+Step 1:
+ Connect the UUT to the spectrum analyser and use the following settings:
+- Centre Frequency: The centre frequency of the channel under test
+- Resolution Bandwidth: 100 kHz
+- - Video Bandwidth: 300 kHz
+- - Frequency Span: 2 × Nominal Bandwidth (e.g. 40 MHz for a 20 MHz channel)
+- - Sweep time: > 1 s; for larger Nominal Bandwidths, the sweep time may be increased
+until a value where the sweep time has no impact on the RMS value of the signal
+- - Detector Mode: RMS
+- - Trace Mode: Max Hold
+Step 2:
+ Wait for the trace to stabilize.
+Step 3:
+• Make sure that the power envelope is sufficiently above the noise floor of the analyser to avoid the noise
+signals left and right from the power envelope being taken into account by this measurement.
+• Use the 99 % bandwidth function of the spectrum analyser to measure the Occupied Channel Bandwidth
+of the UUT. This value shall be recorded.
+The measurement described in step 1 to step 3 above shall be repeated in case of simultaneous
+transmissions in non-adjacent channels.
+Radiated measurement
+The test set up as described in annex B and the applicable measurement procedures described in annex C
+shall be used.
+The test procedure is as described under clause 5.4.3.2.1.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 15 of 29 Version 4.0
+RF Output Power, Transmit Power Control (Without Tpc) And Power Density
+Definition
+RF Output Power:
+The RF Output Power is the mean equivalent isotropically radiated power (e.i.r.p.) during a transmission
+burst.
+Transmit Power Control (TPC):
+Transmit Power Control (TPC) is a mechanism to be used by the RLAN device to ensure a mitigation
+factor of at least 3 dB on the aggregate power from a large number of devices. This requires the RLAN
+device to have a TPC range from which the lowest value is at least 6 dB below the values for mean e.i.r.p.
+given in table 2 for devices with TPC.
+Power Density:
+The Power Density is the mean equivalent isotropically radiated power (e.i.r.p.) density during a
+transmission burst.
+Limits
+General
+The limits below are applicable to the system as a whole and in any possible configuration. This includes
+smart antenna systems (devices with multiple transmit chains).
+In case of multiple (adjacent or non-adjacent) channels within the same sub-band, the total RF output
+power of all channels in that sub-band shall not exceed the limits defined below.
+In case of multiple, non-adjacent channels operating in separate sub-bands, the total RF output power in
+each of the sub-bands shall not exceed the limits defined below.
+RF output power and power density at the highest power level
+TPC is not required for channels whose nominal bandwidth falls completely within the band 5 150 MHz to
+5 250 MHz.
+For devices with TPC, the RF output power and the power density when configured to operate at the
+highest stated power level of the TPC range shall not exceed the levels given in table 2.
+Devices are allowed to operate without TPC. See table 2 for the applicable limits in this case.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 16 of 29 Version 4.0
+RF output power at the lowest power level of the TPC range
+For devices using TPC, the RF output power during a transmission burst when configured to operate at the
+lowest stated power level of the TPC range shall not exceed the levels given in table 3. For devices without
+TPC, the limits in table 3 do not apply.
+Test Procedure
+According to ETSI EN 301 893 V2.1.1 (2017-05) §5.4.4
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 17 of 29 Version 4.0
+Transmitter Unwanted Emissions Outside The 5 Ghz Rlan Bands
+Definition
+Transmitter unwanted emissions outside the 5 GHz RLAN bands are radio frequency emissions outside the
+5 GHz RLAN bands defined in clause 3.1.
+Limits
+The level of transmitter unwanted emissions outside the 5 GHz RLAN bands shall not exceed the limits
+given in table 4.
+In case of equipment with antenna connectors, these limits apply to emissions at the antenna port
+(conducted) and to the emissions radiated by the cabinet. In case of integral antenna equipment (without
+temporary antenna connectors), these limits apply to emissions radiated by the equipment.
+Test Procedure
+According to ETSI EN 301 893 V2.1.1 (2017-05) §5.4.5
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 18 of 29 Version 4.0
+Transmitter unwanted emissions within the 5 GHz RLAN bands
+Definition
+Transmitter unwanted emissions within the 5 GHz RLAN bands are radio frequency emissions within the 5 GHz
+RLAN bands defined in clause 3.1.
+Limits
+The average level of transmitter unwanted emissions within the 5 GHz RLAN bands shall not exceed the
+limit of the mask provided in figure 1 or the limit for unwanted emissions provided in table 4, whichever is
+the higher.
+The mask is only applicable within the band of operation. Beyond the band edges the requirements of
+clause 4.2.4.1 apply.
+In case of smart antenna systems (devices with multiple transmit chains) each of the transmit chains shall
+meet this requirement.
+For transmitter unwanted emissions within the 5 GHz RLAN bands, simultaneous transmissions in
+adjacent channels may be considered as one signal with an actual Nominal Channel Bandwidth of "n"
+times the individual Nominal Channel Bandwidth where "n" is the number of adjacent channels used
+simultaneously.
+For simultaneous transmissions in multiple non-adjacent channels, the overall transmit spectral power
+mask is constructed in the following manner. First, a mask as provided in figure 1 is applied to each of the
+channels. Then, for each frequency point, the highest value from the spectral masks of all the channels
+assessed shall be taken as the overall spectral mask requirement at that frequency.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 19 of 29 Version 4.0
+Test Procedure
+According to ETSI EN 301 893 V2.1.1 (2017-05) §5.4.6.
+Test Set up Block diagram
+EUT
+Test
+Equipment
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 20 of 29 Version 4.0
+Receiver Spurious Emissions
+Definition
+Receiver spurious emissions are emissions at any frequency when the equipment is in receive mode.
+Limits
+The spurious emissions of the receiver shall not exceed the limits given in table 5.
+In case of equipment with antenna connectors, these limits apply to emissions at the antenna port
+(conducted) and to the emissions radiated by the cabinet. In case of integral antenna equipment (without
+temporary antenna connectors), these limits apply to emissions radiated by the equipment.
+Test Procedure
+According to ETSI EN 301 893 V2.1.1 (2017-05) §5.4.7.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 21 of 29 Version 4.0
+Adaptivity (Channel Access Mechanism)
+Definition
+Adaptivity is an automatic channel access mechanism by which a device avoids transmissions in a channel
+in the presence of transmissions from other RLAN devices in that channel.
+Adaptivity is not intended to be used as an alternative to DFS to detect radar transmissions, but to detect
+transmissions from other RLAN devices operating in the band. DFS requirements are covered by clause
+4.2.6.
+Limit
+This requirement applies to all equipment within the scope of the present document.
+The present document defines 2 types of Adaptive equipment: Frame Based Equipment and Load Based
+Equipment.
+Whilst the mechanisms described in this clause define conditions under which the equipment may transmit,
+transmissions are only allowed providing they are not prohibited by any of the DFS requirements in clause
+4.2.6.
+Test Procedure
+According to ETSI EN 301 893 V2.1.1 (2017-05) §5.4.9.
+Test Setup Block diagram
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 22 of 29 Version 4.0
+Receiver Blocking
+Definition
+Receiver blocking is a measure of the capability of the equipment to receive a wanted signal on its
+operating channel without exceeding a given degradation due to the presence of an unwanted input signal
+(blocking signal) on frequencies other than those of the operating bands provided in table 1.
+Limit
+The minimum performance criterion shall be a PER of less than or equal to 10 %. The manufacturer may
+declare alternative performance criteria as long as that is appropriate for the intended use of the equipment
+(see clause 5.4.1, item s)).
+While maintaining the minimum performance criteria as defined in clause 4.2.8.3, the blocking levels at
+specified frequency offsets shall be equal to or greater than the limits defined in table 7.
+Test Procedure
+Conducted measurements
+For systems using multiple receive chains only one chain need to be tested. All other receiver inputs shall
+be terminated.
+Figure 14 shows the test set-up which can be used for performing the receiver blocking test. The
+companion device may require appropriate shielding or may need to be put in a shielded room to prevent it
+may have a negative impact on the measurement.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 23 of 29 Version 4.0
+The steps below define the procedure to verify the receiver blocking requirement as described in clause
+4.2.8.
+Step 1:
+• The UUT shall be set to the first operating frequency to be tested (see clause 5.3.2).
+Step 2:
+• The blocking signal generator is set to the first frequency as defined in table 7.
+Step 3:
+• With the blocking signal generator switched off a communication link is set up between the UUT and the
+associated companion device using the test setup shown in figure 14. The attenuation of the variable
+attenuator shall be increased in 1 dB steps to a value at which the minimum performance criteria as
+specified in clause 4.2.8.3 is still met. The resulting level for the wanted signal at the input of the UUT is
+P min .
+• This signal level (Pmin) is increased by 6 dB resulting in a new level (Pmin + 6 dB) of the wanted signal
+at the UUT receiver input.
+Step 4:
+• The level of the blocking signal at the UUT input is set to the level provided in table 7. It shall be verified
+and recorded in the test report that the performance criteria as specified in clause 4.2.8.3 are met.
+• If the performance criteria as specified in clause 4.2.8.3 are met, the level of the blocking signal at the
+UUT may be further increased (e.g. in steps of 1 dB) until the level whereby the performance criteria as
+specified in clause 4.2.8.3 are no longer met. The highest level at which the performance criteria are met is
+recorded in the test report.
+Step 5:
+• Repeat step 4 for each remaining combination of frequency and level as specified in table 7.
+Step 6:
+• Repeat step 2 to step 5 with the UUT operating at the other operating frequencies at which the blocking
+test has to be performed. See clause 5.3.2.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 24 of 29 Version 4.0
+Radiated measurements
+When performing radiated measurements on equipment with dedicated antennas, measurements shall be
+repeated for each alternative dedicated antenna.
+A test site as described in annex B and applicable measurement procedures as described in annex C shall
+be used.
+The test procedure is further as described under clause 5.4.10.2.1.
+The level of the blocking signal at the UUT referred to in step 4 is assumed to be the level in front of the
+UUT antenna(s). The UUT shall be positioned with its main beam pointing towards the antenna radiating
+the blocking signal.
+The position recorded in clause 5.4.4.2.2 can be used.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 25 of 29 Version 4.0
+TEST DATA AND RESULTS
+Transmitter Unwanted Emissions Outside The 5 GHz RLAN Bands
+Environmental Conditions
+Temperature
+(℃) 25.3~25.2 Relative Humidity
+(%) 48~50.5
+ATM Pressure (kPa): 100.2~ 101.3 Test engineer: Anson Su & Zenos Qiao
+Test date: 2025.05.25~2025.05.29
+EUT operation
+mode: Transmitting
+Note: Test Result: Compliant, please refer to the below table for the worst case.
+Frequency
+(MHz)
+Receiver
+Reading
+(dBμV)
+Polar
+(H / V)
+Substituted
+Absolute
+Level
+(dBm)
+EN 301 893
+Substituted
+Level
+(dBm)
+Cable
+Loss
+(dB)
+Antenna
+Gain
+(dBi/dBd)
+Limit
+(dBm)
+Margin
+(dB)
+802.11a mode, 5180 MHz
+249.7 48.03 H -63 0.9 0 -63.9 -36 27.9
+65.8 45.94 V -62.5 0.75 0 -63.25 -54 9.25
+10360 53.75 H -47.1 2.8 11.8 -38.1 -30 8.1
+10360 54.34 V -46.5 2.8 11.8 -37.5 -30 7.5
+802.11ac20 mode, 5180 MHz
+249.7 48.26 H -62.7 0.9 0 -63.6 -36 27.6
+65.8 46.14 V -62.3 0.75 0 -63.05 -54 9.05
+10360 53.26 H -47.6 2.8 11.8 -38.6 -30 8.6
+10360 53.78 V -47.1 2.8 11.8 -38.1 -30 8.1
+Note:
+1) Absolute Level = Substituted Level - Cable loss + Antenna Gain
+2) Margin = Limit- Absolute Level
+3) Below 1G antenna gain unit is dBd, above 1G antenna gain unit is dBi
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 26 of 29 Version 4.0
+Receiver spurious emissions
+Environmental Conditions
+Temperature
+(℃) 25.3~25.2 Relative Humidity
+(%) 48~50.5
+ATM Pressure (kPa): 100.2~101.3 Test engineer: Anson Su & Zenos Qiao
+Test date: 2025.05.25~2025.05.29
+EUT operation
+mode: Receiving
+Note: Test Result: Compliant, please refer to the below table for the worst case.
+Frequency
+(MHz)
+Receiver
+Reading
+(dBμV)
+Polar
+(H / V)
+Substituted
+Absolute
+Level
+(dBm)
+EN 301 893
+Substituted
+Level
+(dBm)
+Cable
+Loss
+(dB)
+Antenna
+Gain
+(dBi/dBd)
+Limit
+(dBm)
+Margin
+(dB)
+802.11a mode, 5180 MHz
+249.7 47.81 H -63.2 0.9 0 -64.1 -57 7.1
+65.8 45.37 V -63 0.75 0 -63.75 -57 6.75
+1455.37 47.51 H -67.1 1.2 8.2 -60.1 -47 13.1
+1455.37 48.2 V -66.9 1.2 8.2 -59.9 -47 12.9
+802.11ac20 mode, 5180 MHz
+249.7 48.02 H -63 0.9 0 -63.9 -57 6.9
+65.8 45.66 V -62.7 0.75 0 -63.45 -57 6.45
+1481.24 48.36 H -66.3 1.2 8.2 -59.3 -47 12.3
+1481.24 47.56 V -67.6 1.2 8.2 -60.6 -47 13.6
+Note:
+1) Absolute Level = Substituted Level - Cable loss + Antenna Gain
+2) Margin = Limit- Absolute Level
+3) Below 1G antenna gain unit is dBd, above 1G antenna gain unit is dBi
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 27 of 29 Version 4.0
+RF Conducted data
+Please refer to Annex "Appendix B" for detail test data.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 28 of 29 Version 4.0
+EXHIBIT A - EUT PHOTOGRAPHS
+Please refer to the report number is 2501T32449E-RF.
+
+Bay Area Compliance Laboratories Corp. (Shenzhen) Report No. : 2501T32449E-RF-22B
+TR-EM-RF221 Page 29 of 29 Version 4.0
+EXHIBIT B - TEST SETUP PHOTOGRAPHS
+Please refer to the attachment2501T32449E-RF Test Setup photo.
+***** END OF REPORT *****

@@ -1,0 +1,408 @@
+queueId: ingest-1781569954373-3oz
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - 2,3G FDA 문서/VOL_013_Appendix L Cybersecurity/002_Cybersecurity.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/787ecaf84dde/002_Cybersecurity__787ecaf84dde_combined.txt
+canonicalGroupId: 16fa281f9512
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 1276
+
+SOURCE_TEXT
+Cybersecurity Documentation
+
+Hazard analysis, mitigations, and design considerations pertaining to intentional and unintentional cybersecurity risks associated with your device, including:
+
+A specific list of all cybersecurity risks that were considered in the design of your device;
+
+Cybersecurity Risk Code
+
+Description
+
+HA-0009
+
+Unauthorized access by unauthorized personnel
+
+HA-0010
+
+Unauthorized user can access the unencrypted data
+
+A specific list and justification for all cybersecurity controls that were established for your device.
+
+Cybersecurity Controls Code
+
+Category
+
+Description
+
+CC001
+
+WiFi Login Password
+
+Restrict random access by setting id / pw when connecting to Wireless network
+
+CC002
+
+Authentication and encryption
+
+Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+
+A traceability matrix that links your actual cybersecurity controls to the cybersecurity risks that were considered;
+
+HA-0009
+
+HA-0010
+
+CC001
+
+X
+
+CC002
+
+X
+
+[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]
+
+Cybersecurity Controls Code
+
+Category
+
+Description
+
+Verification
+
+Pass / fail criteria
+
+ValidationPass / Fail
+
+Test performed on
+
+Test performed by
+
+CC001
+
+WiFi Login Password
+
+Restrict random access by setting id / pw when connecting to Wireless network
+
+Call the function
+
+SDUpdater_ReadFirmwareInfoEx
+
+Confirmation of registered password information.
+
+Nov/04/2022
+
+Kim, Wan Soo
+
+CC002
+
+Authentication and encryption
+
+Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+
+Call the function
+
+SDUpdater_ReadFirmwareInfoEx
+
+Confirmation of encryption algorithm application.
+
+Nov/04/2022
+
+Kim, Wan Soo
+
+[Cybersecurity “Risk Control”– “Verification & Validation” Traceability Matrix]
+
+A summary describing the plan for providing validated software updates and patches as needed throughout the lifecycle of the medical device to continue to assure its safety and effectiveness. The FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity.
+
+We make release and design changes in accordance with software development procedures(Doc. No. AQP702).
+
+The operator can update firmware automatically on network connection / wireless network setting. 
+
+(See below or refer to User Manual)
+
+Detector Connection
+
+In ‘’Settings’’ tab, enter IP address of the connected detector into “Connection IP” and click “Read” for detector information.
+
+Update
+
+Click “…” next to “Update file” to attach the file to update and click “Update”. Update completion is shown in “Log” tab.
+
+Network Connection
+
+Configuration tab shows current network connection information.
+
+You can change detector IP, MAC address, netmask, country and wireless network settings. Click “Update” after setting and changing.
+
+Wireless Network Settings
+
+Click “Scan” next to AP list to see the wireless network list that can be connected.
+
+Select the network that you want to connect, enter the password, and click “Update”.
+
+Click “Read” to check the wireless network information.
+
+Click “Clear AP Info” and “Update” in order to initialize the wireless network settings.
+
+A summary describing controls that are in place to assure that the medical device software will maintain its integrity (e.g. remain free of malware) from the point of origin to the point at which that device leaves the control of the manufacturer; and
+
+This device restrict random access by setting id / pw when connecting to Wireless network.
+
+And transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+
+Also, this device provide the calibration for the quality of the detector. It developed to perform quality assurance operations on the detector. This calibration function shall be performance once every one year for stabilized detector condition.
+
+Please refer to the following steps for the calibration.
+
+Dark Image Acquisition
+
+Click "Get Dark" to get a Dark image on the "Calibration" tab. The "Preview" window appears and acquires the Dark image. The acquired Dark image will be displayed in the image file list.
+
+H&Abyz recommends to use the "Average Dark" option to enhance image performance.
+
+If you select the "Average Dark" option, Dark images will be automatically acquired to the number of "total dark frame" values.
+
+Dark image in AED Mode (Auto Exposure Detection Mode) is saved in the below location.
+
+C:\XAS_W\Cal_0\CalType0-AED\
+
+Dark image in Normal Mode is saved in the below location.
+
+C:\ XAS_W \Cal_0\CalType0-NorTrg\
+
+Bright Image Acquisition and Creation of calibration Point Image
+
+According to the Trigger Mode (Trigger Mode), the bright image is acquired in different ways.
+
+In AED Mode (Auto Exposure Detection Mode), click the “Get Bright” button of the software to acquire the bright image. The bright images must be acquired at twenty calibration points. The acquired bright images are shown in the image file list.
+
+In Normal Mode, without clicking the “Get Bright” on the software and uses the Switch Box Exposure switch to acquire the bright image. The bright images must be acquired at twenty calibration points. The acquired bright images are shown in the image file list.
+
+H&Abyz recommends twenty calibration points such as written below. Some artifact can be seen on images if the calibration points are not sufficient.
+
+SID: 150
+
+Cal point 1 ~ 17: with Al 21mm filter
+
+Cal point 18 ~ 20: without Al 21mm filter
+
+Calibration point
+
+kVp
+
+mA
+
+mAs
+
+1
+
+70
+
+200
+
+32
+
+2
+
+70
+
+200
+
+32
+
+3
+
+70
+
+200
+
+32
+
+4
+
+70
+
+200
+
+32
+
+5
+
+70
+
+200
+
+32
+
+6
+
+70
+
+200
+
+32
+
+7
+
+70
+
+200
+
+32
+
+8
+
+70
+
+200
+
+32
+
+9
+
+70
+
+200
+
+32
+
+10
+
+70
+
+200
+
+32
+
+11
+
+70
+
+200
+
+0.6
+
+12
+
+70
+
+200
+
+0.8
+
+13
+
+70
+
+200
+
+1.6
+
+14
+
+70
+
+200
+
+2
+
+15
+
+70
+
+200
+
+8
+
+16
+
+70
+
+200
+
+32
+
+17
+
+70
+
+200
+
+50
+
+18
+
+52
+
+200
+
+6.4
+
+19
+
+70
+
+200
+
+3.2
+
+20
+
+70
+
+200
+
+5
+
+In AED mode (Auto Exposure Detection Mode), each bright image must be acquired at intervals of 30 seconds.
+
+In AED mode (Auto Exposure Detection Mode), X-ray shall be exposed within 30 seconds once the “Acquisition” button is clicked. Otherwise, the action will be cancelled.
+
+In Normal Mode, the image is acquired using Switch Box Exposure switch, not clicking “Get Bright” button.
+
+Do not expose X-ray when “Busy” message is displayed in “Preview” pop-up window. Any Images can’t be acquired during “Busy” state although X-ray is exposed. Expose X-ray when “Ready for Exposure” is shown up in “Preview” window.
+
+When acquiring the bright image, the name of the image file must be Bright01.raw ~ Bright20.raw. When you create the bright image file, the Cal point image "*_OC_xxxx.raw" is automatically created. The acquired bright images are shown in the image file list.
+
+BPM Generation
+
+Click “Generate BPM” in BPM tap, and click “OK” in pop-up to finish generating the BPM.
+
+Device instructions for use and product specifications related to recommended cybersecurity controls appropriate for the intended use environment (e.g. anti-virus software, use of firewall).
+
+Follow the below operating systems
+
+2.10 Environment Requirement
+
+PC Requirement
+
+Item
+
+Detail
+
+CPU
+
+At least Intel Core i3 6 Generation (recommended i7)
+
+RAM
+
+At least 4GB of RAM requirement (4GB for 32-bit OS and 8GB for 64-bit OS recommended)
+
+Capacity of Disk Drive
+
+At least 500GB for application and archiving. Recommended 500GB for applications and secondary drive of 1TB for image archiving.
+
+Network Card
+
+Dual 10/100/1000 network card system required. One for network (Internet) and one for the DR Panel communication.
+
+Graphic Card / Monitor
+
+Resolution of at least 1,600 x 900 for desktop and 1366 x 768 for laptop. For diagnostics purpose we recommend 1920 x 1080 resolution (2 mega pixels) monitor.
+
+OS
+
+Microsoft® Windows 7/10 32-bit/64-bit.
+
+Use the latest FW / Software
+
+H&abyz will provide an update when a bug in the detector device is fixed. This device does not provide dynamic software updates. Updates are made only by CS engineers.
