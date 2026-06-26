@@ -1,71 +1,42 @@
 {
-  "generatedAt": "2026-06-26T05:55:42.821Z",
+  "generatedAt": "2026-06-26T06:22:16.847Z",
   "bundleDir": "reports/p1-pilot-eval-p1-r501-r600-202606261312",
   "manifestRows": 100,
   "manifestRankRange": {
     "start": 501,
     "end": 600
   },
-  "jsonOutputs": 90,
-  "jsonParsePass": 90,
-  "runResults": 90,
-  "pass": 89,
-  "fail": 1,
-  "chunkedPass": 0,
-  "validationInvalid": 1,
-  "validationErrors": [
-    {
-      "pilotRank": 567,
-      "queueId": "ingest-1781569954386-ft0",
-      "outputPath": "outputs/567-c6809b9fdc7a.json",
-      "errors": [
-        "missing top-level key: source",
-        "missing top-level key: document",
-        "missing top-level key: sourceSummary",
-        "missing top-level key: entities",
-        "missing top-level key: concepts",
-        "missing top-level key: evidence",
-        "missing top-level key: reviewFlags",
-        "source.queueId mismatch",
-        "source.sourcePath mismatch",
-        "source.canonicalGroupId mismatch",
-        "sourceSummary.oneLine missing",
-        "entities must be an array",
-        "concepts must be an array",
-        "evidence must be an array",
-        "reviewFlags must be an array"
-      ]
-    }
-  ],
+  "jsonOutputs": 100,
+  "jsonParsePass": 100,
+  "runResults": 100,
+  "pass": 100,
+  "fail": 0,
+  "chunkedPass": 1,
+  "validationInvalid": 0,
+  "validationErrors": [],
   "pageMarkerLeakage": {
     "count": 0,
     "items": []
   },
   "missingEvidence": {
-    "count": 1,
-    "items": [
-      {
-        "pilotRank": 567,
-        "queueId": "ingest-1781569954386-ft0",
-        "outputPath": "outputs/567-c6809b9fdc7a.json"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "evidence": {
-    "total": 1292,
-    "average": 14.4,
-    "min": 0,
-    "max": 32
+    "total": 1551,
+    "average": 15.5,
+    "min": 5,
+    "max": 61
   },
   "reviewFlags": {
-    "total": 296,
-    "average": 3.3
+    "total": 345,
+    "average": 3.5
   },
   "runtimeSeconds": {
-    "average": 66.3,
-    "min": 1.1,
-    "max": 306.7,
-    "total": 5963.1
+    "average": 75.2,
+    "min": 31.7,
+    "max": 861.4,
+    "total": 7524.5
   },
   "topDocumentTypes": [
     {
@@ -73,15 +44,15 @@
       "count": 10
     },
     {
+      "name": "Software Validation Report",
+      "count": 5
+    },
+    {
       "name": "DFS test report",
       "count": 4
     },
     {
       "name": "Controlled regulation",
-      "count": 3
-    },
-    {
-      "name": "Software Validation Report",
       "count": 3
     },
     {
@@ -98,6 +69,10 @@
     },
     {
       "name": "Management standard / company regulation",
+      "count": 2
+    },
+    {
+      "name": "Performance Test Report",
       "count": 2
     },
     {
@@ -121,6 +96,10 @@
       "count": 1
     },
     {
+      "name": "의료기기 GMP 적용 가이드라인",
+      "count": 1
+    },
+    {
       "name": "Approval sheet, specification, test procedure, parts list, drawings, and agency approval sheet",
       "count": 1
     },
@@ -139,24 +118,16 @@
     {
       "name": "Controlled clinical evaluation form",
       "count": 1
-    },
-    {
-      "name": "Controlled internal regulation",
-      "count": 1
-    },
-    {
-      "name": "Controlled regulation / quality procedure",
-      "count": 1
     }
   ],
   "topAuthorities": [
     {
-      "name": "FDA",
-      "count": 11
+      "name": "FCC",
+      "count": 12
     },
     {
-      "name": "FCC",
-      "count": 10
+      "name": "FDA",
+      "count": 12
     },
     {
       "name": "Ministry of Internal Affairs and Communications",
@@ -167,6 +138,10 @@
       "count": 9
     },
     {
+      "name": "European Union",
+      "count": 8
+    },
+    {
       "name": "Radio Law",
       "count": 8
     },
@@ -175,12 +150,12 @@
       "count": 7
     },
     {
-      "name": "European Union",
+      "name": "IC",
       "count": 6
     },
     {
-      "name": "IC",
-      "count": 6
+      "name": "United States",
+      "count": 5
     },
     {
       "name": "AS/NZS",
@@ -199,11 +174,15 @@
       "count": 3
     },
     {
-      "name": "United States",
-      "count": 3
+      "name": "21 CFR 820.30 Design Controls",
+      "count": 2
     },
     {
       "name": "CDRH",
+      "count": 2
+    },
+    {
+      "name": "CE/MDR",
       "count": 2
     },
     {
@@ -221,40 +200,7 @@
     {
       "name": "Japan Radio Law",
       "count": 2
-    },
-    {
-      "name": "KC",
-      "count": 2
-    },
-    {
-      "name": "KOLAS",
-      "count": 2
     }
   ],
-  "failedRunResults": [
-    {
-      "pilotRank": 567,
-      "queueId": "ingest-1781569954386-ft0",
-      "status": "fail",
-      "timedOut": false,
-      "parseError": "",
-      "validationErrors": [
-        "missing top-level key: source",
-        "missing top-level key: document",
-        "missing top-level key: sourceSummary",
-        "missing top-level key: entities",
-        "missing top-level key: concepts",
-        "missing top-level key: evidence",
-        "missing top-level key: reviewFlags",
-        "source.queueId mismatch",
-        "source.sourcePath mismatch",
-        "source.canonicalGroupId mismatch",
-        "sourceSummary.oneLine missing",
-        "entities must be an array",
-        "concepts must be an array",
-        "evidence must be an array",
-        "reviewFlags must be an array"
-      ]
-    }
-  ]
+  "failedRunResults": []
 }
