@@ -1,0 +1,256 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954404-t8v",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/NSE에 따른 PRE-SUB진행 (1차)/Clinical report/검토, 질문사항.docx",
+    "canonicalGroupId": "6f777fa611fb"
+  },
+  "document": {
+    "title": "Clinical report 확인 필요사항",
+    "documentType": "Clinical report review questions",
+    "productModels": [
+      "HnVUE",
+      "G series 8종",
+      "2/3G series 3종",
+      "1G",
+      "2/3G"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices",
+      "DICOM"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Internal review questions for a planned FDA 510(k) resubmission after K252912 received NSE due to clinical image report data integrity concerns.",
+    "officialUse": "Use as traceable internal RA notes identifying FDA pre-submission questions, clinical image test plan needs, predicate device data questions, and SSXI 510(k) guidance checklist items.",
+    "keyPoints": [
+      "K252912 Clinical image report data integrity was described as the reason NSE was issued.",
+      "The source plans a 510(k) resubmission after preparing a transparent image evaluation test plan and obtaining authentic image data.",
+      "Questions focus on whether existing FDA-submitted clinical image data and K241346 Aspen data can be used for predicate device comparison.",
+      "The source lists required clinical image data metadata such as test location, subject device information, operator, test date, clinical expert, image check grade, and clinical evaluation date.",
+      "The source includes checklist items from FDA guidance for solid state X-ray imaging devices covering physical, operational, functional, and exposure characteristics."
+    ]
+  },
+  "entities": [
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "기존 FDA 인증 진행시 사용된 자료 사용해도 문제없는지?"
+    },
+    {
+      "name": "K252912",
+      "type": "510(k) submission",
+      "evidence": "주제: K252912의 Clinical image report상의 데이터 무결성 침해로 NSE가 발급."
+    },
+    {
+      "name": "K241346 (Aspen)",
+      "type": "510(k) submission or predicate-related data reference",
+      "evidence": "K241346 (Aspen) 데이터에 대한 소명?"
+    },
+    {
+      "name": "HnVUE",
+      "type": "device or product model",
+      "evidence": "G series 8종 + HnVUE (전체 재촬영)"
+    },
+    {
+      "name": "G series 8종",
+      "type": "device series",
+      "evidence": "G series 8종 + HnVUE (전체 재촬영)"
+    },
+    {
+      "name": "2/3G series 3종",
+      "type": "device series",
+      "evidence": "2/3G series 3종 + HnVUE (전체 재촬영)"
+    },
+    {
+      "name": "방사선사",
+      "type": "operator role",
+      "evidence": "자격 부여자(방사선사) 가 영상 취득"
+    },
+    {
+      "name": "방사선 전문의",
+      "type": "clinical reviewer role",
+      "evidence": "방사선 전문의가 영상 검토"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "510(k)",
+      "pageTarget": "FDA 510(k)",
+      "evidence": "510k 재신청을 계획중"
+    },
+    {
+      "name": "NSE",
+      "pageTarget": "FDA NSE",
+      "evidence": "K252912의 Clinical image report상의 데이터 무결성 침해로 NSE가 발급"
+    },
+    {
+      "name": "Predicate device",
+      "pageTarget": "Predicate Device",
+      "evidence": "K241346 (Aspen) 데이터도 Predicate device로 포함해야할지?"
+    },
+    {
+      "name": "Clinical image report",
+      "pageTarget": "Clinical Image Report",
+      "evidence": "K252912의 Clinical image report상의 데이터 무결성 침해"
+    },
+    {
+      "name": "영상평가 test plan",
+      "pageTarget": "Clinical Image Evaluation Test Plan",
+      "evidence": "투명한 영상평가 test plan을 세우고 진위성을 보장하는 영상데이터를 확보"
+    },
+    {
+      "name": "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices",
+      "pageTarget": "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices",
+      "evidence": "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices에 따른 Clinical"
+    },
+    {
+      "name": "DICOM",
+      "pageTarget": "DICOM",
+      "evidence": "출력 데이터에 대한 설명과 출력 신호에 대한 직접 접근 방법을 제공하십시오 (통신 표준: EX) DICOM)"
+    },
+    {
+      "name": "데이터 무결성",
+      "pageTarget": "Clinical Data Integrity",
+      "evidence": "Clinical image report상의 데이터 무결성 침해"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "K252912 received NSE due to data integrity violation in the Clinical image report.",
+      "evidenceText": "주제: K252912의 Clinical image report상의 데이터 무결성 침해로 NSE가 발급.",
+      "pageTarget": "K252912",
+      "confidence": "high"
+    },
+    {
+      "claim": "A 510(k) resubmission is planned after creating a transparent image evaluation test plan and securing authentic image data.",
+      "evidenceText": "이부분에 대한 문제를 해결하고자 투명한 영상평가 test plan을 세우고 진위성을 보장하는 영상데이터를 확보하여 510k 재신청을 계획중.",
+      "pageTarget": "FDA 510(k)",
+      "confidence": "high"
+    },
+    {
+      "claim": "The planned pre-submission request concerns prior review of the needed image evaluation test plan.",
+      "evidenceText": "이에 필요한 영상평가 test plan에 대한 사전 검토 요청건.",
+      "pageTarget": "Clinical Image Evaluation Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "For one test overview scenario, G series 8 types plus HnVUE are to be fully re-imaged while prior 2/3G FDA-submitted clinical data are used as-is.",
+      "evidenceText": "G series 8종 + HnVUE (전체 재촬영) / 이전 2/3G FDA 제출한 임상데이터 그대로 사용.",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "For another test overview scenario, 2/3G series 3 types plus HnVUE are to be fully re-imaged while prior 1G FDA-submitted clinical data are used as-is.",
+      "evidenceText": "2/3G series 3종 + HnVUE (전체 재촬영) / 이전 1G FDA 제출한 임상데이터 그대로 사용.",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "Image acquisition is planned by a qualified radiologic technologist and image review by a radiologist.",
+      "evidenceText": "자격 부여자(방사선사) 가 영상 취득 / 방사선 전문의가 영상 검토",
+      "pageTarget": "Clinical Image Evaluation Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document asks whether predicate device images may use existing FDA-submitted data.",
+      "evidenceText": "Q1) Predicate device의 영상은, 기존 FDA 제출된 자료를 사용해도 되는지?",
+      "pageTarget": "Predicate Device",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document asks whether K241346 Aspen data should be included as a predicate device.",
+      "evidenceText": "K241346 (Aspen) 데이터도 Predicate device로 포함해야할지?",
+      "pageTarget": "Predicate Device",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source identifies potential missing evaluation grades and possible differences between some clinical photos and standalone certification images.",
+      "evidenceText": "일부 평가 등급grade 누락 있음 / 23g 측정데이터 뿐만 아니라 일부 임상사진이 단독인증시랑 다른 것 같음.",
+      "pageTarget": "Clinical Image Report",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The source asks whether worst-case selection by patient BMI is needed.",
+      "evidenceText": "환자군의 BMI에 따른 Worst case 선정이 필요한지?",
+      "pageTarget": "Clinical Image Evaluation Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source asks whether comparison of previous images and images with software processing can support applying image processing software to a previously 510(k)-cleared medical device.",
+      "evidenceText": "이전에 510k 인증 받은 의료기기에 영상처리 소프트웨어를 적용하고자 하는 건으로 이전 영상과 소프트웨어 프로그램 기능을 적용한 이미지 비교로 가능한지?",
+      "pageTarget": "Image Processing Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source lists traceability fields for clinical data reliability, including measurement instrument, test location, subject device information, operator, test date, clinical expert, image check grade, and clinical evaluation date.",
+      "evidenceText": "데이터의 신뢰성 향상을 위한 계측기, 측정환경(Test Location), 측정기기(대상기기)스펙(Subject device information), 측정자(Operator), 측정일자(Test date), 평가자(Clinical expert), 평가기준(image check grade), 평가 일자(Clinical evaluation date) 등의 정보 포함.",
+      "pageTarget": "Clinical Data Integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source references FDA guidance for 510(k) submissions for solid state X-ray imaging devices.",
+      "evidenceText": "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices에 따른 Clinical",
+      "pageTarget": "Guidance for the Submission of 510(k)s for Solid State X-ray Imaging Devices",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guidance checklist section asks for physical characteristics including overall dimensions, sensor element dimensions and spacing, structural cross-section, interconnections, signal storage and scanning/readout mechanism, and input power requirements.",
+      "evidenceText": "A. 물리적 특성 ... 길이, 너비, 두께를 포함한 전체 치수 ... 센서 소자의 치수와 간격 ... 구조 단면도 ... 상호 연결 ... 기본 신호 저장 방식과 전체적인 \"스캐닝\" 및 판독 메커니즘 ... 입력 전력 요구 사항",
+      "pageTarget": "Solid State X-ray Imaging Device Physical Characteristics",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guidance checklist section asks for operational functions including exposure methods, fluoroscopy response rate, X-ray absorber material, conversion mechanism, readout mechanism, and output data access including DICOM as an example communication standard.",
+      "evidenceText": "B. 운영기능 ... 노출 방법 ... 투시 촬영의 경우 반응률 ... X선 흡수체 ... 에너지 변환 메커니즘 ... 판독 메커니즘 ... 출력 데이터 ... 통신 표준: EX) DICOM",
+      "pageTarget": "Solid State X-ray Imaging Device Operational Functions",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guidance checklist section asks for functional characteristics such as video output format, DQE, quantum-limited performance, MTF or contrast transfer function, aliasing impact, output signal versus dose, residual signals, partial-area readout, beam alignment and collimation, defects, detector sensitivity over time, latent image erasure, and recovery time.",
+      "evidenceText": "C. 기능적 특성 ... 비디오 신호의 출력 형식 ... 검출 양자 효율(DQE) ... 양자 제한 성능 ... 변조 전달 함수 또는 대비 전달 함수 ... 에일리어싱 ... 출력 신호 수준 ... 지연 또는 잔류 신호 ... 부분 영역 ... X선 빔 정렬 및 콜리메이션 ... 결함 ... 검출 감도의 변화 ... 잠재 영상 소멸 ... 회복 시간",
+      "pageTarget": "Solid State X-ray Imaging Device Functional Characteristics",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guidance checklist section asks for exposure characteristics including dose requirements, reciprocity variation, and stability of device characteristics over time.",
+      "evidenceText": "D. 노출 특성 ... 선량 요구량 및 상호 변환 변화 ... 시간에 따른 기기 특성의 안정성",
+      "pageTarget": "Solid State X-ray Imaging Device Exposure Characteristics",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source appears to be internal review notes/questions rather than an official final regulatory submission."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several question placeholders are incomplete or blank, including item 7 and Q2/Q3/Q4."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source text contains possible OCR or transcription artifacts, including broken line wrapping and '??' after recovery time."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product scope is ambiguous because metadata productSignal says HnX while source text mentions HnVUE, G series, 1G, and 2/3G."
+    },
+    {
+      "severity": "info",
+      "reason": "The source explicitly raises data integrity concerns and image mismatch concerns requiring regulatory review."
+    }
+  ]
+}
