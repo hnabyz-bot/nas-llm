@@ -1,4 +1,333 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f0062-d42e-7960-891b-0f522848ac2a"
+  "source": {
+    "queueId": "ingest-1781569954376-5p0",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/07_Software Validation/250504 파생모델 추가 및 v00.12/A-SDP-HNX_Software Development Plan (Rev2).pdf",
+    "canonicalGroupId": "d818d2af06bb"
+  },
+  "document": {
+    "title": "Software Development Plan for HnX-P1, HnX-PB Portable X-ray System",
+    "documentType": "Software Development Plan",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Rev. No. 2",
+    "documentDate": "May 04, 2025",
+    "standards": [
+      "EN 62304",
+      "ISO 14971",
+      "EN ISO13485:2016",
+      "EN ISO14971:2019",
+      "EN 62304:2006/AC:2008"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software Development Plan A-SDP-HNX Rev.2 for HnX-P1 and HnX-PB Portable X-ray System software.",
+    "officialUse": "Defines software development planning, classification, lifecycle activities, verification and validation, release, configuration management, problem handling, and maintenance for the HnX portable X-ray system software.",
+    "keyPoints": [
+      "Rev.2 revision history states: Add variant model (HnX-PB).",
+      "The document states HnX_P1 and HnX_PB are the same software with different names.",
+      "FDA level of concern classification tables identify Major, Moderate, and Minor levels; Moderate questions are marked Yes.",
+      "EN 62304 software safety classes A, B, and C are described by possible harm severity.",
+      "The software development process follows Classic waterfall methodology and includes a V Model relationship between requirements and test documents."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-P1",
+      "type": "product model",
+      "evidence": "Software Development Plan for HnX-P1, HnX-PB Portable X-ray System"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "product model",
+      "evidence": "Rev. 2 May 04, 2025 Add variant model (HnX-PB)"
+    },
+    {
+      "name": "Portable X-ray System",
+      "type": "device type",
+      "evidence": "Software Development Plan for HnX-P1, HnX-PB Portable X-ray System"
+    },
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\""
+    },
+    {
+      "name": "A-SDP-HNX",
+      "type": "document number",
+      "evidence": "Technical Documentation Document No. A-SDP-HNX"
+    },
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "3.1 Software classification comply with FDA Guide Line"
+    },
+    {
+      "name": "STM32H7A3VG",
+      "type": "component",
+      "evidence": "MCU Model STM32H7A3VG"
+    },
+    {
+      "name": "STM32CUBE IDE",
+      "type": "development tool",
+      "evidence": "Compiler STM32CUBE IDE"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Development Plan",
+      "pageTarget": "Software Development Plan",
+      "evidence": "This plan outlines the tasks, responsibilities, resources, and other items pertinent to the specific development project."
+    },
+    {
+      "name": "FDA software level of concern",
+      "pageTarget": "FDA Software Level of Concern",
+      "evidence": "S/W is classified into Major, Moderate and Minor by its level of concern"
+    },
+    {
+      "name": "Moderate Level of Concern",
+      "pageTarget": "Moderate Level of Concern",
+      "evidence": "If the Software Device is not Major Level of Concern and the answer to any one question below is Yes, the Level of Concern is likely to be Moderate."
+    },
+    {
+      "name": "EN 62304 software safety class",
+      "pageTarget": "EN 62304 Software Safety Class",
+      "evidence": "This company shall assign software safety class to each software system"
+    },
+    {
+      "name": "Software safety Class A",
+      "pageTarget": "Software Safety Class A",
+      "evidence": "Class A : There is no injury nor health damage."
+    },
+    {
+      "name": "Software safety Class B",
+      "pageTarget": "Software Safety Class B",
+      "evidence": "Class B : The possible harm is non-serious injury."
+    },
+    {
+      "name": "Software safety Class C",
+      "pageTarget": "Software Safety Class C",
+      "evidence": "Class C : The possible harm is death or serious injury."
+    },
+    {
+      "name": "Classic waterfall methodology",
+      "pageTarget": "Classic Waterfall Methodology",
+      "evidence": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\""
+    },
+    {
+      "name": "V Model of Software Development",
+      "pageTarget": "V Model of Software Development",
+      "evidence": "Figure: “V” Model of Software Development depicts the relationship between requirements and test documents and reports."
+    },
+    {
+      "name": "Software Verification and Validation",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Software verification and validation shall be confirmed through the software test."
+    },
+    {
+      "name": "Software risk management",
+      "pageTarget": "Software Risk Management",
+      "evidence": "personnel who participated in the program development process shall decide, analyze potential risk, reason, probability and severity of the software."
+    },
+    {
+      "name": "Traceability analysis",
+      "pageTarget": "Traceability Analysis",
+      "evidence": "Traceability analysis is an essential element on comprehension of the effective product development, product design, development, testing and risk alleviation"
+    },
+    {
+      "name": "Software release",
+      "pageTarget": "Software Release",
+      "evidence": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software."
+    },
+    {
+      "name": "Software Configuration Management",
+      "pageTarget": "Software Configuration Management",
+      "evidence": "In case the software configuration is changed, it should be validated before it is applied to the software."
+    },
+    {
+      "name": "Software maintenance",
+      "pageTarget": "Software Maintenance",
+      "evidence": "This chapter provides a recommended schedule for periodic maintenance of the HnX-P1"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is Technical Documentation Document No. A-SDP-HNX.",
+      "evidenceText": "Technical Documentation Document No. A-SDP-HNX",
+      "pageTarget": "A-SDP-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev. No. 2.",
+      "evidenceText": "Rev. No. 2",
+      "pageTarget": "A-SDP-HNX Rev 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Rev.2 document date is May 04, 2025.",
+      "evidenceText": "Software Development Plan Rev. Date May 04, 2025",
+      "pageTarget": "A-SDP-HNX Rev 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document applies to HnX-P1 and HnX-PB Portable X-ray System.",
+      "evidenceText": "Software Development Plan for HnX-P1, HnX-PB Portable X-ray System",
+      "pageTarget": "HnX Portable X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision 2 added the variant model HnX-PB.",
+      "evidenceText": "2 May 04, 2025 Add variant model (HnX-PB)",
+      "pageTarget": "HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX_P1 and HnX_PB are the same software with different names.",
+      "evidenceText": "(HnX_P1 and HnX_PB, the software for HnX-P1 and HnX-PB, are the same software with different names.)",
+      "pageTarget": "HnX Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is classified under FDA guideline levels of concern.",
+      "evidenceText": "3.1 Software classification comply with FDA Guide Line",
+      "pageTarget": "FDA Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "Moderate level of concern criteria are marked Yes in Table 2.",
+      "evidenceText": "Is the Software Device an accessory to a medical device that has a Moderate Level of Concern? ■Y □N",
+      "pageTarget": "Moderate Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "EN 62304 software safety classes A, B, and C are described by possible harm.",
+      "evidenceText": "Class A : There is no injury nor health damage. -. Class B : The possible harm is non-serious injury. -. Class C : The possible harm is death or serious injury.",
+      "pageTarget": "EN 62304 Software Safety Class",
+      "confidence": "high"
+    },
+    {
+      "claim": "If software failure risk is reduced to an acceptable level as defined by ISO 14971 by hardware risk control, software safety classification may be reduced.",
+      "evidenceText": "If the risk of death or serious injury arising from a software failure is subsequently reduced to an acceptable level (as defined by ISO 14971) by a hardware risk control measure",
+      "pageTarget": "ISO 14971 Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Until a software safety class is assigned, Class C requirements apply.",
+      "evidenceText": "For each software system, until a software safety class is assigned, Class C requirements applied.",
+      "pageTarget": "EN 62304 Software Safety Class",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development process follows Classic waterfall methodology.",
+      "evidenceText": "Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology\"",
+      "pageTarget": "Classic Waterfall Methodology",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development process includes definition, design, implementation, qualification, and maintenance.",
+      "evidenceText": "Definition Construct software development plan. Design Construct software structure. Implementation Convert the design into a machine readable form. Qualification Verify the design and code implemented meet the requirements. Maintenance Verified software is installed as a firmware in system at manufacturing time.",
+      "pageTarget": "Software Development Lifecycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "The V Model shows relationships between requirements and test documents and reports.",
+      "evidenceText": "Figure: “V” Model of Software Development depicts the relationship between requirements and test documents and reports.",
+      "pageTarget": "V Model of Software Development",
+      "confidence": "high"
+    },
+    {
+      "claim": "The program language is C/C++.",
+      "evidenceText": "Program Language C/C++",
+      "pageTarget": "HnX Software Development Resources",
+      "confidence": "high"
+    },
+    {
+      "claim": "The MCU model is STM32H7A3VG.",
+      "evidenceText": "MCU Model STM32H7A3VG",
+      "pageTarget": "STM32H7A3VG",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software development verification activities reference EN ISO13485:2016.",
+      "evidenceText": "Software development Devise a plan for the software development and put it in writing EN ISO13485:2016 Software development plan",
+      "pageTarget": "EN ISO13485:2016",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software risk analysis references EN ISO14971:2019.",
+      "evidenceText": "Software risk analysis Identification of the characteristics and hazards associated with the intended use and the safety of the device, risk assessment EN ISO14971:2019 Software Validation Report",
+      "pageTarget": "EN ISO14971:2019",
+      "confidence": "high"
+    },
+    {
+      "claim": "The risk evaluation matrix uses severity and probability values.",
+      "evidenceText": "Risk evaluation matrix Severity Probability",
+      "pageTarget": "Software Risk Evaluation Matrix",
+      "confidence": "high"
+    },
+    {
+      "claim": "For hazards caused by software system failure to behave as specified, probability of failure is assumed to be 100 percent.",
+      "evidenceText": "If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the probability of such failure shall be assumed to be 100 percent [∵EN 62304:2006/AC:2008, Cl. 4.3 a)].",
+      "pageTarget": "EN 62304 Clause 4.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software verification and validation are confirmed through software tests including unit test, integration and system test.",
+      "evidenceText": "Software verification and validation shall be confirmed through the software test. The software test shall conduct the unit test, integration and system test.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cyber security includes wireless communication account control and encryption capabilities.",
+      "evidenceText": "Cyber Security Wireless communication account control and encryption capabilities Account management and communication encryption control",
+      "pageTarget": "Cyber Security",
+      "confidence": "high"
+    },
+    {
+      "claim": "Before software release, verification completion and evaluation results should be ensured.",
+      "evidenceText": "It should be ensured that the software verification is completed and that the results are evaluated before releasing the software.",
+      "pageTarget": "Software Release",
+      "confidence": "high"
+    },
+    {
+      "claim": "Identified residual abnormalities should be documented and assessed for unacceptable risks.",
+      "evidenceText": "All identified residual abnormalities should be documented. In order to ensure that all identified residual abnormalities are not causing unacceptable risks, It should be ensured that such abnormal conditions have been evaluated.",
+      "pageTarget": "Residual Software Anomalies",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration changes should be validated before application.",
+      "evidenceText": "In case the software configuration is changed, it should be validated before it is applied to the software.",
+      "pageTarget": "Software Configuration Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX_P1 software cannot be changed or troubleshooted in the field.",
+      "evidenceText": "HnX_P1 software cannot be changed or troubleshooted in the field. If a problem occurs, software change or troubleshooting must be done through the service center or manufacturer.",
+      "pageTarget": "HnX Software Maintenance",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source text contains mixed revision headers: initial pages show Rev. No. 2 with Rev. Date May 04, 2025, while later pages show Rev. No. 1 with Rev. Date Feb 18, 2025."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority signal indicates FDA and the text references FDA Guide Line, but no specific FDA guidance title or publication date is provided."
+    },
+    {
+      "severity": "warning",
+      "reason": "Page numbering is inconsistent in the extracted text, including Page 1 / 2 followed by Page 2 / 3 and later Rev.1 page totals."
+    },
+    {
+      "severity": "info",
+      "reason": "The text references standards including EN 62304, ISO 14971, EN ISO13485:2016, EN ISO14971:2019, and EN 62304:2006/AC:2008, but full standard titles are not consistently provided."
+    }
+  ]
 }

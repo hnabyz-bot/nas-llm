@@ -1,4 +1,270 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f0062-ec70-72a2-9672-31357caadb96"
+  "source": {
+    "queueId": "ingest-1781569954374-43o",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/5. A-CTMR-HNX_Threat Modeling Report(Rev.5) .docx",
+    "canonicalGroupId": "25af1bef43d4"
+  },
+  "document": {
+    "title": "Cybersecurity Risk Management – Threat Modeling",
+    "documentType": "Threat Modeling Report",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.5",
+    "documentDate": "December 10, 2025",
+    "standards": [
+      "IEC 60601-4-5",
+      "MISRA-C:2004",
+      "CycloneDX",
+      "CVSS"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Threat modeling report for the Portable X-ray System models HnX-P1 and HnX-PB.",
+    "officialUse": "Provides cybersecurity lifecycle risk analysis, threat modeling, risk assessment, and mitigation implementation for the device.",
+    "keyPoints": [
+      "The document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Portable X-ray System(HnX-P1, HnX-PB).",
+      "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and no additional cybersecurity risk management is performed due to the addition of the variant model.",
+      "STRIDE methodology is selected for identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege.",
+      "Risk identification includes data-flow diagram risks, IEC 60601-4-5 cybersecurity requirement risks, risk assessment, and mitigation implementation.",
+      "After mitigation measures were taken for a total of 59 risks, residual risk was reduced to Low 3 and Very Low 56."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Portable X-ray System",
+      "type": "product",
+      "evidence": "Product name: Portable X-ray System"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Manufacturer: H&abyz Co., Ltd."
+    },
+    {
+      "name": "Han, Jimin",
+      "type": "person",
+      "evidence": "Prepared by Han, Jimin R&D team December 10, 2025"
+    },
+    {
+      "name": "Hur, Namkyu",
+      "type": "person",
+      "evidence": "Reviewed by Hur, Namkyu Quality Management Representative December 10, 2025"
+    },
+    {
+      "name": "Jeon, Jeu",
+      "type": "person",
+      "evidence": "Approved by Jeon, Jeu R&D manager December 10, 2025"
+    },
+    {
+      "name": "IEC 60601-4-5",
+      "type": "standard",
+      "evidence": "IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity"
+    },
+    {
+      "name": "STMicroelectronics Open-Source Bundle",
+      "type": "open source component",
+      "evidence": "A13: Open source 1 – STMicroelectronics Open-Source Bundle"
+    },
+    {
+      "name": "KISA Crypto Module",
+      "type": "open source component",
+      "evidence": "A14: Open source 2 - KISA Crypto Module"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity lifecycle risk analysis",
+      "pageTarget": "Cybersecurity lifecycle risk analysis",
+      "evidence": "This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Portable X-ray System(HnX-P1, HnX-PB)."
+    },
+    {
+      "name": "Threat modeling",
+      "pageTarget": "Threat modeling",
+      "evidence": "The threat modeling document for the Medical Device HnX-P1 and HnX-PB ... aims to evaluate potential cybersecurity threats and pinpoint vulnerabilities within the device."
+    },
+    {
+      "name": "Data-Flow Diagram",
+      "pageTarget": "Data-flow diagram",
+      "evidence": "A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system."
+    },
+    {
+      "name": "STRIDE methodology",
+      "pageTarget": "STRIDE threat modeling",
+      "evidence": "The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege."
+    },
+    {
+      "name": "IEC 60601-4-5 cybersecurity requirements",
+      "pageTarget": "IEC 60601-4-5",
+      "evidence": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)"
+    },
+    {
+      "name": "Cybersecurity controls",
+      "pageTarget": "Cybersecurity controls",
+      "evidence": "Security control Risk ID Authentication ... Authorization ... Cryptography ... Code, Data, and Execution Integrity ... Confidentiality ... Event Detection and Logging ... Resiliency and Recovery ... Firmware and Software Updates"
+    },
+    {
+      "name": "SBOM-based vulnerability scan",
+      "pageTarget": "Software bill of materials vulnerability management",
+      "evidence": "SBOM-based vulnerability scan (using CycloneDX format): Create SBOM in CycloneDX format and periodically review whether each component has CVE using automated tools such as Snyk/Syft"
+    },
+    {
+      "name": "Bluetooth cybersecurity",
+      "pageTarget": "Bluetooth cybersecurity",
+      "evidence": "It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices."
+    },
+    {
+      "name": "Firmware integrity verification",
+      "pageTarget": "Firmware integrity verification",
+      "evidence": "The product provides an update function through the USB C-TYPE port, and the Likelihood for Risk is mitigated through integrity check during update."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The report applies to Portable X-ray System models HnX-P1 and HnX-PB.",
+      "evidenceText": "Product name: Portable X-ray System\n\nModel name: HnX-P1, HnX-PB",
+      "pageTarget": "Portable X-ray System HnX-P1 and HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer is H&abyz Co., Ltd.",
+      "evidenceText": "Manufacturer: H&abyz Co., Ltd.",
+      "pageTarget": "H&abyz Co., Ltd.",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev.5 dated December 10, 2025.",
+      "evidenceText": "5\n\nDecember 10, 2025\n\nRevision according to the intended purpose",
+      "pageTarget": "Threat Modeling Report Rev.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document was prepared, reviewed, and approved on December 10, 2025.",
+      "evidenceText": "Prepared by Han, Jimin R&D team December 10, 2025 ... Reviewed by Hur, Namkyu Quality Management Representative December 10, 2025 ... Approved by Jeon, Jeu R&D manager December 10, 2025",
+      "pageTarget": "Threat Modeling Report approval",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document provides cybersecurity lifecycle risk analysis and threat modeling for HnX-P1 and HnX-PB.",
+      "evidenceText": "This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Portable X-ray System(HnX-P1, HnX-PB).",
+      "pageTarget": "Cybersecurity lifecycle risk analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-PB is a variant model with exterior design changes only compared to HnX-P1.",
+      "evidenceText": "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.",
+      "pageTarget": "HnX-PB variant model",
+      "confidence": "high"
+    },
+    {
+      "claim": "No additional cybersecurity risk management is performed due to the addition of HnX-PB.",
+      "evidenceText": "Therefore, no additional cybersecurity risk management is performed due to the addition of the variant model (HnX-PB).",
+      "pageTarget": "HnX-PB cybersecurity risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Assets include data and functions, external ports, communications, firmware, and open source SBOM items.",
+      "evidenceText": "Assets was identified for data and functions, external ports, communications, and firmware and open source of SBOM.",
+      "pageTarget": "Medical device cybersecurity assets",
+      "confidence": "high"
+    },
+    {
+      "claim": "User identification and authentication were not applied because the LCD is a non-touch display, with physical controls implemented through limited environment and users.",
+      "evidenceText": "The LCD of the product is a non-touch display, so user identification and authentication were not applied, and physical control measures were implemented through a limited environment and limited users.",
+      "pageTarget": "User identification and authentication controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The threat modeling uses STRIDE methodology.",
+      "evidenceText": "Threat Methodology: The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege",
+      "pageTarget": "STRIDE threat modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report includes IEC 60601-4-5 compliance testing as part of the threat modeling summary.",
+      "evidenceText": "IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity (35 initial risks)",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report includes CWE vulnerability assessment.",
+      "evidenceText": "CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber threats (56 initial risks)",
+      "pageTarget": "CWE vulnerability assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report includes penetration testing.",
+      "evidenceText": "Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in systems. (4 initial risks)",
+      "pageTarget": "Penetration testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Data-flow diagram risk identification lists risks CRM-01 through CRM-24.",
+      "evidenceText": "Risk identification according to Data-Flow Diagram ... CRM-01 ... CRM-24",
+      "pageTarget": "Data-flow diagram risk identification",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-4-5 cybersecurity requirement risk identification lists risks CRM-25 through CRM-59.",
+      "evidenceText": "Risk identification according to cybersecurity requirements (IEC 60601-4-5) ... CRM-25 ... CRM-59",
+      "pageTarget": "IEC 60601-4-5 cybersecurity requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mitigation controls are assigned to authentication, authorization, cryptography, integrity, confidentiality, event detection and logging, resiliency and recovery, and firmware/software updates.",
+      "evidenceText": "Security control Risk ID Authentication ... Authorization ... Cryptography ... Code, Data, and Execution Integrity ... Confidentiality ... Event Detection and Logging ... Resiliency and Recovery ... Firmware and Software Updates",
+      "pageTarget": "Cybersecurity control assignment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Bluetooth communication uses SHA-256 packet integrity protection.",
+      "evidenceText": "The product provides a Bluetooth communication function and provides a packet integrity protection function through data hashing (SHA-256) when transmitting/receiving Bluetooth packets.",
+      "pageTarget": "Bluetooth packet integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides updates through a USB C-TYPE port with integrity checks during update.",
+      "evidenceText": "The product provides an update function through the USB C-TYPE port, and the Likelihood for Risk is mitigated through integrity check during update.",
+      "pageTarget": "USB firmware update integrity check",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is not connected to an Ethernet network and Bluetooth connection is limited.",
+      "evidenceText": "The device is not connected to an Ethernet network, and connection is limited during Bluetooth communication.",
+      "pageTarget": "Medical device network configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "After mitigation, residual risk was reduced to Low 3 and Very Low 56.",
+      "evidenceText": "After mitigation measures were taken for a total of 59 risks (Low: 7 /Medium: 31 / High: 17 / Critical: 4), the residual risk was reduced to a total of Low 3 & Very Low: 56.",
+      "pageTarget": "Residual cybersecurity risk",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is identified in the source text; source metadata only states authoritySignal: general."
+    },
+    {
+      "severity": "warning",
+      "reason": "The threat modeling summary states 'In total 16 risks' but the risk identification and final summary list 59 risks, creating conflicting evidence."
+    },
+    {
+      "severity": "info",
+      "reason": "Several OCR or transcription issues appear in the source text, including 'Attemps', 'Tempering', and spacing inconsistencies in open source component names."
+    }
+  ]
 }

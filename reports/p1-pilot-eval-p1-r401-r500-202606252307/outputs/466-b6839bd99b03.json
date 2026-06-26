@@ -1,4 +1,304 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f0062-a0e9-7553-ae39-fb48e3512e08"
+  "source": {
+    "queueId": "ingest-1781569954378-7u0",
+    "sourcePath": "raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/2.1_A-CRMR-HNXR1_Cybersecurity Risk Management Report(Rev.0 250806).docx",
+    "canonicalGroupId": "b6839bd99b03"
+  },
+  "document": {
+    "title": "Cybersecurity Risk Management Report",
+    "documentType": "Cybersecurity risk management report",
+    "productModels": [
+      "HnX-R1",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW",
+      "HnVUE"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "ISO 14971:2019",
+      "TR 24971:2020",
+      "ISO 14971",
+      "IEC 60601-1",
+      "IEC 60601-1-2",
+      "IEC 62304",
+      "IEC 62366-1",
+      "IEC 60601-1-6",
+      "ISO 15223-1",
+      "AAMI TIR 57",
+      "NIST Special Publication 800-30",
+      "Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions",
+      "CVSS version 3.1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity risk management report for HnX-R1 Digital X-ray Imaging System prior to commercial distribution.",
+    "officialUse": "Supports verification that the cybersecurity risk management plan was implemented, overall residual risk is acceptable, and production and post-production information methods are in place.",
+    "keyPoints": [
+      "The report applies to HnX-R1, listed detector references, and HnVUE console software.",
+      "The report identifies 67 cybersecurity risks through STRIDE threat modeling.",
+      "Initial risk evaluation reported 43 acceptable risks and 24 unacceptable risks.",
+      "After risk control, all 67 identified residual risks were distributed in the broadly acceptable region.",
+      "Cyber threats and cybersecurity risks are to be monitored periodically and reviewed once a year."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "medical device model",
+      "evidence": "Model name: HnX-R1"
+    },
+    {
+      "name": "Digital X-ray Imaging System",
+      "type": "product",
+      "evidence": "Product name: Digital X-ray Imaging System"
+    },
+    {
+      "name": "HnVUE",
+      "type": "console software",
+      "evidence": "Console software HnVUE"
+    },
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Manufacturer H&abyz Co., Ltd."
+    },
+    {
+      "name": "ISO 14971:2019",
+      "type": "standard",
+      "evidence": "in accordance with ISO 14971:2019 , TR 24971:2020"
+    },
+    {
+      "name": "ISO/TR 24971:2020",
+      "type": "standard",
+      "evidence": "The result of identification of characteristics that could impact on safety by ISO/TR 24971:2020, Annex A.2"
+    },
+    {
+      "name": "NIST NVD",
+      "type": "vulnerability database",
+      "evidence": "After reviewing NIST’s NVD and the CISA KEV Catalog for all off‑the‑shelf and open‑source components in the SBOM"
+    },
+    {
+      "name": "CISA KEV Catalog",
+      "type": "vulnerability catalog",
+      "evidence": "After reviewing NIST’s NVD and the CISA KEV Catalog for all off‑the‑shelf and open‑source components in the SBOM"
+    },
+    {
+      "name": "Jimin HAN",
+      "type": "document preparer",
+      "evidence": "Prepared by Jimin HAN RA team August 06, 2025"
+    },
+    {
+      "name": "Kyungsoo LEE",
+      "type": "document reviewer",
+      "evidence": "Reviewed by Kyungsoo LEE R&D Manager August 06, 2025"
+    },
+    {
+      "name": "Namkyu HUR",
+      "type": "document approver",
+      "evidence": "Approved by Namkyu HUR Quality Management Representative August 06, 2025"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity risk management",
+      "pageTarget": "Cybersecurity Risk Management",
+      "evidence": "preparation of cyber security risk management system in accordance with ISO 14971:2019 , TR 24971:2020"
+    },
+    {
+      "name": "Risk management process",
+      "pageTarget": "Medical Device Risk Management Process",
+      "evidence": "Risk management process needs to be iterative, covering each risk in turn, and returning to earlier steps if risk control measures introduce new hazards or if new information becomes available."
+    },
+    {
+      "name": "STRIDE threat modeling",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "A total of 67 risks were identified through STRIDE Threat modeling."
+    },
+    {
+      "name": "CVSS assessment",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "evidence": "The Common Vulnerability Scoring System (CVSS) method was applied as an evaluation method for cybersecurity vulnerabilities"
+    },
+    {
+      "name": "Risk acceptability",
+      "pageTarget": "Risk Acceptability",
+      "evidence": "Acceptable (AR) :Broadly Acceptable Region, Green Zone, Risk levels ≤10"
+    },
+    {
+      "name": "Residual risk evaluation",
+      "pageTarget": "Residual Risk Evaluation",
+      "evidence": "All identified residual risks evaluated after implementation of the risk control measures, are distributed in a broadly acceptable region."
+    },
+    {
+      "name": "Production and post-production activities",
+      "pageTarget": "Production and Post-Production Monitoring",
+      "evidence": "appropriate metho ds are in place to obtain relevant production and post production information."
+    },
+    {
+      "name": "Software bill of materials vulnerability review",
+      "pageTarget": "SBOM Vulnerability Review",
+      "evidence": "After reviewing NIST’s NVD and the CISA KEV Catalog for all off‑the‑shelf and open‑source components in the SBOM, no publicly known vulnerabilities affecting this product were identified."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a cybersecurity risk management report for HnX-R1.",
+      "evidenceText": "Cybersecurity Risk Management Report Product name: Digital X-ray Imaging System Model name: HnX-R1",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Management Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev.0 with initial revision date 2025.08.06.",
+      "evidenceText": "Revision History Revision No. 0 Rev. Date 2025.08.06 Revision Description Initial",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Management Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was prepared, reviewed, and approved on August 06, 2025.",
+      "evidenceText": "Prepared by Jimin HAN RA team August 06, 2025 Reviewed by Kyungsoo LEE R&D Manager August 06, 2025 Approved by Namkyu HUR Quality Management Representative August 06, 2025",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Management Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was prepared in accordance with ISO 14971:2019 and TR 24971:2020.",
+      "evidenceText": "preparation of cyber security risk management system in accordance with ISO 14971:2019 , TR 24971:2020",
+      "pageTarget": "ISO 14971 Medical Device Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-R1 is intended for general radiographic diagnosis of human anatomy for adults and children and is not for mammography.",
+      "evidenceText": "HnX-R1 (Digital X-ray Imaging System) is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children. It is intended to replace film based radiographic diagnostic systems. Not to be used for mammography.",
+      "pageTarget": "HnX-R1 Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The intended patient population is adults and children except infants and pregnant women.",
+      "evidenceText": "Intended PATIENT population Adult and children except infants and pregnant women",
+      "pageTarget": "HnX-R1 Intended Patient Population",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product contains software.",
+      "evidenceText": "A.2.19 Does the medical device contain software? A The product contains software.",
+      "pageTarget": "HnX-R1 Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power supply box can connect to a PC with Ethernet, and the detector can connect to a PC via Wi-Fi.",
+      "evidenceText": "Power Supply Box can be connected to the PC with an Ethernet Cable. The detector can be connected to a PC via Wi-Fi.",
+      "pageTarget": "HnX-R1 Connectivity",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product does not store data.",
+      "evidenceText": "A.2.21 Does the medical device store data critical to patient care? N/A This product does not store data.",
+      "pageTarget": "HnX-R1 Data Storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "No publicly known vulnerabilities affecting the product were identified after reviewing NIST NVD and CISA KEV Catalog for SBOM components.",
+      "evidenceText": "After reviewing NIST’s NVD and the CISA KEV Catalog for all off‑the‑shelf and open‑source components in the SBOM, no publicly known vulnerabilities affecting this product were identified.",
+      "pageTarget": "SBOM Vulnerability Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "A total of 67 risks were identified through STRIDE threat modeling.",
+      "evidenceText": "A total of 67 risks were identified through STRIDE Threat modeling. There are 67 risks distributed across Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege.",
+      "pageTarget": "STRIDE Threat Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "CVSS version 3.1 was used for cybersecurity vulnerability evaluation.",
+      "evidenceText": "The CVSS measurement site and used version. : NVD – CVSS c3.1 Calculator / CVSS version 3.1",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk acceptability was divided into acceptable risk levels of 10 or below and unacceptable risk levels above 10.",
+      "evidenceText": "Acceptable (AR) :Broadly Acceptable Region, Green Zone, Risk levels ≤10 -Unacceptable (UR) : Unacceptable Region, Red Zone, Risk levels >10",
+      "pageTarget": "Risk Acceptability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Initial risk evaluation found 43 acceptable risks and 24 unacceptable risks out of 67 total risks.",
+      "evidenceText": "Green zone, Acceptable Risk 43 Red zone, Unacceptable Risk 24 Total 67",
+      "pageTarget": "HnX-R1 Cybersecurity Risk Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Security controls were grouped into eight items including authentication, authorization, cryptography, integrity, confidentiality, logging, resiliency and recovery, and firmware and software updates.",
+      "evidenceText": "Identify the corresponding risks for a total of 8 security items. (Authentication / Authorization / Cryptography / Code, Data, and Execution Integrity / Confidentiality / Event Detection and Logging / Resiliency and Recovery / Firmware and Software Updates)",
+      "pageTarget": "Medical Device Cybersecurity Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "After risk controls, all 67 identified residual risks were acceptable and no red-zone unacceptable risks remained.",
+      "evidenceText": "Green zone, Acceptable Risk 67 Red zone, Unacceptable Risk - Total 67",
+      "pageTarget": "HnX-R1 Residual Risk Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "No further additional risk control measures were needed after implementation because residual risks were broadly acceptable.",
+      "evidenceText": "All identified residual risks evaluated after implementation of the risk control measures, are distributed in a broadly acceptable region. So, there are no further additional risk control measures needed.",
+      "pageTarget": "HnX-R1 Residual Risk Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The overall residual risks were determined acceptable through cybersecurity testing and threat modeling, labeling, operating method, adverse event reporting, and usability expert review.",
+      "evidenceText": "The overall residual risks are determined to be acceptable through cyber security testing and threat modeling, the label, operating method, adverse event reporting and usability expert review.",
+      "pageTarget": "HnX-R1 Overall Residual Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cyber threats will be monitored periodically, and cyber risks to the product will be reviewed once a year.",
+      "evidenceText": "cyber threats will be monitored periodically in accordance with cyber security developments, and cyber risks to the product will be reviewed once a year to update the product if there is a risk.",
+      "pageTarget": "HnX-R1 Cybersecurity Postmarket Monitoring",
+      "confidence": "high"
+    },
+    {
+      "claim": "R&D is responsible for design change cybersecurity reviews and annual cybersecurity risk review for patches.",
+      "evidenceText": "R&D 1. Design changes Any changes made to the product, such as updates or new features, may introduce new vulnerabilities or modify existing ones. These changes are thoroughly reviewed to establish a relevant cybersecurity risk management plan. 2. Develop and release patches Review your cybersecurity risks once a year and update them if you believe there is a threat to your cybersecurity.",
+      "pageTarget": "HnX-R1 Cybersecurity Postmarket Monitoring",
+      "confidence": "high"
+    },
+    {
+      "claim": "RA monitors national and international standards and performs CISA catalog-based cyber threat review.",
+      "evidenceText": "RA 1. Monitoring the national and international standards Monitoring the medical appliance act and related international standards, and reflect the results in the development department. 3. CISC monitoring Cyber threats will be reviewed, the reviewed risk will be verified through CISA's Catalog, and a solution will be drawn.",
+      "pageTarget": "HnX-R1 Regulatory Affairs Monitoring",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is identified; authoritySignal is general and the document only references standards, guidance titles, and applicable national or regional regulations."
+    },
+    {
+      "severity": "warning",
+      "reason": "Risk count evidence is internally inconsistent: the report states 67 total risks, but also says 59 risks were High and 13 were Medium, which sums to 72."
+    },
+    {
+      "severity": "info",
+      "reason": "The source text contains OCR or extraction quality issues and typographical errors such as 'metho ds', 'Treat modeling', 'Tempering', 'waning', and 'CISC monitoring'."
+    },
+    {
+      "severity": "info",
+      "reason": "The cover page includes a 'Ref no.' label but no document reference number is present in the extracted text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product terminology varies between 'Digital X-ray Imaging System', 'Digital Flat Panel X-ray Detector', and 'Digital Flat Panel X-Ray Detector' in the source."
+    }
+  ]
 }

@@ -1,4 +1,230 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005f-a9bb-7883-a9a0-911910a0e8b1"
+  "source": {
+    "queueId": "ingest-1781569954374-43m",
+    "sourcePath": "raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/1. A-CDR-HNXR1_Cybersecurity Development Report (Rev.0 250806).pdf",
+    "canonicalGroupId": "f0a41548b55d"
+  },
+  "document": {
+    "title": "Cybersecurity Development Report",
+    "documentType": "Technical Documentation",
+    "productModels": [
+      "HnX-R1",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW",
+      "HnVUE"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "NIST",
+      "CISA",
+      "U.S. DHS (ICS-CERT program)",
+      "CERT"
+    ],
+    "revisionOrVersion": "Rev. No. 0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "IEC 81001-5-1",
+      "IEC 60601-4-5",
+      "ISO 14971:2019",
+      "TR 24971:2020",
+      "AAMI TIR 57",
+      "NIST 800-30",
+      "CVSS version 3.1",
+      "DICOM"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity Development Report for the HnX-R1 digital X-ray imaging system documenting cybersecurity development, risk management, verification, update management, patching, and incident response activities.",
+    "officialUse": "Provides cybersecurity documentation intended to demonstrate compliance, support regulatory approval and certification, and inform stakeholders about cybersecurity practices for HnX-R1.",
+    "keyPoints": [
+      "The report states that HnX-R1 cybersecurity activities are documented in accordance with IEC 81001-5-1.",
+      "HnX-R1 is a wired/wireless digital X-ray imaging system with detectors, power supply box, battery pack, battery charger, accessories, and HnVUE console software.",
+      "The intended use is general radiographic diagnosis of human anatomy for adults and children, replacing film-based radiographic diagnostic systems, and not for mammography.",
+      "Cybersecurity risk assessment uses CVSS version 3.1 and identifies STRIDE categories for threat modeling.",
+      "Verification activities include SAST, requirement testing, vulnerability testing, fuzzing testing, and penetration testing.",
+      "The device does not support remote or automatic updates; firmware patches are manually applied via physical connection and verified for integrity before installation."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Manufacturer H&abyz Co., Ltd."
+    },
+    {
+      "name": "HnX-R1",
+      "type": "medical device model",
+      "evidence": "Model name HnX-R1"
+    },
+    {
+      "name": "HnVUE",
+      "type": "console software",
+      "evidence": "Console software HnVUE"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "This architecture outlines four key perspectives for cybersecurity in medical devices, as recommended by the FDA."
+    },
+    {
+      "name": "CISA",
+      "type": "cybersecurity authority",
+      "evidence": "CISA monitoring (Cybersecurity and Infrastructure Security Agency)"
+    },
+    {
+      "name": "U.S. DHS (ICS-CERT program)",
+      "type": "government agency program",
+      "evidence": "Confirmed vulnerabilities must result in a direct report into government agencies such as the U.S. DHS (ICS-CERT program)"
+    },
+    {
+      "name": "CERT",
+      "type": "cybersecurity authority",
+      "evidence": "H&abyz plans to actively participate in the CVD process to monitor the Cybersecurity Vulnerability report issued by CISA or CERT"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "IEC 81001-5-1 cybersecurity lifecycle documentation",
+      "pageTarget": "IEC 81001-5-1",
+      "evidence": "The Cybersecurity Development Report for the HnX-R1 documents all the activities and procedures taken to ensure the cybersecurity of this specific device, in accordance with the IEC 81001-5-1 standard."
+    },
+    {
+      "name": "IEC 60601-4-5 cybersecurity requirements",
+      "pageTarget": "IEC 60601-4-5",
+      "evidence": "Deriving security requirements is a critical step in the design and development phase. This involves identifying both functional and non-functional security requirements based on the IEC 60601-4-5."
+    },
+    {
+      "name": "STRIDE threat modeling",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "Techniques such as STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) can be used to categorize and analyze threats."
+    },
+    {
+      "name": "CVSS 3.1 vulnerability scoring",
+      "pageTarget": "CVSS Version 3.1",
+      "evidence": "As a method for risk assessment, we apply CVSS (Common Vulnerability Scoring System)."
+    },
+    {
+      "name": "Software Bill of Materials",
+      "pageTarget": "Software Bill of Materials",
+      "evidence": "Managing an SBOM (Software Bill of Materials) for medical device cybersecurity involves creating a detailed inventory of all software components, continuously monitoring for vulnerabilities."
+    },
+    {
+      "name": "Coordinated Vulnerability Disclosure",
+      "pageTarget": "Coordinated Vulnerability Disclosure",
+      "evidence": "CVD process (Coordinated Vulnerability Disclosure)"
+    },
+    {
+      "name": "MDS2 checklist",
+      "pageTarget": "Manufacturer Disclosure Statement for Medical Device Security",
+      "evidence": "To verify interoperability functionality, we have added the MDS2 (Manufacturer Disclosure Statement for Medical Device Security) checklist."
+    },
+    {
+      "name": "Manual firmware patching",
+      "pageTarget": "Medical Device Firmware Update Management",
+      "evidence": "Firmware patches are applied manually via a physical connection and the update file is verified for integrity prior to installation."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a Cybersecurity Development Report for HnX-R1.",
+      "evidenceText": "The Cybersecurity Development Report for the HnX-R1 documents all the activities and procedures taken to ensure the cybersecurity of this specific device",
+      "pageTarget": "HnX-R1 Cybersecurity Development Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is a digital X-ray imaging system.",
+      "evidenceText": "Product name Digital X-ray Imaging System",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer is H&abyz Co., Ltd.",
+      "evidenceText": "Manufacturer H&abyz Co., Ltd.",
+      "pageTarget": "H&abyz Co., Ltd.",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-R1 intended use is general radiographic diagnosis of human anatomy for adults and children and is not for mammography.",
+      "evidenceText": "HnX-R1 (Digital X-ray Imaging System) is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children. It is intended to replace film based radiographic diagnostic systems. Not to be used for mammography.",
+      "pageTarget": "HnX-R1 Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report is intended to demonstrate compliance with IEC 81001-5-1.",
+      "evidenceText": "The purpose of the Cybersecurity Development Report for HnX-R1 is to demonstrate compliance with the IEC 81001-5-1 standard",
+      "pageTarget": "IEC 81001-5-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Security requirements are based on IEC 60601-4-5.",
+      "evidenceText": "This involves identifying both functional and non-functional security requirements based on the IEC 60601-4-5.",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity risk assessment applies CVSS version 3.1.",
+      "evidenceText": "The CVSS measurement site and used version. : NVD – CVSS c3 Calculator / CVSS version 3.1",
+      "pageTarget": "CVSS Version 3.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk identification references ISO 14971:2019, TR 24971:2020, AAMI TIR 57, and FDA guidelines.",
+      "evidenceText": "This will be done with reference to ISO 14971:2019, TR 24971:2020, AAMI TIR 57 standards, and the latest international guidelines, including those from the FDA.",
+      "pageTarget": "Medical Device Cybersecurity Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk evaluation follows NIST 800-30 and ISO 14971:2019.",
+      "evidenceText": "In medical device cybersecurity, risk evaluation follows the NIST 800-30 guideline and ISO 14971:2019 standard.",
+      "pageTarget": "Medical Device Cybersecurity Risk Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device stores images in DICOM files and sends captured images to PACS.",
+      "evidenceText": "These signals go through the process of amplification and digital data conversion in the signal process device before being sent to the HnVUE (Console Software) and saved in DICOM file, a standard for medical imaging. The captured images are sent to the Picture Archiving & Communication System (PACS) server",
+      "pageTarget": "HnX-R1 Interoperability",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device does not connect to the internet or external servers and does not support remote or automatic updates.",
+      "evidenceText": "The device does not connect to the internet or external servers, and therefore does not support remote or automatic updates.",
+      "pageTarget": "HnX-R1 Update Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware patches are manually applied via physical connection and verified for integrity before installation.",
+      "evidenceText": "Firmware patches are applied manually via a physical connection and the update file is verified for integrity prior to installation.",
+      "pageTarget": "HnX-R1 Patching Capability",
+      "confidence": "high"
+    },
+    {
+      "claim": "The security incident response plan is developed in accordance with FDA and NIST guidelines.",
+      "evidenceText": "The Security Incident Response Plan outlines a structured approach for handling cybersecurity incidents related to HnX-R1. It has been developed in accordance with FDA and NIST guidelines",
+      "pageTarget": "HnX-R1 Security Incident Response",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority signal in metadata is CE/MDR, but CE or MDR is not stated in the provided source text; source text instead references FDA, NIST, CISA, U.S. DHS, and CERT."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision date evidence is inconsistent: page headers and approvals show August 06, 2025, while Revision History lists Rev. Date August 02, 2025 for Revision 0."
+    },
+    {
+      "severity": "info",
+      "reason": "The source contains OCR or text quality issues, including duplicated wording, section numbering mismatch, and the phrase 'Unresolved Animals issue' where 'anomalies' appears intended."
+    }
+  ]
 }

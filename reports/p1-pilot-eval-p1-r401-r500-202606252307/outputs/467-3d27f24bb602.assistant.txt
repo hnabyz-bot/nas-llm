@@ -1,4 +1,264 @@
-{"type":"thread.started","thread_id":"019f0062-bb6b-75f3-a3fc-8c049c940288"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954377-6wy",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/2. A-CRMP-HNX_Cybersecurity Risk Management Plan (Rev.3, 03032026).pdf",
+    "canonicalGroupId": "3d27f24bb602"
+  },
+  "document": {
+    "title": "Cybersecurity Risk Management Plan",
+    "documentType": "Technical Documentation",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "CISA",
+      "FDA",
+      "ICS-CERT"
+    ],
+    "revisionOrVersion": "Rev. No. 3",
+    "documentDate": "March 03, 2026",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "IEC 60601-1-2",
+      "IEC 60601-1-3",
+      "IEC 60601-2-28",
+      "IEC 60601-2-54",
+      "IEC 62304",
+      "IEC 62366-1",
+      "IEC 60601-1-6",
+      "ISO 15223-1",
+      "AAMI TIR 57",
+      "NIST Special Publication 800-30",
+      "Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions",
+      "IEC 60601-4-5",
+      "IEC 81001-5-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "H&abyz cybersecurity risk management plan for HnX-P1 and HnX-PB portable X-ray systems, covering vulnerability monitoring, KEV handling, patching, update controls, CVD, and customer communication.",
+    "officialUse": "Supports technical documentation and risk management records for cybersecurity activities across the product lifecycle.",
+    "keyPoints": [
+      "The plan applies to all stages of the HnX-P1 lifecycle and describes responsibilities, vulnerability monitoring, KEV handling, testing, patch timelines, update processes, patching capability, CVD, and customer communication.",
+      "The HnX-P1 and HnX-PB are battery-powered portable X-ray systems intended for generating radiographic images of human anatomy and are not intended for mammography.",
+      "The HnX-PB variant changes only exterior design compared to HnX-P1; interface, exterior material, internal structure, PCB, and software are stated to be the same.",
+      "The device does not connect to the internet or external servers and does not support remote or automatic updates.",
+      "Firmware patches are applied manually through a physical connection such as USB Type-C/C-Port by authorized service personnel, a service center, or field engineer.",
+      "CISA KEV Catalog review is performed quarterly, with Critical vulnerabilities remediated within 30 days."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "This is a document for the H&abyz Co., Ltd. to establish and document a Cybersecurity risk management plan"
+    },
+    {
+      "name": "Portable X-ray System",
+      "type": "product",
+      "evidence": "Product name: Portable X-ray System"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "CISA Known Exploited Vulnerabilities Catalog",
+      "type": "vulnerability catalog",
+      "evidence": "The CISA KEV Catalog provides a list of CVEs with confirmed exploits in the wild."
+    },
+    {
+      "name": "NVD",
+      "type": "vulnerability database",
+      "evidence": "Check NVD (National Vulnerability Database) monthly for CVEs that affect embedded Linux, Bluetooth stacks, MCU firmwares, and relevant third-party components."
+    },
+    {
+      "name": "ICS-CERT",
+      "type": "regulatory reporting recipient",
+      "evidence": "Submit required details to ICS-CERT (CISA) and, if applicable, FDA postmarket reports."
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "Submit required details to ICS-CERT (CISA) and, if applicable, FDA postmarket reports."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity Risk Management Plan",
+      "pageTarget": "Cybersecurity risk management plan",
+      "evidence": "This is a document for the H&abyz Co., Ltd. to establish and document a Cybersecurity risk management plan in accordance with the risk management procedure."
+    },
+    {
+      "name": "Threat modeling",
+      "pageTarget": "Threat modeling",
+      "evidence": "Threat modeling is the process of systematically identifying potential threats and vulnerabilities that could affect a medical device."
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE threat modeling",
+      "evidence": "Techniques such as STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) can be used to categorize and analyze threats."
+    },
+    {
+      "name": "CVSS",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "evidence": "As a method for risk assessment, we apply CVSS (Common Vulnerability Scoring System)."
+    },
+    {
+      "name": "SBOM",
+      "pageTarget": "Software Bill of Materials",
+      "evidence": "Maintain an up-to-date Software Bill of Materials listing all third-party libraries, firmware modules, and hardware components."
+    },
+    {
+      "name": "Coordinated Vulnerability Disclosure",
+      "pageTarget": "Coordinated vulnerability disclosure",
+      "evidence": "Maintain a public point of contact for researchers to report bugs. Track all disclosures from initial report through remediation, retest, and documentation."
+    },
+    {
+      "name": "Manual firmware patching",
+      "pageTarget": "Medical device firmware update process",
+      "evidence": "Firmware patches are applied manually via a physical connection (e.g., USB Type-C port), and the update file is verified for integrity prior to installation."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Document A-CRMP-HNX is Rev. No. 3 dated March 03, 2026.",
+      "evidenceText": "Technical Documentation Document No. A-CRMP-HNX Rev. No. 3 Cybersecurity Risk Management Plan Rev. Date March 03, 2026",
+      "pageTarget": "A-CRMP-HNX Cybersecurity Risk Management Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document applies to HnX-P1 and HnX-PB portable X-ray system models.",
+      "evidenceText": "Product name: Portable X-ray System Model name: HnX-P1, HnX-PB",
+      "pageTarget": "HnX portable X-ray system",
+      "confidence": "high"
+    },
+    {
+      "claim": "The cybersecurity risk management plan applies to all stages of the HnX-P1 lifecycle.",
+      "evidenceText": "This Cybersecurity Risk management plan is applicable to all stages of the life cycle of the HnX-P1.",
+      "pageTarget": "Cybersecurity risk management plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-P1 and HnX-PB are battery-powered portable X-ray systems intended for generating radiographic images of human anatomy.",
+      "evidenceText": "The HnX-P1 (and HnX-PB) is a battery-powered portable X-ray system intended for generating radiographic images of human anatomy.",
+      "pageTarget": "HnX portable X-ray system intended purpose",
+      "confidence": "high"
+    },
+    {
+      "claim": "The portable X-ray system is not intended for mammography.",
+      "evidenceText": "This portable x-ray system is not intended for mammography.",
+      "pageTarget": "HnX portable X-ray system intended purpose",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product classification is Class II and expected service life is approximately 7 years.",
+      "evidenceText": "Classification Class ll Expected service life Approximately 7 years",
+      "pageTarget": "HnX portable X-ray system classification",
+      "confidence": "medium"
+    },
+    {
+      "claim": "HnX-PB is a variant model with exterior design changes only, while interface, material, internal structure, PCB, and software are stated to be the same as HnX-P1.",
+      "evidenceText": "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.",
+      "pageTarget": "HnX-PB variant model",
+      "confidence": "high"
+    },
+    {
+      "claim": "The risk assessment method uses CVSS version 3.1 through the NVD CVSS calculator.",
+      "evidenceText": "NVD – CVSS c3 Calculator / CVSS version 3.1",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "confidence": "high"
+    },
+    {
+      "claim": "NVD is checked monthly for CVEs affecting relevant components.",
+      "evidenceText": "Check NVD (National Vulnerability Database) monthly for CVEs that affect embedded Linux, Bluetooth stacks, MCU firmwares, and relevant third-party components.",
+      "pageTarget": "Vulnerability monitoring",
+      "confidence": "high"
+    },
+    {
+      "claim": "CERT/ICS-CERT bulletins and CISA advisories are reviewed quarterly.",
+      "evidenceText": "Review CERT/ICS-CERT and CISA advisories for industry-specific alerts.",
+      "pageTarget": "Vulnerability monitoring",
+      "confidence": "high"
+    },
+    {
+      "claim": "The CISA KEV Catalog is checked quarterly for HnX-P1 and HnX-PB software and firmware components.",
+      "evidenceText": "Check the software and firmware components used by the HnX-P1 and HnX-PB portable X-ray system quarterly for vulnerabilities included in the KEV Catalog",
+      "pageTarget": "CISA Known Exploited Vulnerabilities Catalog",
+      "confidence": "high"
+    },
+    {
+      "claim": "Critical KEV vulnerabilities are remediated within 30 days.",
+      "evidenceText": "Critical: Remediate (patch or mitigation) within 30 days.",
+      "pageTarget": "CISA KEV remediation timeline",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is offline-only for regular updates, and cybersecurity testing is immediate when new cybersecurity requirements or threats arise.",
+      "evidenceText": "Regular: N/A (No need for regular updates as it is an offline-only product) - Immediate: When new cybersecurity requirements arise or cybersecurity threats occur.",
+      "pageTarget": "Periodic security testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Users cannot directly perform software and firmware updates in the field; updates must be performed by authorized service personnel or by returning the product to the manufacturer or service center.",
+      "evidenceText": "the product's software and firmware updates cannot be performed directly by users in the field, and must be performed by authorized service personnel or by returning the product to the manufacturer or service center.",
+      "pageTarget": "Medical device firmware update process",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device does not support remote or automatic updates because it does not connect to the internet or external servers.",
+      "evidenceText": "The device does not connect to the internet or external servers, and therefore does not support remote or automatic updates.",
+      "pageTarget": "Medical device patching capability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware patches are manually applied using a physical connection such as USB Type-C, with integrity verification before installation.",
+      "evidenceText": "Firmware patches are applied manually via a physical connection (e.g., USB Type-C port), and the update file is verified for integrity prior to installation.",
+      "pageTarget": "Medical device patching capability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patch files are encrypted using AES-128 and digitally signed before installation.",
+      "evidenceText": "Encrypt the patch file using a strong encryption algorithm such as AES-128... Add a digital signature to the patch file using the manufacturer's private key",
+      "pageTarget": "Secure firmware update",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz CVD process is intended to align with FDA guidance and IEC 81001-5-1 requirements.",
+      "evidenceText": "our CVD process is designed to align with FDA guidance (“Pre- and Postmarket Management of Cybersecurity in Medical Devices,” 2016) and IEC 81001-5-1 requirements",
+      "pageTarget": "Coordinated vulnerability disclosure",
+      "confidence": "high"
+    },
+    {
+      "claim": "Customer communications for security advisories use email, with urgent critical vulnerability notices sent by email and SMS within 24 hours after the patch is prepared.",
+      "evidenceText": "Urgent Notice: If a critical vulnerability occurs, an emergency notice will be sent via email and text message (SMS) within 24 hours after the patch is prepared",
+      "pageTarget": "Customer cybersecurity communication",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source metadata authoritySignal indicates CE/MDR, but the source text does not explicitly cite MDR or CE requirements; cited authorities and guidance include CISA, FDA, and ICS-CERT."
+    },
+    {
+      "severity": "info",
+      "reason": "Page numbering appears inconsistent in OCR/preprocessed text, e.g. Page 1 / 2 followed by Page 2 / 3 through Page 19 / 19."
+    },
+    {
+      "severity": "info",
+      "reason": "Some wording appears copied from guidance-style templates and includes placeholders/examples, such as example CVEs and example affected firmware versions."
+    },
+    {
+      "severity": "warning",
+      "reason": "Contact channel is described as security team email but example uses sales@abyzr.com; dedicated security contact metadata is not clearly established."
+    }
+  ]
+}
