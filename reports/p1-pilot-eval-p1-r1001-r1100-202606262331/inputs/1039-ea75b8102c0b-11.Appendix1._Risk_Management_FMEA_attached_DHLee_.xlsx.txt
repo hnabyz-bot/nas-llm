@@ -1,0 +1,222 @@
+queueId: ingest-1781569954410-z4s
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/14. Risk Management/11.Appendix1. Risk Management FMEA attached (DHLee).xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/d04c22db4354/11.Appendix1. Risk Management FMEA attached (DHLee)__d04c22db4354_combined.txt
+canonicalGroupId: ea75b8102c0b
+productSignal: ADD/AspenView
+authoritySignal: FDA
+pilotRank: 1039
+
+SOURCE_TEXT
+ISO 14971:2019,4.3 Identification of hazards,,,4.4 Estimation of the risk(s) for each hazardous situation,,,,,,5. Riskevaluation,6.2 Risk control option analysis,,6.3 Implementation of risk control measure(s),,,,6.4 Residual risk evaluation,,,,,6.5 Risk/benefit analysis,,,6.6 Risks arising from risk control measures,6.7 Completeness of risk control
+Classification(Module),Hazard ID,Hazard,Foreseeable hazards associated,Foreseeable sequence of events,Hazardous situation,Harm,Risk Before Control,,,Result,Risk Control,,Implementation of risk control measure,Verification,Effectiveness of risk control measure,Verification and result,Risk After Control,,,,,Residual risk,Benefit,The medical benefits of theintended use outweigh the residual risk?(Yes or No),New or increased risks,Ensure that the risk(s) fromall identified hazardous situations have been considered(Yes or No)
+,,,,,,,"Severity
+",Probability,Risk,,"D: Inherent safety by design
+P: Protective measures in the medical device itself or in themanufacturing process
+I: Information for safety",,,,,,Severity,Probability,Risk,Result,Acceptable residual risks ,,,,,
+Exam Mode,R01,Operational hazard (Use error),Mismatched Pixel data,Diagnosis is impossibleby wrong acquired image.,The image can’t be acquired in the specified size.,Diagnosis is impossible,1,3,3,Acceptable,D,"Designing to show the set pixel value in ""Image Processing Tool.exe""",Alram message are used to inform the user.,Code Review Dynamic Test,"By designing to display the pixelvalue, It is help to recognize the user. So, hazards decrease.","SRS 2, SDS 201,
+Test 6.4.2 , 6.4.5 in
+the software
+Validation.",1,1,1,Acceptable,No,Use error- Low probability of use error hazards,"1. The performance expected
+2. The clinical outcome expected","Yes (Refer to Step 8.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information how to set the pixel value with chart in User Manual (RS-AspenView-UM) 5.4,Serve the training and Manual,"User Manual
+(RS-AspenView-UM)","By providing the troubleshooting,possible hazards decrease.","Test 6.4.2 , 6.4.5 in
+the software Validation.",,,,,,,,,,
+Exam Mode,R02,Operational hazard (Use error),Input wrong information(Detector setting),Second X-ray photographing is tried due to a failure of the first one,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing to inform using the icon status in the information bar and alram message.,Alram message are used to inform the user.,Code Review Dynamic Test Report(AD- RayinView-SVR-003],"By designing to display
+the icon status, It is help to recognize the user.","SRS 11, SDS 513,
+Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,Use error- Low probability of use error hazards,"1. The performance expected
+2. The clinical outcome expected","Yes (Refer to Step 8.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,"Give the information to user how to deal with the problem to check the detector cable and power in
+the Operation Manual",Serve the training and Manual,"User Manual
+(RS-AspenView-UM)","By providing the troubleshooting,possible hazards decrease.","SRS 11, SDS 513,
+Test 6.4.5 in the software Validation.",,,,,,,,,,
+Exam Mode,R03,Information hazard,Acqurie the unknowable image whitout selecting the patient/study,Second X-ray photographing is tried due to a failure of the first one(unknowable image),Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing to alram message to select the patient on the list,Alram message are used to inform the user.,Code Review Dynamic Test,"By designing to display the alram message, It is help to recognizethe user.So, hazards decrease.","SRS 7,8, SDS
+503,504, 505, Test
+6.4.5 in the software Validation.",2,1,2,Acceptable,No,Warnings,"1. The performance expected
+3. The clinical outcome expected","Yes (Refer to Step 9.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Viewer Mode,R04,Information hazard,No insert the USB or invalid HDD Path(To export the images),Second X-ray photographing is tried due to a failure of the first one(unknowable image),Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing to alram message to corrent Export Path,Alram message are used to inform the user.,Code Review Dynamic Test,"By designing to display the alrammessage, It is help to correct path. So, hazards decrease.","SDS 404, SDS 508,
+Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,Warnings,"1. The performance expected
+4. The clinical outcome expected","Yes (Refer to Step 10.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Browser Mode,R05,Information hazard,No select the patient/studyto delete images,Mixed the patient information casued by failureof image delete.,Mixed the patient information,Diagnosis is impossible,1,5,5,Unacceptable,D,Designing to alram message to select the patient/study on thelist for deleting,Alram message are used to inform the user.,Code Review,"By designing to display
+the alram message, It is help to recognizethe user.So, hazards","SRS 10, SDS 509,
+510, Test 6.4.5 in the software
+Validation.",1,1,1,Acceptable,No,Warnings,"1. The performance expected
+5. The clinical outcome expected","Yes (Refer to Step 11.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Setting Module,R06,Information hazard,Wrong information (MWL),Limited usage(Use MWL function) cuased by wrong input information,Increase the timefor the diagnosis,Inconvenience (Too much waiting),1,5,5,Unacceptable,D,Designing to alram message to check the MWL setting value,Alram message are used toinform the user.,Code Review Dynamic Test,"By designing to display
+the alram message, It is help to recognizethe user.So, hazards","SRS 11-3, SDS 513,
+Test 6.4.5 in the software Validation.",1,1,1,Acceptable,No,Warnings,"1. The performance expected
+6. The clinical outcome expected","Yes (Refer to Step 12.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,"Give the information to user how to deal with the problem tocheck the MWL connection Error in the
+User Manual",Serve the training and Manual,"User Manual
+(RS-AspenView-UM)","By providing the troubleshooting,possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+Database Module,R07,Operational hazard (Use error),Failed to verify the patient and Studies,Took the unintended images,Mixed the patient information,Diagnosis is impossible,1,5,5,Unacceptable,D,Designing the merge function to move the images between patients,Surpport the merge function,Code Review,"By designing to support edit function, It is help to edit the information patients easily.","SRS 10, SDS 509,
+510, Test 6.4.5 in the software
+Validation.",1,1,1,Acceptable,No,,"1. The performance expected
+7. The clinical outcome expected","Yes (Refer to Step 13.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information to user for edit functionin the Operation Manual,Serve the training and Manual,"User Manual
+(RS-AspenView-UM)","By providing meathod how to use the function, possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+Database Module,R08,Operational hazard (Use error),PC power truns off byphysician's mistake,Damage the database,Mixed the data,Diagnosis is impossible,1,5,5,Unacceptable,D,Designing the back up database file while running the program,Surpport to make the backup database,Code Review Dynamic Test,"By designing to make the backup database, It is help to restore the damaged database file.So, hazards
+decrease.","SRS 11, SDS 513,
+Test 6.4.5 in the software Validation.",1,1,1,Acceptable,No,,"1. The performance expected
+8. The clinical outcome expected","Yes (Refer to Step 14.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information to restore the backed up database files in the User Manual,Serve the training and Manual,"User Manual
+(RS-AspenView-UM)","By providing meathod for engineer how to use the function,possible
+hazards decrease.","Test 6.4.2, 6.4.3 in
+the software Validation.",,,,,,,,,,
+
+Viewer Mode,R09,Operational hazard (Use error),Delete the Image bymistake,Second X-ray photographing is tried due todelete the unintended image mistakenly,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,"Designing to delete and restore function.(When the user try to delete the image, the message ask ID and Password)",Alram message are used toinform the user.And Support the restore function.,Code Review Dynamic Test,"By designing to delete and restore function, It helps to blockthe user error by alram message.Also, It helps to restore image for deleted images.So, hazards decrease","SRS 10, SDS 509,
+510, Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+9. The clinical outcome expected","Yes (Refer to Step 15.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information for restore functionin the User Manual,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing meathod how to use the function, possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+Viewer Mode,R10,Information hazard,Wrong information (PACS),Limited usage(Send the DICOM Image to PACS) cuased by wrong input information,Increase the timefor the diagnosis,Inconvenience (Too much waiting),2,5,10,Unacceptable,D,Designing to Inform using the icon status in the information bar and warning message.,Alram message are used to inform the user.,Code Review Dynamic Test,"By designing to display the alram message and icon status, It ishelp to recognize the user.So, hazards decrease.","SRS 11, SDS 513,
+Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+10. The clinical outcome expected","Yes (Refer to Step 16.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information to user how to deal with DICOM Image Sending Error in the User Manual,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing the troubleshooting,possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+DICOM Module,R11,Operational hazard (Function error),Image compression,Second X-ray photographing is tried due toacquired wrong image (data loss),Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing don't use the compress option when converting the image into DICOM images.,Check the memory of acquired images,Code Review Dynamic Test,"By designing don't use the compression option.So, hazards decrease.","SRS 2, 3, SDS 201,
+202, 301, 302, Test
+6.4.2, 6.4.5 in the
+software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+11. The clinical outcome expected","Yes (Refer to Step 17.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+DICOM Module,R12,Operational hazard (Function error),Not Comply DICOMStandard,"Second X-ray photographing is tried due to don'tcompatible with the PACS, which compliesDICOM Standard",Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Follow the DICOM 3.0 standard protocol,Check the Image format,Code Review Dynamic Test,"By designing follow the DICOM3.0 standard protocol.So, hazards decrease.","SRS 1, 2, SDS 201,
+202, 301, Test 6.4.2,
+6.4.5 in the software
+Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+12. The clinical outcome expected","Yes (Refer to Step 18.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Image Processing Module,R13,Operational hazard (Function error),Pixel Artifact,"Second X-ray photographing is occurred bymisdiagnosis. It is caused by pixel artifact,which can be influedned acquired images.",Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,"Designing to correct the max and min pixel value, which is over the detector valid pixel range",Check the performance,Code Review Dynamic Test,"By designing to correct the image value. It is help to improve the image quality.So, hazards decrease.","SRS 2, SDS 201,
+Test 6.4.2 , 6.4.5 in
+the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+13. The clinical outcome expected","Yes (Refer to Step 19.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Image Processing Module,R14,Operational hazard (Function error),Low image quality by fixedparameter,Second X-ray photographing is occurred by misdiagnosis. It is caused by low image qualitycaused by flxed parameter.,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing to alram message to select the patient/study on thelist for deleting,Check the image changed followed by parameter.,Code Review Dynamic Test,"By designing to support the function to modify the parameterin the program. It helps to improve the image quality.So, hazards decrease.","SRS 3, SDS 301,
+302. Test 6.4.3 ,
+6.4.5 in the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+14. The clinical outcome expected","Yes (Refer to Step 20.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information for image processing and parameter in the User Manual.,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing meathod how to use the function, possible hazards decrease.","Test 6.4.3 , 6.4.5 in
+the software Validation.",,,,,,,,,,
+Image Processing Module,R15,Operational hazard (Function error),"Click the ""Process"" buttonmore then one time",Second X-ray photographing is occurred by misdiagnosis. It is caused by low image qualitycaused by image processing apply more than once.,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designing to use original (raw) file from detector only.And Designing don't apply the image processing if there are processed images in the image folder.,Check the performance,Code Review Dynamic Test,"By designing to use original (raw)file only. And don't apply the image processing if there are processed images in the image folder. It blocks to acauire thewrong images.So, hazards decrease.","SRS 5, SDS 501,
+Test 6.4.3 , 6.4.5 in
+the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+15. The clinical outcome expected","Yes (Refer to Step 21.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Viewer Mode,R16,Operational hazard (Use error),Input wrong information(To set lengthmeasurement),Misdiagnosis caused by the wrong size of lesion,Proceed unnecessary operation,traumatism,2,5,10,Unacceptable,D,Designing to modify the meaurement followed by input value(Input value is influenced by detector specification),Check the performance,Code Review Dynamic Test,"By designing to modify the meaurement followed by input value. It is flexible for each of detector specification. It blocks misdiagnosis.So, hazards decrease.","SRS 5, SDS 501,
+Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+16. The clinical outcome expected","Yes (Refer to Step 22.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+
+,,,,,,,,,,,I,Train the give the length calibration information to engineer in the User Manual,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing meathod how to use the function, possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+Production,R17,Information hazard,The faulty of dongle key(USB),Impossible to log in the RayinView caused by The faulty of dongle key(license key),unavailable to use RayinView,"Inconvenience (Too much waiting,
+unavilable to diagnosis)",1,2,2,Acceptable,D,,,,,,1,1,1,Acceptable,No,,"1. The performance expected
+17. The clinical outcome expected","Yes (Refer to Step 23.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,Compensate the packing and Pass the freefall test.And establish the the manufacturing process,Conducting freefall testand checking Manufacturing process,"Check the freefall test resultin the packing specification
+Check the product ramdomly after Manufacturing process","By passing the freefall test and manufacturing process, it is proved the safety in the production progress.So, hazards decrease.",Pass,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Transportation,R18,Information hazard,The damage of dongle key(USB),Impossible to log in the RayinView caused by The faulty of dongle key(license key),unavailable to use RayinView,"Inconvenience(Too much waiting,unavilable to diagnosis)",1,3,3,Acceptable,D,,,,,,1,1,1,Acceptable,No,,"1. The performance expected
+18. The clinical outcome expected","Yes (Refer to Step 24.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,Compensate the packing and Pass the freefall test.And establish the the manufacturing process,Conducting freefall testand checking Manufacturing process,"Check the freefall test resultin the packing specification
+Check the product ramdomly after Manufacturing process","By passing the freefall test and manufacturing process, it is proved the safety in the production progress.So, hazards decrease.",Pass,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Installation,R19,Operational hazard (Function error),Incorrect the installation,Impossible to log in the RayinView caused by The faulty of dongle key(license key),unavailable to use RayinView,"Inconvenience (Too much waiting,
+unavilable to diagnosis)",1,2,2,Acceptable,D,"Designing to support the installation program one- stop.(When the RayinView is being set up, the engineer doesn’t need to set the folder and file).",Check the performance,Dynamic Test,"By designing to support the installation program one-stop.It blocks the user make the mistake in the installation.So, hazards decrease.",Test 6.4.5 in the software Validation.,1,1,1,Acceptable,No,,"1. The performance expected
+19. The clinical outcome expected","Yes (Refer to Step 25.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Installation,R20,Information hazard,Wrong information(Detector setting value),Impossible to run the RayinView caused by difficult way to install,unavailable to use RayinView,"Inconvenience (Too much waiting,
+unavilable to diagnosis)",1,2,2,Acceptable,D,"Designing to support the installation program one- stop.(When the RayinView is being set up, the engineer doesn’t need to set the folder and file).",Check the performance,Dynamic Test,"By designing to support the installation program one-stop.It blocks the user make the mistake in the installation.So, hazards decrease.",Test 6.4.5 in the software Validation.,1,1,1,Acceptable,No,,"1. The performance expected
+20. The clinical outcome expected","Yes (Refer to Step 26.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Usability,R21,Information hazard (Labeling),Safety sign,"1. Using the device without referring toaccompanying documents
+2. Ignoring safety rules for X-ray radiation
+3. General warning","1. Misuses of the device
+2. X-ray radiation exposures
+3. General cautions","Electric shock:
+1) Serious burns
+2) Heart fibrillation
+3) DeathTissue damage",2,3,6,Acceptable,D,,,,,,2,2,4,Acceptable,No,,"1. The performance expected
+21. The clinical outcome expected","Yes (Refer to Step 27.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Designing to alram message to select the patient/study on thelist for deleting,Attaching safety signs on relevant parts,"User Manual
+(RS-PedraView-UM)","By attaching safety signs,possible hazards decrease.",,,,,,,,,,,
+Usability,R22,Operational hazard (Function error),Run the software by unauthorized user,Mixed the data casued by unintended data,Misdiagnosis by mixed data andintended data,Diagnosis is impossible,1,5,5,Unacceptable,D,"Designing to enter passwords, it should be used in an unexposed form, such as ****.",Check the performance,Dynamic Test,"By designing to operate the When entering an RayinView password, it shall be used in an unexposed form, such as ""*****"",and the block shall be executedby an unapproved/registered operator. So, hazards decrease.",Test 6.4.5 in the software Validation.,1,1,1,Acceptable,No,,"1. The performance expected
+22. The clinical outcome expected","Yes (Refer to Step 28.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Usability,R23,Operational hazard (Function error),Delete the image by unauthorized user,Second X-ray photographing is tried due to delete the image,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,"Designing to delete and restore function.(When the user try to delete the image, the message ask ID and Password)",Alram message are used toinform the user.And Support the restore function.,Code Review Dynamic Test,"By designing to delete and restore function, It helps to blockthe user error by alram message.Also, It helps to restore image for deleted images.So, hazards decrease","SRS 10, SDS 509,
+510, Test 6.4.5 in the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+23. The clinical outcome expected","Yes (Refer to Step 29.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information for restore functionin the User Manual,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing meathod how to use the function, possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
+
+Usability,R24,Operational hazard (Function error),"The program, which wasrunning previously, didn't closed.",Second X-ray photographing is tried due to a failure of the first one.,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,"Tissue damage (X-ray burn)
+Cancer (DNA modification)",2,5,10,Unacceptable,D,Designed to prevent redundant execution.,,Code Review Dynamic Test,"By designed to prevent redundant execution. So that is approved to block the program duplicately, hazards decrease.","Test 6.4.4, 6.4.5 in
+the software Validation.",2,1,2,Acceptable,No,,"1. The performance expected
+24. The clinical outcome expected","Yes (Refer to Step 30.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,,,,,,,,,,,,,,,
+Maintenance,R25,Operational hazard (Function error),Insufficient disk space,Impossible to run the ExamVue DR caused by insufficient disk space,unavailable to use RayinView,"Inconvenience (Too much waiting,
+unavilable to diagnosis)",1,5,5,Unacceptable,D,Designing to Inform using the icon status in the information bar and warning message.,Alram message are used to inform the user.,Code Review Dynamic Test,"By designing the program Inform using the icon status in the information bar and warning message, hazards decrease.","SRS 2, SDS 201,
+Test 6.4.2 , 6.4.5 in
+the software Validation.",1,1,1,Acceptable,No,,"1. The performance expected
+25. The clinical outcome expected","Yes (Refer to Step 31.Risk/benefit
+analysis Table of Risk management report",No new and increased risks,Yes
+,,,,,,,,,,,P,,,,,,,,,,,,,,,
+,,,,,,,,,,,I,Give the information to user how to deal with insufficient diskspace in the User Manual,Serve the training and Manual,"User Manual
+(RS-PedraView-UM)","By providing the troubleshooting,possible hazards decrease.",Test 6.4.5 in the software Validation.,,,,,,,,,,
