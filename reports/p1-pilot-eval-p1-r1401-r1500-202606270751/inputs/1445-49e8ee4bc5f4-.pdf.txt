@@ -1,0 +1,152 @@
+queueId: ingest-1781569954416-14ui
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/3. Deco Sheet 추가 기술문서/시험규격.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/fcaa39a12451/시험규격__fcaa39a12451_combined.txt
+canonicalGroupId: 49e8ee4bc5f4
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 1445
+
+SOURCE_TEXT
+시험규격
+가. 안전성에 관한 시험
+- 「IEC 60601-1」에 따른다.
+- 「IEC 60601-2」에 따른다.
+- 「IEC 60601-6」에 따른다.
+나. 성능에 관한 시험
+번호 시험항목 시험기준 시험방법
+1 Pixel Defect (Cluster)
+Defcet Class #0 : 2,400 Pixel 이하
+Defcet Class #1 : 1,050 Pixel 이하
+Defcet Class #2 : 530 Pixel 이하
+Defcet Class #3 : 320 Pixel 이하
+Defcet Class #4 : 110 Pixel 이하
+Defcet Class #5 : 50 Pixel 이하
+Defcet Class #6 : 0 Pixel
+Defcet Class #7 : 0 Pixel
+Defect Density : 60 Pixel 이하
+XAS 로 Average Dark 1 장과 Bright 영
+상
+이 미 지를 선 량 별 각 5 장씩 획 득 후
+이를 이용BPM 이미지 생성하여 ADIS
+프로그램으로 Active-area(3052x3052) 영역
+내에서 시험기준을 만족을하는지 확인한다.
+Defect Class 는 3x3 Pixel-area 내 Pixel
+Defect (Cluster)을 확인, Defect Density
+는 20x20 Pixel-area 내 Pixel Defect
+(Cluster)을 확인.
+*조사조건 : RQAS (70 kV, 32 mAs, 64
+mAs, 100 mAs, 200 mAs, 320 mAs), SID :
+150 cm, Al 21 mm filter
+2 Line Detect Line Defect 간의 허용 간격 기준 : 4 Line
+이상
+* Line Defect 이 2EA 가 연접 일 경우 불량
+XAS 로 Average Dark 1장/Bright 영상
+이미지를 선량 별 각 5 장씩 획득 후 이를
+이용하여 BPM 이미지 생성하여 ADIS
+프로그램으로 Active Area(3052x3052) 영
+역내에서 Line Defect이 시험 기준을
+만족을 하는지 확인한다.
+*조사조건 : RQAS (70 kV, 32 mAs, 64
+mAs, 100 mAs, 200 mAs, 320 mAs), SID :
+150 cm,
+Al 21 mm filter
+3 MTF
+HAD1717MC :
+0.1 Ip/mm (93 % 이상),
+0.5 Ip/mm (75 % 이상),
+1.0 Ip/mm (55 % 이상),
+2.0 Ip/mm (34 % 이상),
+3.0 Ip/mm (15 % 이 상)
+HAD1717MG
+0.1 Ip/mm (90 % 이상),
+0.5 Ip/mm (70 % 이상),
+1.0 Ip/mm (45 % 이상),
+2.0 Ip/mm (18 % 이상),
+3.0 Ip/mm (10 % 이상)
+XAS 로 MTF JIG 영상 이미지를 1 장 획득
+후 QC Tool 또는 lmage-J 룰 이용하여
+즉정값이 시험기준 이상이 되는지
+확인한다.
+*조사 조건: RQAS (70 kV, 40 mAs), SID
+: 150 cm, Al 21 mm filter
+*즉정 조건 Calibration 적용 후
+4 DQE
+HAD1717MC :
+0.1 Ip/mm (45 % 이 상),
+0.5 Ip/mm (35 % 이 상),
+1.0 Ip/mm (25 % 이상),
+2.0 Ip/mm (20 % 이상),
+3.0 Ip/mm (15 % 이상)
+HAD1717MG
+0.1 Ip/mm (35 % 이상),
+0.5 Ip/mm (20 % 이상),
+1.0 Ip/mm (15 % 이상),
+2.0 Ip/mm (10 % 이상),
+3.0 Ip/mm (5 % 이상)
+XAS 로 MTF JIG 영상 이미지와 Bright
+영상 이미지를 각각 1 장씩 획득 후 QC
+Tool 또는 lmage-J 를 이용하여 즉정값이
+시험기준 이상이 되는지 확인한다.
+*조사 조건 : RQAS (70 kV, 6.4 mAs),
+SID : 150 cm, Al 21 mm filter
+*측정 조건: Calibration 적용 후
+*Bright 영상 이미지는 Center 기준
+1000x1000 Pixel-area 값을 사용
+5 Sensitivity
+HAD1717MC
+Center 기준 110 LSB/uGy 이상
+HAD1717MG :
+Center 기준 60 LSB/uGy 이상
+XAS 로 조사 선량이 다른 Bright 영상
+이미지를 각 5장씩 획득 후 QC 또는
+lmage-J 를 이용하여 즉정값이 시험기준
+이상이 되는지 확인한다.
+*조사 조건: 70 kV, 200 mA.
+6 Noise 검사
+1) 30 장의 Dark Diff. 영상 이미지의
+개별즉정값기준
+Pixel StDev : 1.5 LSB 이 하
+Column StDev : 0.30 LSB 이하
+2) 30장의 Dark Diff. 영상 이미지의
+측정평균값 기준
+Pixel StDev : 1.2 LSB 이 하
+Column StDev : 0.26 LSB 이하
+XAS 와 HnViewer 로 30장의 Dark Diff.
+영상 이미지를 생성하여 Center 기준, 2900
+X 2900 Pixel-area 의 Pixel StDev, Column
+StDev 각각의 즉정값이 시험기준 이내로
+만족하는지 확인한다,
+권한이 없는 사용자가 사용하지 못하도록 권한이 없는 사용자는 로그인 단계에서
+7 보안기능 접근 권한을 적절하게 설정하여야 한다. 철저히 통제하여 사용을 할 수 없는지
+확인한다.
+8 검색기능 환자정보를 검색하거나 저장 장치에서 입력한 환자정보가 DB상의 환자정보와
+불러올 때 오류가 없어야 한다. 영상환자정보가 일치하는지 확인한다.
+
+9 영상획득
+X선발생장치를 이용하여 조사하였을 때, 센서에서 물체에 대한 영상이 획득되어
+영상이 획득 되는지 확인한다. 화면에 보여주는지 확인한다.
+10 영상저장
+획득된 영상을 저장버튼을 눌러 해당 저장된 영상을 다시 열어 저장 상태를
+경로에 저장 되는지 확인한다. 확인한다.
+11 영상전송 DICOM 서버에 전송 가능하여야 한다. 전송한 영상을 서버에서 확인한다.
+12 프로그램 닫기
+프로그램이 종료되는지 확인한다. 프로그램 종료 버튼을 눌러 종료되는지
+확인한다.
+13 DICOM 적합성
+전송 DICOM 전송이 되어야 한다
+Close Study 또는 Send를 클릭하여 PACS
+상태 창의 파란불을 확인하여 DICOM 전송
+을 확인한다.
+출력 DICOM 출력이 되어야 한
+다.
+Print를 클릭하여 DICOM Print가 됨을 확인
+한다.
+14 소프트웨어 운용
+확대 / 축소 영상이 확대 / 축소가 확대 / 축소 기능 버튼을 눌러 확인한다.
+되어야 한다.
+회전 영상이 설정된 값으로 회전 기능 버튼을 눌러 확인한다.
+회전되어야 한다.
+대조도 조절 영상의 대조도 조절이 획득한 영상위에 마우스 우측버튼을
+되어야 한다. 누른 상태로 마우스를 움직여 확인한다.
+부분 확대 촬영된 영상의 특정 부분 확대 기능 버튼을 눌러 확인한다.
+부분이 확대되어야 한다.

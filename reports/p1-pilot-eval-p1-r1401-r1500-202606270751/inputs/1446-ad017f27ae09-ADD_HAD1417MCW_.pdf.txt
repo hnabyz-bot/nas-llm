@@ -1,0 +1,142 @@
+queueId: ingest-1781569954389-j38
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ 국내 제조인증/1.차 KGMP 등록 문서/ADD(HAD1417MCW) 시험규격.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/55bf399c27fb/ADD(HAD1417MCW) 시험규격__55bf399c27fb_combined.txt
+canonicalGroupId: ad017f27ae09
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 1446
+
+SOURCE_TEXT
+시험규격
+1. 안전성에 관한 시험
+1) 「IEC 60601-1」에 따른다.
+2) 「IEC 60601-2」에 따른다.
+3) 「IEC 60601-6」에 따른다.
+2. 성능에 관한 시험
+번호 시험항목 시험기준 시험방법
+1 Pixel
+Defect(Cluster)
+Defect Class #0: 2,000 Pixel 이하
+Defect Class #1: 1,000 Pixel 이하
+Defect Class #2: 500 Pixel 이하
+Defect Class #3: 300 Pixel 이하
+Defect Class #4: 100 Pixel 이하
+Defect Class #5: 50 Pixel 이하
+Defect Class #6: 25 Pixel
+Defect Class #7: 0 Pixel
+Defect Density: 40 Pixel 이하
+SDK-MCW로 Average Dark 1장과 Bright
+영 상 이미지를 선량별 각 5장씩 획득 후
+이를 이용하여 BPM 이미지 생성, ADIS
+프로그램으로 Active-area(2466x3040) 영역
+내에서 pixel defect이 시험기준을 만족
+하는지 확인한다. Defect Class는 3x3
+Pixel-area 내 Pixel Defect(Cluster)을
+확인, Defect Density는 20x20 Pixel-area
+내 Pixel Defect(Cluster)을 확인한다.
+*조사조건: RQA5 (70kV, 32mAs, 64mAs,
+100mAs, 200mAs, 320mAs), SID: 150
+cm, Aluminum 21mm filter.
+2 Line Detect
+Line Defect Total 허용 Line
+: 10 Line 이하
+Line Defect 간의 허용 간격 기준 :
+4 Line 이상
+* Line Defect 이 2EA 가 연접 일
+경우 불량
+SDK-MCW로 Average Dark 1장과 Bright
+영 상 이미지를 선량별 각 5장씩 획득 후
+이를 이용하여 BPM 이미지 생성,ADIS
+프로그램으로 Active-area(2466x3040) 영역
+내에서 line defect이 시험기준을 만족
+하는지 확인한다.
+*조사조건: RQA5 (70kV, 32mAs, 64mAs,
+100mAs, 200mAs, 320mAs), SID: 150
+cm, Aluminum 21mm filter.
+3 MTF
+0.1 Ip/mm (93 % 이상),
+0.5 Ip/mm (75 % 이상),
+1.0 Ip/mm (55 % 이상),
+2.0 Ip/mm (28 % 이상),
+3.0 Ip/mm (11 % 이상)
+SDK-MCW로 MTF JIG 영상 이미지를 1장
+획득 후 QC Tool, lmage-J, FinalTest
+프로그램 중 하나를 사용하여 측정값이
+시험기준 이상이 되는지 확인한다.
+*조사조건: RQA5 (70kV, 32mAs, 64mAs,
+100mAs, 200mAs, 320mAs), SID: 150
+cm, Aluminum 21mm filter.
+*즉정 조건 Calibration 적용 후.
+4 DQE
+0.1 Ip/mm (45 % 이상),
+0.5 Ip/mm (40 % 이상),
+1.0 Ip/mm (30 % 이상),
+2.0 Ip/mm (25 % 이상),
+3.0 Ip/mm (20 % 이상)
+SDK-MCW 로 MTF JIG 영상 이미지와
+Bright 영상 이미지를 각각 1장씩 획득 후
+QC Tool, lmage-J, FinalTest 프로그램 중
+하나를 사용하여 즉정값이 시험기준 이상이
+되는지 확인한다.
+*조사조건: RQA5 (70kV, 32mAs, 64mAs,
+100mAs, 200mAs, 320mAs), SID: 150
+cm, Aluminum 21mm filter.
+*측정 조건: Calibration 적용 후.
+*Bright 영상 이미지는 Center 기준
+1000x1000 pixel-area 값을 사용.
+
+5 Sensitivity Center 기준 110 LSB/uGy 이상
+SDK-MCW 로 조사 선량이 다른 Bright
+영상
+이미지를 각 5장씩 획득 후 QC Tool,
+lmage-J, FinalTest 프로그램 중 하나를
+사용하여 즉정값이 시험기준 이상이 되는지
+확인한다.
+*조사 조건: 70kV, 200mA.
+6 보안기능
+권한이 없는 사용자가 사용하지 못하도
+록 접근 권한을 적절하게 설정하여야
+한다.
+권한이 없는 사용자는 로그인 단계에서
+철저히 통제하여 사용을 할 수 없는지
+확인한다.
+7 검색기능 환자 정보를 검색하거나 저장 장치에
+서 불러올 때 오류가 없어야 한다.
+입력한 환자정보가 DB상의 환자정보와
+영상환자정보가 일치하는지 확인한다.
+8 영상획득 X선 발생장치를 이용하여 조사하였을
+때, 영상이 획득되는지 확인한다.
+센서에서 물체에 대한 영상이 획득되어
+화면에 보여주는지 확인한다.
+9 영상저장 획득된 영상을 저장버튼을 눌러 해당
+경로에 저장되는지 확인한다.
+저장된 영상을 다시 열어 저장 상태를
+확인한다.
+10 영상전송 DICOM 서버에 전송 가능하여야 한다. 전송한 영상을 서버에서 확인한다.
+11 프로그램 닫기 프로그램이 종료되는지 확인한다. 프로그램 종료 버튼을 눌러 종료되는지
+확인한다.
+12 DICOM 적합성
+전송 DICOM 전송이 되어
+야 한다.
+Close Study 또는 Send를 클릭하여 PACS
+상태 창의 파란불을 확인하여 DICOM 전송
+을 확인한다.
+출력 DICOM 출력이 되어
+야 한다.
+Print를 클릭하여 DICOM Print가 됨을 확
+인 한다.
+13 Console
+소프트웨어 운용
+확대 / 축소 영상이 확대 / 축소가
+되어야 한다. 확대 / 축소 기능 버튼을 눌러 확인한다.
+회전 영상이 설정된 값으로
+회전되어야 한다. 회전 기능 버튼을 눌러 확인한다.
+대조도 조절 영상의 대조도 조절이
+되어야 한다.
+획득한 영상위에 마우스 우측버튼을
+누른 상태로 마우스를 움직여 확인한다.
+부분 확대
+촬영된 영상의 특정
+부분이 확대되어야
+한다.
+부분 확대 기능 버튼을 눌러 확인한다.
