@@ -1,0 +1,258 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954373-3pf",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/5. Software validation/A-TCF-5-009_Software Validation_firmware_20190312.docx",
+    "canonicalGroupId": "b7ecff6ba275"
+  },
+  "document": {
+    "title": "Software Validation (Firmware) For X-ray Detector HAD1717MC, HAD1717MG",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Report No.: A-TCF-5-009 (Rev.0); Software Revision 1.0",
+    "documentDate": "March/12/2019",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for HAD Firmware used to control X-ray Detector models HAD1717MC and HAD1717MG.",
+    "officialUse": "Documents firmware software description, requirements, architecture, development procedure, review results, dynamic tests, unresolved bugs, and risk analysis.",
+    "keyPoints": [
+      "HAD Firmware controls the detector, digitizes and transmits analog image data, processes image transformation register values, and communicates with a PC via TCP/IP.",
+      "Operational environment is ANSI C on i.MX6S MCIMX6S5DVM10AC with Linux.",
+      "The software architecture consists of Initialize, Main, Image data control, and Communication control modules.",
+      "Code review, module review, integration review, and dynamic testing are reported as passed or OK.",
+      "The report states there were no bugs subjected to safety and effectiveness of firmware."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "Product model",
+      "evidence": "For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "Product model",
+      "evidence": "For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD Firmware",
+      "type": "Software",
+      "evidence": "Software Name : HAD Firmware"
+    },
+    {
+      "name": "VIEWORKS",
+      "type": "Organization",
+      "evidence": "Software development process at VIEWORKS. follows a classic waterfall methodology"
+    },
+    {
+      "name": "Park, Nam Ho",
+      "type": "Person",
+      "evidence": "Prepared R&D team Park, Nam Ho March/12/2019"
+    },
+    {
+      "name": "i.MX6S MCIMX6S5DVM10AC",
+      "type": "Hardware platform",
+      "evidence": "Hardware platform : i.MX6S MCIMX6S5DVM10AC"
+    },
+    {
+      "name": "Linux",
+      "type": "Operating system",
+      "evidence": "Operation system : Linux"
+    },
+    {
+      "name": "ARM Cross gcc compiler",
+      "type": "Programming tool",
+      "evidence": "ARM Cross gcc compiler"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Validation",
+      "pageTarget": "Software Validation",
+      "evidence": "Software Validation Report"
+    },
+    {
+      "name": "Firmware",
+      "pageTarget": "Firmware",
+      "evidence": "Software Validation (Firmware)"
+    },
+    {
+      "name": "X-ray Detector",
+      "pageTarget": "X-ray Detector",
+      "evidence": "For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "Software Requirement Specification",
+      "pageTarget": "Software Requirement Specification",
+      "evidence": "2 Software Requirement Specification (SRS)"
+    },
+    {
+      "name": "Waterfall software development methodology",
+      "pageTarget": "Waterfall Software Development Methodology",
+      "evidence": "Software development process at VIEWORKS. follows a classic waterfall methodology"
+    },
+    {
+      "name": "Code Review",
+      "pageTarget": "Software Code Review",
+      "evidence": "As a result of code review, we positively evaluate the success in communication interface"
+    },
+    {
+      "name": "Module Review",
+      "pageTarget": "Software Module Review",
+      "evidence": "As a result of module review, all the module tests are completed successfully"
+    },
+    {
+      "name": "Integration Review",
+      "pageTarget": "Software Integration Review",
+      "evidence": "As a result of Integration review, we hereby certify that all the functions that support system specification are proper."
+    },
+    {
+      "name": "Dynamic Test",
+      "pageTarget": "Software Dynamic Test",
+      "evidence": "Dynamic Test"
+    },
+    {
+      "name": "Risk Analysis",
+      "pageTarget": "Software Risk Analysis",
+      "evidence": "Risk Analysis Report"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a software validation report for firmware for X-ray Detector HAD1717MC and HAD1717MG.",
+      "evidenceText": "Software Validation (Firmware) For X-ray Detector HAD1717MC, HAD1717MG",
+      "pageTarget": "Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report number and revision are A-TCF-5-009 Rev.0.",
+      "evidenceText": "Report No.: A-TCF-5-009 (Rev.0)",
+      "pageTarget": "A-TCF-5-009",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report was initially issued on March/12/2019.",
+      "evidenceText": "0 March/12/2019 Initially issued to Software validation.",
+      "pageTarget": "A-TCF-5-009",
+      "confidence": "high"
+    },
+    {
+      "claim": "The firmware software name is HAD Firmware.",
+      "evidenceText": "Software Name : HAD Firmware",
+      "pageTarget": "HAD Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "The role of the software is to control the detector.",
+      "evidenceText": "Role of S/W : Control the detector.",
+      "pageTarget": "HAD Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "The firmware digitizes and transmits analog images received from ROIC.",
+      "evidenceText": "Digitize and transmit analog images of objects received from ROIC",
+      "pageTarget": "HAD Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "The firmware communicates with the PC via TCP/IP to send and receive data.",
+      "evidenceText": "Communicate with the PC via the TCP/IP interface to send/receive data",
+      "pageTarget": "HAD Firmware Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operational environment uses ANSI C, i.MX6S MCIMX6S5DVM10AC, and Linux.",
+      "evidenceText": "Program language : ANSI C Hardware platform : i.MX6S MCIMX6S5DVM10AC Operation system : Linux",
+      "pageTarget": "HAD Firmware Operational Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software architecture consists of four independently functioning modules combined by the Main Module.",
+      "evidenceText": "The software architecture consists of 4 modules and each module functions independently. Main Module combines it into a software unit.",
+      "pageTarget": "HAD Firmware Architecture",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Initialize module reads initial values from flash memory and sets up FPGA based on initial values.",
+      "evidenceText": "Read Initial value from Flash Memory and setup FPGA based on initial value.",
+      "pageTarget": "HAD Firmware Initialize Module",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Communication control module processes detector image acquisition commands and sends digitized images.",
+      "evidenceText": "Detector Image Acquisition Command Processing and Send Digitized Images.",
+      "pageTarget": "HAD Firmware Communication Control Module",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software development process follows a classic waterfall methodology.",
+      "evidenceText": "Software development process at VIEWORKS. follows a classic waterfall methodology",
+      "pageTarget": "Waterfall Software Development Methodology",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report states there were no bugs subjected to safety and effectiveness of firmware.",
+      "evidenceText": "There were no bugs that are subjected to safety and effectiveness of firmware.",
+      "pageTarget": "HAD Firmware Unsolved Bugs",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software revision 1.0 was initially released on March/12/2019.",
+      "evidenceText": "1.0 March/12/2019 Initial release",
+      "pageTarget": "HAD Firmware Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "Code review concluded that software verification was properly accomplished.",
+      "evidenceText": "As a result of the code review, we hereby certify that the software verification is properly accomplished",
+      "pageTarget": "Software Code Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Module review concluded all module tests were completed successfully.",
+      "evidenceText": "As a result of module review, all the module tests are completed successfully by utilizing communication function evaluated in the code review.",
+      "pageTarget": "Software Module Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Integration review concluded all functions supporting system specification were proper.",
+      "evidenceText": "As a result of Integration review, we hereby certify that all the functions that support system specification are proper.",
+      "pageTarget": "Software Integration Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic tests for booting, dark frame acquisition, flat frame acquisition, FOV, control value read/write/write protection, and control value range limit test were OK.",
+      "evidenceText": "Booting process OK Dark frame acquisition OK Flat frame acquisition OK FOV OK Control value Read, Write, Write protection test OK Check control value exceeds range OK",
+      "pageTarget": "Software Dynamic Test",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk controls include CRC and command validation check for wrong command code.",
+      "evidenceText": "Using CRC and command validation check. Distinguish bad command from incoming data.",
+      "pageTarget": "Software Risk Control",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is explicitly identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No external standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document revision Rev.0 and software revision 1.0 are both present and refer to different revision contexts."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some extracted text appears to contain OCR or conversion errors, including 'Aril' for April and irregular table formatting."
+    }
+  ]
+}
