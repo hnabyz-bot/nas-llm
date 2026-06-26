@@ -1,0 +1,282 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954410-z4s",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/14. Risk Management/11.Appendix1. Risk Management FMEA attached (DHLee).xlsx",
+    "canonicalGroupId": "ea75b8102c0b"
+  },
+  "document": {
+    "title": "11.Appendix1. Risk Management FMEA attached (DHLee).xlsx",
+    "documentType": "Risk Management FMEA",
+    "productModels": [
+      "AspenView",
+      "RayinView",
+      "PedraView",
+      "ExamVue DR"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971:2019",
+      "DICOM 3.0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "FMEA-style risk management table mapping hazards, hazardous situations, harms, risk controls, verification, residual risk, and risk-benefit conclusions for imaging software workflows.",
+    "officialUse": "Supports risk management documentation by recording identified hazards, risk control measures, verification evidence, residual risk acceptability, and confirmation of no new or increased risks.",
+    "keyPoints": [
+      "The table is organized against ISO 14971:2019 clauses including hazard identification, risk estimation, risk evaluation, risk control, residual risk evaluation, risk-benefit analysis, and completeness of risk control.",
+      "Hazards include use error, information hazards, function errors, labeling, production, transportation, installation, usability, and maintenance issues.",
+      "Several initially unacceptable risks are reduced to acceptable residual risk after design controls, alarms, warnings, manuals, training, code review, and dynamic testing.",
+      "Repeated patient X-ray exposure is identified as a hazardous situation for multiple software and workflow failures.",
+      "For listed items, the table records that medical benefits of intended use outweigh residual risk and that no new or increased risks were identified."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ISO 14971:2019",
+      "type": "standard",
+      "evidence": "ISO 14971:2019,4.3 Identification of hazards"
+    },
+    {
+      "name": "DICOM 3.0",
+      "type": "standard",
+      "evidence": "Follow the DICOM 3.0 standard protocol"
+    },
+    {
+      "name": "AspenView",
+      "type": "product",
+      "evidence": "User Manual (RS-AspenView-UM)"
+    },
+    {
+      "name": "RayinView",
+      "type": "product",
+      "evidence": "Impossible to log in the RayinView caused by The faulty of dongle key(license key)"
+    },
+    {
+      "name": "PedraView",
+      "type": "product",
+      "evidence": "User Manual (RS-PedraView-UM)"
+    },
+    {
+      "name": "ExamVue DR",
+      "type": "product",
+      "evidence": "Impossible to run the ExamVue DR caused by insufficient disk space"
+    },
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "authoritySignal: FDA"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Risk Management FMEA",
+      "pageTarget": "Risk Management FMEA",
+      "evidence": "Risk Management FMEA attached"
+    },
+    {
+      "name": "Identification of hazards",
+      "pageTarget": "ISO 14971 Hazard Identification",
+      "evidence": "4.3 Identification of hazards"
+    },
+    {
+      "name": "Risk control option analysis",
+      "pageTarget": "Risk Control Option Analysis",
+      "evidence": "6.2 Risk control option analysis"
+    },
+    {
+      "name": "Residual risk evaluation",
+      "pageTarget": "Residual Risk Evaluation",
+      "evidence": "6.4 Residual risk evaluation"
+    },
+    {
+      "name": "Risk-benefit analysis",
+      "pageTarget": "Risk-Benefit Analysis",
+      "evidence": "6.5 Risk/benefit analysis"
+    },
+    {
+      "name": "Completeness of risk control",
+      "pageTarget": "Completeness of Risk Control",
+      "evidence": "6.7 Completeness of risk control"
+    },
+    {
+      "name": "Unintended excessive X-ray exposure",
+      "pageTarget": "Unintended Excessive X-Ray Exposure",
+      "evidence": "Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient"
+    },
+    {
+      "name": "DICOM compliance",
+      "pageTarget": "DICOM Compliance",
+      "evidence": "Not Comply DICOMStandard"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source uses ISO 14971:2019 risk management headings for hazard identification, risk estimation, risk evaluation, risk control, residual risk evaluation, and risk-benefit analysis.",
+      "evidenceText": "ISO 14971:2019,4.3 Identification of hazards,,,4.4 Estimation of the risk(s) for each hazardous situation,,,,,,5. Riskevaluation,6.2 Risk control option analysis,,6.3 Implementation of risk control measure(s),,,,6.4 Residual risk evaluation,,,,,6.5 Risk/benefit analysis",
+      "pageTarget": "ISO 14971:2019",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table records hazard IDs, hazards, foreseeable events, hazardous situations, harms, pre-control risk, risk controls, verification, post-control risk, residual risk, benefit, and new or increased risks.",
+      "evidenceText": "Classification(Module),Hazard ID,Hazard,Foreseeable hazards associated,Foreseeable sequence of events,Hazardous situation,Harm,Risk Before Control,,,Result,Risk Control,,Implementation of risk control measure,Verification,Effectiveness of risk control measure,Verification and result,Risk After Control",
+      "pageTarget": "Risk Management FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "A mismatched pixel data use error can make diagnosis impossible because the image cannot be acquired in the specified size.",
+      "evidenceText": "Exam Mode,R01,Operational hazard (Use error),Mismatched Pixel data,Diagnosis is impossibleby wrong acquired image.,The image can’t be acquired in the specified size.,Diagnosis is impossible",
+      "pageTarget": "Mismatched Pixel Data",
+      "confidence": "high"
+    },
+    {
+      "claim": "Wrong detector setting information can lead to repeated X-ray imaging and increased patient radiation, with harms including tissue damage and cancer.",
+      "evidenceText": "Input wrong information(Detector setting),Second X-ray photographing is tried due to a failure of the first one,Unintended excessive X ray is applied toresult in an increase of X-ray radiation on a patient,\"Tissue damage (X-ray burn)\nCancer (DNA modification)\"",
+      "pageTarget": "Detector Setting Use Error",
+      "confidence": "high"
+    },
+    {
+      "claim": "For wrong detector setting information, the initial risk is unacceptable and the post-control risk is acceptable.",
+      "evidenceText": "Exam Mode,R02,Operational hazard (Use error),Input wrong information(Detector setting),Second X-ray photographing is tried due to a failure of the first one...2,5,10,Unacceptable...2,1,2,Acceptable",
+      "pageTarget": "Detector Setting Use Error",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk controls include alarm messages, icon status display, user manual information, training, code review, and dynamic testing.",
+      "evidenceText": "Designing to inform using the icon status in the information bar and alram message.,Alram message are used to inform the user.,Code Review Dynamic Test Report",
+      "pageTarget": "Software Risk Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "Failure to select a patient or study before acquisition can produce an unknowable image and lead to repeated X-ray imaging.",
+      "evidenceText": "Acqurie the unknowable image whitout selecting the patient/study,Second X-ray photographing is tried due to a failure of the first one(unknowable image)",
+      "pageTarget": "Patient Study Selection Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Invalid export path or missing USB/HDD path can lead to an unknowable image and repeated X-ray imaging.",
+      "evidenceText": "No insert the USB or invalid HDD Path(To export the images),Second X-ray photographing is tried due to a failure of the first one(unknowable image)",
+      "pageTarget": "Image Export Path Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Wrong MWL information can limit MWL function use and increase diagnosis time.",
+      "evidenceText": "Wrong information (MWL),Limited usage(Use MWL function) cuased by wrong input information,Increase the timefor the diagnosis,Inconvenience (Too much waiting)",
+      "pageTarget": "Modality Worklist Configuration Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source identifies patient/study verification failure as a database-module use error that can mix patient information and make diagnosis impossible.",
+      "evidenceText": "Database Module,R07,Operational hazard (Use error),Failed to verify the patient and Studies,Took the unintended images,Mixed the patient information,Diagnosis is impossible",
+      "pageTarget": "Patient Data Verification Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Database backup while running the program is listed as a design control for damage to the database after PC power loss.",
+      "evidenceText": "PC power truns off byphysician's mistake,Damage the database,Mixed the data,Diagnosis is impossible...Designing the back up database file while running the program",
+      "pageTarget": "Database Backup Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Delete and restore functions with ID and password prompts are listed as controls for mistaken or unauthorized image deletion.",
+      "evidenceText": "Designing to delete and restore function.(When the user try to delete the image, the message ask ID and Password)",
+      "pageTarget": "Image Delete Restore Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "DICOM image sending errors from wrong PACS information can increase diagnosis time.",
+      "evidenceText": "Wrong information (PACS),Limited usage(Send the DICOM Image to PACS) cuased by wrong input information,Increase the timefor the diagnosis,Inconvenience (Too much waiting)",
+      "pageTarget": "PACS Configuration Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table records a DICOM module control to avoid compression when converting images into DICOM images.",
+      "evidenceText": "Image compression...Designing don't use the compress option when converting the image into DICOM images.",
+      "pageTarget": "DICOM Image Compression Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table records a DICOM module control to follow the DICOM 3.0 standard protocol.",
+      "evidenceText": "Not Comply DICOMStandard...Follow the DICOM 3.0 standard protocol",
+      "pageTarget": "DICOM 3.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "Pixel artifacts and low image quality are identified as image-processing hazards that can lead to misdiagnosis and repeated X-ray imaging.",
+      "evidenceText": "Pixel Artifact,\"Second X-ray photographing is occurred bymisdiagnosis. It is caused by pixel artifact,which can be influedned acquired images.\"",
+      "pageTarget": "Image Processing Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Wrong length measurement information can cause misdiagnosis of lesion size and unnecessary operation.",
+      "evidenceText": "Input wrong information(To set lengthmeasurement),Misdiagnosis caused by the wrong size of lesion,Proceed unnecessary operation,traumatism",
+      "pageTarget": "Length Measurement Calibration Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dongle key faults or damage can make RayinView unavailable for login or use.",
+      "evidenceText": "The faulty of dongle key(USB),Impossible to log in the RayinView caused by The faulty of dongle key(license key),unavailable to use RayinView",
+      "pageTarget": "RayinView Dongle Key Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety sign labeling hazards include using the device without accompanying documents, ignoring X-ray radiation safety rules, and general warnings.",
+      "evidenceText": "Safety sign,\"1. Using the device without referring toaccompanying documents\n2. Ignoring safety rules for X-ray radiation\n3. General warning\"",
+      "pageTarget": "Safety Sign Labeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized software use is controlled by requiring passwords in an unexposed form.",
+      "evidenceText": "Run the software by unauthorized user...Designing to enter passwords, it should be used in an unexposed form, such as ****.",
+      "pageTarget": "Unauthorized User Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Redundant execution of the program is identified as a usability function error controlled by preventing duplicate execution.",
+      "evidenceText": "The program, which wasrunning previously, didn't closed...Designed to prevent redundant execution.",
+      "pageTarget": "Redundant Software Execution Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Insufficient disk space can make ExamVue DR impossible to run and RayinView unavailable to use.",
+      "evidenceText": "Insufficient disk space,Impossible to run the ExamVue DR caused by insufficient disk space,unavailable to use RayinView",
+      "pageTarget": "Insufficient Disk Space Hazard",
+      "confidence": "high"
+    },
+    {
+      "claim": "For listed risk items, residual risk is recorded as acceptable and no new or increased risks are recorded.",
+      "evidenceText": "Acceptable,No,...No new and increased risks,Yes",
+      "pageTarget": "Residual Risk Acceptability",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly stated in the source text; path contains 240515 and Abyz-FDA-20240515 but these were not used as documentDate."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: FDA appears in source metadata and path/authoritySignal, but the table text itself does not state an FDA authority or jurisdiction."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product identity is inconsistent or broad: metadata signals ADD/AspenView, while the text also references AspenView, RayinView, PedraView, and ExamVue DR."
+    },
+    {
+      "severity": "warning",
+      "reason": "Preprocessed spreadsheet text has low OCR/extraction quality, including misspellings, merged words, truncated parentheses, and broken references such as alram, cuased, toresult, and incomplete risk-benefit references."
+    },
+    {
+      "severity": "info",
+      "reason": "Several verification references are internal document identifiers only, such as SRS, SDS, software Validation tests, User Manual, Code Review, and Dynamic Test, without full document titles or dates."
+    }
+  ]
+}
