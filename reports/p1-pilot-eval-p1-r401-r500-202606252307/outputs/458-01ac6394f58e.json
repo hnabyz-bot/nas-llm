@@ -1,4 +1,331 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005f-7609-75f3-8bda-f8a1fa6d79c9"
+  "source": {
+    "queueId": "ingest-1781569954373-3l4",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/1. A-CDR-HNX_Cybersecurity Development Report (Rev.4 03032026).pdf",
+    "canonicalGroupId": "01ac6394f58e"
+  },
+  "document": {
+    "title": "Cybersecurity Development Report",
+    "documentType": "Cybersecurity Development Report",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "NIST",
+      "CISA",
+      "U.S. DHS (ICS-CERT program)",
+      "CERT"
+    ],
+    "revisionOrVersion": "Rev. No. 4",
+    "documentDate": "March 03, 2026",
+    "standards": [
+      "IEC 81001-5-1",
+      "IEC 60601-4-5",
+      "ISO 14971:2019",
+      "TR 24971:2020",
+      "AAMI TIR 57",
+      "NIST 800-30",
+      "CVSS version 3.1",
+      "CWE"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity Development Report for HnX-P1 and HnX-PB portable X-ray systems documenting cybersecurity development activities, risk management, update management, patching, and incident response.",
+    "officialUse": "Provides cybersecurity documentation to demonstrate compliance with IEC 81001-5-1 and provide cybersecurity information to regulatory bodies and stakeholders for approval and certification.",
+    "keyPoints": [
+      "The report covers HnX-P1 and HnX-PB, both identified as Portable X-ray System models.",
+      "The HnX-PB variant model has only changed exterior design compared to HnX-P1; interface, exterior material, internal structure, PCB, and software are stated to be the same.",
+      "Cybersecurity activities include architecture analysis, threat modeling, vulnerability analysis, security requirements, risk assessment, mitigation, verification, production and post-production activities, update management, patching capability, and incident response.",
+      "Risk assessment applies CVSS version 3.1 and references ISO 14971:2019, TR 24971:2020, AAMI TIR 57, FDA guidance, and NIST 800-30.",
+      "Firmware updates cannot be performed directly by users in the field and must be performed by authorized service personnel or by returning the product to the manufacturer or service center.",
+      "The device does not connect to the internet or external servers and does not support remote or automatic updates."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "Manufacturer",
+      "evidence": "Manufacturer H&abyz Co., Ltd."
+    },
+    {
+      "name": "HnX-P1",
+      "type": "Product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "Product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "Portable X-ray System",
+      "type": "Product",
+      "evidence": "Product name: Portable X-ray System"
+    },
+    {
+      "name": "FDA",
+      "type": "Authority",
+      "evidence": "This architecture outlines four key perspectives for cybersecurity in medical devices, as recommended by the FDA."
+    },
+    {
+      "name": "NIST",
+      "type": "Authority",
+      "evidence": "Following guidelines from the FDA and NIST, update management includes identifying, acquiring, testing, and deploying software updates to fix vulnerabilities or enhance functionality."
+    },
+    {
+      "name": "CISA",
+      "type": "Authority",
+      "evidence": "H&abyz monitors the CISA catalog by cybersecurity officers within the quarterly one-time lab to identify cyber risks associated with H&abyz's harm."
+    },
+    {
+      "name": "U.S. DHS (ICS-CERT program)",
+      "type": "Authority",
+      "evidence": "Confirmed vulnerabilities must result in a direct report into government agencies such as the U.S. DHS (ICS-CERT program)"
+    },
+    {
+      "name": "STMicroelectronics",
+      "type": "Supplier",
+      "evidence": "Software: STM32CubeProgrammer · Provided by STMicroelectronics, the MCU manufacturer."
+    },
+    {
+      "name": "KISA Crypto Module",
+      "type": "Software component",
+      "evidence": "A14: Open source 2 - KISA Crypto Module"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity Development Report",
+      "pageTarget": "Cybersecurity Development Report",
+      "evidence": "The Cybersecurity Development Report for the HnX-P1 and HnX-PB documents all the activities and procedures taken to ensure the cybersecurity of this specific device, in accordance with the IEC 81001-5-1 standard."
+    },
+    {
+      "name": "IEC 81001-5-1 compliance",
+      "pageTarget": "IEC 81001-5-1",
+      "evidence": "The purpose of the Cybersecurity Development Report for HnX-P1 and HnX-PB are to demonstrate compliance with the IEC 81001-5-1 standard"
+    },
+    {
+      "name": "Threat modeling",
+      "pageTarget": "Threat Modeling",
+      "evidence": "Threat modeling is the process of systematically identifying potential threats and vulnerabilities that could affect a medical device."
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "Techniques such as STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) can be used to categorize and analyze threats."
+    },
+    {
+      "name": "CVSS 3.1 risk assessment",
+      "pageTarget": "CVSS Version 3.1",
+      "evidence": "As a method for risk assessment, we apply CVSS (Common Vulnerability Scoring System). 1) The CVSS measurement site and used version. : NVD – CVSS c3 Calculator / CVSS version 3.1"
+    },
+    {
+      "name": "Static Application Security Testing",
+      "pageTarget": "Static Application Security Testing",
+      "evidence": "Vulnerability assessment for software components can be effectively performed using Static Application Security Testing (SAST)."
+    },
+    {
+      "name": "Software Bill of Materials",
+      "pageTarget": "Software Bill of Materials",
+      "evidence": "Managing an SBOM (Software Bill of Materials) for medical device cybersecurity involves creating a detailed inventory of all software components, continuously monitoring for vulnerabilities."
+    },
+    {
+      "name": "Update management",
+      "pageTarget": "Medical Device Cybersecurity Update Management",
+      "evidence": "It's crucial to manage updates for medical devices as part of cybersecurity to promptly address vulnerabilities and safeguard patient safety and device integrity."
+    },
+    {
+      "name": "Patching capability",
+      "pageTarget": "Medical Device Cybersecurity Patching Capability",
+      "evidence": "The device does not connect to the internet or external servers, and therefore does not support remote or automatic updates."
+    },
+    {
+      "name": "Security incident response",
+      "pageTarget": "Medical Device Cybersecurity Incident Response",
+      "evidence": "The Security Incident Response Plan outlines a structured approach for handling cybersecurity incidents related to HnX-P1 and HnX-PB."
+    },
+    {
+      "name": "MDS2",
+      "pageTarget": "Manufacturer Disclosure Statement for Medical Device Security",
+      "evidence": "To verify interoperability functionality, we have added the MDS2 (Manufacturer Disclosure Statement for Medical Device Security) checklist."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document number is A-CDR-HNX.",
+      "evidenceText": "Technical Documentation Document No. A-CDR-HNX",
+      "pageTarget": "A-CDR-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report is revision 4 dated March 03, 2026.",
+      "evidenceText": "Rev. No. 4 Cybersecurity Development Report Rev. Date March 03, 2026",
+      "pageTarget": "Cybersecurity Development Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is a Portable X-ray System.",
+      "evidenceText": "Product name: Portable X-ray System",
+      "pageTarget": "Portable X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The covered models are HnX-P1 and HnX-PB.",
+      "evidenceText": "Model name: HnX-P1, HnX-PB",
+      "pageTarget": "HnX Models",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz Co., Ltd. is the manufacturer.",
+      "evidenceText": "Manufacturer H&abyz Co., Ltd.",
+      "pageTarget": "H&abyz Co., Ltd.",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-P1 and HnX-PB are battery-powered portable X-ray systems intended to generate radiographic images of human anatomy.",
+      "evidenceText": "The HnX-P1 (and HnX-PB) is a battery-powered portable X-ray system intended for generating radiographic images of human anatomy.",
+      "pageTarget": "HnX Intended Purpose",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report documents cybersecurity activities and procedures in accordance with IEC 81001-5-1.",
+      "evidenceText": "The Cybersecurity Development Report for the HnX-P1 and HnX-PB documents all the activities and procedures taken to ensure the cybersecurity of this specific device, in accordance with the IEC 81001-5-1 standard.",
+      "pageTarget": "IEC 81001-5-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report includes architecture analysis, threat modeling, vulnerability analysis, security requirements, risk assessment, and mitigation.",
+      "evidenceText": "This report includes detailed records of architecture analysis, threat modeling, vulnerability analysis, identification of security requirements, risk assessment, and mitigation.",
+      "pageTarget": "Cybersecurity Development Lifecycle",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-PB is a variant model with only exterior design changed compared to HnX-P1, with no additional cybersecurity risk management performed for the variant addition.",
+      "evidenceText": "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.Therefore, no additional cybersecurity risk management is performed due to the addition of the variant model (HnX-PB).",
+      "pageTarget": "HnX-PB Variant Model",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document purpose is to demonstrate compliance with IEC 81001-5-1 and support approval and certification.",
+      "evidenceText": "The purpose of the Cybersecurity Development Report for HnX-P1 and HnX-PB are to demonstrate compliance with the IEC 81001-5-1 standard... facilitating the approval and certification process.",
+      "pageTarget": "IEC 81001-5-1 Compliance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operational environment includes C/C++, 32Bit Arm Cortex-M7, STM32H7A3VG, no off-the-shelf software, software name HnX_P1, and version Ver 00.12.",
+      "evidenceText": "Program Language: C/C++ • 32Bit Arm Cortex-M7 • MCU - STM32H7A3VG • Off-the-shelf: None • Software name: HnX_P1 • Version: Ver 00.12",
+      "pageTarget": "HnX Operational Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk assessment applies CVSS version 3.1 using the NVD CVSS calculator.",
+      "evidenceText": "As a method for risk assessment, we apply CVSS (Common Vulnerability Scoring System). 1) The CVSS measurement site and used version. : NVD – CVSS c3 Calculator / CVSS version 3.1",
+      "pageTarget": "CVSS Version 3.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Security requirements are based on IEC 60601-4-5.",
+      "evidenceText": "This involves identifying both functional and non-functional security requirements based on the IEC 60601-4-5.",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity risks for HnX-P1 and HnX-PB are identified, analyzed, and evaluated with reference to ISO 14971:2019, TR 24971:2020, AAMI TIR 57, FDA guidelines, and latest international guidelines.",
+      "evidenceText": "This will be done with reference to ISO 14971:2019, TR 24971:2020, AAMI TIR 57 standards, and the latest international guidelines, including those from the FDA.",
+      "pageTarget": "Medical Device Cybersecurity Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Critical, High, and Medium risks are unacceptable and require mitigation, while Low and Very Low risks are acceptable with regular monitoring.",
+      "evidenceText": "Risks at critical, High and Medium levels are deemed unacceptable and require immediate mitigation. On the other hand, Low, Very Low are acceptable with regular monitoring.",
+      "pageTarget": "Cybersecurity Risk Acceptance Criteria",
+      "confidence": "high"
+    },
+    {
+      "claim": "Production and post-production activities include periodic review of cybersecurity risks once every two years and updates if a cybersecurity threat is believed to exist.",
+      "evidenceText": "Timeline to develop and release patches, H&abyz will review cybersecurity risks once every two years and update them if they believe there is a threat to cybersecurity.",
+      "pageTarget": "Production and Post-Production Cybersecurity",
+      "confidence": "high"
+    },
+    {
+      "claim": "H&abyz monitors the CISA catalog quarterly to identify cyber risks.",
+      "evidenceText": "H&abyz monitors the CISA catalog by cybersecurity officers within the quarterly one-time lab to identify cyber risks associated with H&abyz's harm.",
+      "pageTarget": "CISA Vulnerability Monitoring",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The report says confirmed vulnerabilities must be directly reported to government agencies such as U.S. DHS ICS-CERT.",
+      "evidenceText": "Confirmed vulnerabilities must result in a direct report into government agencies such as the U.S. DHS (ICS-CERT program) and then communication through the press to the public.",
+      "pageTarget": "Coordinated Vulnerability Disclosure",
+      "confidence": "high"
+    },
+    {
+      "claim": "MDS2 checklist is added to verify interoperability functionality.",
+      "evidenceText": "To verify interoperability functionality, we have added the MDS2 (Manufacturer Disclosure Statement for Medical Device Security) checklist.",
+      "pageTarget": "MDS2",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-P1 and HnX-PB are designed to anticipate software and firmware patches and updates for cybersecurity vulnerabilities.",
+      "evidenceText": "The HnX-P1 and HnX-PB are designed to anticipate the possibility that software and firmware patches and updates will be required to address cybersecurity vulnerabilities.",
+      "pageTarget": "Medical Device Cybersecurity Update Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software and firmware updates cannot be performed directly by field users and must be performed by authorized service personnel or through return to manufacturer or service center.",
+      "evidenceText": "Therefore, the product's software and firmware updates cannot be performed directly by users in the field, and must be performed by authorized service personnel or by returning the product to the manufacturer or service center.",
+      "pageTarget": "HnX Update Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "The update tools are STM32CubeProgrammer software and ST-Link hardware.",
+      "evidenceText": "Update tool - Software: STM32CubeProgrammer... - Hardware: ST-Link",
+      "pageTarget": "HnX Update Tools",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product uses STMicroelectronics software and KISA_SHA256 open source, with no defined end date of support.",
+      "evidenceText": "The applicable open source for the product is software provided by STMicroelectronics and KISA_SHA256, and the end date of support for the open source has not been defined.",
+      "pageTarget": "HnX SBOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device does not connect to the internet or external servers and does not support remote or automatic updates.",
+      "evidenceText": "The device does not connect to the internet or external servers, and therefore does not support remote or automatic updates.",
+      "pageTarget": "HnX Patching Capability",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware patches are applied manually via a physical connection such as USB Type-C and verified for integrity before installation.",
+      "evidenceText": "Firmware patches are applied manually via a physical connection (e.g., USB Type-C port), and the update file is verified for integrity prior to installation.",
+      "pageTarget": "HnX Patching Capability",
+      "confidence": "high"
+    },
+    {
+      "claim": "The incident response plan covers HnX-P1 and HnX-PB and follows FDA and NIST guidelines.",
+      "evidenceText": "The Security Incident Response Plan outlines a structured approach for handling cybersecurity incidents related to HnX-P1 and HnX-PB. It has been developed in accordance with FDA and NIST guidelines",
+      "pageTarget": "Medical Device Cybersecurity Incident Response",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The source metadata authoritySignal is CE/MDR, but the provided source text does not explicitly cite CE, EU MDR, a notified body, or EU jurisdiction."
+    },
+    {
+      "severity": "warning",
+      "reason": "Section numbering appears inconsistent: the contents list skips section 13, the body includes section 13 Patching capability, and incident response subsections are numbered 13.1 to 13.4 under section 14."
+    },
+    {
+      "severity": "info",
+      "reason": "Text quality contains OCR or drafting issues such as inconsistent page totals, spelling errors like 'Intended porpose', and 'Unresolved Animals issue'."
+    },
+    {
+      "severity": "info",
+      "reason": "The document identifies FDA, NIST, CISA, U.S. DHS ICS-CERT, and CERT references, but it does not clearly define a single primary regulatory authority or jurisdiction for the report."
+    }
+  ]
 }

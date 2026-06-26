@@ -1,4 +1,174 @@
-{"type":"thread.started","thread_id":"019f005f-2de5-7510-b400-4f09f96057a0"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954420-18hk",
+    "sourcePath": "raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/90_규격 Test report/1. 시험소 제출서류/11. 부품인증서_사양서/기구물/데코시트/승인원/MSH-200011_(MC_BACK_DECO_SHEET)_승인원.xlsx",
+    "canonicalGroupId": "5bf250f770b7"
+  },
+  "document": {
+    "title": "승인원 [Approval Sheet] - MC_BACK_DECO_SHEET",
+    "documentType": "부품 승인원",
+    "productModels": [
+      "HAD1717MC"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev. 00",
+    "documentDate": "2024.07.17",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "MC_BACK_DECO_SHEET 부품 MSH-200011에 대한 승인원으로 적용 모델, 공급업체, 원재료, QC 공정도 및 검사 기준을 포함한다.",
+    "officialUse": "부품 승인 및 품질관리 제출서류로 사용되는 승인원이다.",
+    "keyPoints": [
+      "제품명은 MC_BACK_DECO_SHEET이고 도번은 MSH-200011이다.",
+      "적용 모델은 HAD1717MC이며 제작업체는 모아스크린이다.",
+      "종합 원재료 List에는 PC Q42(오메이 엠보), 양면테이프 ST-9108, 잉크 PET 9000이 기재되어 있다.",
+      "QC 공정도는 자재입고, 출력, 인쇄, 합지, 컷팅, 검사, 포장, 출하검사 공정을 포함한다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "㈜H&abyz",
+      "type": "customer",
+      "evidence": "TO : ㈜H&abyz"
+    },
+    {
+      "name": "모아스크린",
+      "type": "supplier",
+      "evidence": "FROM(제작업체) : 모아스크린"
+    },
+    {
+      "name": "MC_BACK_DECO_SHEET",
+      "type": "part",
+      "evidence": "품명(PART NAME) : MC_BACK_DECO_SHEET"
+    },
+    {
+      "name": "MSH-200011",
+      "type": "part number",
+      "evidence": "도번(PART NO) : MSH-200011"
+    },
+    {
+      "name": "HAD1717MC",
+      "type": "applicable model",
+      "evidence": "적용 모델(MODEL NO) : HAD1717MC"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "부품 승인원",
+      "pageTarget": "Part Approval Sheet",
+      "evidence": "부품 승인원"
+    },
+    {
+      "name": "종합 원재료 List",
+      "pageTarget": "Bill of Materials and Raw Material List",
+      "evidence": "4. 종합 원재료 List"
+    },
+    {
+      "name": "QC 공정도",
+      "pageTarget": "QC Process Flow",
+      "evidence": "QC 공정도"
+    },
+    {
+      "name": "비사용 증명서",
+      "pageTarget": "Restricted Substance Non-Use Certificate",
+      "evidence": "비사용 증명서 (Cd, Pb, Hg, Cr6+, PBB, PBDE)"
+    },
+    {
+      "name": "Control Plan Category",
+      "pageTarget": "Control Plan",
+      "evidence": "Control Plan Category"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is an approval sheet for MC_BACK_DECO_SHEET.",
+      "evidenceText": "승 인 원 [Approval Sheet] ... 제품명(PRODUCT NAME) MC_BACK_DECO_SHEET",
+      "pageTarget": "MC_BACK_DECO_SHEET",
+      "confidence": "high"
+    },
+    {
+      "claim": "The part number for MC_BACK_DECO_SHEET is MSH-200011.",
+      "evidenceText": "품명(PART NAME) : MC_BACK_DECO_SHEET ... 도번(PART NO) : MSH-200011",
+      "pageTarget": "MSH-200011",
+      "confidence": "high"
+    },
+    {
+      "claim": "The applicable model is HAD1717MC.",
+      "evidenceText": "적용 모델(MODEL NO) : HAD1717MC",
+      "pageTarget": "HAD1717MC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The customer is ㈜H&abyz.",
+      "evidenceText": "TO : ㈜H&abyz",
+      "pageTarget": "H&abyz",
+      "confidence": "high"
+    },
+    {
+      "claim": "The supplier or manufacturer is 모아스크린.",
+      "evidenceText": "FROM(제작업체) : 모아스크린",
+      "pageTarget": "모아스크린",
+      "confidence": "high"
+    },
+    {
+      "claim": "The approval sheet date is 2024.07.17.",
+      "evidenceText": "일자(DATE) : 2024.07.17",
+      "pageTarget": "Approval Sheet Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document cover identifies revision as Rev. 00.",
+      "evidenceText": "Rev. 00",
+      "pageTarget": "Document Revision",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision history records initial establishment on 7/17/24.",
+      "evidenceText": "Rev. 0, 개정일 7/17/24, 상세 개정 내역 최초 제정",
+      "pageTarget": "Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The raw material list includes PC Q42(오메이 엠보), 양면테이프 ST-9108, and 잉크 PET 9000.",
+      "evidenceText": "1, PC, Q42(오메이 엠보) ... 2, 양면테이프, ST-9108 ... 3, 잉크, PET 9000",
+      "pageTarget": "Raw Material List",
+      "confidence": "high"
+    },
+    {
+      "claim": "The restricted substance non-use certificate column covers Cd, Pb, Hg, Cr6+, PBB, and PBDE.",
+      "evidenceText": "비사용 증명서 (Cd, Pb, Hg, Cr6+, PBB, PBDE)",
+      "pageTarget": "Restricted Substance Non-Use Certificate",
+      "confidence": "high"
+    },
+    {
+      "claim": "The QC process includes material receiving, output, printing, laminating, cutting, inspection, packing, and shipment inspection.",
+      "evidenceText": "Process Name ... 자재입고(수입검사), 출력, 인쇄, 합지, 컷팅, 검사, 포장, 출하검사",
+      "pageTarget": "QC Process Flow",
+      "confidence": "high"
+    },
+    {
+      "claim": "The control plan category marks SOP.",
+      "evidenceText": "Control Plan Category □ DVS, □ PVS, □ PRS, ■ SOP",
+      "pageTarget": "Control Plan",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "authoritySignal indicates FDA in metadata, but the source text does not identify FDA or any regulatory authority or jurisdiction."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision/date evidence varies across sections: cover shows Rev. 00, revision history shows Rev. 0 dated 7/17/24, and QC revision history includes 2024.00.00."
+    },
+    {
+      "severity": "info",
+      "reason": "Spreadsheet text contains malformed or typographical entries such as 'Produst/Part' and blank table cells."
+    }
+  ]
+}

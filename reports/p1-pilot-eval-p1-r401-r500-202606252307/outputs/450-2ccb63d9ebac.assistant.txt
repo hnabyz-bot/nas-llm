@@ -1,4 +1,282 @@
-{"type":"thread.started","thread_id":"019f005e-b25f-7eb2-96e4-75a83c3c481d"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954371-21d",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/4. A-CFMEA-HNX_Cybersecurity FMEA table(Rev.4).pdf",
+    "canonicalGroupId": "2ccb63d9ebac"
+  },
+  "document": {
+    "title": "Cybersecurity FMEA Report",
+    "documentType": "Cybersecurity FMEA report",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.4",
+    "documentDate": "July 26, 2025",
+    "standards": [
+      "IEC 60601-4-5",
+      "MISRA-C:2004",
+      "CycloneDX",
+      "CVSS"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity FMEA Report A-CFMEA-HNX for the Portable X-Ray system models HnX-P1 and HnX-PB.",
+    "officialUse": "Supports design and development verification and validation cybersecurity risk management by listing threats, risk evaluation, mitigation, residual risk, and verification references.",
+    "keyPoints": [
+      "The report identifies the product as a Portable X-Ray system and the model names as HnX-P1 and HnX-PB.",
+      "The document number is A-CFMEA-HNX and the revision number is Rev.4.",
+      "The revision history records establishment on 2024.12.05 and Rev.4 adding physical controls to mitigate threats to User Identification and Authentication.",
+      "The FMEA uses STRIDE threat categories, CVSS scoring, likelihood, impact, risk level, mitigation, and verification evidence.",
+      "Verification references include Cybersecurity Requirements Testing, Source Code Static Analysis, and Penetration Test reports under report no. EBB-2025-000021."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Portable X-Ray system",
+      "type": "product",
+      "evidence": "Product Name : Portable X-Ray system"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "product model",
+      "evidence": "Model Name : HnX-P1 & HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "product model",
+      "evidence": "Model Name : HnX-P1 & HnX-PB"
+    },
+    {
+      "name": "A-CFMEA-HNX",
+      "type": "document number",
+      "evidence": "Doc No. : A-CFMEA-HNX"
+    },
+    {
+      "name": "H＆abyz Co., Ltd.",
+      "type": "organization",
+      "evidence": "A-CFMEA-HNX H＆abyz Co., Ltd."
+    },
+    {
+      "name": "Jeon, Jeu",
+      "type": "approver",
+      "evidence": "Approved by R&D manager Jeon, Jeu July 26, 2025"
+    },
+    {
+      "name": "Han, Jimin",
+      "type": "preparer",
+      "evidence": "Prepared by R&D team Han, Jimin July 26, 2025"
+    },
+    {
+      "name": "Hur, Namkyu",
+      "type": "reviewer",
+      "evidence": "Reviewed by Quality Management Representative Hur, Namkyu July 26, 2025"
+    },
+    {
+      "name": "EBB-2025-000021",
+      "type": "verification report number",
+      "evidence": "Cybersecurity Requirements Testing (Report no. EBB-2025-000021)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity FMEA",
+      "pageTarget": "Cybersecurity FMEA",
+      "evidence": "Cybersecurity FMEA Report"
+    },
+    {
+      "name": "IEC 60601-4-5 cybersecurity requirements",
+      "pageTarget": "IEC 60601-4-5 Cybersecurity Requirements",
+      "evidence": "Added threat identification to the IEC 60601-4-5 cybersecurity requirements list."
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE Threat Modeling",
+      "evidence": "Risk analysis (Step 1) Hazard No. Threat Asset / Requirement ID CVSS Risk evaluation (Step 2) STRIDE"
+    },
+    {
+      "name": "CVSS",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "evidence": "Asset / Requirement ID CVSS"
+    },
+    {
+      "name": "Code, Data, and Execution Integrity",
+      "pageTarget": "Code Data and Execution Integrity",
+      "evidence": "Code, Data, and Execution Integrity Use digital signatures and integrity verification for configuration settings."
+    },
+    {
+      "name": "Cryptography",
+      "pageTarget": "Cryptography",
+      "evidence": "Cryptography Implement cryptographic integrity verification for calibration values."
+    },
+    {
+      "name": "Firmware and Software Updates",
+      "pageTarget": "Firmware and Software Updates",
+      "evidence": "Cryptography, Firmware and Software Updates 1. Integrity Verification (Checksum): Perform SHA-256 verification on all update files"
+    },
+    {
+      "name": "SBOM-based vulnerability scan",
+      "pageTarget": "SBOM Based Vulnerability Scanning",
+      "evidence": "SBOM-based vulnerability scan (using CycloneDX format): Create SBOM in CycloneDX format and periodically review whether each component has CVE"
+    },
+    {
+      "name": "MISRA-C:2004 static analysis",
+      "pageTarget": "MISRA-C:2004",
+      "evidence": "Static Analysis (MISRA-C:2004): Perform static analysis based on the MISRA-C ruleset on production code before compilation"
+    },
+    {
+      "name": "Bluetooth device whitelisting",
+      "pageTarget": "Bluetooth Device Whitelisting",
+      "evidence": "Enforce Bluetooth device whitelisting and strong pairing protocols."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cybersecurity FMEA Report.",
+      "evidenceText": "Cybersecurity FMEA Report",
+      "pageTarget": "Cybersecurity FMEA Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product covered by the report is a Portable X-Ray system.",
+      "evidenceText": "Product Name : Portable X-Ray system",
+      "pageTarget": "Portable X-Ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The covered models are HnX-P1 and HnX-PB.",
+      "evidenceText": "Model Name : HnX-P1 & HnX-PB",
+      "pageTarget": "HnX Product Models",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number is A-CFMEA-HNX.",
+      "evidenceText": "Doc No. : A-CFMEA-HNX",
+      "pageTarget": "A-CFMEA-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision number is Rev.4.",
+      "evidenceText": "Revision No. : Rev.4",
+      "pageTarget": "A-CFMEA-HNX Rev.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "The top-level revision date is July 26, 2025.",
+      "evidenceText": "Revision date : July 26, 2025",
+      "pageTarget": "A-CFMEA-HNX Rev.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Rev.4 added physical controls to mitigate threats to User Identification and Authentication.",
+      "evidenceText": "4 2025.07.20 Added physical controls to mitigate threats to User Identification and Authentication.",
+      "pageTarget": "User Identification and Authentication",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Rev.3 was a revision according to addition of variant model HnX-PB.",
+      "evidenceText": "3 2025.06.20 Revision according to Add variant model (HnX-PB)",
+      "pageTarget": "HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report includes an IEC 60601-4-5 cybersecurity requirement table.",
+      "evidenceText": "Cybersecurity FMEA table 2. (IEC 60601-4-5 Cybersecurity Requirement)",
+      "pageTarget": "IEC 60601-4-5 Cybersecurity Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes configuration tampering as CRM-01 and mitigates it with digital signatures and integrity verification for configuration settings.",
+      "evidenceText": "CRM-01 A1: Configuration Tampering Malicious modification of configuration settings, resulting in unsafe operational parameters. ... Use digital signatures and integrity verification for configuration settings.",
+      "pageTarget": "Configuration Tampering",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes calibration tampering as CRM-02 and mitigates it with cryptographic integrity verification for calibration values.",
+      "evidenceText": "CRM-02 A2: Calibration Tampering Unauthorized alteration of calibration values causing improper X-ray output. ... Implement cryptographic integrity verification for calibration values.",
+      "pageTarget": "Calibration Tampering",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes Bluetooth spoofing as CRM-09 and mitigates it with Bluetooth device whitelisting and strong pairing protocols.",
+      "evidenceText": "CRM-09 A9: Bluetooth Spoofing Impersonation of a trusted Bluetooth device, compromising secure pairing and data integrity. ... Enforce Bluetooth device whitelisting and strong pairing protocols.",
+      "pageTarget": "Bluetooth Spoofing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes Bluetooth information disclosure as CRM-11 and lists encryption of Bluetooth data transmissions with SHA-256 as mitigation.",
+      "evidenceText": "CRM-11 A9: Bluetooth Information Disclosure Exposure of sensitive data transmitted over Bluetooth due to insufficient encryption. ... Encrypt all Bluetooth data transmissions with SHA-256",
+      "pageTarget": "Bluetooth Information Disclosure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes hardware interface spoofing, tampering, and elevation of privilege threats for A12.",
+      "evidenceText": "CRM-14 A12: Hardware Interfaces Spoofing ... CRM-15 A12: Hardware Interfaces Tampering ... CRM-16 A12: Hardware Interfaces Elevation of Privilege",
+      "pageTarget": "Hardware Interface Cybersecurity",
+      "confidence": "high"
+    },
+    {
+      "claim": "Open source software risk management was added in Rev.2.",
+      "evidenceText": "2 2025.06.02 Revisions to add risk management for open source software",
+      "pageTarget": "Open Source Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report analyzes STMicroelectronics Open-Source Bundle risks including tampering, spoofing, information disclosure, and elevation.",
+      "evidenceText": "A13: Open source 1 –STMicroelectronics Open-Source Bundle Tampering ... Spoofing ... Info Disclosure ... Elevation",
+      "pageTarget": "STMicroelectronics Open-Source Bundle",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report analyzes KISA Crypto Module risks including tampering, spoofing, denial of service, and information disclosure.",
+      "evidenceText": "A14: Open source 2 - KISA Crypto Module Tempering ... Spoofing ... DoS ... Info Disclosure",
+      "pageTarget": "KISA Crypto Module",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Risk controls for open source components include SHA-256 integrity verification, MISRA-C:2004 static analysis, and SBOM-based vulnerability scanning using CycloneDX.",
+      "evidenceText": "Integrity Verification (Checksum): Perform SHA-256 verification ... Static Analysis (MISRA-C:2004) ... SBOM-based vulnerability scan (using CycloneDX format)",
+      "pageTarget": "Open Source Component Risk Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states the product does not store important data such as patient personal information or diagnostic information.",
+      "evidenceText": "No important data such as patient personal information or diagnostic information is stored in the device.",
+      "pageTarget": "HnX Data Storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document states the device is intended for use by trained users only in designated locations.",
+      "evidenceText": "The device is intended for use by trained users only in designated locations.",
+      "pageTarget": "HnX Intended Use Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has Bluetooth functionality and is designed to restrict connection of unauthorized devices.",
+      "evidenceText": "It has Bluetooth functionality, but is designed to restrict connection of unauthorized devices.",
+      "pageTarget": "HnX Bluetooth Security",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document cites Cybersecurity Requirements Testing, Source Code Static Analysis, and Penetration Test under report no. EBB-2025-000021.",
+      "evidenceText": "Cybersecurity Requirements Testing (Report no. EBB-2025-000021) ... Source Code Static Analysis (Report no. EBB-2025-000021) ... Penetration Test (Report no. EBB-2025-000021)",
+      "pageTarget": "EBB-2025-000021",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not explicitly identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision date metadata is potentially conflicting: the cover lists Revision date July 26, 2025, while the revision history lists Rev.4 date as 2025.07.20."
+    },
+    {
+      "severity": "info",
+      "reason": "The preprocessed table text contains OCR or extraction artifacts, including merged rows, misspellings such as 'Impack' and 'Tempering', and partial punctuation."
+    }
+  ]
+}

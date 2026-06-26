@@ -1,4 +1,243 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005e-e4ea-7661-8cac-d5a9f82c3aa3"
+  "source": {
+    "queueId": "ingest-1781569954377-715",
+    "sourcePath": "raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/260303 사용목적 수정(CE 반영)/7. A-CAV-HNX_Architecture View(Rev.2).pdf",
+    "canonicalGroupId": "1caa57724e51"
+  },
+  "document": {
+    "title": "Cybersecurity Architecture View",
+    "documentType": "Technical Documentation",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Rev. No. 2",
+    "documentDate": "June 20, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity architecture view for the Portable X-ray System models HnX-P1 and HnX-PB.",
+    "officialUse": "Technical documentation showing cybersecurity architecture views corresponding to FDA requirements for the Portable X-ray System.",
+    "keyPoints": [
+      "Document No. A-CAV-HNX, Rev. No. 2, Rev. Date June 20, 2025.",
+      "Scope is limited to HnX-P1 and HnX-PB, the Portable X-ray System.",
+      "Architecture views include Global system view, Updateability/Patchability view, and Security use case view.",
+      "Multi-Patient Harm View states the product does not correspond to Multi-Patient Harm because it only matches 1:1 with specified console software via Bluetooth.",
+      "Firmware update is possible through the USB C type port, but field updates are not possible and the product must be returned to the manufacturer or service center.",
+      "Security Use Case View states that the product communicates with external console software via Bluetooth and uses integrity checks to reject tampered packets and abnormal file transfers."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd."
+    },
+    {
+      "name": "Portable X-ray System",
+      "type": "product",
+      "evidence": "Product name: Portable X-ray System"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "product model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "FDA",
+      "type": "authority or requirements source",
+      "evidence": "three of the four architectural views corresponding to the FDA requirements are Global system view, Updateability/Patchability view, and Security use case view."
+    },
+    {
+      "name": "STMicroelectronics Open-Source Bundle",
+      "type": "open source component",
+      "evidence": "A13: Open source 1 – STMicroelectronics Open-Source Bundle"
+    },
+    {
+      "name": "KISA Crypto Module",
+      "type": "open source component",
+      "evidence": "A14: Open source 2 - KISA Crypto Module"
+    },
+    {
+      "name": "KTR-QI-Y10053-F10(00)",
+      "type": "test report",
+      "evidence": "Test report no. KTR-QI-Y10053-F10(00), Penetration test PT-1"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity Architecture View",
+      "pageTarget": "Cybersecurity Architecture View",
+      "evidence": "The purpose of this document is to show a cyber security architecture view for Portable X-ray System(HnX-P1, HnX-PB)."
+    },
+    {
+      "name": "Global System View",
+      "pageTarget": "Global System View",
+      "evidence": "2.1 Data Flow Diagram (Global System View)"
+    },
+    {
+      "name": "Multi-Patient Harm View",
+      "pageTarget": "Multi-Patient Harm View",
+      "evidence": "2.2 Multi-Patient Harm View"
+    },
+    {
+      "name": "Updateability and Patchability View",
+      "pageTarget": "Updateability and Patchability View",
+      "evidence": "2.3 Updateability and Patchability View"
+    },
+    {
+      "name": "Security Use Case View",
+      "pageTarget": "Security Use Case View",
+      "evidence": "2.4 Security Use Case View"
+    },
+    {
+      "name": "Firmware update through USB C type port",
+      "pageTarget": "Firmware Update via USB-C",
+      "evidence": "Firmware update is possible through the USB C type port."
+    },
+    {
+      "name": "Bluetooth communication with console software",
+      "pageTarget": "Bluetooth Communication",
+      "evidence": "Communicates with external products (console software) via Bluetooth function."
+    },
+    {
+      "name": "Integrity check",
+      "pageTarget": "Integrity Check",
+      "evidence": "Integrity check is used to reject tampered packets and abnormal file transfers."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cybersecurity Architecture View.",
+      "evidenceText": "Cybersecurity Architecture View",
+      "pageTarget": "Cybersecurity Architecture View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number is A-CAV-HNX.",
+      "evidenceText": "Technical Documentation Document No. A-CAV-HNX",
+      "pageTarget": "A-CAV-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev. No. 2.",
+      "evidenceText": "Rev. No. 2",
+      "pageTarget": "Cybersecurity Architecture View Rev 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision date is June 20, 2025.",
+      "evidenceText": "Cybersecurity Architecture View Rev. Date June 20, 2025",
+      "pageTarget": "Cybersecurity Architecture View Rev 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product name is Portable X-ray System.",
+      "evidenceText": "Product name: Portable X-ray System",
+      "pageTarget": "Portable X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model names are HnX-P1 and HnX-PB.",
+      "evidenceText": "Model name: HnX-P1, HnX-PB",
+      "pageTarget": "HnX Portable X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision 2 added the variant model HnX-PB.",
+      "evidenceText": "2 June 20, 2025 Add variant model (HnX-PB)",
+      "pageTarget": "HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The purpose is to show a cybersecurity architecture view for the Portable X-ray System.",
+      "evidenceText": "The purpose of this document is to show a cyber security architecture view for Portable X-ray System(HnX-P1, HnX-PB).",
+      "pageTarget": "Cybersecurity Architecture View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document scope is limited to HnX-P1 and HnX-PB.",
+      "evidenceText": "This document is limited to HnX-P1 and HnX-PB, the Portable X-ray System.",
+      "pageTarget": "HnX Portable X-ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies Global system view, Updateability/Patchability view, and Security use case view as architectural views corresponding to FDA requirements.",
+      "evidenceText": "three of the four architectural views corresponding to the FDA requirements are Global system view, Updateability/Patchability view, and Security use case view.",
+      "pageTarget": "FDA Cybersecurity Architecture Views",
+      "confidence": "high"
+    },
+    {
+      "claim": "Multi patient harm view is excluded because it is not the product.",
+      "evidenceText": "Multi patient harm view is excluded because it is not our product.",
+      "pageTarget": "Multi-Patient Harm View",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The product does not correspond to Multi-Patient Harm because it only matches 1:1 with specified console software via Bluetooth.",
+      "evidenceText": "This product does not correspond to Multi-Patient Harm because it only matches 1:1 with the specified console software via Bluetooth.",
+      "pageTarget": "Multi-Patient Harm View",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware update is possible through the USB C type port.",
+      "evidenceText": "Firmware update is possible through the USB C type port.",
+      "pageTarget": "Firmware Update via USB-C",
+      "confidence": "high"
+    },
+    {
+      "claim": "Direct firmware updates in the field are not possible; the product must be returned to the manufacturer or service center for updates.",
+      "evidenceText": "However, direct updates in the field are not possible, and the product must be returned to the manufacturer or service center for updates.",
+      "pageTarget": "Firmware Update via USB-C",
+      "confidence": "high"
+    },
+    {
+      "claim": "The USB C type port functions only for charging the battery and firmware updates.",
+      "evidenceText": "The port only functions for charging the battery inside the product and for firmware updates, and does not function for any other functions.",
+      "pageTarget": "USB-C Port Functions",
+      "confidence": "high"
+    },
+    {
+      "claim": "Important information cannot be acquired or functional operations impaired during firmware updates according to test report KTR-QI-Y10053-F10(00), Penetration test PT-1.",
+      "evidenceText": "Important information cannot be acquired or functional operations cannot be impaired during firmware updates. (Test report no. KTR-QI-Y10053-F10(00), Penetration test PT-1)",
+      "pageTarget": "Firmware Update Security Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The RJ-11 port is a hand switch connection port and unnecessary interfaces are blocked.",
+      "evidenceText": "The RJ-11 port is a hand switch connection port, and all other unnecessary interfaces are blocked.",
+      "pageTarget": "RJ-11 Hand Switch Port",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product communicates with external console software via Bluetooth.",
+      "evidenceText": "Communicates with external products (console software) via Bluetooth function.",
+      "pageTarget": "Bluetooth Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Integrity check is used to reject tampered packets and abnormal file transfers.",
+      "evidenceText": "Integrity check is used to reject tampered packets and abnormal file transfers. (Test report no. KTR-QI-Y10053-F10(00), Penetration test PT-2, PT-3)",
+      "pageTarget": "Integrity Check",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "FDA is referenced as requirements, but the document is internal H&abyz technical documentation and is not shown as issued or approved by FDA."
+    },
+    {
+      "severity": "info",
+      "reason": "No explicit standards are identified in the source text."
+    }
+  ]
 }

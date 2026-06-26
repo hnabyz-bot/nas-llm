@@ -1,4 +1,297 @@
-{"type":"thread.started","thread_id":"019f005f-5e1d-7ac1-abea-7213b39a3c30"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954371-1f7",
+    "sourcePath": "raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/4. A-CTMR-HNXR1_Threat Modeling Report 250806.pdf",
+    "canonicalGroupId": "45486e7d0a6c"
+  },
+  "document": {
+    "title": "Cybersecurity Risk Management – Threat Modeling",
+    "documentType": "Technical Documentation threat modeling report",
+    "productModels": [
+      "HnX-R1",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW",
+      "HnVUE"
+    ],
+    "authorityOrJurisdiction": [
+      "CE/MDR"
+    ],
+    "revisionOrVersion": "Rev. No. 0",
+    "documentDate": "August 06, 2025",
+    "standards": [
+      "IEC 60601-4-5",
+      "DICOM",
+      "CVSS:3.1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Threat modeling report for the HnX-R1 Digital X-ray Imaging System cybersecurity lifecycle risk analysis.",
+    "officialUse": "Supports cybersecurity risk management, threat identification, risk assessment, and mitigation evidence for HnX-R1 technical documentation.",
+    "keyPoints": [
+      "The document provides cybersecurity lifecycle risk analysis and threat modeling for Digital X-ray Imaging System model HnX-R1.",
+      "The report identifies 67 risks during the threat modeling process.",
+      "Risk identification uses Data-Flow Diagram analysis and cybersecurity requirements from IEC 60601-4-5.",
+      "Threat methodology is STRIDE, covering Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege.",
+      "After mitigation, residual risk is reported as Low: 11 and Very Low: 56."
+    ]
+  },
+  "entities": [
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Manufacturer H&abyz Co., Ltd."
+    },
+    {
+      "name": "Digital X-ray Imaging System",
+      "type": "medical device product",
+      "evidence": "Product name Digital X-ray Imaging System"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "medical device model",
+      "evidence": "Model name HnX-R1"
+    },
+    {
+      "name": "HnVUE",
+      "type": "console software",
+      "evidence": "Console software HnVUE"
+    },
+    {
+      "name": "PACS server",
+      "type": "external system",
+      "evidence": "The captured images are sent to the Picture Archiving & Communication System (PACS) server, and can be used for reading images."
+    },
+    {
+      "name": "Worklist server",
+      "type": "external system",
+      "evidence": "A22: Console – PACS/Worklist server ethernet communication interface"
+    },
+    {
+      "name": "Blue Engineering Tool v0.20.1",
+      "type": "manufacturer tool",
+      "evidence": "Manufacturer's exclusive tool: Blue Engineering Tool v0.20.1"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Threat modeling",
+      "pageTarget": "Threat modeling",
+      "evidence": "This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Digital X-ray Imaging System (Model: HnX-R1)"
+    },
+    {
+      "name": "Cybersecurity lifecycle risk analysis",
+      "pageTarget": "Cybersecurity risk management",
+      "evidence": "This document aims to provide cybersecurity lifecycle risk analysis and threat modeling for Digital X-ray Imaging System (Model: HnX-R1)"
+    },
+    {
+      "name": "STRIDE methodology",
+      "pageTarget": "STRIDE threat modeling",
+      "evidence": "The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege"
+    },
+    {
+      "name": "Data-Flow Diagram",
+      "pageTarget": "Data-Flow Diagram",
+      "evidence": "A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system."
+    },
+    {
+      "name": "IEC 60601-4-5 compliance testing",
+      "pageTarget": "IEC 60601-4-5",
+      "evidence": "IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity"
+    },
+    {
+      "name": "CWE Vulnerability Assessment",
+      "pageTarget": "CWE vulnerability assessment",
+      "evidence": "CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber threats"
+    },
+    {
+      "name": "Penetration Testing",
+      "pageTarget": "Penetration testing",
+      "evidence": "Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in systems."
+    },
+    {
+      "name": "DICOM",
+      "pageTarget": "DICOM",
+      "evidence": "saved in DICOM file, a standard for medical imaging"
+    },
+    {
+      "name": "AES 128",
+      "pageTarget": "AES encryption",
+      "evidence": "Encryption algorithm: AES 128"
+    },
+    {
+      "name": "SHA-256",
+      "pageTarget": "SHA-256",
+      "evidence": "Hash function: SHA-256"
+    },
+    {
+      "name": "Bcrypt",
+      "pageTarget": "Bcrypt",
+      "evidence": "Verify that it is encrypted and stored using Bcrypt through the source code."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document number is A-CTMR-HNXP1.",
+      "evidenceText": "Technical Documentation Document No. A-CTMR-HNXP1",
+      "pageTarget": "A-CTMR-HNXP1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev. No. 0.",
+      "evidenceText": "Rev. No. 0",
+      "pageTarget": "Cybersecurity Risk Management – Threat Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision date is August 06, 2025.",
+      "evidenceText": "Rev. Date August 06, 2025",
+      "pageTarget": "Cybersecurity Risk Management – Threat Modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is a Digital X-ray Imaging System.",
+      "evidenceText": "Product name Digital X-ray Imaging System",
+      "pageTarget": "Digital X-ray Imaging System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model name is HnX-R1.",
+      "evidenceText": "Model name HnX-R1",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The console software is HnVUE.",
+      "evidenceText": "Console software HnVUE",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer is H&abyz Co., Ltd.",
+      "evidenceText": "Manufacturer H&abyz Co., Ltd.",
+      "pageTarget": "H&abyz Co., Ltd.",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-R1 is intended for general radiographic diagnosis of human anatomy targeting adults and children and is not for mammography.",
+      "evidenceText": "It is indicated for digital imaging solution designed for providing general radiographic diagnosis of human anatomy targeting both adult and children. It is intended to replace film based radiographic diagnostic systems. Not to be used for mammography.",
+      "pageTarget": "HnX-R1 intended use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-R1 system does not include the X-ray generator.",
+      "evidenceText": "The HnX-R1 wired/wireless digital X-ray imaging system consists of Detector, Power supply box, Battery pack, Battery charger, Other Accessories and software for image acquisition and image processing and does not include the X-ray generator.",
+      "pageTarget": "HnX-R1 system configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report identified 67 risks during threat modeling.",
+      "evidenceText": "In total 67 risks have been identified during the threat modeling process",
+      "pageTarget": "HnX-R1 cybersecurity risk assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-4-5 compliance testing produced 35 initial risks.",
+      "evidenceText": "IEC 60601-4-5 Compliance Testing (RT): Ensures medical devices meet requirement for cybersecurity (35 initial risks)",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "CWE vulnerability assessment produced 94 initial risks.",
+      "evidenceText": "CWE Vulnerability Assessment (VT): Detects and analyzes weaknesses to prevent cyber threats (94initial risks)",
+      "pageTarget": "CWE vulnerability assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Penetration testing produced 7 initial risks.",
+      "evidenceText": "Penetration Testing (PT): Simulates attacks to identify and fix security vulnerabilities in systems. (7 initial risks)",
+      "pageTarget": "Penetration testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "STRIDE was selected as the threat methodology.",
+      "evidenceText": "Threat Methodology: The STRIDE methodology is selected for its comprehensiveness in identifying Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege",
+      "pageTarget": "STRIDE threat modeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report groups cybersecurity controls into authentication, authorization, cryptography, integrity, confidentiality, event detection and logging, resiliency and recovery, and firmware/software updates.",
+      "evidenceText": "Security control Risk ID Authentication ... Authorization ... Cryptography ... Code, Data, and Execution Integrity ... Confidentiality ... Event Detection and Logging ... Resiliency and Recovery ... Firmware and Software Updates",
+      "pageTarget": "Cybersecurity controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE performs integrity verification on 49 files required for operation.",
+      "evidenceText": "Integrity verification is performed on 49 files required for HnVUE operation.",
+      "pageTarget": "HnVUE integrity verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE account passwords are encrypted and stored using Bcrypt.",
+      "evidenceText": "Verify that it is encrypted and stored using Bcrypt through the source code.",
+      "pageTarget": "HnVUE password storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "Communication between HnVUE and the Detector uses AES 128 encryption.",
+      "evidenceText": "Encrypted communication between HnVUE and the Detector using AES 128 encryption",
+      "pageTarget": "HnVUE detector communication security",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE and PACS server communication uses DICOM protocol and plaintext.",
+      "evidenceText": "HnVUE SW and PACS server communicate using DICOM protocol and plaintext.",
+      "pageTarget": "HnVUE PACS communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE and Worklists server communication uses DICOM protocol and plaintext.",
+      "evidenceText": "HnVUE SW and Worklists server communicate using DICOM protocol and plaintext.",
+      "pageTarget": "HnVUE Worklist communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector firmware update files use AES 128 encryption and SHA-256 integrity verification.",
+      "evidenceText": "When updating FW, the manufacturer encrypts the update file with AES 128 and generates a SHA 256 hash value for the corresponding file, which is used for integrity verification.",
+      "pageTarget": "Detector firmware update security",
+      "confidence": "high"
+    },
+    {
+      "claim": "After mitigation, residual risk was reduced to Low: 11 and Very Low: 56.",
+      "evidenceText": "After mitigation measures were taken for a total of 67 risks (Very Low 42 / Low 10 / Medium: 14 / High: 1), the residual risk was reduced to a total of Low: 11 / Very Low: 56 .",
+      "pageTarget": "HnX-R1 residual cybersecurity risk",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority signal CE/MDR is present in source metadata but CE/MDR is not explicitly stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source path filename references A-CTMR-HNXR1, while the extracted document text states Document No. A-CTMR-HNXP1."
+    },
+    {
+      "severity": "warning",
+      "reason": "The threat methodology section contains an apparent OCR or source typo: heading reads '4. hreat Identification and Methodology'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some risk IDs appear inconsistently as CRM and CMR in the source text, including CMR-8, CMR-16, and CMR-49."
+    },
+    {
+      "severity": "info",
+      "reason": "The document is marked confidential and intended solely for H&abyz Co., Ltd."
+    }
+  ]
+}

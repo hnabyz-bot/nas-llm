@@ -1,4 +1,270 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005e-fcf2-7a22-9681-77552fdeead4"
+  "source": {
+    "queueId": "ingest-1781569954370-18e",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/이경수 팀장님/정재민 프로님/5.1_A-CLA-HNX_Cybersecurity Labeling.docx",
+    "canonicalGroupId": "7a841c78dc8f"
+  },
+  "document": {
+    "title": "Cybersecurity Labeling",
+    "documentType": "Cybersecurity labeling",
+    "productModels": [
+      "HnX-R1"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Revision No. 0",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity labeling for the Retrofit X-ray System (HnX-R1), covering warnings, security configuration, ports, logs, SBOM, EOL/EOS, updates, backup and incident response.",
+    "officialUse": "Supports end-user cybersecurity risk management instructions and labeling content for HnX-R1.",
+    "keyPoints": [
+      "The cybersecurity labeling is limited to the Retrofit X-ray system (HnX-R1).",
+      "The document describes security measures, maintenance, and best practices for end users.",
+      "The device uses ID and password login authorization and restricts unauthorized users.",
+      "Software or firmware updates cannot be performed in the field and require manufacturer or service center handling.",
+      "If a cybersecurity threat is detected, users are instructed to disconnect Bluetooth, turn off the device, and contact H&abyz service."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Retrofit X-ray System",
+      "type": "product",
+      "evidence": "Product name\n\nRetrofit X-ray System"
+    },
+    {
+      "name": "HnX-R1",
+      "type": "model",
+      "evidence": "Model name\n\nHnX-R1"
+    },
+    {
+      "name": "H&abyz Co., Ltd.",
+      "type": "manufacturer",
+      "evidence": "Manufacturer\n\nH&abyz Co., Ltd."
+    },
+    {
+      "name": "AXD",
+      "type": "software",
+      "evidence": "Software name: AXD\n\nVersion: Ver 00.09"
+    },
+    {
+      "name": "HnVue",
+      "type": "software",
+      "evidence": "How to check logs in real-time communication\n\n: Run HnVue"
+    },
+    {
+      "name": "Windows Defender",
+      "type": "security control",
+      "evidence": "Anti-malware\n\n: window defender"
+    },
+    {
+      "name": "PACS/worklist servers",
+      "type": "external system",
+      "evidence": "communication interface between PACS/worklist servers and a GUI interface for the console program"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity labeling",
+      "pageTarget": "Cybersecurity Labeling",
+      "evidence": "This is a document that has written warnings, precautions, and notices about software cyber risks."
+    },
+    {
+      "name": "Cybersecurity scope",
+      "pageTarget": "HnX-R1 Cybersecurity Scope",
+      "evidence": "This cybersecurity labeling is limited to the Retrofit X-ray system(HnX-R1)."
+    },
+    {
+      "name": "End point protection",
+      "pageTarget": "Endpoint Protection",
+      "evidence": "Cybersecurity configuration\n\nEnd point protection"
+    },
+    {
+      "name": "Access control allow list and deny list",
+      "pageTarget": "Access Control",
+      "evidence": "Access to the software can be granted by logging in using an ID and password."
+    },
+    {
+      "name": "Communication ports",
+      "pageTarget": "Communication Ports",
+      "evidence": "In this chapter, all ports of communication are mentioned."
+    },
+    {
+      "name": "Log management",
+      "pageTarget": "Cybersecurity Log Management",
+      "evidence": "The logs are updated in real time."
+    },
+    {
+      "name": "Software Bill of Materials",
+      "pageTarget": "Software Bill of Materials",
+      "evidence": "SBOM\n\nNo\n\nSoftware name\n\nComponent name\n\nSupplier"
+    },
+    {
+      "name": "Software and firmware download process",
+      "pageTarget": "Software and Firmware Updates",
+      "evidence": "Software (firmware) updates cannot be performed in the field and must be performed after the product has been collected from the manufacturer or a service center."
+    },
+    {
+      "name": "Backup, retention and recovery",
+      "pageTarget": "Backup Retention and Recovery",
+      "evidence": "Function\n\nBackup, Retention and Recovery"
+    },
+    {
+      "name": "Cybersecurity incident response",
+      "pageTarget": "Cybersecurity Incident Response",
+      "evidence": "If a cybersecurity threat is detected, please disconnect the Bluetooth connection first, turn off the device, and then contact the H&abyz service team."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is cybersecurity labeling for software cyber risks.",
+      "evidenceText": "This is a document that has written warnings, precautions, and notices about software cyber risks.",
+      "pageTarget": "Cybersecurity Labeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The cybersecurity labeling scope is limited to the Retrofit X-ray system HnX-R1.",
+      "evidenceText": "This cybersecurity labeling is limited to the Retrofit X-ray system(HnX-R1).",
+      "pageTarget": "HnX-R1 Cybersecurity Scope",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is identified as a Retrofit X-ray System with model name HnX-R1.",
+      "evidenceText": "Product name\n\nRetrofit X-ray System\n\nModel name\n\nHnX-R1",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer is H&abyz Co., Ltd.",
+      "evidenceText": "Manufacturer\n\nH&abyz Co., Ltd.",
+      "pageTarget": "H&abyz Co Ltd",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HnX-R1 Digital X-ray System is intended for general projection radiographic applications and not intended for mammographic applications.",
+      "evidenceText": "The HnX-R1 Digital X-ray System is intended for use in general projection radiographic applications whenever conventional screen-film systems or CR system may be used. This is not intended for mammographic applications",
+      "pageTarget": "HnX-R1 Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software name is AXD and the listed version is Ver 00.09.",
+      "evidenceText": "Software name: AXD\n\nVersion: Ver 00.09",
+      "pageTarget": "AXD Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The labeling section outlines HnX-R1 security measures, maintenance, and end-user best practices for managing cybersecurity risks.",
+      "evidenceText": "This section will outline HnX-R1’s security measures, maintenance, and best practices for the end users to manage cybersecurity risks associated with the modules and the use of the software.",
+      "pageTarget": "HnX-R1 Cybersecurity Labeling",
+      "confidence": "high"
+    },
+    {
+      "claim": "If a cybersecurity threat is detected, users should disconnect Bluetooth, turn off the device, and contact H&abyz service.",
+      "evidenceText": "If a cybersecurity threat is detected, please disconnect the Bluetooth connection first, turn off the device, and then contact the H&abyz service team.",
+      "pageTarget": "Cybersecurity Incident Response",
+      "confidence": "high"
+    },
+    {
+      "claim": "Anti-malware protection is listed as Windows Defender.",
+      "evidenceText": "Anti-malware\n\n: window defender",
+      "pageTarget": "Endpoint Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firewall rules are described as a network connection white list ACL.",
+      "evidenceText": "Firewall / Firewall rules\n\n: Network connection white list(ACL)",
+      "pageTarget": "Firewall Rules",
+      "confidence": "high"
+    },
+    {
+      "claim": "Access to the software can be granted by logging in using an ID and password.",
+      "evidenceText": "Access to the software can be granted by logging in using an ID and password.",
+      "pageTarget": "Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized users cannot log in and have limited access to the software.",
+      "evidenceText": "Unauthorized users can't login and have limited access to the\n\nsoftware.",
+      "pageTarget": "Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Communication ports include enabled tether connector TCP/IP socket communication and enabled Wi-Fi antenna communication.",
+      "evidenceText": "Tether Connector\n\nEnable\n\nBoth\n\nTCP/IP Socket communication\n\n2\n\nAntenna\n\nEnable\n\nWifi Antenna\n\nAntenna for Wifi Communication",
+      "pageTarget": "Communication Ports",
+      "confidence": "high"
+    },
+    {
+      "claim": "Logs are checked by running HnVue and selecting View log from the main window menu.",
+      "evidenceText": "How to check logs in real-time communication\n\n: Run HnVue\n\n Click menu in the main windows” View log”",
+      "pageTarget": "Cybersecurity Log Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Logs are updated in real time.",
+      "evidenceText": "Update frequency\n\n: The logs are updated in real time.",
+      "pageTarget": "Cybersecurity Log Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The log file is saved in .txt format and hidden to prevent access by general users.",
+      "evidenceText": "Format\n\n: The log file is saved in a .txt format and is hidden to prevent access by general users",
+      "pageTarget": "Cybersecurity Log Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVue software does not have a specific EOL/EOS due to the nature of the product.",
+      "evidenceText": "HnVue software does not have a specific EOL/EOS due to the nature of the product.",
+      "pageTarget": "HnVue EOL EOS",
+      "confidence": "high"
+    },
+    {
+      "claim": "The end date is determined by software change or the software life cycle of 10 years.",
+      "evidenceText": "The end date is determined by the software change or the software life cycle (10 years).",
+      "pageTarget": "HnVue EOL EOS",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software and firmware updates cannot be performed in the field and must be performed after collection by the manufacturer or service center.",
+      "evidenceText": "Software (firmware) updates cannot be performed in the field and must be performed after the product has been collected from the manufacturer or a service center.",
+      "pageTarget": "Software and Firmware Updates",
+      "confidence": "high"
+    },
+    {
+      "claim": "When the device runs, setup files and log files are automatically backed up.",
+      "evidenceText": "1) When the device runs, it is automatically backed up.\n\nSet up Files, Log Files",
+      "pageTarget": "Backup Retention and Recovery",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unauthorized individuals cannot perform backups.",
+      "evidenceText": "2) Unauthorized individuals cannot perform backups",
+      "pageTarget": "Backup Retention and Recovery",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date fields are present in the template but no prepared, reviewed, approved, or revision date is populated."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is inferred from source metadata/source path indicating FDA 510(k), but the source text itself does not mention FDA or K252912."
+    },
+    {
+      "severity": "info",
+      "reason": "Several cybersecurity configuration items reference a cybersecurity test report with placeholder report number XXXXX."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text contains draft or internal note text: 'DK것 참조하여 업데이트 필요함'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some SBOM dates and entries appear OCR-normalized or inconsistent, including unknown or misspelled end-of-support text."
+    }
+  ]
 }
