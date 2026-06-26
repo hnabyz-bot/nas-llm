@@ -1,0 +1,233 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954408-www",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/4. Risk Management/구버젼/ARMR-FMEA-0-001 IEC60601-1 Risk Table_20190826.xlsx",
+    "canonicalGroupId": "1f3d1e989e69"
+  },
+  "document": {
+    "title": "ARMR-FMEA-0-001 IEC60601-1 Risk Table_20190826.xlsx",
+    "documentType": "IEC 60601-1 risk management table",
+    "productModels": [
+      "HAD1717MC(MG)",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "ISO 3864-1:2002",
+      "ISO 7010"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Risk management table mapping IEC 60601-1 clauses to ISO 14971 risk analysis, controls, verification, and residual risk acceptance for the device.",
+    "officialUse": "Supports risk management file evidence by identifying applicable IEC 60601-1 requirements, hazards, risk controls, verification records, and residual risk acceptance.",
+    "keyPoints": [
+      "Essential performance is identified as acquiring an image within 5 seconds and avoiding two line-adjacent, line block, or no display defects.",
+      "The device is described as not producing X-rays, but detecting radiated X-rays and processing images.",
+      "Several clauses are marked not applicable because the device has no patient-contacting part, no battery, no moving parts, no liquid use, and no X-ray generation.",
+      "Software/PEMS risks address network/data coupling failure, unavailable data, data integrity loss, incorrect data, and incorrect timing, with software validation as verification evidence.",
+      "Estimated service life is listed as 5 years based on component life and use assumptions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC(MG)",
+      "type": "productModel",
+      "evidence": "sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/..."
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "productSignal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "\"ISO 14971 Clause\""
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "\"IEC 60601-1 Clause,\"IEC60601-1 Requirements\""
+    },
+    {
+      "name": "ISO 3864-1:2002",
+      "type": "standard",
+      "evidence": "\"ISO 3864-1:2002 7절에 대응하는 표지\""
+    },
+    {
+      "name": "ISO 7010",
+      "type": "standard",
+      "evidence": "\"ISO 7010:20030W001 심벌 적용\""
+    },
+    {
+      "name": "AC-DC Power Converter(RPS-200-12",
+      "type": "component",
+      "evidence": "\"part key: AC-DC Power Converter(RPS-200-12\""
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Essential Performance",
+      "pageTarget": "Essential Performance",
+      "evidence": "\"Essential Performance (필수 성능)\", \"Must be able to acquire image within 5 seconds\""
+    },
+    {
+      "name": "Single Fault Condition",
+      "pageTarget": "IEC 60601-1 Single Fault Condition",
+      "evidence": "\"Single Fault Condition for Me Equipment (단일고장상태)\""
+    },
+    {
+      "name": "Leakage Current",
+      "pageTarget": "Leakage Current",
+      "evidence": "\"RM-02,누설전류\""
+    },
+    {
+      "name": "Protective Packaging Marking",
+      "pageTarget": "Protective Packaging Marking",
+      "evidence": "\"Marking for Protective Packaging (보호포장에 대한 표시)\""
+    },
+    {
+      "name": "Safety Signs",
+      "pageTarget": "Safety Signs",
+      "evidence": "\"Safety signs (안전신호)\""
+    },
+    {
+      "name": "Programmable Electrical Medical Systems",
+      "pageTarget": "Programmable Electrical Medical Systems",
+      "evidence": "\"Programmable electrical medical systems - General (프로그램가능 의료용 전기 시스템-일반)\""
+    },
+    {
+      "name": "Network/Data Coupling",
+      "pageTarget": "PEMS Network Data Coupling",
+      "evidence": "\"Connection of PEMS by NETWORK/DATA COUPLING to other equipment\""
+    },
+    {
+      "name": "Electromagnetic Compatibility",
+      "pageTarget": "IEC 60601-1 Electromagnetic Compatibility",
+      "evidence": "\"Electromagnetic compatibility of ME equipment and ME systems (전자기적합성-EMI)\""
+    },
+    {
+      "name": "Estimated Service Life",
+      "pageTarget": "Estimated Service Life",
+      "evidence": "\"∴ ESL =,5,years\""
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The table is organized around ISO 14971 risk management clauses and IEC 60601-1 requirements.",
+      "evidenceText": "\"ISO 14971 Clause\" and \"IEC 60601-1 Clause,\"IEC60601-1 Requirements\"",
+      "pageTarget": "IEC 60601-1 Risk Management Table",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes acquiring an image within 5 seconds and avoiding two line-adjacent, line block, or no display defects.",
+      "evidenceText": "\"Must be able to acquire image within 5 seconds - The acquired image should not have two Line Adjacent, Line Block, or No Display.\"",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "For essential performance risk RM-01, function degradation from fault-condition measurement is initially not accepted with risk 9 and accepted after controls with risk 1.",
+      "evidenceText": "\"RM-01,기능 저하,고장 상태에서의 측정,부정확한 측정,3,3,9,비수락\" ... \"1,1,1,수락\"",
+      "pageTarget": "Essential Performance Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as having no part that contacts the patient during use.",
+      "evidenceText": "\"사용시 환자에게 접촉하는 부분이 없음.\"",
+      "pageTarget": "Patient Contacting Parts",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as having no Type B applied part.",
+      "evidenceText": "\"본 기기는 B형 장착부가 없음\"",
+      "pageTarget": "Type B Applied Parts",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as not using a battery.",
+      "evidenceText": "\"배터리를 사용하지 않음.\"",
+      "pageTarget": "Battery Marking",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as having no moving parts.",
+      "evidenceText": "\"제품에 가동부 없음.\"",
+      "pageTarget": "Moving Parts Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as not generating X-rays; it detects radiated X-rays and processes images.",
+      "evidenceText": "\"X선을 발생시키는 제품이 아님. (방사된 X선을 감지하여 영상처리하는 제품)\"",
+      "pageTarget": "X-Ray Radiation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as not intended to produce diagnostic or therapeutic X-radiation.",
+      "evidenceText": "\"진단 및 치료 목적으로 X선을 방사하는 기기가 아님\"",
+      "pageTarget": "Diagnostic Therapeutic Radiation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cleaning is described as dry-cloth cleaning of body and sensor parts with no other risk.",
+      "evidenceText": "\"본체 및 센서 부분은 마른천으로 청소 관리가 가능한 부분으로 기타 위험은 없음.\"",
+      "pageTarget": "Cleaning and Disinfection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software risks consider network/data coupling failure, unavailable data, lack of data integrity, wrong data, and wrong timing.",
+      "evidenceText": "\"1. 네트워크/데이터 커플링의 고장 2. 입수 불가능한 데이터 3. 데이터의 무결성 결여 4. 잘못된 데이터 5. 데이터의 잘못된 타이밍\"",
+      "pageTarget": "PEMS Software Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software validation report is used as verification evidence for PEMS/software risk controls.",
+      "evidenceText": "\"소프트웨어 벨리데이션 레포트(Software Validation Report)\"",
+      "pageTarget": "Software Validation Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is described as not connected by network/data coupling to other equipment outside the PEMS manufacturer's control.",
+      "evidenceText": "\"본 기기는 PEMS 제조자의 통제 밖에 있는 기타 기기와 네트워크/데이터커플링에 의해 접속되지 않음\"",
+      "pageTarget": "PEMS Network Data Coupling",
+      "confidence": "high"
+    },
+    {
+      "claim": "Electromagnetic compatibility risk is applicable because the product is used in a general clinic and can affect various ME devices in the clinic.",
+      "evidenceText": "\"본 제품은 일반적인 진료실에서 사용하며 진료실내의 다양한 ME 기기들에게 전자파 영향을 줄 수 있다.\"",
+      "pageTarget": "Electromagnetic Compatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "Estimated service life is listed as 5 years.",
+      "evidenceText": "\"∴ ESL =,5,years\"",
+      "pageTarget": "Estimated Service Life",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly stated in the source text; the filename contains 20190826 but no date field was extracted."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not explicitly present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; sourcePath references CE MDD, but the source text does not state a regulatory authority or jurisdiction."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model evidence comes from source metadata/path rather than the tabular source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The source appears to be a spreadsheet-derived text export with many empty cells and some OCR/text artifacts, including inconsistent NA/N/A markings and possible typo in ISO 7010 symbol text."
+    }
+  ]
+}
