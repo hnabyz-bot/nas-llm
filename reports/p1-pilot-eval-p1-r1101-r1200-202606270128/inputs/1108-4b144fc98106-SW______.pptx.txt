@@ -1,0 +1,38 @@
+queueId: ingest-1781569954393-n3s
+sourcePath: raw/sources/RA/20_Standard(국제)/Software validation/의료기기_SW_버전변경_인허가영향_가이드.pptx
+combinedPath: raw/sources/_preprocessed/RA/_combined/7414950cb9e9/의료기기_SW_버전변경_인허가영향_가이드__7414950cb9e9_combined.txt
+canonicalGroupId: 4b144fc98106
+productSignal: Unclassified
+authoritySignal: MFDS/domestic
+pilotRank: 1108
+
+SOURCE_TEXT
+## ppt/slides/slide1.xml
+의료기기 소프트웨어 버전 변경 × 인허가 영향 가이드 SiMD / SaMD 공통 및 차이점 한국(MFDS) · 미국(FDA) · 유럽(EU MDR) 기준 IEC 62304 / ISO 14971 / FDA SW Modification Guidance 2017 / MDCG 2020-3 기반
+
+## ppt/slides/slide2.xml
+소프트웨어 버전 구조 이해 X . Y . Z Major (X) 아키텍처/핵심알고리즘 사용목적 변경 Minor (Y) 기능 추가·수정 성능 개선 Patch (Z) 버그 수정 UI 수정 핵심 원칙 버전 숫자 자체는 규제 판단 기준이 아닙니다. 실제 변경 내용이 안전성·유효성에 미치는 영향이 유일한 판단 기준입니다. Minor 버전이라도 아키텍처가 변경되면 New 510(k) 대상이 될 수 있고, Major 버전이어도 성능·안전성 동등이면 Letter to File로 관리할 수 있습니다.
+
+## ppt/slides/slide3.xml
+버전별 정의 · 변경 예시 · V&V 영향 (SiMD/SaMD 공통) 버전 정의 변경 예시 V&V 영향 식약처 용어 Major (X) 사용목적, 핵심 아키텍처, 코어 알고리즘 변경 (하위호환성 깨질 수 있음) • 사용목적/적응증 변경 • OS 플랫폼 전면 교체 • 진단엔진 교체 (규칙→AI/ML) • 아키텍처 재설계 • 영상 분석대상 추가 전면 V&V 재수행 시스템 V&V, 임상평가, 위험관리 전면 업데이트 업그레이드 (변경허가 대상) Minor (Y) 기능 추가/수정, 성능 개선 핵심 아키텍처·사용목적 유지 (하위호환성 유지) • 보조 기능 추가 (리포트 등) • UI/UX 대규모 개편 • 알고리즘 파라미터 최적화 • 통신 프로토콜 추가 • 사이버보안 통신방식 변경 영향받는 모듈 V&V + 통합시험 리그레션 테스트 위험관리 업데이트 업그레이드 또는 경미변경 (내용에 따라 판단) Patch (Z) 성능·안전성 무관 버그 수정, 경미 UI 수정, 문서 수정 등 • 화면 오타/레이아웃 수정 • 성능 무관 버그 수정 • 로그 메시지 수정 • 코드 리팩토링 (기능 동일) • 사이버보안 전용 패치 해당 수정 부분 단위 테스트 필요시 리그레션 테스트 경미변경 또는 내부관리
+
+## ppt/slides/slide4.xml
+SiMD — Major/Minor 버전 인허가 영향 Software in a Medical Device | 하드웨어 내장 소프트웨어 (X-ray 제어 SW, 초음파 영상처리 SW 등) 버전 변경 시나리오 🇰🇷 MFDS 🇺🇸 FDA 🇪🇺 EU MDR Major 사용목적(Intended Use) 변경/추가 변경허가 (기술문서 심사) New 510(k) 또는 PMA suppl. NB 재인증 (Significant Change) 코어 알고리즘 엔진 교체 (규칙기반 → AI/ML) 변경허가 New 510(k) NB 재인증 전면 아키텍처 변경 (임베디드 → 클라우드) 변경허가 New 510(k) NB 재인증 OS 플랫폼 전면 교체 (WinCE → Linux) 변경허가 또는 변경신고 New 510(k) (가능성 높음) NB 통보 → Substantial 판단 Minor 보조 기능 추가 (진단 무관 리포트 기능 등) 경미변경 (연차보고) LTF 내부 변경관리 알고리즘 파라미터 최적화 (성능 규격 이내) 경미변경 (연차보고) LTF 내부 변경관리 UI/UX 대규모 개편 (워크플로우 변경 수반) 변경신고 또는 경미변경 LTF 또는 New 510(k) NB 통보 (Usability 영향시) 통신 프로토콜 추가 (DICOM → FHIR 추가) 변경신고 LTF (사이버보안 평가 후) NB 통보 (사이버보안 평가) HW 호환성 확장 (신규 디텍터 모델 지원) 변경허가 또는 변경신고 New 510(k) (HW 변경 연동) NB 통보 → Substantial 판단
+
+## ppt/slides/slide5.xml
+SiMD — Patch 버전 + 참고사항 버전 변경 시나리오 🇰🇷 MFDS 🇺🇸 FDA 🇪🇺 EU MDR Patch UI 오타/레이아웃 수정 내부관리 내부 QMS 문서화 내부 변경관리 성능 무관 버그 수정 (로그 파일 날짜 오류 등) 내부관리 내부 QMS 문서화 내부 변경관리 사이버보안 전용 패치 (기능 변경 없음) 경미변경 (즉시/연차보고) 내부 QMS (510(k) 불요) 내부 변경관리 + PMS 문서화 SiMD 주요 참고사항 • 한국: 운영환경 변경은 가이드라인에서 &apos;업그레이드&apos; 해당. 단, 성능·안전성 영향 없음 입증 시 변경신고 가능 • FDA: OS 변경은 &apos;porting to a new OS&apos; → 아키텍처 변경으로 분류. SW 변경 가이드라인 플로차트에서 new 510(k) 가능성 높게 평가 • EU: NB는 &apos;substantial change&apos; 여부를 개별 판단. 동일 변경이라도 NB별 해석 차이 가능 • SiMD 특성: SW 변경이 HW 안전성(전기·기계적 안전)에 직접 영향 → FDA에서 SW + HW 변경 가이드를 동시 적용
+
+## ppt/slides/slide6.xml
+SaMD — Major/Minor 버전 인허가 영향 Software as a Medical Device | 독립형 소프트웨어 (AI 영상진단 SW, 모바일 진단 앱, 임상의사결정지원 SW 등) 버전 변경 시나리오 🇰🇷 MFDS 🇺🇸 FDA 🇪🇺 EU MDR Major 사용목적 변경/추가 (폐CT → 폐+간CT) 변경허가 New 510(k) / De Novo NB 재인증 AI/ML 모델 아키텍처 변경 (CNN → Transformer) 변경허가 New 510(k) (PCCP 없는 경우) NB 재인증 분석 데이터 유형 변경 (2D X-ray → 3D CT) 변경허가 New 510(k) NB 재인증 출력 유형 변경 (스크리닝 → 정량측정) 변경허가 New 510(k) NB 재인증 Minor AI/ML 모델 재학습 (동일 아키텍처, 데이터 추가) 변경허가 또는 변경신고 PCCP 내: LTF PCCP 없음: 510(k) NB 통보 → Substantial 판단 비핵심 보조 기능 추가 (PDF 내보내기, 대시보드) 경미변경 (연차보고) LTF 내부 변경관리 UI/워크플로우 개선 (진단 성능 영향 없음) 경미변경 LTF 내부 변경관리 배포 플랫폼 추가 (웹 → iOS/Android) 변경신고 또는 변경허가 New 510(k) 가능성 NB 통보 → Substantial 판단 전처리 방법 변경 (출력 성능 범위 내) 변경신고 LTF (V&V 성공) 또는 510(k) NB 통보
+
+## ppt/slides/slide7.xml
+SaMD — Patch 버전 + PCCP 안내 버전 변경 시나리오 🇰🇷 MFDS 🇺🇸 FDA 🇪🇺 EU MDR Patch UI 버그 수정 (날짜 표시 오류 등) 내부관리 내부 QMS 내부 변경관리 성능 무관 버그 수정 (로딩속도, 메모리 누수) 내부관리 내부 QMS 내부 변경관리 보안 패치 (인증 취약점, 라이브러리 업데이트) 경미변경 (즉시보고) 내부 QMS (510(k) 불요) 내부 변경관리 + PMS 문서화 PCCP (Predetermined Change Control Plan) — SaMD 핵심 전략 PCCP란? FDA에 사전에 변경 계획을 제출·승인받아, 해당 범위 내 변경은 new 510(k) 없이 LTF로 관리하는 제도 적용 대상: AI/ML SaMD에 특히 유용 (모델 재학습, 파라미터 조정 등을 사전 계획 내에서 관리) 포함 내용: SPS(SaMD Pre-Specifications: 변경 범위 정의) + ACP(Algorithm Change Protocol: 학습/변경 방법론) 실무 팁: 초기 510(k)/De Novo 인허가 시 PCCP를 함께 제출하면 이후 모델 업데이트의 규제 부담을 크게 줄일 수 있음
+
+## ppt/slides/slide8.xml
+SiMD vs SaMD — 규제 차이 핵심 요약 구분 기준 SiMD (내장형) SaMD (독립형) SW 변경 시 HW 연동 고려 필수. SW 변경이 HW 성능/안전에 영향 → HW 변경 플로차트도 병행 검토 불필요 (SW 독립적) 단, 배포 플랫폼은 별도 평가 FDA 변경 가이드라인 SW 변경 가이드 + 일반 기기 변경 가이드 (2017) 동시 적용 SW 변경 가이드 주로 적용 AI/ML의 경우 PCCP 가이드 추가 EU MDR 분류 규칙 HW 기기의 등급을 따름 (Rule 9, 10, 11 등 해당 기기 규칙) Rule 11 독립 적용 일반적으로 Class IIa 이상 한국 경미변경 처리 별표3 &apos;내장 소프트웨어&apos; 관련 조항 적용 별표3 &apos;독립형 소프트웨어&apos; 조항 (2022년 네거티브 규제 개선) AI/ML 추가 요구사항 드묾 (대부분 전통적 알고리즘) FDA PCCP, AI/ML Action Plan, GMLP + EU AI Act 연계 아키텍처 변경 민감도 높음 — OS 변경이 기기 전체 안전성(전기·기계적)에 직접 영향 중간 — 클라우드/앱 배포 유연 단, 성능 검증은 동일하게 요구
+
+## ppt/slides/slide9.xml
+실무 판단 플로 — "이 변경, 심사가 필요한가?" Step 1 사용목적 변경? YES → 3개국 모두 신규 심사/변경허가 필수 NO → Step 2로 이동 Step 2 코어 알고리즘/아키텍처 변경? 진단·치료·모니터링 핵심 알고리즘 변경? 아키텍처(OS, 미들웨어) 근본 변경? YES → 거의 확실히 신규 심사 대상 NO → Step 3으로 이동 Step 3 안전성/유효성에 영향 가능? 새 hazardous situation 도입 여부? 임상 기능/성능 규격 변화 가능? YES → 규제기관별 플로차트 상세 평가 NO → Step 4로 이동 Step 4 V&V 결과 확인 V&V 수행 시 예상치 못한 이슈 발견? 이슈 발견 → Step 3으로 돌아가 재평가 이슈 없음 → 내부 문서화 (LTF/경미변경) 누적 변경(Cumulative Changes) 주의: 개별 Patch/Minor가 누적되면 원래 인증 상태와 달라질 수 있음. FDA inspection 시 누적 평가 → catch-up submission 요구 가능. EU NB 정기감사 시도 동일.
+
+## ppt/slides/slide10.xml
+실무 팁 & 참조 규격 버전 정책 사전 수립 SOP에 Major/Minor/Patch 정의서 포함. 규제기관은 번호보다 변경 내용·위험 평가 근거를 봄 위험 평가 선행 모든 변경에 Risk Assessment 먼저 수행. FDA 플로차트 핵심 질문: &apos;could this significantly affect safety or effectiveness?&apos; LTF/경미변경 보고서 충실화 &apos;심사 불요&apos; 결론도 판단 근거 문서화 필수. Inspection 시 방어 가능해야 함 AI/ML SaMD는 PCCP 활용 초기 인허가 시 PCCP 함께 제출. 이후 모델 업데이트 시 규제 부담 대폭 감소 주요 참조 문서 🇰🇷 의료기기 허가·신고·심사 등에 관한 규정 (별표3) / 소프트웨어 허가·심사 가이드라인 (2023.7) 🇺🇸 FDA: Deciding When to Submit a 510(k) for a Software Change (2017) / PCCP Guidance (2023~2024) 🇪🇺 MDCG 2020-3 rev.1 (Significant Changes) / MDCG 2019-11 rev.1 (SW Classification, 2025) 📋 IEC 62304 (SW Lifecycle) / ISO 14971 (Risk Management) 본 가이드는 참고 목적이며, 최종 판단은 각 규제기관 가이드라인 원문 및 사전 상담(Pre-Submission 등)을 통해 확인하시기 바랍니다.

@@ -1,0 +1,540 @@
+queueId: ingest-1781569954376-6g8
+sourcePath: raw/sources/RA/01_DHF/05_HnX-P1, HnX-PB/05_설계개발 검증 및 유효성 확인/09_Usability/250504 파생모델 추가/1. A-UEP-HNX_Usability Validation Plan (Rev.1).docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/d10d52a09756/1. A-UEP-HNX_Usability Validation Plan (Rev.1)__d10d52a09756_combined.txt
+canonicalGroupId: 8dd75f6d623d
+productSignal: HnX
+authoritySignal: FDA
+pilotRank: 1102
+
+SOURCE_TEXT
+Usability Validation Plan
+
+for
+
+HnX-P1, HnX-PB
+
+Portable X-ray System
+
+Report No.: A-UEP-HNX (Rev.1)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+R&D team
+
+Jeong, Yeji
+
+May 04, 2025
+
+Review
+
+R&D Manager
+
+Han, jimin
+
+May 04, 2025
+
+Approval
+
+Quality Manager
+
+Hur Namkyu
+
+May 04, 2025
+
+Revision history
+
+Rev. No.
+
+Rev. date
+
+Revision contents
+
+Remark
+
+0
+
+Oct 10, 2024
+
+Establishment
+
+1
+
+May 04, 2025
+
+Add variant model (HnX-PB)
+
+Contents
+
+1 Introduction 4
+
+2 Overview of Usability Engineering Process 5
+
+2.1 Usability Goals 5
+
+2.2 Design Inputs and Validation Linkage 5
+
+2.3 Summary of Formative Evaluation Results 5
+
+2.4 Overview of Summative Evaluation Plan 5
+
+3 Validation Strategy 6
+
+3.1 Validation Objectives 6
+
+3.2 Scope of Validation 6
+
+3.3 Validation Approach 6
+
+4 Test Plan 7
+
+4.1 Target User Groups 7
+
+4.2 Test environment 7
+
+4.3 Key tasks and Risk assessment 7
+
+4.4 Succes and Failure criteria 8
+
+- Task completion within the expected time. 8
+
+- No safety-critical errors during tasks. 8
+
+- Any task failure resulting in potential harm. 8
+
+- User frustration exceeding predefined thresholds (e.g., multiple retries). 8
+
+4.5 Test scenarios 8
+
+5 Formative and Summative Evaluation 9
+
+5.1 Summary of Formative Activities 9
+
+5.2 Summative Evaluation Plan 9
+
+6 Data Collection and Analysis 9
+
+6.1 Data Collection Methods 9
+
+6.2 Data Analysis Plan 9
+
+7 Risk Management and Validation Linkage 10
+
+7.1 Potential Use Errors and Hazards 10
+
+7.2 Validation of Risk Controls 10
+
+8 Schedule and Responsibilities 10
+
+8.1 Validation Schedule 10
+
+8.2 Responsibilities and Roles 10
+
+Introduction
+
+Purpose of the Document
+
+The purpose of this document is to outline the Usability Validation Plan for the Portable X-ray System, Model HnX-P1 & HnX-PB. This plan ensures that the device meets usability requirements, provides a safe and effective user experience, and complies with applicable standards and regulations.
+
+Scope
+
+This plan applies to all usability validation activities for the Portable X-ray System, Model HnX-P1, focusing on safety-critical tasks, user interface evaluation, and error minimization. It includes activities to evaluate the interaction of users with the device under realistic conditions.
+
+Applicable Standards and Guidelines
+
+EN 60601-1-6:2010 - Medical electrical equipment - Part 1-6: General requirements for basic safety and essential performance - Collateral standard: Usability
+
+IEC 62366-1:2015 - Application of Usability Engineering to Medical Devices
+
+FDA Guidance - Applying Human Factors and Usability Engineering to Medical Devices
+
+ISO 14971 - Medical Devices Application of Risk Management to Medical Devices
+
+Product overview
+
+Product Description:
+
+This Portable X-ray System (Model: HnX-P1, HnX-PB) consists of an LCD display with up and down soft-keys for controlling kV, an X-ray generator (line-powered transformer), an X-ray tube assembly, a collimator and a cart. It can also use a stand instead of a cart. The HnX-P1 is used with a film-cassette or flat-panel detector.
+
+This device is a battery-powered portable X-ray System, designed and manufactured by H&abyz.
+
+Compared with traditional X-ray products, this device has exquisite structure, compact design, light weight and easy operation.
+
+The major components of the X-ray main unit include handle, enclosure, main control panel, system control board, high-voltage tank, inverter, collimator (beam limiter), and system control software running on the system control board. The system control software is for real-time interaction and control with various circuit modules inside the X-ray generator. The software responds to user operations on the control panel. The user can adjust and control the kV and mAs parameters, and the software will display the parameters or directly load the APR parameters. The software loads the control data from X-ray output into the high-voltage generation control circuit of the system control board, and control the high-voltage tank to generate high-voltage to excite the X-ray tube inside to emit X-rays, control the switch of the collimator, and monitor the working status of the device, and control the display of the status indicators.
+
+The system is for X-ray imaging and diagnosis in facilities with portable or fixing sites.
+
+This Portable X-ray System is not intended for mammography.
+
+The device can be used with an X-ray flat panel detector, a computer for receiving and detecting signal results and an image processing software. This portable X-ray System is designed for handheld or stand-mounted imaging. Model HnX-P1 & HnX-PB can be configured to an optional portable stand that complies with IEC 60601- 1 safety standard. The recommended maximum load that the stand can safely carry is 6kgs to ensure the mechanical stability and effectiveness of the device.
+
+The cybersecurity risk of the HnX-P1 & HnX-PB have been addressed to assure that no new or increased cybersecurity risks were introduced as a part of device risk analysis. These risks are defined as sequence of events leading to a hazardous situation, and the control for their risks were treated and implemented as proposed in the risk analysis (e.g., requirements, verification)
+
+The variant model(HnX-PB) has only changed the exterior design compared to the existing model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.
+
+Therefore, no additional usability validation will be conducted for the addition of the variant model(HnX-PB).
+
+Key Features
+
+Integrated lithium-ion battery
+
+Adjustable X-ray dose settings
+
+LCD status display and control buttons
+
+Bluetooth connectivity for remote operation and image transmission
+
+Safety LEDs indicating operational states
+
+Overview of Usability Engineering Process
+
+Usability Goals
+
+Safety: Ensure safe operation by minimizing user errors.
+
+Effectiveness: Enable users to perform imaging tasks efficiently.
+
+User Satisfaction: Provide an intuitive and user-friendly interface.
+
+Design Inputs and Validation Linkage
+
+The usability validation activities directly address design inputs, including:
+
+User interface layout and clarity: Ensure all buttons and indicators are clearly labeled and positioned for easy access.
+
+Safety-critical features: Verify the effectiveness of safety controls, such as dose adjustment and operational state LEDs.
+
+Task workflow: Evaluate typical user workflows to minimize complexity and reduce errors.
+
+Summary of Formative Evaluation Results
+
+Usability Formative Evaluation was conducted through Usability Formative Evaluation Plan(Doc No. A-UFEP-HNX) and Usability Formative Evaluation Report(Doc No. A-UFER-HNX), through which the following key findings were discovered and improvements were implemented.
+
+Methods Used: Iterative prototyping and user testing with radiology technicians and clinicians.
+
+Key Findings:
+
+Ergonomic design that is easy to hold and use by hand is required.
+
+Caution is required regarding X-RAY emission.
+
+Each button and status LED should be easy to identify.
+
+A function that can preview images captured via Bluetooth function through LCD is required.
+
+Improvements Implemented:
+
+Ergonomic design for easy hand holding
+
+Addition of X-RAY caution symbol and warning message
+
+Clarification of identification of each button and color-coded status LED for easy status identification
+
+Captured images can be previewed via Bluetooth function
+
+Overview of Summative Evaluation Plan
+
+The summative evaluation will test the final design in real-world conditions with representative users to validate usability and safety goals. It will focus on critical tasks, including setup, dose adjustment, and image capture.
+
+Validation Strategy
+
+Validation Objectives
+
+Verify that the product can be used safely and effectively by intended users in the intended use environments.
+
+Identify and mitigate any residual usability risks.
+
+Scope of Validation
+
+User Groups: Radiologists, technicians, and clinicians with varying levels of expertise.
+
+Use Environments: Hospital settings, mobile clinics, emergency response units.
+
+Key Tasks:
+
+Powering on the device and performing the initial setup.
+
+Adjusting X-ray dose based on patient requirements.
+
+Capturing and transmitting images via Bluetooth.
+
+Interpreting status indicators (e.g., warm-up, charging, exposure).
+
+Caution symbols must be easily identifiable.
+
+Maintenance information should be concise and easy to understand.
+
+Validation Approach
+
+Conduct usability tests under simulated clinical environments to replicate real-world conditions.
+
+Use quantitative metrics (e.g., task completion time, error rates) and qualitative feedback (e.g., user satisfaction surveys) for evaluation.
+
+Test Plan
+
+Target User Groups
+
+Users who participate in the survey must be at least as high as the user profile. 설문조사에 참여하는 사용자들은 사용자 프로필과 동등 이상의 수준이어야 한다.
+
+The criteria for the user profile are as follows: 사용자 프로필의 기준은 아래와 같다.
+
+- Occupation: Doctor or Radiologist 직업: 의사 또는 방사선사
+
+- Skills and Qualifications: Medical Licensee or Radiology Licensee 기술 및 자격: 의사 면허 취득자 또는 방사선 면허 취득자
+
+- Knowledge and Education: Bachelor's degree or higher from a medical school or Bachelor's degree or higher in a radiology-related field 지식 및 교육: 의과대학 학사 학위 이상 또는 방사선 관련 학과 학사 학위 이상
+
+Test environment
+
+Simulated Clinical Settings: Replicate hospital, mobile clinic, and emergency use scenarios.
+
+Equipment Setup: Include standard accessories and compatible third-party imaging detectors.
+
+Key tasks and Risk assessment
+
+Use scenarios related to risk factors 1: Check User Manual
+
+위해 요인 관련 사용 시나리오 1: 사용자 설명서 확인
+
+Task
+
+Potential errors
+
+Associated Risks
+
+Read the user manual and understand the functions and usage사용자 설명서를 읽고 기능과 사용법 이해
+
+Not reading the instructions thoroughly.
+
+사용설명서를 충분히 숙지하지 않음.
+
+Unnecessary radiation exposure
+
+Familiarize yourself with the safety warnings. 안전 경고 문구 숙지
+
+The user cannot find the safety information.
+
+The user does not understand the precautions. (Difficult term, low readability)
+
+사용자가 안전 정보를 찾을 수 없습니다.
+
+사용자가 주의사항을 이해하지 못합니다. (어려운 용어, 낮은 가독성)
+
+Unnecessary radiation exposure
+
+Use scenarios related to risk factors2: Preparing the product for use
+
+위해 요인 관련 사용 시나리오 2: 제품 사용 준비
+
+Check the power status of the device
+
+장치의 전원 상태 확인
+
+'Battery not fully charged
+
+배터리가 충분히 충전되지 않음
+
+Delayed diagnosis
+
+of patients
+
+Check the status LED
+
+상태표시 LED 확인
+
+'Attempting to shoot without checking the warm-up status
+
+'예열 상태를 확인하지 않고 촬영 시도
+
+Delayed diagnosis
+
+of patients
+
+Use scenarios related to risk factors 3: Product use
+
+위해 요인 관련 사용 시나리오 3: 제품 사용
+
+X-ray output using the hand exposure switch
+
+핸드조사 스위치로 X-ray 출력
+
+Not fully pressing the switch
+
+Delayed diagnosis
+
+of patients
+
+Setting the exposure dose
+
+조사량 설정
+
+Mistake in setting the dose
+
+Unnecessary radiation exposure
+
+Holding the product for imaging
+
+제품을 들고 촬영
+
+Dropping the product
+
+Wound
+
+Viewing images via Bluetooth functionality
+
+Bluetooth 기능을 통한 이미지 확인.
+
+Failure to check the image due to a mistake in operating the function
+
+Delayed diagnosis
+
+of patients
+
+Exposure control device
+
+조사량 조절장치
+
+Inadequate use of the dose control device.
+
+Unnecessary radiation exposure
+
+Use scenarios related to risk factors 4: Maintenance
+
+위해 요인 관련 사용 시나리오 4: 유지보수
+
+Cleaning method and verification of cleaning results청소방법 및 청소결과 확인
+
+User cannot determine the cleaning method.
+
+User does not understand the cleaning method.
+
+User cleans in an inappropriate manner.
+
+Delayed diagnosis
+
+of patients
+
+Battery status and charging check 베터리 상태, 충전 확인
+
+User cannot check battery status.
+
+User does not understand what battery status means.
+
+User charges battery in an inappropriate way.
+
+Delayed diagnosis
+
+of patients
+
+Succes and Failure criteria
+
+Success Criteria:
+
+Task completion within the expected time.
+
+No safety-critical errors during tasks.
+
+Failure Criteria:
+
+Any task failure resulting in potential harm.
+
+User frustration exceeding predefined thresholds (e.g., multiple retries).
+
+Test scenarios
+
+Scenario 1: Check User Manual
+
+Scenario 2: Preparing the product for use
+
+Scenario 3: Product use
+
+Scenario 4: Maintenance
+
+Formative and Summative Evaluation
+
+Summary of Formative Activities
+
+Activity Overview:
+
+Conducted usability tests on early prototypes.
+
+Enhanced labeling for dose adjustment knobs.
+
+Findings Addressed:
+
+Ergonomic design for easy hand holding
+
+Addition of X-RAY caution symbol and warning message
+
+Clarification of identification of each button and color-coded status LED for easy status identification
+
+Captured images can be previewed via Bluetooth function
+
+Summative Evaluation Plan
+
+Objectives: Confirm that the final design meets all usability goals under realistic conditions.
+
+Methods:
+
+User testing with 15+ participants in diverse clinical scenarios.
+
+Data collection through task observations, error tracking, and user interviews.
+
+Data Collection and Analysis
+
+Data Collection Methods
+
+Quantitative Metrics:
+
+Task completion times
+
+Error rates (e.g., incorrect dose settings, missed Bluetooth connections)
+
+Qualitative Feedback:
+
+User satisfaction surveys
+
+Post-test interviews to gather insights on usability issues
+
+Data Analysis Plan
+
+Analyze task success rates to ensure alignment with predefined usability goals.
+
+Evaluate user feedback to identify residual design improvements
+
+Risk Management and Validation Linkage
+
+Potential Use Errors and Hazards
+
+Misinterpretation of status LEDs: Can lead to incorrect device operation
+
+Incorrect dose adjustment: May result in patient harm due to overexposure.
+
+Failure to establish Bluetooth connection: Delays in image transmission
+
+Validation of Risk Controls
+
+Targeted tests to ensure risk mitigation measures (e.g., clearer LED indicators, confirmation messages for Bluetooth pairing) are effective.
+
+Schedule and Responsibilities
+
+Validation Schedule
+
+Formative evaluations: Completed by [~ Oct 10, 2024].
+
+Summative evaluations: Planned for [Dec 17, 2024 ~].
+
+Responsibilities and Roles
+
+Test supervisor: Hur, Namkyu
+
+Test administrator: Im, Yongbin
+
+Observer/Recorder: Han, Jimin
