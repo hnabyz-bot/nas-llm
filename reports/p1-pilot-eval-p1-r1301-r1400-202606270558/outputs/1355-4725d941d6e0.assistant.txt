@@ -1,0 +1,235 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954392-lht",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/18. Appendix (ce 인증 문서 작성 icmc)/Appendix 3. Risk Management/ARMR-FMEA-0-001.xlsx",
+    "canonicalGroupId": "4725d941d6e0"
+  },
+  "document": {
+    "title": "ARMR-FMEA-0-001",
+    "documentType": "Risk management FMEA worksheet",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "ISO 3864-1:2002",
+      "ISO 7010:20030W001"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Risk management worksheet mapping ISO 14971 and IEC 60601-1 clauses to hazards, risk controls, and residual risk acceptability.",
+    "officialUse": "Supports a medical device risk management file by identifying hazards, estimating risks, documenting control measures, and recording residual risk acceptability.",
+    "keyPoints": [
+      "Essential performance includes ability to acquire image within 5 seconds and acquired image should not have two Line Adjacent, Line Block, or No Display.",
+      "Single fault condition assessment identifies electrical single fault conditions and leakage current risk controls using approved AC-DC transformer, AC cable, and fuse.",
+      "The worksheet records software and PEMS-related degradation of function risks controlled by software design and software validation.",
+      "Connector risks address AC power cable, data cable, LAN cable, and trigger cable removable without tools.",
+      "Electromagnetic compatibility risk is addressed for use in general practice rooms and effects on other ME devices."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "Product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "Standard",
+      "evidence": "\"ISO 14971\nClause\""
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "Standard",
+      "evidence": "\"IEC60601-1\nRequirements\""
+    },
+    {
+      "name": "ISO 3864-1:2002",
+      "type": "Standard",
+      "evidence": "ISO 3864-1: 2002 Cover corresponding to Clause 7"
+    },
+    {
+      "name": "ISO 7010:20030W001",
+      "type": "Standard or marking reference",
+      "evidence": "ISO 7010: 20030W001 Symbol Application"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Essential performance",
+      "pageTarget": "Essential performance",
+      "evidence": "Manufacturer shall identify which functions are Essential Performance."
+    },
+    {
+      "name": "Single fault condition",
+      "pageTarget": "Single fault condition",
+      "evidence": "The single fault condition described in 13.2 applies."
+    },
+    {
+      "name": "Leakage current",
+      "pageTarget": "Leakage current",
+      "evidence": "Can deliver unacceptable current to the patient or operator in a single fault condition"
+    },
+    {
+      "name": "Protective packaging marking",
+      "pageTarget": "Protective packaging marking",
+      "evidence": "Operating conditions displayed on the outer packaging Temperature, Humidity, Pressure"
+    },
+    {
+      "name": "Safety signs",
+      "pageTarget": "Medical device safety signs",
+      "evidence": "Is marking used to convey a warning, prohibition or mandatory action that mitigates a RISK that is not obvious to the OPERATOR?"
+    },
+    {
+      "name": "PEMS software validation",
+      "pageTarget": "Programmable electrical medical systems validation",
+      "evidence": "software for centrifuge and control is applied: software validation report"
+    },
+    {
+      "name": "Network data coupling hazards",
+      "pageTarget": "Network data coupling hazards",
+      "evidence": "1. Failure of network / data coupling\n2. Unavailable data\n3. Lack of data integrity\n4. Incorrect data\n5. Incorrect timing of data"
+    },
+    {
+      "name": "Electromagnetic compatibility",
+      "pageTarget": "Electromagnetic compatibility of ME equipment",
+      "evidence": "Has the risk management process addressed the risks associated with electromagnetic phenomena"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The worksheet is organized around ISO 14971 risk management clauses.",
+      "evidenceText": "\"ISO 14971\nClause\",,4.2 Intended use and identification of characteristics related to the safety of the medical device,,,,,,,4.3 Identification of hazards,,4.4 Estimation of the risk(s) for each harzadous situation",
+      "pageTarget": "ISO 14971 risk management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The worksheet maps risk questions to IEC 60601-1 clauses and requirements.",
+      "evidenceText": "No,IEC 60601-1 Clause,\"IEC60601-1\nRequirements\",Questions for identifying characteristics",
+      "pageTarget": "IEC 60601-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes image acquisition within 5 seconds.",
+      "evidenceText": "Must be able to acquire image within 5 seconds",
+      "pageTarget": "Essential performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes avoiding two Line Adjacent, Line Block, or No Display in the acquired image.",
+      "evidenceText": "The acquired image should not have two Line Adjacent, Line Block, or No Display.",
+      "pageTarget": "Essential performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "RM-01 treats operational hazards from measurement in a fault condition as causing incorrect measurement.",
+      "evidenceText": "RM-01,Operational Hazards,Measurement in a fault condition,Incorrect measurement",
+      "pageTarget": "Operational hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "For leakage current under single fault condition, the worksheet specifies approved AC-DC transformer, AC cable, and fuse as risk controls.",
+      "evidenceText": "Designed to use approved AC-DC transformer, AC cable, fuse to prevent leakage current",
+      "pageTarget": "Leakage current",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated to have no patient-contact part.",
+      "evidenceText": "This product do not have any comtact to patient part.",
+      "pageTarget": "Patient-contacting parts",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Outer packaging displays operating conditions including temperature, humidity, and pressure.",
+      "evidenceText": "Operating conditions displayed on the outer packaging\nTemperature, Humidity, Pressure",
+      "pageTarget": "Protective packaging marking",
+      "confidence": "high"
+    },
+    {
+      "claim": "Fuse and AC power cables are stated to be user replaceable.",
+      "evidenceText": "FUSE and AC power cables are user replaceable",
+      "pageTarget": "Replaceable components",
+      "confidence": "high"
+    },
+    {
+      "claim": "Replacement risk controls include using only the specified cable and describing fuse specifications and replacement methods in the product exterior and user manual.",
+      "evidenceText": "Use only the specified cable.\nDescribe the FUSE specifications and replacement methods available in the product exterior and user manual.",
+      "pageTarget": "Replaceable components",
+      "confidence": "high"
+    },
+    {
+      "claim": "Heat-related insulation risk is controlled by flame-retardant insulators.",
+      "evidenceText": "Designed using flame-retardant insulators",
+      "pageTarget": "Insulation heat resistance",
+      "confidence": "high"
+    },
+    {
+      "claim": "PCB, PCB components, AC-DC transformer, and AC filter are fixed inside the product.",
+      "evidenceText": "Inside the product, PCB, PCB components, AC-DC transformer and AC filter are fixed.",
+      "pageTarget": "Component fixation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The worksheet states fuses and overcurrent shut-off components are applied.",
+      "evidenceText": "We are applying fuses and overcurrent shut-off compontents.",
+      "pageTarget": "Mains fuses and over-current releases",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software-related risk controls include software design and software validation.",
+      "evidenceText": "Software Design to Achieve Essential Performance,Software validation",
+      "pageTarget": "Software risk control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The worksheet identifies network/data coupling failure, unavailable data, lack of data integrity, incorrect data, and incorrect timing of data as degradation of function hazards.",
+      "evidenceText": "1. Failure of network / data coupling\n2. Unavailable data\n3. Lack of data integrity\n4. Incorrect data\n5. Incorrect timing of data",
+      "pageTarget": "Network data coupling hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "AC power cable, data cable, LAN cable, and trigger cable can be removed without tools.",
+      "evidenceText": "AC power cable, data cable, LAN cable, trigger cable can be removed without tools",
+      "pageTarget": "Medical device connectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector risk control includes designing connectors with different pin counts and shapes so they are not mixed.",
+      "evidenceText": "Designed with different number of pins and shapes so that they are not mixed when using external connectors",
+      "pageTarget": "Medical device connectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "Electromagnetic compatibility risk is addressed because the product is used in general practice rooms and can affect ME devices in a medical room.",
+      "evidenceText": "This product is used in general practice rooms and it can affect electromagnetic effects on various ME devices in the medical room.",
+      "pageTarget": "Electromagnetic compatibility of ME equipment",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the provided source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; source metadata only gives authoritySignal as general."
+    },
+    {
+      "severity": "warning",
+      "reason": "The source appears to be a preprocessed spreadsheet with OCR or extraction errors, including misspellings such as harzadous, comtact, compontents, and ambiguous ISO 7010 text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model was taken from source metadata productSignal because the worksheet text does not clearly state a product model."
+    }
+  ]
+}
