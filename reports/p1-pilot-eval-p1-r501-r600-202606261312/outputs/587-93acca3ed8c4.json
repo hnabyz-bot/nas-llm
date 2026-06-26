@@ -1,0 +1,312 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954372-29m",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/■ 3. 3차 CE TCF 보안사항 제출 (12월10일)/05. Software_Validation/A-TCF-5-010_Software Validation 20200331.docx",
+    "canonicalGroupId": "93acca3ed8c4"
+  },
+  "document": {
+    "title": "Software Validation For Digital Flat Panel X-ray Detector HAD1717MC, HAD1717MG",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "CDRH"
+    ],
+    "revisionOrVersion": "Report No.: A-TCF-5-010 (Rev.2)",
+    "documentDate": "MAR/31/2020",
+    "standards": [
+      "FDA Quality System Regulation 21 CFR, Part 820",
+      "FDA Quality System Regulation 21 CFR, Part 803",
+      "CDRH Guidance: General Principles of Software Validation",
+      "CDRH Guidance: Off-The-Shelf Software Use in Medical Devices",
+      "CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices",
+      "ISO 9001, December 2000 Quality System Standards",
+      "IEEE 1012-1986, Standard for Software Verification and Validation Plans",
+      "IEEE 829-1983, Standard for Software Test Documentation",
+      "IEEE 1016, Standard for software designs",
+      "IEEE 830, Standard for software requirements",
+      "EN ISO 13485 [2016]",
+      "IEC 60601-1 [2006/A1:2013]",
+      "IEC 62304 [2006]",
+      "EN ISO14971 [2012]",
+      "Guidance for the content of premarket submission for software contained in medical devices"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for Digital Flat Panel X-ray Detector models HAD1717MC and HAD1717MG.",
+    "officialUse": "Documents software level of concern, references, SRS, SDS, hazards analysis, test plan, traceability analysis, verification and validation results, and software version history.",
+    "keyPoints": [
+      "The software Level of Concern is defined as Moderate (Class B).",
+      "The software is described as a middle-ware utility library between the still image detector and EUA.",
+      "The document references FDA regulations, CDRH guidance, ISO, IEEE, EN ISO, and IEC standards.",
+      "Dynamic tests TS 0002B, TS 0003B, TS 0004A, TS 0006A, TS 1001A, TS 1002A, and TS 1003A are reported as passed.",
+      "The software version history lists SW version 1.0.0 dated March/15/2019 as the initial release."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "Digital Flat Panel X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "product model",
+      "evidence": "Digital Flat Panel X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "FDA Quality System Regulation 21 CFR, Part 820"
+    },
+    {
+      "name": "CDRH",
+      "type": "regulatory authority",
+      "evidence": "CDRH Guidance: General Principles of Software Validation"
+    },
+    {
+      "name": "R&D team",
+      "type": "department",
+      "evidence": "Prepared R&D team Park, Nam Ho MAR/31/2020"
+    },
+    {
+      "name": "Quality Manager",
+      "type": "approval role",
+      "evidence": "Approval Quality Manager Hur Namkyu MAR/31/2020"
+    },
+    {
+      "name": "End-User Application (EUA)",
+      "type": "software entity",
+      "evidence": "End User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user."
+    },
+    {
+      "name": "Acquisition Library",
+      "type": "software entity",
+      "evidence": "Acquisition Library (Software)"
+    },
+    {
+      "name": "Dlib.dll",
+      "type": "software module",
+      "evidence": "Sensor library (original name Dlib.dll)"
+    },
+    {
+      "name": "XAS.exe",
+      "type": "software module",
+      "evidence": "Sample acquisition program (original name XAS.exe)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Level of Concern",
+      "pageTarget": "Software Level of Concern",
+      "evidence": "Level of concern: Moderate (Class B)"
+    },
+    {
+      "name": "Software Requirements Specification",
+      "pageTarget": "Software Requirements Specification",
+      "evidence": "3.Software Requirements Specification (SRS)"
+    },
+    {
+      "name": "Software Design Specification",
+      "pageTarget": "Software Design Specification",
+      "evidence": "4.Software Design Specification (SDS)"
+    },
+    {
+      "name": "Hazards Analysis",
+      "pageTarget": "Software Hazards Analysis",
+      "evidence": "5.Hazards’ Analysis"
+    },
+    {
+      "name": "Failure Mode and Effects Analysis",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "evidence": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA)."
+    },
+    {
+      "name": "Traceability Analysis",
+      "pageTarget": "Software Traceability Analysis",
+      "evidence": "The Traceability Table summarizes links (cross-correlation) between enumerated (SRS x.x) or enlisted (SRS-C-xxx) items in SRS enumerated items in SDS (SDS x) enumerated potential Hazards (HZ x) respective enlisted static tests and enumerated dynamic tests (TS xxx)."
+    },
+    {
+      "name": "Verification and Validation",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Verification, Validation and Test Results"
+    },
+    {
+      "name": "Offset/Gain Calibration",
+      "pageTarget": "Offset Gain Calibration",
+      "evidence": "Offset/Gain-calibration –equalization of pixels’ transfer functions"
+    },
+    {
+      "name": "Bad Pixels Correction",
+      "pageTarget": "Bad Pixels Correction",
+      "evidence": "This operation corrects scattered bad (dead) pixels by interpolation with good neighbors."
+    },
+    {
+      "name": "Line Trigger Mode",
+      "pageTarget": "Line Trigger Mode",
+      "evidence": "When the line mode is set, an image is acquired when a signal is transmitted through the line trigger cable."
+    },
+    {
+      "name": "AED Trigger Mode",
+      "pageTarget": "AED Trigger Mode",
+      "evidence": "When AED mode is set, an image is obtained by detecting a signal received from x-ray generation."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The report is identified as A-TCF-5-010 Rev.2.",
+      "evidenceText": "Report No.: A-TCF-5-010 (Rev.2)",
+      "pageTarget": "A-TCF-5-010 Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document was prepared, reviewed, and approved on MAR/31/2020.",
+      "evidenceText": "Prepared R&D team Park, Nam Ho MAR/31/2020 Review R&D Manager Lee, Dong jin MAR/31/2020 Approval Quality Manager Hur Namkyu MAR/31/2020",
+      "pageTarget": "A-TCF-5-010 Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision 2 was dated March/31/2020 and described as correction of audit points.",
+      "evidenceText": "2 March/31/2020 Correction of audit Points",
+      "pageTarget": "A-TCF-5-010 Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software Level of Concern is Moderate (Class B).",
+      "evidenceText": "1. Level of concern: Moderate (Class B)",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The rationale states that TFT detectors use low X-ray irradiation and the level of concern is moderate.",
+      "evidenceText": "TFT-detectors use low X-ray irradiation that could not harm patient seriously in any way. Because of that the level of concern is defined as “moderate”.",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is an acquisition library for detectors.",
+      "evidenceText": "The term “Software” when used from uppercase “S” in respective context of this document assumes this “acquisition library for detectors”.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software acts as middleware between the still image detector and the EUA.",
+      "evidenceText": "This is “middle-ware” utility library between still image detector (and its low-level driver) from one side and EUA from the other.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software includes setup functions for configuration, Gain/Offset-Calibration, and Bad Pixels’ Correction.",
+      "evidenceText": "It also contains SU to modify software and hardware configuration parameters and preparation of Gain/Offset-Calibration and Bad Pixels’ Correction.",
+      "pageTarget": "Software Setup",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SRS includes acquisition of raw frames from the detector and delivery to EUA as images.",
+      "evidenceText": "Acquire raw frame from detector and deliver it to EUA as image.",
+      "pageTarget": "Software Requirements Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The required image output must represent integral densities of objects along X-ray beams.",
+      "evidenceText": "Final image shall adequately represent integral densities of objects along X-ray beams.",
+      "pageTarget": "Radiographic Image Acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development environment includes Windows 10 Pro 64-bit and MS Visual C++ 2019.",
+      "evidenceText": "Development Environment (SRS-C-DevE): Windows 10 pro 64bit. MS Visual C++ 2019 (MS Visual Studio Professional 2019).",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector operational environment includes Windows 10 connected by VMware virtual machine and Ubuntu 14.0 Linux.",
+      "evidenceText": "Detector Operational Environment Peripheral hardware : Window10 connected by VMware virtual machine OS : Ubuntu 14.0 Linux",
+      "pageTarget": "Detector Operational Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hardware and interface requirement includes a TFT sensor connected by Ethernet.",
+      "evidenceText": "Hardware and interface requirement Peripheral hardware TFT sensor connected by Ethernet",
+      "pageTarget": "Detector Hardware Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document uses FMEA for hazard evaluation.",
+      "evidenceText": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA).",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hazard HZ 0001 is mismatched or absent calibration file with low probability and moderate level of concern.",
+      "evidenceText": "HZ 0001 Mismatched calibration file (No calibration file) L Moderate Check for the presence of a calibration file in \"End User Application\".",
+      "pageTarget": "Software Hazards Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hazard HZ 1001 is stopped data transmission after X-ray exposure because of LAN cable disconnection.",
+      "evidenceText": "HZ 1001 Stop data-transmission after X- ray exposure because of disconnection of LAN-cable. L Moderate",
+      "pageTarget": "Software Hazards Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Testing is classified into static tests and dynamic tests.",
+      "evidenceText": "We classify the test by two groups as the next: Static– expert reviews and analysis of source code and DEBUG release of Software. Dynamic –run Software for test data acquisition and processing",
+      "pageTarget": "Software Test Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "Static verification was certified as properly accomplished.",
+      "evidenceText": "As a result of the code review, we hereby certify that the static verification of Software is properly accomplished",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic tests TS 0002B, TS 0003B, TS 0004A, and TS 0006A passed.",
+      "evidenceText": "TS 0002B Passed TS 0003B Passed TS 0004A Passed TS 0006A Passed",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Functionality tests TS 1001A, TS 1002A, and TS 1003A passed.",
+      "evidenceText": "TS 1001A Passed (refer Appendix A) TS 1002A Passed (refer Appendix B) TS 1003A Passed (refer Appendix C)",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report states no unsolved bugs subject to safety and effectiveness were found.",
+      "evidenceText": "There were no found unsolved bugs that are subjected to safety and effectiveness in this software.",
+      "pageTarget": "Unresolved Software Anomalies",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software version history lists version 1.0.0 dated March/15/2019 as the initial release.",
+      "evidenceText": "1.0.0 March/15/2019 HAD-MD-SW Initial release, Dual polynomial fitting calibration Only for proprietary applications.",
+      "pageTarget": "Software Version History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The firmware version history lists version 1.0 dated March/12/2019 as the initial release.",
+      "evidenceText": "1.0 March/12/2019 HAD-MD-FW Initial release",
+      "pageTarget": "Firmware Version History",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority metadata is ambiguous: the source path references CE MDD, the metadata authoritySignal is FDA, and the text lists FDA/CDRH references plus EN/IEC standards."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text contains OCR or formatting artifacts such as misspellings, broken table text, and inconsistent spacing."
+    },
+    {
+      "severity": "warning",
+      "reason": "The text states 'Firmware program is not applicable' but also includes firmware requirements, firmware tests, and firmware version history."
+    }
+  ]
+}

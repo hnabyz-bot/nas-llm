@@ -1,0 +1,160 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954382-bqt",
+    "sourcePath": "raw/sources/RA/11_Audit F-up/240415-17 ISO 갱신심사 & 2,3G MDR 심사 - 3EC/MDR 심사_경부적합 보완/기술문서 전체_24.04.23_pdf/A-TCF-5-162 Vigilance System/4. Field safety notice customer reply.pdf",
+    "canonicalGroupId": "ddb017451eae"
+  },
+  "document": {
+    "title": "Template for a Field Safety Notice Customer Reply Form",
+    "documentType": "Field Safety Notice customer reply form template",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev 1",
+    "documentDate": "July 2018",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Rev 1 July 2018 template for a Field Safety Notice Customer Reply Form.",
+    "officialUse": "Used to capture customer acknowledgement of an FSN, confirmation that requested actions were completed, and evidence needed to monitor corrective actions.",
+    "keyPoints": [
+      "FSN information fields include FSN reference number, FSN date, product/device name, product codes, and batch or serial numbers.",
+      "Customer details include account number, healthcare organisation name, address, contact name, telephone number, and email.",
+      "Customer action options include confirming receipt and understanding of the FSN, performing requested actions, returning or destroying affected devices, reporting no affected devices, or requesting contact.",
+      "The form instructs that the organisation's reply is evidence needed to monitor the progress of corrective actions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "LOGO/COMPANY NAME",
+      "type": "manufacturer placeholder",
+      "evidence": "Rev 1: July 2018 LOGO/COMPANY NAME"
+    },
+    {
+      "name": "Healthcare Organisation",
+      "type": "customer organisation",
+      "evidence": "Customer action undertaken on behalf of Healthcare Organisation"
+    },
+    {
+      "name": "manufacturer",
+      "type": "responsible party placeholder",
+      "evidence": "FSN Reference number* Pre-filled by manufacturer"
+    },
+    {
+      "name": "manufacturer/sender/requester",
+      "type": "return acknowledgement recipient placeholder",
+      "evidence": "Email Pre-filled by manufacturer/sender/requester"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Field Safety Notice",
+      "pageTarget": "Field Safety Notice",
+      "evidence": "1. Field Safety Notice (FSN) information"
+    },
+    {
+      "name": "Customer Reply Form",
+      "pageTarget": "Field Safety Notice Customer Reply Form",
+      "evidence": "Template for a Field Safety Notice Customer Reply Form Customer Reply Form"
+    },
+    {
+      "name": "Customer acknowledgement",
+      "pageTarget": "Field Safety Notice Customer Acknowledgement",
+      "evidence": "I confirm receipt of the Field Safety Notice and that I read and understood its content."
+    },
+    {
+      "name": "Affected device return",
+      "pageTarget": "Affected Device Return",
+      "evidence": "I have returned affected devices - enter number of devices returned and date complete."
+    },
+    {
+      "name": "Affected device destruction",
+      "pageTarget": "Affected Device Destruction",
+      "evidence": "I have destroyed affected devices – enter number destroyed and date complete."
+    },
+    {
+      "name": "Corrective action monitoring",
+      "pageTarget": "Field Safety Corrective Action Monitoring",
+      "evidence": "Your organisation's reply is the evidence we need to monitor the progress of the corrective actions."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a template for a Field Safety Notice Customer Reply Form.",
+      "evidenceText": "Template for a Field Safety Notice Customer Reply Form",
+      "pageTarget": "Field Safety Notice Customer Reply Form",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev 1 and the date shown is July 2018.",
+      "evidenceText": "Rev 1: July 2018 LOGO/COMPANY NAME",
+      "pageTarget": "Field Safety Notice Customer Reply Form",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form includes FSN information fields for reference number, date, product/device name, product codes, and batch or serial numbers.",
+      "evidenceText": "FSN Reference number* Pre-filled by manufacturer FSN Date* Pre-filled by manufacturer Product/ Device name* Pre-filled by manufacturer Product Code(s) 1 2 3 Batch/Serial Number (s) 1 2 3",
+      "pageTarget": "Field Safety Notice",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form includes customer details fields for account number, healthcare organisation, address, contact, telephone, and email.",
+      "evidenceText": "Customer Details Account Number Healthcare Organisation Name* Organisation Address* Department/Unit Shipping address if different to above Contact Name* Title or Function Telephone number* Email*",
+      "pageTarget": "Customer Details",
+      "confidence": "high"
+    },
+    {
+      "claim": "The customer may confirm receipt of the FSN and that it was read and understood.",
+      "evidenceText": "I confirm receipt of the Field Safety Notice and that I read and understood its content.",
+      "pageTarget": "Field Safety Notice Customer Acknowledgement",
+      "confidence": "high"
+    },
+    {
+      "claim": "The customer may confirm all actions requested by the FSN were performed.",
+      "evidenceText": "I performed all actions requested by the FSN.",
+      "pageTarget": "Field Safety Notice Corrective Actions",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form captures whether information and required actions were brought to relevant users and executed.",
+      "evidenceText": "The information and required actions have been brought to the attention of all relevant users and executed.",
+      "pageTarget": "Field Safety Notice User Communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form can record returned affected devices with quantity, lot or serial number, and return date.",
+      "evidenceText": "I have returned affected devices - enter number of devices returned and date complete. Qty: Lot/Serial Number: Date Returned (DD/MM/YY):",
+      "pageTarget": "Affected Device Return",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form can record destroyed affected devices with number destroyed and completion date.",
+      "evidenceText": "I have destroyed affected devices – enter number destroyed and date complete.",
+      "pageTarget": "Affected Device Destruction",
+      "confidence": "high"
+    },
+    {
+      "claim": "The customer reply is evidence used to monitor the progress of corrective actions.",
+      "evidenceText": "Your organisation's reply is the evidence we need to monitor the progress of the corrective actions.",
+      "pageTarget": "Field Safety Corrective Action Monitoring",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No actual product model or device name is present; product fields are placeholders marked pre-filled by manufacturer."
+    },
+    {
+      "severity": "warning",
+      "reason": "No authority or jurisdiction is stated in the source text, although source metadata includes authoritySignal MFDS/domestic."
+    },
+    {
+      "severity": "info",
+      "reason": "No standard is identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No actual manufacturer name is present; the document uses LOGO/COMPANY NAME and manufacturer/sender/requester placeholders."
+    }
+  ]
+}
