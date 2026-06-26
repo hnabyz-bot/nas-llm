@@ -1,0 +1,123 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954411-zsy",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/CE 현장심사 일정표 및 부적합 사항/■ 심사 대응 자료/개발 등록, 배포 대장/등록, 배포 대장/조립도면 등록 대장.xls",
+    "canonicalGroupId": "699e49ae503a"
+  },
+  "document": {
+    "title": "HAD1717MC,MG [ Ass'y] 도면 등록/접수 대장",
+    "documentType": "Assembly drawing registration/receipt ledger",
+    "productModels": [
+      "HAD1717MC,MG"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "APF403-1 (Rev.0)",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Assembly drawing registration/receipt ledger for HAD1717MC,MG [Ass'y].",
+    "officialUse": "Tracks drawing numbers, item names, drawing classification, registration dates, reviewers, and revision confirmation dates for assembly drawings.",
+    "keyPoints": [
+      "The ledger lists seven assembly-related drawing entries.",
+      "All listed entries are marked under 양산도.",
+      "Most entries show registration date 2019.04.22 and confirmation by 이동욱.",
+      "BODY FRAME Ass'y_Gods and BODY FRAME Ass'y_CsI include an additional revision date of 2020.04.01 confirmed by 이동욱."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC,MG",
+      "type": "product model",
+      "evidence": "\"HAD1717MC,MG [ Ass'y] 도면 등록/접수 대장\""
+    },
+    {
+      "name": "이동욱",
+      "type": "reviewer or confirmer",
+      "evidence": "등록일자,확인 and 개 정 일 자 confirmation fields list 이동욱."
+    },
+    {
+      "name": "APF403-1 (Rev.0)",
+      "type": "form identifier or revision",
+      "evidence": "APF403-1 (Rev.0),,,,, ,,,,,,,,,,297×210mm(A4)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "도면 등록/접수 대장",
+      "pageTarget": "Drawing Registration and Receipt Ledger",
+      "evidence": "\"HAD1717MC,MG [ Ass'y] 도면 등록/접수 대장\""
+    },
+    {
+      "name": "양산도",
+      "pageTarget": "Mass Production Drawing",
+      "evidence": "도면구분 includes 양산도 and the listed rows are marked √ under that column."
+    },
+    {
+      "name": "시작도",
+      "pageTarget": "Prototype Drawing",
+      "evidence": "도면구분 header lists 시작도."
+    },
+    {
+      "name": "개정일자",
+      "pageTarget": "Drawing Revision Date",
+      "evidence": "Header includes 개 정 일 자 with 1차, 2차, 3차, 4차 confirmation fields."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a drawing registration/receipt ledger for HAD1717MC,MG assembly drawings.",
+      "evidenceText": "\"HAD1717MC,MG [ Ass'y] 도면 등록/접수 대장\"",
+      "pageTarget": "HAD1717MC,MG Assembly Drawing Registration Ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ledger records drawing number, item name, drawing classification, registration date, confirmation, revision date, and remarks.",
+      "evidenceText": "No,도면번호,품 명,도면구분,,등록일자,확인,개 정 일 자,,,,,,,,비 고",
+      "pageTarget": "Drawing Registration and Receipt Ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "BODY FRAME SUB Ass'y drawing AC0-000001 was registered on 2019.04.22 and confirmed by 이동욱.",
+      "evidenceText": "1,AC0-000001,BODY FRAME SUB Ass'y,√,,2019.04.22,이동욱,2019.04.22,이동욱",
+      "pageTarget": "BODY FRAME SUB Ass'y Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "BODY FRAME Ass'y_Gods drawing AC0-000004 has registration/revision confirmation on 2019.04.22 and an additional revision date 2020.04.01 confirmed by 이동욱.",
+      "evidenceText": "4,AC0-000004,BODY FRAME Ass'y_Gods,√,,2019.04.22,이동욱,2019.04.22,이동욱,2020.04.01,이동욱",
+      "pageTarget": "BODY FRAME Ass'y_Gods Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "BODY FRAME Ass'y_CsI drawing AC0-000007 has registration/revision confirmation on 2019.04.22 and an additional revision date 2020.04.01 confirmed by 이동욱.",
+      "evidenceText": "5,AC0-000007,BODY FRAME Ass'y_CsI,√,,2019.04.22,이동욱,2019.04.22,이동욱,2020.04.01,이동욱",
+      "pageTarget": "BODY FRAME Ass'y_CsI Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "BOTTOM COVER SUB Ass'y is also listed with drawing number AC0-000007.",
+      "evidenceText": "7,AC0-000007,BOTTOM COVER SUB Ass'y,√,,2019.04.22,이동욱,2019.04.22,이동욱",
+      "pageTarget": "BOTTOM COVER SUB Ass'y Drawing",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No overall document date is stated; only drawing registration and revision dates are present."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are referenced in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Drawing number AC0-000007 appears for both BODY FRAME Ass'y_CsI and BOTTOM COVER SUB Ass'y, requiring review for possible duplicate or transcription issue."
+    }
+  ]
+}

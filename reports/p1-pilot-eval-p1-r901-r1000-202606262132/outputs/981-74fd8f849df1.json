@@ -1,0 +1,139 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-qfg",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/CE 현장심사 일정표 및 부적합 사항/■ 심사 대응 자료/개발 등록, 배포 대장/등록, 배포 대장/조립도면 배포 대장.xls",
+    "canonicalGroupId": "74fd8f849df1"
+  },
+  "document": {
+    "title": "HAD1717MC,MG [ Ass'y] 도 면 배 포 대 장",
+    "documentType": "조립도면 배포 대장",
+    "productModels": [
+      "HAD1717MC",
+      "MG"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "APF403-2 (Rev.0)",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "HAD1717MC, MG assembly drawing distribution ledger recording drawing items, revisions, production-use distribution, recovery, and disposal details.",
+    "officialUse": "Used as a controlled register for distributing assembly drawings for production use and recording confirmation, recovery, and disposal dates.",
+    "keyPoints": [
+      "The ledger columns include item name, drawing number, REV, number of sheets, purpose, distribution recipient, distribution date, confirmation, recovery date, and disposal date.",
+      "Listed drawings were distributed for 양산용 production use, mainly to Abyz 본사 and in some cases 동인산업.",
+      "Several BODY FRAME Ass'y drawings show recovery and disposal on 2020.04.01."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "productModel",
+      "evidence": "\"HAD1717MC,MG [ Ass'y] 도 면 배 포 대 장\""
+    },
+    {
+      "name": "MG",
+      "type": "productModel",
+      "evidence": "\"HAD1717MC,MG [ Ass'y] 도 면 배 포 대 장\""
+    },
+    {
+      "name": "Abyz 본사",
+      "type": "organization",
+      "evidence": "배 포 처 entries include \"Abyz 본사\""
+    },
+    {
+      "name": "동인산업",
+      "type": "organization",
+      "evidence": "배 포 처 entries include \"Abyz 본사, 동인산업\""
+    },
+    {
+      "name": "이동욱",
+      "type": "person",
+      "evidence": "확 인 entries include \"이동욱\""
+    }
+  ],
+  "concepts": [
+    {
+      "name": "조립도면 배포 대장",
+      "pageTarget": "Assembly Drawing Distribution Ledger",
+      "evidence": "\"HAD1717MC,MG [ Ass'y] 도 면 배 포 대 장\""
+    },
+    {
+      "name": "양산용",
+      "pageTarget": "Production Use Documentation",
+      "evidence": "용도 column entries state \"양산용\""
+    },
+    {
+      "name": "도면 REV 관리",
+      "pageTarget": "Drawing Revision Control",
+      "evidence": "The ledger includes a \"REV\" column with values 0 and 1."
+    },
+    {
+      "name": "도면 회수 및 폐기",
+      "pageTarget": "Drawing Recovery and Disposal Control",
+      "evidence": "The ledger includes 회수일 and 폐기일 columns, with BODY FRAME Ass'y rows showing \"2020.04.01\"."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a distribution ledger for HAD1717MC, MG assembly drawings.",
+      "evidenceText": "\"HAD1717MC,MG [ Ass'y] 도 면 배 포 대 장\"",
+      "pageTarget": "HAD1717MC MG Assembly Drawing Distribution Ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ledger records drawing number, revision, sheet count, purpose, distribution recipient, distribution date, confirmation, recovery date, and disposal date.",
+      "evidenceText": "번 호,품 명,도 면 번 호,REV,매 수,용 도,배 포 처,배포일,확 인,회수일,확 인,폐기일,확 인",
+      "pageTarget": "Assembly Drawing Distribution Ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed drawings were distributed for production use.",
+      "evidenceText": "Rows list 용도 as \"양산용\".",
+      "pageTarget": "Production Use Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Distribution recipients include Abyz 본사 and 동인산업.",
+      "evidenceText": "배 포 처 entries include \"Abyz 본사\" and \"Abyz 본사, 동인산업\".",
+      "pageTarget": "Controlled Document Distribution Recipients",
+      "confidence": "high"
+    },
+    {
+      "claim": "Most listed drawing distributions occurred on 2019.04.22.",
+      "evidenceText": "The 배포일 column shows \"2019.04.22\" for listed rows.",
+      "pageTarget": "Controlled Document Distribution Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "BODY FRAME Ass'y_Gods and BODY FRAME Ass'y_CsI rows record recovery and disposal on 2020.04.01.",
+      "evidenceText": "BODY FRAME Ass'y_Gods and BODY FRAME Ass'y_CsI rows show 회수일 \"2020.04.01\" and 폐기일 \"2020.04.01\".",
+      "pageTarget": "Drawing Recovery and Disposal Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form identifier and revision shown in the footer is APF403-2 (Rev.0).",
+      "evidenceText": "APF403-2 (Rev.0),,,,,,,,,,, 297×210mm(A4),",
+      "pageTarget": "APF403-2 Form",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is present; only distribution, recovery, and disposal dates are shown."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision metadata may be ambiguous because row-level drawing REV values and footer form revision APF403-2 (Rev.0) are both present."
+    }
+  ]
+}
