@@ -1,0 +1,188 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954384-dx5",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/03_ADD (HAD1717MCW)/▶ FDA/보안사항 회신/HAD1417,1717 프로세스 비교.xlsx",
+    "canonicalGroupId": "cb376d4f04b2"
+  },
+  "document": {
+    "title": "HAD1417,1717 프로세스 비교",
+    "documentType": "Process comparison spreadsheet",
+    "productModels": [
+      "HAD 1417MCW",
+      "HAD 1717MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet comparing HAD 1417MCW and HAD 1717MCW materials, assemblies, inspections, packing, and shipment processes.",
+    "officialUse": "Used in an FDA response folder to document process and material comparison for HAD 1417MCW and HAD 1717MCW.",
+    "keyPoints": [
+      "Material input differs by panel size: 1417 CsI Scintillator versus 1717 CsI Scintillator.",
+      "Circuit materials and detector hardware materials are identified as identical, with differences in dimensions.",
+      "Sub-assembly, main assembly, inspection, packing, and shipment process steps are marked as identical between HAD 1417MCW and HAD 1717MCW.",
+      "Hardware body frame and front cover raw materials are marked identical, with dimensional differences."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD 1417MCW",
+      "type": "product model",
+      "evidence": "Process Name,HAD 1417MCW,HAD 1717MCW"
+    },
+    {
+      "name": "HAD 1717MCW",
+      "type": "product model",
+      "evidence": "Process Name,HAD 1417MCW,HAD 1717MCW"
+    },
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/03_ADD (HAD1717MCW)/▶ FDA/보안사항 회신/HAD1417,1717 프로세스 비교.xlsx"
+    },
+    {
+      "name": "CsI Scintillator",
+      "type": "component material",
+      "evidence": "Material Input,1417 CsI Scintillator,1717 CsI Scintillator,Panel Size만 차이"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Panel size difference",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW panel size comparison",
+      "evidence": "Material Input,1417 CsI Scintillator,1717 CsI Scintillator,Panel Size만 차이"
+    },
+    {
+      "name": "Identical circuit materials",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW circuit materials",
+      "evidence": ". Circuit materials 동일"
+    },
+    {
+      "name": "Identical detector hardware material",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW detector hardware materials",
+      "evidence": ". Detector Hardware 재질 동일"
+    },
+    {
+      "name": "Manufacturing process comparison",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW manufacturing process comparison",
+      "evidence": "Sub Assembly,Laser Scribe ... EMI Sheet Attachment ... OLB Bonding ... Main assembly ... Packing ... Shipment"
+    },
+    {
+      "name": "EMI Sheet Attachment",
+      "pageTarget": "EMI Sheet Attachment process",
+      "evidence": "EMI Sheet Attachment,,\"Scintillator ESD 보호\n용 Sheet 부착\""
+    },
+    {
+      "name": "OLB Bonding",
+      "pageTarget": "OLB Bonding process",
+      "evidence": "OLB Bonding,,RO/Gate IC Bonding"
+    },
+    {
+      "name": "OQC Inspection",
+      "pageTarget": "OQC Inspection",
+      "evidence": "3st Inspection,Final / OQC Inspection,,\"Inspect the appearance, operation, and characteristics of the product.\""
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document compares HAD 1417MCW and HAD 1717MCW processes.",
+      "evidenceText": "Process Name,HAD 1417MCW,HAD 1717MCW,Note",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW manufacturing process comparison",
+      "confidence": "high"
+    },
+    {
+      "claim": "Material input differs by panel size between 1417 CsI Scintillator and 1717 CsI Scintillator.",
+      "evidenceText": "Material Input,1417 CsI Scintillator,1717 CsI Scintillator,Panel Size만 차이",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW panel size comparison",
+      "confidence": "high"
+    },
+    {
+      "claim": "Circuit materials are identical between the compared products.",
+      "evidenceText": ". Circuit materials 동일",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW circuit materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector hardware material is identical, with dimensional differences.",
+      "evidenceText": ". Detector Hardware 재질 동일\",,Dimension만 차이",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW detector hardware materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hardware body frame and front cover raw materials are identical, with dimensional differences.",
+      "evidenceText": "\"Hardware\n -Body Frame\n -Front Cover \",동일,동일,\"원자재 재질 동일\n.Dimension에 대해서\n 차이 있음.\"",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW hardware materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "Sub-assembly steps Laser Scribe, EMI Sheet Attachment, and OLB Bonding are marked identical.",
+      "evidenceText": "Sub Assembly,Laser Scribe,동일,동일 ... EMI Sheet\nAttachment\",동일,동일 ... OLB Bonding,동일,동일",
+      "pageTarget": "HAD 1417MCW and HAD 1717MCW sub-assembly process comparison",
+      "confidence": "high"
+    },
+    {
+      "claim": "EMI Sheet Attachment is described as attaching a sheet for scintillator ESD protection.",
+      "evidenceText": "EMI Sheet Attachment,,\"Scintillator ESD 보호\n용 Sheet 부착\"",
+      "pageTarget": "EMI Sheet Attachment process",
+      "confidence": "high"
+    },
+    {
+      "claim": "OLB Bonding is associated with RO/Gate IC Bonding.",
+      "evidenceText": "OLB Bonding,,RO/Gate IC Bonding",
+      "pageTarget": "OLB Bonding process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Module Test checks operation after IC bonding.",
+      "evidenceText": "1st Inspection,Module Test,,\"After IC bonding, inspect whether there is any problem with operation.\"",
+      "pageTarget": "Module Test inspection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Main assembly assembles the product in final finished condition.",
+      "evidenceText": "Main assembly,Hardware assembly,,Assemble the product in the final finished condition.",
+      "pageTarget": "Hardware assembly process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Final/OQC Inspection inspects appearance, operation, and characteristics of the product.",
+      "evidenceText": "3st Inspection,Final / OQC Inspection,,\"Inspect the appearance, operation, and characteristics of the product.\"",
+      "pageTarget": "OQC Inspection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Packing boxes the product and accessories.",
+      "evidenceText": "Packing, -,,Box the product and accessories.",
+      "pageTarget": "Product packing process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Shipment ships products to customers.",
+      "evidenceText": "Shipment, -,,Ships products to customers",
+      "pageTarget": "Product shipment process",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text or metadata."
+    },
+    {
+      "severity": "info",
+      "reason": "FDA authority is indicated by sourcePath and authoritySignal, but the source text table itself does not state FDA."
+    },
+    {
+      "severity": "warning",
+      "reason": "Inspection labels appear inconsistent between table sections, including Electric/Backing Test, Final inspection, Final / OQC Inspection, and OQC Inspection."
+    }
+  ]
+}
