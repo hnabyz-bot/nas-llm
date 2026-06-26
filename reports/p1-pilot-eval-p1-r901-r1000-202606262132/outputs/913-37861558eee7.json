@@ -1,0 +1,140 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954402-rij",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ FDA/■ 1차 ADD_510(k)_submission_Final_201023.zip/WORD/VOL_001_510(k) Submission/014_Biocompatibility.docx",
+    "canonicalGroupId": "37861558eee7"
+  },
+  "document": {
+    "title": "Biocompatibility",
+    "documentType": "510(k) submission biocompatibility section",
+    "productModels": [
+      "ADD"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 10993-1",
+      "ISO 10993-1 Annex A"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Biocompatibility section stating that ADD has direct intact-skin contact under 24 hours and biological tests were selected according to ISO 10993-1 Annex A.",
+    "officialUse": "Supports biological evaluation and biocompatibility test selection for a 510(k) submission.",
+    "keyPoints": [
+      "ADD contains parts intended to contact the patient's body.",
+      "ADD has a direct contact component contacting intact skin for under 24 hours.",
+      "The biological evaluation follows ISO 10993-1.",
+      "Biological tests were selected according to ISO 10993-1 Annex A.",
+      "Appendix H is referenced for the Biocompatibility Test Report."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADD",
+      "type": "medical device",
+      "evidence": "The ADD contains parts which is intended to be contacted with the body of patient."
+    },
+    {
+      "name": "FDA",
+      "type": "authority",
+      "evidence": "authoritySignal: FDA"
+    },
+    {
+      "name": "ISO 10993-1",
+      "type": "standard",
+      "evidence": "we perform the systemic approach to a biological evaluation of medical devices according to the ISO 10993-1"
+    },
+    {
+      "name": "Appendix H Biocompatibility Test Report",
+      "type": "supporting report",
+      "evidence": "See Appendix H Biocompatibility Test Report."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Biological evaluation of medical devices",
+      "pageTarget": "Biological evaluation of medical devices",
+      "evidence": "we perform the systemic approach to a biological evaluation of medical devices according to the ISO 10993-1"
+    },
+    {
+      "name": "Direct contact component",
+      "pageTarget": "Medical device direct contact components",
+      "evidence": "The ADD has direct contact component (Intact skin, under 24 hours)."
+    },
+    {
+      "name": "Intact skin contact under 24 hours",
+      "pageTarget": "Intact skin contact under 24 hours",
+      "evidence": "The ADD has direct contact component (Intact skin, under 24 hours)."
+    },
+    {
+      "name": "Biological test selection under ISO 10993-1 Annex A",
+      "pageTarget": "ISO 10993-1 Annex A biological test selection",
+      "evidence": "we select the biological tests according to the ISO 10993-1 Annex A as below"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "ADD contains parts intended to contact the patient's body.",
+      "evidenceText": "The ADD contains parts which is intended to be contacted with the body of patient.",
+      "pageTarget": "ADD medical device biocompatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "The biological evaluation approach follows ISO 10993-1.",
+      "evidenceText": "we perform the systemic approach to a biological evaluation of medical devices according to the ISO 10993-1",
+      "pageTarget": "ISO 10993-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADD has direct contact with intact skin for under 24 hours.",
+      "evidenceText": "The ADD has direct contact component (Intact skin, under 24 hours).",
+      "pageTarget": "Intact skin contact under 24 hours",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADD material is the same as a commercially available device.",
+      "evidenceText": "Material of the ADD is same as in commercially available device.",
+      "pageTarget": "Medical device material equivalence",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The ADD does not have the same chemical composition as the predicate device.",
+      "evidenceText": "But it does not have the same chemical composition with the predicate device.",
+      "pageTarget": "Predicate device chemical composition comparison",
+      "confidence": "high"
+    },
+    {
+      "claim": "Biological tests were selected according to ISO 10993-1 Annex A.",
+      "evidenceText": "Therefore, we select the biological tests according to the ISO 10993-1 Annex A as below",
+      "pageTarget": "ISO 10993-1 Annex A biological test selection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Appendix H contains or provides the referenced Biocompatibility Test Report.",
+      "evidenceText": "See Appendix H Biocompatibility Test Report.",
+      "pageTarget": "Biocompatibility Test Report",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority is taken from source metadata authoritySignal and sourcePath; the body text does not explicitly name FDA."
+    },
+    {
+      "severity": "info",
+      "reason": "Product identification beyond ADD is only available in source metadata/sourcePath, not in the body text."
+    }
+  ]
+}
