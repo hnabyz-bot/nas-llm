@@ -366,3 +366,11 @@ Next P1 bundle:
 - note: ranks 1202 and 1235 passed on direct retry after transient JSON format
   failures; ranks 1245 and 1253 required chunked fallback
 - ops commit: `1eee3d5 feat: complete P1 ranks 1201-1300 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1301-r1400-202606270558`
+- rank range: 1301-1400
+- selected representatives: 100
+- total normalized chars: 2,546,724
+- extraction status: not started at this checkpoint
