@@ -293,3 +293,11 @@ Next P1 bundle:
 - note: rank 641 had a transient JSON parse failure and passed on direct retry;
   no chunked fallback was required
 - ops commit: `49d3ef8 feat: complete P1 ranks 601-700 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r701-r800-202606261744`
+- rank range: 701-800
+- selected representatives: 100
+- total normalized chars: 2,938,495
+- extraction status: not started at this checkpoint

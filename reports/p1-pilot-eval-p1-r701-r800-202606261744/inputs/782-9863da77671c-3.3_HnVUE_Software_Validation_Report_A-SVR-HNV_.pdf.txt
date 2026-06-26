@@ -1,0 +1,4135 @@
+queueId: ingest-1781569954377-6yy
+sourcePath: raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/07_Software Validation/3.3 [HnVUE] Software Validation Report (A-SVR-HNV).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/e28f60f7b67a/3.3 [HnVUE] Software Validation Report (A-SVR-HNV)__e28f60f7b67a_combined.txt
+canonicalGroupId: 9863da77671c
+productSignal: HnX
+authoritySignal: CE/MDR
+pilotRank: 782
+
+SOURCE_TEXT
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 1 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Software Validation Report
+for
+HnVUE
+Product name: Digital Flat Panel X-ray Detector
+(Console software)
+Model name: HnX-R1
+Ref no.: HnVUE
+Report No.: A-SVR-HNV (Rev.0)
+Dept. / Title Name Date Signature
+Prepared R&D Manager KyungSoo LEE July 16, 2025
+Review RA Team Jimin HAN July 16, 2025
+Approval Quality Manager Namkyu HUR July 16, 2025
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 2 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+TABLE OF CONTENTS
+1. Level of Concern ................................................................................................. 5
+2. Human Resources and Responsibilities ............................................................ 6
+3. Software Description .......................................................................................... 7
+3.1. Outline ................................................................................................................................. 7
+3.1.1. Software descriptions ............................................................................................................... 7
+3.1.2. Software layout ........................................................................................................................ 7
+3.1.3. Data format............................................................................................................................... 7
+3.1.4. Robustness and Performance ................................................................................................... 7
+3.2. General requirement ............................................................................................................ 7
+3.2.1. Operational Requirements ........................................................................................................ 8
+4. Software Requirements Specification ............................................................... 9
+4.1. Functional Requirement ...................................................................................................... 9
+4.1.1. Essential function ..................................................................................................................... 9
+4.1.2. Check, logging and error handling conditions ....................................................................... 15
+4.1.3. Layout and Design ................................................................................................................. 16
+5. Architecture Design Chart ........................................................................... 17
+5.1. Software Diagram and Description .............................................................................. 17
+5.1.1. Architecture Design Chart .................................................................................................. 17
+6. Software Design Specification ................................................................... 18
+6.1. Detailed Design Chart....................................................................................................... 18
+6.1.1. Software Design Specification ........................................................................................... 19
+6.1.2. Software Design Chart Descriptions................................................................................. 24
+6.2. Total Process Flowchart ................................................................................................ 32
+6.3. Menu Tree ........................................................................................................................ 33
+6.4. Database .......................................................................................................................... 34
+6.5. Image ................................................................................................................................ 35
+6.6. User Interface Design .................................................................................................... 36
+7. Software Development Environment Description ................................ 39
+7.1. Introduction ...................................................................................................................... 39
+7.2. Concepts .......................................................................................................................... 39
+7.2.1. Responsibilities .................................................................................................................... 39
+7.2.1.1. Management ........................................................................................................................ 39
+7.2.1.2. Head of Development ..................................................................................................... 39
+7.2.1.3. Distribution ........................................................................................................................ 39
+7.2.1.4. Quality Supervisor ........................................................................................................... 39
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 3 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7.3. Software Life Cycle ........................................................................................................ 40
+7.4. Test plan ........................................................................................................................... 41
+7.4.1. Static testing ......................................................................................................................... 41
+7.4.1.1. SDO (Standards Development Organization) implementation..................................... 41
+7.4.1.2. Code review for dynamic testing (Roslyn Analyzer). ..................................................... 41
+7.4.1.3. Detecting memory leaks during debugging ..................................................................... 42
+7.4.2. Dynamic Test ....................................................................................................................... 42
+7.4.2.1. Identifier “ST n” ................................................................................................................. 42
+7.4.2.2. Risk avoidance and error handling ..................................................................................... 42
+7.4.2.3. Function test ....................................................................................................................... 44
+7.4.3. Test Documentation ............................................................................................................ 44
+7.5. Amendments ................................................................................................................... 44
+7.6. Documentation / Main Product File / Risk Management File .................................. 45
+7.7. Software Versioning ....................................................................................................... 45
+7.7.1. Shape identification................................................................................................................ 45
+8. Software Verification and Validation Test ............................................... 46
+8.1. Test environment ............................................................................................................ 46
+8.2. Test report ........................................................................................................................ 48
+8.2.1. Original Code test ................................................................................................................ 48
+8.2.2. Module test ........................................................................................................................... 52
+8.2.3. Dynamic test......................................................................................................................... 53
+8.2.4. Function test ......................................................................................................................... 54
+9. Traceability Analysis ..................................................................................... 59
+10. Hazard Analysis .............................................................................................. 69
+10.1. Severity............................................................................................................................. 69
+10.2. Frequency (Likelihood of Occurrence) ........................................................................ 70
+10.3. Risk Acceptability ............................................................................................................ 71
+10.4. Hazard Analysis .............................................................................................................. 72
+11. List of Attachment ............................................................................................ 89
+12. Revision History ................................................................................................ 90
+13. Unsolved Anomalies ..................................................................................... 91
+13.1. Scope................................................................................................................................ 91
+13.2. Unresolved Anomalies ................................................................................................... 91
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 4 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+No Contents Revision Record
+0 1 2 3 4
+1 Level Of Concern July 16, 2025
+2 Human Resources and
+Responsibilities July 16, 2025
+3 Software Description July 16, 2025
+4 Software Requirement
+Specification July 16, 2025
+5 Application Algorithm
+and Technology July 16, 2025
+6 Architecture Design
+Chart July 16, 2025
+7 Software Design
+Specification July 16, 2025
+8 Software Development
+Environment Description July 16, 2025
+9 Software Verification and
+Validation Test July 16, 2025
+10 Traceability Analysis July 16, 2025
+11 Hazard Analysis July 16, 2025
+12 Revision History July 16, 2025
+13 Software Version History July 16, 2025
+14 Unsolved Anomalies July 16, 2025
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 5 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Document overview:
+This document is a Software Validation Report for HnVUE, the console software for the Digital Flat Panel X-
+ray detector.
+1. Level of Concern
+The following section includes the information required in the FDA guidance document entitled “Guidance for
+the Content of Premarket Submissions for Software Contained in Medical Devices”, May 11, 2005.
+According to below responds, we conclude a Moderate level of concern applies to the AXD software.
+Level of Concern: Moderate
+If the answer to any one question below is Yes, the level of Concern for the Software Device is likely to be
+Major.
+Case 1. Major Level of Concern
+1. Does the Software Device qualify as Blood Establishment Computer Software? No
+2. Is the Software Device intended to be used in combination with a drug or
+biologic?
+No
+3. Is the Software Device an accessory to a medical device that has a Major Level
+of Concern?
+No
+4. Prior to mitigation of hazards, could a failure of the Software Device result in
+death or serious injury, either to a patient or to a user of the device? Examples
+of this include the following:
+a. Does the software Device control a life supporting or life sustaining
+function?
+b. Does the Software Device control the delivery of potentially harmful energy
+that could result in death or serious injury, such as radiation treatment
+systems, defibrillators, and ablation generators?
+c. Does the Software Device control the delivery of treatment or therapy such
+that an error or malfunction could result in death or serious injury?
+d. Does the Software Device provide diagnostic information that directly
+devices a decision regarding treatment or therapy, such that if misapplied
+it could result in serious injury or death?
+e. Does the Software Device provide vital signs monitoring and alarms for
+potentially life threatening situations in which medical intervention
+necessary?
+No
+If the Software Device is not Major Level of Concern and the answer to any one question below is Yes, the
+Level of Concern is likely to be Moderate.
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is Minor.
+Case 2. Moderate Level of Concern
+1. Is the Software Device an accessory to a medical device that has a Moderate
+Level of Concern?
+Yes
+2. Prior to mitigation of hazards, could a failure of the Software Device result in
+Minor Injury, either to a patient or to a user of the device?
+Yes
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to
+an erroneous diagnosis or a delay in delivery of appropriate medical care that
+would likely lead to Minor Injury?
+Yes
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 6 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2. Human Resources and Responsibilities
+Team Person Responsibilities (produced or processed documents)
+SW Team
+SW Engineer
+(2 person)
+SRS (design)
+Software architecture (design)
+Implementation, coding
+SDS (design)
+User Manual (design)
+Hazards analysis (design)
+Software static test report (perform)
+Software dynamic test report (verification)
+Team Manager
+(1 person)
+SRS (approval)
+Software architecture (design, approval)
+SDS (approval)
+Hazards analysis (verification)
+User Manual (verification)
+Software test plan (verification)
+Software test report (verification)
+Traceability analysis (design)
+Validation report (design)
+Test Engineers
+(2 person) Software test report
+Application
+Software Team
+SW Engineer
+(2 person)
+User Manual (verification)
+Proprietary application Design and implementation.
+Casual Software test
+Team Manager
+(1 person)
+SDS (verification)
+User Manual (verification)
+Quality
+Management
+Team
+Team Manager
+(1 person)
+SRS (approval)
+SDS (approval)
+Hazards analysis (approval)
+User Manual (approval)
+Hazards analysis (approval)
+Software test report (approval)
+Traceability analysis (approval)
+Validation report (approval)
+Marketing
+Team
+Team Manager
+(1 person)
+SRS (verification)
+Hazards analysis (verification)
+Customer
+Support
+Team
+Team Manager
+(1 person)
+SDS (verification)
+User Manual (verification)
+Hazards analysis (verification)
+Validation report (verification)
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 7 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3. Software Description
+3.1. Outline
+3.1.1. Software descriptions
+HnVUE, a Digital Flat Panel X-ray Detector (Console Software), is a software used in devices that store,
+enlarge, reduce, view, analyze, transmit, and output medical images.
+3.1.2. Software layout
+3.1.3. Data format
+All image data must be transferred and stored as 16-bit little-endian (Intel byte order) two-dimensional arrays
+without a specific header. The dimensions of the image must be passed as parameters or values to the
+auxiliary procedure in the configuration file. For the stored files, the grayscale range is assumed to be
+0..2^16-1 (16-bit non-negative integers). This applies if the software uses signed and unsigned integer types
+internally for pixel values. Pixels in raw frames are 16-bit non-negative integers.
+3.1.4. Robustness and Performance
+HnVUE is developed in C# language, and memory management is handled by the garbage collector of .NET
+Framework to prevent memory leaks. The software checks the image storage path and notifies the user that
+the specified folder or file should be created or the file should be set if it does not already exist. If new data
+cannot be saved to a read-only database file, the property of the database file is changed to writable when
+the program starts.
+3.2. General requirement
+- Development environment:
+Windows 10 64-bit Professional Edition
+.NET Framework 4.8
+.NET Framework 8
+C# Visual Studio 2022
+
+C++ Visual Studio 2019 (v142)
+SQLite 3.46.1
+- Deployment environment:
+Windows 10 64-bit Professional Edition.
+Windows 11 64-bit Professional Edition.
+VC++ 2008 Redistributable Package SP1
+VC++ 2010 Redistributable Package
+VC++ 2015-2019 (x86) Redistributable Package
+VC++ 2015-2019 (x64) Redistributable Package
+.NET Framework 4.8
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 8 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Character encoding (SRS-C - Character Set): Messages and screen characters are encoded in UNICODE
+by default, while command packets used to communicate with the generator are encoded in ASCII.
+3.2.1. Operational Requirements
+- Hardware requirements
+<Table 1. Hardware>
+Pary Category Descriptions
+Hardware
+CPU Intel® Core™ i5 or higher
+Memory 4G or higher
+Hard disk 200GB or higher
+VGA card Intel UHD 630 or higher
+Monitor 1920x1080 (Optimization)
+- Software requirement
+<Table 2. Software>
+Pary Category Descriptions
+Software
+Operating
+System
+Windows 10 (64-bit) Professional
+Windows 11 (64-bit) Professional
+Application
+Microsoft .Net Framework 4.8
+C++ 2008 Redistributable Package SP1
+C++ 2010 Redistributable Package
+VC++ 2015-2019 Redistributable Package
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 9 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. Software Requirements Specification
+4.1. Functional Requirement
+Function by each module and essential factor that each function must equip in software are as below
+• SRS 100...199 – DICOM Standard
+• SRS 200...299 – Image Acquisition
+• SRS 300...299 – Image Processing
+• SRS 400...499 – Viewer
+• SRS 500...599 – Worklist
+• SRS 600...699 – Study List
+• SRS 700...799 – Configuration
+• SRS 800...899 – Error Handling
+• SRS 900...999 – Logging and Common
+• ASRS 1000...1099 – Equipment Control
+4.1.1. Essential function
+SRS ID Part Function Descriptions Note
+SRS 100 DICOM
+standard
+Image
+Standard
+Supports medical image
+standards.
+Transmits images of
+selected images or images
+of open studies.
+SRS 101 DICOM
+standard
+DICOM Export With the data export feature, you
+can export images in DICOM,
+BMP, JPG, TIFF formats.
+SRS 102 DICOM
+standard
+DICOM Export DICOM image files are
+transferred to the PACS storage
+server.
+SRS 103 DICOM
+standard
+GUI Update - Intuitive and direct
+graphical user interface with
+X-ray detector
+- Optimized exposure
+conditions and image review
+- Reduced unnecessary
+rework and testing
+SRS 200 Image
+Processing
+Image Capture Acquire images captured from
+the detector via Ethernet
+communication.
+The final image must
+properly represent the
+integrated density of the
+object along the X-ray beam,
+i.e. it must be a radiograph
+with at least offset/gain
+correction and bad pixel
+correction.
+SRS 300 Image
+Processing
+Image
+Processing
+SRS 301 Image
+Processing
+ROI
+Processing
+Original image processing after
+image acquisition.
+SRS 302 Image
+Processing
+Tab Changes Improved ROI image processing
+SRS 303 Image
+Processing
+Parameters Display parameters
+SRS 304 Image
+Processing
+Contrast Contrast
+SRS 305 Image Brightness Brightness
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 10 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Processing
+SRS 306 Image
+Processing
+Sharpness Sharpness
+SRS 308 Image
+Processing
+Micro-edge Fine Edge
+SRS 309 Image
+Processing
+Edge
+enhancement
+Edge Strength
+SRS 310 Image
+Processing
+Save
+parameters
+Save Parameter
+SRS 311 Image
+Processing
+Save
+parameters as
+Save As Parameter
+SRS 318 Image
+Processing
+Keep original
+image
+When the user changes the
+image processing parameters of
+an image already sent to PACS,
+the image is duplicated and
+image processing is performed
+to maintain the original image.
+SRS 400 Viewer Take image The captured image is displayed
+on the screen.
+SRS 401 Viewer Select
+ViewPosition
+Perform image processing such
+as brightness, rotation, and
+zoom.
+Capture areas can be
+added/deleted/edited
+using the Procedure
+Manager tool.
+SRS 402 Viewer Procedure
+Step Schedule
+You can configure the display
+location of the DICOM
+information.
+SRS 403 Viewer Display You can select the capture area. W/L, brightness, invert,
+rotate, flip, marker, and
+text functions are
+available.
+SRS 404 Viewer Capacity
+display
+The procedures included in the
+order searched in the worklist
+are automatically registered or
+the user can schedule the
+capture area by adding it directly.
+The icon color changes
+when the capacity is
+larger than the capacity
+set by the user.
+SRS 405 Viewer Stop shooting The acquired image is displayed
+in the preview window.
+SRS 406 Viewer Replace image The capacity of the local storage
+is displayed at the top of the
+screen.
+SRS 407 Viewer Retake image Pause the image acquisition and
+return to the worklist window.
+SRS 408 Viewer Multi-detector Multi-detector support - up to
+3 detectors
+SRS 409 Viewer Image stitching The captured images of the
+patient are stitchable. Chapters
+and two or three images can be
+stitched, and the stitched images
+are included in an existing or
+new series.
+SRS 414 Viewer Image cropping The stitched images have
+windowing values applied.
+SRS 421 Viewer Image
+processing
+The cropping function has been
+improved so that the user can
+crop the image directly.
+SRS 422 Viewer Image tools The image processing tab has
+been added so that the user can
+set the image processing
+parameters in more detail.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 11 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 425 Viewer Image tools Display the exposure index value
+in the viewer.
+SRS 427 Viewer Image stitching Add the 'Notes' tool in the viewer.
+SRS 428 Viewer Image Tools Improve the stitching function so
+that the stitched images have
+similar windowing values.
+SRS 429 Viewer Image Tools Add an image to the viewer via
+the F3 button.
+SRS 430 Viewer Image Tools When the user acquires an
+image in AEC mode, the actual
+exposure time can be displayed
+in the viewer.
+SRS 431 Viewer Image Tools Viewer can measure length.
+SRS 432 Viewer Image Tools Viewer can measure angle.
+SRS 434 Viewer Image
+Processing
+User can save current image
+parameters as defaults in viewer and
+restore image processing
+parameters.
+SRS 437 Viewer Thumbnails There is a thumbnail viewer next to
+the position
+SRS 438 Viewer Fit Added Image Fit button
+SRS 439 Viewer Reset All Reset all feature improvements
+SRS 440 Viewer Invert Image Added Image Invert button
+SRS 441 Viewer Auto Mask (Auto Mask) Qualifier Shutter Master
+area is automatically added
+SRS 443 Viewer Annotation
+Tools
+Add Arrow tool
+SRS 444 Viewer Annotation
+Tools
+Add Line tool
+SRS 445 Viewer Annotation
+Tools
+Added Rectangle, Ellipse tools
+SRS 446 Viewer Annotation
+Tools
+Add Line Segment tool
+SRS 447 Viewer Stitching Added Stitching mode
+SRS 448 Viewer Viewer Compare all selected studies in a
+single screen
+Determines the layout. -
+Supports 1 x 1, 2 x 1, 1 x 2,
+2 x 2, 3 x 1, 1 x 3, 3 x 3
+formats
+SRS 449 Viewer Report Create all selected images as Word
+or PDF files.
+SRS 450 Viewer Print Go to Print window
+SRS 451 Viewer Pause Stop shooting and go to Worklist.
+SRS 452 Viewer Unused Image Mark the thumbnail with an X to
+indicate an unused image.
+SRS 453 Viewer Exit after
+sending image
+to PACS
+After sending the image to
+PACS, exit the capture window.
+SRS 454 Viewer ROI
+Windowing
+You can use ROI Windowing.
+SRS 455 Viewer Zoom in on
+specific area
+When the user places the mouse
+over the desired area, that area
+will be enlarged.
+SRS 456 Viewer Rotate desired
+angle
+It can be rotated to any angle
+desired by the user.
+SRS 500 Worklist PACS patient
+registration
+You can check the capture order
+on the PACS worklist server or
+manually register the order by
+the user.
+The PACS Worklist Server
+Connection Setup is required
+to configure the PACS
+Worklist Server to retrieve
+orders. Accessibility testing
+is performed via the Echo
+feature.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 12 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 501 Worklist Manual entry If the PACS worklist server is not
+connected or there is a network
+failure related to the server, it
+provides the function to manually
+register the shooting list.
+SRS 502 Worklist Search Orders registered by the user on
+the worklist server or manually
+registered can be searched by
+Patient Name.
+SRS 503 Worklist New patient Add Quick Start button for
+manual input in the study list and
+worklist.
+SRS 504 Worklist Manual entry You can change the birthday
+input of a new patient.
+SRS 505 Worklist Worklist There is Merge Study in the
+Studylist and Worklist.
+SRS 506 Worklist Search The date search criteria in the
+Studylist and Worklist can be set
+by the user as 1 Day, 3Days, 1
+Week, 15 Days, 1 Month.
+SRS 507 Worklist Manual entry Add the function to automatically
+generate Accession No. for a
+new patient.
+SRS 508 Worklist Manual entry Add "Description" input item to a
+new patient.
+SRS 509 Worklist Manual Entry Separates the patient name text
+of a new patient into First Name,
+Middle Name, Last Name.
+SRS 510 Worklist Delete Removes a study from the
+Worklist if the study is removed
+from the Worklist server.
+SRS 512 Worklist Edit Patient
+Information
+Edits patient information.
+SRS 600 Studylist Shooting List Ability to view locally stored data
+SRS 601 Studylist Manage Image
+Storage
+The captured images are stored
+on the local hard disk and can be
+viewed/deleted/edited using the
+Studylist tab.
+Saving image data requires
+sufficient space on the hard
+disk, and images cannot be
+saved on a hard disk with
+insufficient capacity.
+SRS 602 Studylist Database Patient information and capture
+information are stored in the
+database. Data in the database
+can be viewed, deleted, and
+edited using the Studylist tab.
+SRS 603 Studylist Export Adds an Export button.
+SRS 604 Studylist Overwrite When the user saves an image,
+if a file with the same name
+already exists, the existing file
+will be overwritten.
+SRS 605 Studylist Delete Confirms again when deleting a
+study.
+SRS 606 Studylist Send DICOM The user can send DICOM files
+to multiple servers on the server.
+SRS 607 Studylist New Patient Adds a "New Patient" button to
+the study list.
+SRS 608 Studylist History
+Manager
+Administrators can analyze logs to
+determine which user accounts have
+collected, deleted, and recaptured
+images.
+SRS 609 Studylist History You can export the log for
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 13 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Manager acquired, deleted, and re-shot
+images to a file (log format).
+SRS 610 Studylist Query &
+Search
+Add "Query & Search" function
+to Studylist.
+SRS 611 Studylist Search Add search criteria by pressing
+"All" button in Studylist.
+SRS 612 Studylist Print Add Print button to Studylist
+SRS 613 Studylist Search Improves the search speed of
+studies.
+SRS 614 Studylist Transfer
+Progress
+After sending images, display the
+image sending results in
+thumbnails.
+SRS 615 Studylist Create Patient The name field is expressed in 3
+fields (F, M, L).
+SRS 617 Studylist Hide Suspend, Hide can be used.
+SRS 618 Studylist DICOM Print Users can create print images in
+Print viewer.
+SRS 619 Studylist DICOM Print Users can show or hide the list of
+information that appears in the print
+layout.
+SRS 700 Setting Settings Configuration Settings HnVUE environment
+settings are stored and
+managed in the
+configuration config.
+Automatically deleted
+when the user-selected
+capacity or cycle is
+reached.
+SRS 701 Setting System Change the date setting of the
+auto-delete function in Settings.
+HnVUE environment
+settings are stored and
+managed in the
+configuration config.
+Automatically deleted
+when the user-selected
+capacity or cycle is
+reached.
+SRS 702 Setting Account (Day, Week, Month, Capacity)
+SRS 703 Setting Save
+Annotation
+Administrator can change the
+administrator password in
+Settings.
+SRS 704 Setting Select Save Bit User can set whether to save
+Annotation or not.
+SRS 705 Setting Stitching save
+size
+User can choose whether to
+save image in 14bit or 16bit.
+SRS 706 Setting Stitching move
+size
+When saving Stitching image,
+you can choose to save among
+1:1, 1:2, 1:3, 1:4.
+SRS 708 Setting View mode User can set the size of the
+image position movement by
+clicking the button in the
+Stitching window.
+SRS 709 Setting Export User can choose between
+TileView and ListView when
+viewing the patient list.
+SRS 712 Setting Annotation size User can change the DICOM file
+save path when sending DICOM
+file.
+SRS 713 Setting Overlay
+location
+Reduce the size of the text
+annotation displayed in the
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 14 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+viewer.
+SRS 714 Setting Create Account Improve the viewer so that user
+can set the image position and
+patient information text.
+SRS 715 Setting Password
+Password
+When creating an account,
+encrypt and save the password
+in the DB
+SRS 716 Setting Input Input, File
+Loading
+Verification
+Verify the characters entered in
+the user input section
+SRS 717 Setting Audit Log Verify the files imported by the
+user.
+SRS 718 Setting Log The administrator can check
+what the user did, when, and
+who it is.
+SRS 719 Setting Integrity
+Verification
+You can search and find the log.
+SRS 720 Setting BackUp When running the program or
+through the button in the settings
+window, check if specific files are
+properly located.
+SRS 721 Setting Restore Back up the data of the day or
+the previous day through the
+user-selected cycle or button.
+SRS 722 Setting Administrator
+Account
+You can restore by selecting the
+folder that the user backed up.
+SRS 723 Setting Change PW There is an administrator
+account so you can manage the
+sub-account settings.
+SRS 724 Setting PW Strength You must change the PW
+according to the period set by
+the PW administrator.
+SRS 725 Setting Login Failed If login fails, the user will be
+notified of the reason for the
+failure.
+SRS 726 Setting Show
+Password
+When displaying the password, it
+will be displayed as ****.
+SRS 727 Setting Consecutive
+Login Failures
+If login fails 5 times in a row, the
+account will be locked.
+You can log in again when
+the administrator account is
+unlocked
+SRS 728 Setting Change
+Default PW
+When the default password is
+used, a password change
+notification will be displayed so
+that the password can be
+changed.
+SRS 900 Logging and
+Common
+Login Password must be at least 8
+characters long. (HIPAA
+regulations)
+SRS 901 Logging and
+Common
+Exit Added "Exit" button at the top of
+the program, and in shooting or
+viewer mode, pressing "Exit"
+button will take you to the
+worklist.
+SRS 904 Logging and
+Common
+Performance Use only parameters of image
+processing function and improve
+save function
+SRS 905 Logging and
+Common
+Import Import DICOM images
+SRS 906 Logging and Print Added overlay function
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 15 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Common
+SRS 907 Logging and
+Common
+Parameter
+Import/ Export
+Image Processing Parameter Load
+Image Processing Parameter save
+SRS 909 Logging and
+Common
+Stitching Stitching Button
+SRS 910 Logging and
+Common
+Multilingual Multilingual support English, Spanish,
+Portuguese
+SRS 911 Logging and
+Common
+DCM
+Encryption
+Encryption of security-required
+header information for all DCM
+files
+Decrypt only on
+transmission
+SRS 912 Logging and
+Common
+System Usage Load message that unauthorized
+persons are liable for civil and
+criminal charges when accessing
+the system
+
+SRS 913 Logging and
+Common
+DB Encryption Encrypt the DB so that only
+those with a password can
+access it.
+SRS 914 Logging and
+Common
+Log Encryption Encrypt the DB so that only
+those with a password can
+access it.
+SRS 1007 Equipment
+Control
+Detector Users can check the information of
+the wireless sensor.
+The information is displayed
+at the bottom of the program.
+Details are as follows:
+- Wireless signal strength
+- Battery level
+- Temperature of the detector
+4.1.2. Check, logging and error handling conditions
+SRS
+ID
+Part Function Descriptions Note
+SRS
+800
+Error
+handling
+SRS 200 It is recorded with the event
+that occurred in the log file.
+SRS
+801
+Error
+handling
+Check detector connection
+error
+It is recorded in the log file as
+“Detector name Message:
+Disconnected”.
+SRS
+804
+Error
+handling
+Internal log image
+acquisition success
+It is recorded in the log file as
+“Acquired Image: Image
+name”.
+SRS
+805
+Error
+handling
+SRS 453 The message “Do you want to
+send all images?” appears.
+SRS
+806
+Error
+handling
+SRS 605 The message “Do you want to
+delete study?” appears.
+SRS
+807
+Error
+handling
+Auto calibration Every time you run
+HnVUE, a calibration is
+automatically performed
+to ensure image quality.
+SRS
+808
+Error
+handling
+SRS 701 If the automatic deletion capacity
+or date is applicable, the message
+“The automatic deletion conditions
+have been satisfied. Would you
+like to proceed with automatic
+deletion?” appears.
+SRS
+810
+Error
+handling
+Image processing
+SRS
+812
+Error
+handling
+DICOM standard
+SRS
+813
+Error
+handling
+DICOM storage is
+complete.
+“Save DICOM file” and the
+actual path saved to the log
+file.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 16 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS
+814
+Error
+handling
+Send images that could not
+be acquired by DICOM.
+Logs events for reasons why it
+could not be imported.
+SRS
+815
+Error
+handling
+DICOM transmission in
+progress
+Shows the transfer rate.
+SRS
+816
+Error
+handling
+DICOM transmission failure A red icon appears in the
+lower right corner of the
+DICOM image.
+If the transfer is
+successful, the icon will
+be green, if it fails, it will
+be red. SRS
+817
+Error
+handling
+DICOM transmission was
+canceled.
+A red icon appears in the
+lower right corner of the
+DICOM image.
+SRS
+818
+Error
+handling
+DICOM transmission is
+complete.
+A green icon appears in the
+lower right corner of the
+DICOM image.
+SRS
+819
+Error
+handling
+Environment
+SRS
+820
+Error
+handling
+If you change the language,
+you need to restart.
+A message appears that says
+“Please Restart the Program.”
+SRS
+821
+Error
+handling
+Click the Apply button to
+apply without restarting.
+A message appears that says
+“Save”.
+4.1.3. Layout and Design
+- Login dialog box
+- Colorful layout design
+- Image resources for title bar and dialog (e.g. png, bmp)
+- Icon design - more visual reorganization
+- Button design - text-based
+- Font - multilingual ready
+- Cursor design – custom
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 17 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+5. Architecture Design Chart
+5.1. Software Diagram and Description
+5.1.1. Architecture Design Chart
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 18 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6. Software Design Specification
+6.1. Detailed Design Chart
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 19 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.1.1. Software Design Specification
+• 100… 199 – Common Features
+• 200.. 299 – Capture and Acquisition
+• 300.. 399 – Image Processing Functions
+• 400.. 499 – Viewer
+• 500.. 599 – Worklist
+• 600.. 699 – Studylist
+• 700.. 799 – Settings
+• 800.. 899 – Logging and Error Handling
+• 900.. 999 – Common
+• 1000.. 1099 – Equipment Control
+SDS ID SRS ID Software Design Output User
+manual
+Note
+SDS 100 SRS 100 DICOM Module
+SDS 101 SRS 101 Image Export Module 4.2.3 - 7 Export
+SDS 102 SRS 102 Image Export Module 4.2.3 - 8 PACS transfer
+SDS 103 SRS 103 Device Control Module - Intuitive and direct graphical
+user interface with X-ray detector
+- Optimized exposure conditions
+and image review
+- Reduce unnecessary rework
+and testing
+SDS 104 Using the Advanced Installer
+SDS 105 Find and Apply System
+Resolution
+SDS 106 Default language is English. Text
+input and data character set is
+UTF-8. Software Serial Number
+Key Management
+SDS 107 Software Serial Number Key
+Management
+SDS201 SRS 200 Viewer Module 4.3
+SDS204 SRS 600 Study List Module 4.2
+SDS205 SRS 601
+SRS 602
+Study List Module 4.2
+Studylist
+SDS 206 DICOM Module Library software interface.
+Acquires raw frames from the
+detector.
+SDS 207 DICOM Module Convert raw images including
+metadata (patient, collection,
+etc.) to DICOM images
+SDS 208 DICOM Module
+SDS 301 SRS 300 Image processing module None
+SDS 302 SRS 301 Image processing module None Improved ROI functionality
+SDS303 SRS 302 Image processing module 4.3.1
+SDS 304 SRS 303 Image processing module 4.3.1 Parameter display
+SDS 305 SRS 304 Image processing module 4.3.1 Parameter control
+SDS 306 SRS 305 Image processing module 4.3.1 Parameter control
+SDS 307 SRS 306 Image processing module 4.3.1 Parameter control
+SDS 309 SRS 308 Image processing module 4.3.1 Parameter control
+SDS 310 SRS 309 Image processing module 4.3.1 Parameter control
+SDS 311 SRS 310 Image processing module 4.3.1 Save Parameter
+SDS 312 SRS 311 Image processing module 4.3.1 Save As Parameter
+SDS 317 SRS 318 Image processing module
+SDS 401 SRS 400 Image processing module 7. You can configure where the
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 20 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 401 DICOM information is displayed
+in the viewer.
+SDS 402 SRS 402 Image processing module Capture areas can be
+added/deleted/edited using the
+Procedure Manager tool.
+SDS 403 SRS 403 Viewer Module 4.3
+SDS 404 SRS 404 Main Module 4.2.4 - 1 Local storage capacity
+SDS 405 SRS 405 Worklist Module 4.3.6 - 2 Pause image collection and
+return to the worklist window.
+SDS 406 SRS 406 Main Module 4.3.5 - 8 Images are temporarily stored in
+the trash.
+SDS 407 SRS 407 DICOM Module 4.3.5 -5 Pictures are discarded in the
+trash and retaken.
+SDS 408 SRS 408 Main Module 4.3 Stand
+Table
+Portable
+SDS 409 SRS 409 Image Processing Module 4.4 After stitching, the Windowing
+value is applied to the image.
+SDS 410 SRS 414 Image Processing Module 4.3.2 Image Crop
+SDS 411 SRS 421 Image Processing Module 4.3.
+SDS 412 SRS 422 Main Module 4.3
+SDS 413 SRS 425 Main Module 4.3.2
+SDS 414 SRS 427 Image Processing Module 4.4 Improve stitching so that stitched
+images have similar windowing
+values.
+SDS 415 SRS 428 Main Module Press F3 button to get sample
+image.
+SDS 416 SRS 429 Main Module 4.3.7 You can display exposure time.
+SDS 417 SRS 430 Image Processing Module 4.8.9 - 1 You can adjust the annotation
+text size.
+SDS 418 SRS 431 Image Processing Module 4.3.4 - 1 Length measurement
+SDS 419 SRS 432 Image Processing Module 4.3.4. - 2 Angle measurement
+SDS 420 SRS 434 Image Processing Module 4.3.1 Image processing parameters
+Load Save
+SDS 421 SRS 436 Image Processing Module 4.3.7
+SDS 422 SRS 437 Viewer Module 4.3.1 Thumbnail View
+SDS 423 SRS 438 Image Processing Module 4.3.3 - 8 Fit Button
+SDS 424 SRS 439 Image Processing Module 4.3.3
+SDS 425 SRS 440 Image Processing Module 4.3.3 - 9 Invert Image Colors
+SDS 426 SRS 441 Image Processing Module 4.3.2 - 1 Auto Crop
+SDS 427 SRS 442 Image Processing Module 4.3.3
+SDS 428 SRS 443 Image Processing Module 4.3.4 - 3 Add Arrow
+SDS 429 SRS 444 Image Processing Module 4.3.4 - 1 Line Tool
+SDS 430 SRS 445 Image Processing Module 4.3.4 - 4,5
+SDS 431 SRS 446 Main Module 4.3.4. - 1 Add Line
+SDS 432 SRS 447 Main Module 4.3.5 - 9 Stitching Button
+SDS 433 SRS 448 Main Module 4.7 Layout Button
+SDS 434 SRS 449 Main Module 4.6 Report Button
+SDS 435 SRS 450 Image Processing Module 4.5 Print Button
+SDS 436 SRS 451 DICOM Module 4.3.5 - 7
+SDS 437 SRS 452 Image Processing Module 4.3.6 - 3 Thumbnail X Mark
+SDS 438 SRS 453 Image Processing Module 4.3.6. - 4 Exit after sending image
+SDS 439 SRS 454 Image Processing Module 4.3.3 - 10 ROI Windowing
+SDS 440 SRS 455 Worklist Module 4.3.3 - 11 Specific area zoom function
+SDS 441 SRS 456 Worklist Module 4.3.3 - 6 Desired angle rotation
+SDS 500 SRS 500 Worklist Module 4.8.5
+SDS 501 SRS 501 Image Processing Module 4.8.5
+SDS 502 SRS 502 Image Processing Module 4.2.2 Search by Patient Name
+SDS 503 SRS 503 Image Processing Module 4.2.3 - 1
+SDS 504 SRS 504 Worklist Module 4.2.3 - 1 You can change the date of birth
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 21 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+for new patients.
+SDS 505 SRS 505 Worklist Module 4.2.3 - 6
+SDS 506 SRS 506 Worklist Module 4.2.2 Search for dates in Studylist and
+Worklist
+SDS 507 SRS 507 Worklist Module 4.2.3 -1
+SDS 508 SRS 508 Worklist Module 4.2.3 - 1
+SDS 509 SRS 509 Worklist Module 4.2.3 - 1
+SDS 510 SRS 510 Worklist Module 4.8.6
+SDS 512 SRS 512 Worklist Module 4.2.3 - 3
+SDS 513 SRS 513 Database Module 4.2.3 - 4
+SDS 600 SRS 600 Study List Module 4.2
+SDS 601 SRS 601 Database Module 4.2.4 - 1 Check local storage capacity
+SDS 602 SRS 602 Worklist Module None Save patient information to
+database
+SDS 603 SRS 603 Image Export Module 4.2.3 - 7 Export
+SDS 604 SRS 604 Image Export Module 4.2.3 - 7 Overwrite if there is an identical
+name when exporting
+SDS 605 SRS 605 Study List Module 4.2.3 - 4
+SDS 606 SRS 606 Study List Module 4.2.3 - 8 Create a new patient
+SDS 607 SRS 607 Study List Module 4.2.3 - 1 Create a new patient
+SDS 608 SRS 608 Main Module 4.8.1.2 -1 Administrators can analyze
+logs.
+SDS 609 SRS 609 Main Module 4.8.1.2 -1
+SDS 610 SRS 610 Study List Module 4.2.2
+SDS 611 SRS 611 Study List Module 4.2.2
+SDS 612 SRS 612 Main Module 4.2.3 - 10 Add a Print button to the Studylist
+SDS 613 SRS 613 Study List Module 4.2.2
+SDS 614 SRS 614 Image Export Module 4.2.3 - 7 When you transfer an image, a
+progress bar is displayed.
+SDS 615 SRS 615 Study List Module 4.2.3 - 1
+SDS 616 SRS 616 DICOM Module 4.2.3 - 7
+SDS 617 SRS 617 Study List Module 4.2.3 - 5 You can use Suspend and Hide.
+SDS 618 SRS 618 Viewer Module 4.5 Users can create print images
+in the Print Viewer.
+SDS 619 SRS 619 Study List Module 4.5 Users can drag and drop
+images onto the layout, and
+the images will be placed in
+the layout.
+SDS 700 SRS 700 Study List Module Users can show or hide the
+list of information displayed in
+the print layout.
+SDS 701 SRS 701 Main Module 4.8.1.3 HnVUE preferences
+information is stored and
+managed in the configuration
+config.
+SDS 702 SRS 702 Main Module 4.8.2
+SDS 703 SRS 703 Main Module 4.8.8 - 7 Users can set whether to save
+annotations or not
+SDS 704 SRS 704 Main Module 4.8.8 - 5 Save by setting bits
+SDS 705 SRS 705 Main Module 4.8.8 - 8 Stitching save ratio can be set
+SDS 706 SRS 706 Main Module 4.8.8 - 9
+SDS 708 SRS 708 Export Image Module 4.2.2
+SDS 709 SRS 709 Study List Module 4.2.3 - 7
+SDS 712 SRS 712 Main Module 4.8.9 - 1 Resize annotation
+SDS 713 SRS 713 Main Module 4.8.9 - 2,3
+SDS 714 SRS 714 Main Module 4.8.2 Do not create identical
+accounts
+SDS 715 SRS 715 Database Module 4.8.2 Encrypt and store passwords
+in the database.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 22 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SDS 716 SRS 716 Study List Module Validates the values entered
+in the user input section and
+verifies the files being
+imported.
+SDS 717 SRS 717 Main module 4.8.1.2 - 1 Audit Log
+SDS 718 SRS 718 Main module 4.8.1.2 - 1 Audit Log
+SDS 719 SRS 719 Main module 4.8.1.2 - 2 Integrity Verification
+SDS 720 SRS 720 Main module 4.8.1.4 Backup
+SDS 721 SRS 721 Main module 4.8.1.4 Restore
+SDS 722 SRS 722 Main module 4.8.2 Administrators can manage
+sub-accounts.
+SDS 723 SRS 723 Database Module 4.8.2 Change Password
+SDS 724 SRS 724 Main module 4.8.2 Password Strength
+SDS 725 SRS 725 Main module 4.1 Login Failure
+SDS 726 SRS 726 Main module 4.1 Displays password as ***
+when logging in
+SDS 727 SRS 727 Main module 4.1 Account is locked after 5
+consecutive failed logins
+SDS 728 SRS 728 Main module 4.1 Change Default PW
+SDS 800 SRS 800 DICOM Module None Recorded with the events that
+occurred in the log file.
+SDS 801 SRS 801 Main module None It is recorded in the log file as
+“Detector name Message:
+Disconnected”.
+SDS 804 SRS 804 DICOM Module None It is recorded in the log file as
+“Acquired Image: Image
+name”.
+SDS 805 SRS 805 Database Module None It is displayed as “Do you
+want to send all images?”.
+SDS 806 SRS 806 Study List Module None It is displayed as “Do you
+want to delete study?”
+SDS 807 SRS 807 Viewer Module None
+SDS 808 SRS 808 Work List Module None If the automatic deletion capacity
+or date is applicable, the
+message “The automatic deletion
+conditions have been satisfied.
+Would you like to proceed with
+automatic deletion?” appears..
+SDS 810 SRS 810 Viewer Module None
+SDS 812 SRS 812 Viewer Module None
+SDS 813 SRS 813 Viewer Module None Record “Save DICOM File” and
+the actual path saved to the log
+file.
+SDS 814 SRS 814 Viewer Module None Logs events for reasons why
+it cannot be imported.
+SDS 815 SRS 815 Viewer Module None Shows the transfer rate.
+SDS 816 SRS 816 Viewer Module None A red icon appears in the
+lower right corner of the
+DICOM image.
+SDS 817 SRS 817 Viewer Module None A red icon appears in the
+lower right corner of the
+DICOM image.
+SDS 818 SRS 818 Viewer Module None A green icon appears in the
+lower right corner of the
+DICOM image.
+SDS 819 SRS 819 Main Module None
+SDS 820 SRS 820 Main Module None A message appears saying
+"Please Restart the Program".
+SDS 821 SRS 821 Main Module None A message appears saying
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 23 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+"Saved".
+SDS 900 SRS 900 Main Module None Password Rules
+SDS 901 SRS 901 Main Module None Exit Button
+SDS 902 SRS 902 Main Module None
+SDS 903 SRS 903 Main Module None
+SDS 904 SRS 904 Image Processing Module None Image processing functions
+SDS 905 SRS 905 DICOM Module 4.8.8 - 2 Save function improvement
+SDS 906 SRS 906 Main Module 4.5.3 - 5 DICOM DIR import
+SDS 907 SRS 907 Main Module 4.3.1 Overlay added function
+SDS 909 SRS 909 Main Module None Image Processing Parameter
+Load
+SDS 910 SRS 910 Main Module 4.8.1.1 Image Processing Parameter
+save
+SDS 911 SRS 911 DICOM Module None Stitching function added
+SDS 912 SRS 912 Main Module 4.1 Multilingual support
+SDS 913 SRS 913 Database Module None DICOM header information
+encryption
+SDS 914 SRS 914 Main Module None Program usage notification
+SDS 1007 SRS 1007 Main Module DB encryption
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 24 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.1.2. Software Design Chart Descriptions
+1) Main module
+- Controls each sub-module of HnVUE.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 25 / 91
+
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2) Worklist module
+- Retrieve patient information from OCS server or PACS worklist server.
+- View, save, edit, and delete patient information from local database.
+- Switch from worklist mode to shooting (control panel) mode for X-ray exposure.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 26 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3) Viewer Module
+- Image Display Module
+· Displays DICOM image files on the monitor.
+- Post processing Module
+· Improves image quality for diagnosis.
+- DICOM Module
+· Send DICOM images to a PACS server or print them.
+· Export DICOM images to external storage.
+· Save images to local disk.
+- Device Control Module
+· Collect raw images from the detector.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 27 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4) Worklist Module & Browser Module
+- Save, edit, and delete study and patient information.
+- Retrieve study information.
+- Edit, delete, transfer, and back up from local disk.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 28 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+5) DICOM Module
+- Create and store DICOM images.
+- Send to PACS server or print.
+- Manage print management service class, archive service class, and modality worklist.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 29 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6) Post Processing Module
+- Improved image quality
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 30 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7) Database Module
+- Search, save, edit, and delete patient information, image information, and study information.
+8) Database Module
+- Export to DICOM printer.
+- Export to DCM, JPG, BMP, TIF formats.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 31 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+9) Image display Module
+- This module displays the acquired image, and displays the image after post-processing.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 32 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.2. Total Process Flowchart
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 33 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.3. Menu Tree
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 34 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.4. Database
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 35 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6.5. Image
+1) Image Processing Parameters
+A hospital worker can adjust the image processing parameters.
+Use files to improve image quality instead of the default image processing parameters.
+Please refer to the HnVUE User Manual for instructions on how to adjust the image processing parameters.
+2) Algorithm Principles and Architecture
+A technique for decomposing an image into multiple resolutions and representing high frequency (details) hierarchically.
+Generating Gaussian Pyramid
+- Gaussian blur the original image → downsample → create multiple resolutions
+Generating Laplacian Pyramid
+- Calculate the difference between the Gaussian image at each step and the image up sampled to a higher
+resolution
+- This difference (high frequency component) becomes the Laplacian image
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 36 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3) Block diagram
+6.6. User Interface Design
+1) Worklist Mode
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 37 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+2) Shooting Mode
+3) Browser Mode
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 38 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4) Setting Mode
+5) Image processing Mode
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 39 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7. Software Development Environment Description
+7.1. Introduction
+This procedure manual (PM) describes the procedure for the development process. It will allow medical
+software to meet all legal requirements when being developed. Development faults will be avoided by
+means of a planned development process with an integral risk management system. A description is given
+on how the necessary testing, verification and validation steps are to be taken, from the Software
+Requirement Specification through the release of the software and how changes to the software are handled.
+There are also guidelines for incorporating amendments. The development process fulfils the requirements
+21 CFR 820.30 Design Controls.
+7.2. Concepts
+Verification (suitability for the application)
+ü Verification confirms that the objectively defined requirements have been met.
+Validation (suitability for implementation)
+ü This confirms that software has been tested for usability against all items in the requirements
+specification. It must also satisfy all the internal requirements and demands of the user.
+PEMS: Programmable electrical medical system
+PESS: Programmable electronic sub-system
+7.2.1. Responsibilities
+7.2.1.1. Management
+ü Issuing a development instruction
+ü Approving the planned budgets
+ü Evaluating and authorizing the requirement specifications (development tasks)
+7.2.1.2. Head of Development
+ü Authorizing the project plan and assessing observance
+ü Initiating testing, verification and validation of the development and authorization of individual
+development outcomes as they occur
+ü Coordination of programming for the individual packages
+ü Obtaining the currently valid norms for projects
+ü Approving amendments
+ü Authorizing risk analysis
+7.2.1.3. Distribution
+ü Obtaining and assessing market information
+ü Performing application tests with potential clients to validate the products
+7.2.1.4. Quality Supervisor
+ü Ensuring that the documentation is complete.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 40 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7.3. Software Life Cycle
+Software development process at software follows a classic waterfall methodology, as illustrated in the
+following chart
+Analysis. The activity consists of establishing requirements for as much as possible before the design phase. The
+requirements are documented in the software-specific requirements and design notes. When enough of the requirements
+are gathered and analyzed for this iteration of the prototype, the activities shift into the design phase.
+Planning. This activity constructs the software development plan. This plan outlines the tasks, responsibilities, resources,
+and other items pertinent to the specific development project.
+Design. This activity considers four functional attributes of the software: data structure, software architecture,
+functionality, and interface characterization. The design is documented in design documents.
+Implementation. The implementation phase converts the design into a machine readable form. The software source
+code is created in accordance with HnVUE's coding conventions. To verify that the code created is consistent with
+Company standards, design reviews/inspections are held.
+Qualification. The qualification phase verifies that the design and code implemented meet the requirements. Testing
+ensures that defined input will produce actual results that agree with required results.
+Maintenance. Once the software enters a released state, the only software changes allowed are to fix identified defects
+in the code or to support approved enhancements. All identified system software defects are recorded on System
+Discrepancy Reports (SDR) forms or submitted electronically to the Modification Request (MR) database.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 41 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7.4. Test plan
+We categorize our tests into two groups:
+· Static analysis – expert review and analysis of software source code and DEBUG releases.
+· Dynamic analysis – software execution for test data collection and processing.
+7.4.1. Static testing
+7.4.1.1. SDO (Standards Development Organization) implementation
+This table verifies that the source code of the software implements the specified SDO.
+Module SDO application (Y / N) Note
+Main module Y
+Worklist module Y
+Shooting module Y
+Viewer module Y
+Studylist module Y
+DICOM module Y
+Image processing module Y
+Database module Y
+Image export module Y
+ASCII Encoding Description
+Data bits are a measure of the actual data bits in a transmission. When a computer sends a frame of
+information, the actual amount of data may not be the full 8 bits. Standard values for a frame are 5, 7, or 8
+bits. Which setting you choose depends on the information you are transmitting. For example, standard
+ASCII has values from 0 to 127 (7 bits). Extended ASCII uses 0 to 255 (8 bits). If the data you are
+transmitting is standard ASCII, sending 7 bits of data per frame is sufficient for communication. A frame is a
+single byte transmission that includes a start/stop bit, data bits, and parity. The actual number of bits
+depends on the protocol you choose, so the term "frame" can be used to cover all instances.
+7.4.1.2. Code review for dynamic testing (Roslyn Analyzer).
+The result of running Roslyn Analyzer on the HnVUE solution and saving it as .sarif
+It says there are no warnings or analyzer rule violations in your code.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 42 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+7.4.1.3. Detecting memory leaks during debugging
+Software developers should carefully check whether there are any reports of memory leaks in the DEBUG
+release of their software when starting from the IDE's debugger. The specific reasons for reported memory
+leaks should be found and addressed before the dynamic testing phase.
+7.4.2. Dynamic Test
+7.4.2.1. Identifier “ST n”
+0001-0999 Tests for specific SRS (concerns about expected errors)
+1000-1999 Tests for specific functionality
+7.4.2.2. Risk avoidance and error handling
+ID SRS ID Descriptions Operation and expected results.
+ST 0001A SRS 200 Obtain the captured image and
+delete the image in the list.
+Restores the remaining capacity of the main
+memory to the level before taking the image.
+ST 0002A SRS 608
+SRS 609
+An error occurs due to the
+user's incorrect behavior.
+When a problem occurs, the administrator can
+check the cause of the problem through the Log.
+ST 0004A SRS 102
+SRS 318
+SRS 453
+The network connection is lost
+during DICOM transmission.
+The color of the paper airplane icon changes to
+red when transmission fails. If transmission is
+successful, it is displayed in green.
+ST 0004C SRS 700 The program terminates during
+DICOM transmission.
+It shows a message that the sequence does not
+match.
+ST 0006A SRS 603
+SRS 604
+DICOM transmission is
+canceled during transmission.
+A folder is created in the part that the user
+pressed or the path that was written down, so
+that the image is not failed to be saved.
+ST 0006B SRS 404 The configuration is set to an
+invalid value.
+The upper capacity icon changes color when it
+exceeds the capacity set by the user.
+ST 0007A SRS 500
+SRS 501
+The image storage path may
+not match.
+The worklist server cannot see the order and can
+only manually search for orders stored locally.
+ST 0008A SRS 606 You can check the capacity of
+the local storage.
+The color of the paper airplane icon changes to
+red when transmission fails. If transmission is
+successful, it is displayed in green.
+ST 0009A SRS 500
+SRS 501
+SRS 503
+SRS 504
+The worklist server connection
+information in the preferences
+is not set.
+Patient registration is not possible. However, it
+tells you why the patient cannot be registered.
+ST 0101A User manual
+1.1
+Install an existing version that
+has not been fixed.
+Existing bugs and issues have been raised.
+ST 0010A SRS 719 Delete any files from the
+HnVUE installer.
+You can check the integrity in the settings
+section to see if the file is missing or the version
+is different.
+ST 0011A SRS 601
+SRS 605
+Delete captured images from
+the Capture tab.
+A pop-up message "Do you want to delete?" is
+displayed and clicking "No" will cancel the
+deletion command.
+ST 0011B SRS 400 Edit images. You can get better images and see the images
+that the user wants.
+ST 0011C SRS 601
+SRS 605
+Delete studies. A pop-up message will be displayed to confirm
+whether to delete. You can secure local storage
+capacity.
+ST 0012A SRS 725
+SRS 727
+Enter a non-existent user ID or
+incorrect password when
+starting HnVUE.
+A message will be displayed saying, “The ID you
+entered does not exist or you entered an
+incorrect ID or password.”
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 43 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+ST 0013A SRS 404 Compare the current local
+storage (hard disk) capacity
+displayed at the bottom of the
+Viewer tab with the actual local
+storage.
+If you enter the wrong ID or password 5 times in
+a row, your account will be locked.
+ST 0014A SRS 502
+SRS 503
+SRS 720
+SRS 721
+SRS 717
+SRS 449
+SRS 449
+SRS 450
+Captions for GUI controls are
+not displayed properly.
+The capacity is the same as the local storage
+(hard disk) and the capacity displayed at the top
+of the viewer tab.
+ST 0015A SRS 422
+SRS 425
+SRS 429
+SRS 430
+SRS 431
+SRS 432
+SRS 437
+SRS 438
+SRS 439
+SRS 440
+Images and overlays are not
+displayed properly in the
+Viewer.
+The user cannot read the caption and cannot
+know what happens when he clicks the button,
+but the administrator can check the action
+
+through the log to find out the problem.
+ST 0016A SRS 421
+SRS 300
+Image cannot be processed. The image display module tries to display the
+image again and other tools do not work when
+the image is not there.
+ST 0016B SRS 610
+SRS 611
+SRS 613
+Users search by setting search
+conditions in the study list.
+The original image is displayed and the user can
+reprocess the image.
+ST 0016C SRS 617 Users hide specific items in the
+study list.
+The search condition is wrong and you may get
+a different search item than what you want.
+ST 0016D SRS 720
+SRS 721
+Users can back up and roll
+back.
+You may not be able to check the hidden items
+again.
+ST 0017A SRS 701 The auto-delete function was
+set by the user's mistake.
+You can view it by using the option to view
+hidden items.
+ST 0018A SRS 702
+SRS 715
+SRS 723
+SRS 724
+SRS 728
+The user wants to change the
+administrator password.
+This program requires the user to log in. And
+only the administrator can change his password.
+ST 0019B SRS 303 The user can execute
+commands for image
+processing functions by right-
+clicking in the image
+processing area.
+You can adjust the Window Width and Level.
+ST 0019C SRS 304
+SRS 305
+SRS 306
+SRS 308
+SRS 309
+The user can adjust image
+processing parameters as
+desired, such as LUT, contrast,
+brightness, frequency,
+sharpness, etc.
+The values in the slider bar are changed and
+applied to the currently displayed image.
+ST 0019E SRS 310
+SRS 311
+The user can load image
+processing parameters by
+clicking the Load Parameters
+menu.
+The image processing parameters load what you
+want to load.
+ST 0019G SRS 312 The changed image
+processing parameters are
+saved in the database.
+If the database cannot be accessed, a message
+will pop up to let you know that the parameters
+cannot be saved.
+ST 0020A SRS 447 The automatic stitching
+argument has been completed
+with arguments.
+The stitched image is added to the thumbnail list.
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 44 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+ST 0020D SRS 439 The user applied the
+parameters, but this was a
+user error and the user wants
+to restore the previous image.
+If the user clicks the 'Reset' button, the image
+will revert to the previous image.
+ST 0025B SRS 318 The image has been sent to
+PACS. Change the image
+processing parameter values
+for that image.
+Before starting the image processing, the image
+is duplicated and the changed values are applied
+to the duplicated image, preserving the original
+image.
+ST 0027A SRS 448 Execute the Advanced DICOM
+Print function. Drag the image
+from the thumbnail list and
+drop it on the print layout.
+The image is placed in the print layout.
+ST 0027B SRS 906 Set whether to show or hide
+the overlay items in the
+Advanced DICOM Print
+Settings menu.
+Only the selected overlays from the displayed
+overlays are displayed in the print layout.
+ST 0030A SRS 910 Select the language item in the
+settings and restart HnVUE.
+The film printed on the DICOM printer also prints
+with the same settings.
+ST 0030D SRS 911
+SRS 913
+SRS 914
+Enable encryption for
+information.
+Encrypt DCM, DB, Log.
+ST 0030B SRS 1007 Check the detector information. Detector information may not load, but can be
+resolved by refreshing.
+ST 0031A SRS 912 Shows a notification that
+unauthorized users may be
+punished when using the
+program.
+I understand that I may be subject to legal
+punishment and stop using the program.
+7.4.2.3. Function test
+ID SRS ID Descriptions Expected results
+ST
+1001A
+SRS 603 When starting HnVUE,
+the image storage path in
+the DB configuration is
+empty.
+There is a default path so that it can be saved.
+7.4.3. Test Documentation
+The documentation of a test must be done in such a way that the test is made comprehensible and
+repeatable.
+A test procedure is drawn up in preparation of the test. The document must contain a description of how
+the test has been drawn up and of the test data, as well as an overview of the test procedure. In addition,
+the test steps to be performed and their expected results are listed in tabular form.
+During the test, the tester enters the following data into a copy or printout of the test procedure (in
+handwriting):
+ü The name of the tester, data, software version, test system
+ü Performing the test step
+ü Result of the step ("OK“, if the expected result occurs)
+ü Deviations from the test procedure (e.g. where steps are superfluous or further steps are advisable).
+ü Test data, test software and log files must be archived in a data carrier.
+7.5. Amendments
+After completion of the development and authorization of the zero series, the product may basically only be
+changed or modified by a development change. Changes are hardening the source code as well as new
+
+Technical Documentation Document No. A-SVR-HNV
+Rev. No. 0
+Software Validation Report Rev. Date July 16, 2025
+Page 45 / 91
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+minor and lead to a service pack. Debugging is corrective measure for removing faults and is not defined
+as a development change.
+Development changes only occur when the client’s product requirements or marginal technical conditions
+change. The requirement specifications for changes are laid down in the minutes of the developer
+meetings. There, all requirements are specified and tested at the same time for any possible new risks. If
+so, the risk analysis is adjusted.
+The amendments must be documented and are added to the main product file.
+ü new conformity statement (see manual)
+ü new manual
+ü filing the program CD or USB
+ü change files with description of changes to software
+Any amendment is concluded when a new service pack is released.
+7.6. Documentation / Main Product File / Risk Management File
+A document contains a revision status / amendment index, date and name of originator as well as the
+controller; it can only be entered into the EDP as a data record. A document is reviewed at regular intervals
+for validity.
+Remarks / minutes are the results of processes and procedures (output). They need at least the project
+number, date and name of the originator. Preliminary development results (documents and notes) enter the
+development file.
+On completion of the development, all documents and notes must be available and listed in order to confirm
+the actual state of the released product. The main product file must be submitted for review by an
+appointed office. The documents of the main product file need not be tangible; a reference to where the
+corresponding documents can be found will suffice.
+The main product file must be administered by the development head. They must be kept on file for at least
+five years after the sale of the last product.
+7.7. Software Versioning
+The software configuration management process is processed in the following order.
+However, all procedures are managed and processed by our quality management system.
+7.7.1. Shape identification
+HnVUE: Version. X.Y.Z
+Category Description
+1 Major X When a new product is designed and developed for the product
+number and its function
+2 Minor Y
+- When functions and new functions are added.
+- If the library is changed,
+- When the compiler is changed
+3 Patch Z In case of being changed to a bug patch.
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 46 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+8. Software Verification and Validation Test
+8.1. Test environment
+1) Hardware & Software environment
+A. Programming Language: C#
+B. Programming Tools
+● Editor: Visual Studio 2022
+● Debugger: Visual Studio 2022
+C. Library
+● DICOM : fo-dicom 4.0.8
+● Image processing : Intel® Integrated Performance Primitives
+● DBMS: SQLite 3.3.4 or higher
+D. Hardware
+● CPU : Intel Core i7 8700 or higher (or compatible CPU such as AMD Ryzen 7 series)
+● RAM : 8GB or higher
+● HDD : 1TB or higher
+● Network : Gigabit Ethernet Network Card
+● Display : 1920 X 1080 or higher
+● OS : Microsoft Windows 10 64bit, Microsoft Windows 11 64bit,
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 47 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+2) Reference
+● EN 62304:2006/AC: 2008, Medical electrical equipment - Medical device software - Software life cycle processes
+● EN ISO 14971:2012, Medical devices - Application of risk management to medical devices
+● EN ISO 13485:2016/AC:2016, Medical devices - Quality management systems - Requirements for regulatory purposes.
+● FDA Quality System Regulation 21 CFR, Part 820
+● FDA Quality System Regulation 21 CFR, Part 803
+● CDRH Guidance: General Principles for Software Validation
+● CDRH Guidance: Use of Off-the-Shelf Software in Medical Devices
+● CDRH Guidance: Guidelines for Submitting Premarket Notifications for Medical Image Management Devices
+● IEEE 1012-1986, Standard for Software Verification and Validation Planning
+● IEEE 829-1983, Standard for Software Test Documentation
+● IEEE 1016, Standard for Software Design
+● IEEE 830, Standard for Software Requirements
+3) Testing technology
+- Technology
+Original code test Unit tests are performed after compiling the source code created
+by the developer.
+Unit test The minimum test unit for each software module.
+Integration test Checks the flow or operation between software modules and
+subsystems or the entire system.
+System test This test should be performed in the office.
+- Methodology
+The waterfall-based lifecycle has been adapted to this software. The testing methodology combines white box or glass box testing with customer-acting
+testing.
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 48 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+8.2. Test report
+8.2.1. Original Code test
+# Software Requirements Applicable
+(Y/N) Module Pass / Fail Criteria
+A
+System initialization
+Y Main Module Check database connection consistency
+Check for duplicate execution
+B Y DICOM Module
+Worklist Module Connecting to Worklist Server and Store Server
+C Hardware Inspection Y Main Module
+Check the status of the detector by checking the validity of the detector and
+display.
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 49 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+For wireless detectors, check only the Wi-Fi and battery status.
+D Management Worklist
+Database Y Study List Module Register or query a patient on the PACS server Modify patient information
+(add/edit/delete referral physician)
+E Management Image
+Database Y Browser Module Search Study and Review Start Image
+F Image Manipulation Y Viewer Module
+Geometric transformation functions,
+Window/horizontal control
+Zoom in/out
+Panning (moving the image)
+Magnifier
+Angle/length measurement
+Marker and label display
+Image inversion
+Image comparison
+Region of interest
+Duplicate image
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 50 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Exposure index
+Stitching
+G
+User System Preferences
+Y Main Module Load System Operating Environment
+Image Processing Parameters
+H Y Main Module PACS Server and Worklist Server and System and Printing Configuration
+I Y Image Processing
+Module Apply and Modify Image Processing Parameters
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 51 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+J Image Data Management Y Image Processing
+Module Manages image memory allocation and image lists on a per-patient basis.
+K DICOM/Paper Printing Y DICOM Module
+Integrate with DICOM server to share image and patient information and
+implement local document or DICOM image printing (actual size). Printed
+DICOM images display image acquisition time, patient date of birth, age, and
+attending physician.
+L Image Processing Y Image Processing
+Module Process raw images within the allowed time (up to 3 seconds).
+Summary: As a result of the code review, we prove that all functions supporting the system specification are adequate. Therefore, we can proceed to
+the next step. As a result of the system integration review, we confirm that the software verification was performed appropriately.
+Inspected by: ____ Kyungsoo Lee __________________
+Reviewed by: _Namkyu Hur __ _
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 52 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+8.2.2. Module test
+# Software Requirement Application
+(Y/N) Descriptions
+Module Function
+A
+Worklist
+Create Worklist Y Add patient information and protocol
+B Edit Worklist Y Edit patient information and protocol
+C Delete Worklist Y Delete registered patient list
+D
+Shooting
+Import Raw Images Y Get raw images from detectors.
+E Open Detector Library Y Connect to detector library
+F Close Library Y Close connection to detector library
+G
+Viewer
+Adjust Settings Y Set image rotation or inversion.
+H Set Annotations and Measurements Y Set annotation and measurement information for DICOM
+images
+I Save Image Y Save selected images to DICOM
+J Update Image Y Update current image to DICOM
+K Process Image Y Process raw images to improve image quality by reducing
+noise and optimizing contrast for viewing.
+L
+DICOM
+Load DCM Y Load DICOM images
+M Create DCM Y Create DICOM images from raw images
+N Save DCM Y Save to DICOM images
+O Database Connect Database Y Configure database
+P Run Query Y Save and retrieve patient information in the database.
+Summary: The module review verifies that all functions supporting the system specifications are adequate. Therefore, the next step can be taken.
+The system integration review verifies that the software verification has been performed appropriately
+Inspected by: ____ Kyungsoo Lee __________________
+Reviewed by: _Namkyu Hur
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 53 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+8.2.3. Dynamic test
+# Test item Test criteria Pass(P)
+Fail(F)
+A Run the software If you run the software again while it is running, the running software will be
+restarted. P
+B Check your login information If the login fails, a message will appear saying "Invalid". If the login fails, enter
+"Password or Username". P
+C The software checks for free disk space before
+initializing the detector after connecting to it.
+If there is not enough space on the current hard disk drive, a message will appear
+saying "Deleting the oldest images to maintain adequate storage space". P
+D Check for the presence of a LAN port When trying to connect to the detector, a message will appear saying "Detector
+disconnected". P
+E
+Check that the device is not in use Start bright shooting but do not expose X-rays (then the detector is connected and waiting for
+exposure).
+Display to check detector status. For wireless detectors, only Wi-Fi and battery status are
+supported.
+P
+F (if the detector is connected) Perform functional aging tests on a variety of machines. P
+G The software must run on the required Windows
+version.
+Process a series of images, measure the time it takes to process each image, and compute
+an average. P
+H Time taken to process images Displays the image at the specified image size of the detector. P
+I Check image quality Send image to PACS server
+(If PACS is not connected, EUA will display PACS icon in gray) P
+Summary: As a result of dynamic testing, we prove that all functions supporting the system specification are adequate. Therefore, we can proceed to
+the next step. As a result of system integration review, we confirm that the software verification was performed appropriately.
+Inspected by: ____ Kyungsoo Lee __________________
+Reviewed by: _Namkyu Hur
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 54 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+8.2.4. Function test
+# Test item Test criteria Pass(P)
+Fail(F)
+A Installation Install HnVUE program at once.
+(Block it because mistakes can occur during installation) P
+B
+Patient registration Register patient information, save it in database and search it.
+Automatically register patient information when selecting body part/projection.
+Automatically generate patient ID/access number when manually registering patient, and
+enter/edit/delete reference doctor information.
+P
+C Acquire images from detector Take test shots by changing X-RAY conditions in various environments. P
+D
+Image processing Show processed images to experienced doctors and get advice.
+(Only raw files used once are applied for image processing. Processed files cannot be
+reprocessed.)
+Manually adjust window level to fit various body parts.
+P
+E Operate on images Perform all operations on the image and check the results. P
+F Resolution and images Revert modified images to their original state (rotate, label, mark, etc.). P
+G Transfer images to DICOM server Transfer to numerous DICOM servers made by various companies. P
+H Export DICOMDIR to external storage Export image data and check the identity between the two data by file comparison. P
+
+I Acquire X-ray images Acquire X-ray images by changing selected patients/series. P
+J Verify database data and user input data Check user input data and database data. P
+K Delete patient/study Delete selected patients/studies P
+L Delete X-ray images Delete X-ray images to change the number of patients/series. P
+M Display information Display information for the user (version, manufacturer information, etc.) in the Help and
+Configuration window (E-Labeling) P
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 55 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Result :
+Login window Configuration window (E-labeling)
+N Check patient ID/name/date, search… Search for patient name/patient ID P
+O DICOM/paper printing Prints actual size DICOM images including printer annotations/tags (image acquisition
+time, patient date of birth, age, attending physician). P
+P
+Check HDD storage capacity Check HDD storage space with icon
+P Result when user sets capacity to 50
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 56 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Result when user sets capacity to 45
+Q Confirm, transfer DICOM to PACS Check number of waiting patients and turn on PACS P
+R
+Check, Application Features - Zoom/Pan/Crop
+P
+Result :
+Basic image
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 57 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Zoom image
+S
+Check, Application Features - Image Adjustment (Reset, Rotate, Flip, Invert)
+P
+Result :
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 58 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Reset Image Rotate Image
+Flip Image Invert Image
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 59 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+9. Traceability Analysis
+SRS SDS Design Elements (Analysis
+Target)
+SDO<s> Risk<s> Shooting
+101 101 DICOM Export Image Export Module HAZ 1009 ST 0004A
+102 102 DICOM PACS Transfer Image Export Module HAZ 1003 ST 0004A
+200 201 Image Processing Viewer Module HAZ 0001 ST 1001A
+600 204 Image Processing Study List Module HAZ 0001 ST 0001A
+601
+602
+205 Image Processing Study List Module HAZ 1002
+HAZ 1015
+ST 0001A
+206 Image Processing DICOM Module HAZ 0001 ST 0016A
+207 Image Processing DICOM Module HAZ 0001 ST 0016A
+208 Image Processing DICOM Module HAZ 0001 ST 0016A
+300 301 Image Processing Image Processing Module HAZ 0001 ST 0015A
+ST 0006A
+ST 0016A
+301 302 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0015A
+ST 0006A
+ST 0016A
+302 303 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019E
+303 304 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+304 305 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+305 306 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 60 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+306 307 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+308 309 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+309 310 Image Processing Image Processing Module HAZ 0001
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+310 311 Save Parameters Image Processing Module HAZ 0001 ST 0019C
+ST 0019G
+ST 0020D
+311 312 Save Parameters Image Processing Module HAZ 0001 ST 0019C
+ST 0019G
+ST 0020D
+318 317 Image Processing Image Processing Module HAZ 0001
+HAZ 1003
+ST 0016A
+400
+401
+401 Viewer Image Processing Module HAZ 1011 ST 0025B
+ST 0011B
+402 402 Viewer Image Processing Module HAZ 1002 ST 0009A
+403 403 Viewer Viewer Module HAZ 1011 ST 0015A
+ST 0011B
+404 404 Display Capacity Main Module HAZ 1014 ST 0013A
+405 405 Stop Shooting Worklist Module HAZ 0001 ST 0007A
+ST 0008A
+406 406 Retake Image Main Module HAZ 0001 ST 0001A
+407 407 Retake Image DICOM Module HAZ 0001 ST 0001A
+408 408 Multi-Detector Main Module HAZ 1018 ST 0007A
+ST 0008A
+409 409 Image Stitching Image Processing Module HAZ 0001
+HAZ 1011
+ST 0015A
+ST 0020A
+ST 0027A
+414 410 Image Adjustment Image Processing Module HAZ 1011 ST 0011B
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 61 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+421 411 Viewer Image Processing Module HAZ 1012 ST 0019C
+ST 0019G
+ST 0020D
+422 412 Viewer Main Module HAZ 1011 ST 0015A
+425 413 Viewer Main Module HAZ 1011 ST 0015A
+427 414 Image Stitching Image Processing Module HAZ 0001
+HAZ 1011
+ST 0015A
+ST 0020A
+ST 0027A
+428 415 Viewer Main Module HAZ 1011 ST 0015A
+429 416 Viewer Image Processing Module HAZ 1011
+HAZ 1001
+ST 0015A
+431 418 Tools Image Processing Module HAZ 1011 ST 0011B
+432 419 Tools Viewer Module HAZ 1011 ST 0011B
+434 420 Image Processing Image Processing Module HAZ 1011
+HAZ 001
+ST 0019C
+ST 0019G
+ST 0020D
+437 422 Thumbnail Image Processing Module HAZ 1011
+HAZ 0001
+ST 0015A
+438 423 Image Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+439 424 Image Processing Main Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0020D
+440 425 Image Processing Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+441 426 Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+442 427 Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+ST 0015A
+443 428 Tools Image Processing Module HAZ 1011 ST 0011B
+ST 0015A
+444 429 Tools Image Processing Module HAZ 1011 ST 0011B
+ST 0015A
+445 430 Tools Image Processing Module HAZ 1011 ST 0011B
+ST 0015A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 62 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+446 431 Tools Image Processing Module HAZ 1011 ST 0011B
+ST 0015A
+447 432 Image Stitching Main Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0020A
+ST 0027A
+448 433 Viewer Main Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0027A
+ST 1001A
+449 434 Viewer Image Processing Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0027A
+ST 1001A
+450 435 Viewer Main Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0027A
+ST 0027B
+ST 1001A
+451 436 Stop Shooting Main Module HAZ 1011
+HAZ 0001
+HAZ 1002
+ST 0015A
+ST 1001A
+452 437 Image Processing Image Processing Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 1001A
+453 438 Image Transfer DICOM Module HAZ 1003 ST 0004A
+ST 0006A
+ST 0007A
+ST 0008A
+454 439 Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+ST 0015A
+ST 1001A
+455 440 Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+ST 0015A
+ST 1001A
+456 441 Tools Image Processing Module HAZ 1011
+HAZ 0001
+ST 0011B
+ST 0015A
+ST 1001A
+500 500 Patient Registration Worklist Module HAZ 1002
+HAZ 1010
+ST 0009A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 63 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+501 501 Manual Entry Worklist Module HAZ 1002
+HAZ 1010
+ST 0009A
+502 502 Search Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+503 503 Patient Registration Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+504 504 Manual Entry Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+505 505 Worklist Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+506 506 Search Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+507 507 Manual Entry Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+508 508 Manual Entry Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+509 509 Delete Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+510 510 Patient Registration Worklist Module HAZ 1008
+HAZ 0001
+ST 0011A
+511 511 Import Worklist Module HAZ 1007
+HAZ 0001
+ST 0006A
+ST 0006B
+ST 0013A
+512 512 Edit patient information Worklist Module HAZ 1002
+HAZ 0001
+ST 0009A
+513 513 Trash Worklist Module HAZ 1006
+HAZ 0001
+HAZ 1008
+ST 0011A
+600 600 Shooting list Database Module HAZ 1002
+HAZ 1011
+ST 0015A
+601 601 Edit study Study List Module HAZ 1002
+HAZ 1008
+ST 0011C
+602 602 Delete study Study List Module HAZ 1002
+HAZ 1008
+ST 0011C
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 64 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+603 603 Export Image Export Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+604 604 Overwrite Image Export Module HAZ 1006
+HAZ 0001
+ST 0006A
+605 605 Delete Study List Module HAZ 1008
+HAZ 0001
+ST 0011C
+606 606 Send DICOM Study List Module HAZ 1003
+HAZ 0001
+HAZ 1009
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+607 607 Register Patient Study List Module HAZ 1002
+HAZ 0001
+ST 0009A
+608 608 History Manager Main Module HAZ 0001 ST 0002A
+609 609 History Manager Main Module HAZ 0001 ST 0002A
+610 610 Query & Search Study List Module HAZ 1002
+HAZ 0001
+ST 0016B
+611 611 Search Study List Module HAZ 1002
+HAZ 0001
+ST 0016B
+612 612 Print Main Module HAZ 1002
+HAZ 1011
+ST 0015A
+ST 0027A
+ST 0027B
+ST 1001A
+613 613 Search Study List Module HAZ 1002
+HAZ 0001
+ST 0016B
+614 614 Transfer Progress Export Image Module HAZ 0001 ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+615 615 Patient Registration Study List Module HAZ 1002
+HAZ 0001
+ST 0009A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 65 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+616 616 Send DICOM Module HAZ 1003
+HAZ 0001
+HAZ 1009
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+617 617 Hide Study List Module HAZ 0001
+HAZ 1002
+ST 0016C
+618 618 DICOM Print Viewer Module HAZ 1011 ST 0015A
+ST 0027A
+ST 0027B
+ST 1001A
+619 619 DICOM Print Study List Module HAZ 1011 ST 0015A
+ST 0027A
+ST 0027B
+ST 1001A
+700 700 Settings Information Study List Module HAZ 1001 ST 0004C
+701 701 System Main Module HAZ 1001 ST 0017A
+702 702 Account Main Module HAZ 1001 ST 0013A
+ST 0018A
+703 703 Annotation Save Main Module HAZ 1001 ST 0004A
+704 704 Save bit selection Main Module HAZ 1001 ST 0004A
+705 705 Stitching save size Study List Module HAZ 1001 ST 0004A
+706 706 Stitching move size Main Module HAZ 1001 ST 0004A
+707 707 Export Image Export Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+708 708 View mode Main Module HAZ 1001
+HAz 1002
+ST 0014A
+709 709 Export Image Export Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+710 710 Detector Main Module HAZ 1001 ST 0004C
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 66 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+712 712 Annotation size Main Module HAZ 1001
+HAZ 1012
+ST 0004C
+713 713 Overlay position Main Module HAZ 1001 ST 0004C
+ST 0027B
+ST 0015A
+714 714 Create account Main Module HAZ 1001 ST 0012A
+ST 0018A
+715 715 Encrypt password Database Module HAZ 0001
+HAZ 1001
+HAZ 1015
+ST 0012A
+ST 0018A
+716 716 Input Input, File Loading
+Verification
+Studylist module HAZ 0001 ST 0004C
+ST 0010A
+717 717 Audit Log Main module HAZ 0001 ST 0018A
+718 718 Log Main module HAZ 0001 ST 0002A
+719 719 Integrity Verification Main module HAZ 1001
+HAZ 1004
+ST 0010A
+720 720 BackUP Main module HAZ 1001
+HAZ 1015
+HAZ 1006
+ST 0016D
+721 721 Restore Main module HAZ 1001
+HAZ 1015
+HAZ 1006
+ST 0016D
+722 722 Administrator Account Main module HAZ 1001 ST 0002A
+723 723 Change PW Database module HAZ 1001
+HAZ 1015
+ST 0012A
+ST 0018A
+724 724 PW Strength Main module HAZ 1001 ST 0012A
+ST 0018A
+725 725 Login Failure Main module HAZ 1019 ST 0012A
+ST 0018A
+726 726 PW Display Main module - ST 0012A
+ST 0018A
+727 727 Continuous Login Failure Main module HAZ 1019 ST 0012A
+ST 0018A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 67 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+728 728 Change default PW Main Module - ST 0012A
+ST 0018A
+800 800 Error handling DICOM Module HAZ 0001
+HAZ 1011
+ST 0002A
+801 801 Error handling Main Module HAZ 0001
+HAZ 1011
+ST 0007A
+ST 0008A
+804 804 Error handling DICOM Module HAZ 0001
+HAZ 1011
+ST 0002A
+805 805 Error handling Database Module HAZ 0001
+HAZ 1011
+ST 0002A
+806 806 Error handling Study List Module HAZ 1011 ST 0002A
+807 807 Error handling Viewer Module HAZ 1011 ST 0002A
+808 808 Error handling Worklist Module HAZ 1014 ST 0017A
+809 809 Error handling Worklist Module HAZ 1011 ST 0002A
+810 810 Error handling Viewer Module HAZ 1011 ST 0002A
+812 812 Error handling Viewer Module HAZ 1011 ST 0002A
+813 813 Change default PW Viewer Module HAZ 1011 ST 0016A
+ST 0006A
+ST 1001A
+814 814 Error handling Viewer Module HAZ 1011 ST 0016A
+ST 0006A
+ST 1001A
+815 815 Error handling Viewer Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+816 816 Error handling Viewer Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+817 817 Error handling Viewer Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 68 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+818 818 Error handling Viewer Module HAZ 0001
+HAZ 1003
+HAZ 1009
+HAZ 0002
+ST 0006A
+ST 0007A
+ST 0004A
+ST 0008A
+819 819 Error handling Main Module - ST 0002A
+820 820 Error handling Main Module - ST 0019C
+ST 0019G
+ST 0020D
+821 821 Error handling Main Module - ST 0030A
+SRS 900 911 Password regulations Viewer Module - ST 0012A
+ST 0018A
+SRS 901 912 Exit Main Module HAZ 0001 ST 0001A
+SRS 903 913 Login Main Module HAZ 1015 ST 0018A
+SRS 904 914 Parameters Main Module HAZ 1015
+HAZ 1011
+HAZ 1013
+ST 0019C
+ST 0019G
+ST 0020D
+SRS 905 915 DICOM Import Image Processing Module HAZ 1015
+HAZ 1011
+HAZ 0001
+ST 0006A
+ST 0006B
+ST 0013A
+SRS 906 916 Print DICOM Module HAZ 1002
+HAZ 1011
+ST 0015A
+ST 0027A
+ST 0027B
+ST 1001A
+SRS 907 917 Image Processing Parameter
+Load
+Main Module HAZ 1015 ST 0019C
+ST 0019G
+ST 0020D
+SRS 909 919 Image Processing Parameter
+save
+Study List Module HAZ 1011
+HAZ 0001
+ST 0015A
+ST 0020A
+ST 0027A
+SRS 910 920 Stitching Main Module HAZ 0001 ST 0030A
+SRS 911 911 Multilingual DICOM Module HAZ 1020 ST 0030D
+SRS 912 912 DCM Encryption Main Module - ST 0031A
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 69 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+SRS 913 913 System Usage Database Module HAZ 1020 ST 0030D
+SRS 914 914 Log Encryption Main Module HAZ 1020 ST 0030D
+SRS 1007 921 Detector Main Module HAZ 1018 ST 0030B
+10. Hazard Analysis
+The following chart shows a list of potential hazards that may occur during use of AXD.
+And analysis of what the potential cause would be along with the possible frequency and severity for each hazard has been indicated.
+Severity and Frequency were each measured based on the charts shown on the next page.
+10.1. Severity
+The severity of risk consists of 5 levels as below.
+Level Severity Score
+Paralysis State Potential failure mode affects safe system operation 5
+Very Severe System inoperable with equipment damage 4
+Severe System inoperable without damage 3
+Slight System operable with some degradation of performance 2
+Not Entirely Harmful None 1
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 70 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+10.2. Frequency (Likelihood of Occurrence)
+The frequency of risk consists of 5 levels as below.
+Level Frequency (Likelihood of Occurrence) Score
+Frequent
+Daily, 1 / 1 day (usually)
+Likely to occur often in the life of an item, with a likelihood of occurrence greater than
+10^-2 in any one mission
+5
+Probable
+Weekly, 1 / 1 week (often)
+Will occur several times in the life of an item, with a likelihood of occurrence less than
+10^-2 but greater than 10^-3 in any one mission
+4
+Occasional
+Monthly, 1 / 1 month (sometimes)
+Likely to occur sometime in the life of an item, with likelihood of occurrence less than
+10^-3 but greater than 10^-5 in any one mission
+3
+Remote
+Quarterly, 1 / 1 quarter (a few times while its life cycle)
+Unlikely but possible to occur in the life of an item, with a likelihood of occurrence
+less than 10^-5 but greater than 10^-6 in any one mission
+2
+Improbable
+Annually, 1 / 1 (might occur but hardly does)
+So unlikely, it can be assumed occurrence may not be experienced, with a likelihood
+of occurrence less than 10^-6 in any one mission.
+1
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 71 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+10.3. Risk Acceptability
+By evaluation of risk analysis factors mentioned above, the level of risk divided by 3 zones which are colored as light gray, white and dark gray.
+Acceptable – Light Gray Zone (Risk Level 1 ~ 4)
+In this zone, risk is acceptable.
+Unacceptable – Dark Gray Zone (Risk Level 5 ~ 25)
+Elimination or mitigation actions must be taken at first to reduce the risk. After that if is still in intolerable region, then halt the design.
+The Risk Acceptability reflects the evaluation of risk management.
+Section Not Entirely Harmful Slight Severe Very Severe Paralysis State
+Frequent
+Probable
+Occasional
+Remote
+Improbable
+: Acceptable Region
+: Unacceptable Region
+
+Software Validation Report
+
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 72 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+10.4. Hazard Analysis
+Requirement Software item Description Risk
+class
+Risk ID
+- Memory Management The memory resources of the OS must be managed appropriately. Class B HAZ 0001
+SRS 100 DICOM Standard Supports medical image standards. Class B HAZ 0002
+SRS 700 Environment Configuration settings Class B HAZ 1001
+SRS 500 Worklist Check capture orders from the PACS worklist server or manually register
+orders by users.
+Class B HAZ 1002
+SRS 102 DICOM Store DICOM image files are transferred to the PACS storage server. Class B HAZ 1003
+- Software Version Install a specific version of HnVUE. Class B HAZ 1004
+- Software Package Copy the installation package file. Class B HAZ 1005
+- Access to Image Folder Copy or delete images in the HnVUE image folder. Class B HAZ 1006
+SRS 905 Import Users can import DICOM images. Class B HAZ 1007
+SRS 605 Delete Study List Reconfirm when deleting a study. Class B HAZ 1008
+SRS 606 Send DICOM Users can send DICOM files to multiple destinations on the server. Class B HAZ 1009
+- Configure Storage
+Server
+Users can configure the storage server configuration. Class B HAZ 1010
+SRS 400 Viewer The captured image is displayed on the screen.
+Perform image processing such as brightness, rotation, and zoom.
+You can configure the display location of DICOM information.
+Class B HAZ 1011
+SRS 430 Viewer Reduce the size of text annotations displayed in the viewer. Added an Image
+Processing tab to allow users to set more detailed image processing
+parameters.
+Class B HAZ 1012
+SRS 421 Image Processing Reduce the size of text annotations displayed in the viewer. Added an Image
+Processing tab to allow users to set more detailed image processing
+parameters.
+Class B HAZ 1013
+SRS 701 System Settings Change the date settings for the auto-delete feature in Settings. (Day, Week, Month,
+Capacity)
+Class B HAZ 1014
+- Database Connection HnVUE can access the database Class B HAZ 1015
+SRS 447 Manual Stitching Users can manually stitch images Class B HAZ 1017
+- Equipment Connection Users can control the device Class B HAZ 1018
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 73 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+SRS 725 Login Failed Display login failure notification Class B HAZ 1019
+SRS 911 Encryption DCM encryption Class B HAZ 1020
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+HAZ
+0001
+Code
+error
+There will be no
+memory leaks
+Misdiag
+nosis 1 3 3 Accept
+able
+Because HnVUE is
+designed in C#,
+developers cannot
+arbitrarily free memory.
+Instead, the .NET
+Framework's garbage
+collector automatically
+frees unused memory,
+preventing memory
+leaks.
+Because HnVUE is
+developed in C#, there
+are no leaks during the
+week, as developers can
+ST
+0001A 1 1 1 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 74 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+avoid using the spider or
+the .NET Framework's
+garbage collector can
+free memory unused.
+HAZ
+0002
+Code
+error
+DICOM transmission
+failure:
+- Hardware error
+- Network
+connection failure
+Misdiag
+nosis 3 3 9 Unacce
+ptable
+The transfer list is
+marked with an icon to
+indicate whether the
+transfer was successful.
+The original file is saved
+to the local disk and can
+be retrieved and
+transferred later from the
+Browser tab.
+The transfer list displays
+an icon indicating
+whether the transfer was
+successful. The original
+video is saved to the
+ST
+0004A 1 3 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 75 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+same location for later
+retrieval.
+HAZ
+1001
+Code
+error
+The captured image is
+not displayed on the
+screen because the DB
+storage path is not set
+in the configuration
+preferences.
+Misdiag
+nosis 2 2 4 Unacce
+ptable
+If the image storage
+path has not been set
+when HnVUE starts, a
+Settings dialog box will
+appear, allowing you to
+configure the image data
+path either through the
+Configuration
+Preferences tab in the
+General tab or directly.
+If the image storage has
+not been set externally
+when HnVUE starts, a
+Settings dialog box will
+pop up, accessible
+ST
+0005A 1 2 2 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 76 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+through the External
+Settings dialog box or
+the General tab in
+Preferences.
+HAZ
+1002
+Code
+error
+Worklist server query
+fails because Worklist
+server connection
+data is not set in the
+configuration.
+Misdiag
+nosis 3 2 6 Unacce
+ptable
+If the Worklist server
+configuration is not
+properly configured, the
+message "The Worklist
+server list is empty.
+Please check your
+settings." will appear,
+allowing the user to
+configure Worklist server
+access information.
+If no Worklist server
+settings exist, the
+message "The Worklist
+server settings are not
+ST
+0007A 1 2 2 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 77 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+working properly. Please
+check your settings." This
+pop-up status allows the
+user to configure their
+preferences. To connect
+to the Worklist server,
+you can manually
+configure the settings.
+HAZ
+1003
+Code
+error
+"DICOM Send" fails
+because the storage
+server connection
+information is not
+configured correctly.
+Misdiag
+nosis 3 2 6 Unacce
+ptable
+If the storage server
+configuration is not
+properly configured, the
+message "Storage server
+settings are valid. Please
+check the settings." will
+appear, allowing the user
+to configure the storage
+server connection
+information.
+ST
+0008A 1 2 2 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 78 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+If the PACS Server
+settings are not properly
+configured, the message
+"Server settings are not
+properly configured.
+Please check the
+settings." will appear in
+the pop-up status,
+allowing the user to
+configure the settings
+through the preferences.
+HAZ
+1004
+Code
+error
+Due to an error in the
+installer, the wrong
+version of HnVUE was
+installed.
+Misdiag
+nosis 3 3 9 Unacce
+ptable
+Enables
+service/installation
+documentation, service
+training, and installer
+training.
+ST
+0101A 1 3 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1005
+Code
+error
+The installation
+package file was
+Misdiag
+nosis 3 3 9 Unacce
+ptable
+Enables
+service/installation
+ST
+0010A 1 3 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 79 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+corrupted due to an
+error in the installer.
+documentation, service
+training, and installer
+training.
+HAZ
+1006
+Code
+error
+The captured image
+was accidentally
+deleted by the user.
+Delayed
+use 3 2 6 Unacce
+ptable
+A pop-up confirmation
+window appears before
+deleting an image to
+prevent accidental
+deletion.
+A pop-up confirmation
+window appears before
+deleting a video to
+prevent users from
+accidentally deleting it. A
+backup function is
+provided to allow users
+to perform a backup
+beforehand.
+ST
+0011A 1 2 2 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ Code The amount of saved Misdiag 3 3 9 Unacce The current storage ST 3 1 3 Accept Acce None Accept
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 80 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+1007 error images is too large,
+causing the storage
+capacity (hard disk) to
+overflow.
+nosis ptable space is displayed at the
+top of the Viewer tab. If
+the current storage
+capacity exceeds the
+user-defined value, the
+icon will turn red to alert
+the user.
+You can change the
+image storage path in
+Preferences to perform
+patient imaging.
+0013A able pted ed
+HAZ
+1008
+Code
+error Delete study list Delayed
+use 3 2 6 Unacce
+ptable
+Only administrators can
+delete study lists.
+ST
+0012A 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1009
+Code
+error
+"Send DICOM" fails
+because the DICOM
+file is not in the image
+temp folder.
+Delayed
+use 3 2 6 Unacce
+ptable
+A DICOM file can be
+created each time the
+DICOM transfer function
+is called. A new DICOM
+file is created for each
+ST
+0004B 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 81 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+transmission attempt, so
+a new file will be created
+in the temporary folder.
+HAZ
+1010
+Code
+error
+"DICOM Send" fails
+because the Store SCP
+module's settings are
+not set correctly.
+Delayed
+use 3 2 6 ALARP
+If the Store SCP
+configuration is not set
+correctly, a "Connection
+Failed" message will
+appear, allowing the user
+to set the Store SCP
+configuration correctly.
+Alternatively, a "DICOM
+File Save Failed" log will
+be displayed, allowing
+the user to set the SCP
+storage configuration
+correctly.
+If the Store SCP
+configuration fails to
+ST
+0008A 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 82 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+connect to the server, a
+"Connection Failed" pop-
+up will appear, allowing
+the user to connect once
+the server settings are
+correct.
+Alternatively, it is
+recommended to record
+"DICOM File Creation
+Failed" in the log. The
+user should ensure that
+the server settings are
+correct.
+HAZ
+1011
+Code
+error
+The captions on the
+buttons are not
+displayed properly.
+Delayed
+use 1 2 2 Accept
+able
+When the user drags the
+mouse pointer over a
+button, a tooltip appears,
+letting the user know
+what will happen when
+ST
+0014A 1 1 1 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 83 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+they click the button.
+When the user hovers
+the mouse over a
+button, a readable
+tooltip pops up, letting
+the user know what
+function the button will
+perform when clicked.
+HAZ
+1012
+Code
+error
+Images and
+annotation text are
+not displayed in the
+viewer.
+Delayed
+use 1 2 2 Accept
+able
+If the image and
+annotation text do not
+display in the viewer, the
+display module will
+attempt to display the
+image again, but will
+ultimately fail and
+display error text in the
+viewer.
+If the image display
+ST
+0015A 1 1 1 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 84 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+module is present, it will
+automatically retry if the
+display fails, eventually
+displaying the image. If
+the image does not
+display, the image will
+not be displayed.
+HAZ
+1013
+Code
+error
+The image cannot be
+processed.
+Delayed
+use 3 2 6 Unacce
+ptable
+If the image cannot be
+processed, the original
+image will be displayed
+and the user can
+reprocess it.
+If the image processing
+fails, the image will be
+displayed. The user can
+view the original image
+and retry the image
+processing.
+ST
+0016A 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 85 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+HAZ
+1014
+Code
+error
+The auto-delete
+feature has been
+enabled due to a user
+error.
+Delayed
+use 3 2 6 Unacce
+ptable
+This feature should be
+used with caution and
+with user training. We
+will ensure that users are
+trained to use this
+feature.
+ST
+0017A 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1015
+Code
+error
+When trying to load
+and save image
+processing
+parameters, the
+database cannot be
+accessed.
+Delayed
+use 3 2 6 Unacce
+ptable
+If the image processing
+fails to save, an error
+message appears.
+It's not surprising that
+the processor's berry
+berry isn't saved to the
+database.
+ST
+0019G 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1017
+Code
+error
+When I run the auto
+stitching function, the
+image cannot be
+stitched..
+Delayed
+use 3 2 6 Unacce
+ptable
+Users can use the
+manual stitching function
+if the automatic stitching
+function fails.
+Even if the automatic
+ST
+0020C 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 86 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+stitching function fails,
+there is a function that
+allows users to double-
+click to stitch around the
+desired area.
+HAZ
+1019
+Login
+failed
+The user forgets his
+account and enters
+the wrong account
+multiple times.
+Delayed
+use 3 2 6 Unacce
+ptable
+If you enter the wrong
+password multiple times,
+your account will be
+locked after 5 attempts.
+The administrator can
+unlock it and change the
+password.
+3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1020
+Encryptio
+n
+Information is
+exposed.
+Informa
+tion
+Disclosu
+re
+3 3 9 Unacce
+ptable
+Encrypts information to
+prevent it from being
+exposed to unauthorized
+users
+- 3 1 3 Accept
+able
+Acce
+pted None Accept
+ed
+HAZ
+1024
+Code
+error
+The operator is
+unaware of the
+Delayed
+use 2 3 6 Unacce
+ptable
+HnVUE displays the
+remaining battery level
+ST
+0031A 2 1 2 Accept
+able
+Acce
+pted None Accept
+ed
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 87 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+detector's battery
+status, which is low or
+at zero. The operator
+then takes an X-ray
+for the patient.
+at the bottom of the
+program. A warning
+message pops up when
+the battery is low. This
+allows the operator to
+recognize the current
+low battery level and
+attempt to replace the
+battery before the
+patient arrives.
+If the battery level is 0, a
+connection failure
+message pops up in the
+capture window during
+X-ray capture.
+HnVUE displays the
+detector's battery level at
+the bottom of the
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 88 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+Software Risk FMEA Table
+Risk analysis
+F-Probability, S-
+Severity, A-
+Acceptability
+Risk
+evaluati
+on
+Risk Management Measures
+D- Design, P- Protection, I-
+Information
+Residual risk assessment
+Risk-
+Benef
+it
+Analy
+sis
+Risks
+Caused
+by RCM
+Overall
+Assess
+ment
+Risk ID Hazard Hazardous situation Harm F S A Implementation Effective
+ness F S A Result
+program. A warning
+message appears when
+the battery is low,
+encouraging the
+operator to replace the
+battery before the
+patient arrives.
+If the battery is almost
+empty, a connection
+failure will appear in the
+capture window when
+attempting to connect to
+the detector for capture.
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 89 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+11. List of Attachment
+No. Content
+1 Requirements for Cybersecurity of Medical Devices
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 90 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+12. Revision History
+1) Software version info
+Revision Date Name Description
+1.0.0 July 16, 2025 HnVUE Initial release
+
+Software Validation Report
+File No A-SVR-HNV
+Rev. No 0
+Rev. Date July 16, 2025
+Page 91 / 91
+A-SVR-HNV H&abyz Co., Ltd. A4(297*210mm)
+13. Unsolved Anomalies
+13.1. Scope
+List of errors and bugs which remain in the device and an explanation how they were determined to not
+impact safety or effectiveness, including operator usage and human factors. For each anomaly, indicate the
+problem, the impact on device performance, and if appropriate, any plans or timeframes for correcting the
+problem. This list of bugs should be communicated to the user in the device labeling.
+ü Safety
+Patient, and/or user safety issue. Product cannot be released without compromising one of these.
+Must be fixed.
+ü Major
+Defect impacting product intended use. No work around available.
+ü Moderate
+Impact on Product, typically related to user interface or general quality of product. Work around is
+available
+ü Minor
+No impact on product intended use, not significant or impacting product release, cosmetic.
+13.2. Unresolved Anomalies
+No Problem Description Criticality Reason for Problem Potential Impact
+None

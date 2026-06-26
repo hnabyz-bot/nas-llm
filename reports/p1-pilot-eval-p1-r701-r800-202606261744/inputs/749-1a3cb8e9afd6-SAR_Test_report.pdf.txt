@@ -1,0 +1,1378 @@
+queueId: ingest-1781569954387-hjz
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/250411 SKD 인도 - Blue/SKD india 250530/5.7 Verification & Validation/Test report (Electrical, EMC)/SAR Test report.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/49ba6de855ae/SAR Test report__49ba6de855ae_combined.txt
+canonicalGroupId: 1a3cb8e9afd6
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 749
+
+SOURCE_TEXT
+TEST REPORT
+Report No. : KES-SR240254
+Page 1 / 78
+KES Co., Ltd.
+#3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-gu,
+Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+Tel : +82-31-425-6200, Fax : +82-31-341-3838
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of this test report can be found on the verification page of our website (www.kes.co.kr).
+1. Client
+○ Name : H&abyz Co., Ltd.
+○ Address : 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si, Gyeonggi-do, Republic of
+Korea
+2. Sample Description
+○ Product item : Digital Flat Panel X-ray Detector
+○ Host Model name : G1417CW
+○ Multiple Model Name : G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW,
+G1717FWP
+○ Manufacturer etc. : H&abyz Co., Ltd.
+3. Date of test : 2025.02.12
+4. Location of Test :  Permanent Testing Lab  On Site Testing
+○ Adress : #3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-gu, Anyang-si,
+Gyeonggi-do, 14057, Republic of Korea
+5. Test method used : EN IEC/IEEE 62209-1528:2021
+6. Test result : PASS
+The results shown in this test report refer only to the sample(s) tested unless otherwise stated.
+This laboratory is not accredited for the test results marked *.
+This test report is not related to KOLAS accreditation.
+Affirmation
+Tested by Technical Manager
+Name : Ye-dam, Ahn (Signature) Name : Wi-han, Jeong (Signature)
+.
+2025 . 02. 14.
+KES Co., Ltd.
+Accredited by KOLAS, Republic of KOREA
+
+Report No. : KES-SR240254 Page 2 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+REPORT REVISION HISTORY
+Date Test Report No. Revision History
+2025.02.14 KES-SR240254 Initial
+This report shall not be reproduced except in full, without the written approval of KES Co., Ltd. This document may be altered or revised by
+KES Co., Ltd. personnel only, and shall be noted in the revision section of the document. Any alteration of this document not carried out by
+KES Co., Ltd. will constitute fraud and shall nullify the document.
+
+Report No. : KES-SR240254 Page 3 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+TABLE OF CONTENTS
+1. General information ................................................................................................................................ 4
+1.1. EUT description ...................................................................................................................................... 4
+1.2. Device Overview ..................................................................................................................................... 4
+1.3. Highest SAR summary ........................................................................................................................... 4
+1.4. Power Reduction for SAR ....................................................................................................................... 4
+1.5. Guidance applied .................................................................................................................................... 5
+1.6. Nominal and Maximum Output Power Specifications ............................................................................ 5
+1.7. Simultaneous Transmission Capabilities ................................................................................................ 8
+1.8. Device Serial Numbers ........................................................................................................................... 8
+2. SAR measurement system ..................................................................................................................... 9
+2.1. SAR definition ......................................................................................................................................... 9
+2.2. SPEAG DASY System .......................................................................................................................... 10
+3. Tissue simulating liquids ........................................................................................................................ 11
+4. SAR System Verification ....................................................................................................................... 13
+5. SAR Measurement Procedure .............................................................................................................. 14
+5.1. SAR Evaluation ..................................................................................................................................... 14
+5.2. Spatial Peak SAR Evaluation ............................................................................................................... 16
+5.3. SAR Averaged Methods ....................................................................................................................... 16
+6. SAR Measurement Evaluation .............................................................................................................. 17
+6.1. Body Exposure Conditions ................................................................................................................... 17
+7. RF EXPOSURE LIMITS ....................................................................................................................... 18
+7.1. Uncontrolled Environment .................................................................................................................... 18
+7.2. Controlled Environment ........................................................................................................................ 18
+8. RF Conducted Power ........................................................................................................................... 19
+8.1. W-LAN Conducted Power ..................................................................................................................... 19
+9. Tissue & System Verification ................................................................................................................ 22
+9.1. Tissue Verification ................................................................................................................................. 22
+9.2. Test System Verification ........................................................................................................................ 23
+10. SAR Testing Results ............................................................................................................................. 24
+10.1. Body SAR Data ..................................................................................................................................... 24
+11. Measurement Equipment ...................................................................................................................... 25
+12. Measurement uncertainty ..................................................................................................................... 26
+Appendix A. SAR Plots for System Verification ............................................................................................... 28
+Appendix B. SAR Plots for SAR Measurement ............................................................................................... 32
+Appendix C. SAR calibration certificates for SAR Measurement .................................................................... 36
+Appendix D. SAR TISSUE SPECIFICATIONS ................................................................................................ 74
+Appendix E. DUT ANTENNA DIAGRAM & SAR TEST SETUP PHOTOGRAPHS ......................................... 76
+
+Report No. : KES-SR240254 Page 4 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+1. General information
+Applicant: H&abyz Co., Ltd.
+Applicant address: 41-16, Cheoinseong-ro, Namsa-eup, Cheoin-gu, Yongin-si, Gyeonggi-do
+Republic of Korea
+Test site: KES Co., Ltd.
+Test site address: #3002, #3503, #3701, 40, Simin-daero365beon-gil, Dongan-gu,
+Anyang-si, Gyeonggi-do, 14057, Republic of Korea
+Test device serial No.: Production Pre-production Engineering
+1.1. EUT description
+EUT Type Digital Flat Panel X-ray Detector
+Brand Name(Applicant) H&abyz Co., Ltd.
+Host Model Name G1417CW
+Additional Model Name G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW,
+G1717FWP
+Antenna Type Dual-Band Flexible Planar Antenna,
+Antenna gain: (2.8 ㏈i (@ 2.4 ㎓), 3.4 ㏈i (@ 5 ㎓))
+Notes:
+1. The above DUT information is declared by manufacturer and for more detailed features description please refers to
+the manufacturer’s specification or User’s Manual.
+2. Test results are valid only for the samples provided by the customer.
+1.2. Device Overview
+Band & Mode Operating Modes Tx Frequency
+2.4 ㎓ W-LAN Data 2 412 ~ 2 472 ㎒
+5.2 & 5.3 ㎓ W-LAN Data 5 180 ~ 5 320 ㎒
+5.5 ㎓ W-LAN Data 5 500 ~ 5 700 ㎒
+5.8 ㎓ W-LAN Data 5 745 ~ 5 825 ㎒
+1.3. Highest SAR summary
+Band & Mode Tx Frequency Body 10g SAR(W/㎏)
+MIMO(Ant.1+2)
+2.4 ㎓ W-LAN 2 412 ~ 2 472 ㎒ 0.131
+5.2 & 5.3 ㎓ W-LAN 5 180 ~ 5 320 ㎒ 0.869
+5.5 ㎓ W-LAN 5 500 ~ 5 700 ㎒ 0.990
+Notes:
+1. The SAR10g limit (2.0 W/kg for Head/Body, 4.0 W/kg for Limbs) for general public exposure is specified in Council
+Recommendation 1999/519/EC Annex II.
+1.4. Power Reduction for SAR
+There is no power reduction used for any band/mode implemented in the device for SAR purposes.
+
+Report No. : KES-SR240254 Page 5 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+1.5. Guidance applied
+1) EN 50566:2017+A1:2023
+2) EN IEC/IEEE 62209-1528: 2021
+3) EN 50663:2017
+1.6. Nominal and Maximum Output Power Specifications
+This device operates using the following maximum and nominal output power specifications. SAR values were
+scaled to the maximum allowed power to determine compliance per EN IEC/IEEE 62209-1528:2021.
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 1 7 13 1 7 13
+IEEE 802.11b
+(2.4 ㎓)
+Maximum 20.0 20.0 19.0 22.8 22.8 21.8
+Nominal 19.0 19.0 18.0 21.8 21.8 20.8
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 1 7 13 1 7 13
+IEEE 802.11g
+(2.4 ㎓)
+Maximum 20.0 20.0 19.0 22.8 22.8 21.8
+Nominal 19.0 19.0 18.0 21.8 21.8 20.8
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 1 7 13 1 7 13
+IEEE 802.11n
+(2.4 ㎓)
+Maximum 20.0 20.0 19.0 22.8 22.8 21.8
+Nominal 19.0 19.0 18.0 21.8 21.8 20.8
+Band / Mode
+Modulated Average (40 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (40 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 3 7 11 3 7 11
+IEEE 802.11n
+(2.4 ㎓)
+Maximum 20.0 19.0 19.0 22.8 21.8 21.8
+Nominal 19.0 18.0 18.0 21.8 20.8 20.8
+
+Report No. : KES-SR240254 Page 6 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 36 52 64 36 52 64
+IEEE 802.11a
+(5.2 & 5.3 ㎓)
+Maximum 16.0 16.0 18.0 19.4 19.4 21.4
+Nominal 15.0 15.0 17.0 18.4 18.4 20.4
+IEEE 802.11n
+(5.2 & 5.3 ㎓)
+Maximum 16.0 16.0 18.0 19.4 19.4 21.4
+Nominal 15.0 15.0 17.0 18.4 18.4 20.4
+IEEE 802.11ac
+(5.2 & 5.3 ㎓)
+Maximum 16.0 16.0 19.0 19.4 19.4 22.4
+Nominal 15.0 15.0 18.0 18.4 18.4 21.4
+Band / Mode
+Modulated Average (40 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (40 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 38 54 62 38 54 62
+IEEE 802.11n
+(5.2 & 5.3 ㎓)
+Maximum 16.0 16.0 19.0 19.4 19.4 22.4
+Nominal 15.0 15.0 18.0 18.4 18.4 21.4
+IEEE 802.11ac
+(5.2 & 5.3 ㎓)
+Maximum 16.0 16.0 19.0 19.4 19.4 22.4
+Nominal 15.0 15.0 18.0 18.4 18.4 21.4
+Band / Mode
+Modulated Average (80 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (80 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 42 58 42 58
+IEEE 802.11ac
+(5.2 & 5.3 ㎓)
+Maximum 16.0 17.0 19.4 20.4
+Nominal 15.0 16.0 18.4 19.4
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 100 120 140 100 120 140
+IEEE 802.11a
+(5.5 ㎓)
+Maximum 16.0 18.0 20.0 19.4 21.4 23.4
+Nominal 15.0 17.0 19.0 18.4 20.4 22.4
+IEEE 802.11n
+(5.5 ㎓)
+Maximum 16.0 18.0 20.0 19.4 21.4 23.4
+Nominal 15.0 17.0 19.0 18.4 20.4 22.4
+IEEE 802.11ac
+(5.5 ㎓)
+Maximum 16.0 18.0 21.0 19.4 21.4 24.4
+Nominal 15.0 17.0 20.0 18.4 20.4 23.4
+Band / Mode
+Modulated Average (40 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (40 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 102 118 134 102 118 134
+IEEE 802.11n
+(5.5 ㎓)
+Maximum 16.0 18.0 20.0 19.4 21.4 23.4
+Nominal 15.0 17.0 19.0 18.4 20.4 22.4
+IEEE 802.11ac
+(5.5 ㎓)
+Maximum 16.0 18.0 21.0 19.4 21.4 24.4
+Nominal 15.0 17.0 20.0 18.4 20.4 23.4
+
+Report No. : KES-SR240254 Page 7 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Band / Mode
+Modulated Average (80 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (80 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 106 106
+IEEE 802.11ac
+(5.5 ㎓)
+Maximum 16.0 19.4
+Nominal 15.0 18.4
+Band / Mode
+Modulated Average (20 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (20 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 149 157 165 149 157 165
+IEEE 802.11a
+(5.8 ㎓)
+Maximum 7.0 7.0 7.0 10.4 10.4 10.4
+Nominal 6.0 6.0 6.0 9.4 9.4 9.4
+IEEE 802.11n
+(5.8 ㎓)
+Maximum 7.0 7.0 7.0 10.4 10.4 10.4
+Nominal 6.0 6.0 6.0 9.4 9.4 9.4
+IEEE 802.11ac
+(5.8 ㎓)
+Maximum 7.0 7.0 7.0 10.4 10.4 10.4
+Nominal 6.0 6.0 6.0 9.4 9.4 9.4
+Band / Mode
+Modulated Average (40 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (40 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 151 159 151 159
+IEEE 802.11n
+(5.8 ㎓)
+Maximum 7.0 7.0 10.4 10.4
+Nominal 6.0 6.0 9.4 9.4
+IEEE 802.11ac
+(5.8 ㎓)
+Maximum 7.0 7.0 10.4 10.4
+Nominal 6.0 6.0 9.4 9.4
+Band / Mode
+Modulated Average (80 ㎒)
+Single Tx Chain (dBm) – Ant. 1+2
+Modulated Average (80 ㎒)
+E.I.R.P (㏈m) – Ant.1+2
+Channel 155 155
+IEEE 802.11ac
+(5.8 ㎓)
+Maximum 8.0 11.4
+Nominal 7.0 10.4
+
+Report No. : KES-SR240254 Page 8 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+1.7. Simultaneous Transmission Capabilities
+This device is supported MIMO mode but it is not supported simultaneous transmission with the other frequency
+bands.
+1.8. Device Serial Numbers
+This product has eight model names, including derivatives. The SAR test was performed using the G1417CW
+model among the eight models. These models have the same components and functions, but they are identical to
+electrical component except for case color.
+Several samples with identical hardware were used to support SAR testing. The manufacturer has confirmed that
+the device(s) tested have the same physical, mechanical and thermal characteristics and are within operational
+tolerances expected for production units. The serial numbers used for each test are indicated alongside the results
+in Section 10.
+
+Report No. : KES-SR240254 Page 9 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+2. SAR measurement system
+2.1. SAR definition
+SAR is related to the rate at which energy is absorbed per unit mass in an object exposed to a radio field. The
+SAR distribution in a biological body is complicated and is usually carried out by experimental techniques or
+numerical modeling. The standard recommends limits for two tiers of groups, occupational/controlled and general
+population/uncontrolled, based on a person’s awareness and ability to exercise control over his or her exposure.
+In general, occupational/controlled exposure limits are higher than the limits for general population/uncontrolled.
+The SAR definition is the time derivative (rate) of the incremental energy (dW) absorbed by (dissipated in) an
+incremental mass (dm) contained in a volume element (dv) of a given density (ρ). The equation description is as
+below:
+SAR is expressed in units of Watts per kilogram (W/kg)
+SAR measurement can be related to the electrical field in the tissue by
+where:
+σ = conductivity of the tissue (S/m)
+ρ = mass density of the tissue (kg/m3)
+E = rms electric field strength (V/m)
+NOTE: The primary factors that control rate of energy absorption were found to be the wavelength of the incident
+field in relation to the dimensions and geometry of the irradiated organism, the orientation of the organism in
+relation to the polarity of field vectors, the presence of reflecting surfaces, and whether conductive contact is made
+by the organism with a ground plane.
+
+Report No. : KES-SR240254 Page 10 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+2.2. SPEAG DASY System
+A standard high precision 6-axis robot with controller, teach pendant and software. An arm extension for
+accommodating the data acquisition electronics (DAE). An isotropic Field probe optimized and calibrated for the
+targeted measurement. Data acquisition electronics (DAE) which performs the signal amplification, signal
+multiplexing, AD-conversion, offset measurements, mechanical surface detection, collision detection, etc. The unit
+is battery powered with standard or rechargeable batteries. The signal is optically transmitted to the EOC.
+The Electro-optical converter (EOC) performs the conversion from optical to electrical signals for the digital
+communication to the DAE. To use optical surface detection, a special version of the EOC is required. The EOC
+signal is transmitted to the measurement server. The function of the measurement server is to perform the time
+critical tasks such as signal filtering, control of the robot operation and fast movement interrupts. The Light Beam
+used is for probe alignment. This improves the (absolute) accuracy of the probe positioning. A computer running
+
+WinXP, Win7 or Win10 and the DASY5 software. Remote control and teach pendant as well as additional circuitry
+for robot safety such as warning lamps, etc. The phantom, the device holder and other accessories according to
+the targeted measurement.
+Figure 2-1. SPEAG DASY system configuration
+
+Report No. : KES-SR240254 Page 11 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+3. Tissue simulating liquids
+For SAR measurement of the field distribution inside the phantom, the phantom must be filled with homogeneous
+tissue simulating liquid to a depth of at least 15 ㎝. For head SAR testing, the liquid height from the ear reference
+point (ERP) of the phantom to the liquid top surface is larger than 15 ㎝. For body SAR testing, the liquid height
+from the center of the flat phantom to the liquid top surface is larger than 15 ㎝. The nominal dielectric values of
+the tissue simulating liquids in the phantom and the tolerance of 5 % are listed in Table-3.1.
+Photo of Liquid Height for Head Position Photo of Liquid Height for Body Position
+The dielectric properties of the tissue simulating liquids are defined in EN IEC/IEEE 62209-1528:2021.
+The dielectric properties of the tissue simulating liquids were verified prior to the SAR evaluation using a SPEAG
+DAK3.5 Dielectric Assessment Kit and an Agilent Network Analyzer.
+Table-3.1 Targets of Tissue Simulating Liquid
+Frequency
+(㎒)
+Target
+Permittivity
+Range of
+± 5 %
+Target
+Conductivity
+Range of
+± 5 %
+750 41.9 39.8 ~ 44.0 0.89 0.85 ~ 0.93
+835 41.5 39.4 ~ 43.6 0.90 0.86 ~ 0.95
+900 41.5 39.4 ~ 43.6 0.97 0.92 ~ 1.02
+1 450 40.5 38.5 ~ 42.5 1.20 1.14 ~ 1.26
+1 640 40.3 38.3 ~ 42.3 1.29 1.23 ~ 1.35
+1 750 40.1 38.1 ~ 42.1 1.37 1.30 ~ 1.44
+1 800 40.0 38.0 ~ 42.0 1.40 1.33 ~ 1.47
+1 900 40.0 38.0 ~ 42.0 1.40 1.33 ~ 1.47
+2 000 40.0 38.0 ~ 42.0 1.40 1.33 ~ 1.47
+2 300 39.5 37.5 ~ 41.5 1.67 1.59 ~ 1.75
+2 450 39.2 37.2 ~ 41.2 1.80 1.71 ~ 1.89
+2 600 39.0 37.1 ~ 41.0 1.96 1.86 ~ 2.06
+3 500 37.9 36.0 ~ 39.8 2.91 2.76 ~ 3.06
+5 200 36.0 34.2 ~ 37.8 4.66 4.43 ~ 4.89
+5 300 35.9 34.1 ~ 37.7 4.76 4.52 ~ 5.00
+5 500 35.6 33.8 ~ 37.4 4.96 4.71 ~ 5.21
+5 600 35.5 33.7 ~ 37.3 5.07 4.82 ~ 5.32
+5 800 35.3 33.5 ~ 37.1 5.27 5.01 ~ 5.53
+
+Report No. : KES-SR240254 Page 12 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+The following table gives the recipes for tissue simulating liquids.
+Table-3.2 Recipes of Tissue Simulating Liquid
+Tissue
+Type Bactericide DGBE HEC NaCl Sucrose Triton
+X-100 Water
+Diethylene
+Glycol
+Mono-
+Hexyl ether
+H750 0.2 - 0.2 1.5 56.0 - 42.1 -
+H835 0.2 - 0.2 1.5 57.0 - 41.1 -
+H900 0.2 - 0.2 1.4 58.0 - 40.2 -
+H1450 - 43.3 - 0.6 - - 56.1 -
+H1640 - 45.8 - 0.5 - - 53.7 -
+H1750 - 47.0 - 0.4 - - 52.6 -
+H1800 - 44.5 - 0.3 - - 55.2 -
+H1900 - 44.5 - 0.2 - - 55.3 -
+H2000 - 44.5 - 0.1 - - 55.4 -
+H2300 - 44.9 - 0.1 - - 55.0 -
+H2450 - 45.0 - 0.1 - - 54.9 -
+H2600 - 45.1 - 0.1 - - 54.8 -
+H3500 - 8.0 - 0.2 - 20.0 71.8 -
+H5G - - - - - 17.2 65.5 17.3
+
+Report No. : KES-SR240254 Page 13 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+4. SAR System Verification
+The system check verifies that the system operates within its specifications. It is performed daily or before every
+SAR measurement. The system check uses normal SAR measurements in the flat section of the phantom with a
+matched dipole at a specified distance. The system verification setup is shown as below.
+Figure 4. System Verification Setup
+The validation dipole is placed beneath the flat phantom with the specific spacer in place. The distance spacer is
+touch the phantom surface with a light pressure at the reference marking and be oriented parallel to the long side
+of the phantom. The power meter PM1 measures the forward power at the location of the system check dipole
+connector. The signal generator is adjusted for the desired forward power (100 ㎽) at the dipole connector and
+the power meter PM2 is read at that level. After connecting the cable to the dipole, the signal generator is
+readjusted for the same reading at power meter PM2.
+After system check testing, the SAR result will be normalized to 1 W forward input power and compared with the
+reference SAR value derived from validation dipole certificate report. The deviation of system check should be
+within 10 %.
+
+Report No. : KES-SR240254 Page 14 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+5. SAR Measurement Procedure
+5.1. SAR Evaluation
+According to the SAR test standard, the recommended procedure for assessing the peak spatial-average SAR
+value consists of the following steps:
+(a) Power reference measurement
+(b) Area scan
+(c) Zoom scan
+(d) Power drift measurement
+The SAR measurement procedures for each of test conditions are as follows:
+(a) Make EUT to transmit maximum output power
+(b) Measure conducted output power through RF cable
+(c) Place the EUT in the specific position of phantom
+(d) Perform SAR testing steps on the DASY system
+(e) Record the SAR value
+Area & Zoom Scan Procedure
+First Area Scan is used to locate the approximate location(s) of the local peak SAR value(s). The measurement
+grid within an Area Scan is defined by the grid extent, grid step size and grid offset. Next, in order to determine the
+EM field distribution in a three-dimensional spatial extension, Zoom Scan is required. The Zoom Scan measures
+5 x 5 x 7 points with step size 8, 8 and 5 mm for below 3 ㎓, and 7 x 7 x 12 points with step size 4, 4 and 2 mm
+for above 5 ㎓. The Zoom Scan is performed around the highest E-field value to determine the averaged SAR-
+distribution over 10 g.
+
+Report No. : KES-SR240254 Page 15 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Power Drift Monitoring
+All SAR testing is under the EUT install full charged battery and transmit maximum output power. In DASY
+measurement software, the power reference measurement and power drift measurement procedures are used for
+monitoring the power drift of EUT during SAR test. Both these procedures measure the field at a specified
+reference position before and after the SAR testing. The software will calculate the field difference in ㏈. If the
+power drifts more than 5 %, the SAR will be retested.
+
+Report No. : KES-SR240254 Page 16 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+5.2. Spatial Peak SAR Evaluation
+The procedure for spatial peak SAR evaluation has been implemented according to the test standard. It can be
+conducted for 1 g and 10 g, as well as for user-specific masses. The DASY software includes all numerical
+procedures necessary to evaluate the spatial peak SAR value.
+The base for the evaluation is a "cube" measurement. The measured volume must include the 1 g and 10 g cubes
+with the highest averaged SAR values. For that purpose, the center of the measured volume is aligned to the
+interpolated peak SAR value of a previously performed area scan.
+The entire evaluation of the spatial peak values is performed within the post-processing engine (SEMCAD). The
+system always gives the maximum values for the 1 g and 10 g cubes. The algorithm to find the cube with highest
+averaged SAR is divided into the following stages:
+(a) Extraction of the measured data (grid and values) from the Zoom Scan
+(b) Calculation of the SAR value at every measurement point based on all stored data (A/D values and
+measurement parameters)
+(c) Generation of a high-resolution mesh within the measured volume
+(d) Interpolation of all measured values form the measurement grid to the high-resolution grid
+(e) Extrapolation of the entire 3-D field distribution to the phantom surface over the distance from sensor to
+surface
+(f) Calculation of the averaged SAR within masses of 1 g and 10 g
+5.3. SAR Averaged Methods
+In DASY, the interpolation and extrapolation are both based on the modified Quadratic Shepard’s method. The
+interpolation scheme combines a least-square fitted function method and a weighted average method which are
+the two basic types of computational interpolation and approximation.
+Extrapolation routines are used to obtain SAR values between the lowest measurement points and the inner
+phantom surface. The extrapolation distance is determined by the surface detection distance and the probe sensor
+offset. The uncertainty increases with the extrapolation distance. To keep the uncertainty within 1 % for the 1 g
+and 10 g cubes, the extrapolation distance should not be larger than 5 mm.
+
+Report No. : KES-SR240254 Page 17 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+6. SAR Measurement Evaluation
+According to technical standards, Body devices are tested for SAR compliance described in the following
+subsections.
+6.1. Body Exposure Conditions
+Since this DUT is a device that can be operated on the limbs, the limbs SAR were considered. The test was carried
+out by contacting the flat phantom on 6 sides of the product.
+Generic device SAR compliance is tested according to the test positions defined in EN IEC/IEEE 62209-1528:2021
+using the flat phantom illustrated as below.
+(a) To position the DUT parallel to the phantom surface.
+(b) To adjust the DUT parallel to the flat phantom.
+(c) To adjust the distance between the DUT surface and the flat phantom to 0 ㎝.
+Figure 6-1. Illustration for Generic device Position
+
+Report No. : KES-SR240254 Page 18 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+7. RF EXPOSURE LIMITS
+In order for users to be aware of the body operating requirements for meeting RF exposure compliance, operating
+instructions and cautions statements are included in the user’s manual.
+7.1. Uncontrolled Environment
+Uncontrolled Environments are defined as locations where there is the exposure of individuals who have no
+knowledge or control of their exposure. The general population/uncontrolled exposure limits are applicable to
+situations in which the general public may be exposed or in which persons who are exposed as a consequence of
+their employment may not be made fully aware of the potential for exposure or cannot exercise control over their
+exposure. Members of the general public would come under this category when exposure is not employment-
+related; for example, in the case of a wireless transmitter that exposes persons in its vicinity.
+7.2. Controlled Environment
+Controlled Environments are defined as locations where there is exposure that may be incurred by persons who
+are aware of the potential for exposure, (i.e. as a result of employment or occupation). In general,
+occupational/controlled exposure limits are applicable to situations in which persons are exposed as a
+consequence of their employment, who have been made fully aware of the potential for exposure and can exercise
+control over their exposure. This exposure category is also applicable when the exposure is of a transient nature
+due to incidental passage through a location where the exposure levels may be higher than the general
+population/uncontrolled limits, but the exposed person is fully aware of the potential for exposure and can exercise
+control over his or her exposure by leaving the area or by some other appropriate means.
+Table 8-1 SAR Safety Limits for Partial Exposure
+
+Report No. : KES-SR240254 Page 19 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+8. RF Conducted Power
+8.1. W-LAN Conducted Power
+Table 8-1 2.4 ㎓ W-LAN Conducted Powers Ant. 1+2 (MIMO)
+802.11b 802.11g 802.11n
+Average Average Average
+2412 1 16.69 16.43 16.93 2422 3
+2442 7 16.56 16.41 16.72 2442 7
+2472 13 16.36 16.15 16.48 2462 11
+802.11b 802.11g 802.11n
+Average Average Average
+2412 1 15.66 15.51 15.62 2422 3
+2442 7 15.46 15.54 15.37 2442 7
+2472 13 15.16 15.03 15.39 2462 11
+802.11b 802.11g 802.11n
+Average Average Average
+2412 1 19.22 19.01 19.34 2422 3
+2442 7 19.06 19.01 19.11 2442 7
+2472 13 18.82 18.64 18.98 2462 11 18.90
+IEEE Transmission Mode
+802.11n
+Average
+19.41
+18.86
+Freq.
+[MHz] Channel
+IEEE Transmission Mode Freq.
+[MHz] Channel
+15.19
+15.22
+2.4 GHz Conducted Power - Ant. 1+2 (MIMO) [dBm] 2.4 GHz (40 MHz) Conducted Power - Ant. 1+2 (MIMO) [dBm]
+IEEE Transmission Mode
+802.11n
+Average
+15.71
+16.46
+2.4 GHz Conducted Power - Ant. 2 [dBm] 2.4 GHz (40 MHz) Conducted Power - Ant. 2 [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode Freq.
+[MHz] Channel
+IEEE Transmission Mode
+802.11n
+Average
+16.98
+16.42
+2.4 GHz Conducted Power - Ant. 1 [dBm] 2.4 GHz (40 MHz) Conducted Power - Ant. 1 [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode Freq.
+[MHz] Channel
+
+Report No. : KES-SR240254 Page 20 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Table 8-2 5 ㎓ W-LAN Conducted Powers Ant. 1+2 (MIMO)
+802.11a 802.11n 802.11ac 802.11a 802.11n 802.11ac
+Average Average Average Average Average Average
+5180 36 12.75 12.66 12.63 5190 38 - 12.73 12.52
+5260 52 11.21 11.22 11.28 5270 54 - 11.25 11.03
+5320 64 13.73 13.89 13.97 5310 62 - 14.02 13.91
+5500 100 12.24 12.52 12.73 5510 102 - 12.88 12.75
+5600 120 13.12 13.38 13.24 5590 118 - 14.04 13.97
+5700 140 16.94 17.01 17.21 5670 134 - 17.05 17.16
+5745 149 3.46 3.55 3.62 5755 151 - 3.57 3.46
+5785 157 3.35 3.54 3.48 5795 159 - 3.49 3.42
+5825 165 3.27 3.33 3.37
+802.11a 802.11n 802.11ac 802.11a 802.11n 802.11ac
+Average Average Average Average Average Average
+5180 36 11.06 11.64 11.53 5190 38 - 11.31 11.38
+5260 52 13.34 14.01 13.84 5270 54 - 13.71 13.81
+5320 64 15.30 15.83 16.01 5310 62 - 15.87 15.92
+5500 100 12.22 12.36 12.42 5510 102 - 12.16 12.29
+5600 120 14.83 15.02 15.07 5590 118 - 14.87 14.92
+5700 140 16.56 16.63 16.91 5670 134 - 16.61 16.87
+5745 149 3.46 3.63 3.53 5755 151 - 3.46 3.51
+5785 157 3.38 3.55 3.46 5795 159 - 3.39 3.42
+5825 165 3.32 3.43 3.51
+802.11a 802.11n 802.11ac 802.11a 802.11n 802.11ac
+Average Average Average Average Average Average
+5180 36 15.11 15.20 15.13 5190 38 - 15.09 15.04
+5260 52 15.64 15.85 15.76 5270 54 - 15.67 15.65
+5320 64 17.65 17.98 18.12 5310 62 - 18.06 18.05
+5500 100 15.23 15.46 15.59 5510 102 - 15.55 15.54
+5600 120 17.21 17.29 17.27 5590 118 - 17.49 17.52
+5700 140 19.73 19.84 20.08 5670 134 - 19.85 20.03
+5745 149 6.44 6.61 6.59 5755 151 - 6.53 6.50
+5785 157 6.38 6.56 6.49 5795 159 - 6.46 6.44
+5825 165 6.23 6.40 6.46
+5 GHz (20 MHz) Conducted Power [dBm] 5 GHz (40 MHz) Conducted Power [dBm]
+IEEE Transmission Mode
+5 GHz (20 MHz) Conducted Power [dBm] 5 GHz (40 MHz) Conducted Power [dBm]
+IEEE Transmission Mode
+5 GHz (20 MHz) Conducted Power [dBm] 5 GHz (40 MHz) Conducted Power [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode
+Freq.
+[MHz] Channel
+IEEE Transmission Mode Freq.
+[MHz] Channel
+Freq.
+[MHz] Channel
+Channel
+IEEE Transmission Mode
+Freq.
+[MHz] Channel
+IEEE Transmission Mode Freq.
+[MHz]
+
+Report No. : KES-SR240254 Page 21 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Note: Per EN 50663, 5.8 ㎓ WLAN is exempted from the SAR test as the output power measured less than 20 ㎽.
+5210 42
+5290 58
+5530 106
+5775 155
+5210 42
+5290 58
+5530 106
+5775 155
+5210 42
+5290 58
+5530 106
+5775 155
+802.11ac
+Average
+15.56
+16.13
+15.09
+6.99
+12.18
+14.35
+11.88
+3.93
+5 GHz (80 MHz) Conducted Power [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode
+5 GHz (80 MHz) Conducted Power [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode
+802.11ac
+Average
+802.11ac
+Average
+12.88
+11.37
+12.27
+4.02
+5 GHz (80 MHz) Conducted Power [dBm]
+Freq.
+[MHz] Channel
+IEEE Transmission Mode
+
+Report No. : KES-SR240254 Page 22 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+9. Tissue & System Verification
+9.1. Tissue Verification
+Table 9-1 Measured Tissue Properties
+Tissue
+Type
+Measured
+Frequency
+(㎒)
+Tissue Temp (℃)
+Measured
+Conductivity
+(σ)
+Measured
+Permittivity
+(εr)
+Target
+Conductivity
+(σ)
+Target
+Permittivity
+(εr)
+Conductivity
+Deviation
+(%)
+Permittivity
+Deviation
+(%)
+Test
+Date
+HSL2450
+2 450
+21.1
+1.852 39.295 1.80 39.2 2.89 0.24
+2025.02.12
+2 412 1.833 39.180 1.77 39.3 3.77 - 0.22
+2 442 1.856 39.271 1.79 39.2 3.52 0.15
+2 462 1.868 39.209 1.81 39.2 3.05 0.06
+HSL5GHz
+5 200
+21.1
+4.602 35.919 4.66 36.0 - 1.24 - 0.23
+2025.02.12
+5 180 4.570 35.932 4.64 36.0 - 1.49 - 0.24
+5 260 4.702 35.658 4.72 35.9 - 0.38 - 0.78
+5 320 4.770 35.784 4.78 35.9 - 0.21 - 0.27
+HSL5GHz
+5 500
+21.1
+4.926 35.717 4.97 35.7 - 0.79 0.19
+2025.02.12 5 600 5.050 35.230 5.07 35.5 - 0.39 - 0.76
+5 700 5.158 35.109 5.19 35.4 - 0.62 - 0.77
+The above measured tissue parameters were used in the DASY software. The DASY software was used to perform
+interpolation to determine the dielectric parameters at the SAR test device frequencies (per EN IEC/IEEE 62209-1528 6.2.2).
+The tissue parameters listed in the SAR test plots may slightly differ from the table above due to significant digit rounding in
+the software.
+
+Report No. : KES-SR240254 Page 23 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+9.2. Test System Verification
+Prior to SAR assessment, the system is verified to ± 10 % of the SAR measurement on the reference dipole at the
+time of calibration by the calibration facility.
+Table 9-2 System Verification Results – 10 g
+SAR
+System
+#
+Test
+Date
+Tissue
+Frequency
+(㎒)
+Amb.
+Temp
+(℃)
+Liquid
+Temp
+(℃)
+Input
+Power
+(mW)
+Dipole
+SN
+Probe
+SN
+1W Target
+SAR-10 g
+(W/kg)
+Measured
+SAR-10 g
+(W/kg)
+Normalized
+to 1W
+SAR-10 g
+(W/kg)
+Deviation
+(%)
+1 2025.02.12 2 450 22.4 21.1 100 1075 3879 24.80 2.38 23.80 - 4.03
+1 2025.02.12 5 200 22.4 21.1 50 1217 3879 22.50 1.09 21.80 - 3.11
+
+1 2025.02.12 5 500 22.4 21.1 50 1217 3879 24.00 1.17 23.40 - 2.50
+Figure 9-1 System Verification Setup Diagram and Photo
+
+Report No. : KES-SR240254 Page 24 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+10. SAR Testing Results
+10.1. Body SAR Data
+Table 10-1 2.4 ㎓ WLAN Body SAR
+Plot
+No.
+Device
+Serial
+Number
+Mode Test Position Spacing
+(㎝) Ch. Ant
+Status
+Maximum
+Allowed
+Power
+[㏈m]
+Measured
+Conducted
+Power
+[㏈m]
+Scaling
+Factor
+(Duty Cycle)
+Scaling
+Factor
+(Power)
+Power
+Drift [㏈]
+Measured
+SAR 10 g
+(W/kg)
+Reported
+SAR 10 g
+(W/kg)
+SAR1 802.11n HT40 Front Side 0 7 1+2 19.0 18.86 1.000 1.033 - 0.03 0.073 0.075
+SAR1 802.11n HT40 Front Side 0 3 1+2 20.0 19.41 1.000 1.146 0.05 0.072 0.082
+3 SAR1 802.11n HT40 Front Side 0 11 1+2 19.0 18.90 1.000 1.023 - 0.04 0.128 0.131
+Table 10-2 5 ㎓ WLAN Body SAR
+Plot
+No.
+Device
+Serial
+Number
+Mode Test Position Spacing
+(㎝) Ch. Ant
+Status
+Maximum
+Allowed
+Power
+[㏈m]
+Measured
+Conducted
+Power
+[㏈m]
+Scaling
+Factor
+(Duty Cycle)
+Scaling
+Factor
+(Power)
+Power
+Drift [㏈]
+Measured
+SAR 10 g
+(W/kg)
+Reported
+SAR 10 g
+(W/kg)
+SAR1 802.11ac VHT20 Front Side 0 52 1+2 16.0 15.76 1.000 1.057 - 0.09 0.716 0.757
+SAR1 802.11ac VHT20 Front Side 0 36 1+2 16.0 15.13 1.000 1.222 - 0.05 0.644 0.787
+6 SAR1 802.11ac VHT20 Front Side 0 64 1+2 19.0 18.12 1.000 1.225 0.17 0.710 0.869
+SAR1 802.11ac VHT20 Front Side 0 120 1+2 18.0 17.27 1.000 1.183 - 0.04 0.769 0.910
+SAR1 802.11ac VHT20 Front Side 0 100 1+2 16.0 15.59 1.000 1.099 - 0.02 0.754 0.829
+9 SAR1 802.11ac VHT20 Front Side 0 140 1+2 21.0 20.08 1.000 1.236 0.07 0.801 0.990
+General Notes:
+1. The test data reported are the worst-case SAR values according to test procedures specified in EN
+IEC/IEEE 62209-1528.
+2. Batteries are fully charged at the beginning of the SAR measurements.
+3. Liquid tissue depth was at least 15.0 ㎝ for all frequencies.
+4. The manufacturer has confirmed that the device(s) tested have the same physical, mechanical and
+thermal characteristics and are within operational tolerances expected for production units.
+5. SAR results were scaled to the maximum allowed power to demonstrate compliance per EN IEC/IEEE
+62209-1528.
+6. The DUT was tested for Body SAR with a 0 cm separation distance between the all side of DUT and the
+outer surface of the flat phantom.
+7. Per Section 7.4.2 d) of EN IEC/IEEE 62209-1528: 2021, Smallest distance from peaks to all points 3 dB
+below is 5.7 mm for the maximum SAR, and Ratio of SAR at M2 to SAR at M1 for the maximum SAR is
+64.5 %. See Section APPENDIX B: SAR TEST DATA for SAR plot for the maximum SAR of each band.
+
+Report No. : KES-SR240254 Page 25 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+11. Measurement Equipment
+Equipment Manufacturer Model Serial No. Cal. Date Next Cal.
+Date Cal. Interval
+SAR Chamber Dymstec N/A N/A N/A N/A N/A
+Thermo-Hygrostat ㈜한국문터스 HK-030-AU1 1506231 N/A N/A N/A
+Staubli Robot Unit Staubli TX60L F15/5Y7QA1/A/01 N/A N/A N/A
+Electro Optical Converter SPEAG EOC60 1096 N/A N/A N/A
+2mm Oval Phantom V6.0 SPEAG QD OVA 003 AA 2036 N/A N/A N/A
+Device Holder SPEAG Laptop Holder SM LH1 001 CD N/A N/A N/A
+Data Acquisition Electronics SPEAG DAE4 1699 2025-01-21 2026-01-21 1 Year
+E-Field Probe SPEAG EX3DV4 3879 2025-01-23 2026-01-23 1 Year
+Dipole Antenna SPEAG D2450V2 1075 2024-02-19 2026-02-19 2 Years
+Dipole Antenna SPEAG D5GHzV2 1217 2024-02-21 2026-02-21 2 Years
+RF Signal Generator ANRITSU 68369B 992113 2025-01-10 2026-01-10 1 Year
+BROADBAND HIGH
+POWER AMPLIFIER EMPOWER 1138 1030 2024-06-11 2025-06-11 1 Year
+DUAL DIRECTIONAL COUPLER HP 11692D 1212A03523 2024-06-11 2025-06-11 1 Year
+EPM Series Power Meter HP E4419B GB40202055 2025-01-10 2026-01-10 1 Year
+E-Series AVG Power Sensor Agilent E9300H MY41495967 2025-01-10 2026-01-10 1 Year
+E-Series AVG Power Sensor Agilent E9300H US39215405 2025-01-10 2026-01-10 1 Year
+POWER METER ANRITSU ML2495A 1438001 2025-01-10 2026-01-10 1 Year
+Pulse Power Sensor ANRITSU MA2411B 1339205 2025-01-10 2026-01-10 1 Year
+Attenuator HP 8491B 22234 2025-01-10 2026-01-10 1 Year
+Attenuator MINI-
+CIRCUITS UNAT-10+ VUU38501715 2025-01-10 2026-01-10 1 Year
+Low Pass Filter FILTRON F-LPCA-
+KOO1410 1408004S 2025-01-10 2026-01-10 1 Year
+Low Pass Filter FILTRON F-LPCA-
+KOO1420 1408008S 2025-01-10 2026-01-10 1 Year
+DIELECTRIC ASSESSMENT KIT SPEAG DAK3.5 1205 2025-01-25 2026-01-25 1 Year
+Network Analyzer HP 8720C 3124A01008 2024-06-11 2025-06-11 1 Year
+HYGRO-THERMOMETER DAEKWANG 811CE NONE 2024-06-13 2025-06-13 1 Year
+DIGITAL THERMOMETER NONE TP101 191105 2025-01-16 2026-01-16 1 Year
+Spectrum Analyzer R&S FSV 30 101389 2024-04-16 2025-04-16 1 Year
+
+Report No. : KES-SR240254 Page 26 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+12. Measurement uncertainty
+A
+b
+d
+e=f(d, k)
+f
+g
+h=c x f/e l=c x g/e
+k
+Ci Ci
+Div. (1 g) (10 g) Uncertainty Uncertainty Vi
+± %, (1 g) ± %, (10 g)
+Probe calibration 8.4.1.1 N 2.000 1 1 3.325 3.325 ∞
+Probe calibration drift 8.4.1.2 N 1.000 1 1 1.00 1.00 ∞
+Probe linearity and detection
+limit 8.4.1.3 R 1.732 1 1 2.71 2.71 ∞
+Broadband signal 8.4.1.4 N 2.000 1 1 1.50 1.50 ∞
+Probe isotropy 8.4.1.5 R 1.732 1 1 4.39 4.39 ∞
+Other probe and data
+acquisition errors 8.4.1.6 N 1.000 1 1 0.30 0.30 ∞
+RF ambient and noise 8.4.1.7 N 1.000 1 1 1.80 1.80 ∞
+Probe positioning errors 8.4.1.8 N 1.000 0.67 0.67 0.17 0.17 -
+Data processing errors 8.4.1.9 N 1.000 1 1 0.30 0.30 ∞
+Measurement of phantom
+conductivity(σ) 8.4.2.1 N 1.000 0.78 0.71 1.48 1.35 ∞
+Temperature effects (medium) 8.4.2.2 2.01 1.87 R 1.732 0.23 0.78 0.27 0.91 ∞
+Shell permittivity 8.4.2.3 R 1.732 0.5 0.5 4.04 4.04 ∞
+Distance between the radiating
+element of the DUT and the
+phantom medium
+8.4.2.4 N 1.000 2 2 4.00 4.00 ∞
+Repeatability of positioning
+the DUT or source against the
+phantom
+8.4.2.5 1.6 1.6 N 1.000 1 1 1.60 1.60 88
+Device holder effects 8.4.2.6 2.5 2.0 N 1.000 1 1 2.50 2.00 -
+Effect of operating mode on
+probe sensitivity
+DUT
+8.4.2.7 R 1.732 1 1 1.39 1.39 ∞
+Time-average SAR 8.4.2.8 R 1.732 1 1 0.00 0.00 ∞
+Variation in SAR due to drift in
+output of DUT
+data
+8.4.2.9 N 1.732 1 1 2.89 2.89 -
+SAR scaling 8.4.3.2 R 1.732 1 1 0.00 0.00 -
+Combined standard uncertainty,
+u(ΔSAR) RSS 10.10 10.00 Veff
+Expanded uncertainty, U
+(95% Confidence Interval)
+Measurement system errors
+300 MHz to 3 GHz Measurement Uncertainy - DASY5 System
+c
+Unc.
+± %
+14.0
+6.65
+1.0
+4.7
+3.0
+7.6
+0.3
+1.8
+0.25
+0.3
+Phantom and device (DUT or validation antenna) errors
+1.90
+Phantom deviation from target
+(ε′,σ) 8.4.3.1 1.9 N 1.000
+2.0
+2.4
+0.0
+5.0
+Corrections to the SAR result (if applied)
+0.84 1.90 1.60
+20.00
+source of uncertainty Ref. Prob
+Dist.
+-
+0.0
+k
+= 2 20.20
+1
+
+Report No. : KES-SR240254 Page 27 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+A
+b
+d
+e=f(d, k)
+f
+g
+h=c x f/e l=c x g/e
+k
+Ci Ci
+Div. (1 g) (10 g) Uncertainty Uncertainty contribution contribution Vi
+± %, (1 g) ± %, (10 g) 1g 10g
+Probe calibration 8.4.1.1 N 2.000 1 1 3.5 3.5 3.50 3.50 ∞
+Probe calibration drift 8.4.1.2 N 1.000 1 1 1.00 1.00 1.00 1.00 ∞
+Probe linearity and detection
+limit 8.4.1.3 R 1.732 1 1 2.71 2.71 2.71 2.71 ∞
+Broadband signal 8.4.1.4 N 2.000 1 1 1.50 1.50 1.50 1.50 ∞
+Probe isotropy 8.4.1.5 R 1.732 1 1 4.39 4.39 4.39 4.39 ∞
+Other probe and data
+acquisition errors 8.4.1.6 N 1.000 1 1 0.30 0.30 0.30 0.30 ∞
+RF ambient and noise 8.4.1.7 N 1.000 1 1 1.80 1.80 1.80 1.80 ∞
+Probe positioning errors 8.4.1.8 N 1.000 0.67 0.67 0.17 0.17 0.11 0.11 -
+Data processing errors 8.4.1.9 N 1.000 1 1 0.30 0.30 0.30 0.30 ∞
+Measurement of phantom
+conductivity(σ) 8.4.2.1 N 1.000 0.78 0.71 1.48 1.35 1.16 0.96 ∞
+Temperature effects (medium) 8.4.2.2 2.01 1.87 R 1.732 0.23 0.78 0.27 0.91 0.06 0.71 ∞
+Shell permittivity 8.4.2.3 R 1.732 0.5 0.5 4.04 4.04 2.02 2.02 ∞
+Distance between the radiating
+element of the DUT and the
+phantom medium
+8.4.2.4 N 1.000 2 2 4.00 4.00 8.00 8.00 ∞
+Repeatability of positioning
+the DUT or source against the
+phantom
+8.4.2.5 1.6 1.6 N 1.000 1 1 1.60 1.60 1.60 1.60 88
+Device holder effects 8.4.2.6 2.5 2.0 N 1.000 1 1 2.50 2.00 2.50 2.00 -
+Effect of operating mode on
+probe sensitivity
+DUT
+8.4.2.7 R 1.732 1 1 1.39 1.39 1.39 1.39 ∞
+Time-average SAR 8.4.2.8 R 1.732 1 1 0.00 0.00 0.00 0.00 ∞
+Variation in SAR due to drift in
+output of DUT
+data
+8.4.2.9 N 1.732 1 1 2.89 2.89 2.89 2.89 -
+SAR scaling 8.4.3.2 R 1.732 1 1 0.00 0.00 0.00 0.00 -
+Combined standard uncertainty,
+u(ΔSAR) RSS 10.20 10.00 Veff
+Expanded uncertainty, U
+(95% Confidence Interval)
+Measurement system errors
+3 GHz to 6 GHz Measurement Uncertainy - DASY5 System
+c
+C i x U i
+Unc.
+± %
+14.0
+7
+1.0
+4.7
+3.0
+7.6
+0.3
+1.8
+0.25
+0.3
+Phantom and device (DUT or validation antenna) errors
+1.90
+Phantom deviation from target
+(ε′,σ) 8.4.3.1 1.9 N 1.000
+2.0
+2.4
+0.0
+5.0
+Corrections to the SAR result (if applied)
+0.84 1.90 1.60 1.90 1.34
+20.00
+source of uncertainty Ref. Prob
+Dist.
+-
+0.0
+k
+= 2 20.40
+1
+
+Report No. : KES-SR240254 Page 28 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Appendix A. SAR Plots for System Verification
+The plots for system verification with largest deviation for each SAR system combination are shown as follows.
+
+Report No. : KES-SR240254 Page 29 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 30 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 31 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 32 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Appendix B. SAR Plots for SAR Measurement
+The plots for SAR measurement are shown as follows.
+
+Report No. : KES-SR240254 Page 33 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 34 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 35 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 36 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Appendix C. SAR calibration certificates for SAR Measurement
+The SPEAG calibration certificates are shown as follows.
+
+Report No. : KES-SR240254 Page 37 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 38 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 39 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 40 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 41 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 42 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 43 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 44 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 45 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 46 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 47 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 48 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 49 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 50 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 51 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 52 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 53 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 54 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 55 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 56 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 57 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 58 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 59 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 60 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 61 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 62 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 63 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 64 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 65 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 66 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 67 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 68 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 69 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 70 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 71 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 72 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 73 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+
+Report No. : KES-SR240254 Page 74 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Appendix D. SAR TISSUE SPECIFICATIONS
+Measurement Procedure for Tissue verification:
+1) The network analyzer and probe system were configured and calibrated.
+2) The probe was immersed in the tissue. The tissue was placed in a nonmetallic container.
+Trapped air bubbles beneath the flange were minimized by placing the probe at a slight angle.
+3) The complex admittance with respect to the probe aperture was measured.
+4) The complex relative permittivity εr can be calculated from the below equation (Pournaropoulos and
+Misra):
+Table D-1 Composition of the Tissue Equivalent Matter
+Frequency (㎒) 2 450 5 200 ~ 5 800
+Tissue type Head
+Ingredients (% by weight)
+DGBE - -
+Mineral Oil - 11.0
+Emulsifiers - 9.0
+Nacl 0.1 2.0
+Tween 20 45.0 -
+Water 54.9 78.0
+Table D-2 Recommended Tissue Dielectric Parameters (EN IEC/IEEE 62209-1528:2021)
+
+Report No. : KES-SR240254 Page 75 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+
+The authenticity of the test report, contact kes@kes.co.kr
+Figure D-1 Liquid Height for Body Position (ELI Phantom)
+
+Report No. : KES-SR240254 Page 76 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+Appendix E. DUT ANTENNA DIAGRAM & SAR TEST SETUP PHOTOGRAPHS
+
+Report No. : KES-SR240254 Page 77 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+DUT Antenna Diagram
+Figure E-1 Antenna Location (Rear Side View)
+
+Report No. : KES-SR240254 Page 78 / 78
+KES-QP16-F01(00-23-01-01) KES Co., Ltd.
+The authenticity of the test report, contact kes@kes.co.kr
+SAR Test Setup Photographs
+Front Side from Flat Phantom (Separation Distance: 0 cm)_Ant.1+2
+The End.

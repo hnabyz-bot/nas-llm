@@ -1,0 +1,3596 @@
+queueId: ingest-1781569954396-qfj
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/ASNZS_60-SIPT_60-2230C/ASNZS 4268 2017_5G_B1-3_ST60-2230C_AR740701-11AN.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/8e180e4033de/ASNZS 4268 2017_5G_B1-3_ST60-2230C_AR740701-11AN__8e180e4033de_combined.txt
+canonicalGroupId: a02fc54bb1c4
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 750
+
+SOURCE_TEXT
+Report No.: AR740701-11AN Page : 1 of 263
+Report Version: Rev. 01
+AS/NZS Test Report
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+(Please refer to section 1.1.1 for more details)
+Model No. : ST60-2230C
+(Please refer to section 1.1.1 for more details)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity, Inc.
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : AS/NZS 4268:2017
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 25 ~ Jun. 19, 2018
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+James Fan / Assistant Manager Gary Chang / Manager
+
+Report No.: AR740701-11AN Page : 2 of 263
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List .............................................................................................................. 10
+1.3 Test Setup Chart .................................................................................................................................. 10
+1.4 Test Equipment and Calibration Data .................................................................................................. 12
+1.5 Testing Applied Standards ................................................................................................................... 14
+1.6 Deviation from Test Standard and Measurement Procedure............................................................... 14
+1.7 Measurement Uncertainty .................................................................................................................... 15
+2 TEST CONFIGURATION ..................................................................................................................... 16
+2.1 Testing Condition ................................................................................................................................. 16
+2.2 Testing Facility ..................................................................................................................................... 16
+2.3 The Worst Test Modes and Channel Details ....................................................................................... 17
+3 TRANSMITTER TEST RESULTS ....................................................................................................... 18
+3.1 Carrier Frequencies.............................................................................................................................. 18
+3.2 Emission Bandwidth and Operating frequencies ................................................................................. 35
+3.3 RF Output Power, Transmit Power Control (TPC) and Power density ................................................ 37
+3.4 Transmitter Unwanted Emissions outside the 5 GHz RLAN Bands..................................................... 75
+3.5 Transmitter Unwanted Emissions within the 5 GHz RLAN Band .......................................................159
+4 RECEIVER TEST RESULTS .............................................................................................................164
+4.1 Receiver Spurious Emissions.............................................................................................................164
+5 ADAPTIVITY TEST RESULTS ..........................................................................................................247
+5.1 Adaptivity ............................................................................................................................................247
+6 RECEIVER BLOCKING TEST RESULTS.........................................................................................251
+6.1 Receiver Blocking ...............................................................................................................................251
+7 PHOTOGRAPHS OF THE TEST CONFIGURATION .......................................................................254
+8 TEST LABORATORY INFORMATION .............................................................................................263
+
+Report No.: AR740701-11AN Page : 3 of 263
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+AR740701-11AN Rev. 01 Initial issue Feb. 25, 2021
+
+Report No.: AR740701-11AN Page : 4 of 263
+Report Version: Rev. 01
+Summary of Test Result
+Ref. Std.
+Clause
+(ACMA 4268)
+Ref. Std.
+Clause
+(EN 301 893)
+Test Items Measured Result
+--- 4.2.1 Carrier Frequencies Meet the requirement of limit. Pass
+6.5 4.2.2 Emission Bandwidth Meet the requirement of limit. Pass
+6.6 4.2.2 Operating frequencies Meet the requirement of limit. Pass
+6.3 4.2.3 RF Output Power & Transmit
+Power Control (TPC)
+5.15-5.25GHz: 22.87 dBm
+5.25-5.35GHz: 22.76 dBm
+5.47-5.725GHz: 22.89 dBm
+Pass
+Row 61
+Row 62
+Row 63
+4.2.3 Power Density Meet the requirement of limit. Pass
+6.4 4.2.4 Transmitter Unwanted
+Emissions Meet the requirement of limit. Pass
+7.2 4.2.5 Receiver Spurious Emissions Meet the requirement of limit. Pass
+Row 62
+Row 63 4.2.6 Dynamic Frequency Selection
+(DFS) Meet the requirement of limit. Pass
+--- 4.2.7 Adaptivity (Channel Access
+Mechanism) Meet the requirement of limit. PassNote2
+--- 4.2.8 Receiver Blocking Meet the requirement of limit. Pass
+--- 4.2.9 User Access Restrictions Meet the requirement of limit. Pass
+--- 4.2.10 Geo-location capability
+This test is not required since the
+device does not support this
+function
+NA
+Note:
+1. The DFS measurement was recorded in Report No.: AD740701-11.
+2. Channel Access Mechanism and maximum Channel Occupancy Time are declared compliance with
+requirement by manufacturer. Both items are not evaluated.
+Declaration of Conformity:
+The test results with all measurement uncertainty excluded are presented in accordance with the regulation
+limits or requirements declared by manufacturers.
+Comments and Explanations:
+The declared of product specification for EUT presented in the report are provided by the manufacturer, and
+the manufacturer takes all the responsibilities for the accuracy of product specification.
+
+Report No.: AR740701-11AN Page : 5 of 263
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a supplementary report to original ICC report no. AR740701-03AI. The modification is
+1. Additional model and product names
+2. Resistance of CONFIG_HOST0/1/2 are different to switch interface
+3. Update to the latest SW version
+4. New applicant name & brand name.
+5. Adding one antenna.
+After verification, above changes does not impact to original test results. Thus test results remain the same.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module with carrier board
+ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/UART interface PCIe/UART interface
+ST60-2230C-PU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module PCIe/USB interface PCIe/USB interface
+ST60-2230C-SS 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module SDIO/SDIO Interface SDIO/SDIO Interface
+ST60-2230C-U 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/UART Interface USB/UART Interface
+ST60-2230C-UU 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module USB/USB interface USB/USB interface
+ST60-2230C-Q 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module,ST60-2230C-Q
+The difference
+between
+ST60-2230C and
+ST60-2230C-Q the
+OTP parameter is
+different for ID
+recognition. SW is
+exactly the same.
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+
+Report No.: AR740701-11AN Page : 6 of 263
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+IEEE Std.
+802.11
+Frequency
+Range (MHz) Ch. Freq. (MHz) Channel
+Number
+Transmit
+Chains (NTX)
+Data Rate /
+MCS
+a
+5150-5250
+5250-5350
+5500-5700
+5180-5240
+5260-5320
+5500-5700
+36-48 [4]
+52-64 [4]
+100-140 [11]
+1 6-54 Mbps
+2 6-54 Mbps
+n (HT20)
+5150-5250
+5250-5350
+5500-5700
+5180-5240
+5260-5320
+5500-5700
+36-48 [4]
+52-64 [4]
+100-140 [11]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+n (HT40)
+5150-5250
+5250-5350
+5500-5700
+5190-5230
+5270-5310
+5510-5670
+38-46 [2]
+54-62 [2]
+102-134 [5]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+ac (VHT20)
+5150-5250
+5250-5350
+5500-5700
+5180-5240
+5260-5320
+5500-5700
+36-48 [4]
+52-64 [4]
+100-140 [11]
+1
+MCS 0-9
+2
+ac (VHT40)
+5150-5250
+5250-5350
+5500-5700
+5190-5230
+5270-5310
+5510-5670
+38-46 [2]
+54-62 [2]
+102-134 [5]
+1
+MCS 0-9
+2
+ac (VHT80)
+5150-5250
+5250-5350
+5500-5700
+5210
+5290
+5530-5610
+42 [1]
+58 [1]
+106-122 [2]
+1
+MCS 0-9
+2
+Note 1: 802.11a/n/ac uses a combination of OFDM-BPSK, QPSK, 16QAM, 64QAM, 256QAM modulation.
+Note 2: The device supports TX antenna diversity function. The conducted power of single chain is same for
+1TX and 2TX operating mode. Therefore, Ant1 + Ant 2 configuration is chosen for final testing.
+
+Report No.: AR740701-11AN Page : 7 of 263
+Report Version: Rev. 01
+1.1.3 Antenna Details (New addition is marked in boldface.)
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2 2 2
+2 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB
+Dipole IPEX U.FL 2.79 3.38 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 2.5 3 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic
+Dipole
+IPEX U.FL 2.5 3.5 3.5 3.5 3.5
+6
+Laird/MIMO
+FlexPIFA
+Antenna
+PIFA IPEX U.FL 2 3 3 3 3
+1.1.4 EUT Operational Condition
+Power Supply Type DC 3.3V from host
+SW Version laird-backport-7.0.0.136 (only for ST60-2230C-UU)
+laird-backport-7.0.0.70 (others)
+Operational Voltage Vnom (3.30 V) Vmax (3.63 V) Vmin (2.97 V)
+Operational Climatic Tnom (20°C) Tmax (85°C) Tmin (-30°C)
+1.1.5 Accessories
+N/A
+1.1.6 Adaptive Equipment
+Adaptive Equipment
+Adaptive Equipment without the possibility to switch to a non-adaptive mode:
+The equipment has implemented an LBT based DAA mechanism:
+The equipment is Frame Based equipment
+The equipment is Load Based equipment
+The equipment can switch dynamically between Frame Based and Load Based equipment
+The equipment has implemented an non-LBT based DAA mechanism
+The equipment can operate in more than one adaptive mode
+Adaptive Equipment which can also operate in a non-adaptive mode
+
+Report No.: AR740701-11AN Page : 8 of 263
+Report Version: Rev. 01
+1.1.7 Channel List
+Frequency band (MHz) 5150~5350
+802.11a / n HT20 / ac VHT20 802.11n HT40 / ac VHT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+36 5180 38 5190
+40 5200 46 5230
+44 5220 54 5270
+48 5240 62 5310
+52 5260 802.11ac VHT80
+56 5280 42 5210
+60 5300 58 5290
+64 5320 -- --
+Frequency band (MHz) 5500~5700
+802.11a / n HT20 / ac VHT20 802.11n HT40 / ac VHT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+100 5500 102 5510
+104 5520 110 5550
+108 5540 118 5590
+112 5560 126 5630
+116 5580 134 5670
+120 5600 802.11ac VHT80
+124 5620 106 5530
+128 5640 122 5610
+132 5660 -- --
+136 5680 -- --
+140 5700 -- --
+1.1.8 Test Tool and Duty Cycle
+Test tool Command
+Duty Cycle Of Test Signal (%)
+100% - IEEE 802.11a
+100% - IEEE 802.11ac VHT20
+100% - IEEE 802.11ac VHT40
+100% - IEEE 802.11ac (VHT80)
+Duty Factor
+0.00 - IEEE 802.11a
+0.00 - IEEE 802.11ac VHT20
+0.00 - IEEE 802.11ac VHT40
+0.00 - IEEE 802.11ac (VHT80)
+
+Report No.: AR740701-11AN Page : 9 of 263
+Report Version: Rev. 01
+1.1.9 Power Setting
+Configuration 1 : Dipole Antenna
+Modulation
+Mode
+Test Frequency (MHz)
+a / ac (VHT20) ac (VHT40) ac (VHT80)
+5180 5320 5500 5700 5190 5310 5510 5670 5210 5290 5530 5610
+a 16 16 17 17 -- -- -- -- -- -- -- --
+ac (VHT20) 16 16 17 17 -- -- -- -- -- -- -- --
+ac (VHT40) -- -- -- -- 17 17 17 18 -- -- -- --
+ac (VHT80) -- -- -- -- -- -- -- -- 17 17 17 18
+Configuration 2 : PCB Dipole Antenna
+Modulation
+Mode
+Test Frequency (MHz)
+a / ac (VHT20) ac (VHT40) ac (VHT80)
+5180 5320 5500 5700 5190 5310 5510 5670 5210 5290 5530 5610
+a 14 14 15 15 -- -- -- -- -- -- -- --
+ac (VHT20) 14 14 15 15 -- -- -- -- -- -- -- --
+ac (VHT40) -- -- -- -- 15 15 15 16 -- -- -- --
+ac (VHT80) -- -- -- -- -- -- -- -- 15 15 15 15
+Configuration 3 : PIFA Antenna
+Modulation
+Mode
+Test Frequency (MHz)
+a / ac (VHT20) ac (VHT40) ac (VHT80)
+5180 5320 5500 5700 5190 5310 5510 5670 5210 5290 5530 5610
+a 15 15 16 16 -- -- -- -- -- -- -- --
+ac (VHT20) 15 15 16 16 -- -- -- -- -- -- -- --
+ac (VHT40) -- -- -- -- 16 16 16 17 -- -- -- --
+ac (VHT80) -- -- -- -- -- -- -- -- 16 16 16 17
+Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation
+Mode
+Test Frequency (MHz)
+a / ac (VHT20) ac (VHT40) ac (VHT80)
+5180 5320 5500 5700 5190 5310 5510 5670 5210 5290 5530 5610
+a 14 14 15 15 -- -- -- -- -- -- -- --
+ac (VHT20) 14 14 15 15 -- -- -- -- -- -- -- --
+ac (VHT40) -- -- -- -- 15 16 16 17 -- -- -- --
+ac (VHT80) -- -- -- -- -- -- -- -- 15 15 16 15
+
+Report No.: AR740701-11AN Page : 10 of 263
+Report Version: Rev. 01
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 1m non-shielded
+2 Notebook Lenovo T430 DoC RJ45, 1m non-shielded
+3 50Ω terminator --- --- --- ---
+4 Fixture --- --- --- ---
+5 Wireless connectivity
+tester LITE POINT IQ2010 --- ---
+Note: No.2, 4 and 5 were provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram (Conducted)
+
+Report No.: AR740701-11AN Page : 11 of 263
+Report Version: Rev. 01
+Test Setup Diagram (Radiated)
+
+Report No.: AR740701-11AN Page : 12 of 263
+Report Version: Rev. 01
+1.4 Test Equipment and Calibration Data
+Test Item Radiated Emissions
+Test Site Fully-anechoic chamber 2 / (05CH02-WS)
+Tested Date Apr. 25, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer Agilent N9010A MY52221474 Oct. 14, 2016 Oct. 13, 2017
+Bilog Antenna
+30-1000MHz SCHWARZBECK VULB9168 9168-563 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D 9120D-1205 Jan. 05, 2017 Jan. 04, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170508 Dec. 29, 2016 Dec. 28, 2017
+Preamplifier Agilent 83017A MY53270013 Jan. 10, 2017 Jan. 09, 2018
+Preamplifier
+30-1000MHz EMC EMC02325 980188 Dec. 13, 2016 Dec. 12, 2017
+Preamplifier EMC EMC184045B 980192 Aug. 24, 2016 Aug. 23, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22622/4 Dec. 13, 2016 Dec. 12, 2017
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22623/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22621/4 Dec. 14, 2016 Dec. 13, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX104 MY22579/4 Dec. 14, 2016 Dec. 13, 2017
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-002 Dec. 14, 2016 Dec. 13, 2017
+LF cable-3M EMC EMC8D-NM-NM-3000 131102 Dec. 14, 2016 Dec. 13, 2017
+LF cable-10M EMC EMC8D-NM-NM-10000 131101 Dec. 14, 2016 Dec. 13, 2017
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: AR740701-11AN Page : 13 of 263
+Report Version: Rev. 01
+Test Item RF Conducted
+Test Site (TH01-WS)
+Tested Date May 06, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV40 101063 Mar. 15, 2017 Mar. 14, 2018
+Spectrum Analyzer Agilent N9010A MY53400091 Sep. 09, 2016 Sep. 08, 2017
+TEMP&HUMIDITY
+CHAMBER GIANT FORCE GCT-225-40-SP-SD MAF1212-002 Nov. 21, 2016 Nov. 20, 2017
+Power Meter Anritsu ML2495A 1241002 Oct. 06, 2016 Oct. 05, 2017
+Power Sensor Anritsu MA2411B 1207366 Oct. 06, 2016 Oct. 05, 2017
+Signal Generator R&S SMB100A 175727 Oct. 19, 2016 Oct. 18, 2017
+Radio
+Communication
+Analyzer
+Anritsu MT8820C 6201465544 Aug. 19, 2016 Aug. 18, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53050081 Apr. 15, 2017 Apr. 14, 2018
+DC POWER
+SOURCE GW INSTEK GPC-6030D EM892433 Oct. 20, 2016 Oct. 19, 2017
+AC POWER
+SOURCE APC AFC-500W F312060012 Oct. 28, 2016 Oct. 27, 2017
+Measurement
+Software Sporton Sporton_1 1.3.30 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Adaptivity
+Test Site (TH01-WS)
+Tested Date Jun. 01, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Spectrum Keysight N9010A MY54200247 Aug. 30, 2016 Aug. 29, 2017
+RF cable-4M HUBER+SUHNER SUCOFLEX_104 MY15686/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.5M HUBER+SUHNER SUCOFLEX_104 296081/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 16, 2016 Dec. 15, 2017
+RF cable-0.2M HUBER+SUHNER SUCOFLEX_104 329021/4 Dec. 16, 2016 Dec. 15, 2017
+MXG-B RF Vector
+Signal Generator Agilent N5182B MY53051912 Nov. 21, 2016 Nov. 20, 2017
+Preamplifier Burgeon BPA-530 100219 Nov. 02, 2016 Nov. 01, 2017
+Oscilloscope National Instruments USB-5133 F651FF Jun. 22, 2016 Jun. 21, 2017
+Measurement
+Software Sporton Sporton_3 2.2.0.0 NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: AR740701-11AN Page : 14 of 263
+Report Version: Rev. 01
+Test Item Receiver Blocking
+Test Site (05CH01-WS)
+Tested Date Jun. 09, 2017
+Instrument Brand Model No. Serial No. Calibration Date Calibration Until
+Signal Generator R&S SMB100A 175727 Oct. 19, 2016 Oct. 18, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 500202/4 Dec. 16, 2016 Dec. 15, 2017
+
+RF Cable HUBER+SUHNER SUCOFLEX_104 296088/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 16, 2016 Dec. 15, 2017
+Note: Calibration Interval of instruments listed above is one year.
+Test Item Radiated Emissions
+Test Site (10CH01-HY)
+Tested Date Jun. 15 ~ Jun. 19, 2018
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Receiver R&S ESI 838496/008 Sep. 01, 2017 Sep. 01, 2018
+Preamplifier EMC EMC02325 980225 Jul. 28, 2017 Jul. 27, 2018
+RF Cable-R03m Jye Bao RG142 CB031 Dec. 29, 2017 Dec. 28, 2018
+RF Cable-R10m MTJ RG223/U+RG8/U CB026-DOOR Dec. 29, 2017 Dec. 28, 2018
+Loop Antenna R&S HFH2-Z2 100330 Nov. 13, 2017 Nov. 12, 2018
+Software Audix E3 4.03260c --- ---
+Note: Calibration Interval of instruments listed above is one year.
+1.5 Testing Applied Standards
+According to the specifications of the manufacturer, the EUT must comply with the requirements of the
+following standards:
+AS/NZS 4268:2017
+EN 301 893 V2.1.1 (2017-05)
+1.6 Deviation from Test Standard and Measurement Procedure
+None
+
+Report No.: AR740701-11AN Page : 15 of 263
+Report Version: Rev. 01
+1.7 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty Limit
+Radio Frequency ±1.4 x 10-9 ±1 × 10-5
+RF power conducted ±0.808 dB ±1,5 dB
+RF power radiated ±3.398 dB ±6 dB
+Spurious emission, conducted ±2.470 dB ±3 dB
+Spurious emission, radiated ±3.398 dB ±6 dB
+Humidity ±4.7% ±5 %
+Temperature ±0.8 oC ±2 °C
+Time ±0.1 % ±10 %
+
+Report No.: AR740701-11AN Page : 16 of 263
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+RF Conducted TH01-WS 23°C / 62% Jack Li
+Radiated Emission
+> 30 MHz 05CH02-WS 24°C / 65% Penguin Jiang
+Adaptivity TH01-WS 23°C / 67% Jack Li
+Receiver Blocking 05CH01-WS 22.5°C / 64% Tom Shu
+Radiated Emission
+≤ 30 MHz 10CH01-HY 24°C / 65% Jack Li
+2.2 Testing Facility
+Test Laboratory International Certification Corp.
+Test Site TH01-WS, 05CH01-WS
+Address of Test Site
+(Kwei Shan)
+No. 3-1, Lane 6, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333, Taiwan,
+R.O.C.
+Test Laboratory International Certification Corp.
+Test Site 05CH02-WS
+Address of Test Site
+(Kwei Shan II)
+No. 14-1, Lane 19, Wen San 3rd St., Kwei Shan District, Tao Yuan City 333,
+Taiwan, R.O.C.
+Test Laboratory Sporton International Inc.
+Test Site 10CH01-HY
+Address of Test Site No. 52, Huaya 1st Rd., Guishan Dist., Taoyuan City, Taiwan (R.O.C.)
+Tel: 886-3-327-3456, Fax: 886-3-327-0973
+
+Report No.: AR740701-11AN Page : 17 of 263
+Report Version: Rev. 01
+2.3 The Worst Test Modes and Channel Details
+Test item Modulation
+Mode
+Test Frequency
+(MHz) Data Rate Test
+Configuration
+Carrier Frequencies
+Emission Bandwidth & Operating
+frequencies
+RF Output Power
+Power Spectral Density
+11a
+VHT20
+VHT40
+VHT80
+5180 / 5320 / 5500 / 5700
+5180 / 5320 / 5500 / 5700
+5190 / 5310 / 5510 / 5670
+5210 / 5290 / 5530 / 5610
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+1, 2, 3, 4
+Transmitter Unwanted Emissions outside
+the 5 GHz RLAN Bands
+11a
+VHT20
+VHT40
+VHT80
+5180 / 5700
+5180 / 5700
+5190 / 5670
+5210 / 5610
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+1
+Transmitter Unwanted Emissions within
+the 5 GHz RLAN Band
+11a
+VHT20
+VHT40
+VHT80
+5180 / 5320 / 5500 / 5700
+5180 / 5320 / 5500 / 5700
+5190 / 5310 / 5510 / 5670
+5210 / 5290 / 5530 / 5610
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+1
+Receiver Spurious Emissions
+11a
+VHT20
+VHT40
+VHT80
+5180 / 5700
+5180 / 5700
+5190 / 5670
+5210 / 5610
+6 Mbps
+MCS 0
+MCS 0
+MCS 0
+1
+Adaptivity VHT20
+VHT40
+5180 / 5500
+5190 / 5510
+MCS 0
+MCS 0 1
+Receiver Blocking 11a 5180 / 5700 6 Mbps 2
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y,
+and Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+2. The device can be operated under adapter mode and charging mode. Each mode was selected for related
+test items as below configuration.
+Configuration 1 : Dipole Antenna
+Configuration 2 : PCB Dipole Antenna
+Configuration 3 : PIFA Antenna
+Configuration 4: Isolated Magnetic Dipole Antenna
+3. Conducted emission is only measured for configuration 1 which has maximum conducted power.
+4. Two 50Ω terminators are connected to antenna port of EUT for radiated emission measurement.
+
+Report No.: AR740701-11AN Page : 18 of 263
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Carrier Frequencies
+3.1.1 Limit of Carrier Frequencies
+The actual centre frequency for any given channel declared by the manufacturer shall be maintained within
+the range fc ± 20 ppm.
+3.1.2 Test Procedures
+Reference to clause 5.4.2.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+3.1.3 Test Setup
+
+Report No.: AR740701-11AN Page : 19 of 263
+Report Version: Rev. 01
+3.1.4 Test Result of Carrier Frequencies
+Configuration 1 : Dipole Antenna
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11a 5180 5179.99626 -0.72 20
+TminVmax 802.11a 5180 5180.01635 3.16 20
+TminVmin 802.11a 5180 5180.01635 3.16 20
+TmaxVmax 802.11a 5180 5180.06900 13.32 20
+TmaxVmin 802.11a 5180 5180.06900 13.32 20
+TnomVnom 802.11a 5320 5319.99653 -0.65 20
+TminVmax 802.11a 5320 5320.02146 4.03 20
+TminVmin 802.11a 5320 5320.02146 4.03 20
+TmaxVmax 802.11a 5320 5320.05650 10.62 20
+TmaxVmin 802.11a 5320 5320.05650 10.62 20
+TnomVnom 802.11a 5500 5499.99230 -1.40 20
+TminVmax 802.11a 5500 5500.02633 4.79 20
+TminVmin 802.11a 5500 5500.02633 4.79 20
+TmaxVmax 802.11a 5500 5500.08420 15.31 20
+TmaxVmin 802.11a 5500 5500.08420 15.31 20
+TnomVnom 802.11a 5700 5699.99240 -1.33 20
+TminVmax 802.11a 5700 5700.03353 5.88 20
+TminVmin 802.11a 5700 5700.03353 5.88 20
+TmaxVmax 802.11a 5700 5700.06950 12.19 20
+TmaxVmin 802.11a 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 20 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT20 5180 5179.99626 -0.72 20
+TminVmax 802.11ac VHT20 5180 5180.01635 3.16 20
+TminVmin 802.11ac VHT20 5180 5180.01635 3.16 20
+TmaxVmax 802.11ac VHT20 5180 5180.06900 13.32 20
+TmaxVmin 802.11ac VHT20 5180 5180.06900 13.32 20
+TnomVnom 802.11ac VHT20 5320 5319.99653 -0.65 20
+TminVmax 802.11ac VHT20 5320 5320.02146 4.03 20
+TminVmin 802.11ac VHT20 5320 5320.02146 4.03 20
+TmaxVmax 802.11ac VHT20 5320 5320.05650 10.62 20
+TmaxVmin 802.11ac VHT20 5320 5320.05650 10.62 20
+TnomVnom 802.11ac VHT20 5500 5499.99230 -1.40 20
+TminVmax 802.11ac VHT20 5500 5500.02633 4.79 20
+TminVmin 802.11ac VHT20 5500 5500.02633 4.79 20
+TmaxVmax 802.11ac VHT20 5500 5500.08420 15.31 20
+TmaxVmin 802.11ac VHT20 5500 5500.08420 15.31 20
+TnomVnom 802.11ac VHT20 5700 5699.99240 -1.33 20
+TminVmax 802.11ac VHT20 5700 5700.03353 5.88 20
+TminVmin 802.11ac VHT20 5700 5700.03353 5.88 20
+TmaxVmax 802.11ac VHT20 5700 5700.06950 12.19 20
+TmaxVmin 802.11ac VHT20 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 21 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT40 5190 5189.99477 -1.01 20
+TminVmax 802.11ac VHT40 5190 5190.03043 5.86 20
+TminVmin 802.11ac VHT40 5190 5190.03043 5.86 20
+TmaxVmax 802.11ac VHT40 5190 5190.06000 11.56 20
+TmaxVmin 802.11ac VHT40 5190 5190.06000 11.56 20
+TnomVnom 802.11ac VHT40 5310 5309.99540 -0.87 20
+TminVmax 802.11ac VHT40 5310 5310.03264 6.15 20
+TminVmin 802.11ac VHT40 5310 5310.03264 6.15 20
+TmaxVmax 802.11ac VHT40 5310 5310.06400 12.05 20
+TmaxVmin 802.11ac VHT40 5310 5310.06400 12.05 20
+TnomVnom 802.11ac VHT40 5510 5509.99689 -0.56 20
+TminVmax 802.11ac VHT40 5510 5510.03348 6.08 20
+TminVmin 802.11ac VHT40 5510 5510.03348 6.08 20
+TmaxVmax 802.11ac VHT40 5510 5510.06800 12.34 20
+TmaxVmin 802.11ac VHT40 5510 5510.06800 12.34 20
+TnomVnom 802.11ac VHT40 5670 5669.99488 -0.90 20
+TminVmax 802.11ac VHT40 5670 5670.03732 6.58 20
+TminVmin 802.11ac VHT40 5670 5670.03732 6.58 20
+TmaxVmax 802.11ac VHT40 5670 5670.07100 12.52 20
+TmaxVmin 802.11ac VHT40 5670 5670.07100 12.52 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 22 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT80 5210 5209.99482 -0.99 20
+TminVmax 802.11ac VHT80 5210 5210.03308 6.35 20
+TminVmin 802.11ac VHT80 5210 5210.03308 6.35 20
+TmaxVmax 802.11ac VHT80 5210 5210.06200 11.90 20
+TmaxVmin 802.11ac VHT80 5210 5210.06200 11.90 20
+TnomVnom 802.11ac VHT80 5290 5289.99607 -0.74 20
+TminVmax 802.11ac VHT80 5290 5290.03186 6.02 20
+TminVmin 802.11ac VHT80 5290 5290.03186 6.02 20
+TmaxVmax 802.11ac VHT80 5290 5290.06800 12.85 20
+TmaxVmin 802.11ac VHT80 5290 5290.06800 12.85 20
+TnomVnom 802.11ac VHT80 5530 5529.99655 -0.62 20
+TminVmax 802.11ac VHT80 5530 5530.03708 6.71 20
+TminVmin 802.11ac VHT80 5530 5530.03708 6.71 20
+TmaxVmax 802.11ac VHT80 5530 5530.06200 11.21 20
+TmaxVmin 802.11ac VHT80 5530 5530.06200 11.21 20
+TnomVnom 802.11ac VHT80 5610 5609.99718 -0.50 20
+TminVmax 802.11ac VHT80 5610 5610.03904 6.96 20
+TminVmin 802.11ac VHT80 5610 5610.03904 6.96 20
+TmaxVmax 802.11ac VHT80 5610 5610.07320 13.05 20
+TmaxVmin 802.11ac VHT80 5610 5610.07320 13.05 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 23 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11a 5180 5179.99626 -0.72 20
+TminVmax 802.11a 5180 5180.01635 3.16 20
+TminVmin 802.11a 5180 5180.01635 3.16 20
+TmaxVmax 802.11a 5180 5180.06900 13.32 20
+TmaxVmin 802.11a 5180 5180.06900 13.32 20
+TnomVnom 802.11a 5320 5319.99653 -0.65 20
+TminVmax 802.11a 5320 5320.02146 4.03 20
+TminVmin 802.11a 5320 5320.02146 4.03 20
+TmaxVmax 802.11a 5320 5320.05650 10.62 20
+TmaxVmin 802.11a 5320 5320.05650 10.62 20
+TnomVnom 802.11a 5500 5499.99230 -1.40 20
+TminVmax 802.11a 5500 5500.02633 4.79 20
+TminVmin 802.11a 5500 5500.02633 4.79 20
+TmaxVmax 802.11a 5500 5500.08420 15.31 20
+TmaxVmin 802.11a 5500 5500.08420 15.31 20
+TnomVnom 802.11a 5700 5699.99240 -1.33 20
+TminVmax 802.11a 5700 5700.03353 5.88 20
+TminVmin 802.11a 5700 5700.03353 5.88 20
+TmaxVmax 802.11a 5700 5700.06950 12.19 20
+TmaxVmin 802.11a 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 24 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT20 5180 5179.99626 -0.72 20
+TminVmax 802.11ac VHT20 5180 5180.01635 3.16 20
+TminVmin 802.11ac VHT20 5180 5180.01635 3.16 20
+TmaxVmax 802.11ac VHT20 5180 5180.06900 13.32 20
+TmaxVmin 802.11ac VHT20 5180 5180.06900 13.32 20
+TnomVnom 802.11ac VHT20 5320 5319.99653 -0.65 20
+TminVmax 802.11ac VHT20 5320 5320.02146 4.03 20
+TminVmin 802.11ac VHT20 5320 5320.02146 4.03 20
+TmaxVmax 802.11ac VHT20 5320 5320.05650 10.62 20
+TmaxVmin 802.11ac VHT20 5320 5320.05650 10.62 20
+TnomVnom 802.11ac VHT20 5500 5499.99230 -1.40 20
+TminVmax 802.11ac VHT20 5500 5500.02633 4.79 20
+TminVmin 802.11ac VHT20 5500 5500.02633 4.79 20
+TmaxVmax 802.11ac VHT20 5500 5500.08420 15.31 20
+TmaxVmin 802.11ac VHT20 5500 5500.08420 15.31 20
+TnomVnom 802.11ac VHT20 5700 5699.99240 -1.33 20
+TminVmax 802.11ac VHT20 5700 5700.03353 5.88 20
+TminVmin 802.11ac VHT20 5700 5700.03353 5.88 20
+TmaxVmax 802.11ac VHT20 5700 5700.06950 12.19 20
+TmaxVmin 802.11ac VHT20 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 25 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT40 5190 5189.99477 -1.01 20
+TminVmax 802.11ac VHT40 5190 5190.03043 5.86 20
+TminVmin 802.11ac VHT40 5190 5190.03043 5.86 20
+TmaxVmax 802.11ac VHT40 5190 5190.06000 11.56 20
+TmaxVmin 802.11ac VHT40 5190 5190.06000 11.56 20
+TnomVnom 802.11ac VHT40 5310 5309.99540 -0.87 20
+TminVmax 802.11ac VHT40 5310 5310.03264 6.15 20
+TminVmin 802.11ac VHT40 5310 5310.03264 6.15 20
+TmaxVmax 802.11ac VHT40 5310 5310.06400 12.05 20
+TmaxVmin 802.11ac VHT40 5310 5310.06400 12.05 20
+TnomVnom 802.11ac VHT40 5510 5509.99689 -0.56 20
+TminVmax 802.11ac VHT40 5510 5510.03348 6.08 20
+TminVmin 802.11ac VHT40 5510 5510.03348 6.08 20
+TmaxVmax 802.11ac VHT40 5510 5510.06800 12.34 20
+TmaxVmin 802.11ac VHT40 5510 5510.06800 12.34 20
+TnomVnom 802.11ac VHT40 5670 5669.99488 -0.90 20
+TminVmax 802.11ac VHT40 5670 5670.03732 6.58 20
+TminVmin 802.11ac VHT40 5670 5670.03732 6.58 20
+TmaxVmax 802.11ac VHT40 5670 5670.07100 12.52 20
+TmaxVmin 802.11ac VHT40 5670 5670.07100 12.52 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 26 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT80 5210 5209.99482 -0.99 20
+TminVmax 802.11ac VHT80 5210 5210.03308 6.35 20
+TminVmin 802.11ac VHT80 5210 5210.03308 6.35 20
+TmaxVmax 802.11ac VHT80 5210 5210.06200 11.90 20
+TmaxVmin 802.11ac VHT80 5210 5210.06200 11.90 20
+TnomVnom 802.11ac VHT80 5290 5289.99607 -0.74 20
+TminVmax 802.11ac VHT80 5290 5290.03186 6.02 20
+TminVmin 802.11ac VHT80 5290 5290.03186 6.02 20
+TmaxVmax 802.11ac VHT80 5290 5290.06800 12.85 20
+TmaxVmin 802.11ac VHT80 5290 5290.06800 12.85 20
+TnomVnom 802.11ac VHT80 5530 5529.99655 -0.62 20
+TminVmax 802.11ac VHT80 5530 5530.03708 6.71 20
+TminVmin 802.11ac VHT80 5530 5530.03708 6.71 20
+TmaxVmax 802.11ac VHT80 5530 5530.06200 11.21 20
+TmaxVmin 802.11ac VHT80 5530 5530.06200 11.21 20
+TnomVnom 802.11ac VHT80 5610 5609.99718 -0.50 20
+TminVmax 802.11ac VHT80 5610 5610.03904 6.96 20
+TminVmin 802.11ac VHT80 5610 5610.03904 6.96 20
+TmaxVmax 802.11ac VHT80 5610 5610.07320 13.05 20
+TmaxVmin 802.11ac VHT80 5610 5610.07320 13.05 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 27 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11a 5180 5179.99626 -0.72 20
+TminVmax 802.11a 5180 5180.01635 3.16 20
+TminVmin 802.11a 5180 5180.01635 3.16 20
+TmaxVmax 802.11a 5180 5180.06900 13.32 20
+TmaxVmin 802.11a 5180 5180.06900 13.32 20
+TnomVnom 802.11a 5320 5319.99653 -0.65 20
+TminVmax 802.11a 5320 5320.02146 4.03 20
+TminVmin 802.11a 5320 5320.02146 4.03 20
+TmaxVmax 802.11a 5320 5320.05650 10.62 20
+TmaxVmin 802.11a 5320 5320.05650 10.62 20
+TnomVnom 802.11a 5500 5499.99230 -1.40 20
+TminVmax 802.11a 5500 5500.02633 4.79 20
+TminVmin 802.11a 5500 5500.02633 4.79 20
+TmaxVmax 802.11a 5500 5500.08420 15.31 20
+TmaxVmin 802.11a 5500 5500.08420 15.31 20
+TnomVnom 802.11a 5700 5699.99240 -1.33 20
+TminVmax 802.11a 5700 5700.03353 5.88 20
+TminVmin 802.11a 5700 5700.03353 5.88 20
+TmaxVmax 802.11a 5700 5700.06950 12.19 20
+TmaxVmin 802.11a 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 28 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT20 5180 5179.99626 -0.72 20
+TminVmax 802.11ac VHT20 5180 5180.01635 3.16 20
+TminVmin 802.11ac VHT20 5180 5180.01635 3.16 20
+TmaxVmax 802.11ac VHT20 5180 5180.06900 13.32 20
+TmaxVmin 802.11ac VHT20 5180 5180.06900 13.32 20
+TnomVnom 802.11ac VHT20 5320 5319.99653 -0.65 20
+TminVmax 802.11ac VHT20 5320 5320.02146 4.03 20
+TminVmin 802.11ac VHT20 5320 5320.02146 4.03 20
+TmaxVmax 802.11ac VHT20 5320 5320.05650 10.62 20
+TmaxVmin 802.11ac VHT20 5320 5320.05650 10.62 20
+TnomVnom 802.11ac VHT20 5500 5499.99230 -1.40 20
+TminVmax 802.11ac VHT20 5500 5500.02633 4.79 20
+TminVmin 802.11ac VHT20 5500 5500.02633 4.79 20
+TmaxVmax 802.11ac VHT20 5500 5500.08420 15.31 20
+TmaxVmin 802.11ac VHT20 5500 5500.08420 15.31 20
+TnomVnom 802.11ac VHT20 5700 5699.99240 -1.33 20
+TminVmax 802.11ac VHT20 5700 5700.03353 5.88 20
+TminVmin 802.11ac VHT20 5700 5700.03353 5.88 20
+TmaxVmax 802.11ac VHT20 5700 5700.06950 12.19 20
+TmaxVmin 802.11ac VHT20 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 29 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT40 5190 5189.99477 -1.01 20
+TminVmax 802.11ac VHT40 5190 5190.03043 5.86 20
+TminVmin 802.11ac VHT40 5190 5190.03043 5.86 20
+TmaxVmax 802.11ac VHT40 5190 5190.06000 11.56 20
+TmaxVmin 802.11ac VHT40 5190 5190.06000 11.56 20
+TnomVnom 802.11ac VHT40 5310 5309.99540 -0.87 20
+TminVmax 802.11ac VHT40 5310 5310.03264 6.15 20
+TminVmin 802.11ac VHT40 5310 5310.03264 6.15 20
+TmaxVmax 802.11ac VHT40 5310 5310.06400 12.05 20
+TmaxVmin 802.11ac VHT40 5310 5310.06400 12.05 20
+TnomVnom 802.11ac VHT40 5510 5509.99689 -0.56 20
+TminVmax 802.11ac VHT40 5510 5510.03348 6.08 20
+TminVmin 802.11ac VHT40 5510 5510.03348 6.08 20
+TmaxVmax 802.11ac VHT40 5510 5510.06800 12.34 20
+TmaxVmin 802.11ac VHT40 5510 5510.06800 12.34 20
+TnomVnom 802.11ac VHT40 5670 5669.99488 -0.90 20
+TminVmax 802.11ac VHT40 5670 5670.03732 6.58 20
+TminVmin 802.11ac VHT40 5670 5670.03732 6.58 20
+TmaxVmax 802.11ac VHT40 5670 5670.07100 12.52 20
+TmaxVmin 802.11ac VHT40 5670 5670.07100 12.52 20
+
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 30 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT80 5210 5209.99482 -0.99 20
+TminVmax 802.11ac VHT80 5210 5210.03308 6.35 20
+TminVmin 802.11ac VHT80 5210 5210.03308 6.35 20
+TmaxVmax 802.11ac VHT80 5210 5210.06200 11.90 20
+TmaxVmin 802.11ac VHT80 5210 5210.06200 11.90 20
+TnomVnom 802.11ac VHT80 5290 5289.99607 -0.74 20
+TminVmax 802.11ac VHT80 5290 5290.03186 6.02 20
+TminVmin 802.11ac VHT80 5290 5290.03186 6.02 20
+TmaxVmax 802.11ac VHT80 5290 5290.06800 12.85 20
+TmaxVmin 802.11ac VHT80 5290 5290.06800 12.85 20
+TnomVnom 802.11ac VHT80 5530 5529.99655 -0.62 20
+TminVmax 802.11ac VHT80 5530 5530.03708 6.71 20
+TminVmin 802.11ac VHT80 5530 5530.03708 6.71 20
+TmaxVmax 802.11ac VHT80 5530 5530.06200 11.21 20
+TmaxVmin 802.11ac VHT80 5530 5530.06200 11.21 20
+TnomVnom 802.11ac VHT80 5610 5609.99718 -0.50 20
+TminVmax 802.11ac VHT80 5610 5610.03904 6.96 20
+TminVmin 802.11ac VHT80 5610 5610.03904 6.96 20
+TmaxVmax 802.11ac VHT80 5610 5610.07320 13.05 20
+TmaxVmin 802.11ac VHT80 5610 5610.07320 13.05 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 31 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11a 5180 5179.99626 -0.72 20
+TminVmax 802.11a 5180 5180.01635 3.16 20
+TminVmin 802.11a 5180 5180.01635 3.16 20
+TmaxVmax 802.11a 5180 5180.06900 13.32 20
+TmaxVmin 802.11a 5180 5180.06900 13.32 20
+TnomVnom 802.11a 5320 5319.99653 -0.65 20
+TminVmax 802.11a 5320 5320.02146 4.03 20
+TminVmin 802.11a 5320 5320.02146 4.03 20
+TmaxVmax 802.11a 5320 5320.05650 10.62 20
+TmaxVmin 802.11a 5320 5320.05650 10.62 20
+TnomVnom 802.11a 5500 5499.99230 -1.40 20
+TminVmax 802.11a 5500 5500.02633 4.79 20
+TminVmin 802.11a 5500 5500.02633 4.79 20
+TmaxVmax 802.11a 5500 5500.08420 15.31 20
+TmaxVmin 802.11a 5500 5500.08420 15.31 20
+TnomVnom 802.11a 5700 5699.99240 -1.33 20
+TminVmax 802.11a 5700 5700.03353 5.88 20
+TminVmin 802.11a 5700 5700.03353 5.88 20
+TmaxVmax 802.11a 5700 5700.06950 12.19 20
+TmaxVmin 802.11a 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 32 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT20 5180 5179.99626 -0.72 20
+TminVmax 802.11ac VHT20 5180 5180.01635 3.16 20
+TminVmin 802.11ac VHT20 5180 5180.01635 3.16 20
+TmaxVmax 802.11ac VHT20 5180 5180.06900 13.32 20
+TmaxVmin 802.11ac VHT20 5180 5180.06900 13.32 20
+TnomVnom 802.11ac VHT20 5320 5319.99653 -0.65 20
+TminVmax 802.11ac VHT20 5320 5320.02146 4.03 20
+TminVmin 802.11ac VHT20 5320 5320.02146 4.03 20
+TmaxVmax 802.11ac VHT20 5320 5320.05650 10.62 20
+TmaxVmin 802.11ac VHT20 5320 5320.05650 10.62 20
+TnomVnom 802.11ac VHT20 5500 5499.99230 -1.40 20
+TminVmax 802.11ac VHT20 5500 5500.02633 4.79 20
+TminVmin 802.11ac VHT20 5500 5500.02633 4.79 20
+TmaxVmax 802.11ac VHT20 5500 5500.08420 15.31 20
+TmaxVmin 802.11ac VHT20 5500 5500.08420 15.31 20
+TnomVnom 802.11ac VHT20 5700 5699.99240 -1.33 20
+TminVmax 802.11ac VHT20 5700 5700.03353 5.88 20
+TminVmin 802.11ac VHT20 5700 5700.03353 5.88 20
+TmaxVmax 802.11ac VHT20 5700 5700.06950 12.19 20
+TmaxVmin 802.11ac VHT20 5700 5700.06950 12.19 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 33 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT40 5190 5189.99477 -1.01 20
+TminVmax 802.11ac VHT40 5190 5190.03043 5.86 20
+TminVmin 802.11ac VHT40 5190 5190.03043 5.86 20
+TmaxVmax 802.11ac VHT40 5190 5190.06000 11.56 20
+TmaxVmin 802.11ac VHT40 5190 5190.06000 11.56 20
+TnomVnom 802.11ac VHT40 5310 5309.99540 -0.87 20
+TminVmax 802.11ac VHT40 5310 5310.03264 6.15 20
+TminVmin 802.11ac VHT40 5310 5310.03264 6.15 20
+TmaxVmax 802.11ac VHT40 5310 5310.06400 12.05 20
+TmaxVmin 802.11ac VHT40 5310 5310.06400 12.05 20
+TnomVnom 802.11ac VHT40 5510 5509.99689 -0.56 20
+TminVmax 802.11ac VHT40 5510 5510.03348 6.08 20
+TminVmin 802.11ac VHT40 5510 5510.03348 6.08 20
+TmaxVmax 802.11ac VHT40 5510 5510.06800 12.34 20
+TmaxVmin 802.11ac VHT40 5510 5510.06800 12.34 20
+TnomVnom 802.11ac VHT40 5670 5669.99488 -0.90 20
+TminVmax 802.11ac VHT40 5670 5670.03732 6.58 20
+TminVmin 802.11ac VHT40 5670 5670.03732 6.58 20
+TmaxVmax 802.11ac VHT40 5670 5670.07100 12.52 20
+TmaxVmin 802.11ac VHT40 5670 5670.07100 12.52 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 34 of 263
+Report Version: Rev. 01
+Condition Modulation Mode Freq. (MHz) Carrier Centre Frequencies (ppm) Limit (ppm)
+Freqeuncy (MHz) Carrier Stability
+TnomVnom 802.11ac VHT80 5210 5209.99482 -0.99 20
+TminVmax 802.11ac VHT80 5210 5210.03308 6.35 20
+TminVmin 802.11ac VHT80 5210 5210.03308 6.35 20
+TmaxVmax 802.11ac VHT80 5210 5210.06200 11.90 20
+TmaxVmin 802.11ac VHT80 5210 5210.06200 11.90 20
+TnomVnom 802.11ac VHT80 5290 5289.99607 -0.74 20
+TminVmax 802.11ac VHT80 5290 5290.03186 6.02 20
+TminVmin 802.11ac VHT80 5290 5290.03186 6.02 20
+TmaxVmax 802.11ac VHT80 5290 5290.06800 12.85 20
+TmaxVmin 802.11ac VHT80 5290 5290.06800 12.85 20
+TnomVnom 802.11ac VHT80 5530 5529.99655 -0.62 20
+TminVmax 802.11ac VHT80 5530 5530.03708 6.71 20
+TminVmin 802.11ac VHT80 5530 5530.03708 6.71 20
+TmaxVmax 802.11ac VHT80 5530 5530.06200 11.21 20
+TmaxVmin 802.11ac VHT80 5530 5530.06200 11.21 20
+TnomVnom 802.11ac VHT80 5610 5609.99718 -0.50 20
+TminVmax 802.11ac VHT80 5610 5610.03904 6.96 20
+TminVmin 802.11ac VHT80 5610 5610.03904 6.96 20
+TmaxVmax 802.11ac VHT80 5610 5610.07320 13.05 20
+TmaxVmin 802.11ac VHT80 5610 5610.07320 13.05 20
+Note: EIRP = Measured conducted power + Antenna gain.
+
+Report No.: AR740701-11AN Page : 35 of 263
+Report Version: Rev. 01
+3.2 Emission Bandwidth and Operating frequencies
+3.2.1 Limit of Emission Bandwidth and Operating frequencies
+The Nominal Emission Bandwidth for a single Operating Channel shall be 20 MHz.
+The Emission Bandwidth shall be between 80 % and 100 % of the Nominal Emission Bandwidth. In case of
+smart antenna systems (devices with multiple transmit chains) each of the transmit chains shall meet this
+requirement.
+The Emission Bandwidth might change with time/payload.
+The Emission Bandwidth for each frequency shall fall completely within 5.15 ~ 5.25 GHz
+3.2.2 Test Procedures
+Reference to clause 5.4.3.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+3.2.3 Test Setup
+
+Report No.: AR740701-11AN Page : 36 of 263
+Report Version: Rev. 01
+3.2.4 Test Result of Emission Bandwidth and Operating Frequencies
+Modulation Mode Frequency (MHz) Occupied Channel
+Bandwidth (MHz)
+Occupied Channel
+Bandwidth Limit (MHz)
+802.11a 5180 16.38 16-20
+802.11a 5320 16.38 16-20
+802.11a 5500 16.43 16-20
+802.11a 5700 16.38 16-20
+802.11ac VHT20 5180 17.07 16-20
+802.11ac VHT20 5320 17.01 16-20
+802.11ac VHT20 5500 17.30 16-20
+802.11ac VHT20 5700 16.96 16-20
+802.11ac VHT40 5190 36.00 32-40
+802.11ac VHT40 5310 36.12 32-40
+802.11ac VHT40 5510 36.00 32-40
+802.11ac VHT40 5670 35.77 32-40
+802.11ac VHT80 5210 75.94 64-80
+802.11ac VHT80 5290 75.94 64-80
+802.11ac VHT80 5530 75.02 64-80
+802.11ac VHT80 5610 75.94 64-80
+
+Report No.: AR740701-11AN Page : 37 of 263
+Report Version: Rev. 01
+3.3 RF Output Power, Transmit Power Control (TPC) and Power
+density
+3.3.1 Limit of RF Output Power, Transmit Power Control (TPC) and Power Density
+Mean e.i.r.p. limits for RF output power and Power Density at the highest power level (PH)
+Frequency range (MHz) Mean e.i.r.p. limit for PH (dBm) Mean e.i.r.p. density limit (dBm/MHz)
+With TPC Without TPC With TPC Without TPC
+5 150 to 5 350 23 20/23 (see note 1) 10 7/10 (see note 2)
+5 470 to 5 725 30 (see note 3) 27 (see note 3) 17 (see note 3) 14 (see note 3)
+Note 1: The applicable limit is 20 dBm, except for transmissions whose nominal bandwidth falls completely
+within the band 5 150 MHz to 5 250 MHz, in which case the applicable limit is 23 dBm.
+Note 2: The applicable limit is 7 dBm/MHz except for transmissions whose nominal bandwidth falls
+completely within the band 5 150 MHz to 5 250 MHz, in which case the applicable limit is 10
+dBm/MHz.
+Note 3: Slave devices without a Radar Interference Detection function shall comply with the limits for the
+frequency range 5 250 MHz to 5 350 MHz.
+Mean e.i.r.p. limits for RF Output Power at the lowest power level of the TPC range
+Frequency range (MHz) Mean e.i.r.p. (dBm) limit for PL
+5 250 to 5 350 17
+5 470 to 5 725 24 (see note)
+Note: Slave devices without a Radar Interference Detection function shall comply with the limits for the band
+5 250 MHz to 5 350 MHz.
+3.3.2 Test Procedures
+Reference to clause 5.4.4.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+
+Report No.: AR740701-11AN Page : 38 of 263
+Report Version: Rev. 01
+3.3.3 Test Setup
+For RF Output Power, Transmit Power Control (TPC)
+For Power Density
+
+Report No.: AR740701-11AN Page : 39 of 263
+Report Version: Rev. 01
+3.3.4 Test Result of RF Output Power at the Highest Power
+Configuration 1 : Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5180 21.06 23
+TminVmax 5180 21.82 23
+TminVmin 5180 21.84 23
+TmaxVmax 5180 20.66 23
+TmaxVmin 5180 20.63 23
+TnomVnom 5320 21.01 23
+TminVmax 5320 21.72 23
+TminVmin 5320 21.74 23
+TmaxVmax 5320 20.58 23
+TmaxVmin 5320 20.56 23
+TnomVnom 5500 21.41 23
+TminVmax 5500 22.19 23
+TminVmin 5500 22.21 23
+TmaxVmax 5500 20.75 23
+TmaxVmin 5500 20.72 23
+TnomVnom 5700 21.17 23
+TminVmax 5700 21.98 23
+TminVmin 5700 22.01 23
+TmaxVmax 5700 20.66 23
+TmaxVmin 5700 20.64 23
+
+Report No.: AR740701-11AN Page : 40 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5180 21.01 23
+TminVmax 5180 21.78 23
+TminVmin 5180 21.81 23
+TmaxVmax 5180 20.60 23
+TmaxVmin 5180 20.58 23
+TnomVnom 5320 21.00 23
+TminVmax 5320 21.84 23
+TminVmin 5320 21.86 23
+TmaxVmax 5320 20.51 23
+TmaxVmin 5320 20.49 23
+TnomVnom 5500 21.55 23
+TminVmax 5500 22.35 23
+TminVmin 5500 22.38 23
+TmaxVmax 5500 20.92 23
+TmaxVmin 5500 20.90 23
+TnomVnom 5700 21.22 23
+TminVmax 5700 21.98 23
+TminVmin 5700 22.00 23
+TmaxVmax 5700 20.64 23
+TmaxVmin 5700 20.62 23
+
+Report No.: AR740701-11AN Page : 41 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5190 22.05 23
+TminVmax 5190 22.80 23
+TminVmin 5190 22.82 23
+TmaxVmax 5190 21.39 23
+TmaxVmin 5190 21.37 23
+TnomVnom 5310 21.58 23
+TminVmax 5310 22.24 23
+TminVmin 5310 22.26 23
+TmaxVmax 5310 21.16 23
+TmaxVmin 5310 21.14 23
+TnomVnom 5510 21.61 23
+TminVmax 5510 22.41 23
+TminVmin 5510 22.43 23
+TmaxVmax 5510 20.97 23
+TmaxVmin 5510 20.95 23
+TnomVnom 5670 21.70 23
+TminVmax 5670 22.43 23
+TminVmin 5670 22.45 23
+TmaxVmax 5670 21.16 23
+TmaxVmin 5670 21.14 23
+
+Report No.: AR740701-11AN Page : 42 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5210 22.00 23
+TminVmax 5210 22.84 23
+TminVmin 5210 22.87 23
+TmaxVmax 5210 21.39 23
+TmaxVmin 5210 21.37 23
+TnomVnom 5290 21.99 23
+TminVmax 5290 22.72 23
+TminVmin 5290 22.76 23
+TmaxVmax 5290 21.48 23
+TmaxVmin 5290 21.45 23
+TnomVnom 5530 21.65 23
+TminVmax 5530 22.46 23
+TminVmin 5530 22.49 23
+TmaxVmax 5530 21.01 23
+TmaxVmin 5530 20.99 23
+TnomVnom 5610 21.85 23
+TminVmax 5610 22.66 23
+TminVmin 5610 22.68 23
+TmaxVmax 5610 21.43 23
+TmaxVmin 5610 21.41 23
+
+Report No.: AR740701-11AN Page : 43 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5180 20.96 23
+TminVmax 5180 21.72 23
+TminVmin 5180 21.74 23
+TmaxVmax 5180 20.56 23
+TmaxVmin 5180 20.53 23
+TnomVnom 5320 20.79 23
+TminVmax 5320 21.50 23
+TminVmin 5320 21.52 23
+TmaxVmax 5320 20.36 23
+TmaxVmin 5320 20.34 23
+TnomVnom 5500 21.51 23
+TminVmax 5500 22.29 23
+TminVmin 5500 22.31 23
+TmaxVmax 5500 20.85 23
+TmaxVmin 5500 20.82 23
+TnomVnom 5700 21.05 23
+TminVmax 5700 21.86 23
+TminVmin 5700 21.89 23
+TmaxVmax 5700 20.54 23
+TmaxVmin 5700 20.52 23
+
+Report No.: AR740701-11AN Page : 44 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5180 20.95 23
+TminVmax 5180 21.72 23
+TminVmin 5180 21.75 23
+TmaxVmax 5180 20.54 23
+TmaxVmin 5180 20.52 23
+TnomVnom 5320 20.93 23
+TminVmax 5320 21.77 23
+TminVmin 5320 21.79 23
+TmaxVmax 5320 20.44 23
+TmaxVmin 5320 20.42 23
+TnomVnom 5500 21.53 23
+TminVmax 5500 22.33 23
+TminVmin 5500 22.36 23
+TmaxVmax 5500 20.90 23
+TmaxVmin 5500 20.88 23
+TnomVnom 5700 21.27 23
+TminVmax 5700 22.03 23
+TminVmin 5700 22.05 23
+TmaxVmax 5700 20.69 23
+TmaxVmin 5700 20.67 23
+
+Report No.: AR740701-11AN Page : 45 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5190 21.90 23
+TminVmax 5190 22.65 23
+TminVmin 5190 22.67 23
+TmaxVmax 5190 21.24 23
+TmaxVmin 5190 21.22 23
+TnomVnom 5310 21.44 23
+TminVmax 5310 22.10 23
+TminVmin 5310 22.12 23
+TmaxVmax 5310 21.02 23
+TmaxVmin 5310 21.00 23
+TnomVnom 5510 21.56 23
+TminVmax 5510 22.36 23
+TminVmin 5510 22.38 23
+TmaxVmax 5510 20.92 23
+TmaxVmin 5510 20.90 23
+TnomVnom 5670 21.61 23
+TminVmax 5670 22.34 23
+TminVmin 5670 22.36 23
+TmaxVmax 5670 21.07 23
+TmaxVmin 5670 21.05 23
+
+Report No.: AR740701-11AN Page : 46 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5210 21.80 23
+TminVmax 5210 22.64 23
+TminVmin 5210 22.67 23
+TmaxVmax 5210 21.19 23
+TmaxVmin 5210 21.17 23
+TnomVnom 5290 21.88 23
+TminVmax 5290 22.61 23
+TminVmin 5290 22.65 23
+TmaxVmax 5290 21.37 23
+TmaxVmin 5290 21.34 23
+TnomVnom 5530 21.74 23
+TminVmax 5530 22.55 23
+TminVmin 5530 22.58 23
+TmaxVmax 5530 21.10 23
+TmaxVmin 5530 21.08 23
+TnomVnom 5610 21.78 23
+TminVmax 5610 22.59 23
+TminVmin 5610 22.61 23
+TmaxVmax 5610 21.36 23
+TmaxVmin 5610 21.34 23
+
+Report No.: AR740701-11AN Page : 47 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5180 21.07 23
+TminVmax 5180 21.83 23
+TminVmin 5180 21.85 23
+TmaxVmax 5180 20.67 23
+TmaxVmin 5180 20.64 23
+TnomVnom 5320 20.91 23
+TminVmax 5320 21.62 23
+TminVmin 5320 21.64 23
+TmaxVmax 5320 20.48 23
+TmaxVmin 5320 20.46 23
+TnomVnom 5500 21.47 23
+TminVmax 5500 22.25 23
+TminVmin 5500 22.27 23
+TmaxVmax 5500 20.81 23
+TmaxVmin 5500 20.78 23
+TnomVnom 5700 21.13 23
+TminVmax 5700 21.94 23
+TminVmin 5700 21.97 23
+TmaxVmax 5700 20.62 23
+TmaxVmin 5700 20.60 23
+
+Report No.: AR740701-11AN Page : 48 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5180 21.08 23
+TminVmax 5180 21.85 23
+TminVmin 5180 21.88 23
+TmaxVmax 5180 20.67 23
+TmaxVmin 5180 20.65 23
+TnomVnom 5320 21.03 23
+TminVmax 5320 21.87 23
+TminVmin 5320 21.89 23
+TmaxVmax 5320 20.54 23
+TmaxVmin 5320 20.52 23
+TnomVnom 5500 21.51 23
+TminVmax 5500 22.31 23
+TminVmin 5500 22.34 23
+TmaxVmax 5500 20.88 23
+TmaxVmin 5500 20.86 23
+TnomVnom 5700 21.23 23
+TminVmax 5700 21.99 23
+TminVmin 5700 22.01 23
+TmaxVmax 5700 20.65 23
+TmaxVmin 5700 20.63 23
+
+Report No.: AR740701-11AN Page : 49 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5190 21.96 23
+TminVmax 5190 22.71 23
+TminVmin 5190 22.73 23
+TmaxVmax 5190 21.30 23
+TmaxVmin 5190 21.28 23
+TnomVnom 5310 21.50 23
+TminVmax 5310 22.16 23
+TminVmin 5310 22.18 23
+TmaxVmax 5310 21.08 23
+TmaxVmin 5310 21.06 23
+TnomVnom 5510 21.53 23
+TminVmax 5510 22.33 23
+TminVmin 5510 22.35 23
+TmaxVmax 5510 20.89 23
+TmaxVmin 5510 20.87 23
+TnomVnom 5670 21.56 23
+TminVmax 5670 22.29 23
+TminVmin 5670 22.31 23
+TmaxVmax 5670 21.02 23
+TmaxVmin 5670 21.00 23
+
+Report No.: AR740701-11AN Page : 50 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5210 21.91 23
+TminVmax 5210 22.75 23
+TminVmin 5210 22.78 23
+TmaxVmax 5210 21.30 23
+TmaxVmin 5210 21.28 23
+TnomVnom 5290 21.90 23
+TminVmax 5290 22.63 23
+TminVmin 5290 22.67 23
+TmaxVmax 5290 21.39 23
+TmaxVmin 5290 21.36 23
+TnomVnom 5530 21.55 23
+TminVmax 5530 22.36 23
+TminVmin 5530 22.39 23
+TmaxVmax 5530 20.91 23
+TmaxVmin 5530 20.89 23
+TnomVnom 5610 21.76 23
+TminVmax 5610 22.57 23
+TminVmin 5610 22.59 23
+TmaxVmax 5610 21.34 23
+TmaxVmin 5610 21.32 23
+
+Report No.: AR740701-11AN Page : 51 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5180 20.56 23
+TminVmax 5180 21.32 23
+TminVmin 5180 21.34 23
+TmaxVmax 5180 20.16 23
+TmaxVmin 5180 20.13 23
+TnomVnom 5320 20.39 23
+TminVmax 5320 21.10 23
+TminVmin 5320 21.12 23
+TmaxVmax 5320 19.96 23
+TmaxVmin 5320 19.94 23
+TnomVnom 5500 21.01 23
+TminVmax 5500 21.79 23
+TminVmin 5500 21.81 23
+TmaxVmax 5500 20.35 23
+TmaxVmin 5500 20.32 23
+TnomVnom 5700 20.55 23
+TminVmax 5700 21.36 23
+TminVmin 5700 21.39 23
+TmaxVmax 5700 20.04 23
+TmaxVmin 5700 20.02 23
+
+Report No.: AR740701-11AN Page : 52 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5180 20.55 23
+TminVmax 5180 21.32 23
+TminVmin 5180 21.35 23
+TmaxVmax 5180 20.14 23
+TmaxVmin 5180 20.12 23
+TnomVnom 5320 20.53 23
+TminVmax 5320 21.37 23
+TminVmin 5320 21.39 23
+TmaxVmax 5320 20.04 23
+TmaxVmin 5320 20.02 23
+TnomVnom 5500 21.03 23
+
+TminVmax 5500 21.83 23
+TminVmin 5500 21.86 23
+TmaxVmax 5500 20.40 23
+TmaxVmin 5500 20.38 23
+TnomVnom 5700 20.77 23
+TminVmax 5700 21.53 23
+TminVmin 5700 21.55 23
+TmaxVmax 5700 20.19 23
+TmaxVmin 5700 20.17 23
+
+Report No.: AR740701-11AN Page : 53 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5190 21.50 23
+TminVmax 5190 22.25 23
+TminVmin 5190 22.27 23
+TmaxVmax 5190 20.84 23
+TmaxVmin 5190 20.82 23
+TnomVnom 5310 22.00 23
+TminVmax 5310 22.66 23
+TminVmin 5310 22.68 23
+TmaxVmax 5310 21.58 23
+TmaxVmin 5310 21.56 23
+TnomVnom 5510 22.03 23
+TminVmax 5510 22.83 23
+TminVmin 5510 22.85 23
+TmaxVmax 5510 21.39 23
+TmaxVmin 5510 21.37 23
+TnomVnom 5670 22.06 23
+TminVmax 5670 22.79 23
+TminVmin 5670 22.81 23
+TmaxVmax 5670 21.52 23
+TmaxVmin 5670 21.50 23
+
+Report No.: AR740701-11AN Page : 54 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5210 21.40 23
+TminVmax 5210 22.24 23
+TminVmin 5210 22.27 23
+TmaxVmax 5210 20.79 23
+TmaxVmin 5210 20.77 23
+TnomVnom 5290 21.48 23
+TminVmax 5290 22.21 23
+TminVmin 5290 22.25 23
+TmaxVmax 5290 20.97 23
+TmaxVmin 5290 20.94 23
+TnomVnom 5530 22.05 23
+TminVmax 5530 22.86 23
+TminVmin 5530 22.89 23
+TmaxVmax 5530 21.41 23
+TmaxVmin 5530 21.39 23
+TnomVnom 5610 21.28 23
+TminVmax 5610 22.09 23
+TminVmin 5610 22.11 23
+TmaxVmax 5610 20.86 23
+TmaxVmin 5610 20.84 23
+
+Report No.: AR740701-11AN Page : 55 of 263
+Report Version: Rev. 01
+3.3.5 Test Result of RF Output Power at the Lowest Power
+Configuration 1 : Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5320 15.01 17
+TminVmax 5320 15.72 17
+TminVmin 5320 15.74 17
+TmaxVmax 5320 14.58 17
+TmaxVmin 5320 14.56 17
+TnomVnom 5500 15.41 17
+TminVmax 5500 16.19 17
+TminVmin 5500 16.21 17
+TmaxVmax 5500 14.75 17
+TmaxVmin 5500 14.72 17
+TnomVnom 5700 15.17 17
+TminVmax 5700 15.98 17
+TminVmin 5700 16.01 17
+TmaxVmax 5700 14.66 17
+TmaxVmin 5700 14.64 17
+
+Report No.: AR740701-11AN Page : 56 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5320 15.00 17
+TminVmax 5320 15.84 17
+TminVmin 5320 15.86 17
+TmaxVmax 5320 14.51 17
+TmaxVmin 5320 14.49 17
+TnomVnom 5500 15.55 17
+TminVmax 5500 16.35 17
+TminVmin 5500 16.38 17
+TmaxVmax 5500 14.92 17
+TmaxVmin 5500 14.90 17
+TnomVnom 5700 15.22 17
+TminVmax 5700 15.98 17
+TminVmin 5700 16.00 17
+TmaxVmax 5700 14.64 17
+TmaxVmin 5700 14.62 17
+
+Report No.: AR740701-11AN Page : 57 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5310 15.58 17
+TminVmax 5310 16.24 17
+TminVmin 5310 16.26 17
+TmaxVmax 5310 15.16 17
+TmaxVmin 5310 15.14 17
+TnomVnom 5510 15.61 17
+TminVmax 5510 16.41 17
+TminVmin 5510 16.43 17
+TmaxVmax 5510 14.97 17
+TmaxVmin 5510 14.95 17
+TnomVnom 5670 15.70 17
+TminVmax 5670 16.43 17
+TminVmin 5670 16.45 17
+TmaxVmax 5670 15.16 17
+TmaxVmin 5670 15.14 17
+
+Report No.: AR740701-11AN Page : 58 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5290 15.99 17
+TminVmax 5290 16.72 17
+TminVmin 5290 16.76 17
+TmaxVmax 5290 15.48 17
+TmaxVmin 5290 15.45 17
+TnomVnom 5530 15.65 17
+TminVmax 5530 16.46 17
+TminVmin 5530 16.49 17
+TmaxVmax 5530 15.01 17
+TmaxVmin 5530 14.99 17
+TnomVnom 5610 15.85 17
+TminVmax 5610 16.66 17
+TminVmin 5610 16.68 17
+TmaxVmax 5610 15.43 17
+TmaxVmin 5610 15.41 17
+
+Report No.: AR740701-11AN Page : 59 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5320 14.79 17
+TminVmax 5320 15.50 17
+TminVmin 5320 15.52 17
+TmaxVmax 5320 14.36 17
+TmaxVmin 5320 14.34 17
+TnomVnom 5500 15.51 17
+TminVmax 5500 16.29 17
+TminVmin 5500 16.31 17
+TmaxVmax 5500 14.85 17
+TmaxVmin 5500 14.82 17
+TnomVnom 5700 15.05 17
+TminVmax 5700 15.86 17
+TminVmin 5700 15.89 17
+TmaxVmax 5700 14.54 17
+TmaxVmin 5700 14.52 17
+
+Report No.: AR740701-11AN Page : 60 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5320 14.93 17
+TminVmax 5320 15.77 17
+TminVmin 5320 15.79 17
+TmaxVmax 5320 14.44 17
+TmaxVmin 5320 14.42 17
+TnomVnom 5500 15.53 17
+TminVmax 5500 16.33 17
+TminVmin 5500 16.36 17
+TmaxVmax 5500 14.90 17
+TmaxVmin 5500 14.88 17
+TnomVnom 5700 15.27 17
+TminVmax 5700 16.03 17
+TminVmin 5700 16.05 17
+TmaxVmax 5700 14.69 17
+TmaxVmin 5700 14.67 17
+
+Report No.: AR740701-11AN Page : 61 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5310 15.44 17
+TminVmax 5310 16.10 17
+TminVmin 5310 16.12 17
+TmaxVmax 5310 15.02 17
+TmaxVmin 5310 15.00 17
+TnomVnom 5510 15.56 17
+TminVmax 5510 16.36 17
+TminVmin 5510 16.38 17
+TmaxVmax 5510 14.92 17
+TmaxVmin 5510 14.90 17
+TnomVnom 5670 15.61 17
+TminVmax 5670 16.34 17
+TminVmin 5670 16.36 17
+TmaxVmax 5670 15.07 17
+TmaxVmin 5670 15.05 17
+
+Report No.: AR740701-11AN Page : 62 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5290 15.88 17
+TminVmax 5290 16.61 17
+TminVmin 5290 16.65 17
+TmaxVmax 5290 15.37 17
+TmaxVmin 5290 15.34 17
+TnomVnom 5530 15.74 17
+TminVmax 5530 16.55 17
+TminVmin 5530 16.58 17
+TmaxVmax 5530 15.10 17
+TmaxVmin 5530 15.08 17
+TnomVnom 5610 15.78 17
+TminVmax 5610 16.59 17
+TminVmin 5610 16.61 17
+TmaxVmax 5610 15.36 17
+TmaxVmin 5610 15.34 17
+
+Report No.: AR740701-11AN Page : 63 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5320 14.91 17
+TminVmax 5320 15.62 17
+TminVmin 5320 15.64 17
+TmaxVmax 5320 14.48 17
+TmaxVmin 5320 14.46 17
+TnomVnom 5500 15.47 17
+TminVmax 5500 16.25 17
+TminVmin 5500 16.27 17
+TmaxVmax 5500 14.81 17
+TmaxVmin 5500 14.78 17
+TnomVnom 5700 15.13 17
+TminVmax 5700 15.94 17
+TminVmin 5700 15.97 17
+TmaxVmax 5700 14.62 17
+TmaxVmin 5700 14.60 17
+
+Report No.: AR740701-11AN Page : 64 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5320 15.03 17
+TminVmax 5320 15.87 17
+TminVmin 5320 15.89 17
+TmaxVmax 5320 14.54 17
+TmaxVmin 5320 14.52 17
+TnomVnom 5500 15.51 17
+TminVmax 5500 16.31 17
+TminVmin 5500 16.34 17
+TmaxVmax 5500 14.88 17
+TmaxVmin 5500 14.86 17
+TnomVnom 5700 15.23 17
+TminVmax 5700 15.99 17
+TminVmin 5700 16.01 17
+TmaxVmax 5700 14.65 17
+TmaxVmin 5700 14.63 17
+
+Report No.: AR740701-11AN Page : 65 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5310 15.50 17
+TminVmax 5310 16.16 17
+TminVmin 5310 16.18 17
+TmaxVmax 5310 15.08 17
+TmaxVmin 5310 15.06 17
+TnomVnom 5510 15.53 17
+TminVmax 5510 16.33 17
+TminVmin 5510 16.35 17
+TmaxVmax 5510 14.89 17
+TmaxVmin 5510 14.87 17
+TnomVnom 5670 15.56 17
+TminVmax 5670 16.29 17
+TminVmin 5670 16.31 17
+TmaxVmax 5670 15.02 17
+TmaxVmin 5670 15.00 17
+
+Report No.: AR740701-11AN Page : 66 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5290 15.90 17
+TminVmax 5290 16.63 17
+TminVmin 5290 16.67 17
+TmaxVmax 5290 15.39 17
+TmaxVmin 5290 15.36 17
+TnomVnom 5530 15.55 17
+TminVmax 5530 16.36 17
+TminVmin 5530 16.39 17
+TmaxVmax 5530 14.91 17
+TmaxVmin 5530 14.89 17
+TnomVnom 5610 15.76 17
+TminVmax 5610 16.57 17
+TminVmin 5610 16.59 17
+TmaxVmax 5610 15.34 17
+TmaxVmin 5610 15.32 17
+
+Report No.: AR740701-11AN Page : 67 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11a Limit
+(dBm)
+TnomVnom 5320 14.39 17
+TminVmax 5320 15.10 17
+TminVmin 5320 15.12 17
+TmaxVmax 5320 13.96 17
+TmaxVmin 5320 13.94 17
+TnomVnom 5500 15.01 17
+TminVmax 5500 15.79 17
+TminVmin 5500 15.81 17
+TmaxVmax 5500 14.35 17
+TmaxVmin 5500 14.32 17
+TnomVnom 5700 14.55 17
+TminVmax 5700 15.36 17
+TminVmin 5700 15.39 17
+TmaxVmax 5700 14.04 17
+TmaxVmin 5700 14.02 17
+
+Report No.: AR740701-11AN Page : 68 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT20 Limit
+(dBm)
+TnomVnom 5320 14.53 17
+TminVmax 5320 15.37 17
+TminVmin 5320 15.39 17
+TmaxVmax 5320 14.04 17
+TmaxVmin 5320 14.02 17
+TnomVnom 5500 15.03 17
+TminVmax 5500 15.83 17
+TminVmin 5500 15.86 17
+TmaxVmax 5500 14.40 17
+TmaxVmin 5500 14.38 17
+TnomVnom 5700 14.77 17
+TminVmax 5700 15.53 17
+TminVmin 5700 15.55 17
+TmaxVmax 5700 14.19 17
+TmaxVmin 5700 14.17 17
+
+Report No.: AR740701-11AN Page : 69 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT40 Limit
+(dBm)
+TnomVnom 5310 16.00 17
+TminVmax 5310 16.66 17
+TminVmin 5310 16.68 17
+TmaxVmax 5310 15.58 17
+TmaxVmin 5310 15.56 17
+TnomVnom 5510 16.03 17
+TminVmax 5510 16.83 17
+TminVmin 5510 16.85 17
+TmaxVmax 5510 15.39 17
+TmaxVmin 5510 15.37 17
+TnomVnom 5670 16.06 17
+TminVmax 5670 16.79 17
+TminVmin 5670 16.81 17
+TmaxVmax 5670 15.52 17
+TmaxVmin 5670 15.50 17
+
+Report No.: AR740701-11AN Page : 70 of 263
+Report Version: Rev. 01
+Maximum Transmit Power (dBm)
+Condition Freq. (MHz) 802.11ac VHT80 Limit
+(dBm)
+TnomVnom 5290 15.48 17
+TminVmax 5290 16.21 17
+TminVmin 5290 16.25 17
+TmaxVmax 5290 14.97 17
+TmaxVmin 5290 14.94 17
+TnomVnom 5530 16.05 17
+TminVmax 5530 16.86 17
+TminVmin 5530 16.89 17
+TmaxVmax 5530 15.41 17
+TmaxVmin 5530 15.39 17
+TnomVnom 5610 15.28 17
+TminVmax 5610 16.09 17
+TminVmin 5610 16.11 17
+TmaxVmax 5610 14.86 17
+TmaxVmin 5610 14.84 17
+
+Report No.: AR740701-11AN Page : 71 of 263
+Report Version: Rev. 01
+3.3.6 Test Result of Power Density
+Configuration 1 : Dipole Antenna
+Modulation Mode Freq. (MHz)
+Power Density
+(dBm/1MHz)
+e.i.r.p.
+Limit
+(dBm/1MHz)
+e.i.r.p.
+Results
+11a 5180 9.61 10 Pass
+11a 5320 9.60 10 Pass
+11a 5500 9.99 10 Pass
+11a 5700 9.71 10 Pass
+802.11ac VHT20 5180 9.59 10 Pass
+802.11ac VHT20 5320 9.54 10 Pass
+802.11ac VHT20 5500 9.94 10 Pass
+802.11ac VHT20 5700 9.76 10 Pass
+802.11ac VHT40 5190 7.52 10 Pass
+802.11ac VHT40 5310 7.12 10 Pass
+802.11ac VHT40 5510 7.25 10 Pass
+802.11ac VHT40 5670 7.45 10 Pass
+802.11ac VHT80 5210 3.69 10 Pass
+802.11ac VHT80 5290 3.71 10 Pass
+802.11ac VHT80 5530 3.22 10 Pass
+802.11ac VHT80 5610 3.56 10 Pass
+
+Report No.: AR740701-11AN Page : 72 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Modulation Mode Freq. (MHz)
+Power Density
+(dBm/1MHz)
+e.i.r.p.
+Limit
+(dBm/1MHz)
+e.i.r.p.
+Results
+11a 5180 9.56 10 Pass
+11a 5320 9.38 10 Pass
+11a 5500 9.97 10 Pass
+11a 5700 9.56 10 Pass
+802.11ac VHT20 5180 9.59 10 Pass
+802.11ac VHT20 5320 9.65 10 Pass
+802.11ac VHT20 5500 9.93 10 Pass
+802.11ac VHT20 5700 9.72 10 Pass
+802.11ac VHT40 5190 7.48 10 Pass
+802.11ac VHT40 5310 7.10 10 Pass
+802.11ac VHT40 5510 7.23 10 Pass
+802.11ac VHT40 5670 7.35 10 Pass
+802.11ac VHT80 5210 3.45 10 Pass
+802.11ac VHT80 5290 3.51 10 Pass
+802.11ac VHT80 5530 3.42 10 Pass
+802.11ac VHT80 5610 3.46 10 Pass
+
+Report No.: AR740701-11AN Page : 73 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Modulation Mode Freq. (MHz)
+Power Density
+(dBm/1MHz)
+e.i.r.p.
+Limit
+(dBm/1MHz)
+e.i.r.p.
+Results
+11a 5180 9.61 10 Pass
+11a 5320 9.57 10 Pass
+11a 5500 9.96 10 Pass
+11a 5700 9.72 10 Pass
+802.11ac VHT20 5180 9.68 10 Pass
+802.11ac VHT20 5320 9.65 10 Pass
+802.11ac VHT20 5500 9.97 10 Pass
+802.11ac VHT20 5700 9.78 10 Pass
+802.11ac VHT40 5190 7.47 10 Pass
+802.11ac VHT40 5310 7.12 10 Pass
+802.11ac VHT40 5510 7.20 10 Pass
+802.11ac VHT40 5670 7.26 10 Pass
+802.11ac VHT80 5210 3.64 10 Pass
+802.11ac VHT80 5290 3.66 10 Pass
+802.11ac VHT80 5530 3.23 10 Pass
+802.11ac VHT80 5610 3.46 10 Pass
+
+Report No.: AR740701-11AN Page : 74 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation Mode Freq. (MHz)
+Power Density
+(dBm/1MHz)
+e.i.r.p.
+Limit
+(dBm/1MHz)
+e.i.r.p.
+Results
+11a 5180 9.13 10 Pass
+11a 5320 8.98 10 Pass
+11a 5500 9.56 10 Pass
+11a 5700 9.11 10 Pass
+802.11ac VHT20 5180 9.24 10 Pass
+802.11ac VHT20 5320 9.22 10 Pass
+802.11ac VHT20 5500 9.51 10 Pass
+802.11ac VHT20 5700 9.47 10 Pass
+802.11ac VHT40 5190 7.21 10 Pass
+802.11ac VHT40 5310 7.55 10 Pass
+802.11ac VHT40 5510 7.51 10 Pass
+802.11ac VHT40 5670 7.54 10 Pass
+802.11ac VHT80 5210 3.15 10 Pass
+802.11ac VHT80 5290 3.18 10 Pass
+802.11ac VHT80 5530 3.70 10 Pass
+802.11ac VHT80 5610 3.09 10 Pass
+
+Report No.: AR740701-11AN Page : 75 of 263
+Report Version: Rev. 01
+3.4 Transmitter Unwanted Emissions outside the 5 GHz RLAN Bands
+3.4.1 Limit of Transmitter Unwanted Emissions outside the 5 GHz RLAN Bands
+Spurious Emissions Limit
+(Peak Power) Frequency Range Measurement Bandwidth
+-56 dBW (2.5μW) e.i.r.p
+(59 dBμV/m at 10 metres)
+< 150 kHz 1 kHz
+150 kHz – 30 MHz 10 kHz
+Conducted Emission
+Frequency Range Maximum Power (dBm) Bandwidth (kHz)
+30 MHz to 47 MHz -39.01 100
+47 MHz to 74 MHz -57.01 100
+74 MHz to 87,5 MHz -39.01 100
+87,5 MHz to 118 MHz -57.01 100
+118 MHz to 174 MHz -39.01 100
+174 MHz to 230 MHz -57.01 100
+230 MHz to 470 MHz -39.01 100
+470 MHz to 862 MHz -57.01 100
+862 MHz to 1 GHz -39.01 100
+1 GHz to 5,15 GHz -33.01 1000
+5,35 GHz to 5,47 GHz -33.01 1000
+5,725 GHz to 26 GHz -33.01 1000
+Radiated Emission
+Frequency Range Maximum Power Bandwidth
+30 MHz to 47 MHz -36 dBm 100 kHz
+47 MHz to 74 MHz -54 dBm 100 kHz
+74 MHz to 87,5 MHz -36 dBm 100 kHz
+87,5 MHz to 118 MHz -54 dBm 100 kHz
+118 MHz to 174 MHz -36 dBm 100 kHz
+174 MHz to 230 MHz -54 dBm 100 kHz
+230 MHz to 470 MHz -36 dBm 100 kHz
+470 MHz to 862 MHz -54 dBm 100 kHz
+862 MHz to 1 GHz -36 dBm 100 kHz
+1 GHz to 5,15 GHz -30 dBm 1 MHz
+5,35 GHz to 5,47 GHz -30 dBm 1 MHz
+5,725 GHz to 26 GHz -30 dBm 1 MHz
+
+Report No.: AR740701-11AN Page : 76 of 263
+Report Version: Rev. 01
+3.4.2 Test Procedures
+Reference to clause 5.4.5.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+
+Report No.: AR740701-11AN Page : 77 of 263
+Report Version: Rev. 01
+3.4.3 Test Setup
+Below 30MHz
+Below 1GHz
+Above 1 GHz
+
+Report No.: AR740701-11AN Page : 78 of 263
+Report Version: Rev. 01
+Conducted Emission
+
+Report No.: AR740701-11AN Page : 79 of 263
+Report Version: Rev. 01
+Configuration 1 : Dipole Antenna
+3.4.4 Transmitter Radiated Unwanted Emissions (≤ 30MHz)
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 80 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 81 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 82 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 83 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 84 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 85 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 86 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 87 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 88 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 89 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 90 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 91 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 92 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 93 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 94 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 95 of 263
+Report Version: Rev. 01
+3.4.5 Transmitter Conducted Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 96 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 97 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 98 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 99 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 100 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 101 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 102 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 103 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 104 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 105 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 106 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 107 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 108 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 109 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 110 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 111 of 263
+Report Version: Rev. 01
+3.4.6 Transmitter Conducted Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 112 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 113 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 114 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 115 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 116 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 117 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 118 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 119 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 120 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 121 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 122 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 123 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 124 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 125 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 126 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 127 of 263
+Report Version: Rev. 01
+3.4.7 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 128 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 129 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 130 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 131 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 132 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 133 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 134 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 135 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 136 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 137 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 138 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 139 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 140 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 141 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 142 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 143 of 263
+Report Version: Rev. 01
+3.4.8 Transmitter Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 144 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 145 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 146 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 147 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 148 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 149 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 150 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 151 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 152 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 153 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 154 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 155 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 156 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 157 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 158 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 159 of 263
+Report Version: Rev. 01
+3.5 Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+3.5.1 Limit of Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+3.5.2 Test Procedures
+Reference to clause 5.4.6.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+3.5.3 Test Setup
+
+Report No.: AR740701-11AN Page : 160 of 263
+Report Version: Rev. 01
+3.5.4 Test Result of Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+for 802.11a
+5180MHz 5180MHz
+5320MHz 5320MHz
+5500MHz 5500MHz
+5700MHz 5700MHz
+
+Report No.: AR740701-11AN Page : 161 of 263
+Report Version: Rev. 01
+3.5.5 Test Result of Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+for 802.11ac VHT20
+5180MHz 5180MHz
+5320MHz 5320MHz
+5500MHz 5500MHz
+5700MHz 5700MHz
+
+Report No.: AR740701-11AN Page : 162 of 263
+Report Version: Rev. 01
+3.5.6 Test Result of Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+for 802.11ac VHT40
+5190MHz 5190MHz
+5310MHz 5310MHz
+5510MHz 5510MHz
+5670MHz 5670MHz
+
+Report No.: AR740701-11AN Page : 163 of 263
+Report Version: Rev. 01
+3.5.7 Test Result of Transmitter Unwanted Emissions within the 5 GHz RLAN Band
+for 802.11ac VHT80
+5210MHz 5210MHz
+5290MHz 5290MHz
+5530MHz 5530MHz
+5610MHz 5610MHz
+
+Report No.: AR740701-11AN Page : 164 of 263
+Report Version: Rev. 01
+4 Receiver Test Results
+4.1 Receiver Spurious Emissions
+4.1.1 Limit of Receiver Spurious Emissions
+Spurious Emissions Limit
+(Peak Power) Frequency Range Measurement Bandwidth
+-56 dBW (2.5μW) e.i.r.p
+(59 dBμV/m at 10 metres)
+< 150 kHz 1 kHz
+150 kHz – 30 MHz 10 kHz
+Conducted Emission
+Frequency Range Maximum power (dBm) Measurement bandwidth (kHz)
+30 MHz to 1 GHz -60.01 100
+1 GHz to 26 GHz -50.01 1000
+Radiated Emission
+Frequency Range Maximum Power Measurement Bandwidth
+30 MHz to 1 GHz -57 dBm 100 kHz
+1 GHz to 26 GHz -47 dBm 1 MHz
+4.1.2 Test Procedures
+Reference to clause 5.4.7.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+
+Report No.: AR740701-11AN Page : 165 of 263
+Report Version: Rev. 01
+4.1.3 Test Setup
+Below 30MHz
+Below 1GHz
+Above 1 GHz
+
+Report No.: AR740701-11AN Page : 166 of 263
+Report Version: Rev. 01
+Conducted Emission
+
+Report No.: AR740701-11AN Page : 167 of 263
+Report Version: Rev. 01
+Configuration 1 : Dipole Antenna
+4.1.4 Receiver Radiated Unwanted Emissions (≤ 30MHz)
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 168 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 169 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 170 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 171 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 172 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 173 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 174 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 175 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 176 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 177 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 178 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 179 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Modulation 11a Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation 11a Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 180 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT20 Test Freq. (MHz) 5700
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 181 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+Modulation VHT40 Test Freq. (MHz) 5670
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 182 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Modulation VHT80 Test Freq. (MHz) 5530
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB).
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm).
+
+Report No.: AR740701-11AN Page : 183 of 263
+Report Version: Rev. 01
+4.1.5 Receiver Conducted Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 184 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 185 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 186 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 187 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 188 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 189 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 190 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 191 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 192 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 193 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 194 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 195 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 196 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 197 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 198 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 199 of 263
+Report Version: Rev. 01
+4.1.6 Receiver Conducted Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 200 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 201 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 202 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 203 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 204 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 205 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 206 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 207 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 208 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 209 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 210 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 211 of 263
+Report Version: Rev. 01
+
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 212 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 213 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 0
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 214 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Antenna Port 1
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 215 of 263
+Report Version: Rev. 01
+4.1.7 Receiver Radiated Unwanted Emissions (Below 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 216 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 217 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 218 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 219 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 220 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 221 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 222 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 223 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 224 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 225 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 226 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 227 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 228 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 229 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 230 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 231 of 263
+Report Version: Rev. 01
+4.1.8 Receiver Radiated Unwanted Emissions (Above 1GHz)
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 232 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 233 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 234 of 263
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 235 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 236 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 237 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 238 of 263
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 239 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 240 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 241 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 242 of 263
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 243 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 244 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5210
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 245 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Horizontal
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 246 of 263
+Report Version: Rev. 01
+Modulation VHT80 Test Freq. (MHz) 5610
+Polarization Vertical
+Note 1: Measured Value (dBm) = Reading (dBm) + Factor (dB)
+Note 2: Margin (dB) = Measured Value (dBm) – Limit (dBm)
+
+Report No.: AR740701-11AN Page : 247 of 263
+Report Version: Rev. 01
+5 Adaptivity Test Results
+5.1 Adaptivity
+5.1.1 Adaptivity Limit
+Adaptivity Limit
+Frame Based Equipment
+The ED Threshold Level (TL), at the input of the receiver, shall be proportional to the maximum transmit
+power (PH) according to the formula which assumes a 0 dBi receive antenna and PH to be specified in
+dBm e.i.r.p.
+For PH ≤ 13 dBm: TL = -75 dBm/MHz
+For 13 dBm < PH < 23 dBm: TL = -85 dBm/MHz + (23 dBm - PH)
+For PH ≥ 23 dBm: TL = -85 dBm/MHz
+Load Based Equipment
+Option 1:
+For equipment that for its operation in the 5 GHz bands is conforming to IEEE 802.11™-2016 [9],
+clause 17, clause 19 or clause 21, or any combination of these clauses, the ED Threshold Level (TL) is
+independent of the equipment's maximum transmit power (PH). Assuming a 0 dBi receive antenna the
+ED Threshold Level (TL) shall be:
+TL = -75 dBm/MHz
+Option 2:
+For equipment conforming to one or more of the clauses listed in Option 1, and to at least one other
+operating mode, and for equipment conforming to none of the clauses listed in Option 1, the ED
+Threshold Level (TL) shall be proportional to the equipment's maximum transmit power (PH).
+Assuming a 0 dBi receive antenna the ED Threshold Level (TL) shall be:
+For PH ≤ 13 dBm: TL = -75 dBm/MHz
+For 13 dBm < PH < 23 dBm: TL = -85 dBm/MHz + (23 dBm - PH)
+For PH ≥ 23 dBm: TL = -85 dBm/MHz
+Short Control Signalling Transmissions:
+ within an observation period of 50 ms, the number of Short Control Signalling Transmissions by the
+equipment shall be equal to or less than 50; and
+ the total duration of the equipment's Short Control Signalling Transmissions shall be less than 2
+500 μs within said observation period.
+Channel Access Mechanism / Maximum Channel Occupancy Time(s) :
+For Supervising Devices refer to clause 4.2.7.3.2.4 Table 7.
+For Supervised Devices refer to clause 4.2.7.3.2.4 Table 8.
+Option A: Measurement for Channel Access Mechanism and Maximum Channel Occupancy Time(s)
+Option B: Compliance by declaration for the Channel Access Mechanism and Maximum Channel
+Occupancy Time(s)
+5.1.2 Test Procedures
+Reference to clause 5.4.9.3 of ETSI EN 301 893 V2.1.1 (2017-05).
+
+Report No.: AR740701-11AN Page : 248 of 263
+Report Version: Rev. 01
+5.1.3 Test Setup
+5.1.4 Test Result of Adaptivity and Short Control Signalling Transmissions
+Adaptivity Result
+Equipment / Device type Load Based Equipment / Supervised Device
+Energy Detect Threshold Level
+(dBm) -75
+Modulation Mode Freq. (MHz)
+Interference
+Signal
+Frequency (MHz)
+Interference
+Signal
+Type
+Short Control
+Signalling
+Transmissions
+(ms)/period
+Numbers
+Adaptivity
+802.11an (HT20) 5180 5180 AWGN 0 / 0
+PASS 802.11an (HT20) 5180 5180 OFDM 0 / 0
+802.11an (HT20) 5180 5180 LTE 0.508 / 2
+802.11an (HT20) 5500 5500 AWGN 0 / 0
+PASS 802.11an (HT20) 5500 5500 OFDM 0 / 0
+802.11an (HT20) 5500 5500 LTE 0.058 / 1
+802.11an (HT40) 5190 5200 AWGN 0.85 / 16 PASS
+802.11an (HT40) 5510 5520 AWGN 1.033 / 19 PASS
+Limit < 2.5 ms / 50 N/A
+
+Report No.: AR740701-11AN Page : 249 of 263
+Report Version: Rev. 01
+Adaptivity Result Plots
+802.11a - 5180MHz (AWGN) 802.11a - 5180MHz (OFDM)
+802.11a - 5180MHz (LTE) 802.11a - 5500MHz (AWGN)
+802.11a - 5500MHz (OFDM) 802.11a - 5500MHz (LTE)
+Adaptivity Result Plots
+802.11an (HT40) - 5190MHz (AWGN) 802.11an (HT40) - 5510MHz (AWGN)
+
+Report No.: AR740701-11AN Page : 250 of 263
+Report Version: Rev. 01
+Short Control Signalling Transmissions Plots
+802.11a - 5180MHz (AWGN) 802.11a - 5180MHz (OFDM)
+802.11a - 5180MHz (LTE) 802.11a - 5500MHz (AWGN)
+802.11a - 5500MHz (OFDM) 802.11a - 5500MHz (LTE)
+Short Control Signalling Transmissions Plots
+802.11an (HT40) - 5190MHz (AWGN) 802.11an (HT40) - 5510MHz (AWGN)
+
+Report No.: AR740701-11AN Page : 251 of 263
+Report Version: Rev. 01
+6 Receiver Blocking Test Results
+6.1 Receiver Blocking
+6.1.1 Limit of Receiver Blocking
+Receiver Blocking Parameters
+Wanted Signal
+Mean Power from
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power (dBm)
+(see note 2) Type of Blocking
+Signal Master or Slave
+with radar
+detection
+Slave without
+radar detection
+Pmin + 6 dB 5 100 -53 -59 Continuous Wave
+Pmin + 6 dB
+4 900
+5 000
+5 975
+-47 -53 Continuous Wave
+Note 1: Pmin is the minimum level of the wanted signal (in dBm) required to meet the minimum performance
+criteria (The minimum performance criterion shall be a PER of less than or equal to 10 %) in the
+absence of any blocking signal.
+Note 2: The levels specified are levels in front of the UUT antenna. In case of conducted measurements, the
+same levels should be used at the antenna connector irrespective of antenna gain.
+6.1.2 Test Procedures
+Reference to clause 5.4.10.2 of ETSI EN 301 893 V2.1.1 (2017-05).
+6.1.3 Test Setup
+
+Report No.: AR740701-11AN Page : 252 of 263
+Report Version: Rev. 01
+6.1.4 Test Result of Receiver Blocking
+11a / 5180 MHz
+Without Interference Signal Sensitivity Level
+PER minimum
+performance criteria 10 %
+Sensitivity Level -88 dBm
+Want Signal Mean
+Power form
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-82 5100 -55.1 Pass
+-82 4900
+-49.1
+Pass
+-82 5000 Pass
+-82 5975 Pass
+Note: The performance criteria declare by manufacturer.
+
+Report No.: AR740701-11AN Page : 253 of 263
+Report Version: Rev. 01
+11a / 5700 MHz
+Without Interference Signal Sensitivity Level
+PER minimum
+performance criteria 10 %
+Sensitivity Level -90 dBm
+Want Signal Mean
+Power form
+Companion Device
+(dBm)
+Blocking Signal
+Frequency (MHz)
+Blocking Signal Power
+(dBm) Test Result
+-84 5100 -55 Pass
+-84 4900
+-49
+Pass
+-84 5000 Pass
+-84 5975 Pass
+Note: The performance criteria declare by manufacturer.
+
+Report No.: AR740701-11AN Page : 254 of 263
+Report Version: Rev. 01
+7 Photographs of the Test Configuration
+Configuration 1 : Dipole Antenna
+Spurious Emission Test below 30MHz
+
+Report No.: AR740701-11AN Page : 255 of 263
+Report Version: Rev. 01
+
+Report No.: AR740701-11AN Page : 256 of 263
+Report Version: Rev. 01
+Configuration 2 : PCB Dipole Antenna
+Spurious Emission Test below 30MHz
+
+Report No.: AR740701-11AN Page : 257 of 263
+Report Version: Rev. 01
+Configuration 3 : PIFA Antenna
+Spurious Emission Test below 30MHz
+
+Report No.: AR740701-11AN Page : 258 of 263
+Report Version: Rev. 01
+Configuration 4: Isolated Magnetic Dipole Antenna
+Spurious Emission Test below 30MHz
+
+Report No.: AR740701-11AN Page : 259 of 263
+Report Version: Rev. 01
+Conducted Spurious Emission Test
+
+Report No.: AR740701-11AN Page : 260 of 263
+Report Version: Rev. 01
+Spurious Emission Test above 30MHz
+
+Report No.: AR740701-11AN Page : 261 of 263
+Report Version: Rev. 01
+Radiated Spurious Emission Test
+
+Report No.: AR740701-11AN Page : 262 of 263
+Report Version: Rev. 01
+Adaptivity Test
+Receiver Blocking Test
+
+Report No.: AR740701-11AN Page : 263 of 263
+Report Version: Rev. 01
+8 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C..
+If you have any suggestion, please feel free to contact us as below information
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══
