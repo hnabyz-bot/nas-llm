@@ -1,0 +1,237 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954405-uc8",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/14. Risk Management/11.Appendix1. Risk Management FMEA attached.pdf",
+    "canonicalGroupId": "277fec7ba47a"
+  },
+  "document": {
+    "title": "11.Appendix1. Risk Management FMEA attached",
+    "documentType": "Risk Management FMEA appendix",
+    "productModels": [
+      "AspenView"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "EN ISO 14971:2012"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Risk Management FMEA content for AspenView software hazards, risk controls, residual risk, and risk/benefit references under EN ISO 14971:2012.",
+    "officialUse": "Supports risk management documentation by identifying hazards, estimating risk, documenting controls, verifying implementation, and evaluating residual risk and benefit.",
+    "keyPoints": [
+      "Hazard IDs R01 through R08 are listed across Exam Mode, Viewer Mode, Browser Mode, Setting Module, and Database Module.",
+      "Risk control categories are defined as D: inherent safety by design, P: protective measures, and I: information for safety.",
+      "Several hazards initially rated unacceptable are reduced to acceptable after controls.",
+      "Controls include alarm messages, user manual information, training/manual service, code review, dynamic test, and software validation references.",
+      "Residual risk entries refer to risk/benefit analysis tables in the Risk management report."
+    ]
+  },
+  "entities": [
+    {
+      "name": "AspenView",
+      "type": "product/software",
+      "evidence": "User Manual (RS-AspenView-UM)"
+    },
+    {
+      "name": "EN ISO 14971:2012",
+      "type": "standard",
+      "evidence": "EN ISO 14971:2012 5. Riskevaluation"
+    },
+    {
+      "name": "Image Processing Tool.exe",
+      "type": "software tool",
+      "evidence": "Designing to show the set pixel value in \"Image Processing Tool.exe\""
+    },
+    {
+      "name": "RS-AspenView-UM",
+      "type": "user manual",
+      "evidence": "User Manual (RS-AspenView-UM)"
+    },
+    {
+      "name": "AD-RayinView-SVR-003",
+      "type": "test report",
+      "evidence": "Code Review Dynamic Test Report(AD-RayinView-SVR-003]"
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "authoritySignal: FDA"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Risk evaluation",
+      "pageTarget": "Risk evaluation",
+      "evidence": "EN ISO 14971:2012 5. Riskevaluation"
+    },
+    {
+      "name": "Risk control option analysis",
+      "pageTarget": "Risk control option analysis",
+      "evidence": "6.2 Risk control option analysis"
+    },
+    {
+      "name": "Implementation of risk control measures",
+      "pageTarget": "Risk control implementation",
+      "evidence": "6.3 Implementation of risk control measure(s)"
+    },
+    {
+      "name": "Residual risk evaluation",
+      "pageTarget": "Residual risk evaluation",
+      "evidence": "6.4 Residual risk evaluation"
+    },
+    {
+      "name": "Risk/benefit analysis",
+      "pageTarget": "Risk-benefit analysis",
+      "evidence": "6.5 Risk/benefit analysis"
+    },
+    {
+      "name": "Completeness of risk control",
+      "pageTarget": "Completeness of risk control",
+      "evidence": "6.7 Completeness of risk control"
+    },
+    {
+      "name": "Inherent safety by design",
+      "pageTarget": "Inherent safety by design",
+      "evidence": "D: Inherent safety by design"
+    },
+    {
+      "name": "Protective measures",
+      "pageTarget": "Protective measures in medical devices",
+      "evidence": "P: Protective measures in the medical device itself or in themanufacturing process"
+    },
+    {
+      "name": "Information for safety",
+      "pageTarget": "Information for safety",
+      "evidence": "I: Information for safety"
+    },
+    {
+      "name": "Operational hazard use error",
+      "pageTarget": "Use error hazard",
+      "evidence": "Operational hazard (Use error)"
+    },
+    {
+      "name": "Information hazard",
+      "pageTarget": "Information hazard",
+      "evidence": "Viewer Mode R04 Information hazard"
+    },
+    {
+      "name": "Software validation",
+      "pageTarget": "Software validation",
+      "evidence": "Test 6.4.5 in the software Validation."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document references EN ISO 14971:2012 risk management sections.",
+      "evidenceText": "EN ISO 14971:2012 5. Riskevaluation",
+      "pageTarget": "EN ISO 14971:2012",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA table includes hazard identification, risk estimation, risk control, residual risk, and risk/benefit analysis fields.",
+      "evidenceText": "4.3 Identification of hazards 4.4 Estimation of the risk(s) for each hazardous situation 6.2 Risk control option analysis 6.3 Implementation of risk control measure(s) 6.4 Residual risk evaluation 6.5 Risk/benefit analysis",
+      "pageTarget": "Risk management FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk control types are categorized as design, protective measures, and information for safety.",
+      "evidenceText": "D: Inherent safety by design P: Protective measures in the medical device itself or in themanufacturing process I: Information for safety",
+      "pageTarget": "Risk control measures",
+      "confidence": "high"
+    },
+    {
+      "claim": "Exam Mode R01 addresses mismatched pixel data as an operational use-error hazard.",
+      "evidenceText": "Exam Mode R01 Operational hazard (Use error) Mismatched Pixel data",
+      "pageTarget": "Exam Mode R01",
+      "confidence": "high"
+    },
+    {
+      "claim": "Exam Mode R02 addresses wrong detector setting information that may lead to unintended excessive X-ray exposure.",
+      "evidenceText": "Exam Mode R02 Operational hazard (Use error) Input wrong information(Detector setting) Second X-ray photographing is tried due to a failure of the first one Unintended excessive X ray is applied",
+      "pageTarget": "Exam Mode R02",
+      "confidence": "high"
+    },
+    {
+      "claim": "Exam Mode R03 addresses acquiring an unknowable image without selecting the patient or study.",
+      "evidenceText": "Exam Mode R03 Information hazard Acqurie the unknowable image whitout selecting the patient/study",
+      "pageTarget": "Exam Mode R03",
+      "confidence": "high"
+    },
+    {
+      "claim": "Viewer Mode R04 addresses export failures caused by missing USB or invalid HDD path.",
+      "evidenceText": "Viewer Mode R04 Information hazard No insert the USB or invalid HDD Path(To export the images)",
+      "pageTarget": "Viewer Mode R04",
+      "confidence": "high"
+    },
+    {
+      "claim": "Browser Mode R05 addresses failure to select a patient or study before deleting images.",
+      "evidenceText": "Browser Mode R05 Information hazard No select the patient/studyto delete images",
+      "pageTarget": "Browser Mode R05",
+      "confidence": "high"
+    },
+    {
+      "claim": "Setting Module R06 addresses wrong MWL information and limited usage of the MWL function.",
+      "evidenceText": "Setting Module R06 Information hazard Wrong information (MWL) Limited usage(Use MWL function) cuased by wrong input information",
+      "pageTarget": "Setting Module R06",
+      "confidence": "high"
+    },
+    {
+      "claim": "Database Module R07 addresses failure to verify patient and studies, causing mixed patient information.",
+      "evidenceText": "Database Module R07 Operational hazard (Use error) Failed to verify the patient and Studies Took the unintended images Mixed the patient information",
+      "pageTarget": "Database Module R07",
+      "confidence": "high"
+    },
+    {
+      "claim": "Database Module R08 addresses database damage caused by PC power turning off by physician mistake.",
+      "evidenceText": "Database Module R08 Operational hazard (Use error) PC power truns off byphysician's mistake Damage the database Mixed the data",
+      "pageTarget": "Database Module R08",
+      "confidence": "high"
+    },
+    {
+      "claim": "Alarm messages are used as risk controls to inform the user.",
+      "evidenceText": "Alram message are used to inform the user.",
+      "pageTarget": "Alarm message risk control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The user manual RS-AspenView-UM is used for information-for-safety controls.",
+      "evidenceText": "Serve the training and Manual User Manual (RS-AspenView-UM)",
+      "pageTarget": "RS-AspenView-UM",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software validation test references are used to verify risk control measures.",
+      "evidenceText": "Test 6.4.5 in the software Validation.",
+      "pageTarget": "Software validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several residual risk entries state no new or increased risks.",
+      "evidenceText": "No new and increased risks",
+      "pageTarget": "Residual risk",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text; date-like strings appear only in the source path."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "FDA appears as authoritySignal and in the source path, but the document body does not identify FDA as an issuing or reviewing authority."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text quality is low, with misspellings and spacing errors such as 'Riskevaluation', 'Alram', 'truns', and merged words."
+    }
+  ]
+}
