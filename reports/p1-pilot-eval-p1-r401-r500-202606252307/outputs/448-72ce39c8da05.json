@@ -1,4 +1,258 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005e-80ec-76a1-a7f5-8af6453f22c4"
+  "source": {
+    "queueId": "ingest-1781569954405-ttk",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ CE MDD/■ 10. TCF_ADD(HAD1417MCW) 230215 (Rev.5) - Label Update/Attachment 10. Clinical Evaluation/Attachment 10-8 Vigilance System procedure/AQP808 Vigilance System form.xls",
+    "canonicalGroupId": "72ce39c8da05"
+  },
+  "document": {
+    "title": "AQP808 Vigilance System form",
+    "documentType": "Vigilance reporting form template set",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "National Competent Authority (NCA)",
+      "EEA",
+      "Switzerland",
+      "Turkey"
+    ],
+    "revisionOrVersion": "APF808-1(REV.0); APF808-2(REV.0); APF808-3(REV.0); APF808-4(REV.0)",
+    "documentDate": "",
+    "standards": [
+      "MDD",
+      "AIMD",
+      "IVD",
+      "GMDN"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Template set for medical device vigilance reporting, including incident, FSCA, periodic summary, and trend reports to National Competent Authorities.",
+    "officialUse": "Used to collect and submit manufacturer vigilance information, Field Safety Corrective Action details, Periodic Summary Reports, and Trend Reports for medical devices distributed in EEA, Switzerland and Turkey.",
+    "keyPoints": [
+      "Includes Manufacturer's Incident Report fields for incident classification, submitter, manufacturer, device, patient, healthcare facility, investigation, and distribution information.",
+      "Includes Field Safety Corrective Action Report fields for FSCA description, Field Safety Notice status, implementation schedule, and distribution countries.",
+      "Includes Periodic Summary Report fields for PSR type, failure mode or root cause basis, summary period, incident counts, and manufacturer investigation updates.",
+      "Includes Trend Report fields for identified trend, trend analysis period, trigger level, reportable events under vigilance, and corrective or preventive actions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "National Competent Authority (NCA)",
+      "type": "authority",
+      "evidence": "Recipient (Name of NCA); Address of National Competent Authority; Reference number assigned by NCA"
+    },
+    {
+      "name": "Authorised Representative EEA and Switzerland",
+      "type": "role",
+      "evidence": "Status of submitter □ Authorised Representative EEA and Switzerland"
+    },
+    {
+      "name": "Authorised Representative EEA and Switzerland and Turkey",
+      "type": "role",
+      "evidence": "Status of submitter □ Authorised Representative EEA and Switzerland and Turkey"
+    },
+    {
+      "name": "Manufacturer",
+      "type": "role",
+      "evidence": "Manufacturer information; Reference number assigned by the manufacturer"
+    },
+    {
+      "name": "Notified Body (NB)",
+      "type": "conformity assessment body",
+      "evidence": "Notified Body (NB) ID-number"
+    },
+    {
+      "name": "EEA",
+      "type": "jurisdiction",
+      "evidence": "within the EEA and Switzerland and Turkey"
+    },
+    {
+      "name": "Switzerland",
+      "type": "jurisdiction",
+      "evidence": "within the EEA and Switzerland and Turkey"
+    },
+    {
+      "name": "Turkey",
+      "type": "jurisdiction",
+      "evidence": "within the EEA and Switzerland and Turkey"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Manufacturer's Incident Report",
+      "pageTarget": "Manufacturer's Incident Report",
+      "evidence": "Manufacturer's Incident Report"
+    },
+    {
+      "name": "Field Safety Corrective Action Report",
+      "pageTarget": "Field Safety Corrective Action",
+      "evidence": "Field Safety Corrective Action Report"
+    },
+    {
+      "name": "Field Safety Notice",
+      "pageTarget": "Field Safety Notice",
+      "evidence": "Attached please find FSN Status; Field Safety Notice(FSN) in English; Draft FSN; Final FSN"
+    },
+    {
+      "name": "Periodic Summary Report",
+      "pageTarget": "Periodic Summary Report",
+      "evidence": "Periodic Summary Report"
+    },
+    {
+      "name": "Trend Report",
+      "pageTarget": "Trend Report",
+      "evidence": "Trend Report"
+    },
+    {
+      "name": "Serious public health threat",
+      "pageTarget": "Serious Public Health Threat",
+      "evidence": "Does the incident represent a serious public health threat?; Do these incidents / trend represent a serious public health threat?"
+    },
+    {
+      "name": "Medical device vigilance",
+      "pageTarget": "Medical Device Vigilance",
+      "evidence": "Have any of the trended events been submitted individually as reportable events under vigilance?"
+    },
+    {
+      "name": "Corrective and preventive action",
+      "pageTarget": "Corrective And Preventive Action",
+      "evidence": "Initial corrective actions / preventive actions implemented by the manufacturer"
+    },
+    {
+      "name": "GMDN nomenclature",
+      "pageTarget": "Global Medical Device Nomenclature",
+      "evidence": "Nomenclature system (preferable GMDN)"
+    },
+    {
+      "name": "Medical Device Directive class",
+      "pageTarget": "Medical Device Directive Classification",
+      "evidence": "MDD Class III; MDD Class IIb; MDD Class IIa; MDD Class I"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document contains a Manufacturer's Incident Report form.",
+      "evidenceText": "Manufacturer's Incident Report",
+      "pageTarget": "Manufacturer's Incident Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Manufacturer's Incident Report includes report types for initial, follow-up, combined initial and final, and final reports.",
+      "evidenceText": "Type of report □ Initial report □ Follow-up report □ Combined Initial and final report □ Final report",
+      "pageTarget": "Manufacturer's Incident Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Manufacturer's Incident Report asks whether an incident represents a serious public health threat.",
+      "evidenceText": "Does the incident represent a serious public health threat? □ Yes □ No",
+      "pageTarget": "Serious Public Health Threat",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Manufacturer's Incident Report classifies incidents as death, unanticipated serious deterioration in state of health, or all other reportable incident.",
+      "evidenceText": "Classification of incident □ Death □ Unanticipated serious deterioration in state of health □ All other reportable incident",
+      "pageTarget": "Incident Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains a Field Safety Corrective Action Report form.",
+      "evidenceText": "Field Safety Corrective Action Report",
+      "pageTarget": "Field Safety Corrective Action",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FSCA report includes fields for background, reason, action description, user and distributor advice, FSCA progress, and implementation schedule.",
+      "evidenceText": "Description of FSCA; Background information and reason for the FSCA; Description and justification of the action (corrective/preventive); Advice on actions to be taken by the distributor and the user; Progress of FSCA; Time schadule for the implementation of the different actions",
+      "pageTarget": "Field Safety Corrective Action",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FSCA report captures Field Safety Notice attachments and status.",
+      "evidenceText": "Attached please find FSN Status □ Field Safety Notice(FSN) in English □ Draft FSN □ FSN in national launguage □ Final FSN",
+      "pageTarget": "Field Safety Notice",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains a Periodic Summary Report form.",
+      "evidenceText": "Periodic Summary Report",
+      "pageTarget": "Periodic Summary Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Periodic Summary Report supports reporting incidents described in a Field Safety Notice or common and well documented incidents.",
+      "evidenceText": "PSR Type : □ Inidents described in a Field Satety Notice □ Common and well documented incidents",
+      "pageTarget": "Periodic Summary Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Periodic Summary Report can be based on observed failure mode or root cause.",
+      "evidenceText": "Stage of PSR reporting based on: □ Observed Failure mode □ Root cause",
+      "pageTarget": "Periodic Summary Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains a Trend Report form.",
+      "evidenceText": "Trend Report",
+      "pageTarget": "Trend Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Trend Report includes fields for date identified, trend narrative, analysis period, and trigger level.",
+      "evidenceText": "Date the trend was identified; Description narrative for identified trend; Time period of trend analysis; Established trigger level",
+      "pageTarget": "Trend Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Trend Report asks whether trended events were submitted individually as reportable vigilance events.",
+      "evidenceText": "Have any of the trended events been submitted individually as reportable events under vigilance? □ Yes □ No",
+      "pageTarget": "Medical Device Vigilance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The forms include medical device classification options under AIMD, IVD, and MDD classes.",
+      "evidenceText": "Class : □ AIMD Active implants □ IVD Annex II List A □ MDD Class III □ IVD Annex II List B □ MDD Class IIb □ IVD Devices for self-testing □ MDD Class IIa □ IVD General □ MDD Class I",
+      "pageTarget": "Medical Device Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The forms prefer GMDN for nomenclature information.",
+      "evidenceText": "Nomenclature system (preferable GMDN)",
+      "pageTarget": "Global Medical Device Nomenclature",
+      "confidence": "high"
+    },
+    {
+      "claim": "The forms include distribution coverage for EEA, Switzerland, and Turkey.",
+      "evidenceText": "The medical device has been distributed to the following Countries: Within EEA, Switzerland and Turkey",
+      "pageTarget": "EEA Switzerland Turkey Distribution",
+      "confidence": "high"
+    },
+    {
+      "claim": "The forms state that submission is not itself a conclusion that the report is complete or accurate or that the device failed or caused harm.",
+      "evidenceText": "Submission of this report does not, in itself, represent a conclusion by the manufacturer and / or authorized representative or the National Competent Authority that the content of this report is complete or accurate, that the medical device(s) listed failed in any manner and/or that the medical device(s) caused or contributed to the alleged death or deterioration in the state of the health of any person.",
+      "pageTarget": "Vigilance Report Disclaimer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form set identifies revisions APF808-1 through APF808-4 as REV.0.",
+      "evidenceText": "APF808-1(REV.0); APF808-2(REV.0); APF808-3(REV.0); APF808-4(REV.0)",
+      "pageTarget": "AQP808 Vigilance System Form",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date is present in the extracted form text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No specific product model is filled in the source text; product-related metadata appears only in the source path or productSignal."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority is represented generically as National Competent Authority/NCA rather than a named national authority."
+    },
+    {
+      "severity": "info",
+      "reason": "The source appears to be a blank form template set with OCR/spelling artifacts such as 'Indentify', 'Inaial', 'nember', and 'launguage'."
+    }
+  ]
 }

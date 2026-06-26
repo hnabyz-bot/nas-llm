@@ -1,4 +1,237 @@
-{"type":"thread.started","thread_id":"019f005d-bc9a-7d03-a504-fb5683679a1c"}
-{"type":"turn.started"}
-{"type":"error","message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}
-{"type":"turn.failed","error":{"message":"You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:57 AM."}}
+{
+  "source": {
+    "queueId": "ingest-1781569954372-2bz",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/1. User manual/2. Manual_Check list_IEC 60601-1 (3.1)_V2.2.docx",
+    "canonicalGroupId": "b447e5aabf1a"
+  },
+  "document": {
+    "title": "Manual_Check list_IEC 60601-1 (3.1)_V2.2",
+    "documentType": "User manual checklist for IEC 60601-1 accompanying documents",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [
+      "CE MDD",
+      "FDA"
+    ],
+    "revisionOrVersion": "V2.2",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-1 (3.1)",
+      "60601-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Checklist maps IEC 60601-1 accompanying document and technical description requirements to user manual sections and pages.",
+    "officialUse": "Used to verify whether the user manual and technical description include required IEC 60601-1 information for ME equipment.",
+    "keyPoints": [
+      "Accompanying documents are regarded as part of the ME equipment.",
+      "The checklist records applicable user manual requirements such as manufacturer information, model reference, intended use, warnings, classifications, markings, symbols, operation, maintenance, accessories, disposal, and version identifier.",
+      "The technical description section records applicable requirements for safe operation, transport and storage, installation, preparation for use, environmental conditions, unauthorized modification warning, essential performance, and basic safety testing."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "instructions for the installation, assembly and modification of the ME SYSTEM to ensure continued compliance with this standard;(60601-1의 규격에 대한 지속적인 적합성을 보장하기 위한 의료기기 시스템의 설치, 조립 및 변경에 대한 설명서를 포함해야 합니다.)"
+    },
+    {
+      "name": "Manufacturer",
+      "type": "organization role",
+      "evidence": "Name or trade-name of the Manufacturer (제조사 이름 또는 Trade-name을 기술해야 합니다.)"
+    },
+    {
+      "name": "Responsible Organization",
+      "type": "organization role",
+      "evidence": "Contact information to which the responsible organization can refer (책임기관이 참조 할 수 있는 연락처를 기술해야 합니다.)"
+    },
+    {
+      "name": "Service Personnel",
+      "type": "personnel role",
+      "evidence": "identify the parts on which preventive inspection and maintenance shall be performed by SERVICE PERSONNEL"
+    },
+    {
+      "name": "Operator",
+      "type": "personnel role",
+      "evidence": "contain the necessary information for the OPERATOR to safely terminate the operation of the ME EQUIPMENT"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Accompanying Documents",
+      "pageTarget": "Accompanying Documents",
+      "evidence": "Accompanying Documents - General (부속문서의 기본 요구 사항)"
+    },
+    {
+      "name": "Technical description",
+      "pageTarget": "Technical Description",
+      "evidence": "Accompanying Documents – Technical description (기술 설명서)"
+    },
+    {
+      "name": "Instructions for use",
+      "pageTarget": "Instructions For Use",
+      "evidence": "Instruction for use (제품의 사용 설명서를 제공해야 합니다.)"
+    },
+    {
+      "name": "ME Equipment",
+      "pageTarget": "ME Equipment",
+      "evidence": "Regarded as a part of the ME Equipment (부속 문서는 의료기기의 일부분으로 간주 해야 한다.)"
+    },
+    {
+      "name": "ME System",
+      "pageTarget": "ME System",
+      "evidence": "ME SYSTEMS: addition requirements(의료용 전기 시스템의 첨부 문서에 관해서 하기의 사항을 기술해야 합니다.)"
+    },
+    {
+      "name": "Essential Performance",
+      "pageTarget": "Essential Performance",
+      "evidence": "Information pertaining to Essential Performance and any necessary recurrent Essential Performance and Basic Safety testing including details of the means, methods and recommended frequency."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is an IEC 60601-1 accompanying documents checklist for user manual content.",
+      "evidenceText": "Accompanying Documents - General (부속문서의 기본 요구 사항)",
+      "pageTarget": "Accompanying Documents",
+      "confidence": "high"
+    },
+    {
+      "claim": "The checklist includes an instruction-for-use requirement.",
+      "evidenceText": "7.9.1 Instruction for use (제품의 사용 설명서를 제공해야 합니다.) A",
+      "pageTarget": "Instructions For Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The checklist includes a technical-description requirement.",
+      "evidenceText": "7.9.1 Technical description (제품의 기술 명세서를 제공해야 합니다.) A",
+      "pageTarget": "Technical Description",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accompanying documents are treated as part of the ME equipment.",
+      "evidenceText": "7.9.1 Regarded as a part of the ME Equipment (부속 문서는 의료기기의 일부분으로 간주 해야 한다.) A",
+      "pageTarget": "ME Equipment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The user manual should state the manufacturer name or trade name.",
+      "evidenceText": "7.9.1 Name or trade-name of the Manufacturer (제조사 이름 또는 Trade-name을 기술해야 합니다.) A 63페이지",
+      "pageTarget": "Manufacturer Identification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The user manual should state the model or type reference.",
+      "evidenceText": "7.9.1 Model or Type reference (see clause 7.2.2)(제품의 모델명 or 형식명을 기술해야 합니다.) A 1페이지",
+      "pageTarget": "Model Or Type Reference",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should state intended use of the ME equipment.",
+      "evidenceText": "7.9.2.1 The use of the ME Equipment as intended by the Manufacturer(제조자가 의도하는 의료기기 용도를 기술해야 합니다.) A 2.1 18페이지",
+      "pageTarget": "Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should include known contraindications.",
+      "evidenceText": "7.9.2.1 Any known contraindication(s) to the use of the ME Equipment(의료기기 사용시 알아야 할 금기 사항을 기술해야 합니다.) A 1.4 1.5 8 ~ 11페이지",
+      "pageTarget": "Contraindications",
+      "confidence": "high"
+    },
+    {
+      "claim": "Class I ME equipment warning language is marked applicable in the checklist.",
+      "evidenceText": "7.9.2.2 Class I ME Equipment (1급 기기<보호 접지가 있는 제품>의 경우 하기의 경고 문구를 기술해야 합니다.) A 1.4 8페이지",
+      "pageTarget": "Class I ME Equipment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should include information on electromagnetic or other interference and ways to avoid or minimize it.",
+      "evidenceText": "7.9.2.2 Information regarding potential electromagnetic or other interference between the ME EQUIPMENT and other devices advice on ways to avoid or minimize such interference A 1.6 13페이지",
+      "pageTarget": "Electromagnetic Interference",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should describe the ME equipment and how it functions.",
+      "evidenceText": "7.9.2.5 A brief description of the ME EQUIPMENT A 2.1 18페이지; How the ME EQUIPMENT functions A 2.1 18페이지",
+      "pageTarget": "ME Equipment Description",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should include significant physical and performance characteristics.",
+      "evidenceText": "7.9.2.5 The significant physical and performance characteristics of the ME EQUIPMENT A 2.4 23 ~ 24페이지",
+      "pageTarget": "Performance Characteristics",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should include operation information such as displays, signals, sequence of operation, and detachable parts or accessories.",
+      "evidenceText": "7.9.2.9 displays and signals A 3, 4 28~49페이지; the sequence of operation A 3, 4 28~49페이지; connection and disconnection of detachable parts and ACCESSORIES A 2.2, 2.3 18~22페이지",
+      "pageTarget": "Operation Instructions",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should include preventive inspection, maintenance, and calibration information.",
+      "evidenceText": "7.9.2.13 instruct the OPERATOR or RESPONSIBLE ORGANIZATION in sufficient detail concerning preventive inspection, maintenance and calibration to be performed by them, including the frequency of such maintenance A 5.2 50페이지",
+      "pageTarget": "Preventive Maintenance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should list accessories, detachable parts, and materials.",
+      "evidenceText": "7.9.2.14 List of ACCESSORIES, detachable parts and materials A 5.3 48 ~ 49페이지",
+      "pageTarget": "Accessories",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should provide disposal advice for waste products, residues, ME equipment, and accessories at end of expected service life.",
+      "evidenceText": "7.9.2.15 Provide advice on the proper disposal of waste products, residues, etc. and of the ME Equipment and Accessories at the end of their Expected Service Life A 5.4 52페이지",
+      "pageTarget": "Disposal",
+      "confidence": "high"
+    },
+    {
+      "claim": "The instructions for use should contain a unique version identifier such as date of issue.",
+      "evidenceText": "7.9.2.19 The instructions for use shall contain a unique version identifier such as its date of issue. A 1페이지",
+      "pageTarget": "Version Identifier",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description should include information essential for safe operation, transport and storage, installation, preparation for use, marking information, and environmental conditions.",
+      "evidenceText": "7.9.3.1 essential for safe operation A; transport and storage A; measures or conditions necessary for installing the ME EQUIPMENT A; preparing it for use A; the information required in 7.2 A; the permissible environmental conditions of use including conditions for transport and storage A",
+      "pageTarget": "Technical Description",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description should include a warning about hazards from unauthorized modification.",
+      "evidenceText": "a warning statement that addresses the HAZARDS that can result from unauthorized modification of the ME EQUIPMENT A 1.4 8페이지",
+      "pageTarget": "Unauthorized Modification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description should include Essential Performance and Basic Safety testing information, including means, methods, and recommended frequency.",
+      "evidenceText": "Information pertaining to Essential Performance and any necessary recurrent Essential Performance and Basic Safety testing including details of the means, methods and recommended frequency. A 11페이지",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly present; filename only provides revision/version V2.2."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: source path references CE MDD, metadata authoritySignal is FDA, and source text primarily references IEC 60601-1 requirements."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is taken from source metadata productSignal; the source text only states that a model or type reference is required and located on page 1."
+    },
+    {
+      "severity": "info",
+      "reason": "Many entries use A or N status without an explicit legend defining the status values."
+    }
+  ]
+}

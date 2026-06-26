@@ -1,4 +1,151 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f005e-50db-7911-a28f-1d50ecf3a36a"
+  "source": {
+    "queueId": "ingest-1781569954369-5g",
+    "sourcePath": "raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/SBOM.txt",
+    "canonicalGroupId": "342686f61ede"
+  },
+  "document": {
+    "title": "SBOM",
+    "documentType": "SBOM",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "SBOM-style module/version list for software components.",
+    "officialUse": "Supports software component and version traceability for regulatory review.",
+    "keyPoints": [
+      "The source is organized as a two-column module/version list.",
+      "Microsoft Visual Studio 2022 is listed.",
+      "Multiple DICOM-related libraries are listed, including fo-dicom versions 4.0.7.0, 4.0.8.0, 4.0.4.0, and 5.1.2.0.",
+      "Image and document libraries listed include OpenCV 2.4.13, Newtonsoft.Json 13.0.0.0, PdfSharp 1.50.5147.0, and SixLabors.ImageSharp 2.0.0.0."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Microsoft Visual Studio 2022",
+      "type": "software tool",
+      "evidence": "Microsoft Visual Studio 2022"
+    },
+    {
+      "name": "fo-dicom",
+      "type": "software library",
+      "evidence": "fo-dicom, 4.0.7.0"
+    },
+    {
+      "name": "OpenCV",
+      "type": "software library",
+      "evidence": "opencv, 2.4.13"
+    },
+    {
+      "name": "Newtonsoft.Json",
+      "type": "software library",
+      "evidence": "Newtonsoft.Json, 13.0.0.0"
+    },
+    {
+      "name": "PdfSharp",
+      "type": "software library",
+      "evidence": "PdfSharp, 1.50.5147.0"
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "authoritySignal: FDA"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Bill of Materials",
+      "pageTarget": "Software Bill of Materials",
+      "evidence": "sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/240515 ASPEN IODR FDA 대응/Abyz-FDA-20240515/#Abyz/SBOM.txt"
+    },
+    {
+      "name": "Module version inventory",
+      "pageTarget": "Software Module Version Inventory",
+      "evidence": "Module Version"
+    },
+    {
+      "name": "DICOM software components",
+      "pageTarget": "DICOM Software Components",
+      "evidence": "Dicom.Core(fo-dicom), 4.0.7.0"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document lists software modules with versions.",
+      "evidenceText": "Module Version",
+      "pageTarget": "Software Module Version Inventory",
+      "confidence": "high"
+    },
+    {
+      "claim": "Microsoft Visual Studio 2022 is included in the module list.",
+      "evidenceText": "Microsoft Visual Studio 2022",
+      "pageTarget": "Microsoft Visual Studio 2022",
+      "confidence": "high"
+    },
+    {
+      "claim": "BitMiracle.LibTiff.NET version 2.4.649.0 is listed.",
+      "evidenceText": "BitMiracle.LibTiff.NET, 2.4.649.0",
+      "pageTarget": "BitMiracle.LibTiff.NET",
+      "confidence": "high"
+    },
+    {
+      "claim": "fo-dicom version 4.0.7.0 is listed.",
+      "evidenceText": "fo-dicom, 4.0.7.0",
+      "pageTarget": "fo-dicom",
+      "confidence": "high"
+    },
+    {
+      "claim": "fo-dicom.core version 5.1.2.0 is listed.",
+      "evidenceText": "fo-dicom.core, 5.1.2.0",
+      "pageTarget": "fo-dicom",
+      "confidence": "high"
+    },
+    {
+      "claim": "OpenCV version 2.4.13 is listed.",
+      "evidenceText": "opencv, 2.4.13",
+      "pageTarget": "OpenCV",
+      "confidence": "high"
+    },
+    {
+      "claim": "Newtonsoft.Json version 13.0.0.0 is listed.",
+      "evidenceText": "Newtonsoft.Json, 13.0.0.0",
+      "pageTarget": "Newtonsoft.Json",
+      "confidence": "high"
+    },
+    {
+      "claim": "PdfSharp version 1.50.5147.0 is listed.",
+      "evidenceText": "PdfSharp, 1.50.5147.0",
+      "pageTarget": "PdfSharp",
+      "confidence": "high"
+    },
+    {
+      "claim": "SixLabors.ImageSharp version 2.0.0.0 is listed.",
+      "evidenceText": "SixLabors.ImageSharp, 2.0.0.0",
+      "pageTarget": "SixLabors.ImageSharp",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document revision or version is not explicitly present."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product model is not identified in the source text; metadata productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "FDA appears as metadata authoritySignal and in the source path, but the source text itself does not state an issuing authority."
+    }
+  ]
 }
