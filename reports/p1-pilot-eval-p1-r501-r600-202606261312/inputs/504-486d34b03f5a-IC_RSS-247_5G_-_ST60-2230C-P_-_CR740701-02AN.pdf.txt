@@ -1,0 +1,729 @@
+queueId: ingest-1781569954407-vq9
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/ISED_ST60-2230C/IC RSS-247 5G - ST60-2230C-P - CR740701-02AN.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/b69afc192e77/IC RSS-247 5G - ST60-2230C-P - CR740701-02AN__b69afc192e77_combined.txt
+canonicalGroupId: 486d34b03f5a
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 504
+
+SOURCE_TEXT
+Report No.: CR740701-02AN Page : 1 of 50
+Report Version: Rev. 01
+IC Partial Test Report
+IC : 3147A-602230C
+Equipment : 802.11 ac/a/b/g/n M.2 2230 + Bluetooth 4.2
+module
+Model No. : ST60-2230C-P
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Technologies
+Applicant : Laird Technologies
+Address : W66N220 Commerce Court, Cedarburg,
+Wisconsin 53012, USA
+Standard : RSS-247 Issue 2 February 2017
+Received Date : Apr. 07, 2017
+Tested Date : Apr. 12 ~ May 10, 2017
+We, International Certification Corp., would like to declare that the tested sample has been
+evaluated and in compliance with the requirement of the above standards. The test results
+contained in this report refer exclusively to the product. It may be duplicated completely for
+legal use with the approval of the applicant. It shall not be reproduced except in full without
+the written approval of our laboratory.
+Reviewed by: Approved by:
+Along Chen / Assistant Manager Gary Chang / Manager
+
+Report No.: CR740701-02AN Page : 2 of 50
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Local Support Equipment List ................................................................................................................ 9
+1.3 Test Setup Chart .................................................................................................................................... 9
+1.4 The Equipment List ..............................................................................................................................10
+1.5 Testing Applied Standards ...................................................................................................................11
+1.6 Measurement Uncertainty ....................................................................................................................11
+2 TEST CONFIGURATION .....................................................................................................................12
+2.1 Testing Condition .................................................................................................................................12
+2.2 The Worst Test Modes and Channel Details .......................................................................................12
+3 TRANSMITTER TEST RESULTS........................................................................................................13
+3.1 Transmitter Radiated and Band Edge Emissions ................................................................................13
+4 TEST LABORATORY INFORMATION ...............................................................................................50
+
+Report No.: CR740701-02AN Page : 3 of 50
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+CR740701-02AN Rev. 01 Initial issue Nov. 29, 2017
+
+Report No.: CR740701-02AN Page : 4 of 50
+Report Version: Rev. 01
+Summary of Test Results
+FCC Rules Test Items Measured Result
+RSS-247 Section 6.2.1.2
+RSS-247 Section 6.2.2.2
+RSS-247 Section 6.2.3.2
+RSS-247 Section 6.2.4.2
+Radiated Emissions [dBuV/m at 3m]: 43.58MHz
+38.52 (Margin -1.48dB) - QP Pass
+
+Report No.: CR740701-02AN Page : 5 of 50
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Technologies ST60-2230C-P 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module For marketing purpose
+SU60-2230C-P
+
+Report No.: CR740701-02AN Page : 6 of 50
+Report Version: Rev. 01
+1.1.2 Specification of the Equipment under Test (EUT)
+RF General Information
+Frequency
+Range (MHz)
+IEEE Std.
+802.11 Ch. Freq. (MHz) Channel
+Number
+Transmit
+Chains (NTX)
+Data Rate /
+MCS
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+a
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [9]
+149-165 [5]
+1 6-54 Mbps
+2 6-54 Mbps
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+n (HT20)
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [9]
+149-165 [5]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+n (HT40)
+5190-5230
+5270-5310
+5510-5710
+5755-5795
+38-46 [2]
+54-62 [2]
+102-142 [4]
+151-159 [2]
+1 MCS 0-7
+2 MCS 0-7
+2 MCS 8-15
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT20)
+5180-5240
+5260-5320
+5500-5720
+5745-5825
+36-48 [4]
+52-64 [4]
+100-144 [9]
+149-165 [5]
+1
+MCS 0-9
+2
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT40)
+5190-5230
+5270-5310
+5510-5710
+5755-5795
+38-46 [2]
+54-62 [2]
+102-142 [4]
+151-159 [2]
+1
+MCS 0-9
+2
+5150-5250
+5250-5350
+5470-5725
+5725-5850
+ac (VHT80)
+5210
+5290
+5530~5690
+5775
+42 [1]
+58 [1]
+106-138 [2]
+155 [1]
+1
+MCS 0-9
+2
+Note 1: RF output power specifies that Maximum Conducted Output Power.
+Note 2: 802.11a/n/ac uses a combination of OFDM-BPSK, QPSK, 16QAM, 64QAM, 256QAM modulation.
+Note 3: The device supports TX antenna diversity function. The conducted power of single chain is same for
+1TX and 2TX operating mode. Therefore, Ant1 + Ant 2 configuration is chosen for final testing.
+
+Report No.: CR740701-02AN Page : 7 of 50
+Report Version: Rev. 01
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+2400~2483.5 5150~5250 5250~5350 5470~5725 5725~5850
+1 Laird
+NanoBlade-IP04
+PCB
+Dipole IPEX U.FL 2 3.9 3.9 4 4
+1.1.4 Power Supply Type of Equipment under Test (EUT)
+Power Supply Type DC 3.3V from host
+1.1.5 Accessories
+N/A
+
+Report No.: CR740701-02AN Page : 8 of 50
+Report Version: Rev. 01
+1.1.6 Channel List
+802.11 a / HT20 / VHT20 HT40 / VHT40
+Channel Frequency(MHz) Channel Frequency(MHz)
+36 5180 38 5190
+40 5200 46 5230
+44 5220 54 5270
+48 5240 62 5310
+52 5260 102 5510
+56 5280 110 5550
+60 5300 118 5590
+64 5320 126 5630
+100 5500 134 5670
+104 5520 142 5710
+108 5540 151 5755
+112 5560 159 5795
+116 5580 VHT80
+120 5600 42 5210
+124 5620 58 5290
+128 5640 106 5530
+132 5660 122 5610
+136 5680 138 5690
+140 5700 155 5775
+144 5720 --- ---
+149 5745 --- ---
+153 5765 --- ---
+157 5785 --- ---
+161 5805 --- ---
+165 5825 --- ---
+
+Report No.: CR740701-02AN Page : 9 of 50
+Report Version: Rev. 01
+1.2 Local Support Equipment List
+Support Equipment List
+No. Equipment Brand Model FCC ID Signal cable / Length (m)
+1 Notebook DELL Latitude E5420 DoC RJ45, 10m non-shielded
+2 Notebook Lenovo T430 DoC USB, 0.8m shielded
+3 Fixture --- --- --- Fixture, 0.2m non-shielded
+Note: No2. & No. 3 were provided by applicant.
+1.3 Test Setup Chart
+Test Setup Diagram
+
+Report No.: CR740701-02AN Page : 10 of 50
+Report Version: Rev. 01
+1.4 The Equipment List
+Test Item Radiated Emission
+Test Site 966 chamber 3 / (03CH03-WS)
+Instrument Manufacturer Model No. Serial No. Calibration
+Date
+Calibration
+Until
+Spectrum Analyzer ROHDE&SCHWARZ FSV40 101486 Nov. 15, 2016 Nov. 14, 2017
+Receiver Agilent N9038A MY53290044 Sep. 26, 2017 Sep. 25, 2018
+Bilog Antenna SCHWARZBECK VULB9168 VULB9168-685 Apr. 28, 2017 Apr. 27, 2018
+Horn Antenna
+1G-18G SCHWARZBECK BBHA 9120 D BBHA 9120 D 1206 Feb. 09, 2017 Feb. 08, 2018
+Horn Antenna
+18G-40G SCHWARZBECK BBHA 9170 BBHA 9170517 Oct. 25, 2016 Oct. 24, 2017
+Loop Antenna R&S HFH2-Z2 100330 Nov. 10, 2016 Nov. 09, 2017
+Loop Antenna
+Cable KOAX KABEL 101354-BW 101354-BW Dec. 09, 2016 Dec. 08, 2017
+Preamplifier EMC EMC02325 980187 Sep. 04, 2017 Sep. 03, 2018
+Preamplifier Agilent 83017A MY53270014 Aug. 21, 2017 Aug. 20, 2018
+Preamplifier EMC EMC184045B 980192 Aug. 22, 2017 Aug. 21, 2018
+RF cable-3M HUBER+SUHNER SUCOFLEX104 MY22620/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-8M HUBER+SUHNER SUCOFLEX104 MY22600/4 Feb. 04, 2017 Feb. 03, 2018
+RF cable-1M HUBER+SUHNER SUCOFLEX104 MY22624/4 Feb. 04, 2017 Feb. 03, 2018
+LF cable-0.8M EMC EMC8D-NM-NM-800 EMC8D-NM-NM-800-001 Feb. 04, 2017 Feb. 03, 2018
+LF cable-3M EMC EMC8D-NM-NM-3000 131103 Feb. 04, 2017 Feb. 03, 2018
+LF cable-13M EMC EMC8D-NM-NM-13000 131104 Feb. 04, 2017 Feb. 03, 2018
+Measurement
+Software AUDIX e3 6.120210g NA NA
+Note: Calibration Interval of instruments listed above is one year.
+
+Report No.: CR740701-02AN Page : 11 of 50
+Report Version: Rev. 01
+1.5 Testing Applied Standards
+According to the specification of EUT, the EUT must comply with following standards and KDB documents.
+RSS-247 Issue 2 February 2017
+RSS-Gen Issue 4 November 2014
+ANSI C63.10-2013
+ANSI C63.4-2014
+FCC KDB 789033 D02 General UNII Test Procedures New Rules v01r04
+FCC KDB 644545 D03 Guidance for IEEE 802 11ac New Rules v01
+FCC KDB 662911 D01 Multiple Transmitter Output v02r01
+FCC KDB 412172 D01 Determining ERP and EIRP v01r01
+1.6 Measurement Uncertainty
+ISO/IEC 17025 requires that an estimate of the measurement uncertainties associated with the emissions test
+results be included in the report. The measurement uncertainties given below are based on a 95% confidence
+level (based on a coverage factor (k=2)
+Measurement Uncertainty
+Parameters Uncertainty
+Radiated emission ≤ 1GHz ±3.66 dB
+Radiated emission > 1GHz ±5.37 dB
+
+Report No.: CR740701-02AN Page : 12 of 50
+Report Version: Rev. 01
+2 Test Configuration
+2.1 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+Radiated Emissions 03CH03-WS 22-24°C / 66-67% Aska Huang
+ FCC Designation No.: TW0009
+ FCC site registration No.: 207696
+ IC site registration No.: 10807C-1
+2.2 The Worst Test Modes and Channel Details
+Frequency band 5150~5250 MHz / 5250~5350 MHz / 5470~5725 MHz
+Test item Modulation
+Mode
+Test Frequency
+(MHz)
+Data Rate
+(Mbps) / MCS
+Test
+Configuration
+Radiated Emissions ≤1GHz VHT20 5240 MCS 0 ---
+Radiated Emissions >1GHz
+11a 5180 / 5500 6 Mbps
+--- VHT20 5180 / 5320 / 5500 / 5700 MCS 0
+VHT40 5190 / 5310 / 5510 / 5670 MCS 0
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y, and
+Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+Frequency band 5725-5850 MHz
+Test item Modulation
+Mode
+Test Frequency
+(MHz)
+Data Rate
+(Mbps) / MCS
+Test
+Configuration
+Radiated Emissions ≤1GHz VHT20 5825 MCS 0 ---
+Radiated Emissions >1GHz
+11a 5745 6 Mbps
+--- VHT20 5745 / 5825 MCS 0
+VHT40 5755 / 5795 MCS 0
+NOTE:
+1. The EUT was pretested with 3 orientations placed on the table for the radiated emission measurement – X, Y, and
+Z-plane. The Y-plane results were found as the worst case and were shown in this report.
+
+Report No.: CR740701-02AN Page : 13 of 50
+Report Version: Rev. 01
+3 Transmitter Test Results
+3.1 Transmitter Radiated and Band Edge Emissions
+3.1.1 Limit of Transmitter Radiated and Band Edge Emissions
+Restricted Band Emissions Limit
+Frequency Range (MHz) Field Strength (uV/m) Field Strength (dBuV/m) Measure Distance (m)
+0.009~0.490 2400/F(kHz) 48.5 - 13.8 300
+0.490~1.705 24000/F(kHz) 33.8 - 23 30
+1.705~30.0 30 29 30
+30~88 100 40 3
+88~216 150 43.5 3
+216~960 200 46 3
+Above 960 500 54 3
+Note 1:
+Qusai-Peak value is measured for frequency below 1GHz except for 9–90 kHz, 110–490 kHz frequency band. Peak and
+average value are measured for frequency above 1GHz. The limit on average radio frequency emission is as above
+table. The limit on peak radio frequency emissions is 20 dB above the maximum permitted average emission limit
+Note 2:
+Measurements may be performed at a distance other than what is specified provided. When performing measurements
+at a distance other than that specified, the results shall be extrapolated to the specified distance using an extrapolation
+factor as below, Frequency at or above 30 MHz: 20 dB/decade Frequency below 30 MHz: 40 dB/decade.
+
+Report No.: CR740701-02AN Page : 14 of 50
+Report Version: Rev. 01
+Un-restricted band emissions above 1GHz Limit
+Operating Band Limit
+5.15 - 5.25 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.25 - 5.35 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.47 - 5.725 GHz e.i.r.p. -27 dBm [68.2 dBuV/m@3m]
+5.725 - 5.850 GHz 15.407(b)(4)(i)
+All emissions shall be limited to a level of −27 dBm/MHz at 75 MHz or more
+above or below the band edge increasing linearly to 10 dBm/MHz at 25 MHz
+above or below the band edge, and from 25 MHz above or below the band
+edge increasing linearly to a level of 15.6 dBm/MHz at 5 MHz above or
+below the band edge, and from 5 MHz above or below the band edge
+increasing linearly to a level of 27 dBm/MHz at the band edge.
+15.407(b)(4)(ii) ,compliance with the emission limits in § 15.247(d)
+Shall be at least 30dB below that in the 100 kHz bandwidth within the band
+that contains the highest level of the desired power,. Attenuation below the
+general limits specified in §15.209(a) is not required. In addition,radiated
+emissions which fall in the restricted bands, as defined in §15.205(a), must
+also comply with the radiated emission limits specified in §15.209(a) (see §
+15.205(c))
+Note 1: Measurements may be performed at a distance other than the limit distance provided they are not
+performed in the near field and the emissions to be measured can be detected by the measurement
+equipment. When performing measurements at a distance other than that specified, the results shall
+be extrapolated to the specified distance using an extrapolation factor of 20 dB/decade (inverse of
+linear distance for field-strength measurements, inverse of linear distance-squared for power-density
+measurements).
+3.1.2 Test Procedures
+1. Measurement is made at a semi-anechoic chamber that incorporates a turntable allowing a EUT
+rotation of 360°. A continuously-rotating, remotely-controlled turntable is installed at the test site to
+support the EUT and facilitate determination of the direction of maximum radiation for each EUT
+emission frequency. The EUT is placed at test table. For emissions testing at or below 1 GHz, the table
+height is 80 cm above the reference ground plane. For emission measurements above 1 GHz, the table
+height is 1.5 m
+2. Measurement is made with the antenna positioned in both the horizontal and vertical planes of
+polarization. The measurement antenna is varied in height (1m ~ 4m) above the reference ground plane
+to obtain the maximum signal strength. Distance between EUT and antenna is 3 m.
+3. This investigation is performed with the EUT rotated 360°, the antenna height scanned between 1 m
+and 4 m, and the antenna rotated to repeat the measurements for both the horizontal and vertical
+antenna polarizations.
+Note:
+1. 120kHz measurement bandwidth of test receiver and Quasi-peak detector is for radiated emission below 1GHz.
+2. RBW=1MHz, VBW=3MHz and Peak detector is for peak measured value of radiated emission above 1GHz.
+3. RBW=1MHz, VBW=1/T and Peak detector is for average measured value of radiated emission above 1GHz.
+
+Report No.: CR740701-02AN Page : 15 of 50
+Report Version: Rev. 01
+3.1.3 Test Setup
+Radiated Emissions below 1 GHz
+Radiated Emissions above 1 GHz
+
+Report No.: CR740701-02AN Page : 16 of 50
+Report Version: Rev. 01
+3.1.4 Transmitter Radiated Unwanted Emissions (Below 1GHz)
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701-02AN Page : 17 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5240
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701-02AN Page : 18 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701-02AN Page : 19 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+Note 3: All spurious emissions below 30MHz are more than 20 dB below the limit.
+
+Report No.: CR740701-02AN Page : 20 of 50
+Report Version: Rev. 01
+3.1.5 Transmitter Radiated Unwanted Emissions (Above 1GHz) for 11a for Harmonic
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 21 of 50
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 22 of 50
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 23 of 50
+Report Version: Rev. 01
+
+Modulation 11a Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 24 of 50
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 25 of 50
+Report Version: Rev. 01
+Modulation 11a Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 26 of 50
+Report Version: Rev. 01
+3.1.6 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT20 for Band Edge
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 27 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5180
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 28 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 29 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5320
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 30 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 31 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5500
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 32 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 33 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5700
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 34 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 35 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5745
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 36 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 37 of 50
+Report Version: Rev. 01
+Modulation VHT20 Test Freq. (MHz) 5825
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 38 of 50
+Report Version: Rev. 01
+3.1.7 Transmitter Radiated Unwanted Emissions (Above 1GHz) for VHT40 for Band Edge
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 39 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5190
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 40 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 41 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5310
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 42 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 43 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5510
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 44 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 45 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5670
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 46 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 47 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5755
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 48 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Horizontal
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 49 of 50
+Report Version: Rev. 01
+Modulation VHT40 Test Freq. (MHz) 5795
+Polarization Vertical
+Note 1: Emission Level (dBuV/m) = SA Reading (dBuV/m) + Factor* (dB)
+*Factor includes antenna factor , cable loss and amplifier gain
+Note 2: Margin (dB) = Emission level (dBuV/m) – Limit (dBuV/m).
+
+Report No.: CR740701-02AN Page : 50 of 50
+Report Version: Rev. 01
+4 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corp (EMC and Wireless Communication Laboratory), it is our definitive objective is
+to institute long term, trust-based associations with our clients. The expectation we set up with our clients is
+based on outstanding service, practical expertise and devotion to a certified value structure. Our passion is to
+grant our clients with best EMC / RF services by oriented knowledgeable and accommodating staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No. 30-2, Ding Fwu Tsuen, Lin
+Kou District, New Taipei City,
+Taiwan, R.O.C.
+No. 3-1, Lane 6, Wen San 3rd St.,
+Kwei Shan District, Tao Yuan City
+333, Taiwan, R.O.C.
+No. 14-1, Lane 19, Wen San 3rd
+St., Kwei Shan District, Tao Yuan
+City 333, Taiwan, R.O.C.
+If you have any suggestion, please feel free to contact us as below information.
+Tel: 886-3-271-8666
+Fax: 886-3-318-0155
+Email: ICC_Service@icertifi.com.tw
+══END══

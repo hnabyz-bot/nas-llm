@@ -1,0 +1,2368 @@
+queueId: ingest-1781569954372-2jj
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ FDA/참조 문서/2. Software/2. Software Validation Report(Doc No. SVR-01, Rev.0) [62304 2014 적용].docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/52a3c62c21d9/2. Software Validation Report(Doc No. SVR-01, Rev.0) [62304 2014 적용]__52a3c62c21d9_combined.txt
+canonicalGroupId: 1fa229e725f0
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 593
+
+SOURCE_TEXT
+Software Validation Report
+
+According to EN 62304:2006/AC:2008
+
+Device Description
+
+Product Name
+
+Model Name
+
+Document Number
+
+SVR-01
+
+Preparation, Review and Approval of the document
+
+Prepared by
+
+Reviewed by
+
+Approved by
+
+Name
+
+Position
+
+Assistant Manager
+
+CEO
+
+Date
+
+2018.02.10
+
+2018.02.10
+
+2018.02.10
+
+Signature
+
+Revision History
+
+No.
+
+Rev. No.
+
+Description of changes
+
+Date
+
+1
+
+0
+
+Initial Release
+
+Contents
+
+0. Overview 6
+
+0.1 Purpose 6
+
+0.2 Roles and Responsibilities 6
+
+0.2.1 Management Members 6
+
+0.2.2 Hazard Analysis Team: Members, Roles and Responsibilities 6
+
+0.2.3 V & V Testing Team: Members, Roles and Responsibilities 6
+
+0.2.4 Documentation Review: Members, Roles and Responsibilities 6
+
+0.2.5 Team Members/Qualifications 6
+
+1. Level of Concern 6
+
+2. Software Description 9
+
+2.1 Device Feature 9
+
+2.1.1 Role of S/W 9
+
+2.1.2 Block Diagram 10
+
+2.2 Operational Environment 11
+
+2.2.1 Software 11
+
+2.2.2 Software Development Tool 11
+
+3. Hazard Analysis 12
+
+3.1 Hazard Analysis Plan 12
+
+3.1.1 Range of Application and Purpose 12
+
+3.1.2 Hazard Analysis Activities and outputs 12
+
+3.2 Definitions and Terms 12
+
+3.3 Estimation of the risk for each hazardous 14
+
+3.4 Risk analysis and evaluation 14
+
+3.4.1 Risk acceptance criteria 14
+
+3.5 Hazard Analysis Result 15
+
+- Detailed analysis report refers to Appendix 3. 15
+
+4. Software Requirement Specification (SRS) 16
+
+4.1 Software Description 16
+
+4.1.1 Hardware/Software Requirement 16
+
+4.2 User Interface specification 16
+
+4.2.1 Description 16
+
+4.3 Functional Specification 17
+
+5. Architecture Design Chart 18
+
+5.1 Initialize default data Module 18
+
+5.2 Operate module 19
+
+5.3 Battery level scan module 19
+
+5.4 Vacuum pump module 20
+
+5.5 Solenoid valve module 20
+
+5.6 LCD User interface module 21
+
+5.7 Error module 21
+
+5.8 Safety module 22
+
+6. Software Design Specification (SDS) 23
+
+6.1 Design Specification 23
+
+6.1.1 Initialize default data module 23
+
+6.1.2 Operate Module 24
+
+6.1.3 Battery level scan module 25
+
+6.1.4 Vacuum pump module 26
+
+6.1.5 Solenoid valve Module 26
+
+6.1.6 LCD user interface module 27
+
+6.1.7 Error module 28
+
+6.1.8 Safety module 28
+
+7. Verification, Validation & Test 29
+
+7.1 Software verification & test plan 29
+
+7.1.1 Overview and Purpose 29
+
+7.1.2 Software integration and integration testing Planning 29
+
+7.1.3 Technique and test procedure for the test method 29
+
+7.1.4 Solution process when defect occurs 30
+
+7.2 V.V & T Item & Methods 32
+
+7.2.1 Static Test 32
+
+7.2.2 Dynamic Test 32
+
+7.3 Documentation Handling 32
+
+7.4 Process Assessment 32
+
+7.5 V.V & Test Results 32
+
+8. Traceability Analysis 33
+
+8.1 Requirement Traceability Matrix 33
+
+9. Revision Level History 35
+
+10. Unsolved Anomalies 35
+
+10.1 Scope 35
+
+10.2 Unresolved Software Anomalies (Bugs or Defects) 35
+
+11. Release Version Number 35
+
+[Appendix 1] S/W Verification Report (Module Review) 36
+
+[Appendix 2] S/W Verification Report (Integration Review) 38
+
+[Appendix 3] Dynamic Test Report 40
+
+[Appendix 4] Hazard Analysis Report 43
+
+Overview
+
+Purpose
+
+The purpose is to confirm by examination and provision of objective evidence that software specifications conform to user needs and intended uses, and that the particular requirements implemented through software can be consistently fulfilled.
+
+Roles and Responsibilities
+
+Where roles and responsibilities are identified, or his/her designate is implied.
+
+Management Members
+
+Hazard Analysis Team: Members, Roles and Responsibilities
+
+V & V Testing Team: Members, Roles and Responsibilities
+
+Documentation Review: Members, Roles and Responsibilities
+
+Team Members/Qualifications
+
+General Qualifications/Requirements as described in each individual’s training file.
+
+Level of Concern
+
+The Level of Concern for the software is moderate
+
+If the answer to any one question below is Yes, the Level of Concern for the Software Device is likely to be Major.
+
+Question
+
+Answer
+
+1. Does the Software Device qualify as Blood Establishment Computer Software?
+
+N
+
+2. Is the Software Device intended to be used in combination with a drug or biologic ?
+
+N
+
+3. Is the Software Device an accessory to a medical device that has a Major Level of Concern ?
+
+N
+
+4. Prior to mitigation of hazards, could a failure of the Software Device result in death or serious injury, either to a patient or to a user of the device? Examples of this include the following:
+
+N
+
+4-1. Does the Software Device control a life supporting or life sustaining function ?
+
+N
+
+4-2. Does the Software Device control the delivery of potentially harmful energy that could result in death or serious injury, such as radiation treatment systems, defibrillators, and ablation generators ?
+
+N
+
+4-3. Does the Software Device control the delivery of treatment or therapy such that an error or malfunction could result in death or serious injury?
+
+N
+
+4-4. Does the Software Device provide diagnostic information that directly drives a decision regarding treatment or therapy, such that if misapplied it could result in serious injury or death?
+
+N
+
+4-5. Does the Software Device provide vital signs monitoring and alarms for potentially life threatening situations in which medical intervention is necessary?
+
+N
+
+If the Software Device is not Major Level of Concern and the answer to any one question below is Yes, the Level of Concern is likely to be Moderate.
+
+Question
+
+Answer
+
+1. Is the Software Device an accessory to a medical device that has a Moderate Level of Concern?
+
+N
+
+2. Prior to mitigation of hazards, could a failure of the Software Device result in Minor Injury, either to a patient or to a user of the device?
+
+Y
+
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to an erroneous diagnosis or a delay in delivery of appropriate medical care that would likely lead to Minor Injury?
+
+N
+
+The Level of Concern for the software is Class B
+
+Level of Concern: Moderate [FDA], Class B [IEC 62304]
+
+Software Description
+
+Device Feature
+
+Role of S/W
+
+Name
+
+Purpose
+
+Block Diagram
+
+Application
+
+Operational Environment
+
+Software
+
+Software
+
+- Program Language:
+
+- CPU:
+
+- Display:
+
+Software Development Tool
+
+- Programming Language:
+
+- Programming Tool :
+
+- Complier:
+
+Hazard Analysis
+
+Hazard Analysis Plan
+
+Range of Application and Purpose
+
+EN ISO 14971 Standard specifies a process for monitoring administration of hazard.
+
+This Standard identifies and estimate the risk of medical image analysis software, and it evaluates and manages the calculated risk. A range of application is as follows.
+
+- Comply with the EN ISO 14971 standard.
+
+- The requirements of this standard shall apply throughout the Life Cycle.
+
+- This standard does not apply to the clinical judgment relating to the use of medical devices.
+
+- This standard does not define the acceptable level of risk.
+
+Hazard Analysis Activities and outputs
+
+H/A Stage
+
+Activity description
+
+Responsibility
+
+Output
+
+Hazard identification
+
+Describe the hazard analysis, hazard tools, and the hazard analysis plan
+
+R&D
+
+Hazard Analysis Report
+
+Level of concern
+
+Describe the level of concern according to hazard category
+
+R&D
+
+Hazard Analysis Report
+
+Hazard control measure
+
+Describe the hazard control measure during software development process
+
+R&D
+
+Hazard Analysis Report
+
+Residual Hazard analysis
+
+Describe the residual hazard analysis after hazard control measure
+
+R&D
+
+Hazard Analysis Report
+
+Hazard Analysis after S/W change
+
+Reanalysis the hazard analysis after s/w change
+
+R&D
+
+Hazard Analysis Report
+
+Definitions and Terms
+
+The definitions and terms used in this specification are as follows.
+
+▪ Harm
+
+physical injury or damage to the health of people, or damage to property or the environment
+
+▪ Hazard
+
+potential source of harm
+
+▪ Hazardous situation
+
+circumstance in which people, property, or the environment are exposed to one or more hazard(s)
+
+▪ Intended use/ intended purpose
+
+use for which a product, process or service is intended according to the specifications, instructions and information provided by the manufacturer
+
+▪ Life-cycle
+
+all phases in the life of a medical device, from the initial conception to final
+
+decommissioning and disposal
+
+▪ Post-production
+
+part of the life-cycle of the product after the design has been completed and the medical device has been manufactured
+
+▪ Residual risk
+
+risk remaining after risk control measures have been taken
+
+▪ Risk
+
+combination of the probability of occurrence of harm and the severity of that harm
+
+▪ Risk analysis
+
+systematic use of available information to identify hazards and to estimate the risk
+
+▪ Risk assessment
+
+overall process comprising a risk analysis and a risk evaluation
+
+▪ Risk control
+
+process in which decisions are made and measures implemented by which risks are
+
+reduced to, or maintained within, specified levels
+
+▪ Risk estimation
+
+process used to assign values to the probability of occurrence of harm and the severity of that harm
+
+▪ Risk evaluation
+
+process of comparing the estimated risk against given risk criteria to determine the
+
+acceptability of the risk
+
+▪ Risk management
+
+systematic application of management policies, procedures and practices to the tasks of analyzing, evaluating, controlling and monitoring risk
+
+▪ Safety
+
+freedom from unacceptable risk
+
+▪ Severity
+
+measure of the possible consequences of a hazard
+
+Estimation of the risk for each hazardous
+
+- In accordance with the EN ISO 14971:2012 Annex D.3, E.4 and H.2.3.5, evaluate the risk factors for each risk by combining the predictable events that may result in a dangerous situation.
+
+▪ Software classification
+
+Given the intended use, the answers to questions above, and the software functional requirements, the classification of the software is defined below:
+
+- classification Related to EN62304
+
+Class
+
+Justification
+
+Applicable check
+
+A(Minor)
+
+No injury or damage to health is possible
+
+B(Moderate)
+
+Non serious injury is possible
+
+O
+
+C(Major)
+
+Death or serious injury is possible
+
+Risk analysis and evaluation
+
+Risk acceptance criteria
+
+Severity level of this product is a B level (among A, B, C) according to
+
+EN 62304:2006 safety classification.
+
+ The term “Stability” was determined as “The severity of which may be caused a potential defect in the software”.
+
+Severity
+
+Rating
+
+Definition
+
+Ranking
+
+SW safety class
+
+severity
+
+3
+
+C(Major)
+
+Serious
+
+Death or serious injury is possible
+
+2
+
+B(Moderate)
+
+Critical
+
+Non-serious injury is possible
+
+1
+
+A(Minor)
+
+Negligible
+
+No injury or damage to health is possible
+
+Probability
+
+ Rating
+
+Definition (P=Incidence/Production number)
+
+Ranking
+
+Probability
+
+4
+
+Frequent
+
+1/100 ≤ P
+
+3
+
+Probable
+
+1/500 ≤ P < 1/100
+
+2
+
+Occasional
+
+1/1000 ≤ P < 1/500
+
+1
+
+Remote
+
+P < 1/1000
+
+Acceptability of risk
+
+Frequent (4)
+
+4
+
+8
+
+12
+
+Probable (3)
+
+3
+
+6
+
+9
+
+Occasional (2)
+
+2
+
+4
+
+6
+
+Remote (1)
+
+1
+
+2
+
+3
+
+Probability
+
+ Severity
+
+Negligible(1)
+
+Critical (2)
+
+Serious(3)
+
+Risk level = Severity x Probability
+
+Green Zone
+
+Broadly Acceptable Zone
+
+Risk Level: 1~3
+
+ Red Zone
+
+As Far As Possible Zone
+
+Risk Level: 4~12
+
+Hazard Analysis Result
+
+ - Detailed analysis report refers to Appendix 3.
+
+Software Requirement Specification (SRS)
+
+The purpose of this chapter is to provide a consistent and complete description of the requirements for the software of ______. The requirements will be presented using textual descriptions to explain concepts, different types of diagrams to illustrate complicated interactions, and tables to relate relevant information.
+
+The intended audience of this document is all of the managers and engineering involving the development of the processor embedded software. This includes, but is not limited to, software developers, project managers, quality assurance personnel, and customers.
+
+Software Description
+
+Hardware/Software Requirement
+
+Hardware Platform: Atmega88 8bit Microprocessor
+
+- Architecture
+
+- RAM :
+
+- EEPROM :
+
+- Program Memory Size :
+
+- Clock:
+
+- 23 Programmable I/O Line
+
+Software Development Tool
+
+- Programming Language:
+
+- Programming tools and library
+
+- Editor:
+
+- Debugger:
+
+- Down Loader:
+
+User Interface specification
+
+Description
+
+Main Devices
+
+Power button: On/Off button
+
+Functional Specification
+
+Module
+
+Function
+
+Description
+
+No.
+
+SRS-01
+
+SRS-02
+
+SRS-03
+
+SRS-04
+
+SRS-05
+
+SRS-06
+
+SRS-07
+
+SRS-08
+
+SRS-09
+
+SRS-10
+
+SRS-11
+
+SRS-12
+
+SRS-13
+
+SRS-14
+
+SRS-15
+
+SRS-16
+
+Verify software requirements
+
+No.
+
+Verification requirements
+
+A or N/A
+
+Description
+
+1
+
+implement SYSTEM requirements including those relating to RISK CONTROL;
+
+A
+
+Risk control measures are provided in Clause 7. And we implemented all the risk control measure in the software requirement specifications. (Clause 8)
+
+2
+
+do not contradict one another;
+
+A
+
+No requirements are contradicted other requirements.
+
+3
+
+are expressed in terms that avoid ambiguity;
+
+A
+
+All the requirements are identified as simple and clarify.
+
+4
+
+are stated in terms that permit establishment of test criteria and performance of tests;
+
+A
+
+All the requirements are stated in terms that permit establishment of test criteria and performance of tests.
+
+5
+
+can be uniquely identified; and
+
+A
+
+All the requirements are uniquely identified by the identifier (SRS-XX)
+
+6
+
+are traceable to SYSTEM requirements or other source.
+
+A
+
+All the requirements can be uniquely identified by the identifier (SRS-XX)
+
+Architecture Design Chart
+
+Architecture Design
+
+Initialize default data Module
+
+The initialize default data module manages the default data. It can initialize the default data of microprocessor, interrupt and timer. When the system starts, this module initialize the data of microprocessor, interrupt and timer to default data which is saved in the memory.
+
+Operate module
+
+The operate module manage the all the mode of the MINUET LCD & MINUET LCD eco. It adjust the suction pressure by controlling the RPM of the motor and the solenoid depending on the mode. When the user inputs items such as mode, step and pattern through the LCD, It adjust the output.
+
+Battery level scan module
+
+The Editing Module check the battery level. When the module completes the battery level check, it sends the information to the LCD user interface module so that the user can confirm it
+
+Vacuum pump module
+
+The Vacuum pump module is responsible for controlling the RPM of the motor. It inputs the operation information from the operate module.
+
+Solenoid valve module
+
+The Vacuum pump module is responsible for controlling the operation of solenoid. It inputs the operation information from the operate module.
+
+LCD User interface module
+
+The LCD user interface module is responsible for indicating the data. When information is received from another module, it is displayed on the LCD according to the information. It also controls the information entered by the user via the button.
+
+Error module
+
+If unexpected error is occurred, the device will set the watch dog flag it will reset the program.
+
+Safety Vmodule
+
+The safety module is responsible for stopping the device. It stop the operation of the MINUET LCD & MINUET LCD eco after 30minutes of use.
+
+Architecture consideration
+
+No.
+
+Specification
+
+A/NA
+
+Description
+
+a
+
+Did you use an integrity part?
+
+N/A
+
+Not use an integrity part.
+
+b
+
+fail-safe functions
+
+A
+
+We performed risk management for the following items in the Fault situation:
+
+RM601-1-4.3-1, RM601-1-4.3-2, RM601-1-4.7-1, RM601-1-4.7-2, RM601-1-7.4.2, RM601-1-7.5, RM601-1-7.9.3.2, RM601-1-8.1, RM601-1-8.8.4.1, RM601-1-8.10.1, RM601-1-9.2.1, RM601-1-9.8.1, RM601-1-9.8.3.1, RM601-1-10.1.2, RM601-1-11.1.3, RM601-1-12.1, RM601-1-12.4.1, RM601-1-12.4.2, RM601-1-12.4.4, RM601-1-14.6.1, RM601-1-14.6.2, RM601-1-14.7, RM601-1-14.8, RM601-1-14.10, RM601-1-14.11, RM601-1-15.4.1, RM601-1-17, RM601-1-3-6.7.4, RM601-1-3-6.12.1, RM601-2-28-201.17, RM601-2-54
+
+201.9.2.2.5, RM-601-2-54-201.9.2.2.6, RM601-2-54-201.9.2.4.101, RM601-2-54-201.9.8.3.3, UR-01, UR-02, UR-03, UR-04, UR-05
+
+All the Risk control measures are included in the ‘Design Input’ of the XVISION-525.
+
+Please refer to the Risk management Report (Clause 4.2.2 – 6) FMEA Table (Doc. No. XC019-QC-006, Rev. 1.2)
+
+Software Validation Report (Appendix 5)
+
+c
+
+redundancy;
+
+A
+
+For the Inability of intended X-ray exposure / Misdiagnosis or unintended radiation exposure, we design the protective system as below:
+
+Protective Measure No.
+
+Description
+
+P1
+
+In case of exceeding the setting value which is set by the user, it is detected in independent protection circuit. If the output is higher than setting value, it forcibly cuts off the signal commanded by the control system, the exposure signal, and stops the x-ray output power. The control system checks that there is no X-ray output and displays an error code to the user.
+
+P2
+
+A signal connected to the CN406 and CN408 connectors detects an abnormal overcurrent flowing through the IGBT. If overcurrent flows, stop IGBT operation within 6usec and display the error (Err 22) by sending the signal to HT cont. board
+
+d
+
+diversity;
+
+N/A
+
+No duplication of functions of a system.
+
+e
+
+partitioning of functionality
+
+N/A
+
+-
+
+f
+
+defensive design
+
+N/A
+
+-
+
+g
+
+Assignment of risk control measures for systems and components of subsystems
+
+A
+
+We perform the risk management activity before the s/w and h/w design. And all the risk control measures are included in the ‘Design Input’. And this traceability are indicated in the FMEA Table and the Software validation report.
+
+For the detailed traceability, Please refer to the FMEA Table (Doc. No. XCO19-QC-006), Software Validation Report (Clause 6, Traceability) (Doc. No. XCO18-TM-003)
+
+h
+
+failure modes of components and their effects
+
+N/A
+
+-
+
+i
+
+failures by common cause
+
+N/A
+
+-
+
+j
+
+systematic failures
+
+N/A
+
+-
+
+k
+
+test interval duration and diagnostic coverage
+
+N/A
+
+-
+
+l
+
+maintainability
+
+N/A
+
+-
+
+m
+
+Protection against misuse that can reasonably be expected.
+
+A
+
+We select ‘frequently used functions. And we find reasonably foreseeable worst cases. These worst cases are risk-controlled, and these measures are described in the usability engineering report. (All the measures are validated by the usability test)
+
+For the detailed traceability, Usability Engineering Report (Clause 5.5.1.2 – 5.5.2) (Doc. No. XCO19-QC-007)
+
+n
+
+The IT-NETWORK specification, if applicable
+
+N/A
+
+-
+
+Software Design Specification (SDS)
+
+Design Specification
+
+Initialize default data module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-01
+
+Systen initialize
+
+Initialize the microprocessor, interrupt and timer when the user start the system
+
+SDS-01
+
+SRS-02
+
+System control
+
+Control the memory
+
+SDS-02
+
+Operate Module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-03
+
+SDS-03
+
+SRS-04
+
+SDS-04
+
+Battery level scan module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-05
+
+Battery level scan
+
+Check the battery level. If the request to send a battery level status, pass the current level
+
+SDS-05
+
+Vacuum pump module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-06
+
+Motor control
+
+If the vacuum pump module recevies a request from the operate module to control the rpm of the motor, vacuum pump module controls the RPM of the motor
+
+SDS-06
+
+Solenoid valve Module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-07
+
+Solenoid control
+
+If the Solenoid valve module recevies a request from the operate module to control the solenoid, solenoid valve module controls the solenoid
+
+SDS-07
+
+LCD user interface module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-08
+
+Massage mode pattern
+
+Indicate the massage mode pattern on the LCD
+
+SDS-08
+
+SRS-09
+
+Expression mode step
+
+Indicate the expression mode step on the LCD
+
+SDS-09
+
+SRS-10
+
+charge
+
+Indicate the charging status on the LCD
+
+SDS-10
+
+SRS-11
+
+Time display
+
+Indicate the time on the LCD
+
+SDS-11
+
+SRS-12
+
+LED Control
+
+Indicate the charging status on the LED
+
+SDS-12
+
+SRS-13
+
+Input control
+
+Control the function when user select the function key
+
+SDS-13
+
+SRS-14
+
+Output control
+
+Control the LCD display, motor speed, solenoid control
+
+SDS-14
+
+Error module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-15
+
+Error
+
+If unexpected error is occurred, the device will set the watch dog flag it will reset the program
+
+SDS-15
+
+Safety module
+
+SRS No.
+
+Function
+
+Description
+
+SDS No.
+
+SRS-16
+
+Auto turn off
+
+It stop the operation of after 30minutes of use
+
+SDS-16
+
+Verification, Validation & Test
+
+Software verification & test plan
+
+Overview and Purpose
+
+Ensure compliance with the user requirements, the developed software during the software lifecycle of our Software and check whether it Contradict with the detailed design information, and check it works properly when integrate each unit as plan. Verify the validity in the process of each test and verification of control measures as a means of risk control.
+
+Software integration and integration testing Planning
+
+Once the software design is completed, TEST the interaction between the developed program and other system (Operating System) after checking that the unit program or module functions peorplery as defined in the program specification. Reference: 2.1 Software development process
+
+Technique and test procedure for the test method
+
+Testing Methods
+
+Static Testing & Dynamic Testing
+
+Testing Description
+
+(1) Static Testing Outline
+
+Static Testing is a method to find defects without executing the software. The code will be reviewed by the programmer who wrote the code and other programmers to find the problems and things that are missing, and record its result
+
+(2) Level of testing
+
+The test is processed in a step-by-step process (from the sub-code to the module), and integration and integration verification is performed.
+
+(3) Dynamic Testing Outline
+
+Dynamic Testing is a method to find defects by executing the software. Found defect is modified by debugging, and is a representative method of a direct test.
+
+(4) Functional or Black box testing
+
+Functional testing is a technique in which functionality and requirements of the software are tested without looking at the internal design structure.
+
+It proceeds by performing a dynamic testing focused to the requirements and functionality.
+
+Clearly state the test criteria and the requirements of all clients to minimize errors that may occur in actual operation.
+
+Solution process when defect occurs
+
+Test process follows the following order.
+
+Error found
+
+If an error is found while performing the requirement analysis, design, and test process, please discuss with the professional testers and project teams.
+
+Error registration
+
+Register the error in the defect management report.
+
+Error analysis
+
+Analyze whether the registered error is just the simple error or the physical defect.
+
+Defect confirmation
+
+When the registered information is confirmed as a ‘defect’, set the found error to ‘defect state’
+
+Defect assignment
+
+Specifies the representative and assign the defect.
+
+Defect action
+
+Perform a corrective action of the defect, and if corrective action is completed,
+
+set the defect as the ‘defect action state’
+
+Defect action review and approval
+
+Perform verification testing of the modified defect and ensure that the defect is corrected properly. If the action is completed successfully, set the defect as ‘action complete’ state.
+
+V.V & T Item & Methods
+
+Static Test
+
+a. Code Review: performed by S/W engineer.
+
+b. Module Review: performed by S/W engineer.
+
+c. Integration Review: performed by S/W engineer.
+
+Dynamic Test
+
+a. Dynamic Test: performed by Q.C & S/W engineer.
+
+b. Refer to Appendix 3 Dynamic Test Plan.
+
+Documentation Handling
+
+Documentation will be handled in accordance with BMS Co., Ltd
+
+outlined in QM Document Control.
+
+Process Assessment
+
+The assessment of process is performed by internal audits.
+
+V.V & Test Results
+
+Refer to appendix 1, 2, 3
+
+Traceability Analysis
+
+Requirement Traceability Matrix
+
+Module
+
+SRS
+
+SDS
+
+Hazard Analysis
+
+Test Report
+
+MLS_Software
+
+Initialize default data module
+
+SRS-01
+
+SDS-01
+
+HA-01
+
+DT1-1
+
+SRS-02
+
+SDS-02
+
+HA-02,
+
+HA-04,
+
+HA-05,
+
+HA-06
+
+DT2, DT3
+
+Operate module
+
+SRS-03
+
+SDS-03
+
+HA-02
+
+DT2-1
+
+SRS-04
+
+SDS-04
+
+HA-02
+
+DT2-2
+
+Battery level scan module
+
+SRS-05
+
+SDS-05
+
+HA-03
+
+DT3-1,
+
+DT3-2,
+
+DT3-3,
+
+DT3-4
+
+Vacuum pump module
+
+SRS-06
+
+SDS-06
+
+HA-04
+
+DT2-1
+
+DT2-2
+
+Solenoid valve module
+
+SRS-07
+
+SDS-07
+
+HA-05
+
+DT2-1
+
+DT2-2
+
+LCD user interface module
+
+SRS-08
+
+SDS-08
+
+HA-06
+
+DT3-7
+
+DT3-8
+
+SRS-09
+
+SDS-09
+
+HA-06
+
+DT3-5
+
+DT3-6
+
+SRS-10
+
+SDS-10
+
+HA-06
+
+DT3-1,
+
+DT3-3
+
+SRS-11
+
+SDS-11
+
+HA-06
+
+DT3-10
+
+SRS-12
+
+SDS-12
+
+HA-06
+
+DT3-2,
+
+DT3-4
+
+SRS-13
+
+SDS-13
+
+HA-06
+
+DT2-1,DT2-2
+
+SRS-14
+
+SDS-14
+
+HA-06
+
+DT2-1,DT2-2,
+
+DT3-1,
+
+DT3-3,
+
+DT3-5,
+
+DT3-6,
+
+DT3-7
+
+DT3-8
+
+Error module
+
+SRS-15
+
+SDS-15
+
+HA-07
+
+DT3-9
+
+Safety module
+
+SRS-16
+
+SDS-16
+
+HA-08
+
+DT2-3
+
+Revision Level History
+
+Release Date
+
+Release Version
+
+Before Change
+
+After Change
+
+Potential Effect
+
+2017.12.05
+
+1.0
+
+None
+
+None
+
+None
+
+Unsolved Anomalies
+
+Scope
+
+List of errors and bugs which remain in the device and an explanation how they were determined to not impact safety or effectiveness, including operator usage and human factors.
+
+For each anomaly, indicate the problem, the impact on device performance, and if appropriate, any plans or timeframes for correcting the problem. This list of bugs should be communicated to the user in the device labeling.
+
+▪ Safety Patient, and/or user safety issue. Product cannot be released without
+
+compromising one of these. Must be fixed.
+
+▪ Major Defect impacting product intended use. No work around available.
+
+▪ Moderate Impact on product, typically related to user interface or general quality of
+
+product. Work around is available.
+
+▪ Minor No impact on product intended use, not significant or impacting product release, cosmetic.
+
+Unresolved Software Anomalies (Bugs or Defects)
+
+N/A
+
+Release Version Number
+
+- Software [version 1.0]
+
+[Appendix 1] S/W Verification Report (Code Review)
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2017-11-13
+
+SDS-No
+
+Function
+
+Module
+
+Description
+
+적합/부적합
+
+(Y/N)
+
+2. Acceptance : ◆ Pass ◇ Fail
+
+3. Summary : As a result of code review, all the codes are completed successfully. You may advance to Integration review phase. As a result of code review, we hereby certify that software verification is properly accomplished.
+
+Inspected by: (sign)
+
+ Reviewed by: (sign)
+
+[Appendix 2] S/W Verification Report (Module Review)
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2017-11-13
+
+Software Specifications
+
+Implemented?
+
+Remark
+
+Module
+
+Function
+
+MLS_Software
+
+Initialize default data module
+
+System initialize
+
+Y
+
+Initialize the microprocessor, interrupt and timer when the user start the system
+
+System control
+
+Y
+
+Control the memory
+
+Massage PWM
+
+Y
+
+Adjust the suction pressure by controlling the RPM of the motor and the solenoid
+
+MLS_Software
+
+Battery level scan module
+
+Battery level scan
+
+Y
+
+Check the battery level. If the request to send a battery level status, pass the current level
+
+MLS_Software
+
+Vacuum pump module
+
+Motor control
+
+Y
+
+If the vacuum pump module recevies a request from the operate module to control the rpm of the motor, vacuum pump module controls the RPM of the motor
+
+MLS_Software
+
+Solenoid valve Module
+
+Solenoid control
+
+Y
+
+If the Solenoid valve module recevies a request from the operate module to control the solenoid, solenoid valve module controls the solenoid
+
+MLS_Software
+
+LCD user interface module
+
+Massage mode pattern
+
+Y
+
+Indicate the massage mode pattern on the LCD
+
+Expression mode step
+
+Y
+
+Indicate the expression mode step on the LCD
+
+charge
+
+Y
+
+Indicate the charging status on the LED
+
+Time display
+
+Y
+
+Indicate the time on the LCD
+
+LED Control
+
+Y
+
+Indicate the charging status on the LED
+
+Input control
+
+Y
+
+Control the function when user select the function key
+
+Output control
+
+Y
+
+Control the LCD display, motor speed, solenoid control
+
+MLS_Software
+
+Error module
+
+Error
+
+Y
+
+Reset the program by activating the watch dog
+
+MLS_Software
+
+Safety module
+
+Auto turn off
+
+Y
+
+Stop the operation after 30minutes of use
+
+2. Acceptance : ◆ Pass ◇ Fail
+
+3. Summary : As a result of module review, all the module tests are completed successfully. You may advance to Integration review phase. As a result of module review, we hereby certify that software verification is properly accomplished.
+
+Inspected by: (sign)
+
+ Reviewed by: (sign)
+
+[Appendix 3] S/W Verification Report (Integration Review)
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2017-11-15
+
+the equipment
+
+▪ Vacuum Gage
+
+▪ Stop Watch
+
+▪ MINUET LCD
+
+Test environment (including
+
+software tools) used for test.
+
+▪ OS : Microsoft windows Win 7, Atmel Studio
+
+Software Specifications
+
+Implemented? (Y/N)
+
+Remark
+
+Status
+
+Function
+
+Module
+
+Ready
+
+System initialize
+
+Initialize default data module
+
+Y
+
+Check initializing the default data
+
+Operate
+
+System control
+
+Initialize default data module
+
+Y
+
+Check controlling the memory
+
+Massage PWM
+
+Operate Module
+
+Y
+
+Check adjusting the suction pressure
+
+Motor control
+
+Vacuum pump module
+
+Y
+
+Check controlling the RPM of the motor
+
+Solenoid control
+
+Solenoid valve Module
+
+Y
+
+Check controlling the solenoid
+
+Output control
+
+LCD user interface module
+
+Y
+
+Check controlling the LCD display, motor speed, solenoid control
+
+LCD
+
+Battery level scan
+
+Battery level scan module
+
+Y
+
+Check passing the current battery level
+
+Massage mode pattern
+
+LCD user interface module
+
+Y
+
+Check indicating the massage mode pattern on the LCD
+
+Expression mode step
+
+LCD user interface module
+
+Y
+
+Check indicating the expression mode step on the LCD
+
+charge
+
+LCD user interface module
+
+Y
+
+Check indicating the charging status on the LCD
+
+Time display
+
+LCD user interface module
+
+Y
+
+Check indicating the time on the LCD
+
+LED Control
+
+LCD user interface module
+
+Y
+
+Check indicating the charging status on the LCD
+
+Input control
+
+LCD user interface module
+
+Y
+
+Check controlling the function when user select the function key
+
+Error
+
+Error
+
+Error module
+
+Y
+
+Reset the program by activating the watch dog
+
+Safety
+
+Auto turn off
+
+Safety module
+
+Y
+
+Stop the operation after 30minutes of use
+
+2. Acceptance : ◆ Pass ◇ Fail
+
+3. Summary : As a result of Integration review, we hereby certify that all the functions that support system specification are proper. Therefore, you may advance to the next phase. As a result of system Integration review, we confirm that software verification is properly accomplished.
+
+Inspected by: (sign)
+
+ Reviewed by: (sign)
+
+[Appendix 4] Dynamic Test Report
+
+Dynamic Test Report
+
+Test case
+
+Item
+
+Method
+
+Criteria
+
+Count
+
+Remarks
+
+DT1
+
+Start the device
+
+DT1-1
+
+Initialize
+
+Turn on the device
+
+Check that microprocessor, interrupt and timer is initialized to default data when the device is started
+
+10
+
+DT2
+
+Operate
+
+DT2-1
+
+Expression control
+
+Change the Expression mode with ‘+’ and ‘-‘ button
+
+According to the changed vacuum level, compare the actual output vacuum level with the value set by the actual manufacturer and check whether it is within the error range.
+
+10
+
+DT2-2
+
+Massage control
+
+Change the massage mode with ‘+’ and ‘-‘ button
+
+According to the changed massage mode, compare the actual output massage mode with the value set by the actual manufacturer and check whether it is within the error range.
+
+10
+
+DT2-3
+
+Auto turn off
+
+Operate the mode. And wait until the operation time which is set in the product is completed
+
+Check whether the operation of the product stops automatically when the operation time set after 30minutes of use
+
+10
+
+DT3
+
+LCD
+
+DT3-1
+
+Battery level (Discharging)
+
+Do not connect the device to the power source and let it operate using the battery
+
+Check that the battery level displayed on the CLD changes as the battery discharges
+
+10
+
+DT3-2
+
+LED_Battery level (Discharging)
+
+Do not connect the device to the power source and let it operate using the battery
+
+Check that the LED is not lit
+
+10
+
+DT3-3
+
+Battery level (Charging)
+
+Connect the device to the power source
+
+Check that the battery level displayed on the CLD changes as the battery charges
+
+10
+
+DT3-4
+
+LED_Battery level (Charging)
+
+Connect the device to the power source
+
+Check that the LED is lit
+
+10
+
+DT3-5
+
+Massage mode (+)
+
+Change the massage mode with ‘+’ button
+
+Check the massage mode displayed on the LCD increases by 1 when press the ‘+’ button
+
+10
+
+DT3-6
+
+Massage mode (-)
+
+Change the massage mode with ‘-’ button
+
+Check the massage mode displayed on the LCD decreases by 1 when press the ‘-’ button
+
+10
+
+DT3-7
+
+Expression mode (+)
+
+Change the vacuum level with ‘+’ button
+
+Check the expression mode displayed on the LCD increases by 1 when press the ‘+’ button
+
+10
+
+DT3-8
+
+Expression mode (-)
+
+Change the vacuum level with ‘-’ button
+
+Check the expression mode displayed on the LCD decreases by 1 when press the ‘-’ button
+
+10
+
+DT3-9
+
+Error
+
+Force an error
+
+Check the activation of the watch dog and do reset the program.
+
+10
+
+DT3-10
+
+Time display
+
+Turn on the device
+
+Compare the actual time and the time displayed on the LCD
+
+10
+
+Inspected by: (sign)
+
+ Reviewed by: (sign)
+
+[Appendix 5] Hazard Analysis Report
+
+Hazard Analysis Report
+
+The matrix below contains the risk analysis table, used for the study of the risks associated with the device.
+
+ID
+
+Hazards
+
+Predictable case
+
+Hazardous situation
+
+Harm
+
+Risk Evaluation
+
+Risk control and action
+
+risk arising from mitigation action
+
+Risk re-Evaluation
+
+(Risk After Control)
+
+probability
+
+Severity
+
+Risk
+
+Result
+
+Inherent Design
+
+Protective
+
+Measures
+
+Labelling/
+
+Warning
+
+Probability
+
+Severity
+
+Risk
+
+Result
+
+HA-01
+
+Initialize the data
+
+Initialize the data fail
+
+Device is started with the mode of the device not initialized, and suddenly the output of strong level is generated
+
+Physical injury
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to initialize the microprocessor, interrupt and timer when the user start the system
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Acceptable
+
+HA-02
+
+Output
+
+Set the output fail
+
+Compared with the set level, different output occurred
+
+Physical injury
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to produce the same output as the value set through the button
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Acceptable
+
+HA-03
+
+Battery
+
+Check the battery level fail
+
+There is no way for the user to know the battery level, so the product suddenly turns off during use
+
+Temporarily discomfort
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to indicate battery level and charge status through LCD and LED
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Unacceptable
+
+HA-04
+
+Vacuum
+
+Set the vacuum level fail
+
+Motor operates at a different RPM from the set level
+
+Physical injury
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to produce the same output as the value set through the system
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Acceptable
+
+HA-05
+
+Solenoid
+
+Set the solenoid fail
+
+Solenoid operated differently from the setting
+
+Physical injury
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to produce the same output as the value set through the system
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Acceptable
+
+HA-06
+
+LCD
+
+Data fail
+
+Information related to product usage is not displayed
+
+Misuse
+
+2
+
+2
+
+4
+
+Unacceptable
+
+Design to display information related to product usage through LCD
+
+-
+
+-
+
+N/A
+
+1
+
+2
+
+2
+
+Acceptable
+
+HA-07
+
+Error
+
+Device operation fail
+
+Product operated even though error occurred
+
+Malfunction
+
+3
+
+1
+
+3
+
+Unacceptable
+
+Design to stop the operation of the device when an error occurs and to indicate an error message on the LCD
+
+-
+
+-
+
+N/A
+
+2
+
+1
+
+2
+
+Acceptable
+
+HA-08
+
+Safety
+
+Operation fail
+
+Continue to use the product beyond the time limit due to user’s carelessness while using the product
+
+Misuse
+
+2
+
+2
+
+4
+
+Unacceptable
+
+Design to stop the operation when the time of the mode which is set by the manufacturer is completed
+
+-
+
+-
+
+N/A
+
+1
+
+2
+
+2
+
+Acceptable

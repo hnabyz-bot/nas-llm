@@ -1,0 +1,528 @@
+queueId: ingest-1781569954410-z5k
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 시험소/06. Usability 보완_250103/05. 주요 부품 인증서 + 사양서/60-2230C/FCC - ST60/FZ740701-19_ST60-2230C_FCC DFS Client.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/d076000c4100/FZ740701-19_ST60-2230C_FCC DFS Client__d076000c4100_combined.txt
+canonicalGroupId: d96b30c80bba
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 509
+
+SOURCE_TEXT
+Report No.: FZ740701-19 Page : 1 of 20
+Report Version: Rev. 01
+FCC DFS Test Report
+FCC ID : SQG-60SIPT
+Equipment : 802.11 ac/a/b/g/n + Bluetooth 4.2 module
+(please refer to section 1.1.1 for more details.)
+Model No. : ST60-SIPT
+(please refer to section 1.1.1 for more details.)
+Brand Name : Laird Connectivity
+Applicant : Laird Connectivity LLC
+Address : W66N220 Commerce Court, Cedarburg, WI
+53012 United States Of America
+Standard : 47 CFR FCC Part 15.407
+Received Date : Apr. 07, 2017
+Tested Date : Jun 9 , 2017
+Operating Mode : Client Without Radar Detection
+We, International Certification Corporation, would like to declare that the tested sample has
+been evaluated and in compliance with the requirement of the above standards. The test
+results contained in this report refer exclusively to the product. It shall not be reproduced
+except in full without the written approval of our laboratory.
+Reviewed by: Approved by:
+Along Chen / Assistant Manager Gary Chang / Manager
+
+Report No.: FZ740701-19 Page : 2 of 20
+Report Version: Rev. 01
+Table of Contents
+1 GENERAL DESCRIPTION .................................................................................................................... 5
+1.1 Information.............................................................................................................................................. 5
+1.2 Support Equipment List .......................................................................................................................... 6
+1.3 The Equipment List ................................................................................................................................ 6
+1.4 Testing Condition ................................................................................................................................... 6
+1.5 Testing Facility ....................................................................................................................................... 7
+1.6 Test Standards ....................................................................................................................................... 7
+1.7 Deviation from Test Standard and Measurement Procedure................................................................. 7
+1.8 Measurement Uncertainty ...................................................................................................................... 7
+2 TECHNICAL REQUIREMENTS FOR DFS............................................................................................ 8
+2.1 Applicability of DFS Requirements ......................................................................................................... 8
+2.2 DFS Detection Thresholds and Response Requirement ....................................................................... 9
+2.3 Radar Test Waveforms ........................................................................................................................ 10
+3 DFS TEST RESULT ............................................................................................................................. 15
+3.1 DFS Detection Threshold levels ........................................................................................................... 15
+3.2 In-Service Monitoring ........................................................................................................................... 16
+3.3 Non-Associated .................................................................................................................................... 19
+4 TEST LABORATORY INFORMATION ............................................................................................... 20
+
+Report No.: FZ740701-19 Page : 3 of 20
+Report Version: Rev. 01
+Release Record
+Report No. Version Description Issued Date
+FZ740701-19 Rev. 01 Initial issue Nov. 28, 2023
+
+Report No.: FZ740701-19 Page : 4 of 20
+Report Version: Rev. 01
+Summary of Test Results
+FCC Rules Description of Test Result
+FCC 15.407 KDB 905462 D02 Non-Occupancy Period Pass
+FCC 15.407 KDB 905462 D02 Channel Closing Transmission Time Pass
+FCC 15.407 KDB 905462 D02 Channel Move Time Pass
+
+Report No.: FZ740701-19 Page : 5 of 20
+Report Version: Rev. 01
+1 General Description
+1.1 Information
+This report is issued as a duplicate report to original report no. FZ740701. The modifications are changing
+brand name and applicant.
+1.1.1 Product Details
+The following models are provided to this EUT.
+Brand Name Model Name Product Name Description
+Laird Connectivity
+ST60-SIPT 802.11 ac/a/b/g/n +
+Bluetooth 4.2 module SIPT only
+For marketing purpose
+SU60-SIPT
+ST60-2230C 802.11 ac/a/b/g/n M.2 2230
++ Bluetooth 4.2 module
+with carrier
+board
+SU60-2230C
+ The above models, model ST60-2230C was selected as a representative one for the final test and only
+its data was recorded in this report.
+1.1.2 Specification of the Equipment under Test (EUT)
+Frequency Range (GHz) 5.15~5.25, 5.25~5.35, 5.47~5.725
+Wireless Function 11a / HT20 / HT40 / VHT20 / VHT40 / VHT80
+Operating Mode at DFS Band Client without radar detection and ad hoc function
+Firmware / Software Version SD-UAPSTA-8997-U14-MMC-16.68.1.p95-C3X16219_V4-MGPL-src
+1.1.3 Antenna Details
+Ant.
+No. Model Type Connector Operating Frequencies (MHz) / Antenna Gain (dBi)
+5150~5250 5250~5350 5470~5725
+1 LSR/001-0009 Dipole IPEX U.FL 2 2 2
+2 Laird
+NanoBlade-IP04 PCB Dipole IPEX U.FL 3.9 3.9 4
+3
+Laird
+MAF95310 Mini
+NanoBlade Flex
+PCB Dipole IPEX U.FL 3.38 3.38 3.38
+4 LSR/FlexPIFA
+001-0016 PIFA IPEX U.FL 3 3 3
+5 Ethertronics
+WLAN_1000146
+Isolated
+Magnetic Dipole IPEX U.FL 3.5 3.5 3.5
+
+Report No.: FZ740701-19 Page : 6 of 20
+Report Version: Rev. 01
+1.2 Support Equipment List
+Support Equipment List
+No. Equipment Brand Name Model Name FCC ID
+1 AP (Master) Netgear R6100 PY312400225
+2 Notebook DELL LATITUDE-E5420 S/N: B6FV9T1
+1.3 The Equipment List
+Test Site (DF01-WS)
+Instrument Manufacturer Model No. Serial No. Calibration Date Calibration Until
+Spectrum Analyzer R&S FSV 7 101607 Dec. 07, 2016 Dec. 06, 2017
+Horn Antenna
+1G-18G ETS-LINDGREN 3115 00149268 Aug. 31, 2016 Aug. 30, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 MY15686/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 296081/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 500199/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 500202/4 Dec. 16, 2016 Dec. 15, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 296088/4 Dec. 07, 2016 Dec. 06, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 329023/4 Dec. 07, 2016 Dec. 06, 2017
+RF Cable HUBER+SUHNER SUCOFLEX_104 329021/4 Dec. 07, 2016 Dec. 06, 2017
+Vector signal
+generator R&S SMJ100A 100498 Aug. 31, 2016 Aug. 30, 2017
+Note: Calibration Interval of instruments listed above is one year.
+1.4 Testing Condition
+Test Item Test Site Ambient Condition Tested By
+DFS DF01-WS 25°C / 64% Jack Li
+➢ FCC Designation No.: TW2732
+➢ FCC site registration No.: 181692
+➢ ISED#: 10807A
+➢ CAB identifier: TW2732
+
+Report No.: FZ740701-19 Page : 7 of 20
+Report Version: Rev. 01
+1.5 Testing Facility
+Test Laboratory International Certification Corporation
+Test Site DF01-WS
+Address of Test Site No.3-1, Lane 6, Wen San 3rd St., Kwei Shan Dist., Tao Yuan City 33381, Taiwan
+(R.O.C.)
+1.6 Test Standards
+47 CFR FCC Part 15.407
+FCC KDB 905462 D02 UNII DFS Compliance Procedures New Rules v02
+FCC KDB 905462 D03 UNII Clients Without Radar Detection New Rules v01r02
+FCC KDB 905462 D06 802 11 Channel Plans New Rules v02
+1.7 Deviation from Test Standard and Measurement Procedure
+None
+1.8 Measurement Uncertainty
+The measurement uncertainties given below are based on a 95% confidence level (based on a coverage
+factor (k=2)).
+Measurement Uncertainty
+Parameters Uncertainty
+Time ±0.1%
+
+Report No.: FZ740701-19 Page : 8 of 20
+Report Version: Rev. 01
+2 Technical Requirements for DFS
+2.1 Applicability of DFS Requirements
+2.1.1 Applicability of DFS Requirements Prior to use of a Channel
+Requirement
+Operational Mode
+Master Client Without
+Radar Detection
+Client With Radar
+Detection
+Non-Occupancy Period Yes Not required Yes
+DFS Detection Threshold Yes Not required Yes
+Channel Availability Check Time Yes Not required Not required
+U-NII Detection Bandwidth Yes Not required Yes
+2.1.2 Applicability of DFS Requirements during Normal Operation
+Requirement
+Operational Mode
+Master or Client With Radar
+Detection
+Client Without Radar
+Detection
+DFS Detection Threshold Yes Not required
+Channel Closing Transmission Time Yes Yes
+Channel Move Time Yes Yes
+U-NII Detection Bandwidth Yes Not required
+Additional requirements for devices
+with multiple bandwidth modes
+Operational Mode
+Master or Client With Radar
+Detection
+Client Without Radar
+Detection
+U-NII Detection Bandwidth and
+Statistical Performance Check All BW modes must be tested Not required
+Channel Move Time and
+Channel Closing Transmission Time
+Test using widest BW mode
+available
+Test using the widest BW mode
+available for the link
+All other tests Any single BW mode Not required
+Note: Frequencies selected for statistical performance check should include several frequencies within the
+radar detection bandwidth and frequencies near the edge of the radar detection bandwidth. For 802.11
+devices it is suggested to select frequencies in all 20 MHz channel blocks and a null frequencies between
+the bonded 20 MHz channel blocks.
+
+Report No.: FZ740701-19 Page : 9 of 20
+Report Version: Rev. 01
+2.2 DFS Detection Thresholds and Response Requirement
+Below table provides the DFS Detection Thresholds for Master Devices as well as Client Devices
+incorporating In-Service Monitoring.
+DFS Detection Thresholds for Master Devices and Client Devices With Radar Detection.
+Maximum Transmit Power Value (See Notes 1 , 2 and 3)
+EIRP ≥ 200 milliwatt -64 dBm
+EIRP < 200 milliwatt and
+power spectral density < 10 dBm / MHz
+-62 dBm
+EIRP < 200 milliwatt and that do not meet
+the power spectral density requirement
+-64 dBm
+Note 1: This is the level at the input of the receiver assuming a 0 dBi receive antenna.
+Note 2: Throughout these test procedures an additional 1 dB has been added to the amplitude of the test
+transmission waveforms to account for variations in measurement equipment. This will ensure that the test
+signal is at or above the detection threshold level to trigger a DFS response.
+Note3: EIRP is based on the highest antenna gain. For MIMO devices refer to KDB Publication 662911 D01.
+DFS Response Requirement Values
+Parameter Value
+Non-occupancy period Minimum 30 minutes.
+Channel Availability Check Time 60 seconds.
+Channel Move Time 10 seconds. (See Note 1.)
+Channel Closing Transmission Time 200 milliseconds + an aggregate of 60 milliseconds over
+remaining 10 second period.
+(See Notes 1 and 2.)
+U-NII Detection Bandwidth Minimum 100% of the U- NII 99% transmission power
+bandwidth. (See Note 3.)
+Note 1: Channel Move Time and the Channel Closing Transmission Time should be performed with Radar
+Type 0. The measurement timing begins at the end of the Radar Type 0 burst.
+Note 2: The Channel Closing Transmission Time is comprised of 200 milliseconds starting at the beginning of
+the Channel Move Time plus any additional intermittent control signals required to facilitate a Channel move
+(an aggregate of 60 milliseconds) during the remainder of the 10 second period. The aggregate duration of
+control signals will not count quiet periods in between transmissions.
+Note 3: During the U-NII Detection Bandwidth detection test, radar type 0 should be used. For each
+frequency step the minimum percentage of detection is 90 percent. Measurements are performed with no
+data traffic.
+
+Report No.: FZ740701-19 Page : 10 of 20
+Report Version: Rev. 01
+2.3 Radar Test Waveforms
+This section provides the parameters for required test waveforms, minimum percentage of successful
+detections, and the minimum number of trials that must be used for determining DFS conformance. Step
+intervals of 0.1 microsecond for Pulse Width, 1 microsecond for PRI, 1 MHz for chirp width and 1 for the
+number of pulses will be utilized for the random determination of specific test waveforms.
+2.3.1 Short Pulse Radar Test Waveforms
+Radar
+Type
+Pulse Width
+(μsec) PRI (μsec) Number of
+Pulses
+Minimum
+Percentage of
+Successful
+Detection
+Minimum
+Number of Trials
+0 1 1428 18 See Note1 See Note1
+1 Test A: 15 unique
+PRI values
+randomly
+selected from the
+list of 23 PRI
+values in Table 5a
+60% 30
+Test B: 15 unique
+PRI values
+randomly
+selected within
+the range of
+518-3066
+μsec, with a
+minimum
+increment of 1
+μsec, excluding
+PRI values
+selected in Test A
+2 1-5 150-230 23-29 60% 30
+3 6-10 200-500 16-18 60% 30
+4 11-20 200-500 12-16 60% 30
+Aggregate (Radar Types 1-4) 80% 120
+Note 1: Short Pulse Radar Type 0 should be used for the detection bandwidth test, channel move time, and
+channel closing time tests.
+A minimum of 30 unique waveforms are required for each of the Short Pulse Radar Types 2 through 4. If
+more than 30 waveforms are used for Short Pulse Radar Types 2 through 4, then each additional waveform
+must also be unique and not repeated from the previous waveforms. If more than 30 waveforms are used for
+Short Pulse Radar Type 1, then each additional waveform is generated with Test B and must also be unique
+and not repeated from the previous waveforms in Tests A or B.
+
+Report No.: FZ740701-19 Page : 11 of 20
+Report Version: Rev. 01
+Pulse Repetition Intervals Values for Test A
+Pulse Repetition Frequency
+Number
+Pulse Repetition Frequency
+(Pulses Per Second)
+Pulse Repetition Interval
+(Microseconds)
+1 1930.5 518
+2 1858.7 538
+3 1792.1 558
+4 1730.1 578
+5 1672.2 598
+6 1618.1 618
+7 1567.4 638
+8 1519.8 658
+9 1474.9 678
+10 1432.7 698
+11 1392.8 718
+12 1355 738
+13 1319.3 758
+14 1285.3 778
+15 1253.1 798
+16 1222.5 818
+17 1193.3 838
+18 1165.6 858
+19 1139 878
+20 1113.6 898
+21 1089.3 918
+22 1066.1 938
+23 326.2 3066
+
+Report No.: FZ740701-19 Page : 12 of 20
+Report Version: Rev. 01
+2.3.2 Long Pulse Radar Test Waveform
+Radar
+Type
+Pulse
+Width
+(μsec)
+Chirp Width
+(MHz) PRI (μsec)
+Number of
+Pulses per
+Burst
+Number of
+Bursts
+Minimum
+Percentage
+of
+Successful
+Detection
+Minimum
+Number of
+Trials
+5 50-100 5-20 1000-2000 1-3 8-20 80% 30
+The parameters for this waveform are randomly chosen. Thirty unique waveforms are required for the Long
+Pulse Radar Type waveforms. If more than 30 waveforms are used for the Long Pulse Radar Type
+waveforms, then each additional waveform must also be unique and not repeated from the previous
+waveforms.
+2.3.3 Frequency Hopping Radar Test Waveform
+Radar
+Type
+Pulse
+Width
+(μsec)
+PRI (μsec) Pulses per
+Hop
+Hopping
+Rate (kHz)
+Hopping
+Sequence
+Length
+(msec)
+Minimum
+Percentage
+of
+Successful
+Detection
+Minimum
+Number of
+Trials
+6 1 333 9 0.333 300 70% 30
+For the Frequency Hopping Radar Type, the same Burst parameters are used for each waveform. The hopping
+sequence is different for each waveform and a 100-length segment is selected from the hopping sequence
+defined by the following algorithm:
+The first frequency in a hopping sequence is selected randomly from the group of 475 integer frequencies from
+5250 – 5724 MHz. Next, the frequency that was just chosen is removed from the group and a frequency is
+randomly selected from the remaining 474 frequencies in the group. This process continues until all 475
+frequencies are chosen for the set. For selection of a random frequency, the frequencies remaining within the
+group are always treated as equally likely
+2.3.4 Radar waveform generation
+A single R&S SMU200A Vector Signal Generator is used for the DFS signal generation. This instrument is
+capable of generating all the above waveforms with Pulse Sequencer Software. The R&S Pulse Sequencer
+Software comes as a stand-alone PC based software with preconfigured project files for DFS. It simplifies the
+generation of all required waveforms and offers a one box solution
+
+Report No.: FZ740701-19 Page : 13 of 20
+Report Version: Rev. 01
+2.3.5 DFS Test Setup
+
+Report No.: FZ740701-19 Page : 14 of 20
+Report Version: Rev. 01
+2.3.6 Channel Loading/Data Streaming
+IP Based (Load Based) - stream the test file from the Master to the Client.
+The data file must be of a type that is typical for the device (i.e., MPEG-2, MPEG-4, WAV, MP3,
+MP4, AVI, etc.) and must generally be transmitting in a streaming mode.
+Minimum channel loading of approximately 17 %
+VHT80 Channel Loading: 22.06%
+
+Report No.: FZ740701-19 Page : 15 of 20
+Report Version: Rev. 01
+3 DFS test result
+3.1 DFS Detection Threshold levels
+Master DFS Threshold Level
+DFS Threshold level: -60.1 dBm
+The Interference Radar Detection Threshold Level is (-64dBm) + (2.9 [dBi] ) + {1 dB}= -60.1 dBm. That
+had been taken into account the master output power range and antenna gain.
+Without Data Traffic Plot (Noise Plot) Master Data Traffic Plot
+Client(EUT) Data Traffic Plot Calibration Radar # 0 detection threshold level
+
+Report No.: FZ740701-19 Page : 16 of 20
+Report Version: Rev. 01
+3.2 In-Service Monitoring
+3.2.1 In-service Monitoring Limit
+In-service Monitoring Limit
+Channel Move Time 10 sec
+Channel Closing Transmission Time 200 ms + an aggregate of 60 ms over remaining 10 sec periods.
+Non-occupancy period Minimum 30 minutes
+3.2.2 Test Procedures
+Test Method
+Refer as FCC KDB 905642 D02, clause 7.8.3 verified during In-Service Monitoring; Channel Closing
+Transmission Time, Channel Move Time. Client Device will associate with the EUT. Observe the
+transmissions of the EUT at the end of the radar Burst on the Operating Channel for duration greater
+than 10 seconds. Measure and record the transmissions from the EUT during the observation time
+(Channel Move Time). Compare the Channel Move Time and Channel Closing Transmission Time
+limits.
+Refer as FCC KDB 905642 D02, clause 7.8.3 verified during In-Service Monitoring; Non-Occupancy
+
+Period. Client Device will associate with the EUT. Observe the transmissions of the EUT at the end of
+the radar Burst on the Operating Channel for duration greater than 10 seconds. Measure and record the
+transmissions from the EUT during the observation time (Non-Occupancy Period). Compare the
+Non-Occupancy Period limits.
+
+Report No.: FZ740701-19 Page : 17 of 20
+Report Version: Rev. 01
+3.2.3 Test Result of Channel Closing Transmission and Channel Move Time
+Modulation
+Mode
+Freq.
+(MHz)
+Radar
+Type
+Channel Closing Transmission Time Channel Move Time
+Test
+(0-200ms)
+Limit
+(0-200ms)
+Test
+(200ms-10s)
+Limit
+(200ms-10s) Test Limit
+VHT80 5530 0 < 200ms 200ms 10 60ms 0.49 10s
+8001 sample bin for measurement 4 bin [200ms~10s]
+20 sec Timing Plot
+Zoom-in 600 msTiming Plot
+After
+ending
+radar
+burst
+200ms
+200ms~10s 4 bin for data transmit
+EUT Signal
+200ms 4 bin after 200ms-10s
+
+Report No.: FZ740701-19 Page : 18 of 20
+Report Version: Rev. 01
+3.2.4 Test Result of Non-Occupancy
+Non-Occupancy Period Result
+Modulation
+Mode Freq. (MHz) Non-Occupancy Period
+Measured Limit Result
+VHT80 5530 >30min 30min Complied
+2000 sec Timing Plot
+
+Report No.: FZ740701-19 Page : 19 of 20
+Report Version: Rev. 01
+3.3 Non-Associated
+Non-Associated Test Result
+Modulation Mode Freq. (MHz) Observation time Result
+VHT80 5530 30 Minutes Complied
+2000 sec Timing Plot
+
+Report No.: FZ740701-19 Page : 20 of 20
+Report Version: Rev. 01
+4 Test laboratory information
+Established in 2012, ICC provides foremost EMC & RF Testing and advisory consultation services by our
+skilled engineers and technicians. Our services employ a wide variety of advanced edge test equipment and
+one of the widest certification extents in the business.
+International Certification Corporation (EMC and Wireless Communication Laboratory), it is our definitive
+objective is to institute long term, trust-based associations with our clients. The expectation we set up with our
+clients is based on outstanding service, practical expertise and devotion to a certified value structure. Our
+passion is to grant our clients with best EMC / RF services by oriented knowledgeable and accommodating
+staff.
+Our Test sites are located at Linkou District and Kwei Shan District. Location map can be found on our
+website http://www.icertifi.com.tw.
+Linkou Kwei Shan Kwei Shan Site II
+Tel: 886-2-2601-1640 Tel: 886-3-271-8666 Tel: 886-3-271-8640
+No.30-2, Ding Fwu Tsuen, Lin Kou
+District, New Taipei City, Taiwan
+(R.O.C.)
+No.3-1, Lane 6, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+No.2-1, Lane 6, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+No.14-1, Lane 19, Wen San 3rd
+St., Kwei Shan Dist., Tao Yuan
+City 33381, Taiwan (R.O.C.)
+If you have any suggestion, please feel free to contact us as below information.
+Tel: 886-3-271-8666
+Fax: 886-3-318-0345
+Email: ICC_Service@icertifi.com.tw
+══END══
