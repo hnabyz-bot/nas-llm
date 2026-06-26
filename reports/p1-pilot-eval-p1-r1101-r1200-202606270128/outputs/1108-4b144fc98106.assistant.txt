@@ -1,0 +1,211 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954393-n3s",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/Software validation/의료기기_SW_버전변경_인허가영향_가이드.pptx",
+    "canonicalGroupId": "4b144fc98106"
+  },
+  "document": {
+    "title": "의료기기 소프트웨어 버전 변경 × 인허가 영향 가이드",
+    "documentType": "PPT guide",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "한국(MFDS)",
+      "미국(FDA)",
+      "유럽(EU MDR)"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "IEC 62304",
+      "ISO 14971",
+      "FDA SW Modification Guidance 2017",
+      "MDCG 2020-3",
+      "MDCG 2020-3 rev.1",
+      "MDCG 2019-11 rev.1",
+      "의료기기 허가·신고·심사 등에 관한 규정 (별표3)",
+      "소프트웨어 허가·심사 가이드라인 (2023.7)"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Guide comparing regulatory impact of medical device software version changes for SiMD and SaMD under MFDS, FDA, and EU MDR criteria.",
+    "officialUse": "본 가이드는 참고 목적이며, 최종 판단은 각 규제기관 가이드라인 원문 및 사전 상담(Pre-Submission 등)을 통해 확인하도록 안내한다.",
+    "keyPoints": [
+      "버전 숫자 자체는 규제 판단 기준이 아니며 실제 변경 내용이 안전성·유효성에 미치는 영향이 판단 기준이라고 설명한다.",
+      "Major changes include intended use, core architecture, or core algorithm changes and may require full V&V and regulatory submission or reassessment.",
+      "Minor changes may be managed by affected-module V&V, integration testing, regression testing, and risk-management updates depending on impact.",
+      "Patch changes such as non-performance-related bug fixes or minor UI fixes may be handled by internal management or minor-change reporting depending on jurisdiction and impact.",
+      "AI/ML SaMD updates may use PCCP where an approved predetermined change plan covers the modification scope."
+    ]
+  },
+  "entities": [
+    {
+      "name": "MFDS",
+      "type": "regulatory authority",
+      "evidence": "한국(MFDS) · 미국(FDA) · 유럽(EU MDR) 기준"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "한국(MFDS) · 미국(FDA) · 유럽(EU MDR) 기준"
+    },
+    {
+      "name": "EU MDR",
+      "type": "regulatory framework",
+      "evidence": "한국(MFDS) · 미국(FDA) · 유럽(EU MDR) 기준"
+    },
+    {
+      "name": "SiMD",
+      "type": "medical device software category",
+      "evidence": "Software in a Medical Device | 하드웨어 내장 소프트웨어"
+    },
+    {
+      "name": "SaMD",
+      "type": "medical device software category",
+      "evidence": "Software as a Medical Device | 독립형 소프트웨어"
+    },
+    {
+      "name": "IEC 62304",
+      "type": "standard",
+      "evidence": "IEC 62304 / ISO 14971 / FDA SW Modification Guidance 2017 / MDCG 2020-3 기반"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "IEC 62304 / ISO 14971 / FDA SW Modification Guidance 2017 / MDCG 2020-3 기반"
+    },
+    {
+      "name": "PCCP",
+      "type": "regulatory change control concept",
+      "evidence": "PCCP (Predetermined Change Control Plan) — SaMD 핵심 전략"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software version regulatory impact",
+      "pageTarget": "Medical device software version change regulatory impact",
+      "evidence": "버전 숫자 자체는 규제 판단 기준이 아닙니다. 실제 변경 내용이 안전성·유효성에 미치는 영향이 유일한 판단 기준입니다."
+    },
+    {
+      "name": "Major software version change",
+      "pageTarget": "Major medical device software version change",
+      "evidence": "Major (X) 사용목적, 핵심 아키텍처, 코어 알고리즘 변경"
+    },
+    {
+      "name": "Minor software version change",
+      "pageTarget": "Minor medical device software version change",
+      "evidence": "Minor (Y) 기능 추가/수정, 성능 개선 핵심 아키텍처·사용목적 유지"
+    },
+    {
+      "name": "Patch software version change",
+      "pageTarget": "Patch medical device software version change",
+      "evidence": "Patch (Z) 성능·안전성 무관 버그 수정, 경미 UI 수정, 문서 수정 등"
+    },
+    {
+      "name": "Letter to File",
+      "pageTarget": "Letter to File for medical device software changes",
+      "evidence": "Major 버전이어도 성능·안전성 동등이면 Letter to File로 관리할 수 있습니다."
+    },
+    {
+      "name": "Predetermined Change Control Plan",
+      "pageTarget": "Predetermined Change Control Plan for AI ML SaMD",
+      "evidence": "FDA에 사전에 변경 계획을 제출·승인받아, 해당 범위 내 변경은 new 510(k) 없이 LTF로 관리하는 제도"
+    },
+    {
+      "name": "Cumulative software changes",
+      "pageTarget": "Cumulative medical device software changes",
+      "evidence": "개별 Patch/Minor가 누적되면 원래 인증 상태와 달라질 수 있음."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The guide covers medical device software version changes for both SiMD and SaMD under Korea MFDS, US FDA, and EU MDR criteria.",
+      "evidenceText": "의료기기 소프트웨어 버전 변경 × 인허가 영향 가이드 SiMD / SaMD 공통 및 차이점 한국(MFDS) · 미국(FDA) · 유럽(EU MDR) 기준",
+      "pageTarget": "Medical device software version change regulatory impact",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version numbering itself is not the regulatory decision criterion; the effect of the actual change on safety and effectiveness is the criterion stated by the guide.",
+      "evidenceText": "버전 숫자 자체는 규제 판단 기준이 아닙니다. 실제 변경 내용이 안전성·유효성에 미치는 영향이 유일한 판단 기준입니다.",
+      "pageTarget": "Medical device software change assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "A Minor version change can still be subject to a new 510(k) if architecture changes, while a Major version change may be managed by Letter to File if performance and safety remain equivalent.",
+      "evidenceText": "Minor 버전이라도 아키텍처가 변경되면 New 510(k) 대상이 될 수 있고, Major 버전이어도 성능·안전성 동등이면 Letter to File로 관리할 수 있습니다.",
+      "pageTarget": "FDA software change 510(k) assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Major software changes are described as intended-use, core-architecture, or core-algorithm changes that can require full V&V, clinical evaluation, and risk-management updates.",
+      "evidenceText": "Major (X) 사용목적, 핵심 아키텍처, 코어 알고리즘 변경 ... 전면 V&V 재수행 시스템 V&V, 임상평가, 위험관리 전면 업데이트",
+      "pageTarget": "Major medical device software version change",
+      "confidence": "high"
+    },
+    {
+      "claim": "Minor software changes are described as function additions or modifications and performance improvements while maintaining core architecture and intended use.",
+      "evidenceText": "Minor (Y) 기능 추가/수정, 성능 개선 핵심 아키텍처·사용목적 유지",
+      "pageTarget": "Minor medical device software version change",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patch software changes are described as bug fixes unrelated to performance or safety, minor UI fixes, and document changes.",
+      "evidenceText": "Patch (Z) 성능·안전성 무관 버그 수정, 경미 UI 수정, 문서 수정 등",
+      "pageTarget": "Patch medical device software version change",
+      "confidence": "high"
+    },
+    {
+      "claim": "For SiMD, software changes must consider hardware linkage because software changes may affect hardware performance or safety.",
+      "evidenceText": "SW 변경 시 HW 연동 고려 필수. SW 변경이 HW 성능/안전에 영향 → HW 변경 플로차트도 병행 검토",
+      "pageTarget": "Software in a Medical Device change assessment",
+      "confidence": "high"
+    },
+    {
+      "claim": "For SaMD, Rule 11 is independently applied under EU MDR according to the guide.",
+      "evidenceText": "EU MDR 분류 규칙 ... SaMD (독립형) Rule 11 독립 적용 일반적으로 Class IIa 이상",
+      "pageTarget": "EU MDR Rule 11 software classification",
+      "confidence": "medium"
+    },
+    {
+      "claim": "PCCP is presented as a strategy for AI/ML SaMD where approved changes within scope can be managed without a new 510(k).",
+      "evidenceText": "FDA에 사전에 변경 계획을 제출·승인받아, 해당 범위 내 변경은 new 510(k) 없이 LTF로 관리하는 제도",
+      "pageTarget": "Predetermined Change Control Plan for AI ML SaMD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The practical decision flow starts with intended-use change, then core algorithm or architecture change, then possible safety or effectiveness impact, then V&V results.",
+      "evidenceText": "Step 1 사용목적 변경? ... Step 2 코어 알고리즘/아키텍처 변경? ... Step 3 안전성/유효성에 영향 가능? ... Step 4 V&V 결과 확인",
+      "pageTarget": "Medical device software change assessment workflow",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guide warns that cumulative Patch or Minor changes can cause the product to differ from the original certification state.",
+      "evidenceText": "누적 변경(Cumulative Changes) 주의: 개별 Patch/Minor가 누적되면 원래 인증 상태와 달라질 수 있음.",
+      "pageTarget": "Cumulative medical device software changes",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guide states that final determinations should be confirmed using original regulator guidance and pre-submission consultation.",
+      "evidenceText": "본 가이드는 참고 목적이며, 최종 판단은 각 규제기관 가이드라인 원문 및 사전 상담(Pre-Submission 등)을 통해 확인하시기 바랍니다.",
+      "pageTarget": "Medical device regulatory pre-submission consultation",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version number of this guide is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "The source presents a reference guide and states that final judgment should be confirmed through original regulator guidelines and pre-submission consultation."
+    },
+    {
+      "severity": "info",
+      "reason": "No specific product model is identified; source metadata productSignal is Unclassified."
+    }
+  ]
+}
