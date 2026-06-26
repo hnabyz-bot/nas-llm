@@ -1,0 +1,266 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954369-h",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/5. Software validation/새 폴더/HAD1717MC_Software Validation 2019.06.18 rev0.docx",
+    "canonicalGroupId": "6b4298132466"
+  },
+  "document": {
+    "title": "Software Validation For HAD",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "HAD",
+      "HAD1717MC"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "CDRH"
+    ],
+    "revisionOrVersion": "HAD1717MC-ACQ-SVR (Rev.0)",
+    "documentDate": "2019.06.18",
+    "standards": [
+      "FDA Quality System Regulation 21 CFR, Part 820",
+      "FDA Quality System Regulation 21 CFR, Part 803",
+      "CDRH Guidance: General Principles of Software Validation",
+      "CDRH Guidance: Off-The-Shelf Software Use in Medical Devices",
+      "CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices",
+      "ISO 9001, December 2000 Quality System Standards",
+      "IEEE 1012-1986, Standard for Software Verification and Validation Plans",
+      "IEEE 829-1983, Standard for Software Test Documentation",
+      "IEEE 1016, Standard for software designs",
+      "IEEE 830, Standard for software requirements"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for HAD acquisition library for detectors, document number HAD1717MC-ACQ-SVR Rev.0.",
+    "officialUse": "Supports regulatory software validation documentation by providing level of concern, SRS, SDS, hazards analysis, test plan, traceability analysis, verification and validation results, and revision history.",
+    "keyPoints": [
+      "The software level of concern is defined as Moderate.",
+      "The software is described as a middle-ware utility library between a still image detector and an End User Application.",
+      "The term Software in the document assumes the acquisition library for detectors.",
+      "References include FDA Quality System Regulation 21 CFR Parts 820 and 803 and CDRH software guidance documents.",
+      "Static verification and dynamic tests were reported as approved or passed, with no unsolved bugs subjected to safety and effectiveness found."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Abyz Co., Ltd",
+      "type": "manufacturer",
+      "evidence": "Abyz Co., Ltd"
+    },
+    {
+      "name": "HAD",
+      "type": "product",
+      "evidence": "Document Title : Software Validation For HAD"
+    },
+    {
+      "name": "HAD1717MC-ACQ-SVR",
+      "type": "document_number",
+      "evidence": "Document Number: HAD1717MC-ACQ-SVR (Rev.0)"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory_authority",
+      "evidence": "FDA Quality System Regulation 21 CFR, Part 820"
+    },
+    {
+      "name": "CDRH",
+      "type": "regulatory_authority",
+      "evidence": "CDRH Guidance: General Principles of Software Validation"
+    },
+    {
+      "name": "End-User Application",
+      "type": "software_component",
+      "evidence": "End User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user."
+    },
+    {
+      "name": "Acquisition Library",
+      "type": "software_component",
+      "evidence": "Acquisition Library (Software)"
+    },
+    {
+      "name": "TFT sensor",
+      "type": "hardware_component",
+      "evidence": "Peripheral hardware TFT sensor connected by Ethernet"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Moderate Level of Concern",
+      "pageTarget": "Software Level of Concern",
+      "evidence": "TFT-detectors use low X-ray irradiation that could not harm patient seriously in any way. Because of that the level of concern is defined as “moderate”."
+    },
+    {
+      "name": "Software Requirements Specification",
+      "pageTarget": "Software Requirements Specification",
+      "evidence": "Software Requirements Specification (SRS)"
+    },
+    {
+      "name": "Software Design Specification",
+      "pageTarget": "Software Design Specification",
+      "evidence": "Software Design Specification (SDS)"
+    },
+    {
+      "name": "Hazards Analysis",
+      "pageTarget": "Software Hazard Analysis",
+      "evidence": "This document contains results of the Hazard Evaluation and corrective actions for those hazards for the Software. The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA)."
+    },
+    {
+      "name": "Traceability Analysis",
+      "pageTarget": "Software Traceability Analysis",
+      "evidence": "Traceability among requirements, specifications, identified hazards and mitigations, and Verification and Validation testing."
+    },
+    {
+      "name": "Verification and Validation",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Description of V&V activities at the unit, integration, and system level. System level test protocol, including pass/fail criteria, and tests results."
+    },
+    {
+      "name": "Waterfall Life Cycle Model",
+      "pageTarget": "Software Development Life Cycle",
+      "evidence": "Software development process follows classic methodology of Waterfall Life Cycle Model"
+    },
+    {
+      "name": "Offset/Gain Calibration",
+      "pageTarget": "Detector Calibration",
+      "evidence": "Offset/Gain-Calibration –equalization of pixels’ transfer functions"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Software Validation For HAD.",
+      "evidenceText": "Document Title : Software Validation For HAD",
+      "pageTarget": "Software Validation For HAD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number and revision are HAD1717MC-ACQ-SVR Rev.0.",
+      "evidenceText": "Document Number: HAD1717MC-ACQ-SVR (Rev.0)",
+      "pageTarget": "HAD1717MC Software Validation Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision record shows revision date 2019.06.18, revision number 0, and description Firstly prepared.",
+      "evidenceText": "1 2019.06.18 0 Firstly prepared",
+      "pageTarget": "HAD1717MC Software Validation Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software level of concern is Moderate.",
+      "evidenceText": "Because of that the level of concern is defined as “moderate”.",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is an accessory to a medical device with a Moderate Level of Concern.",
+      "evidenceText": "Is the Software Device an accessory to a medical device that has a Moderate Level of Concern? Yes",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is a middleware utility library between a still image detector and an End User Application.",
+      "evidenceText": "This is “middle-ware” utility library between still image detector (and its low-level driver) from one side and EUA from the other.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software includes SetUp functions for configuration, Gain/Offset Calibration preparation, and Bad Pixels Correction.",
+      "evidenceText": "It also contains SU to modify software and hardware configuration parameters and preparation of Gain/Offset-Calibration and Bad Pixels’ Correction.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "Image data are transmitted and stored as 16-bit little-endian two-dimensional arrays without a specific header.",
+      "evidenceText": "All image data shall be transmitted and stored as 16-bits little-endian (Intel bytes order) two- dimensional arrays without any specific header.",
+      "pageTarget": "Image Data Format",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development environment is Windows 10 Pro 64-bit and MS Visual C++ 2019.",
+      "evidenceText": "Development Environment (SRS-C-DevE): Windows 10 pro 64bit. MS Visual C++ 2019 (MS Visual Studio Professional 2019).",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The minimum deployment operating system is at least Windows 7.",
+      "evidenceText": "OS : At least Window 7",
+      "pageTarget": "Software Deployment Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The referenced regulatory standards and guidances include FDA QSR 21 CFR Part 820 and Part 803.",
+      "evidenceText": "FDA Quality System Regulation 21 CFR, Part 820 FDA Quality System Regulation 21 CFR, Part 803",
+      "pageTarget": "FDA Quality System Regulation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The referenced CDRH guidances include General Principles of Software Validation and Off-The-Shelf Software Use in Medical Devices.",
+      "evidenceText": "CDRH Guidance: General Principles of Software Validation CDRH Guidance: Off-The-Shelf Software Use in Medical Devices",
+      "pageTarget": "CDRH Software Guidance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hazards analysis uses Failure Mode and Effects Analysis.",
+      "evidenceText": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA).",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "The identified hazards include mismatched calibration or configuration data and LAN cable disconnection after X-ray exposure.",
+      "evidenceText": "Mismatched calibration and/or configuration data for given instance of detector in installation CD ... Stop data-transmission after X- ray exposure because of disconnection of LAN-cable.",
+      "pageTarget": "Software Hazard Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Static tests included implementation of SDO and code reviews for SDS 101, SDS 103, SDS 104, SRS 1.1, SDS 201, and SDS 501.",
+      "evidenceText": "Implementation of SDO (refer 6.1.1) Y Code Review for SDS 101, SDS 103, SDS 104 (Refer 6.1.2) Y Code Review for SRS 1.1, SDS 201, SDS 501 (Refer 6.1.3) Y",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic tests TS 0002B, TS 0003B, TS 0004A, TS 0006A, TS 0006B, and TS 1001A passed.",
+      "evidenceText": "TS 0002B Passed TS 0003B Passed TS 0004A Passed TS 0006A, TS 0006B Passed ... TS 1001A Passed",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The dynamic test summary states that all SRS-stipulated functionalities are proper and no unsolved safety or effectiveness bugs were found.",
+      "evidenceText": "As a result of dynamic tests, we hereby certify that all functionalities, which are stipulated in the SRS are proper. There were no found unsolved bugs that are subjected to safety and effectiveness in this software.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Appendix C reports that calibration reduces standard deviation and properly calibrates flat bright frames without an object.",
+      "evidenceText": "Calibration makes source raw frames “flat”. It reduces standard deviation (within area of 1500x1500 pixels).",
+      "pageTarget": "Detector Calibration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The legacy software release history lists version 1.x.x.x as initial release in year 2019 and version 3.0.0.0 as initial release for Ethernet acquisition.",
+      "evidenceText": "1.x.x.x Initial release, Dual polynomial fitting calibration Only for proprietary applications. Year 2019 Version 3.0.0.0 initial release for Ethernet acquisition",
+      "pageTarget": "Software Revision History",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source metadata authoritySignal is FDA, while the sourcePath contains CE MDD; the document text itself references FDA and CDRH guidance but does not clearly state a target submission authority."
+    },
+    {
+      "severity": "warning",
+      "reason": "Traceability Analysis section lists Date 2014.01.15, conflicting with the document revision date 2019.06.18 and surrounding section dates."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is not stated as a clean model field in the document body; HAD is shown in the title, and HAD1717MC appears in the document number and source path."
+    },
+    {
+      "severity": "info",
+      "reason": "Approved by field appears blank in the extracted text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text quality issues are present, including misspellings such as Traceabilty, Dnamic, Sevice, commnon, and EAU/EUA inconsistencies."
+    }
+  ]
+}
