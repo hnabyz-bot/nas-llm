@@ -1,0 +1,275 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954404-sxk",
+    "sourcePath": "raw/sources/RA/00_기타 작업 서류/240718 - DK 제품별 자료 정리/DK_제품별 자료 정리(pdf)/4. A1417MCW/6. IEC Test Report (EMC, Safety)/PRJ0042257 REP028549 CBTR IEC60601-1 H&abyz A1717MCW (Original)_CSV.pdf",
+    "canonicalGroupId": "24510b52db27"
+  },
+  "document": {
+    "title": "CBTR IEC60601-1 H&abyz A1717MCW (Original)",
+    "documentType": "IEC 60601-1 CB Test Report",
+    "productModels": [
+      "HAD/A/F 1417-1717",
+      "A1717MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "Original",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-1",
+      "ISO 14971",
+      "IEC 60417",
+      "ISO 80000-1",
+      "ISO 3864-1",
+      "IEC 60227-1",
+      "IEC 60245-1",
+      "IEC 60384-14",
+      "IEC 60950-1",
+      "IEC 60320-1",
+      "IEC 60364-7-710",
+      "IEC 60695",
+      "IEC 60695-11-10",
+      "IEC 60825-1:2007",
+      "ISO 13857:2008",
+      "IEC 60335-1:2001"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "IEC 60601-1 safety test report section for a component power supply, covering marking, electrical protection, insulation, leakage current, earthing, mechanical hazards, radiation, temperature, and fire prevention clauses.",
+    "officialUse": "Supports regulatory safety evidence for IEC 60601-1 compliance and identifies items requiring additional evaluation in the end product application.",
+    "keyPoints": [
+      "The equipment is repeatedly characterized as a component-level power supply requiring additional end-product evaluation for several accompanying-document, accessibility, mechanical, and fire-hazard requirements.",
+      "Electrical protection requirements in Clause 8 show pass verdicts for accessible-part limits, MOOP, protective earthing, leakage-current limits, insulation, creepage/clearance, mains isolation, fuses, and internal mains wiring.",
+      "No MOPP, applied parts, defibrillation-proof applied parts, external DC source connection, oxygen-rich-environment use, X-radiation, pressure vessels, or patient support systems are identified in this chunk."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Report No. 269183",
+      "type": "test_report_identifier",
+      "evidence": "Pages 27-70 headers state: \"Page 27 of 138 Report No. 269183\" and \"IEC 60601-1\"."
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "Each page header identifies the report section as \"IEC 60601-1\" with clause requirements and verdicts."
+    },
+    {
+      "name": "Component power supply",
+      "type": "device_characterization",
+      "evidence": "Multiple remarks state: \"The equipment is a power supply unit, shall be additionally evaluated in the end product.\""
+    },
+    {
+      "name": "IEC 60320 appliance inlet",
+      "type": "component",
+      "evidence": "Clause 8.6.2 states the equipment is provided with an IEC 60320 appliance inlet and that the earth pin is considered the protective earth terminal."
+    },
+    {
+      "name": "Y1 capacitors C1 and C2",
+      "type": "safety_component",
+      "evidence": "Clause 8.5.1.3 states: \"Y1 capacitors (C1 and C2) are used across primary and protective earth.\""
+    },
+    {
+      "name": "Power transformer T1",
+      "type": "safety_component",
+      "evidence": "Clause 8.8.2 states insulation tape of Power transformer T1 was tested according to appended Table 8.8.3."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "risk_management_standard",
+      "evidence": "Several risk-management-file entries cite ISO 14971 clauses, including \"ISO 14971 Cl. 4.2-4.4, 5, 6.2-6.5\"."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Means of Operator Protection (MOOP)",
+      "pageTarget": "Pages 36-37",
+      "evidence": "Clause 8.5.1.1 states operator protection is provided from mains to secondary; Clause 8.5.1.3 states \"MOOP considered\" with pass verdict."
+    },
+    {
+      "name": "No Means of Patient Protection (MOPP)",
+      "pageTarget": "Pages 36-37",
+      "evidence": "Clause 8.5.1.2 states \"No MOPP\" and related MOPP checks are N/A."
+    },
+    {
+      "name": "Protective earthing",
+      "pageTarget": "Pages 40-42",
+      "evidence": "Clause 8.6 covers protective and functional earthing; the appliance inlet earth pin is treated as the protective earth terminal."
+    },
+    {
+      "name": "Leakage current compliance",
+      "pageTarget": "Pages 42-43",
+      "evidence": "Clause 8.7 states leakage-current values are checked in appended Table 8.7 and touch current and earth leakage current requirements pass."
+    },
+    {
+      "name": "Creepage and air clearance compliance",
+      "pageTarget": "Page 46",
+      "evidence": "Clause 8.9.1.1 states creepage distances and air clearances are equal to or greater than values in Tables 12 to 16, with pass verdict."
+    },
+    {
+      "name": "End product evaluation dependency",
+      "pageTarget": "Pages 27-70",
+      "evidence": "Many remarks state the component power supply shall be additionally evaluated in the end product application."
+    },
+    {
+      "name": "Fire enclosure construction",
+      "pageTarget": "Pages 67-69",
+      "evidence": "Clause 11.2.1 and 11.3 address enclosure strength and fire enclosure construction; internal wires and PCB material receive pass verdicts."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The mains switch on/off positions are marked using IEC 60601-1 Table D.1 symbols 12 and 13.",
+      "evidenceText": "Clause 7.4.1: \"Symbols 12 and 13 of table D.1 are marked on the mains switch.\" Verdict P.",
+      "pageTarget": "Page 26-27",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has green/yellow internal protective earth wiring and complies with conductor color requirements for protective earth connections.",
+      "evidenceText": "Clause 7.7.1: \"All internal earth wiring is green and yellow.\" Clause 7.7.2 also has pass verdict.",
+      "pageTarget": "Page 28",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accompanying-document requirements were not evaluated for the component power supply and must be determined in the end product.",
+      "evidenceText": "Clause 7.9.1: \"Accompanying document is not provided with component power supply. Accompanying document requirements have not been evaluated. To be determined in the end product.\"",
+      "pageTarget": "Page 29",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment is intended only for connection to supply mains, not a separate power source or external DC power source.",
+      "evidenceText": "Clause 8.2.1 says \"Only intended to be connected with the supply mains\"; Clause 8.2.2 says \"No connection to an external d.c. power source.\"",
+      "pageTarget": "Pages 33-34",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessible-part touch-current limits are evaluated by reference to appended Table 8.7 and pass.",
+      "evidenceText": "Clause 8.4.2(b): \"LEAKAGE CURRENTS from, to, or between ACCESSIBLE PARTS did not exceed limits for TOUCH CURRENT: See appended Table 8.7\" with verdict P.",
+      "pageTarget": "Page 34",
+      "confidence": "high"
+    },
+    {
+      "claim": "Residual voltage at the plug one second after disconnection did not exceed 60 V.",
+      "evidenceText": "Clause 8.4.3: worst case voltage after disconnecting plug refers to appended Table 8.4.3 with verdict P; following line states \"Not exceeded 60 V.\"",
+      "pageTarget": "Page 35",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power supply provides Means of Operator Protection from mains to secondary, but no Means of Patient Protection.",
+      "evidenceText": "Clause 8.5.1.1: \"Operator protection (MOOP) provided; from mains to secondary.\" Clause 8.5.1.2: \"No MOPP.\"",
+      "pageTarget": "Pages 36-37",
+      "confidence": "high"
+    },
+    {
+      "claim": "Y1 capacitors C1 and C2 are used across primary and protective earth and are treated as two MOOP.",
+      "evidenceText": "Clause 8.5.1.3: \"Y1 capacitors (C1 and C2) are used across primary and protective earth. And see appended Table 8.10.\" Verdict P.",
+      "pageTarget": "Page 37",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has no Type F, Type B, or defibrillation-proof applied parts in this evaluated section.",
+      "evidenceText": "Clauses 8.5.2.1 and 8.5.2.2 state \"No Type F-type applied part\" and \"No Type B applied part\"; Clause 8.5.5 states \"No defibrillation-proof applied parts.\"",
+      "pageTarget": "Pages 37-40",
+      "confidence": "high"
+    },
+    {
+      "claim": "The protective earth terminal is implemented through an IEC 60320 appliance inlet with an internal crimp connection.",
+      "evidenceText": "Clause 8.6.2: \"The equipment is provided with an IEC 60320 appliance inlet. Internal protective earth connection to the appliance inlet is by crimp connector at appliance inlet.\"",
+      "pageTarget": "Page 40",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth connection continuity passes, with impedance not exceeding 0.1 ohm noted for the relevant condition.",
+      "evidenceText": "Clause 8.6.4(a): \"See appended Table 8.6.4\" with verdict P; Clause 8.6.4(b) remarks \"Impedance of protective earth connection does not exceed 0.1 ohm.\"",
+      "pageTarget": "Page 41",
+      "confidence": "high"
+    },
+    {
+      "claim": "The potential equalization terminal is accessible, detachable without a tool, not used for protective earth, and marked with Table D.1 symbol 8.",
+      "evidenceText": "Clause 8.6.7 lists accessible, detachable without a tool, not used for protective earth, and \"Terminal marked with symbol 8 of Table D.1\" with pass verdicts.",
+      "pageTarget": "Page 41",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current limits for touch current and earth leakage current pass against IEC 60601-1 Clause 8.7.3.",
+      "evidenceText": "Clause 8.7.3(c): touch current did not exceed 100 μA normal and 500 μA single fault; Clause 8.7.3(d): earth leakage did not exceed 5 mA normal and 10 mA single fault; both refer to appended Table 8.7 with verdict P.",
+      "pageTarget": "Pages 42-43",
+      "confidence": "high"
+    },
+    {
+      "claim": "Solid insulation and dielectric strength requirements pass, with Power transformer T1 insulation tape tested.",
+      "evidenceText": "Clause 8.8.3 states insulating materials with safety function withstood dielectric strength test voltages; Clause 8.8.2 identifies insulation tape of Power transformer T1 tested in appended Table 8.8.3.",
+      "pageTarget": "Pages 43-45",
+      "confidence": "high"
+    },
+    {
+      "claim": "Creepage distances and air clearances comply with IEC 60601-1 Tables 12 through 16.",
+      "evidenceText": "Clause 8.9.1.1: \"CREEPAGE DISTANCES and AIR CLEARANCES are equal to or greater than values in Tables 12 to 16 (inclusive): See insulation diagram and associate table.\" Verdict P.",
+      "pageTarget": "Page 46",
+      "confidence": "high"
+    },
+    {
+      "claim": "Conductors and connectors are secured by through-hole soldered connections, and internal wiring is protected from sharp edges and moving parts.",
+      "evidenceText": "Clause 8.10.2: \"Connections are through-hole and soldered.\" Clause 8.10.5: wiring is adequately protected against sharp edges or secured away from moving parts.",
+      "pageTarget": "Pages 47-48",
+      "confidence": "high"
+    },
+    {
+      "claim": "The appliance inlet is used as the mains disconnecting device and as the means of isolating circuits from supply mains.",
+      "evidenceText": "Clause 8.11.1(a): \"The appliance inlet is used as mains disconnecting device.\" Clause 8.11.1(f) also states the appliance inlet is used as mains disconnect device.",
+      "pageTarget": "Pages 48-49",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power supply cord set is not evaluated in this report, but a certified appliance coupler is provided.",
+      "evidenceText": "Clauses 8.11.3.1-8.11.3.3 state the power supply cord set is not evaluated; Clause 8.11.3.4 states \"Certified appliance coupler provided.\"",
+      "pageTarget": "Pages 49-50",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mains fuses are provided with adequate breaking capacity and no fuse is placed in the protective earth conductor.",
+      "evidenceText": "Clause 8.11.5: \"Mains fuses provided\"; \"Protective devices have adequate breaking capacity\"; \"No fuse in protective earth conductor.\" Verdicts P.",
+      "pageTarget": "Page 52",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mechanical hazard clauses are largely not applicable because the equipment is a power supply unit and has no moving parts, guards, emergency stops, patient constraints, pressure vessels, or support systems.",
+      "evidenceText": "Clauses 9.2-9.8 repeatedly state no moving parts, no emergency stopping devices, no patient constraints, no pressure vessel, and that the power supply unit requires end-product evaluation.",
+      "pageTarget": "Pages 52-64",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment does not produce X-radiation and is not intended for hand-transmitted vibration or oxygen-rich-environment use.",
+      "evidenceText": "Clause 10.1.1: \"Equipment does not produce X-radiation.\" Clause 9.6.3 says not intended for such vibration; Clause 11.2.2.1 says not intended for oxygen rich environments.",
+      "pageTarget": "Pages 58-68",
+      "confidence": "high"
+    },
+    {
+      "claim": "Excessive temperature requirements pass for equipment parts, with additional end-product evaluation noted.",
+      "evidenceText": "Clause 11.1.1: temperatures did not exceed table values, referring to appended Tables 11.1.1 and 11.1.3; remark states the power supply unit shall be evaluated in the end product application. Verdict P.",
+      "pageTarget": "Page 65",
+      "confidence": "high"
+    },
+    {
+      "claim": "Fire enclosure material requirements pass for internal wires and PCB material.",
+      "evidenceText": "Clause 11.3(a): \"Internal wires suitably rated\" and \"PCB material is rated as minimum V-1 of flammability\" with pass verdicts.",
+      "pageTarget": "Page 69",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 8 of 13; extracted facts are limited to pages 27-70 shown in the chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "Many requirements are marked N/A or deferred because the item is a component-level power supply requiring additional evaluation in the end product application."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several pass verdicts refer to appended tables or insulation diagrams that are not included in this chunk, so numeric test values are not available here."
+    }
+  ]
+}

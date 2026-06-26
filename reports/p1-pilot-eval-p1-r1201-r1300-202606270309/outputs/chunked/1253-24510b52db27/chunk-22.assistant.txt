@@ -1,0 +1,284 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954404-sxk",
+    "sourcePath": "raw/sources/RA/00_기타 작업 서류/240718 - DK 제품별 자료 정리/DK_제품별 자료 정리(pdf)/4. A1417MCW/6. IEC Test Report (EMC, Safety)/PRJ0042257 REP028549 CBTR IEC60601-1 H&abyz A1717MCW (Original)_CSV.pdf",
+    "canonicalGroupId": "24510b52db27"
+  },
+  "document": {
+    "title": "IEC 60601-1 CB Test Report, Report No. E302267-D1020-1/A1/C1-CB",
+    "documentType": "CB Test Report / IEC 60601-1 test report",
+    "productModels": [
+      "A1417MCW",
+      "A1717MCW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "E302267-D1020-1/A1/C1-CB",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-1",
+      "IEC 60384-14",
+      "IEC 60950-1",
+      "ISO 14971",
+      "IEC 60320-1",
+      "IEC 60335-1:2001",
+      "IEC 60364-7-710",
+      "IEC 60245-1:2003",
+      "IEC 60227-1:1993",
+      "IEC 60447",
+      "ISO 13857:2008"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This chunk records IEC 60601-1 CB test results for electrical safety, insulation, leakage current, earthing, mains construction, and mechanical hazard clauses.",
+    "officialUse": "Supports safety compliance evidence for IEC 60601-1 CB reporting, including pass/N/A determinations and references to appended test tables and risk management file records.",
+    "keyPoints": [
+      "The equipment passed IEC 60601-1 clauses for limitation of voltage/current/energy, separation of parts, protective earthing, leakage current, insulation, creepage/clearance, wiring, mains parts, fuses, and mains internal wiring.",
+      "No applied parts, patient connections, defibrillation-proof applied parts, moving parts, functional earth terminals, potential equalization terminals, or multiple socket outlets were used according to this chunk.",
+      "Leakage current evaluation references appended Table 8.7; touch current and earth leakage current limits were reported as passing.",
+      "Insulation and dielectric strength evaluations reference the insulation diagram, insulation table, appended Table 8.8.3, and risk management file BPM-QA-BX090 rev.1.",
+      "Several items were deferred to end-product evaluation, including operator current-flow likelihood and some plug/socket or special leakage current conditions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "E302267-D1020-1/A1/C1-CB",
+      "type": "report_number",
+      "evidence": "Page headers identify 'Report No.: E302267-D1020-1/A1/C1-CB'."
+    },
+    {
+      "name": "BPM-QA-BX090 rev.1",
+      "type": "risk_management_file",
+      "evidence": "Clause 8.8.4.1 cites 'RMF:BPM-QA-BX090 rev.1' and risk analysis hazard identification references."
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "The page headers state 'IEC 60601-1' and clauses 8.2 through 9.4 are evaluated."
+    },
+    {
+      "name": "IEC 60384-14",
+      "type": "component_standard",
+      "evidence": "Clause 8.5.1.2 states Y1 or Y2 capacitors complying with IEC 60384-14 are considered one MOPP."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "risk_management_standard",
+      "evidence": "Multiple clauses cite ISO 14971 risk management references, including clauses 4.2-6.4."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Means of Patient Protection",
+      "pageTarget": "Page 33 of 168",
+      "evidence": "Clause 8.5.1.2 reports MOPP as Pass, including dielectric strength, creepage/clearance, protective earth, and Y-capacitor considerations."
+    },
+    {
+      "name": "Leakage Current Limits",
+      "pageTarget": "Pages 39-40 of 168",
+      "evidence": "Clause 8.7 reports leakage currents and patient auxiliary currents as Pass and references appended Table 8.7."
+    },
+    {
+      "name": "Protective Earthing",
+      "pageTarget": "Pages 37-39 of 168",
+      "evidence": "Clause 8.6 reports protective and functional earthing and potential equalization of ME equipment as Pass."
+    },
+    {
+      "name": "Dielectric Strength",
+      "pageTarget": "Page 41 of 168",
+      "evidence": "Clause 8.8.3 reports dielectric strength as Pass and states solid insulating materials with safety function withstood test voltages."
+    },
+    {
+      "name": "Creepage Distances and Air Clearances",
+      "pageTarget": "Page 43 of 168",
+      "evidence": "Clause 8.9 reports creepage distances and air clearances as Pass and refers to the insulation diagram."
+    },
+    {
+      "name": "Mains Isolation",
+      "pageTarget": "Page 45 of 168",
+      "evidence": "Clause 8.11.1 reports mains isolation requirements as Pass and references appended Table 8.10."
+    },
+    {
+      "name": "Mechanical Hazards",
+      "pageTarget": "Pages 49-53 of 168",
+      "evidence": "Clause 9 protection against mechanical hazards is marked Pass, while moving-part clauses are N/A because no moving parts are used."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The equipment does not connect to an external DC supply source for IEC 60601-1 clause 8.2.2.",
+      "evidenceText": "Clause 8.2.2 is N/A; remarks state 'Not connected to an external DC supply source'.",
+      "pageTarget": "Page 31 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "No applied parts are used, making applied-part classification and patient-connection requirements not applicable in this chunk.",
+      "evidenceText": "Clause 8.3 and 8.5.2 entries repeatedly state 'No applied parts used' with N/A verdicts.",
+      "pageTarget": "Pages 31-35 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment passed IEC 60601-1 clause 8.4 for limitation of voltage, current, or energy.",
+      "evidenceText": "Clause 8.4 is marked Pass; accessible-parts touch current refers to appended Table 8.7 and clause 8.4.3 refers to appended Table 8.4.3.",
+      "pageTarget": "Pages 31-32 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment passed separation of parts and means of protection requirements under IEC 60601-1 clause 8.5.",
+      "evidenceText": "Clause 8.5 and 8.5.1 are marked Pass; two means of protection are reported as provided.",
+      "pageTarget": "Pages 32-33 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "MOPP solid insulation, creepage/clearance, protective earth, and IEC 60384-14 Y-capacitor provisions were reported as passing where applicable.",
+      "evidenceText": "Clause 8.5.1.2 is Pass and cites appended Tables 8.8.3 and 8.10 for dielectric and capacitor evidence.",
+      "pageTarget": "Page 33 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "No Means of Operator Protection was used.",
+      "evidenceText": "Clause 8.5.1.3 states 'No MOOP used' for MOOP insulation, creepage/clearance, protective earth, and capacitor provisions.",
+      "pageTarget": "Pages 33-34 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The measured working voltage condition reported a 240 Vac rated input with 620 Vpeak and 390 Vrms measured working voltage.",
+      "evidenceText": "Clause 8.5.4 states 'Rated 240 Vac and measured working voltage of 620 Vpeak and 390 Vrms' with Pass verdict.",
+      "pageTarget": "Page 36 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "No defibrillation-protected applied parts are used.",
+      "evidenceText": "Clause 8.5.5 states 'No defibrillation-protected applied parts used' and is N/A.",
+      "pageTarget": "Pages 36-37 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment passed protective and functional earthing and potential equalization requirements.",
+      "evidenceText": "Clause 8.6 is marked Pass; clause 8.6.2 states an appliance inlet is provided for Class I and the earth pin is the protective earth terminal.",
+      "pageTarget": "Pages 37-38 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth connections carried fault currents reliably and without excessive voltage drop.",
+      "evidenceText": "Clause 8.6.4(a) states protective earth connections carried fault currents reliably and references appended Table 8.6.4 with Pass verdict.",
+      "pageTarget": "Page 37 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "No potential equalization terminals or functional earth terminals are used.",
+      "evidenceText": "Clauses 8.6.7 and 8.6.8 state 'No potential equalization terminals used' and 'No functional earth terminals used'.",
+      "pageTarget": "Page 38 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment passed leakage current and patient auxiliary current requirements.",
+      "evidenceText": "Clause 8.7 is marked Pass; clause 8.7.1 references appended Tables 8.7 for electric shock current limits and conditions.",
+      "pageTarget": "Page 39 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Touch current and earth leakage current limits were reported as passing.",
+      "evidenceText": "Clause 8.7.3(c) references touch current limits of 100 uA normal and 500 uA single fault; clause 8.7.3(d) references earth leakage current limits of 5 mA normal and 10 mA single fault, both citing appended Table 8.7 with Pass verdicts.",
+      "pageTarget": "Pages 39-40 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The non-frequency-weighted leakage current indication test was waived based on construction review and schematic analysis.",
+      "evidenceText": "Clause 8.7.3(e) states the indicating test was waived after schematic analysis verified no components producing frequencies above 60 Hz and no effect from standard leakage-current network filtering.",
+      "pageTarget": "Page 40 of 168",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The equipment passed insulation requirements, including dielectric strength testing for safety-function insulation.",
+      "evidenceText": "Clause 8.8 is Pass; clause 8.8.3 states solid insulating materials with a safety function withstood dielectric strength test voltages.",
+      "pageTarget": "Pages 40-41 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "UL-certified triple-insulation wire is used in primary and secondary windings.",
+      "evidenceText": "Clause 8.8.2 states 'UL-certified triple insulation wire used' and 'UL-certified Triple Insulation wire used in primary and secondary windings'.",
+      "pageTarget": "Page 41 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Risk management file BPM-QA-BX090 rev.1 was examined for insulation resistance to heat and related risks.",
+      "evidenceText": "Clause 8.8.4.1 cites 'RMF:BPM-QA-BX090 rev.1' and Hazard ID 1.1.2 for risk analysis under ISO 14971 clauses 4.2-6.4.",
+      "pageTarget": "Page 42 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Creepage distances and air clearances met IEC 60601-1 Tables 12 to 16 requirements.",
+      "evidenceText": "Clause 8.9.1.1 states creepage distances and air clearances are equal to or greater than Tables 12 to 16 and refers to the insulation diagram with Pass verdict.",
+      "pageTarget": "Page 43 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Components and conductors were assessed as securely mounted or secured against accidental detachment.",
+      "evidenceText": "Clause 8.10.1 states components are 'Mounted securely'; clause 8.10.2 states conductors and connectors are 'Secured firmly to prevent accidental detachment'.",
+      "pageTarget": "Page 44 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal cables and wiring passed mechanical protection requirements.",
+      "evidenceText": "Clause 8.10.5 states internal cables and wiring are adequately protected against friction at sharp corners and edges, with Pass verdict.",
+      "pageTarget": "Pages 44-45 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mains isolation and mains parts layout requirements were reported as passing.",
+      "evidenceText": "Clause 8.11 is Pass; clause 8.11.1(a) states circuits can be electrically isolated from supply mains simultaneously on all poles and references appended Table 8.10.",
+      "pageTarget": "Page 45 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "The equipment is not permanently installed, and a suitable plug device is used where no supply mains switch is provided.",
+      "evidenceText": "Clause 8.11.1 notes 'Not permanently installed equipment' and clause 8.11.1(f) references a suitable plug device for non-permanently installed ME equipment with Pass verdict.",
+      "pageTarget": "Page 45 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "No multiple socket-outlets are used.",
+      "evidenceText": "Clause 8.11.2 states 'No multiple socket outlets used' with N/A verdict.",
+      "pageTarget": "Page 46 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Only a detachable power cord is used, making cord anchorage tests for fixed power supply cords not applicable.",
+      "evidenceText": "Clause 8.11.3.5 entries repeatedly state 'Detachable power cord used only' with N/A verdicts.",
+      "pageTarget": "Pages 46-47 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mains fuses and over-current releases passed applicable requirements, including no fuse in the protective earth conductor.",
+      "evidenceText": "Clause 8.11.5 is Pass; protective devices reference appended Table 8.10 and the report states a fuse or over-current release is not provided in the protective earth conductor.",
+      "pageTarget": "Pages 48-49 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal wiring of the mains part passed cross-sectional area and printed wiring track sizing requirements.",
+      "evidenceText": "Clause 8.11.6 is Pass and references appended Table 8.10 for mains-part internal wiring and printed wiring circuit tracks.",
+      "pageTarget": "Page 49 of 168",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protection against mechanical hazards is marked Pass, while moving-part hazards are not applicable because the equipment has no moving parts.",
+      "evidenceText": "Clause 9 is marked Pass; clause 9.2 and related trapping-zone, guard, continuous activation, and emergency stop clauses repeatedly state 'No moving parts'.",
+      "pageTarget": "Pages 49-52 of 168",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is a partial chunk covering pages 31-53 of 168; many conclusions depend on appended tables or attachments not included in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several clauses state 'to be determined in end-product evaluation', including operator current-flow likelihood and some component or plug/socket conditions."
+    },
+    {
+      "severity": "info",
+      "reason": "Some OCR text contains encoding artifacts for symbols such as microampere and microcoulomb; extracted claims normalize units only where the meaning is clear from context."
+    }
+  ]
+}
