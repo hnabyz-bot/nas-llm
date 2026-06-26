@@ -1,4 +1,202 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f0063-508b-7051-95ba-04e41f708bb0"
+  "source": {
+    "queueId": "ingest-1781569954376-5u8",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/05_Blue (G1417MCW 외 7종)/▶ 국내 제조인증/2. 250402 보완/기술문서_수정중/2. 첨부자료/2. Cybersecurity/A-CFMEA-BLU_Cybersecurity FMEA table.xlsx",
+    "canonicalGroupId": "85113bde43c5"
+  },
+  "document": {
+    "title": "Cybersecurity FMEA Report",
+    "documentType": "Cybersecurity FMEA report",
+    "productModels": [
+      "HnX-P1"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev. 1",
+    "documentDate": "April 02, 2025",
+    "standards": [
+      "IEC 60601-4-5"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity FMEA Report for Portable X-Ray system model HnX-P1, document A-CFMEA-HNX, Rev. 1 dated April 02, 2025.",
+    "officialUse": "Supports cybersecurity risk analysis, risk evaluation, and risk control documentation for the Portable X-Ray system HnX-P1.",
+    "keyPoints": [
+      "Revision 1 added threat identification to the IEC 60601-4-5 cybersecurity requirements list.",
+      "The FMEA table evaluates CRM-01 through CRM-17 using STRIDE, likelihood, impact, risk level, CVSS, and mitigation fields.",
+      "Risk controls include certificate verification, RSA key exchange, AES encryption, SHA256 integrity verification, update signing, restricted ports, logging, and cybersecurity/software maintenance planning."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Portable X-Ray system",
+      "type": "Product name",
+      "evidence": "Product Name,:,Portable X-Ray system"
+    },
+    {
+      "name": "HnX-P1",
+      "type": "Product model",
+      "evidence": "Model Name,:,HnX-P1"
+    },
+    {
+      "name": "A-CFMEA-HNX",
+      "type": "Document number",
+      "evidence": "Doc No.,:,A-CFMEA-HNX"
+    },
+    {
+      "name": "IEC 60601-4-5",
+      "type": "Standard",
+      "evidence": "Added threat identification to the IEC 60601-4-5 cybersecurity requirements list."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity FMEA",
+      "pageTarget": "Cybersecurity FMEA",
+      "evidence": "Cybersecurity FMEA Report"
+    },
+    {
+      "name": "STRIDE threat model",
+      "pageTarget": "STRIDE",
+      "evidence": "Risk analysis (Step 1),,,,Risk evaluation (Step 2),,,,Risk control (Step 3),,, Hazard No.,Requirement,STRIDE,Threat"
+    },
+    {
+      "name": "CVSS",
+      "pageTarget": "Common Vulnerability Scoring System",
+      "evidence": "Hazard No.,Requirement,STRIDE,Threat ,Likelihood (Before),Impact (Before),Risk Level,CVSS,Mitigation"
+    },
+    {
+      "name": "AES encryption",
+      "pageTarget": "AES Encryption",
+      "evidence": "Subsequent communication is encrypted (AES) with the symmetric key."
+    },
+    {
+      "name": "RSA encryption",
+      "pageTarget": "RSA Encryption",
+      "evidence": "Authentication information and symmetric key exchange: Using RSA encryption algorithm."
+    },
+    {
+      "name": "SHA256 integrity verification",
+      "pageTarget": "SHA-256",
+      "evidence": "Each packet contains a SHA256 value that can verify its integrity, making forgery/tampering impossible."
+    },
+    {
+      "name": "Firmware update integrity verification",
+      "pageTarget": "Firmware Update Integrity Verification",
+      "evidence": "Firmware can be updated through designated software, and its integrity is verified through signatures created using SHA-256 and RSA methods before applying the update file."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cybersecurity FMEA Report.",
+      "evidenceText": "Cybersecurity FMEA Report",
+      "pageTarget": "Cybersecurity FMEA Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product name is Portable X-Ray system.",
+      "evidenceText": "Product Name,:,Portable X-Ray system",
+      "pageTarget": "Portable X-Ray System",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model name is HnX-P1.",
+      "evidenceText": "Model Name,:,HnX-P1",
+      "pageTarget": "HnX-P1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document number is A-CFMEA-HNX.",
+      "evidenceText": "Doc No.,:,A-CFMEA-HNX",
+      "pageTarget": "A-CFMEA-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision date is April 02, 2025.",
+      "evidenceText": "Revision date,:,\"April 02, 2025\"",
+      "pageTarget": "A-CFMEA-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision number is Rev. 1.",
+      "evidenceText": "Revision No.,:,Rev. 1",
+      "pageTarget": "A-CFMEA-HNX",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision 1 dated 2025.04.02 added threat identification to the IEC 60601-4-5 cybersecurity requirements list.",
+      "evidenceText": "1,2025.04.02,Added threat identification to the IEC 60601-4-5 cybersecurity requirements list.",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FMEA includes risk analysis, risk evaluation, and risk control steps.",
+      "evidenceText": "Risk analysis (Step 1),,,,Risk evaluation (Step 2),,,,Risk control (Step 3)",
+      "pageTarget": "Cybersecurity FMEA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table uses STRIDE threat categories and CVSS in cybersecurity risk evaluation.",
+      "evidenceText": "Hazard No.,Requirement,STRIDE,Threat ,Likelihood (Before),Impact (Before),Risk Level,CVSS,Mitigation",
+      "pageTarget": "STRIDE",
+      "confidence": "high"
+    },
+    {
+      "claim": "Communication security controls include certificate verification, asymmetric key receipt, symmetric key delivery, and AES encryption.",
+      "evidenceText": "During the connection establishment procedure, a certificate and asymmetric key are received, and after verification with the signature of the certificate, a symmetric key encrypted with the received asymmetric key is delivered. Subsequent communication is encrypted (AES) with the symmetric key.",
+      "pageTarget": "Device Communication Encryption",
+      "confidence": "high"
+    },
+    {
+      "claim": "Packets include a SHA256 value for integrity verification.",
+      "evidenceText": "Each packet contains a SHA256 value that can verify its integrity, making forgery/tampering impossible.",
+      "pageTarget": "SHA-256",
+      "confidence": "high"
+    },
+    {
+      "claim": "Authentication information and symmetric key exchange use RSA, and data and command transmission use AES-128.",
+      "evidenceText": "Authentication information and symmetric key exchange: Using RSA encryption algorithm. Transmission and reception of data, commands, etc.: Use of AES-128 (128-bit encryption) encryption algorithm.",
+      "pageTarget": "Cryptographic Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The symmetric key used for communication is randomly generated during connection establishment and is not stored or reused on the device.",
+      "evidenceText": "The symmetric key used for communication is randomly generated during the connection establishment process and is not stored or reused on the device.",
+      "pageTarget": "Cryptographic Key Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "User operation details specified in the certificate are recorded in the log.",
+      "evidenceText": "The details of operations performed by the user specified in the certificate passed during the connection establishment procedure are recorded in the log.",
+      "pageTarget": "Audit Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "Device software verifies its own integrity by verifying the signature when it runs.",
+      "evidenceText": "When the device software runs, it verifies its own integrity by verifying the signature.",
+      "pageTarget": "Software Integrity Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "All external access ports and services except the main communication port are disabled.",
+      "evidenceText": "All external access ports and services except the main communication port are disabled, and accessible ports are accessible only through private keys and passwords to control malware.",
+      "pageTarget": "Medical Device Port Restrictions",
+      "confidence": "high"
+    },
+    {
+      "claim": "Firmware updates are applied through designated software and verified using SHA-256 and RSA signatures before applying the update file.",
+      "evidenceText": "Firmware can be updated through designated software, and its integrity is verified through signatures created using SHA-256 and RSA methods before applying the update file.",
+      "pageTarget": "Firmware Update Integrity Verification",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated in the source text; authoritySignal metadata indicates MFDS/domestic but was not used as document authority."
+    },
+    {
+      "severity": "info",
+      "reason": "The source is preprocessed from an Excel file, and some table text contains minor OCR or extraction artifacts such as 'Impack' and special bullet characters."
+    }
+  ]
 }

@@ -1,4 +1,306 @@
 {
-  "type": "thread.started",
-  "thread_id": "019f0063-81bc-7cc2-bec3-82901da9ea99"
+  "source": {
+    "queueId": "ingest-1781569954376-6k9",
+    "sourcePath": "raw/sources/RA/01_DHF/06_HnX-R1 (Retrofit)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/0. HnX-R1 사이버보안 체크리스트 (Rev.1 250918).pdf",
+    "canonicalGroupId": "3e4a121972b9"
+  },
+  "document": {
+    "title": "의료기기 사이버보안 요구사항 체크리스트",
+    "documentType": "사이버보안 요구사항 체크리스트",
+    "productModels": [
+      "HnX-R1"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev 1. 250918",
+    "documentDate": "",
+    "standards": [
+      "DICOM",
+      "Wi-Fi",
+      "SHA-256",
+      "AES-128"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "HnX-R1 의료영상획득장치의 사이버보안 요구사항 적용 여부와 입증 문서를 정리한 체크리스트이다.",
+    "officialUse": "설계개발 검증 및 유효성 확인 자료로서 사용자 식별 및 인증, 사용 통제, 시스템 무결성, 데이터 기밀성, 이벤트 적시 대응, 자원 가용성 요구사항의 적용 여부와 시험보고서 또는 위험관리 문서를 연결한다.",
+    "keyPoints": [
+      "품목명은 의료영상획득장치이고 모델명은 HnX-R1이다.",
+      "사용되는 통신 기술은 무선통신(Wi-Fi) 및 DICOM 표준 통신 프로토콜로 기재되어 있다.",
+      "사용 환경은 병원 내 사용이며 공용 네트워크망 사용 여부는 N/A로 기재되어 있다.",
+      "다수 요구사항의 적합성 입증 방법은 Cybersecurity test report 및 Cybersecurity Requirements Test report이다.",
+      "위험관리 근거 문서로 Threat Modeling Report, Cybersecurity Risk Management Report, Cybersecurity FMEA table이 반복 기재되어 있다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "product model",
+      "evidence": "모델명: HnX-R1"
+    },
+    {
+      "name": "의료영상획득장치",
+      "type": "device type",
+      "evidence": "품목명: 의료영상획득장치"
+    },
+    {
+      "name": "HnVUE SW",
+      "type": "software component",
+      "evidence": "HnVUE SW와 Detector 간 암호화 통신함을 확인함."
+    },
+    {
+      "name": "Detector",
+      "type": "device component",
+      "evidence": "HnVUE SW와 Detector 간 암호화 통신함을 확인함."
+    },
+    {
+      "name": "PACS",
+      "type": "external system",
+      "evidence": "HnVUE SW는 PACS, Worklists 서버와 각각 DICOM 프로토콜 및 평문 통신함을 확인함."
+    },
+    {
+      "name": "Worklists 서버",
+      "type": "external system",
+      "evidence": "HnVUE SW는 PACS, Worklists 서버와 각각 DICOM 프로토콜 및 평문 통신함을 확인함."
+    },
+    {
+      "name": "Cybersecurity Requirements Test report",
+      "type": "evidence document",
+      "evidence": "Cybersecurity Requirements Test report (Report no. EBB-2025-000109)"
+    },
+    {
+      "name": "Threat Modeling Report",
+      "type": "evidence document",
+      "evidence": "Threat Modeling Report (Doc No. A-CTMR-HNXR1)"
+    },
+    {
+      "name": "Cybersecurity Risk Management Report",
+      "type": "evidence document",
+      "evidence": "Cybersecurity Risk Management Report (Doc no. _A-CRMR-HNXR1)"
+    },
+    {
+      "name": "Cybersecurity FMEA table",
+      "type": "evidence document",
+      "evidence": "Cybersecurity FMEA table (Doc no. A-CFMEA-HNXR1)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "사용자 식별 및 인증",
+      "pageTarget": "User identification and authentication",
+      "evidence": "IA-01 사용자 식별 및 인증 A 본 의료기기는 ID 및 PW 방식의 사용자 식별 및 인증 방식을 제공함."
+    },
+    {
+      "name": "계정 관리",
+      "pageTarget": "Account management",
+      "evidence": "IA-02 계정 관리 A 본 의료기기는 특정 권한을 가진 사용자에게 계정 관리 기능(등록, 삭제, 수정)을 제공함."
+    },
+    {
+      "name": "권한 부여",
+      "pageTarget": "Authorization and user roles",
+      "evidence": "본 의료기기는 Administrator, Engineer, User으로 권한을 구분하며 각 권한마다 사용할 수 있는 기능이 다름."
+    },
+    {
+      "name": "감사 로그",
+      "pageTarget": "Audit logging",
+      "evidence": "본 의료기기는 이벤트 시간, 이벤트 발생 주체, 이벤트 발생 내용을 기록한 감사 로그를 사용자에게 제공함."
+    },
+    {
+      "name": "통신 무결성",
+      "pageTarget": "Communication integrity",
+      "evidence": "SI-01 통신에 대한 무결성 보장 A HnVUE SW와 Detector 간 암호화 통신함을 확인함."
+    },
+    {
+      "name": "악성코드 보호",
+      "pageTarget": "Malware protection",
+      "evidence": "HnVUE SW는 사용자 PC에 단독으로 설치되는 소프트웨어로써 사용자 매뉴얼 내 해당 소프트웨어가 설치된 PC에 안티 바이러스 제품을 설치할 것을 명시하고 있음."
+    },
+    {
+      "name": "업데이트 진본성 및 무결성 검증",
+      "pageTarget": "Software update authenticity and integrity",
+      "evidence": "SI-09 업데이트에 대한 진본성 및 무결성 검증 A 본 의료기기는 업데이트 시, 무결성 검증 기능(SHA-256)"
+    },
+    {
+      "name": "데이터 기밀성",
+      "pageTarget": "Data confidentiality",
+      "evidence": "DC-01 정보에 대한 기밀성 보장 A 본 의료기기가 저장하는 중요정보는 암호화되어 저장됨을 확인함."
+    },
+    {
+      "name": "안전한 암호화 사용",
+      "pageTarget": "Secure cryptography",
+      "evidence": "본 의료기기는 안전한 암호화 방식(AES-128)을 활용하고 있음을 확인함."
+    },
+    {
+      "name": "서비스 거부 방지",
+      "pageTarget": "Denial of service protection",
+      "evidence": "RA-01 서비스 거부(Denial of Service, DoS) 방지 A"
+    },
+    {
+      "name": "의료기기 백업",
+      "pageTarget": "Medical device backup",
+      "evidence": "본 의료기기는 사용자에게 백업 기능을 제공하고 백업 적용 시 제품의 정상작동에 영향을 미치지 않음."
+    },
+    {
+      "name": "의료기기 복구 및 재구성",
+      "pageTarget": "Medical device recovery and reconfiguration",
+      "evidence": "본 의료기기는 기기 작동의 중단 또는 장애시 안전한 상태로 복구 및 재구성할 수 있는 기능을 사용자에게 제공함."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a cybersecurity requirements checklist for a medical device.",
+      "evidenceText": "[ 의료기기 사이버보안 요구사항 체크리스트 ]",
+      "pageTarget": "Medical device cybersecurity requirements checklist",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product item name is 의료영상획득장치.",
+      "evidenceText": "품목명: 의료영상획득장치",
+      "pageTarget": "Medical imaging acquisition device",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model name is HnX-R1.",
+      "evidenceText": "모델명: HnX-R1",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The checklist revision is Rev 1. 250918.",
+      "evidenceText": "Rev 1. 250918",
+      "pageTarget": "HnX-R1 cybersecurity checklist",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device uses wireless communication and DICOM standard communication protocol.",
+      "evidenceText": "1) 사용되는 통신 기술: 무선통신(Wi-Fi), DICOM 표준 통신 프로토콜",
+      "pageTarget": "Medical device communication technology",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is used in a hospital environment.",
+      "evidenceText": "2) 사용 환경: 병원 내 사용",
+      "pageTarget": "Medical device use environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Public network use is marked N/A.",
+      "evidenceText": "3) 공용 네트워크망 사용 여부: N/A",
+      "pageTarget": "Public network use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides ID and password-based user identification and authentication.",
+      "evidenceText": "IA-01 사용자 식별 및 인증 A 본 의료기기는 ID 및 PW 방식의 사용자 식별 및 인증 방식을 제공함.",
+      "pageTarget": "User identification and authentication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides account registration, deletion, and modification to users with specific privileges.",
+      "evidenceText": "IA-02 계정 관리 A 본 의료기기는 특정 권한을 가진 사용자에게 계정 관리 기능(등록, 삭제, 수정)을 제공함.",
+      "pageTarget": "Account management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device distinguishes Administrator, Engineer, and User permissions.",
+      "evidenceText": "본 의료기기는 Administrator, Engineer, User으로 권한을 구분하며 각 권한마다 사용할 수 있는 기능이 다름.",
+      "pageTarget": "Authorization and user roles",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mobile code use control is not applicable because the device does not use mobile code technology.",
+      "evidenceText": "UC-02 모바일 코드 사용 통제 N/A 본 의료기기는 모바일 코드 기술을 사용하지 않으므로 적용 제외됨.",
+      "pageTarget": "Mobile code control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides audit logs recording event time, event subject, and event content.",
+      "evidenceText": "본 의료기기는 이벤트 시간, 이벤트 발생 주체, 이벤트 발생 내용을 기록한 감사 로그를 사용자에게 제공함.",
+      "pageTarget": "Audit logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE SW and Detector communicate using encrypted communication.",
+      "evidenceText": "SI-01 통신에 대한 무결성 보장 A HnVUE SW와 Detector 간 암호화 통신함을 확인함.",
+      "pageTarget": "Communication integrity",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE SW communicates with PACS and Worklists servers using DICOM protocol and plaintext communication, and both servers operate on a closed network.",
+      "evidenceText": "HnVUE SW는 PACS, Worklists 서버와 각각 DICOM 프로토콜 및 평문 통신함을 확인함. 또한 PACS, Worklists 서버 모두 폐쇄망에서 운영됨.",
+      "pageTarget": "PACS and Worklist communication",
+      "confidence": "high"
+    },
+    {
+      "claim": "The user manual states that antivirus software should be installed on the PC where HnVUE SW is installed.",
+      "evidenceText": "HnVUE SW는 사용자 PC에 단독으로 설치되는 소프트웨어로써 사용자 매뉴얼 내 해당 소프트웨어가 설치된 PC에 안티 바이러스 제품을 설치할 것을 명시하고 있음.",
+      "pageTarget": "Malware protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device can be updated.",
+      "evidenceText": "SI-08 업데이트 A 본 의료기기는 업데이트가 가능함.",
+      "pageTarget": "Medical device software update",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device performs integrity verification during update using SHA-256.",
+      "evidenceText": "SI-09 업데이트에 대한 진본성 및 무결성 검증 A 본 의료기기는 업데이트 시, 무결성 검증 기능(SHA-256)",
+      "pageTarget": "Software update authenticity and integrity",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Stored important information is encrypted.",
+      "evidenceText": "DC-01 정보에 대한 기밀성 보장 A 본 의료기기가 저장하는 중요정보는 암호화되어 저장됨을 확인함.",
+      "pageTarget": "Data confidentiality",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device uses AES-128 encryption and protects stored encryption keys by controlling unauthorized access.",
+      "evidenceText": "본 의료기기는 안전한 암호화 방식(AES-128)을 활용하고 있음을 확인함. 의료기기에 저장된 암호키는 비인가자의 접근을 통제하는 방식으로 보호되고 있음을 확인함.",
+      "pageTarget": "Secure cryptography",
+      "confidence": "high"
+    },
+    {
+      "claim": "Users have read-only permission for the device audit logs.",
+      "evidenceText": "TRE-01 감사로그에 대한 비인가된 접근 제한 A 사용자는 본 의료기기의 감사로그에 대해 읽기 권한만 가질 수 있음.",
+      "pageTarget": "Audit log access control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides backup functionality and applying backup does not affect normal product operation.",
+      "evidenceText": "본 의료기기는 사용자에게 백업 기능을 제공하고 백업 적용 시 제품의 정상작동에 영향을 미치지 않음.",
+      "pageTarget": "Medical device backup",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device provides functionality to recover and reconfigure to a safe state after interruption or failure.",
+      "evidenceText": "본 의료기기는 기기 작동의 중단 또는 장애시 안전한 상태로 복구 및 재구성할 수 있는 기능을 사용자에게 제공함.",
+      "pageTarget": "Medical device recovery and reconfiguration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The user manual describes network configuration, and HnVUE records network settings and communication logs for Detector.",
+      "evidenceText": "본 의료기기의 사용자 매뉴얼 내 네트워크 설정 방법을 기재하고 있으며, HnVUE는 Detector에 대한 네트워크 설정 및 통신에 대한 로그를 기록하고 있음을 확인함.",
+      "pageTarget": "Network and security configuration",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly stated; 250918 appears as part of the revision string and filename but was not normalized as a date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified in the source text; source metadata only indicates authoritySignal: general."
+    },
+    {
+      "severity": "info",
+      "reason": "Some extracted text is fragmented or incomplete, including the SI-09 sentence ending after '무결성 검증 기능(SHA-256)'."
+    },
+    {
+      "severity": "info",
+      "reason": "Cybersecurity Risk Management Report document number appears with a leading underscore as '_A-CRMR-HNXR1' in the source text."
+    }
+  ]
 }
