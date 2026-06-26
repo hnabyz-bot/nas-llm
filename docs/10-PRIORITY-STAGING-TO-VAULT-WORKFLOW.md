@@ -360,4 +360,9 @@ Next P1 bundle:
 - rank range: 1201-1300
 - selected representatives: 100
 - total normalized chars: 4,226,180
-- extraction status: not started at this checkpoint
+- extraction status: PASS
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- note: ranks 1202 and 1235 passed on direct retry after transient JSON format
+  failures; ranks 1245 and 1253 required chunked fallback
+- ops commit: `1eee3d5 feat: complete P1 ranks 1201-1300 extraction outputs`
