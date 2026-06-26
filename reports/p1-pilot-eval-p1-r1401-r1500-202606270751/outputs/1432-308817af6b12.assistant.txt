@@ -1,0 +1,241 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954394-o8l",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/4. Risk Management/구버젼/ARMR-FMEA-0-001  양식.xls",
+    "canonicalGroupId": "308817af6b12"
+  },
+  "document": {
+    "title": "ARMR-FMEA-0-001 양식",
+    "documentType": "Risk management / FMEA worksheet",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "ISO 3864-1:2002",
+      "ISO 7010"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Risk management worksheet mapping ISO 14971 risk management clauses and IEC 60601-1 requirements to applicability, hazards, risk controls, residual risk, and verification.",
+    "officialUse": "Used as a risk management/FMEA checklist for ME equipment safety requirements, including essential performance, single fault conditions, software/PEMS, EMC, and expected service life.",
+    "keyPoints": [
+      "The worksheet is structured around ISO 14971 clauses 4.2 through 7 and IEC 60601-1 clause requirements.",
+      "Essential performance is identified as image acquisition within 5 seconds and acquired image quality without specified display defects.",
+      "The device is described as detecting radiated X-rays and converting X-rays to electrical signals, not producing X-rays.",
+      "Software/PEMS items are marked applicable and include requirements specification, architecture, design, verification, validation, and risk control documentation.",
+      "Life expectancy is estimated from an AC-DC Power Converter component life of 12,000 hours, resulting in ESL of 5.00 years."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product family signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "\"ISO 14971 Clause\",4.2 의도된 용도와 의료기기의 안전에 관련된 특성의 식별"
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "IEC 60601-1 Clause,\"IEC60601-1 Requirements\""
+    },
+    {
+      "name": "ISO 3864-1:2002",
+      "type": "standard",
+      "evidence": "ISO 3864-1:2002 7절에 대응하는 표지"
+    },
+    {
+      "name": "ISO 7010",
+      "type": "standard",
+      "evidence": "ISO 7010:20030W001 심벌 적용"
+    },
+    {
+      "name": "AC-DC Power Converter(RPS-200-12",
+      "type": "component",
+      "evidence": "part key: AC-DC Power Converter(RPS-200-12"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Risk management process",
+      "pageTarget": "Risk Management Process",
+      "evidence": "ISO 14971 Clause\",4.2 의도된 용도와 의료기기의 안전에 관련된 특성의 식별 ,,,,,,4.3 예측 가능한 위험 요소의 식별,,4.4 각 위해상황에서의 위험 산정,,,,,5. 위험평가"
+    },
+    {
+      "name": "Essential Performance",
+      "pageTarget": "Essential Performance",
+      "evidence": "4.3,\"Essential Performance\n(필수 성능)\",Is there essential performance?,A,\"Manufacturer shall identify which functions are Essential Performance."
+    },
+    {
+      "name": "Single Fault Condition",
+      "pageTarget": "Single Fault Condition",
+      "evidence": "4.7,\"Single Fault Condition for Me Equipment\n(단일고장상태)\""
+    },
+    {
+      "name": "Safety signs",
+      "pageTarget": "Safety Signs",
+      "evidence": "7.5,\"Safety signs\n(안전신호)\""
+    },
+    {
+      "name": "Programmable electrical medical systems",
+      "pageTarget": "Programmable Electrical Medical Systems",
+      "evidence": "14.1,\"Programmable\nelectrical medical\nsystems - General\n(프로그램가능 의료용 전기 시스템-일반)\""
+    },
+    {
+      "name": "Electromagnetic compatibility",
+      "pageTarget": "Electromagnetic Compatibility",
+      "evidence": "17,\"Electromagnetic\ncompatibility of ME\nequipment and ME\nsystems\n(전자기적합성-EMI)\""
+    },
+    {
+      "name": "Expected service life",
+      "pageTarget": "Expected Service Life",
+      "evidence": "Estimation of life expectancy"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a risk management worksheet aligned to ISO 14971 clauses and IEC 60601-1 requirements.",
+      "evidenceText": "\"ISO 14971 Clause\",4.2 의도된 용도와 의료기기의 안전에 관련된 특성의 식별 ... IEC 60601-1 Clause,\"IEC60601-1 Requirements\"",
+      "pageTarget": "Risk Management Process",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance is applicable.",
+      "evidenceText": "4.3,\"Essential Performance\n(필수 성능)\",Is there essential performance?,A",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes image acquisition within 5 seconds.",
+      "evidenceText": "Must be able to acquire image within 5 seconds",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes acquired image quality without two Line Adjacent, Line Block, or No Display.",
+      "evidenceText": "The acquired image should not have two Line Adjacent, Line Block, or No Display.",
+      "pageTarget": "Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has no patient-contacting part during use.",
+      "evidenceText": "사용시 환자에게 접촉하는 부분이 없음.",
+      "pageTarget": "Patient Contacting Parts",
+      "confidence": "high"
+    },
+    {
+      "claim": "Single fault condition requirements are applicable.",
+      "evidenceText": "4.7,\"Single Fault Condition for Me Equipment\n(단일고장상태)\" ... A,\"13.2에 설명된 단일고장조건이 적용됨.",
+      "pageTarget": "Single Fault Condition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Overload protection is provided by a FUSE rated 3.15AH/250V at the AC power input.",
+      "evidenceText": "AC전원 입력단에 FUSE(3.15AH/250V)를 사용한 보호장치를 장착하여, 허용치를 초과하는 전류 발생시 전류를 차단함.",
+      "pageTarget": "Overcurrent Protection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device does not produce X-rays; it detects radiated X-rays and processes images.",
+      "evidenceText": "X선을 발생시키는 제품이 아님.\n(방사된 X선을 감지하여 영상처리하는 제품)",
+      "pageTarget": "X-Ray Radiation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device converts X-rays to electrical signals and is not a radiation-emitting product.",
+      "evidenceText": "X선을 전기적 신호로 전환하는 제품으로, 방사하는 제품이 아님.",
+      "pageTarget": "X-Ray Radiation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has no B-type applied part.",
+      "evidenceText": "본 기기는 B형 장착부가 없음",
+      "pageTarget": "Applied Parts",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device has no moving parts.",
+      "evidenceText": "제품에 가동부 없음.",
+      "pageTarget": "Mechanical Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is not intended to use batteries.",
+      "evidenceText": "배터리를 사용하지 않음.",
+      "pageTarget": "Battery Safety",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety signs are applicable and reference ISO 3864-1:2002 and ISO 7010.",
+      "evidenceText": "7.5,\"Safety signs\n(안전신호)\" ... A,ISO 3864-1:2002 7절에 대응하는 표지 및 ISO 7010:20030W001 심벌 적용",
+      "pageTarget": "Safety Signs",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Software is applicable to essential performance and can store image data acquired through a network.",
+      "evidenceText": "소프트웨어는 필수성능을 만족하며, 네트워크를 통해 획득한 영상 이미지를 저장 할 수 있음",
+      "pageTarget": "Medical Device Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software risk control content is documented.",
+      "evidenceText": "소프트웨어는 위험통제 수단을 포함하고 있으며, 위해요인에 관한 내용이 문서화 되어 있음",
+      "pageTarget": "Software Risk Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software requirements specification is included in the software validation report.",
+      "evidenceText": "The software validation report contain software requirement specification.\n소프트웨어 유효성 확인 보고서에는 소프트웨어 요구 사항 사양이 포함됩니다.",
+      "pageTarget": "Software Requirements Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS validation is documented in the risk management file.",
+      "evidenceText": "이 소프트웨어는 개발 부서에서 독립적인 인 전문가가 개발 및 검증하고 위험 관리 파일에 문서화 하고 있음",
+      "pageTarget": "PEMS Validation",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The device is used in a general clinic and can have electromagnetic effects on other ME devices in the clinic.",
+      "evidenceText": "본 제품은 일반적인 진료실에서 사용하며 진료실내의 다양한 ME 기기들에게 전자파 영향을 줄 수 있다.",
+      "pageTarget": "Electromagnetic Compatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "Expected service life is estimated as 5.00 years based on component life and use assumptions.",
+      "evidenceText": "Component life : Life time (Number of shots) ... \"12,000\",hours ... 1year=,2400hours ... ∴ ESL =,5.00 years",
+      "pageTarget": "Expected Service Life",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; metadata authoritySignal is only 'general' and the source text does not identify a regulator or jurisdiction."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is inferred from provided productSignal metadata rather than an explicit model field in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Preprocessed spreadsheet text has possible OCR or extraction issues, including malformed component text 'AC-DC Power Converter(RPS-200-12' and apparent malformed standard/symbol text 'ISO 7010:20030W001'."
+    }
+  ]
+}
