@@ -1,71 +1,42 @@
 {
-  "generatedAt": "2026-06-26T03:04:50.714Z",
+  "generatedAt": "2026-06-26T03:17:36.518Z",
   "bundleDir": "reports/p1-pilot-eval-p1-r401-r500-202606252307",
   "manifestRows": 100,
   "manifestRankRange": {
     "start": 401,
     "end": 500
   },
-  "jsonOutputs": 99,
-  "jsonParsePass": 99,
+  "jsonOutputs": 100,
+  "jsonParsePass": 100,
   "runResults": 100,
-  "pass": 98,
-  "fail": 2,
-  "chunkedPass": 0,
-  "validationInvalid": 1,
-  "validationErrors": [
-    {
-      "pilotRank": 417,
-      "queueId": "ingest-1781569954415-13xa",
-      "outputPath": "outputs/417-88e3c41f9d15.json",
-      "errors": [
-        "missing top-level key: source",
-        "missing top-level key: document",
-        "missing top-level key: sourceSummary",
-        "missing top-level key: entities",
-        "missing top-level key: concepts",
-        "missing top-level key: evidence",
-        "missing top-level key: reviewFlags",
-        "source.queueId mismatch",
-        "source.sourcePath mismatch",
-        "source.canonicalGroupId mismatch",
-        "sourceSummary.oneLine missing",
-        "entities must be an array",
-        "concepts must be an array",
-        "evidence must be an array",
-        "reviewFlags must be an array"
-      ]
-    }
-  ],
+  "pass": 100,
+  "fail": 0,
+  "chunkedPass": 2,
+  "validationInvalid": 0,
+  "validationErrors": [],
   "pageMarkerLeakage": {
     "count": 0,
     "items": []
   },
   "missingEvidence": {
-    "count": 1,
-    "items": [
-      {
-        "pilotRank": 417,
-        "queueId": "ingest-1781569954415-13xa",
-        "outputPath": "outputs/417-88e3c41f9d15.json"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "evidence": {
-    "total": 1680,
-    "average": 17,
-    "min": 0,
-    "max": 33
+    "total": 1754,
+    "average": 17.5,
+    "min": 7,
+    "max": 63
   },
   "reviewFlags": {
-    "total": 366,
-    "average": 3.7
+    "total": 375,
+    "average": 3.8
   },
   "runtimeSeconds": {
-    "average": 66.6,
-    "min": 6.7,
-    "max": 105.2,
-    "total": 6659.1
+    "average": 73.3,
+    "min": 36.1,
+    "max": 655.8,
+    "total": 7331.1
   },
   "topDocumentTypes": [
     {
@@ -155,11 +126,11 @@
       "count": 12
     },
     {
-      "name": "European Union",
-      "count": 8
+      "name": "Japan",
+      "count": 9
     },
     {
-      "name": "Japan",
+      "name": "European Union",
       "count": 8
     },
     {
@@ -231,38 +202,5 @@
       "count": 2
     }
   ],
-  "failedRunResults": [
-    {
-      "pilotRank": 412,
-      "queueId": "ingest-1781569954388-ige",
-      "status": "fail",
-      "timedOut": false,
-      "parseError": "Bad control character in string literal in JSON at position 5413 (line 118 column 55)",
-      "validationErrors": []
-    },
-    {
-      "pilotRank": 417,
-      "queueId": "ingest-1781569954415-13xa",
-      "status": "fail",
-      "timedOut": false,
-      "parseError": "",
-      "validationErrors": [
-        "missing top-level key: source",
-        "missing top-level key: document",
-        "missing top-level key: sourceSummary",
-        "missing top-level key: entities",
-        "missing top-level key: concepts",
-        "missing top-level key: evidence",
-        "missing top-level key: reviewFlags",
-        "source.queueId mismatch",
-        "source.sourcePath mismatch",
-        "source.canonicalGroupId mismatch",
-        "sourceSummary.oneLine missing",
-        "entities must be an array",
-        "concepts must be an array",
-        "evidence must be an array",
-        "reviewFlags must be an array"
-      ]
-    }
-  ]
+  "failedRunResults": []
 }
