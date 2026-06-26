@@ -1,0 +1,278 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954406-uwo",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/■ 3. 3차 CE TCF 보안사항 제출 (12월10일)/03. Risk_Management/ARMR-FMEA-0-001 Risk Table 19.9.17.xlsx",
+    "canonicalGroupId": "3c3ad2d1e852"
+  },
+  "document": {
+    "title": "ARMR-FMEA-0-001 Risk Table 19.9.17",
+    "documentType": "Risk management FMEA risk table",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [
+      "CE MDD"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "ISO 14971",
+      "IEC 60601-1",
+      "ISO 3864-1:2002",
+      "ISO 7010",
+      "IEC60601-1-14"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Risk management table mapping ISO 14971 and IEC 60601-1 clauses to hazards, risk controls, residual risk acceptability, and verification evidence for product HAD/A/F 1417-1717.",
+    "officialUse": "Supports CE MDD technical file risk management evidence by documenting hazards, risk estimation, control measures, implementation evidence, residual risks, and acceptability.",
+    "keyPoints": [
+      "Essential performance includes image acquisition within 5 seconds and acquired images without two Line Adjacent, Line Block, or No Display.",
+      "Risk controls address leakage current, user recognition errors, overheating, component fixation, software degradation of function, connector misuse, and electromagnetic waves.",
+      "Residual risk outcomes are generally recorded as Acceptable after controls and verification evidence such as user manuals, work instructions, test reports, inspection standards, and software validation reports.",
+      "Many IEC 60601-1 clauses are marked N/A because the product has no patient contact parts, no lithium batteries, no moving parts, no diagnostic or therapeutic radiation, and no sterilization requirement."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "\"ISO 14971 Clause\""
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "\"IEC 60601-1 Clause,\" \"IEC60601-1 Requirements\""
+    },
+    {
+      "name": "ISO 3864-1:2002",
+      "type": "standard",
+      "evidence": "ISO 3864-1: 2002 Cover corresponding to Clause 7"
+    },
+    {
+      "name": "ISO 7010",
+      "type": "standard",
+      "evidence": "ISO 7010: 20030W001 Symbol Application"
+    },
+    {
+      "name": "CE MDD",
+      "type": "regulatory pathway",
+      "evidence": "sourcePath includes \"▶ CE MDD\""
+    },
+    {
+      "name": "Required Performance Verification Report",
+      "type": "verification record",
+      "evidence": "Required Performance Verification Report"
+    },
+    {
+      "name": "Software validation report",
+      "type": "verification record",
+      "evidence": "software for centrifuge and control is applied: software validation report"
+    },
+    {
+      "name": "EMC Test report",
+      "type": "test report",
+      "evidence": "EMC Test report"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Risk Management",
+      "pageTarget": "Risk Management",
+      "evidence": "4.3 Identification of hazards, 4.4 Estimation of the risk(s) for each hazardous situation, 5. Risk Evaluation, 6.2 Risk Control option analysis"
+    },
+    {
+      "name": "Essential Performance",
+      "pageTarget": "IEC 60601-1 Essential Performance",
+      "evidence": "Manufacturer shall identify which functions are Essential Performance. - Must be able to acquire image within 5 seconds - The acquired image should not have two Line Adjacent, Line Block, or No Display."
+    },
+    {
+      "name": "Single Fault Condition",
+      "pageTarget": "IEC 60601-1 Single Fault Condition",
+      "evidence": "The single fault condition described in 13.2 applies."
+    },
+    {
+      "name": "Leakage Current",
+      "pageTarget": "Leakage Current Risk",
+      "evidence": "RM-02, leakage current, Can deliver unacceptable current to the patient or operator in a single fault condition, Electrical hazards"
+    },
+    {
+      "name": "Protective Packaging Marking",
+      "pageTarget": "IEC 60601-1 Protective Packaging Marking",
+      "evidence": "Operating conditions displayed on the outer packaging Temperature, Humidity, Pressure"
+    },
+    {
+      "name": "Safety Signs",
+      "pageTarget": "Medical Device Safety Signs",
+      "evidence": "ISO 3864-1: 2002 Cover corresponding to Clause 7 and ISO 7010: 20030W001 Symbol Application"
+    },
+    {
+      "name": "Software Validation",
+      "pageTarget": "Medical Device Software Validation",
+      "evidence": "Software validation report"
+    },
+    {
+      "name": "PEMS",
+      "pageTarget": "Programmable Electrical Medical Systems",
+      "evidence": "Programmable electrical medical systems - General"
+    },
+    {
+      "name": "Electromagnetic Compatibility",
+      "pageTarget": "Medical Electrical Equipment Electromagnetic Compatibility",
+      "evidence": "Electromagnetic compatibility of ME equipment and ME systems"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a risk table structured around ISO 14971 clauses for hazard identification, risk estimation, risk evaluation, risk control, and residual risk acceptability.",
+      "evidenceText": "\"ISO 14971 Clause\" ... \"4.3 Identification of hazards\" ... \"4.4 Estimation of the risk(s)\" ... \"5. Risk Evaluation\" ... \"6.2 Risk Control option analysis\" ... \"6.4 Residual risk evaluation\"",
+      "pageTarget": "Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table maps risk management questions to IEC 60601-1 clauses and requirements.",
+      "evidenceText": "No, IEC 60601-1 Clause, IEC60601-1 Requirements, Questions for identifying characteristics",
+      "pageTarget": "IEC 60601-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Essential performance includes acquiring an image within 5 seconds and preventing two Line Adjacent, Line Block, or No Display in acquired images.",
+      "evidenceText": "Must be able to acquire image within 5 seconds - The acquired image should not have two Line Adjacent, Line Block, or No Display.",
+      "pageTarget": "IEC 60601-1 Essential Performance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The essential performance risk RM-01 identifies operational hazards leading to incorrect measurement, initially unacceptable with risk 9 and reduced to acceptable with residual risk 1.",
+      "evidenceText": "RM-01, Operational Hazards, Measurement in a fault condition, Incorrect measurement, 3,3,9,Unacceptable ... 1,1,1,Acceptable",
+      "pageTarget": "Operational Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated to have no patient-contact part.",
+      "evidenceText": "This product do not have any comtact to patient part.",
+      "pageTarget": "Patient Contact Parts",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Single fault condition assessment includes electrical single fault conditions and overload protection using a FUSE rated 3.15AH / 250V at the AC power input terminal.",
+      "evidenceText": "13.2.2. Electrical single fault condition ... 13.2.13 Overload -> In case of overloading inside the system, a protection device using FUSE (3.15AH / 250V) is installed at the AC power input terminal",
+      "pageTarget": "IEC 60601-1 Single Fault Condition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current risk RM-02 is controlled by approved AC-DC transformer, AC cable, and fuse, with electrical safety testing during shipment inspection.",
+      "evidenceText": "Designed to use approved AC-DC transformer, AC cable, fuse to prevent leakage current ... Electrical safety test is carried out during shipment inspection",
+      "pageTarget": "Leakage Current Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective packaging marking includes operating conditions on the outer packaging for temperature, humidity, and pressure.",
+      "evidenceText": "Operating conditions displayed on the outer packaging Temperature, Humidity, Pressure",
+      "pageTarget": "IEC 60601-1 Protective Packaging Marking",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated not to use lithium batteries or fuel cells.",
+      "evidenceText": "This product do not use lithium batteries or fuel cell.",
+      "pageTarget": "Medical Device Batteries",
+      "confidence": "high"
+    },
+    {
+      "claim": "FUSE and AC power cables are stated to be user replaceable, and the user manual describes specified cable use and fuse specifications and replacement methods.",
+      "evidenceText": "FUSE and AC power cables are user replaceable ... Use only the specified cable. Describe the FUSE specifications and replacement methods available in the product exterior and user manual.",
+      "pageTarget": "Medical Electrical Equipment Fuse Replacement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Thermal insulation risk RM-08 is controlled by using flame-retardant insulators and verified through cable drawing, connector, external raw material data, and import inspection standard.",
+      "evidenceText": "RM-08, Electromagnetic energy / thermal energy, Insulator may be damaged by heat ... Designed using flame-retardant insulators ... Cable drawing, connector, external raw material data, import inspection standard",
+      "pageTarget": "Medical Electrical Equipment Thermal Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "Component movement risk RM-09 concerns PCB, PCB components, AC-DC transformer, and AC filter fixed inside the product.",
+      "evidenceText": "Inside the product, PCB, PCB components, AC-DC transformer and AC filter are fixed.",
+      "pageTarget": "Medical Electrical Equipment Component Fixing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated not to be associated with moving parts.",
+      "evidenceText": "this product is not associated with moving parts",
+      "pageTarget": "Moving Parts Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated not to produce diagnostic or therapeutic radiation.",
+      "evidenceText": "It is not a product that causes factors for diagnostic or therapeutic radiation",
+      "pageTarget": "Medical Device Radiation Hazards",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cleaning is limited to the main body and sensor part with a dry cloth, with no other risk stated.",
+      "evidenceText": "The main body and the sensor part can be cleaned with a dry cloth. There is no other risk.",
+      "pageTarget": "Medical Electrical Equipment Cleaning",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product is stated not to require sterilization.",
+      "evidenceText": "this product do not require sterillization.",
+      "pageTarget": "Medical Device Sterilization",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software-related degradation of function risks RM-11 through RM-17 are controlled by software design and software validation, with software validation report as evidence.",
+      "evidenceText": "RM-11, Degradation of function ... Software Design to Achieve Essential Performance, Software validation ... Software validation report",
+      "pageTarget": "Medical Device Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector misuse risk RM-18 covers removable AC power cable, data cable, LAN cable, and trigger cable, controlled by connector design and user manual instructions.",
+      "evidenceText": "AC power cable, data cable, LAN cable, trigger cable can be removed without tools ... Designed not to be mixed with other connectors ... Instruction manual to connect the specified cable",
+      "pageTarget": "Medical Electrical Equipment Connectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "Electromagnetic compatibility risk RM-19 states the product is used in general practice rooms and may affect other ME devices through electromagnetic effects.",
+      "evidenceText": "This product is used in general practice rooms and it can affect electromagnetic effects on various ME devices in the medical room.",
+      "pageTarget": "Medical Electrical Equipment Electromagnetic Compatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "Electromagnetic wave risk RM-19 is recorded as acceptable both before and after applying electromagnetic hazards to design, with EMC Test report as evidence.",
+      "evidenceText": "RM-19, electromagnetic waves, The performance of other devices is degraded due to electromagnetic waves., electrical hazard, 1,1,1,Acceptable ... EMC Test report ... 1,1,1,Acceptable",
+      "pageTarget": "Medical Electrical Equipment Electromagnetic Compatibility",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly provided in the source text; filename contains 19.9.17 but this was not treated as a document date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not explicitly provided; ARMR-FMEA-0-001 appears in the filename but is not clearly identified as a revision."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: sourcePath indicates CE MDD, while authoritySignal is general and the table mainly cites standards rather than a named authority."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source text has OCR or extraction quality issues, including misspellings such as harzadous, hazzards, comtact, faliures, and sterillization."
+    },
+    {
+      "severity": "warning",
+      "reason": "Possible conflicting product evidence: the product signal is HAD/A/F 1417-1717 and essential performance refers to image acquisition, while several software rows state software for centrifuge and control is applied."
+    },
+    {
+      "severity": "info",
+      "reason": "Some standards references appear malformed or ambiguous, including ISO 7010: 20030W001 and IEC60601-1-14."
+    }
+  ]
+}
