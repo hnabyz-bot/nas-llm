@@ -1,0 +1,185 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954418-16wb",
+    "sourcePath": "raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/90_규격 Test report/1. 시험소 제출서류/04. 회로도_패턴도_부품배치도_블록다이어그램/1. 회로도/2. Cyan(GT1717C,GT1717CP)_Gate/Cyan(GT1717C,GT1717CP)_Gate.pdf",
+    "canonicalGroupId": "16de01bc7b36"
+  },
+  "document": {
+    "title": "CYAN GATA / CYZN_GATA",
+    "documentType": "Circuit schematic",
+    "productModels": [
+      "GT1717C",
+      "GT1717CP"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V1.0; Rev A",
+    "documentDate": "27/05/2025; Monday, July 07, 2025; Thursday, August 21, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Circuit schematic for CYAN GATA/CYZN_GATA gate circuitry, including main signal level shifting, power rails, and GATA connector blocks.",
+    "officialUse": "DHF regulatory/test report supporting schematic documentation for CYAN GT1717C and GT1717CP.",
+    "keyPoints": [
+      "Document index lists pages for DOC, MAIN&Signal, POWER, GATA_CON1-3, and GATA_CON4-6.",
+      "Level shift is specified between FPGA 1.5 V and Gata 3.3 V.",
+      "Power inputs include VGH_15V5, VGL_N8V, VCC_3V3/2A, LDO VGL_7V/1A, VGH_15V/1A, and VCC_1V5/0.3A.",
+      "GATA connectors CON1 through CON6 use 05002HR-50J05 and repeat pin functions including GUARD, VSRI, VEE, VGG, VCC, GND, CPV, OE, LR, and STV signals.",
+      "Revision history states V1.0 dated 27/05/2025 with description Rev-A Release."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN",
+      "type": "product family",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Gate.pdf"
+    },
+    {
+      "name": "GT1717C",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Gate.pdf"
+    },
+    {
+      "name": "GT1717CP",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Gate.pdf"
+    },
+    {
+      "name": "CYZN_GATA",
+      "type": "document number or schematic identifier",
+      "evidence": "Title Size Document Number Rev Date: Sheet of 00_DOC A CYZN_GATA A4"
+    },
+    {
+      "name": "TXB0108PWR",
+      "type": "electronic component",
+      "evidence": "U2 TXB0108PWR ... U1 TXB0108PWR"
+    },
+    {
+      "name": "TPS7A4700RGWR",
+      "type": "electronic component",
+      "evidence": "U3 TPS7A4700RGWR"
+    },
+    {
+      "name": "TPS7A3301RGWR",
+      "type": "electronic component",
+      "evidence": "U4 TPS7A3301RGWR"
+    },
+    {
+      "name": "AP7331-15WG-7",
+      "type": "electronic component",
+      "evidence": "U5 AP7331-15WG-7"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "CYAN GATA schematic",
+      "pageTarget": "CYAN GATA Schematic",
+      "evidence": "Title Size Document Number Rev Date: Sheet of 00_DOC A CYZN_GATA A4"
+    },
+    {
+      "name": "Level shift",
+      "pageTarget": "Signal Level Shifting",
+      "evidence": "Level shift FPGA(1.5V) ↔ Gata(3.3V)"
+    },
+    {
+      "name": "Normal output mode",
+      "pageTarget": "GATA Normal Output Mode",
+      "evidence": "Normal output mode HI= FPGA → GATA_STV_R → STV_LR1→ STV_LR2 →STV_LR3 →STV_LR4 →STV_LR5 →GATA_STV_L → FPGA"
+    },
+    {
+      "name": "Power input",
+      "pageTarget": "CYAN GATA Power Inputs",
+      "evidence": "Power Input VGH_15V5 VGL_N8V VCC_3V3/2A LDO VGL_7V/1A VGH_15V/1A VCC_1V5/0.3A"
+    },
+    {
+      "name": "GATA connector pinout",
+      "pageTarget": "GATA Connector Pinout",
+      "evidence": "CON1 05002HR-50J05 ... 50_GUARD ... 47_VEE ... 45_VGG ... 43_VCC ... 41_GND"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a circuit schematic for CYAN GATA/CYZN_GATA.",
+      "evidenceText": "CYAN GATA ... Title Size Document Number Rev Date: Sheet of 00_DOC A CYZN_GATA A4",
+      "pageTarget": "CYAN GATA Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source path associates the document with CYAN product models GT1717C and GT1717CP.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/.../Cyan(GT1717C,GT1717CP)_Gate.pdf",
+      "pageTarget": "GT1717C and GT1717CP",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision information includes V1.0, dated 27/05/2025, with Rev-A Release description.",
+      "evidenceText": "Rev V1.0 27/05/2025 Date Rev-A Release Description",
+      "pageTarget": "CYAN GATA Schematic Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains five sheets including DOC, MAIN&Signal, POWER, GATA_CON1-3, and GATA_CON4-6.",
+      "evidenceText": "Page DOC 03 00 GATA_CON1-3 02 Description MAIN&Signal 04 GATA_CON4-6 ... POWER 05",
+      "pageTarget": "CYAN GATA Schematic Sheet Index",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The MAIN&Signal sheet specifies level shifting between FPGA 1.5 V and Gata 3.3 V.",
+      "evidenceText": "Level shift FPGA(1.5V) ↔ Gata(3.3V)",
+      "pageTarget": "Signal Level Shifting",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic identifies power inputs including VGH_15V5, VGL_N8V, VCC_3V3/2A, LDO VGL_7V/1A, VGH_15V/1A, and VCC_1V5/0.3A.",
+      "evidenceText": "Power Input VGH_15V5 VGL_N8V VCC_3V3/2A LDO VGL_7V/1A VGH_15V/1A VCC_1V5/0.3A",
+      "pageTarget": "CYAN GATA Power Inputs",
+      "confidence": "high"
+    },
+    {
+      "claim": "The POWER sheet includes regulators TPS7A4700RGWR, TPS7A3301RGWR, and AP7331-15WG-7.",
+      "evidenceText": "U3 TPS7A4700RGWR ... U4 TPS7A3301RGWR ... U5 AP7331-15WG-7",
+      "pageTarget": "CYAN GATA Power Circuit",
+      "confidence": "high"
+    },
+    {
+      "claim": "GATA connectors CON1 through CON6 use part number 05002HR-50J05.",
+      "evidenceText": "CON1 05002HR-50J05 ... CON2 05002HR-50J05 ... CON3 05002HR-50J05 ... CON5 05002HR-50J05 ... CON4 05002HR-50J05 ... CON6 05002HR-50J05",
+      "pageTarget": "GATA Connector Pinout",
+      "confidence": "high"
+    },
+    {
+      "claim": "The connector pin list includes repeated signal names such as GUARD, VSRI, VEE, VGG, VCC, GND, CPV, OE, LR, and STV.",
+      "evidenceText": "50_GUARD ... 49_VSRI ... 47_VEE ... 45_VGG ... 43_VCC ... 41_GND ... 31_CPV_L ... 30_OE1_L ... 26_LR ... 33_STV2_L",
+      "pageTarget": "GATA Connector Pinout",
+      "confidence": "high"
+    },
+    {
+      "claim": "Normal output mode routes STV from FPGA through GATA_STV_R and STV_LR1 to STV_LR5 before returning through GATA_STV_L to FPGA when HI.",
+      "evidenceText": "Normal output mode HI= FPGA → GATA_STV_R → STV_LR1→ STV_LR2 →STV_LR3 →STV_LR4 →STV_LR5 →GATA_STV_L → FPGA",
+      "pageTarget": "GATA Normal Output Mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output channel count is 512.",
+      "evidenceText": "OUTPUT CHANNEL = 512",
+      "pageTarget": "GATA Output Channel",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Multiple dates appear in the source: revision date 27/05/2025, sheet dates Monday, July 07, 2025, and Thursday, August 21, 2025."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction contains likely inconsistencies such as CYAN GATA versus CYZN_GATA and duplicated title blocks."
+    }
+  ]
+}
