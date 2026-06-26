@@ -1,0 +1,118 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954395-p0c",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/2023 시험소 규격업데이트/HAD1717MC/Safety 접수자료 231219/8. 회로도/HAD1717MC/ADI_GYRO_V001_20230810.pdf",
+    "canonicalGroupId": "84c054778aad"
+  },
+  "document": {
+    "title": "ADI_GYRO_V001_20230810",
+    "documentType": "circuit schematic",
+    "productModels": [
+      "HAD1717MC",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V001",
+    "documentDate": "Tuesday, December 26, 2023",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Schematic page for an ADI gyro circuit using a BMI160 sensor with I2C signals and 3.3 V power.",
+    "officialUse": "RA safety submission circuit diagram material.",
+    "keyPoints": [
+      "The circuit lists I2C address 0b1101000 (0x68).",
+      "The main IC shown is U1 BMI160.",
+      "Signals include MCU_SCL, MCU_SDA, I2C_ADD_SET, and V3V3_FP.",
+      "Connectors CN1 and CN2 are identified as 12505WR-05P."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "sourcePath includes .../HAD1717MC/.../ADI_GYRO_V001_20230810.pdf"
+    },
+    {
+      "name": "BMI160",
+      "type": "component",
+      "evidence": "U1 BMI160"
+    },
+    {
+      "name": "CN1 12505WR-05P",
+      "type": "connector",
+      "evidence": "CN1\n12505WR-05P"
+    },
+    {
+      "name": "CN2 12505WR-05P",
+      "type": "connector",
+      "evidence": "CN2\n12505WR-05P"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "I2C address",
+      "pageTarget": "I2C address",
+      "evidence": "I2C ADDR: 0b1101000 (0x68)"
+    },
+    {
+      "name": "Circuit schematic",
+      "pageTarget": "Circuit schematic",
+      "evidence": "Title\nSize Document Number R e v\nDate: Sheet o f"
+    },
+    {
+      "name": "3.3 V power rail",
+      "pageTarget": "3.3 V power rail",
+      "evidence": "V3V3_FP"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The schematic specifies I2C address 0b1101000 (0x68).",
+      "evidenceText": "I2C ADDR: 0b1101000 (0x68)",
+      "pageTarget": "I2C address",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main IC designated U1 is BMI160.",
+      "evidenceText": "U1\nBMI160",
+      "pageTarget": "BMI160",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes MCU_SCL and MCU_SDA I2C signal labels.",
+      "evidenceText": "MCU_SCL\nMCU_SDA",
+      "pageTarget": "I2C bus",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes a V3V3_FP power net.",
+      "evidenceText": "V3V3_FP",
+      "pageTarget": "3.3 V power rail",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic date field shows Tuesday, December 26, 2023.",
+      "evidenceText": "Date: Sheet o f\n<Doc> <RevCo\n<Title>\nA4\n1 1 Tuesday, December 26, 2023",
+      "pageTarget": "Document date",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Title and revision fields in OCR text appear as placeholders rather than populated schematic metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model HAD1717MC is taken from the source path, while the schematic text itself does not show a product model."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR text is sparse and layout-derived, with repeated schematic border labels and incomplete metadata fields."
+    }
+  ]
+}

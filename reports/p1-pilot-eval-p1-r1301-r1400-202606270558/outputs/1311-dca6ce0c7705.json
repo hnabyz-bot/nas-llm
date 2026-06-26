@@ -1,0 +1,166 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954393-mmt",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/2023 시험소 규격업데이트/ADD/접수자료/Safety 접수자료 231219/5. Insulation & Block diagram/ADD Insulation & Block diagram.pptx",
+    "canonicalGroupId": "dca6ce0c7705"
+  },
+  "document": {
+    "title": "ADD Insulation & Block diagram",
+    "documentType": "Insulation diagram and set-up diagram presentation",
+    "productModels": [
+      "HAD/A/F 1417-1717",
+      "HAD1417MCW Detector"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Confidential insulation and set-up diagrams for power supply box and power adapter configurations involving HAD1417MCW Detector.",
+    "officialUse": "Safety receipt material showing insulation diagrams and electrical set-up diagrams for power box and adapter configurations.",
+    "keyPoints": [
+      "Insulation diagram includes Power supply box.",
+      "Insulation diagram includes Power adapter.",
+      "Set-up diagrams show CPU, PMIC, FPGA, main board, power board, ROIC board, GATEIC board, panel, battery, wireless data, Giga Ethernet, and DC-DC voltage regulators.",
+      "Power Box configuration includes AC-DC Power Supply Box with input 100~240VAC /50-60Hz and output 16VDC 200W.",
+      "Adapter configuration includes SMPS with input 100~240VAC /50-60Hz and output 15VDC 6A."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "productSignal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "HAD1417MCW Detector",
+      "type": "productModel",
+      "evidence": "P A N E L HAD1417MCW Detector"
+    },
+    {
+      "name": "Power supply box",
+      "type": "component",
+      "evidence": "1. Insulation diagram <confidential> ① Power supply box"
+    },
+    {
+      "name": "Power adapter",
+      "type": "component",
+      "evidence": "1. Insulation diagram <confidential> ② Power adapter"
+    },
+    {
+      "name": "AC-DC Power Supply Box",
+      "type": "component",
+      "evidence": "AC-DC Power Supply Box 100~ 240VAC /50-60Hz"
+    },
+    {
+      "name": "SMPS",
+      "type": "component",
+      "evidence": "SMPS Input: 100~240VAC /50-60Hz Output: 15VDC 6A"
+    },
+    {
+      "name": "BATTERY",
+      "type": "component",
+      "evidence": "Output: 11.1V 3400mAh BATTERY"
+    },
+    {
+      "name": "WiFi Moudle",
+      "type": "component",
+      "evidence": "Giga Ethernet WiFi Moudle"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Insulation diagram",
+      "pageTarget": "Insulation Diagram",
+      "evidence": "1. Insulation diagram <confidential> ① Power supply box"
+    },
+    {
+      "name": "Set-up diagram",
+      "pageTarget": "Set-up Diagram",
+      "evidence": "2. set-up diagram <confidential> CPU DC-DC Voltage Regulator PMIC FPGA MAIN BD POWER BD"
+    },
+    {
+      "name": "Power supply box configuration",
+      "pageTarget": "Power Supply Box Configuration",
+      "evidence": "(1) Power Box"
+    },
+    {
+      "name": "Adapter configuration",
+      "pageTarget": "Adapter Configuration",
+      "evidence": "(2) Adapter"
+    },
+    {
+      "name": "AC-DC power supply input/output",
+      "pageTarget": "AC-DC Power Supply",
+      "evidence": "Input: 100~240VAC /50-60Hz Output: 16VDC 200W"
+    },
+    {
+      "name": "SMPS input/output",
+      "pageTarget": "SMPS",
+      "evidence": "SMPS Input: 100~240VAC /50-60Hz Output: 15VDC 6A"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document contains an insulation diagram for a power supply box.",
+      "evidenceText": "1. Insulation diagram <confidential> ① Power supply box",
+      "pageTarget": "Power Supply Box Insulation Diagram",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains an insulation diagram for a power adapter.",
+      "evidenceText": "1. Insulation diagram <confidential> ② Power adapter",
+      "pageTarget": "Power Adapter Insulation Diagram",
+      "confidence": "high"
+    },
+    {
+      "claim": "The set-up diagram identifies the detector as HAD1417MCW Detector.",
+      "evidenceText": "P A N E L HAD1417MCW Detector",
+      "pageTarget": "HAD1417MCW Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Power Box configuration includes AC-DC Power Supply Box input of 100~240VAC /50-60Hz and output of 16VDC 200W.",
+      "evidenceText": "Input: 100~240VAC /50-60Hz Output: 16VDC 200W ... AC-DC Power Supply Box 100~ 240VAC /50-60Hz ... (1) Power Box",
+      "pageTarget": "Power Box Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Adapter configuration includes SMPS input of 100~240VAC /50-60Hz and output of 15VDC 6A.",
+      "evidenceText": "(2) Adapter ... SMPS Input: 100~240VAC /50-60Hz Output: 15VDC 6A",
+      "pageTarget": "Adapter Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The set-up diagram includes a battery output of 11.1V 3400mAh.",
+      "evidenceText": "Output: 11.1V 3400mAh BATTERY",
+      "pageTarget": "Battery Specification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The set-up diagram includes wireless data, Giga Ethernet, and WiFi module connections.",
+      "evidenceText": "Giga Ethernet WiFi Moudle ... Wireless Data Giga Ethernet",
+      "pageTarget": "Detector Communication Interfaces",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly present in the source text; path contains 231219 but it is not asserted as the document date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; metadata authoritySignal is only 'general' and no regulator or jurisdiction appears in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954388-ic8",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/2023 시험소 규격업데이트/ADD/접수자료/EMC 접수자료 231219/3. EUT Internal Operating Frequencies/ADD(1G) Detector 기타 서류 231220.docx",
+    "canonicalGroupId": "625bae2dca4a"
+  },
+  "document": {
+    "title": "ADD(1G) Detector 기타 서류",
+    "documentType": "기타 서류",
+    "productModels": [
+      "ADD(1G) Detector"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "ADD(1G) Detector document listing EUT internal operating frequencies and tested power interface conditions.",
+    "officialUse": "Supports EMC or regulatory test documentation by identifying EUT clock frequencies and tested voltage modes.",
+    "keyPoints": [
+      "EUT internal operating frequencies are listed for MCU, MPU, LAN, SerDes, and FPGA functions.",
+      "Power interface tested voltage modes include AC 100 V, 220 V, 230 V, 240 V and DC 11.1 V battery.",
+      "AC test modes are single phase at 50 Hz or 60 Hz."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADD(1G) Detector",
+      "type": "product",
+      "evidence": "ADD(1G) Detector 기타 서류"
+    },
+    {
+      "name": "MCU",
+      "type": "component",
+      "evidence": "16 MHz\n\nMCU"
+    },
+    {
+      "name": "MPU",
+      "type": "component",
+      "evidence": "24 MHz\n\nMPU(PLL,USB and so on)"
+    },
+    {
+      "name": "LAN",
+      "type": "component",
+      "evidence": "25 MHz\n\nLAN"
+    },
+    {
+      "name": "SerDes",
+      "type": "component",
+      "evidence": "90 MHz\n\nSerDes"
+    },
+    {
+      "name": "FPGA",
+      "type": "component",
+      "evidence": "80 MHz\n\nFPGA(Internal)"
+    },
+    {
+      "name": "Battery",
+      "type": "power source",
+      "evidence": "11.1\n\n-\n\n-\n\nDC\n\nSingle\n\nBattery"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "EUT Internal Operating Frequencies",
+      "pageTarget": "EUT Internal Operating Frequencies",
+      "evidence": "EUT Internal Operating Frequencies:"
+    },
+    {
+      "name": "Power Interface Tested Voltage",
+      "pageTarget": "Power Interface (Tested Voltage)",
+      "evidence": "Power Interface (Tested Voltage)"
+    },
+    {
+      "name": "Single Phase AC Test Modes",
+      "pageTarget": "Single Phase AC Power Interface",
+      "evidence": "AC 50\n\nSingle"
+    },
+    {
+      "name": "DC Battery Test Mode",
+      "pageTarget": "DC Battery Power Interface",
+      "evidence": "DC\n\nSingle\n\nBattery"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source document title is ADD(1G) Detector 기타 서류.",
+      "evidenceText": "ADD(1G) Detector 기타 서류",
+      "pageTarget": "ADD(1G) Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains an EUT Internal Operating Frequencies section.",
+      "evidenceText": "EUT Internal Operating Frequencies:",
+      "pageTarget": "EUT Internal Operating Frequencies",
+      "confidence": "high"
+    },
+    {
+      "claim": "The MCU frequency is 16 MHz.",
+      "evidenceText": "16 MHz\n\nMCU",
+      "pageTarget": "MCU",
+      "confidence": "high"
+    },
+    {
+      "claim": "The MPU frequencies include 24 MHz for PLL, USB and related functions and 32.768 MHz for RTC.",
+      "evidenceText": "24 MHz\n\nMPU(PLL,USB and so on)\n\n32.768 MHz\n\nMPU(RTC)",
+      "pageTarget": "MPU",
+      "confidence": "high"
+    },
+    {
+      "claim": "The LAN frequency is 25 MHz.",
+      "evidenceText": "25 MHz\n\nLAN",
+      "pageTarget": "LAN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SerDes frequency is 90 MHz.",
+      "evidenceText": "90 MHz\n\nSerDes",
+      "pageTarget": "SerDes",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA internal frequencies listed are 80 MHz, 50 MHz, and 25 MHz.",
+      "evidenceText": "80 MHz\n\nFPGA(Internal)\n\n50 MHz\n\nFPGA(Internal)\n\n25 MHz\n\nFPGA(Internal)",
+      "pageTarget": "FPGA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document contains a Power Interface (Tested Voltage) section.",
+      "evidenceText": "Power Interface (Tested Voltage)",
+      "pageTarget": "Power Interface (Tested Voltage)",
+      "confidence": "high"
+    },
+    {
+      "claim": "AC tested voltage modes include 100 V at 50 Hz, 100 V at 60 Hz, 220 V at 60 Hz, 230 V at 50 Hz, and 240 V at 50 Hz, all single phase.",
+      "evidenceText": "1\n\n100\n\n0.55\n\n55.0\n\nAC 50\n\nSingle\n\n-\n\n2\n\n100\n\n0.53\n\n53.0\n\nAC 60\n\nSingle\n\n-\n\n3\n\n220\n\n0.30\n\n66.0\n\nAC 60\n\nSingle\n\n-\n\n4\n\n230\n\n0.32\n\n73.6\n\nAC 50\n\nSingle\n\n-\n\n5\n\n240\n\n0.29\n\n69.6\n\nAC 50\n\nSingle\n\n-",
+      "pageTarget": "AC Power Interface Test Modes",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DC tested voltage mode is 11.1 V, single phase, with Battery comment.",
+      "evidenceText": "6\n\n11.1\n\n-\n\n-\n\nDC\n\nSingle\n\nBattery",
+      "pageTarget": "DC Battery Power Interface",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    }
+  ]
+}
