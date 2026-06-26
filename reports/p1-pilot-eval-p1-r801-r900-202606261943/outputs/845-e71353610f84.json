@@ -1,0 +1,254 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954377-7es",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/2. Infou 콘솔 추가 기술문서/설계변경/User_Console Manual Ver.0.1_KOR.pdf",
+    "canonicalGroupId": "e71353610f84"
+  },
+  "document": {
+    "title": "Digital Radiography Console Software feel-DRCS 사용자 매뉴얼",
+    "documentType": "User Manual",
+    "productModels": [
+      "feel-DRCS",
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "0.1",
+    "documentDate": "2020-03-12",
+    "standards": [
+      "DICOM"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "User manual for H&abyz feel-DRCS digital radiography console software used with supported X-ray detectors.",
+    "officialUse": "Provides installation, operation, configuration, DICOM, image processing, option software, troubleshooting, and revision history information for feel-DRCS.",
+    "keyPoints": [
+      "feel-DRCS is described as DR console/control software for image acquisition from DR detectors, image processing, and DICOM services for PACS integration.",
+      "The stated intended use is acquisition of general X-ray images by radiologic technologists and physicians in hospitals.",
+      "The software must be connected to an X-ray detector and operates under exposure conditions of an X-ray generator system.",
+      "Supported H&abyz detector models listed are HAD1717MC and HAD1717MG.",
+      "The manual identifies version 0.1 dated 2020-03-12 as the initial release."
+    ]
+  },
+  "entities": [
+    {
+      "name": "feel-DRCS",
+      "type": "Software product",
+      "evidence": "feel-DRCS 는 H&abyz 사의 Digital Radiography Control Software 의 제품명입니다."
+    },
+    {
+      "name": "H&abyz",
+      "type": "Manufacturer",
+      "evidence": "주식회사 에이치앤아비즈(H&abyz)"
+    },
+    {
+      "name": "HAD1717MC",
+      "type": "Compatible detector model",
+      "evidence": "Manufacture Model H&abyz HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "Compatible detector model",
+      "evidence": "Manufacture Model H&abyz HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "PACS",
+      "type": "Clinical imaging system",
+      "evidence": "PACS 연동을 위한 DICOM 서비스를 제공하는 DR 콘솔 또는 DR 컨트롤 소프트웨어입니다."
+    },
+    {
+      "name": "DICOM Worklist",
+      "type": "DICOM service",
+      "evidence": "DICOM Worklist 를 통해 병원정보시스템(HIS)과 연동하여 환자 정보를 입력하거나 수동으로 환자 정보를 입력한다."
+    },
+    {
+      "name": "DICOM Storage",
+      "type": "DICOM service",
+      "evidence": "DICOM 전송을 위한 서버의 환경을 설정한다."
+    },
+    {
+      "name": "DICOM Print",
+      "type": "DICOM service",
+      "evidence": "DICOM Print 를 위한 서버의 환경을 설정한다."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Intended use of feel-DRCS",
+      "pageTarget": "feel-DRCS Intended Use",
+      "evidence": "Feel-DRCS 는 방사선사 및 의사들이 일반 x-ray 영상을 획득하기 위한 용도로 사용된다."
+    },
+    {
+      "name": "Qualified users",
+      "pageTarget": "feel-DRCS Qualified Users",
+      "evidence": "적법한 자격을 갖춘 사람 (의사, 의료 방사선 전문 기술자, 의료용 X-ray 기술자)만 이 제품을 사용할 수 있도록 하십시오."
+    },
+    {
+      "name": "Connection to X-ray detector",
+      "pageTarget": "feel-DRCS X-ray Detector Connection",
+      "evidence": "이 의료 기기는 단독으로 사용할 수 없습니다. 따라서 이 제품은 X-ray 디텍터와 연결해야 합니다."
+    },
+    {
+      "name": "Compatible detectors",
+      "pageTarget": "feel-DRCS Compatible Detectors",
+      "evidence": "Manufacture Model H&abyz HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "DICOM Modality Worklist configuration",
+      "pageTarget": "DICOM Modality Worklist",
+      "evidence": "DICOM Modality Worklsit 서비스를 사용하기 위한 서버 환경과 클라이언트 환경을 설정한다."
+    },
+    {
+      "name": "DICOM Storage configuration",
+      "pageTarget": "DICOM Storage",
+      "evidence": "DICOM 전송을 위한 서버의 환경을 설정한다."
+    },
+    {
+      "name": "DICOM Print configuration",
+      "pageTarget": "DICOM Print",
+      "evidence": "DICOM Print 를 위한 서버의 환경을 설정한다."
+    },
+    {
+      "name": "Image processing parameter files",
+      "pageTarget": "feel-DRCS Image Processing Parameters",
+      "evidence": "영상 처리에 사용하는 인자들이 저장되어 있는 parameter 파일을 지정한다."
+    },
+    {
+      "name": "Length calibration",
+      "pageTarget": "feel-DRCS Length Calibration",
+      "evidence": "Detector 의 pixel spacing 값을 임의로 설정할 수 있는 기능이다."
+    },
+    {
+      "name": "Viewsub option software",
+      "pageTarget": "Viewsub Option Software",
+      "evidence": "Option software 인 Viewsub 는 main console software 와 동기화 되어 움직이는 소프트웨어이다."
+    },
+    {
+      "name": "feelVIEW option software",
+      "pageTarget": "feelVIEW Option Software",
+      "evidence": "feelVIEW 는 main console 모니터 외에 별도의 의료용이나 고해상도 모니터를 사용하여 영상을 좀더 자세히 보고자 할 때 사용하는 소프트웨어이다."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a user manual for Digital Radiography Console Software feel-DRCS.",
+      "evidenceText": "Digital Radiography Console Software feel-DRCS 사용자 매뉴얼",
+      "pageTarget": "feel-DRCS User Manual",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manual version is 0.1.",
+      "evidenceText": "User Manual Version : 0.1",
+      "pageTarget": "feel-DRCS User Manual Version",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is 2020-03-12.",
+      "evidenceText": "Date : 2020.03.12",
+      "pageTarget": "feel-DRCS User Manual Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "Revision history identifies version 0.1 dated 2020-03-12 as the initial release.",
+      "evidenceText": "버전 날짜 내용 0.1 2020-03-12 Initial Release",
+      "pageTarget": "feel-DRCS Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "feel-DRCS is the product name of H&abyz Digital Radiography Control Software.",
+      "evidenceText": "feel-DRCS 는 H&abyz 사의 Digital Radiography Control Software 의 제품명입니다.",
+      "pageTarget": "feel-DRCS",
+      "confidence": "high"
+    },
+    {
+      "claim": "feel-DRCS provides image acquisition from DR detectors, image processing, and DICOM services for PACS integration.",
+      "evidenceText": "feel-DRCS 는 flat-panel 또는 CCD 등의 DR detector 로부터 영상 획득 및 임상적용을 위한 빠른 속도의 영상처리, 그리고 PACS 연동을 위한 DICOM 서비스를 제공하는 DR 콘솔 또는 DR 컨트롤 소프트웨어입니다.",
+      "pageTarget": "feel-DRCS Functional Description",
+      "confidence": "high"
+    },
+    {
+      "claim": "The intended use is general X-ray image acquisition by radiologic technologists and physicians.",
+      "evidenceText": "Feel-DRCS 는 방사선사 및 의사들이 일반 x-ray 영상을 획득하기 위한 용도로 사용된다.",
+      "pageTarget": "feel-DRCS Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is for use by qualified persons such as physicians, medical radiologic technologists, and medical X-ray technologists.",
+      "evidenceText": "적법한 자격을 갖춘 사람 (의사, 의료 방사선 전문 기술자, 의료용 X-ray 기술자)만 이 제품을 사용할 수 있도록 하십시오.",
+      "pageTarget": "feel-DRCS Qualified Users",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product cannot be used alone and must be connected to an X-ray detector.",
+      "evidenceText": "이 의료 기기는 단독으로 사용할 수 없습니다. 따라서 이 제품은 X-ray 디텍터와 연결해야 합니다.",
+      "pageTarget": "feel-DRCS X-ray Detector Connection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is to be used only as digital X-ray radiography console software for hospital X-ray radiography.",
+      "evidenceText": "이 제품은 의료 기기로 해당 병원의 X-ray 방사선 촬영을 위한 디지털 X-ray 촬영 콘솔 소프트웨어로만 사용해야합니다.",
+      "pageTarget": "feel-DRCS Intended Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed compatible H&abyz detector models are HAD1717MC and HAD1717MG.",
+      "evidenceText": "Manufacture Model H&abyz HAD1717MC, HAD1717MG",
+      "pageTarget": "feel-DRCS Compatible Detectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "Changing to a non-compatible device prevents feel-DRCS from operating.",
+      "evidenceText": "호환되는 장치 이외의 장치를 변경하면 feel-DRCS는 작동되지 않습니다.",
+      "pageTarget": "feel-DRCS Compatible Detectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "The workstation operating system requirements list Windows 7, Windows 8.1, and Windows 10.",
+      "evidenceText": "OS : Windows 7/8.1/10",
+      "pageTarget": "feel-DRCS Workstation Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "DICOM Worklist is used to interface with the hospital information system and enter patient information.",
+      "evidenceText": "DICOM Worklist 를 통해 병원정보시스템(HIS)과 연동하여 환자 정보를 입력하거나 수동으로 환자 정보를 입력한다.",
+      "pageTarget": "DICOM Modality Worklist",
+      "confidence": "high"
+    },
+    {
+      "claim": "DICOM Storage settings configure the server environment for DICOM transmission.",
+      "evidenceText": "DICOM 전송을 위한 서버의 환경을 설정한다.",
+      "pageTarget": "DICOM Storage",
+      "confidence": "high"
+    },
+    {
+      "claim": "DICOM Print settings configure the server environment for DICOM Print.",
+      "evidenceText": "DICOM Print 를 위한 서버의 환경을 설정한다.",
+      "pageTarget": "DICOM Print",
+      "confidence": "high"
+    },
+    {
+      "claim": "The optional DICOM update adds DICOM storage commitment SCU, DICOM MPPS SCU, and DICOM Query/Retrieve SCU services.",
+      "evidenceText": "업데이트를 통해 Feel-DRCS 는 DICOM 서비스 (DICOM storage commitment SCU, DICOM Modality Performed Procedure Step SCU, DICOM Query and Retrieve SCU)를 추가합니다.",
+      "pageTarget": "feel-DRCS DICOM Options",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority signal indicates MFDS/domestic, but the source text does not explicitly identify MFDS, a jurisdiction, approval status, or certificate number."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date and version are present, but no regulatory approval date or regulatory revision identifier is stated."
+    },
+    {
+      "severity": "info",
+      "reason": "The source is a product user manual; extracted regulatory facts are limited to manual statements such as intended use, compatible detectors, and operating constraints."
+    },
+    {
+      "severity": "info",
+      "reason": "Text is generally readable, but some OCR or source spelling inconsistencies are present, such as Worklsit, Filim, CANCLE, and SUPERVISIOR."
+    }
+  ]
+}

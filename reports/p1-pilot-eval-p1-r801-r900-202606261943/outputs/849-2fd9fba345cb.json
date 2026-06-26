@@ -1,0 +1,205 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954375-56c",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/5. Software validation/A-TCF-5-010_Software Validation_20190315.docx",
+    "canonicalGroupId": "2fd9fba345cb"
+  },
+  "document": {
+    "title": "Software Validation For X-ray Detector HAD1717MC, HAD1717MG",
+    "documentType": "Software Validation Report",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA",
+      "CDRH"
+    ],
+    "revisionOrVersion": "A-TCF-5-010 (Rev.0)",
+    "documentDate": "March/15/2019",
+    "standards": [
+      "FDA Quality System Regulation 21 CFR, Part 820",
+      "FDA Quality System Regulation 21 CFR, Part 803",
+      "CDRH Guidance: General Principles of Software Validation",
+      "CDRH Guidance: Off-The-Shelf Software Use in Medical Devices",
+      "CDRH Guidance: Guidance for the Submission of Premarket Notifications for Medical Image Management Devices",
+      "ISO 9001, December 2000 Quality System Standards",
+      "IEEE 1012-1986, Standard for Software Verification and Validation Plans",
+      "IEEE 829-1983, Standard for Software Test Documentation",
+      "IEEE 1016, Standard for software designs",
+      "IEEE 830, Standard for software requirements"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Software validation report for the HAD1717MC and HAD1717MG X-ray detector acquisition library.",
+    "officialUse": "Supports software validation documentation, including level of concern, SRS, SDS, hazard analysis, test plan, traceability, and V&V results.",
+    "keyPoints": [
+      "The software level of concern is defined as moderate.",
+      "The software is described as a middle-ware utility library between the still image detector and the End User Application.",
+      "Static and dynamic test results are recorded as approved or passed.",
+      "The software revision history lists version 1.0.0 dated March/15/2019 as the initial release."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "productModel",
+      "evidence": "For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "productModel",
+      "evidence": "For X-ray Detector HAD1717MC, HAD1717MG"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatoryAuthority",
+      "evidence": "FDA Quality System Regulation 21 CFR, Part 820"
+    },
+    {
+      "name": "CDRH",
+      "type": "regulatoryAuthority",
+      "evidence": "CDRH Guidance: General Principles of Software Validation"
+    },
+    {
+      "name": "Acquisition Library",
+      "type": "softwareComponent",
+      "evidence": "Acquisition Library (Software)"
+    },
+    {
+      "name": "End-User Application (EUA)",
+      "type": "softwareComponent",
+      "evidence": "End-User Application (EUA) – upper level software that acquires images from detector using this library and then presents (displays) images to end-user."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Level of Concern",
+      "pageTarget": "Software Level of Concern",
+      "evidence": "TFT-detectors use low X-ray irradiation that could not harm patient seriously in any way. Because of that the level of concern is defined as “moderate”."
+    },
+    {
+      "name": "Software Requirements Specification",
+      "pageTarget": "Software Requirements Specification",
+      "evidence": "Software Requirements Specification (SRS)"
+    },
+    {
+      "name": "Software Design Specification",
+      "pageTarget": "Software Design Specification",
+      "evidence": "Software Design Specification (SDS)"
+    },
+    {
+      "name": "Failure Mode and Effects Analysis",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "evidence": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA)."
+    },
+    {
+      "name": "Verification and Validation Testing",
+      "pageTarget": "Software Verification and Validation",
+      "evidence": "Description of V&V activities at the unit, integration, and system level. System level test protocol, including pass/fail criteria, and tests results."
+    },
+    {
+      "name": "Waterfall Life Cycle Model",
+      "pageTarget": "Waterfall Life Cycle Model",
+      "evidence": "Software development process follows classic methodology of Waterfall Life Cycle Model"
+    },
+    {
+      "name": "Offset/Gain Calibration",
+      "pageTarget": "Offset Gain Calibration",
+      "evidence": "Offset/Gain-Calibration –equalization of pixels’ transfer functions"
+    },
+    {
+      "name": "Bad Pixels Correction",
+      "pageTarget": "Bad Pixels Correction",
+      "evidence": "Bad Pixels Correction This operation corrects scattered bad (dead) pixels by interpolation with good neighbors."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a software validation report for X-ray detector models HAD1717MC and HAD1717MG.",
+      "evidenceText": "Software Validation For X-ray Detector HAD1717MC, HAD1717MG",
+      "pageTarget": "HAD1717MC Software Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report number and revision are A-TCF-5-010 Rev.0.",
+      "evidenceText": "Report No.: A-TCF-5-010 (Rev.0)",
+      "pageTarget": "A-TCF-5-010",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document was initially issued on March/15/2019.",
+      "evidenceText": "0 March/15/2019 Initially issued to Software validation.",
+      "pageTarget": "A-TCF-5-010",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software level of concern is moderate.",
+      "evidenceText": "Because of that the level of concern is defined as “moderate”.",
+      "pageTarget": "Software Level of Concern",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software is a middle-ware utility library between the still image detector and the End User Application.",
+      "evidenceText": "This is “middle-ware” utility library between still image detector (and its low-level driver) from one side and EUA from the other.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software includes SetUp functions for configuration, maintenance, Gain/Offset-Calibration, and Bad Pixels’ Correction.",
+      "evidenceText": "It also contains SU to modify software and hardware configuration parameters and preparation of Gain/Offset-Calibration and Bad Pixels’ Correction.",
+      "pageTarget": "Acquisition Library",
+      "confidence": "high"
+    },
+    {
+      "claim": "The development environment is Windows 10 Pro 64-bit with MS Visual C++ 2019 / MS Visual Studio Professional 2019.",
+      "evidenceText": "Development Environment (SRS-C-DevE): Windows 10 pro 64bit. MS Visual C++ 2019 (MS Visual Studio Professional 2019).",
+      "pageTarget": "Software Development Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The deployment operating system requirement is at least Windows 7.",
+      "evidenceText": "OS : At least Window 7",
+      "pageTarget": "Software Deployment Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The hazard evaluation model is FMEA.",
+      "evidenceText": "The model used for the Hazard Evaluation was Failure Mode and Effects Analysis (FMEA).",
+      "pageTarget": "Failure Mode and Effects Analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Static verification was certified as properly accomplished.",
+      "evidenceText": "As a result of the code review, we hereby certify that the static verification of Software is properly accomplished",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dynamic tests found no unsolved bugs subject to safety and effectiveness.",
+      "evidenceText": "There were no found unsolved bugs that are subjected to safety and effectiveness in this software.",
+      "pageTarget": "Software Verification and Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software revision 1.0.0 was released on March/15/2019 as the initial release.",
+      "evidenceText": "1.0.0 March/15/2019 Initial release, Dual polynomial fitting calibration Only for proprietary applications.",
+      "pageTarget": "Software Revision History",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority context is ambiguous: sourcePath indicates CE MDD, authoritySignal indicates FDA, and the document references FDA/CDRH regulations and guidances."
+    },
+    {
+      "severity": "info",
+      "reason": "Approval and review signature fields are present as headings but the source text does not show completed review or approval names, dates, or signatures."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text quality issues are present, including misspellings such as Aril, Dnamic, Traceabilty, Sevice, and fragmented diagram text."
+    }
+  ]
+}
