@@ -1,0 +1,266 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954377-6sf",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/05_설계개발 검증 및 유효성 확인/08_Cybersecurity/HAD1717MCW_Cybersecurity - 수정필요.docx",
+    "canonicalGroupId": "6ad6128cddbe"
+  },
+  "document": {
+    "title": "Cybersecurity Documentation",
+    "documentType": "Cybersecurity documentation",
+    "productModels": [
+      "HAD1717MCW",
+      "HAD1417MCW"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "WPA",
+      "WPAPSK",
+      "WPA2",
+      "WPA2PSK",
+      "WPAPSK+TKIP"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity documentation describing ADD cybersecurity risks, controls, traceability, verification, update process, and software integrity measures.",
+    "officialUse": "Supports regulatory documentation for cybersecurity risk analysis, risk controls, verification and validation traceability, software update planning, and device software integrity controls.",
+    "keyPoints": [
+      "Cybersecurity risks include unauthorized access by unauthorized personnel and access to unencrypted data.",
+      "Controls include WiFi login password restriction and authentication/encryption for transmission data.",
+      "Verification for CC001 and CC002 used SDUpdater_ReadFirmwareInfoEx and was performed on June/15/2021 by Kim, Wan Soo.",
+      "Firmware update workflow is described through detector connection, update file selection, network configuration, and wireless network settings.",
+      "ADD does not provide dynamic software updates; updates are made only by CS engineers."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADD",
+      "type": "device",
+      "evidence": "The ADD restrict random access by setting id / pw when connecting to Wireless network."
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "The FDA typically will not need to review or approve medical device software changes made solely to strengthen cybersecurity."
+    },
+    {
+      "name": "H&Abyz",
+      "type": "manufacturer or organization",
+      "evidence": "H&Abyz recommends to use the \"Average Dark\" option to enhance image performance."
+    },
+    {
+      "name": "AQP702",
+      "type": "procedure document",
+      "evidence": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702)."
+    },
+    {
+      "name": "Kim, Wan Soo",
+      "type": "test performer",
+      "evidence": "Test performed by Kim, Wan Soo"
+    },
+    {
+      "name": "SDUpdater_ReadFirmwareInfoEx",
+      "type": "software function",
+      "evidence": "Call the function SDUpdater_ReadFirmwareInfoEx"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Cybersecurity risk analysis",
+      "pageTarget": "Cybersecurity risk analysis",
+      "evidence": "Hazard analysis, mitigations, and design considerations pertaining to intentional and unintentional cybersecurity risks associated with your device"
+    },
+    {
+      "name": "Unauthorized access",
+      "pageTarget": "Unauthorized access",
+      "evidence": "HA-0009 Unauthorized access by unauthorized personnel"
+    },
+    {
+      "name": "Unencrypted data access",
+      "pageTarget": "Unencrypted data access",
+      "evidence": "HA-0010 Unauthorized user can access the unencrypted data"
+    },
+    {
+      "name": "WiFi login password",
+      "pageTarget": "WiFi login password control",
+      "evidence": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network"
+    },
+    {
+      "name": "Authentication and encryption",
+      "pageTarget": "Authentication and encryption control",
+      "evidence": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc."
+    },
+    {
+      "name": "Cybersecurity traceability matrix",
+      "pageTarget": "Cybersecurity traceability matrix",
+      "evidence": "[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]"
+    },
+    {
+      "name": "Validated software updates and patches",
+      "pageTarget": "Validated software updates and patches",
+      "evidence": "A summary describing the plan for providing validated software updates and patches as needed throughout the lifecycle of the medical device"
+    },
+    {
+      "name": "Medical device software integrity",
+      "pageTarget": "Medical device software integrity",
+      "evidence": "controls that are in place to assure that the medical device software will maintain its integrity"
+    },
+    {
+      "name": "Detector calibration",
+      "pageTarget": "Detector calibration",
+      "evidence": "This calibration function shall be performance once every one year for stabilized detector condition."
+    },
+    {
+      "name": "Firmware updates",
+      "pageTarget": "Firmware updates",
+      "evidence": "Use the latest FW / Software"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled Cybersecurity Documentation.",
+      "evidenceText": "Cybersecurity Documentation",
+      "pageTarget": "Cybersecurity Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document addresses hazard analysis, mitigations, and design considerations for intentional and unintentional cybersecurity risks.",
+      "evidenceText": "Hazard analysis, mitigations, and design considerations pertaining to intentional and unintentional cybersecurity risks associated with your device",
+      "pageTarget": "Cybersecurity risk analysis",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity risk HA-0009 is unauthorized access by unauthorized personnel.",
+      "evidenceText": "HA-0009 Unauthorized access by unauthorized personnel",
+      "pageTarget": "Unauthorized access",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity risk HA-0010 is unauthorized user access to unencrypted data.",
+      "evidenceText": "HA-0010 Unauthorized user can access the unencrypted data",
+      "pageTarget": "Unencrypted data access",
+      "confidence": "high"
+    },
+    {
+      "claim": "Control CC001 is a WiFi login password control that restricts random access by setting an ID and password for wireless network connection.",
+      "evidenceText": "CC001 WiFi Login Password Restrict random access by setting id / pw when connecting to Wireless network",
+      "pageTarget": "WiFi login password control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Control CC002 protects transmission data by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, and WPAPSK+TKIP.",
+      "evidenceText": "CC002 Authentication and encryption Transmission data is protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Authentication and encryption control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a cybersecurity risk to risk control traceability matrix.",
+      "evidenceText": "[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]",
+      "pageTarget": "Cybersecurity traceability matrix",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC001 verification calls SDUpdater_ReadFirmwareInfoEx and confirms registered password information.",
+      "evidenceText": "CC001 WiFi Login Password ... Call the function SDUpdater_ReadFirmwareInfoEx Confirmation of registered password information.",
+      "pageTarget": "Cybersecurity control verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "CC002 verification calls SDUpdater_ReadFirmwareInfoEx and confirms encryption algorithm application.",
+      "evidenceText": "CC002 Authentication and encryption ... Call the function SDUpdater_ReadFirmwareInfoEx Confirmation of encryption algorithm application.",
+      "pageTarget": "Cybersecurity control verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cybersecurity control verification testing was performed on June/15/2021 by Kim, Wan Soo.",
+      "evidenceText": "Test performed on June/15/2021 Test performed by Kim, Wan Soo",
+      "pageTarget": "Cybersecurity control verification",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Release and design changes are made according to software development procedure Doc. No. AQP702.",
+      "evidenceText": "We make release and design changes in accordance with software development procedures(Doc. No. AQP702).",
+      "pageTarget": "Software development procedure AQP702",
+      "confidence": "high"
+    },
+    {
+      "claim": "The operator can update firmware automatically on network connection or wireless network setting.",
+      "evidenceText": "The operator can update firmware automatically on network connection / wireless network setting.",
+      "pageTarget": "Firmware updates",
+      "confidence": "high"
+    },
+    {
+      "claim": "The update workflow includes attaching an update file and clicking Update, with completion shown in the Log tab.",
+      "evidenceText": "Click “…” next to “Update file” to attach the file to update and click “Update”. Update completion is shown in “Log” tab.",
+      "pageTarget": "Firmware update procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network configuration allows changing detector IP, MAC address, netmask, country, and wireless network settings.",
+      "evidenceText": "You can change detector IP, MAC address, netmask, country and wireless network settings. Click “Update” after setting and changing.",
+      "pageTarget": "Network configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADD restricts random access by setting an ID and password when connecting to a wireless network.",
+      "evidenceText": "The ADD restrict random access by setting id / pw when connecting to Wireless network.",
+      "pageTarget": "WiFi login password control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADD protects transmission data by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, and WPAPSK+TKIP.",
+      "evidenceText": "And transmission data should be protected by applying encryption such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.",
+      "pageTarget": "Authentication and encryption control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The calibration function is to be performed once every year for stabilized detector condition.",
+      "evidenceText": "This calibration function shall be performance once every one year for stabilized detector condition.",
+      "pageTarget": "Detector calibration",
+      "confidence": "medium"
+    },
+    {
+      "claim": "H&Abyz recommends using Average Dark to enhance image performance.",
+      "evidenceText": "H&Abyz recommends to use the \"Average Dark\" option to enhance image performance.",
+      "pageTarget": "Dark image acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Bright images must be acquired at twenty calibration points.",
+      "evidenceText": "The bright images must be acquired at twenty calibration points.",
+      "pageTarget": "Bright image acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADD does not provide dynamic software updates, and updates are made only by CS engineers.",
+      "evidenceText": "ADD does not provide dynamic software updates. Updates are made only by CS engineers.",
+      "pageTarget": "Firmware updates",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document revision or version is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document date is not present; June/15/2021 appears only as a cybersecurity control test date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous because FDA is mentioned in a general statement, while authoritySignal identifies FDA."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product models are taken from sourcePath metadata rather than the body text."
+    },
+    {
+      "severity": "info",
+      "reason": "Some text appears to have formatting or OCR quality issues, including merged table headers and inconsistent H&Abyz/H&abyz spelling."
+    }
+  ]
+}
