@@ -1,0 +1,1260 @@
+queueId: ingest-1781569954370-nu
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - 국내 기술문서/03. 기술문서 첨부자료/03 제품의 성능 및 안전을 확인하기 위한 자료/03 성능에 관한 자료/1. 소프트웨어 적합성/3.2 [HnVUE] Software Development Plan (A-SDP-HNV).pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/14f5daca0e91/3.2 [HnVUE] Software Development Plan (A-SDP-HNV)__14f5daca0e91_combined.txt
+canonicalGroupId: 0776c35fb1d4
+productSignal: HnX
+authoritySignal: MFDS/domestic
+pilotRank: 659
+
+SOURCE_TEXT
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 1 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Software Development Plan
+for
+HnVUE
+Product name: Digital Flat Panel X-ray Detector
+(Console software)
+Model name: HnX-R1
+Ref no.: HnVUE
+Report No.: A-SDP-HNV (Rev.0)
+Dept. / Title Name Date Signature
+Prepared R&D Manager KyungSoo LEE July 02, 2024
+Review RA Team Jimin HAN July 02, 2024
+Approval Quality Manager Namkyu HUR July 02, 2024
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 2 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Table of contents
+1. Purpose of the software development plan .................................................................................... 4
+2. Work that should be performed in the development stage .......................................................... 4
+3. Classification of software and its application ................................................................................ 5
+3.1 Software classification comply with FDA Guide Line ........................................................... 5
+3.2 Software classification in accordance with EN 62304 ............................................................ 6
+4. Software Development Environment ............................................................................................. 8
+4.1 Software development resources............................................................................................ 10
+5. Software Requirements Specification .......................................................................................... 11
+6. Software Architectural Design ...................................................................................................... 21
+7. Software Design Specification....................................................................................................... 21
+8. Software Risk Management .......................................................................................................... 22
+9. Software Verification & Validation .............................................................................................. 24
+10. Software release ............................................................................................................................. 25
+11. Software Configuration Management.......................................................................................... 26
+12. Problem settlement and support in the software development activities .................................. 27
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 3 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Revision history
+Rev. Revision date Page The reason & content for establishment and amendment
+0 July 02, 2024 - Initial Release
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 4 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+1. Purpose of the software development plan
+To use the Digital Flat Panel X-ray Detector(Console software) developed, produced and sold by this
+company according to intention, it aims at developing software that can manipulate and utilize the
+product function.
+2. Work that should be performed in the development stage
+(1) Determine which product will be developed, and forward the requirements to the R&D team so get it
+developed according to intention.
+(2) Stage of the development work (time frame)
+1) First stage: Select the product to be developed.
+2) Second stage: Gather material on the selected product.
+3) Third stage: Based on the gathered material, select and contract with a development firm which
+will realize the product development.
+4) Fourth stage: Forward the requirements necessary for the product development to the selected
+firm.
+5) Fifth stage: Once the development firm get started the product development, this company shall
+forward the development direction, changed requirements, etc to the development firm aside from
+a relevant meeting and support the product development positively.
+6) Sixth stage: If the development is finished, conduct testing and verification for the product
+realization jointly with the development firm, and adjust, complement so make the completed
+product a reality.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 5 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+3. Classification of software and its application
+3.1 Software classification comply with FDA Guide Line
+(1) S/W is classified and applied in accordance with the table as follows. :
+“Major” Level of
+Concern
+The level of concern is “Major” if a failure or latent flaw could directly result in
+death or serious injury to the patient or operator. The level of concern is also
+“Major” if a failure or latent flaw could indirectly result in death or serious injury of
+the patient or operator through incorrect or delayed information.
+“Moderate” Level
+of Concern
+The level of concern is “Moderate” if a failure or latent design flaw could directly
+result in minor injury to the patient or operator. The level of concern is also
+“Moderate” if a failure or latent flaw could indirectly result in minor injury to the
+patient or operator through incorrect or delayed information.
+“Minor” Level of
+Concern
+The level of concern is “Minor” if failures or latent design flaws are unlikely to
+cause any injury to the patient or operator.
+(2) S/W is classified into Major, Moderate and Minor by its level of concern, which is determined
+by answer to the questions listed in the table as follows:
+Table 1 “Major” Level of Concern
+If the answer to any one question below is Yes, the Level of Concern for the Software
+Device is likely to be “Major”. Answer
+1. Does the Software Device qualify as Blood Establishment Computer Software? □Y □N
+2. Is the Software Device intended to be used in combination with a drug or biologic? □Y □N
+3. Is the Software Device an accessory to a medical device that has a ‘Major’ Level of
+Concern? □Y □N
+4. Prior to mitigation of hazards, could a failure of the Software Device result in death or
+serious injury, either to a patient or to a user of the device? □Y □N
+a. Does the Software Device control a life supporting or life sustaining function? □Y □N
+b. Does the Software Device control the delivery of potentially harmful energy that could
+result in death or serious injury, such as radiation treatment systems, defibrillators, and
+ablation generators?
+□Y □N
+c. Does the Software Device control the delivery of treatment or therapy such that an error or
+malfunction could result in death or serious injury? □Y □N
+d. Does the Software Device provide diagnostic information that directly drives a decision
+regarding treatment or therapy, such that if misapplied it could result in serious injury or
+death?
+□Y □N
+e. Does the Software Device provide vital signs monitoring and alarms for potentially life
+threatening situations in which medical intervention is necessary? □Y □N
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 6 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Table 2 “Moderate” Level of Concern
+If the Software Device is not Major Level of Concern and the answer to any one question below is
+Yes, the Level of Concern is likely to be Moderate. Answer
+1. Is the Software Device an accessory to a medical device that has a Moderate Level of Concern? □Y □N
+2. Prior to mitigation of hazards, could a failure of the Software Device result in Minor Injury, either to
+a patient or to a user of the device? □Y □N
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to an erroneous
+diagnosis or a delay in delivery of appropriate medical care that would likely lead to Minor Injury? □Y □N
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is Minor.
+3.2 Software classification in accordance with EN 62304
+(1) S/W is classified and applied in accordance with as follows. :
+1) This company shall assign software safety class to each software system originated by our
+software system and based on the impact of the harm on the patient, the worker, or others.
+The software safety classes shall initially be assigned based on concern as follows:
+-. Class A: There is no injury nor health damage.
+-. Class B: The possible harm is non-serious injury.
+-. Class C: The possible harm is death or serious injury.
+In case harm is caused by that Software system is not operate by designated, the possibility of
+such defectiveness should be regarded as 100%.
+(2) If the risk of death or serious injury arising from a software failure is subsequently reduced to
+an acceptable level (as defined by ISO 14971) by a hardware risk control measure, either by
+reducing the consequences of the failure or by reducing the probability of death or serious
+injury arising from that failure, the software safety classification may be reduced from C to B.
+and If the risk of non- serious injury arising from a software failure is similarly reduced to an
+acceptable level by a hardware risk control measure, the software safety classification may be
+reduced from B to A. Our company assigned to each software system that contributes to the
+implementation of a risk control measure a software safety class based on the possible effects
+of the hazard that the risk control measure is controlling.
+(3) [If applicable] The company documented the software safety class assigned to each software
+system in the risk management file.
+(4) [If applicable] When a software system is decomposed into software items, and when a
+software item is decomposed into further software items, such software items inherit the
+software safety classification of the original software item (or software system) unless our
+company documents a rationale for classification into a different software safety class. Such A
+rationale explains how the new software items are segregated so that they may be classified
+separately.
+(5) [If applicable] Our company documented the software safety class of each software item if that
+class is different from the class of the software item from which it was created by
+decomposition.
+(6) [If applicable] For compliance with standard, wherever a process is required for software items
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 7 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+of a specific classification and the process is necessarily applied to a group of software items,
+our company used the processes and tasks which are required by the classification of the
+highest-classified software item in the group unless our company documents in the risk
+management file a rationale for using a lower classification.
+(7) [If applicable] For each software system, until a software safety class is assigned, Class C
+requirements applied.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 8 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4. Software Development Environment
+(1) Software development process of H&abyz Co., Ltd. follows “Classic waterfall methodology", as
+illustrated in the following chart.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 9 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+(2) The details of the development process and schedule of each software are presented in the table below.
+Step Main Contents Development
+Period
+Analysis
+The activity consists of establishing requirements for as much as
+possible before the design phase. The requirements are documented in
+the software-specific requirements and design notes.
+2024.07.01~
+2024.07.15
+Planning
+This activity constructs the software development plan. This plan
+outlines the tasks, responsibilities, resource, and other items pertinent to
+the specific development project.
+2024.07.16~
+2024.07.31
+Design
+The activity considers four functional attribute of the software: data
+structure, software architecture, functionality, and interface
+characterization. The design is documented in design documents.
+2024.08.01~
+2024.08.31
+Implementation
+The implementation phase converts the design into a machine readable
+form. The software source code is created in accordance with H&abyz
+Co., Ltd.‘s coding conventions.
+To verify that the code created is consistent with H&abyz Co., Ltd.
+standard, reviews/inspections are held.
+2024.09.01~
+2024.10.15
+Qualification
+The qualification phase verifies that the design and code implemented
+meet the requirements. Testing ensures that defined input will produce
+actual results that agree with required results.
+2024.10.16~
+2024.10.31
+Maintenance
+Once the software enters a released state, the only software changes
+allowed are to fix identified defects in the code or to support approved
+enhancements.
+2024.11.01~
+2024.11.14
+Software
+release
+Software verification has been completed and the software prior to
+release of the software should verify the evaluation results.
+2024.11.15~
+2024.11.22
+Development
+plan updated
+UI can be updated or completely replaced to satisfy customer
+requirement or revision s/w.
+2024.11.23~
+2024.11.25
+(3) The input requirements and verification results (outputs) required at each development step of each
+software are presented in the table below.
+Step Input requirements Responsible person Verification Results (Outputs)
+Analysis and
+Planning Investigating similar products
+Jinsun, Song
+Jaemin, Jeong
+Kyungsoo Lee
+Software Development Plan,
+Software Requirements
+Specification
+Design
+Software Development Plan,
+Software Requirements
+Specification
+Jinsun, Song
+Jaemin, Jeong
+Kyungsoo Lee
+Architecture Design,
+Design Technique Specification
+Implementation Software design
+Jinsun, Song
+Jaemin, Jeong
+Kyungsoo Lee
+Source code
+Qualification Measuring instrument for
+certification validation
+Jinsun, Song
+Jaemin, Jeong
+Kyungsoo Lee
+Test, Software Risk Management,
+Software Validation Report
+Maintenance Measuring instrument for output
+validation
+Jinsun, Song
+Jaemin, Jeong
+Kyungsoo Lee
+Software Configuration
+Management Plan
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 10 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+4.1 Software development resources
+(1) Software resources
+Resource
+Windows 10 64bit
+.NET Framework 4.8
+.NET Framework 8
+C# Microsoft Visual Studio 2022
+C++ Microsoft Visual Studio 2019(v142)
+SQLite 3.46.1
+(2) Human Resources
+Team Person Responsibilities (produced or processed documents)
+SW Team SW Engineer
+(2 person)
+SRS (design)
+Software architecture (design) Implementation, coding
+SDS (design)
+User Manual (design) Hazards analysis (design)
+Software static test report (perform) Software dynamic test report
+(verification)
+Team Manager
+(1 person)
+SRS (approval)
+Software architecture (design, approval) SDS (approval)
+Hazards analysis (verification) User Manual (verification) Software
+test plan (verification) Software test report (verification) Traceability
+analysis (design) Validation report (design)
+Test Engineers
+(2 person)
+Software test report
+Application
+Software Team
+SW Engineers
+(2 person) User Manual (verification)
+Proprietary application Design and implementation. Casual Software
+test
+Team Manager
+(1 person)
+SDS (verification)
+User Manual (verification)
+Quality
+Management
+Team
+Team Manager
+(1 person)
+SRS (approval) SDS (approval)
+Hazards analysis (approval) User Manual (approval) Hazards Analysis
+(approval) Software test report (approval) Traceability analysis
+(approval) Validation report (approval)
+Marketing
+Team
+Team Manager
+(1 person) SRS (verification)
+Hazards analysis (verification)
+Customer
+Support Team Team Manager
+(1 person)
+SDS (verification)
+
+User Manual (verification) Hazards analysis (verification) Validation
+report (verification)
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 11 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+5. Software Requirements Specification
+(1) Functional Requirement
+Function by each module and essential factor that each function must equip in software are as below:
+1) Essential function
+SRS ID Part Function Descriptions Note
+SRS 100 DICOM
+standard
+Image Standard Supports medical image standards. Transmits images of selected
+images or images of open
+studies.
+SRS 101 DICOM
+standard
+DICOM Export With the data export feature, you
+can export images in DICOM, BMP,
+JPG, TIFF formats.
+SRS 102 DICOM
+standard
+DICOM Export DICOM image files are transferred
+to the PACS storage server.
+SRS 103 DICOM
+standard
+GUI Update - Intuitive and direct graphical
+user interface with X-ray
+detector
+- Optimized exposure
+conditions and image review
+- Reduced unnecessary rework
+and testing
+SRS 200 Image
+Processing
+Image Capture Acquire images captured from the
+detector via Ethernet
+communication.
+The final image must properly
+represent the integrated density
+of the object along the X-ray
+beam, i.e. it must be a
+radiograph with at least
+offset/gain correction and bad
+pixel correction.
+SRS 300 Image
+Processing
+Image
+Processing
+SRS 301 Image
+Processing
+ROI Processing Original image processing after
+image acquisition.
+SRS 302 Image
+Processing
+Tab Changes Improved ROI image processing
+SRS 303 Image
+Processing
+Parameters Display parameters
+SRS 304 Image
+Processing
+Contrast Contrast
+SRS 305 Image
+Processing
+Brightness Brightness
+SRS 306 Image
+Processing
+Sharpness Sharpness
+SRS 308 Image
+Processing
+Micro-edge Fine Edge
+SRS 309 Image Edge Edge Strength
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 12 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+Processing enhancement
+SRS 310 Image
+Processing
+Save parameters Save Parameter
+SRS 311 Image
+Processing
+Save parameters
+as
+Save As Parameter
+SRS 318 Image
+Processing
+Keep original
+image
+When the user changes the image
+processing parameters of an image
+already sent to PACS, the image is
+duplicated and image processing is
+performed to maintain the original
+image.
+SRS 400 Viewer Take image The captured image is displayed on
+the screen.
+SRS 401 Viewer Select
+ViewPosition
+Perform image processing such as
+brightness, rotation, and zoom.
+Capture areas can be
+added/deleted/edited using
+the Procedure Manager tool.
+SRS 402 Viewer Procedure Step
+Schedule
+You can configure the display
+location of the DICOM information.
+SRS 403 Viewer Display You can select the capture area. W/L, brightness, invert,
+rotate, flip, marker, and text
+functions are available.
+SRS 404 Viewer Capacity display The procedures included in the order
+searched in the worklist are
+automatically registered or the user
+can schedule the capture area by
+adding it directly.
+The icon color changes
+when the capacity is larger
+than the capacity set by the
+user.
+SRS 405 Viewer Stop shooting The acquired image is displayed in
+the preview window.
+SRS 406 Viewer Replace image The capacity of the local storage is
+displayed at the top of the screen.
+SRS 407 Viewer Retake image Pause the image acquisition and
+return to the worklist window.
+SRS 408 Viewer Multi-detector Multi-detector support - up to 3
+detectors
+SRS 409 Viewer Image stitching The captured images of the patient
+are stitchable. Chapters and two or
+three images can be stitched, and the
+stitched images are included in an
+existing or new series.
+SRS 414 Viewer Image cropping The stitched images have
+windowing values applied.
+SRS 421 Viewer Image
+processing
+The cropping function has been
+improved so that the user can crop
+the image directly.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 13 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 422 Viewer Image tools The image processing tab has been
+added so that the user can set the
+image processing parameters in
+more detail.
+SRS 425 Viewer Image tools Display the exposure index value in
+the viewer.
+SRS 427 Viewer Image stitching Add the 'Notes' tool in the viewer.
+SRS 428 Viewer Image Tools Improve the stitching function so
+that the stitched images have similar
+windowing values.
+SRS 429 Viewer Image Tools Add an image to the viewer via the
+F3 button.
+SRS 430 Viewer Image Tools When the user acquires an image in
+AEC mode, the actual exposure time
+can be displayed in the viewer.
+SRS 431 Viewer Image Tools Viewer can measure length.
+SRS 432 Viewer Image Tools Viewer can measure angle.
+SRS 434 Viewer Image
+Processing
+User can save current image parameters
+as defaults in viewer and restore image
+processing parameters.
+SRS 437 Viewer Thumbnails There is a thumbnail viewer next to the
+position
+SRS 438 Viewer Fit Added Image Fit button
+SRS 439 Viewer Reset All Reset all feature improvements
+SRS 440 Viewer Invert Image Added Image Invert button
+SRS 441 Viewer Auto Mask (Auto Mask) Qualifier Shutter Master
+area is automatically added
+SRS 443 Viewer Annotation Tools Add Arrow tool
+SRS 444 Viewer Annotation Tools Add Line tool
+SRS 445 Viewer Annotation Tools Added Rectangle, Ellipse tools
+SRS 446 Viewer Annotation Tools Add Line Segment tool
+SRS 447 Viewer Stitching Added Stitching mode
+SRS 448 Viewer Viewer Compare all selected studies in a single
+screen
+Determines the layout. -
+Supports 1 x 1, 2 x 1, 1 x 2, 2 x
+2, 3 x 1, 1 x 3, 3 x 3 formats
+SRS 449 Viewer Report Create all selected images as Word or
+PDF files.
+SRS 450 Viewer Print Go to Print window
+SRS 451 Viewer Pause Stop shooting and go to Worklist.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 14 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 452 Viewer Unused Image Mark the thumbnail with an X to
+indicate an unused image.
+SRS 453 Viewer Exit after
+sending image to
+PACS
+After sending the image to PACS,
+exit the capture window.
+SRS 454 Viewer ROI Windowing You can use ROI Windowing.
+SRS 455 Viewer Zoom in on
+specific area
+When the user places the mouse
+over the desired area, that area will
+be enlarged.
+SRS 456 Viewer Rotate desired
+angle
+It can be rotated to any angle desired by
+the user.
+SRS 500 Worklist PACS patient
+registration
+You can check the capture order on
+the PACS worklist server or
+manually register the order by the
+user.
+The PACS Worklist Server
+Connection Setup is required to
+configure the PACS Worklist
+Server to retrieve orders.
+Accessibility testing is
+performed via the Echo feature.
+SRS 501 Worklist Manual entry If the PACS worklist server is not
+connected or there is a network
+failure related to the server, it
+provides the function to manually
+register the shooting list.
+SRS 502 Worklist Search Orders registered by the user on the
+worklist server or manually
+registered can be searched by
+Patient Name.
+SRS 503 Worklist New patient Add Quick Start button for manual
+input in the study list and worklist.
+SRS 504 Worklist Manual entry You can change the birthday input
+of a new patient.
+SRS 505 Worklist Worklist There is Merge Study in the
+Studylist and Worklist.
+SRS 506 Worklist Search The date search criteria in the
+Studylist and Worklist can be set by
+the user as 1 Day, 3Days, 1 Week,
+15 Days, 1 Month.
+SRS 507 Worklist Manual entry Add the function to automatically
+generate Accession No. for a new
+patient.
+SRS 508 Worklist Manual entry Add "Description" input item to a
+new patient.
+SRS 509 Worklist Manual Entry Separates the patient name text of a
+new patient into First Name, Middle
+Name, Last Name.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 15 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 510 Worklist Delete Removes a study from the Worklist
+if the study is removed from the
+Worklist server.
+SRS 512 Worklist Edit Patient
+Information
+Edits patient information.
+SRS 600 Studylist Shooting List Ability to view locally stored data
+SRS 601 Studylist Manage Image
+Storage
+The captured images are stored on
+the local hard disk and can be
+viewed/deleted/edited using the
+Studylist tab.
+Saving image data requires
+sufficient space on the hard
+disk, and images cannot be
+saved on a hard disk with
+insufficient capacity.
+SRS 602 Studylist Database Patient information and capture
+information are stored in the
+database. Data in the database can
+be viewed, deleted, and edited using
+the Studylist tab.
+SRS 603 Studylist Export Adds an Export button.
+SRS 604 Studylist Overwrite When the user saves an image, if a
+file with the same name already
+exists, the existing file will be
+overwritten.
+SRS 605 Studylist Delete Confirms again when deleting a
+study.
+SRS 606 Studylist Send DICOM The user can send DICOM files to
+multiple servers on the server.
+SRS 607 Studylist New Patient Adds a "New Patient" button to the
+study list.
+SRS 608 Studylist History Manager Administrators can analyze logs to
+determine which user accounts have
+collected, deleted, and recaptured
+images.
+SRS 609 Studylist History Manager You can export the log for acquired,
+deleted, and re-shot images to a file
+(log format).
+SRS 610 Studylist Query & Search Add "Query & Search" function to
+Studylist.
+SRS 611 Studylist Search Add search criteria by pressing
+"All" button in Studylist.
+SRS 612 Studylist Print Add Print button to Studylist
+SRS 613 Studylist Search Improves the search speed of
+studies.
+SRS 614 Studylist Transfer
+Progress
+After sending images, display the
+image sending results in thumbnails.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 16 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS 615 Studylist Create Patient The name field is expressed in 3
+fields (F, M, L).
+SRS 617 Studylist Hide Suspend, Hide can be used.
+SRS 618 Studylist DICOM Print Users can create print images in
+Print viewer.
+SRS 619 Studylist DICOM Print Users can show or hide the list of
+information that appears in the print
+layout.
+SRS 700 Setting Settings Configuration Settings HnVUE environment
+settings are stored and
+managed in the
+configuration config.
+Automatically deleted when
+the user-selected capacity or
+cycle is reached.
+SRS 701 Setting System Change the date setting of the auto-
+delete function in Settings.
+HnVUE environment
+settings are stored and
+managed in the
+configuration config.
+Automatically deleted when
+the user-selected capacity or
+cycle is reached.
+SRS 702 Setting Account (Day, Week, Month, Capacity)
+SRS 703 Setting Save Annotation Administrator can change the
+administrator password in Settings.
+SRS 704 Setting Select Save Bit User can set whether to save
+Annotation or not.
+SRS 705 Setting Stitching save
+size
+User can choose whether to save
+image in 14bit or 16bit.
+SRS 706 Setting Stitching move
+size
+When saving Stitching image, you
+can choose to save among 1:1, 1:2,
+1:3, 1:4.
+SRS 708 Setting View mode User can set the size of the image
+position movement by clicking the
+button in the Stitching window.
+SRS 709 Setting Export User can choose between TileView
+and ListView when viewing the
+patient list.
+SRS 712 Setting Annotation size User can change the DICOM file
+save path when sending DICOM
+file.
+SRS 713 Setting Overlay location Reduce the size of the text
+annotation displayed in the viewer.
+SRS 714 Setting Create Account Improve the viewer so that user can
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 17 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+set the image position and patient
+information text.
+SRS 715 Setting Password
+Password
+When creating an account, encrypt
+and save the password in the DB
+SRS 716 Setting Input Input, File
+Loading
+Verification
+Verify the characters entered in the
+user input section
+SRS 717 Setting Audit Log Verify the files imported by the user.
+SRS 718 Setting Log The administrator can check what
+the user did, when, and who it is.
+SRS 719 Setting Integrity
+Verification
+You can search and find the log.
+SRS 720 Setting BackUp When running the program or
+through the button in the settings
+window, check if specific files are
+properly located.
+SRS 721 Setting Restore Back up the data of the day or the
+previous day through the user-
+selected cycle or button.
+SRS 722 Setting Administrator
+Account
+You can restore by selecting the
+folder that the user backed up.
+SRS 723 Setting Change PW There is an administrator account so
+you can manage the sub-account
+settings.
+SRS 724 Setting PW Strength You must change the PW according
+to the period set by the PW
+administrator.
+SRS 725 Setting Login Failed If login fails, the user will be
+notified of the reason for the failure.
+SRS 726 Setting Show Password When displaying the password, it
+will be displayed as ****.
+SRS 727 Setting Consecutive
+Login Failures
+If login fails 5 times in a row, the
+account will be locked.
+You can log in again when the
+administrator account is
+unlocked
+SRS 728 Setting Change Default
+PW
+When the default password is used,
+a password change notification will
+be displayed so that the password
+can be changed.
+SRS 900 Logging and
+Common
+Login Password must be at least 8
+characters long. (HIPAA
+regulations)
+SRS 901 Logging and
+Common
+Exit Added "Exit" button at the top of the
+program, and in shooting or viewer
+mode, pressing "Exit" button will
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 18 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+take you to the worklist.
+SRS 904 Logging and
+Common
+Performance Use only parameters of image
+processing function and improve
+save function
+SRS 905 Logging and
+Common
+Import Import DICOM images
+SRS 906 Logging and
+Common
+Print Added overlay function
+SRS 907 Logging and
+Common
+Parameter Import/
+Export
+Image Processing Parameter Load
+Image Processing Parameter save
+SRS 909 Logging and
+Common
+Stitching Stitching Button
+SRS 910 Logging and
+Common
+Multilingual Multilingual support English, Spanish, Portuguese
+SRS 911 Logging and
+Common
+DCM
+Encryption
+Encryption of security-required
+header information for all DCM
+files
+Decrypt only on
+transmission
+SRS 912 Logging and
+Common
+System Usage Load message that unauthorized
+persons are liable for civil and
+criminal charges when accessing the
+system
+SRS 913 Logging and
+Common
+DB Encryption Encrypt the DB so that only those
+with a password can access it.
+SRS 914 Logging and
+Common
+Log Encryption Encrypt the DB so that only those
+with a password can access it.
+SRS 1007 Equipment
+Control
+Detector Users can check the information of the
+wireless sensor.
+The information is displayed at
+the bottom of the program.
+Details are as follows:
+- Wireless signal strength
+- Battery level
+- Temperature of the detector
+2) Check, logging and error handling conditions
+SRS
+ID
+Part Function Descriptions Note
+SRS
+800
+Error handling SRS 200 It is recorded with the event that
+occurred in the log file.
+SRS
+801
+Error handling Check detector connection
+error
+It is recorded in the log file as
+“Detector name Message:
+Disconnected”.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 19 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+SRS
+804
+Error handling Internal log image acquisition
+success
+It is recorded in the log file as
+“Acquired Image: Image name”.
+SRS
+805
+Error handling SRS 453 The message “Do you want to
+send all images?” appears.
+SRS
+806
+Error handling SRS 605 The message “Do you want to
+delete study?” appears.
+SRS
+807
+
+Error handling Auto calibration Every time you run HnVUE,
+a calibration is automatically
+performed to ensure image
+quality.
+SRS
+808
+Error handling SRS 701 If the automatic deletion capacity or
+date is applicable, the message “The
+automatic deletion conditions have
+been satisfied. Would you like to
+proceed with automatic deletion?”
+appears.
+SRS
+810
+Error handling Image processing
+SRS
+812
+Error handling DICOM standard
+SRS
+813
+Error handling DICOM storage is complete. “Save DICOM file” and the
+actual path saved to the log file.
+SRS
+814
+Error handling Send images that could not be
+acquired by DICOM.
+Logs events for reasons why it
+could not be imported.
+SRS
+815
+Error handling DICOM transmission in
+progress
+Shows the transfer rate.
+SRS
+816
+Error handling DICOM transmission failure A red icon appears in the lower
+right corner of the DICOM
+image.
+If the transfer is successful,
+the icon will be green, if it
+fails, it will be red.
+SRS
+817
+Error handling DICOM transmission was
+canceled.
+A red icon appears in the lower
+right corner of the DICOM
+image.
+SRS
+818
+Error handling DICOM transmission is
+complete.
+A green icon appears in the lower
+right corner of the DICOM
+image.
+SRS
+819
+Error handling Environment
+SRS
+820
+Error handling If you change the language,
+you need to restart.
+A message appears that says
+“Please Restart the Program.”
+SRS
+821
+Error handling Click the Apply button to
+apply without restarting.
+A message appears that says
+“Save”.
+3) Layout and Design
+- Login dialog box
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 20 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+- Colorful layout design
+- Image resources for title bar and dialog (e.g. png, bmp)
+- Icon design - more visual reorganization
+- Button design - text-based
+- Font - multilingual ready
+- Cursor design – custom
+(2) Verification activities
+1) Prior to development of the software, concrete items thereof should be planned/devised, and based
+on this the software development should be done.
+2) The software requirements should analyze the risk to examine the safety and reliability and
+subsequently manage toward the software developed as an input material for the software
+development so evaluate whether it is legitimate to use.
+Category Description Reference Result responsible
+person
+Software
+development
+Devise a plan for the software
+development and put it in writing EN ISO13485:2016 Software development
+plan
+R&D
+manager
+Software risk
+analysis
+Identification of the characteristics
+and hazards associated with the
+intended use and the safety of the
+device, risk assessment
+EN ISO14971:2019 Software Validation
+Report
+Quality
+manager
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 21 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+6. Software Architectural Design
+The software architectural design is a structure that explains the software requirements by the software
+structure and identifies the software item. The software architectural design includes a similar description etc
+on the relation between the primary functions of the software inclusive of the relation with the data flow
+such as a typical flow chart, hardware and networking. That does not need to include every function call of
+this document and module in general. However, there should be sufficient information to allow review by an
+organization on the functionality and intended use of the software equipment.
+7. Software Design Specification
+The software design specification explains materialization of the requirements on the software device. In the
+aspect of the relation between the Software Requirements Specification (SRS) and the Software Design
+Specification (SDS), SRS explains how the software device will be worked while SDS explains how the
+requirements will be materialized to SRS. The information presented to SDS should be enough to confirm
+the job conducted by a software engineer who made the software device is clear and not vague along with a
+temporary design decision at least. SDS can include a reference on the other document like the Software
+Detailed Design.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 22 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+8. Software Risk Management
+(1) As for the software risk management, personnel who participated in the program development process
+shall decide, analyze potential risk, reason, probability and severity of the software.
+(2) As to the analyzed risk, make out a risk evaluation and present, verify the risk control method thereof.
+(3) Software risk management
+1) Risk evaluation matrix
+Severity
+Probability
+Not Entirely Ha
+rmful (1)
+Slight
+(2)
+Severe
+(3)
+Very Severe
+(4)
+Paralysis State
+(5)
+Frequent
+(5) 5 10 15 20 25
+Probable
+(4) 4 8 12 16 20
+Occasional
+(3) 3 6 9 12 15
+Remote
+(2) 2 4 6 8 10
+Improbable
+(1) 1 2 3 4 5
+2) Explanation of the risk evaluation zone
+① Acceptable zone (Green Zone)
+As severity and probability on hazard is quite low, the risk is a level which is acceptable and
+negligible when compared with the risk of another hazard. But risk control measures for the risk
+reduction are needed as far as possible.
+② Non-acceptable zone (Red Zone)
+If the risk still remains on the non-acceptable zone even after taking measures to reduce or
+remove the risk, stop the design work.
+3) Risk estimation level
+① Severity
+Step Severity Definition
+5 Paralysis State Potential failure mode affects safe system operation
+4 Very Severe System inoperable with equipment damage
+3 Severe System inoperable without damage
+2 Slight System operable with some degradation of performance
+1 Not Entirely Harmful None
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 23 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+② Probability
+Step Probability Definition
+5 Frequent
+Daily, 1 / 1 day (usually)
+Likely to occur often in the life of an item, with a likelihood of
+occurrence greater than 10^-2 in any one mission
+4 Probable
+Weekly, 1 / 1 week (often)
+Will occur several times in the life of an item, with a likelihood of
+occurrence less than 10^-2 but greater than 10^-3 in any one mission
+3 Occasional
+Monthly, 1 / 1 month (sometimes)
+Likely to occur sometime in the life of an item, with likelihood of
+occurrence less than 10^-3 but greater than 10^-5 in any one mission
+2 Remote
+Quarterly, 1 / 1 quarter (a few times while its life cycle)
+Unlikely but possible to occur in the life of an item, with a likelihood
+of occurrence less than 10^-5 but greater than 10^-6 in any one
+mission
+1 Improbable
+Annually, 1 / 1 (might occur but hardly does)
+So unlikely, it can be assumed occurrence may not be experienced,
+with a likelihood of occurrence less than 10^-6 in any one mission.
+※ If the HAZARD could arise from a failure of the SOFTWARE SYSTEM to behave as specified, the
+probability of such failure shall be assumed to be 100 percent [∵EN 62304:2006/AC:2008, Cl. 4.3
+a)].
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 24 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+9. Software Verification & Validation
+(1) Work of verification and Validation
+1) Test item
+Original code test Unit tests performed after compiling the source code generated by the
+developer.
+Unit test The minimum test unit for each software module.
+Integration test Checks the flow or operation between software modules and subsystems
+or the entire system.
+System test This test should be performed in the office.
+2) Test method
+The waterfall-based lifecycle has been adapted to this software. The testing methodology combines
+white box or glass box testing with customer-acting testing.
+※ Traceability analysis
+As the traceability analysis is an essential element on comprehension of the effective product
+development, product design, development, testing and risk alleviation, do clear traceability
+analysis between the related document and development activities.
+Software
+Requirements
+Specification(SRS)
+Software Design
+Specification(SDS) Hazard Mitigations Software Verification
+& Validation(SVV)
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 25 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+10. Software release
+(1) Confirmation of the integrity of software verification
+It should be ensured that the software verification is completed and that the results are
+evaluated before releasing the software.
+(2) Documentation of identified residual abnormal conditions
+All identified residual abnormalities should be documented.
+(3) Assessment of identified residual abnormal conditions
+In order to ensure that all identified residual abnormalities are not causing unacceptable risks,
+It should be ensured that such abnormal conditions have been evaluated.
+(4) Documentation of the releasing version
+The version of the software product being deployed should be documented.
+(5) Document how you created the distributed software
+The procedures and environment used to create the deployed software should be documented.
+(6) Confirmation of activity and work completion
+Ensure that all activities and tasks are completed with all relevant documentation.
+(7) Software storage
+Either a period of time determined by the manufacturer's defined minimum life time of the
+equipment or the time specified by the relevant regulatory requirements, the following shall
+be stored for longer period:
+1) Software products and configuration items
+2) Document
+(8) Ensure repetition accuracy of software release
+Procedures to ensure that the deployed software product is reliably delivered to the point of
+use without modification or unauthorized modification should be established. This procedure
+should address the production and handling of media containing software products, including:
+1) Replication
+2) Media labeling
+3) Packing
+4) Protection
+5) Storage
+6) Delivery
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 26 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+11. Software Configuration Management
+(1) Purpose of the configuration management plan
+Software should include a function that can materialize the optimum performance on the
+product developed by this company. To this end, continual upgrade from the previously
+launched version should be available.
+(2) How to manage configuration
+1) The development request firm shall conduct monitoring continually the customer
+requirements, item for performance improvement and other problematic issue, etc on the
+software-applied product so settle through the software upgrade based on the immediate
+foregoing.
+2) In case the software upgrade has settled the performance improvement, application of the
+customer request and bug matter, etc, it should be able to distinguish by a version name and
+write as the following type.
+* Version. X.Y.Z
+Category Description
+1 Major X When a new product is designed and developed for the product number
+and its function
+2 Minor Y
+- When functions and new functions are added.
+- If the library is changed,
+- When the compiler is changed
+3 Patch Z In case of being changed to a bug patch.
+If Ver. was upgraded for the change of customer requirements and performance
+improvement, it will be changed accordingly.
+(However, the upgrade item of Ver. will be limited to the one that does not affect the
+product's basic performance.)
+3) In case the software configuration is changed, it should be recorded, managed on 12.
+Software Configuration Management of the Software Validation Report.
+(3) In case the software configuration is changed, it should be validated before it is applied to
+the software.
+
+Technical Documentation Document No. A-SDP-HNV
+Rev. No. 0
+Software Development Plan Rev. Date July 02, 2024
+Page 27 / 27
+Confidential This document is strictly private, confidential and intended solely for the use of H&abyz Co., Ltd.
+It must not be reproduced or disclosed to others without prior written approval.
+12. Problem settlement and support in the software development activities
+(1) Software's problem-solving procedure
+(2) The customer dissatisfaction item should be received pursuant to Customer complaints
+Procedure and if a software change is needed, it should quickly be notified to R&D team.
+(3) To settle the software's problem, a top priority should be given to improving the problem
+under mutual cooperation between Production team and R&D team and it should promptly
+be applied to the product.
+(4) Any issues identified with the software shall be recorded and applicable corrective measures
+shall be conducted.
+(5) In addition, when correcting the issues of software, the company shall examine the issues,
+notify them to relevant personnel, and analyze any trend of issues. The software shall be
+used only after the required validation has completed.
+(6) As for the software's preservation, R&D team should keep the same version against the
+original, and whenever the version changes the two firms should put it in a separate backup
+file (CD, hard disk) so keep in the system.

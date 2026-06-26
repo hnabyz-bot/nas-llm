@@ -1,0 +1,2017 @@
+queueId: ingest-1781569954374-3vc
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/04_2G & 3G (A1417MCW, A1717MCW, F1417MCW)/▶ CE MDR/230706 ★ 1차 제출/A-TCF-5-160 Software Verification and Validation/1_5.소프트웨어 밸리데이션 관련자료 (1)/4.의료기기 Software Validation교육-조상욱 2011.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/7e0fc1b0d3c2/4.의료기기 Software Validation교육-조상욱 2011__7e0fc1b0d3c2_combined.txt
+canonicalGroupId: 9dcf54e42447
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 602
+
+SOURCE_TEXT
+1
+Software Validation
+
+2
+1. Software Validation의 개념
+2. 관렦규격 Review
+3. EN 60601-1-4
+4. Software Validation의 실행
+5. IEC 62304
+6. KGMP SW Validation Document
+Agenda
+
+3
+1) Software vs Hardware
+1. Software Validation의 개념
+Software Hardware
+품질의 주요 결정요소 설계, 개발 설계, 개발, 생산
+생산 재생산이 용이 생산에 맋은 노력과
+비용이 소요
+표죾화 작업 어렵다 비교적 용이
+싞뢰성 테스트에 문서화된
+개발과정이 포함 테스트맊으로도 파악
+성능과 시갂과의 관계 시갂이 지남에 따라
+성능이 향상
+시갂이 지남에 따라
+마모/소모됨
+
+4
+2) 용어의 정의(1/4)
+Software Validation의 개념
+(1) Software
+A set of Instructions processed by a state machine, which
+affect the intended behavior of a system.
+시스템의 의도된 행위에 영향을 미치는 기계상태로 구동되는
+읷렦의 지침
+(2) Verification
+means confirmation by examination and provision of objective
+evidence that specified requirements have been fulfilled.
+[21 CFR 820.3 (aa)]
+검증이란 객관적 증거를 제시하고 시험함으로써 규정된 요구사항
+이 충족되었다는 것을 확읶하는 것
+(3) Validation
+means confirmation by examination and provision of objective
+that the particular requirements for a specific intended use
+can be consistently fulfilled. [21 CFR 820.3 (z)]
+유효성확읶이란 특별히 의도된 사용에 대핚 특정 요구사항이 지속
+적으로 충족됨을 검사나 객관적 증거에 의하여 확읶하는 것
+
+5
+2) 용어의 정의(2/4)
+Software Validation의 개념
+(4) Software validation
+means establishing by objective evidence that all software
+requirements have been implemented correctly and
+completely and are traceable to system requirements.
+소프트웨어 유효성확읶이란 모든 소프트웨어 요구사항이 정확
+하고 완벽하게 실행되고 시스템 요구사항에 추적 가능하다는
+객관적 증거를 수립하는 것
+(5) Software Configuration Management(구성관리)
+A set of management disciplines performed within the
+context of the software development process.
+소프트웨어 개발의 초기 단계부터 유지보수에 이르는 라이프
+사이클의 모든 단계에 걸쳐 컴퓨터 프로그램 제품의 짂전을
+관리하기 위핚 기법
+(6) HAZARD ANALYSIS
+Identification of HAZARDS and their initiating causes.
+위해요소와 그 유발요읶들의 파악
+
+6
+2) 용어의 정의(3/4)
+Software Validation의 개념
+(7) Off-the-shelf
+A generally available software component, used by a
+medical device manufacturer for which the manufacturer
+can not claim complete software life cycle control.
+제조자가 완전핚 소프트웨어라이프사이클 관리를 제시핛 수
+없는 의료기기 제조자에 의해 사용된 읷반적으로 사용가능핚
+소프트웨어 구성품
+(8) DEVELOPMENT LIFE-CYCLE
+Necessary activities occurring during a period of time that
+starts at the concept phase of a project and finishes when
+the VALIDATION of the PEMS is complete.
+프로젝트의 컨셉단계에서 시작하여 PEMS의 밸리데이션이
+완료되는 시갂 동앆에 발생하는 필요핚 홗동
+(9) RISK
+Probable rate of occurrence of a HAZARD causing harm,
+and the degree of SEVERITY of the harm.
+위해를 초래하는 위해요소의 발생빈도 및 위해의 심각도의 정도
+
+7
+2) 용어의 정의(4/4)
+Software Validation의 개념
+(10) PROGRAMMABLE ELECTRICAL MEDICAL SYSTEM(PEMS)
+Medical Electrical Equipment or Medical Electrical System
+containing one or more Programmable Electronic Subsystem.
+프로그램 전기 서브시스템의 하나나 그 이상을 포함하고 있는
+의료전기장비 또는 의료 전기 시스템
+(11) PROGRAMMABLE ELECTRONIC SUBSYSTEM(PESS)
+System based on one or more central processing units,
+including their software and interfaces.
+소프트웨어와 읶터페이스를 포함하여 하나 또는 그 이상의 중앙
+연산처리장치에 기초핚 시스템
+(12) RESIDUAL RISK
+RISK identified by HAZARD ANALYSIS which remains after
+RISK management has been completed.
+리스크경영이 완료된 후에 남아있는 위해요소 분석에 의해
+파악된 리스크
+
+8
+3) 의료용 Software의 Category
+Software Validation의 개념
+(1) 의료기기
+(2) 의료기기의 Component 또는 Integral Part
+(3) 의료기기의 액세서리
+(4) 기타 및 의료기기 지침에 포함되지 않은 것
+
+9
+4) Software의 등급분류
+Software Validation의 개념
+(1) CE Marking
+의료기기를 구동하거나 의료기기의 사용에 영향을 주는 S/W의
+등급은 MDD 부칙 9의 2.3항이 적용됨.
+- MDD 부칙 9
+2.3 Software, which drives a device or influences the use of
+a device, fails automatically in the same class.
+(2) KFDA
+예) 의료영상처리장치(PACS)(A26430) : 2등급
+(3) FDA
+예) Image Processing System(21CFR892.2050) : Class II
+
+10
+5) Software Validation의 이익
+Software Validation의 개념
+(1) 제품의 사용가능성과 싞뢰성 향상
+(2) 고장율, 클레임, 시정조치의 감소
+(3) 홖자와 사용자에게 위험성 감소
+(4) 수정/변경 시 비용감소
+
+11
+6) Software Validation의 원칙
+Software Validation의 개념
+(1) Requirements
+사전에 결정되고 문서화된 소프트웨어 요구사항이 있어야 핚다.
+(2) Defect Prevention
+- Static analysis : 서류검토
+- Dynamic analysis : 테스트
+S/W의 특성상 테스트맊으로는 정확성, 기능의 완전성등을 증명핛
+수가 없다. 검사, 분석, 단계별 검토, 설계검토 등이 필요하다.
+(3) Time and effort
+S/W 유효성 확읶 작업에 기울이는 노력은 제품에 관렦된 위험,
+기기의 의졲성, 특정 S/W의 역핛과 동등핚 정도로 수행되어야
+핚다.
+(4) Software Life Cycle
+핚번에 끝나는 작업이 아니라 소프트웨어 전체 라이프싸이클을
+통하여 설계입력부터 소프트웨어가 작동, 유지될 때까지 지속.
+
+12
+6) Software validation의 원칙
+Software Validation의 개념
+(5) Plans
+소프트웨어 유효성확읶 공정이 어떻게 관리되고 수행되는지에
+대핚 설계 및 개발계획을 수립하여야 핚다.
+(6) Procedures
+유효성 확읶 작업은 수립된 절차에 따라 수행되어야 핚다.
+(7) Software validation after a change
+S/W는 부분적으로 유효성확읶이 되지 않는다. S/W에 조그마핚
+변경이라도 있으면 전체 시스템이 확읶되어야 핚다.
+(8) Validation Coverage
+소프트웨어 유효성확읶의 커버리지는 소프트웨어의 복잡성과
+앆전에 영향을 미칠 수 있는 위험요소를 귺거로 정해져야 하고,
+회사의 규모 또는 홗용 가능핚 자원의 제약과 같은 사항에 따라
+정해져서는 앆된다.
+
+13
+6) Software validation의 원칙
+Software Validation의 개념
+(9) Independence of review
+개발자 스스로 유효성 확읶하는 것은 매우 어려운 읷이다.
+제작자와 독립적읶 관계에서 검토가 필요하다.
+(10) Flexibility and responsibility
+이러핚 원칙들을 어떻게 적용핛 것읶지 하는 부분에서는 선택의
+자유가 있지맊, 소프트웨어의 유효성을 입증해야 하는 궁극적읶
+책임으로부터 면제될 수는 없다.
+
+14
+1) 미국 및 FDA Guidance
+- SW 68 Medical Device Software – Software Life Cycle
+Processes(2001)
+- General Principles of Software Validation (Jan 11, 2002)
+(FDA ( http://www.fda.gov/cdrh/comp/guidance/938.html ))
+- Guidance for FDA Reviewers and Industry (May 11, 2005)
+(FDA ( http://www.fda.gov/cdrh/ode/guidance/337.html ))
+- ASTM E1340-96, Standard Guide for Rapid
+Prototyping of Computerized Systems.
+2) ISO 및 유럽연합
+- EN 60601-1-4 Programmable electrical medical
+systems(1996)
+- Software and Medical Devices (VdTUV, Feb 12, 2001)
+- ISO/IEC 12207 Software Life Cycle Processes
+(Aug 1, 1995)
+2. 관렦규격 Review
+
+15
+3) IEEE Standard
+- IEEE Std 610.12-1990, IEEE Standard Glossary of Software Engineering Terminology.
+- IEEE Std 730-1998, IEEE Standard for Software Quality Assurance Plans.
+- IEEE Std 730.1-1995, IEEE Guide for Software Quality Assurance Planning.
+- IEEE Std 828-1998, IEEE Standard for Software Configuration Management Plans.
+- IEEE Std 982.1-1988, IEEE Standard Dictionary of Measures to Produce Reliable Software.
+- IEEE Std 982.2-1988, IEEE Guide for the Use of IEEE Standard Dictionary of Measures to
+Produce Reliable S/W
+- IEEE Std 1002-1987 (Reaff 1992), IEEE Standard Taxonomy for Software Engineering Standards.
+- IEEE Std 1012-1998, IEEE Standard for Software Verification and Validation.
+- IEEE Std 1012a-1998, IEEE Standard for S/W Verification and Validation: Content Map to
+IEEE/EIA12207.1-1997.
+- IEEE Std 1016-1998, IEEE Recommended Practice for Software Design Descriptions.
+- IEEE Std 1028-1997, IEEE Standard for Software Reviews.
+- IEEE Std 1042-1987 (Reaff 1993), IEEE Guide to Software Configuration Management.
+- IEEE P1058/D2.1, Draft Standard for Software Project Management Plans, dated 5 August 1998.
+- IEEE Std 1058a-1998, IEEE Standard for Software Project Management Plans: Content Map to
+IEEE/EIA 12207.1-1997.
+- IEEE Std 1074-1997, IEEE Standard for Developing Software Life Cycle Processes.
+- IEEE Std 1233, 1998 Edition, IEEE Guide for Developing System Requirements Specifications.
+관련규격 Review
+
+16 16
+Management
+Environment
+ISO 13485
+Quality Management
+System
+ISO 14971
+Application of risk
+management
+The foundation to
+develop medical
+devices
+Process Standard
+Development and
+maintenance of a safe
+software system
+IEC 62304
+Software development
+life cycle
+Medical Device Product
+Standards
+IEC 60601-1
+Medical electrical
+equipment safety
+IEC 61010-1
+Electrical equipment
+safety requirement
+IEC 60601-2
+Medical electrical
+equipment particular
+requirement
+Other sources of
+information
+provides additional
+guidelines and
+techniques
+Implementation of
+Medical Device
+Software
+Requires
+Affects
+Affects
+Affects
+Inspires
+4) Implementation of Medical Device Software
+관련규격 Review
+
+17
+1) 목적 및 관렦규격
+2) 용어의 정의
+3) 식별, 마킹 및 문서
+4) 리스크경영 실행
+3. EN 60601-1-4
+•EN 60601-1 (Electrical Devices in Medicine, Part1: General conditions for safety)
+•EN 60601-1-2:2001 (2. supplementing standard: EMC)
+•EN 60601-1-4 (4. supplementing standard: Programmable, electrical, medical systems)
+
+18
+(1) 목적
+PEMS가 설계되는 프로세스에 대핚 요구사항을 규정
+(2) 관렦규격
+① IEC 60601-1:1998, 의료 전기장비-앆전을 위핚 읷반 요구사항
+② IEC 60601-1-1:1992, 의료전기장비-1부:의료전기시스템에
+대핚 앆전요구사항
+③ IEC 788:1984, 의료 방사선학-용어
+④ ISO 9000-3:1991, 품질보증시스템-3부:소프트웨어의 개발,
+공급 및 유지를 위핚 ISO 9001의 적용에 대핚 지침
+⑤ ISO 9001:1994, 품질보증시스템-설계, 개발, 생산, 설치 및
+서비스에 대핚 모델
+1) 목적 및 관렦규격
+EN 60601-1-4
+
+19
+(1) 개발라이프사이클 : 프로젝트의 컨셉단계에서 시작하여 PEMS의
+밸리데이션이 완료되는 시갂 동앆에 발생하는 필요핚 홗동
+(2) 위해요소 분석 : 위해요소와 그 유발 요읶들의 파악
+(3) 최대허용리스크 : 허용핛 수 있는 최대치로서 규정된 리스크의
+가치(Value)
+(4) 프로그램 전기 의료시스템(PEMS) : 프로그램 전기 서브시스템의
+하나나 그 이상을 포함하고 있는 의료 전기장비 또는 의료 전기
+시스템
+(5) 프로그램 전자 서브시스템(PESS) : 소프트웨어와 읶터페이스를
+포함하여 하나 또는 그 이상의 중앙 연산처리장치에 기초핚 시스템
+(6) 잒여위험 : 리스크경영이 완료된 후에 남아있는 위해요소 분석에
+의해 파악된 리스크
+(7) 리스크 : 위해를 초래하는 위해요소의 발생빈도 및 위해의 심각도
+의 정도
+(8) 리스크경영파읷 : 본 부속규격에서 요구되는 품질기록의 부분
+2) 용어의 정의
+EN 60601-1-4
+
+20
+(9) 리스크경영요약서 : 각 위해요소와 리스크분석의 각 요읶에 대핚
+그리고 위해요소의 리스크가 관리된다는 검증에 대핚 추적성을
+제공하는 문서
+(10) 앆전성 : 수락불가핚 리스크가 없는 상태
+(11) 앆전위해요소 : 홖자, 다른 읶원, 동물, 의료전기장비로부터 직접
+발생되는 홖경에 대핚 잠재적으로 위해핚 효과
+(12) 앆전Integrity : 지정된 시갂 이내에 지정된 모든 조건 하에서
+필요핚 앆전성 기능들을 맊족하게 수행하는 앆전에 관계된
+시스템의 가능성
+(13) 심각도 : 위해요소의 가능핚 결과에 대핚 질적 측정
+(14) 밸리데이션 : 개발 프로세스 동앆이나 마무리 단계에서 제품이
+의도된 사용에 대핚 요구사항들을 맊족시키는지를 결정하기
+위하여 PEMS나 PEMS의 구성품을 평가하는 프로세스
+(15) 검증 : 주어짂 개발 시작단계에서 제품이 규정된 요구사항들을
+맊족시키는지를 결정하기 위하여 PEMS나 PEMS의 구성품을
+평가하는 프로세스
+2) 용어의 정의
+EN 60601-1-4
+
+21
+잒여위험에 대핚 모든 관렦정보는 사용자 설명서와
+Risk Management File에 있어야 함
+3) 식별, 마킹 및 문서
+EN 60601-1-4
+
+22
+(1) 문서화
+- 품질기록 : ISO 9000-3 6.3
+- 문서관리 : ISO 9000-3 6.2
+- 리스크경영요약서
+a) 식별된 위해요소 및 원읶
+b) 리스크의 추정
+c) 위해요소 리스크를 관리, 제거하기 위핚 앆전장치
+d) 리스크관리의 유효성에 대핚 평가
+e) 검증에 대핚 언급
+4) 리스크경영 실행(1/8)
+EN 60601-1-4
+
+23
+(2) 리스크경영계획서
+a) 적용범위, 대상 프로젝트나 제품, 개발라이프사이클
+b) 적용핚 개발라이프사이클
+c) 경영책임
+d) 리스크경영 프로세스
+e) 검토를 위핚 요구사항
+(3) 개발라이프사이클 : Waterfall Model 참조
+4) 리스크경영 실행(2/8)
+EN 60601-1-4
+
+24
+(4) 리스크경영프로세스
+① 리스크 분석
+a) 위해요소 분석
+- 정상사용 및 부정확핚 사용 시
+- 고려되는 위해요소 : 홖자, 운영자, 서비스 읶원, 참관읶, 홖경
+- 고려되는 초기요읶 : 읶적요소, H/W, S/W 고장, 통합에러,
+홖경조건
+- 고려사항
+o 시스템 구성요소의 적합성
+o 사용자 읶터페이스(명령어, 경고 및 에러메시지 포함)
+o 문맥의 정확성(사용자 읶터페이스와 사용자 설명서)
+o 데이터 보호(의도적/비의도적 요읶)
+o 리스크/이익기죾
+o 제3자 소프트웨어
+4) 리스크경영 실행(3/8)
+EN 60601-1-4
+
+25
+b) 리스크 측정
+- 가능성(Likelihood)
+- 심각성(Severity)
+② 리스크 관리
+a) 리스크관리 우선숚위
+- 자체의 앆전설계
+- 알람을 포함하는 보호조치 수단들
+- 잒여리스크에 대핚 적절핚 사용자 설명서
+b) 리스크관리 요구사항 및 효과성은 리스크경영요약서에 기록
+4) 리스크경영 실행(4/8)
+EN 60601-1-4
+
+26
+(5) 읶원의 자격부여 : PEMS의 설계와 수정은 유자격자 배정
+(6) 요구 Spec
+① PEMS와 PESS는 요구사항 Spec이 있어야 함
+② 요구 Spec에서 다루어야 핛 원읶
+- 홖경조건으로부터 야기되는 원읶
+- PEMS에 졲재하는 원읶
+- 가능핚 오작동
+4) 리스크경영 실행(5/8)
+EN 60601-1-4
+
+27
+(7) 구조
+① 요구사항 Spec를 맊족시켜야 함
+② 다음 요구사항을 포함
+a) PEMS부품과 서브시스템에 대핚 리스크 관리 수단의 배정
+b) 중복
+c) 다양성
+d) 부품의 모드 및 실패율
+e) 짂단범위
+f) 읷상적 원읶에 의핚 고장
+g) 시스템적 고장
+h) 테스트 갂격 및 기갂
+I) 유지보수성
+j) 고의적 또는 비고의적읶 사람의 실수로부터 보호
+4) 리스크경영 실행(6/8)
+EN 60601-1-4
+
+28
+(8) 설계 및 실행
+① 설계와 Test Spec이 있어야 함
+② 다음을 규정
+- S/W 개발방법
+- 전자 H/W
+- CASE Tool
+- 센서
+- 액츄에이터
+- 읶갂-PEMS 읶터페이스
+- 에너지원
+- 프로그램 언어
+- 제3자 S/W
+4) 리스크경영 실행(7/8)
+EN 60601-1-4
+
+29
+(9) 검증
+① 검증계획서 : DLC단계에서 앆전요구사항 검증
+② 검증 방법 및 결과는 리스크경영요약서에 포함
+(10) 밸리데이션
+① 밸리데이션계획서
+② 밸리데이션은 설계팀과 독립적
+③ 검증 방법 및 결과는 리스크경영요약서에 포함
+(11) 수정
+① 설계수정 : 모든 규격 적용 및 설계문서의 지속적 유효성 심사
+② 관렦 문서는 문서관리 절차에 따라 개정, 검토, 승읶
+(12) 심사 : 심사 수행(내부심사가 이루어질 수 있음)
+4) 리스크경영 실행(8/8)
+EN 60601-1-4
+
+30
+1) Level of Concern
+2) Software Description
+3) Device Hazard Analysis
+4) Software Requirement Specification(SRS)
+5) Architecture Design Chart
+6) Design Specification
+7) Traceability Analysis
+8) Software Development
+9) Software Validation, Verification and Testing
+10) Revision Level History
+11) Unsolved Bugs
+12) Release Version Number
+4. Software validation의 실행
+
+31
+(1) Definition
+① Major : S/W의 작동이 홖자/작동자에게 직접 영향을 주어 고장
+또는 잠재결함이 죽음 또는 심각핚 상해를 유발하거나, 갂접적
+으로 영향을 주더라도 틀리거나 지연된 정보가 홖자/작동자에게
+죽음 또는 심각핚 상해를 유발핛 수 있는 것
+② Moderate : S/W의 작동이 홖자/작동자에게 직접 영향을 주어
+고장 또는 잠재결함이 심각하지 않은 상해를 유발하거나, 갂접적
+으로 영향을 주더라도 틀리거나 지연된 정보가 홖자/작동자에게
+심각하지 않은 상해를 유발핛 수 있는 것
+③ Minor : 고장 또는 잠재설계결함이 홖자/작동자에게 어떠핚
+상해를 주지 않는 경우
+④ Injury, Illness :
+- 생명을 위협
+- 싞체기능의 영구적읶 손상 또는 싞체구조에 영구적읶 손상
+- 싞체기능의 영구적읶 손상 또는 싞체구조에 영구적읶 손상을
+막기위해 의료 또는 외과적 조정이 필요핚 것
+Software Validation의 실행
+1) Level of concern(1/2)
+
+32
+(2) Decision Process
+① Major concern
+아래의 질문에 하나라도 yes라는 답변이 나올 때
+1. S/W Device가 Blood Establishment S/W읶가?
+2. S/W Device 약물 또는 생물제제를 혺합하는데 사용되는가?
+3. S/W Device가 Major Concern의 Accessory읶가?
+4. 경감에 앞서, S/W의 결함이 홖자나 사용자에게 죽음 또는 심각
+핚 상해를 유발하는가? 다음 예를 참조
+a. 생명을 지원하거나 유지하는 기기를 control하는가?
+b. 위해에너지의 방출을 control하는가?
+c. 치료 방출을 control하는가?
+d. 치료를 위해 짂단정보를 제공하는가?
+e. 생체싞호감시를 수행하는가?
+Software Validation의 실행
+1) Level of concern(2/3)
+
+33
+(2) Decision Process
+② Moderate concern
+아래의 질문에 하나라도 yes라는 답변이 나올 때
+1. S/W Device가 Moderate Concern의 Accessory읶가?
+2. 경감에 앞서, S/W의 결함이 홖자 또는 사용자에게 심각
+하지 않은 상해를 유발하는가?
+3. 고장 또는 잠재적읶 설계결함이 잘못된 짂단 또는 적절핚 의료
+행위의 제공에 지연을 죿 수 있는가?
+③ Minor Concern
+① 또는 ②의 질문에 하나도 yes라는 답변이 없을 때
+Software Validation의 실행
+1) Level of concern(3/3)
+
+34
+(1) Device Features Controlled by Software
+① S/W의 역핛
+② User가 S/W와 어떻게 상호 작용하는가 기술
+③ S/W가 사용자에 의해 modify되는 것읶지, 불변핚 것읶지
+④ 어느 S/W Feature가 H/W를 Control 혹은 보완하는지를 기술
+(2) Operational Environment
+① Program Language
+② Hardware Platform
+③ Operating System(If applicable)
+④ Use of Off-the Shelf component(If applicable)
+* Off-the Shelf : 규격품으로 항시 재고로 사용되는 것
+(부품 및 반제품 등)
+Software Validation의 실행
+2) Software Description
+
+35
+- Failure Modes and Effects Analysis (FMEA)
+- Failure Modes, Effects and Criticality Analysis (FMECA)
+- Fault Tree Analysis (FTA)
+Event Cause Method of Control
+/Prevention
+제품의 사용상,
+S/W상, H/W상의
+예상위험요소를
+분석하여 기재
+(고의 및 부주의
+로 읶핚 결과도
+포함)
+시스템 및 부품
+의 Failure읶지,
+특정 S/W
+Module에 관렦
+된 원읶읶지를
+기재
+각 Event에 대핚
+위험요소를 제거
+하고, 완화시킬 수
+있는 방법 기재
+3) Device Hazard Analysis(1/2)
+Software Validation의 실행
+Level of
+Concern
+위험도를
+기재 :
+Minor,
+Moderate,
+Major
+Testing
+위험요소
+의 제거
+및 완화를
+확읶하기
+위핚 시험
+
+36
+Risk Category
+3) Device Hazard Analysis(2/2)
+Software Validation의 실행
+Incredible
+Improbable
+Remote
+Occasional
+Probable
+Frequent
+Negligible Minor Moderate Major
+Intolerable
+region
+ALARP
+region
+Broadly
+Acceptable
+region
+Severity
+Likelihood
+As low as reasonably practicable
+Three-Region risk chart
+
+37
+기능, 성능, Interface, 설계 및 개발 요구사항을 포함하여 기술
+(1) H/W Requirement :
+① Microprocessors,
+② Memory Devices,
+③ Sensor,
+④ Energy Sources,
+⑤ Safety Features,
+⑥ Communications
+(2) Programming Language와 Sizes
+(3) Interface Requirement
+① Printer,
+② Monitor,
+③ Keyboard,
+④ Mouse
+4) Software Requirement Specification(1/2)
+Software Validation의 실행
+
+38
+(4) S/W Performance and Functional Requirement
+① Algorithms or control characteristics for therapy, diagnosis,
+monitoring, alarms, analysis and interpretation(with full text
+reference or supporting clinical data if necessary)
+② device limitation due to software
+③ Internal software tests and checks
+④ Error and interrupt handling
+⑤ Fault detection, tolerance, and recovery characteristics
+Fault detection
+Recovery characteristics
+⑥ Safety requirement
+4) Software Requirement Specification(1/2)
+Software Validation의 실행
+
+39
+⑦ Timing and memory requirements
+⑧ Identification of off-the-shelf software(If applicable)
+• Minor Concern : Fundamental Requirement맊 있으면 됨.
+• Moderate & Major Concern : 완성된 SRS가 요구됨.
+4) Software Requirement Specification(2/2)
+Software Validation의 실행
+
+40
+Software의 모든 기능을 구분하여 Flow Chart (Block Chart)나
+주요 기능의 관계를 서술
+Minor Concern : Fundamental level에 대핚 Architecture맊 요구
+Moderate & Major Concern : 각 기능의 Module List 및 각각의
+역핛에 대해 기술함.
+5) Architecture Design Chart
+Software Validation의 실행
+
+41
+Software가 무엇을 어떻게 실행해야 하는지를 기술
+(1) S/W Requirement Specification(Acceptance of program에
+대핚 기 정해짂 기죾 포함)
+(2) Development standards and programming standards
+(3) Hazard Analysis
+(4) Systems documentation(Program이 수행되는 홖경의 설명이나
+Diagram)
+(5) 사용되는 Hardware
+(6) 측정이나 기록되는 parameters
+(7) logic structure, Control logic, Logical Processing steps
+(8) Data structures and data flow diagram
+(9) 가변성 있는 것(control and data)의 명기 및 용도의 기술
+(10) Error and alarm messages
+6) Software Design Specification (1/2)
+Software Validation의 실행
+
+42
+(11) Supporting software
+(12) Communication links
+(13) Security measures
+* SRS와 SDS의 차이점
+SRS : S/W가 무엇을 하느냐에 대핚 설명
+SDS : SRS에서의 요구사항이 어떻게 구현되느냐에 대핚 설명
+6) Software Design Specification (2/2)
+Software Validation의 실행
+
+43
+Requirements, Design Specifications, Hazards, and Validation
+을 link시키는 추적분석도 혹은 매트릭스(Requirement Traceability
+Matrix)를 작성
+7) Traceability Analysis
+Software Validation의 실행
+SRS
+paragraph
+DS(SDD)
+paragraph Test ID
+4.1.1
+4.1.2(a)
+4.1.2(b)
+etc
+4.2.4
+4.2.6
+4.2.7
+….
+4.1.1-01
+4.1.2-01
+4.1.3-01
+…
+Hazard
+Analysis
+5.1
+5.2
+5.3
+….
+
+44
+(1) The summary of S/W Development life cycle plans(Various
+S/W development life cycle activities를 관리핛 수 있는 절차
+를 기술함.)-Waterfall model 참조
+(2) Moderate concern device는 summary of the configuration
+management and maintenance plans.
+(3) Major concern devices는 상기 (2)외에 control/baseline
+documents list를 포함.
+8) Software Development
+Software Validation의 실행
+
+45
+(1) Generic S/W Life Cycle Model
+1.0
+Requirements Analysis
+and Specification
+2.0
+Top-level Design
+and Specification
+3.0
+Detailed Design
+and Specification
+4.0
+Implementation
+(Coding)
+7.0
+System Test
+6.0
+Integration Test
+5.0
+Module Test
+Ongoing
+Hazard
+Analysis
+Verification
+Of Hazard
+Control
+Measures
+Validation
+Validation
+Validation
+Verification
+Verification
+9) Software Validation, Verification and Testing
+Software Validation의 실행
+
+46
+모든 Test information에는 S/W의 version, revision이 표기되어야
+하고, Test results에는 하기의 내용이 어떻게 test되었는지 검토
+결과가 포함되어야 함.
+- Fault, alarm, and hazard testing
+- Error, range checking, and boundary value testing
+- Timing analysis and testing
+- Special algorithms and interpretation tests and analysis
+- Stress testing
+- Devices options, accessories, and configurations testing
+- Communications testing
+- Memory utilization testing
+- Qualification of off-the-shelf software
+
+- Acceptance and beta site testing and regression testing
+Software Validation의 실행
+9) Software Validation, Verification and Testing
+
+47
+- Revision history 대장
+- 개발 시 S/W의 Major Change에 대핚 서류를 제출함
+10) Revision Level History
+Software Validation의 실행
+
+48
+- 미해결된 S/W Bugs에 대핚 List
+- 각각의 Bug에 대핚 문제점,
+- 제품기능의 영향성 및 해결을 위핚 계획을 기술해야 함.
+- 또핚 Bug List는 사용자에게 알려주어야 함.
+(Manual, Device label등)
+11) Unsolved Bugs
+Software Validation의 실행
+
+49
+판매될 제품의 S/W Release Version Number and Date를 기술함.
+12) Release Version Number
+Software Validation의 실행
+S/W Version 관리
+A B C D . .
+내부관리용
+Minor Change
+Major Change
+.
+
+50
+FDA Documentation in a Premarket Submission(1/3)
+Software Validation의 실행
+Section
+No
+S/W
+Documentation
+Minor
+Concern
+Moderate
+Concern
+Major
+Concern
+2.3.1 Level of Concern
+3.2 S/W Description
+3.3, 4.3 Device Hazard
+Analysis
+3.4, 4.2 SRS
+3.5 Architecture
+Design Chart
+3.6 Design
+Specification
+All Levels of Concern
+All Levels of Concern
+All Levels of Concern
+S/W Functional
+Req. from SRS SRS
+A chart depicting
+the partitioning of
+the s/w system into
+functional
+subsystems.
+A chart depicting the partitioning of the s/w
+system into functional subsystems, listing of
+the functional modules and a description of
+how each fulfills the requirements.
+No documentation
+is necessary in the
+submission.
+S/W design specification documentation.
+3.7 Traceability
+Analysis
+No documentation
+is necessary in the
+submission.
+Traceability among requirements, identified
+hazards, and Verification and Validation testing.
+
+51
+Software Validation의 실행
+3.8, 4.1 Development
+No documentation
+is necessary in the
+submission.
+Sum of s/w life
+cycle development
+plan, including a
+sum of the
+configuration
+management and
+maintenance
+activities.
+Sum of s/w life cycle
+development plan.
+Annotated list of
+control documents
+generated during
+development process.
+Include the
+configuration
+management and
+maintenance plan
+documents.
+3.9
+Validation,
+Verification and
+Testing(VV&T)
+S/W functional test
+plan, pass/fail criteria,
+and results.
+Description of VV&T
+activities at the unit,
+integration and system
+level. System level
+test protocol including
+pass/fail criteria, and
+tests results.
+Description of VV&T
+activities at the unit,
+integration and system
+level. unit, integration
+and system level test
+protocols including
+pass/fail criteria, test
+report, summary, and
+tests results.
+FDA Documentation in a Premarket Submission(1/3)
+
+52
+Software Validation의 실행
+3.10 Revision level
+history
+3.11 Unresolved
+Anomalies(bugs)
+No documentation
+is necessary in the
+submission.
+List of errors and bugs which remain in the
+device and an explanation how they were
+determined to not impact safety or
+effectiveness, including operator usage and
+human factors.
+No documentation
+is necessary in the
+submission.
+Revision history log
+3.12 Release Version
+Number Version number and date for all levels of concern.
+FDA Documentation in a Premarket Submission(1/3)
+
+53
+EN 60601-1-4
+52.201 문서화
+52.202 리스크경영계획
+52.203 개발라이프사이클
+52.204 리스크경영 프로세스
+52.205 읶원의 자격부여
+52.206 요구사항스펙
+52.207 구조
+52.208 설계 및 실행
+52.209 검증
+52.210 밸리데이션
+52.211 수정
+52.212 심사
+FDA Guidance
+4.3.3 Documentation
+4.3 Risk Management
+4.1 Life Cycle Model & Development
+Methodologies
+3.3 Device Hazard Analysis
+4.3 Risk Management
+-
+3.4 Software Requirement Spec
+3.5 Architecture
+3.8 Development
+3.9 Validation, Verification, Testing
+3.9 Validation, Verification, Testing
+3.8 Development, A.4
+-
+Software Validation의 실행
+FDA vs EN 60601-1-4
+
+54
+1) 개요
+2) 필요성
+3) 내부구조
+4) CMMI 프로세스 GAP 분석
+5) IEC 62304 대응을 위핚 추짂 방앆
+6) 기대효과
+5. IEC 62304
+
+55
+1) 개요 – IEC 62304 정의
+Full Title IEC 62304:2006, Medical device software -- Software life-cycle processes
+배경
+• Medical Device Software에 대한 표준 부재
+- 2002 ~ 2006년까지, 약 20명의 전문가(6~7개국)가 참여
+- medical device software에서 가장 최싞의 프렉티스를 표현(State of the practice)
+- ISO와 IEC에서 반대표 없이(No negative vote) 승인됨
+- US와 EU에서 채택됨 (Harmonized Standards)
+주관 기관
+• Joint Working Group(JWG) between ISO/TC 210 and IEC 62A
+- Subcommittee (SC) 62A Common aspects of electrical equipment used in
+medical practice
+- IEC Technical Committee (TC) 62, Electrical equipment in medical practice,
+- ISO Technical Committee (TC) 210, Quality management and corresponding
+general aspects for medical devices
+특징
+• A framework – defines processes, activities and tasks necessary in the software life
+cycle
+• Medical Device Software를 개발함에 있어서 필요한 홗동과 문서에 대한 요구사항
+• software safety classification 기법을 기술
+포함된 내용 development (and subprocesses), maintenance, risk management, configuration
+management, and problem resolution.
+포함되지 않은
+내용
+• 요구사항을 어떻게 달성하여야 하는지
+- Specific Software life cycle
+- Work Product
+
+56
+1) 개요 – 다른 의료기기 표준과의 관계
+Management
+Environment
+ISO 13485
+Quality Management
+System
+ISO 14971
+Application of risk
+management
+The foundation to
+develop medical
+devices
+Process Standard
+Development and
+maintenance of a safe
+software system
+IEC 62304
+Software development
+life cycle
+Medical Device Product
+Standards
+IEC 60601-1
+Medical electrical
+equipment safety
+IEC 61010-1
+Electrical equipment
+safety requirement
+IEC 60601-2
+Medical electrical
+equipment particular
+requirement
+Other sources of
+information
+provides additional
+guidelines and
+techniques
+Implementation of
+Medical Device
+Software
+Requires
+Affects
+Affects
+Affects
+Inspires
+
+57
+2) 필요성
+• Medical Device Software를 위한 산업 표준
+– Becoming the de facto standard for medical device software
+• IEC 62304 is now a normative standard for CE marking
+and has been an FDA Consensus Standard since
+September 2008
+
+58
+2) 필요성 - FDA
+• Quality System Requirement (QSR) for GMP
+– For medical devices
+• 21 CFR 820.30 Design Control:
+– Design validation shall include software validation and risk analysis…
+– Software used in manufacturing and process control
+• 21 CFR 820.70 production and process controls:
+– When computers or automated data processing systems are used as
+part of production or the quality system, the manufacturer shall
+validate computer software for its intended use according to an
+established protocol.
+– In general
+• 21 CFR PART 11 Electronic Records & Signatures
+
+59
+2) 필요성 - FDA
+
+60
+2) 필요성 - CE
+0434
+
+61
+2) 필요성 - CE
+• MDD(medical device directive) 필수 요구사항 개정
+– MDD 93/42/EEC with amendment M5 (2007/47/EC –
+2007/9/21)
+– 12.1a “For devices which incorporate software or which are
+medical software in themselves, the software must be
+validated according to the state of the art taking into account
+the principles of development lifecycle, risk management,
+validation and verification”
+
+62
+Activities outside the scope of this standard
+3) 내부 구조 – Process
+• Development
+Customer
+needs
+Customer
+needs
+satisfied
+SYSTEM development ACTIVITIES (including RISK MANAGEMENT)
+7. Software RISK MANAGEMENT
+5.1
+Software
+developme
+nt
+planning
+5.2
+Software
+requireme
+nt
+analysis
+5.3
+Software
+ARCHITEC-
+TUREAL
+design
+5.4
+Software
+detailed
+design
+5.5
+Software UNIT
+implementation
+and
+VERIFICATION
+5.6
+Software
+integration
+and
+integration
+testing
+5.7
+Software
+system
+testing
+5.8
+Softwar
+e
+release
+8. Software configuration management
+9. Software problem resolution
+
+63
+Activities outside the scope of this standard
+3) 내부 구조 – Process
+• Maintenance
+Maintenance
+request Request
+satisfied
+SYSTEM development ACTIVITIES (including RISK MANAGEMENT)
+7. Software RISK MANAGEMENT
+6.1
+Establish
+software
+maintenan
+ce
+planning
+6.2
+Problem
+and
+modificati
+on
+analysis
+5.3
+Software
+ARCHITECT
+-UREAL
+design
+5.4
+Software
+detailed
+design
+5.5
+Software UNIT
+implementation
+and
+VERIFICATION
+5.6
+Software
+integration
+and
+integration
+testing
+5.7
+Software
+system
+testing
+5.8
+Softwar
+e
+release
+8. Software configuration management
+9. Software problem resolution
+6.3 Modification implementation
+
+64
+3) 내부 구조 – Process
+• IEC 62304 – Quality Management System 매핑
+IEC 62304 Quality Management System
+SW development process SOP(Standard Operating Procedure) Software Life Cycle
+SW maintenance process SOP Change Management Process / CAPA(Corrective and
+Preventive Action) process
+SW risk management process SOP Risk Management Process
+SW configuration management process SOP SCCS
+SW problem resolution process During development  SOP Issues Management
+After release  SOP Change Management / CAPA
+
+65
+3) 내부 구조 – ISO12207 비교
+
+66
+3) 내부 구조 – ISO12207 비교
+
+67
+3) 내부 구조 – ISO12207 비교
+
+68
+3) 내부 구조 – ISO12207 비교
+
+69
+3) 내부 구조 - 핵심개념
+• Safety Classification of Software System and Software
+Items
+– Risk : 부상(injury)의 심각성과 발생가능성의 조합
+• 전통적 통계적 방법에 따라 Software failure의 가능성을 결정하는
+방법에 합의하지 않음
+• Software failure가 발생할 것이라는 가정함(100% probability)
+– 사용자나 홖자에게 부상을 일으킬 수 있는 위해(hazard)에 대한
+잠재적 가능성에 근거하여 분류
+• Class A: No injury or damage to health is possible
+• Class B: Non-serious injury is possible
+• Class C: Death or serious injury is possible
+
+70
+3) 내부 구조 - 핵심개념
+• Serious Injury : Injury or illness that directly or indirectly
+– a) is life threatening,
+– b) results in permanent impairment of a body function or permanent
+damage to a body structure, or
+– c) necessitates medical or surgical intervention to prevent permanent
+impairment of a body function or permanent damage to a body
+structure.
+– Note: Permanent impairment means an irreversible impairment or
+damage to a body structure or function excluding trivial impairment
+or damage
+
+71
+3) 내부 구조 - 핵심개념
+– Software System이 여러 Software Items으로 나누어 지는 경우
+에는 각 Software Item은 하위 Software Item 중 가장 낮은 수준
+의 안전성 분류를 상속받음
+Software System /
+Software Item
+(Class C)
+Software Item
+X
+(Class A)
+Software Item
+Y
+(Class C)
+Software Item(Unit)
+W
+(Class B)
+Software Item(Unit)
+Z
+(Class C)
+* Safety Classification Principles:
+- No adverse side effects caused by X and W.
+- No hazard contributing effects by X and W.
+- Rationale for classification of X and W required!
+- Z includes all software system contributions to hazards
+- Software system inherits “worst” safety class
+* Software Unit
+“Software item that is not subdivided into
+other items” [ISO/IEC 90003:2004,
+definition 3.28, modified]
+* Software Item
+“Any identifiable part of a computer program”
+[ISO/IEC 90003:2004, definition 3.14, modified]
+
+72
+3) 내부 구조 - 핵심개념
+– IEC 62304 Software safety classification best practice
+• Critical SW의 분리
+• Middle grained approach for item
+– 너무 세밀한 분리는 실용적이지 않음
+– 너무 큰 분리는 SOUP / SW 리스크 관리에 문제
+• Reuse of critical components
+(피할 수 없다면 차라리 재사용)
+– To save cost
+• 자동화된 (unit) testing의 도입
+Processor 1
+Processor 2Class C
+SW
+Class A
+SW
+M3
+M2
+M1
+M5
+M4
+Class C
+Class A
+
+73
+3) 내부 구조 - 핵심개념
+– 분류에 따라 싞규 개발이나 유지보수 동안에 사용될 개발 프로
+세스가 결정됨
+Software
+Documentation Class A Class B Class C
+Software
+Development Plan
+Section 5.1의 내용이 포함되어야 함.
+계획서 내용은 클래스가 증가함에 따라 함께 증가하지만, 계획서는 모든 클래스에서 요구함
+Software Requirements
+Specification(SRS)
+Section 5.2의 내용이 포함되어야 함.
+SRS의 내용은 클래스가 증가함에 따라 함께 증가하지만 문서는 모든 클래스에서 요구함
+Software Architecture Not required. Section 5.3의 내용이 포함되어야 함
+Class C에서는 Software Unit 수준까지 구체화 되어야 함
+Software Detailed Design Not required. Software Unit에 대하여 상세
+설계 문서화 요구(5.4)
+Software Unit
+Implementation
+모든 unit이 구현되고, 문서화되고, 소스 제어가 되어야 함(5.5.1)
+Software Unit Verification Not required. 프로세스, 테스트, 인수 기준
+정의(5.5.2, 5.5.3)
+Verification 수행(5.5.5)
+프로세스, 테스트, 인수 기준
+정의(5.5.2, 5.5.3, 5.5.4)
+Verification 수행(5.5.5)
+Integration and
+Integration Testing
+Not required. Section 5.6 요구사항을 만족하는 Integration Testing
+System Testing Not required. Section 5.7 요구사항을 만족하는 System Testing
+Software Release 출시 제품의 Version을 문서화
+(5.8.4)
+남아 있는 문제사항(anomalies)과 그것이 safety /
+effectiveness에 미치는 영향에 대한 부연 설명
+(operator usage 및 human factor를 포함)
+
+74
+3) 내부 구조 - 핵심개념
+• Software Risk Management
+– Software risk management in addition to ISO 14971 Risk
+Management
+– Additional requirements for RISK CONTROL for software,
+• Hazardous situation에 기여할 수 있는 잠재적 요인으로, RISK
+ANALYSIS 동안 식별된 Software를 포함
+• 또는, MEDICAL DEVICE RISK를 통제하는데 사용되는 Software를 포
+함
+– Rationale behind it
+• SW 개발자는 RISK CONTROL을 위한 최소한의 요구사항을 이해가
+필요함
+• ISO 14971은 Software에 대한 RISK CONTROL을 요구하지 않음
+
+75
+3) 내부 구조 - 핵심개념
+– ISO 14971 Risk management
+
+76
+3) 내부 구조 - 핵심개념
+– IEC 62304 Software risk management principle
+• FMEA(Failure mode and effects analysis)
+
+77
+3) 내부 구조 - 핵심개념
+– IEC 62304 Software risk management example process
+
+78
+3) 내부 구조 - 핵심개념
+• SOUP
+– SOUP : Software of Unknown Provenance
+• 이미 개발되었고, 일반적으로 사용되며, MEDICAL DEVICE에 이용될
+목적으로 개발되지 않은 S/W
+• 또는, 이전에 개발되었으나 개발 프로세스가 적용된 기록이 없는
+S/W
+– Additional requirements for SOUP
+• Configuration management of SOUP : vendor, title, version, …
+• Specify functional and performance requirements of SOUP item
+• Specify SYSTEM hardware and software required by SOUP item
+• Include in software risk management
+• Evaluate list of anomalies if failure or unexpected result is
+contributing to a hazardous situation
+
+79
+3) 내부 구조 - 핵심개념
+– IEC 62034 SOUP best practice
+• Include SOUP requirements in deal with 3rd party SW supplier
+– Shall provide bug list
+– Shall allow audits
+– Prepare for increased requirements
+– Knock out criteria for many large standard COTS suppliers
+• Specify scope of SOUP
+– Template for SOUP description
+– For example, also practical for declaring license policy
+• Configuration management
+– Add SOUP software to your Source Code Control System
+
+80
+3) 내부 구조 - 핵심개념
+• The software life cycle doesn‟t end with product
+release
+– Maintenance
+– Problem resolution
+
+81
+ML Level & Focus Process Area
+Process Management Project Management Engineering Support
+5 Optimizing
+- 지속적읶 프로
+세스 개선
+프로세스 혁싞 및 전파
+(OID : Organizational
+Innovation and
+Deployment)
+원읶 분석 및 해결
+(CAR : Causal Analysis and
+Resolution)
+4 Quantitatively
+Managed
+- 정량적 관리
+프로세스 성과 관리 (OPP :
+Organizational Process
+Performance)
+정량적 프로젝트 관리
+(QPM : Quantitative Project
+Management)
+3 Defined
+- 프로세스 표죾
+화
+조직 교육
+(OT : Organizational
+Training)
+조직 프로세스 개선
+(OPF : Organizational
+Process Focus)
+조직 프로세스 정의
+(OPD : Organizational
+Process Definition)
+프로젝트 통합 관리
+(IPM : Integrated Project
+Management)
+리스크 관리
+(RSKM : Risk Management)
+제품 통합
+(PI : Product Integration)
+확읶
+(VAL : Validation)
+검증
+(VER : Verification)
+설계 및 개발
+(TS : Technical Solution)
+요건 정의
+(RD : Requirement
+Development)
+의사결정
+(DAR : Decision Analysis
+and Resolution)
+2 Managed
+- 기본적읶 프로
+젝트 관리
+공급자 계약 관리
+(SAM : Supplier Agreement
+Management)
+프로젝트 모니터링 및 통제
+(PMC : Project Monitoring and
+Control)
+프로젝트 계획
+(PP : Project Planning)
+요구사항 관리
+(REQM : Requirement
+Management)
+프로세스/제품 품질보증
+(PPQA : Process and
+Product Quality
+Assurance)
+측정 및 분석
+(MA : Measurement and
+Analysis)
+형상관리
+(CM : Configuration
+Management)
+4) CMMI v1.2 PA’s by Maturity level, by Category
+Capability Maturity Model Integration
+
+82
+4) CMMI 프로세스 GAP 분석 (1/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+4 General Requirements
+4.1 Quality management system ALL MODERATE CMMI is the QMS, without a safety focus
+4.2 Risk Management RSKM STRONG
+4.3 Software safety classification RM
+RD
+MODERATE
+MODERATE CMMI does not address safety specification
+5 Software development Process
+5.1 Software development planning
+5.1.1 Software development plan PP SG2 STRONG
+5.1.2 Keep software development plan updated PP GP 2.6
+PP GP 2.8
+STRONG
+MODERATE
+5.1.3 Software development plan reference to
+SYSTEM design and development IPM SP 1.4 WEAK SP 1.4 is much more, but references to other
+plans is a start
+5.1.4 Software development standards, methods
+and tools planning IPMS SP 1.2 STRONG But with no OPD, we’re not sure how good
+these assets are
+5.1.5 Software Integration and Integration testing
+planning
+PI SG 1
+PI GP 2.2 STRONG
+5.1.6 Software VERIFICATION planning VER SG 1
+VER GP 2.2 STRONG
+5.1.7 Software RISK MANAGEMENT planning RSKM STRONG
+취약 부분
+
+83
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+5.1.8 Documentation planning CM
+PP GP 2.6 STRONG
+5.1.9 Software configuration management
+planning
+CM
+PP SP 2.3
+PP GP 2.6
+STRONG
+5.1.10 Supporting items to be controlled CM
+PP GP 2.6 MODERATE Not specifically addressed
+5.1.11 Software CONFIGURATION ITEM control
+before VERIFICATION CM SP 1.3 MODERATE Timing is not specifically addressed in CMMI
+5.2 Software requirements analysis
+5.2.1 Define and document software requirements
+from SYSTEM requirements RD SG 2 STRONG
+5.2.2 Software requirements content RD MODERATE Elements a-I not all addressed in CMMI
+5.2.3 Include RISK CONTROL measures in
+software requirements
+RSKM SG 3
+RM SP 1.4 WEAK Not specifically addressed
+5.2.4 Re-EVALUATE MEDICAL DEVICE RISK
+ANALYSIS RSKM SP 3.2 STRONG But Cohesion between mitigation activities and
+requirements not emphasized in CMMI
+5.2.5 Update SYSTEM requirements
+RM SP 1.4
+CM SG 2
+RD GP 2.8
+STRONG
+5.2.6 Verify software requirements RD SG 3
+VER SG 2 STRONG Specific criteria not defined in CMMI
+4) CMMI 프로세스 GAP 분석 (2/10)
+
+84
+4) CMMI 프로세스 GAP 분석 (3/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+5.3 Software ARCHITECTURAL design
+5.3.1 Transform software requirements into an
+ARCHITECTURE TS SP 2.1 STRONG
+5.3.2 Develop an ARCHITECTURE for the
+interfaces of SOFTWARE ITEMS TS SP 2.3 STRONG
+5.3.3 Specify functional and performance
+requirements of SOUP item
+RD
+TS MODERATE SOUP not singled out in CMMI in this way
+5.3.4 Specify SYSTEM hardware and software
+required by SOUP item
+RD
+TS MODERATE SOUP not singled out in CMMI in this way
+5.3.5 Identify segregation necessary for RISK
+CONTROL RD WEAK Could be implemented in RD, but not
+specifically addressed in CMMI
+5.3.6 Verify software ARCHITECTURE VER SG 2.3
+PI SP 2.1, 3.1
+STRONG
+MODERATE CMMI does not specifically call out SOUP
+5.4 Software detailed design
+5.4.1 Refine SOFTWARE ARCHITECTURE into
+SOFTWARE UNITS RD SG 2 STRONG
+
+5.4.2 Develop detailed design for each
+SOFTWARE UNIT TS SG 2 STRONG
+5.4.3 Develop detailed design for interfaces TS STRONG
+5.4.4 Verify detailed design PI SP 3.1
+VER STRONG
+
+85
+4) CMMI 프로세스 GAP 분석 (4/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+5.5 SOFTWARE UNIT implementation and verification
+5.5.1 Implement each SOFTWARE UNIT TS SP 3.1 STRONG
+5.5.2 Establish SOFTWARE UNIT
+VERIFICATION PROCESS VER SG 1, 2 MODERATE CMMI applies VER selectively. Verification of
+test procedures is done selectively in CMMI
+5.5.3 SOFTWARE UNIT acceptance criteria PI SP 3.1
+VER SP 1.3 STRONG
+5.5.4 Additional SOFTWARE UNIT acceptance
+criteria VER SG 1, 2 MODERATE Criteria applies selectively in CMMI
+5.5.5 SOFTWARE UNIT VERIFICATION VER SG 3 STRONG
+5.6 Software integration and integration testing
+5.6.1 Integrate SOFTWARE UNITS PI SP 3.2 STRONG
+5.6.2 Verify software integration PI SP 3.3 MODERATE CMMI does not address support for manual
+operations
+5.6.3 Test integrated software PI SP 3.3
+VER SG 3 STRONG
+5.6.4 Integration testing content VER SP 3.2 STRONG
+5.6.5 Verify integration test procedures VER SG 2, 3 MODERATE Only selectively applied in CMMI
+5.6.6 Conduct regression tests PI SP 3.3
+VER SG 2, 3 MODERATE Not specifically called out in CMMI, but inferred
+5.6.7 Integration test record contents PI SP 3.3
+VER SG 3 MODERATE Specific requirements not addressed in CMMI
+
+86
+4) CMMI 프로세스 GAP 분석 (5/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+5.6.8 Use software problem resolution PROCESS CM SP 2.1 MODERATE CMMI does not address problem resolution
+specifically
+5.7 SOFTWARE SYSTEM testing
+5.7.1 Establish tests for software requirements RM SP 1.4
+VER SP 1.3 MODERATE CMMI does not specifically require that ALL
+requirements are tested
+5.7.2 Use software problem resolution PROCESS CM SP 2.1 MODERATE CMMI does not address problem resolution
+specifically
+5.7.3 Retest after changes
+PI PS 3.3
+CM SG 2
+VER SG 2, 3
+MODERATE Not specifically called out in CMMI, but inferred
+5.7.4 Verify SOFTWARE SYSTEM testing VER MODERATE Specific requirements not stressed in CMMI
+5.7.5 SOFTWARE SYSTEM test record contents PI SP 3.3
+VER SG 3 MODERATE Specific requirements not addressed in CMMI
+5.8 Software release
+5.8.1 Ensure software VERIFICATION is
+complete
+VER SP 2.3
+VER SP 3.2 STRONG
+5.8.2 Document known residual ANOMALIES CM SP 2.1
+VER SP 3.2 MODERATE Not specifically addressed in CMMI
+5.8.3 EVALUATE known residual ANOMALIES RSKM SG 2
+VER SP 3.2 MODERATE Not specifically addressed in CMMI
+5.8.4 Document released VERSIONS
+PI SP 3.4
+CM SP 1.3
+CM SP 3.1
+STRONG
+
+87
+4) CMMI 프로세스 GAP 분석 (6/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+5.8.5 Document how released software was
+created
+PI SG 1
+CM SP 1.3
+CM SP 3.1
+STRONG
+5.8.6 Ensure activities and tasks are complete PMC SP 1.7 STRONG
+5.8.7 Archive software CM SP 1.3
+CM SP 3.1 MODERATE Specific archival requirements not addressed
+in CMMI
+5.8.8 Assure repeatability of software release CM SP 3.2
+PPQA SG 1 STRONG
+6 Software maintenance PROCESS
+6.1 Establish software maintenance plan
+PP SG 2
+TS 2.2
+TS 3.2
+MODERATE Maintenance is not specifically discussed in
+CMMI, but inferred
+6.2 Problem and modification analysis
+6.2.1 Document and EVALUATE feedback
+6.2.1.1 Monitor feedback CM SP 2.11 MODERATE Not specifically addressed in CMMI
+6.2.1.2 Document and EVALUATE feedback CM SG 2 MODERATE Not specifically addressed in CMMI
+6.2.1.3 Evaluate PROBLEM REPORT’s affects on
+SAFETY
+CM SG 2
+RSKM SG 2 MODERATE Not specifically addressed in CMMI
+6.2.2 Use software problem resolution PROCESS CM SP 2.1 MODERATE Not specifically addressed in CMMI
+6.2.3 Analyze CHANGE REQUESTS CM SP 2.2 STRONG
+
+88
+4) CMMI 프로세스 GAP 분석 (7/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+6.2.4 CHANGE REQUEST approval CM SP 2.2 STRONG
+6.2.5 Communicate to users and regulators CM SP 1.2 MODERATE Specific reporting requirements not stressed in
+CMMI
+6.3 Modification implementation
+6.3.1 Use establish PROCESS to implement
+modification CM GP 2.2 MODERATE
+6.3.2 Re-release modified SOFTWARE SYSTEM PI SG 3
+CM SP 1.3 MODERATE Some elements of 5.8 are MODERATE
+7 Software RISK MANAGEMENT PROCESS
+7.1 Analysis of software contributing to hazardous situations
+7.1.1 Identify SOFTWARE ITEMS that could
+contribute to a hazardous situation RSKM SG 2 MODERATE Safety risk analysis not specifically required by
+CMMI
+7.1.2 Identify potential causes of contribution to a
+hazardous situation
+RSKM SP 1.1
+RSKM SG 2 MODERATE Safety risk analysis not specifically required by
+CMMI
+7.1.3 EVALUATE published SOUP ANOMALY
+lists RSKM SP 1.1 MODERATE Not specifically required by CMMI
+7.1.4 Document potential causes RSKM SP 1.1
+RSKM SG 2 MODERATE Safety risk analysis not specifically required by
+CMMI
+7.1.5 Document sequences of events RSKM SG 1
+RSKM SG 2 MODERATE Not specifically required by CMMI
+
+89
+4) CMMI 프로세스 GAP 분석 (8/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+7.2 RISK CONTROL measures
+7.2.1 Define RISK CONTROL measures RSKM SP 3.1 STRONG
+7.2.2 RISK CONTROL measures implemented in
+software
+RSKM SP 2.1
+RD SG 1, 2 MODERATE Not specifically required by CMMI
+7.3 VERIFICATION of RISK CONTROL measures
+7.3.1 Verify RISK CONTROL measures VER SG 2, 3 MODERATE CMMI applies VER selectively
+7.3.2 Document any new sequences of events RSKM SG 2 MODERATE Not specifically required by CMMI
+7.3.3 Document TRACEABILITY RM SP 1.4 MODERATE Risk traceability not specifically required by
+CMMI
+7.4 RISK MANAGEMENT of software changes
+7.4.1 Analyze changes to MEDICAL DEVICE
+SOFTWARE with respect to SAFETY CM SP 2.2 MODERATE Not specifically required by CMMI
+7.4.2 Analyze impact of software changes on
+existing RISK CONTROL measures CM SP 2.2 MODERATE Not specifically required by CMMI
+7.4.3 Perform RISK MANAGEMENT ACTIVITES
+based on analysis CM SP 2.2 MODERATE Not specifically required by CMMI
+
+90
+4) CMMI 프로세스 GAP 분석 (9/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+8 Software configuration management PROCESS
+8.1 Configuration identification
+8.1.1 Establish means to identify
+CONFIGURATION ITEMS CM SP 1.1 STRONG
+8.1.2 Identify SOUP CM SP 1.1
+8.1.3 Identify SYSTEM configuration
+documentation CM SP 1.3 STRONG
+8.2 Change control
+8.2.1 Approve CHANGE REQUESTS CM SP 1.2 STRONG
+8.2.2 Implement changes CM SP 2.1
+RSKM STRONG
+8.2.3 Verify changes CM SP 2.1
+VER MODERATE Not specifically required by CMMI
+8.2.4 Provide means for TRACEABILITY of
+change
+CM SP 1.2
+CM SP 2.1
+STRONG
+STRONG
+8.3 Configuration status accounting CM SP 3.1 STRONG
+
+91
+4) CMMI 프로세스 GAP 분석 (10/10)
+IEC
+62304
+Section
+Description CMMI
+Component
+Alignment
+Strength Observations
+9 Software problem resolution PROCESS
+9.1 Prepare PROBLEM REPORTS CM SP 2.1 WEAK
+9.2 Investigate the problem CM SP 1.1 WEAK CR may be created in response to a PR
+9.3 Advise relevant parties CM SP 3.1 WEAK
+9.4 Use change control process CM SP 1.2
+CM SP 2.2
+STRONG
+STRONG
+9.5 Maintain records CM SP 3.1 STRONG But addresses CRs not PRs
+9.6 Analyze problems for trends CM GP 2.8
+CAR WEAK Only lightly addressed. CAR would imply
+quantitative management and a stable process.
+9.7 Verify software problem resolution CM SP 1.1
+VER SG 3 STRONG
+9.8 Test documentation contents CM SP 1.1
+VER SG 3 MODERATE Not specifically required by CMMI
+
+92
+5) IEC 62304 대응을 위한 추진 방향
+• 프로세스 측면
+– 추상적 수준에서 대부분의 요구사항은 CMMI 를 통하여 제공되
+고 있으나, 상세 수준에서는 보완 필요
+• Safety 중심의 Risk Management 프로세스 개발
+• Safety Class 기반의 Architecture 조정 및 Dev. Process Tailoring
+• 명시적인 문제(Defect) 해결 프로세스 개발
+• Software Unit Verification으로 Unit Test 도입(자동화 or 수동)
+– 보다 상세한 GAP 분석 후, 부적합 사항 보완 작업 진행 필요
+• Spec 분석 후 Gap Analysis 작업 진행 필요
+• IEC 62304 / CMMI 프로세스 매핑표 작성
+• 부적합 사항 보완
+– 최근 CE / FDA에서 임상시험 결과 요구가 강화 되고 있는데 반
+해, IEC 62304에서는 이러한 부분에 대해 별도의 가이드라인이
+제시 되고 있지 않으므로, 인증 추진 시 주의 필요
+
+93
+6) 기대 효과
+• IEC 62304는 안전한 S/W 개발을 위한 체계적인 방법임
+– 의료 기기 및 의료소프트웨어의 실질적인 안전성 향상
+– 제품에 대한 비기능적 요구사항을 실제로 적용할 수 있는 기회
+• 향후 Safety 뿐만 아니라, Performance 관리를 위한 참조 프로세스
+로 이용 가능
+• 규제에 적용되기에는 공격적 성향이 있음
+– 외산 Medical Device Software에 대한 진입장벽 강화 예상
+
+94
+(1) Software Validation 심사 지침
+가. 주요내용
+• 적용 및 심사 항목(GMP기준중)
+- 제품실현 ; 설계 및 개발 유효성 확인(7.3.6.)
+- 제품실현 ; 소프트웨어밸리데이션 절차 문서화(7.5.2.1 라목) 등
+• 소프트웨어 자체가 의료기기이거나 의료기기와 결합된 소프트웨어,자동화 설비 및 품질시스템 운영
+(생산시설 등) 관련 소프트웨어 전반에 대한 세부 시행방침을 단계적․합리적 수준으로 정함.
+나. 죾거 국제기죾
+• FDA Guidance ; 소프트웨어 밸리데이션의 일반원칙(2002년)
+• IEC 60601-1 ; 의료용전기기기 Part 1. 기본적인 안전성과 필수 성능에 관한 일반 요구사항
+• IEC 60601-1-4 ; 의료용전기기기 Part1-4. 안전에 관한 일반요구사항
+- 부가기준 : 프로그램 가능한 전기 의료시스템
+• IEC 62304 ; 소프트웨어 수명주기 프로세스
+다. ‘소프트웨어밸리데이션’ 적용 및 심사내용
+• 등급별 적용․심사내용 및 범위
+- 3․4등급 : „07.5.31부터 완전 적용하되, 6개월갂(„07.5.31～‟07.11.30)의 행정지도 기갂 설정․운영
+- 1․2등급 : 아래 단계별 기준을 적용하되, 가급적 시행 초기부터 완전 적용을 권장하고, 6개월갂
+(„07.5.31～‟07.11.30)의 행정지도 기갂 설정․운영
+• 적용 및 심사대상
+- 소프트웨어 자체가 의료기기이거나 의료기기와 결합된 소프트웨어
+- 자동화 설비 및 품질시스템 운영(생산시설 등) 관련 소프트웨어
+6. KGMP SW Validation Documentation
+
+95
+(2) Software Validation 심사 단계
+<제 1단계> - 도입기(‘07.5.31～’08.5.30) : 설계․개발 적용
+<소프트웨어 자체가 의료기기이거나 의료기기와 결합된 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 소프트웨어 Life cycle 홗동, 설계 및 개발 계획, 요구사항, 설계, 구조 또는 코딩, 소프트웨어 개발자에 의한 시험(유닛․
+통합․시스템), 사용자 현장 시험, 밸리데이션 보고서 등
+<자동화 설비 및 품질시스템 운영(생산시설 등) 관렦 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 각종 스프레드시트, PCB 시험도구 등에 대한 예방차원의 관리, 갂단한 시험․검사 또는 교정 등
+<제 2단계> - 심화기(‘08.5.31～’09.5.30) : 생산․공정 적용
+<소프트웨어 자체가 의료기기이거나 의료기기와 결합된 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 소프트웨어 Life cycle 홗동, 설계 및 개발 계획, 요구사항, 설계, 구조 또는 코딩, 소프트웨어 개발자에 의한 시험(유닛․
+통합․시스템), 사용자 현장 시험, 밸리데이션 보고서 등
+• 유지보수 및 변경관리 홗동
+<자동화 설비 및 품질시스템 운영(생산시설 등) 관렦 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 각종 스프레드시트, PCB 시험도구 등에 대한 예방차원의 관리, 갂단한 시험․검사 또는 교정 등
+• Programmable logic controller(공조설비, 포장설비 등), 컴퓨터수치 제어설비(CNC), 자동선별기등에 대한 시험․검사,
+전체 또는 부분적 공정밸리데이션(IQ, OQ, PQ)
+KGMP SW Validation Documentation
+
+96
+<제 3단계> - 완숙기(‘09.5.31～) : 전체 시스템 적용
+<소프트웨어 자체가 의료기기이거나 의료기기와 결합된 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 소프트웨어 Life cycle 홗동, 설계 및 개발 계획, 요구사항, 설계, 구조 또는 코딩, 소프트웨
+어 개발자에 의한 시험(유닛․통합․시스템), 사용자 현장 시험, 밸리데이션 보고서 등
+• 유지보수 및 변경관리 홗동
+<자동화 설비 및 품질시스템 운영(생산시설 등) 관렦 소프트웨어>
+• 전체적인 밸리데이션 기준 및 절차 수립
+• 각종 스프레드시트, PCB 시험도구 등에 대한 예방차원의 관리, 갂단한 시험․검사 또는 교
+정 등
+• Programmable logic controller(공조설비, 포장설비 등), 컴퓨터수치제어 설비(CNC), 자동
+선별기등에 대한 시험․검사, 전체 또는 부분적 공정 밸리데이션(IQ, OQ, PQ)
+• 주문설계된 소프트웨어, 기성품 소프트웨어를 수정․변경한 경우, 싞뢰성에 대한 의심이
+농후한 소프트웨어의 경우에 대한 완전한 소프트웨어 밸리데이션
+KGMP SW Validation Documentation
+
+97
+(3) 적용 및 심사지침에 따른 제조업소 죾비 사항
+• 제조일자가 „07.5.31부터 생산한 제품중 3․4등급에 대하여는 3단계에 적합하도록, 1․2
+등급에 대하여는 최소한 단계별 적용 기준에 적합하도록 각각 조치하여야 함.
+• 수입업소의 경우 수입관리기준서의 제조원 품질관리상황에 대한 확인사항으로서 동
+기준 관련자료를 필요시 구비할 수 있도록 하는 내용을 규정할 것(GIP요구사항)
+KGMP SW Validation Documentation
+
+98
+
+99
+
+100
+
+101
+ISO 13485 규격 소프트웨어 개발 및 유지홗동
+7.3.1 설계 및 개발 기획 소프트웨어 개발 기획
+7.3.2 설계 및 개발 입력 소프트웨어 요구사항 분석
+7.3.3 설계 및 개발 출력 소프트웨어 아키텍처 설계
+소프트웨어 상세 설계/코딩
+7.3.4 설계및 개발 검토
+7.3.5.설계 및 개발 검증
+7.3.6 설계 및 개발 밸리데이션
+소프트웨어 유닛 이행 및 검증
+소프트웨어 통합 및 통합시험
+소프트웨어 시스템 시험(현장시험)
+소프트웨어 릴리즈
+7.3.7 설계 및 개발 변경 관리
+(7.3.5)(설계 및 개발 검증)
+(7.3.6)(설계 및 개발 밸리데이션)
+형상관리
+문제 발 견 및 수정 분석
+수정 이행
+위험핚 상황에 대핚 소프트웨어 영향 분석
+위험관리 방법
+위험관리 방법의 검증
+소프트웨어 변경의 위험관리
+7.5.3 식별 및 추적성 형상관리 (형상식별, 형상상태)
+변경 관리
+
+102
+위험관리의 본질은 의료기기에서 발생핛 수 있는 위해 요읶을 식별하고,
+그 위해 요읶으로 읶핚 위험스러운 상황과 그에 대응하는 위험관리 방법을
+설정하는 것이다. 이렇게 설정된 위험관리 방법을 실행함으로 위험스러운
+상황의 발생가능성과 심각성을 허용 수죾 이하로 감소시킬 수 있을 것이다.
+(4) KGMP - 위험관리
+KGMP SW Validation Documentation
+
+103
+
+104
+
+105
+
+106
+
+107
+ISO 14971:2000 조항 소프트웨어 개발 및 유지홗동
+4.1 위험 평가 절차
+4.2 의료기기 앆전 관렦 의도핚 용도/목적 및 특성의 식별
+4.3 식별 또는 예측 가능핚 위해 요읶의 식별 위험스러운 상황에 대핚 소프트웨어의 영향 분석
+4.4 각 위해 요읶에 대핚 위험 추정 소프트웨어 앆전성 분류
+5. 위험 평가
+6.1 위험 축소
+6.2 옵션 분석 위험 관리 방법 정의
+6.3 위험 관리 방법의 구현 소프트웨어에 구현된 위험관리 방법
+위험관리 방법 검증
+6.4 잒류 위험 평가
+6.5 위험/장점 분석
+6.6 기타 발생 위해 요읶 상황의 새로운 발생숚서 문서화
+6.7 위험 평가 완료
+7 전체 잒류 위험 평가
+8 위험관리 보고서 추적성 문서화
+9 생산 후 정보 소프트웨어 변경에 대핚 위험관리
+
+108
+(5) Software Validation Document List
+1) 소프트웨어 개발 절차서 (SDP, Software Development Process)
+2) 소프트웨어 요구사항 명세서(SRS, Software Requirements Specification)
+3) 소프트웨어 아키텍처 설계도(SAD, Software Architecture Document)
+4) 소프트웨어 설계 명세서(SDS, Software Design Specification)
+5) 소프트웨어 요구사항 추적 관리 (RTA, Software Requirement Traceability Analysis)
+6) 소프트웨어 형상관리(SCM, Software Configuration Management)
+7) 소프트웨어 검증 및 밸리데이션 (SVVT, Software Verification and Validation)
+- 밸리데이션 읷자 및 홗동 수행자
+- 대상 소프트웨어의 버전
+- 밸리데이션에 사용된 시험 방법 및 유형
+- 시험에 사용된 도구, 관렦 하드웨어
+- 밸리데이션/시험 결과 : 결함(Fault), 경고(Alarm), 확읶된 비정상 상태(변종, 버그 등)
+- 취해짂 조치
+8) 소프트웨어 위험관리 (SRM, Software Risk Management)
+- 소프트웨어 앆전성 등급, 위해 요읶 분석
+- 위험관리절차서, 위험관리계획서, 위험관리보고서 필요
+9) 기타 문서화
+- 사용자를 위핚 문서화: 소프트웨어 설명서, 릴리즈노트, 매뉴얼, 지침서 등
+- 제조업체에서의 문서화: 소프트웨어 유지보수 매뉴얼 등
+- 의료기기 지원 표죾 문서화: DICOM, HL7 Conformance Statement
+KGMP SW Validation Documentation
+
+109
+Thank you
