@@ -1,0 +1,242 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954373-3sn",
+    "sourcePath": "raw/sources/RA/04_제품별 인허가 진행 문서/07_Retrofit (HnX-R1)/★ FDA 510(k) - K252912/참고자료/참고 - Cybersecurity - 최종 정리/이경수 팀장님/정재민 프로님/3.1_A-CAV-HNX_Architecture View.docx",
+    "canonicalGroupId": "fb2be68b203d"
+  },
+  "document": {
+    "title": "Cybersecurity Architecture View",
+    "documentType": "Cybersecurity architecture view",
+    "productModels": [
+      "HnX-R1(가칭)"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Revision No. 0",
+    "documentDate": "",
+    "standards": [
+      "IEC 60601-4-5"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Cybersecurity architecture view for the Retrofit X-ray System HnX-R1.",
+    "officialUse": "Supports cybersecurity architecture documentation for FDA-related requirements, including global system view, updateability/patchability view, and security use case view.",
+    "keyPoints": [
+      "The document scope is limited to HnX-R1, the Retrofit X-ray System.",
+      "Three architectural views corresponding to FDA requirements are included: Global system view, Updateability/Patchability view, and Security use case view.",
+      "Multi patient harm view is excluded because it is not the product.",
+      "The detector update process uses standard communication procedure, decrypts received patch data, performs a SHA-256 integrity check, applies the update after a normal response, and automatically reboots.",
+      "Risk identification is mapped to STRIDE categories and cybersecurity controls, including authentication, authorization, cryptography, integrity, confidentiality, logging, resiliency, and firmware/software update controls."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Retrofit X-ray System",
+      "type": "product",
+      "evidence": "Product name: Retrofit X-ray System"
+    },
+    {
+      "name": "HnX-R1(가칭)",
+      "type": "product model",
+      "evidence": "Model name: HnX-R1(가칭)"
+    },
+    {
+      "name": "FDA",
+      "type": "regulatory authority",
+      "evidence": "three of the four architectural views corresponding to the FDA requirements"
+    },
+    {
+      "name": "IEC 60601-4-5",
+      "type": "standard",
+      "evidence": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)"
+    },
+    {
+      "name": "Console application",
+      "type": "system component",
+      "evidence": "CRM-1~CRM-25(A1~A25): These assets are entities implemented in the console application"
+    },
+    {
+      "name": "Detector",
+      "type": "system component",
+      "evidence": "A26~A32: These assets are entities implemented in the detector inside"
+    },
+    {
+      "name": "PACS/worklist server",
+      "type": "external system",
+      "evidence": "CRM-22(A22): Console – PACS/Worklist server ethernet communication interface"
+    },
+    {
+      "name": "KTR-XXXXXXX",
+      "type": "test report number",
+      "evidence": "(Test report no. KTR-XXXXXXX), Penetration test PT-2, XXXXXXX)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Global security architecture view",
+      "pageTarget": "Global Security Architecture View",
+      "evidence": "Data Flow Diagram (Global security architecture view)"
+    },
+    {
+      "name": "Data-Flow Diagram",
+      "pageTarget": "Data Flow Diagram",
+      "evidence": "A Data-Flow Diagram (DFD) in medical device cybersecurity is a graphical representation that maps out the flow of data within a medical system."
+    },
+    {
+      "name": "Updateability/Patch-ability View",
+      "pageTarget": "Updateability and Patchability View",
+      "evidence": "Updateability/Patch-ability View"
+    },
+    {
+      "name": "Security Use Case View",
+      "pageTarget": "Security Use Case View",
+      "evidence": "Security Use Case View"
+    },
+    {
+      "name": "STRIDE",
+      "pageTarget": "STRIDE Threat Model",
+      "evidence": "Risk ID Asset STRIDE Threat Description"
+    },
+    {
+      "name": "SHA-256 integrity check",
+      "pageTarget": "SHA-256 Integrity Check",
+      "evidence": "The detector decrypts the received patch data and performs a SHA-256 integrity check."
+    },
+    {
+      "name": "Firmware and software update controls",
+      "pageTarget": "Firmware and Software Update Controls",
+      "evidence": "H) Firmware and software update controls: Risk ID CRM-55,56, 57"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a cybersecurity architecture view for the Retrofit X-ray System HnX-R1.",
+      "evidenceText": "The purpose of this document is to show a cyber security architecture view for Retrofit X-ray System(HnX-R1).",
+      "pageTarget": "Cybersecurity Architecture View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document scope is limited to HnX-R1.",
+      "evidenceText": "This document is limited to HnX-R1, the Retrofit X-ray System.",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes three architectural views corresponding to FDA requirements.",
+      "evidenceText": "three of the four architectural views corresponding to the FDA requirements are Global system view, Updateability/Patchability view, and Security use case view.",
+      "pageTarget": "FDA Cybersecurity Requirements",
+      "confidence": "high"
+    },
+    {
+      "claim": "The multi patient harm view is excluded.",
+      "evidenceText": "Multi patient harm view is excluded because it is not our product.",
+      "pageTarget": "Multi Patient Harm View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DFD is used to map data flow and identify potential vulnerabilities in data handling, transmission, and storage.",
+      "evidenceText": "By visualizing these flows, DFDs help identify potential vulnerabilities in data handling, transmission, and storage",
+      "pageTarget": "Data Flow Diagram",
+      "confidence": "high"
+    },
+    {
+      "claim": "Console assets CRM-1 through CRM-25 include database, data manipulation process, detector, PACS/worklist communication interface, and GUI interface functions.",
+      "evidenceText": "CRM-1~CRM-25(A1~A25): These assets are entities implemented in the console application and consist of a database, data manipulation process, detector, and communication interface between PACS/worklist servers and a GUI interface",
+      "pageTarget": "Console Application",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector assets A26 through A32 include detector database, data manipulation process, and interface for communication with the console program.",
+      "evidenceText": "A26~A32: These assets are entities implemented in the detector inside and consist of a database, data manipulation process, interface for the console program to communication its image data.",
+      "pageTarget": "Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector update process proceeds only after proper standard communication connection and uses no additional ports.",
+      "evidenceText": "The detector's update process can only proceed after a proper connection has been established through the standard communication procedure. No additional ports are used.",
+      "pageTarget": "Updateability and Patchability View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The console sends a *.bpd update file to the detector and initiates the patch request.",
+      "evidenceText": "The console sends the update file (*.bpd) to the detector and initiates the patch request.",
+      "pageTarget": "Detector Firmware Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector decrypts patch data and performs a SHA-256 integrity check.",
+      "evidenceText": "The detector decrypts the received patch data and performs a SHA-256 integrity check.",
+      "pageTarget": "SHA-256 Integrity Check",
+      "confidence": "high"
+    },
+    {
+      "claim": "After a successful update response, the detector applies the update and automatically reboots.",
+      "evidenceText": "After sending a normal response, the detector proceeds with applying the update and automatically reboots itself.",
+      "pageTarget": "Detector Firmware Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "Security use case risks were identified according to the Data-Flow Diagram.",
+      "evidenceText": "Risk identification according to Data-Flow Diagram",
+      "pageTarget": "Security Use Case View",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document maps DFD risks to cybersecurity control categories.",
+      "evidenceText": "* Risk ID by Cybersecurity Controls list A) Authentication controls: Risk ID CRM-07, 14, 17, 18",
+      "pageTarget": "Cybersecurity Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document identifies cybersecurity requirements according to IEC 60601-4-5.",
+      "evidenceText": "Risk identification according to cybersecurity requirements (IEC 60601-4-5)",
+      "pageTarget": "IEC 60601-4-5",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-4-5 risk IDs CRM-33 through CRM-40 are mapped to authentication controls.",
+      "evidenceText": "A) Authentication controls: Risk ID CRM-33-40",
+      "pageTarget": "Authentication Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-4-5 firmware and software update controls are mapped to CRM-55, CRM-56, and CRM-57.",
+      "evidenceText": "H) Firmware and software update controls: Risk ID CRM-55,56, 57",
+      "pageTarget": "Firmware and Software Update Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document refers readers to a penetration test report for evaluation results.",
+      "evidenceText": "Please refer to the following report for the evaluation results of the penetration test (Test report no. KTR-XXXXXXX), Penetration test PT-2, XXXXXXX)",
+      "pageTarget": "Penetration Test Report",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present; prepared, reviewed, approved, date, and signature fields appear blank in the extracted text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision history shows Revision No. 0 and Initial, but no revision date is present."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority is based on the phrase 'FDA requirements'; no specific FDA guidance title, regulation number, or submission identifier is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Architecture diagrams are represented only by placeholder captions in the preprocessed text, limiting extraction of diagram details."
+    },
+    {
+      "severity": "warning",
+      "reason": "Penetration test report metadata is masked or incomplete: 'KTR-XXXXXXX' and 'XXXXXXX'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Potential conflicting evidence: the first cybersecurity controls list states 'Firmware and software update controls: N/A', while the IEC 60601-4-5 controls list maps firmware and software update controls to CRM-55, CRM-56, and CRM-57."
+    }
+  ]
+}

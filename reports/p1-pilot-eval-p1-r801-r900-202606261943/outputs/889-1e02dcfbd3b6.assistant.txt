@@ -1,0 +1,255 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954417-15bs",
+    "sourcePath": "raw/sources/DHF (인허가)/05_HnX-P1, HnX-PB/92_인증 - FDA/Attachment/034_Clinical Report (Rev2).pdf",
+    "canonicalGroupId": "1e02dcfbd3b6"
+  },
+  "document": {
+    "title": "Clinical Report",
+    "documentType": "Clinical report",
+    "productModels": [
+      "HnX-P1",
+      "HnX-PB"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "Rev2",
+    "documentDate": "December 30, 2024",
+    "standards": [
+      "DICOM 3.0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Clinical image quality evaluation report for HnX-P1 and HnX-PB portable x-ray systems.",
+    "officialUse": "Supports regulatory/RA evidence for diagnostic imaging performance, image quality, indication for use, clinical evaluator qualification, and clinical evaluation results.",
+    "keyPoints": [
+      "The portable x-ray system may be used for diagnostic imaging of body extremities and is not for mammography use.",
+      "The variant model HnX-PB has only exterior design changes compared to HnX-P1, with interface, exterior material, internal structure, PCB, software, and other items stated as the same.",
+      "Clinical evaluation was conducted through the main model HnX-P1 using a FDA cleared detector A1717MCW identified with K223930.",
+      "Images were acquired using DICOM 3.0 and evaluated by one radiologist, Dr. Sung Hyun Kim of Seoul National University Hospital.",
+      "The total average annotation value was 3.57 on a scale where Grade S equals 4, Grade A equals 3, Grade B equals 2, and Grade C equals 1.",
+      "The conclusion states that images acquired using HnX-P1 and HnX-PB provide sufficient image quality and diagnostic capability to meet medical imaging requirements."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-P1",
+      "type": "device model",
+      "evidence": "Model name: HnX-P1, HnX-PB"
+    },
+    {
+      "name": "HnX-PB",
+      "type": "device model",
+      "evidence": "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1"
+    },
+    {
+      "name": "H&abyz",
+      "type": "manufacturer",
+      "evidence": "Objective X-ray source : HnX-P1 made by H&abyz."
+    },
+    {
+      "name": "A1717MCW",
+      "type": "detector model",
+      "evidence": "FDA Cleared Detector (K223930) : A1717MCW"
+    },
+    {
+      "name": "K223930",
+      "type": "FDA clearance identifier",
+      "evidence": "FDA Cleared Detector (K223930) : A1717MCW"
+    },
+    {
+      "name": "Dr. Sung Hyun Kim",
+      "type": "clinical evaluator",
+      "evidence": "The number of radiologist : 1 (Dr. Sung Hyun Kim, Seoul National University Hospital)"
+    },
+    {
+      "name": "Seoul National University Hospital",
+      "type": "institution",
+      "evidence": "The number of radiologist : 1 (Dr. Sung Hyun Kim, Seoul National University Hospital)"
+    },
+    {
+      "name": "PicoScope 3204D",
+      "type": "oscilloscope model",
+      "evidence": "Oscilloscope information Product Manufacturing company Pico Technology Model name PicoScope 3204D"
+    },
+    {
+      "name": "Dosimeter 3",
+      "type": "dosemeter model",
+      "evidence": "Dosemeter information Product Manufacturing company Iba Model name Dosimeter 3"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Indication for Use",
+      "pageTarget": "Indication for Use",
+      "evidence": "The portable x-ray system may be used for diagnostic imaging of body extremities."
+    },
+    {
+      "name": "Not for mammography use",
+      "pageTarget": "Mammography Exclusion",
+      "evidence": "- Not for mammography use"
+    },
+    {
+      "name": "Portable x-ray system",
+      "pageTarget": "Portable X-Ray System",
+      "evidence": "The test is conducted by installing the portable device on a stand."
+    },
+    {
+      "name": "DICOM 3.0",
+      "pageTarget": "DICOM 3.0",
+      "evidence": "Image Acquisition DICOM 3.0"
+    },
+    {
+      "name": "Clinical image quality evaluation",
+      "pageTarget": "Clinical Image Quality Evaluation",
+      "evidence": "The images acquired using the HnX-P1 and HnX-PB were analyzed and evaluated for image quality."
+    },
+    {
+      "name": "Clinical evaluation expert qualification",
+      "pageTarget": "Clinical Evaluation Expert Qualification",
+      "evidence": "His qualifications and professional history are equivalent to those of a U.S. board-certified radiologist, fulfilling the requirement set forth by the FDA"
+    },
+    {
+      "name": "Dose reliability test",
+      "pageTarget": "Dose Reliability Test",
+      "evidence": "HnX-P1 Dose Reliability TEST"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a Clinical Report for HnX-P1 and HnX-PB.",
+      "evidenceText": "Clinical Report Model name: HnX-P1, HnX-PB",
+      "pageTarget": "Clinical Report",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-PB is described as a variant model with only exterior design changes from HnX-P1.",
+      "evidenceText": "The variant model HnX-PB has only changed the exterior design compared to the main model HnX-P1, and the interface, exterior material, internal structure, PCB, software, etc. are all the same.",
+      "pageTarget": "HnX-PB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The clinical study was conducted through the main model HnX-P1.",
+      "evidenceText": "Therefore, the clinical study was conducted through the main model (HnX-P1)",
+      "pageTarget": "HnX-P1 Clinical Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report uses DICOM 3.0 for image acquisition/output data.",
+      "evidenceText": "By these presents output data for communications standard DICOM 3.0 is used to format at the data for downloading and analysis.",
+      "pageTarget": "DICOM 3.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector used is listed as FDA Cleared Detector A1717MCW with identifier K223930.",
+      "evidenceText": "FDA Cleared Detector (K223930) : A1717MCW",
+      "pageTarget": "A1717MCW",
+      "confidence": "high"
+    },
+    {
+      "claim": "The portable x-ray system indication for use is diagnostic imaging of body extremities.",
+      "evidenceText": "The portable x-ray system may be used for diagnostic imaging of body extremities.",
+      "pageTarget": "Indication for Use",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is not for mammography use.",
+      "evidenceText": "- Not for mammography use",
+      "pageTarget": "Mammography Exclusion",
+      "confidence": "high"
+    },
+    {
+      "claim": "The device is not intended to replace a stationary radiographic system.",
+      "evidenceText": "This device is not intended to replace a stationary radiographic system, which may be required for full optimization of image quality and radiation exposure for different exam types.",
+      "pageTarget": "Stationary Radiographic System",
+      "confidence": "high"
+    },
+    {
+      "claim": "One radiologist evaluated the images according to manufacturer-prepared criteria using grades S, A, B, and C.",
+      "evidenceText": "Method: for each of image, one radiologist evaluated the images according to the criteria that is prepared by manufacturer. Check grade: S, A, B, C",
+      "pageTarget": "Clinical Image Quality Evaluation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The radiologist evaluator was Dr. Sung Hyun Kim of Seoul National University Hospital.",
+      "evidenceText": "The number of radiologist : 1 (Dr. Sung Hyun Kim, Seoul National University Hospital)",
+      "pageTarget": "Dr. Sung Hyun Kim",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report selected subjects up to BMI 40 for worst-case evaluation of thick areas.",
+      "evidenceText": "we selected subjects (BMI 30-40) in the range of up to BMI40, which corresponds to the 95th percentile of adult male BMI, as the worst case and performed a clinical evaluation on thick areas (abdomen, chest, skull).",
+      "pageTarget": "Patient Selection Rationale",
+      "confidence": "high"
+    },
+    {
+      "claim": "For patients with BMI of 30 or higher, the report warns it may be difficult to accurately evaluate thick areas such as pelvis and hips using HnX-P1.",
+      "evidenceText": "For Patients with a BMI of 30 or higher, it may be difficult to accurately evaluate thick areas such as the pelvis and hips using Hnx-P1",
+      "pageTarget": "BMI Limitation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The total average annotation value was 3.57.",
+      "evidenceText": "Total Average 3.57 ( Grade S : Perfect=4 , A : excellent=3 , B : average=2 C : poor=1 )",
+      "pageTarget": "Clinical Image Quality Evaluation Results",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report concludes that HnX-P1 and HnX-PB images provide sufficient image quality and diagnostic capability for medical imaging requirements.",
+      "evidenceText": "The images acquired using the HnX-P1 and HnX-PB were concluded to provide sufficient image quality and diagnostic capability to meet the requirements of medical imaging.",
+      "pageTarget": "Clinical Report Conclusion",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report states the device meets diagnostic radiography standards by producing high-resolution and detailed images.",
+      "evidenceText": "This device meets the diagnostic radiography standards by producing high-resolution and detailed images.",
+      "pageTarget": "Diagnostic Radiography Standards",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The clinical report conclusion is signed by Dr. Sung Hyun Kim and dated December 30, 2024.",
+      "evidenceText": "Sincerely,. Dr. Sung Hyun – Kim December 30, 2024",
+      "pageTarget": "Clinical Report Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "The selected clinical evaluation expert is described as a board-certified radiologist in Korea with over 30 years of experience.",
+      "evidenceText": "Professor Sung Hyun Kim, M.D., Ph.D., is a board-certified radiologist in Korea with over 30 years of clinical, academic, and research experience in diagnostic and interventional radiology.",
+      "pageTarget": "Clinical Evaluation Expert Qualification",
+      "confidence": "high"
+    },
+    {
+      "claim": "The report says the evaluator's qualifications satisfy the FDA requirement for a U.S. radiologist or equivalently qualified expert.",
+      "evidenceText": "fulfilling the requirement set forth by the FDA that the evaluation be conducted by a U.S. radiologist or an equivalently qualified expert.",
+      "pageTarget": "FDA Clinical Evaluator Qualification",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority is ambiguous: FDA appears in the authority signal and source text, but the document itself is a clinical report signed by a radiologist, not an FDA-issued document."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision/version is derived from the source file name '(Rev2)' rather than an explicit revision field in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text quality issues are present, including wording such as 'H&abyz', 'un remarkable', '53Vp', and inconsistent capitalization."
+    },
+    {
+      "severity": "warning",
+      "reason": "Conflicting section labels are present: Abdomen AP evaluations are labeled 'Sternum Lat View' on several pages."
+    },
+    {
+      "severity": "warning",
+      "reason": "Conflicting section labels are present: '30. Knee LAT' lists 'Study Knee AP' and the evaluation is labeled 'Knee AP View'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Dose reliability table appears incomplete for some rows and includes a possible inconsistent Humerus AP result value of 12.12 mAs against a 10 mAs setting."
+    }
+  ]
+}
