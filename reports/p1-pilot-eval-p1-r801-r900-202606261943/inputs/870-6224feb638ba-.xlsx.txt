@@ -1,0 +1,382 @@
+queueId: ingest-1781569954414-12g5
+sourcePath: raw/sources/RA/06_인허가 조사 및 보고자료/260402 - 26년도 KPI 관련 조사/맘모_디텍터_인허가_분석보고서_에이치앤아비즈.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/e9c5a90841f2/맘모_디텍터_인허가_분석보고서_에이치앤아비즈__e9c5a90841f2_combined.txt
+canonicalGroupId: 6224feb638ba
+productSignal: Unclassified
+authoritySignal: MFDS/domestic
+pilotRank: 870
+
+SOURCE_TEXT
+맘모그래피 디지털 디텍터(FPD) 시장 및 허가 제품 현황,,,,,,,,,,,
+※ 에이치앤아비즈 맘모 사업 진출을 위한 경쟁환경 파악 목적 | 작성일: 2026.04,,,,,,,,,,,
+A. 글로벌 주요 맘모 디텍터 제조사 및 허가 제품,,,,,,,,,,,
+No.,제조사,국가,제품명,"디텍터 기술
+(a-Si/CMOS/a-Se)","픽셀 피치
+(μm)",활성 영역,"용도
+(FFDM/DBT)","FDA
+(510k/PMA)",CE,"MFDS
+(식약처)",비고
+1,iRay Technology,중국,Mammo 1012P,CMOS,49.5,"10×12""",FFDM+DBT,,CE,,최신 CMOS 모델
+2,iRay Technology,중국,Mammo 1012F,a-Si (CsI),85,"10×12""",FFDM,,CE,,고정형 모델
+3,iRay Technology,중국,Mammo 1012C,a-Si (CsI),85,"10×12""",FFDM,,CE,,카세트형/레트로핏
+4,Hologic,미국,Selenia Dimensions,a-Se,70,24×29cm,FFDM+DBT,PMA,CE,허가,시장 1위 업체
+5,GE HealthCare,미국,Senographe Pristina,a-Si (CsI),100,24×31cm,FFDM+DBT,PMA,CE,허가,
+6,Siemens Healthineers,독일,MAMMOMAT B.brilliant,a-Si,85,24×30cm,FFDM+DBT,510(k)+PMA심사중,CE,,2024 FDA 510(k) 획득
+7,Fujifilm,일본,AMULET Innovality,a-Se,50,24×30cm,FFDM+DBT,PMA,CE,허가,직접변환형
+8,Planmed,핀란드,Clarity 2D/3D,a-Si (CsI),,24×30cm,FFDM+DBT,PMA,CE,,
+9,DRTECH,한국,RSM 2430C,,,"9×12""",FFDM,,,,한국 업체
+10,Vieworks,한국,,CMOS,,"10×12""",,,,,"한국 업체, 디텍터 전문"
+11,Teledyne DALSA,캐나다,Xineos-2329,CMOS,,,FFDM+DBT,,,,CMOS 맘모 전용
+12,Varex Imaging,미국,,a-Si / CMOS,,,FFDM,,,,부품(디텍터) 전문
+13,Trixell (Thales),프랑스,,a-Si (CsI),,,FFDM+DBT,,,,Siemens/Philips 공급
+14,Analogic,미국,,,,,,,,,Hologic 자회사
+15,,,,,,,,,,,
+16,,,,,,,,,,,
+17,,,,,,,,,,,
+18,,,,,,,,,,,
+19,,,,,,,,,,,
+B. 맘모 디텍터 기술 동향 요약,,,,,,,,,,,
+,기술 트렌드,상세 내용,,,,,,,,,
+1,a-Si → CMOS 전환,"CMOS는 a-Si 대비 저노이즈, 고속 읽기, 미세 픽셀 피치 구현 가능. 맘모·치과·DBT 분야에서 채택 증가",,,,,,,,,
+2,DBT(토모신세시스) 지원,정적 FFDM에서 동적 3D 촬영(DBT)으로 확장. CMOS의 고속 프레임레이트가 유리,,,,,,,,,
+3,저선량 고화질,DQE 향상을 통한 저선량 촬영 추세. 환자 피폭 저감이 규제·시장 모두에서 핵심 요구사항,,,,,,,,,
+4,무선(Wireless) 디텍터,레트로핏 시장 확대. 기존 아날로그 시스템의 디지털 전환 수요,,,,,,,,,
+5,AI 영상 분석 통합,맘모 CADe/CADx 소프트웨어와 디텍터 연계. FDA AI/ML 승인 기기 급증 중,,,,,,,,,
+
+DR(일반촬영) vs 맘모그래피 인허가 Gap 분석,,,,,,,
+※ 에이치앤아비즈 기존 DR FPD 인허가 경험 대비 맘모에서 추가/변경되는 사항 정리,,,,,,,
+No.,비교 항목,DR(일반촬영) FPD,맘모그래피 FPD,Gap / 추가 필요사항,"난이도
+(상/중/하)",우선순위,비고
+1,FDA 분류/경로,Class II - 510(k),"Class II (Special Controls)
+※ 통합시스템은 Class III (PMA)","FFDM Special Controls Guidance 추가 충족 필요
+Detector-only는 510(k) 가능",중,1,핵심 차이점
+2,적용 규격 (IEC),"IEC 60601-1
+IEC 60601-1-2
+IEC 62220-1-1","IEC 60601-1
+IEC 60601-1-2
+IEC 60601-2-45 (맘모 개별규격)
+IEC 62220-1-2 (맘모 DQE)","IEC 60601-2-45, IEC 62220-1-2 추가 적용 필요",중,1,맘모 전용 규격 존재
+3,DQE 측정,"IEC 62220-1-1
+RQA5 빔조건","IEC 62220-1-2
+맘모 전용 빔조건 (Mo/Mo 28kVp 등)
+7개 노출 레벨 요구","맘모 전용 DQE 측정 프로토콜 전면 변경
+시험 장비·팬텀 별도 준비",상,1,가장 큰 기술적 차이
+4,MTF / NPS 시험,일반 방사선 조건,"맘모 전용 조건
+더 높은 공간해상도 요구",시험 방법·합격 기준 다름,상,1,
+5,Ghosting / Lag 시험,일반 수준,"100회 이상 반복 노출
+잔상 영향 검증 (IEC 62220-1-2)",맘모는 더 엄격한 잔상 평가 요구,중,2,
+6,"흉벽 커버리지
+(Chest Wall)",해당 없음,"≤3mm 이내 필수
+(흉벽 근접 병변 검출 목적)","디텍터 물리적 설계에 영향
+외주 제품 사양 확인 필수",중,1,제품 선택 시 핵심 사양
+7,MQSA 관련,해당 없음,"21 CFR 900.12 (MQSA)
+ACR 인증 프로그램 연계","맘모 전용 미국 연방법
+시설 품질 기준과 연계",하,3,시스템 제조사 이슈
+8,AEC 호환성,AED 기본,"AED + 기존 맘모 시스템 AEC 호환 필수
+다양한 X선 시스템 대응",호환 범위 정의·검증 필요,중,2,레트로핏 시
+9,팬텀 이미지 평가,요구되지 않을 수 있음,"ACR MAP 팬텀 필수
+CDMAM 팬텀 권장",맘모 전용 팬텀 확보 및 평가 프로토콜,중,2,
+10,임상 데이터,"일반적으로 불필요
+(510k 물리시험만)","Detector-only: 조건부
+통합시스템: 필수
+(팬텀+임상 이미지 평가)","Predicate 대비 동등성 입증 필요
+가능하면 임상 면제 전략",상,1,비용·시간 핵심 변수
+11,SW 요구사항,IEC 62304 (Basic),"IEC 62304 (Basic~Moderate)
+사이버보안 가이드라인 추가",SW 문서화 수준 검토 필요,하,3,SDK 포함 시
+12,Predicate 선정,DR FPD predicate 다수,"맘모 FFDM predicate 제한적
+(Class II 전환 비교적 최근)",적절한 predicate device 사전 조사 필수,중,1,510(k) 전략의 핵심
+13,한국 식약처,2등급 의료기기,"2등급 (디지털유방촬영용엑스선장치)
+기술문서 심사","맘모 품목 분류 확인
+추가 시험 항목 여부 확인",중,2,
+14,유럽 CE (MDR),Class IIa,"Class IIb (맘모는 더 높은 등급)
+MDR 2017/745 적용","임상평가보고서(CER) 요구 수준 상향
+Notified Body 심사 강화",상,1,MDR 전환 영향 큼
+
+맘모그래피 디텍터 국가별 인허가 경로 비교,,,,,,,,
+"※ Detector-only (FPD 단품) 기준, OEM 브랜딩 후 자사 명의 인허가 시나리오",,,,,,,,
+항목,한국 (MFDS/식약처),미국 (FDA),유럽 (CE/MDR),,,,,
+규제 기관,식품의약품안전처 (MFDS),FDA CDRH,Notified Body (MDR 2017/745),,,,,
+기기 등급,"2등급 (디지털유방촬영용X선장치)
+※ 확인 필요: 디텍터 단품 품목분류","Class II (Special Controls)
+※ Detector-only = 510(k) 경로
+※ 통합 시스템 = PMA 가능성","Class IIb
+(맘모는 IIa보다 높은 등급 가능)",,,,,
+인허가 경로,"기술문서 심사 (2등급)
+→ 식약처 허가","510(k) Premarket Notification
+→ Substantial Equivalence 입증","CE 적합성 평가
+→ Notified Body 인증
+→ CE 마크 부착",,,,,
+핵심 제출 서류,"• 기술문서 (안전성·성능 입증)
+• 시험성적서
+• 위험관리 보고서 (ISO 14971)
+• 품목분류 확인서","• 510(k) Summary
+• 기기 설명 및 Predicate 비교
+• IEC 62220-1-2 시험 데이터
+• SW 문서 (IEC 62304)
+• Biocompatibility (필요시)
+• 전기안전/EMC 시험","• 기술문서 (MDR Annex II/III)
+• 임상평가보고서 (CER)
+• ISO 14971 위험관리
+• IEC 62220-1-2 시험 데이터
+• GSPR Checklist",,,,,
+주요 적용 규격,"• KS C IEC 60601-1
+• KS C IEC 60601-1-2
+• IEC 60601-2-45
+• IEC 62220-1-2","• AAMI/ANSI ES60601-1
+• IEC 60601-1-2 (EMC)
+• IEC 62304 (SW)
+• IEC 62366-1 (Usability)
+• ANSI/AAMI HE75
+• IEC 62220-1-2
+• FDA FFDM Guidance
+• 21 CFR 900.12 (MQSA)","• IEC 60601-1 (Ed.3.2)
+• IEC 60601-1-2
+• IEC 60601-2-45
+• IEC 62304
+• IEC 62366-1
+• IEC 62220-1-2
+• ISO 10993 (필요시)
+• MDR 2017/745 Annex I (GSPR)",,,,,
+임상 데이터,"동등 제품 비교시험으로 대체 가능
+(임상시험 면제 조건 검토)","Detector-only: 물리시험 + 팬텀 평가
+→ 임상 면제 가능성 있음
+(Predicate 동등성 입증 시)","임상평가보고서(CER) 필수
+→ 기존 문헌/데이터로 대체 가능
+(임상시험 직접 수행은 드묾)",,,,,
+예상 소요기간,"6~12개월
+(시험 기간 포함)","6~12개월
+(Pre-submission 포함 시 +3개월)
+※ PMA는 18~24개월 이상","12~18개월
+(MDR 전환 이후 심사 장기화 추세)",,,,,
+예상 비용 수준,"중간
+(시험비 + 심사 수수료)","높음
+(510(k) User Fee ~$22,000+
++ 시험비 + 컨설팅)","높음
+(Notified Body 심사비
++ 시험비 + 대리인 비용)",,,,,
+기존 DR 경험 활용,"높음
+(인허가 프로세스 동일
+품목만 변경)","높음
+(510(k) 프로세스 동일
+시험 항목이 맘모 특화로 변경)","중간
+(MDR 이후 CER 부담 증가
+기존 CE 경험은 활용 가능)",,,,,
+진입 난이도,★★☆ (중간),"★★★ (높음)
+규격 요구사항 가장 상세","★★★ (높음)
+MDR 전환 이후 심사 강화",,,,,
+추천 순서,① 1순위 (가장 빠름),② 2순위 (핵심 시장),③ 3순위 (시간 소요),,,,,
+
+맘모 디텍터 물리시험·임상 요구사항 및 면제 조건,,,,,,,,
+※ FDA FFDM Special Controls Guidance 및 IEC 62220-1-2 기반 정리,,,,,,,,
+A. 필수 물리시험 항목 (FDA 510(k) 기준),,,,,,,,
+No.,시험 항목,시험 규격/방법,시험 조건 (맘모),합격 기준 (참고),"소요 기간
+(예상)",시험 기관,완료 여부,비고
+1,"DQE
+(Detective Quantum Efficiency)","IEC 62220-1-2
+Section 6","Mo/Mo 28kVp + 4.5cm PMMA
+7개 노출레벨
+(1/8, 1/4, 1/2, 1, 2, 4, 8 × Ref)",Predicate 대비 동등 이상,2~4주,,,"FDA FFDM 필수
+가장 중요한 지표"
+2,"MTF
+(Modulation Transfer Function)","IEC 62220-1-2
+Section 5","맘모 빔조건
+Pre-sampling MTF","Predicate 대비 동등 이상
+(예: 0.4 이상 at 4 cycles/mm)",1~2주,,,공간 해상도 평가
+3,"NPS/NNPS
+(Noise Power Spectrum)","IEC 62220-1-2
+Section 6.3","7개 노출레벨
+1D 및 2D NPS",Predicate 대비 동등 이상,1~2주,,,노이즈 특성 평가
+4,SNR / CNR,FDA FFDM Guidance,다양한 두께·조성 팬텀,AEC 모드별 평가,1주,,,
+5,다이나믹 레인지,"IEC 62220-1-2
+NEQ/DQE 기반",노출 범위 전체,NEQ/DQE 함수로 산출,DQE와 동시,,,
+6,"Ghosting / Lag
+(잔상 평가)","IEC 62220-1-2
+IEC 61223-3-2","100회 이상 반복 노출+소거
+잔상 이미지 정량 평가",잔상 영향 없음 확인,1~2주,,,맘모 특화 요구
+7,AEC 성능,"FDA FFDM Guidance
+21 CFR 900.12","2~6cm PMMA 팬텀
+표준+확대 모드",각 두께에서 적정 SNR/선량,1주,,,
+8,흉벽 커버리지,FDA FFDM Guidance,물리적 측정,≤3mm,측정,,,제품 사양
+9,Pixel Defect / Uniformity,FDA FFDM Guidance,Flat field 보정 후,결함 픽셀 수·위치 기록,1주,,,
+10,ACR 팬텀 이미지,"ACR MAP Protocol
+21 CFR 900.12",ACR 맘모 인증 팬텀,"Fiber, Speck, Mass 최소 점수",1주,,,미국 시장 필수
+11,전기 안전,"IEC 60601-1
+(AAMI/ANSI ES60601-1)",,합격,4~8주,KOLAS 등,,DR과 동일
+12,EMC,IEC 60601-1-2,,합격,4~6주,KOLAS 등,,DR과 동일
+13,생체적합성,ISO 10993,피부 접촉 부위 해당 시,세포독성·감작성·자극성,6~12주,,,해당 여부 확인
+14,SW 검증,"IEC 62304
+FDA SW Guidance",SDK/제어SW,Level of Concern 분류,포함,,,
+15,사이버보안,"FDA Cybersecurity
+Guidance (2023)",,SBOM 등,포함,,,2023년 이후 강화
+B. 임상시험 면제 가능 조건 분석,,,,,,,,
+No.,국가/기관,면제 가능 조건,필요 근거,"우리 회사 해당 여부
+(해당/미해당/확인중)",전략 제안,비고,,
+1,FDA (510k),"Predicate device와 동일 의도사용 +
+기술적 특성 동등 시 임상 면제","• 물리시험(DQE, MTF 등) 동등성
+• 팬텀 이미지 평가
+• Predicate과 비교 데이터",,"적절한 Predicate 사전 선정이 핵심
+Pre-submission 미팅 권장","Detector-only 510(k)가
+가장 현실적 경로",,
+2,FDA (PMA),면제 불가 (Class III),임상 데이터 필수,"해당 없음
+(PMA 비추천)","통합 시스템이 아닌
+Detector-only로 포지셔닝",,,
+3,한국 식약처,"동등 의료기기 비교시험 시
+임상시험 면제 가능","• 기허가 동등제품 존재
+• 물리시험 동등성",확인 필요,"식약처 사전상담 제도 활용
+품목분류 및 면제 조건 확인",비교적 유연한 편,,
+4,유럽 CE (MDR),"CER(임상평가보고서)에서
+기존 문헌/데이터로 대체 가능","• 기존 임상 문헌 근거
+• 동등 기기 임상 데이터
+• State of the Art 문헌 리뷰",확인 필요,"CER 작성 역량 확보 필요
+(외부 컨설팅 검토)",MDR Annex XIV 참조,,
+
+맘모 디텍터 인허가 추진 로드맵(안),,,,,,,,,
+※ Detector-only OEM 브랜딩 기준 | 한국→미국→유럽 순차 추진 제안,,,,,,,,,
+A. 추진 전략 요약,,,,,,,,,
+구분,내용,,,,,,,,
+제품 포지셔닝,"맘모그래피용 FPD (Detector-only)
+→ 시스템 제조사 또는 레트로핏 시장 대상",,,,,,,,
+인허가 전략,"OEM 제품을 자사 브랜드로 인허가
+→ 기존 DR 인허가 인프라(ISO 13485, QMS) 최대 활용",,,,,,,,
+시장 우선순위,"① 한국(MFDS) → ② 미국(FDA) → ③ 유럽(CE)
+※ 한국을 먼저 하여 경험 축적 + 국내 실적 확보",,,,,,,,
+핵심 전제조건,"• 외주 제품 사양 확정 (디텍터 기술, 픽셀 피치, 활성 영역 등)
+• 외주처와의 기술문서 공유 범위 합의
+• Predicate device 사전 조사 완료",,,,,,,,
+B. 단계별 로드맵 (타임라인),,,,,,,,,
+단계,활동,상세 내용,산출물,소요기간,M1-3,M4-6,M7-9,M10-12,M13-18
+"Phase 0
+(사전 준비)","외주 제품 확정 및
+기술 사양 파악","• 외주처 선정/계약
+• 제품 사양서 확보
+• 기술문서 공유 범위 합의","제품 사양서
+기술문서 목록",1~3개월,●,,,,
+Phase 0,"Predicate 조사
+(FDA)","• FDA 510(k) DB 검색
+• 적합한 predicate 후보 선정
+• Pre-submission 준비",Predicate 분석 보고서,1~2개월,●,,,,
+"Phase 1
+(시험 준비)",시험 계획 수립,"• 맘모 전용 시험 항목 정리
+• IEC 62220-1-2 프로토콜
+• 시험기관 선정",시험 계획서,1~2개월,●,,,,
+Phase 1,물리시험 수행,"• DQE, MTF, NPS, Ghosting 등
+• 전기안전, EMC
+• 팬텀 이미지 평가",시험 성적서,3~4개월,,●,●,,
+"Phase 2-KR
+(한국 인허가)",식약처 허가 신청,"• 기술문서 작성
+• 시험성적서 첨부
+• 품목분류 및 임상면제 확인",허가 신청서,2~3개월,,,●,,
+Phase 2-KR,식약처 심사·허가,"• 기술문서 심사
+• 보완 대응",허가증,3~6개월,,,,●,
+"Phase 3-US
+(미국 인허가)",FDA 510(k) 제출,"• Pre-submission 미팅
+• 510(k) 문서 작성·제출",510(k) 제출 완료,2~3개월,,,●,●,
+Phase 3-US,FDA 심사·Clearance,"• 심사 대응
+• Additional Info 대응",510(k) Clearance,3~6개월,,,,●,●
+"Phase 4-EU
+(유럽 인허가)",CE 기술문서 작성,"• MDR 기술문서
+• CER 작성
+• GSPR Checklist",CE 기술문서,3~4개월,,,,●,●
+Phase 4-EU,Notified Body 심사,"• NB 선정·계약
+• 심사 대응",CE 인증서,6~12개월,,,,,●
+C. 의사결정 필요 사항 (리더님 확인용),,,,,,,,,
+No.,의사결정 항목,선택지,판단 기준,결정,비고,,,,
+1,외주 제품 기술 방향,a-Si (CsI) vs CMOS,"CMOS: 고성능·고가, DBT 가능
+a-Si: 검증됨·저가, FFDM 중심",,시장·가격 전략에 따라 결정,,,,
+2,FDA 인허가 경로,"510(k) Detector-only
+vs PMA (통합시스템)","Detector-only 510(k) 추천
+→ 비용·시간·리스크 최소",,,,,,
+3,시장 진출 순서,"한국→미국→유럽
+vs 동시 추진","순차 추진 추천
+→ 시험 데이터 공유 가능",,,,,,
+4,시험기관 선정,국내 vs 해외,"국내 KOLAS 기관 + 해외 대행
+비용·일정 비교",,,,,,
+5,CER 작성 역량,자체 vs 외부 컨설팅,"MDR CER 경험 없으면
+외부 전문 컨설팅 권장",,유럽 진출 시,,,,
+
+"참고 규격, FDA 가이던스 및 관련 논문",,,,,,
+※ 맘모 디텍터 인허가·기술 검토에 필요한 주요 레퍼런스 정리,,,,,,
+A. FDA 가이던스 문서 (필수 참조),,,,,,
+No.,문서명,발행 기관,발행/개정일,핵심 내용,적용 대상,비고
+1,"Class II Special Controls Guidance:
+Full-Field Digital Mammography System",FDA CDRH,2014 (최종),"FFDM 510(k) 제출 요구사항 전반
+물리시험 항목, 위험분석 등",FFDM 시스템 및 Detector-only,★★★ 가장 핵심 문서
+2,"Guidance for Submission of 510(k)s
+for Solid State X-ray Imaging Devices",FDA CDRH,2016.09,"고체 X선 영상기기 510(k) 가이드
+디텍터 특성 기술 방법",X선 FPD 전반,"DR과 공통, 맘모에도 참조"
+3,"Guidance for Content of Premarket
+Submissions for Device Software Functions",FDA CDRH,2023.06,"의료기기 SW 사전시판 문서 가이드
+Level of Concern 분류",SDK/SW 포함 기기,IEC 62304 연계
+4,"Cybersecurity in Medical Devices:
+Quality System and Premarket Submissions",FDA CDRH,2023.09,"사이버보안 요구사항
+SBOM, 위협 모델링 등",네트워크 연결 기기,2023년 이후 강화
+5,"Best Practices for Selecting
+a Predicate Device",FDA CDRH,2023.09,"Predicate 선정 4가지 Best Practice
+안전·유효성 비교 방법",510(k) 제출 전반,Predicate 전략 수립 시 필수
+6,"MQSA Regulations
+(21 CFR Part 900)",FDA,2024.09 개정,"맘모그래피 품질 표준법
+시설 인증·품질 관리 기준",맘모그래피 시설,"시스템 제조사 이슈이나
+디텍터 사양에 영향"
+B. 주요 국제 규격 (Standards),,,,,,
+No.,규격 번호,규격 명칭,적용 범위,DR에서 경험 있음?,맘모 추가 사항,비고
+1,IEC 62220-1-2:2007,"디지털 X선 영상기기 DQE - Part 1-2:
+맘모그래피용 디텍터","DQE, MTF, NPS 측정
+(맘모 전용)",X (DR은 Part 1-1),"★ 맘모 전용 빔조건, 노출 레벨
+시험 방법 전면 변경",가장 중요한 차이
+2,IEC 60601-2-45,"의료용 전기기기 -
+맘모그래피 X선 장비 개별 요구사항",맘모 시스템 안전·성능,X,"맘모 시스템 개별 규격
+디텍터 단품에 부분 적용",
+3,IEC 60601-1:2005+A1+A2,의료용 전기기기 - 일반 안전 요구사항,전기 안전,O (동일),변경 없음,기존 경험 활용
+4,IEC 60601-1-2:2014+A1,의료용 전기기기 - EMC 요구사항,전자파 적합성,O (동일),변경 없음,기존 경험 활용
+5,IEC 62304:2006+A1,의료기기 소프트웨어 수명주기 프로세스,SW 개발,O (동일),맘모 SW Level of Concern 확인,
+6,IEC 62366-1:2015+A1,의료기기 사용적합성 엔지니어링,Usability,O (동일),맘모 사용 시나리오 추가,
+7,ISO 14971:2019,의료기기 위험관리,위험 분석,O (동일),"맘모 특유 위험 추가
+(흉벽 커버리지, 선량 등)",
+8,ISO 13485:2016,의료기기 품질경영시스템,QMS,O (보유 중),변경 없음,기존 인증 유지
+9,ISO 10993 시리즈,의료기기 생물학적 평가,생체적합성,해당 시,피부 접촉부 해당 여부 확인,
+10,MDR (EU) 2017/745,유럽 의료기기 규정,CE 마크,O (CE 경험),"맘모 등급 IIb 가능
+CER 요구 수준 상향",
+C. 참고 논문 및 기술 자료,,,,,,
+No.,제목 / 저자,저널 / 출처,연도,핵심 내용,활용 포인트,비고
+1,"Performance evaluation of six digital
+mammography systems
+(Bessa et al.)","Radiation Physics
+and Chemistry",2024,"6종 디지털 맘모 시스템 DQE 비교
+CR, a-Si, a-Se 디텍터 성능 평가","경쟁 제품 DQE 벤치마크
+자사 제품 성능 목표 설정",ScienceDirect
+2,"A comparison of the performance of
+digital mammography systems
+(Marshall et al.)","Physics in Medicine
+and Biology",2011,"11종 디지털 맘모 시스템 MTF, NNPS,
+DQE 비교 평가","FPD vs CR 성능 차이 데이터
+CsI vs GOS 비교",PubMed: 17441236
+3,"Full breast digital mammography with
+a-Si flat panel detector
+(Vedantham et al.)",Medical Physics,2000,"a-Si CsI 기반 맘모 FPD 물리 특성
+MTF, DQE, NPS 측정 결과","a-Si CsI 디텍터 성능 기준선
+100μm 픽셀 피치 성능 참고",PMC: 4280189
+4,"New Software for DQE Calculation
+compliant with IEC 62220-1-2
+(Piotrowski et al.)","Journal of Digital
+Imaging",2022,"IEC 62220-1-2 준수 DQE 계산
+Python 기반 오픈소스 SW","DQE 측정·계산 방법론 참고
+시험 프로토콜 이해",PMC: 9582097
+5,"Comparison of CMOS and a-Si flat panel
+imagers for X-ray imaging
+(Yorkston)",SPIE Proceedings,2011,"CMOS vs a-Si 이미저 성능 비교
+노이즈, DQE, 속도, 해상도","기술 방향 의사결정 참고
+(a-Si vs CMOS 선택)",ResearchGate
+6,"FDA & digital mammography:
+why has FDA required PMA?
+(Saunders)","Breast Cancer Research
+and Treatment",2010,"FDA 맘모 규제 역사
+510(k) vs PMA 논쟁","FDA 규제 배경 이해
+인허가 전략 수립 참고",PubMed: 20380981
+7,"X-ray Flat Panel Detectors Market
+(Fortune Business Insights)",Market Report,2025,"FPD 글로벌 시장 규모·전망
+a-Si vs CMOS vs a-Se 점유율","시장 규모·성장률 참고
+기술 트렌드 파악",fortunebusinessinsights.com
+8,"Mammography Detectors Market
+Trends and Forecasts","Market Report
+Analytics",2025,"맘모 디텍터 시장 세분화
+FPD, CMOS 성장 전망",맘모 특화 시장 데이터,marketreportanalytics.com

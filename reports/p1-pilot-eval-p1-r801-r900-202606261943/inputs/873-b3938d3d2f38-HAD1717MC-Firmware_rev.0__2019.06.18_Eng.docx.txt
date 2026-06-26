@@ -1,0 +1,1000 @@
+queueId: ingest-1781569954390-kdu
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/18. Appendix (ce 인증 문서 작성 icmc)/Appendix 5. Software Validation/HAD1717MC-Firmware(rev.0)_2019.06.18_Eng.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/5faf8276c6ff/HAD1717MC-Firmware(rev.0)_2019.06.18_Eng__5faf8276c6ff_combined.txt
+canonicalGroupId: b3938d3d2f38
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 873
+
+SOURCE_TEXT
+Document title :
+
+Software Validation Report For Firmware
+
+(Applied to HAD1717MC, HAD1717MG)
+
+Document Number HAD1717MC, HAD1717MG – Firmware (Rev.0)
+
+Revision Status
+
+Revision Level
+
+Revision Date
+
+Revision Number
+
+Description of Revision
+
+Prepared by
+
+Reviewed by
+
+Approved by
+
+1
+
+19/06/17
+
+0
+
+Firstly prepared
+
+Contents
+
+No
+
+Contents
+
+Revision Record(No & Date)
+
+0
+
+1
+
+2
+
+3
+
+4
+
+1
+
+Software description
+
+19/06/17
+
+2
+
+Software Requirement Specification
+
+19/06/17
+
+3
+
+Architecture Design Chart
+
+19/06/17
+
+4
+
+Design Specification
+
+19/06/17
+
+5
+
+Software Design and Development Procedure
+
+19/06/17
+
+6
+
+Revision Level History
+
+19/06/17
+
+7
+
+Unsolved Bugs
+
+19/06/17
+
+8
+
+Release Version Number
+
+19/06/17
+
+Table of Content
+
+1 Software Description 5
+
+1.1 Software Name : HAD Firmware 5
+
+1.2 Software Feature 5
+
+1.3 Operational Environment 5
+
+2 Software Requirement Specification (SRS) 6
+
+2.1 Block diagram 6
+
+2.2 Initialize process 6
+
+2.2.1 Description 6
+
+2.3 Read image data control 6
+
+2.3.1 Description 6
+
+2.4 Network control 6
+
+2.4.1 Description 6
+
+3. Architecture Design Chart 7
+
+3.1 Software Diagram and Description 7
+
+3.1.1 Initialize module 7
+
+3.1.2 Main Module 7
+
+3.1.3 Image data control module 7
+
+3.1.4 Communication control module 8
+
+4. Design Description 8
+
+4.1 Programming language and program size(s) 8
+
+4.1.1 Programming language 8
+
+4.1.2 Programming Tools and Library 8
+
+4.1.3 8
+
+4.1.4 Program Size 8
+
+5. Software Design and Development PROCEDURE 9
+
+6. Revision Level History 10
+
+7.Unsolved Bugs 10
+
+8. Release Version Number 11
+
+9. Revision Level History 11
+
+10. Unsolved Bugs 11
+
+11. Release Version Number 11
+
+1 Software Description
+
+Software Name : HAD Firmware
+
+Software Feature
+
+Role of S/W : Control the detector.
+
+What does the software do?
+
+Set Peripheral registers at initialize status.
+
+Digitize and transmit analog images of objects received from ROIC
+
+Set register values for processing image transformations of objects projected to the detector
+
+Communicate with the PC via the TCP/IP interface to send/receive data
+
+Operational Environment
+
+Program language : ANSI C
+
+Hardware platform : i.MX6S MCIMX6S5DVM10AC
+
+Operation system : Linux
+
+4) Off-the-shelf : None
+
+Software Requirement Specification (SRS)
+
+Block diagram
+
+Initialize
+
+Network control
+
+Read image data control
+
+PC UDP Cable
+
+Initialize process
+
+Description
+
+System booting and driver loading
+
+Load reset settings from flash memory
+
+Set peripherals with initial value
+
+Prepare communication module
+
+Read image data control
+
+Description
+
+Read image data from image sensor
+
+Digitally transforms and processes analog image data of objects received by the detector sensor
+
+Network control
+
+Description
+
+Send/receive control commands and transfer digital image data of objects from the PC
+
+Do command
+
+Do trans data
+
+3. Architecture Design Chart
+
+ 3.1 Software Diagram and Description
+
+The software architecture consists of 4 modules and each module functions independently. Main Module combines it into a software unit.
+
+Main module
+
+Initialize module
+
+Image data
+
+control module
+
+Communication
+
+control module
+
+ 3.1.1 Initialize module
+
+Initialize module Initialize ADC related control values. Read Initial value from Flash Memory and setup FPGA based on initial value.
+
+ 3.1.2 Main Module
+
+Main Module is the center of the software architecture and it calls each module when it needed.
+
+Main Module classifies the command from computer and call Communication control module to do action related to command.
+
+Receive digital image data and send it to PC via network communication.
+
+ 3.1.3 Image data control module
+
+Set Detector Analog Image Data Read and FPGA register values.
+
+ 3.1.4 Communication control module
+
+Detector Image Acquisition Command Processing and Send Digitized Images.
+
+4. Design Description
+
+ 4.1 Programming language and program size(s)
+
+4.1.1 Programming language
+
+ ANSI C
+
+4.1.2 Programming Tools and Library
+
+ ARM Cross gcc compiler
+
+4.1.3
+
+ 1) Programming Tools
+
+- Editor : geditor
+
+- Debugger : rs-232 , usb to serial
+
+- Compiler : arm cross gcc compiler
+
+- Linker : arm cross gcc linker
+
+4.1.4 Program Size
+
+ - boot size : 160Kbyte bin format
+
+ - kernel size : 3166Kbyte
+
+ - application size : 82.1Kbyte
+
+5. Software Design and Development PROCEDURE
+
+ Software development process at VIEWORKS. follows a classic waterfall methodology, as
+
+ illustrated in the following chart
+
+<Classic " Waterfall" Life Cycle Model>
+
+Analysis. The activity consists of establishing requirements for as much as possible
+
+before the design phase. The requirements are documented in the software-specific
+
+requirements and design notes. When enough of the requirements are gathered
+
+and analyzed for this iteration of the prototype, the activities shift into the design
+
+phase.
+
+Planning. This activity constructs the software development plan. This plan outlines
+
+the tasks, responsibilities, resources, and other items pertinent to the specific
+
+development project.
+
+Design. This activity considers four functional attributes of the software : data
+
+structure, software architecture, functionality, and interface characterization. The
+
+design is documented in design documents.
+
+Implementation. The implementation phase converts the design into a machine
+
+readable form. The software source code is created in accordance with coding
+
+conventions. To verify that the code created is consistent with manufacturer
+
+standards, design reviews/inspections are held.
+
+Qualification. The qualification phase verifies that the design and code
+
+implemented meet the requirements. Testing ensures that defined input will
+
+produce actual results that agree with required results.
+
+Maintenance. Once the software enters a released state, the only software changes
+
+allowed are to fix identified defects in the code or to support approved
+
+enhancements. All identified system software defects are recorded on System
+
+Discrepancy Reports(SDR) forms or submitted electronically to the Modification
+
+Request(MR) database.
+
+6. Revision Level History
+
+Rev
+
+No
+
+Date of
+
+Change
+
+Reason of Change
+
+Applicable
+
+Date
+
+Remarks
+
+0
+
+17/06/2019
+
+Initial release
+
+7.Unsolved Bugs
+
+ There were no bugs that are subjected to safety and effectiveness of HAD firmware.
+
+8. Release Version Number
+
+ 1.00
+
+9. Revision Level History
+
+Rev
+
+No
+
+Date of
+
+Change
+
+Reason of Change
+
+Applicable
+
+Date
+
+Remarks
+
+.0
+
+17/06/2019
+
+Initial release
+
+10. Unsolved Bugs
+
+ There were no bugs that are subjected to safety and effectiveness of HAD Calibration
+
+11. Release Version Number
+
+ 1.0
+
+To aid the development process, task lists showing specific deliverables, by phase, are used as a form of guidance. Atypical list is shown in the table below.
+
+Phase
+
+Se →
+
+↓Group
+
+Planning
+
+Design
+
+Implementation
+
+Qualification
+
+Maintenance
+
+System
+
+Architecture
+
+Requirement
+
+Specifications
+
+Architecture Specification
+
+System Design Specification
+
+Design Reviews
+
+Test Support
+
+Support
+
+Software
+
+SW Requirements and Spec.
+
+Software Design and Spec.
+
+Design Reviews
+
+Completed Software
+
+Build Environment
+
+Code Reviews & Inspections
+
+Test Requirements Specification
+
+Updated Software Design Specs
+
+Test Support
+
+Support
+
+Design
+
+Assurance
+
+Preliminary Schedule
+
+Independent V & V
+
+Source Code Analysis
+
+Problem Analysis
+
+Hazard Analysis
+
+Independent V & V
+
+Additional test cases
+
+Automated tests
+
+Independent V & V
+
+Execution of Tests
+
+V & V Documentation
+
+V & V Report
+
+Internal Audit Report
+
+Product & Test Certification
+
+Support
+
+Technical
+
+Publications
+
+Documentation
+
+Support Plan
+
+Documentation Design
+
+Completed user and service
+
+documentation
+
+Documentation reviews
+
+Support
+
+Items in italics indicate a document or an activity which produces a document.
+
+Group Responsibilities by Development Phase
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2019-06-17
+
+Software Requirement
+
+Implemented?
+
+(Y/N)
+
+Function subroutine
+
+Remark
+
+Initialize the system
+
+Y
+
+void init_seq(void)
+
+Initialize fpga,roic param configuration
+
+Y
+
+void rtc2systemtime()
+
+Setup system timer configuration
+
+Y
+
+void FPGA_INT2_Proc()
+
+Initialize system control variables and Load
+
+Flash memory stored value. Reset roic and
+
+FPGA.
+
+Y
+
+Void *CtrlProc(void *arg)
+
+Process command and configuration data with PC and Ethernet communications
+
+Image data read control
+
+Y
+
+Void *ReadoutProc(void *arg)
+
+ Reading data from the Image Receiving
+
+ Sensor Controller
+
+Image data transfer control
+
+Y
+
+Void *SendProc(void *arg)
+
+ Send image data acquired from sensors to PC
+
+Acceptance : ◆ Pass ◇ Fail
+
+Summary : As a result of code review, we positively evaluate the success in communication interface to provide correct operation of PCB board and
+
+programming. Therefore, you may advance to the next stage with the proven software code as the basis. As a result of the code review, we
+
+hereby certify that the software verification is properly accomplished
+
+Inspected by :
+
+Wansoo Kim / Director
+
+Reviewed by :
+
+Dongjin Lee / Director
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2019-06-17
+
+Software Requirement
+
+Implemented?
+
+(Y/N)
+
+Module
+
+Remark
+
+Main control and initialize routines
+
+Y
+
+main.c
+
+Responsible for the basic settings for communicating with the PC, and the ability to generate each thread required for communication and command control
+
+Communication and FPGA control module
+
+Y
+
+server.c
+
+In charge of sending/receiving messages and images acquired from each function, via network communication.
+
+Also responsible for setting up the FPGA register.
+
+ rtc module
+
+Y
+
+rtc.c
+
+RTC read, write and system time setting control routines
+
+Acceptance : ◆ Pass ◇ Fail
+
+Summary : As a result of module review, all the module tests are completed successfully by utilizing communication function evaluated in the code review.
+
+You may advance to Integration review phase. As a result of module review, we hereby certify that software verification is properly accomplished.
+
+ Inspected by :
+
+Wansoo Kim / Director
+
+ Reviewed by :
+
+Dongjin Lee / Director
+
+S/W Verification Report
+
+Status : Code Review / Module Review / Integration Review Date : 2010-06-17
+
+Software Specifications
+
+Implemented?
+
+(Y/N)
+
+Remark
+
+Status
+
+Function
+
+Module
+
+Initialize
+
+Hardware Initialize
+
+XASDlg
+
+Y
+
+Check with button function of main menu
+
+Image Acquisition
+
+Data Acquisition
+
+XASDlg
+
+Y
+
+Check the Image acquisition by running the X-Ray
+
+Generator
+
+Image dIsplay
+
+XASDlg
+
+Y
+
+Check Display Image is correct or not
+
+Detector control
+
+Control Detector
+
+XASDlg
+
+Y
+
+Check detector control is correct with compare re-loaded
+
+control values
+
+Control value store
+
+XASDlg
+
+Y
+
+Check Stored control value is correct with rebooting
+
+process
+
+Acceptance : ◆ Pass ◇ Fail
+
+Summary : As a result of Integration review, we hereby certify that all the functions that support system specification are proper.
+
+Therefore, you may advance to the next phase. As a result of system Integration review, we confirm that software verification is properly
+
+accomplished.
+
+ Inspected by :
+
+Wansoo Kim / Director
+
+ Reviewed by :
+
+Dongjin Lee / Director
+
+Dynamic Test
+
+Item
+
+Procedure
+
+Result
+
+Functional
+
+test
+
+Booting process
+
+Supply power to system
+
+OK
+
+Dark frame
+
+acquisition
+
+After dark frame acquisition, check
+
+result is within system tolerance
+
+OK
+
+Flat frame
+
+acquisition
+
+Check received flat image
+
+OK
+
+FOV
+
+Check FOV adjust value is within
+
+system tolerance
+
+OK
+
+Control value
+
+Read, Write, Write
+
+protection test
+
+Control value write protect test and
+
+Read, write test.
+
+OK
+
+Limit test
+
+Check control
+
+value exceeds
+
+range
+
+Apply control values exceeds boundary
+
+and no undesirable effect is occurred
+
+OK
+
+Risk Analysis Report
+
+Misdiagnosis Hazards
+
+Risk Analysis
+
+Risk Assessment
+
+Risk Control
+
+Risk Assessment
+
+Undesirable
+
+Effect
+
+Potential Cause
+
+Hazard
+
+Likeli-
+
+hood
+
+Hazard
+
+Sever-
+
+ity
+
+Risk
+
+Index
+
+Minimum
+
+Requirements
+
+Requirements
+
+Allocation
+
+Description of
+
+Control/Comments
+
+Hazard
+
+Likeli-
+
+hood
+
+Hazard
+
+Sever-
+
+ity
+
+Risk
+
+Index
+
+Data transfer error due to network disconnect
+
+Unable to send data and handle invalid commands
+
+2
+
+1
+
+1
+
+Write warning in setup
+
+manual
+
+1
+
+1
+
+1
+
+Image Acquisition Processing Task Abnormal Behavior
+
+2
+
+2
+
+2
+
+Write recommendation
+
+in setup manual
+
+1
+
+1
+
+1
+
+Wrong system
+
+setup by wrong
+
+command code
+
+User send detector
+
+wrong command
+
+4
+
+2
+
+2
+
+Check command
+
+structure is
+
+proper.
+
+Using CRC and
+
+command validation
+
+check. Distinguish bad
+
+command from
+
+incoming data. Timeout
+
+function for 1 packet of
+
+command block
+
+1
+
+1
+
+1
+
+User changes
+
+detector system
+
+variables
+
+3
+
+2
+
+2
+
+Variable reset
+
+function
+
+After power off and on,
+
+system variables
+
+changes to initial value
+
+1
+
+1
+
+1

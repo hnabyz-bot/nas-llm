@@ -1,0 +1,4601 @@
+queueId: ingest-1781569954417-15zl
+sourcePath: raw/sources/DHF (인허가)/07_(CYAN) GT1717C, GT1717CP/91_인증 - 국내/참고 - 성능시험성적서 첨부자료 GT series/AFE2256_FULL.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/28cc9fb4a4a3/AFE2256_FULL__28cc9fb4a4a3_combined.txt
+canonicalGroupId: 75c63a1555dc
+productSignal: CYAN
+authoritySignal: MFDS/domestic
+pilotRank: 816
+
+SOURCE_TEXT
+16-Bit
+ADC[3:0]
+ADC ADC LVDS
+Serializer
+TFT Switch
+Timing and Control
+MCLK, SYNC, TP_SEL
+Reference
+Voltage
+ VREF AFE2256GR
+DCLK_P,
+DCLK_M
+DOUT_P,
+DOUT_M
+FCLK_P,
+FCLK_M
+SDATA, SDOUT, SCLK, SEN
+SPI
+ADC
+Pixel Cap
+[255:0]
+Integrators
+and CDS
+255-0
+MUX
+TI Confidential — NDA Restrictions
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 –REVISED JANUARY 2018
+AFE2256GRTDU, AFE2256GRTDR
+256-Channel, Analog Front-End for Digital X-Ray, Flat-Panel Detectors
+1
+1 Features
+1• 256 Channels
+• On-Chip, 16-Bit ADC
+• Photodiode Short Immunity
+• High Performance:
+– Noise: 240 Electrons RMS
+(0.6-pC Input Charge Range)
+– Noise: 670 Electrons RMS
+(1.2-pC Input Charge Range)
+– Low Correlated Noise
+– Integral Nonlinearity:
+±2 LSB with Internal 16-Bit ADC
+– Scan Time:
+– 51.2 μs to 204.8 μs
+• Integration:
+– Programmable Full-Scale Input Charge Range:
+0.6 pC (Minimum) to 9.6 pC (Maximum) With
+Resolution of 0.6 pC
+– Internal Timing Generator (TG)
+– Built-In Correlated Double Sampler
+– Software-Programmable Electron and Hole
+integration Mode
+– Pipelined Integrate and Read for Improved
+Throughput: Allows Data Read During
+Integration
+– Serial LVDS Output
+• Simple Power-Supply Scheme:
+– AVDD1 = 1.85 V
+– AVDD2 = 3.3 V
+• Low Power Consumption
+• Nap and Power-Down Mode
+• AFE2256GRTDU is pin compatible to the
+AFE2256TDU
+• AFE2256GRTDR is pin-compatible to the
+AFE2256TDR
+2 Applications
+• Flat-Panel, X-Ray Detectors
+• Charge Detectors
+• Capacitance Measurement
+3 Description
+The AFE2256GR device is a 256-channel, analog
+front-end (AFE) designed to suit the requirements of
+flat-panel detector (FPD)-based digital x-ray systems.
+The device includes 256 integrators, a correlated
+double sampler (CDS) with dual banking, and 256:4
+analog multiplexers.
+The device also features four 16-bit successive-
+approximation register (SAR) analog-to-digital
+converters (ADCs). Serial data from the ADCs are
+available in low-voltage differential signaling (LVDS)
+format.
+The Nap and power-down modes enable substantial
+power saving that is especially useful in battery-
+powered systems.
+Device Information(1)
+PART NUMBER PACKAGE BODY SIZE (NOM)(2)
+AFE2256GRTDU COF (320) 38.00 mm × 28.00 mm
+AFE2256GRTDR COF (325) 48.35 mm × 21.50 mm
+(1) For all available packages, see the orderable addendum at
+the end of the data sheet.
+(2) L x W (mm × mm)
+AFE2256GR Schematic
+
+TI Confidential — NDA Restrictions
+2
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Table of Contents
+1 Features .................................................................. 1
+2 Applications ........................................................... 1
+3 Description ............................................................. 1
+4 Revision History..................................................... 2
+5 Pin Configuration and Functions ......................... 4
+6 Specifications......................................................... 8
+6.1 Absolute Maximum Ratings ...................................... 8
+6.2 ESD Ratings.............................................................. 8
+6.3 Recommended Operating Conditions....................... 8
+6.4 Thermal Information .................................................. 8
+6.5 Electrical Characteristics........................................... 9
+6.6 Timing Requirements .............................................. 12
+6.7 Typical Characteristics: Integrate-Up Mode............ 14
+6.8 Typical Characteristics: Integrate-Down Mode ....... 16
+6.9 Typical Characteristics: Internal ADC ..................... 18
+7 Detailed Description ............................................ 19
+7.1 Overview ................................................................. 19
+7.2 Functional Block Diagram ....................................... 20
+7.3 Feature Description................................................. 21
+7.4 Device Functional Modes........................................ 38
+7.5 Programming........................................................... 40
+7.6 Register Map........................................................... 44
+8 Application and Implementation ........................ 62
+8.1 Application Information............................................ 62
+8.2 Typical Application .................................................. 72
+8.3 System Examples ................................................... 76
+9 Power Supply Recommendations...................... 78
+10 Layout................................................................... 78
+10.1 Layout Guidelines ................................................. 78
+10.2 Layout Examples................................................... 79
+11 Device and Documentation Support ................. 83
+11.1 Documentation Support ........................................ 83
+11.2 Trademarks ........................................................... 83
+11.3 Electrostatic Discharge Caution............................ 83
+11.4 Glossary ................................................................ 83
+12 Mechanical, Packaging, and Orderable
+Information ........................................................... 83
+12.1 Package Option Addendum .................................. 84
+4 Revision History
+Changes from Revision A (November 2017) to Revision B Page
+• Changed device status of AFE2256GRTDR to production data ............................................................................................ 1
+• Changed AFE2256 to "device" in the Timing Profiles subsection........................................................................................ 34
+• Changed AFE2256GRTDR to ACTIVE in Packaging Information ....................................................................................... 84
+Changes from Original (November 2016) to Revision A Page
+• Added new device name AFE2256GRTDR to the title of the document ............................................................................... 1
+• Added resolution value to Programmable Full-Scale Input Charge Range feature ............................................................... 1
+• Added AFE2256GRTDR package specifications across the document................................................................................. 1
+• Changed Device Information table ......................................................................................................................................... 1
+• Added Pin Configuration and Functions section for AFE2256GRTDR ................................................................................. 6
+• Added thermal information for AFE2256GRTDR. .................................................................................................................. 8
+• Added a test condition to—and a table note about—Input charge range parameter in Electrical Characteristics table ....... 9
+• Added VEXTC_O parameter in Electrical Characteristics table. ................................................................................................. 9
+• Changed the minimum values of Data Read inTiming Requirements section. .................................................................... 12
+• Deleted the text "integrate-down mode..." from the condition of Typical Characteristics: Integrate-Down Mode section.... 16
+• Added text "TI also offers custom COF package..." to Overview section ........................................................................... 19
+• Changed the Functional Block Diagram. ............................................................................................................................. 20
+• Added text "For AFE22256GR, STR = 0 and 1 are same..." to Device Operation section.................................................. 21
+• Added description and note for Input charge range in Charge Acquisition section ............................................................. 24
+• Added a note to Register Readout section........................................................................................................................... 44
+• Added Timing Profile Register Readout section................................................................................................................... 44
+• Changed Register 0h Field Descriptions ............................................................................................................................. 47
+• Changed Register 11h Field Descriptions ............................................................................................................................ 48
+• Changed Register 5Ch Field Descriptions ........................................................................................................................... 58
+
+TI Confidential — NDA Restrictions
+3
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+• Changed Figure 70 and Figure 71 ....................................................................................................................................... 64
+• Added Typical Application Circuit figure and related details for AFE2256GRTDR. ............................................................. 73
+• Added Layout Examples for AFE2256GRTDR..................................................................................................................... 81
+• Deleted link to AFE2256TDU datasheet............................................................................................................................... 83
+• Added AFE2256GRTDR details in Packaging Information table ......................................................................................... 84
+
+AFE2256GR
+GLASS INTERFACE
+270-pin, 100um pitch
+PG[1]
+PG[2]
+.
+.
+.
+.
+PG[270]
+PCB INTERFACE
+50-pin, 500um pitch
+PP[1]
+PP[2]
+.
+.
+.
+.
+PP[50]
+AFE Inputs ADC
+Outputs
+TI Confidential — NDA Restrictions
+4
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) A = analog, D = digital, I = input, NA = not applicable, and O = output.
+5 Pin Configuration and Functions
+TDU Package
+320-Pad COF
+Top View
+The COF pinout is shown with die-side up. The COF gets inserted into the connector with the die-side down. Hence,
+PP-1 will connect to pin 50 of the PCB connector. Consider this pinout flip while designing mating connections on the
+PCB side and the panel side. See Figure 79 for more details.
+Pin Functions: Glass Interface(1)
+COF PAD NO. OF PADS I/O DESCRIPTION GLASS CONNECTION
+NO. NAME
+PG[1] FLOAT1 1 I/O Not connected N/A
+PG[2] FLOAT2 1 I/O Not connected N/A
+PG[3] FLOAT3 1 I/O Not connected N/A
+PG[4:6] VBIAS 3 I/O Passthrough connection to PP[1] Photodiode bias
+PG[7] VB 1 O Shield trace biased at EXTC_I voltage Float and route adjacent to IN[255] as a shield
+PG[8:263] IN[255:0] 256 I Analog input channels From flat-panel detector (FPD) sensor
+PG[264] VB 1 O Shield trace biased at EXTC_I voltage Float and route adjacent to IN[0] as a shield
+PG[265:267] VBIAS 3 I/O Passthrough connection to PP[50] Photodiode bias
+PG[268] FLOAT4 1 I/O Not connected N/A
+PG[269] FLOAT5 1 I/O Not connected N/A
+PG[270] FLOAT6 1 I/O Not connected N/A
+(1) A = analog, D = digital, I = input, NA = not applicable, and O = output.
+Pin Functions: PCB Interface(1)
+COF PAD I/O ANALOG OR
+DIGITAL DESCRIPTION PCB CONNECTION
+NO. NAME
+PP[1] VBIAS I/O Analog Photodiode bias; passthrough
+connection to PG[4:6] Low-noise voltage source
+PP[2] EXTC_I I Analog Input reference for integrator positive
+terminal
+22-μF + 1-μF + 0.1-μF capacitor (preferably X5R-type) to
+ground plane
+PP[3] AVSS I Analog Analog ground Ground plane
+PP[4] AVSS I Analog Analog ground Ground plane
+PP[5] AVDD1 I Analog Analog supply 1.85 V
+PP[6] AVDD2 I Analog Analog supply 3.3 V
+PP[7] AVSS I Analog Analog ground Ground plane
+PP[8] AVSS I Analog Analog ground Ground plane
+PP[9] AVSS I Analog Analog ground Ground plane
+PP[10] AVDD1 I Analog Analog supply 1.85 V
+PP[11] AVSS I Analog Analog ground Ground plane
+PP[12] AVDD1 I Analog Analog supply 1.85 V
+
+TI Confidential — NDA Restrictions
+5
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Pin Functions: PCB Interface(1) (continued)
+COF PAD I/O ANALOG OR
+DIGITAL DESCRIPTION PCB CONNECTION
+NO. NAME
+PP[13] AVSS I Analog Analog ground Ground plane
+PP[14] DOUTP O Digital Low-voltage differential signaling
+(LVDS) data output To field-programmable gate array (FPGA)
+PP[15] DOUTM O Digital LVDS data output To FPGA
+PP[16] FCLKP O Digital LVDS frame clock To FPGA
+PP[17] FCLKM O Digital LVDS frame clock To FPGA
+PP[18] DCLKP O Digital LVDS data clock To FPGA
+PP[19] DCLKM O Digital LVDS data clock To FPGA
+PP[20] AVSS I Analog Analog ground Ground plane
+PP[21] AVDD1 I Analog Analog supply 1.85 V
+PP[22] AVDD1 I Analog Analog supply 1.85 V
+PP[23] MCLK I Digital Master clock input From FPGA
+PP[24] SYNC I Digital Synchronization pulse input From FPGA
+PP[25] TP_SEL I Digital Timing profile selection From FPGA
+PP[26] SDOUT O Digital Serial interface data output To FPGA
+PP[27] SCLK I Digital Serial interface clock input From FPGA
+PP[28] SDATA I Digital Serial interface data input From FPGA
+PP[29] SEN I Digital Serial interface enable From FPGA
+PP[30] COMP4 I Analog
+Analog input for thin-film transistor
+(TFT) charge compensation
+Output of low-noise digital-to-analog converters (DACs).
+These pins can be connected to the ground plane if not used.
+PP[31] COMP3 I Analog
+PP[32] COMP2 I Analog
+PP[33] COMP1 I Analog
+PP[34] AVSS I Analog Analog ground Ground plane
+PP[35] AVDD1 I Analog Analog supply 1.85 V
+PP[36] AVSS I Analog Analog ground Ground plane
+PP[37] AVDD1 I Analog Analog supply 1.85 V
+PP[38] AVSS I Analog Analog ground Ground plane
+PP[39] AVDD1 I Analog Analog supply 1.85 V
+PP[40] AVSS I Analog Analog ground Ground plane
+PP[41] VREF I Analog Reference voltage Low-noise 1.25-V reference
+PP[42] EXTC_O O Analog Output reference for integrator positive
+terminal Short to EXTC_I
+PP[43] VTESTC O Analog Probe pad Test point
+PP[44] AVSS I Analog Analog ground Ground plane
+PP[45] AVDD2 I Analog Analog supply 3.3 V
+PP[46] AVDD1 I Analog Analog supply 1.85 V
+PP[47] AVSS I Analog Analog ground Ground plane
+PP[48] AVSS I Analog Analog ground Ground plane
+PP[49] EXTC_I I Analog Input reference for integrator positive
+terminal
+Short to EXTC_O and place a 22-μF + 1-μF + 0.1-μF capacitor
+(preferably X5R-type) to ground plane
+PP[50] VBIAS I/O Analog Photodiode bias; passthrough
+connection to PG[265:267] Low-noise voltage source
+
+AFE2256GR
+GLASS INTERFACE
+270-pin, 60-μm pitch
+PG[1]
+PG[2]
+.
+.
+.
+.
+PG[270]
+PCB INTERFACE
+55-pin, 300-μm pitch
+PP[1]
+PP[2]
+.
+.
+.
+.
+PP[55]
+AFE Inputs ADC Outputs
+TI Confidential — NDA Restrictions
+6
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) A = analog, D = digital, I = input, NA = not applicable, and O = output.
+TDR Package
+325-Pad COF
+Top View
+The COF pinout is shown with die-side up. The COF gets inserted into the connector with the die-side down. Hence,
+PP-1 will connect to pin 55 of the PCB connector. Consider this pinout flip while designing mating connections on the
+PCB side and the panel side. See Figure 80 for more details.
+Pin Functions: Glass Interface(1)
+COF PAD NO. OF
+PADS I/O DESCRIPTION GLASS CONNECTION
+NO. NAME
+PG [1:4] PASSTHROU 1 4 I/O Passthrough connection to PP[1:2] Reserved
+PG [5:6] PASSTHROU 2 2 I/O Passthrough connection to PP[3:4] Reserved
+PG[7] VB 1 O Shield voltage biased at EXTC_I voltage Float and route adjacent to IN[255] as a shield
+PG[8:263] IN[255:0] 256 I Analog input channels From FPD Sensor
+PG[264] VB 1 O Shield voltage biased at EXTC_I voltage Float and route adjacent to IN[0] as a shield
+PG[265:266] PASSTHROU 3 2 I/O Passthrough connection to PP[53] Reserved
+PG [267:270] PASSTHROU 4 4 I/O Passthrough connection to PP[54:55] Reserved
+(1) A = analog, D = digital, I = input, NA = not applicable, and O = output.
+Pin Functions: PCB Interface(1)
+COF PAD I/O ANALOG OR
+DIGITAL DESCRIPTION PCB CONNECTION
+NO. NAME
+PP[1:2] PASSTHROU1 I/O Analog Passthrough connection to PG[1:4] Reserved
+PP[3:4] PASSTHROU2 I/O Analog Passthrough connection to PG[5:6] Reserved
+PP[5] EXTC_I I Analog Input reference for integrator
+positive terminal
+22-μF + 1-μF + 0.1-μF capacitor (preferably X5R-type)
+to ground plane
+PP[6] AVSS I Analog Analog ground Ground plane
+PP[7] AVSS I Analog Analog ground Ground plane
+PP[8] AVDD1 I Analog Analog supply 1.85 V
+PP[9] AVDD2 I Analog Analog supply 3.3 V
+PP[10] AVSS I Analog Analog ground Ground plane
+PP[11] AVSS I Analog Analog ground Ground plane
+PP[12] AVSS I Analog Analog ground Ground plane
+PP[13] AVDD1 I Analog Analog supply 1.85 V
+PP[14] AVSS I Analog Analog ground Ground plane
+PP[15] AVDD1 I Analog Analog supply 1.85 V
+PP[16] AVSS I Analog Analog ground Ground plane
+
+TI Confidential — NDA Restrictions
+7
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Pin Functions: PCB Interface(1) (continued)
+COF PAD I/O ANALOG OR
+DIGITAL DESCRIPTION PCB CONNECTION
+NO. NAME
+PP[17] DOUTP O Digital Low-voltage differential signaling
+(LVDS) data output To field-programmable gate array (FPGA)
+PP[18] DOUTM O Digital LVDS data output To FPGA
+
+PP[19] FCLKP O Digital LVDS frame clock To FPGA
+PP[20] FCLKM O Digital LVDS frame clock To FPGA
+PP[21] DCLKP O Digital LVDS data clock To FPGA
+PP[22] DCLKM O Digital LVDS data clock To FPGA
+PP[23] AVSS I Analog Analog ground Ground plane
+PP[24] AVDD1 I Analog Analog supply 1.85 V
+PP[25] AVDD1 I Analog Analog supply 1.85 V
+PP[26] MCLK I Digital Master clock input From FPGA
+PP[27] SYNC I Digital Synchronization pulse input From FPGA
+PP[28] TP_SEL I Digital Timing profile selection From FPGA
+PP[29] SDOUT O Digital Serial interface data output To FPGA
+PP[30] SCLK I Digital Serial interface clock input From FPGA
+PP[31] SDATA I Digital Serial interface data input From FPGA
+PP[32] SEN I Digital Serial interface enable From FPGA
+PP[33] COMP4 I Analog
+Analog input for TFT charge
+compensation
+Output of low-noise digital-to-analog converters
+(DACs).
+Connect these pins to the ground plane if not used.
+PP[34] COMP3 I Analog
+PP[35] COMP2 I Analog
+PP[36] COMP1 I Analog
+PP[37] AVSS I Analog Analog ground Ground plane
+PP[38] AVDD1 I Analog Analog supply 1.85 V
+PP[39] AVSS I Analog Analog ground Ground plane
+PP[40] AVDD1 I Analog Analog supply 1.85 V
+PP[41] AVSS I Analog Analog ground Ground plane
+PP[42] AVDD1 I Analog Analog supply 1.85 V
+PP[43] AVSS I Analog Analog ground Ground plane
+PP[44] VREF I Analog Reference voltage Low-noise 1.25-V reference
+PP[45] EXTC_O O Analog Output reference for integrator
+positive terminal Short to EXTC_I
+PP[46] VTESTC O Analog Probe pad Test point
+PP[47] AVSS I Analog Analog ground Ground plane
+PP[48] AVDD2 I Analog Analog supply 3.3 V
+PP[49] AVDD1 I Analog Analog supply 1.85 V
+PP[50] AVSS I Analog Analog ground Ground plane
+PP[51] AVSS I Analog Analog ground Ground plane
+PP[52] EXTC_I I Analog Input reference for integrator
+positive terminal
+Short to EXTC_O and place a 22-μF + 1-μF + 0.1-μF
+capacitor (preferably X5R-type) to ground plane
+PP[53] PASSTHROU3 I/O Analog Passthrough connection to
+PG[265:266] Reserved
+PP[54:55] PASSTHROU4 I/O Analog Passthrough connection to
+PG[267:270] Reserved
+
+TI Confidential — NDA Restrictions
+8
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN MAX UNIT
+IN[n] to AGND, AVDD1 –100 20 mA
+AVDD1 to AGND –0.3 2.2 V
+AVDD2 to AGND –0.3 5.5 V
+COMP1 and COMP2 to AGND –0.3 AVDD2 + 0.3 V
+COMP3 and COMP4 to AGND –0.3 AVDD1 + 0.3 V
+Digital input voltage to AGND –0.3 AVDD1 + 0.3 V
+Digital output to AGND –0.3 AVDD1 + 0.3 V
+Operating temperature 0 85 °C
+Junction temperature, TJ 150 °C
+Storage temperature, Tstg –65 125 °C
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+6.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±1000 V
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+AVDD1 Analog supply voltage 1 1.8 1.85 1.95 V
+AVDD2 Analog supply voltage 2 3.135 3.3 3.465 V
+VREF Reference voltage 1.24 1.25 1.26 V
+COMP1, COMP2 Charge injection compensation inputs 1 and 2 0 3.3 V
+COMP3, COMP4 Charge injection compensation inputs 3 and 4 0 1.85 V
+TA Ambient temperature 0 85 °C
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report, SPRA953.
+(2) Values are modeled on a flex device attached to a 40°C glass plate and a 40°C printed circuit board (PCB), per the standard-use
+condition.
+6.4 Thermal Information
+THERMAL METRIC(1)
+AFE2256GRTDU AFE2256GRTDR
+UNIT TDU (COF) TDR (COF)
+320 PADS 325 PADS
+RθJA Junction-to-ambient thermal resistance 49.9 49.9 °C/W
+ψJT Junction-to-top characterization parameter 0.02 0.02 °C/W
+ψJflex Junction-to-flex characterization parameter(2) 10.5 10.5 °C/W
+
+TI Confidential — NDA Restrictions
+9
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) STR = scan time range setting; see Table 1 for more information.
+(2) Csensor is the total external capacitance at the IN[n] pad, including the capacitance of all the TFT switches connected to that node and
+the routing capacitance.
+(3) INPUT_CHARGE_RANGE bits = 00000b is 0 pC (no feedback capacitor for integrator). All intermediate values are valid. For example,
+INPUT_CHARGE_RANGE = 00011b corresponds to 1.8 pC charge range.
+(4) LSB = least significant bit.
+(5) Ideal gain of a channel is 65535 ÷ (input charge range).
+6.5 Electrical Characteristics
+at TA= 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR(1) = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor (2) = 50 pF; all specifications are in integrate-up and integrate-down mode,
+pixel short-detection circuitry enabled, and auto-reverse mode enabled (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+FULL CHANNEL
+Input charge
+range(3)
+INPUT_CHARGE_RANGE bits = 00001b 0.6
+pC
+INPUT_CHARGE_RANGE bits = 00010b 1.2
+INPUT_CHARGE_RANGE bits = 00100b 2.4
+INPUT_CHARGE_RANGE bits = 01000b 4.8
+INPUT_CHARGE_RANGE bits = 10000b 0.6
+INPUT_CHARGE_RANGE bits = 01100b 7.2
+INPUT_CHARGE_RANGE bits = 11111b 9.6
+VEXTC_I
+Integrator positive
+input voltage 0.875 V
+VEXTC_O
+Output of Internal
+buffer to be
+connected to
+EXTC_I input
+0.875 V
+Noise (referred to
+input of integrator)
+Input charge range = 0.6 pC,
+scan time = 102.4 μs, fLPF1 =
+fLPF2 = 13 kHz, Csensor = 20 pF
+Integrate-up mode 240
+electrons
+(e–)
+Integrate-down mode 240
+Input charge range = 1.2 pC,
+scan time = 51.2 μs, fLPF1 = fLPF2
+= 52 kHz, Csensor = 50 pF
+Integrate-up mode 670
+Integrate-down mode 670
+Input charge range = 4.8 pC,
+scan time = 51.2 μs, fLPF1 = fLPF2
+= 52 kHz, Csensor = 50 pF
+Integrate-up mode 1000
+Integrate-down mode 1050
+Correlated noise Across 256 channels 10
+% of
+average
+noise
+INL Integral
+nonlinearity ±2 LSB(4)
+Analog input
+channel leakage
+current
+This current is integrated and reflects as a part of offset
+error ±10 pA
+EG Gain error
+Average gain of 256 channels in
+an AFE2256GR device, input
+charge range = 9.6 pC
+Integrate-up mode –5 5 % of
+ideal
+gain(5) Integrate-down mode –15 15
+Channel-to-
+channel gain
+matching
+(Max gain – min gain), within an AFE2256GR device,
+input charge range = 9.6 pC 2
+% of
+average
+gain
+Offset code Output code with no input charge Integrate-up mode 280 LSB
+Integrate-down mode 1000
+Crosstalk
+Crosstalk to distant channel with 200 aggressor channels
+overloaded with 5X input charge range 0.02 % of full-
+scale
+range Crosstalk to distant channel with one aggressor channel
+overloaded with 5X input charge range 0.01
+
+TI Confidential — NDA Restrictions
+10
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Electrical Characteristics (continued)
+at TA= 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR(1) = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor(2) = 50 pF; all specifications are in integrate-up and integrate-down mode,
+pixel short-detection circuitry enabled, and auto-reverse mode enabled (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+EXTERNAL REFERENCE INPUT
+Reference voltage
+pin, VREF 1.24 1.25 1.26 V
+Input current from
+VREF 50 nA
+POST INTEGRATION FILTER
+Number of filter
+settings 5
+Filter 3-dB cutoff
+frequency (fLPF1,
+fLPF2)
+210, 105,
+52, 26, 13 kHz
+POWER DISSIPATION
+Power per channel
+Pixel short-detection circuitry
+disabled (ENB_TDEF = 0)
+Integrate-up mode 1.3
+mW/ch
+Integrate-down mode 1.4
+Pixel short-detection circuitry
+enabled (ENB_TDEF = 1)
+Integrate-up mode 1.4
+Integrate-down mode 1.4
+Nap mode, no toggle on digital inputs 23 μW/ch
+Power-down (PD) mode, no toggle on digital inputs 1.2
+IAVDD1
+AVDD1 power-
+supply current
+Pixel short-detection circuitry
+enabled, disabled (ENB_TDEF =
+1 or 0)
+Integrate-up mode 164
+mA
+Integrate-down mode 161
+Nap mode, no toggle on digital inputs 3.2
+Power-down (PD) mode, no toggle on digital inputs 0.16
+IAVDD2
+AVDD2 power-
+supply current
+Pixel short-detection circuitry
+disabled (ENB_TDEF = 0)
+Integrate-up mode 12
+mA
+Integrate-down mode 19
+Pixel short-detection circuitry
+enabled (ENB_TDEF = 1)
+Integrate-up mode 14
+Integrate-down mode 20
+Nap mode, no toggle on digital inputs 1 μA
+Power-down (PD) mode, no toggle on digital inputs 1
+tNAP-POWERUP
+Power-up time
+from nap
+With 47-μF capacitor on EXTC_I
+0.4
+ms
+tPD-POWERUP
+Power-up time
+from full power-
+down
+20
+DIGITAL INPUT (MCLK, SYNC, TP_SEL, SCLK, SDATA, SEN)
+VIH
+High-level input
+voltage,
+1.8-V CMOS logic
+level
+0.8 ×
+AVDD1
+AVDD1 +
+0.1 V
+VIL
+Low-level input
+voltage,
+1.8-V CMOS logic
+level
+–0.1 0.2 ×
+AVDD1 V
+DIGITAL OUTPUT (SDOUT)
+VOH
+High-level output
+voltage,
+1.8-V CMOS logic
+level
+IOH = –500 μA AVDD1 – 0.4 V
+
+TI Confidential — NDA Restrictions
+11
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Electrical Characteristics (continued)
+at TA= 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR(1) = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor(2) = 50 pF; all specifications are in integrate-up and integrate-down mode,
+pixel short-detection circuitry enabled, and auto-reverse mode enabled (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+(6) See the Data Serialization section for more details.
+(7) tSCAN = 204.8 μs.
+(8) tSCAN = 51.2 μs.
+VOL
+Low-level output
+voltage,
+1.8-V CMOS logic
+level
+IOL = 500 μA 0.4 V
+DIGITAL OUTPUT (DOUT, FCLK, DCLK)
+Format LVDS, DDR
+DR Data rate(6) 30(7) 120(8) Mbps
+Differential swing With 100-Ω differential termination ±350 mV
+VOC
+Common-mode
+output voltage 1.1 V
+
+TI Confidential — NDA Restrictions
+12
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) The filter settling time for the 210-kHz filter is included in tSHR and tSHS. Do not program the LPF1 and LPF2 timing signals for the
+210-kHz filter.
+(2) Minimum values are specified at the maximum data rate. DCLK is center-aligned with DOUT and FCLK; thus, at slower speeds,
+increased bit duration can be equally divided between setup time and hold time to increase the setup and hold margins at slower
+speeds.
+6.6 Timing Requirements
+all specifications are at TA = 0°C to +85°C, AVDD1 = 1.8 V to 1.95 V, AVDD2 = 3.135 V to 3.465 V, capacitance on SDOUT =
+15 pF, capacitance on DOUT, DCLK, FCLK = 5 pF, and LVDS pairs terminated with 100-Ω differential termination (unless
+otherwise noted)
+MIN TYP MAX UNIT
+CONTROL TIMING (see Figure 1)
+tSCAN Scan time Scan time range 2 51.2 102.4 μs
+Scan time range 3 102.4 204.8
+tSU1 TP_SEL toggle to SYNC pulse rising edge 0 ns
+tH1 SYNC pulse rising edge to TP_SEL toggle 2 × tMCLK
+tW1 SYNC pulse duration tMCLK
+tSU2 SYNC toggle to MCLK rising edge 0 s
+tH2 MCLK rising to SYNC toggle 1/3 × tMCLK + 10 ns
+tMCLK Master clock period (1 / fMCLK) 50 100 ns
+tWH Master clock high pulse duration 20 ns
+tWL Master clock low pulse duration 20 ns
+tIRST Integrator reset duration 1.5 μs
+tSHR Reset sample (SHR) duration 4 + tLPF1 μs
+tSHR-LPF1 SHR rising edge to LPF1 rising edge duration 4 μs
+tSHS Signal sample (SHS) duration 4 + tLPF2 μs
+tSHS-LPF2 SHS rising edge to LPF2 rising edge duration 4 μs
+tLPF1 LPF1 rising edge to SHR fall edge
+fLPF1 = 210 kHz 0(1)
+μs
+fLPF1 = 105 kHz 1.5
+fLPF1 = 52 kHz 9.1
+fLPF1 = 26 kHz 18.2
+fLPF1 = 13 kHz 36.4
+tLPF2 LPF2 rising edge to SHS falling edge
+fLPF2 = 210 kHz 0(1)
+μs
+fLPF2 = 105 kHz 1.5
+fLPF2 = 52 kHz 9.1
+fLPF2 = 26 kHz 18.2
+fLPF2 = 13 kHz 36.4
+tTDEF TDEF falling edge to LPF2 rising edge 2 μs
+DATA READ (see Figure 2)
+tDCLK DCLK (clock) period (DDR) 16.68 66.67 ns
+tSU3
+DOUT valid to DCLK toggle, setup time: tSCAN = 51.2 μs,
+LVDS data rate = 120 Mbps(2) 3.8 ns
+tSU4
+FCLK valid to DCLK toggle, setup time: tSCAN = 51.2 μs,
+LVDS data rate = 120 Mbps(2) 3.8 ns
+tH3
+DCLK toggle to DOUT toggle, hold time: tSCAN = 51.2 μs,
+LVDS data rate = 120 Mbps(2) 3.8 ns
+tH4
+DCLK toggle to FCLK toggle, hold time: tSCAN = 51.2 μs,
+LVDS data rate = 120 Mbps(2) 3.8 ns
+DFCLK FCLK duty cycle 50%
+
+FCLK
+DCLK
+(DDR)
+DOUT D23 D1 D22 D0 D21 D0 D2 D1 D3 D20 ´´´´´´´´ D23 D22 D21 D20
+ADC(x), Ch (n) ADC(x+1)
+Ch (n+64)
+´´´´´´´´´´
+tDCLK
+tH3
+tSU3
+tH4
+tSU4
+Scan i
+SYNC is not required for subsequent scans using the same timing profile (TP).
+t = 0
+tIRST
+External signal, not an input to the AFE2256GR.
+tSHR
+tSHS
+Read i-1 data
+tTDEF
+tSCAN
+1024 or 2048 Cycles
+tSU1
+tMCLK
+tLPF1
+IRST
+MCLK
+TFT ON
+SYNC
+TP_SEL
+SHR
+SHS
+LPF1
+A_BZ
+TDEF
+FCLK
+DCLK
+DOUT
+tH1
+tSU2
+For STR = 2, FCLK frequency = (fMCLK / 4)
+and
+For STR = 3, FCLK frequency = (fMCLK / 8)
+tH2
+Internally
+Generated
+tSHR-LPF1
+tW1
+tLPF2
+LPF2
+tSHS-LPF2
+External Signals
+Internal TG Signals
+Output Data and Clock
+tWH tWL
+ADC0
+Ch (n)
+ADC1
+Ch (n+64)
+ADC2
+Ch (n+128)
+ADC3
+Ch (n+192)
+ADC0
+Ch (n+1)
+TI Confidential — NDA Restrictions
+13
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 1. Control Timing Diagram
+Figure 2. Digital Data Read Timing Diagram
+
+Temperature (qC)
+Offset Drift (LSB)
+0 10 20 30 40 50 60 70 80 85
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+-5
+0
+5
+10
+15
+Low
+High
+Offset Code (LSB)
+Number of Channels
+0
+200
+400
+600
+800
+1000
+200 220 240 260 280 300 320 340 360
+Input-Referred Noise (electrons)
+Number of Channels
+0
+250
+500
+750
+1000
+1250
+1500
+1750
+900
+ 950
+ 1000
+ 1050
+ 1100
+ 1150 LPF Cutoff Frequency (kHz)
+Input-Referred Noise (electrons)
+600
+900
+1200
+1500
+1800
+2100
+2400
+210 105 52 26 13
+Csensor = 110 pF
+Csensor = 50 pF
+Csensor = 30 pF
+Csensor = 20 pF
+Input Charge Range (pC)
+Input-Referred Noise (electrons)
+450
+650
+850
+1050
+1250
+1450
+1650
+0.6 1.2 2.4 4.8 7.2 9.6Input Charge Range (pC)
+Input-Referred Noise (electrons)
+300
+500
+700
+900
+1100
+1300
+1500
+0.6 1.2 2.4 4.8 7.2 9.6
+TI Confidential — NDA Restrictions
+14
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+6.7 Typical Characteristics: Integrate-Up Mode
+at TA = 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor = 50 pF; all specifications are in pixel short-detection circuitry enabled, and
+auto-reverse mode enabled (unless otherwise noted)
+Figure 3. Input-Referred Noise vs
+Input Charge Range
+tSCAN = 102.4 μs, STR = 3, fLPF1 = fLPF2 = 13 kHz
+Figure 4. Input-Referred Noise vs
+Input Charge Range
+tSCAN = 102.4 μs, STR = 3, normal-power mode,
+fLPF1 = fLPF2 = LPF cutoff frequency
+Figure 5. Input-Referred Noise vs
+LPF Cutoff Frequency Across Csensor
+Distribution across 2560 channels (10 devices)
+Figure 6. Input-Referred Noise Histogram
+Distribution of average offset code across 2560 channels
+(10 devices)
+Figure 7. Offset Code Histogram
+Envelope of offset drift for 768 channels (3 devices),
+data are offset corrected at 30°C
+Figure 8. Offset Drift vs Temperature
+
+STR MCLK
+1
+Null Frequency 2 (SHS _ FALL SHR _ FALL) t u  u
+fIN (kHz)
+AVDD2 PSRR (dB)
+1 2 3 4 5 67 10 20 30 50 70100 200 500 1000
+-55
+-50
+-45
+-40
+-35
+-30
+-25
+-20
+Percentage of Full Scale ()
+INL (LSB)
+0 10 20 30 40 50 60 70 80 90 100
+-3
+-2
+-1
+0
+1
+2
+3
+High
+Mean
+Low
+fIN (kHz)
+AVDD1 PSRR (dB)
+1 2 3 4 5 67 10 20 30 50 70100 200 500 1000
+-50
+-45
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+TI Confidential — NDA Restrictions
+15
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Typical Characteristics: Integrate-Up Mode (continued)
+at TA = 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor = 50 pF; all specifications are in pixel short-detection circuitry enabled, and
+auto-reverse mode enabled (unless otherwise noted)
+(1)
+Envelope of INL for 768 channels (3 devices)
+Figure 9. Full-Channel INL
+SHR_FALL = 101,
+SHS_FALL = 253, null frequency (1) = 32.9 kHz,
+PSRR is measured for a 50-mVPP tone on the supply
+Figure 10. AVDD1 PSRR vs Input Frequency
+SHR_FALL = 101,
+SHS_FALL = 253, null frequency(1) = 32.9 kHz,
+PSRR is measured for a 50-mVPP tone on the supply
+Figure 11. AVDD2 PSRR vs Input Frequency
+
+Offset Code (LSB)
+Number of Channels
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+850 900 950 1000 1050 1100 1150Temperature (qC)
+Offset Drift (LSB)
+0 10 20 30 40 50 60 70 80 85
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+30
+35
+40
+Low
+High
+Input-Referred Noise (electrons)
+Number of Channels
+0
+250
+500
+750
+1000
+1250
+1500
+1750
+900 950 1000 1050 1100 1150 1200
+LPF Cutoff Frequency (kHz)
+Input-Referred Noise (electrons)
+600
+900
+1200
+1500
+1800
+2100
+2400
+210 105 52 26 13
+Csensor = 110 pF
+Csensor = 50 pF
+Csensor = 30 pF
+Csensor = 20 pF
+Input Charge Range (pC)
+Input-Referred Noise (electrons)
+450
+650
+850
+1050
+1250
+1450
+1650
+1850
+0.6 1.2 2.4 4.8 7.2 9.6Input Charge Range (pC)
+Input-Referred Noise (electrons)
+200
+400
+600
+800
+1000
+1200
+1400
+
+1600
+0.6 1.2 2.4 4.8 7.2 9.6
+TI Confidential — NDA Restrictions
+16
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+6.8 Typical Characteristics: Integrate-Down Mode
+at TA = 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor = 50 pF; all specifications are pixel short-detection circuitry enabled, and
+auto-reverse mode enabled (unless otherwise noted)
+Figure 12. Input-Referred Noise vs
+Input Charge Range
+tSCAN = 102.4 μs, STR = 3, fLPF1 = fLPF2 = 13 kHz
+Figure 13. Input-Referred Noise vs
+Input Charge Range
+tSCAN = 102.4 μs, STR = 3, normal-power mode,
+fLPF1 = fLPF2 = LPF cutoff frequency
+Figure 14. Input-Referred Noise vs
+LPF Cutoff Frequency Across Csensor
+Distribution across 2560 channels (10 devices)
+Figure 15. Input-Referred Noise Histogram
+Distribution of average offset code across 2560 channels
+(10 devices)
+Figure 16. Offset Code Histogram
+Envelope of offset drift for 768 channels (3 devices),
+data are offset corrected at 30°C
+Figure 17. Offset Drift vs Temperature
+
+STR MCLK
+1
+Null Frequency 2 (SHS _ FALL SHR _ FALL) t u  u
+fIN (kHz)
+AVDD2 PSRR (dB)
+1 2 3 4 5 67 10 20 30 50 70100 200 500 1000
+-55
+-50
+-45
+-40
+-35
+-30
+-25
+-20
+fIN (kHz)
+AVDD1 PSRR (dB)
+1 2 3 4 5 67 10 20 30 50 70100 200 500 1000
+-50
+-45
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+Percentage of Full Scale ()
+INL (LSB)
+0 10 20 30 40 50 60 70 80 90 100
+-2
+-1
+0
+1
+2
+High
+Mean
+Low
+TI Confidential — NDA Restrictions
+17
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Typical Characteristics: Integrate-Down Mode (continued)
+at TA = 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR = 2, scan time = 51.2 μs, input charge
+range = 4.8 pC, fLPF1 = fLPF2 = 52 kHz, and Csensor = 50 pF; all specifications are pixel short-detection circuitry enabled, and
+auto-reverse mode enabled (unless otherwise noted)
+(1)
+Envelope of INL for 768 channels (3 devices)
+Figure 18. Full-Channel INL
+SHR_FALL = 101,
+SHS_FALL = 253, null frequency (1) = 32.9 kHz,
+PSRR is measured for a 50-mVPP tone on the supply
+Figure 19. AVDD1 PSRR vs Input Frequency
+SHR_FALL = 101,
+SHS_FALL = 253, null frequency(1) = 32.9 kHz,
+PSRR is measured for a 50-mVPP tone on the supply
+Figure 20. AVDD2 PSRR vs Input Frequency
+
+ADC CODE
+INL (LSB)
+0 16384 32768 49152 65535
+-1
+-0.5
+0
+0.5
+1
+ADC CODE
+DNL (LSB)
+0 16384 32768 49152 65535
+-0.5
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+TI Confidential — NDA Restrictions
+18
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+6.9 Typical Characteristics: Internal ADC
+at TA = 25ºC, AVDD1 = 1.85 V, AVDD2 = 3.3 V, MCLK frequency = 20 MHz, STR = 2 (unless otherwise noted); note that,
+irrespective of the STR setting, the ADC data conversion period is always 4 × t MCLK; for a higher STR setting, multiple
+samples are averaged automatically to reduce thermal noise
+Figure 21. ADC INL Figure 22. ADC DNL
+
+TI Confidential — NDA Restrictions
+19
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7 Detailed Description
+7.1 Overview
+The AFE2256GR is a 256-channel, charge-to-digital converter. The device is specifically designed to meet
+performance specifications of x-ray imaging systems. The AFE2256GR can also be used in multichannel
+capacitance measurement applications.
+The AFE2256GR supports both electron and hole integration, without any hardware change. The device
+operates over a wide range of scan times (from 51.2 μs to 204.8 μs), and has a programmable input charge
+range from 0.6 pC to 9.6 pC to optimize the dynamic range of the system.
+The device has features specific to x-ray imaging applications (for example, charge injection compensation, pixel
+short detection, and ultra-low crosstalk). The device provides test modes such as CSENSOR emulation (emulate
+panel capacitance), panel isolation (disconnect inputs from panel), test-patterns, and so forth to reduce system
+development time.
+The AFE2256GR is available in a COF package that can be directly bonded to the x-ray panel. The COF
+connects to a printed circuit board (PCB) using a zero insertion force (ZIF) connector.
+TI also offers custom COF package design facility. Contact TI for more details.
+
+IN-0
+IN-1
+IN-254
+AFE2256GR
+IN<000>
+IN<001>
+IN-255
+IN<255>
+EXTC_I
+Reference
+Generator
+Timing
+Generator
+and Control
+MCLK
+SYNC
+TP_SEL
+Charge Injection To Integrators
+IN<254>
+256:4 MUX
+Data
+Serializer
+DOUT_P
+DOUT_M
+COMP1
+COMP2
+COMP3
+COMP4
+EXTC_O
+From Timing Generator
+FCLK_P
+FCLK_M
+DCLK_P
+DCLK_M
+ADC 0
+ADC 1
+ADC 2
+ADC 3
+SPI
+SDATA
+SCLK
+SEN
+Register
+Bank
+Integrator and CDS Control:
+SHR, SHS, TDEF,
+LPF1, LPF2, DF_SM[5:0]
+Serializer CLK
+ADC CLK
+SDOUT
+PLL
+Timing Signals to
+CH0 to CH255
+AVDD1
+AVDD2
+AVSS
+VREF
+Copyright © 2017, Texas Instruments Incorporated
+Dual CDS-0
+Shr-A
+Shr-B
+Shs-A
+Shs-B
+Dual CDS-1
+Shr-A
+Shr-B
+Shs-A
+Shs-B
+Dual CDS-254
+Shr-A
+Shr-B
+Shs-A
+Shs-B
+Dual CDS-255
+Shr-A
+Shr-B
+Shs-A
+Shs-B
+TI Confidential — NDA Restrictions
+20
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.2 Functional Block Diagram
+
+TI Confidential — NDA Restrictions
+21
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3 Feature Description
+7.3.1 Device Operation
+The AFE2256GR performs three main functions in parallel during each scan: charge acquisition, analog-to-digital
+conversion, and shifting out digital data. These functions are all controlled by the internal timing generator (TG).
+This section describes the details of charge acquisition, analog-to-digital conversion, the data shift out operation,
+and the functionality of the timing generator.
+The AFE2256GR incorporates a high-speed, phase-locked loop (PLL) that locks to MCLK. For successful locking
+of the PLL, MCLK must be in the 10-MHz to 20-MHz range. The PLL takes approximately 20 μs to lock after
+applying MCLK; this time must be accounted for in the power-up timing.
+If MCLK is stopped, the PLL lock time must be accounted for in the system timing. MCLK is recommended to be
+free-running so that the PLL is continuously locked.
+The timing generator, analog-to-digital converter (ADC), and low-voltage differential signaling (LVDS) interface all
+run on the clocks generated by the PLL.
+The scan period (tSCAN) or the line repetition period is set by the MCLK period and the scan time range (STR)
+setting that is programmed through the serial peripheral interface (SPI). The selected STR defines the integer
+number of MCLK cycles in a tSCAN.
+Valid values of STR are 2 and 3, corresponding to the two possible values of MCLK cycles (1024 and 2048),
+respectively. Table 1 summarizes the tSCAN values for different STR settings and MCLK frequencies.
+For AFE22256GR, STR = 0 and 1 are same as STR = 2, that is 1024 MCLKs. To ensure compatibility with
+AFE2256TDU and AFE2256TDR, only STR = 2 will be specified throughout this document.
+Table 1. tSCAN Across STR and fMCLK
+SCAN TIME RANGE
+(STR)
+NUMBER OF MCLK CYCLES IN ONE
+tSCAN = 2(8 + STR) fMCLK RANGE tSCAN RANGE = tMCLK × 2(8 + STR)
+2 1024 20 MHz to 10 MHz 51.2 μs to 102.4 μs
+3 2048 102.4 μs to 204.8 μs
+Figure 23 illustrates a typical integrator channel schematic. Each integrator has a reset switch that resets the
+integrator output to a reset level when IRST = 1. The device integrates the input current when this switch is open.
+There are two sample-and-hold circuits (for the reset sample and the signal sample) connected to each integrator
+output. The reset sample (SHR) samples the integrator reset level output and the signal sample (SHS) samples
+the integrator output post integration of the signal charge. The device subtracts the SHR sample from the SHS
+sample. The difference is converted to digital using an on-chip, 16-bit ADC. This action is termed correlated
+double sampling (CDS). CDS removes integrator offset and low-frequency noise from the device output.
+
+Reset Sample (VSHR)
+VSHS ± VSHR
+CDS with Dual Banking
+IRST
+Bank B
+Bank A
+Integrator
+IN[n]
+EXTC_I
+±
++
+Frequency
+fLPF1
+Amplitude
+Frequency
+fLPF2
+Amplitude
++
+±
+Bank B
+Bank A
+SHR, A_BZ A_BZ
+A_BZ SHR, A_BZ
+SHS, A_BZ
+SHS, A_BZ A_BZ
+LPF1 LPF1_FREQ
+LPF2 LPF2_FREQ
+Signal Sample (VSHS)
+Copyright © 2016, Texas Instruments Incorporated
+A_BZ
+TI Confidential — NDA Restrictions
+22
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 23. Integrator Channel Schematic
+Each sample-and-hold circuit employs two banks of capacitors, referred to as bank A and bank B. Bank B data
+from the previous integration cycle are read (through the on-chip ADC) and bank A samples the data from the
+ongoing integration.
+Conversely, bank A data are read in the next line period and bank B samples data from the ongoing integration.
+This pipelined operation helps optimize frame time for integration and data reads.
+Each sample-and-hold circuit has a built-in, low-pass filter (LPF). This filter limits the sampling bandwidth in order
+to limit the sampled noise. The device features five user-selectable, LPF filter-bandwidth settings: 210 kHz, 105
+kHz, 52 kHz, 26 kHz, and 13 kHz.
+The timings of the reset and sampling control signals (IRST, SHR, SHS, LPF1, LPF2, DF_SM[5:0], and TDEF)
+are programmed by the user through register settings and are then internally generated by a real-time sequencer
+termed the timing generator (TG).
+
+IRST
+SHR
+Integrator Output at
+Reset Level Device Integrates the Input Channel
+Leakage Current Device Integrates the
+Acquired Charge
+Integrator
+Output
+Reset-Level
+Sample Bandwidth
+Limited by Filter
+LPF1
+REFP
+Reset Integrator End
+ LPF1 On Reset Sample End TFT Turned On
+IRST
+SHR
+Integrator Output at Reset
+Level
+Device Integrates the Input Channel
+Leakage Current
+Device Integrates the Acquired
+Charge
+Integrator
+Output
+Reset-Level
+Sample Bandwidth
+Limited by Filter
+LPF1
+REFM
+Reset Integrator End
+ LPF1 On Reset Sample End TFT Turned On
+TI Confidential — NDA Restrictions
+23
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.1.1 Charge Acquisition
+The charge acquisition function consists of two phases: reset and integration. Asserting IRST initiates the reset
+phase. In this phase, the device resets all 256 integration capacitors.
+Figure 24 shows a detailed reset phase timing waveform for integrate-up mode. Note that REFM is an internally
+generated voltage.
+Similarly, Figure 25 shows a detailed reset phase timing waveform for Integrate-down mode. During reset phase,
+the integrator gets reset to REFP, which is an internally-generated voltage.
+Figure 24. Detailed Reset Phase Timing Diagram: Integrate-Up Mode
+Figure 25. Detailed Reset Phase Timing Diagram: Integrate-Down Mode
+
+Signal-Level
+Sample Bandwidth
+Limited by Filter
+SHS
+Integrator Output
+SHR
+LPF2
+Reset Level
+Sample End
+TFT On TFT Off LPF2 On Signal Sample End
+Signal-Level
+Sample Bandwidth
+Limited by Filter
+SHS
+Integrator Output
+SHR
+LPF2
+Reset Level
+Sample End TFT On TFT Off LPF2 On Signal Sample End
+TI Confidential — NDA Restrictions
+24
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+The device starts integration when IRST is low and integrates input leakage current when the external TFT (the
+switch connecting the pixel to the integrator channel) is off. An SHR high level connects the CDS reset sample
+capacitor to the integrator output from bank A or bank B, depending on the A_BZ status (see Figure 1). The CDS
+capacitor tracks integrator output voltage with high bandwidth when LPF1 is low. The LPF initiates when the
+LPF1 signal is high. This dynamic filter control settles the offset value with high bandwidth and finally samples
+the values on the CDS with low bandwidth (for low noise). The LPF1 bandwidth is selected with the LPF1_FREQ
+setting in register 5Ch. Using LPF1 limits the noise bandwidth and therefore limits sampled noise during a reset-
+level sample. The CDS samples and holds the integrator reset level output on the SHR falling edge.
+Afterwards, the integration phase (as shown in Figure 26 and Figure 27) starts. The device integrates the pixel
+charge during the external TFT switch on-time. Pixel charge integration starts from the reset level.
+Figure 26. Detailed Integration Phase Timing Diagram: Integrate-Up Mode
+Figure 27. Detailed Integration Phase Timing Diagram: Integrate-Down Mode
+In Integrate-up mode, the integrator output increases from REFM (reset level). In integrate-down mode, the
+integrator output decreases from REFP (reset level).
+The device supports full scale input charge range from 0.6 pC to 9.6 pC. The input charge range selection can
+be made in the steps of 0.6 pC using INPUT_CHARGE_RANGE bits.
+
+TI Confidential — NDA Restrictions
+25
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+NOTE
+INPUT_CHARGE_RANGE = 0h corresponds to no feedback capacitor for the charge
+integrator. Hence, it is an invalid selection.
+For any range, the device can linearly integrate the input charge as long as the input charge is less than the
+selected charge range, including the gain and offset errors.
+An SHS high level connects the CDS signal sample capacitor to the integrator output from bank A or bank B,
+depending on the A_BZ status. SHS is recommended to be asserted (that is, pull SHS high) either when the
+external TFT turns on or before TFT turns on. The CDS capacitor tracks integrator output voltage with high
+bandwidth when LPF2 is low. The LPF initiates when the LPF2 signal is high. This dynamic filter control helps
+acquire the signal with high bandwidth (for good linearity) and finally samples the signal on the CDS capacitor
+with low bandwidth (for low noise). LPF2 limits noise bandwidth and therefore limits sampled noise during the
+signal level sample. The LPF2 bandwidth is selected with the LPF2_FREQ setting in register 5Ch. The CDS
+samples and holds the integrator signal level output on the SHS falling edge.
+The integration phase ends with an SHS falling edge, and the data corresponding to all 256 channels are ready
+to be converted by the ADC.
+During data read, the difference of the SHS and SHR samples is fed to an on-chip ADC. This process eliminates
+the offset and noise coming from the integrator reset phase.
+The ADC converts the difference of the SHS and SHR voltages to a proportional digital code. Irrespective of
+integrate-up or integrate-down mode, the output code always increases proportional to the input charge. Thus,
+data processing is independent of integrate-up or integrate-down mode.
+The analog-to-digital conversion, data output, and test patterns behave the same, regardless if integrate-up or
+integrate-down mode is selected.
+
+IN 0
+IN 1
+IN 63
+IN 64
+IN 65
+IN 127
+IN 128
+IN 129
+IN 191
+IN 192
+IN 193
+IN 255
+AFE2256GR Serializer
+DOUTP,
+DOUTM
+FCLKP,
+FCLKM
+DCLKP,
+DCLKM
+ADC 0
+ADC 1
+ADC 2
+ADC 3
+TI Confidential — NDA Restrictions
+26
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.1.2 Analog-to-Digital Conversion
+The 256 front-end channels are multiplexed into four on-chip, 16-bit ADCs, as shown in Figure 28. In integrate-up
+or integrate-down mode, for a given charge range (R), the ideal output code (D) is related to the input charge (Q)
+as [D = (Q / R) × (216)].
+Figure 28. Input Channels Converted by ADCs
+ADC0 converts channels 0 to 63, ADC1 converts channels 64 to 127, ADC2 converts channels 128 to 191, and
+ADC3 converts channels 192 to 255.
+The four ADCs work in parallel, each with a sampling frequency of fMCLK / 4. Each ADC converts a set of input
+channels in a specific order. After converting the last channel in the set of 64 channels from one CDS bank, the
+A_BZ signal toggles and the ADC starts converting from the other CDS bank. This process automatically
+continues as long as MCLK is applied and the device is powered up.
+Register bits are provided to control the ADC conversion direction and, thus, the LVDS shifts out the direction, as
+described in the Data Output section.
+
+TI Confidential — NDA Restrictions
+27
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Depending on the STR setting, the ADC automatically takes multiple conversions of the same channel and
+generates the averaged output, thus improving noise performance. The ADC averaging factor is the number of
+times the ADC converts a channel before averaging the channel; and proceeding to sample the next channel in
+the set. The ADC averaging factors, for the different values of STR, are listed in Table 2.
+Table 2. ADC Averaging Factors Across STR Settings
+SCAN TIME RANGE (STR)
+NUMBER OF MCLK
+CYCLES IN ONE tSCAN
+[P = 2(8 + STR)]
+ADC SAMPLING FREQUENCY
+(fS)
+ADC AVERAGING FACTOR
+(= P / 256)
+2 1024 fMCLK / 4 4
+3 2048 8
+
+The total ADC conversion time for all channels is exactly equal to the front-end rate (tSCAN) for all STR and MCLK
+values.
+After converting the channels in order, the ADC digital data are serialized and transferred to the LVDS outputs.
+7.3.1.3 Data Output
+The 16-bit ADC data are appended with an 8-bit alignment vector, forming a 24-bit data word. These eight bits
+can be used for detecting the first channel in the data stream, verifying data integrity by a cyclic redundancy
+check (CRC), and so forth. Details regarding the alignment vector can be found in the Alignment Vector section.
+7.3.1.3.1 Data Serialization
+The 24-bit data from each ADC are serialized and output over one LVDS pair (DOUT), together with the bit clock
+(DCLK) and the frame clock (FCLK).
+The duration of the 24-bit data is tMCLK × 2(STR) (with STR = 2 or 3). Figure 29 illustrates the data timing diagram.
+
+t = 0
+MCLK
+SYNC
+A_BZ
+Scan i
+SYNC is not required for subsequent scans when using the same timing profile (TP).
+1024 or 2048 Cycles
+Scan i+1
+FCLK
+DCLK
+DOUT
+Read i-1 data
+For STR = 2, FCLK frequency = (fMCLK / 4)
+and
+For STR = 3, FCLK frequency = (fMCLK / 8)
+Read i Data
+tSCAN
+t = tSCAN
+24 Bits 24 Bits 24 Bits 24 Bits 24 Bits 24 Bits 24 Bits
+ADC0
+Ch (n)
+ADC1
+Ch (n+64)
+ADC2
+Ch (n+128)
+ADC3
+Ch (n+192)
+ADC0
+Ch (n+1)
+ADC0
+Ch (n)
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+TI Confidential — NDA Restrictions
+28 Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 29. Digital Data Read Timing Diagram
+The output LVDS data rate is 24 / (tMCLK × 2(STR)) bits per second. The LVDS data rate for various MCLK frequencies and STR settings is listed in
+Table 3.
+Table 3. Data Throughput for Different STR Settings
+SCAN TIME RANGE (STR) NUMBER OF MCLK CYCLES IN ONE
+tSCAN = 2(8 + STR) fMCLK RANGE DATA THROUGHPUT RANGE
+[= 24 × fMCLK / 2(STR)]
+2 1024 20 MHz to 10 MHz 120 Mbps to 60 Mbps
+3 2048 60 Mbps to 30 Mbps
+
+FCLK
+DCLK
+(DDR)
+DOUT
+MCLK
+STR = 2
+MCLK
+STR = 3
+b23 b1 b22 b0 b21 b0 b2 b1 b3 b20 ´´´´´´´´´´´´.. b23 b22 b21 b20 ´´´´´´´´´´´´.. b0 b2 b1 b3
+ADC(x)
+Ch (n)
+ADC(x+1)
+Ch (n+64)
+´´´´´´´´´´´´..
+´´´´´´´´´´´´..
+TI Confidential — NDA Restrictions
+29
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 30 shows the format of the output data word. Starting with an FCLK rising edge, the device
+simultaneously outputs FCLK, DCLK, and DOUT. Each data word bit can be latched with the DCLK signal, using
+the DDR scheme.
+Figure 30. LVDS Timing Diagram
+7.3.1.3.2 Alignment Vector
+Each 24-bit ADC sample contains 16-bit ADC data and an 8-bit alignment vector. Use the alignment vector to
+detect the first channel in a data stream. Additional details regarding word alignment can be found in the
+Application and Implementation section.
+Bit mapping in the alignment vector depends on the CONFIG_MODE (register 10h, bit 11) setting. Table 4 shows
+the output bit mapping.
+Table 4. Output Bit Mapping and Alignment Vector
+DATA BIT
+DESCRIPTION ADC DATA (D[23:8]) ALIGNMENT VECTOR
+D7 D6 D5 D4 D3 D2 D1 D0
+CONFIG_MODE = 1 MSB-first, 16-bit data Y X 1 1 1 0 0 0
+CONFIG_MODE = 0 Y X W 0 0 0 CRC1 CRC0
+
+TI Confidential — NDA Restrictions
+30
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+The alignment vector also provides timing profile selection information and data validity with a CRC check.
+Table 5 shows various fields in the alignment vector.
+Table 5. Alignment Vector Bit Descriptions
+VALUE DESCRIPTION
+Y
+First column indicator; Y = 1 for the first channel in each set of 64 channels.
+For example, in forward scan mode, Y = 1 for channels 0, 64, 128, and 192.
+For reverse scan mode, Y = 1 for channels 63, 127, 191, and 255.
+For auto-reverse mode in the forward scan case, Y = 1 for channels 0, 64, 128, and 192 in line N converted by bank A.
+Y = 1 for channels 63, 127, 191, and 255 in line N+1 converted by bank B.
+See the Scan Direction section for details regarding scan mode.
+X Bank select signal; X = 1 for bank A. The device always starts from bank A when SYNC is detected.
+W For timing profile TPα, W = 0. For timing profile TPβ, W = 1. Details regarding the timing profile can be found in the
+Timing Profiles section.
+CRC1 CRC bits. For details regarding the CRC, see the Cyclic Redundancy Check (CRC) section.
+CRC0
+7.3.1.3.3 Scan Direction
+The device provides programmability for the order in which the channel data are digitized and sent over the
+LVDS link. By default, the device sends data in forward scan mode. Table 6 shows the channel order on the
+LVDS link in forward scan mode. The reverse scan mode is set when the REVERSE_SCAN bit (register 11h, bit
+15) = 1. As shown in Table 7, reverse scan mode sends the last channel (in the set of 64 channels) first.
+Table 6. Forward Scan Mode: Channel Order on the LVDS Link
+REGISTER
+SETTING
+(Reg 11h,
+Bits 15, 13)
+MODE BANK SAMPLE
+NUMBER 0 1 2 3 4 5 6 7 … 252 253 254 255
+00 Forward scan
+A Channel
+number 0 64 128 192 1 65 129 193
+…
+63 127 191 255
+B Channel
+number 0 64 128 192 1 65 129 193 63 127 191 255
+Table 7. Reverse Scan Mode: Channel Order on the LVDS Link
+REGISTER
+SETTING
+(Reg 11h,
+Bits 15, 13)
+MODE BANK SAMPLE
+NUMBER 0 1 2 3 4 5 6 7 … 252 253 254 255
+10 Reverse scan
+A Channel
+number 63 127 191 255 62 126 190 254
+…
+0 64 128 192
+B Channel
+number 63 127 191 255 62 126 190 254 0 64 128 192
+
+TI Confidential — NDA Restrictions
+31
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Auto-reverse mode (set by register 11h, bit 13 = 1) reverses the channel order for bank B. For example, if the
+auto-reverse bit is set in forward-scan mode, then the data are sent as shown in Table 8. Table 9 shows the
+channel order in reverse scan with auto reverse.
+Using auto-reverse mode is recommended for optimum performance. Forward or reverse scan can be set as per
+panel-scan requirements.
+Rearrange the data with the image generation tool as per the scan direction selected in the device.
+Table 8. Forward Scan Mode with Auto-Reverse: Channel Order on the LVDS Link
+REGISTER
+SETTING
+(Reg 11h,
+Bits 15, 13)
+MODE BANK SAMPLE
+NUMBER 0 1 2 3 4 5 6 7 … 252 253 254 255
+01
+Forward scan
+with auto-
+reverse
+A Channel
+number 0 64 128 192 1 65 129 193
+…
+63 127 191 255
+B Channel
+number 63 127 191 255 62 126 190 254 0 64 128 192
+Table 9. Reverse Scan with Auto Reverse: Channel Order on the LVDS Link
+REGISTER
+SETTING
+(Reg 11h,
+Bits 15, 13)
+MODE BANK SAMPLE
+NUMBER 0 1 2 3 4 5 6 7 … 252 253 254 255
+11
+Reverse scan
+with auto-
+reverse
+A Channel
+number 63 127 191 255 62 126 190 254
+…
+0 64 128 192
+B Channel
+number 0 64 128 192 1 65 129 193 63 127 191 255
+
+DEMUX
+Timing Generator
+Divide-by-4
+IRST, SHR, SHS,
+LPF1, LPF2,
+DF_SM[5:0], A_BZ
+Integrators
+and CDS
+[255:0]
+SYNC
+TP_SEL
+MCLK MCLK / 4
+ADC
+ADC
+MUX
+Serializer
+DCLK
+FCLK
+Registers
+SPI
+DOUT
+DCLK
+FCLK
+MUX
+24 Bits
+TP_SEL_SYNC
+TP_SEL_SYNC
+TPD TPE
+0 1
+0 1
+SDOUT
+SDATA, SCLK, SEN
+16-Bit ADC[3:0]
+MCLK
+D
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+32
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.1.4 Internal Timing Generator (TG)
+The device has an internal timing generator (TG) that creates and synchronizes all the internal clocks and control
+signals for multiple successful scans. The TG generates these signals with a period of tSCAN. The A_BZ signal is
+generated with a period of 2 × tSCAN.
+As shown in Figure 31, the TG uses three external CMOS level signals to operate: SYNC, MCLK, and TP_SEL.
+Figure 31. Timing Generator Block Diagram
+The MCLK signal is the system master clock. All internal front-end and back-end controls and clocks are derived
+from MCLK.
+The SYNC signal is the synchronization pulse that indicates the beginning of the scan time. When SYNC is
+detected, the TG logic starts counting the MCLK cycles and internally generates all required clocks and control
+signals for the integrators, the ADCs, and the data serializer. Ideally, SYNC only must be applied the first time to
+synchronize the TG with the external controller. Afterwards, the TG keeps track of the MCLK and internally
+generates the programmed waveforms with a period of tSCAN.
+Note than when SYNC is applied, the scan is always started with A_BZ high. In other words, the AFE2256GR
+deterministically selects the CDS bank for the scan. By using the SPI interface, the user can program the rising
+and falling edge for every control signal: IRST, SHR, SHS, LPF1, LPF2, TDEF, and DF_SM[5:0].
+Each signal is defined by a 16-bit word in the timing generator register space corresponding to that signal.
+
+MCLK
+0 1 2 3 4 6 7 8 12 24 48 127 128 257 512 2048 1024 129 256 513 1025
+Repeats with 2048 MCLK Periods
+Repeats with 1024 MCLK Periods
+STR = 2
+STR = 3
+TI Confidential — NDA Restrictions
+33
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+For all STR settings, after the SYNC signal is detected, tSCAN is split into 256 equally-spaced time locations and
+the 16-bit word defines the exact location where the rising and falling edge occur for that signal. The upper byte
+(rise_edge) defines the rising edge location. The lower byte (fall_edge) defines the falling edge location. Thus,
+the 8-bit edge location can be also interpreted as the integer number that always goes from 0 to 255, defining
+which of the 256 timing locations that the specified transition (rise or fall) must occur on in the specified signal.
+Figure 32 shows the effect of the TG register programing in various STR settings. The MCLK rising edge after
+SYNC is detected is considered as the zero (0) MCLK edge, as described in Figure 33.
+Figure 32. IRST Pulse Duration for Various STR Settings
+(Register address 40h is programmed with 0106h.)
+For example, if address 40h (IRST) is written as 0106h and STR = 2, the IRST signal goes high at MCLK rising
+edge 4, goes low at MCLK rising edge 24, and is periodic with 1024 MCLKs. If address 42h (SHR) is written as
+0720h and STR = 3, then the SHR signal goes high at MCLK rising edge 56, goes low at MCLK rising edge 256,
+and is periodic with 2048 MCLKs.
+NOTE
+1. If rise_edge = fall_edge = 00h, then the signal is always 0.
+2. The signal is always high for all other settings of rise_edge = fall_edge. For example,
+IRST_RISE = IRST_FALL = 01h keeps the integrator in reset for the entire scan duration.
+7.3.1.4.1 Constraints on TG Values
+The rising edge can be programmed to be before or after the falling edge, thus providing greater flexibility in
+timing. Use this option for charge injection compensation and gate driver signal generation.
+The following constraints are applicable to the otherwise fully flexible timing generator register space. These
+restrictions are in place only for an active scan in order to retain the analog performance as per the specification:
+• The IRST rising edge must not be programmed as 00h.
+• The SHR rising edge must be at least one value greater than the IRST falling edge.
+• The SHS rising edge must be at least one value greater than the SHR falling edge.
+• The LPF1 falling edge must be at least one value greater than the SHR falling edge.
+• The LPF2 falling edge must be at least one value greater than the SHS falling edge.
+• The SHS falling edge must not be programmed as either 00h or FFh.
+Calculating TG register settings is explained in the Programming the TG section.
+
+(2(8+STR) - 1)
+MCLK
+0 1 2 (2(8+STR) - 1) 0 1 2 (2(8+STR) - 1) 0 1 2
+ (2(8+STR) - 2) (2(8+STR) - 1) 0 1
+TP_SEL
+SYNC(1)
+TP_SEL_SYNC
+A_BZ
+TG State
+2
+TPis used for generating signals by the TG.
+The TP.register can be programmed if desired.
+TP.is used for generating signals by the TG.
+The TPregister can be programmed if desired.
+tSU2
+tSU1
+tH1
+tH2
+Internal
+Signals
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+TI Confidential — NDA Restrictions
+34 Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.1.4.2 Timing Profiles
+The device allows two different timing profiles (TPα and TPβ) to be programmed into the device, thus allowing the timing profile to be quickly changed
+using the TP_SEL and SYNC pins. This scheme avoids any latency that results from reprogramming the timing generator register space for a new profile
+using the serial interface. The register content of TPα and TPβ must be programmed before proceeding with a valid scan. MCLK must be running when
+the timing profiles are programmed.
+Both timing profiles (TPα and TPβ) share the same register addresses; that is, address 40h to 55h. For example, address 40h is common to the IRST
+signals for both profiles TPα and TPβ.
+Only one of the profiles is active (used for timing generation by the TG machine) at a time. The serial interface write operations on the timing generator
+register space always occur on the inactive profile, thus ensuring that the active profile is not disturbed when the inactive profile is modified.
+TP_SEL_SYNC (generated by latching TP_SEL with SYNC, see Figure 31) is used to decide which profile is active.
+The user can switch between TPα and TPβ by toggling the TP_SEL pin and by providing a SYNC pulse, as shown in Figure 33. The SYNC signal is not
+recommended to be applied for successive scans that use the same timing profile. When switching between timing profiles, SYNC must be applied at the
+start of a new line of CDS bank A, as shown in Figure 33. Otherwise, the output data (DOUT) bit alignment with respect to DCLK can become corrupted.
+If SYNC cannot be applied at the start of a new line (for example, for the first SYNC after power-up), a bit realignment is necessary in the system field-
+programmable gate array (FPGA) to correctly realign the bits to correctly form the ADC word from the DOUT serial stream. The bit alignment technique is
+described further in the Application and Implementation section.
+(1) Ideally, the SYNC rising edge must occur at MCLK = 2(8 + STR) – 1 and A_BZ = 0. Otherwise, a bit realignment is required in the FPGA.
+Figure 33. Timing Profile Switching Diagram
+
+TI Confidential — NDA Restrictions
+35
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.2 TFT Charge Injection Compensation and Photodiode Residual Charge Compensation
+Turning the thin-film transistor (TFT) of the flat-panel detector on and off injects charge onto the integrator inputs,
+thus resulting in decreased dynamic range. The device provides a special feature (enabled by setting register
+5Dh) to compensate for this TFT charge during both turn-on and turn-off.
+The compensation charge injected by the scheme can be either positive or negative. The compensation scheme
+uses the external voltages COMP1 and COMP2, of which one can be grounded.
+There are five charge injection capacitors (C[4:0]) that are sized to have a piece-wise approximation of an
+exponential charge injection, as given by Equation 1:
+C[4] = e × C[3] = e2 × C[2] = e3 × C[1] = e4 × C[0]
+where
+• e = 2.718 (Napier’s constant) (1)
+Each of these capacitors can be fully disconnected if not required by using the static bits DFTV_CAP_SEL_x in
+configuration register address 5Dh.
+When ENB_DFTV_ALL = 0, all charge injection capacitors are disabled. Set ENB_DFTV_ALL to 1 in order to
+use any charge injection capacitor.
+The connection between the capacitors C[x] and the COMP1, COMP2 voltage is controlled by the DF_SMx
+signals that are generated by the TG. A low value of the DF_SMx signal connects C[x] to COMP1 and a high
+value of DF_SMx connects C[x] to COMP2.
+Similar to other signals generated by the TG, the rising and falling edges of DF_SMx are determined by the 16-
+bit contents of addresses 50h to 54h in the timing generator register space. Furthermore, similar to other control
+signals, the register bank contains two separates sets of timing profiles for each DF_SMx signal.
+The device can also independently compensate for a stored residual charge on the photodiode by using the
+COMP3 and COMP4 external voltages in conjunction with DF_SM5 and capacitor C[5]. Configure the
+ENB_DFTV_ALL = 1, DFTV_CAP_SEL_5 = 1, and DF_SM5 timings to use this feature.
+The DF_SM5 signal is controlled by the TG similar to DF_SM[4:0]. A low value of the DF_SM5 signal connects
+C[5] to COMP3 and a high value of DF_SM5 connects C[5] to COMP4. Only COMP3 can be connected to an
+external low-noise voltage source; COMP4 can be grounded.
+Both the TFT charge injection and photodiode residual charge compensation schemes are illustrated in
+Figure 34.
+
+IN-n
+±
++
+Ch n
+EXTC_I
+Pixel
+Capacitor
+TFT Switch
+TFT Compensation Scheme
+COMP2
+COMP1
+DF_SM[0]
+C[0] = 0.045 pF
+A B
+COMP2
+COMP1
+DF_SM[1]
+C[1] = 0.122 pF
+A B
+COMP2
+COMP1
+DF_SM[2]
+C[2] = 0.33 pF
+COMP2
+COMP1
+DF_SM[3]
+C[3] = 0.9 pF
+COMP2
+COMP1
+DF_SM[4]
+C[4] = 2.44 pF
+COMP4
+COMP3
+DF_SM[5]
+C[5] = 1.2 pF Photodiode Compensation Scheme
+A B
+A B
+A B
+A B
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+36
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 34. TFT Charge Injection and Photodiode Residual Charge Compensation Scheme
+7.3.3 Quick Wakeup
+
+The power-up time is the minimum time required for the device during power-up from nap or power-down, after
+which the device starts providing a stable output. After the power-up time, all internal nodes of the device are at
+steady-state values.
+The EXTC_I pin has a low-pass filter with a very low cutoff frequency. The low cutoff frequency is essential for
+optimum noise performance of the device. During power up, EXTC_I takes a large duration of time to reach a
+steady-state value and is the dominating factor influencing power-up time.
+Quick wakeup mode (set by register 13h, bit 5 = 1) increases the bandwidth of the EXTC_I low-pass filter, thus
+reducing the power-up time. Therefore, to avoid negatively affecting noise, reset the quick wakeup bit to 0 before
+starting the data capture. Figure 69, Figure 70, and Figure 71 detail usage of this bit.
+
+±
++
+Register 5Ch,
+Bits 9-6
+Register 5Dh,
+Bit 9
+Register 5Ch,
+Bits 15-11
+INx
+Register 5Dh,
+Bits 12-11
+Register 5Dh,
+Bits 8-3
+Register 5Ch,
+Bits 4-1
+EXTC_I
+50h to 55h
+COMP1, COMP3 COMP2, COMP4
+Register 5Dh,
+Bit 14 = 1
+EXTC_I
+Register 5Dh,
+Bit 14 = 0
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+37
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.3.4 Pixel Short Detection
+Shorted pixels in the panel overload adjacent channels, thus creating T-shaped artifacts in the image. The device
+includes a pixel short-detection feature that is helpful in suppressing the T-defect displayed in the image. The
+pixel short-detection mechanism detects a pixel overload condition and immediately resets the integrator. This
+feature avoids driving the integrator into deep saturation, which can affect adjacent pixels. Note that because the
+integrator is in a reset state, the current drawn by a shorted pixel can be provided without changing the data line
+voltage. This feature can be enabled by configuring the ENB_TDEF bit (register bit 5Dh, bit 10) = 1 and selecting
+the appropriate timings in register 4Ah; see Figure 1 for the TDEF signal timings.
+7.3.5 Csensor Emulation
+This feature is provided to emulate the data line capacitance (Csensor) to test the AFE2256GR noise performance.
+At the input of every channel, a capacitor with a value of 20 pF, 30 pF, or 50 pF per channel can be added by
+configuring the ADD_CAP setting (register 5Dh, bits 12-11), as shown in Figure 35. Using this option, channel
+noise can be measured without connecting the devices to a panel. Use Csensor to evaluate and debug system
+noise performance. This option is usually used in conjunction with the isolate panel feature (see the Isolate Panel
+section) to avoid external noise pickup during noise measurement.
+7.3.6 Isolate Panel
+Use this feature to isolate the device from the panel without physically disconnecting the device. Use this option
+during system debug but disable this option during normal operation. As shown in Figure 35, there is a series
+switch between the IN pins and integrator amplifier inputs. When the ISOLATE_PANEL bit (register 5Dh, bit 14)
+= 1, the switch is opened and all channels are disconnected from the panel. As shown in Figure 35, the panel is
+connected to the EXTC_I voltage. Therefore, isolate_panel mode does not disturb the data line voltage.
+Figure 35. Register Bit Control
+
+TI Confidential — NDA Restrictions
+38
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) Instead of ADC data, this test pattern is sent over the LVDS link.
+7.3.7 TG Signal Probe
+Use this option to verify if the IRST, SHR, and SHS timing signals are correctly programmed. This option is also
+used to check the timing generation profile selection. By configuring the PROBE_SIGNAL bits (register 5Ah, bits
+7-0) to different values as specified in register 5Ah, these signals can be probed on the SDOUT pin. This option
+is also used when gate driver signals are generated from the AFE2256GR; see the Generating Gate Driver
+Signals from the AFE2256GR section for further information. Note that the SDOUT pin is multiplexed between
+the TG signal probe and the register read function. Thus, only one of these options can be selected at a time.
+7.4 Device Functional Modes
+7.4.1 Charge Integration Modes
+The AFE2256GR supports electron or hole integration. The charge integration modes are completely register-
+programmable, and no hardware changes are required. In electron integration mode, the positive charge drawn
+from the channel input increases the integrator output voltage. Therefore, this mode is referred to as integrate-up
+mode. Conversely, in hole integration mode, the positive charge flows into the input pin of AFE2256GR, reducing
+the integrator output. Therefore, this mode is referred to as integrate-down mode. However, in each mode, the
+output code always increases proportionally to the magnitude of the incoming charge. The default register
+settings for each mode are different, and must be configured accordingly; see the Register Initialization section
+for more details.
+7.4.2 Test Patterns
+The AFE2256GR provides the facility to generate known output data to check the functionality of deserialization,
+data processing, and image formation. This section describes the use of the various test patterns available in the
+AFE2256GR. These test patterns are listed in Table 10.
+All test patterns (except the sync/deskew pattern) replace ADC data with known data without disturbing the
+alignment vectors. Thus, replaced data are processed exactly the same way as normal data. The sync/deskew
+pattern provides a fixed pattern of FFF000h without an alignment vector.
+Table 10. Test Patterns and Applications
+TEST_PATTERN_SEL BITS
+(Register 10h, Bits 9-5) TEST PATTERN APPLICATION
+00000b Test pattern disabled ADC data transmitted over LVDS link
+10111b(1) All zeros Data = 0h; verify LVDS link functionality
+11001b(1) All ones Data = FFFFh; verify LVDS link functionality
+10011b(1) Ramp Verify data capture
+10001b(1) Row-column counter Verify channel-to-column mapping in image
+11110b(1) Sync/deskew Bit alignment (without using frame clock)
+7.4.2.1 All Zeroes and All Ones Patterns
+Use these patterns to check the functionality of the LVDS link. These patterns are also used to identify the LVDS
+polarity inversion, stuck code, or bit inversion issues in the firmware.
+
+TI Confidential — NDA Restrictions
+39
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) Alignment vector is not shown.
+7.4.2.2 Ramp Pattern
+The ramp pattern is the most basic pattern to verify data capture. The ramp pattern provides linearly
+incrementing ramp data, as shown in Table 11. The device generates a 16-bit ramp pattern. For each sample,
+the data value increments by 1. The count resets at overflow (after FFFFh, decimal 65535), or when applying or
+asserting the SYNC pulse.
+To determine the correct ramp pattern, data do not need to be rearranged. Use this pattern to verify data
+deserialization and word alignment process. To simplify checking the ramp pattern, configure the device in
+forward-scan mode (REVERSE_SCAN = 0) with AUTO_REVERSE = 0.
+Table 11. Data on the LVDS Link in Ramp Pattern With REVERSE_SCAN = 0 and AUTO_REVERSE = 0(1)
+ROW
+NUMBER
+SAMPLE NUMBER
+0 1 2 3 4 5 ... 64 65 ... 128 129 ... 192 193 ... 254 255
+1 0 1 2 3 4 5 ... 64 65 ... 128 129 ... 192 193 ... 254 255
+2 256 257 258 259 260 261 320 321 384 385 448 449 510 511
+(1) Alignment vector is not shown.
+7.4.2.3 Row-Column Counter
+As discussed in the Data Output section, the device sends the data of four ADCs over a single LVDS link in an
+interleaved format. The image-processing algorithm must map the incoming data to the correct pixel in the
+image. Use the row-column count given by the row-column counter test pattern to check if the data mapping is
+correct.
+NOTE
+The order in which bank A data and bank B data are transmitted depends on the
+REVERSE_SCAN and AUTO_REVERSE settings. The image generation algorithm must
+account for the scan settings for the correct channel-to-pixel mapping.
+The MSB byte of the row-column counter provides the row count, and the lower byte provides the column count.
+In the generated image, the column count increments from 0 to 255 within each row. The row count increments
+by 1 for each row and resets to 0 after each 255th row. Similar to the ramp pattern, the row-column counter
+pattern resets on the SYNC signal. Table 12 shows the data on the LVDS link in row-column counter mode.
+Table 13 shows the data after the columns are rearranged.
+Table 12. Data on the LVDS Link in the Row-Column Counter With REVERSE_SCAN = 0 and
+AUTO_REVERSE = 0(1)
+ROW
+NUMBER
+SAMPLE NUMBER
+0 1 2 3 4 5 ... 64 65 ... 128 129 ... 192 193 ... 254 255
+1 0 64 128 192 1 65 ... 16 80 ... 32 96 ... 48 112 ... 191 255
+2 256 320 384 448 257 321 272 336 288 352 304 368 447 511
+Table 13. Image Generated Using Row-Column Counter Test Pattern
+ROW
+NUMBER
+COLUMN NUMBER
+0 1 2 3 4 5 ... 64 65 ... 128 129 ... 192 193 ... 254 255
+1 0 1 2 3 4 5 ... 64 65 ... 128 129 ... 192 193 ... 254 255
+2 256 257 258 259 260 261 320 321 384 385 448 449 510 511
+7.4.2.4 Sync/Deskew Pattern
+When the sync/deskew pattern is selected, data output is forced to FFF000h. The alignment vector is not
+transmitted in this pattern. Use this pattern for bit alignment, as described in the Using the Sync/Deskew Pattern
+section.
+
+TI Confidential — NDA Restrictions
+40
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.4.3 Power-Down (PD) Modes
+When the device is not performing an active scan, the device can be kept in a power-down state in order to
+reduce overall energy consumption of the system. The AFE2256GR offers two power-down modes: nap and
+power-down (PD).
+The main difference between nap and PD modes is in terms of power consumption and power-up time. See the
+Electrical Characteristics table for power consumption and power-up times in these modes.
+All register contents are preserved in these modes. Therefore, register reconfiguration is not required at power-
+up.
+The LVDS interface is powered down during these modes. Thus, if the system uses a sync/deskew pattern-
+based bit-alignment technique, then bit realignment is required.
+Entry and exit from nap and power-down modes is discussed in the Initialization Setup section.
+7.5 Programming
+The device provides many registers to allow the user to optimize performance in a use case. Many parameters
+are also trimmed at the factory.
+7.5.1 Register Initialization
+During power-up, the internal registers must be initialized to the default values after the supplies are settled. The
+device-specified performance can only be achieved after successful initialization. For example, after power-up
+and before the device default values are loaded, the power consumption can be higher than the specified value
+as a result of the unknown internal register settings.
+Register initialization must be done as follows:
+1. Set the RESET bit (register 00h, bit 0) high. Setting this bit initializes the internal registers to the default
+value (0h) and then self-clears the RESET bit to low in approximately 200 ns.
+2. Optionally, quick wakeup mode (register 13h, bits 15-0 = 0020h) can be set to reduce power-up time. In
+order to obtain specified noise performance, disable this mode before initiating data capture if quick wakeup
+mode is used (that is, set register 13h, bits 15-0 = 0h).
+3. Set the TRIM_LOAD bit (register 30h, bit 1) = 1. Wait for a minimum of 100 μs then reset the TRIM_LOAD
+bit (register 30h, bit 1) = 0, which loads the factory-set trim values. This step is essential to get specified
+device performance.
+4. Program the default register values as explained in the Default Register Settings section.
+NOTE
+1. If a quick reset of the register space is desired during device operation, setting the RESET bit
+high is sufficient.
+2. The TRIM_LOAD bit must only be cycled if the AVDD1, AVDD2 power supplies are removed
+after the last TRIM_LOAD cycle.
+3. A RESET or TRIM_LOAD cycle is not required if only the power modes (nap, power down) are
+exercised.
+4. For the register initialization to take effect, the AVDD1, AVDD2 supplies must be applied and
+stable.
+5. All register settings are cleared on reset. Thus, the register configuration described in the
+Default Register Settings section is required after each reset.
+The register initialization affects the register space, serial interface, and timing generator engines and configures
+the device circuits in the default states. When the internal registers change values, the data propagating through
+the pipe are affected. At the same time, some glitches can appear on the output as a result of transitioning
+register values (for instance, if any of the output-controlling modes change, glitches can occur).
+
+TI Confidential — NDA Restrictions
+41
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Programming (continued)
+7.5.1.1 Default Register Settings
+7.5.1.1.1 Integrate-Up Mode
+This section describes the default register settings for the AFE2256GR in integrate-up mode that are
+essential to obtain specified performance.
+1. Register 61h, bits 15-0 = 4000h
+2. Register 11h, bit 10 = 1
+3. Register 12h, bit 14 = 1
+4. Register 18h, bit 0 = 1
+5. Auto-reverse scan mode is recommended to be kept enabled for optimal performance. This mode is enabled
+by setting the AUTO_REVERSE bit (register 11h, bit 13) = 1. For details on auto-reverse mode; see the
+Scan Direction section.
+6. Program register 16h, bits 15-0 = 00C0h
+7.5.1.1.2 Integrate-Down Mode
+This section describes the default register settings for the AFE2256GR in integrate-down mode that are essential
+to obtain specified performance.
+1. Register 61h, bits 15-0 = 4000h
+2. Register 11h, bit 10 = 1
+3. Register 12h, bit 14 = 0
+4. Register 18h, bit 0 = 1
+5. Register 5Eh, bit 12 = 1
+6. Register 2Ch, bit 0 = 1
+7. Auto-reverse scan mode is recommended to be kept enabled for optimal performance. This mode is enabled
+by setting the AUTO_REVERSE bit (register 11h, bit 13) = 1. For details on auto-reverse mode; see the
+Scan Direction section.
+8. Program register 16h, bits 15-0 = CAC0h
+
+tSEN_SU
+tSEN_HO
+SCLK
+SEN
+Data Latched On
+SCLK Rising Edge
+SDATA A7 A6 A5 A4 A3 A2 A1 A0 D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1 D0
+tSCLK
+tDSU tDHO
+tSCLK_L
+tSCLK_H
+TI Confidential — NDA Restrictions
+42
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Programming (continued)
+(1) See Figure 37.
+7.5.2 Register Programming
+Programming different modes (including the timing generator) can be done through the serial interface formed by
+the SEN (serial interface enable), SCLK (serial interface clock), and SDATA (serial interface data) pins. SEN has
+a 100-kΩ pullup resistor to AVDD1. Serially shifting bits into the device is enabled when SEN is low. SDATA
+serial data are latched at every SCLK rising edge when SEN is active (low). Serial data are loaded into the
+register at every 24th SCLK rising edge when SEN is low. If the word length exceeds a multiple of 24-bits, then
+the excess bits are ignored. The interface can function with SCLK frequencies from 10 MHz down to very low
+speeds (of a few hertz). Data are divided into two main portions (the 8-bit register address and the actual data)
+that are loaded on the addressed 16-bit register. Figure 36 shows this process.
+Figure 36. Serial Interface Register Write Timing Diagram
+Table 14. Timing Characteristics for Figure 36 and Figure 37
+MIN TYP MAX UNIT
+tSCLK SCLK period 100 ns
+tSCLK_H SCLK high time 20 ns
+tSCLK_L SCLK low time 20 ns
+tDSU SDATA setup time 10 ns
+tDHO SDATA hold time 10 ns
+tSEN_SU SEN fall to SCLK rise 10 ns
+tSEN_HO Last SCLK rising edge to SEN rising edge 10 ns
+tOUT_DV SCLK falling edge to valid SDOUT (15 pF on SDOUT)(1) 20 ns
+
+SCLK
+SDOUT D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1 D0
+tOUT_DV
+SDATA A7 A6 A5 A4 A3 A2 A1 A0 X X X X X X X X X X X X X X X X
+SEN
+Tri-State
+TI Confidential — NDA Restrictions
+43
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.5.2.1 Serial Register Readout
+The device includes an option to read the contents of the internal registers on the SDOUT pin. Use this option as
+a diagnostic check to verify the serial interface communication between the external controller and the ADC. The
+data read operation is shown in Figure 37.
+By default, the SDOUT pin is tri-stated after power-up and device reset. When the readout mode is enabled
+using the REG_READ bit, SDOUT serially outputs the contents of the selected register.
+Steps for register readout are as follows:
+1. Set the REG_READ bit (register 00h, bit 1) = 1 to enable serial readout mode. This setting disables any
+further writes to the internal registers, except for register 00h. Note that the REG_READ bit is also located in
+register 00h. Only the contents of register 00h cannot be read in register readout mode.
+2. Initiate a serial interface cycle specifying the address of the register (A[7:0]) whose content must be read.
+Only the SPI command address field is considered and data are ignored. Data can be set to 0.
+3. The device serially outputs the contents (D[15:0]) of the selected register on the SDOUT pin, MSB first.
+
+4. Data are shifted out on the SCLK falling edge. The external controller can latch the contents at the SCLK
+rising edge.
+5. To exit serial readout mode, reset register 00h, bit 1 = 0 to enable writes to all device registers.
+Figure 37. Serial Interface Register Read Timing Diagram
+
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Register Address A[7:0] = 00h Register Data D[15:0] = 0002h
+SDATA
+SCLK
+SEN
+a) Enable Serial Readout (REG_READ = 1)
+A7 A6 A5 A4 A3 A2 A1 A0 D15 D14 D13 D12 D11 D10 D9 D8 SDATA
+SCLK
+SEN
+SDOUT
+b) Example Read Contents of Register 5Ch. This register is initialized with 0800h.
+Register Address A[7:0] = 5Ch Register Data D[15:0] = XXXX (GRQ∂WFDUH)
+SDOUT 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 1 0
+SDOUT Pin is in Tri-State
+D7 D6 D5 D4 D3 D2 D1 D0
+0 0 0 0 0 0 0 0
+SDOUT outputs the contents of register 5Ch in the same cycle, MSB first.
+TI Confidential — NDA Restrictions
+44
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+An example of a read operation is shown in Figure 38.
+Figure 38. Serial Readout Function Timing Diagrams
+Data from multiple registers can be read without having to set and reset the REG_READ bit after each register
+read.
+NOTE
+During register read,TG SIGNAL PROBE must be disabled. That is, PROBE_SIGNAL = 0.
+7.5.2.1.1 Timing Profile Register Readout
+Register readout operation always reads the register values of the inactive timing profile. Hence, the inactive
+timing profile register readout is same as any other register readout. The active timing profile registers cannot be
+read directly. Register readout operation does not disturb an ongoing scan.
+The steps to read active timing profile registers are:
+1. Change the active timing profile to inactive. That is, toggle TP_SEL state and apply SYNC signal. For
+example, if TPβ (TP_SEL = 1) is the active timing profile, then change the active timing profile to TPα (make
+TP_SEL = 0 and apply SYNC).
+2. Set REG_READ (register 00h, bit 1) = 1 to enable register readout. Even though the device was in register
+readout (REG_READ = 1) before the timing profile change, program REG_READ bit to 1 again for correct
+readout operation.
+3. Read the timing profile registers by following the usual register readout steps.
+4. To exit register readout, reset REG_READ (register 00h, bit 1) = 0.
+5. The active timing profile is restored after timing profile register readout. Using the example in Step 1, TPβ
+(TP_SEL = 1) is restored as the active timing profile.
+7.6 Register Map
+The AFE2256GR register space is organized as 16-bit words addressable with an 8-bit address. The serial
+interface is used to write and read from this register space.
+1. On reset, the values of all registers go to 0.
+2. Contents of the register map are not affected during nap or power-down modes.
+
+TI Confidential — NDA Restrictions
+45
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Register Map (continued)
+3. Contents of the register map are corrupted if AVDD1, AVDD2 are removed.
+
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+TI Confidential — NDA Restrictions
+46 Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.1 Serial Interface Register Map
+Table 15. Register Map
+ADDRESS (Hex) 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+Register 0h 0 0 0 0 0 0 0 0 0 0 0 0 0 0 REG_
+READ RESET
+Register 10h 0 0 0 0 CONFIG_
+MODE 0 TEST_PATTERN_SEL 0 0 0 0 0
+Register 11h REVERSE_
+SCAN 0 AUTO_
+REVERSE 0 0 ESSENTIAL
+_BIT1 0 0 0 0 STR 0 0 0 0
+Register 12h 0 ESSENTIAL
+_BIT2 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Register 13h POWER_DOWN
+Register 16h ESSENTIAL_BITS7 ESSENTIAL_BITS5 0 0 ESSENTIAL
+_BIT6 0 0 0
+Register 18h 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ESSENTIAL
+_BIT3
+Register 2Ch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ESSENTIAL
+_BIT8
+Register 30h 0 0 0 0 0 0 0 0 0 0 0 0 0 0 TRIM_
+LOAD 0
+Register 31h DIE_ID[47:32]
+Register 32h DIE_ID[31:16]
+Register 33h DIE_ID[15:0]
+Register 40h IRST_RISE IRST_FALL
+Register 42h SHR_RISE SHR_FALL
+Register 43h SHS_RISE SHS_FALL
+Register 46h LPF1_RISE LPF1_FALL
+Register 47h LPF2_RISE LPF2_FALL
+Register 4Ah TDEF_RISE TDEF_FALL
+Register 4Bh GATE_DRIVER_RISE GATE_DRIVER_FALL
+Register 50h DF_SM0_RISE DF_SM0_FALL
+Register 51h DF_SM1_RISE DF_SM1_FALL
+Register 52h DF_SM2_RISE DF_SM2_FALL
+Register 53h DF_SM3_RISE DF_SM3_FALL
+Register 54h DF_SM4_RISE DF_SM4_FALL
+Register 55h DF_SM5_RISE DF_SM5_FALL
+Register 5Ah 0 0 0 0 0 0 0 0 PROBE_SIGNAL
+Register 5Ch INPUT_CHARGE_RANGE 0 LPF1_FREQ 0 LPF2_FREQ 0
+Register 5Dh
+BIAS_
+PANEL
+2COMP
+ISOLATE_
+PANEL 0 ADD_CAP ENB_TDEF ENB_DFTV
+_ALL
+DFTV_CAP
+_SEL_5
+DFTV_CAP
+_SEL_4
+DFTV_CAP
+_SEL_3
+DFTV_CAP
+_SEL_2
+DFTV_CAP
+_SEL_1
+DFTV_CAP
+_SEL_0 0 0 0
+Register 5Eh 0 0 0 INTG_
+MODE 0 0 0 0 0 0 0 0 0 0 0 0
+Register 61h 0 ESSENTIAL
+_BIT4 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+TI Confidential — NDA Restrictions
+47
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2 Register Descriptions
+7.6.2.1 Register 0h (address = 0h)
+Figure 39. Register 0h
+15 14 13 12 11 10 9 8
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 REG_READ RESET
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+LEGEND: W = Write only; -n = reset value
+Table 16. Register 0h Field Descriptions
+Bit Field Type Reset Description
+15:2 0 W 0h Must write 0
+1 REG_READ W 0h
+0 = Register read disabled
+1 = Register read enabled
+Keep PROBE_SIGNAL = 0 during register read operation.
+0 RESET W 0h
+This bit self-clears in 200 ns.
+0 = Normal operation
+1 = Device reset
+7.6.2.2 Register 10h (address = 10h)
+Figure 40. Register 10h
+15 14 13 12 11 10 9 8
+0 0 0 0 CONFIG_MODE 0 TEST_PATTERN_SEL
+W-0h W-0h W-0h W-0h R/W-0h W-0h R/W-0h
+7 6 5 4 3 2 1 0
+TEST_PATTERN_SEL 0 0 0 0 0
+R/W-0h W-0h W-0h W-0h W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 17. Register 10h Field Descriptions
+Bit Field Type Reset Description
+15:12 0 W 0h Must write 0
+11 CONFIG_MODE R/W 0h
+0 = CONFIG_MODE 0
+1 = CONFIG_MODE 1
+See the Alignment Vector section for more details.
+10 0 W 0h Must write 0
+9:5 TEST_PATTERN_SEL R/W 0h
+0h = Normal data, all test patterns are disabled
+11h = Row-column counter test pattern
+13h = Ramp test pattern
+17h = All zeros test pattern
+19h = All ones test pattern
+1Eh = Sync/deskew test pattern
+Other values are invalid
+4:0 0 W 0h Must write 0
+
+TI Confidential — NDA Restrictions
+48
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.3 Register 11h (address = 11h)
+Figure 41. Register 11h
+15 14 13 12 11 10 9 8
+REVERSE_
+SCAN 0 AUTO_
+REVERSE 0 0 ESSENTIAL_
+BIT1 0 0
+R/W-0h W-0h R/W-0h W-0h W-0h R/W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 STR 0 0 0 0
+W-0h W-0h R/W-0h W-0h W-0h W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 18. Register 11h Field Descriptions
+Bit Field Type Reset Description
+15 REVERSE_SCAN R/W 0h 0 = Forward scan mode
+1 = Reverse scan mode
+14 0 W 0h Must write 0
+13 AUTO_REVERSE R/W 0h 0 = Auto-reverse disabled
+1 = Auto-reverse enabled
+12:11 0 W 0h Must write 0
+10 ESSENTIAL_BIT1 R/W 0h Must write 1
+9:6 0 W 0h Must write 0
+5:4 STR R/W 0h
+Scan period setting. These bits set the number of MCLKs
+in one line time and thus set the data conversion rate.
+2h = 1024 MCLKs
+3h = 2048 MCLKs
+Values 0h and 1h also correspond to 1024 MCLKs.
+3:0 0 W 0h Must write 0
+7.6.2.4 Register 12h (address = 12h)
+Figure 42. Register 12h
+15 14 13 12 11 10 9 8
+0 ESSENTIAL_BIT2 0 0 0 0 0 0
+W-0h R/W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 19. Register 12h Field Descriptions
+Bit Field Type Reset Description
+15 0 W 0h Must write 0
+14 ESSENTIAL_BIT2 R/W 0h
+The value of this bit must be selected depending on the
+integration mode (INTG_MODE).
+Must be 0 in integrate-down mode.
+Must be 1 in integrate-up mode.
+13:0 0 W 0h Must write 0
+
+TI Confidential — NDA Restrictions
+49
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.5 Register 13h (address = 13h)
+Figure 43. Register 13h
+15 14 13 12 11 10 9 8
+POWER DOWN
+R/W-0h
+7 6 5 4 3 2 1 0
+POWER DOWN
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 20. Register 13h Field Descriptions
+Bit Field Type Reset Description
+15:0 POWER DOWN R/W 0h
+0 = Active mode
+F827h = Nap mode with PLL on
+F8A7h = Nap mode
+FD3Fh = Power-down with PLL on
+FFBFh = Power-down
+20h = Quick wakeup
+7.6.2.6 Register 16h (address = 16h)
+Figure 44. Register 16h
+15 14 13 12 11 10 9 8
+ESSENTIAL_BITS7
+R/W-0h R/W-0h R/W-0h R/W-0h R/W-0h R/W-0h R/W-0h R/W-0h
+7 6 5 4 3 2 1 0
+ESSENTIAL_BITS5 0 0 ESSENTIAL_BIT6 0 0 0
+R/W-0h W-0h W-0h R/W-0h W-0h W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 21. Register 16h Field Descriptions
+Bit Field Type Reset Description
+15:8 ESSENTIAL_BITS7 R/W 0h
+The value of this byte must be selected depending on the
+integration mode (INTG_MODE).
+Must be 0h in integrate-up mode.
+Must be CAh in integrate-down mode.
+Other values are invalid
+7:6 ESSENTIAL_BITS5 R/W 0h Must write 11b
+5:4 0 W 0h Must write 0
+3 ESSENTIAL_BIT6 R/W 0h Must write 0
+2:0 0 W 0h Must write 0
+
+TI Confidential — NDA Restrictions
+50
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.7 Register 18h (address = 18h)
+Figure 45. Register 18h
+15 14 13 12 11 10 9 8
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 0 ESSENTIAL_BIT3
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h R/W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 22. Register 18h Field Descriptions
+Bit Field Type Reset Description
+15:1 0 W 0h Must write 0
+0 ESSENTIAL_BIT3 R/W 0h Must write 1
+7.6.2.8 Register 2Ch (address = 2Ch)
+Figure 46. Register 2Ch
+15 14 13 12 11 10 9 8
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 0 ESSENTIAL_BIT8
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h R/W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 23. Register 2Ch Field Descriptions
+Bit Field Type Reset Description
+15:1 0 W 0h Must write 0
+0 ESSENTIAL_BIT8 R/W 0h
+The value of this bit must be selected depending on the
+integration mode (INTG_MODE).
+Must be 0 in integrate-up mode.
+Must be 1 in integrate-down mode.
+
+TI Confidential — NDA Restrictions
+51
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.9 Register 30h (address = 30h)
+Figure 47. Register 30h
+15 14 13 12 11 10 9 8
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 TRIM_LOAD 0
+W-0h W-0h W-0h W-0h W-0h W-0h R/W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 24. Register 30h Field Descriptions
+Bit Field Type Reset Description
+15:2 0 W 0h Must write 0
+1 TRIM_LOAD R/W 0h
+A TRIM_LOAD cycle is mandatory to meet specified
+performance.
+0 = Disable TRIM_LOAD
+1 = Enable TRIM_LOAD
+0 0 W 0h Must write 0
+7.6.2.10 Register 31h (address = 31h)
+Figure 48. Register 31h
+15 14 13 12 11 10 9 8
+DIE_ID[47:40]
+R-N/A
+7 6 5 4 3 2 1 0
+DIE_ID [39:32]
+R-N/A
+LEGEND: R = Read only; -n = reset value
+Table 25. Register 31h Field Descriptions
+Bit Field Type Reset Description
+15:0 DIE_ID[47:32] R N/A Most significant word (16 bits) of the unique 48-bit
+identifier for the die.
+7.6.2.11 Register 32h (address = 32h)
+Figure 49. Register 32h
+15 14 13 12 11 10 9 8
+DIE_ID[31:24]
+R-N/A
+7 6 5 4 3 2 1 0
+DIE_ID[21:16]
+R-N/A
+LEGEND: R = Read only; -n = reset value
+Table 26. Register 32h Field Descriptions
+Bit Field Type Reset Description
+15:0 DIE_ID[31:16] R N/A Middle word (16 bits) of the unique 48-bit identifier for the
+die.
+
+TI Confidential — NDA Restrictions
+52
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.12 Register 33h (address = 33h)
+Figure 50. Register 33h
+15 14 13 12 11 10 9 8
+DIE_ID[15:8]
+R-N/A
+7 6 5 4 3 2 1 0
+DIE_ID[7:0]
+R-N/A
+LEGEND: R = Read only; -n = reset value
+Table 27. Register 33h Field Descriptions
+Bit Field Type Reset Description
+15:0 DIE_ID[15:0] R N/A Least significant word (16 bits) of the unique 48-bit
+identifier for the die.
+7.6.2.13 Register 40h (address = 40h)
+Figure 51. Register 40h
+15 14 13 12 11 10 9 8
+IRST_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+IRST_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 28. Register 40h Field Descriptions
+Bit Field Type Reset Description
+15:8 IRST_RISE R/W 0h Rising edge location for the integrator feedback capacitor
+reset.
+7:0 IRST_FALL R/W 0h Falling edge location for the integrator feedback capacitor
+reset.
+7.6.2.14 Register 42h (address = 42h)
+Figure 52. Register 42h
+15 14 13 12 11 10 9 8
+SHR_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+SHR_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 29. Register 42h Field Descriptions
+Bit Field Type Reset Description
+15:8 SHR_RISE R/W 0h Rising edge location for the reset sampling phase.
+7:0 SHR_FALL R/W 0h Falling edge location for the reset sampling phase.
+
+TI Confidential — NDA Restrictions
+53
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.15 Register 43h (address = 43h)
+Figure 53. Register 43h
+15 14 13 12 11 10 9 8
+SHS_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+SHS_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 30. Register 43h Field Descriptions
+Bit Field Type Reset Description
+15:8 SHS_RISE R/W 0h Rising edge location for the signal sampling phase.
+7:0 SHS_FALL R/W 0h Falling edge location for the signal sampling phase.
+7.6.2.16 Register 46h (address = 46h)
+Figure 54. Register 46h
+15 14 13 12 11 10 9 8
+LPF1_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+LPF1_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 31. Register 46h Field Descriptions
+Bit Field Type Reset Description
+15:8 LPF1_RISE R/W 0h Reset sample filter turn-on edge.
+7:0 LPF1_FALL R/W 0h Reset sample filter turn-off edge.
+7.6.2.17 Register 47h (address = 47h)
+Figure 55. Register 47h
+15 14 13 12 11 10 9 8
+LPF2_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+LPF2_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 32. Register 47h Field Descriptions
+Bit Field Type Reset Description
+15:8 LPF2_RISE R/W 0h Signal sample filter turn-on edge.
+7:0 LPF2_FALL R/W 0h Signal sample filter turn-off edge.
+
+TI Confidential — NDA Restrictions
+54
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.18 Register 4Ah (address = 4Ah)
+Figure 56. Register 4Ah
+15 14 13 12 11 10 9 8
+TDEF_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+TDEF_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 33. Register 4Ah Field Descriptions
+Bit Field Type Reset Description
+15:8 TDEF_RISE R/W 0h Pixel short-detection enable edge; see the Pixel Short
+Detection section for more details.
+7:0 TDEF_FALL R/W 0h Pixel short-detection disable edge; see the Pixel Short
+Detection section for more details.
+7.6.2.19 Register 4Bh (address = 4Bh)
+Figure 57. Register 4Bh
+15 14 13 12 11 10 9 8
+GATE_DRIVER_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+GATE_DRIVER_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 34. Register 4Bh Field Descriptions
+Bit Field Type Reset Description
+15:8 GATE_DRIVER_RISE R/W 0h
+Rising edge location for the gate driver signal; see the
+Generating Gate Driver Signals from the AFE2256GR
+section for more details.
+7:0 GATE_DRIVER_FALL R/W 0h
+Falling edge location for the gate driver signal; see the
+Generating Gate Driver Signals from the AFE2256GR
+section for more details.
+
+TI Confidential — NDA Restrictions
+55
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.20 Register 50h (address = 50h)
+Figure 58. Register 50h
+15 14 13 12 11 10 9 8
+DF_SM0_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM0_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 35. Register 50h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM0_RISE R/W 0h
+Charge dump control for the 0.045-pF capacitor rising
+edge. When DF_SM[0] = 1, the capacitor is connected to
+COMP2.
+7:0 DF_SM0_FALL R/W 0h
+Charge dump control for the 0.045-pF capacitor falling
+edge. When DF_SM[0] = 0, the capacitor is connected to
+COMP1.
+7.6.2.21 Register 51h (address = 51h)
+Figure 59. Register 51h
+15 14 13 12 11 10 9 8
+DF_SM1_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM1_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 36. Register 51h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM1_RISE R/W 0h
+Charge dump control for the 0.122 pF-capacitor rising
+edge. When DF_SM[1] = 1, the capacitor is connected to
+COMP2.
+7:0 DF_SM1_FALL R/W 0h
+Charge dump control for the 0.122 pF-capacitor falling
+edge. When DF_SM[1] = 0, the capacitor is connected to
+COMP1.
+
+TI Confidential — NDA Restrictions
+56
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.22 Register 52h (address = 52h)
+
+Figure 60. Register 52h
+15 14 13 12 11 10 9 8
+DF_SM2_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM2_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 37. Register 52h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM2_RISE R/W 0h
+Charge dump control for the 0.33-pF capacitor rising
+edge. When DF_SM[2] = 1, the capacitor is connected to
+COMP2.
+7:0 DF_SM2_FALL R/W 0h
+Charge dump control for the 0.33-pF capacitor falling
+edge. When DF_SM[2] = 0, the capacitor is connected to
+COMP1.
+7.6.2.23 Register 53h (address = 53h)
+Figure 61. Register 53h
+15 14 13 12 11 10 9 8
+DF_SM3_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM3_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 38. Register 53h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM3_RISE R/W 0h
+Charge dump control for the 0.9-pF capacitor rising edge.
+When DF_SM[3] = 1, the capacitor is connected to
+COMP2.
+7:0 DF_SM3_FALL R/W 0h
+Charge dump control for the 0.9-pF capacitor falling edge.
+When DF_SM[3] = 0, the capacitor is connected to
+COMP1.
+
+TI Confidential — NDA Restrictions
+57
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.24 Register 54h (address = 54h)
+Figure 62. Register 54h
+15 14 13 12 11 10 9 8
+DF_SM4_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM4_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 39. Register 54h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM4_RISE R/W 0h
+Charge dump control for the 2.44-pF capacitor rising
+edge. When DF_SM[4] = 1, the capacitor is connected to
+COMP2.
+7:0 DF_SM4_FALL R/W 0h
+Charge dump control for the 2.44-pF capacitor falling
+edge. When DF_SM[4] = 0, the capacitor is connected to
+COMP1.
+7.6.2.25 Register 55h (address = 55h)
+Figure 63. Register 55h
+15 14 13 12 11 10 9 8
+DF_SM5_RISE
+R/W-0h
+7 6 5 4 3 2 1 0
+DF_SM5_FALL
+R/W-0h
+LEGEND: R/W = Read/Write; -n = reset value
+Table 40. Register 55h Field Descriptions
+Bit Field Type Reset Description
+15:8 DF_SM5_RISE R/W 0h
+Charge dump control for the 1.2-pF capacitor rising edge.
+When DF_SM[5] = 1, the capacitor is connected to
+COMP4.
+7:0 DF_SM5_FALL R/W 0h
+Charge dump control for the 1.2-pF capacitor falling edge.
+When DF_SM[5] = 0, the capacitor is connected to
+COMP3.
+
+TI Confidential — NDA Restrictions
+58
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+7.6.2.26 Register 5Ah (address = 5Ah)
+Figure 64. Register 5Ah
+15 14 13 12 11 10 9 8
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+PROBE_SIGNAL
+R/W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 41. Register 5Ah Field Descriptions
+Bit Field Type Reset Description
+15-8 0 W 0h Must write 0
+7:0 PROBE_SIGNAL R/W 0h
+These bits transmit some TG signals to the SDOUT pin;
+see the TG Signal Probe section for more details.
+0h = None
+1h = PROBE IRST signal
+4h = PROBE SHR signal
+8h = PROBE SHS signal
+20h = PROBE DF_SM0 signal
+40h = PROBE GATE DRIVER signal
+7.6.2.27 Register 5Ch (address = 5Ch)
+Figure 65. Register 5Ch
+15 14 13 12 11 10 9 8
+INPUT_CHARGE_RANGE 0 LPF1_FREQ
+R/W-0h W-0h R/W-0h
+7 6 5 4 3 2 1 0
+LPF1_FREQ 0 LPF2_FREQ 0
+R/W-0h W-0h R/W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 42. Register 5Ch Field Descriptions
+Bit Field Type Reset Description
+15:11 INPUT_CHARGE_RANGE R/W 0h
+These bits select input charge range. The bits are
+additive. That is, setting a particular bit increases charge
+range by corresponding value. For example, 3h
+corresponds to 1.8 pC.
+0h = 0 pC
+1h = 0.6 pC
+2h = 1.2 pC
+4h = 2.4 pC
+8h = 4.8 pC
+10h = 0.6 pC
+Ch = 7.2 pC
+1Fh = 9.6 pC
+All intermediate combinations are valid.
+10 0 W 0h Must write 0
+9:6 LPF1_FREQ R/W 0h
+0h = fLPF1 is 210 kHz
+1h = fLPF1 is 105 kHz
+3h = fLPF1 is 52 kHz
+7h = fLPF1 is 26 kHz
+Fh = fLPF1 is 13 kHz
+5 0 W 0h Must write 0
+
+TI Confidential — NDA Restrictions
+59
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Table 42. Register 5Ch Field Descriptions (continued)
+Bit Field Type Reset Description
+4:1 LPF2_FREQ R/W 0h
+0h = fLPF2 is 210 kHz
+1h = fLPF2 is 105 kHz
+3h = fLPF2 is 52 kHz
+7h = fLPF2 is 26 kHz
+Fh = fLPF2 is 13 kHz
+0 0 W 0h Must write 0
+7.6.2.28 Register 5Dh (address = 5Dh)
+Figure 66. Register 5Dh
+15 14 13 12 11 10 9 8
+BIAS_PANEL2
+COMP
+ISOLATE_
+PANEL 0 ADD_CAP ENB_TDEF ENB_DFTV_
+ALL
+DFTV_CAP_
+SEL_5
+R/W-0h R/W-0h W-0h R/W-0h R/W-0h R/W-0h R/W-0h
+7 6 5 4 3 2 1 0
+DFTV_CAP_
+SEL_4
+DFTV_CAP_
+SEL_3
+DFTV_CAP_
+SEL_2
+DFTV_CAP_
+SEL_1
+DFTV_CAP_
+SEL_0 0 0 0
+R/W-0h R/W-0h R/W-0h R/W-0h R/W-0h W-0h R/W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 43. Register 5Dh Field Descriptions
+Bit Field Type Reset Description
+15 BIAS_PANEL2COMP R/W 0h
+0 = Bias to EXTC_I
+1 = Bias to COMP3; the voltage that the panel is biased to
+during panel isolation is changed to COMP3 instead of
+EXTC_I
+14 ISOLATE_PANEL R/W 0h
+0 = Connect panel
+1 = Isolate panel; all input switches are opened and the
+panel is biased to EXTC_I or COMP3 (selection is based
+on BIAS_PANEL2COMP)
+See the Isolate Panel section for more details.
+13 0 W 0h Must write 0
+12:11 ADD_CAP R/W 0h
+These bits control the value of the internal data line
+capacitor at the integrator inputs. ADD_CAP is used to
+emulate data line capacitance; see the Csensor Emulation
+section for more details.
+0h = No capacitor
+1h = 20-pF capacitor
+2h = 30-pF capacitor
+3h = 50-pF capacitor
+10 ENB_TDEF R/W 0h
+0 = Pixel short detection disabled
+1 = Pixel short detection enabled; the pixel short-detection
+circuit is enabled
+9 ENB_DFTV_ALL R/W 0h
+This bit is ANDed with DFTV_CAP_SEL_n and therefore
+functions as the master control on charge dumps.
+0 = Charge dump disabled
+1 = Charge dump enabled
+8 DFTV_CAP_SEL_5 R/W 0h
+This bit enables the 1.2-pF charge dump capacitor. A
+charge dump occurs with the COMP3 and COMP4
+voltages.
+0 = C[5] is 1.2 pF, disabled
+1 = C[5] is 1.2 pF, enabled
+7 DFTV_CAP_SEL_4 R/W 0h
+This bit enables the 2.44-pF charge dump capacitor. A
+charge dump occurs with the COMP1 and COMP2
+voltages.
+0 = C[4] is 2.44 pF, disabled
+1 = C[4] is 2.44 pF, enabled
+
+TI Confidential — NDA Restrictions
+60
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Table 43. Register 5Dh Field Descriptions (continued)
+Bit Field Type Reset Description
+6 DFTV_CAP_SEL_3 R/W 0h
+This bit enables the 0.9-pF charge dump capacitor. A
+charge dump occurs with the COMP1 and COMP2
+voltages.
+0 = C[3] is 0.9 pF, disabled
+1 = C[3] is 0.9 pF, enabled
+5 DFTV_CAP_SEL_2 R/W 0h
+This bit enables the 0.33-pF charge dump capacitor. A
+charge dump occurs with the COMP1 and COMP2
+voltages.
+0 = C[2] is 0.33 pF, disabled
+1 = C[2] is 0.33 pF, enabled
+4 DFTV_CAP_SEL_1 R/W 0h
+This bit enables the 0.122-pF charge dump capacitor. A
+charge dump occurs with the COMP1 and COMP2
+voltages.
+0 = C[1] is 0.122 pF, disabled
+1 = C[1] is 0.122 pF, enabled
+3 DFTV_CAP_SEL_0 R/W 0h
+This bit enables the 0.045-pF charge dump capacitor. A
+charge dump occurs with the COMP1 and COMP2
+voltages.
+0 = C[0] is 0.045 pF, disabled
+1 = C[0] is 0.045 pF, enabled
+2:0 0 R/W 0h Must write 0
+7.6.2.29 Register 5Eh (address = 5Eh)
+Figure 67. Register 5Eh
+15 14 13 12 11 10 9 8
+0 0 0 INTG_MODE 0 0 0 0
+W-0h W-0h W-0h R/W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h R/W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+Table 44. Register 5Eh Field Descriptions
+Bit Field Type Reset Description
+15:13 0 W 0h Must write 0
+12 INTG_MODE R/W 0h 0 = Integrate-up mode
+1 = Integrate-down mode
+11:0 0 W 0h Must write 0
+7.6.2.30 Register 61h (address = 61h)
+Figure 68. Register 61h
+15 14 13 12 11 10 9 8
+0 ESSENTIAL_BIT4 0 0 0 0 0 0
+W-0h R/W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+7 6 5 4 3 2 1 0
+0 0 0 0 0 0 0 0
+W-0h W-0h W-0h W-0h W-0h W-0h W-0h W-0h
+LEGEND: R/W = Read/Write; W = Write only; -n = reset value
+
+TI Confidential — NDA Restrictions
+61
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Table 45. Register 61h Field Descriptions
+Bit Field Type Reset Description
+15 0 W 0h Must write 0
+14 ESSENTIAL_BIT4 R/W 0h Must write 1
+13:0 0 W 0h Must write 0
+
+TI Confidential — NDA Restrictions
+62
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+8.1 Application Information
+8.1.1 Initialization Setup
+8.1.1.1 Recommended Device Start-Up Sequence
+The sequence for device start-up is:
+1. Apply the power supplies: the AFE2256GR uses two power supplies (AVDD1 and AVDD2). AVDD1 is
+recommended to be applied before AVDD2.
+2. Apply MCLK and wait for the PLL lock (20 μs).
+3. Register initialization is as explained in the Register Initialization section and discusses clearing the register
+space, loading the factory trim values, and the default register settings.
+4. Program the registers (such as device settings and TG profiles).
+5. Apply the TP_SEL, SYNC, and bit alignment (optional).
+6. Start integration and readout.
+See Figure 69 for the recommended power-up sequence.
+
+System Activity
+AVDD1
+AVDD2
+Keep >200 ns
+MCLK
+Apply Supplies,
+VREF, and COMP
+Wait for
+PLL Lock AFE2256GR Register Initialization TG Profile Programming AFE2256GR Register
+Programming
+Bit Alignment
+In FPGA
+Data Capture with
+TP.
+Serial Interface Activity
+Programming
+TP
+.
+Programming
+TP
+
+Programming other Registers
+(STR, Range, Filter, and
+so forth)
+TP_SEL
+SYNC
+Valid Data on DOUT Invalid Data
+Keep > 30 ms
+SYNC is not needed after this timing if a
+fixed timing profile is used in the TG.
+Valid Data
+Keep > 20μs
+13K:0020h
+30K:0002h
+00K:0001h
+30K:0000h
+13K:0000h
+Keep >100 μs
+VREF
+10h, Bits 9-5
+ :00000b
+(1)
+10h, Bits 9-5
+ :11110b
+(1)
+Register
+ Initialization
+FFF000h
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+TI Confidential — NDA Restrictions
+63 Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) Required if the sync/deskew test pattern is used for bit alignment in the FPGA.
+Figure 69. AFE2256GR Start-Up Sequence
+
+Device Activity
+MCLK
+Bit Alignment
+In the FPGA
+Data Capture
+with TP.
+Serial Interface Activity
+TP_SEL
+SYNC
+Valid Data on DOUT Invalid Data
+SYNC is not needed after this timing if
+a fixed timing profile is used in the TG.
+Valid Data
+13K:0020h
+13K:0000h
+5Dh, Bit 14
+ :0
+Keep > tPD-POWERUP
+13K:))%)K
+(3)
+5Dh, Bits 15-14
+ :11b
+Device is in Total PD
+(Signal Chain and LVDS Powered Down, Internal References Powered Down) Device Powering Up (1) (2)
+5Dh, Bit 15
+ :1
+5Dh, Bit 15
+ :0
+10h, Bits 9-5
+ :00000b
+(4)
+10h, Bits 9-5
+ :11110b
+(4)
+FFF000h
+Device Activity
+MCLK
+Bit Alignment
+In FPGA
+Data Capture
+with TP.
+Serial Interface Activity
+TP_SEL
+SYNC
+Valid Data on DOUT Invalid Data
+SYNC is not needed after this timing if
+a fixed timing profile is used in the TG.
+Valid Data
+13K:0020h
+13K:0000h
+5Dh, Bit 14
+ :0
+Keep > tNAP-POWERUP
+13K:)8A7h
+(3)
+5Dh, Bit 14
+ :1
+Device is in Nap
+(Signal Chain and LVDS Powered Down, Internal References not Powered Down) Device Powering Up (1) (2)
+10h, Bits 9-5
+ :00000b
+(4)
+10h, Bits 9-5
+ :11110b
+(4)
+FFF000h
+TI Confidential — NDA Restrictions
+64
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.1.1.2 Recommended Nap and Power-Down (PD) Entry, Exit Sequence
+The AFE2256GR offers two low-power modes (nap and power-down), during which the signal chain or the entire
+device is powered down, respectively. Note that the contents of the register space and factory trim are not
+erased during the nap and power-down modes. Figure 70 and Figure 71 show the recommended sequence for
+entering and exiting from nap and PD modes.
+(1) All input switches are open.
+(2) Connects the sensor to the integrators.
+(3) If the PLL must remain active (for example, in cases where the AFE is configured to generate gate driver controls),
+set register 13h to F827h. Note that MCLK cannot be powered down in this case.
+(4) Required if the sync/deskew test pattern is used for bit alignment in the FPGA.
+Figure 70. Nap Entry and Exit Sequence
+(1) All input switches are open.
+(2) Disconnects the sensor from EXTC_I or COMP3 and connects the sensor to the integrators.
+(3) If the PLL must remain active (for example, in cases where the device is configured to generate gate driver controls),
+set register 13h to FD3Fh. Note that MCLK cannot be powered down in this case.
+(4) Required if the sync/deskew test pattern is used for bit alignment in the FPGA.
+Figure 71. Power-Down Entry and Exit Sequence
+
+TI Confidential — NDA Restrictions
+65
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.1.2 Data Capture
+The AFE2256GR serially sends data from 256 channels over a single LVDS link. The data capture module
+(implemented in the FPGA) receives the serial data, deserializes the data into 24-bit words, and detects the start
+of a new scan line. The image generation logic receives data from multiple devices and generates the final
+image. The description of various blocks in the data capture module is shown in Table 46. See Figure 72 and
+Figure 73 for various data-processing blocks and their timings, respectively.
+Table 46. Description of Various Blocks in Data Capture Module
+BLOCK
+NAME
+NUMBER OF
+INSTANCES
+IN THE
+FPGA
+INPUT OUTPUT DESCRIPTION
+Bit alignment One per
+device Serial data 24-bit parallel data This block identifies the correct word boundaries in the serial
+bit stream; see the Bit Alignment section for more details.
+Word
+alignment
+One per
+device
+Parallel 24-bit data,
+gate driver start signal
+16-bit channel data,
+first channel (start of line) in
+signal
+This block locates the first channel using the alignment vector
+and synchronizes data with the gate driver control.
+Image
+generation
+One per
+system
+(common
+across all
+devices)
+16-bit channel data,
+first channel (start of line)
+signal from all devices
+Final image
+This block rearranges the channels and forms the image. The
+rearrangement algorithm can be implemented in hardware or
+software programs.
+
+Bit Alignment
+Word Alignment
+(Detect 4
+Successive Data
+with Y = 1 in
+Alignment Vector)
+Channel Rearrangement
+and Image Generation
+AFE2256GR
+Glass Connection
+FPD
+24-Bit Parallel Data
+Bit-Alignment Done
+16-Bit Parallel Data
+First Channel
+Detected
+Glass
+Connection
+Gate Driver Control
+and Gate Driver
+DOUT
+ FCLK
+ DCLK
+SYNC
+16-Bit Parallel Data from
+Other AFE2256GR Devices
+Gate Driver Start
+TI Confidential — NDA Restrictions
+66
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Figure 72. Data Capture Module Block Diagram
+
+FCLK
+111111111111000000000000´
+DCLK
+FCLK
+Deserializer
+Data
+Deserializer
+Bit
+Alignment
+Serial Data
+101010111100110110111000´
+Parallel FCLK
+7FF800h
+Parallel Data
+55E6DCh
+FFF000h
+Aligned FCLK
+Aligned Parallel Data
+ABCDB8h(1)
+Copyright © 2016, Texas Instruments Incorporated
+SYNC
+Gate Driver Start
+Gate Driver Clock
+FFF000h Line 0
+Bit alignment with the sync/deskew pattern.
+2n(1) x tSCAN tSCAN
+Line 1 ...
+Word Alignment and Data Capture
+Row 0 Row 1
+DOUT
+TI Confidential — NDA Restrictions
+67
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) n is an integer.
+Figure 73. Data Capture Timing Diagram
+8.1.2.1 Bit Alignment
+Bit alignment can be done by using either of the two following methods:
+• Using FCLK or
+• Using the sync/deskew pattern.
+8.1.2.1.1 Using FCLK
+FCLK sends a fixed bit stream, FFF000h. If FCLK is deserialized identical to DATA deserialization, then the
+parallel data has the same bit shift on the DATA and FCLK lines, assuming that delays are matched on the
+FCLK and DATA paths.
+Figure 74 shows an example of bit alignment using FCLK. After deserialization FCLK has a pattern of 7FF800h,
+indicating that a left-shift by 1 is required. Assuming no skew exists between FCLK and DATA, a 1-bit left-shift on
+the parallel DOUT gives the correct bit alignment.
+(1) The example shown is for CONFIG_MODE = 1.
+Figure 74. Bit Alignment Using FCLK
+As a result of trace routing length mismatch and FPGA buffer delay mismatch, there can be a skew between
+FCLK and DATA at the deserializer. This skew can be corrected during system calibration by adding an
+additional bit shift in the bit alignment block.
+
+Row ±1 Row 0
+FCLK
+2STR × tMCLK
+Gate Driver Clock
+Gate Driver Start
+Row 0 Row 1
+Channel Data
+Alignment Vector
+Fields Y and X Y = 1, X = 1 Y = 0, X = 1 Y = 1, X = 0 Y = 0, X = 0
+Ch 0 Ch 64 Ch 128 Ch 192 Ch 0 Ch 64 Ch 128 Ch 192
+Start data capture on this condition.
+DCLK
+Deserializer
+Bit
+Alignment
+11111111111100000000000011111...
+Parallel Data
+7FF800h FFF000h
+Align_Enable = 1
+Aligned Data
+Parallel Data Clock
+
+Serial Data (Sync/Deskew Pattern)
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+68
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.1.2.1.2 Using the Sync/Deskew Pattern
+Figure 75 shows a block diagram of the sync/deskew pattern based on the bit-alignment technique. The device is
+configured to send a sync/deskew test pattern. After enabling the test pattern, the bit-alignment logic in the FPGA
+can be enabled by asserting Align_Enable = 1. The bit-alignment block compares parallel data with the 24-bit
+pattern FFF000h to determine the bit shift required for the correct bit alignment. After the bit alignment, the
+Align_Enable signal is deasserted to 0. The bit-alignment logic now holds the calculated bit-shift value. The
+device can be configured to send the normal channel data by disabling the test pattern. The bit-alignment logic
+applies the same bit shift to obtain the correct parallel data. Note that MCLK must not be disturbed between the
+alignment and data capture, otherwise the bit-alignment value can change.
+Figure 75. Bit Alignment Using the Sync/Deskew Pattern
+8.1.2.2 Word Alignment
+Word alignment is essential to identify the start of a new row in the parallel data stream. Consider the forward
+scan mode where channel data are in the following order: 0, 64, 128, 192, 1, 65, 129, 193, 2, 66, 130…63, 127,
+191, 255; 0, 64, and so forth.
+The AFE2256GR sends an alignment vector, as described in the Alignment Vector section. Thus, in forward scan
+mode, the FPGA receives four successive samples with Y = 1 corresponding to the data of channels 0, 64, 128,
+and 192. Using this information, the start of a row can be detected.
+The gate driver start signal can be used to synchronize the gate driver signals and data capture. In such a case,
+the word alignment block gets the gate driver start signal as an input. Incoming data from the bit alignment block
+are ignored until the gate driver start is asserted. After asserting gate-start, the word-alignment block starts
+sending data to the image generation logic on the subsequent first channel.
+Figure 76 shows the location of the first row with respect to the gate driver start signal. Data capture starts at
+detection of four successive samples with Y = 1.
+Figure 76. Word Alignment Timing Diagram
+
+TI Confidential — NDA Restrictions
+69
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.1.3 Generating Gate Driver Signals from the AFE2256GR
+The AFE2256GR provides a feature where gate driver control signals can be generated from the device. This
+feature is possible because the device provides one fully functional additional TG register for this purpose and
+the associated TG signal can be brought out on the SDOUT pin. This additional TG register is available in both
+timing profiles (TPα and TPβ), just like the other TG signals.
+In a typical application scenario, the SDOUT pin of the device is routed to the FPGA or gate driver logic. The
+FPGA can directly send a signal on SDOUT to the gate driver or can process the signals further (such as
+counting the number of lines).
+Note that each device can produce only one gate driver signal. which is not a limitation because a typical system
+has multiple AFE2256GR devices and each device can provide a different signal on SDOUT. These signals are
+synchronized by the common SYNC signal. For example, one device can produce the gate output enable signal
+and other device can be configured to generate the gate driver clock. To use this scheme, the SDOUT signal
+from multiple devices must be independently routed to the FPGA.
+If the SDOUT from a single device is connected to the FPGA, then the gate driver output enable signal can be
+generated from the device. Using this signal, other signals can be derived from inside the FPGA.
+To generate gate driver signals from the AFE2256GR:
+1. Configure the rising and falling edges of the gate driver signal with register 4Bh to select the timing profile.
+This configuration process is similar to programming any other timing signal (IRST, SHR, and so forth).
+Ensure that the correct timing profile is programmed and selected. The active-low gate driver signal can be
+generated by programming the rise edge to be greater than the falling edge.
+2. The gate driver signal can be brought out on the SDOUT pin by configuring the PROBE_SIGNAL bits
+(register 5Ah, bits 7-0) = 40h.
+8.1.3.1 Generating Gate Driver Signals in Power-Down, Nap Mode
+The timing generator (TG) generates the internal timing and gate driver signals using the clock from the PLL.
+Thus, if the AFE2256GR is required to generate the gate driver signals in power-down or nap mode, the PLL
+must remain active during the power-down or nap mode. Note that MCLK must be running for the gate driver
+signal generation.
+To enter nap mode with continuous gate driver signal generation, follow the same sequence as described in the
+Recommended Nap and Power-Down (PD) Entry, Exit Sequence section. Instead of configuring register 13h with
+F8A7h, program register 13h = F827h.
+To enter power-down mode with continuous gate driver signal generation, follow the same sequence as
+described in the Recommended Nap and Power-Down (PD) Entry, Exit Sequence section. Instead of configuring
+register 13h with FFBFh, program register 13h = FD3Fh.
+8.1.4 Cyclic Redundancy Check (CRC)
+During data transfer, data can become corrupted because of environmental noise, timing errors in the FPGA, and
+so forth. The AFE2256GR provides a data integrity check using the cyclic redundancy check (CRC).
+The device computes a CRC as illustrated in Figure 77. In Figure 77, the following data are considered as an
+example for CRC computation:
+• ADC0 = 02A0E0h
+• ADC1 = 01F4E0h
+• ADC2 = 0279E0h
+• ADC3 = 01F0E0h
+Each ADCn corresponds to 16-bit data from the nth ADC appended with the alignment vector with CRC1 =
+CRC0 = 0. ADC0 to ADC3 data are appended to form the 96-bit message. Note that ADC3 data form the 24
+significant bits of the message.
+
+Q = ADC3[23..2] + 00 + ADC2[23..2] + 00 + ADC1[23..2] + 00 + ADC0[23..2] + 00 =
+01F0E00279E001F4E002A0E0h
+Result of CRC Division, R = C6h
+ADC3[23..2] + 00 = 01F0E0h
+Append Data
+Q, P
+ADC2[23..2] + 00 = 0279E0h ADC1[23..2] + 00 = 01F4E0h ADC0[23..2] + 00 = 02A0E0h
+ADC3[23..0] = 01F0E3h
+ADC2[23..0] = 0279E0h
+ADC1[23..0] = 01F4E1h
+ADC0[23..0] = 02A0E2h ADC0 Data are Transmitted First
+ADC3[23..2] + R[7:6] = 01F0E3h ADC2[23..2] + R[5:4] = 0279E0h ADC1[23..2] + R[3:2] = 01F4E1h ADC0[23..2] + R[1:0] = 02A0E2h
+Insert CRC in the Data
+Data Serializer and LVDS
+Transmitter
+Send Data, ADC0 Data are Sent First
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+70
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+CRC uses the polynomial divisor P = 97h. The computed CRC is inserted into the alignment vector, as shown in
+Figure 77.
+NOTE: + denotes the appending of bits.
+Figure 77. CRC Computation Inside the AFE2256GR
+Steps for a CRC at the receiver end:
+1. The set of four 24-bit samples (total of 96 bits) is considered for CRC calculations.
+2. Incoming R’ = CRC_IN[7:0] = ADC3[1:0] + ADC2[1:0] + ADC1[1:0] + ADC0[1:0]. Where + denotes the
+appending of bits.
+3. The dividend polynomial Q[95:0] = ADC3[23..2] + 00 + ADC2[23..2] + 00 + ADC1[23..2] + 00 + ADC0[23..2]
++ 00 is divided by P = 97h to generate the 8-bit result, such as R[7:0].
+4. Compare R and R’ to verify data integrity.
+5. Alternately, the vector R’ can be appended to the end of Q to generate Q’ = Q + R’, where + indicates the
+append operation. Then, the CRC division can be performed on Q’ by P. The result of division is zero, thus
+implying that the data have no errors within the detectable limits of CRC.
+
+4∂= ADC3[23..2] + 00 + ADC2[23..2] + 00 + ADC1[23..2] + 00 + ADC0[23..2] + 00 + 5∂=
+01F0E00279E001F4E002A0E0C6h
+Result of CRC Division
+ADC3[23..2] + 00 = 01F0E0h
+Append Data
+4∂, P
+5HVXOWè0
+Loss of Data Integrity,
+Send for Error Handling
+Data are Correct,
+Send for Processing
+Result = 0
+ADC2[23..2] + 00 = 0279E0h ADC1[23..2] + 00 = 01F4E0h ADC0[23..2] + 00 = 02A0E0h 5∂= ADC3[1:0] + ADC2[1:0] +
+ADC1[1:0] + ADC0[1:0] = C6h
+Rearrange Data
+ADC3[23..0] = 01F0E3h
+ADC2[23..0] = 0279E0h
+ADC1[23..0] = 01F4E1h
+ADC0[23..0] = 02A0E2h ADC0 Data are Received First
+Copyright © 2016, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+71
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+An example of a cyclic redundancy check shown in Figure 78.
+Figure 78. CRC Check
+
+50
+49
+48
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+33
+32
+31
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+1 μF
+2
+1
+10 μF
+0.1 μF 1 μF
+1 μF 10 μF
+0.1 μF 1 μF
+1 μF
+R5
+R4
+C2
+R6
+Output to
+FPGA
+R2
+C1
+R3
+R1
+VBIAS
+EXTC_I
+AVSS
+AVSS
+AVDD1
+AVDD2
+AVSS
+AVSS
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+DOUTP
+DOUTM
+FCLKP
+FCLKM
+DCLKP
+DCLKM
+AVSS
+AVDD1
+AVDD1
+MCLK
+SYNC
+TP_SEL
+SDOUT
+SCLK
+SDATA
+SEN
+COMP4
+COMP3
+COMP2
+COMP1
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+VREF
+EXTC_O
+VTESTC
+AVSS
+AVDD2
+AVDD1
+AVSS
+AVSS
+EXTC_I
+VBIAS
+22 μF
+10 μF
+22 μF
+AFE2256GR DIE
+DOUTM
+FCLKP
+FCLKM
+DCLKP
+DCLKM
+MCLK
+SYNC
+TP_SEL
+SDOUT
+SCLK
+SDATA
+SEN
+COMP3
+COMP1
+From 1.25-V low-noise reference.
+VBIAS
+DOUTP
+Input, Output
+From or To
+FPGA
+From DAC
+Test Point
+AFE2256GRTDU COF
+Pin 50 of COF
+Pin 1 of COF
+U1
+AVDD1 = 1.85 V
+AVDD2 = 3.3 V
+1 μF 10 μF 1 μF 1 μF 1 μF 1 μF 1 μF 1 μF 10 μF 1 μF
+AVDD1 AVDD2
+AVDD2 = 3.3 V
+VBIAS
+Pin 1 of FPC Connector
+Copyright © 2017, Texas Instruments Incorporated
+_
+TI Confidential — NDA Restrictions
+72
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.2 Typical Application
+NOTE: All capacitors are of X5R or X7R type.
+PP[1] of COF gets connected to pin 50 of the FPC connector.
+Figure 79. AFE2256GRTDU Typical Application Circuit
+
+52, 53
+51
+50
+49
+48
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+33
+32
+31
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+1, 2
+Output
+To
+FPGA
+PASSTHROU2
+EXTC_I
+AVSS
+AVSS
+AVDD1
+AVDD2
+AVSS
+AVSS
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+DOUTP
+DOUTM
+FCLKP
+FCLKM
+DCLKP
+DCLKM
+AVSS
+AVDD1
+AVDD1
+MCLK
+SYNC
+TP_SEL
+SDOUT
+SCLK
+SDATA
+SEN
+COMP4
+COMP3
+COMP2
+COMP1
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+AVDD1
+AVSS
+VREF
+EXTC_O
+VTESTC
+AVSS
+AVDD2
+AVDD1
+AVSS
+AVSS
+EXTC_I
+PASSTHROU4
+AFE2256GR DIE
+DOUTM
+FCLKP
+FCLKM
+DCLKP
+DCLKM
+MCLK
+SYNC
+TP_SEL
+SDOUT
+SCLK
+SDATA
+SEN
+COMP3
+COMP1
+From 1.25-V Low-Noise Reference
+DOUTP
+Input, Output From
+or To FPGA
+From DAC
+Test Point
+Pin 55 of COF
+Pin 1 of COF
+U1
+AVDD1 = 1.85 V
+AVDD2 = 3.3 V
+AVDD1
+AVDD2 = 3.3 V
+Pin 1 of FPC Connector
+54, 55
+ PASSTHROU1
+3
+ PASSTHROU3
+Reserved
+1 ÖF 1 ÖF 1 ÖF 1 ÖF 1 ÖF 1 ÖF 10 ÖF
+AVDD2
+1 ÖF 1 ÖF 10 ÖF
+R1
+R2
+R4
+R5
+C1
+R3
+C2
+R6
+10 μF 1 μF
+22 ÖF 1 ÖF 0.1 ÖF
+22 ÖF 1 ÖF 0.1 ÖF
+Reserved
+Reserved
+Reserved
+AFE2256GRTDR COF
+Copyright © 2017, Texas Instruments Incorporated
+TI Confidential — NDA Restrictions
+73
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Typical Application (continued)
+NOTE: All capacitors are of X5R or X7R type.
+PP[1] of COF gets connected to pin 55 of the FPC connector.
+Figure 80. AFE2256GRTDR Typical Application Circuit
+
+SCAN
+MCLK (8 STR)
+t
+t 2 
+TI Confidential — NDA Restrictions
+74
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Typical Application (continued)
+Table 47. Component Selection for Figure 79
+REFERENCE DESIGNATOR DESCRIPTION VALUE
+U1 ZIF connector for the AFE2256GRTDU COF.
+Part number: FH28D - 50S - 0.5SH(05)
+R1-R6 and C1, C2 R-C circuit on COMP[4:1] pins. Used to control the charge injection time constant.
+Table 48. Component Selection for Figure 80
+REFERENCE DESIGNATOR DESCRIPTION VALUE
+U1 ZIF connector for the AFE2256GRTDR COF.
+Part number: Kyocera 04 6281 255 212 846+
+R1-R6 and C1, C2 R-C circuit on COMP[4:1] pins. Used to control the charge injection time constant.
+8.2.1 Design Requirements
+To configure the AFE2256GR, the parameters specified in Table 49 must be known.
+Table 49. Design Parameters
+PARAMETER EXAMPLE VALUE
+Line time (tSCAN) 102.4 μs
+Input charge range 4.8 pC
+TFT on-time + TFT charge injection settling time (tintg) 75 μs
+8.2.2 Detailed Design Procedure
+To begin, the design procedure parameters described in the Design Requirements section must be known. In
+this procedure, the integrate-up mode of operation is assumed. Default Register Settings is different,depending if
+integrate-up or integrate-down mode is used.
+8.2.2.1 Input Charge Range Selection
+The Electrical Characteristics table specifies various input charge ranges available in the device. Select a charge
+range equal to or higher than the maximum expected input charge. Input charge range can be configured from
+the INPUT_CHARGE_RANGE bits (register 5Ch, bits 15-11).
+8.2.2.2 MCLK Selection
+The line time can be calculated as Equation 2:
+where
+• 100 ns ≤ tMCLK ≤ 50 ns
+• STR = 2 or 3 (2)
+From Equation 2, the required tSCAN can be achieved by different combinations of MCLK frequency and STR
+settings. Select the highest possible STR and MCLK frequency to provide a higher ADC averaging factor, and
+thus a lower back-end noise, as indicated in Table 2.
+8.2.2.3 Programming the TG
+After selecting the MCLK frequency and STR, the next step is to determine the duration of each phase. To
+program a duration for each phase, the TG programming resolution must be known. The TG resolution or time-
+step can be calculated as shown in Equation 3.
+tstep = 2STR × tMCLK (3)
+From the Timing Requirements section, the time for each phase can be selected.
+
+extra
+LPF1
+N
+N floor 2
+ß ∑
+® ∏
+© π
+SHS LPF2
+SHS LPF2
+step
+t
+N ceil t
+
+
+ß ∑
+® ∏
+® ∏
+© π
+SHR PF1
+SHR LPF1
+step
+t L
+N ceil t
+
+ß ∑ 
+® ∏
+® ∏
+© π
+IRST
+IRST
+step
+t
+N ceil t
+ß ∑
+® ∏
+® ∏
+© π
+TI Confidential — NDA Restrictions
+75
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) Ceil(x) gives the smallest integer greater than X.
+The next step is to calculate the time available for the low-pass filter. To calculate this time, first find the extra TG
+time-steps available after satisfying the requirements in Table 50. The extra TG time-steps available are given by
+Equation 4.
+Nextra= 256 – (NIRST + NSHR–LPF1 + NSHR–LPF2) – 5
+where
+• The additional five cycles are subtracted because of constraints described in the Constraints on TG Values
+section (4)
+Table 50. Calculating tIRST, tSHR-LPF1, and tSHS-LPF2 (1)
+PARAMETER MINIMUM DURATION DURATION IN TERMS OF tstep
+tIRST IRST time 1.5 μs
+tSHR-LPF1
+SHR time before the LPF1 rising
+edge 4 μs
+tSHS-LPF2
+SHS time before the LPF2 rising
+edge
+Max (tintg, tSHS-min),
+tSHS-min = 4 μs
+NLPF1 and NLPF2 are the LPF1 and LPF2 duration in number of tsteps, respectively, as shown in Equation 5 and
+Equation 6.
+(5)
+NLPF2 = Nextra – N LPF1 (6)
+The SHR and SHS phase timings in terms of tstep are shown by Equation 7 and Equation 8.
+NSHR = NSHR–LPF1 + NLPF1 (7)
+NSHS = NSHS–LPF2 + NLPF2 (8)
+The rising and falling edges for each signal are shown in Table 51.
+Table 51. Calculating Rising and Falling Edge Values for Various Timing Phases
+TIMING SIGNAL RISING EDGE FALLING EDGE
+IRST 1 IRST_FALL = NIRST + 1
+SHR SHR_RISE = IRST_FALL + 1 SHR_FALL = SHR_RISE + NSHR
+SHS SHS_RISE = SHR_FALL + 1 254
+LPF1 SHR_FALL – NLPF1 SHR_FALL + 1
+LPF2 254 – NLPF2 255
+8.2.2.4 Filter Selection
+From Equation 5, the available filtering time can be calculated as Equation 9 and Equation 10:
+tLPF1-available (in seconds) = tstep × NLPF1 (9)
+tLPF2-available (in seconds) = tstep × NLPF2 (10)
+The Electrical Characteristics table provides the minimum settling time required for different low-pass filters.
+Select the filter with the lowest cutoff frequency that satisfies Equation 11 and Equation 12 to get optimum noise
+performance. For example, if tLPF1-available = 20 μs, then the lowest filter that can be selected is fLPF1 = 26 kHz
+(tLPF1–min = 18.2 μs).
+tLPF1–min ≤ tLPF1-available (11)
+tLPF2–min ≤ tLPF2-available (12)
+
+Csensor (pF)
+Input-Referred Noise (electrons)
+20 35 50 65 80 95 110
+600
+800
+1000
+1200
+1400
+1600
+Power Mode
+Normal
+TI Confidential — NDA Restrictions
+76
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+8.2.2.5 Timing Profile Selection
+The AFE2256GR provides a dual timing profile structure. Use this feature when an application must change
+timings during image capture. For more details, see the Timing Profiles section.
+For the dual timing profile, the programming TG operation (see the Programming the TG section) must be
+repeated for each timing profile.
+Consider the following precautions when using the dual timing profile capture:
+• The TP_SEL signal can change states at any time during the capture. Applying SYNC dictates the instance
+when the timing profile changes. Thus, timing requirements for the TP_SEL signal are relaxed.
+• SYNC can be a periodic signal or a one-shot pulse. If SYNC is periodic, then the duration must be an integral
+multiple of 2 × tSCAN (that is, the SYNC pulse can only be applied on an even-line, bank A). The same
+
+restriction applies for a one-shot SYNC pulse as well. If SYNC is applied at any other point, glitches can
+result in the PLL-generated clock. These glitches can lead to a bit alignment change.
+For a single timing profile, any one timing profile can be programmed.
+As discussed in the Timing Profiles section, the device permits programming of the timing profile that is not
+being used for data capture. For example, if TPα is used for TG (TP_SEL = 0), then TPβ can be programmed.
+Thus, change the TP_SEL state and apply SYNC to activate a programmed timing profile.
+8.2.3 Application Curve
+Figure 81 shows the input-referred noise as a function of Csensor as per the settings specified in the System
+Examples section.
+Figure 81. Input-Referred Noise vs Csensor
+8.3 System Examples
+Consider a case with the requirements listed in Table 52.
+Table 52. Application Example Design Parameters
+PARAMETER EXAMPLE VALUE
+Line time (tSCAN) 102.4 μs
+Input charge range 4.8 pC
+TFT on-time + TFT charge injection settling time (tintg) 75 μs
+The system requires integrate-up mode and a single timing profile (timings are not changed during frame
+capture).
+8.3.1 Input Charge Range Selection
+Configure INPUT_CHARGE_RANGE (register 5Ch, bits 15-11) = 010000.
+8.3.2 MCLK Selection
+The required line time can be achieved with the following combinations of MCLK and STR:
+
+TI Confidential — NDA Restrictions
+77
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+• Option 1: MCLK = 20 MHz and STR = 3 (2048 MCLKs)
+• Option 2: MCLK = 10 MHz and STR = 2 (1024 MCLKs)
+As discussed in the MCLK Selection section, option 1 is preferred.
+8.3.3 Programming TG
+Using the design parameters from Table 52 and following the procedure described in the Programming the TG
+section, the values listed below are obtained:
+• tstep = 400 ns
+• NIRST = 4
+• NSHR-LPF1 = 10
+• NSHR-LPF2 = 188
+• NLPF1 = 24
+• NLPF2 = 25
+8.3.4 Filter Selection
+From Equation 9 and Equation 10, the available filtering time is as shown in Equation 13 and Equation 14:
+tLPF1-available = 9.6 μs (13)
+tLPF2-available = 10 μs (14)
+From the Timing Requirements section, fLPF1 = 52 kHz and fLPF2 = 52 kHz satisfy Equation 11 and Equation 12.
+Thus, a 52-kHz filter is selected for filtering in the SHR and SHS phase.
+To enable the 52-kHz filter, configure LPF1_FREQ (register 5Ch, bits 9-6) = LPF2_FREQ (register 5Ch, bits 4-1)
+= 00011.
+From these calculations, the final timings are as specified in Table 53.
+Table 53. Application Example Timings
+SIGNAL
+RISING EDGE
+LOCATION
+(Decimal)
+FALLING
+EDGE
+LOCATION
+(Decimal)
+DURATION
+(μs)
+RISING EDGE
+(Hex)
+FALLING
+EDGE
+(Hex)
+REGISTER
+ADDRESS
+(Hex)
+REGISTER
+VALUE
+(Hex)
+IRST 1 5 1.6 01 05 40 0105
+SHR 6 40 13.6 06 28 42 0628
+SHS 41 254 85.2 29 FE 43 29FE
+LPF1 16 41 9.6 10 29 46 1029
+LPF2 229 255 10.0 E5 FF 47 E5FF
+8.3.5 Timing Profile Selection
+Profile TPα is selected because a single timing profile is sufficient. In this case, the registers are configured as
+follows:
+• TP_SEL = 1, apply a SYNC pulse
+• Program the TG values derived from Table 53
+• TP_SEL = 0, apply a SYNC pulse
+
+TI Confidential — NDA Restrictions
+78
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+9 Power Supply Recommendations
+The power-supply design can affect noise and crosstalk performance of the system. Consider the following
+recommendations when designing the power supply for an AFE2256GR-based system.
+• Parameters such as thermal noise, low-frequency noise, PSRR, and load regulation must be considered
+when selecting the low-dropout regulator (LDO). Using a low-noise LDO (such as the TPS7A8300) is
+recommended for AVDD1 and AVDD2.
+• In order to improve the system power efficiency, a dc-dc converter can be used to drive the LDO. In this case,
+the dc-dc converter clock frequency must be an integral multiple of the line rate, otherwise increased noise
+can result in the image. When selecting the LDO, consider the LDO PSRR at the dc-dc converter switching
+frequency.
+• Using LDOs with an output enable and power-good feature is preferable. Use these features for power-supply
+sequencing.
+10 Layout
+10.1 Layout Guidelines
+This section discusses the general guidelines when designing the system board.
+• The AFE2256GR has two EXTC_I pins. These pins are shorted inside the device and, therefore, board layout
+can be simplified by connecting only the one EXTC_I (nearer to EXTC_O) to the EXTC_O pin. EXTC_I must
+be directly connected to the EXTC_O pin, which is the output of the internal low-noise buffer.
+• Each EXTC_I pin must be bypassed to ground by low-ESR ceramic capacitors. Parallel combinations of
+22-μF, 1-μF, and 0.1-μF capacitors near each EXTC_I pin is recommended. Use X5 or X7 capacitors.
+• Switching signal traces or vias must not be present near the reference routing. Even COMP signals must be
+avoided near VREF because COMP signals contain switching currents.
+• Voltage references and digital-to-analog converters (DACs) must be placed away from digital circuits. Placing
+these references and DACs in the region of the board with no switching activity is recommended.
+• Provide good ground connectivity by using ground planes on multiple layers. Connect all ground planes using
+multiple stitching vias; especially where vias on signal traces are placed.
+• Each ground pin must directly connect to the AGND (analog ground) plane. Do not share ground vias of
+different ground pins.
+• Provide a 1-μF bypass capacitor to ground for each supply pin.
+• LVDS signals must be routed differentially with a differential impedance of 100 Ω.
+• Wherever digital signal traces change the plane, provide a ground via near the signal via to provide the
+shortest path for return currents.
+• Connecting VTESTC to a test point is recommended and can be used during debug and for future purposes.
+
+TI Confidential — NDA Restrictions
+79
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+10.2 Layout Examples
+10.2.1 AFE2256GRTDU
+Figure 82. Top Layer
+
+TI Confidential — NDA Restrictions
+80
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Layout Examples (continued)
+Figure 83. Bottom Layer
+
+TI Confidential — NDA Restrictions
+81
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Layout Examples (continued)
+10.2.2 AFE2256GRTDR
+Figure 84. Top Layer
+
+TI Confidential — NDA Restrictions
+82
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+Layout Examples (continued)
+Figure 85. Bottom Layer
+
+TI Confidential — NDA Restrictions
+83
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+11 Device and Documentation Support
+11.1 Documentation Support
+11.1.1 Related Documentation
+For related documentation see the following:
+• TPS7A8300 2-A, 6-μVRMS, RF, LDO Voltage Regulator
+• AFE2256TDU, AFE2256TDR 256-Channel, Analog Front-End for Digital X-Ray, Flat-Panel Detectors
+11.2 Trademarks
+All trademarks are the property of their respective owners.
+11.3 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled with
+appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may be more
+susceptible to damage because very small parametric changes could cause the device not to meet its published specifications.
+11.4 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+TI Confidential — NDA Restrictions
+84 Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+(1) The marketing status values are defined as follows:
+ACTIVE: Product device recommended for new designs.
+LIFEBUY: TI has announced that the device will be discontinued, and a lifetime-buy period is in effect.
+NRND: Not recommended for new designs. Device is in production to support existing customers, but TI does not recommend using this part in a new design.
+PRE_PROD Unannounced device, not in production, not available for mass market, nor on the web, samples not available.
+PREVIEW: Device has been announced but is not in production. Samples may or may not be available.
+OBSOLETE: TI has discontinued the production of the device.
+space
+(2) Eco Plan - The planned eco-friendly classification: Pb-Free (RoHS), Pb-Free (RoHS Exempt), or Green (RoHS & no Sb/Br) - please check http://www.ti.com/productcontent for the latest
+availability information and additional product content details.
+TBD: The Pb-Free/Green conversion plan has not been defined.
+Pb-Free (RoHS): TI's terms "Lead-Free" or "Pb-Free" mean semiconductor products that are compatible with the current RoHS requirements for all 6 substances, including the
+requirement that lead not exceed 0.1% by weight in homogeneous materials. Where designed to be soldered at high temperatures, TI Pb-Free products are suitable for use in specified
+lead-free processes.
+Pb-Free (RoHS Exempt): This component has a RoHS exemption for either 1) lead-based flip-chip solder bumps used between the die and package, or 2) lead-based die adhesive used
+between the die and leadframe. The component is otherwise considered Pb-Free (RoHS compatible) as defined above.
+Green (RoHS & no Sb/Br): TI defines "Green" to mean Pb-Free (RoHS compatible), and free of Bromine (Br) and Antimony (Sb) based flame retardants (Br or Sb do not exceed 0.1% by
+weight in homogeneous material)
+space
+(3) Lead/Ball Finish - Orderable Devices may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead/Ball Finish values may wrap to two lines if the
+finish value exceeds the maximum column width.
+space
+(4) MSL, Peak Temp. -- The Moisture Sensitivity Level rating according to the JEDEC industry standard classifications, and peak solder temperature.
+space
+(5) There may be additional marking, which relates to the logo, the lot trace code information, or the environmental category on the device
+space
+(6) Multiple Device markings will be inside parentheses. Only on Device Marking contained in parentheses and separated by a "~" will appear on a device. If a line is indented then it is a
+continuation of the previous line and the two combined represent the entire Device Marking for that device.
+Important Information and Disclaimer: The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief
+on information provided by third parties, and makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third
+parties. TI has taken and continues to take reasonable steps to provide representative and accurate information but may not have conducted destructive testing or chemical analysis on
+incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers and other limited information may not be available for
+release.
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+12.1 Package Option Addendum
+12.1.1 Packaging Information
+Orderable Device Status (1) Package
+Type
+Package
+Drawing Pins Package
+Qty Eco Plan (2) Lead/Ball
+Finish(3) MSL Peak Temp (4) Op Temp (°C) Device Marking(5) (6)
+AFE2256GRTDU ACTIVE COF TDU 320 35 Green (RoHS
+& no Sb/Br) Au Level-1-260C-UNLIM 0 to 85 AFE2256GR
+AFE2256GRTDR ACTIVE COF TDR 325 32 Green (RoHS
+& no Sb/Br) Au Level-1-260C-UNLIM 0 to 85 AFE2256GR
+
+TRACE PITCH
+1.5 MAX
+TYP
+CUT LINE
+28 0.05
+CUT LINE
+38 0.05
+2.45 0.2
+CUT LINE
+25.5 0.05
+4.919 0.2 5.886 0.05
+9.159 0.05
+(6.89)
+(17.5)
+(0.1) TYP
+TRACE PITCH
+(0.05) TYP
+TRACE WIDTH
+(0.25) TYP
+TRACE WIDTH
+0.076 MAX 0.8 MAX
+2X (0.219) (0.5)
+2X
+(0.536)
+(0.05) TYP
+2X (1.244)
+2X (0.29)
+2X (0.37)
+2X
+(0.256)
+(1.578)
+4221694/B 10/2016
+COF - 0.8 mm max height TDU0320A
+CHIP ON FLEX
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. Flip chip application only.
+PP1
+PP50
+PG1
+PG270
+DIE
+SIDE
+GLASS
+PCB
+SIDE
+SYMM
+COPPER SIDE UP
+SEE DETAIL A
+SEE DETAIL B
+DIE SOLDER RESIST
+COPPER
+STIFFENER POLYIMIDE
+NOT TO SCALE
+SIDE VIEW
+DETAIL A
+DETAIL B
+A 15.000
+B 10.000
+PACKAGE OUTLINE
+(0.5) TYP
+TI Confidential — NDA Restrictions
+85
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+
+www.ti.com
+PACKAGE OUTLINE
+1.5 MAX
+TYP
+(0.255)
+48.35 0.05
+17.33
+0.05
+CUT LINE
+16.8
+0.05
+CUT LINE
+21.5
+0.05
+CUT LINE
+2.5 0.2 8.055 0.05
+(6.89)
+(17.5)
+3.5 0.05 (3.543)
+0.076
+MAX
+0.8 MAX
+20.5 MAX
+9.89 MAX
+0.2 0.03
+Cu, PI & Stiffener
+3.143 0.05
+24.25 0.05
+1.935 0.2
+(0.02) TYP
+(0.1)
+(0.15)
+(0.04) (0.05) TYP
+( 0.4)
+(0.05)
+(0.03) TYP
+(0.03) TYP
+TRACE WIDTH
+(0.06) TYP
+TRACE PITCH
+(0.135)
+(0.685)
+(0.35)
+(0.2)
+4223601/A 04/2017
+COF - 0.8 mm max height TDR0325A
+CHIP ON FLEX
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. Flip chip application only.
+CUT LINE
+PG1
+PG270
+PP1
+PP55
+SYMM DIE
+PCB
+COPPER SIDE UP
+SIDE
+SIDE
+GLASS
+SEE
+DETAIL C SEE DETAIL A
+POTTING AREA
+SEE DETAIL B
+SOLDER RESIST
+COPPER
+STIFFENER POLYIMIDE (PI)
+DIE
+NOT TO SCALE
+2 PLACES
+TYPICAL
+A-A
+A SCALE 30.000
+BSCALE 30.000
+SIDE VIEW
+DETAIL A
+DETAIL B
+SCALE 0.550
+SEE
+DETAIL C
+TI Confidential — NDA Restrictions
+86
+AFE2256GRTDU, AFE2256GRTDR
+SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018 www.ti.com
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+
+www.ti.com
+PACKAGE OUTLINE
+4X R0.2 0.15
+0.17 0.15
+0.27 0.15
+0.89 0.15
+0.99 0.15
+1.6 0.15
+1.8 0.15
+(0.3)
+(0.08)
+(0.6)
+(0.3)
+TRACE PITCH
+(0.2)
+(0.1)
+(0.2) (0.61)
+(0.1) (0.62)
+(0.4)
+(0.3)
+(0.35)
+(0.11)
+(0.1)
+COF - 0.8 mm max height TDR0325A
+CHIP ON FLEX
+4223601/A 04/2017
+TYPICAL
+DETAIL C
+TI Confidential — NDA Restrictions
+87
+AFE2256GRTDU, AFE2256GRTDR
+www.ti.com SBAS755B – NOVEMBER 2016 – REVISED JANUARY 2018
+Submit Documentation Feedback Copyright © 2016–2018, Texas Instruments Incorporated
+
+IMPORTANT NOTICE
+Texas Instruments Incorporated (TI) reserves the right to make corrections, enhancements, improvements and other changes to its
+semiconductor products and services per JESD46, latest issue, and to discontinue any product or service per JESD48, latest issue. Buyers
+should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+TI’s published terms of sale for semiconductor products (http://www.ti.com/sc/docs/stdterms.htm) apply to the sale of packaged integrated
+circuit products that TI has qualified and released to market. Additional terms may apply to the use or sale of other types of TI products and
+services.
+Reproduction of significant portions of TI information in TI data sheets is permissible only if reproduction is without alteration and is
+accompanied by all associated warranties, conditions, limitations, and notices. TI is not responsible or liable for such reproduced
+documentation. Information of third parties may be subject to additional restrictions. Resale of TI products or services with statements
+different from or beyond the parameters stated by TI for that product or service voids all express and any implied warranties for the
+associated TI product or service and is an unfair and deceptive business practice. TI is not responsible or liable for any such statements.
+Buyers and others who are developing systems that incorporate TI products (collectively, “Designers”) understand and agree that Designers
+remain responsible for using their independent analysis, evaluation and judgment in designing their applications and that Designers have
+full and exclusive responsibility to assure the safety of Designers' applications and compliance of their applications (and of all TI products
+used in or for Designers’ applications) with all applicable regulations, laws and other applicable requirements. Designer represents that, with
+respect to their applications, Designer has all the necessary expertise to create and implement safeguards that (1) anticipate dangerous
+
+consequences of failures, (2) monitor failures and their consequences, and (3) lessen the likelihood of failures that might cause harm and
+take appropriate actions. Designer agrees that prior to using or distributing any applications that include TI products, Designer will
+thoroughly test such applications and the functionality of such TI products as used in such applications.
+TI’s provision of technical, application or other design advice, quality characterization, reliability data or other services or information,
+including, but not limited to, reference designs and materials relating to evaluation modules, (collectively, “TI Resources”) are intended to
+assist designers who are developing applications that incorporate TI products; by downloading, accessing or using TI Resources in any
+way, Designer (individually or, if Designer is acting on behalf of a company, Designer’s company) agrees to use any particular TI Resource
+solely for this purpose and subject to the terms of this Notice.
+TI’s provision of TI Resources does not expand or otherwise alter TI’s applicable published warranties or warranty disclaimers for TI
+products, and no additional obligations or liabilities arise from TI providing such TI Resources. TI reserves the right to make corrections,
+enhancements, improvements and other changes to its TI Resources. TI has not conducted any testing other than that specifically
+described in the published documentation for a particular TI Resource.
+Designer is authorized to use, copy and modify any individual TI Resource only in connection with the development of applications that
+include the TI product(s) identified in such TI Resource. NO OTHER LICENSE, EXPRESS OR IMPLIED, BY ESTOPPEL OR OTHERWISE
+TO ANY OTHER TI INTELLECTUAL PROPERTY RIGHT, AND NO LICENSE TO ANY TECHNOLOGY OR INTELLECTUAL PROPERTY
+RIGHT OF TI OR ANY THIRD PARTY IS GRANTED HEREIN, including but not limited to any patent right, copyright, mask work right, or
+other intellectual property right relating to any combination, machine, or process in which TI products or services are used. Information
+regarding or referencing third-party products or services does not constitute a license to use such products or services, or a warranty or
+endorsement thereof. Use of TI Resources may require a license from a third party under the patents or other intellectual property of the
+third party, or a license from TI under the patents or other intellectual property of TI.
+TI RESOURCES ARE PROVIDED “AS IS” AND WITH ALL FAULTS. TI DISCLAIMS ALL OTHER WARRANTIES OR
+REPRESENTATIONS, EXPRESS OR IMPLIED, REGARDING RESOURCES OR USE THEREOF, INCLUDING BUT NOT LIMITED TO
+ACCURACY OR COMPLETENESS, TITLE, ANY EPIDEMIC FAILURE WARRANTY AND ANY IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT OF ANY THIRD PARTY INTELLECTUAL
+PROPERTY RIGHTS. TI SHALL NOT BE LIABLE FOR AND SHALL NOT DEFEND OR INDEMNIFY DESIGNER AGAINST ANY CLAIM,
+INCLUDING BUT NOT LIMITED TO ANY INFRINGEMENT CLAIM THAT RELATES TO OR IS BASED ON ANY COMBINATION OF
+PRODUCTS EVEN IF DESCRIBED IN TI RESOURCES OR OTHERWISE. IN NO EVENT SHALL TI BE LIABLE FOR ANY ACTUAL,
+DIRECT, SPECIAL, COLLATERAL, INDIRECT, PUNITIVE, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES IN
+CONNECTION WITH OR ARISING OUT OF TI RESOURCES OR USE THEREOF, AND REGARDLESS OF WHETHER TI HAS BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+Unless TI has explicitly designated an individual product as meeting the requirements of a particular industry standard (e.g., ISO/TS 16949
+and ISO 26262), TI is not responsible for any failure to meet such industry standard requirements.
+Where TI specifically promotes products as facilitating functional safety or as compliant with industry functional safety standards, such
+products are intended to help enable customers to design and create their own applications that meet applicable functional safety standards
+and requirements. Using products in an application does not by itself establish any safety features in the application. Designers must
+ensure compliance with safety-related requirements and standards applicable to their applications. Designer may not use any TI products in
+life-critical medical equipment unless authorized officers of the parties have executed a special contract specifically governing such use.
+Life-critical medical equipment is medical equipment where failure of such equipment would cause serious bodily injury or death (e.g., life
+support, pacemakers, defibrillators, heart pumps, neurostimulators, and implantables). Such equipment includes, without limitation, all
+medical devices identified by the U.S. Food and Drug Administration as Class III devices and equivalent classifications outside the U.S.
+TI may expressly designate certain products as completing a particular qualification (e.g., Q100, Military Grade, or Enhanced Product).
+Designers agree that it has the necessary expertise to select the product with the appropriate qualification designation for their applications
+and that proper product selection is at Designers’ own risk. Designers are solely responsible for compliance with all legal and regulatory
+requirements in connection with such selection.
+Designer will fully indemnify TI and its representatives against any damages, costs, losses, and/or liabilities arising out of Designer’s non-
+compliance with the terms and provisions of this Notice.
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2018, Texas Instruments Incorporated

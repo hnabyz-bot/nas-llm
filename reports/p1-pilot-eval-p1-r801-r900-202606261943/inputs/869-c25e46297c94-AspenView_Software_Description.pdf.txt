@@ -1,0 +1,291 @@
+queueId: ingest-1781569954417-15pm
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenView Software Description.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/19884c739c8f/AspenView Software Description__19884c739c8f_combined.txt
+canonicalGroupId: c25e46297c94
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 869
+
+SOURCE_TEXT
+AspenView Document 3/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1. Software Description
+1.1 Device Description
+The AspenView software is designed for use by radiologists and radiology technicians for
+the acquisition of digital x-ray images. It interfaces with 3rd party digital x-ray detectors
+manufacturer supplied software for the acquisition and storage of digital x-ray images. The
+AspenView software then provides a user interface for the viewing, annotating, and other
+workstation functions. AspenView includes the ability to receive patient information and
+send x-ray images to remote destinations using the DICOM 3.0 protocol.
+AspenView software consists of some program module that is developed by ourselves such
+as Worklist, Decision Board(Exam), Browser (Worklist), Decision Board(Viewer), Database and
+DICOM module and that is developed by some manufacture such as the detector, the
+generator and etc.
+So the AspenView software is validated at our program module mentioned above only. If
+someone wants to be validated manufacture’s s/w, please refer to another document
+provided by manufacturer.
+
+AspenView Document 4/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1) Main Module
+Main Module have control of each modules for AspenView
+2) Worklist Module
+Register the patient information with Body part and projection that will be taken some
+image from the detector.
+3) Exam Module
+Exam module communicate to some detector to get some raw image.
+And Exam module assist image viewing and is including the image processing.
+4) Browser & Viewer Module
+Search for Patient images from Local database and view the searched patient’s images.
+And also user can make some image processed using the image processing.
+5) Database Module
+Save and query the patient information from Database for Worklist and Browser
+6) DICOM Module
+Acquired images is print out using Print Management Service Class and send to some
+PACS server using Storage Service Class.
+1.2 Software Architecture Design
+The software architecture consists some modules and each module functions
+independently. Main Module it into a software unit.
+1) AspenView Main Module
+MVVM is the center of the software architecture. MVVM streamlines the software’s
+architecture, enhancing both modularity and maintainability. Also fo-dicom library is
+used for DICOM.
+
+AspenView Document 5/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+2) Image Processing
+Provides high quality x-ray images at even higher speeds. Various preset parameters
+are optimized for each shooting area.
+3) Detector
+Library to communicate with Detector.
+4) Generator
+Library to communicate with Generator.
+5) S/W Key License
+Library to license for AspenView
+6) Fo-dicom
+Fo-dicom is an open-source project representing a combination of DICOM libraries
+for .NET, .NET Core, Universal Windows Platform (UWP), and Xamarin.
+7) Database
+Database Module stores patient’s data by the date it is created and the state of the
+images acquired from the Modality device.
+8) MWL SCU
+Search patients to it through DICOM protocol from MWL
+9) Storage SCU
+Send images to it through DICOM protocol for image storage.
+10) Printer SCU
+Send images to it through DICOM protocol for DICOM Printer
+
+AspenView Document 6/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.3 Security Architecture Design
+1) CreateAesService Module
+The AES key and IV values are generated when AspenView is first executed and are
+stored in the WorkList.db. The key and IV are generated using .NET's
+System.Security.Cryptography.Aes and
+System.Security.Cryptography.RandomNumberGenerator
+2) EncryptDicomParameter
+This module encrypts DICOM tags. It encrypts the following tags using AES256:
+InstitutionName, StudyDescription, ReferringPhysiciansName, RequestingPhysician,
+ReasonForTheRequestedProcedure, ScheduledProcedureStepDescription,
+InstitutionalDepartmentName, PatientsName, PatientID, PatientsBirthDate,
+PatientsSex, PatientsAge, PatientsSize, PatientsWeight, OperatorsName, and
+ResponsiblePerson. The encryption is performed using .NET's
+System.Security.Cryptography.Aes class.Detector
+3) Decrypt DCM File
+This module decrypts the tags contained in a DCM file. It first opens the DCM file
+using the fo-dicom module, decrypts each tag, and then saves the result.
+4) CommonUtils.GetCryptedString
+This function is used for password encryption. It returns a hash value of the input
+text, utilizing .NET's System.Security.Cryptography.
+5) DecryptData, EncryptData
+
+AspenView Document 7/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+Using the AES key and IV values, an Encryptor and Decryptor are created. The
+encryption and decryption processes are performed using .NET's
+System.IO.MemoryStream, System.Security.Cryptography.CryptoStream, and
+System.Security.Cryptography.CryptoStreamMode.
+6) NotiBar
+Screen saver function setting and unused session termination. The user will be
+automatically logged out if no mouse or keyboard events occur for a certain period
+of time (10 minutes).
+1.4 Development Methods and Life Cycle Model
+Software development process follows classic methodology of Waterfall Life Cycle Model, as
+illustrated in the following chart.
+1) Definition
+- Analysis
+The scope of software development is defined and analyzed. The activity
+consists of establishing requirements and work scope before the design phase.
+The requirements are documented for each level of the software-specific project
+and design notes. When enough of the requirements are gathered, and analyzed
+for the iteration of the prototype, the activities shift into the design phase.
+- Planning
+
+AspenView Document 8/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+Specific step by step activities for projected work scopes are planned. The tasks,
+responsibilities, resources, and other aspects pertinent to the specific
+development project are outlined.
+2) Design
+The design phase addresses four functional attributes of the software: data structure,
+software architecture, functionality, and interface characterization. Each attribute is
+designed and documented.
+3) Implementation
+The implementation phase converts the design into a machine language. The
+software source code is created in accordance with coding conventions. Design
+reviews/inspections are held to verify the consistency of the code created with
+respect to the company standards.
+4) Qualification
+The qualification phase verifies that the design and code implemented meet the
+original requirements. Testing ensures that defined inputs will produce intended
+results that coincide with required outputs.
+5) Maintenance
+Once the software is released, the only software changes allowed are to fix Identified
+defects in the code or to support approved enhancements. All identified system
+software defects are recorded on System Discrepancy Reports (SDR) forms or
+submitted electronically to the Modification Request (MR) database
+1.5 Configuration management
+1) Revision management
+Developer management maintenance 3. (Example : Ver 1.0.0.0)
+2) Build management
+Build Management Tool supports functions such as software source management,
+change confirmation, and restoration as well as general build, and refers to a tool
+that uses the footprint technique.
+3) Release management
+Release management refers to the task of creating a distribution file by gathering all
+the components included in the software before distributing the software
+4) Changes management
+A change point request refers to a series of processes in which a change point
+request is received from a customer, a related department, or a company when it is
+
+AspenView Document 9/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+necessary to change the production, reliability, or function of a change point is
+notified.
+5) Distribution management
+Distribute a AspenView installation file (in the form of a Zip compressed file with a
+password) in the Google Drive Cloud.
+6) Installation management
+Managing the deployment process of software to ensure smooth installation,
+compatibility, and user-friendly setup on target systems.
+1.6 Intended use (Medical Indication)
+AspenView is indicated for use in general radiographic images of human anatomy. It is
+intended to replace radiographic film/screen systems in all general-purpose diagnostic
+procedures (excluding fluoroscopic, angiographic, and mammographic applications). The
+main features of this software are controlling and interfacing the detector, controlling the x-
+ray generator acquisition settings, storing acquired images, data management, image
+processing and image stitching.
+For proper usage and safety purposes, please ensure that only
+legally qualified person (Doctor, Radiologi
+st, Medical Treatment
+X-RAY Technician) can use this product after fully familiarize with
+contents of the user manual.
+This medical device can’t use alone. So this product need to
+connect with X-ray detector. Sometimes, this software operates
+with exposure condition of X-ray Generator system.
+This product is a medical device, and it should only be used as
+digital X-ray radiography console software for X-ray radiography
+in hospital environment.
+.
+1.7 Intended Patient Profile
+a) Age : all ages
+b) Sex : male or female
+
+AspenView Document 10/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.8 Intended Part of the Body
+a) head
+b) chest
+c) spine
+d) abdomen
+e) pelvis
+f) arm and leg
+g) hand and foot
+1.9 Intended User Profile
+a) Age : Over 20 years old
+b) Education : Radiology
+c) Knowledge : Human anatomy and operation of X-ray machine
+d) Permissible impairments : not allowed
+e) Sex : male or female
+f) No mental illness
+
+AspenView Document 11/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.10 Intended Conditions of Use (Application)
+a) Environment :
+- General :
+Hospital use only
+- Conditions of Visibility :
+Software depends on the followings conditions:
+• Viewing Monitor’s resolution : minimum 1920 x 1080
+• Operating Windows System : Windows 10
+- Physical:
+Software depends on the PC’s physical environment
+b) Frequency of use
+- Not limited if the HDD driver in PC is allowed
+- Software depends on the installed system.
+c) Mobility
+- The software depends on the PC specifications, which means it is compatible with
+desktops, laptops, and tablet PCs if the required specifications are met.
+
+AspenView Document 12/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.11 Operating principle (how to achieve the intended
+purpose)
+A radiograph is an X-ray image obtained by placing a part of the patient in front of an X-
+ray detector and then illuminating it with a short X-ray pulse. To take an X-ray image, the
+operator sets the patient in front of the detector and sets the parameter values of the high
+voltage generator to control the intensity of X-ray for each body part. The detector changes
+the X-rays coming through the part of the patient to digital signals and makes digital
+images.
+An Acquisition program is to acquire, process, storage and view the taken X-ray image by
+detector or Image plate. After exposure and readout, the raw imaging data must be sent
+and processed for display on the computer. Image processing is one of the key features of
+digital radiography, greatly influencing the way the image appears to the radiologist.
+Image processing is used to improve image quality by reducing noise, removing technical
+artifacts, and optimizing contrast for viewing.
+1.12 Limit of Use
+The device should be operated by the personnel who are licensed and certified by the
+appropriate governing authority.
+
+AspenView Document 13/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.13 Role of Software
+Role of AspenView is as following picture.
+Operating Software: AspenView (Windows application)
+• It is an operating software based on the Digital Radiography system and is installed on the
+workstation
+• Register patient information & body parts
+• Image acquisition
+• High quality image (Image processing and enhancement)
+• Edit and Save Images
+• Patient list and information query form OCS software
+• Send Images to PACS or DICOM Print
+(Compatible with DICOM 3.0)
+
+AspenView Document 14/37
+Doc. Name: AspenView/Doc. No.: AI-AspenView-SVR-001
+Initiate date: 2022.09.06 /Revision: 1
+1.14 Summary
+① Product Name: AspenView
+② Software Name & Version
+• Operating Software: AspenView Ver 1.0
+③ Manufacturer: Aspen Imaging Healthcare Inc
+※ AspenView is stand alone software, but to performance intended use should be used with
+X-ray devices like the equivalent test environment.
+※ And we tested main functions of AspenView. It is stated in Test Report (AI-AspenView-TR)
+※ We will update the Software Validation Report when we have major changes, which is to
+change SRS (Software Requirement Specification). For minor changes (which are to change
+SDS (Software Design Specification) and Test case), we won’t updated the Software
+Validation Report.

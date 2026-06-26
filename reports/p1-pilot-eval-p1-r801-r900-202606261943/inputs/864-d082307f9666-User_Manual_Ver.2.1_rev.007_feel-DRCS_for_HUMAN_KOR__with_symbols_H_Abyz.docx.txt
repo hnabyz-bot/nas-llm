@@ -1,0 +1,1918 @@
+queueId: ingest-1781569954369-cs
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/2. Infou 콘솔 추가 기술문서/console 프로그램 적용 제품 인증 자료/임포유 console 프로그램  기술문서/KFDA_기술문서/User Manual Ver.2.1_rev.007_feel-DRCS_for HUMAN(KOR)_with symbols_H&Abyz.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/0b9263db137f/User Manual Ver.2.1_rev.007_feel-DRCS_for HUMAN(KOR)_with symbols_H&Abyz__0b9263db137f_combined.txt
+canonicalGroupId: d082307f9666
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 864
+
+SOURCE_TEXT
+DR Console Software
+
+User Manual
+
+(for HUMAN)
+
+feel-DRCS ver.2
+
+사용자 매뉴얼
+
+DR Console Software
+
+Installation Service Manual
+
+(for PIXX1717)
+
+feel-DRCS ver.2
+
+DR Console Software
+
+feel-DRCS
+
+User Manual Version : 2.1
+
+Revision : 007
+
+Date : 2018.09.20
+
+목차
+
+1. Introduction 6
+
+2. Purpose 7
+
+2-1. 사용용도 8
+
+2-2. 심볼 라벨 8
+
+3. System requirements 9
+
+3-1. Workstation 9
+
+3-2. Monitor 9
+
+3-3. 연결가능한 디텍터 10
+
+4. Software 설치 및 제거 11
+
+5. Software 구성 12
+
+5-1. Worklist 12
+
+5-2. Browser 13
+
+5-3. Review 14
+
+5-4. Config 15
+
+5-5. Option Mode 16
+
+6. Operation feel-DRCS 19
+
+6-1. Login 19
+
+6-2. Worklist 20
+
+6-2-1. Main Menu 20
+
+6-2-2. Search option 21
+
+6-2-3. Refresh condition 21
+
+6-2-4. New SET 22
+
+6-2-5. List 22
+
+6-2-6. Manual Input 23
+
+6-3. Browser 26
+
+6-3-2. Patient List 30
+
+6-3-3. Study List 31
+
+6-3-4. Thumbnail 32
+
+6-3-5. Command Button 35
+
+6-4. Review 39
+
+6-4-1. Stand & Table 41
+
+6-4-2. Generator 41
+
+① Examined Part 42
+
+② View Position 43
+
+③ Image Parameter 45
+
+6-4-3. Process 47
+
+6-4-4. Detector Status 51
+
+6-4-5. Study 51
+
+6-4-6. Re exposure 52
+
+6-4-7. R, L, MARK, TEXT 53
+
+6-4-8. TOOLS ICON 54
+
+6-4-9. TOOLS ICON at Review Mode 64
+
+6-4-10. TOOLS Menu 65
+
+6-4-11. Pop-up Menu 71
+
+6-5. Configuration 73
+
+6-5-1. Default Setting 73
+
+6-5-2. Storage Setting 74
+
+6-5-3. Annotation Management 75
+
+6-5-4. Worklist Item Management 76
+
+6-5-5. DICOM MWL(Modality Worklist Server Setting ) 77
+
+6-5-6. DICOM Storage 78
+
+6-5-7. DICOM Print 79
+
+7. Option software 및 function 81
+
+7-1. Viewsub 81
+
+7-2. feelVIEW 83
+
+7-2-1. Menu 84
+
+8. Trouble shooting 88
+
+8-1. Dicom Communication 88
+
+8-2. Image Processing 89
+
+8-3. Crash 와 Error Message 발생 89
+
+Appendix I : Simple Workflow 92
+
+Appendix II : DICOM Option 93
+
+Appendix III : Calibration for Shutter Size 97
+
+Appendix IV : Code Matching (Add Code) 101
+
+Appendix V : Image Rotation 103
+
+Appendix VI : Excel Export 104
+
+Appendix VII : Acquisition of phantom image 105
+
+Appendix VIII : Print Composure 106
+
+Revision History 110
+
+Introduction
+
+feel-DRCS 는 imfoU 사의 Digital Radiography Control Software의 제품명 입니다.
+
+feel-DRCS는 flat-panel 또는 CCD 등의 DR detector로부터 영상 획득 및 임상적용을 위한 빠른 속도의 영상처리, 그리고 PACS 연동을 위한 DICOM 서비스를 제공하는 DR console 또는 DR control software 입니다.
+
+이 매뉴얼은 feel-DRCS 소프트웨어를 installation 및 operation 하기 위한 내용을 정리되어 있습니다.
+
+IMFOU CO.,LTD.
+
+#1105, Daerung PostTower7, 48, Digital-ro 33-gil, Guro-gu, Seoul, 08377. Korea.
+
+Purpose
+
+feel-DRCS 는 FS-MLW(Faster Specialized Multi Layered Wavelet) 기술을 기반하여, 각종 detector나 X-Ray Generator와 integrated 된 Operation Console System 소프트웨어입니다.
+
+feel-DRCS 는 절대적인 사용자 입장에서 개발된 제품으로, 다년간 임상사이트인 병원에서 디자인 되었으며, 서비스를 위한 DR 제조사들의 서비스 엔지니어들에 의해 완성된 제품입니다. 그러므로 쉽고, 간결하면서도 다양한 기능들이 포함된 최상의 User interface로 개발된 DR Console system입니다.
+
+feel-DRCS 는 feel-TK를 기반으로 내장되어 있기 때문에 보다 빠른 속도로 노이즈와 각종 artifact 제거되고, 보다 선명한 생체조직을 볼 수 있습니다. 그리고 독자적인 calibration 기능이 내장되어, 모두 종류의 detector에 대한 기본 calibration data(offset image and gain image)을 설정할 수 있습니다. 그리고 defect view를 제공하여 진행성 defect들을 처리할 수 있습니다.
+
+feel-DRCS 는 전세계적으로 판매되고 있는 각종 detector들에 대해서 이미 소프트웨어 검증 및 판매가 되어서 임상필드에서 사용되고 있습니다. DR제조사가 사용하고자 하는 detector를 손쉽게 설정에서 타입만 변경하면 바로 콘솔시스템의 소프트웨어로 사용이 가능합니다. 그리고 통합 DR 시스템인 X-ray 의 generator operation panel을 소프트웨어 내부에 integration 되어 있어, APR, AEC, Ready/Exposure등을 제어가 손쉽게 가능합니다.
+
+feel-DRCS 는 각종 X-ray 제너레이터와 연동이 되어, APR 기능 등을 지원하여, 하나의 콘솔 소프트웨어에서 기존의 Operation Panel의 역할을 같이 수행할 수 있게 하여 분리된 DR제품이 아닌 하나의 통합된 DR제품을 지원합니다.
+
+feel-DRCS 는 단순히 소프트웨어를 공급하는 것이 아니라, 다년간 경험했던 노하우를 DR 제조사에게 전달해 드리며, 동시에 컨설팅까지 같이 지원해 줌으로써 조력자(implement for you)의 역할을 다 할 것입니다.
+
+2-1. 사용용도
+
+Feel-DRCS는 방사선사 및 의사들이 일반 X선 영상을 획득하기 위한 용도로 사용된다.그래서 병원에서 근무하는 의사 및 방사선사외에는 사용할 수 없다. 또한 이 소프트웨어는 서비스 엔지니어에 의해서만 설치되고 방사선기사 및 의사에 의해서만 사용되어진다.
+
+For proper usage and safety purposes, please ensure that only legally qualified person (Doctor, Medical Treatment Radiological Technologist, Medical Treatment X-RAY Technologist) can use this product after fully familiarize with contents of user manual
+
+This medical device can’t use alone. So this product need to connect with X-ray detector. Sometimes, this software operates with exposure condition of X-ray Generator system.
+
+This product is a medical device, and it should only be used as digital X-ray radiography console software for X-ray radiography at corresponding hospitals.
+
+2-2. 심볼 라벨
+
+Symbols
+
+Descriptions
+
+Refer to operation or install manual
+
+Warning
+
+Caution
+
+Read Carefully
+
+Manufacture
+
+Date of manufacture
+
+System requirements
+
+Workstation
+
+Processor: Intel Core i3 이상(i5 이상 추천)
+
+RAM : 4GB RAM 이상(8GB 이상 추천)
+
+HDD: At least 40GB hard disk(가능하다면 7,200 RPM이상 속도의 제품). 데이터백업 및 안정성을 위하여 1개의 HDD를 논리적으로 파티션을 나눈 것이 아니라, 2개의 물리적으로 분리된 HDD를 장착하여 1st HDD: System and Software, 2 HDD: Image Data Storage용 사용할 것을 추천.
+
+Network Card : 10/100/1000Mbps Ethernet Network Card
+
+Video graphic adapter: 해상도는 최소한 1280 X 900 pixels이며 칼라 해상도는 True Color mode(no shard memory), DVI interface connector
+
+OS : Windows 7/8.1/10
+
+Monitor
+
+1600 X 1200 or 1920 X 1280 추천(최저 해상도 1280 X 900 이상)
+
+4 : 3 , 16 : 9, 16 : 10 비율 모두 지원
+
+High fidelity of grayscale and optimized luminance distribution
+
+만약 고휘도, 고해상도의 모니터를 사용하고자 한다면, Medical LCD Monitor(B/W or Color)를 선택하기로 추천함. 그리고 B/W 모니터를 선택하여도 현재 소프트웨어가 gray color 베이스에서 만들어져 있으므로 사용하는데 전혀 문제가 되지 않음.
+
+영상 QC를 위해서는 Medical Monitor에서 하기를 추천한다. 그 이유는 DR이기 때문에 촬영 후 Medical monitor에서 판독을 하는 이유로 같은 밝기에서의 영상 조절이 이루어져야 하기 때문이다. 그리고 대부분의 medical monitor들은 각 국가별 의학기준에 근거하여 제작되어 있으므로 사용에 대한 제약이 거의 없다.
+
+연결가능한 디텍터
+
+Detector
+
+Manufacture
+
+Model
+
+H&abyz
+
+HAD1717M
+
+The feel-DRCS support with upper lists. If you change other device excepted with compatible devices, the feel-DRCS can’t be operated. And If you want to change other device of compatible devices, you can’t change it without installation engineer of contacted company.
+
+In case of X-ray generator and other devices, you should have to check option of manufacture for interface with external PC.
+
+Software 설치 및 제거
+
+Note
+
+이전 Version의 S/W를 제거 후 새 PC에 S/W 설치 또는 재 설치를 원하면, Service 담당자에게 요청을 하시길 바랍니다.
+
+Refer “Installation Manual”
+
+Software 구성
+
+ Worklist
+
+DICOM Worklist를 통해 병원정보시스템(HIS)과 연동하여 환자 정보를 입력하거나 수동으로 환자 정보를 입력한다.
+
+ Browser
+
+획득하여 저장한 영상의 리스트를 보여준다.
+
+저장된 영상을 오픈하여 편집을 하거나 PACS 서버로 전송, Print로 출력할수 있다.
+
+Review
+
+Worklist에서 선택한 정보로 촬영을 하거나 Browser에서 저장되어 있는 영상을 불러와 편집할 수 있다. Generator를 제어하기 위해서 Generator탭과 영상을 편집하기 위해서 Process탭이 있다.
+
+Config
+
+소프트웨어에 대한 각종 설정을 할 수 있다.
+
+Option Mode
+
+장비의 구성에 따른 추가적인 view 모드들이 제공됩니다.Viewsub (Generator Console 지원 모니터 viewer)
+
+feelView(의료용 모니터를 추가하여 영상확인하고자 하는 경우)
+
+Operation feel-DRCS
+
+Login
+
+프로그램을 시작한다.
+
+바탕화면에서 feel-DRCS 단축아이콘을 더블 클릭하여 프로그램을 실행한다.
+
+Login 화면에 사용자 이름(혹은 아이디)과 비밀번호를 입력하고 OK 버튼을 선택하여 프로그램을 시작한다.
+
+로그인을 하고 나면 최초에 각종 연결된 detector 및 generator 와의 연결을 확인하여 화면의 각 부위의 연결된 color 값을 입력하게 된다.
+
+- Company 또는 회사이름, SUPERVISIOR등의 사용자 별에 따라 기능 권한이 차이가 나게 된다.
+
+- 일반사용자 및 일반관리자는 병원에서 사용가능 한 계정이며, SUPERVISIOR 계정은 A/S 엔지니어 사용자 계정임.
+
+- 로그인 후 장비의 연동에 따라 잠시 화면이 멈춰 있게 보일 수도 있다
+
+ Worklist
+
+설정된 Worklist서버에서 Study를 읽어와 화면에 표시한다. 수동으로 입력할 수도 있다.
+
+리스트에서 환자정보를 더블 클릭하거나 Exam버튼을 클릭하여 촬영모드로 이동할 수 있다.
+
+Main Menu
+
+EXAM : 아래 리스트에서 선택된 검사에 대해서 촬영모드로 전환
+
+DELETE : 선택된 촬영 검사 목록을 삭제한다.
+
+REFRESH : DICOM Worklist 가 지원되는 경우에 목록 갱신한다.
+
+ER : 응급촬영을 실시한다.
+
+CODE : RIS 코드를 추가 및 수정하기 위하여 code manager 콜한다
+
+ER 의 경우에 사전에 코드 매니저에서 ER001 special code를 사전에 설정해 두어야 아이디, 이름등 자동으로 생성되면서 촬영 모드로 넘어가게 된다. 이때 검사코드에 촬영부위, 촬영조건등을 기입해 놓은 것이 촬영설정이 되어지게 된다.
+
+Search option
+
+리스트에 표시되는 항목을 설정할 수 있다.
+
+환자정보(ID, Name, Access No.)를 이용하여 특정환자만 표시하거나 Schedule, Modality, State, D.O.B(Date Of Birth) 항목을 이용하여 특정 조건에 맞는 환자만 표시할 수 있다.
+
+Refresh condition
+
+워크리스트 서버에 연결이 가능할 경우 서버에서 환자정보를 가져올 주기를 설정할 수 있다.
+
+AUTO 가 보이게 되는 경우에는 우측에 설정된 시간 주기로 자동으로 리스트를 갱신하게 된다.
+
+만약 자동 리스트 갱신을 원하지 않는 경우에는 AUTO 버튼을 눌러서 MANUAL로 보이게 하면 원하는 경우에만 refresh 하게 된다. 이때 refresh 버튼은 6-2-1. 에 있는 REFRESH 버튼을 클릭하여 수동 목록 갱신을 할 수 있다.
+
+New SET
+
+ 각종 설정(Body part, View position, X-ray exposure condition, Image processing parameter, Annotation etc)을 수정하거나 추가하기 위하여 NewSET을 콜 한다. 사용법은 Generator 부분을 참조한다.
+
+List
+
+Option에 설정된 조건에 따라 해당되는 목록이 표시된다.
+
+Worklist 목록에서 마우스 오른쪽 버튼을 클릭하면 Pop-up 메뉴가 나타난다.
+
+Reserve (X) : 선택한 목록을 예외적인 이유로 인하여 상태를 촬영보류상태(Reserve)로 변경한다.
+
+Show : 선택한 검사 상황을 만족하는 검사 목록을 검색한다.
+
+All : 검색 조건 없이 모든 검사 목록을 표시한다.
+
+R : 검사하지 않은 목록을 검색한다.
+
+X : 촬영보류상태로 강제 변경시킨 목록을 검색한다.
+
+Y : 검사가 종료된 목록을 검색한다.
+
+Search Option : Worklist 목록 검색 조건을 표시하거나 숨긴다.
+
+Code Manager… : 선택한 검사의 RIS code에 대해 View position을 선택하는 Code Manager를 화면에 표시한다. 사용법은 “8. TOOLS의 code manager” 를 참조한다.
+
+Export to Excel : Exam list에 보여지는 환자 목록을 Excel 파일로 내보낸다. (이 기능이 올바르게 동작하기 위해선 feel-DRCS 폴더 내 WorkInfo.xls 파일이 존재해야 한다.)
+
+Phantom : Phantom를 촬영하기 위한 옵션으로 영상 획득 후 Parameter 적용이 되지 않는다. (관리자 SUPERVIOR, COMPANY 등 관리자 권한으로 로그인시 나타난다.)
+
+Manual Input
+
+임의로 환자정보를 입력하여 새로운 검사 정보를 만들수 있다.
+
+Manual Input
+
+ID, Name, ACC. No. 등을 입력한다. 최소한 ID, Name을 입력해야 검사를 실시할 수 있다. 만약 한번 이라도 촬영 정보를 입력한 경우가 있다면 해당 ID를 입력하고 Enter 키를 누르면 해당 ID의 나머지 환자정보가 자동으로 입력된다. 그리고 각 항목 이동 시 TAB 키 사용이 가능하다.
+
+Anatomy의 선택은 아래의 그림처럼 그림에서 선택할 수 있다.
+
+만약 사전에 자주 사용하는 검사목록을 special code에 입력된 상태라면 special code 옆의 코드를 선택하면 자동으로 study list에 검사목록이 확인된다.
+
+Worklist 창에서 Special code를 수정 또는 새로이 입력하고자 하는 경우에는 EXAM list 위에서 우측 버튼을 클릭하여 Code Manager 실행한다.
+
+D.O.B(Date of Birth,생년월일)를 입력하면 DICOM 파일에 생년월일과 나이가 입력된다.
+
+Date of Birth를 1900.01.01로 그대로 두면 DICOM 파일의 Patient’s Birth Date 필드(0010,0030)에 값이 입력되지 않는다.
+
+Pat Age(나이)를 입력하면 DICOM file에 나이만 입력된다.
+
+나이를 Y(연 단위), M(개월 단위), D(날짜 단위)로 지정할 수 있다.
+
+Description에 Study Description를 임의로 입력할 수 있다.
+
+Date of Birth(생년월일)과 Pat Age(나이)를 따로 입력하게 되면, DICOM 파일에 입력한 대로 저장이 되어 생년월일과 나이가 다르게 입력될 수 있으므로 주의해야 합니다.
+
+Study List
+
+ADD : 입력된 검사정보에 대하여 위의 좌측그림에 선택 한 검사목록에 추가한다.
+
+DEL : 잘못 추가된 검사목록을 삭제한다.
+
+UP/DOWN : 선택한 검사목록의 순서를 수정하고자 할 때 이 버튼을 이용하여 순서를 수정한다.
+
+OK : 입력한 검사 정보를 검사목록(EXAM List)에 추가한다.
+
+CANCLE : 입력한 검사정보를 초기화 한다.
+
+EXAM : 입력된 검사내용으로 바로 검사를 실시하기 위한 촬영모드로 전환한다.
+
+ Browser
+
+Browser 모드는 현재 저장되어 있는 영상데이타를 review 하기 위하여 영상을 선택하는 database viewer의 역할을 한다.
+
+이 모드에서는 다양한 방법으로 검색도 가능하면 추가촬영, image 순서 바꾸기, PACS 로 전송 또는 백업 및 restore 가 가능하기 때문에 영상관리에 매우 유용한 모드로 사용이 가능하다.
+
+Browser mode를 실행하면 항상 초기에는 image display 목록에서는 영상이 보이지 않는다. 그 이유는 Patient/study/series의 목록에서 선택이 되어 있지 않기 때문이다. 그러므로 항상 영상을 보이도록 하기 위해서는 보고자 하는 목록리스트에서 선택을 하게 되면 영상이 나타나게 된다
+
+Main Menu
+
+OEPN : 선택된 환자의 영상을 모두 오픈하여 보여준다.
+
+EXPOSURE : 선택된 검사에 대하여 다시 재촬영을 할 수 있도록 촬영모드로 전환한다.
+
+MERGE : 서로 다른 Study를 합칠 때 사용한다. 예를 들어 같은 환자의 영상중에 하나가 잘못되어 다른 환자로 입력되어 촬영된 경우, 또는 한 환자의 영상을 여러 개의 응급촬영을 한 경우에 merge 하기 위하여 사용한다.
+
+우선 합쳐지고자 하는 환자를 선택한다.
+
+그런 다음 MERGE 버튼을 클릭한다.(main menu에서)
+
+MERGE 버튼을 클릭하면 위와 같은 팝업창이 뜬다.
+
+조건 또는 전부 보이는 환자 목록 중에서 합치고자 하는 환자를 선택한다.
+
+선택된 환자의 아래에 표시된 검사 목록 중에서 합치고자 하는 목록을 선택한 후에 Merge 버튼을 눌러서 검사를 merge 한다.
+
+검사 목록(Study) 모두 merge된다.
+
+ANALYSIS : 최초 설치시에 Analysis가 체크된 이후부터 촬영된 영상들에 대한 전반적인 분석표를 볼 수 있다.
+
+위와 같이 화면이 디스플레이 된다. 위의 내용은 해당년도의 전체 내용을 월별로 표시하여 준다.
+
+우측의 해당년도를 선택 후에 TOTAL을 누르면 해당년도의 데이터를 보여주게 된다.
+
+기간을 설정하여 검색하고자 하는 경우에는 기간을 설정 후에 search 버튼을 눌러서 확인할 수 있다. 이때, 기간은 설정된 년도 기준으로 설정되도록 되어 있다.
+
+화면에 보이는 내용을 출력하고자 할때에는 아래와 같은 순서로 하여 출력 할 수 있다.
+
+눌러서 프린터를 선택한다.
+
+붉은 박스를 클릭하여 pre view 화면으로 간다.
+
+Preview 화면에서 아래와 같이 프린터 아이콘을 눌러서 출력 할 수 있다.
+
+Patient List
+
+환자 ID, 성명, 성별, 생년월일, 검사일자 등을 표시한다. 목록을 선택하면 아래 화면에 Study, Series, Image가 표시된다. 항목을 마우스 왼쪽 버튼으로 더블클릭 하면, 선택한 환자에 대한 모든 영상을 Review 화면에서 확인할 수 있다. 아래의 각 기능은 Company 이상의 권한만 사용가능 한다.
+
+ EDIT
+
+아래의 EDIT 버튼은 아래의 그림처럼 환자정보를 수정하기 위하여 사용된다. 이때 누가 수정한 것인지 확인하기 위하여 계정확인을 실시한다.
+
+ DEL
+
+아래의 DEL 버튼은 삭제하고자 하는 환자를 선택하여 삭제한다.
+
+이때에도 마찬가지로 계정확인을 실시한다.
+
+Study List
+
+Patient List에서 선택한 환자의 Study 목록을 보여준다.
+
+환자 ID, Study ID, Accession Number, Study Date & Time, Study Description 등을 표시하며, 목록 중 하나를 선택하면 아래 화면에 Series, Image가 표시된다.
+
+항목을 마우스 왼쪽 버튼으로 더블클릭 하면, 선택한 Study에 포함된 영상을 Review 화면에서 확인할 수 있다. 아래의 두가지 기능은 company 권한 이상만 사용 가능한다.
+
+ EDIT
+
+아래의 EDIT 버튼은 아래의 그림처럼 검사정보를 수정하기 위하여 사용된다. 이때 누가 수정한 것인지 확인하기 위하여 계정확인을 실시한다.
+
+ DEL
+
+아래의 DEL 버튼은 삭제하고자 하는 검사를 선택하여 삭제한다.
+
+이때에도 마찬가지로 계정확인을 실시한다.
+
+Thumbnail
+
+선택된 검사에 대한 thumbnail 영상을 보여주는 준다. 이때 마우스 왼쪽 버튼으로 클릭하게 되면 우측에 마우스로 클릭된 영상에 대한 pre view 이미지를 보여준다.
+
+Invert Sel.
+
+영상 목록에서 영상의 선택을 반전한다. 즉, 선택한 영상은 선택을 취소하고, 선택하지 않은 영상은 선택한다.
+
+Invert. Sel이 체크된 상태에서 환자 목록, Study 목록, Series 목록을 선택하면, 기본적으로 영상은 선택되지 않은 상태(노란색박스 표시가 없는 상태)로 표시된다.
+
+영상을 Open 했는데 정상적으로 이루어지지 않을 경우, Invert. Sel 항목을 확인하여 원하는 영상에 노란색박스 표시가 있는지 확인한다.
+
+OPEN : 선택된 영상들을 오픈한다.
+
+EXPAND : Thumbnail 영상의 숫자가 많아서 아래의 thumbnail 한줄로 모든 영상들을 확인할 수 없을 때 EXPAND 눌러서 아래 그림과 같이 전체를 볼 수 있게 해 준다.
+
+아래의 EDIT 버튼은 아래의 그림처럼 검사정보를 수정하기 위하여 사용된다. 이때 누가 수정한 것인지 확인하기 위하여 계정확인을 실시한다.
+
+ACCEPT 기능은 Reject 된 이미지를 다시 Accept 하고자 할 때 사용하게 된다. Reject 된 이미지를 선택한 후, ACCEPT 버튼이 active가 되면 클릭하여 accept 할 수 있다.
+
+Image 순서 바꾸기 : 촬영된 영상의 순서를 바꾸고자 할 때 사용된다. 사용 방법은 움직고자 하는 영상을 마우스로 클릭한 채 옮기고자 하는 영상의 앞쪽에 놓고 클릭을 해제한다(drag & drop)
+
+메세지를 확인한 후 클릭한다.
+
+영상 순서 바꾸기 기능은 동일한 Series 내에서만 가능하기 때문에 항상 사전에 한 개의 series 를 선택한 후에 선택된series시리즈내에서 영상의 순서를 변경해야 한다.
+
+Expand를 하지 않은 상태에서의 thumbnail 창에서도 가능하다.
+
+Command Button
+
+Send
+
+영상 목록에서 선택한 영상(노란색박스표시가 된 영상)을 우측의 선택된 PACS 서버 전송한다.
+
+(PACS 서버에 대한 설정은 Configuration에서 PACS 항목을 참고)
+
+Print
+
+영상 목록에서 선택한 영상(노란색박스표시가 된 영상)을 우측의 선택된 Print로 출력한다.( Appendix III 를 참조한다.)
+
+File Export
+
+선택한 영상을 일반 그림 파일로 저장한다. BMP, JPG, PNG, DICOM 등으로 저장할 수 있다. (Config 에서 설정한 환자정보가 overlay 된다.)
+
+- File name은 PatId_StuId_filename으로 저장 된다.
+
+- 저장 시 동일한 이름의 파일이 있으면 File name 뒤에 _1, _2, … 순서로 번호가 붙여 진다.
+
+- Folder name칸에 내용이 있으면 현재 경로에 입력한 Folder name 폴더를 만들고 만들어진 폴더 안에 저장된다.
+
+CD Backup
+
+선택한 영상을 CD매체로 백업한다. 이때 영상데이타를 백업함과 동시에 백업된 영상을 보기위한 viewer 소프트웨어도 같이 저장되게 된다. 이렇게 저장된 CD를 위부로 보내기 위한 도구로도 활용할 수 있다.
+
+CD만 넣게 되면 자동 실행되어서 Viewer에서 영상을 확인할 수 있다.
+
+Backup
+
+선택한 영상을 지정된 폴더로 백업할 수 있다.
+
+이때에도 CDWrite backup 과 같은 CD Publisher와 같은 Viewing software를 같이 저장할지 선택하여 준다. 같이 백업 또는 외부로 내보내고자 할때에도 이 기능을 사용한다.
+
+공 CD를 CDROM 드라이브에 삽입한 다음
+
+백업경로를 CDROM 드라이브로 선택한다.
+
+Backup start를 하여 백업을 시킨다.
+
+아래와 같은 메시지가 뜨면 Yes를 눌러서 최종 마무리 한다.
+
+Restore
+
+백업된 영상을 복원한다.
+
+이 복원기능은 DICOM import의 역할도 할 수 있다. 다른 곳으로부터 받아온 DICOM 파일을 본 DR-console 소프트웨어에 등록하고자 할 때에도 이 기능을 사용할 수 있다. 단, 최종영상이 image processing 되기 전의 영상으로 인식한다.
+
+ Review
+
+REVIEW 모드는 worklist 또는 browser 에서 촬영을 하기 위한 EXPOSURE 화면과 Browser에서 영상 확인 및 편집작업을 위기 위한 review 모드를 같이 사용할 수 있다. 두개의 촬영모드의 차이점은 아래와 같이 확인 할 수 있다.
+
+[ WORKLIST/BROWSER 에서 exposure 로 이동하는 경우 ]
+
+[ REVIEW 모드인 경우 ]
+
+Browser모드에서의 촬영모드로 넘어가는 경우와 Review 모드에서 촬영모드를 활용하는 경우의 차이는 추가영상획득이냐 획득된 영상을 re exposure 하는 것의 차이점이 있다.
+
+[Review Mode 인 경우]
+
+[Exposure Mode 인 경우]
+
+Stand & Table
+
+촬영모드에서 촬영을 진행하려는 장비를 선택한다.
+
+Generator
+
+Generator가 연동이 되는 경우 좌측의 Generator버튼을 클릭하여 Generator를 조작할 수 있는 모드로 변경할 수 있다.
+
+촬영에 필요한 조사량을 변경하거나 AEC지원될 경우 AEC설정을 할 수도 있다.
+
+“ 화면에 디스플레이 되는 조건값들은 generator에서 지원되는 형태로 표기 되기 때문에 모든 조건값이 다 출력이 되지 않을 수도 있다. “
+
+“ generator 가 연동되어 있는 않는 경우에는 위의 창은 보이지 않는다”
+
+Examined Part
+
+Exam Type
+
+장비 형태(STAND/TABLE/UNIVERSAL)에 따라 해당 장비에 저장되어 있는 Body Part를 표시한다.
+
+ Up
+
+목록에서 선택한 Body Part의 위치를 위쪽으로 이동한다.
+
+ Down
+
+목록에서 선택한 Body Part의 위치를 아래쪽으로 이동한다.
+
+ Body Part Name
+
+목록에서 선택한 Body Part 명을 표시하거나, 새로 추가할 Body Part를 입력할 수 있다.
+
+ ADD
+
+입력 창을 통해 새로 입력한 Body Part 항목을 목록에 추가한다.
+
+ Delete
+
+목록에서 선택한 Body Part 항목을 삭제한다.
+
+ Edit
+
+목록에서 선택한 Body Part 명을 수정한다.
+
+View Position
+
+View Position
+
+Exam Type 목록에서 선택한 Body Part에 해당하는 모든 View Position을 표시한다.
+
+ Up
+
+목록에서 선택한 View Position의 위치를 위쪽으로 이동한다.
+
+ Down
+
+목록에서 선택한 View Position의 위치를 아래쪽으로 이동한다.
+
+ Marker
+
+영상에 Laterality를 표시할지 여부와 표시할 항목의 내용, 위치 및 Font size를 선택한다.
+
+ Label
+
+영상에 View Position을 표시할지 여부와 표시할 항목의 내용, 위치 및 Font size를 선택한다.
+
+ Annotation
+
+영상에 Patient Direction을 표시할지 여부와 표시할 항목의 내용, 위치 및 Font size를 선택한다.
+
+ Flip Horz
+
+영상을 표시할 때 자동으로 Mirror 기능(영상의 좌우가 바뀌어 표시되는 기능)을 적용할지 여부를 선택한다.
+
+Flip Vert
+
+영상을 표시할 때 자동으로 Flip 기능(영상의 위아래가 바뀌어 표시되는 기능)을 적용할지 여부를 선택한다
+
+ SID
+
+촬영 거리(튜브와 디텍터 사이의 거리)를 선택한다.
+
+Cross
+
+트릭셀 디텍터 사용시에 Cross 라인 처리를 위한 기능이다.
+
+Rotate
+
+Bucky 구성에 따라 detector top 의 위치가 맞지 않는 경우에 영상을 획득하면 항상 고정적으로 회전을 할 수 있는 기능이다. Examined part & View position 화면에서 각 부위별로 회전을 지정할 수 도 있다.
+
+0, 90, 180, 270을 선택할 수 있다. 기본값은 0 으로 되어 있다.
+
+ View Position Name
+
+목록에서 선택한 View Position 명을 표시한다.
+
+ Description
+
+선택한 View Position의 설명을 표시한다.
+
+ Patient Orientation
+
+DICOM 형식에 지정되어 있는 Patient Orientation을 지정한다.
+
+ View Code Sequence
+
+DICOM 형식에 지정되어 있는 View Position을 지정한다.
+
+ None RIS Code
+
+Worklist와 연동 할 수 있도록 병원 고유의 RIS 코드를 입력한다.
+
+ WW
+
+영상을 표시할 때 적용할 Window Width 값을 지정한다.
+
+ WL
+
+영상을 표시할 때 적용할 Window Level 값을 지정한다.
+
+Add
+
+새로 작성한 View Position 항목을 목록에 추가한다.
+
+ Delete
+
+목록에서 선택한 View Position 항목을 삭제한다.
+
+ Edit
+
+목록에서 선택한 View Position 항목의 내용을 수정한다.
+
+Image Parameter
+
+Patient Size
+
+Patient Size를 지정한다.
+
+Cor. Shutter
+
+Shutter Size를 Calibration 한다.
+
+ Shutter
+
+영상에서 저장하려고 하는 부분의 크기를 선택한다.
+
+ X-Ray Parameters
+
+Generator에서 X-Ray를 조사하기 위한 조건을 설정한다.
+
+kVp
+
+mA
+
+mAs
+
+Focal Spot : Large / Small
+
+Mode : mA/ms, mAs, AEC
+
+ Enhance Parameters
+
+영상 처리를 위한 값을 지정한다.
+
+Par : 영상 처리에 사용하는 Parameter 파일을 지정한다.
+
+Process
+
+화면에 표시된 영상을 프로세싱 할 수 있다. Par파일을 오픈하여 파라미터를 적용하고 세부설정을 바꿀수 있다.
+
+파라미터 파일의 설정은 아래의 6-4-2. Generator 부분을 참조한다.
+
+Image Processing Parameter 설정
+
+영상 처리에 사용하는 인자들이 저장되어 있는 parameter 파일을 지정한다. P/S/M/L는 환자의 조건에 따라 사전에 지정된 PAR파일을 선택할 수 있다. 만약 사전에 설정되어 있지 않다면 각 해당 경로가 빈칸으로 디스플레이 된다.
+
+영상 처리를 하려면 꼭 지정되어야만 한다. 만약 사전에 설정된 경로에 파일이 존재하지 않으면 아래의 process등의 실행버튼들이 모두 disable 된다.
+
+Edge Enhancement 조절
+
+영상의 Edge부분을 강조 하는 파라메터이다. (다른 파라메터와는 독립적으로 적용됨) 일반적으로 아래의 영상처럼 bone조직의 detail한 부분을 더 자세히 보고자 할 때 가변하는 파라메터 항목으로 많이 사용한다.
+
+edge enhancement = 2
+
+edge enhancement = 7
+
+Contrast Enhancement 조절
+
+영상의 대조도(주위 조직간의 대조차)를 강조 한다.
+
+Latitude와 서로 연관되어 작용한다. 너무 강조되면 Hard한 영상이 구현된다. 아래의 그림처럼 C-spine의 spine 쪽을 강조하고 상대적으로 주변 tissue조직은 감소되어진다.
+
+Contrast enhancement = 2
+
+Contrast enhancement = 7
+
+Latitude 조절
+
+높은 값일 수록 이미지 하단부를 강조하고 이미지가 두꺼워 진다. 높은 값일 수록 영상은 거칠어 진다. 즉 2차원영상에 대하여 좀더 입체감있는 영상을 보여준다.
+
+아래의 도식을 참조하여 이해할 수 있다.
+
+Latitude = 2
+
+Latitude = 7
+
+영상 처리 작업을 실행한다.
+
+영상처리에 사용하는 Parameter 파일의 Edge Enhance, Contrast Factor, Image latitude의 변경된 내용을 저장한다.
+
+저장된 파라메터로 동일 검사부위에 대해서는 저장된 파라메터로 처리하게 된다.
+
+화면에 표시된 변경된 파라메터 값들 즉, Edge Enhance, Contrast Factor, Image latitude등의 최초 적용된 파라메터 값들로 초기화한다.
+
+영상 처리에 사용하는 Par 파일의 파일명과 경로를 저장한다. 해당되는 검사부위에 대해서는 저장된 경로의 파라메터로 적용되어 처리하게 된다.
+
+영상이 처리되기 이전 상태로 되돌린다. 즉 디텍터로부터 획득된 영상 데이터를 디스플레이 한다. 이때에 review 모드에서 shutter 가 되어 있는 상태라면 shutter에 의해서 보여지는 영역만 raw데이터로 디스플레이한다.
+
+Detector Status
+
+ : Detector 가 촬영준비가 되면 R 마크의 색이 노란색으로 변경이 된다.
+
+R 마크의 색이 review 모드에서는 항상 gray가 된다.
+
+ : 영상 획득시에는 “E” 램프가 녹색으로 변경되면서 데이타를 획득한다.
+
+Study
+
+A 버튼은 촬영 후에 자동으로 다음 촬영한 view position으로 이동하는 기능이며, 자동으로 이동되더라도 원하는 view position을 선택한 후에 촬영하여 된다.
+
+아래 view sequence 를 추가하거나 수정하고자 할 때 Study 을 이용한다.
+
+Re exposure
+
+선택된 영상에 대하여 촬영조건 부족 이나 촬영 부위의 잘못등으로 재 촬촬영하고 할 때 이 버튼을 클릭하게 된다.
+
+클릭하게 되면 자동으로 촬영모드 즉 generator tab이 나타나게 되고, 만약 제너레이터 연동이 되어 있지 않는 경우에는 아무런 반응은 없게 된다.
+
+이 버튼을 클릭 한 후 촬영을 실시하게 되면 다음과 같은 대화창이 뜨게 된다.
+
+위의 내용은 기존의 데이터를 삭제하고 새로 찍은 영상으로 대치할것인지에 대한 질문이므로, YES를 누르게 되면 기존 영상을 신규영상으로 대치하게 된다.
+
+영상을 update 하게되면 기존의 영상파일에 over write 가 되므로 신중하게 선택하여야 한다.
+
+R, L, MARK, TEXT
+
+영상에 주석을 입력한다.
+
+기본 으로 세팅되어 있는 AP/PA/LAT인 경우에는 우측 버튼중 해당하는 MARK를 클릭하면 자동으로 화면에 입력이 된다. 만약 추가적으로 새로운 마크를 만들고자 하는 경우에는 “+” 버튼을 눌러서 아래의 그림 처럼 추가할 수 있다.
+
+Insert Mark를 체크하여 OK 버튼을 클릭하면 MARK 리스트에만 추가되는 기능이며, Insert Mark의 체크가 해제 된 상태에서는 MARK 리스트에 추가함과 동시에 이미지 영역에 기입한 MARK 가 보여지게 된다.
+
+“SELECT” 버튼은 리스트중에 있는 MARK를 선택하여 화면에 보여지게 한다.
+
+다음의 그림 2장은 TEXT 추가하는 것이며 방법은 MARK랑 같다.
+
+TOOLS ICON
+
+Review모드에서 화면에 영상이 표시되어 있을 경우 도구모음을 사용하여 영상을 편집할 수 있다.
+
+Layout 1 X 1
+
+화면을 분할하지 않고 한 개의 큰 이미지를 표시한다
+
+Layout Custom
+
+화면을 분할하는 개수를 사용자가 지정할 수 있다. 기본적으로 1X2, 2X1, 2X2가 포함되어 있고, Custom을 선택하면 사용자의 취향에 따라 Layout을 입력할 수 있다.
+
+추가하고자 하는 Row, Column 을 입력하여 Add 실행한다.
+
+WL Reset
+
+Window width/level을 변경하였을 경우 영상 획득한 초기값으로 되돌린다.
+
+Image Reset
+
+영상을 초기화한다. (ROI Rectangle과 Processing을 취소한다.)
+
+Panning
+
+마우스 포인터를 영상에 가져다 대고 왼쪽 버튼을 클릭한 상태에서 마우스를 움직이면 마우스 포인터가 움직이는 방향으로 영상을 이동한다.
+
+Zoom In/Out
+
+마우스 포인터를 영상에 가져다 대고 왼쪽 버튼을 클릭한 상태에서 마우스를 위로 움직이면 영상을 확대하고, 아래로 움직이면 축소하여 표시한다.
+
+Magnify Glass
+
+영상의 특정 영역에 대해서 확대/축소하여 표시한다
+
+Shift 키를 누른 상태에서 왼쪽-위로 마우스를 움직이면 창이 작아지고, 오른쪽 아래로 움직이면 창이 커진다.
+
+또한, Ctrl 키를 누른 상태에서 마우스를 위로 움직이면 영상 확대 비율이 작아지고, 아래로 움직이면 영상 확대 비율이 커진다.
+
+Fit Image
+
+영상의 크기를 화면 표시 영역에 맞춘다.
+
+ROI Ellipse
+
+저장하고자 하는 영역을 원이나 타원 형식으로 설정한다. 영역의 외부는 검게 표시된다
+
+ROI Rectangle
+
+저장하고자 하는 영역을 사각형 형식으로 설정한다. 영역 외부는 잘려져 없어진다.
+
+Print
+
+선택한 영상을 DICOM printer로 출력한다.
+
+(Only Dicom Printer).
+
+아이콘을 클릭하면 아래와 같이 preview가 보인다.
+
+Appendix III 를 참조한다.
+
+Save
+
+현재 표시되어 있는 영상을 저장한다.
+
+Save & Send
+
+현재 표시되어 있는 영상을 저장한 후 전송한다.
+
+Close Study
+
+영상 획득 모드인 경우에는 현재 표시되어 있는 영상을 저장 혹은 전송한 후 현 검사를 종료한 후 Worklist 화면을 표시한다.
+
+여기서는 4가지 모드를 지원한다.
+
+Save an image : 현재 표시되어 있는 영상을 저장한다.
+
+Save and send an image : 현재 표시되어 있는 영상을 저장한 후 전송한다.
+
+Save an image and send all images : 현재 표시되어 있는 영상을 저장한 후 썸네일에 표시되어 있는 모든 영상을 전송한다.
+
+Only send images : 저장 없이 thumbnail에 표시되어 있는 모든 영상을 전송한다.
+
+Cancel
+
+촬영 모드에서는 촬영한 영상을 취소하고(영상을 저장하지 않음), 다른 영상을 촬영하도록 준비한다. Review 모드에서는 Review 화면을 표시한다.
+
+Reject 모드 인 경우에는 영상은 삭제 되지 않고, 화면에 Rejected 라는 메시지가 나타나게 된다
+
+Rotation
+
+다양한 각도로 영상을 회전 시킬 수 있다.
+
+1. 각도 버튼을 누르면 중앙 부에 각도 값이 표시되고 미리보기로 영상이 보여진다.
+
+2. 각도 버튼을 중복하거나 다른 각도와 같이 여러 번 눌러 영상 회전 설정을 할 수 있다.
+
+Flip Horizon & Vertical
+
+클릭 시 Mirror와 Flip 중 선택할 수 있는 메뉴바가 나타난다.
+
+Flip Horz : 영상을 좌우가 바뀌게 표시한다.
+
+Flip Vert : 영상을 위아래가 바뀌게 표시한다.
+
+Rotate CCW
+
+영상을 시계 반대 방향으로 90° 만큼 회전하여 표시한다.
+
+Rotate CW
+
+영상을 시계 방향으로 90° 만큼 회전하여 표시한다.
+
+Whole Spine
+
+2 - 4개의 영상을 임의적으로 또는 세미오토방식을 이용하여 영상들을 서로 붙혀서 하나의 새로운 영상을 만들어 낸다. Stitching 기능이라고도 한다.
+
+우선 stitching 하고자 하는 영상만 browser 모드에서 선택하여 review로 보이게 한다. 매뉴얼 6.5.5 Command Button의 Open 버튼 설명 참조)
+
+Merge 버튼(세미오토방식)을 사용하는 방법 (ex. 영상 위에 x 기준으로 붙일 경우)
+
+우측의 확대를 원하는 형태로 확대하여 위치를 잡습니다.
+
+G
+
+F
+
+E
+
+D
+
+C
+
+B
+
+Click 1st point
+
+Click 2nd point
+
+Click Viewing position
+
+Select zoom ratio
+
+Set 1st point 버튼을 체크합니다.
+
+위에 있는 영상에서 접합할 포인터를 마우스 왼쪽 버튼으로 클릭합니다.
+
+Set 2nd point 버튼을 체크합니다.
+
+아래에 있는 영상에서 접합할 포인터를 마우스 왼쪽 버튼으로 클릭합니다.
+
+Merge 버튼을 클릭하면 2, 4에서 선택한 접합 면에 자동으로 영상이 붙게 됩니다. 최종적으로 합쳐진 영상을 Save 버튼을 눌러서 최종 저장하게 된다.
+
+저장 후에는 촬영한것과 같은 처리를 하기 때문에 영상이 획득하고 , 프로세싱하는 과정을 진행하게 됨으로 PC의 성능에 따라 속도 차이가 있으므로 잠시 기다려여야 함.
+
+단 이 기능은 영상이 3장이상인 경우에는 Merge 기능이 활성화 되지 않습니다.
+
+Merge 버튼을 클릭.
+
+영상을 직접 마우스를 이용하여 stitching 하는 경우
+
+움직이고자 하는 영상을 선택한다. 선택하게 되면 화면 우측 상단에 있는 이미지 번호버튼이 활성화 된다.
+
+마우스 왼쪽 버튼을 클릭한해로 drag & drop방식을 이용하여 원하는 위치로 이동시킨다.
+
+마우스로 원하는 위치에 정확히 움직이지 못하는 경우에는 원하는 곳에 대략적으로 이동시킨후, 아래의 옵션등을 이용하여 Left/Right/Up/Down 버튼등을 이용하여 영상을 이동시킨다.
+
+모든 작업이 완료되면 OK 버튼을 눌러서 현재 화면에 보이는 합성된 이미지를 저장한다.
+
+옵션 기능 설명
+
+Left, Right, Up, Down : 선택한 영상을 10 pixel 만큼 지정한 방향으로 이동합니다.
+
+Fine Tuning : Left, Right, Up, Down 할 때 10 pixel이 아닌 1 pixel 만큼 이동하도록 합니다.
+
+Fix Horizontally : 영상을 마우스 왼쪽 버튼으로 클릭하여 움직이는 과정에서 좌우로는 고정하여 상하로만 움직이게 합니다. 방향 이동 버튼에는 영향을 주지 않습니다.
+
+Fix Vertical : 영상을 마우스 왼쪽 버튼으로 클릭하여 움직이는 과정에서 상하로는 고정하여 좌우로만 움직이게 합니다. 방향 이동 버튼에는 영향을 주지 않습니다.
+
+Fix Image : 영상을 고정하여 마우스 왼쪽 버튼을 클릭하여 움직여도 영상이 움직이지 않습니다. 영상을 맞춰놓고 확인하는 과정에서 위치가 틀어지는 현상을 방지하기 위해 사용합니다.
+
+“영상을 합성할때 프로세싱된 영상을 이용하는 방법과 원본영상을 사용하여 합성하는 두가지 방법이 있습니다.
+
+원본영상을 사용하여 합성할 경우:
+
+Capture 모드 또는 browser 모드에서 영상에 ROI를 적용하여 영상을 원본 보다 작게 저장 할 때 프로세싱 전 영상을 사용합니다
+
+프로세싱된 영상을 사용하여 합성할 경우
+
+Capture 모드 또는 browser 모드에서 영상에 ROI를 적용하지 않거나 ROI 크기를 영상원본 크기와 동일하게 적용하여 원본과 동일 크기로 저장하였을 경우 프로세싱된 영상을 사용합니다.
+
+”
+
+TOOLS ICON at Review Mode
+
+Measurement Angle
+
+Measurement Length
+
+Invert(Pixel gray value)
+
+Line Profile(Histogram)
+
+New SET
+
+Code Manger
+
+DICOM Storage Sending Status
+
+DICOM Printing Status
+
+Default mode mouse
+
+TOOLS Menu
+
+Review모드에서 우측하단의 TOOLS를 열면 아래와 같은 기능을 사용할수 있다.
+
+Image Open
+
+feel-DRCS 에 저장된 DICOM 파일이 아닌 외부 DICOM 영상파일을 오픈하여 볼 수 있다.
+
+단, 영상을 보고 window width/level 등의 기본 기능만 사용할 수 있다.
+
+Tool
+
+Histogram
+
+여기서의 histogram은 line profile 의 의미로 image 영역에서 보고자 하는 영상부위의 직선라인을 그리면, 아래와 같이 그 라인에 해당하는 거리 및 각종 수치값들을 동시에 볼 수 있다.
+
+Measure Angle
+
+영상에서 측정하고자 하는 각도를 표시한다.
+
+Measure Line
+
+영상에서 측정하고자 하는 길이를 표시한다.
+
+Invert
+
+영상의 각 픽셀값을 반전(negative)하여 표시한다. 다시 누르면 원상으로 복귀된다.
+
+Length Calibration
+
+- Detector의 pixel spacing 값을 임의로 설정할 수 있는 기능이다.
+
+- 수치적으로 입력되어 있는 pixel spacing 값을 실제의 눈금자를 이용하여 영상을 촬영 한 후, 화면상에 나타나는 실제의 눈금자의 길이를 distance measurement 기능으로 측정한 다음 이 수치가 실제 눈금자의 수치로 재 입력하여 실제 distance 에 대한 calibration의 역할로 사용하는 기능이다. 즉 실제 물체의 길이와 영상 촬영 후의 길이가 서로 다를 때 차이를 보정하는 기능이다.
+
+1. Menu-Tool-Length calibration 을 선택한다.
+
+2. 영상에서 측정하려고 하는 눈금자 또는 실제길이를 알고는 물체의 길이만큼 line을 그린다.
+
+3. 길이 측정을 완료하면 아래와 같은 화면이 나타난다.
+
+4. Measure는 영상에서 측정한 길이를 표시합니다.
+
+5. Real에 실제 길이를 mm 단위로 입력하면,
+
+6. Stand (선택한 Bucky)에 계산된 Pixel Spacing값이 표시됩니다.
+
+7. Reset은 계산된 Pixel Spacing값을 무시하고, Aceview.ini 파일에 저장된 Pixel Spacing값(설치 시점의 초기값)을 불러와서 표시합니다.
+
+8. Save는 현재 Pixel Spacing값을 저장하고 화면을 종료합니다.
+
+9. Cancel은 현재 작업을 취소하고 화면을 종료합니다.
+
+이 기능은 최소 설치시에 한번 정도 해 주는 것이 가장 정확한 길이를 측정하는데 유용하게 사용이 된다. 일반적으로 설치시에 engineer 들이 length calibration작업을 실시한다.
+
+Send Status
+
+현재 DICOM storage 서비스를 이용하여 네트워크로 전송되고 있는 DICOM file transfer QUE를 보여준다. 영상이 전송이 완료되면 리스트는 다 지워지게 된다.
+
+만약 전송이 완료되지 않은 상태에서 프로그램을 종료하게 되면 현재 QUE 영상이 남아 있음을 경고하고, 이에 처리 방향을 물어보게 된다.
+
+Print Status
+
+현재 DICOM Print 서비스를 이용하여 네트워크로 전송되고 있는 DICOM file transfer QUE를 보여준다. 영상이 전송이 완료되면 리스트는 다 지워지게 된다. 기타 기능은 Send status 와 동일하다.
+
+Check Exposure Count
+
+초기 설치 이후 현재까지 촬영 횟수를 표시한다.
+
+CONFIG
+
+Exam Part & View Position 은 별도로 설명한다.
+
+Code Manager
+
+RIS code에 View position 항목을 매칭한다
+
+Code : 입력되어 있는 RIS code를 모두 표시한다.
+
+Add : 입력한 Code를 등록한다.
+
+Edit : 선택한 Code를 편집한다.
+
+Del. : 선택한 Code를 삭제한다.
+
+Item : 선택한 RIS code에 매칭된 View position을 표시한다.
+
+Up : 선택한 Item의 순서를 위로 올린다.
+
+Down : 선택한 Item의 순서를 아래로 내린다.
+
+Add : View position에서 선택한 항목을 Item에 추가한다.
+
+Delete : Item에서 선택한 항목을 삭제한다.
+
+Del. All Code : 입력되어 있는 모든 RIS code를 삭제한다.
+
+Load : RIS code를 엑셀 파일을 통해 입력한다.
+
+Microsoft Office Excel 2003 버전에서 작성한 파일만 읽을 수 있다.
+
+탭 이름이 “Code”이고, RIS code가 두 번째 열에 입력되어 있어야 한다.
+
+OK : Code Manager를 종료한다.
+
+입력되지 않은 RIS code로 영상 촬영을 하게 되면 처음 촬영창 진입 시 위의 그림과 같이 code를 등록할 수 있는 창이 나타난다. 이렇게 등록된 code는 자동적으로 code manager에 저장되어 추가로 등록할 필요는 없다.
+
+Change Operator
+
+사용자를 변경한다.
+
+Refresh image
+
+기준 영상(Offset Image)을 새로 얻는다.
+
+Refresh offset
+
+현재 기준 영상(Offset Image)을 다른 이름으로 저장한다.
+
+About
+
+프로그램의 버젼과 소프트웨어 serial number를 표시한다.
+
+Pop-up Menu
+
+Review모드 또는 Exposure모드에서 영상이 화면에 표시되어 있는 경우에 마우스 오른쪽 버튼을 누르면 다음과 같은 pop-up 메뉴가 나타난다.
+
+Shutter size 적용
+
+각 해당하는 shutter 사이즈를 적용할 수 있다.
+
+Custom
+
+Shutter size를 기존의 것보다 더 추가하고자 할 때에 위의 편집 툴을 이용하여 더 추가할 수 있다.
+
+이때 단위는 inch 단위이다.
+
+Delete Image
+
+현재 활성화된 영상을 삭제할 수 있다.
+
+Processing
+
+이 기능은 현재 Tool상태에서 영상처리를 초기화 하였던지 기타 다른 이유들로 영상이 저장된 것과 다르게 보일 때 영상처리를 원래 설정되어 있던 파라메터로 다시 처리하고자 할 때 process tab으로 가지 않고 바로 처리할 수 있는 short cut 기능이다.
+
+Configuration
+
+시스템 전반에 걸쳐서 세팅하기 위한 기능이다.
+
+각종 네트워크 연결 서비스에 대한 설정 및 시스템 설정 및 데이터 포맷 등을 설정할 수 있다.
+
+Default Setting
+
+사용자 목록과 병원명을 입력하고, 날짜 형식을 지정한다.
+
+Operator List
+
+사용자 목록을 작성한다.
+
+Add: 새로운 사용자를 등록한다. 목록 하단 입력 창에 사용자 성명을 입력하고 Add 버튼을 클릭하면 리스트에 추가된다
+
+Modify: 선택한 사용자의 정보를 변경한다.
+
+Delete: 선택한 사용자를 삭제한다.
+
+Information
+
+병원명 및 정보를 입력한다.
+
+Date Format
+
+날짜를 표기하는 형식을 지정한다.
+
+Modality
+
+연결된 장비의 형태를 선택한다.
+
+- Stand : Stand only type
+
+- Table : Table only type
+
+- Full : Stand + Table type
+
+Storage Setting
+
+영상 저장 경로 및 백업 경로를 지정하고, 자동 삭제 기능에 대해 설정한다.
+
+Image Save Path
+
+영상을 저장할 경로를 지정한다. 이때에 저장경로는 디텍터로 영상을 획득한 raw 영상과 process를 한 영상 모두를 저장하는 경로를 의미한다.
+
+DICOM Save Option
+
+- 영상을 DICOM 형식으로 저장할 때 Modality 형식을 지정한다.
+
+- 영상의 Bit 수를 지정한다.
+
+Image Auto Delete
+
+영상을 자동으로 삭제하는 기능의 사용 여부와 사용 조건을 선택한다.
+
+Delete by Space : 공간이 지정한 % 이하이면 삭제한다.
+
+Delete by Date : 촬영한 날로부터 선택한 날짜가 지난 영상을 삭제한다.
+
+디스크가 full이 나면 촬영이 더 이상 안되거나 영상이 저장되지 않는 오류가 발생한다. 그러므로 이 부분의 설정을 하여야 할 것을 추천한다. 단, 설정되면 자동으로 삭제 되기 때문에 사전에 영상을 미리 백업받는 스케쥴을 관리하는 것이 좋다.
+
+Database
+
+데이터베이스를 관리하는 기능을 제공한다.
+
+- Compress : 데이터베이스를 압축한다.
+
+- Backup : 데이터베이스를 백업한다.
+
+- Restore : 데이터베이스를 복구한다.
+
+Annotation Management
+
+영상에 표기하고자 하는 정보를 선택할 수 있다.
+
+Patient Information : 환자 ID, 성명, 성별, 생년월일.
+
+Acquisition date & time : 검사일자, 사용자 성명.
+
+Hospital Information : 병원명.
+
+X-Ray Parameters : X-Ray 조사 조건. (kV, mAs, Time)
+
+Anatomical Information : Laterality & View Position.
+
+Series Information : Series No, Image No, Acquisition No.
+
+Full
+
+영상에 표시할 수 있는 모든 정보를 표시한다.
+
+None
+
+영상에 정보를 표시하지 않는다.
+
+Custom
+
+영상에 표시하는 정보를 사용자가 부분적으로 지정한다.
+
+Worklist Item Management
+
+Worklist 에서 표기하는 항목을 선택한다.
+
+Worklist all item에서 선택하여 우측으로 버튼을 클릭해서 추가하면 된다. Study Item내에서 우선 순위는 원하는 항목을 선택한 후 up/Down 버튼을 이용하여 조정할 수 있다.
+
+DICOM MWL(Modality Worklist Server Setting )
+
+DICOM Modality Worklsit 서비스를 사용하기 위한 서버 환경과 클라이언트 환경을 설정한다.
+
+Server
+
+DICOM Worklist 서비스를 제공하는 서버의 환경을 설정한다.
+
+AE Title
+
+IP
+
+Port
+
+Test
+
+서버가 정상적으로 동작하고 있는지 확인한다.
+
+DICOM Storage
+
+DICOM 전송을 위한 서버의 환경을 설정한다.
+
+List
+
+Name : 서버 이름을 표시한다. Server AE와 동일하게 표시된다.
+
+Server AE : 서버의 AE title을 표시한다.
+
+Server IP : 서버의 IP를 표시한다.
+
+Server Port : 서버의 Port를 표시한다.
+
+Client AE : 클라이언트의 AE title을 표시한다.
+
+Client Port : 클라이언트의 Port를 표시한다.
+
+Insert
+
+새로운 PACS 서버(DICOM Storage SCP)를 추가한다.
+
+Delete
+
+선택한 서버 설정을 제거한다.
+
+Modify
+
+선택한 서버설정을 변경한다.
+
+Select
+
+여러 가지 서버 설정 중에서 접속할려고 하는 서버 설정을 선택한다.
+
+마우스로 선택하거나 select를 하고자 하면 체크박스에 연결테스트가 되어 connected 라는 메시지가 아래에 나타나면 체크박스가 체크가 된 상태로 변하게 된다.
+
+DICOM Print
+
+DICOM Print를 위한 서버의 환경을 설정한다.
+
+List
+
+Name : Laser Printer 이름을 표시한다. Server AE와 동일하게 표시된다.
+
+Laser Imager AE : Laser Printer의 AE title을 표시한다.
+
+Laser Imager IP : Laser Printer의 IP를 표시한다.
+
+Laser Imager Port : Laser Printer의 Port를 표시한다.
+
+Host AE : Host의 AE title을 표시한다.
+
+Print Model : Print Model를 표시한다.
+
+Insert
+
+새로운 프린터 설정을 추가한다.
+
+Delete
+
+선택한 프린터 설정을 제거한다.
+
+Modify
+
+선택한 프린터 설정을 변경한다.
+
+Select
+
+여러가지 프린터 설정 중에서 접속할려고 하는 프린터 설정을 선택한다.
+
+Print Setting
+
+필름 및 프린터에 대해 설정한다.
+
+Medium Type : 필름의 종류를 선택한다.
+
+Film Orientation : 필름의 방향을 선택한다.
+
+Film Size : 필름의 크기를 선택한다.
+
+Smoothing : 프린터의 Process Type을 선택한다.
+
+Boarder Density : 필름의 Boarder Density를 선택한다.
+
+Min Density : 필름의 Minimum Density 영역을 지정한다.
+
+Max Density : 필름의 Maximum Density 영역을 지정한다.
+
+Overlay information
+
+필름 상에 영상과 함께 표시될 정보를 선택한다.
+
+Option software 및 function
+
+Viewsub
+
+Option software 인 sub view는 main console software와 동기화 되어 움직이는 소프트웨어이다. 이 소프트웨어는 main console에서 뿐 아니라, 별도의 터치모니터등을 사용하여 제너레이터를 제어하고, 촬영 후 영상의 preview 이미지를 확인확인하고자 할 때 사용할 수 있다.
+
+별도의 옵션 항목이며, 제너레이터가 연동이 되어 있어야만 제대로 할용 할 수 있다.
+
+Exam list에 있는 항목들은 main console에 있는 exam list와 동일하게 같이 움직이며, viewsub 창에서 검사 순서를 바꾸어서 선택하여도 된다.
+
+획득된 영상은 위와 같이 뜨게 되고, 우측의 save 또는 cancel 눌러서 영상에 대한 확인 작업을 해주어야 한다. 만약 여기서 save 또는 cancel를 누르지 않으면 다음 순서로 넘어 갈 수 없다. 단, add-exposure, re-exposure는 자동저장으로 되어 있기 때문에 영상만 잠시 확인 시켜 주고 다음단계로 자동으로 넘어간다.
+
+ feelVIEW
+
+feelVIEW는 main console 모니터외에 별도의 의료용 이나 고해상도 모니터를 사용하여 영상을 좀더 자세히 보고자 할 때 사용하는 소프트웨어이다. 이때에 하나의 workstaion내에 모니터가 연결되어야 하는 전제조건이다.
+
+Option 소프트웨어 이므로 별도로 구매하여야 한다.
+
+기능적으로 main console viewer의 review 모드에서 thumbnail 을 click할때 마다 main console의 영상이 바뀌면서 동시에 feelVIEW의 영상도 바뀌게 된다.
+
+Menu
+
+Images
+
+Default
+
+Change default mode
+
+Prev. Image
+
+Previous image or previous page
+
+Next Image
+
+Next image or next page
+
+ZOOM Image
+
+If you put your mouse pointer on the image and left click, you can zoom out by moving to the upper side and zoom in by moving to the lower side.
+
+Pan Image
+
+If you put your mouse pointer on the image and left click, you can move the image as the mouse pointer moves.
+
+Magnify Glass
+
+It can magnify/make smaller any screen area. If you move the mouse to the left upper side, pushing the Shift key, the screen will get smaller. Moving to the right upper side makes it larger.
+
+If you move to the upper side, pushing the control key, the image magnification ratio will get smaller. Moving to the lower side makes it larger.
+
+Reset
+
+Reset image.
+
+Rotate
+
+Rotate L
+
+It rotates the image 90° counter clockwise.
+
+Rotate R
+
+It rotates the image 90° clockwise.
+
+Mirror
+
+It changes right and left.
+
+Flip
+
+It changes up and down.
+
+Layout
+
+1 X 1
+
+Displays the big image without any split.
+
+1 X 2
+
+Split 1 X 2
+
+2 X 2
+
+Split 2 X 2
+
+Measure
+
+Line
+
+You can measure the length on the image.
+
+Angle
+
+You can measure the angle on the image.
+
+Report
+
+Create/Edit
+
+You can make a report for selected study.
+
+Save : Save a report data.
+
+Print : Print a report.
+
+OK : Exit report mode.
+
+Edit Preform : Edit preform.
+
+OK : Exit mode of edit Preform.
+
+Add : Add content of each items
+
+Delete : Delete selected title.
+
+Edit : Save content of modified items.
+
+Trouble shooting
+
+Dicom Communication
+
+feel-DRCS내의 Config 모드에서 Worklist가 연결이 되지 않을 경우
+
+명령 프롬프트에서 Worklist Server IP로 Ping test 진행
+
+방화벽이 꺼져 있는지 확인
+
+MWL SERVER 정보 확인 (AE Title, Port 번호, IP 주소)
+
+Worklist 연결은 되나 정보를 받아 오지 않을 경우
+
+Setup.exe내에서 ‘Use Log’ 를 체크한다.
+
+Feel-DRCS에서 Refresh 등을 눌러 Worklist의 정보를 받아옴
+
+C:\feel-DRCS\log 폴더에 당일 날짜의 Log 파일을 서비스 담당자에게 송부한다.
+
+Dicom image가 PACS Storage Server로 전송이 되지 않을 경우
+
+명령 프롬프트에서 Storage Server IP로 Ping test 진행
+
+방화벽이 꺼져 있는지 확인
+
+PACS Server의 정보를 확인 (AE Title, Port 번호, IP 주소)
+
+PACS 회사 서비스 담당자와 연락
+
+Dicom image가 Dicom film Printer로 전송이 되지 않을 경우
+
+명령 프롬프트에서 Storage Server IP로 Ping test 진행
+
+방화벽이 꺼져 있는지 확인
+
+Dicom film Printer의 정보를 확인 (AE Title, Port 번호, IP 주소)
+
+Printer 회사 서비스 담당자와 연락
+
+모든 Printer는 Client AETitle과 기타 정보가 필요하다. 이에 따라 Client AETitle을 Print Server에 등록해야 할 수도 있다.
+
+Print가 에러가 발생하거나 Gray만 출력 될 경우
+
+Flim size를 정확한지 확인
+
+Min density와 Max density 확인
+
+Media type이 Blue인지 Black인지 확인
+
+Image Processing
+
+Feel-DRCS에서 Raw image를 Post processing 할 때 문제
+
+하기 사항을 체크
+
+선택 된 Body part와 View position정확한지 확인
+
+Parameter와 Body part+view position 이 매칭되었는지 확인
+
+위와 같이 체크가 되었는데도 이상 이미지가 발생을 하였을 경우
+
+하기 파일들을 서비스 담당자에게 송부
+
+Feel-DRCS.exe
+
+Aceview.ini
+
+Aceview.mdb
+
+문제가 되는 dcm 파일과 _org.dcm 파일
+
+Parameter files 폴더
+
+Crash 와 Error Message 발생
+
+Feel-DRCS 사용 도중 s/w가 갑자기 종료 될 경우
+
+DEP 확인
+
+가상 메모리 확인
+
+방화벽 해제 확인
+
+Sleep mode 꺼짐 확인
+
+특정 작업 도중 feel-DRCS가 종료 될 경우
+
+정확히 어떤 작업 도중 종료가 되었는지 시점 확인
+
+예. Browser 상태에서 환자 선택 후 Open 버튼 눌렀을 때 종료 됨
+
+서비스 담당자에게 내용 전달
+
+에러 메시지 발생
+
+에러 메시지를 캡쳐 한 후 서비스 담당자에게 전달
+
+영상 촬영 중 feel-DRCS가 종료 될 경우
+
+사용하는 Detector모델과 feel-DRCS에서 선택한 Detector의 모델이 동일한지 확인
+
+사용하는 Detector의 해상도와 feel-DRCS에서 설정한 Detector의 해상도가 동일한지 확인
+
+네트워크 공유를 사용하지 않음.
+
+Detector의 전원을 재 부팅 후 재 시도
+
+위 사항이 이상이 없을 경우 서비스 담당자에게 연락
+
+Browser 모드에서 환자와 이미지를 선택 후 Review mode로 이동 시 문제 발생할 경우
+
+등록과 관련 된 Software control 에 문제가 발생했을 때
+
+SystemReg.bat 파일을 실행한다.
+
+서비스 담당자에게 연락한다.
+
+Preview 이미지가 나타난 후 Software가 image를 processing 할 때 종료가 되는 경우
+
+가상 메모리와 DEP 설정을 확인
+
+feelTK_XR.exe와 feelTK.dll 파일 확인
+
+DCM 폴더내의 Dicom file을 확인 (xxx_org.dcm과 xxx.tnb, xxx.dcm 파일의 용량이 정상적인지 확인)
+
+Feel-DRCS가 실행이 되지 않을 경우
+
+Aceview.mdb 파일이 정상적인지 확인한다.
+
+Aceview.mdb 파일은 백업한다.
+
+Aceview.mdb 파일을 복원하여 사용 후 feel-DRCS 를 실행해 본다.
+
+Body part와 view position이 Study에 추가가 되지 않을 경우
+
+Worklist에서 Modality 값을 확인
+
+만약 modality 값이 비어 있을 경우 ‘ALL’을 넣은 후 software를 재 부팅 후 시도
+
+Stitching 중 software가 종료 될 경우
+
+가상 메모리 확인
+
+CD Backup 시 에러 메시지가 발생할 경우
+
+에러 메시지를 Capture
+
+Window XP를 사용 할 경우 install CD에서 Hotfix를 설치
+
+Window 7또는 8을 사용할 경우 C:\feel-DRCS\CDWriteBackup.exe 파일의 버전을 확인
+
+해당 내용을 서비스 담당자에게 전달
+
+Stitching 시 Original (Raw) image가 나타날 경우
+
+Stitching 되는 각 이미지들의 크기가 다르기 때문에 발생
+
+각 이미지를 Image Reset하여 원래 사이즈로 돌린 후 Crop하지 않고 프로세싱만 하여 다시 Stitching 해 본다.
+
+Appendix I : Simple Workflow
+
+Appendix II : DICOM Option
+
+DICOM Option
+
+Browser Mode Update
+
+DICOM Query and Retrieve SCU
+
+* This DICOM Q/R function is a optional Function. And then if you want to use this function, you should order to your account sale man.
+
+➀ Config : Configuration of Setup Remote destination or Retrieve Destination.
+
+You should ADD/Modify/Remove information of Remote or Retrieve destination. After installation feel-DRCS, feel-DRCS is set automatically for the Retrieve destination. At this time, the retrieve destination is local host (feel-DRCS).
+
+➁ Select query and retrieve destination.
+
+➂ Search option
+
+➃ Result for listing. You should select study or series.
+
+➄ Command add queue or retrieve
+
+Add Queue : Add Queue for selected study or series
+
+Add Queue & Retrieve : Add queue and command retrieve for selected study or series
+
+Retrieve : Command retrieve for selected queue on lists.
+
+Select All : Select all on queue lists.
+
+Clear : Delete all queue lists.
+
+* After retrieve, this function is registered in the DB of the feel-DRCS. And you will see the retrieved images on feel-DRCS. But the feel-DRCS is not registered in the DB for all DICOM image.
+
+The feel-DRCS in registered in the DB for only 16Bit (9 – 16 bit) monochrome 2 DICOM images.
+
+Config Mode Update
+
+* In this update, feel-DRCS add DICOM Service ( DICOM storage commitment SCU, DICOM Modality Performed Procedure Step SCU, DICOM Query and Retrieve SCU ).
+
+Appendix III : Calibration for Shutter Size
+
+Calibration for Shutter Size
+
+* feel-DRCS 실행
+
+* Supervisor로 로그인 (Supervisor 권한에서만 Calibration 버튼 활성화)
+
+* Worklist 모에서 ‘New Set’ 실행
+
+Appendix IV : Code Matching (Add Code)
+
+* When use OCS code but there is no matching code, the code can be matched in expose window
+
+Appendix V : Image Rotation
+
+* In Expose Window one of function is added
+
+* image can be rotated (!! Cropped image is not allowed to rotate)
+
+Appendix VI : Excel Export
+
+* Information of lists can be Exported to Excel file
+
+Appendix VII : Acquisition of phantom image
+
+* Phantom exposure mode : Acquisition image without any processing
+
+Appendix VIII : Print Composure
+
+DICOM
+
+Medium Type : Image medium type (Clear Film / Blue Film)
+
+Film Orientation : film direction (Portrait / Landscape)
+
+Film Size : Film size of the film (8x10, 8.5x11, 10x12, 10x14, 11x14, 11x17, 14x14, 14x17, inch)
+
+Layout : Layout of the image (column : 1~9, row : 1~9)
+
+Sub Layout : Sub Layout of the image (column : 1~5, row : 1~5)
+
+Magnification Type : 1:1 in magnification type. if printing out the film with same ratio like 1:1 (Cubic / 1:1)
+
+Smoothing : Sharp / Smooth / Medium
+
+Boarder Density : Black / White
+
+Min Density : minimum print density
+
+Max Density : maximum print density
+
+Printer DPI : Resolution number for 1:1 print in advance
+
+Font Size : Annotation size
+
+By image : Annotation position, refer to the figure below
+
+PAPER
+
+Film Orientation : : film direction (Portrait / Landscape)
+
+Layout : Layout of the image (column : 1~9, row : 1~9)
+
+Sub Layout : Sub Layout of the image (column : 1~5, row : 1~5)
+
+By image : Annotation position, refer to the figure below
+
+Unchecking ‘By image’
+
+Checking ‘By image’
+
+TOOLS ICON
+
+you can edit images with Tools icon
+
+Default
+
+Default status
+
+Zoom In/Out
+
+If you put your mouse pointer on the image and left click, you can zoom out by moving to the upper side and zoom in by moving to the lower side.
+
+Panning
+
+If you put your mouse pointer on the image and left click, you can move the image as the mouse pointer moves.
+
+Fit Image
+
+It fits the image to the screen size.
+
+Rotate CW
+
+It rotates the image 90° clockwise.
+
+Rotate CCW
+
+It rotates the image 90° counter clockwise.
+
+Flip Horizon
+
+Flip Horizon: It changes left and right
+
+Flip Vertical
+
+Flip Vertical: It changes up and down.
+
+Length
+
+Measure the Length
+
+Angle
+
+Measure the angle
+
+Arrow
+
+Mark the arrow
+
+Text
+
+Write text on the image
+
+Revision History
+
+버전
+
+날짜
+
+내용
+
+Rev 001
+
+2011-04-26
+
+Initial Release
+
+Rev 002
+
+2012-08-31
+
+Updated
+
+Rev 003
+
+2014-07-18
+
+Updated
+
+Rev 004
+
+2015-02-26
+
+Updated
+
+Rev 005
+
+2015-12-02
+
+Added for Trouble Shooting
+
+Rev 006
+
+2016-07-11
+
+Updated
+
+Rev 007
+
+2018-09-20
+
+Updated

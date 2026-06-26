@@ -1,0 +1,227 @@
+queueId: ingest-1781569954377-7j1
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/02_ADD (HAD1417MCW)/▶ FDA/■ 1차 ADD_510(k)_submission_Final_201023.zip/PDF/VOL_013_Appendix L Cybersecurity/002_Cybersecurity.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/f42c4a46f819/002_Cybersecurity__f42c4a46f819_combined.txt
+canonicalGroupId: 4e21168c83b4
+productSignal: HAD/A/F 1417-1717
+authoritySignal: FDA
+pilotRank: 897
+
+SOURCE_TEXT
+1 / 16
+Cybersecurity Documentation
+1. Hazard analysis, mitigations, and design considerations pertaining to intentional and
+unintentional cybersecurity risks associated with your device, including:
+⚫ A specific list of all cybersecurity risks that were considered in the design of your device;
+Cybersecurity Risk Code Description
+HA-0009 Unauthorized access by unauthorized personnel
+HA-0010 Unauthorized user can access the unencrypted data
+⚫ A specific list and justification for all cybersecurity controls that were established for your
+device.
+Cybersecurity
+Controls Code Category Description
+CC001 WiFi Login Password Restrict random access by setting id / pw when
+connecting to Wireless network
+CC002 Authentication and
+encryption
+Transmission data is protected by applying encryption
+such as WPA, WPAPSK, WPA2, WPA2PSK,
+WPAPSK+TKIP, etc.
+
+2 / 16
+2. A traceability matrix that links your actual cybersecurity controls to the cybersecurity risks
+that were considered;
+HA-0009 HA-0010
+CC001 X
+CC002 X
+[Cybersecurity “Risk”– “Risk Control” Traceability Matrix]
+Cybersecuri
+ty Controls
+Code
+Category Description Verification
+Pass / fail criteria
+Validation
+Pass / Fail
+Test
+performed on
+Test
+performed
+by
+CC001 WiFi Login
+Password
+Restrict
+random
+access by
+setting id /
+pw when
+connecting to
+Wireless
+network
+Call the function
+SDUpdater_ReadFirmwa
+reInfoEx Confirmation of
+registered password
+information.
+June/20/202
+0
+Kim, Wan
+Soo
+CC002
+Authenticati
+on and
+encryption
+Transmission
+data is
+protected by
+applying
+encryption
+such as WPA,
+WPAPSK,
+WPA2,
+WPA2PSK,
+WPAPSK+TKI
+P, etc.
+Call the function
+SDUpdater_ReadFirmwa
+reInfoEx Confirmation of
+encryption algorithm
+application.
+June/20/202
+0
+Kim, Wan
+Soo
+[Cybersecurity “Risk Control”– “Verification & Validation” Traceability Matrix]
+
+3 / 16
+3. A summary describing the plan for providing validated software updates and patches as
+needed throughout the lifecycle of the medical device to continue to assure its safety and
+effectiveness. The FDA typically will not need to review or approve medical device software
+changes made solely to strengthen cybersecurity.
+1) We make release and design changes in accordance with software development
+procedures(Doc. No. AQP702).
+2) The operator can update firmware automatically on network connection / wireless
+network setting.
+(See below or refer to User Manual)
+⚫ Detector Connection
+➢ In ‘’Settings’’ tab, enter IP address of the connected detector into “Connection IP”
+and click “Read” for detector information.
+
+4 / 16
+⚫ Update
+➢ Click “…” next to “Update file” to attach the file to update and click “Update”. Update
+completion is shown in “Log” tab.
+
+5 / 16
+⚫ Network Connection
+➢ Configuration tab shows current network connection information.
+➢ You can change detector IP, MAC address, netmask, country and wireless network
+settings. Click “Update” after setting and changing.
+
+6 / 16
+⚫ Wireless Network Settings
+➢ Click “Scan” next to AP list to see the wireless network list that can be connected.
+➢ Select the network that you want to connect, enter the password, and click “Update”.
+
+7 / 16
+➢ Click “Read” to check the wireless network information.
+➢ Click “Clear AP Info” and “Update” in order to initialize the wireless network settings.
+
+8 / 16
+4. A summary describing controls that are in place to assure that the medical device software
+will maintain its integrity (e.g. remain free of malware) from the point of origin to the point
+at which that device leaves the control of the manufacturer; and
+The ADD restrict random access by setting id / pw when connecting to Wireless network.
+And transmission data should be protected by applying encryption such as WPA, WPAPSK,
+WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+Also, the ADD provide the calibration for the quality of the detector. It developed to perform
+quality assurance operations on the detector. This calibration function shall be performance
+once every one year for stabilized detector condition.
+Please refer to the following steps for the calibration.
+
+9 / 16
+⚫ Dark Image Acquisition
+➢ Click "Get Dark" to get a Dark image on the "Calibration" tab. The "Preview" window
+appears and acquires the Dark image. The acquired Dark image will be displayed in the
+image file list.
+• H&Abyz recommends to use the "Average Dark" option to enhance
+image performance.
+• If you select the "Average Dark" option, Dark images will be
+automatically acquired to the number of "total dark frame" values.
+• Dark image in AED Mode (Auto Exposure Detection Mode) is saved in
+the below location.
+C:\XAS_W\Cal_0\CalType0-AED\
+• Dark image in Normal Mode is saved in the below location.
+C:\XAS_W \Cal_0\CalType0-NorTrg\
+
+10 / 16
+⚫ Bright Image Acquisition and Creation of calibration Point Image
+➢ According to the Op Mode (Operation Mode), the bright image is acquired in different
+ways.
+➢ In AED Mode (Auto Exposure Detection Mode), click the “Get Bright” button of the
+software to acquire the bright image. The bright images must be acquired at twenty
+calibration points. The acquired bright images are shown in the image file list.
+
+11 / 16
+➢ In Normal Mode, without clicking the “Get Bright” on the software and uses the Switch
+Box Exposure switch to acquire the bright image. The bright images must be acquired at
+twenty calibration points. The acquired bright images are shown in the image file list.
+• H&Abyz recommends twenty calibration points such as written below.
+Some artifact can be seen on images if the calibration points are not
+sufficient.
+※ SID: 150
+※ Cal point 1 ~ 17: with Al 21mm filter
+※ Cal point 18 ~ 20: without Al 21mm filter
+Calibration point kVp mA mAs
+1 70 200 32
+2 70 200 32
+3 70 200 32
+4 70 200 32
+5 70 200 32
+6 70 200 32
+7 70 200 32
+
+12 / 16
+8 70 200 32
+9 70 200 32
+10 70 200 32
+11 70 200 0.6
+12 70 200 0.8
+13 70 200 1.6
+14 70 200 2
+15 70 200 8
+16 70 200 32
+17 70 200 50
+18 52 200 6.4
+19 70 200 3.2
+20 70 200 5
+• In AED mode (Auto Exposure Detection Mode), each bright image must
+be acquired at intervals of 30 seconds.
+• In AED mode (Auto Exposure Detection Mode), X-ray shall be exposed
+within 30 seconds once the “Acquisition” button is clicked. Otherwise,
+the action will be cancelled.
+• In Normal Mode, the image is acquired using Switch Box Exposure
+switch, not clicking “Get Bright” button.
+• Do not expose X-ray when “Busy” message is displayed in “Preview”
+pop-up window. Any Images can’t be acquired during “Busy” state
+although X-ray is exposed. Expose X-ray when “Ready for Exposure” is
+shown up in “Preview” window.
+
+13 / 16
+➢ When acquiring the bright image, the name of the image file must be Bright02_00.raw
+~ Bright02_09.raw and Bright03_00.raw ~ Bright03_19.raw. When you create the
+bright image file, the Cal point image "*_OC_.raw" is automatically created. The
+acquired bright images are shown in the image file list.
+
+14 / 16
+⚫ BPM Generation
+➢ Click “Generate BPM” in BPM tap, and click “OK” in pop-up to finish generating the BPM.
+
+15 / 16
+5. Device instructions for use and product specifications related to recommended cybersecurity
+controls appropriate for the intended use environment (e.g. anti-virus software, use of
+firewall).
+1) Follow the below operating systems
+
+16 / 16
+2) Use the latest FW / Software
+H&abyz will provide an update when a bug in the detector device is fixed. ADD does not
+provide dynamic software updates. Updates are made only by CS engineers.

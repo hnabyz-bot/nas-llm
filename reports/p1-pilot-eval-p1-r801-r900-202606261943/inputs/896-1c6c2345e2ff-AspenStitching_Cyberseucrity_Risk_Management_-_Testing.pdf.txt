@@ -1,0 +1,265 @@
+queueId: ingest-1781569954421-19jn
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/AspenStitching Cyberseucrity Risk Management - Testing.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/fa3ba2da366f/AspenStitching Cyberseucrity Risk Management - Testing__fa3ba2da366f_combined.txt
+canonicalGroupId: 1c6c2345e2ff
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 896
+
+SOURCE_TEXT
+Aspen Imaging Healthcare 1/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+Cyber Security Test Report
+Model: AspenStitching software
+Revision Status
+Number Revision
+Date
+Rev
+No.
+Description of
+Revision
+Prepared by Reviewed by Approved by
+1 2024.10.10 0 established Dong Hyun Kim
+
+Aspen Imaging Healthcare 2/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+1. Introduction
+This cybersecurity testing document will outline the result of the tests that were conducted to
+assess the vulnerability of the AspenStitching software.
+1.1 Manufacturer
+Aspen Imaging Healthcare Inc
+1.2 Address of company
+Head office:
+801 Jupiter Rd Suite 200, Plano, TX 75074, USA
+(+1) 214-257-0113
+Website: http://aspenimaging.com
+1.3 Applicable directive and annex
+This Technical File consists of technical documentation relating to development of Radiological
+Image Processing System(AspenStitching). It meets the requirements of the Medical Device
+Directive 93/42/EEC as amended by 2007/47/EC and annex Ⅱ, Ⅸ, X.
+
+Aspen Imaging Healthcare 3/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+2. Vulnerability Scanning Test Result
+• Date of Test: 10/10/24
+• Test Objective: Identify potential vulnerabilities in third-party libraries, runtime libraries,
+and compilers used within the system.
+2.1 Scope
+• Include the specified libraries and components only.
+• Communication protocols used for image retrieval
+• Database for storing software configurations and credentials.
+2.2 Test Methodology
+2.2.1 Reconnaissance
+• Reviewed software documentation and system architecture diagrams to understand the
+components and communication pathways involved in the AspenStitching software.
+• Analyzed transmission traffic between the stitching software and the imaging detector to
+identify potential attack surfaces and communication protocols.
+2.2.2 Vulnerability Scanning
+• Utilized static and dynamic analysis tools to scan the X-Ray Image stitching software
+binaries for known vulnerabilities and common security weaknesses.
+• Conducted port scanning and network vulnerability assessments to identify potential
+entry points and security flaws in network configurations.
+2.2.3 Manual Testing
+• Manually inspected the stitching software codebase for security vulnerabilities, including
+buffer overflows, input validation flaws, and insecure data storage practices.
+• Conducted user interface testing to identify potential privilege escalation vulnerabilities
+and unauthorized access paths within the application.
+
+Aspen Imaging Healthcare 4/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+2.3 Vulnerability Findings
+2.3.1 Medium-Risk Vulnerabilities
+• Weak input validation in user-controlled parameters, leading to potential SQL injection
+and command injection vulnerabilities in database queries and system commands.
+2.3.2 Low-Risk Vulnerabilities
+• Lack of proper session management controls in the stitching software, increasing the
+risk of session hijacking and unauthorized access to sensitive patient data.
+• Information disclosure vulnerability detected in error messages, leaking sensitive
+system information that could aid attackers in further exploitation.
+• SSL/TLS configuration issues identified, including the use of weak cipher suites and
+outdated SSL protocols, potentially exposing the system to man-in-the-middle attacks.
+2.4 Mitigation Measures
+2.4.1 Remediating Medium-Risk Vulnerabilities
+• SQL Injection Vulnerability:
+o Implement stronger input validation and parameterized queries to sanitize user
+inputs and mitigate the risk of injection attacks.
+o Conduct code review and security testing to identify and remediate similar
+vulnerabilities in other parts of the application.
+2.4.2 Remediating Low-Risk Vulnerabilities
+• Authentication Bypass Vulnerability:
+o Implement proper authentication mechanisms such as strong password policies
+and multi-factor authentication to prevent unauthorized access.
+o Apply security patches or updates to address the authentication bypass
+vulnerability.
+o Implement session expiration after extended period of time.
+• Weak Password Policy:
+
+Aspen Imaging Healthcare 5/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+o Enforce stronger password policies, including minimum length requirements,
+complexity rules, and expiration periods.
+o Implement account lockout mechanisms to mitigate brute-force attacks and
+unauthorized access attempts.
+o Provide user pointers and tips to notify the user about the importance of
+creating and maintaining strong passwords.
+• SSL/TLS Configuration Issues:
+o Update SSL/TLS configurations to disable deprecated cipher suites and
+protocols and enable forward secrecy.
+2.5 Mitigation Strategies
+• Implement remediation details in a timely manner.
+• Establish a robust incident response plan to quickly respond to security incidents and
+minimize the impact of potential breaches on patient care and data security.
+• Enforce security updates of operating system when patching updates for
+AspenStitching.
+2.6 Summary
+•
+• This vulnerability test report provided an overview of the testing process, identified
+vulnerabilities, and recommendations for remediation and mitigation specific to the
+working of AspenStitching software and its interaction to a detector. Some of the
+vulnerabilities found revealed security weakness in the communication protocols and
+authentication that can be reinforced with software upgrades and policy improvements.
+This document will also serve as a guide to the manufacturer in addressing security
+weaknesses and improving the overall security standards of AspenStitching.
+2.7 Sign-off
+Test Lead Dong Hyun Kim
+Test Date 10/10/24
+
+Aspen Imaging Healthcare 6/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+3. Penetration Test Report
+• Date of Test: 10/10/24
+• Test Objective: To simulate real-world attacks and attempt to compromise the security
+of the AspenStitching software, identifying potential entry points and vulnerabilities.
+3.1 Scope
+• AspenStitching Software
+• Communication protocols used for image transmission between the stitching software
+and the imaging detector.
+• Network infrastructure supporting the stitching software deployment.
+3.2 Test Methodology
+3.2.1 Reconnaissance
+• Gathered information about the target environment (AspenStitching), including system
+architecture, network topology, and software components.
+• Identified potential attack surfaces and entry points through open-source intelligence
+(OSINT) and network reconnaissance techniques.
+3.2.2 Vulnerability Scanning
+• Utilized automated vulnerability scanning tools Nessus and OpenVAS to identify known
+vulnerabilities in the AspenStitching software and associated systems.
+• Conducted port scanning and service enumeration to identify open ports and running
+services for further exploitation.
+3.2.3 Exploitation
+• Attempted to exploit identified vulnerabilities to gain unauthorized access to
+AspenStitching and backend systems.
+
+Aspen Imaging Healthcare 7/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+• Utilized penetration testing frameworks and custom scripts to simulate real-world attack
+scenarios and bypass security controls.
+3.2.4 Post Exploitation
+• Performed privilege escalation techniques to escalate access rights and gain
+administrative control over the target system.
+• Explored the target environment to identify additional systems and sensitive data
+accessible from compromised systems.
+3.3 Test Scenarios
+3.3.1 SQL Injection Attack
+• Attempted to exploit SQL injection vulnerabilities in the stitching software's search
+functionality to extract sensitive patient data from the backend database.
+3.3.2 Remote Code Execution
+• Attempted to exploit buffer overflow vulnerabilities in the image parsing module to
+execute arbitrary code on the user's system and gain remote access to AspenStitching
+software.
+3.3.3 Man-in-the-Middle Attack
+• Attempted to intercept and manipulate network traffic between the stitching software
+and the imaging detector to modify transmitted X-ray images or inject malicious content.
+3.3.3 Network Crawling
+• Attempted to intercept and exploit open ports that can be used to gain access into the
+software and inject malicious content.
+
+Aspen Imaging Healthcare 8/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+3.4 Test Result – Discovered Vulnerabilities
+3.4.1 SQL Injection
+• The search functionality of AspenStitching revealed vulnerability to SQL injection
+attacks, potentially exposing sensitive patient data stored in the backend database to
+unauthorized access.
+3.4.2 Man-in-the-Middle Attack
+• Weak encryption in communication protocols allowed for interception of transmitted
+data
+3.4.3 Remote Code Execution
+• Failed to remotely stub and execute code.
+3.4.4 Network Crawling
+• Failed to find open ports that could be exploited.
+3.4.5 Vulnerabilities by Modules
+Module Version Findings
+Summary
+Risk
+Level Recommendation
+Crypto++ Library 8.3.0 Weak cipher
+algorithms low Consideration for
+upgrading
+Intel C/C++/Fortran
+Compiler 17.0.0
+Buffer
+overflow
+vulnerability
+low Consideration for
+upgrading
+
+Aspen Imaging Healthcare 9/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+Intel OpenMP
+Runtime Library 20160916 Race condition
+vulnerability low Consideration for
+upgrading
+Intel Threading
+Building Blocks 2017
+Concurrency
+issues with
+deadlock
+potential
+low Use latest version with
+improved concurrency
+Microsoft C
+Runtime Library 10.0.17134.12
+Memory leak,
+remote code
+execution
+(RCE)
+medium Update or patch with
+secure configurations
+3.5 Mitigation Measures
+3.5.1 Improved Encryption of Communication
+• Implement secure communication protocols such as TLS/SSL to encrypt data
+transmission between the stitching software and the imaging detector.
+• Enforce security updates of operating system to raise security standard of the operating
+hardware
+3.5.2 Improved Defense Against for SQL Injection:
+• Patch the search inputs and all searchable fields allowing inputs of the application to
+enforce stricter validation and better error handling.
+3.5.3 Improved Authentication Policy:
+• Implement proper authentication mechanisms such as stronger password policies and
+multi-factor authentication to prevent unauthorized access.
+• Apply security patches or updates to address the authentication bypass vulnerability.
+
+Aspen Imaging Healthcare 10/10
+Doc. Name: AspenStitching-Security-Test-Report
+Initiate date: 2024.10.10 /Rev 0
+3.6 Summary
+• The penetration test was conducted on the AspenStitching software to evaluate its
+resilience against simulated cyber attacks. The test revealed a few vulnerabilities that
+can be easily addressed with updated software policies through patches and upgrading
+to newer versions of the libraries to reduce security risks to the end user. These
+measures will also improve the confidentiality, integrity, and availability of patient data
+and imaging systems. Mitigation measures that have been outlined in the document
+should be implemented in a timely manner to remediate all potential security threats.
+3.7 Sign-off
+Test Lead Dong Hyun Kim
+Test Date 10/10/24

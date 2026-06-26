@@ -1,0 +1,1506 @@
+queueId: ingest-1781569954371-1uj
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ 국내 제조인증/2. Infou 콘솔 추가 기술문서/설계변경/User_Console Manual Ver.0.1_ENG.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/3c59133caeb6/User_Console Manual Ver.0.1_ENG__3c59133caeb6_combined.txt
+canonicalGroupId: 484762305ef9
+productSignal: HAD/A/F 1417-1717
+authoritySignal: MFDS/domestic
+pilotRank: 841
+
+SOURCE_TEXT
+Digital Flat Panel X-ray Detector
+feel-DRCS
+User Manual
+
+Digital Radiography Console Software
+User Manual
+feel-DRCS
+
+feel-DRCS
+2
+User Manual Version : 0.1
+Date : 2020.03.12
+
+feel-DRCS
+3
+Table of Contents
+1. Introduction...................................................................................................................................... 6
+2. Purpose .............................................................................................................................................. 7
+2-1. Intended use...................................................................................................................... 7
+2-2. Symbols .............................................................................................................................. 8
+3. System requirements ................................................................................................................... 9
+3-1. Workstation .................................................................................................................... 9
+3-2. Monitor ........................................................................................................................... 9
+4. Installation & Delete software ...............................................................................................10
+5. Software configuration ..............................................................................................................11
+5-1. Worklist ......................................................................................................................... 11
+5-2. Browser.......................................................................................................................... 12
+5-3. Review ........................................................................................................................... 13
+5-4. Config ............................................................................................................................ 14
+5-5. Option Mode ................................................................................................................ 15
+6. Operation feel-DRCS ..................................................................................................................18
+6-1. Login .............................................................................................................................. 18
+6-2. Worklist ......................................................................................................................... 19
+6-2-1. Main Menu ................................................................................................................................................... 19
+6-2-2. Search option .............................................................................................................................................. 20
+6-2-3. Refresh condition ....................................................................................................................................... 20
+6-2-4. New SET ......................................................................................................................................................... 20
+6-2-5. List ..................................................................................................................................................................... 21
+6-2-6. Manual Input ............................................................................................................................................... 22
+6-3. Browser.......................................................................................................................... 25
+6-3-1. Main Menu ................................................................................................................................................... 29
+
+feel-DRCS
+4
+6-3-2. Patient List..................................................................................................................................................... 29
+6-3-3. Study List ....................................................................................................................................................... 30
+6-3-4. Thumbnail...................................................................................................................................................... 31
+6-3-5. Command Button ...................................................................................................................................... 33
+6-4. Review ........................................................................................................................... 37
+[Review Mode] ................................................................................................................................................................. 38
+[Exposure Mode] ............................................................................................................................................................ 38
+6-4-1. Stand & Table ............................................................................................................................................. 39
+6-4-2. Generator ....................................................................................................................................................... 39
+① Examined Part ........................................................................................................................................................ 40
+② View Position ......................................................................................................................................................... 41
+③ Image Parameter .................................................................................................................................................. 43
+6-4-3. Process ............................................................................................................................................................ 45
+6-4-4. Detector Status ........................................................................................................................................... 49
+6-4-5. Study ................................................................................................................................................................ 49
+6-4-6. Re exposure .................................................................................................................................................. 50
+6-4-7. R, L, MARK, TEXT ........................................................................................................................................ 51
+6-4-8. TOOLS ICON ................................................................................................................................................ 53
+6-4-9. TOOLS ICON in Review mode ............................................................................................................. 63
+6-4-10. TOOLS Menu................................................................................................................................................ 64
+6-4-11. Pop-up Menu .............................................................................................................................................. 70
+6-5. Configuration ............................................................................................................... 72
+6-5-1. Default Setting ............................................................................................................................................ 72
+6-5-2. Storage Setting ........................................................................................................................................... 73
+6-5-3. Annotation Management ....................................................................................................................... 74
+6-5-4. Worklist Item Management .................................................................................................................. 75
+6-5-5. DICOM MWL(Modality Worklist Server Setting ) ....................................................................... 76
+6-5-6. DICOM Storage .......................................................................................................................................... 77
+6-5-7. DICOM Print ................................................................................................................................................. 78
+7. Option software & function ....................................................................................................80
+7-1. Viewsub ......................................................................................................................... 80
+7-2. feelVIEW ........................................................................................................................ 82
+
+feel-DRCS
+5
+7-2-1. Menu................................................................................................................................................................ 83
+8. Trouble shooting..........................................................................................................................87
+8-1. Dicom Communication............................................................................................... 87
+8-2. Image Processing ........................................................................................................ 88
+8-3. Crash and Error Message .......................................................................................... 88
+Appendix I : Simple Workflow ........................................................................................................91
+Appendix II. DICOM Option ............................................................................................................92
+Appendix III : Calibration for Shutter Size ................................................................................96
+Appendix IV : Code Matching (Add Code) ............................................................................ 100
+Appendix V : Image Rotation ...................................................................................................... 102
+Appendix VI : Excel Export ............................................................................................................ 103
+Appendix VII : Acquisition of phantom image ..................................................................... 104
+Appendix VIII : Print Composure................................................................................................ 105
+9. Revision History ......................................................................................................................... 109
+
+feel-DRCS
+6
+1. Introduction
+feel-DRCS is the name of the digital radiography of H&abyz Co. Ltd. feel-
+DRCS is the DR console or DR control software that acquires image from the
+DR detector like flat panel or CCD, processes rapidly for clinical application,
+and provides DICOM services for the integration with PACS system. This
+manual explains how to install and operate feel-DRCS software.
+H&abyz CO.,LTD.
+1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-
+si, Gyeonggi-do, Republic of Korea www.abyzr.com
+
+feel-DRCS
+7
+2. Purpose
+feel-DRCS is the operation console system software integrated with various
+detectors or X-ray generator, based on FS-MLW (Faster Specialized Multi
+Layered Wavelet) technology.
+feel-DRCS is the product developed for the operator, designed at the clinical
+hospital through many years of clinical tests, and finished by service
+engineers of former major DR makers.
+feel-DRCS is the embedded software based on feel-TK enable to remove
+noise and various artifacts and much clearer body tissue. The embedded
+calibration function makes it possible to set the basic calibration data (offset
+image and gain image) for all types of detector. It can also process
+progressive defect by providing defect view.
+feel-DRCS is distributed and being used at the clinical fields after verifying
+software on various detectors distributed worldwide. It is easy to use console
+system’s software just by changing the type of the detector which DR makers
+want. Integrating the X-ray’s generator operation panel, the total DR system
+inside the software makes it possible to control APR, AEC, Ready/Exposure
+with ease.
+feel-DRCS is integrated with various X-ray generators, supports APR function,
+and provides all-in-one DR product which enables to work as existing
+operation panel with just one console software.
+feel-DRCS does not provide the software the DR makers, but the
+knowhow as well as consulting services to be your best partner.
+2-1. Intended use
+Feel-DRCS is intended to be used for radiological doctor and radiological
+technician for acquired general radiographic images.
+So, it’s used by radiological doctor or radiological technician in hospital.
+
+feel-DRCS
+8
+So, this system is installed by only X-ray engineer or X-ray installation
+engineer. It is used by radiological doctor
+For proper usage and safety purposes, please ensure that only legally
+qualified person (Doctor, Medical Treatment Radiological
+Technologist, Medical Treatment X-RAY Technologist) can use this
+product after fully familiarize with contents of user manual
+This medical device can’t use alone. So this product need to connect
+with X-ray detector. Sometimes, this software operates with
+exposure condition of X-ray Generator system.
+This product is a medical device, and it should only be used as digital
+X-ray radiography console software for X-ray radiography at
+corresponding hospitals.
+2-2. Symbols
+Symbols Descriptions
+Refer to operation or install manual
+Warning
+Caution
+Read Carefully
+Manufacture
+Date of manufacture
+
+feel-DRCS
+9
+3. System requirements
+3-1. Workstation
+ Processor: Intel Core i3 or later(recommend : i5 or more)
+ RAM : 4GB RAM(Recommend 8GB)
+ HDD: At least 100GB hard disk. For data backup and reliability, we
+recommend two separate HDDs physically-1st HDD: System and
+Software, 2 HDD: Image Data Storage, not separating the partition
+logically with just one HDD.
+ Network Card : 10/100/1000Mbps Ethernet Network Card
+ Video graphic adapter: at least over 1280 X 1024 pixels, color
+resolution-True Color mode(no shard memory), DVI interface connector
+ Operating System : Windows 7 prof.(at least SP1), Windows 10
+ Need I/O : 1 Parallel port(synchronize Detector & X-ray Generator &
+Software), 1 Serial port(in case Control of X-ray generator), 1 USB
+port(Software Lock-Key)
+3-2. Monitor
+ Over 19 inch (23 inch recommended)
+ Brightness : over 300cd/m2
+ Contrast Ratio : over DC 8000:1
+ Response time : over 5 ms
+ 1600X1200 or 1920X1280 recommended (at least over 1280 X 1024) 4:
+3 , 16:9. 16: 10 ratio supported.
+ High fidelity of grayscale and optimized luminance distribution
+If you want to use high-resolution monitor, we recommend medical LCD
+monitor (B/W or color). There is no problem because the present software
+was made based on gray color when you want to use black and white
+monitor.
+For image quality control, we recommend the below among medical
+monitors. It is because it needs to adjust the image at the same brightness
+for diagnosis after taking X-ray. Most of monitors are made according to
+each country’s medical standard so that there is no problem to use them.
+
+feel-DRCS
+10
+4. Installation & Delete software
+Refer “Installation Manual”
+
+feel-DRCS
+11
+5. Software configuration
+5-1. Worklist
+Through DICOM Worklist, you can input the patient information, integrated
+with hospital information system (HIS) or input the patient information
+manually.
+
+feel-DRCS
+12
+5-2. Browser
+It shows the list of stored images after acquisition. You can open the images
+to edit, to send to the PACS server, and to print out.
+
+feel-DRCS
+13
+5-3. Review
+You can take images according to the information selected from the Worklist
+and edit after retrieving images stored in the browser. There are the
+generator tab for controlling the generator and the process tab for editing
+images.
+
+feel-DRCS
+14
+5-4. Config
+You can do configuration for functions and information for feel-DRCS
+
+feel-DRCS
+15
+5-5. Option Mode
+ViewSub (option)
+
+feel-DRCS
+16
+
+feel-DRCS
+17
+feelVIEW (option)
+
+feel-DRCS
+18
+6. Operation feel-DRCS
+6-1.Login
+The program starts.
+From the desktop, double-click “feel-DRCS” icon to execute the program.
+Put the operator name (or ID) and password from the login screen and click
+“OK” to start the program.
+Check the connection status with detector and generator after login and Put
+the color value connected with each part of the screen.
+-There is the difference according to the user level like company, or
+company name or supervisor.
+-You can ordinary user account or ordinary manager account at the
+hospital. The “supervisor” account is for A/S engineers.
+-The screen may look still temporarily due to the connection to the
+equipment after login.
+
+feel-DRCS
+19
+6-2.Worklist
+You can retrieve the study from the Worklist and display on the screen. You
+can also input manually. You can move to the study mode by double-clicking
+the patient information of the list or clicking the study button.
+6-2-1. Main Menu
+① EXAM: Move the studies selected from the list to the EXAM mode.
+② DELETE: Delete the selected study lists.
+③ REFRESH: Renew the list when DICOM worklist supported.
+④ ER: This is for emergency study.
+⑤ CODE : Setting RIS code and View position.
+
+In the case of “ER”, you need to set ER001 special code in the code
+manager in advance to move to the study mode after creating ID,
+password and so on automatically. Here you input the study body
+part, study conditions and so on for the study settings.
+
+feel-DRCS
+20
+6-2-2. Search option
+You can set the item to display in the list. With the patient information (ID,
+Name, Access No.), you can display the specific patient or the patient
+satisfying special conditions with the items like Schedule, Modality,
+DOB(Date of Birth) and State.
+6-2-3. Refresh condition
+You can set the cycle to retrive the patient information when the worklist
+server is is able to be connected.
+AUTO renews the list automatically according to the time cycle as above.
+If you want to refresh manually, click the AUTO button again and the push
+the FRESH button at 6-2-1.
+6-2-4. New SET
+Press this function to modify or add the various setting value
+(Body part, View position, X-ray exposure condition, Image processing
+parameter, Annotation etc)
+Refer to “part of Generator “
+
+feel-DRCS
+21
+6-2-5. List
+It displays the list corresponding to the conditions set in the Option.
+Double-click the right button of the mouse from the worklist to show pop-
+up menu.
+① Reserve (X) : Change the selected list to Reserve mode due special reasons.
+② STATUS : Search study lists satisfying selected study conditions.
+A. All : Display all study lists.
+B. R (Ready) : Display the list not examined yet.
+C. X (Reserve) : Display list changed to Reserve forcibly.
+D. Y (Examined) : Display the examined list.
+③ Search Option : Show or hide search options of the worklist.
+④ Code Manager : For the RIS code of selected studies, it displays the code
+manager on the screen to select the view position. Please refer to “8.
+TOOLS 의 code manager” for its usage.
+⑤ Export to excel : Information of patient lists can be Exported to Excel file
+⑥ Phantom : acquisition image without any processing
+
+feel-DRCS
+22
+6-2-6. Manual Input
+You can create new patient information by putting them.
+① Manual Input
+A. You input ID, Name, ACC. No. and so on. You need to input at least ID and
+name. When you enter after inputting Patient ID, other information is entered
+automatically before entering patient information(ID, Name, Age, etc) at least
+one time.
+B. You can select the type of the anatomy as below.
+C. If the favorite study lists are inputted in advance in the special code, you can
+automatically check study lists in the study list by selecting the code next to
+the special code. If you want to add the study list here, click the special code
+to check the study list and then push the ADD button to add.
+
+feel-DRCS
+23
+D. If you want to change or create the special code on the worklist screen, right-
+click from the Study list to execute the Code manager.
+E. You can create Date of Birth and the age in the DICOM file by putting them.
+F. If you do not change 1900.01.01 as default, there is no value at the patient’s
+birth date field (0010.0030) of the DICOM file.
+G. If you put the patient age, it inputs the age only in the DICOM file.
+H. You can specify the age by year, month, and date unit.
+Be careful not to input the Date of Birth and the Pat Age separately. It
+may cause that the date of birth and age become different in the
+DICOM file.
+
+feel-DRCS
+24
+② Study List
+A. ADD : Add the inputted study information to the study list.
+B. DEL : Delete the wrong list.
+C. UP/DOWN : You can order when changing the sequence of the selected study
+lists.
+③ OK : Add the inputted study information to the Study list.
+④ CANCEL : Reset the inputted study information.
+⑤ STUDY : Change to the Study mode for inspecting as inputted study information.
+
+feel-DRCS
+25
+6-3. Browser
+The browser mode works as database viewer in order to review saved image
+data. In this mode, you can query in various ways, x-ray again, and change
+the sequence of the image. You can also send to PACS or backup and restore.
+It is very useful management tool.
+If you execute the browser mode, you can not see the image on the
+image display list at the early stage. That is because it is not selected
+from the list of Patient/study/series. Therefore, you need to select to
+display from the list of Patient/study/series.
+
+feel-DRCS
+26
+6-3-1. Main Menu
+① OPEN : Open all images of the selected patient.
+② EXPOSURE : Change to study mode for reexamination of the selected studies.
+③ MERGE : Merge different studies. For example, the case happens that the
+different patient image is in the selected patient image folder or one patient’s
+image is to merge after ER.
+A. First select the patient to merge.
+B. Click the MERGE button (from the main menu).
+C. It shows the above pop-up after that.
+D. Select the patient to merge according to the option or the patient list.
+E. Select the study list of the selected patient and then click the merge button.
+F. It merges all Study list.
+
+feel-DRCS
+27
+④ ANALYSIS : This function is displayed about the entire analysis of radiography
+history as checking it at the s/w installation.
+As above, analysis window is displayed.
+This content includes the entire information of the applicable year by month.
+Press the “Total” after Selecting the applicable year
+and the data of the applicable year is displayed.
+And press the “Search” to display the data after setting date.
+Follows the below to print out the analysis data.
+
+feel-DRCS
+28
+A. Press “Print Setup”
+B. Press the red box and go to pre-view window
+
+feel-DRCS
+29
+C. Press the printer icon to print out in pre-view window
+6-3-2. Patient List
+It displays Patient ID, name, sex, date of birth, study date and so on. If you
+select the list, study, series, and images are displayed on the below screen.
+If you double click the item, you can check all the images for the patient on
+the review screen.
+① EDIT
+You can change the patient information as below. Check the account to
+know who modified it.
+② DEL
+You can delete the selected patient information. In this case, also check the
+account.
+
+feel-DRCS
+30
+6-3-3. Study List
+This shows the study list of the patient selected from the patient list. Patient
+ID, study ID, accession number, study date & time, study description and so
+on are displayed. If you choose one of them, the series and images appear.
+Double clicking the item, you can check images included in the study
+selected on the review screen.
+The EDIT and DEL allow only company and supervisor user.
+① EDIT
+You can change the patient information as below. Check the account to
+know who modified it.
+② DEL
+You can delete the selected patient information. In this case, also check the
+account.
+
+feel-DRCS
+31
+6-3-4. Thumbnail
+This shows the thumbnail images of the selected study. Left-click to show
+the pre-view image.
+① Invert Sel.
+A. Invert the selection of the image from the image list. Cancel the
+selected image and choose the unselected image.
+B. With Inver Sel. Checked, if you select the patient list, study list
+and series list, the basic image is displayed without yellow box.
+C. If it does not work normally after opening images, check whether
+or not the yellow box is on the image.
+② OPEN : Open selected images.
+③ EXPAND : You can watch all images by pushing EXPAND button
+when there are too many thumbnail images.
+
+feel-DRCS
+32
+④ The EDIT button is for changing the study information. Check the
+account to know who modified it.
+⑤ The ACCEPT activate the rejected image and accept the rejected
+image in the software.
+⑥ Image Sequence change: You can change the sequence of the image
+by drag & drop.
+
+feel-DRCS
+33
+Click after checking the message.
+This function works only at the same series so that you need to
+change the sequence at the selected series after choosing one. You
+can also do on the thumbnail screen when not expanding.
+6-3-5. Command Button
+Send You can send images selected (with yellow box) from the image list to
+PACS server selected on the right side. (Refer to PACS of configuration for
+setting PACS server)
+Print You can print out the selected image (with yellow box) form the image
+list.(Refer to Appendix VIII : Print Composer)
+
+feel-DRCS
+34
+File
+Export
+You can save the selected images in file. We support BMP, JPG, PNG, DCM
+(Pre-established patient information in Config menu overlay on image)
+- File name is written as PatID_StuID_Filename
+- If there is file that have same file name, the file name include _1, _2, …
+at end of file name
+- If input Folder name in Folder Block, feel DRCS create folder and save
+image in it when the folder is not existed
+CD
+Backup
+You can back up the selected images in CD/DVD with image viewer
+(so called CDPublisher)
+
+feel-DRCS
+35
+Backup You can back up the selected images in the folder.
+Back up has two options to save or export the data from the console PC .
+one is saved in selected drive without viewing S/W. Another is saved with
+viewing S/W like “CD Write backup” .
+How to back up in CD-ROM
+a. Insert the empty CD to CDROM Drive
+b. Select the backup path to CDROM Drive
+c. Press “Backup start”
+d. Press “yes” as below
+
+feel-DRCS
+36
+Restore It restores backup images.
+The Restore function can work as DICOM import. You use this function
+when you register DICOM files from other sources to the DR-console
+software.
+
+feel-DRCS
+37
+6-4. Review
+Under the REVIEW mode, you can use the EXPOSURE screen for examining in the
+worklist and also REVIEW mode for checking and editing images in the browser.
+[From WORKLIST/BROWSER to EXPOSER]
+[REVIEW mode]
+The difference is whether or not it acquires additional images. In the
+case that study mode is taken in the Review mode, it is to expose
+the acquired images again.
+
+feel-DRCS
+38
+[Review Mode]
+[Exposure Mode]
+
+feel-DRCS
+39
+6-4-1. Stand & Table
+Select the equipments for studying under study mode.
+6-4-2. Generator
+You can manipulate by pushing the Generator button when the generator
+integrated. You can change dosage and also AEC environment when AEC
+supported.
+
+feel-DRCS
+40
+The condition values displayed on the screen are shown in the
+support type of the generator so that it does not display all
+condition values
+① Examined Part
+➢ Exam Type
+According to the equipment type (STAND/TABLE/UNIVERSAL), the body part
+embedded in the equipment will be displayed
+➢ Up
+It moves the location of the body part selected from the list to the upper side.
+➢ Down
+It moves the location of the body part selected from the list to the lower side
+
+feel-DRCS
+41
+➢ Body Part Name
+It displays the name of the body part selected from the list or it can input the
+new body part to add.
+➢ ADD
+It adds new body part items to the list through input window
+➢ Delete
+It deletes the item of the body part selected from the list.
+➢ Edit
+It changes the name of the body part selected from the list.
+② View Position
+➢ View Position
+It displays all view positions corresponding to the body part selected from Study
+type list
+➢ Up
+It moves the location of the view position selected from the list to the upper
+side.
+➢ Down
+It moves the location of the view position selected from the list to the lower side.
+➢ Marker
+You can select whether you display laterality on the image or not, and the
+contents/position/font size of the items to display.
+➢ Label
+You can select whether you display View Position on the image or not, and the
+contents/position/font size of the items to display.
+
+feel-DRCS
+42
+➢ Annotation
+You can select whether you display Patient Direction on the image or not, and
+the contents/position/font size of the items to display.
+➢ Flip Horz
+You can select whether you automatically apply Mirror function (The right part
+and left part of the image are inverted) or not.
+➢ Flip Vert
+You can select whether you automatically apply Flip function (The upper part and
+lower part of the image are inverted) or not.
+➢ SID
+You can select the x-raying distance (The distance between the tube and the
+detector).
+➢ Cross
+This is for processing the cross line when using Trixell’s detector.
+➢ Rotate
+In the case that the detector top’s position does not match according to the
+Bucky’s configuration, you can rotate after image acquisition. You can also rotate
+partially on examined part & View position screen. You can choose 0, 90, 180,
+and 270. The default value is 0.
+➢ View Position Name
+It displays the name of View position selected from the list.
+➢ Description
+It displays the description of View position selected.
+➢ Patient Orientation
+You can select Patient Orientation in DICOM format.
+
+feel-DRCS
+43
+➢ View Code Sequence
+You can select View position in DICOM format.
+➢ None RIS Code
+You can input original hospital code to integrate with Worklist.
+➢ WW
+You can select the window width value to apply in displaying images.
+➢ WL
+You can select the window level value to apply in displaying images.
+➢ Add
+You can add newly created view position items to the list.
+➢ Delete
+You can delete view position items selected from the list.
+➢ Edit
+You can modify the contents of view position items selected from the list.
+③ Image Parameter
+➢ Patient Size
+You can select the patient size.
+➢ Cor. Shutter
+Calibrate for Shutter Size
+➢ Shutter
+You can select the size of the part to save from images.
+
+feel-DRCS
+44
+➢ X-Ray Parameters
+You can set the condition for x-raying from the Generator.
+1. kVp
+2. mA
+3. mAs
+4. Focal Spot : Large / Small
+5. Mode : mA/ms, mAs, AEC
+➢ Enhance Parameters
+You can set values for image processing.
+- Par : Selects Parameter files for image processing.
+
+feel-DRCS
+45
+6-4-3. Process
+You can process displayed images by opening the Par file, applying the
+parameter, and changing the details. For setting the parameter file, refer to
+the 6-4-2.
+
+feel-DRCS
+46
+Image Processing Parameter
+setting
+You can save parameter files for image processing.
+P/S/M/L buttons make it possible to select the
+parameter file chosen in advance according to the
+patient condition. If it is not set yet, it is displayed
+as blank.
+You need to set for image processing. If the file
+is not in the pre-set route, all execution
+buttons for the below processing will get
+disabled.
+Edge Enhancement adjustment
+This is for highlighting the edge of the image
+(separately with other parameters). As shown in the
+below images, it is used to watch the detailed part
+of the bone tissue.
+edge enhancement = 2 edge enhancement = 7
+Contrast Enhancement
+adjustment
+
+feel-DRCS
+47
+This is for highlighting the contrast of the image. It
+is related to latitude. If highlighted too much, it
+looks hard. As shown in the below images, C-spine’s
+part is highlighted compared to the surrounding
+tissue.
+Contrast enhancement = 2 Contrast enhancement = 7
+Latitude adjustment
+As the value gets higher, the lower part of the image
+is highlighted and the image gets thicker. It shows
+more realistic image for the two-dimensional image.
+Please refer to the below.
+Cross section
+of image
+Top of image
+Bottom of image
+
+feel-DRCS
+48
+Latitude = 2 Latitude = 7
+It executes image processing.
+The modified Edge enhance, Contrast factor and
+Image latitude of the parameters for image
+processing are saved.
+The saved parameters will process the same study
+part.
+You can initialize to the original values of
+parameters.
+You can save LUT files, PAR files, and their routes
+for image processing. For selected study part, it is
+processed by the saved route.
+You can go back to raw image that is not
+processed. In other words, when displaying image
+data acquired from the detector, the part shown by
+the shutter is displayed as raw data if the shutter
+exists in the review mode.
+
+feel-DRCS
+49
+6-4-4. Detector Status
+: When detector is ready for exposure, “R” mark is changed to yellow color.
+In review mode, “R” mark is fixed to gray color.
+; When acquiring the image, “E” mark is changed to green color and acquires
+the data.
+6-4-5. Study
+“A” Button this function moves to the next study automatically.
+Also it is possible to select the view position by user in auto mode.
+As following the window, use to add or modify the view sequence.
+
+feel-DRCS
+50
+6-4-6. Re exposure
+If a saved image is under X-ray exposure or mismatch position, you can do
+re exposure x-ray using this button.
+After clicked this button, the console software does wait until X-ray exposure.
+If your system is integrated X-ray generator, the console viewer is changed
+to exposure mode. Otherwise, the console viewer is not changed.
+After acquisition of new image, you must select “accept” or not for new
+image.
+If you do accept new image, You must choose carefully because the
+system delete old image.
+
+feel-DRCS
+51
+6-4-7. R, L, MARK, TEXT
+You can input the annotations on the screen.
+In the case of AP/PA/LAT, just click the mark to input on the screen. If you
+want to make a new mark, push + button.
+Checking Insert mark and pushing OK button just adds to the MARK list. But,
+if you do the above process with Insert mark unchecked, it adds to the list
+and also shows the mark in the image part.
+“SELECT” button shows the mark of the list on the screen.
+The following two photos are for adding Text and the process is the same
+as MARK.
+
+feel-DRCS
+52
+
+feel-DRCS
+53
+6-4-8. TOOLS ICON
+Under the Review mode, you can edit images with Tools icon when the image is
+displayed on the screen.
+
+feel-DRCS
+54
+Layout 1 X 1 Displays the big image without any split.
+Layout Custom
+The operator can select how to split. Basically 1X2, 2X1,
+2X2 are included. If you select “Custom”, you can input
+the layout as you want.
+Input the row and column to add and push “Add”
+button.
+
+WL Reset Changing the Window width/level initializes to the
+original value of acquired image.
+Image Reset Initializes the image (cancelling ROI rectangle and
+processing).
+
+feel-DRCS
+55
+Panning
+If you put your mouse pointer on the image and left
+click, you can move the image as the mouse pointer
+moves.
+Zoom In/Out
+If you put your mouse pointer on the image and left
+click, you can zoom out by moving to the upper side
+and zoom in by moving to the lower side.
+Magnify Glass
+It can magnify/make smaller any screen area. If you
+move the mouse to the left upper side, pushing the
+Shift key, the screen will get smaller. Moving to the
+right upper side makes it larger.
+If you move to the upper side, pushing the control key,
+the image magnification ratio will get smaller. Moving
+to the lower side makes it larger.
+Fit Image It fits the image to the screen size.
+ROI Ellipse It selects the area to store in the form of circle or in
+the oval form. The outside of the area looks black.
+ROI Rectangle It selects the area to store in the rectangle. The outside
+of the area gets removed.
+Print
+It prints the image selected with DICOM printer.(Only
+DICOM printer)
+Clicking the icon shows the below preview.
+For detail explanation, refer to Appendix.
+
+feel-DRCS
+56
+Refer to Appendix VIII : Print composer
+Save It saves the present image.
+Save & Send It saves and sends the present images.
+
+feel-DRCS
+57
+Close Study
+In image acquisition mode, it displays the Worklist
+screen after saving or sending the present images and
+then finishing the study.
+Here 4 modes are supported.
+① Save an image: It saves the present image.
+② Save and send an image :
+It saves and sends the present image.
+③ Save an image and send all images :
+It saves the present images and sends all images
+displayed in the thumbnail
+④ Only send images : It sends all images displayed in
+the thumbnail without storage.
+Cancel
+In examination mode, it cancels to use images (not save
+images) and gets ready for another.
+In the Review mode, it displays the review screen.
+Reject function does not use the image without
+deletion and the image is displayed with “Reject”
+message.
+
+feel-DRCS
+58
+Rotation It rotates the image with various angle
+1. When click the icon(-30, -45, +30, +45 …) rotated image and rotation
+value can be show
+2. User can set The rotation value clicking icon several times
+
+feel-DRCS
+59
+Flip Horizon &
+Vertical
+When click this icon display menu bar can select Horz
+or Vert
+Flip Horz : It changes left and right
+Flip Vert : It changes up and down.
+Rotate CCW It rotates the image 90° counter clockwise.
+Rotate CW It rotates the image 90° clockwise.
+Whole Spine
+It can create new merged image that do stitch 2- 4
+images by method of manual or semi auto.
+Sometimes this functions is called name “Stitching”.
+1. The first step, you should selected images to stitch in review mode.
+.
+2. The method of using Merge button(semi auto)
+
+feel-DRCS
+60
+(ex. Using “X” marker on the images by merge button)
+A. Select ZOOM ratio.
+B. Select position.
+C. Check a Set 1st point.
+D. Click the left button of mouse on the stitching pointer in the upper
+image.
+E. Check a Set 2nd point.
+F. Click the left button of mouse on the stitching pointer in the below
+image.
+G. Push the Merge button. After push the button, it is created new
+stitched image.
+H. Push the Save or Cancel.
+I. After push the save button, you wait until display the processed
+image. The processing time is different by PC performance.
+J. This function is only support in the case of stitching of Two images.
+If the counter of your select images is over 3 image, this merge
+function is disable.
+Click 1st point
+Click 2nd point
+Click Viewing position
+Select zoom ratio
+B
+C
+D
+E
+F
+G
+
+feel-DRCS
+61
+The image after push the Merge button.
+
+feel-DRCS
+62
+After push the save button
+3. The method of manual stitching
+A. Select moving image. As selecting image, The selected image
+number is active.
+B. Move the image with clicking left mouse button.
+C. If you cannot move at the exact point, you should move at the
+near point by mouse. And you can move at the exact point by
+using bellow option
+D. Push the Save or Cancel.
+4. Options button.
+A. Left, Right, Up, Down : Move unit of 10 pixel selected image.
+B. Other
+i. Fine Tuning : Move unit of 1 pixel as push the Left, Right, U
+p, Down.
+ii. Fix Horizontally :
+iii. Fix Vertical :
+iv. Fix Image : Fixed image for check the stitched image after
+moving image.
+“When stitching images, there are two methods to merge the image.
+One is the raw images to use, another is the processed images to use .
+A
+B
+
+feel-DRCS
+63
+6-4-9. TOOLS ICON in Review mode
+Measurement Angle
+Measurement Length
+Invert(Pixel gray value)
+Line Profile(Histogram)
+New SET
+Code Manger
+DICOM Storage Sending Status
+DICOM Printing Status
+Default mode mouse
+
+feel-DRCS
+64
+6-4-10. TOOLS Menu
+Under the Review mode, you can use below functions by clicking the TOOLS
+button.
+Image Open You can watch DICOM files from outside, not DICOM files stored in
+feel-DRCS.
+You can use basic functions like watching images and window
+width/level.
+Tool  Histogram
+The histogram means the line profile here. If you draw a strait line on
+the image, you can see the distance and various values related to the
+line as below.
+
+feel-DRCS
+65
+ Measure Angle
+You can measure the angle on the image.
+ Measure Line
+You can measure the line on the image.
+ Invert
+You can invert (negative) the pixel’s value for each image. You go
+back to the original status by pushing again.
+ Length Calibration
+- This is for setting pixel spacing value of the detector at one’s
+discretion.
+- After x-raying, measure the pixel spacing value to compare with the
+real value and then input the real number. This is the calibration for the
+
+feel-DRCS
+66
+real distance when the real distance is different from that of the image
+taken.
+1. Select Menu-Tool-Length calibration.
+2. Check the distance on the image or the real distance and draw the
+line as long as the distance.
+3. The screen as below will appear if you finish measuring the distance.
+4. Measure displays the measured distance on the image.
+5. Put the real distance in “Real”(Unit: mm).
+6. Pixel Spacing value computed in Stand (selected Bucky) is displayed.
+7. Reset disregards computed pixel spacing value and calls pixel spacing
+value (original value when installed) saved in Aceview.ini file to display.
+8. Save saves the present pixel spacing value and closes the screen.
+9. “Cancel” cancels the present work and closes the screen.
+It is very useful to do this measurement when installing first. Generally, the
+engineers do length calibration in installing.
+
+feel-DRCS
+67
+Send Status It displays DICOM file transfer QUE being transmitted to Network
+through DICOM storage service. The list will be deleted after
+transmitting images is over.
+If the program is closed with transmission not finished, the warning
+sign appears to inform that QUE images remain and asks how to
+process.
+Print Status It displays DICOM file transfer QUE being transmitted to Network
+through DICOM print service. The list will be deleted after transmitting
+images is over. Other functions are similar to Send status.
+Check Exposure
+Count
+It displays exposure count until now after initial installation.
+Configuration, Study Part & View Position will be explained later.
+
+feel-DRCS
+68
+Code Manager It matches View position items with RIS code.
+① Code : It shows all inputted RIS codes.
+A. Add : Registers inputted codes.
+B. Edit : Edits selected codes.
+C. Del. : Deletes selected codes.
+② Item : It shows all view positions matching with RIS codes.
+selected.
+A. Up : Gets the sequence of the selected item upper.
+B. Down : Gets the sequence of the selected item lower.
+C. Add : Adds items selected from View position to Item.
+D. Delete : Deletes items selected from Item.
+③ Del. All Code : It deletes all RIS codes.
+④ Load : It inputs RIS codes through Excel file.
+A. The file created in Microsoft Office Excel 2003 is readable.
+B. Tab name should be “Code” and RIS code should be
+inputted in the second column.
+⑤ OK : It closes Code Manager.
+
+feel-DRCS
+69
+If enter exam window with unregistered RIS code window that can
+register RIS code will pop up as above.
+After registered RIS code in exam window the first time it will be
+saved in code manager automatically.
+Change
+Operator
+It changes the operator.
+Refresh image It gets new standard image (Offset Image).
+Refresh offset It saves the present standard image (Offset Image) with different name.
+About It displays the program version and software serial number.
+
+feel-DRCS
+70
+6-4-11. Pop-up Menu
+Under the Review mode or Exposure mode, if you right click on the image, the
+pop-up menu appears as follows.
+Shutter size
+application You can apply each shutter size.
+Custom
+If you want to add the shutter size, use the above Edit tool.
+
+feel-DRCS
+71
+The unit is inch here.
+Delete Image You can delete the present image.
+Processing This is the shortcut that you can do image processing with originally
+set parameters again without going to the process tab when images
+look different from saved ones due to the initialization or other
+reasons in processing images.
+
+feel-DRCS
+72
+6-5.Configuration
+This is for setting the whole system.
+You can set various networking services, system, and data format.
+6-5-1. Default Setting
+It sets the user list, hospital name, and date.
+Operator List You can create the operator list.
+ Add: Adds new operators. Input the name of the new operator
+at the bottom of the window and then click “Add”.
+ Modify: Changes the selected operator information.
+ Delete: Deletes the selected operator.
+ Delete All : Deletes all registered operators.
+Information You can input the hospital name.
+Date Format You can select the date format.
+Modality You can select equipments to connect.
+- Stand : Stand only type
+- Table : Table only type
+- Full : Stand + Table type
+
+feel-DRCS
+73
+6-5-2. Storage Setting
+You can select image storage route and backup route, and set the automatic
+deletion function.
+Image Save Path You can select the route to save images. Here storage route means
+the path for saving processed images as well as raw images
+acquired from the detector.
+DICOM Save
+Option
+- You can select the type of the modality when saving images in
+DICOM format.
+- You can select the bit number of the image.
+Image Auto Delete You can select whether you use the automatic image deletion function
+or not and conditions.
+Delete by Space: Deletes if the space is less than the set percentage.
+Delete by Date: Deletes older images than the selected date from x-ray
+day.
+If the disk is full, you cannot x-ray and save images. Therefore, we
+recommend the partial setting. Once set, it deletes automatically so that
+you need to manage backup schedule in advance.
+
+feel-DRCS
+74
+Database It provides functions for managing database.
+- Compress : compress database.
+- Backup : Backup database.
+- Restore : Restore database.
+6-5-3. Annotation Management
+You can select the information to display on the image.
+ Patient Information : Patient ID, name, sex, date of birth
+ Acquisition date & time : Study date, operator name
+ Hospital Information : Hospital name
+ X-Ray Parameters : X-Ray exposure conditions (kV, mAs, Time)
+ Anatomical Information : Laterality & View Position.
+ Series Information : Series No, Image No, Acquisition No.
+Full Displays all information on the image.
+None Does not display any information on the image.
+Custom Displays information that the operator selects at discretion.
+
+feel-DRCS
+75
+6-5-4. Worklist Item Management
+You can select the item to display in the worklist.
+Select the item to add from the Worklist All Item and push “>” button. For
+changing the sequence, use the up and down buttons.
+
+feel-DRCS
+76
+6-5-5. DICOM MWL(Modality Worklist Server Setting )
+You can set the server’s environment and client’s environment for using
+DICOM Modality Worklist service.
+Server You can set the server’s environment, providing DICOM Modality
+Worklist service.
+ AE Title
+ IP
+ Port
+Test You can check the server works normally.
+
+feel-DRCS
+77
+6-5-6. DICOM Storage
+This is to set the server’s environments for DICOM transmission.
+List ① Name : Displays the server name. The same name as Server
+AE will be displayed.
+② Server AE : Displays the server’s AE title.
+③ Server IP : Displays the server IP.
+④ Server Port : Displays the server port.
+⑤ Client AE : Displays client’s AE title.
+⑥ Client Port : Displays client port.
+Insert It adds new PACS server (DICOM Storage SCP).
+
+feel-DRCS
+78
+Delete It deletes the setting of the server selected.
+Modify It changes the setting of the server selected.
+Select You can select the setting of the server to access to among various
+server settings. If you want to select with the mouse, the check box
+will change into “checked” after the message “connected” appears
+from the bottom.
+6-5-7. DICOM Print
+You can set the server’s environment for DICOM Print.
+List  Name : Displays the laser printer name. The same name as
+Server AE will be displayed.
+ Laser Imager AE : Displays the laser printer’s AE title.
+ Laser Imager IP : Displays the laser printer IP.
+ Laser Imager Port : Display the laser printer port.
+ Host AE : Displays host’s AE title
+ Print Model : Displays the print model.
+
+feel-DRCS
+79
+Insert You can add new printer’s setting.
+Delete You can delete the setting of the printer selected.
+Modify You can change the setting of the printer selected.
+Select You can select the setting of the printer to access to among
+various server settings.
+Print Setting You can set the film and printer.
+ Medium Type : Selects the type of film.
+ Film Orientation : Selects the direction of film.
+ Film Size : Selects the size of film.
+ Smoothing : Selects the process type of printer.
+ Boarder Density : Selects the boarder density of film.
+ Min Density : Selects the minimum density area of film.
+ Max Density : Selects the maximum density area of film.
+Overlay
+information
+You can choose the information to be displayed with images on
+film.
+
+feel-DRCS
+80
+7. Option software & function
+7-1.Viewsub
+The viewsub is synchronized with main console software(feelDRCS). And the
+viewsub can see the preview image after X-ray exposure and control a connected
+X-ray generator on the other touch monitor.
+The Viewsub is a optional software or function and can be used properly as
+interfaced X-ray generator.
+The lists on the Exam list and main console are synchronized with each other.
+
+feel-DRCS
+81
+After X-ray exposure, you can see the image as upper figure.
+You should push the one button of “SAVE”,“CANCEL”.
+If you don’t push one button of “SAVE” and “CANCEL”, the feel-DRCS cannot
+operate next step.
+
+feel-DRCS
+82
+7-2. feelVIEW
+feelVIEW is the software for detail viewing on the medical or high resolution
+monitor.
+As installation of feelVIEW, you must be install in same PC of feelDRCS
+console software.
+This function is a optional functions. If you want to this option, you should
+order to your account sale man.
+
+feel-DRCS
+83
+7-2-1. Menu
+Images
+Default Change default mode
+Prev. Image Previous image or previous page
+Next Image Next image or next page
+ZOOM Image
+If you put your mouse pointer on the image and left
+click, you can zoom out by moving to the upper side
+and zoom in by moving to the lower side.
+Pan Image
+If you put your mouse pointer on the image and left
+click, you can move the image as the mouse pointer
+moves.
+Magnify Glass
+It can magnify/make smaller any screen area. If you
+move the mouse to the left upper side, pushing the
+Shift key, the screen will get smaller. Moving to the
+right upper side makes it larger.
+If you move to the upper side, pushing the control key,
+the image magnification ratio will get smaller. Moving
+to the lower side makes it larger.
+Reset Reset image.
+Rotate
+Rotate L It rotates the image 90° counter clockwise.
+Rotate R It rotates the image 90° clockwise.
+
+feel-DRCS
+84
+Mirror It changes right and left.
+Flip It changes up and down.
+Layout
+1 X 1 Displays the big image without any split.
+1 X 2 Split 1 X 2
+2 X 2 Split 2 X 2
+Measure
+Line You can measure the length on the image.
+Angle You can measure the angle on the image.
+Report
+Create/Edit You can make a report for selected study.
+
+feel-DRCS
+85
+① Save : Save a report data.
+② Print : Print a report.
+③ OK : Exit report mode.
+④ Edit Preform : Edit preform.
+
+feel-DRCS
+86
+① OK : Exit mode of edit Preform.
+② Add : Add content of each items
+③ Delete : Delete selected title.
+④ Edit : Save content of modified items.
+
+feel-DRCS
+87
+8. Trouble shooting
+8-1. Dicom Communication
+(1) In case, Config of feel-DRCS doesn’t connect to Worklist
+① Ping test to Worklist Server IP in command window
+② Check that firewall turn off
+③ Check that information of MWL Server (AE Title, Porn No, IP
+Address)
+(2) In case, Worklist is connected to MWL Server, but there is no list in
+Worklist
+① Check ‘Use Log’ in Setup.exe as below
+② Click the ‘Refresh’ button in Worklist of feel-DRCS
+③ Send the log file in C:\feel-DRCS\log folder to Service engineer.
+(3) In case, Dicom images don’t send to PACS Storage Server
+① Ping test to Storage Server IP in command window
+② Check that firewall turn off
+③ Check that information of Storage Server (AE Title, Porn No, IP
+Address)
+④ Contact to Service engineer of PACS company
+(4) In case, Dicom images don’t send to Dicom Printer
+① Ping test to Dicom Printer IP in command window
+② Check that firewall turn off
+
+feel-DRCS
+88
+
+③ Check that information of Dicom Printer (AE Title, Porn No, IP
+Address)
+④ Check that setting of feel-DRCS correspond with Dicom Printer
+specification.
+⑤ Contact to Service engineer of Dicom Printer company
+⑥ Almost of Dicom Printer require the Client AE title and etc, check
+that Client AE title is registered.
+(5) In case, the Dicom Print occurs error or printed only Gray color
+① Check Flim size
+② Check Min density and Max density
+③ Check Media type is Blue or Black
+8-2. Image Processing
+(1) Problem of Image Processing in Feel-DRCS
+① Check below items
+② Selection of Body part and View Position is correct or not
+③ Parameter is matched with Body part and view position
+(2) Problem doesn’t fixed even though check upper items.
+① Send below files to Service engineer
+② Feel-DRCS.exe
+③ Aceview.ini
+④ Aceview.mdb
+⑤ Problem of **.dcm file and **_org.dcm file
+⑥ Parameter files folder in C:\feel-DRCS
+8-3. Crash and Error Message
+(1) In case, Feel-DRCS is stopped suddenly.
+① Check the DEP setting
+② Check the Virtual memory
+③ Check the Firewall turn off
+④ Check the Sleep mode turn off
+(2) In case, Feel-DRCS is stopped when perform specific works
+
+feel-DRCS
+89
+① Check when perform specific works and repeat again.
+② For example. Open Image or adjust image or Send to PACS
+③ Inform to Service engineer
+(3) Error message is occurred
+① Capture the error message and inform to Service engineer
+(4) In case, feel-DRCS is stopped when the image is acquiring.
+① Check Detector model whether using is same with setting in feel-
+DRCS
+② Check the resolution of detector whether using is same with setting
+in feel-DRCS
+③ Don’t use Network sharing.
+④ Reboot the detector and test again.
+⑤ If the problem is still, contact to Service engineer.
+(5) In case, Problem is happen when open the selected Patient and images in
+Browser and move to Review
+① Check Software control that is registered
+② Execute SystemReg.bat
+③ Contact to Service engineer
+(6) In case, feel-DRCS is stopped when image processing is performed after
+showing of Preview image.
+① Check Virtual memory setting and DEP setting
+② Check the feelTK_XR.exe and feelTK.dll in C:\feel-DRCS
+③ Check Dicom files in DCM folder (check the file size of **_org.dcm
+and **.tnb, **.dcm)
+(7) In case, Feel-DRCS doesn’t execute
+① Check Aceview.mdb in C:\feel-DRCS folder
+② Backup Aceview.mdb
+③ Restore Aceview.mdb and then execute feel-DRCS
+(8) In case, Body part and view position isn’t added to Study list
+
+feel-DRCS
+90
+① Check Modality in Worklist
+② If modality value is empty, input ‘All’ and then retry after reboot
+feel-DRCS
+(9) In case, feel-DRC is stopped during Stitching
+① Check virtual memory
+② Contact to Service engineer
+(10) In case, the error message is occurred during CD Backup
+① Capture the error message
+② If use Window XP, install Hotfix in install CD
+③ If use Window 7or 8, check the version of CDWriteBackup.exe in
+C:\feel-DRCS\
+④ Send the information to Service engineer
+(11) In case, Original (Raw) image is occurred after Stitching
+① It may be occurred due to different size of each images for
+Stitching
+② Each images return to origin size by clicking Image Reset button
+and Don’t’ crop all image for stitching
+③ Retry Stitching
+
+feel-DRCS
+91
+Appendix I : Simple Workflow
+
+feel-DRCS
+92
+Appendix II. DICOM Option
+A. Browser Mode Update
+⚫ DICOM Query and Retrieve SCU
+* This DICOM Q/R function is a optional Function. And then if you want to use this
+function, you should order to your account sale man.
+
+feel-DRCS
+93
+ Config : Configuration of Setup Remote destination or Retrieve Destination.
+You should ADD/Modify/Remove information of Remote or Retrieve destination. After
+installation feel-DRCS, feel-DRCS is set automatically for the Retrieve destination. At this
+time, the retrieve destination is local host (feel-DRCS).
+ Select query and retrieve destination.
+
+feel-DRCS
+94
+ Search option
+ Result for listing. You should select study or series.
+ Command add queue or retrieve
+- Add Queue : Add Queue for selected study or series
+- Add Queue & Retrieve : Add queue and command retrieve for selected
+study or series
+- Retrieve : Command retrieve for selected queue on lists.
+- Select All : Select all on queue lists.
+- Clear : Delete all queue lists.
+* After retrieve, this function is registered in the DB of the feel-DRCS. And you will see
+the retrieved images on feel-DRCS. But the feel-DRCS is not registered in the DB for all
+DICOM image.
+The feel-DRCS in registered in the DB for only 16Bit (9 – 16 bit)
+monochrome 2 DICOM images.
+
+feel-DRCS
+95
+B. Config Mode Update
+* In this update, feel-DRCS add DICOM Service ( DICOM storage commitment SCU,
+DICOM Modality Performed Procedure Step SCU, DICOM Query and Retrieve SCU ).
+
+feel-DRCS
+96
+Appendix III : Calibration for Shutter Size
+Calibration for Shutter Size
+* Execute the feel-DRCS
+* Log in by Supervisor (Calibration Button is activated by Supervisor)
+* Execute the ‘New Set’ in Worklist mode
+
+feel-DRCS
+97
+
+feel-DRCS
+98
+
+feel-DRCS
+99
+
+feel-DRCS
+100
+Appendix IV : Code Matching (Add Code)
+* When use OCS code but there is no matching code, the code can be matched in
+expose window
+
+feel-DRCS
+101
+
+feel-DRCS
+102
+Appendix V : Image Rotation
+* In Expose Window one of function is added
+* image can be rotated (!! Cropped image is not allowed to rotate)
+
+feel-DRCS
+103
+Appendix VI : Excel Export
+* Information of lists can be Exported to Excel file
+
+feel-DRCS
+104
+Appendix VII : Acquisition of phantom image
+* Phantom exposure mode : Acquisition image without any processing
+
+feel-DRCS
+105
+Appendix VIII : Print Composure
+DICOM
+ Medium Type : Image medium type (Clear Film / Blue Film)
+ Film Orientation : film direction (Portrait / Landscape)
+ Film Size : Film size of the film (8x10, 8.5x11, 10x12, 10x14, 11x14, 11x17,
+14x14, 14x17, inch)
+ Layout : Layout of the image (column : 1~9, row : 1~9)
+ Sub Layout : Sub Layout of the image (column : 1~5, row : 1~5)
+ Magnification Type : 1:1 in magnification type. if printing out the film with
+same ratio like 1:1 (Cubic / 1:1)
+ Smoothing : Sharp / Smooth / Medium
+ Boarder Density : Black / White
+ Min Density : minimum print density
+ Max Density : maximum print density
+ Printer DPI : Resolution number for 1:1 print in advance
+ Font Size : Annotation size
+ By image : Annotation position, refer to the figure below
+PAPER
+ Film Orientation : : film direction (Portrait / Landscape)
+ Layout : Layout of the image (column : 1~9, row : 1~9)
+ Sub Layout : Sub Layout of the image (column : 1~5, row : 1~5)
+ By image : Annotation position, refer to the figure below
+
+feel-DRCS
+106
+Unchecking ‘By image’
+Checking ‘By image’
+
+feel-DRCS
+107
+TOOLS ICON
+you can edit images with Tools icon
+Default Default status
+Zoom In/Out
+If you put your mouse pointer on the image and left
+click, you can zoom out by moving to the upper side
+and zoom in by moving to the lower side.
+Panning
+If you put your mouse pointer on the image and left
+click, you can move the image as the mouse pointer
+moves.
+
+feel-DRCS
+108
+Fit Image It fits the image to the screen size.
+Rotate CW It rotates the image 90° clockwise.
+Rotate CCW It rotates the image 90° counter clockwise.
+Flip Horizon Flip Horizon: It changes left and right
+Flip Vertical Flip Vertical: It changes up and down.
+Length Measure the Length
+Angle Measure the angle
+Arrow Mark the arrow
+Text Write text on the image
+
+feel-DRCS
+109
+9. Revision History
+Version Date Description
+0.1 2020-03-12 Initial Release
