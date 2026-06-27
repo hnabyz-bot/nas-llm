@@ -1,0 +1,151 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954379-9m0",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/02. Master Schedule/KGMP 심사용/(참조용) 디텍터 개발 일정.xlsx",
+    "canonicalGroupId": "7f2ab1cad36b"
+  },
+  "document": {
+    "title": "Detector Master Plan",
+    "documentType": "Detector development master schedule",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Detector Master Plan lists detector development milestones across 2018 and 2019.",
+    "officialUse": "Reference schedule for detector development activities and completion milestones.",
+    "keyPoints": [
+      "Schedule begins with MRD review on 4/6 and development plan drafting on 4/13.",
+      "Design, mechanical design, circuit design, sample build, FPGA, FW, and SW design activities are listed through July.",
+      "Internal performance tests, evaluation meetings, reliability testing, and document distribution are listed before production preparation.",
+      "Development completion and mass-production transfer document distribution are listed for 5/22."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Detector Master Plan",
+      "type": "document",
+      "evidence": "Detector Master Plan"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "KGMP",
+      "type": "regulatory review context",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/02. Master Schedule/KGMP 심사용/(참조용) 디텍터 개발 일정.xlsx"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector development schedule",
+      "pageTarget": "Detector Development Schedule",
+      "evidence": "Detector Master Plan"
+    },
+    {
+      "name": "Design review",
+      "pageTarget": "Design Review",
+      "evidence": "Detector Design Review"
+    },
+    {
+      "name": "Reliability test",
+      "pageTarget": "Reliability Testing",
+      "evidence": "신뢰성 테스트"
+    },
+    {
+      "name": "Mass-production transfer",
+      "pageTarget": "Mass Production Transfer",
+      "evidence": "양산이관 문서 배포"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is Detector Master Plan.",
+      "evidenceText": "Detector Master Plan",
+      "pageTarget": "Detector Master Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schedule covers columns for 2018 and 2019.",
+      "evidenceText": "2018년,,,,,,,,,2019년",
+      "pageTarget": "Detector Development Schedule",
+      "confidence": "high"
+    },
+    {
+      "claim": "MRD review is listed on 4/6.",
+      "evidenceText": "MRD 검토,,,4/6",
+      "pageTarget": "MRD Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Development plan drafting and approval is listed on 4/13.",
+      "evidenceText": "개발계획서 작성 및 기안,,,4/13",
+      "pageTarget": "Development Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector Design is listed on 5/3 and Detector Design Review is listed on 5/4.",
+      "evidenceText": "Detector Design 설계,,,,5/3; Detector Design Review,,,,5/4",
+      "pageTarget": "Detector Design Review",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mechanical design and circuit design/artwork are listed on 6/8.",
+      "evidenceText": "기구 설계,,,,,6/8; 회로 설계 및 Artwork,,,,,6/8",
+      "pageTarget": "Design Controls",
+      "confidence": "high"
+    },
+    {
+      "claim": "Sample production is listed on 6/29 and again on 9/21.",
+      "evidenceText": "Sample 제작,,,,,6/29; Sample 제작,,,,,,,,9/21",
+      "pageTarget": "Sample Production",
+      "confidence": "high"
+    },
+    {
+      "claim": "FPGA, FW, and SW design are each listed on 7/27.",
+      "evidenceText": "FPGA 설계,,,,,,7/27; FW 설계,,,,,,7/27; SW 설계,,,,,,7/27",
+      "pageTarget": "Software And Firmware Design",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reliability testing is listed from 10/25 to 12/11 with a note that 12/11 is the quality reliability completion date.",
+      "evidenceText": "신뢰성 테스트,,,,,,,,,10/25,,12/11,,,,,,,,,12/11 품질신뢰성 완료일 (보고서 날짜 수정)",
+      "pageTarget": "Reliability Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "Development completion and mass-production transfer document distribution are listed on 5/22.",
+      "evidenceText": "개발 완료,,,,,,,,,,,,,,,,5/22; 양산이관 문서 배포,,,,,,,,,,,,,,,,5/22",
+      "pageTarget": "Mass Production Transfer",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present; only schedule years and milestone dates are shown."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; metadata authoritySignal is 'general' and no regulator is named."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is inferred from provided productSignal metadata rather than the schedule body."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    }
+  ]
+}
