@@ -1,0 +1,154 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17zu",
+    "sourcePath": "raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/01_BOM/BOM_HW_V1.1_20221209.xls",
+    "canonicalGroupId": "1a0f469c5571"
+  },
+  "document": {
+    "title": "ADI_BD_BOM_V1.1_20221209",
+    "documentType": "Hardware bill of materials",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V1.1",
+    "documentDate": "20221209",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Hardware BOM listing ADI_MAIN, ADI_ROIC, ADI_GATE, and ADI_POWER PCB assemblies with quantities, references, item names, specifications, and notes.",
+    "officialUse": "Design and development output BOM for identifying PCB assemblies and component-level hardware configuration.",
+    "keyPoints": [
+      "Document header states ADI_BD_BOM_V1.1_20221209.",
+      "BOM includes ADI_MAIN_PCB Ass'y, ADI_ROIC_PCB Ass'y, ADI_GATE_PCB Ass'y, and ADI_POWER_PCB Ass'y.",
+      "Each assembly section lists item number, quantity, reference, code, item name, specification, and remarks.",
+      "NC sections identify components marked not connected or not populated."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI_MAIN_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_MAIN_PCB Ass'y"
+    },
+    {
+      "name": "ADI_MAIN_V006_PCB Ass'y",
+      "type": "PCB assembly code",
+      "evidence": "AB0-000001,ADI_MAIN_V006_PCB Ass'y,FR4 12L_240mm x 130mm x 1.6T(Green) V006 적용"
+    },
+    {
+      "name": "ADI_ROIC_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_ROIC_PCB Ass'y"
+    },
+    {
+      "name": "ADI_ROIC_V007_PCB Ass'y",
+      "type": "PCB assembly code",
+      "evidence": "AB0-000002,ADI_ROIC_V007_PCB Ass'y,FR4 8L_427mm x 41.5mm x 1.0T(Green) V007 적용"
+    },
+    {
+      "name": "ADI_GATE_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_GATE_PCB Ass'y"
+    },
+    {
+      "name": "ADI_GATE_V006_PCB Ass'y",
+      "type": "PCB assembly code",
+      "evidence": "AB0-000003,ADI_GATE_V006_PCB Ass'y,FR4 4L_402.5mm x 32.5mm x 1.0T(Green) V006 적용"
+    },
+    {
+      "name": "ADI_POWER_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_POWER_PCB Ass'y"
+    },
+    {
+      "name": "ADI_POWER_V006_PCB Ass'y",
+      "type": "PCB assembly code",
+      "evidence": "AB0-000004,ADI_POWER_V006_PCB Ass'y,FR4 4L_160mm x 55mm x 1.6T(Green) V006 적용"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "Item,Quantity,Reference,CODE,품목명,규격,비고"
+    },
+    {
+      "name": "PCB assembly",
+      "pageTarget": "PCB Assembly",
+      "evidence": "ADI_MAIN_PCB Ass'y"
+    },
+    {
+      "name": "FR4 PCB",
+      "pageTarget": "FR4 PCB Material",
+      "evidence": "FR4 12L_240mm x 130mm x 1.6T(Green) V006 적용"
+    },
+    {
+      "name": "No connect components",
+      "pageTarget": "No Connect BOM Items",
+      "evidence": "*NC"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document identifies itself as ADI_BD_BOM_V1.1_20221209.",
+      "evidenceText": "* ADI_BD_BOM_V1.1_20221209",
+      "pageTarget": "ADI_BD_BOM_V1.1_20221209",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADI_MAIN PCB assembly is AB0-000001 and uses ADI_MAIN_V006_PCB Ass'y.",
+      "evidenceText": "AB0-000001,ADI_MAIN_V006_PCB Ass'y,FR4 12L_240mm x 130mm x 1.6T(Green) V006 적용",
+      "pageTarget": "ADI_MAIN_PCB Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADI_ROIC PCB assembly is AB0-000002 and uses ADI_ROIC_V007_PCB Ass'y.",
+      "evidenceText": "AB0-000002,ADI_ROIC_V007_PCB Ass'y,FR4 8L_427mm x 41.5mm x 1.0T(Green) V007 적용",
+      "pageTarget": "ADI_ROIC_PCB Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADI_GATE PCB assembly is AB0-000003 and uses ADI_GATE_V006_PCB Ass'y.",
+      "evidenceText": "AB0-000003,ADI_GATE_V006_PCB Ass'y,FR4 4L_402.5mm x 32.5mm x 1.0T(Green) V006 적용",
+      "pageTarget": "ADI_GATE_PCB Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADI_POWER PCB assembly is AB0-000004 and uses ADI_POWER_V006_PCB Ass'y.",
+      "evidenceText": "AB0-000004,ADI_POWER_V006_PCB Ass'y,FR4 4L_160mm x 55mm x 1.6T(Green) V006 적용",
+      "pageTarget": "ADI_POWER_PCB Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM table fields are item, quantity, reference, code, item name, specification, and remarks.",
+      "evidenceText": "Item,Quantity,Reference,CODE,품목명,규격,비고",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM contains NC sections for components marked as not connected or not populated.",
+      "evidenceText": "*NC",
+      "pageTarget": "No Connect BOM Items",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal only says general."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are listed in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is taken from the title and filename-style string 20221209, not from a separately labeled date field."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is provided by source metadata productSignal, while the source text primarily identifies ADI PCB assemblies."
+    }
+  ]
+}
