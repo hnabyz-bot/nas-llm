@@ -1,0 +1,195 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954374-4ao",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/08. BOM/RED-GL1 (가공 Design)_BOM.xlsx",
+    "canonicalGroupId": "cb9b0e49d251"
+  },
+  "document": {
+    "title": "RED-GL1 (가공 Design)_BOM",
+    "documentType": "BOM",
+    "productModels": [
+      "RED-GL1",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "RED-GL1 bill of materials listing detector, power box, accessory, packaging, and manual-related 구성품 with part numbers, revisions, specifications, suppliers, units, and quantities.",
+    "officialUse": "Supports DHF/BOM traceability for RED-GL1 구성품, assemblies, materials, suppliers, and quantities.",
+    "keyPoints": [
+      "The source is structured as a BOM with headers including 구성품, LEVEL, Ass'y 구분, ERP CODE, 품목, PART, 도번, Rev No., 규격, 공급업체명, 공급유형, 단위, 단가, 수량, 금액, and 비고.",
+      "Top-level RED-GL1 includes Detector, Power Box, 악세서리, 포장, 라벨, and Manual sections.",
+      "Detector content includes OQC Module Ass'y, BODY FRAME Ass'y, CONNECTOR BLOCK subassemblies, 1717 boards, harnesses, bolts, and 1717 PANEL MODULE.",
+      "Power Box content includes POWER BOX, covers, POWER BOX BOARD, SMPS, power cables, and related fastening bolts.",
+      "Accessory options include LAN CAT6 Cable, 220V AC Cable, Trigger Cable, and Main Data Cable variants."
+    ]
+  },
+  "entities": [
+    {
+      "name": "RED-GL1",
+      "type": "product",
+      "evidence": "RED-GL1,,O,,,,,,,,,,,RED-GL1"
+    },
+    {
+      "name": "Detector",
+      "type": "assembly section",
+      "evidence": ",Detector,,O,,,,,,,,,,OQC Module Ass'y"
+    },
+    {
+      "name": "OQC Module Ass'y",
+      "type": "assembly",
+      "evidence": ",Detector,,O,,,,,,,,,,OQC Module Ass'y"
+    },
+    {
+      "name": "POWER BOX",
+      "type": "assembly",
+      "evidence": ",Power Box,,O,,,,,,,,Ass'y,,POWER BOX,Ass'y,,0"
+    },
+    {
+      "name": "1717 PANEL MODULE",
+      "type": "assembly",
+      "evidence": ",,,,,O,,,,,,Ass'y,,1717 PANEL MODULE,Ass'y"
+    },
+    {
+      "name": "MEANWELL",
+      "type": "supplier or manufacturer",
+      "evidence": ",,,,O,,,,,,,자재,,SMPS,H/W,-,-,MEANWELL / RPS200-15,MEANWELL,,EA,,1"
+    },
+    {
+      "name": "동인산업",
+      "type": "supplier",
+      "evidence": ",,,,,,O,,,,,자재,,BODY FRAME,기구,MC0-000012,0,\"AL6061, Non-Cromate 처리, 도장\",동인산업,도급,EA,,1"
+    },
+    {
+      "name": "바텍이엔지",
+      "type": "supplier",
+      "evidence": ",,,,,O,,,,,,자재,,1717 MAIN BOARD,H/W,AB0-000001,0,,바텍이엔지,,EA,,1"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/08. BOM/RED-GL1 (가공 Design)_BOM.xlsx"
+    },
+    {
+      "name": "Ass'y 구분",
+      "pageTarget": "Assembly Classification",
+      "evidence": "구성품,,LEVEL,,,,,,,,,Ass'y 구분,ERP CODE,품목,PART,도번,Rev No.,규격,공급업체명,공급유형,단위,단가,수량,금액,비고"
+    },
+    {
+      "name": "Rev No.",
+      "pageTarget": "Revision Number",
+      "evidence": "구성품,,LEVEL,,,,,,,,,Ass'y 구분,ERP CODE,품목,PART,도번,Rev No.,규격,공급업체명,공급유형,단위,단가,수량,금액,비고"
+    },
+    {
+      "name": "Non-Cromate 처리",
+      "pageTarget": "Non-Cromate Treatment",
+      "evidence": "BODY FRAME,기구,MC0-000012,0,\"AL6061, Non-Cromate 처리, 도장\""
+    },
+    {
+      "name": "도급",
+      "pageTarget": "Supplier Type",
+      "evidence": "BODY FRAME,기구,MC0-000012,0,\"AL6061, Non-Cromate 처리, 도장\",동인산업,도급,EA,,1"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a BOM for RED-GL1.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/08. BOM/RED-GL1 (가공 Design)_BOM.xlsx; RED-GL1,,O,,,,,,,,,,,RED-GL1",
+      "pageTarget": "RED-GL1 BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM header tracks part classification, ERP code, item, part, drawing number, revision number, specification, supplier, supplier type, unit, unit price, quantity, amount, and remarks.",
+      "evidenceText": "Ass'y 구분,ERP CODE,품목,PART,도번,Rev No.,규격,공급업체명,공급유형,단위,단가,수량,금액,비고",
+      "pageTarget": "Bill of Materials Fields",
+      "confidence": "high"
+    },
+    {
+      "claim": "The RED-GL1 Detector section contains OQC Module Ass'y.",
+      "evidenceText": ",Detector,,O,,,,,,,,,,OQC Module Ass'y",
+      "pageTarget": "RED-GL1 Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "BODY FRAME has part number MC0-000012, revision 0, specification AL6061, Non-Cromate 처리, 도장, supplier 동인산업, supplier type 도급, unit EA, and quantity 1.",
+      "evidenceText": "BODY FRAME,기구,MC0-000012,0,\"AL6061, Non-Cromate 처리, 도장\",동인산업,도급,EA,,1",
+      "pageTarget": "BODY FRAME",
+      "confidence": "high"
+    },
+    {
+      "claim": "CONNECTOR BLOCK has part number MC0-000013, revision 0, specification AL6061, Non-Cromate 처리, 도장, supplier 동인산업, supplier type 도급, unit EA, and quantity 1.",
+      "evidenceText": "CONNECTOR BLOCK,기구,MC0-000013,0,\"AL6061, Non-Cromate 처리, 도장\",동인산업,도급,EA,,1",
+      "pageTarget": "CONNECTOR BLOCK",
+      "confidence": "high"
+    },
+    {
+      "claim": "1717 MAIN BOARD is an H/W item with drawing number AB0-000001, revision 0, supplier 바텍이엔지, unit EA, and quantity 1.",
+      "evidenceText": "1717 MAIN BOARD,H/W,AB0-000001,0,,바텍이엔지,,EA,,1",
+      "pageTarget": "1717 MAIN BOARD",
+      "confidence": "high"
+    },
+    {
+      "claim": "1717 ROIC BOARD is an H/W item with drawing number AB0-000002, revision 0, supplier 바텍이엔지, unit EA, and quantity 1.",
+      "evidenceText": "1717 ROIC BOARD,H/W,AB0-000002,0,,바텍이엔지,,EA,,1",
+      "pageTarget": "1717 ROIC BOARD",
+      "confidence": "high"
+    },
+    {
+      "claim": "1717 GATE BOARD is an H/W item with drawing number AB0-000003, revision 0, supplier 바텍이엔지, unit EA, and quantity 1.",
+      "evidenceText": "1717 GATE BOARD,H/W,AB0-000003,0,,바텍이엔지,,EA,,1",
+      "pageTarget": "1717 GATE BOARD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Power Box section includes POWER BOX as an assembly with revision 0 and quantity 1.",
+      "evidenceText": ",Power Box,,O,,,,,,,,Ass'y,,POWER BOX,Ass'y,,0,,,,EA,,1",
+      "pageTarget": "POWER BOX",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Power Box contains SMPS with specification MEANWELL / RPS200-15, supplier MEANWELL, unit EA, and quantity 1.",
+      "evidenceText": "SMPS,H/W,-,-,MEANWELL / RPS200-15,MEANWELL,,EA,,1",
+      "pageTarget": "SMPS",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessory options include LAN CAT6 Cable(5M), 220V AC Cable(1.5M), Trigger Cable, and Main Data Cable variants.",
+      "evidenceText": "LAN CAT6 Cable(5M); 220V AC Cable(1.5M); Trigger Cable; Main Data Cable; Main Data Cable (10M); Main Data Cable (15M); Main Data Cable (5M)",
+      "pageTarget": "RED-GL1 Accessories",
+      "confidence": "high"
+    },
+    {
+      "claim": "Packaging items include OUT BOX, OUT BOX PAD, ACCESSORY FOAM, ACCESSORY BOX, DETECTOR FOAM, DETECTOR PAD, and DETECTOR BOX.",
+      "evidenceText": "OUT BOX; OUT BOX PAD; ACCESSORY FOAM; ACCESSORY BOX; DETECTOR FOAM; DETECTOR PAD; DETECTOR BOX",
+      "pageTarget": "RED-GL1 Packaging",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document-level revision or version is not present; Rev No. values appear to be line-item revisions."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified; source metadata authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are cited in the provided BOM text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product signal HAD/A/F 1417-1717 appears only in source metadata, while source text identifies RED-GL1 and multiple 1717 components."
+    }
+  ]
+}
