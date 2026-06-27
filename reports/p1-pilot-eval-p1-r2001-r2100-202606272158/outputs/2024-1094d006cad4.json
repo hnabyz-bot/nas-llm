@@ -1,0 +1,146 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954422-1af8",
+    "sourcePath": "raw/sources/Project/01_BLUE/03_G1417FW/DHF/11. 전장 설계/SW&OLED/좌표/SW&OLED_REV3.0_좌표데이타.xlsx",
+    "canonicalGroupId": "1094d006cad4"
+  },
+  "document": {
+    "title": "SW&OLED_REV3.0_좌표데이타.xlsx",
+    "documentType": "Component coordinate data",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV3.0",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet-derived SW&OLED component coordinate data listing reference designators, decals, pins, PCB layer, orientation, X/Y positions, SMD status, and glued status.",
+    "officialUse": "Engineering placement coordinate reference for SW&OLED PCB components.",
+    "keyPoints": [
+      "The table includes PartType, RefDes, PartDecal, Pins, Layer, Orient., X, Y, SMD, and Glued fields.",
+      "Components are listed on Top and Bottom PCB layers.",
+      "All listed components have SMD marked as Yes.",
+      "SW1 is marked Glued Yes; SW2 and other listed components are marked Glued No."
+    ]
+  },
+  "entities": [
+    {
+      "name": "SW&OLED_REV3.0_좌표데이타.xlsx",
+      "type": "source document",
+      "evidence": "sourcePath: raw/sources/Project/01_BLUE/03_G1417FW/DHF/11. 전장 설계/SW&OLED/좌표/SW&OLED_REV3.0_좌표데이타.xlsx"
+    },
+    {
+      "name": "OLED0.91",
+      "type": "component part type",
+      "evidence": "OLED0.91,CON1,OLED0.91,14,Top,90,79.65,0.7,Yes,No"
+    },
+    {
+      "name": "05005HS-10F",
+      "type": "component part type",
+      "evidence": "05005HS-10F,CN1,05005HS-10F,14,Bottom,0,42.8,4.85,Yes,No"
+    },
+    {
+      "name": "1N4148WS/SOD-323FL",
+      "type": "component part type",
+      "evidence": "1N4148WS/SOD-323FL,D1,DS-SOD-323FL,2,Top,0,70.1,4.5,Yes,No"
+    },
+    {
+      "name": "PTS526",
+      "type": "component part type",
+      "evidence": "PTS526,SW1,PTS526,4,Top,0,30.8,6.4,Yes,Yes"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB component coordinate data",
+      "pageTarget": "PCB component coordinate data",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "Reference designator",
+      "pageTarget": "Reference designator",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "PCB layer",
+      "pageTarget": "PCB layer",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "SMD component placement",
+      "pageTarget": "Surface-mount device placement",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "Glued component status",
+      "pageTarget": "Glued component status",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a SW&OLED revision 3.0 coordinate data spreadsheet.",
+      "evidenceText": "sourcePath: raw/sources/Project/01_BLUE/03_G1417FW/DHF/11. 전장 설계/SW&OLED/좌표/SW&OLED_REV3.0_좌표데이타.xlsx",
+      "pageTarget": "SW&OLED_REV3.0_좌표데이타.xlsx",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The coordinate data table records part type, reference designator, decal, pin count, layer, orientation, X/Y coordinates, SMD status, and glued status.",
+      "evidenceText": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued",
+      "pageTarget": "PCB component coordinate data",
+      "confidence": "high"
+    },
+    {
+      "claim": "CON1 is an OLED0.91 component on the Top layer with 14 pins at X 79.65 and Y 0.7.",
+      "evidenceText": "OLED0.91,CON1,OLED0.91,14,Top,90,79.65,0.7,Yes,No",
+      "pageTarget": "OLED0.91",
+      "confidence": "high"
+    },
+    {
+      "claim": "CN1 is a 05005HS-10F component on the Bottom layer with 14 pins at X 42.8 and Y 4.85.",
+      "evidenceText": "05005HS-10F,CN1,05005HS-10F,14,Bottom,0,42.8,4.85,Yes,No",
+      "pageTarget": "05005HS-10F",
+      "confidence": "high"
+    },
+    {
+      "claim": "D1 is a 1N4148WS/SOD-323FL component using DS-SOD-323FL decal on the Top layer.",
+      "evidenceText": "1N4148WS/SOD-323FL,D1,DS-SOD-323FL,2,Top,0,70.1,4.5,Yes,No",
+      "pageTarget": "1N4148WS/SOD-323FL",
+      "confidence": "high"
+    },
+    {
+      "claim": "SW1 is a PTS526 component on the Top layer and is marked Glued Yes.",
+      "evidenceText": "PTS526,SW1,PTS526,4,Top,0,30.8,6.4,Yes,Yes",
+      "pageTarget": "PTS526",
+      "confidence": "high"
+    },
+    {
+      "claim": "SW2 is a PTS526 component on the Top layer and is marked Glued No.",
+      "evidenceText": "PTS526,SW2,PTS526,4,Top,0,8.8,6.4,Yes,No",
+      "pageTarget": "PTS526",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No document date is present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is not classified in metadata; productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "REV3.0 is inferred from the source filename rather than a dedicated revision field in the table."
+    }
+  ]
+}
