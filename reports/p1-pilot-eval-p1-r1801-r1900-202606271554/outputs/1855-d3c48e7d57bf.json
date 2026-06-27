@@ -1,0 +1,187 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954372-30r",
+    "sourcePath": "raw/sources/RA/01_DHF/03_A1417MCW, A1717MCW, F1417MCW/DHF DMR/10. 설계변경 문서/(A-TCF-5-019-A-038) 2G, 3G用 Deco Sheet 변경 요청 件_2024.08.30/설계변경 문서/첨부문서/A1717MCW_BOM(ABYZ).xlsx",
+    "canonicalGroupId": "d3c48e7d57bf"
+  },
+  "document": {
+    "title": "A1717MCW_BOM(ABYZ).xlsx",
+    "documentType": "BOM",
+    "productModels": [
+      "A1717MCW",
+      "2G_1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "IEC60332-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "BOM listing for A1717MCW / 2G_1717 assembly, deco sheet, covers, detector assembly, packing, and accessory set.",
+    "officialUse": "Supports bill of materials traceability for A1717MCW product configuration and related assembly or design-change documentation.",
+    "keyPoints": [
+      "Top-level BOM item is 1717_ABYZ_DECO_SHEET with product number MSH-200005 and quantity EA 1.",
+      "A1717MCW_ASSY is listed as ASM-200003 with specification 2G_A1717MCW_ASSY and quantity EA 1.",
+      "Major subassemblies include A1717MCW-MT process, 2G_1717_REAR_COVER_ASSY, and 2G_1717_MIDDLE_BLOCK_ASSY.",
+      "Accessory set ACCSET-MCW(2G) includes battery, power supply, charger, LAN cables, ferrite core, power cords, recharger adaptor, and AC1200 Archer C64 Wi-Fi router.",
+      "A harness-signal item lists IEC60332-1 in its specification."
+    ]
+  },
+  "entities": [
+    {
+      "name": "A1717MCW_ASSY",
+      "type": "assembly",
+      "evidence": "01-3 A1717MCW_ASSY ASM-200003 2G_A1717MCW_ASSY EA 1"
+    },
+    {
+      "name": "1717_ABYZ_DECO_SHEET",
+      "type": "part",
+      "evidence": "01-1 1717_ABYZ_DECO_SHEET MSH-200005 2G_1717_DECO_SHEET EA 1"
+    },
+    {
+      "name": "2G_BATTERY_COVER_ABYZ_GY",
+      "type": "part",
+      "evidence": "01-2 2G_BATTERY_COVER_ABYZ_GY MSV-000004 2G_BATTERY_COVER EA 1"
+    },
+    {
+      "name": "2G_1717_REAR_COVER_ASSY",
+      "type": "subassembly",
+      "evidence": "01-3-02 2G_1717_REAR_COVER_ASSY ASM-200001 2G_1717_REAR_COVER_ASSY(NON_BATTERY_COVER) EA 1"
+    },
+    {
+      "name": "2G_1717_MIDDLE_BLOCK_ASSY",
+      "type": "subassembly",
+      "evidence": "01-3-03 2G_1717_MIDDLE_BLOCK_ASSY ASM-200002 2G_1717_MIDDLE_BLOCK_ASSY EA 1"
+    },
+    {
+      "name": "Cesium Iodide",
+      "type": "material",
+      "evidence": "01-3-01-01-3 Cesium Iodide M20R1-001 CsI (99.999%) / CsI (99.99%) / CsI Recycle (99.99%) KG 1.5"
+    },
+    {
+      "name": "Thallium Iodide",
+      "type": "material",
+      "evidence": "01-3-01-01-4 Thallium Iodide M20R2-001 Thallium Iodide(99.999%),beads G 10"
+    },
+    {
+      "name": "IEC60332-1",
+      "type": "standard",
+      "evidence": "01-5-03 HARNESS-SIGNAL MI39-02330A IEC60332-1,16P,L7000,26AW EA 1"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "BOM연속출력"
+    },
+    {
+      "name": "A1717MCW assembly",
+      "pageTarget": "A1717MCW",
+      "evidence": "01-3 A1717MCW_ASSY ASM-200003 2G_A1717MCW_ASSY EA 1"
+    },
+    {
+      "name": "2G detector accessory set",
+      "pageTarget": "2G Detector Accessory Set",
+      "evidence": "01-5 ACCSET-MCW(2G) ACCSET-MCW(2G) EA 1"
+    },
+    {
+      "name": "Detector packing",
+      "pageTarget": "Detector Packaging",
+      "evidence": "01-4 OUT-PACKING-ABYZ OUTPACK EA 1"
+    },
+    {
+      "name": "Scintillator materials",
+      "pageTarget": "Scintillator Materials",
+      "evidence": "Cesium Iodide M20R1-001 CsI (99.999%) / CsI (99.99%) / CsI Recycle (99.99%) KG 1.5"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a BOM output.",
+      "evidenceText": "BOM연속출력",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "The top-level deco sheet item is 1717_ABYZ_DECO_SHEET, product number MSH-200005, specification 2G_1717_DECO_SHEET, quantity EA 1.",
+      "evidenceText": "01-1 1717_ABYZ_DECO_SHEET MSH-200005 2G_1717_DECO_SHEET EA 1",
+      "pageTarget": "1717_ABYZ_DECO_SHEET",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes 2G_BATTERY_COVER_ABYZ_GY, product number MSV-000004, specification 2G_BATTERY_COVER, quantity EA 1.",
+      "evidenceText": "01-2 2G_BATTERY_COVER_ABYZ_GY MSV-000004 2G_BATTERY_COVER EA 1",
+      "pageTarget": "2G_BATTERY_COVER_ABYZ_GY",
+      "confidence": "high"
+    },
+    {
+      "claim": "A1717MCW_ASSY is listed as product number ASM-200003 with specification 2G_A1717MCW_ASSY and quantity EA 1.",
+      "evidenceText": "01-3 A1717MCW_ASSY ASM-200003 2G_A1717MCW_ASSY EA 1",
+      "pageTarget": "A1717MCW",
+      "confidence": "high"
+    },
+    {
+      "claim": "The A1717MCW-MT process includes HME(BOE)-1717-530N_NA_도 with dimensions 477(L) x 458(W) x 0.7(t), CsI 530 micrometer, and Al Sheet.",
+      "evidenceText": "01-3-01-01 HME(BOE)-1717-530N_NA_도 AR-AC2-1510 [477(L)ⅹ458(W)ⅹ0.7(t)] + CsI 530㎛ + Al Sheet EA 1",
+      "pageTarget": "HME(BOE)-1717-530N_NA",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cesium Iodide is listed as material M20R1-001 with CsI purity entries and total required quantity KG 1.5.",
+      "evidenceText": "01-3-01-01-3 Cesium Iodide M20R1-001 CsI (99.999%) / CsI (99.99%) / CsI Recycle (99.99%) KG 1.5",
+      "pageTarget": "Cesium Iodide",
+      "confidence": "high"
+    },
+    {
+      "claim": "Thallium Iodide is listed as material M20R2-001, Thallium Iodide(99.999%), beads, quantity G 10.",
+      "evidenceText": "01-3-01-01-4 Thallium Iodide M20R2-001 Thallium Iodide(99.999%),beads G 10",
+      "pageTarget": "Thallium Iodide",
+      "confidence": "high"
+    },
+    {
+      "claim": "The rear cover subassembly is 2G_1717_REAR_COVER_ASSY, product number ASM-200001, quantity EA 1.",
+      "evidenceText": "01-3-02 2G_1717_REAR_COVER_ASSY ASM-200001 2G_1717_REAR_COVER_ASSY(NON_BATTERY_COVER) EA 1",
+      "pageTarget": "2G_1717_REAR_COVER_ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The middle block subassembly is 2G_1717_MIDDLE_BLOCK_ASSY, product number ASM-200002, quantity EA 1.",
+      "evidenceText": "01-3-03 2G_1717_MIDDLE_BLOCK_ASSY ASM-200002 2G_1717_MIDDLE_BLOCK_ASSY EA 1",
+      "pageTarget": "2G_1717_MIDDLE_BLOCK_ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The accessory set ACCSET-MCW(2G) includes BATTERY-2G DETECTOR product number MI43-01011A, quantity EA 2.",
+      "evidenceText": "01-5-04 BATTERY-2G DETECTOR MI43-01011A ELT-3S1PA,Li-ion Pol EA 2",
+      "pageTarget": "ACCSET-MCW(2G)",
+      "confidence": "high"
+    },
+    {
+      "claim": "A harness-signal item references IEC60332-1.",
+      "evidenceText": "01-5-03 HARNESS-SIGNAL MI39-02330A IEC60332-1,16P,L7000,26AW EA 1",
+      "pageTarget": "IEC60332-1",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not stated in SOURCE_TEXT; date-like text appears only in sourcePath and was not treated as the document date."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not stated in SOURCE_TEXT."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated in SOURCE_TEXT; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "Source is a preprocessed spreadsheet text extract with no explicit column delimiters beyond spacing, so some BOM fields may require source-file verification."
+    }
+  ]
+}
