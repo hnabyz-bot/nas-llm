@@ -1,0 +1,140 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-eu9",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BAT_CON/좌표/BAT_CON_REV2.0_좌표데이타.xlsx",
+    "canonicalGroupId": "7d9597351af8"
+  },
+  "document": {
+    "title": "BAT_CON_REV2.0_좌표데이타.xlsx",
+    "documentType": "component coordinate data spreadsheet",
+    "productModels": [
+      "G1717CW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV2.0",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BAT_CON REV2.0 coordinate data lists PCB part placement fields and component rows for connectors, ferrite beads, resistors, mounting holes, and ESD devices.",
+    "officialUse": "Supports electrical design/DHF traceability for BAT_CON component placement coordinates.",
+    "keyPoints": [
+      "The table fields include PartType, RefDes, PartDecal, Pins, Layer, Orient., X, Y, SMD, and Glued.",
+      "All listed components are on the Top layer.",
+      "Listed reference designators include CON2-CON5, FB2-FB3, R1-R9, and TH1-TH7."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BAT_CON_REV2.0_좌표데이타.xlsx",
+      "type": "document",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BAT_CON/좌표/BAT_CON_REV2.0_좌표데이타.xlsx"
+    },
+    {
+      "name": "G1717CW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BAT_CON/좌표/BAT_CON_REV2.0_좌표데이타.xlsx"
+    },
+    {
+      "name": "BAT_CON",
+      "type": "assembly or design item",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BAT_CON/좌표/BAT_CON_REV2.0_좌표데이타.xlsx"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB component coordinate data",
+      "pageTarget": "PCB Component Coordinate Data",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "Top layer component placement",
+      "pageTarget": "PCB Top Layer Placement",
+      "evidence": "1827654-1,CON2,CND-TE-1827654-7P,9,Top,0,133.8,1.3,No,No"
+    },
+    {
+      "name": "Surface-mount component marking",
+      "pageTarget": "Surface Mount Device",
+      "evidence": "BK22C07_6DS,CON3,CONN6_BK22C07_HIR,16,Top,180,73.845,20.145,Yes,Yes"
+    },
+    {
+      "name": "Glued component flag",
+      "pageTarget": "PCB Component Adhesive",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a BAT_CON REV2.0 coordinate data spreadsheet.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BAT_CON/좌표/BAT_CON_REV2.0_좌표데이타.xlsx",
+      "pageTarget": "BAT_CON REV2.0 Coordinate Data",
+      "confidence": "high"
+    },
+    {
+      "claim": "The coordinate table records PartType, reference designator, decal, pin count, layer, orientation, X/Y coordinates, SMD status, and glued status.",
+      "evidenceText": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued",
+      "pageTarget": "PCB Component Coordinate Data",
+      "confidence": "high"
+    },
+    {
+      "claim": "All component rows shown are placed on the Top layer.",
+      "evidenceText": "1827654-1,CON2,CND-TE-1827654-7P,9,Top,0,133.8,1.3,No,No",
+      "pageTarget": "PCB Top Layer Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector reference designators CON2, CON3, CON4, and CON5 are included in the coordinate data.",
+      "evidenceText": "1827654-1,CON2,CND-TE-1827654-7P,9,Top,0,133.8,1.3,No,No\nBK22C07_6DS,CON3,CONN6_BK22C07_HIR,16,Top,180,73.845,20.145,Yes,Yes\n1827654-1,CON4,CND-TE-1827654-7P,9,Top,0,41.31,1.3,No,Yes\nBK22C07_6DS,CON5,CONN6_BK22C07_HIR,16,Top,180,101.335,20.145,Yes,Yes",
+      "pageTarget": "BAT_CON Connector Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ferrite bead reference designators FB2 and FB3 use part type LS-1608.",
+      "evidenceText": "LS-1608,FB2,LS-1608,2,Top,180,17.8,10.2,Yes,No\nLS-1608,FB3,LS-1608,2,Top,270,8.8,9.4,Yes,No",
+      "pageTarget": "BAT_CON Ferrite Bead Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Resistor reference designators R1 through R8 use part type RS-1608.",
+      "evidenceText": "RS-1608,R1,RS-1608,2,Top,90,12.9,9.4,Yes,No\nRS-1608,R8,RS-1608,2,Top,90,44.3,9.5,Yes,No",
+      "pageTarget": "BAT_CON Resistor Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reference designator R9 uses part type 10118194-0001LF with 11 pins.",
+      "evidenceText": "10118194-0001LF,R9,10118194-0001LF,11,Top,0,12.25,1.45,No,No",
+      "pageTarget": "BAT_CON R9 Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mounting or through-hole reference designators TH1 through TH5 use MT-THRU4.2X10-related decals.",
+      "evidenceText": "MT-THRU4.2X10,TH1,MT-THRU4.2X10,1,Top,0,26.8,8.4,No,Yes\nMT-THRU4.2X10,TH5,MT-THRU4.2X10AAAAA,1,Top,0,87.6,26.5,No,No",
+      "pageTarget": "BAT_CON Through Hole Placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reference designators TH6 and TH7 use part type TPD1E10B06/X1SON and decal DS-X1SON.",
+      "evidenceText": "TPD1E10B06/X1SON,TH6,DS-X1SON,2,Top,0,10.5,12.6,Yes,No\nTPD1E10B06/X1SON,TH7,DS-X1SON,2,Top,180,13.4,12.6,Yes,No",
+      "pageTarget": "BAT_CON ESD Device Placement",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "Product scope is ambiguous: sourcePath states 'G1717CW 외 7종', but the other seven product models are not named."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are cited in the provided coordinate data."
+    }
+  ]
+}
