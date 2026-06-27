@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// Build a dry-run P0 staging-to-vault publish plan.
+// Build a dry-run priority staging-to-vault publish plan.
 //
-// This script does not modify the vault. It consumes the QA-passed P0 staging
-// extraction bundles plus the P0 disposition manifest, derives app-compatible
+// This script does not modify the vault. It consumes the QA-passed priority
+// extraction bundles plus the priority disposition manifest, derives app-compatible
 // source identities and source-summary slugs, and reports what would be created
 // or updated in D:\vault\llm-wiki-vault\wiki.
 
@@ -11,6 +11,7 @@ const path = require("path");
 
 const DEFAULT_VAULT = "D:\\vault\\llm-wiki-vault";
 const DEFAULT_TRIAGE_DIR = "reports\\p0-meaningful-triage-20260618153500";
+const DEFAULT_PRIORITY = "p0";
 const REPORTS_ROOT = "reports";
 const MAX_SOURCE_SUMMARY_SLUG_LENGTH = 120;
 
@@ -18,6 +19,7 @@ function parseArgs(argv) {
   const args = {
     vaultRoot: DEFAULT_VAULT,
     triageDir: DEFAULT_TRIAGE_DIR,
+    priority: DEFAULT_PRIORITY,
     outDir: "",
     bundles: [],
   };
@@ -25,6 +27,7 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === "--vaultRoot") args.vaultRoot = argv[++i];
     else if (arg === "--triage-dir") args.triageDir = argv[++i];
+    else if (arg === "--priority") args.priority = normalizePriority(argv[++i]);
     else if (arg === "--out-dir") args.outDir = argv[++i];
     else if (arg === "--bundle") args.bundles.push(argv[++i]);
     else if (arg === "--help" || arg === "-h") {
@@ -35,7 +38,7 @@ function parseArgs(argv) {
     }
   }
   if (!args.outDir) {
-    args.outDir = path.join(REPORTS_ROOT, `p0-vault-publish-plan-${timestamp()}`);
+    args.outDir = path.join(REPORTS_ROOT, `${args.priority}-vault-publish-plan-${timestamp()}`);
   }
   return args;
 }
@@ -47,11 +50,22 @@ Usage:
 
 Options:
   --vaultRoot <path>     Vault root. Default: ${DEFAULT_VAULT}
-  --triage-dir <path>    P0 triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
+  --triage-dir <path>    Priority triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
+  --priority <p0|p1>     Priority prefix. Default: ${DEFAULT_PRIORITY}
   --bundle <path>        Explicit extraction bundle. May be repeated.
-                         Omit to auto-discover the P0 1-300 and 301-1775 bundles.
-  --out-dir <path>       Report output directory. Default: reports/p0-vault-publish-plan-<timestamp>
+                         Omit to auto-discover matching priority bundles.
+  --out-dir <path>       Report output directory. Default: reports/<priority>-vault-publish-plan-<timestamp>
 `);
+}
+
+function normalizePriority(value) {
+  const normalized = String(value || DEFAULT_PRIORITY).trim().toLowerCase();
+  if (!/^p\d+$/.test(normalized)) throw new Error(`Invalid --priority: ${value}`);
+  return normalized;
+}
+
+function priorityLabel(priority) {
+  return priority.toUpperCase();
 }
 
 function timestamp() {
@@ -146,23 +160,25 @@ function simpleSlug(value, fallback = "item") {
   return `${fallback}-${stableSlugHash(String(value || fallback))}`;
 }
 
-function discoverBundles() {
+function discoverBundles(priority = DEFAULT_PRIORITY) {
   if (!fs.existsSync(REPORTS_ROOT)) return [];
   return fs.readdirSync(REPORTS_ROOT, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => path.join(REPORTS_ROOT, entry.name))
     .filter((dir) => {
       const name = path.basename(dir);
-      return /^p0-pilot-eval-300-/.test(name) || /^p0-pilot-eval-p0-r\d+-r\d+-/.test(name);
+      if (priority === "p0") return /^p0-pilot-eval-300-/.test(name) || /^p0-pilot-eval-p0-r\d+-r\d+-/.test(name);
+      const re = new RegExp(`^${priority}-pilot-eval-${priority}-r\\d+-r\\d+-`);
+      return re.test(name);
     })
     .filter((dir) => fs.existsSync(path.join(dir, "manifest.json")))
-    .sort((a, b) => bundleStartRank(a) - bundleStartRank(b));
+    .sort((a, b) => bundleStartRank(a, priority) - bundleStartRank(b, priority));
 }
 
-function bundleStartRank(bundleDir) {
+function bundleStartRank(bundleDir, priority = DEFAULT_PRIORITY) {
   const name = path.basename(bundleDir);
-  if (/^p0-pilot-eval-300-/.test(name)) return 1;
-  const match = /^p0-pilot-eval-p0-r(\d+)-r/.exec(name);
+  if (priority === "p0" && /^p0-pilot-eval-300-/.test(name)) return 1;
+  const match = new RegExp(`^${priority}-pilot-eval-${priority}-r(\\d+)-r`).exec(name);
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
 }
 
@@ -291,11 +307,12 @@ function taskState(name) {
 async function main() {
   const args = parseArgs(process.argv);
   const vaultRoot = args.vaultRoot;
-  const triageFile = path.join(args.triageDir, "p0-disposition-full.json");
+  const label = priorityLabel(args.priority);
+  const triageFile = path.join(args.triageDir, `${args.priority}-disposition-full.json`);
   const dispositionRows = readJson(triageFile);
   if (!Array.isArray(dispositionRows)) throw new Error(`Disposition must be an array: ${triageFile}`);
 
-  const bundleDirs = args.bundles.length ? args.bundles : discoverBundles();
+  const bundleDirs = args.bundles.length ? args.bundles : discoverBundles(args.priority);
   const extractionState = loadExtractions(bundleDirs);
   const planned = { items: [], seen: new Set() };
   const dispositionCounts = {};
@@ -454,6 +471,7 @@ async function main() {
   const summary = {
     generatedAt: new Date().toISOString(),
     mode: "dry-run",
+    priority: args.priority,
     vaultRoot,
     triageDir: normalizePath(args.triageDir),
     bundles: extractionState.bundleSummaries,
@@ -497,7 +515,7 @@ async function main() {
 
 function writeReport(file, summary) {
   const lines = [
-    "# P0 Vault Publish Dry-Run Plan",
+    `# ${priorityLabel(summary.priority || DEFAULT_PRIORITY)} Vault Publish Dry-Run Plan`,
     "",
     `Generated: ${summary.generatedAt}`,
     `Mode: ${summary.mode}`,
@@ -513,7 +531,7 @@ function writeReport(file, summary) {
     "",
     "## Disposition",
     "",
-    `- total P0 sources: ${summary.disposition.total}`,
+    `- total ${priorityLabel(summary.priority || DEFAULT_PRIORITY)} sources: ${summary.disposition.total}`,
     ...Object.entries(summary.disposition.counts).map(([name, count]) => `- ${name}: ${count}`),
     "",
     "## Representative Outputs",

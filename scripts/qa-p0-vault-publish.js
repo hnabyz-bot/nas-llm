@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// Static QA for P0 staging knowledge materialized into the live vault wiki.
+// Static QA for priority staging knowledge materialized into the live vault wiki.
 //
 // This does not start llm-wiki and does not mutate the vault. It validates the
-// materialized file set, source traceability, frontmatter, P0 markers, and basic
+// materialized file set, source traceability, frontmatter, priority markers, and basic
 // Markdown hygiene before app usability checks.
 
 const fs = require("fs");
@@ -12,14 +12,15 @@ const cp = require("child_process");
 const DEFAULT_VAULT = "D:\\vault\\llm-wiki-vault";
 const DEFAULT_APPLY_DIR = "reports\\p0-vault-materialize-apply-202606241458";
 const DEFAULT_TRIAGE_DIR = "reports\\p0-meaningful-triage-20260618153500";
+const DEFAULT_PRIORITY = "p0";
 const REPORTS_ROOT = "reports";
-const PUBLISH_MARKER = "P0-STAGING-PUBLISH:p0";
 
 function parseArgs(argv) {
   const args = {
     vaultRoot: DEFAULT_VAULT,
     applyDir: DEFAULT_APPLY_DIR,
     triageDir: DEFAULT_TRIAGE_DIR,
+    priority: DEFAULT_PRIORITY,
     outDir: "",
     maxExamples: 25,
   };
@@ -28,6 +29,7 @@ function parseArgs(argv) {
     if (arg === "--vaultRoot") args.vaultRoot = argv[++i];
     else if (arg === "--apply-dir") args.applyDir = argv[++i];
     else if (arg === "--triage-dir") args.triageDir = argv[++i];
+    else if (arg === "--priority") args.priority = normalizePriority(argv[++i]);
     else if (arg === "--out-dir") args.outDir = argv[++i];
     else if (arg === "--max-examples") args.maxExamples = Number(argv[++i]);
     else if (arg === "--help" || arg === "-h") {
@@ -37,7 +39,7 @@ function parseArgs(argv) {
       throw new Error(`Unknown argument: ${arg}`);
     }
   }
-  if (!args.outDir) args.outDir = path.join(REPORTS_ROOT, `p0-vault-qa-${timestamp()}`);
+  if (!args.outDir) args.outDir = path.join(REPORTS_ROOT, `${args.priority}-vault-qa-${timestamp()}`);
   return args;
 }
 
@@ -49,10 +51,25 @@ Usage:
 Options:
   --vaultRoot <path>     Vault root. Default: ${DEFAULT_VAULT}
   --apply-dir <path>     Materialize apply report directory. Default: ${DEFAULT_APPLY_DIR}
-  --triage-dir <path>    P0 triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
-  --out-dir <path>       QA report output directory. Default: reports/p0-vault-qa-<timestamp>
+  --triage-dir <path>    Priority triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
+  --priority <p0|p1>     Priority prefix. Default: ${DEFAULT_PRIORITY}
+  --out-dir <path>       QA report output directory. Default: reports/<priority>-vault-qa-<timestamp>
   --max-examples <n>     Max examples stored per issue. Default: 25.
 `);
+}
+
+function normalizePriority(value) {
+  const normalized = String(value || DEFAULT_PRIORITY).trim().toLowerCase();
+  if (!/^p\d+$/.test(normalized)) throw new Error(`Invalid --priority: ${value}`);
+  return normalized;
+}
+
+function priorityLabel(priority) {
+  return priority.toUpperCase();
+}
+
+function publishMarker(priority) {
+  return `${priorityLabel(priority)}-STAGING-PUBLISH:${priority}`;
 }
 
 function timestamp() {
@@ -88,6 +105,10 @@ function addExample(bucket, value, maxExamples) {
 
 function countMatches(text, re) {
   return [...text.matchAll(re)].length;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function parseFrontmatter(content) {
@@ -164,10 +185,12 @@ function getScheduledTaskState(taskName) {
 function main() {
   const args = parseArgs(process.argv);
   ensureDir(args.outDir);
+  const label = priorityLabel(args.priority);
+  const marker = publishMarker(args.priority);
 
   const files = readJson(path.join(args.applyDir, "materialize-files.json"));
   const summary = readJson(path.join(args.applyDir, "materialize-summary.json"));
-  const dispositionRows = readJson(path.join(args.triageDir, "p0-disposition-full.json"));
+  const dispositionRows = readJson(path.join(args.triageDir, `${args.priority}-disposition-full.json`));
   const plannedPaths = [...new Set(files.map((item) => normalizePath(item.relPath)))].sort();
   const sourcePaths = plannedPaths.filter((relPath) => relPath.startsWith("wiki/sources/"));
 
@@ -199,9 +222,9 @@ function main() {
     contributionCount: 0,
     pagesWithFrontmatter: 0,
     pagesWithSources: 0,
-    pagesWithP0Marker: 0,
-    p0BeginCount: 0,
-    p0EndCount: 0,
+    pagesWithPriorityMarker: 0,
+    priorityBeginCount: 0,
+    priorityEndCount: 0,
     sourceQueueIdsSeen: 0,
   };
 
@@ -254,11 +277,11 @@ function main() {
       else addExample(issueExamples.emptySources, relPath, args.maxExamples);
     }
 
-    const beginCount = countMatches(content, /<!-- P0-STAGING-PUBLISH:p0:BEGIN -->/g);
-    const endCount = countMatches(content, /<!-- P0-STAGING-PUBLISH:p0:END -->/g);
-    stats.p0BeginCount += beginCount;
-    stats.p0EndCount += endCount;
-    if (beginCount > 0 || endCount > 0) stats.pagesWithP0Marker += 1;
+    const beginCount = countMatches(content, new RegExp(`${escapeRegExp(`<!-- ${marker}:BEGIN -->`)}`, "g"));
+    const endCount = countMatches(content, new RegExp(`${escapeRegExp(`<!-- ${marker}:END -->`)}`, "g"));
+    stats.priorityBeginCount += beginCount;
+    stats.priorityEndCount += endCount;
+    if (beginCount > 0 || endCount > 0) stats.pagesWithPriorityMarker += 1;
     if (beginCount === 0 && endCount === 0) addExample(issueExamples.missingMarker, relPath, args.maxExamples);
     if (beginCount !== 1 || endCount !== 1) {
       addExample(issueExamples.mismatchedMarker, `${relPath}: begin=${beginCount}, end=${endCount}`, args.maxExamples);
@@ -275,10 +298,10 @@ function main() {
 
     if (relPath.startsWith("wiki/sources/")) {
       const hasKnownSection =
-        content.includes("## P0 Staging Source Summary") ||
-        content.includes("## P0 Canonical Duplicate Disposition") ||
-        content.includes("## P0 Empty Text Recovery Stub") ||
-        content.includes("## P0 Low Text Review Stub");
+        content.includes(`## ${label} Staging Source Summary`) ||
+        content.includes(`## ${label} Canonical Duplicate Disposition`) ||
+        content.includes(`## ${label} Empty Text Recovery Stub`) ||
+        content.includes(`## ${label} Low Text Review Stub`);
       if (!hasKnownSection) addExample(issueExamples.missingSourceSections, relPath, args.maxExamples);
       for (const match of content.matchAll(/queueId:\s*`([^`]+)`/g)) {
         seenQueueIds.add(match[1]);
@@ -303,12 +326,12 @@ function main() {
   if (issueExamples.missingFrontmatter.length) errors.push(`pages missing frontmatter found: ${issueExamples.missingFrontmatter.length}+`);
   if (issueExamples.missingFrontmatterKeys.length) errors.push(`pages missing required frontmatter keys found: ${issueExamples.missingFrontmatterKeys.length}+`);
   if (issueExamples.emptySources.length) errors.push(`pages with empty frontmatter sources found: ${issueExamples.emptySources.length}+`);
-  if (issueExamples.missingMarker.length) errors.push(`pages missing P0 marker found: ${issueExamples.missingMarker.length}+`);
-  if (issueExamples.mismatchedMarker.length) errors.push(`pages with non-idempotent P0 marker counts found: ${issueExamples.mismatchedMarker.length}+`);
+  if (issueExamples.missingMarker.length) errors.push(`pages missing ${label} marker found: ${issueExamples.missingMarker.length}+`);
+  if (issueExamples.mismatchedMarker.length) errors.push(`pages with non-idempotent ${label} marker counts found: ${issueExamples.mismatchedMarker.length}+`);
   if (issueExamples.trailingWhitespace.length) errors.push(`pages with trailing whitespace found: ${issueExamples.trailingWhitespace.length}+`);
   if (issueExamples.nulBytes.length) errors.push(`pages with NUL bytes found: ${issueExamples.nulBytes.length}+`);
-  if (issueExamples.missingSourceSections.length) errors.push(`source pages missing P0 section found: ${issueExamples.missingSourceSections.length}+`);
-  if (issueExamples.missingQueueIds.length) errors.push(`P0 disposition queueIds missing from source pages found: ${issueExamples.missingQueueIds.length}+`);
+  if (issueExamples.missingSourceSections.length) errors.push(`source pages missing ${label} section found: ${issueExamples.missingSourceSections.length}+`);
+  if (issueExamples.missingQueueIds.length) errors.push(`${label} disposition queueIds missing from source pages found: ${issueExamples.missingQueueIds.length}+`);
 
   if (issueExamples.replacementChars.length) warnings.push(`pages containing Unicode replacement character: ${issueExamples.replacementChars.length}+`);
   if (issueExamples.suspiciousTokens.length) warnings.push(`pages containing suspicious generated tokens: ${issueExamples.suspiciousTokens.length}+`);
@@ -339,6 +362,7 @@ function main() {
 
   const result = {
     generatedAt: new Date().toISOString(),
+    priority: args.priority,
     vaultRoot: args.vaultRoot,
     applyDir: args.applyDir,
     triageDir: args.triageDir,
@@ -365,8 +389,8 @@ function main() {
     },
   };
 
-  writeJson(path.join(args.outDir, "p0-vault-qa-summary.json"), result);
-  fs.writeFileSync(path.join(args.outDir, "p0-vault-qa-report.md"), renderMarkdown(result), "utf8");
+  writeJson(path.join(args.outDir, `${args.priority}-vault-qa-summary.json`), result);
+  fs.writeFileSync(path.join(args.outDir, `${args.priority}-vault-qa-report.md`), renderMarkdown(result), "utf8");
 
   console.log(`QA ${result.pass ? "PASS" : "FAIL"}`);
   console.log(`report=${args.outDir}`);
@@ -376,8 +400,9 @@ function main() {
 }
 
 function renderMarkdown(result) {
+  const label = priorityLabel(result.priority || DEFAULT_PRIORITY);
   return [
-    "# P0 Vault QA Report",
+    `# ${label} Vault QA Report`,
     "",
     `Generated: ${result.generatedAt}`,
     `Result: ${result.pass ? "PASS" : "FAIL"}`,
@@ -386,7 +411,7 @@ function renderMarkdown(result) {
     "",
     "## Coverage",
     "",
-    `- P0 disposition rows: ${result.expected.dispositionRows}`,
+    `- ${label} disposition rows: ${result.expected.dispositionRows}`,
     `- materialized unique files: ${result.stats.uniquePlannedPaths}`,
     `- materialized source pages: ${result.stats.sourcePages}`,
     `- source queueIds seen: ${result.stats.sourceQueueIdsSeen}/${result.expected.expectedQueueIds}`,
@@ -398,8 +423,8 @@ function renderMarkdown(result) {
     `- existing materialized files: ${result.stats.existingFiles}/${result.stats.uniquePlannedPaths}`,
     `- pages with frontmatter: ${result.stats.pagesWithFrontmatter}`,
     `- pages with non-empty sources: ${result.stats.pagesWithSources}`,
-    `- pages with P0 marker: ${result.stats.pagesWithP0Marker}`,
-    `- P0 marker begin/end counts: ${result.stats.p0BeginCount}/${result.stats.p0EndCount}`,
+    `- pages with ${label} marker: ${result.stats.pagesWithPriorityMarker}`,
+    `- ${label} marker begin/end counts: ${result.stats.priorityBeginCount}/${result.stats.priorityEndCount}`,
     "",
     "## Vault State",
     "",

@@ -1,24 +1,26 @@
 #!/usr/bin/env node
-// Materialize QA-passed P0 staging extraction outputs into the live vault wiki.
+// Materialize QA-passed priority staging extraction outputs into the live vault wiki.
 //
 // Default mode is dry-run. Use --apply to write D:\vault\llm-wiki-vault\wiki.
 // The script does not start llm-wiki and does not modify raw sources. It stages
 // app-compatible Markdown pages with frontmatter source traceability and an
-// idempotent P0 staging section.
+// idempotent priority staging section.
 
 const fs = require("fs");
 const path = require("path");
 
 const DEFAULT_VAULT = "D:\\vault\\llm-wiki-vault";
 const DEFAULT_TRIAGE_DIR = "reports\\p0-meaningful-triage-20260618153500";
+const DEFAULT_PRIORITY = "p0";
 const REPORTS_ROOT = "reports";
 const MAX_SOURCE_SUMMARY_SLUG_LENGTH = 120;
-const PUBLISH_MARKER = "P0-STAGING-PUBLISH";
+let CURRENT_PRIORITY = DEFAULT_PRIORITY;
 
 function parseArgs(argv) {
   const args = {
     vaultRoot: DEFAULT_VAULT,
     triageDir: DEFAULT_TRIAGE_DIR,
+    priority: DEFAULT_PRIORITY,
     outDir: "",
     apply: false,
     maxItems: 0,
@@ -27,6 +29,7 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === "--vaultRoot") args.vaultRoot = argv[++i];
     else if (arg === "--triage-dir") args.triageDir = argv[++i];
+    else if (arg === "--priority") args.priority = normalizePriority(argv[++i]);
     else if (arg === "--out-dir") args.outDir = argv[++i];
     else if (arg === "--apply") args.apply = true;
     else if (arg === "--max-items") args.maxItems = Number(argv[++i]);
@@ -38,7 +41,7 @@ function parseArgs(argv) {
     }
   }
   if (!args.outDir) {
-    args.outDir = path.join(REPORTS_ROOT, `p0-vault-materialize-${timestamp()}`);
+    args.outDir = path.join(REPORTS_ROOT, `${args.priority}-vault-materialize-${timestamp()}`);
   }
   return args;
 }
@@ -50,11 +53,26 @@ Usage:
 
 Options:
   --vaultRoot <path>     Vault root. Default: ${DEFAULT_VAULT}
-  --triage-dir <path>    P0 triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
-  --out-dir <path>       Report output directory. Default: reports/p0-vault-materialize-<timestamp>
+  --triage-dir <path>    Priority triage report directory. Default: ${DEFAULT_TRIAGE_DIR}
+  --priority <p0|p1>     Priority prefix. Default: ${DEFAULT_PRIORITY}
+  --out-dir <path>       Report output directory. Default: reports/<priority>-vault-materialize-<timestamp>
   --apply                Write wiki files. Omit for dry-run.
   --max-items <n>        Diagnostic cap for planned contributions. Default: no cap.
 `);
+}
+
+function normalizePriority(value) {
+  const normalized = String(value || DEFAULT_PRIORITY).trim().toLowerCase();
+  if (!/^p\d+$/.test(normalized)) throw new Error(`Invalid --priority: ${value}`);
+  return normalized;
+}
+
+function priorityLabel() {
+  return CURRENT_PRIORITY.toUpperCase();
+}
+
+function publishMarker() {
+  return `${priorityLabel()}-STAGING-PUBLISH`;
 }
 
 function timestamp() {
@@ -139,23 +157,25 @@ function sanitizePathPart(value, fallback = "item") {
   return slug || `${fallback}-${stableSlugHash(String(value || fallback))}`;
 }
 
-function discoverBundles() {
+function discoverBundles(priority = CURRENT_PRIORITY) {
   if (!fs.existsSync(REPORTS_ROOT)) return [];
   return fs.readdirSync(REPORTS_ROOT, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => path.join(REPORTS_ROOT, entry.name))
     .filter((dir) => {
       const name = path.basename(dir);
-      return /^p0-pilot-eval-300-/.test(name) || /^p0-pilot-eval-p0-r\d+-r\d+-/.test(name);
+      if (priority === "p0") return /^p0-pilot-eval-300-/.test(name) || /^p0-pilot-eval-p0-r\d+-r\d+-/.test(name);
+      const re = new RegExp(`^${priority}-pilot-eval-${priority}-r\\d+-r\\d+-`);
+      return re.test(name);
     })
     .filter((dir) => fs.existsSync(path.join(dir, "manifest.json")))
-    .sort((a, b) => bundleStartRank(a) - bundleStartRank(b));
+    .sort((a, b) => bundleStartRank(a, priority) - bundleStartRank(b, priority));
 }
 
-function bundleStartRank(bundleDir) {
+function bundleStartRank(bundleDir, priority = CURRENT_PRIORITY) {
   const name = path.basename(bundleDir);
-  if (/^p0-pilot-eval-300-/.test(name)) return 1;
-  const match = /^p0-pilot-eval-p0-r(\d+)-r/.exec(name);
+  if (priority === "p0" && /^p0-pilot-eval-300-/.test(name)) return 1;
+  const match = new RegExp(`^${priority}-pilot-eval-${priority}-r(\\d+)-r`).exec(name);
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
 }
 
@@ -238,7 +258,7 @@ function frontmatter(type, title, sources, tags = []) {
     `title: ${yamlString(title || "Untitled")}`,
     `created: ${yamlString(today)}`,
     `updated: ${yamlString(today)}`,
-    `tags: ${yamlArray(["p0-staging-publish", ...tags])}`,
+    `tags: ${yamlArray([`${CURRENT_PRIORITY}-staging-publish`, ...tags])}`,
     `sources: ${yamlArray(sources)}`,
     "related: []",
     "---",
@@ -274,7 +294,7 @@ function mergeExistingFrontmatter(existingContent, fallbackType, fallbackTitle, 
   if (!parsed) return frontmatter(fallbackType, fallbackTitle, sources, tags) + existingContent.replace(/^\n+/, "");
   let fm = parsed.raw.slice(0, -5);
   const mergedSources = [...parseArrayLine(fm, "sources"), ...sources];
-  const mergedTags = [...parseArrayLine(fm, "tags"), "p0-staging-publish", ...tags];
+  const mergedTags = [...parseArrayLine(fm, "tags"), `${CURRENT_PRIORITY}-staging-publish`, ...tags];
   const today = new Date().toISOString().slice(0, 10);
 
   if (/^sources:\s*/m.test(fm)) fm = fm.replace(/^sources:\s*.*$/m, `sources: ${yamlArray(mergedSources)}`);
@@ -289,8 +309,8 @@ function mergeExistingFrontmatter(existingContent, fallbackType, fallbackTitle, 
 function sectionMarkers(sectionId) {
   const safe = sectionId.replace(/[^a-zA-Z0-9_.:-]/g, "-");
   return {
-    begin: `<!-- ${PUBLISH_MARKER}:${safe}:BEGIN -->`,
-    end: `<!-- ${PUBLISH_MARKER}:${safe}:END -->`,
+    begin: `<!-- ${publishMarker()}:${safe}:BEGIN -->`,
+    end: `<!-- ${publishMarker()}:${safe}:END -->`,
   };
 }
 
@@ -320,7 +340,7 @@ function buildRepresentativeSourceSection(contribs) {
   const doc = obj.document || {};
   const summary = obj.sourceSummary || {};
   const lines = [
-    "## P0 Staging Source Summary",
+    `## ${priorityLabel()} Staging Source Summary`,
     "",
     `- queueId: \`${c.queueId}\``,
     `- canonicalGroupId: \`${c.canonicalGroupId}\``,
@@ -358,7 +378,7 @@ function buildRepresentativeSourceSection(contribs) {
 
 function buildDuplicateSection(contribs) {
   return [
-    "## P0 Canonical Duplicate Disposition",
+    `## ${priorityLabel()} Canonical Duplicate Disposition`,
     "",
     ...contribs.map((c) => [
       `- source identity: \`${c.sourceIdentity}\``,
@@ -373,7 +393,7 @@ function buildDuplicateSection(contribs) {
 
 function buildReviewStubSection(title, contribs) {
   return [
-    `## P0 ${title}`,
+    `## ${priorityLabel()} ${title}`,
     "",
     ...contribs.map((c) => [
       `- source identity: \`${c.sourceIdentity}\``,
@@ -413,21 +433,21 @@ function sectionForPage(relPath, contribs) {
   if (type === "empty-text-recovery-stub") return buildReviewStubSection("Empty Text Recovery Stub", contribs);
   if (type === "low-text-review-stub") return buildReviewStubSection("Low Text Review Stub", contribs);
   if (relPath.startsWith("wiki/entities/")) {
-    return buildEvidenceListSection("P0 Entity Evidence", contribs, (c) =>
+    return buildEvidenceListSection(`${priorityLabel()} Entity Evidence`, contribs, (c) =>
       `- **${quoteInline(c.name)}** from \`${c.sourceIdentity}\`: ${quoteInline(c.evidence || c.title || "")}`,
     );
   }
   if (relPath.startsWith("wiki/concepts/")) {
-    return buildEvidenceListSection("P0 Concept Evidence", contribs, (c) =>
+    return buildEvidenceListSection(`${priorityLabel()} Concept Evidence`, contribs, (c) =>
       `- **${quoteInline(c.name)}** from \`${c.sourceIdentity}\`: ${quoteInline(c.evidence || "")}`,
     );
   }
   if (relPath.startsWith("wiki/findings/")) {
-    return buildEvidenceListSection("P0 Findings", contribs, (c) =>
+    return buildEvidenceListSection(`${priorityLabel()} Findings`, contribs, (c) =>
       `- From \`${c.sourceIdentity}\` (${quoteInline(c.confidence)}): ${quoteInline(c.claim)} - ${quoteInline(c.evidenceText || "")}`,
     );
   }
-  return buildEvidenceListSection("P0 Staging Evidence", contribs, (c) => `- \`${c.sourceIdentity}\``);
+  return buildEvidenceListSection(`${priorityLabel()} Staging Evidence`, contribs, (c) => `- \`${c.sourceIdentity}\``);
 }
 
 function buildPlan(dispositionRows, extractions, maxItems) {
@@ -558,7 +578,7 @@ function materializePage(vaultRoot, relPath, contribs, apply) {
   const sources = contribs.map((c) => c.sourceIdentity).filter(Boolean);
   const type = pageTypeFor(relPath, contribs[0]?.type);
   const title = titleForPage(relPath, contribs);
-  const tags = [`p0-${type}`];
+  const tags = [`${CURRENT_PRIORITY}-${type}`];
   const section = sectionForPage(relPath, contribs);
   let content;
 
@@ -569,7 +589,7 @@ function materializePage(vaultRoot, relPath, contribs, apply) {
     content = frontmatter(type, title, sources, tags) + `# ${title}\n`;
   }
 
-  content = upsertSection(content, "p0", section);
+  content = upsertSection(content, CURRENT_PRIORITY, section);
   if (apply) {
     ensureDirFor(target);
     fs.writeFileSync(target, content.endsWith("\n") ? content : `${content}\n`, "utf8");
@@ -599,7 +619,7 @@ function validateWritten(vaultRoot, plannedFiles) {
       continue;
     }
     const content = fs.readFileSync(target, "utf8");
-    if (!content.includes(`${PUBLISH_MARKER}:p0:BEGIN`)) missingMarker.push(item.relPath);
+    if (!content.includes(`${publishMarker()}:${CURRENT_PRIORITY}:BEGIN`)) missingMarker.push(item.relPath);
     const fm = extractFrontmatter(content);
     if (!fm || !/^sources:\s*\[/m.test(fm.raw)) missingSources.push(item.relPath);
   }
@@ -615,7 +635,7 @@ function validateWritten(vaultRoot, plannedFiles) {
 
 function writeReport(file, summary) {
   const lines = [
-    "# P0 Vault Materialize Report",
+    `# ${priorityLabel()} Vault Materialize Report`,
     "",
     `Generated: ${summary.generatedAt}`,
     `Mode: ${summary.mode}`,
@@ -637,7 +657,7 @@ function writeReport(file, summary) {
     "## Validation",
     "",
     `- missing files: ${summary.validation.missingCount}`,
-    `- missing P0 marker: ${summary.validation.missingMarkerCount}`,
+    `- missing ${priorityLabel()} marker: ${summary.validation.missingMarkerCount}`,
     `- missing frontmatter sources: ${summary.validation.missingSourcesCount}`,
     "",
     "## Vault Queue State",
@@ -651,9 +671,10 @@ function writeReport(file, summary) {
 
 async function main() {
   const args = parseArgs(process.argv);
+  CURRENT_PRIORITY = args.priority;
   const vaultRoot = args.vaultRoot;
-  const dispositionRows = readJson(path.join(args.triageDir, "p0-disposition-full.json"));
-  const bundleDirs = discoverBundles();
+  const dispositionRows = readJson(path.join(args.triageDir, `${args.priority}-disposition-full.json`));
+  const bundleDirs = discoverBundles(args.priority);
   const extractions = loadExtractions(bundleDirs);
   const plan = buildPlan(dispositionRows, extractions, args.maxItems);
 
@@ -686,6 +707,7 @@ async function main() {
   const summary = {
     generatedAt: new Date().toISOString(),
     mode: args.apply ? "apply" : "dry-run",
+    priority: args.priority,
     vaultRoot,
     triageDir: normalizePath(args.triageDir),
     bundles: extractions.bundles,
