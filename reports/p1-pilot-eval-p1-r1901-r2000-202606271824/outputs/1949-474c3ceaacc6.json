@@ -1,0 +1,974 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-eru",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.2판 [영문] 2020_IEC(R).pdf",
+    "canonicalGroupId": "474c3ceaacc6"
+  },
+  "document": {
+    "title": "IEC 60601-1 Medical electrical equipment - Part 1: General requirements for basic safety and essential performance",
+    "documentType": "International Standard, consolidated redline version",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "International Electrotechnical Commission (IEC)",
+      "IEC Subcommittee 62A",
+      "IEC Technical Committee 62"
+    ],
+    "revisionOrVersion": "Edition 3.2; IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV",
+    "documentDate": "2020-08",
+    "standards": [
+      "IEC 60601-1",
+      "IEC 60601-1:2005",
+      "IEC 60601-1:2005/AMD1:2012",
+      "IEC 60601-1:2005/AMD2:2020",
+      "IEC 60601-1-2:2014",
+      "IEC 60601-1-2:2014/AMD1:2020",
+      "IEC 60601-1-3",
+      "IEC 60601-1-6:2010",
+      "IEC 60601-1-6:2010/AMD1:2013",
+      "IEC 60601-1-6:2010/AMD2:2020",
+      "IEC 60601-1-8:2006",
+      "IEC 60601-1-8:2006/AMD1:2012",
+      "IEC 60601-1-8:2006/AMD2:2020",
+      "IEC 60601-1-11:2010",
+      "IEC 60601-1-12",
+      "IEC 60601-2-49:2001",
+      "IEC 60320-1",
+      "IEC 60335-1",
+      "IEC 60364-4-41",
+      "IEC 60364-7-710",
+      "IEC 60384-14",
+      "IEC 60417",
+      "IEC 60445",
+      "IEC 60447",
+      "IEC 60529",
+      "IEC 60664-1",
+      "IEC 60730-1:2010",
+      "IEC 60825-1:2014",
+      "IEC 60884-1",
+      "IEC 60950-1:2005",
+      "IEC 60950-1:2005/AMD1:2009",
+      "IEC 60950-1:2005/AMD2:2013",
+      "IEC 60990",
+      "IEC 61058-1",
+      "IEC 61558-1:1997",
+      "IEC 62304:2006+AMD1:2015",
+      "IEC 62366-1:2015",
+      "IEC 62368-1:2018",
+      "IEC 80001-1:2010",
+      "ISO 10993",
+      "ISO 11135-1",
+      "ISO 11137-1",
+      "ISO 13485",
+      "ISO 14971:2007",
+      "ISO 14971:2019",
+      "ISO 15223-1:2016",
+      "ISO 7010"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "IEC 60601-1 Edition 3.2 is the consolidated 2020 international general safety and essential performance standard for medical electrical equipment and medical electrical systems.",
+    "officialUse": "Used as the base IEC 60601 series standard for assessing basic safety and essential performance of ME equipment and ME systems, together with applicable collateral and particular standards, risk management evidence, design verification, markings, accompanying documents, PEMS/software lifecycle controls, ME system controls, and EMC requirements.",
+    "keyPoints": [
+      "Edition 3.2 consolidates the 2005 third edition, Amendment 1:2012, Amendment 2:2020, corrigenda, and interpretation sheets 1-3.",
+      "The standard applies to basic safety and essential performance of medical electrical equipment and medical electrical systems.",
+      "Collateral standards become normative when applicable, and particular standards take priority over general and collateral requirements.",
+      "Compliance uses risk management concepts, including requirements tied to ISO 14971 and the risk management file.",
+      "Major requirement areas include markings and accompanying documents, electrical hazards, mechanical hazards, radiation, temperature and fire safety, ingress and cleaning, hazardous outputs, PEMS, ME systems, and EMC.",
+      "PEMS requirements include lifecycle documentation, risk management integration, verification, validation, modification control, IEC 62304 application, and IT-network risk instructions.",
+      "ME systems must be assessed after installation or modification so they do not result in unacceptable risk."
+    ]
+  },
+  "entities": [
+    {
+      "name": "International Electrotechnical Commission (IEC)",
+      "type": "standards authority",
+      "evidence": "Foreword identifies IEC as the worldwide standardization organization that publishes International Standards and IEC Publications."
+    },
+    {
+      "name": "IEC Subcommittee 62A",
+      "type": "technical committee",
+      "evidence": "The standard was prepared by subcommittee 62A: Common aspects of electrical equipment used in medical practice."
+    },
+    {
+      "name": "IEC Technical Committee 62",
+      "type": "technical committee",
+      "evidence": "SC 62A is part of IEC technical committee 62: Electrical equipment in medical practice."
+    },
+    {
+      "name": "IEC 60601-1",
+      "type": "standard",
+      "evidence": "Cover title states IEC 60601-1, Edition 3.2 2020-08, Medical electrical equipment - Part 1."
+    },
+    {
+      "name": "Manufacturer",
+      "type": "regulated responsible party",
+      "evidence": "Manufacturer is defined as the person responsible for design, manufacture, packaging, labelling, assembling an ME system, or adapting ME equipment or an ME system."
+    },
+    {
+      "name": "Responsible Organization",
+      "type": "regulated user organization",
+      "evidence": "Responsible Organization is defined as the entity accountable for the use and maintenance of ME equipment or an ME system."
+    },
+    {
+      "name": "Operator",
+      "type": "user role",
+      "evidence": "Operator is defined as a person handling equipment."
+    },
+    {
+      "name": "Service Personnel",
+      "type": "maintenance role",
+      "evidence": "Service Personnel are individuals or entities accountable to the Responsible Organization that install, assemble, maintain, or repair ME equipment, ME systems, or equipment."
+    },
+    {
+      "name": "Patient",
+      "type": "protected person",
+      "evidence": "Instructions for use must identify when the PATIENT is an intended OPERATOR and state which functions and maintenance the PATIENT can safely perform."
+    },
+    {
+      "name": "ME Equipment",
+      "type": "regulated device category",
+      "evidence": "Requirements repeatedly apply to ME EQUIPMENT, including protective earthing, leakage current, insulation, construction, component, battery, transformer, connector, indicator, control, and EMC requirements."
+    },
+    {
+      "name": "ME System",
+      "type": "regulated system category",
+      "evidence": "Clause 16 states that after installation or subsequent modification, an ME SYSTEM shall not result in an unacceptable risk."
+    },
+    {
+      "name": "Programmable Electrical Medical System (PEMS)",
+      "type": "system category",
+      "evidence": "Clause 14 applies to programmable electrical medical systems unless PESS failures do not affect basic safety, essential performance, or unacceptable risk."
+    },
+    {
+      "name": "Risk Management File",
+      "type": "compliance record",
+      "evidence": "Risk Management File is a set of records and other documents produced by a risk management process; safety information including calculations and test results is part of the file."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "risk management standard",
+      "evidence": "Introduction states compliance with IEC 60601-1 requires the manufacturer to have a risk management process complying with parts of ISO 14971."
+    },
+    {
+      "name": "IEC 62304",
+      "type": "medical software standard",
+      "evidence": "Normative references list IEC 62304:2006, Medical device software - Software life cycle processes, Amendment 1:2015."
+    },
+    {
+      "name": "IEC 60601-1-2",
+      "type": "collateral standard",
+      "evidence": "Clause 17 states that electromagnetic disturbance risk compliance is checked as specified in IEC 60601-1-2:2014 and IEC 60601-1-2:2014/AMD1:2020."
+    },
+    {
+      "name": "Certification body",
+      "type": "conformity assessment body",
+      "evidence": "Subclause 14.2 states Clause 14 documentation is necessary for a certification body to determine that PROCESS steps have been performed."
+    },
+    {
+      "name": "Test house",
+      "type": "testing organization",
+      "evidence": "Subclause 16.1 states standards compliance documentation can be a declaration of conformity by the manufacturer or a certificate from a test house."
+    },
+    {
+      "name": "System IT-network integrator",
+      "type": "regulated role",
+      "evidence": "The system IT-NETWORK integrator has overall responsibility for ensuring separate equipment works together in the integrated system."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Basic safety and essential performance",
+      "pageTarget": "page 18",
+      "evidence": "Scope applies to BASIC SAFETY and ESSENTIAL PERFORMANCE of ME EQUIPMENT and ME SYSTEMS."
+    },
+    {
+      "name": "Medical electrical equipment and medical electrical systems",
+      "pageTarget": "page 18",
+      "evidence": "The scope defines the subject as MEDICAL ELECTRICAL EQUIPMENT and MEDICAL ELECTRICAL SYSTEMS, referred to as ME EQUIPMENT and ME SYSTEMS."
+    },
+    {
+      "name": "Collateral standards",
+      "pageTarget": "page 18",
+      "evidence": "Collateral standards specify general requirements for basic safety and essential performance for subgroups or characteristics of ME equipment."
+    },
+    {
+      "name": "Particular standards priority",
+      "pageTarget": "page 19",
+      "evidence": "Particular standards may modify, replace, delete, or add requirements, and a particular standard requirement takes priority."
+    },
+    {
+      "name": "Risk management process",
+      "pageTarget": "page 15",
+      "evidence": "The introduction states a general requirement was introduced to carry out a RISK MANAGEMENT PROCESS."
+    },
+    {
+      "name": "Risk Management File",
+      "pageTarget": "Section 3.108, page 39",
+      "evidence": "Risk Management File is a set of records and other documents produced by a risk management process; safety information including calculations and test results is part of the file."
+    },
+    {
+      "name": "Essential Performance",
+      "pageTarget": "Sections 3.27 and 4.3, pages 29 and 48-49",
+      "evidence": "Essential Performance is performance necessary to achieve freedom from unacceptable risk; the manufacturer shall identify which functions are essential performance."
+    },
+    {
+      "name": "Single Fault Safe",
+      "pageTarget": "Sections 3.117 and 4.7, pages 40 and 50-51",
+      "evidence": "Single Fault Safe means ME equipment remains free of unacceptable risk during expected service life under single fault conditions."
+    },
+    {
+      "name": "Type Test",
+      "pageTarget": "Sections 3.135 and 5.1, pages 42 and 54",
+      "evidence": "A type test is performed on a representative sample to determine whether equipment as designed and manufactured can meet this standard."
+    },
+    {
+      "name": "Applied Part Type Classification",
+      "pageTarget": "Sections 3.132-3.134 and 6.2, pages 41-42 and 59",
+      "evidence": "Applied parts are classified as Type B, Type BF, or Type CF applied parts; defibrillation-proof applied parts may also be classified."
+    },
+    {
+      "name": "Marking Legibility and Durability",
+      "pageTarget": "Sections 7.1.2 and 7.1.3, pages 60-61",
+      "evidence": "Required markings must be clearly legible and sufficiently durable to remain clearly legible during expected service life."
+    },
+    {
+      "name": "Accompanying documents",
+      "pageTarget": "Clause 7.9.1, pages 72-73",
+      "evidence": "ME EQUIPMENT shall be accompanied by documents containing at least instructions for use and a technical description, and these documents are regarded as part of the ME EQUIPMENT."
+    },
+    {
+      "name": "Means of patient protection and operator protection",
+      "pageTarget": "Clause 8.5.1, pages 84-88",
+      "evidence": "Each means of protection shall be categorized as a means of patient protection or means of operator protection according to the part protected."
+    },
+    {
+      "name": "Means of Operator Protection (MOOP)",
+      "pageTarget": "p. 275",
+      "evidence": "For MOOP, the manufacturer may apply IEC 60950-1, use derived table values, or treat MOOP as MOPP."
+    },
+    {
+      "name": "Means of Patient Protection (MOPP)",
+      "pageTarget": "p. 275",
+      "evidence": "The standard retains second-edition values for MOPP because patient contact probability is higher."
+    },
+    {
+      "name": "Defibrillation-proof applied parts",
+      "pageTarget": "Clause 8.5.5.1, pages 90-95",
+      "evidence": "The classification DEFIBRILLATION-PROOF APPLIED PART applies to the whole applied part and requires tests using specified common-mode and differential-mode circuits."
+    },
+    {
+      "name": "Protective earth impedance limit",
+      "pageTarget": "pp. 98-99 / 8.6.4",
+      "evidence": "Impedance limits include 100 milliohms for permanently installed equipment or appliance inlet earth pin to protectively earthed parts, and 200 milliohms for non-detachable or detachable power supply cord configurations."
+    },
+    {
+      "name": "Leakage current limits",
+      "pageTarget": "p. 290",
+      "evidence": "Allowable leakage current requirements consider ventricular fibrillation, frequency, duration, and normal or single fault conditions."
+    },
+    {
+      "name": "Creepage distance and air clearance classification",
+      "pageTarget": "pp. 129-138 / 8.9.1 and Tables 8-16",
+      "evidence": "Creepage distances and air clearances are determined using tables for patient protection and operator protection, with altitude, material group, pollution degree, and overvoltage category considerations."
+    },
+    {
+      "name": "Mains isolation",
+      "pageTarget": "pp. 149-150",
+      "evidence": "ME EQUIPMENT shall have means to isolate circuits electrically from the SUPPLY MAINS on all poles simultaneously."
+    },
+    {
+      "name": "Mechanical hazards from moving parts",
+      "pageTarget": "pp. 155-161",
+      "evidence": "Clause 9.2 requires acceptable-risk design for moving parts, trapping zones, guards, continuous activation, speed limits, end stops, and emergency stops."
+    },
+    {
+      "name": "Instability hazards",
+      "pageTarget": "pp. 161-166",
+      "evidence": "ME EQUIPMENT must not tip over or move unexpectedly under specified incline, force, threshold, wheel lock, and braking tests."
+    },
+    {
+      "name": "Pressure vessel and pressure relief safety",
+      "pageTarget": "pp. 168-171",
+      "evidence": "Pressure systems require maximum pressure assessment, hydraulic test pressure, pressure-control devices, and pressure-relief devices."
+    },
+    {
+      "name": "Support system tensile safety factor",
+      "pageTarget": "pp. 171-173",
+      "evidence": "Support systems must maintain structural integrity during expected service life using tensile safety factors in Table 21 or an alternative method."
+    },
+    {
+      "name": "Unwanted radiation hazards",
+      "pageTarget": "pp.322-323, Clause 10",
+      "evidence": "Clause 10 addresses stray and incidental radiation; intended radiation output hazards are covered separately in 12.4.5."
+    },
+    {
+      "name": "Applied Part Temperature",
+      "pageTarget": "pp.181-182",
+      "evidence": "Applied parts not intended to supply heat must meet Table 24 limits; above 41 C requires disclosure and risk management documentation."
+    },
+    {
+      "name": "Oxygen-Rich Environment Fire Safety",
+      "pageTarget": "pp.184-188",
+      "evidence": "Fire risk in oxygen-rich environments must be reduced as far as possible under normal and single fault conditions."
+    },
+    {
+      "name": "Cleaning, Disinfection, and Sterilization",
+      "pageTarget": "p.193",
+      "evidence": "Equipment and parts must withstand specified cleaning, disinfection, and sterilization without deterioration that creates unacceptable risk."
+    },
+    {
+      "name": "Programmable Electrical Medical Systems Lifecycle",
+      "pageTarget": "pp.203-207",
+      "evidence": "Clause 14 requires PEMS lifecycle documentation, risk management integration, verification, validation, and modification controls."
+    },
+    {
+      "name": "IT-Network Connection Risk",
+      "pageTarget": "pp.207-208",
+      "evidence": "PEMS intended for IT-network incorporation must provide connection instructions, security specifications, information flow, and hazardous situation lists."
+    },
+    {
+      "name": "ME system general safety",
+      "pageTarget": "p. 222",
+      "evidence": "An ME system must provide safety equivalent to IEC 60601-1-compliant ME equipment within the patient environment and equivalent IEC or ISO safety outside the patient environment."
+    },
+    {
+      "name": "ME system leakage current limits",
+      "pageTarget": "pp. 224-225",
+      "evidence": "Touch current within the patient environment must not exceed 100 μA in normal condition and 500 μA after interruption of a non-permanently installed protective earth conductor."
+    },
+    {
+      "name": "Electromagnetic compatibility",
+      "pageTarget": "Clause 17, pp.349-350",
+      "evidence": "IEC 60601-1-2 specifies electromagnetic immunity test levels and emissions limits for ME EQUIPMENT and ME SYSTEMS."
+    },
+    {
+      "name": "Category AP/APG flammable anaesthetic mixture ignition protection",
+      "pageTarget": "Annex G, pp.372-386",
+      "evidence": "Annex G is normative and covers protection against hazards of ignition of flammable anaesthetic mixtures."
+    },
+    {
+      "name": "Insulated winding wire qualification",
+      "pageTarget": "p.413-p.415",
+      "evidence": "Annex L specifies type tests and manufacturing tests for winding wire insulation used as basic, supplementary, double, or reinforced insulation without interleaved insulation."
+    },
+    {
+      "name": "Pollution degree reduction",
+      "pageTarget": "p.416",
+      "evidence": "Annex M gives additional protective measures such as IP enclosures, hermetic sealing, heating, encapsulation, and coating to reduce internal pollution degree."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "IEC 60601-1 Edition 3.2 was published as a consolidated version in August 2020.",
+      "evidenceText": "Cover identifies IEC 60601-1, Edition 3.2 2020-08, CONSOLIDATED VERSION.",
+      "pageTarget": "cover",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is the general standard for basic safety and essential performance of medical electrical equipment.",
+      "evidenceText": "Title states Medical electrical equipment - Part 1: General requirements for basic safety and essential performance.",
+      "pageTarget": "cover",
+      "confidence": "high"
+    },
+    {
+      "claim": "Edition 3.2 consolidates the 2005 third edition, Amendment 1:2012, and Amendment 2:2020.",
+      "evidenceText": "Foreword says edition 3.2 contains the third edition (2005-12), amendment 1 (2012-07), and amendment 2 (2020-08).",
+      "pageTarget": "page 11",
+      "confidence": "high"
+    },
+    {
+      "claim": "The consolidated version includes corrigenda and interpretation sheets 1, 2, and 3.",
+      "evidenceText": "Foreword states the consolidated version includes corrigenda 1 and 2, the corrigendum to Amendment 1, and interpretation sheets 1-3.",
+      "pageTarget": "page 11",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 applies to basic safety and essential performance of ME equipment and ME systems.",
+      "evidenceText": "Scope states the standard applies to BASIC SAFETY and ESSENTIAL PERFORMANCE of MEDICAL ELECTRICAL EQUIPMENT and MEDICAL ELECTRICAL SYSTEMS.",
+      "pageTarget": "page 18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The IEC 60601 series excludes certain IVD equipment, active implantable device implantable parts, and medical gas pipeline systems.",
+      "evidenceText": "Scope states the IEC 60601 series does not apply to IVD equipment outside ME equipment, implantable parts covered by ISO 14708, or medical gas pipeline systems covered by ISO 7396-1.",
+      "pageTarget": "page 18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The object of IEC 60601-1 is to specify general requirements and serve as the basis for particular standards.",
+      "evidenceText": "Clause 1.2 states the object is to specify general requirements and serve as the basis for particular standards.",
+      "pageTarget": "page 18",
+      "confidence": "high"
+    },
+    {
+      "claim": "Applicable IEC 60601 collateral standards are normative together with IEC 60601-1.",
+      "evidenceText": "Clause 1.3 states applicable collateral standards become normative at publication and apply together with this standard.",
+      "pageTarget": "page 18",
+      "confidence": "high"
+    },
+    {
+      "claim": "Particular standards take priority over IEC 60601-1 and applicable collateral standards.",
+      "evidenceText": "Clause 1.4 states a requirement of a particular standard takes priority over this standard and applicable collateral standards.",
+      "pageTarget": "page 19",
+      "confidence": "high"
+    },
+    {
+      "claim": "Compliance with IEC 60601-1 requires a manufacturer risk management process complying with parts of ISO 14971.",
+      "evidenceText": "Introduction states compliance requires the MANUFACTURER to have a RISK MANAGEMENT PROCESS complying with parts of ISO 14971.",
+      "pageTarget": "page 15",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 requirements apply to ME equipment and ME systems in normal use and reasonably foreseeable misuse unless otherwise specified.",
+      "evidenceText": "Clause 4.1 states that, unless otherwise specified, requirements apply in NORMAL USE and reasonably foreseeable misuse.",
+      "pageTarget": "Section 4.1, page 45",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer establishes acceptable risk policy and acceptability of residual risks for IEC 60601-1 compliance.",
+      "evidenceText": "The policy for determining acceptable RISK and acceptability of RESIDUAL RISK(S) shall be established by the MANUFACTURER.",
+      "pageTarget": "Section 4.2, page 46",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 risk management compliance is checked by inspecting risk acceptability policy, risk management plan, and risk management file.",
+      "evidenceText": "Compliance is checked by inspection of the manufacturer's policy, inspection of the risk management plan, and confirming preparation of a risk management file.",
+      "pageTarget": "Section 4.2.2, page 47",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 does not require all ISO 14971:2019 elements; production/post-production monitoring and periodic suitability reviews are excluded for compliance with this standard.",
+      "evidenceText": "All ISO 14971:2019 risk management elements apply except planning/execution of production and post-production monitoring and periodic reviews of process suitability.",
+      "pageTarget": "Section 4.2.2, page 47",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manufacturers must identify essential performance functions and evaluate loss or degradation beyond specified limits through risk analysis.",
+      "evidenceText": "Clause 4.3 requires the manufacturer to identify essential performance, specify performance limits, and evaluate risk from loss or degradation beyond those limits.",
+      "pageTarget": "Section 4.3, pages 48-49",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer must state expected service life of ME equipment or ME system in the risk management file.",
+      "evidenceText": "Clause 4.4 states the manufacturer shall state expected service life in the risk management file; compliance is checked by inspection.",
+      "pageTarget": "Section 4.4, page 49",
+      "confidence": "high"
+    },
+    {
+      "claim": "Alternative risk control measures or test methods are acceptable only if justified as producing comparable acceptable residual risk.",
+      "evidenceText": "Clause 4.5 permits alternatives where the manufacturer demonstrates through scientific data, clinical opinion, or comparative studies that residual risk remains acceptable and comparable.",
+      "pageTarget": "Section 4.5, page 50",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment must be designed and manufactured to remain single fault safe or have acceptable risk under IEC 60601-1 risk management.",
+      "evidenceText": "Clause 4.7 states ME equipment shall remain SINGLE FAULT SAFE, or risk shall remain acceptable as determined through application of 4.2.",
+      "pageTarget": "Section 4.7, pages 50-51",
+      "confidence": "high"
+    },
+    {
+      "claim": "High-integrity components are required when a fault in a component can generate unacceptable risk.",
+      "evidenceText": "Clause 4.9 states a component with high-integrity characteristics shall be used when a fault in a particular component can generate unacceptable risk.",
+      "pageTarget": "Section 4.9, page 52",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 tests are type tests, and risk analysis can determine whether tests or combinations of simultaneous faults are needed.",
+      "evidenceText": "Clause 5.1 states tests are type tests, tests are determined considering Clause 4, and risk analysis determines combinations of simultaneous faults to be tested.",
+      "pageTarget": "Section 5.1, page 54",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment and applied parts must be classified for electric shock protection, including Class I, Class II, internally powered, and Type B/BF/CF applied parts.",
+      "evidenceText": "Clause 6.2 requires externally powered ME equipment to be Class I or Class II, other equipment internally powered, and applied parts classified as Type B, BF, or CF.",
+      "pageTarget": "Section 6.2, page 59",
+      "confidence": "high"
+    },
+    {
+      "claim": "Enclosures must be classified for harmful ingress of water and particulate matter according to IEC 60529.",
+      "evidenceText": "Clause 6.3 states enclosures shall be classified according to the degree of protection against harmful ingress of water and particulate matter as detailed in IEC 60529.",
+      "pageTarget": "Section 6.3, page 59",
+      "confidence": "high"
+    },
+    {
+      "claim": "Required markings must be clearly legible under specified viewing, position, lighting, and observer acuity conditions.",
+      "evidenceText": "Clause 7.1.2 requires markings in 7.2-7.6 to be clearly legible and specifies viewpoint, illuminance range of 100 lx to 1 500 lx, and observer acuity criteria.",
+      "pageTarget": "Section 7.1.2, page 60",
+      "confidence": "high"
+    },
+    {
+      "claim": "Required markings must be durable enough to remain clearly legible during expected service life.",
+      "evidenceText": "Clause 7.1.3 requires markings to be removable only with a tool or appreciable force and durable through expected service life; durability includes rubbing tests with water, ethanol, and isopropyl alcohol.",
+      "pageTarget": "Section 7.1.3, pages 60-61",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment and detachable components require manufacturer and model/type identification unless misidentification does not create unacceptable risk.",
+      "evidenceText": "ME EQUIPMENT and detachable components shall be marked with the manufacturer name or trademark and model/type reference unless misidentification does not present unacceptable risk.",
+      "pageTarget": "Clause 7.2.2, page 61",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software that is part of a PEMS must have a unique identifier available to designated persons.",
+      "evidenceText": "Software forming part of a PEMS shall be identified with a unique identifier such as revision level or release/issue date, available to designated persons such as service personnel.",
+      "pageTarget": "Clause 7.2.2, page 61",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accompanying documents are part of ME equipment and must include at least instructions for use and a technical description.",
+      "evidenceText": "ME EQUIPMENT shall be accompanied by documents containing at least the instructions for use and a technical description, and the ACCOMPANYING DOCUMENTS shall be regarded as part of the ME EQUIPMENT.",
+      "pageTarget": "Clause 7.9.1, page 72",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must contain operating information including controls, displays, signals, operation sequence, accessories, and consumables.",
+      "evidenceText": "Operating instructions shall contain all information necessary to operate ME EQUIPMENT, including functions of controls, displays and signals, sequence of operation, detachable parts and accessories, and consumed materials.",
+      "pageTarget": "Clause 7.9.2.9, page 75",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description must include essential performance and recurrent basic safety and essential performance testing information.",
+      "evidenceText": "The technical description shall include information pertaining to ESSENTIAL PERFORMANCE and necessary recurrent ESSENTIAL PERFORMANCE and BASIC SAFETY testing, including means, methods, and recommended frequency.",
+      "pageTarget": "Clause 7.9.3.1, page 78",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessible parts and applied parts must not exceed 8.4 limits in normal or single fault condition.",
+      "evidenceText": "The limits specified in 8.4 shall not be exceeded for ACCESSIBLE PARTS and APPLIED PARTS in NORMAL CONDITION or SINGLE FAULT CONDITION.",
+      "pageTarget": "Clause 8.1, page 79",
+      "confidence": "high"
+    },
+    {
+      "claim": "Applied parts for direct cardiac application must be Type CF.",
+      "evidenceText": "An APPLIED PART specified in accompanying documents as suitable for DIRECT CARDIAC APPLICATION shall be a TYPE CF APPLIED PART.",
+      "pageTarget": "Clause 8.3(a), page 80",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment must have two means of protection preventing applied and accessible parts from exceeding permitted limits.",
+      "evidenceText": "ME EQUIPMENT shall have two MEANS OF PROTECTION to prevent APPLIED PARTS and other ACCESSIBLE PARTS from exceeding limits specified in 8.4.",
+      "pageTarget": "Clause 8.5.1.1, page 84",
+      "confidence": "high"
+    },
+    {
+      "claim": "MOOP may use IEC 60950-1 or IEC 62368-1 insulation coordination and protective earthing requirements as alternatives for operator protection.",
+      "evidenceText": "MOOP solid insulation, creepage distances, air clearances, and protective earth connections may comply with IEC 60950-1 or IEC 62368-1 insulation coordination or protective earthing requirements.",
+      "pageTarget": "Clause 8.5.1.3, pages 86-87",
+      "confidence": "high"
+    },
+    {
+      "claim": "After defibrillation exposure and stated recovery time, ME equipment must continue to meet IEC 60601-1 requirements and provide basic safety and essential performance.",
+      "evidenceText": "Following exposure to defibrillation voltage and any necessary recovery time stated in the accompanying documents, the ME EQUIPMENT shall comply with relevant requirements and continue to provide BASIC SAFETY and ESSENTIAL PERFORMANCE.",
+      "pageTarget": "Clause 8.5.5.1, page 91",
+      "confidence": "high"
+    },
+    {
+      "claim": "Defibrillation-proof applied parts must preserve at least 90 percent of defibrillator energy delivered to a 100 ohm load compared with the equipment disconnected condition.",
+      "evidenceText": "Clause 8.5.5.2 requires delivered energy E1 to a 100 ohm load to be at least 90 percent of E2 measured with ME equipment removed from the test circuit.",
+      "pageTarget": "p. 96 / 8.5.5.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth impedance testing uses 25 A or 1.5 times the highest rated current, whichever is greater, for 5 to 10 seconds at 50 Hz or 60 Hz or alternatively d.c.",
+      "evidenceText": "8.6.4 compliance test passes the specified current through the protective earth terminal, appliance inlet earth contact, or mains plug earth pin and each protectively earthed part.",
+      "pageTarget": "p. 99 / 8.6.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Touch current allowable values are 100 microamps in normal condition and 500 microamps in single fault condition.",
+      "evidenceText": "8.7.3 c) states the allowable values of TOUCH CURRENT are 100 microamps in NORMAL CONDITION and 500 microamps in SINGLE FAULT CONDITION.",
+      "pageTarget": "p. 101 / 8.7.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Earth leakage current allowable values are 5 mA in normal condition and 10 mA in single fault condition, with an exception for certain permanently installed equipment.",
+      "evidenceText": "8.7.3 d) states earth leakage current limits of 5 mA NC and 10 mA SFC, allowing a higher value for permanently installed ME equipment on a dedicated supply circuit.",
+      "pageTarget": "p. 101 / 8.7.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dielectric strength compliance is checked by applying the Table 6 test voltage for 1 minute after humidity preconditioning, required sterilization, and steady-state operating temperature conditions.",
+      "evidenceText": "8.8.3 specifies 1 minute application of Table 6 test voltage under these conditions with the ME equipment de-energized.",
+      "pageTarget": "p. 124 / 8.8.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment is rated for operation at altitudes up to 2000 m unless the manufacturer declares otherwise; higher operating altitudes require air-clearance multiplication factors.",
+      "evidenceText": "8.9.1.5 states ME equipment is rated to operate at altitude <= 2000 m unless otherwise declared, and air clearance is multiplied using Table 8 for higher altitudes.",
+      "pageTarget": "p. 130 / 8.9.1.5 and Table 8",
+      "confidence": "high"
+    },
+    {
+      "claim": "Pollution degree 4 is not acceptable for insulation providing a means of protection.",
+      "evidenceText": "8.9.1.8 states pollution degree 4 is not acceptable for insulation providing a MEANS OF PROTECTION.",
+      "pageTarget": "p. 131 / 8.9.1.8",
+      "confidence": "high"
+    },
+    {
+      "claim": "Creepage distances and air clearances for defibrillation-proof applied parts needed to satisfy 8.5.5.1 must be at least 4 mm.",
+      "evidenceText": "8.9.1.15 states creepage distances and air clearances needed for defibrillation-proof applied parts shall not be less than 4 mm.",
+      "pageTarget": "p. 133 / 8.9.1.15",
+      "confidence": "high"
+    },
+    {
+      "claim": "Components whose unwanted movement could create unacceptable risk must be securely mounted.",
+      "evidenceText": "Components of ME EQUIPMENT, the unwanted movement of which could result in an unacceptable RISK, shall be mounted securely to prevent such movement.",
+      "pageTarget": "p. 147, 8.10.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment must provide a means to electrically isolate circuits from the supply mains on all poles simultaneously.",
+      "evidenceText": "ME EQUIPMENT shall have means to isolate its circuits electrically from the SUPPLY MAINS on all poles simultaneously.",
+      "pageTarget": "p. 149, 8.11.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "A fuse or semiconductor device is not acceptable as the mains isolating means for this subclause.",
+      "evidenceText": "A fuse or a semiconductor device shall not be used as an isolating means in the sense of this subclause.",
+      "pageTarget": "p. 150, 8.11.1 g)",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth conductors must not incorporate a fuse or over-current release.",
+      "evidenceText": "A PROTECTIVE EARTH CONDUCTOR shall not incorporate a fuse or OVER-CURRENT RELEASE.",
+      "pageTarget": "p. 154, 8.11.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mechanical hazards covered by Clause 9 include crushing, shearing, cutting, entanglement, trapping, puncturing, abrasion, expelled parts, high-pressure fluid ejection, falling, instability, impact, patient movement, vibration, and noise.",
+      "evidenceText": "Table 19 identifies the subclauses that address the MECHANICAL HAZARDS... Crushing... Shearing... Expelled parts... High pressure fluid ejection... Instability... Vibration and noise.",
+      "pageTarget": "p. 155, Table 19",
+      "confidence": "high"
+    },
+    {
+      "claim": "Emergency stopping devices must be accessible, red, distinctive, not part of normal operation, stop movement with one action, and maintain the disabled condition until a different deliberate reset action occurs.",
+      "evidenceText": "The emergency stopping device actuator shall be readily accessible... shall not be part of the normal operation... actuator coloured red... Means for stopping... one single action... maintain the ME EQUIPMENT in the disabled condition until a deliberate action, different from that used to actuate it.",
+      "pageTarget": "pp. 160-161, 9.2.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Means must be provided to release the patient quickly and safely after equipment breakdown, power failure, protective risk-control activation, or emergency stopping.",
+      "evidenceText": "Means shall be provided to permit the release of the PATIENT quickly and safely in the event of breakdown... failure of the power supply... activation of a protective RISK CONTROL measure or emergency stopping.",
+      "pageTarget": "p. 161, 9.2.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Equipment in transport position must not overbalance on a plane inclined 10 degrees from horizontal.",
+      "evidenceText": "ME EQUIPMENT or its parts shall not overbalance when placed in any transport position of NORMAL USE on a plane inclined at an angle of 10° from the horizontal plane.",
+      "pageTarget": "p. 162, 9.4.2.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Pressure vessel hydraulic testing applies when maximum equipment pressure is greater than 50 kPa and pressure-volume product is greater than 200 kPa·l.",
+      "evidenceText": "A pressure vessel shall withstand a HYDRAULIC TEST PRESSURE if... MAXIMUM EQUIPMENT PRESSURE is greater than 50 kPa; and... pressure... and volume is greater than 200 kPa·l.",
+      "pageTarget": "p. 169, 9.7.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Adult patient or operator support and suspension parts must be designed for at least 135 kg person mass plus 15 kg accessories unless otherwise stated by the manufacturer.",
+      "evidenceText": "Unless otherwise stated by the MANUFACTURER, supporting and suspending parts for adult human PATIENTS or OPERATORS shall be designed for a PATIENT or OPERATOR having a minimum mass of 135 kg and ACCESSORIES having a minimum mass of 15 kg.",
+      "pageTarget": "p. 173, 9.8.3.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment not intended to produce diagnostic or therapeutic X-radiation but capable of ionizing radiation must not exceed 5 uGy/h at 5 cm from the equipment surface, accounting for background radiation.",
+      "evidenceText": "For ME EQUIPMENT not intended to produce X-radiation... the dose-rate AIR KERMA rate shall not exceed... 5 μGy/h at a distance of 5 cm from a surface of the ME EQUIPMENT taking account of the background radiation.",
+      "pageTarget": "p. 177, 10.1.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Unintended microwave radiation from ME equipment is limited to 10 W/m2 at 50 mm for frequencies from 1 GHz to 100 GHz.",
+      "evidenceText": "Power density of unintended microwave radiation at frequencies between 1 GHz and 100 GHz shall not exceed 10 W/m2 at any point 50 mm away from a surface.",
+      "pageTarget": "pp.178-179, clause 10.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Lasers and laser diodes in the 180 nm to 1 mm wavelength range must meet IEC 60825-1:2014 requirements.",
+      "evidenceText": "For lasers, including laser diodes, that produce or amplify electromagnetic radiation in the wavelength range from 180 nm to 1 mm, IEC 60825-1:2014 shall apply.",
+      "pageTarget": "p.179, clause 10.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Fire risk in oxygen-rich environments must be reduced as far as possible under normal and single fault conditions.",
+      "evidenceText": "In ME equipment and ME systems, the risk of fire in an oxygen-rich environment shall be reduced as far as possible under normal condition or single fault conditions.",
+      "pageTarget": "p.184, clause 11.2.2.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ingress protection claims must be verified according to IEC 60529.",
+      "evidenceText": "Enclosures designed to provide a specified degree of protection against water or particulate ingress shall provide this protection in accordance with IEC 60529; compliance is checked by IEC 60529 tests.",
+      "pageTarget": "p.193, clause 11.6.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cleaning and disinfection processes specified in the instructions for use must not damage safety provisions or create unacceptable risk over expected service life.",
+      "evidenceText": "Equipment, systems, parts, applied parts, and accessories shall withstand specified cleaning or disinfection; multiple cleanings during expected service life must be evaluated and documented.",
+      "pageTarget": "p.193, clause 11.6.6",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient-contacting parts and accessories must be assessed and documented according to ISO 10993 biocompatibility guidance and principles.",
+      "evidenceText": "Parts or accessories intended for direct or indirect contact with biological tissues, cells, or body fluids shall be assessed and documented according to the ISO 10993 series.",
+      "pageTarget": "p.194, clause 11.7",
+      "confidence": "high"
+    },
+    {
+      "claim": "Usability risks must be addressed through a usability engineering process complying with IEC 60601-1-6:2010 and its amendments.",
+      "evidenceText": "The manufacturer shall address poor usability risks through a usability engineering process complying with IEC 60601-1-6:2010, AMD1:2013, and AMD2:2020.",
+      "pageTarget": "p.194, clause 12.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Implemented alarm systems must comply with IEC 60601-1-8:2006 and its 2012 and 2020 amendments.",
+      "evidenceText": "If the manufacturer has implemented an alarm system, this alarm system shall comply with IEC 60601-1-8:2006, AMD1:2012, and AMD2:2020.",
+      "pageTarget": "p.194, clause 12.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Single fault conditions must not cause specified hazardous situations including flames, molten metal, toxic or ignitable substances, enclosure deformation, excessive temperatures, leakage current, or voltage limit exceedance.",
+      "evidenceText": "When applying single fault conditions one at a time, none of the hazardous situations in 13.1.2 to 13.1.4 shall occur.",
+      "pageTarget": "pp.196-198, clauses 13.1.1-13.1.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS requirements apply unless no PESS provides basic safety or essential performance, or risk management shows PESS failure does not lead to unacceptable risk.",
+      "evidenceText": "Clause 14 requirements apply to PEMS unless no programmable electronic subsystem provides functionality necessary for basic safety or essential performance, or risk management shows no unacceptable risk.",
+      "pageTarget": "p.203, clause 14.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "When PEMS requirements apply, specified IEC 62304 software lifecycle clauses apply to development or modification of software for each PESS.",
+      "evidenceText": "When 14.2 to 14.13 apply, subclause 4.3, Clause 5, Clause 7, Clause 8 and Clause 9 of IEC 62304:2006 and AMD1:2015 shall apply to software development or modification.",
+      "pageTarget": "p.204, clause 14.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS validation must include basic safety, essential performance, unintended functioning checks, documented results, and design-team independence.",
+      "evidenceText": "The PEMS validation plan shall include validation of basic safety and essential performance and checks for unintended functioning; validation responsibility must be independent of the design team.",
+      "pageTarget": "pp.206-207, clause 14.11",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS intended for IT-network incorporation must include technical network instructions, security specifications, information flow, and hazardous situation lists.",
+      "evidenceText": "Instructions must include purpose, required IT-network characteristics and configuration, technical network connection specifications including security, information flow and routing, and hazardous situations from network failure.",
+      "pageTarget": "pp.207-208, clause 14.13",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mechanical strength testing for ME equipment is selected by equipment type and includes push, impact, drop, rough handling, and moulding stress relief tests.",
+      "evidenceText": "Table 28 lists mechanical strength test applicability for hand-held, body-worn, portable, mobile, fixed, and stationary ME equipment.",
+      "pageTarget": "p.209, clause 15.3.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Lithium batteries in ME equipment that could become a hazard must comply with IEC battery safety standards.",
+      "evidenceText": "Primary lithium batteries shall comply with IEC 60086-4; secondary lithium batteries shall comply with IEC 62133 or IEC 62133-2.",
+      "pageTarget": "p. 215",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment transformers must be protected against overheating under short-circuit or overload of any output winding.",
+      "evidenceText": "Transformers of ME equipment shall be protected against overheating in the event of short circuit or overload of any output winding.",
+      "pageTarget": "p. 218",
+      "confidence": "high"
+    },
+    {
+      "claim": "After installation or subsequent modification, an ME system must not result in unacceptable risk.",
+      "evidenceText": "Clause 16.1 states that after installation or subsequent modification, an ME system shall not result in an unacceptable risk.",
+      "pageTarget": "p. 222",
+      "confidence": "high"
+    },
+    {
+      "claim": "Non-ME equipment used in an ME system must comply with relevant IEC or ISO safety standards.",
+      "evidenceText": "Non-ME equipment, when used in an ME system, shall comply with IEC or ISO safety standards relevant to that equipment.",
+      "pageTarget": "p. 222",
+      "confidence": "high"
+    },
+    {
+      "claim": "Equipment relying only on basic insulation for protection against electric shock must not be used in an ME system.",
+      "evidenceText": "Equipment in which protection against electric shock relies only on basic insulation shall not be used in an ME system.",
+      "pageTarget": "p. 222",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system accompanying documents are part of the ME system and must contain all data needed for intended use.",
+      "evidenceText": "An ME system, including a modified ME system, shall be accompanied by documents containing all data necessary for intended use; the documents are regarded as part of the ME system.",
+      "pageTarget": "p. 223",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system touch current limits are 100 μA in normal condition and 500 μA after interruption of a non-permanently installed protective earth conductor.",
+      "evidenceText": "Touch current within the patient environment shall not exceed 100 μA in normal condition and 500 μA after interruption of any non-permanently installed protective earth conductor.",
+      "pageTarget": "pp. 224-225",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient leakage current and total patient leakage current for an ME system must not exceed the ME equipment values in IEC 60601-1 Tables 3 and 4.",
+      "evidenceText": "Patient leakage current and total patient leakage current of an ME system in normal condition shall not exceed the values specified for ME equipment in Table 3 and Table 4.",
+      "pageTarget": "p. 225",
+      "confidence": "high"
+    },
+    {
+      "claim": "Interruption and restoration of power to an ME system or any part must not cause loss of basic safety or essential performance.",
+      "evidenceText": "An ME system shall be designed so interruption and restoration of power to the whole system or any part does not result in loss of basic safety or essential performance.",
+      "pageTarget": "p. 226",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manufacturers must address electromagnetic phenomena and electromagnetic disturbances in the risk management process for ME equipment and ME systems.",
+      "evidenceText": "The manufacturer shall address risks associated with electromagnetic phenomena at intended use locations, introduction of electromagnetic phenomena into the environment, and electromagnetic disturbances.",
+      "pageTarget": "p. 228",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1-2 specifies EMC immunity, emissions, identification, marking, and documentation requirements for ME equipment and ME systems.",
+      "evidenceText": "Clause 17 states IEC 60601-1-2 specifies immunity test levels, emissions limits, and requirements for identification, marking and documents.",
+      "pageTarget": "Clause 17, pp.349-350",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 operator protection was harmonized with IEC 60950-1 because IT equipment is commonly used in ME systems.",
+      "evidenceText": "The rationale states limit values were harmonized with IEC 60950-1:2005 because IT equipment is commonly used in ME systems.",
+      "pageTarget": "p. 274",
+      "confidence": "high"
+    },
+    {
+      "claim": "Amendment 2 permits IEC 62368-1:2018 requirements as an alternative MOOP route.",
+      "evidenceText": "Amendment 2 expanded the options for means of operator protection to include application of IEC 62368-1:2018.",
+      "pageTarget": "p. 275",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient protection uses a larger safety margin than operator protection due to higher patient contact probability.",
+      "evidenceText": "The probability of a patient being in contact with an applied part and earth is significantly higher, so a larger margin of safety was applied for patient safety.",
+      "pageTarget": "p. 275",
+      "confidence": "high"
+    },
+    {
+      "claim": "Y capacitors are safety critical and require IEC 60384-14 certification and monitoring by a recognized test house.",
+      "evidenceText": "The text states Y capacitors provide leakage paths to earth or across a barrier and must be certified and monitored by a recognised test house to IEC 60384-14.",
+      "pageTarget": "p. 277",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 Clause 14 requires process-based controls for PEMS because finished-product testing alone is inadequate for programmable medical electrical systems.",
+      "evidenceText": "Clause 14 states that systematic failures can escape practical testing limits and that testing of the finished product is not, by itself, adequate.",
+      "pageTarget": "Clause 14, p.333",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS documentation must be generated, revised, and maintained under a formal document control system.",
+      "evidenceText": "Subclause 14.2 requires documents to be generated, revised and maintained under a formal document control system.",
+      "pageTarget": "Subclause 14.2, p.335",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS compliance requires a specified and followed development lifecycle, though no specific lifecycle model is mandated.",
+      "evidenceText": "Compliance with Clause 14 requires that a PEMS DEVELOPMENT LIFE-CYCLE be specified and followed; it does not require any particular lifecycle, but requires certain attributes.",
+      "pageTarget": "p.388",
+      "confidence": "high"
+    },
+    {
+      "claim": "IT-network hazardous situation causes include data loss, inappropriate data interchange, corrupted data, timing problems, unexpected data, and unauthorized access.",
+      "evidenceText": "Likely causes for hazardous situations include loss of data, inappropriate data interchange, corrupted data, inappropriate timing, unexpected receipt of data, and unauthorized access to data.",
+      "pageTarget": "p.396",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reliable installation of network-coupled PEMS requires technical-parameter communication among manufacturer, responsible organization, and system integrator.",
+      "evidenceText": "To ensure reliable installation and minimize patient risk, the PEMS manufacturer, responsible organization, and system integrator need to communicate all relevant technical parameters to each other.",
+      "pageTarget": "p.399",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex B permits PEMS, EMC, radiation, biocompatibility, usability, and alarm-system tests to be performed independently from the listed test sequence.",
+      "evidenceText": "Annex B states tests for radiation hazards, biocompatibility, usability, alarm systems, PEMS, and EMC can be performed independently.",
+      "pageTarget": "Annex B, p.351",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex C consolidates marking and accompanying-document requirements for ME equipment and ME systems.",
+      "evidenceText": "Annex C tables list outside markings, inside markings, controls, accompanying documents, instructions for use, and technical description requirements.",
+      "pageTarget": "Annex C, pp.355-357",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex D distinguishes informational symbols from safety signs and requires safety signs where warnings are intended.",
+      "evidenceText": "Annex D states Table D.2 safety signs are required where a warning is intended, while Table D.1 symbols are used solely to inform.",
+      "pageTarget": "Annex D, p.358",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex G is normative and sets requirements for ME equipment used where flammable anaesthetic mixtures may create explosion risk.",
+      "evidenceText": "Annex G states an explosion RISK can exist where flammable anaesthetics or agents are mixed with air, oxygen, or nitrous oxide.",
+      "pageTarget": "Annex G, p.372",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP and APG markings must be placed on the major part of ME equipment when that part is Category AP or APG.",
+      "evidenceText": "The marking according to G.3.1, G.3.2 and G.3.3 shall be present on the major part of the ME EQUIPMENT if this part is CATEGORY AP or CATEGORY APG.",
+      "pageTarget": "p.375",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP equipment must not ignite flammable anesthetic mixtures with air in normal use and normal condition.",
+      "evidenceText": "ME EQUIPMENT, its parts or components shall not ignite FLAMMABLE ANAESTHETIC MIXTURES WITH AIR in NORMAL USE and NORMAL CONDITION.",
+      "pageTarget": "p.376",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG equipment must not ignite flammable anesthetic mixtures with oxygen or nitrous oxide in normal use or applicable single fault condition.",
+      "evidenceText": "ME EQUIPMENT, its parts or components shall not ignite FLAMMABLE ANAESTHETIC MIXTURE WITH OXYGEN OR NITROUS OXIDE; this applies in NORMAL USE and applicable SINGLE FAULT CONDITION.",
+      "pageTarget": "p.381",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex L is normative and specifies insulated winding wires for use without interleaved insulation.",
+      "evidenceText": "Annex L, normative, specifies winding wire whose insulation may provide basic, supplementary, double, or reinforced insulation in wound components without interleaved insulation.",
+      "pageTarget": "p.413",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex M is normative and gives protective measures to reduce pollution degree.",
+      "evidenceText": "Annex M, normative, states Table M.1 shows additional protective measures that may be used to reduce the pollution degree.",
+      "pageTarget": "p.416",
+      "confidence": "high"
+    },
+    {
+      "claim": "Interpretation Sheet 1 clarifies IEC 60601-1 does not apply to medical gas pipeline systems covered by ISO 7396-1.",
+      "evidenceText": "Interpretation Sheet 1 under Subclause 1.1 states IEC 60601-1 does not apply to medical gas pipeline systems covered by ISO 7396-1.",
+      "pageTarget": "interpretation sheet 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Interpretation Sheet 2 clarifies fire enclosure and fault testing decisions rely on manufacturer risk analysis and risk management file documentation.",
+      "evidenceText": "Interpretation Sheet 2 states manufacturers should determine combustible materials through analyses documented in the RISK MANAGEMENT FILE and that risk analysis determines components subject to failure testing.",
+      "pageTarget": "interpretation sheet 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Interpretation Sheet 3 provides an alternate risk-control approach for accessible enclosure surface temperatures in single fault condition.",
+      "evidenceText": "Interpretation Sheet 3 permits fulfillment for enclosure surface temperatures if conditions include a 105 °C operator-accessible surface limit, IFU warning, ISO 7010-W018 where needed, and acceptable risk assessment.",
+      "pageTarget": "interpretation sheet 3",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "No product-specific model names are supported by the partial evidence; productModels is therefore empty."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several chunks report IEC consolidated-version change markup and OCR artifacts, including duplicated or replaced wording; extracted claims use only the clearest supported requirement text and numerical limits should be checked against the final consolidated standard before binding use."
+    },
+    {
+      "severity": "info",
+      "reason": "Several partials note that source metadata may contain an FDA authority signal, but the provided evidence supports IEC as the issuing standards authority and does not support FDA as the document authority."
+    },
+    {
+      "severity": "info",
+      "reason": "Some extracted material comes from Annex A rationale and index pages; rationale and index-derived facts should be distinguished from normative clause requirements during conformity assessment."
+    }
+  ]
+}

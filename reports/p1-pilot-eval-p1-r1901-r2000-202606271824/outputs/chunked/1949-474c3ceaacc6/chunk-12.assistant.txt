@@ -1,0 +1,387 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-eru",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.2판 [영문] 2020_IEC(R).pdf",
+    "canonicalGroupId": "474c3ceaacc6"
+  },
+  "document": {
+    "title": "IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV",
+    "documentType": "International medical electrical equipment safety standard",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "International Electrotechnical Commission"
+    ],
+    "revisionOrVersion": "2005+AMD1:2012+AMD2:2020 CSV",
+    "documentDate": "2020",
+    "standards": [
+      "IEC 60601-1",
+      "IEC 60417-5331",
+      "ISO 2882",
+      "ISO 1853",
+      "ISO 2878",
+      "ISO 23529",
+      "IEC 60079-0",
+      "IEC 60079-2",
+      "IEC 60079-5",
+      "IEC 60079-6",
+      "IEC 60068-2-2",
+      "IEC 62304",
+      "ISO 14971:2000",
+      "ISO 14971:2019",
+      "IEC 60529",
+      "IEC 60851-3",
+      "IEC 60851-5",
+      "IEC 60851-6",
+      "IEC 62368-1:2018",
+      "IEC 80001-1:2010",
+      "ISO 13485"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This chunk contains IEC 60601-1 annex requirements and guidance for AP/APG flammable anesthetic environments, PEMS software lifecycle documentation, IT-network risk considerations, ME systems leakage current examples, winding-wire insulation tests, and pollution-degree reduction.",
+    "officialUse": "Use as regulatory evidence for IEC 60601-1 safety compliance planning, test protocols, design documentation, software lifecycle controls, network integration risk management, insulation/winding-wire qualification, and ME system configuration review.",
+    "keyPoints": [
+      "Category AP/APG equipment requires specific markings, accompanying document identification, protected electrical connections, enclosure construction controls, electrostatic charge prevention, and corona prevention.",
+      "Category AP and APG flammable anesthetic safety is addressed through temperature limits, low-energy circuit limits, ventilation/overpressure or restricted-breathing enclosures, and specified ignition test apparatus.",
+      "PEMS guidance emphasizes documented architecture, lifecycle processes, requirements specification, risk management linkage, OTS software characterization, integration testing, configuration management, and change control.",
+      "IT-network and network/data coupling guidance identifies data loss, corrupted data, timing, unauthorized access, security, compatibility, bandwidth, and configuration-management hazards.",
+      "Annex L and Annex M provide normative requirements for insulated winding wires and pollution-degree reduction measures."
+    ]
+  },
+  "entities": [
+    {
+      "name": "International Electrotechnical Commission",
+      "type": "standards body",
+      "evidence": "Page headers and copyright identify IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV as an IEC publication."
+    },
+    {
+      "name": "Responsible Organization",
+      "type": "regulated role",
+      "evidence": "Accompanying documents must contain an indication enabling the RESPONSIBLE ORGANIZATION to distinguish Category AP and APG parts."
+    },
+    {
+      "name": "Manufacturer",
+      "type": "regulated role",
+      "evidence": "For network/data coupling, the MANUFACTURER stipulates possible information types and transmission protocols in the technical description."
+    },
+    {
+      "name": "System IT-network integrator",
+      "type": "regulated role",
+      "evidence": "The system IT-NETWORK integrator has overall responsibility for ensuring separate equipment works together in the integrated system."
+    },
+    {
+      "name": "IEC 62304",
+      "type": "standard",
+      "evidence": "Annex H states IEC 62304 describes processes to be included in the software development lifecycle for safe medical device software."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "standard",
+      "evidence": "Annex H documentation references ISO 14971:2000, and H.7.2 references ISO 14971:2019 Annex C for IT-network hazardous situations."
+    },
+    {
+      "name": "IEC 80001-1:2010",
+      "type": "standard",
+      "evidence": "The bibliography lists IEC 80001-1:2010, Application of risk management for IT-networks incorporating medical devices."
+    },
+    {
+      "name": "ISO 13485",
+      "type": "standard",
+      "evidence": "The bibliography lists ISO 13485, Medical devices - Quality management systems - Requirements for regulatory purposes."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Category AP marking",
+      "pageTarget": "p.375",
+      "evidence": "The AP marking uses a circle at least 2 cm in diameter with the characters AP, and compliance is checked by inspection and marking tests."
+    },
+    {
+      "name": "Category APG marking and documentation",
+      "pageTarget": "p.375",
+      "evidence": "Markings must identify AP or APG parts, and accompanying documents must enable the responsible organization to distinguish Category AP and APG parts."
+    },
+    {
+      "name": "AP/APG electrical connections",
+      "pageTarget": "p.375",
+      "evidence": "Creepage distances and air clearances between power-supply-cord connection points must meet Table 12 values for one means of patient protection."
+    },
+    {
+      "name": "Electrostatic charge prevention",
+      "pageTarget": "p.375-p.376",
+      "evidence": "Category AP and APG equipment must prevent electrostatic charges using antistatic materials and conductive paths to floor, protective earth, or potential equalization."
+    },
+    {
+      "name": "Category AP ignition prevention",
+      "pageTarget": "p.376",
+      "evidence": "Category AP ME equipment, parts, or components must not ignite flammable anesthetic mixtures with air in normal use and normal condition."
+    },
+    {
+      "name": "Category APG ignition prevention",
+      "pageTarget": "p.381",
+      "evidence": "Category APG equipment must not ignite flammable anesthetic mixtures with oxygen or nitrous oxide in normal use or applicable single fault condition."
+    },
+    {
+      "name": "PEMS architecture documentation",
+      "pageTarget": "p.388",
+      "evidence": "The PEMS architecture should document structure, PESS relationships, component division, functions, and software/external interfaces."
+    },
+    {
+      "name": "PEMS development lifecycle",
+      "pageTarget": "p.388-p.391",
+      "evidence": "Compliance with Clause 14 requires a specified and followed PEMS development lifecycle with decomposition, integration, verification, and validation activities."
+    },
+    {
+      "name": "Software requirements specification",
+      "pageTarget": "p.391",
+      "evidence": "Adequate risk assessment requires complete PEMS/PESS requirements and architectural design; requirements include safety, security, alarms, interfaces, installation, operation, and maintenance."
+    },
+    {
+      "name": "Third-party and OTS software characterization",
+      "pageTarget": "p.392",
+      "evidence": "Developers should characterize third-party or OTS software, including title, manufacturer, version, release date, patch number, system requirements, interfaces, and safety-critical functions."
+    },
+    {
+      "name": "IT-network risk management",
+      "pageTarget": "p.395-p.400",
+      "evidence": "IT-networks outside manufacturer control should not be presumed 100% reliable, and integration requires technical parameter communication to avoid unacceptable risk."
+    },
+    {
+      "name": "ME system leakage current controls",
+      "pageTarget": "p.401-p.405",
+      "evidence": "In fault condition allowable touch current is 500 microamps, and non-medical equipment in the patient environment may need measures to limit touch current."
+    },
+    {
+      "name": "Insulated winding wire qualification",
+      "pageTarget": "p.413-p.415",
+      "evidence": "Annex L specifies type tests and manufacturing tests for winding wire insulation used as basic, supplementary, double, or reinforced insulation without interleaved insulation."
+    },
+    {
+      "name": "Pollution degree reduction",
+      "pageTarget": "p.416",
+      "evidence": "Annex M gives additional protective measures such as IP enclosures, hermetic sealing, heating, encapsulation, and coating to reduce internal pollution degree."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Category AP and APG markings must be placed on the major part of ME equipment when that part is Category AP or APG.",
+      "evidenceText": "The marking according to G.3.1, G.3.2 and G.3.3 shall be present on the major part of the ME EQUIPMENT if this part is CATEGORY AP or CATEGORY APG.",
+      "pageTarget": "p.375",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accompanying documents must identify which equipment parts are Category AP or APG.",
+      "evidenceText": "ACCOMPANYING DOCUMENTS shall contain an indication to enable the RESPONSIBLE ORGANIZATION to distinguish the parts of ME EQUIPMENT that are CATEGORY AP and CATEGORY APG.",
+      "pageTarget": "p.375",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP and APG detachable power supply cords are not permitted unless the circuit complies with specified clauses.",
+      "evidenceText": "CATEGORY AP and CATEGORY APG ME EQUIPMENT shall not be provided with a DETACHABLE POWER SUPPLY CORD unless the circuit complies with the requirements of G.5.3 and G.6.3.",
+      "pageTarget": "p.375",
+      "confidence": "high"
+    },
+    {
+      "claim": "Openings in AP/APG enclosures are controlled to reduce arcing and sparking risk from foreign objects.",
+      "evidenceText": "Top covers shall have no openings; side-cover openings must prevent penetration by a solid cylindrical object over 4 mm; base-plate openings must prevent penetration over 12 mm.",
+      "pageTarget": "p.375",
+      "confidence": "high"
+    },
+    {
+      "claim": "Antistatic materials for AP/APG equipment must comply with ISO 2882 resistance limits, checked using ISO 1853, ISO 2878, and ISO 23529 measurements.",
+      "evidenceText": "Electrical resistance limits of anaesthetic tubing, mattresses and pads, castor tyres and other antistatic material shall comply with ISO 2882; compliance is checked by measurements according to ISO 1853, ISO 2878 and ISO 23529.",
+      "pageTarget": "p.376",
+      "confidence": "high"
+    },
+    {
+      "claim": "Parts operating above 2000 V AC or 2400 V DC must be designed so corona cannot be produced unless enclosed under specified clauses.",
+      "evidenceText": "Parts and components operating at more than 2 000 V a.c. or more than 2 400 V d.c. not included in compliant enclosures shall be designed so corona cannot be produced.",
+      "pageTarget": "p.376",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP equipment must not ignite flammable anesthetic mixtures with air in normal use and normal condition.",
+      "evidenceText": "ME EQUIPMENT, its parts or components shall not ignite FLAMMABLE ANAESTHETIC MIXTURES WITH AIR in NORMAL USE and NORMAL CONDITION.",
+      "pageTarget": "p.376",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP temperature limits are 150 °C with restricted vertical air convection and 200 °C with unrestricted vertical air circulation at 25 °C ambient.",
+      "evidenceText": "Surfaces in contact with gas mixtures must not exceed 150 °C with restricted vertical air circulation or 200 °C with unrestricted vertical air circulation, measured at 25 °C ambient.",
+      "pageTarget": "p.376",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP low-energy circuit compliance may be shown by measuring temperature, Umax, Imax, R, Lmax, and Cmax and applying Figures G.1 through G.3.",
+      "evidenceText": "Compliance is checked either by temperature measurement and determination of Umax, Imax, R, Lmax and Cmax and application of Figure G.1, Figure G.2 and Figure G.3, or by design data examination.",
+      "pageTarget": "p.377",
+      "confidence": "high"
+    },
+    {
+      "claim": "AP equipment using internal overpressure must maintain at least 75 Pa in normal condition and de-energize ignition sources if pressure drops below 50 Pa.",
+      "evidenceText": "Overpressure inside the enclosure shall be at least 75 Pa in normal condition; if it drops below 50 Pa during operation, ignition sources shall be de-energized automatically.",
+      "pageTarget": "p.380",
+      "confidence": "high"
+    },
+    {
+      "claim": "Restricted-breathing AP enclosures must prevent formation of a flammable anesthetic mixture with air for at least 30 minutes.",
+      "evidenceText": "Enclosures with restricted breathing shall be designed so a flammable anesthetic mixture with air does not occur inside while surrounded by a high concentration mixture for at least 30 min.",
+      "pageTarget": "p.380",
+      "confidence": "high"
+    },
+    {
+      "claim": "Restricted-breathing enclosure cord-inlet gas-tightness is tested with 400 Pa internal overpressure and pull forces based on equipment mass.",
+      "evidenceText": "An internal overpressure of 400 Pa is created and 30 pulls from Table G.1 are applied to each flexible cord; at the end overpressure is not reduced below 200 Pa.",
+      "pageTarget": "p.381",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG equipment must not ignite flammable anesthetic mixtures with oxygen or nitrous oxide in normal use or applicable single fault condition.",
+      "evidenceText": "ME EQUIPMENT, its parts or components shall not ignite FLAMMABLE ANAESTHETIC MIXTURE WITH OXYGEN OR NITROUS OXIDE; this applies in NORMAL USE and applicable SINGLE FAULT CONDITION.",
+      "pageTarget": "p.381",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG parts operating in oxygen or nitrous oxide mixtures require supply isolation from earth by one MOPP and from electrical parts by two MOPP.",
+      "evidenceText": "Parts or components of CATEGORY APG ME EQUIPMENT operating in the mixture shall be supplied from a source isolated from earth by at least one MOPP and from electrical parts by two MOPP.",
+      "pageTarget": "p.381",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG low-energy compliance can avoid the 10-minute ignition test if no sparks and no temperatures above 90 °C occur, or if spark circuits meet low-energy limits.",
+      "evidenceText": "Equipment is considered compliant without G.6.1 testing if no sparks and no temperatures exceeding 90 °C occur, or if sparking components meet Umax/Imax limits using Figures G.4-G.6.",
+      "pageTarget": "p.381-p.382",
+      "confidence": "high"
+    },
+    {
+      "claim": "APG heating elements that heat flammable anesthetic mixtures with oxygen or nitrous oxide require a non-self-resetting thermal cut-out.",
+      "evidenceText": "ME EQUIPMENT, its parts and components that heat the mixture shall be provided with a non-SELF-RESETTING THERMAL CUT-OUT as additional protection against overheating.",
+      "pageTarget": "p.385",
+      "confidence": "high"
+    },
+    {
+      "claim": "The flammable-mixture test apparatus uses an ignition space of at least 250 cm3 and a contact arrangement producing sparks by opening and closing.",
+      "evidenceText": "The test apparatus comprises an ignition space with a volume of at least 250 cm3 containing the prescribed atmosphere or mixture and a contact arrangement providing sparks by opening and closing.",
+      "pageTarget": "p.386",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS compliance requires a specified and followed development lifecycle, though no specific lifecycle model is mandated.",
+      "evidenceText": "Compliance with Clause 14 requires that a PEMS DEVELOPMENT LIFE-CYCLE be specified and followed; it does not require any particular lifecycle, but requires certain attributes.",
+      "pageTarget": "p.388",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS architecture should document component division, PESS functions, safety-related functions, and software interfaces.",
+      "evidenceText": "The architecture should indicate division into components, functions performed by each PESS including safety-related functions, interfaces between software components, and interfaces with external components.",
+      "pageTarget": "p.388",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS validation is performed after integration to determine whether the PEMS works as intended.",
+      "evidenceText": "At the conclusion of the integration process, a PEMS VALIDATION is performed to determine whether or not the PEMS works as intended.",
+      "pageTarget": "p.391",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS software requirements should include security requirements when lack of security would compromise safety.",
+      "evidenceText": "The requirements should include security requirements, where lack of security would compromise safety.",
+      "pageTarget": "p.391",
+      "confidence": "high"
+    },
+    {
+      "claim": "Integration plans for PEMS/PESS should include responsibilities, sequence, all software components, regression testing for incremental integration, and abnormal-condition tests.",
+      "evidenceText": "The integration plan should include approach, responsibilities, sequence, all software components; regression testing should be sufficient, and tests should cover normal, exceptional, stress, and worst case conditions.",
+      "pageTarget": "p.392",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software configuration management must prevent added functionality from bypassing risk management consideration.",
+      "evidenceText": "Configuration management and change control are necessary to ensure additional software functionality is not added during development without being considered by the risk management process.",
+      "pageTarget": "p.392",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software change control should record requests, analyze and evaluate changes, approve or disapprove requests, and implement, verify, and release modified software.",
+      "evidenceText": "Modification/change control includes identification and recording of change requests, analysis and evaluation, approval or disapproval, implementation, verification and release.",
+      "pageTarget": "p.392",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network/data coupling excludes information transferred across user interfaces and requires manufacturer-stipulated information types and protocols in the technical description.",
+      "evidenceText": "NETWORK/DATA COUPLING does not include information transferred across user interfaces; the manufacturer stipulates possible information types and transmission protocols in the technical description.",
+      "pageTarget": "p.395",
+      "confidence": "high"
+    },
+    {
+      "claim": "A single system IT-network integrator has overall responsibility for the integrated system IT-network, while each manufacturer provides required information about its equipment.",
+      "evidenceText": "The system IT-NETWORK integrator has to be a single person or organisation with overall responsibility; manufacturer responsibility is limited to providing required equipment information.",
+      "pageTarget": "p.395",
+      "confidence": "high"
+    },
+    {
+      "claim": "IT-network hazardous situation causes include data loss, inappropriate data interchange, corrupted data, timing problems, unexpected data, and unauthorized access.",
+      "evidenceText": "Likely causes for hazardous situations include loss of data, inappropriate data interchange, corrupted data, inappropriate timing, unexpected receipt of data, and unauthorized access to data.",
+      "pageTarget": "p.396",
+      "confidence": "high"
+    },
+    {
+      "claim": "IT-network risk considerations include remote servicing, OS compatibility, software modifications, interface compatibility, DICOM/HL7 protocols, loads, availability, security, and response time.",
+      "evidenceText": "The initiating events list includes remote servicing, operating system compatibility, software modifications/upgrades, interface compatibility, network protocols such as DICOM and HL7, loads, security, response time, and availability.",
+      "pageTarget": "p.396",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reliable installation of network-coupled PEMS requires technical-parameter communication among manufacturer, responsible organization, and system integrator.",
+      "evidenceText": "To ensure reliable installation and minimize patient risk, the PEMS manufacturer, responsible organization, and system integrator need to communicate all relevant technical parameters to each other.",
+      "pageTarget": "p.399",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system patients should only be connected to applied parts of ME equipment complying with IEC 60601-1.",
+      "evidenceText": "PATIENTS should only be connected to APPLIED PARTS of ME EQUIPMENT complying with this standard.",
+      "pageTarget": "p.401",
+      "confidence": "high"
+    },
+    {
+      "claim": "The allowable touch current in fault condition is 500 microamps.",
+      "evidenceText": "In fault condition the allowable TOUCH CURRENT is 500 microamps.",
+      "pageTarget": "p.401",
+      "confidence": "high"
+    },
+    {
+      "claim": "Non-medical equipment placed in the patient environment may need measures to limit touch current if it exceeds Clause 16.6.1 values.",
+      "evidenceText": "Equipment complying with a non-medical safety standard and placed in the patient environment needs measures to limit TOUCH CURRENT if this exceeds values specified in 16.6.1.",
+      "pageTarget": "p.401",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex L is normative and specifies insulated winding wires for use without interleaved insulation.",
+      "evidenceText": "Annex L, normative, specifies winding wire whose insulation may provide basic, supplementary, double, or reinforced insulation in wound components without interleaved insulation.",
+      "pageTarget": "p.413",
+      "confidence": "high"
+    },
+    {
+      "claim": "Insulated winding wire type tests include dielectric strength, flexibility and adherence, heat shock, and retention of electric strength after bending.",
+      "evidenceText": "The wire shall pass tests L.3.1 to L.3.4: dielectric strength, flexibility and adherence, heat shock, and retention of electric strength after bending.",
+      "pageTarget": "p.413-p.415",
+      "confidence": "high"
+    },
+    {
+      "claim": "Annex M is normative and gives protective measures to reduce pollution degree.",
+      "evidenceText": "Annex M, normative, states Table M.1 shows additional protective measures that may be used to reduce the pollution degree.",
+      "pageTarget": "p.416",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 12 of 13; extracted claims are limited to Annex G through Annex M content, bibliography entries, abbreviations, and index text present in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several passages contain IEC consolidated-version change markup and 'Not used' labels, especially network classification material; those items should be reviewed against the final consolidated standard before use as active requirements."
+    }
+  ]
+}

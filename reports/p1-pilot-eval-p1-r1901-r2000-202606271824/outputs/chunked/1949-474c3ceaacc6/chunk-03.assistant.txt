@@ -1,0 +1,550 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-eru",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.2판 [영문] 2020_IEC(R).pdf",
+    "canonicalGroupId": "474c3ceaacc6"
+  },
+  "document": {
+    "title": "IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV",
+    "documentType": "International medical electrical equipment safety standard",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "International Electrotechnical Commission (IEC)"
+    ],
+    "revisionOrVersion": "IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV",
+    "documentDate": "2020",
+    "standards": [
+      "IEC 60601-1",
+      "IEC 60601-1:2005",
+      "IEC 60601-1:2005/AMD1:2012",
+      "IEC 60601-1:2005/AMD2:2020",
+      "ISO 15223-1",
+      "ISO 7000",
+      "ISO 7010",
+      "IEC 60417",
+      "IEC 60529",
+      "IEC 61293",
+      "ISO 780",
+      "IEC 60127-1",
+      "IEC 60445",
+      "ISO 80000-1",
+      "IEC 60601-1-8",
+      "IEC 60601-1-6",
+      "IEC 60320-1",
+      "IEC 60384-14",
+      "IEC 60747-5-5",
+      "IEC 60950-1",
+      "IEC 62368-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This chunk covers IEC 60601-1 marking, accompanying document, safety sign, electrical hazard, applied part, and means-of-protection requirements for medical electrical equipment.",
+    "officialUse": "Use as regulatory evidence for labeling, IFU, technical description, electrical safety design, leakage current testing, applied part classification, and defibrillation-proof applied part verification under IEC 60601-1.",
+    "keyPoints": [
+      "ME equipment, accessories, detachable components, software in PEMS, supply inputs, output connectors, applied parts, fuses, packaging, earth terminals, and controls have specific marking requirements.",
+      "Instructions for use and technical descriptions are part of the accompanying documents and must include safety-critical warnings, classifications, symbols, maintenance, installation, messages, performance, and testing information.",
+      "Electrical protection requirements define normal and single fault conditions, leakage current limits, applied part classification, MOPP/MOOP criteria, and defibrillation-proof applied part tests."
+    ]
+  },
+  "entities": [
+    {
+      "name": "International Electrotechnical Commission",
+      "type": "standards publisher",
+      "evidence": "Page headers identify the document as IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV and show IEC copyright."
+    },
+    {
+      "name": "ME EQUIPMENT",
+      "type": "regulated device category",
+      "evidence": "Clause 7.2.2 requires ME EQUIPMENT to be marked with manufacturer identity, model/type reference, serial or lot/batch identifier, and manufacture or use-by date if applicable."
+    },
+    {
+      "name": "MANUFACTURER",
+      "type": "regulated actor",
+      "evidence": "Marking and instructions for use requirements repeatedly require the name or trademark and contact information of the MANUFACTURER."
+    },
+    {
+      "name": "RESPONSIBLE ORGANIZATION",
+      "type": "regulated user organization",
+      "evidence": "Accompanying documents must include contact information to which the RESPONSIBLE ORGANIZATION can refer and specify required skills, training, knowledge, and environmental restrictions."
+    },
+    {
+      "name": "SERVICE PERSONNEL",
+      "type": "service actor",
+      "evidence": "Software identification must be available to designated persons such as SERVICE PERSONNEL, and the technical description is intended for the RESPONSIBLE ORGANIZATION and SERVICE PERSONNEL."
+    },
+    {
+      "name": "PATIENT",
+      "type": "protected person",
+      "evidence": "Instructions for use must identify when the PATIENT is an intended OPERATOR and state which functions and maintenance the PATIENT can safely perform."
+    },
+    {
+      "name": "OPERATOR",
+      "type": "user role",
+      "evidence": "Instructions for use must contain information necessary for the OPERATOR to bring ME EQUIPMENT into operation, operate it, and safely terminate operation."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "ME equipment identification marking",
+      "pageTarget": "Clause 7.2.2, pages 61-62",
+      "evidence": "ME EQUIPMENT shall be marked with manufacturer name or trademark and contact information, model/type reference, serial number or lot/batch identifier, and manufacture or use-by date if applicable."
+    },
+    {
+      "name": "PEMS software unique identifier",
+      "pageTarget": "Clause 7.2.2, page 61",
+      "evidence": "Software forming part of a PEMS shall be identified with a unique identifier such as revision level or release/issue date."
+    },
+    {
+      "name": "Mandatory consult-accompanying-documents marking",
+      "pageTarget": "Clause 7.2.3, pages 61-62",
+      "evidence": "When consulting accompanying documents is mandatory, safety sign ISO 7010-M002 shall be used instead of ISO 7000-1641."
+    },
+    {
+      "name": "Accessory marking",
+      "pageTarget": "Clause 7.2.4, page 62",
+      "evidence": "Accessories shall be marked with manufacturer or supplier identity, model/type reference, serial or lot/batch identifier, and manufacture or use-by date if applicable."
+    },
+    {
+      "name": "Supply mains marking",
+      "pageTarget": "Clause 7.2.6, pages 62-63",
+      "evidence": "ME EQUIPMENT shall be marked with rated supply voltage or voltage range, nature of supply, rated frequency or frequency range, and Class II symbol where applicable."
+    },
+    {
+      "name": "IP classification marking",
+      "pageTarget": "Clause 7.2.9, page 64",
+      "evidence": "ME EQUIPMENT or parts shall be marked with IP followed by IEC 60529 designations; IPX0 or IP0X need not be marked."
+    },
+    {
+      "name": "Applied part marking",
+      "pageTarget": "Clause 7.2.10, page 64",
+      "evidence": "Applied parts shall be marked with relevant Type B, Type BF, Type CF, or defibrillation-proof symbols, with marking adjacent to or on the connector unless exceptions apply."
+    },
+    {
+      "name": "Safety signs",
+      "pageTarget": "Clause 7.5, pages 69-70",
+      "evidence": "Warnings, prohibitions, or mandatory actions mitigating risks not obvious to the operator shall use a safety sign selected from ISO 7010."
+    },
+    {
+      "name": "Accompanying documents",
+      "pageTarget": "Clause 7.9.1, pages 72-73",
+      "evidence": "ME EQUIPMENT shall be accompanied by documents containing at least instructions for use and a technical description, and these documents are regarded as part of the ME EQUIPMENT."
+    },
+    {
+      "name": "Electrical hazard protection",
+      "pageTarget": "Clause 8.1, page 79",
+      "evidence": "Limits specified in 8.4 shall not be exceeded for accessible parts and applied parts in normal condition or single fault condition."
+    },
+    {
+      "name": "Means of patient protection and operator protection",
+      "pageTarget": "Clause 8.5.1, pages 84-88",
+      "evidence": "Each means of protection shall be categorized as a means of patient protection or means of operator protection according to the part protected."
+    },
+    {
+      "name": "Defibrillation-proof applied parts",
+      "pageTarget": "Clause 8.5.5.1, pages 90-95",
+      "evidence": "The classification DEFIBRILLATION-PROOF APPLIED PART applies to the whole applied part and requires tests using specified common-mode and differential-mode circuits."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Single-use materials, components, accessories, or ME equipment must be marked as single use or with the ISO 7000-1051 symbol.",
+      "evidenceText": "Any material, component, ACCESSORY or ME EQUIPMENT intended for single use or its packaging shall be marked \"Single Use Only\", \"Do Not Reuse\" or with symbol ISO 7000-1051.",
+      "pageTarget": "Clause 7.2.1, page 61",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment and detachable components require manufacturer and model/type identification unless misidentification does not create unacceptable risk.",
+      "evidenceText": "ME EQUIPMENT and detachable components shall be marked with the manufacturer name or trademark and model/type reference unless misidentification does not present unacceptable risk.",
+      "pageTarget": "Clause 7.2.2, page 61",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software that is part of a PEMS must have a unique identifier available to designated persons.",
+      "evidenceText": "Software forming part of a PEMS shall be identified with a unique identifier such as revision level or release/issue date, available to designated persons such as service personnel.",
+      "pageTarget": "Clause 7.2.2, page 61",
+      "confidence": "high"
+    },
+    {
+      "claim": "If accompanying documents are a primary risk control and marking is required for effectiveness, ISO 7010-M002 must be placed on the ME equipment.",
+      "evidenceText": "When consulting accompanying documents is used as a primary risk control and usability engineering determines marking is required, the ME EQUIPMENT shall be marked with ISO 7010-M002.",
+      "pageTarget": "Clause 7.2.3, page 62",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessories must carry manufacturer or supplier identification, model/type reference, traceability identifier, and date information where applicable.",
+      "evidenceText": "ACCESSORIES shall be marked with manufacturer contact information, model/type reference, serial number or lot/batch identifier, and manufacture or use-by date if applicable.",
+      "pageTarget": "Clause 7.2.4, page 62",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment receiving power from other equipment must identify the specified equipment near the relevant connection point when incorrect connection could create unacceptable risk.",
+      "evidenceText": "If ME EQUIPMENT receives power from other equipment and connection to another source could result in unacceptable risk, the specified other equipment model/type reference shall be marked adjacent to the connection point.",
+      "pageTarget": "Clause 7.2.5, page 62",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment supply mains marking must include rated voltage, supply nature, rated frequency, and Class II marking where applicable.",
+      "evidenceText": "ME EQUIPMENT shall be marked with rated supply voltage or range, nature of supply, rated supply frequency or range, and for Class II ME EQUIPMENT symbol IEC 60417-5172.",
+      "pageTarget": "Clause 7.2.6, pages 62-63",
+      "confidence": "high"
+    },
+    {
+      "claim": "Rated input from the supply mains must be marked on ME equipment.",
+      "evidenceText": "The RATED input from the SUPPLY MAINS shall be marked on the ME EQUIPMENT and given in amperes, volt-amperes, or watts when allowed by power factor.",
+      "pageTarget": "Clause 7.2.7, page 63",
+      "confidence": "high"
+    },
+    {
+      "claim": "Power output connectors other than specified exceptions must be marked with rated output voltage and current or power.",
+      "evidenceText": "Output connectors intended to deliver power shall be marked with rated output voltage, rated current or power when applicable, and output frequency when applicable.",
+      "pageTarget": "Clause 7.2.8.2, page 64",
+      "confidence": "high"
+    },
+    {
+      "claim": "IP classification marking follows IEC 60529, with IPX0/IP0X and equivalent unspecified classifications exempt from marking.",
+      "evidenceText": "ME EQUIPMENT or parts shall be marked with IP designations described in IEC 60529; IPX0, IP0X, IPXX, IP00, IPX0, or IP0X need not be marked.",
+      "pageTarget": "Clause 7.2.9, page 64",
+      "confidence": "high"
+    },
+    {
+      "claim": "Applied parts must be marked for electric shock protection classification using IEC 60417 symbols.",
+      "evidenceText": "Type B, Type BF, and Type CF applied parts shall be marked with IEC 60417-5840, IEC 60417-5333, or IEC 60417-5335 respectively.",
+      "pageTarget": "Clause 7.2.10, page 64",
+      "confidence": "high"
+    },
+    {
+      "claim": "If defibrillator discharge protection depends partly on the patient cable, a warning safety sign and IFU explanation are required.",
+      "evidenceText": "If protection against cardiac defibrillator discharge is partly in the patient cable, ISO 7010-W001 shall be placed near the outlet and the instructions for use shall explain cable dependency.",
+      "pageTarget": "Clause 7.2.10, page 64",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment without mode-of-operation marking is assumed suitable for continuous operation.",
+      "evidenceText": "If no marking is provided, ME EQUIPMENT is assumed to be suitable for CONTINUOUS OPERATION.",
+      "pageTarget": "Clause 7.2.11, page 64",
+      "confidence": "high"
+    },
+    {
+      "claim": "Physiological effects that are not obvious and can harm the patient or operator require prominent safety sign marking and IFU hazard precautions.",
+      "evidenceText": "ME EQUIPMENT producing non-obvious physiological effects that can cause harm shall bear a suitable safety sign, and the instructions for use shall describe the hazard and precautions.",
+      "pageTarget": "Clause 7.2.13, page 65",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective packaging must identify special handling, transport/storage environmental conditions, premature unpacking risks, and sterile status where applicable.",
+      "evidenceText": "Packaging shall be marked for special handling, permissible environmental conditions, premature unpacking risk where applicable, and sterile supply and sterilization method where applicable.",
+      "pageTarget": "Clause 7.2.17, page 65",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mobile ME equipment must be marked with its mass including safe working load.",
+      "evidenceText": "MOBILE ME EQUIPMENT shall be marked with its mass including SAFE WORKING LOAD in kilograms, separate from maximum bin, shelf, or drawer load markings.",
+      "pageTarget": "Clause 7.2.21, page 66",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal high-voltage parts require high-voltage symbol or safety sign marking.",
+      "evidenceText": "The presence of HIGH VOLTAGE parts shall be marked with IEC 60417-5036 or with safety sign 3.",
+      "pageTarget": "Clause 7.3.2, page 66",
+      "confidence": "high"
+    },
+    {
+      "claim": "Lithium batteries or fuel cells require a warning if incorrect replacement could create hazardous situations such as excessive temperature, fire, or explosion.",
+      "evidenceText": "Where lithium batteries or fuel cells are incorporated and incorrect replacement would result in a hazardous situation, a warning about replacement by inadequately trained personnel shall be given.",
+      "pageTarget": "Clause 7.3.3, page 66",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth terminals must use IEC 60417-5019 unless located in an appliance inlet according to IEC 60320-1.",
+      "evidenceText": "PROTECTIVE EARTH TERMINALS shall be marked with symbol IEC 60417-5019 unless the terminal is in an APPLIANCE INLET according to IEC 60320-1.",
+      "pageTarget": "Clause 7.3.5, page 66",
+      "confidence": "high"
+    },
+    {
+      "claim": "Supply terminal markings must remain visible after connection and must not be on removable parts needed for the connection.",
+      "evidenceText": "Markings on or adjacent to electrical connection points shall not be affixed to parts that have to be removed to make the connection and shall remain visible after connection.",
+      "pageTarget": "Clause 7.3.7, page 67",
+      "confidence": "high"
+    },
+    {
+      "claim": "Power switch on/off positions must be marked or indicated by unambiguous means.",
+      "evidenceText": "Switches used to control power shall have on and off positions marked with IEC symbols, indicated by adjacent indicator light, or indicated by other unambiguous means.",
+      "pageTarget": "Clause 7.4.1, pages 67-68",
+      "confidence": "high"
+    },
+    {
+      "claim": "Numeric parameter indications on ME equipment must use SI units, with listed exceptions.",
+      "evidenceText": "Numeric indications of parameters on ME EQUIPMENT shall be expressed in SI units according to ISO 80000-1 except listed base quantities and units outside SI.",
+      "pageTarget": "Clause 7.4.3 and Table 1, pages 68-69",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety signs used for risk mitigation must be selected from ISO 7010, or constructed/supplemented according to allowed alternatives.",
+      "evidenceText": "Markings conveying warning, prohibition, or mandatory action mitigating non-obvious risk shall be a safety sign selected from ISO 7010; unavailable meanings may use ISO 3864-1 construction or general signs with supplementary text.",
+      "pageTarget": "Clause 7.5, pages 69-70",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety signs, supplementary symbols, and text must be explained in the instructions for use.",
+      "evidenceText": "Safety signs, including any supplementary symbol or text, shall be explained in the instructions for use.",
+      "pageTarget": "Clause 7.5, page 70",
+      "confidence": "high"
+    },
+    {
+      "claim": "Meanings of symbols used for marking must be explained in the instructions for use.",
+      "evidenceText": "The meanings of the symbols used for marking shall be explained in the instructions for use.",
+      "pageTarget": "Clause 7.6.1, page 70",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth conductors must be identified by green and yellow insulation throughout their length.",
+      "evidenceText": "A PROTECTIVE EARTH CONDUCTOR shall be identified throughout its length by green and yellow coloured insulation.",
+      "pageTarget": "Clause 7.7.1, page 70",
+      "confidence": "high"
+    },
+    {
+      "claim": "Indicator light colors have defined meanings, including red for warning, yellow for caution, and green for ready for use.",
+      "evidenceText": "Table 2 states red means warning and immediate operator response, yellow means caution and prompt operator response, and green means ready for use.",
+      "pageTarget": "Clause 7.8.1 and Table 2, pages 71-72",
+      "confidence": "high"
+    },
+    {
+      "claim": "Red controls are restricted to emergency interruption functions.",
+      "evidenceText": "The colour red shall be used only for a control by which a function is interrupted in case of emergency.",
+      "pageTarget": "Clause 7.8.2, page 72",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accompanying documents are part of ME equipment and must include at least instructions for use and a technical description.",
+      "evidenceText": "ME EQUIPMENT shall be accompanied by documents containing at least the instructions for use and a technical description, and the ACCOMPANYING DOCUMENTS shall be regarded as part of the ME EQUIPMENT.",
+      "pageTarget": "Clause 7.9.1, page 72",
+      "confidence": "high"
+    },
+    {
+      "claim": "Electronic accompanying documents require consideration of what information must also be hard copy or markings.",
+      "evidenceText": "If accompanying documents are provided electronically, the usability engineering process shall consider which information also needs to be provided as hard copy or as markings.",
+      "pageTarget": "Clause 7.9.1, page 73",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must document intended use, frequently used functions, contraindications, and parts not to be serviced while in use with a patient.",
+      "evidenceText": "Instructions for use shall document use as intended by the manufacturer, frequently used functions, known contraindications, and parts not to be serviced or maintained while in use with a patient.",
+      "pageTarget": "Clause 7.9.2.1, page 73",
+      "confidence": "high"
+    },
+    {
+      "claim": "For Class I ME equipment, the IFU must warn that the equipment must only be connected to supply mains with protective earth.",
+      "evidenceText": "For CLASS I ME EQUIPMENT, the instructions for use shall include a warning that to avoid electric shock risk, the equipment must only be connected to supply mains with protective earth.",
+      "pageTarget": "Clause 7.9.2.2, page 74",
+      "confidence": "high"
+    },
+    {
+      "claim": "The IFU must address electromagnetic or other interference with other devices and provide advice to avoid or minimize it.",
+      "evidenceText": "The instructions for use shall include information regarding potential electromagnetic or other interference between the ME EQUIPMENT and other devices and advice on avoiding or minimizing it.",
+      "pageTarget": "Clause 7.9.2.2, page 74",
+      "confidence": "high"
+    },
+    {
+      "claim": "If ME equipment connects to a separate power supply, the power supply must be specified as part of the ME equipment or the combination as an ME system.",
+      "evidenceText": "If ME EQUIPMENT is intended for connection to a separate power supply, the power supply shall be specified as part of the ME EQUIPMENT or the combination shall be specified as an ME SYSTEM.",
+      "pageTarget": "Clause 7.9.2.3, page 74",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must describe significant physical and performance characteristics and restrict external equipment or network/data couplings for signal input/output parts.",
+      "evidenceText": "The IFU shall include a brief equipment description, how it functions, significant physical and performance characteristics, and restrictions on other equipment or NETWORK/DATA COUPLINGS connected to a SIGNAL INPUT/OUTPUT PART.",
+      "pageTarget": "Clause 7.9.2.5, page 75",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must contain operating information including controls, displays, signals, operation sequence, accessories, and consumables.",
+      "evidenceText": "Operating instructions shall contain all information necessary to operate ME EQUIPMENT, including functions of controls, displays and signals, sequence of operation, detachable parts and accessories, and consumed materials.",
+      "pageTarget": "Clause 7.9.2.9, page 75",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must list non-self-explanatory system, error, and fault messages with causes and operator actions.",
+      "evidenceText": "The IFU shall list all non-self-explanatory system, error, and fault messages and include explanations, important causes, and possible operator actions.",
+      "pageTarget": "Clause 7.9.2.10, pages 75-76",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must give cleaning, disinfection, or sterilization methods and process limits for contaminated parts and accessories.",
+      "evidenceText": "For parts or accessories that can become contaminated, the IFU shall contain cleaning, disinfection, or sterilization methods and applicable parameters such as temperature, pressure, humidity, time limits, and cycle numbers.",
+      "pageTarget": "Clause 7.9.2.12, page 76",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must cover preventive inspection, maintenance, calibration, and safe routine maintenance.",
+      "evidenceText": "The IFU shall instruct the operator or responsible organization in preventive inspection, maintenance, and calibration including frequency, and provide safe routine maintenance information.",
+      "pageTarget": "Clause 7.9.2.13, page 76",
+      "confidence": "high"
+    },
+    {
+      "claim": "Instructions for use must include a unique version identifier.",
+      "evidenceText": "The instructions for use shall contain a unique version identifier such as its date of issue.",
+      "pageTarget": "Clause 7.9.2.19, page 77",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description must provide data essential for safe operation, transport, storage, installation, and preparation for use.",
+      "evidenceText": "The technical description shall provide all data essential for safe operation, transport and storage, and measures or conditions necessary for installing and preparing ME EQUIPMENT for use.",
+      "pageTarget": "Clause 7.9.3.1, pages 77-78",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description must include essential performance and recurrent basic safety and essential performance testing information.",
+      "evidenceText": "The technical description shall include information pertaining to ESSENTIAL PERFORMANCE and necessary recurrent ESSENTIAL PERFORMANCE and BASIC SAFETY testing, including means, methods, and recommended frequency.",
+      "pageTarget": "Clause 7.9.3.1, page 78",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description must warn about hazards from unauthorized modification of ME equipment.",
+      "evidenceText": "The technical description shall include a warning statement addressing hazards from unauthorized modification, such as no modification allowed or testing required after modification.",
+      "pageTarget": "Clause 7.9.3.1, page 78",
+      "confidence": "high"
+    },
+    {
+      "claim": "The technical description must state availability of repair-support information for service personnel upon request.",
+      "evidenceText": "The technical description shall state that the manufacturer will make available circuit diagrams, part lists, descriptions, calibration instructions, or other repair-assisting information on request.",
+      "pageTarget": "Clause 7.9.3.3, page 78",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessible parts and applied parts must not exceed 8.4 limits in normal or single fault condition.",
+      "evidenceText": "The limits specified in 8.4 shall not be exceeded for ACCESSIBLE PARTS and APPLIED PARTS in NORMAL CONDITION or SINGLE FAULT CONDITION.",
+      "pageTarget": "Clause 8.1, page 79",
+      "confidence": "high"
+    },
+    {
+      "claim": "Normal condition includes specified external signal input/output voltages, supply transposition, and failure of non-compliant insulation, creepage, clearance, or earth connections.",
+      "evidenceText": "Normal condition includes permitted voltages on signal input/output parts, transposition of supply connections, and short or open circuits of insulation, creepage, clearances, or earth connections that do not comply.",
+      "pageTarget": "Clause 8.1(a), page 79",
+      "confidence": "high"
+    },
+    {
+      "claim": "Single fault condition includes failure of one compliant insulation, creepage/clearance, protective earth connection, supply conductor, or relevant conductors/connectors.",
+      "evidenceText": "Single fault condition includes short circuit of one insulation or creepage/clearance meeting one means of protection, open protective earth connection, interruption of one supply conductor, and accidental conductor or connector detachment leading to hazard.",
+      "pageTarget": "Clause 8.1(b), page 79",
+      "confidence": "high"
+    },
+    {
+      "claim": "A separate power source specified for ME equipment is either part of the ME equipment or makes the combination an ME system.",
+      "evidenceText": "If ME EQUIPMENT is specified for connection to a separate power source other than supply mains, the power source is considered part of the ME EQUIPMENT or the combination is considered an ME SYSTEM.",
+      "pageTarget": "Clause 8.2.1, page 80",
+      "confidence": "high"
+    },
+    {
+      "claim": "External DC wrong-polarity connection must not cause hazardous situations and correct polarity must restore basic safety and essential performance.",
+      "evidenceText": "For external d.c. power, wrong polarity shall not lead to hazardous situations described in 13.1, and with correct polarity the ME EQUIPMENT shall maintain BASIC SAFETY and ESSENTIAL PERFORMANCE.",
+      "pageTarget": "Clause 8.2.2, page 80",
+      "confidence": "high"
+    },
+    {
+      "claim": "Applied parts for direct cardiac application must be Type CF.",
+      "evidenceText": "An APPLIED PART specified in accompanying documents as suitable for DIRECT CARDIAC APPLICATION shall be a TYPE CF APPLIED PART.",
+      "pageTarget": "Clause 8.3(a), page 80",
+      "confidence": "high"
+    },
+    {
+      "claim": "Applied parts with patient connections intended to deliver electrical energy or electrophysiological signals must be Type BF or Type CF.",
+      "evidenceText": "An APPLIED PART that includes a PATIENT CONNECTION intended to deliver electrical energy or an electrophysiological signal to or from the patient shall be TYPE BF or TYPE CF.",
+      "pageTarget": "Clause 8.3(b), page 80",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient leakage current and patient auxiliary current limits apply to currents from, to, or between patient connections.",
+      "evidenceText": "Currents from, to, or between PATIENT CONNECTIONS shall not exceed PATIENT LEAKAGE CURRENT and PATIENT AUXILIARY CURRENT limits specified in Table 3 and Table 4 when measured under 8.7.4.",
+      "pageTarget": "Clause 8.4.2(a), page 81",
+      "confidence": "high"
+    },
+    {
+      "claim": "Touch current limits apply to accessible parts other than patient connections unless specific negligible-risk conditions and IFU warnings apply.",
+      "evidenceText": "Leakage currents from, to, or between accessible parts other than patient connections shall not exceed touch current limits, with exceptions requiring negligible patient connection probability and IFU instruction not to touch patient and part simultaneously.",
+      "pageTarget": "Clause 8.4.2(b)-(c), page 81",
+      "confidence": "high"
+    },
+    {
+      "claim": "Plug-connected ME equipment must discharge plug pins to no more than 60 V or 45 microcoulombs stored charge within one second after disconnection.",
+      "evidenceText": "ME EQUIPMENT connected by plug shall be designed so that 1 s after disconnection voltage between plug pins and enclosure does not exceed 60 V, or stored charge does not exceed 45 microcoulombs.",
+      "pageTarget": "Clause 8.4.3, page 83",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessible internal capacitive circuits after de-energization must not exceed 60 V residual voltage or 45 microcoulombs stored charge.",
+      "evidenceText": "Conductive parts of capacitive circuits accessible after de-energization and access cover removal shall not have residual voltage above 60 V or stored charge above 45 microcoulombs.",
+      "pageTarget": "Clause 8.4.4, page 84",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment must have two means of protection preventing applied and accessible parts from exceeding permitted limits.",
+      "evidenceText": "ME EQUIPMENT shall have two MEANS OF PROTECTION to prevent APPLIED PARTS and other ACCESSIBLE PARTS from exceeding limits specified in 8.4.",
+      "pageTarget": "Clause 8.5.1.1, page 84",
+      "confidence": "high"
+    },
+    {
+      "claim": "MOPP solid insulation, creepage distances, clearances, and protective earth connections must meet specified dielectric, distance, and earth requirements.",
+      "evidenceText": "Solid insulation forming MOPP shall comply with dielectric strength tests; creepage and air clearances shall comply with Table 12; protective earth connections forming MOPP shall comply with 8.6.",
+      "pageTarget": "Clause 8.5.1.2, pages 85-86",
+      "confidence": "high"
+    },
+    {
+      "claim": "MOOP may use IEC 60950-1 or IEC 62368-1 insulation coordination and protective earthing requirements as alternatives for operator protection.",
+      "evidenceText": "MOOP solid insulation, creepage distances, air clearances, and protective earth connections may comply with IEC 60950-1 or IEC 62368-1 insulation coordination or protective earthing requirements.",
+      "pageTarget": "Clause 8.5.1.3, pages 86-87",
+      "confidence": "high"
+    },
+    {
+      "claim": "F-type applied part patient connections must be separated from all other parts by one MOPP for maximum mains voltage and comply with patient leakage current limits at 110 percent maximum mains voltage.",
+      "evidenceText": "Patient connections of any F-TYPE APPLIED PART shall be separated from all other parts by means equivalent to one MOPP for maximum mains voltage and comply with patient leakage current limits with 110 percent maximum mains voltage applied.",
+      "pageTarget": "Clause 8.5.2.1, page 88",
+      "confidence": "high"
+    },
+    {
+      "claim": "Type B applied parts that are not protectively earthed require one MOPP separation from unearthed metal accessible parts unless specific contiguous low-risk conditions are met.",
+      "evidenceText": "Patient connections of a TYPE B APPLIED PART not protectively earthed shall be separated by one MOPP from unearthed metal accessible parts unless physically contiguous with the applied part and risk is acceptably low.",
+      "pageTarget": "Clause 8.5.2.2, pages 88-89",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient lead connectors with conductive parts not separated from patient connections must be constructed to avoid connection to earth or hazardous voltage while patient connections contact the patient.",
+      "evidenceText": "Any patient lead connector conductive part not separated from patient connections by one MOPP shall be constructed so it cannot become connected to earth or possible hazardous voltage while patient connections contact the patient.",
+      "pageTarget": "Clause 8.5.2.3, page 89",
+      "confidence": "high"
+    },
+    {
+      "claim": "For single-phase or DC supply mains powered ME equipment, maximum mains voltage is the highest rated supply voltage unless below 100 V, in which case it is 240 V.",
+      "evidenceText": "For single-phase or d.c. supply mains powered ME EQUIPMENT, maximum mains voltage is the highest rated supply voltage, unless below 100 V, in which case the maximum mains voltage is 240 V.",
+      "pageTarget": "Clause 8.5.3, page 89",
+      "confidence": "high"
+    },
+    {
+      "claim": "Working voltage for each means of protection is determined by specified measurement rules, including rated voltage worst case, ripple handling, double insulation, patient earthing, F-type applied part insulation, and motor resonance voltage.",
+      "evidenceText": "Clause 8.5.4 lists working voltage determination rules for MOPs, including earth connections during measurement, highest rated input, DC ripple, double insulation, patient connection earthing, F-type applied parts, defibrillation-proof exclusions, and motor resonance.",
+      "pageTarget": "Clause 8.5.4, pages 89-90",
+      "confidence": "high"
+    },
+    {
+      "claim": "Defibrillation-proof applied parts must prevent hazardous electrical energy from appearing on enclosure, signal input/output parts, test foil, other patient connections, or unused connections during defibrillator discharge.",
+      "evidenceText": "During cardiac defibrillator discharge, hazardous electrical energies above the specified measurement threshold shall not appear on the enclosure, signal input/output part, foil, other applied part patient connections, or unused/disconnected connections.",
+      "pageTarget": "Clause 8.5.5.1, pages 90-91",
+      "confidence": "high"
+    },
+    {
+      "claim": "After defibrillation exposure and stated recovery time, ME equipment must continue to meet IEC 60601-1 requirements and provide basic safety and essential performance.",
+      "evidenceText": "Following exposure to defibrillation voltage and any necessary recovery time stated in the accompanying documents, the ME EQUIPMENT shall comply with relevant requirements and continue to provide BASIC SAFETY and ESSENTIAL PERFORMANCE.",
+      "pageTarget": "Clause 8.5.5.1, page 91",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 3 of 13; extracted facts are limited to clauses 7.2 through part of 8.5.5.1 shown in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "The chunk contains consolidated-version change markup artifacts and duplicated replacement text; extracted claims use the apparent final IEC 60601-1:2005+AMD1:2012+AMD2:2020 CSV requirements where readable."
+    }
+  ]
+}
