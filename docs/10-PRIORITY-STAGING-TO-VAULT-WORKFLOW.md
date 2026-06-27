@@ -473,4 +473,9 @@ Next P1 bundle:
 - rank range: 2101-2200
 - selected representatives: 100
 - total normalized chars: 1,007,715
-- extraction status: not started at this checkpoint
+- extraction status: PASS
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- note: ranks 2105, 2124, and 2177 passed on direct retry; ranks 2184
+  required chunked fallback after transient tool-call/timeout failure
+- ops commit: `57498b0 feat: complete P1 ranks 2101-2200 extraction outputs`
