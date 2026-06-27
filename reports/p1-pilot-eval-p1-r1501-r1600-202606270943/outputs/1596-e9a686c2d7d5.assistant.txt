@@ -1,0 +1,144 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-1796",
+    "sourcePath": "raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls",
+    "canonicalGroupId": "e9a686c2d7d5"
+  },
+  "document": {
+    "title": "도면 등록/접수 대장",
+    "documentType": "도면 등록/접수 대장",
+    "productModels": [
+      "A1417MCW",
+      "A1717MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "APF403-1 (Rev.0)",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "기구 도면의 도면번호, 품명, 도면구분, 등록일자, 확인자, 개정일자를 기록한 도면 등록/접수 대장이다.",
+    "officialUse": "설계개발 출력 중 기구 도면의 등록 및 개정 이력 추적에 사용되는 대장으로 보인다.",
+    "keyPoints": [
+      "표 제목은 '도면 등록/접수 대장'이다.",
+      "열에는 No, 도면번호, 품명, 도면구분, 등록일자, 확인, 개정일자, 비고가 포함된다.",
+      "기재된 도면 항목들은 양산도 표시가 되어 있다.",
+      "반복 기재된 등록일자 및 1차 개정일자는 2022.12.30이며 확인자는 이동욱이다.",
+      "문서 하단에 'APF403-1 (Rev.0)' 및 '297×210mm(A4)'가 기재되어 있다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "A1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls"
+    },
+    {
+      "name": "A1717MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls"
+    },
+    {
+      "name": "F1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls"
+    },
+    {
+      "name": "이동욱",
+      "type": "confirmation person",
+      "evidence": "No,도면번호,품 명,도면구분,,등록일자,확인,개 정 일 자... 1,AMI63-03301A,SHEET-GF BACK DECO,√,,2022.12.30,이동욱,2022.12.30,이동욱"
+    },
+    {
+      "name": "APF403-1 (Rev.0)",
+      "type": "form identifier",
+      "evidence": "APF403-1 (Rev.0),,,,, ,,,,,,,,,,297×210mm(A4)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "도면 등록/접수 대장",
+      "pageTarget": "Drawing Register",
+      "evidence": "도면 등록/접수 대장"
+    },
+    {
+      "name": "양산도",
+      "pageTarget": "Production Drawing",
+      "evidence": "No,도면번호,품 명,도면구분,,등록일자,확인,개 정 일 자... ,,,양산도,시작도"
+    },
+    {
+      "name": "기구도면",
+      "pageTarget": "Mechanical Drawing",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls"
+    },
+    {
+      "name": "설계개발 출력",
+      "pageTarget": "Design and Development Output",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/기구/도면 등록 대장.xls"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled '도면 등록/접수 대장'.",
+      "evidenceText": "도면 등록/접수 대장",
+      "pageTarget": "Drawing Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "The register records drawing number, item name, drawing classification, registration date, confirmation, revision date, and remarks.",
+      "evidenceText": "No,도면번호,품 명,도면구분,,등록일자,확인,개 정 일 자,,,,,,,,비 고",
+      "pageTarget": "Drawing Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "The drawing classification columns include 양산도 and 시작도.",
+      "evidenceText": ",,,양산도,시작도,,,1차,확인,2차,확인,3차,확인,4차,확인,",
+      "pageTarget": "Drawing Classification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Entries in the register show registration date 2022.12.30, confirmation by 이동욱, and first revision date 2022.12.30.",
+      "evidenceText": "1,AMI63-03301A,SHEET-GF BACK DECO,√,,2022.12.30,이동욱,2022.12.30,이동욱",
+      "pageTarget": "Drawing Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "The register includes AMI97-05515A for ASSY COVER-REAR_COVER_ASSY with page remarks 1/2 PAGE and 2/2 PAGE.",
+      "evidenceText": "7,AMI97-05515A,ASSY COVER-REAR_COVER_ASSY,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,1/2 PAGE\n8,AMI97-05515A,ASSY COVER-REAR_COVER_ASSY,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,2/2 PAGE",
+      "pageTarget": "Rear Cover Assembly Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The register includes AMI63-03308A for COVER-REAR SIDE FRAME with page remarks 1/2 PAGE and 2/2 PAGE.",
+      "evidenceText": "35,AMI63-03308A,COVER-REAR SIDE FRAME,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,1/2 PAGE\n36,AMI63-03308A,COVER-REAR SIDE FRAME,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,2/2 PAGE",
+      "pageTarget": "Rear Side Frame Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The register includes AMI61-05841A for PLATE-GF MIDDLE_BLOCK with page remarks 1/3 PAGE, 2/3 PAGE, and 3/3 PAGE.",
+      "evidenceText": "99,AMI61-05841A,PLATE-GF MIDDLE_BLOCK,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,1/3 PAGE\n100,AMI61-05841A,PLATE-GF MIDDLE_BLOCK,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,2/3 PAGE\n101,AMI61-05841A,PLATE-GF MIDDLE_BLOCK,√,,2022.12.30,이동욱,2022.12.30,이동욱,,,,,,,3/3 PAGE",
+      "pageTarget": "Middle Block Drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form identifier is APF403-1 (Rev.0), and the paper size is A4.",
+      "evidenceText": "APF403-1 (Rev.0),,,,, ,,,,,,,,,,297×210mm(A4)",
+      "pageTarget": "Document Form Control",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is present in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standalone document date is present; dates shown are register entry registration and revision dates."
+    },
+    {
+      "severity": "info",
+      "reason": "Product models are derived from the source path metadata, not from the table body."
+    }
+  ]
+}

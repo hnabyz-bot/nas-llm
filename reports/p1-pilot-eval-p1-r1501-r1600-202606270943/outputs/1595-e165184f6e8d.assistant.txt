@@ -1,0 +1,168 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-1964",
+    "sourcePath": "raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/01_BOM/RED-GL1 (가공 Design)_BOM_Rev.3.xlsx",
+    "canonicalGroupId": "e165184f6e8d"
+  },
+  "document": {
+    "title": "RED-GL1 (가공 Design)_BOM_Rev.3.xlsx",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "RED-GL1"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.3",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM for RED-GL1 listing detector, power box, accessory, packaging, label, manual, and USB/software components.",
+    "officialUse": "Design and development output BOM for component configuration, ERP codes, part names, drawings, revisions, specifications, suppliers, units, quantities, and costs.",
+    "keyPoints": [
+      "RED-GL1 includes Detector and Power Box assemblies plus accessories, packaging, label, manual, and installation software.",
+      "Detector configurations include RED-GL1 OQC Module Ass'y variants with BODY FRAME, connector block, carbon plate, bottom plate, boards, cables, bolts, and panel module assemblies.",
+      "Panel module entries include 1717 PANEL MODULE_Gods and 1717 PANEL MODULE_CsI variants.",
+      "Power Box includes TOP COVER, BOTTOM COVER, POWER BOX BOARD, SMPS, power cables, and fastening bolts."
+    ]
+  },
+  "entities": [
+    {
+      "name": "RED-GL1",
+      "type": "product",
+      "evidence": "RED-GL1,,O,,,,,,,,,,,RED-GL1"
+    },
+    {
+      "name": "RED-GL1 OQC Module Ass'y",
+      "type": "assembly",
+      "evidence": ",Detector,,O,,,,,,,,,AC0-000005,RED-GL1 OQC Module Ass'y,Ass'y,AC0-000005"
+    },
+    {
+      "name": "BODY FRAME Ass'y",
+      "type": "assembly",
+      "evidence": "Ass'y,AC0-000004,BODY FRAME Ass'y,Ass'y,AC0-000004,0"
+    },
+    {
+      "name": "POWER BOX",
+      "type": "assembly",
+      "evidence": ",Power Box,,O,,,,,,,,Ass'y,01-B-0-01,POWER BOX,Ass'y,01-B-0-01,0"
+    },
+    {
+      "name": "1717 PANEL MODULE_Gods",
+      "type": "assembly",
+      "evidence": "Ass'y,AA1-000002,1717 PANEL MODULE_Gods,Ass'y,AA1-000002"
+    },
+    {
+      "name": "1717 PANEL MODULE_CsI",
+      "type": "assembly",
+      "evidence": "Ass'y,AA1-000003,1717 PANEL MODULE_CsI,Ass'y,AA1-000003"
+    },
+    {
+      "name": "BOE",
+      "type": "supplier",
+      "evidence": "F-BG-0101,1717 TFT Panel,Panel,F-BG-0101,0,17*17 BOE Panel,BOE"
+    },
+    {
+      "name": "MEANWELL",
+      "type": "supplier",
+      "evidence": "RPS200-15,SMPS,H/W,RPS200-15,-,MEANWELL / RPS200-15,MEANWELL"
+    },
+    {
+      "name": "바텍이엔지",
+      "type": "supplier",
+      "evidence": "AB0-000001,1717 MAIN BOARD,H/W,AB0-000001,0,240mm * 130mm * 1.6T,바텍이엔지"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "구성품,,LEVEL,,,,,,,,,Ass'y 구분,ERP CODE,품목,PART,도번,Rev No.,규격,공급업체명,공급유형,단위,단가,수량,금액,비고"
+    },
+    {
+      "name": "Detector assembly",
+      "pageTarget": "RED-GL1 Detector Assembly",
+      "evidence": ",Detector,,O,,,,,,,,,AC0-000005,RED-GL1 OQC Module Ass'y,Ass'y,AC0-000005"
+    },
+    {
+      "name": "Power box assembly",
+      "pageTarget": "RED-GL1 Power Box Assembly",
+      "evidence": ",Power Box,,O,,,,,,,,Ass'y,01-B-0-01,POWER BOX,Ass'y,01-B-0-01,0"
+    },
+    {
+      "name": "1717 panel module variants",
+      "pageTarget": "1717 Panel Module",
+      "evidence": "1717 PANEL MODULE_Gods; 1717 PANEL MODULE_CsI"
+    },
+    {
+      "name": "Packaging components",
+      "pageTarget": "RED-GL1 Packaging",
+      "evidence": ",포장,,O,,,,,,,,자재,MC0-000039,OUT BOX,기구,MC0-000039,0"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a BOM for RED-GL1.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/01_BOM/RED-GL1 (가공 Design)_BOM_Rev.3.xlsx",
+      "pageTarget": "RED-GL1 BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is Rev.3.",
+      "evidenceText": "RED-GL1 (가공 Design)_BOM_Rev.3.xlsx",
+      "pageTarget": "RED-GL1 BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "RED-GL1 BOM has a Detector section containing RED-GL1 OQC Module Ass'y.",
+      "evidenceText": ",Detector,,O,,,,,,,,,AC0-000005,RED-GL1 OQC Module Ass'y,Ass'y,AC0-000005",
+      "pageTarget": "RED-GL1 Detector Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "RED-GL1 BOM includes a Power Box assembly.",
+      "evidenceText": ",Power Box,,O,,,,,,,,Ass'y,01-B-0-01,POWER BOX,Ass'y,01-B-0-01,0",
+      "pageTarget": "RED-GL1 Power Box Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes accessory cable options such as LAN CAT6 Cable, AC cables, Trigger Cable, and Main Data Cable variants.",
+      "evidenceText": ",악세서리,,O,,,,,,,,Option,01-C-1-01,01-C-1-01,하네스,01-C-1-01,-,LAN CAT6 Cable(5M)",
+      "pageTarget": "RED-GL1 Accessories",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes packaging items such as OUT BOX, OUT BOX PAD, ACCESSORY FOAM, ACCESSORY BOX, DETECTOR FOAM, DETECTOR PAD, and DETECTOR BOX.",
+      "evidenceText": ",포장,,O,,,,,,,,자재,MC0-000039,OUT BOX,기구,MC0-000039,0",
+      "pageTarget": "RED-GL1 Packaging",
+      "confidence": "high"
+    },
+    {
+      "claim": "No issuing regulatory authority or jurisdiction is identified in the extracted BOM text.",
+      "evidenceText": "구성품,,LEVEL,,,,,,,,,Ass'y 구분,ERP CODE,품목,PART,도번,Rev No.,규격,공급업체명,공급유형,단위,단가,수량,금액,비고",
+      "pageTarget": "RED-GL1 BOM",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date is present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the BOM text."
+    },
+    {
+      "severity": "warning",
+      "reason": "The second BOM block contains RED-CL1 product label and manual entries while the source path and root product identify RED-GL1."
+    },
+    {
+      "severity": "info",
+      "reason": "Some supplier and specification fields differ between repeated BOM blocks, including 휴켐/휴캠 and populated versus blank board dimensions."
+    }
+  ]
+}

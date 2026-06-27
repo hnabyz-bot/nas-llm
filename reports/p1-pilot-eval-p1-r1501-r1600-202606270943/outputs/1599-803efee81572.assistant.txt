@@ -1,0 +1,175 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19an",
+    "sourcePath": "raw/sources/DHF (인허가)/05_HnX-P1, HnX-PB/92_인증 - FDA/Attachment/003_Circuit diagram 2_TANK board assy.pdf",
+    "canonicalGroupId": "803efee81572"
+  },
+  "document": {
+    "title": "Circuit diagram 2_TANK board assy",
+    "documentType": "Circuit diagram / schematic",
+    "productModels": [
+      "X3"
+    ],
+    "authorityOrJurisdiction": [
+      "FDA"
+    ],
+    "revisionOrVersion": "00",
+    "documentDate": "2024-11-01",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Circuit diagram document DDPT006640 revision 00 dated 2024-11-01 for model X3 TANK board assembly sheets.",
+    "officialUse": "Design history/regulatory attachment evidence for TANK board assembly circuitry, including board sheets and labeled electrical signals.",
+    "keyPoints": [
+      "Document number is DDPT006640 with revision 00 and date 2024-11-01.",
+      "Model is listed as X3.",
+      "Sheets include TANK MAIN, MULTIPLIER, IO BOARD, and SCH.",
+      "The document is marked CONFIDENTIAL and associated with DAEAN R&D CENTER.",
+      "Circuit labels include HV_TRANS, CATHODE, FILAMENT, ANODE, KV_FB, MA_FB, TEMP_SEN, TEMP_SW, PWR1, PWR2, FIL_A, FIL_B, FIL_COM, GND, HV+, and HV-."
+    ]
+  },
+  "entities": [
+    {
+      "name": "DAEAN",
+      "type": "organization",
+      "evidence": "DAEAN"
+    },
+    {
+      "name": "R&D CENTER",
+      "type": "organizational unit",
+      "evidence": "R&D CENTER"
+    },
+    {
+      "name": "X3",
+      "type": "product model",
+      "evidence": "Model: X3"
+    },
+    {
+      "name": "DDPT006640",
+      "type": "document number",
+      "evidence": "DDPT006640 00 2024-11-01"
+    },
+    {
+      "name": "FDA",
+      "type": "authority signal",
+      "evidence": "sourcePath: raw/sources/DHF (인허가)/05_HnX-P1, HnX-PB/92_인증 - FDA/Attachment/003_Circuit diagram 2_TANK board assy.pdf"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "TANK MAIN",
+      "pageTarget": "TANK MAIN",
+      "evidence": "1 5 TANK MAIN"
+    },
+    {
+      "name": "MULTIPLIER",
+      "pageTarget": "Multiplier Circuit",
+      "evidence": "2 5 MULTIPLIER"
+    },
+    {
+      "name": "IO BOARD",
+      "pageTarget": "IO Board",
+      "evidence": "3 5 IO BOARD"
+    },
+    {
+      "name": "High-voltage transformer signal",
+      "pageTarget": "HV_TRANS",
+      "evidence": "HV_TRANS"
+    },
+    {
+      "name": "Kilovoltage feedback",
+      "pageTarget": "KV_FB",
+      "evidence": "KV_FB"
+    },
+    {
+      "name": "Tube current feedback",
+      "pageTarget": "MA_FB",
+      "evidence": "MA_FB"
+    },
+    {
+      "name": "Temperature sensing and switch signals",
+      "pageTarget": "Temperature Sensor Signals",
+      "evidence": "TEMP_SEN TEMP_SW"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document number is DDPT006640.",
+      "evidenceText": "DDPT006640 00 2024-11-01",
+      "pageTarget": "DDPT006640",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is 00.",
+      "evidenceText": "Revision: 00",
+      "pageTarget": "Document Revision",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is 2024-11-01.",
+      "evidenceText": "Date: 2024-11-01",
+      "pageTarget": "Document Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "The model listed in the document is X3.",
+      "evidenceText": "Model: X3",
+      "pageTarget": "X3",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a TANK MAIN sheet.",
+      "evidenceText": "1 5 TANK MAIN",
+      "pageTarget": "TANK MAIN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a MULTIPLIER sheet.",
+      "evidenceText": "2 5 MULTIPLIER",
+      "pageTarget": "Multiplier Circuit",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes an IO BOARD sheet.",
+      "evidenceText": "3 5 IO BOARD",
+      "pageTarget": "IO Board",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes schematic sheets labeled SCH.",
+      "evidenceText": "5 5 SCH; 4 5 SCH",
+      "pageTarget": "Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source path associates the attachment with FDA certification materials.",
+      "evidenceText": "92_인증 - FDA/Attachment/003_Circuit diagram 2_TANK board assy.pdf",
+      "pageTarget": "FDA",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The document is marked confidential.",
+      "evidenceText": "CONFIDENTIAL",
+      "pageTarget": "Confidential Document",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The schematic title fields appear blank in the OCR text; title is taken from the source filename."
+    },
+    {
+      "severity": "warning",
+      "reason": "FDA appears in source metadata/path but not in the schematic body text, so authority linkage is indirect."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product signal metadata says HnX, while the document body lists model X3."
+    }
+  ]
+}
