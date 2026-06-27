@@ -390,3 +390,11 @@ Next P1 bundle:
   missing evidence 0, page marker leakage 0
 - note: no chunked fallback was required
 - ops commit: `d23b32a feat: complete P1 ranks 1401-1500 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1501-r1600-202606270943`
+- rank range: 1501-1600
+- selected representatives: 100
+- total normalized chars: 3,082,871
+- extraction status: not started at this checkpoint
