@@ -1,0 +1,127 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954409-xq6",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_ROIC_V004_20180619/PDF/Gerber_ADI_ROIC_V004_20180619.pdf",
+    "canonicalGroupId": "c791bfbcceae"
+  },
+  "document": {
+    "title": "Gerber_ADI_ROIC_V004_20180619",
+    "documentType": "Gerber/CAM350 PCB fabrication output",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V004",
+    "documentDate": "2018-06-19",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CAM350 V10.0 output listing Gerber and drill files for ADI_ROIC_V004 dated June 19, 2018.",
+    "officialUse": "Supports DHF electrical hardware design traceability for PCB fabrication layer and drill outputs.",
+    "keyPoints": [
+      "Source path identifies ADI_ROIC_V004_20180619 as a Gerber PDF under DHF electrical hardware design.",
+      "CAM350 V 10.0 timestamps show output generated on Tue Jun 19, 2018.",
+      "Listed fabrication outputs include top/bottom silk, mask, metal, internal layers L1-L8, FAB, and DRILL files."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "productModel",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ADI_ROIC_V004_20180619",
+      "type": "designDocument",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_ROIC_V004_20180619/PDF/Gerber_ADI_ROIC_V004_20180619.pdf"
+    },
+    {
+      "name": "CAM350 V 10.0",
+      "type": "software",
+      "evidence": "CAM350 V 10.0 : Tue Jun 19 11:34:17 2018 - (Untitled)"
+    },
+    {
+      "name": "16_DRILL.drl",
+      "type": "drillFile",
+      "evidence": "CAM350 V 10.0 : Tue Jun 19 11:31:48 2018 - (Untitled) : 16_DRILL.drl"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Gerber PCB fabrication files",
+      "pageTarget": "Gerber PCB fabrication files",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_ROIC_V004_20180619/PDF/Gerber_ADI_ROIC_V004_20180619.pdf"
+    },
+    {
+      "name": "CAM350 output",
+      "pageTarget": "CAM350",
+      "evidence": "CAM350 V 10.0 : Tue Jun 19 11:31:44 2018 - (Untitled) : 01_TOP-SILK.pho"
+    },
+    {
+      "name": "PCB layer stack files",
+      "pageTarget": "PCB layer stack",
+      "evidence": "04_L1(TOP).pho; 05_L2(GND1).pho; 06_L3(SIG1).pho; 07_L4(VCC).pho; 08_L5(VCC2).pho; 09_L6(SIG2).pho; 10_L7(GND2).pho; 11_L8(BOT).pho"
+    },
+    {
+      "name": "PCB drill file",
+      "pageTarget": "PCB drill files",
+      "evidence": "16_DRILL.drl"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a Gerber PDF for ADI_ROIC_V004_20180619.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_ROIC_V004_20180619/PDF/Gerber_ADI_ROIC_V004_20180619.pdf",
+      "pageTarget": "ADI_ROIC_V004_20180619",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product signal associated with the source is HAD/A/F 1417-1717.",
+      "evidenceText": "productSignal: HAD/A/F 1417-1717",
+      "pageTarget": "HAD/A/F 1417-1717",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output was produced or recorded by CAM350 V 10.0 on June 19, 2018.",
+      "evidenceText": "CAM350 V 10.0 : Tue Jun 19 11:34:17 2018 - (Untitled)",
+      "pageTarget": "CAM350",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Gerber output includes top-side silk, mask, and metal files.",
+      "evidenceText": "01_TOP-SILK.pho; 02_TOP-MASK.pho; 03_TOP-METAL.pho",
+      "pageTarget": "Gerber PCB fabrication files",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Gerber output includes L1 through L8 PCB layer files including TOP, GND, SIG, VCC, and BOT layers.",
+      "evidenceText": "04_L1(TOP).pho; 05_L2(GND1).pho; 06_L3(SIG1).pho; 07_L4(VCC).pho; 08_L5(VCC2).pho; 09_L6(SIG2).pho; 10_L7(GND2).pho; 11_L8(BOT).pho",
+      "pageTarget": "PCB layer stack",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Gerber output includes bottom-side silk, mask, and metal files plus FAB and DRILL files.",
+      "evidenceText": "13_BOT-SILK.pho; 12_BOT-MASK.pho; 14_BOT-METAL.pho; 15_FAB.pho; 16_DRILL.drl",
+      "pageTarget": "PCB fabrication outputs",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified in the source text; metadata only provides authoritySignal as general."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are stated in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "CAM350 output title is shown as Untitled; document title is inferred from source path filename."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source text is a sparse CAM/Gerber file listing rather than a narrative regulatory approval document."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954410-yxx",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_GATE_V004_20180617/PDF/Gerber_ADI_GATE_V004_20180617.pdf",
+    "canonicalGroupId": "a628f5b28821"
+  },
+  "document": {
+    "title": "Gerber_ADI_GATE_V004_20180617.pdf",
+    "documentType": "Gerber/CAM350 PCB fabrication output",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V004",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CAM350 V 10.0 output listing ADI_GATE V004 Gerber layer and drill files generated on June 18, 2018.",
+    "officialUse": "Supports DHF electrical hardware design traceability for PCB fabrication outputs, including layer photo files and drill data.",
+    "keyPoints": [
+      "CAM350 V 10.0 appears as the generating/viewing tool in the source text.",
+      "Listed fabrication outputs include top, ground, inner, bottom, mask, silk, fab, and drill files.",
+      "The source metadata associates the file with product signal HAD/A/F 1417-1717 and ADI_GATE V004."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CAM350 V 10.0",
+      "type": "software",
+      "evidence": "CAM350 V 10.0 : Mon Jun 18 01:58:49 2018 - (Untitled)"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "ADI_GATE_V004_20180617",
+      "type": "hardware design artifact",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_GATE_V004_20180617/PDF/Gerber_ADI_GATE_V004_20180617.pdf"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Gerber layer files",
+      "pageTarget": "Gerber PCB Fabrication Files",
+      "evidence": "01_L1(TOP).pho; 02_L2(GND).pho; 03_L3(INN1).pho; 04_L4(BOT).pho"
+    },
+    {
+      "name": "PCB solder mask and silk layers",
+      "pageTarget": "PCB Solder Mask And Silkscreen Layers",
+      "evidence": "06_TOP-MASK.pho; 07_TOP-SILK.pho; 09_BOT-MASK.pho"
+    },
+    {
+      "name": "PCB drill file",
+      "pageTarget": "PCB Drill Files",
+      "evidence": "11_DRILL.drl"
+    },
+    {
+      "name": "PCB fabrication drawing output",
+      "pageTarget": "PCB Fabrication Documentation",
+      "evidence": "12_FAB.pho"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a CAM350 V 10.0 output.",
+      "evidenceText": "CAM350 V 10.0 : Mon Jun 18 01:58:49 2018 - (Untitled)",
+      "pageTarget": "CAM350 PCB CAM Software",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output includes top, ground, inner, and bottom PCB layer files.",
+      "evidenceText": "01_L1(TOP).pho; 02_L2(GND).pho; 03_L3(INN1).pho; 04_L4(BOT).pho",
+      "pageTarget": "Gerber PCB Fabrication Files",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output includes top metal, top mask, top silk, and bottom mask files.",
+      "evidenceText": "05_TOP-METAL.pho; 06_TOP-MASK.pho; 07_TOP-SILK.pho; 09_BOT-MASK.pho",
+      "pageTarget": "PCB Layer Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output includes fabrication and drill files.",
+      "evidenceText": "12_FAB.pho; 11_DRILL.drl",
+      "pageTarget": "PCB Fabrication Documentation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source metadata associates the document with product signal HAD/A/F 1417-1717.",
+      "evidenceText": "productSignal: HAD/A/F 1417-1717",
+      "pageTarget": "HAD A F 1417 1717",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The source path identifies the artifact as ADI_GATE V004.",
+      "evidenceText": "ADI_GATE_V004_20180617/PDF/Gerber_ADI_GATE_V004_20180617.pdf",
+      "pageTarget": "ADI GATE V004",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is present; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document title page, approval status, or controlled document metadata is present in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is left empty because the visible June 18, 2018 values are CAM350 output timestamps, not explicitly identified as a controlled document date."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision V004 is inferred from the source path filename rather than from body text."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954391-kf7",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/ES/ADI_POWERBOX_V006_20181107/PDF/ADI_POWERBOX_V006_20181107-GBR.pdf",
+    "canonicalGroupId": "c5bfa02fa913"
+  },
+  "document": {
+    "title": "ADI_POWERBOX_V006_20181107-GBR.pdf",
+    "documentType": "CAM350 PCB fabrication/Gerber output",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V006",
+    "documentDate": "2018-11-07",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CAM350 V 10.0 output listing PCB fabrication layers for ADI_POWERBOX.",
+    "officialUse": "Design history file evidence for electrical hardware PCB fabrication data.",
+    "keyPoints": [
+      "Generated with CAM350 V 10.0 on Wed Nov 07 2018.",
+      "Includes PCB layer files for top, ground, VCC, bottom, solder mask, silk, fabrication, and drill.",
+      "No regulatory authority, standard, approval status, or product model is stated in the source text."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CAM350 V 10.0",
+      "type": "software tool",
+      "evidence": "CAM350 V 10.0 : Wed Nov 07 17:18:08 2018 - (Untitled)"
+    },
+    {
+      "name": "ADI_POWERBOX_V006_20181107-GBR.pdf",
+      "type": "source document",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/ES/ADI_POWERBOX_V006_20181107/PDF/ADI_POWERBOX_V006_20181107-GBR.pdf"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB top layer",
+      "pageTarget": "PCB Fabrication Layers",
+      "evidence": "01_L1(TOP).pho"
+    },
+    {
+      "name": "PCB ground layer",
+      "pageTarget": "PCB Fabrication Layers",
+      "evidence": "02_L2(GND).pho"
+    },
+    {
+      "name": "PCB VCC layer",
+      "pageTarget": "PCB Fabrication Layers",
+      "evidence": "03_L3(VCC).pho"
+    },
+    {
+      "name": "PCB bottom layer",
+      "pageTarget": "PCB Fabrication Layers",
+      "evidence": "04_L4(BOT).pho"
+    },
+    {
+      "name": "PCB drill file",
+      "pageTarget": "PCB Drill Data",
+      "evidence": "11_DRILL.drl"
+    },
+    {
+      "name": "PCB fabrication file",
+      "pageTarget": "PCB Fabrication Drawing",
+      "evidence": "12_FAB.pho"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is CAM350 V 10.0 output generated on November 7, 2018.",
+      "evidenceText": "CAM350 V 10.0 : Wed Nov 07 17:18:08 2018 - (Untitled)",
+      "pageTarget": "CAM350",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output includes top, ground, VCC, and bottom PCB layer files.",
+      "evidenceText": "01_L1(TOP).pho\n02_L2(GND).pho\n03_L3(VCC).pho\n04_L4(BOT).pho",
+      "pageTarget": "PCB Fabrication Layers",
+      "confidence": "high"
+    },
+    {
+      "claim": "The output includes top metal, top mask, top silk, bottom mask, fabrication, and drill files.",
+      "evidenceText": "05_TOP-METAL.pho\n06_TOP-MASK.pho\n07_TOP-SILK.pho\n09_BOT-MASK.pho\n12_FAB.pho\n11_DRILL.drl",
+      "pageTarget": "PCB Fabrication Data",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source file name indicates revision V006.",
+      "evidenceText": "ADI_POWERBOX_V006_20181107-GBR.pdf",
+      "pageTarget": "ADI_POWERBOX",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is stated in the source text; product signal appears only in metadata."
+    },
+    {
+      "severity": "info",
+      "reason": "Title and revision are inferred from sourcePath filename rather than document body text."
+    }
+  ]
+}

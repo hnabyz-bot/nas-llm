@@ -1,0 +1,133 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954390-jv0",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_POWERBOX_V003_20180615/SCH/ADI_POWERBOX_V003_180615.pdf",
+    "canonicalGroupId": "9dd571ae3bc7"
+  },
+  "document": {
+    "title": "ADI POWER",
+    "documentType": "Hardware schematic",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V003",
+    "documentDate": "2018.6.15",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "ADI POWER V003 hardware schematic dated 2018.6.15.",
+    "officialUse": "Design history file hardware schematic for ADI POWER circuitry.",
+    "keyPoints": [
+      "Title block identifies the document as ADI POWER.",
+      "Revision/version is shown as V003 and Rev 003.",
+      "Document date is shown as 2018.6.15 and Friday, June 15, 2018.",
+      "Schematic includes 12V, 5V / 0.8A, GND, LED POWER (NC), and signal lines such as OUT_EXP_REQ and OUT_EXP_ACK."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI POWER",
+      "type": "document title",
+      "evidence": "ADI POWER"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "LM1117IMP-5.0_SOT223",
+      "type": "electronic component",
+      "evidence": "U1 LM1117IMP-5.0_SOT223"
+    },
+    {
+      "name": "TE_5747836-4_D-SUB9_FEMALE",
+      "type": "connector",
+      "evidence": "J3 TE_5747836-4_D-SUB9_FEMALE"
+    },
+    {
+      "name": "TE_5747838-4_D-SUB25_FEMALE",
+      "type": "connector",
+      "evidence": "J2 TE_5747838-4_D-SUB25_FEMALE"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Hardware schematic",
+      "pageTarget": "Hardware Schematic",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_POWERBOX_V003_20180615/SCH/ADI_POWERBOX_V003_180615.pdf"
+    },
+    {
+      "name": "Design history file",
+      "pageTarget": "Design History File",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_POWERBOX_V003_20180615/SCH/ADI_POWERBOX_V003_180615.pdf"
+    },
+    {
+      "name": "5V / 0.8A power output",
+      "pageTarget": "Power Output",
+      "evidence": "5V / 0.8A"
+    },
+    {
+      "name": "12V power input",
+      "pageTarget": "12V Power",
+      "evidence": "12V"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is ADI POWER.",
+      "evidenceText": "Title Size Document Number R e v Date: Sheet o f <Doc> 003 ADI POWER A3",
+      "pageTarget": "ADI POWER",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision/version is V003.",
+      "evidenceText": "ADI POWER V003 2018.6.15",
+      "pageTarget": "ADI POWER V003",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is June 15, 2018.",
+      "evidenceText": "Date: Sheet o f <Doc> 003 ADI POWER A3 1 2 Friday, June 15, 2018",
+      "pageTarget": "ADI POWER",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes a 5V / 0.8A power line.",
+      "evidenceText": "5V / 0.8A",
+      "pageTarget": "Power Output",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes 12V and GND lines.",
+      "evidenceText": "12V GND",
+      "pageTarget": "Power Lines",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic uses LM1117IMP-5.0_SOT223 as component U1.",
+      "evidenceText": "U1 LM1117IMP-5.0_SOT223 VOUT 2 GND 1 VOUT 4 VIN 3",
+      "pageTarget": "LM1117IMP-5.0",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is taken from source metadata productSignal, not from the schematic text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Preprocessed schematic text contains repeated title blocks and placeholder fields such as <Doc>, <RevCo, and <Title>."
+    }
+  ]
+}
