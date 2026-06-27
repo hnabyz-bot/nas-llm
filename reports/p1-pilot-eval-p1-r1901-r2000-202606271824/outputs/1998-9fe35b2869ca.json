@@ -1,0 +1,203 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954383-cp4",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/12. MCU Fimware/firm_1.1.1/FW_Vers.xlsx",
+    "canonicalGroupId": "9fe35b2869ca"
+  },
+  "document": {
+    "title": "FW Version",
+    "documentType": "Firmware version history",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "firm_1.1.1",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Firmware version record for firm_1.1.1 listing changes dated 6/20/18, 7/10/18, and 7/27/18.",
+    "officialUse": "Supports DHF traceability for MCU firmware changes, including register output formatting, FPGA register updates, auto-trigger status reporting, and logging features.",
+    "keyPoints": [
+      "firm_1.1.1 changed register address output values from decimal to hexadecimal notation.",
+      "FPGA register names and addresses were changed for the auto-trigger function.",
+      "Auto-Trigger mode sends real-time status to the PC regarding whether FPGA x-ray image acquisition is possible.",
+      "Log functionality records image acquisition, FPGA or firmware register read/write events, command send/receive events, first firmware connection time after detector power-on, and error times."
+    ]
+  },
+  "entities": [
+    {
+      "name": "firm_1.1.1",
+      "type": "firmware version",
+      "evidence": "FW Version,Date,Contents\nfirm_1.1.1,6/20/18"
+    },
+    {
+      "name": "main.c",
+      "type": "source file",
+      "evidence": "main.c -> ConsoleProc()"
+    },
+    {
+      "name": "ConsoleProc()",
+      "type": "function",
+      "evidence": "main.c -> ConsoleProc()"
+    },
+    {
+      "name": "fpga.h",
+      "type": "source file",
+      "evidence": "fpga.h => 레지스터 이름 변경 및 추가"
+    },
+    {
+      "name": "server.c",
+      "type": "source file",
+      "evidence": "server.c => setfpgaparam(), getfpgaparam()"
+    },
+    {
+      "name": "setfpgaparam()",
+      "type": "function",
+      "evidence": "server.c => setfpgaparam(), getfpgaparam()"
+    },
+    {
+      "name": "getfpgaparam()",
+      "type": "function",
+      "evidence": "server.c => setfpgaparam(), getfpgaparam()"
+    },
+    {
+      "name": "MessageProc()",
+      "type": "function",
+      "evidence": "server.c => MessageProc() 함수 추가"
+    },
+    {
+      "name": "aura_driving/aa/parameterstruct.h",
+      "type": "source file",
+      "evidence": "aura_driving/aa/parameterstruct.h"
+    },
+    {
+      "name": "_aura_common/parameterstruct.h",
+      "type": "source file",
+      "evidence": "_aura_common/parameterstruct.h"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Firmware Version History",
+      "pageTarget": "Firmware Version History",
+      "evidence": "FW Version,Date,Contents"
+    },
+    {
+      "name": "Auto-Trigger Mode",
+      "pageTarget": "Auto-Trigger Mode",
+      "evidence": "Auto-Trigger mode 에서 fpga x-ray image 획득 가능 여부 상태에 대한 실시간 상태 값 PC로 전달"
+    },
+    {
+      "name": "FPGA Register",
+      "pageTarget": "FPGA Register",
+      "evidence": "FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)"
+    },
+    {
+      "name": "Firmware Logging",
+      "pageTarget": "Firmware Logging",
+      "evidence": "<Log 기능 구현>"
+    },
+    {
+      "name": "Detector Firmware Connection",
+      "pageTarget": "Detector Firmware Connection",
+      "evidence": "Detector 전원이 켜지고 F/W 최초 connection 날짜 및 시간"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a firmware version record for firm_1.1.1.",
+      "evidenceText": "FW Version,Date,Contents\nfirm_1.1.1,6/20/18",
+      "pageTarget": "Firmware Version History",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 6/20/18, register address output values were changed from decimal notation to hexadecimal notation.",
+      "evidenceText": "레지스터 어드레스 출력 시 값을 10진수를 16진수로 표기 변경",
+      "pageTarget": "Firmware Register Output Formatting",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 6/20/18 change references main.c ConsoleProc().",
+      "evidenceText": "main.c -> ConsoleProc()",
+      "pageTarget": "ConsoleProc",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 6/20/18, FPGA register names and addresses were changed for the auto-trigger function.",
+      "evidenceText": "FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)",
+      "pageTarget": "FPGA Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA register change involved fpga.h, server.c setfpgaparam(), server.c getfpgaparam(), aura_driving/aa/parameterstruct.h, and _aura_common/parameterstruct.h.",
+      "evidenceText": "fpga.h => 레지스터 이름 변경 및 추가\n server.c => setfpgaparam(), getfpgaparam()\n aura_driving/aa/parameterstruct.h\n _aura_common/parameterstruct.h",
+      "pageTarget": "FPGA Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 7/10/18, Auto-Trigger mode began sending real-time status values to the PC about whether FPGA x-ray image acquisition is possible.",
+      "evidenceText": "Auto-Trigger mode 에서 fpga x-ray image 획득 가능 여부 상태에 대한 실시간 상태 값 PC로 전달",
+      "pageTarget": "Auto-Trigger Mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 7/10/18 Auto-Trigger status change added the MessageProc() function in server.c.",
+      "evidenceText": "server.c => MessageProc() 함수 추가",
+      "pageTarget": "MessageProc",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 7/27/18, log functionality was implemented.",
+      "evidenceText": "<Log 기능 구현>",
+      "pageTarget": "Firmware Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The implemented logging includes image acquisition logs for acquired image date and time, image type, and image acquisition count.",
+      "evidenceText": "영상 획득 관련 로그\n 1) 획득 된 영상의 날짜 및 시간 => RTC 구현 후 설정 (년월일 시분초)\n 2) 획득 된 영상 종류 (Dark 이미지 또는 Bright 이미지)\n 3) 영상 획득 횟수",
+      "pageTarget": "Image Acquisition Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The implemented logging includes FPGA register or firmware setting register logs for write/read date and time, register type, and parameter value.",
+      "evidenceText": "FPGA 레지스터 또는 펌웨어 자체 설정 레지스터 관련 로그\n 1) write 및 read 날짜 및 시간\n 2) write 및 read 레지스터 종류 및 해당 파라미터 값",
+      "pageTarget": "Firmware Register Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The implemented logging includes command send/receive logs between CPU and PC by command and date/time.",
+      "evidenceText": "command 송수신 관련 로그\n 1) cpu <-> pc command 별 송수신 날짜 및 시간",
+      "pageTarget": "Command Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The implemented logging includes the first firmware connection date and time after detector power-on.",
+      "evidenceText": "Detector 전원이 켜지고 F/W 최초 connection 날짜 및 시간",
+      "pageTarget": "Detector Firmware Connection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The implemented logging includes dates and times for errors.",
+      "evidenceText": "각종 Error 날짜 및 시간",
+      "pageTarget": "Firmware Error Logging",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit product model is stated in SOURCE_TEXT; productSignal is provided only as metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit authority or jurisdiction is stated in SOURCE_TEXT; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "No single document date is present; the source lists dated firmware change entries only."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    }
+  ]
+}

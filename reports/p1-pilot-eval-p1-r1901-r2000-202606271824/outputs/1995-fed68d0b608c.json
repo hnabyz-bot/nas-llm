@@ -1,0 +1,146 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954416-14y9",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HARNESS/01-C-4-07.pdf",
+    "canonicalGroupId": "fed68d0b608c"
+  },
+  "document": {
+    "title": "01-C-4-07",
+    "documentType": "Harness wiring / connector pin assignment drawing",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "D-SUB25_MALE harness pin assignment and cable color reference with soldering, molding, and shrink-tube work notes.",
+    "officialUse": "Use as a harness assembly reference for D-SUB25 male connector wiring, signal names, cable colors, and post-soldering molding or shrink-tube operations.",
+    "keyPoints": [
+      "Connector identified as 10126-3000PE (3M) D-SUB25_MALE.",
+      "Work notes include 납땜 후 Molding 작업 and 납땜 후 수축튜브 작업.",
+      "Pin and wire references include TRXP/TRXN signal pairs, VCC, GND, NC, OUT_EXP_REQ, OUT_EXP_REQ_N, OUT_EXP_ACK, and OUT_EXP_ACK_P.",
+      "Cable colors are listed with paired colors such as Green (Orange), Orange (Green), Red (Yellow), Yellow (Red), Pink (Green), and Gray (White)."
+    ]
+  },
+  "entities": [
+    {
+      "name": "10126-3000PE",
+      "type": "connector part number",
+      "evidence": "10126-3000PE (3M) D-SUB25_MALE"
+    },
+    {
+      "name": "3M",
+      "type": "manufacturer",
+      "evidence": "10126-3000PE (3M) D-SUB25_MALE"
+    },
+    {
+      "name": "D-SUB25_MALE",
+      "type": "connector type",
+      "evidence": "D-SUB25_MALE"
+    },
+    {
+      "name": "대한전선",
+      "type": "company or supplier",
+      "evidence": "대한전선"
+    },
+    {
+      "name": "AMP",
+      "type": "company or component brand",
+      "evidence": "AMP"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Harness wiring pin assignment",
+      "pageTarget": "Harness Wiring Pin Assignment",
+      "evidence": "TRXP0 Green (Orange) TRXN0 Orange (Green) TRXP1 White (Blue) TRXN1 Red (Gray)"
+    },
+    {
+      "name": "D-SUB25 male connector",
+      "pageTarget": "D-SUB25 Male Connector",
+      "evidence": "10126-3000PE (3M) D-SUB25_MALE"
+    },
+    {
+      "name": "Post-soldering molding operation",
+      "pageTarget": "Post-Soldering Molding Operation",
+      "evidence": "납땜 후 Molding 작업"
+    },
+    {
+      "name": "Post-soldering shrink tube operation",
+      "pageTarget": "Post-Soldering Shrink Tube Operation",
+      "evidence": "납땜 후 수축튜브 작업"
+    },
+    {
+      "name": "Cable color pair identification",
+      "pageTarget": "Cable Color Pair Identification",
+      "evidence": "Cable Color (Pair Color)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The connector is identified as 10126-3000PE by 3M and described as D-SUB25_MALE.",
+      "evidenceText": "10126-3000PE (3M) D-SUB25_MALE",
+      "pageTarget": "D-SUB25 Male Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a post-soldering molding operation note.",
+      "evidenceText": "납땜 후 Molding 작업",
+      "pageTarget": "Post-Soldering Molding Operation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a post-soldering shrink-tube operation note.",
+      "evidenceText": "납땜 후 수축튜브 작업",
+      "pageTarget": "Post-Soldering Shrink Tube Operation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Harness wiring references include TRXP and TRXN differential-style signal names across numbered positions.",
+      "evidenceText": "TRXP3 2 TRXP2 3 TRXP1 4 TRXP0",
+      "pageTarget": "Harness Wiring Pin Assignment",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The listed signals include OUT_EXP_REQ_N, OUT_EXP_REQ, OUT_EXP_ACK, and OUT_EXP_ACK_P with cable color pair notes.",
+      "evidenceText": "OUT_EXP_REQ_N Yellow (Red) OUT_EXP_REQ Red (Yellow) OUT_EXP_ACK Green (Pink) OUT_EXP_ACK_P Pink (Green)",
+      "pageTarget": "Harness Wiring Pin Assignment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed power and unused pin labels include VCC, GND, and NC.",
+      "evidenceText": "NC GND White (Gray) 10 GND 11 NC 12 VCC",
+      "pageTarget": "Harness Wiring Pin Assignment",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cable color information is represented as cable color with pair color in parentheses.",
+      "evidenceText": "Cable Color (Pair Color)",
+      "pageTarget": "Cable Color Pair Identification",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date is present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version is present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority, jurisdiction, or standard is present; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product model is not explicitly present in the source text; productSignal appears only in metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction quality is low, with fragmented pin numbering and repeated cable color lines that make some pin-to-signal mappings ambiguous."
+    }
+  ]
+}
