@@ -1,0 +1,527 @@
+queueId: ingest-1781569954422-1amn
+sourcePath: raw/sources/Project/01_BLUE/01_G1417CW/DMR/11. 승인원/구성품/엠플러스/Approval spec sheet_MBP-3S1P3330_HAZ_1_0_20250821 (1).pdf
+combinedPath: raw/sources/_preprocessed/Project/_combined/5b104948cb38/Approval spec sheet_MBP-3S1P3330_HAZ_1_0_20250821 (1)__5b104948cb38_combined.txt
+canonicalGroupId: a8c185e3700d
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1931
+
+SOURCE_TEXT
+SPECIFICATION FOR APPROVAL
+(Rechargeable Li-ion Battery Pack)
+Model Name : MBP-3S1P3330-HAZ
+Version : Rev0.1
+Date : 2024. 08. 21
+Application : Li-ion Battery(3S1P)
+11.55Vdc, Typical 3410mAh, 39.39Wh
+Minimum 3330mAh, 38.46Wh
+H&ABZY
+Issued Checked Approved
+Issued Checked Approved
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+Revision History
+Date Revision Item Contents Remark
+2024.07.19 0.1 R First Issue Tentative
+2025-08-21 1.0 Initial Approval
+Symbols in column of Item represent D: Deletion, A: Addition, R: Revision
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+CONTENTS
+1. Scope
+2. Descriptions and Model name
+3. Basic Information of the cell used in the pack
+4. Pack Specification
+4.1 Electrical specification
+4.2 Physical Specification
+4.3 Safety Specification
+5. Performance and test
+5.1 Test Sampling and environmental condition
+5.2 Standard test conditions
+5.3 General Performance
+5.4 Safety Performance
+5.5 Mechanical Performance
+6. Parts List
+7. Drawings of product and parts
+7.1 Drawing of Pack outline dimension
+7.2 Drawing of Core Pack Assemble
+7.3 Drawing of PCM outline dimension
+7.4 Drawing of Label outline dimension
+8. Packing Method
+8.1 Lot No. Marking
+8.2 Master box packing
+9. Caution and prohibition
+10. Long term storage
+11. Warranty
+[Appendix]
+A. Handling Instruction Guide for Li- Battery Pack
+B. Block Diagram
+C. Schematic
+D. Component Specification
+E. Other Data
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+1. Scope
+This product Specification (“Specification” here in after) covers the requirements for the rechargeable Lithium
+ion (Polymer) battery pack(“pack” hereinafter) manufactured and supplied by mPLUS Electronics Co.,Ltd.
+The pack contains Lithium- ion battery cell, safety devices and protection circuit units.
+All tests conducted at 25deg.C, under standard charge and discharge conditions.
+2. Descriptions and Model name
+2.1 Description Rechargeable Li-Polymer battery pack
+2.2 Battery cell configuration 3S1P (11.55V 3330mAh)
+2.3 Model name MBP-3S1P3330-HAZ
+3. Basic information of the cell used in the pack
+3.1 Manufacturer DONGGUAN VEKEN BATTERY
+3.2 Cell type 396088PU
+3.3 Chemistry Lithium-Polymer
+3.4 Voltage Nominal 3.85V
+3.5 Capacity Typical 3410mAh
+Minimum 3330mAh
+4. Pack Specification
+4.1 Electrical specification
+4.1.1 Capacity Typical 3410mAh
+Minimum 3330mAh
+4.1.2 Voltage Nominal 11.55V
+4.1.3 Charging Method CC-CV (Constant-voltage with limited current)
+4.1.4 Charging Voltage 12.6V
+4.1.5 Charging Current Standard 0.67A
+Maximum 2.3A
+Cut-off 68mA
+4.1.6 Discharging Current Standard 0.67A
+Maximum 3.35A
+4.1.7 Discharging cutoff voltage 9.0V
+4.1.8 Internal Resistance ≤250mΩ
+4.1.9 Operating Temperature Standard Charge 0 to 45℃
+Standard Discharge -20 to 60℃
+4.1.10 Storage Temperature -15 ~ 25℃ ≤1 year
+-0 ~ 30℃ ≤3 Months
+-20 ~ 45 ℃ ≤1 Month
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+4.1.11 Storage Humidity 65% RH (not condensed)
+4.2 Physical Specification
+4.2.1 Dimension T*W *L(mm) 6.8±0.1(T) X 201.5±0.1(W) X 90±0.1(L)
+(Refer to Outline dimension drawing)
+4.2.2 Weight ≤ 230g
+4.2.3 Terminal (Output) Number 7
+Function , Power(+)2,DT,SDA,SCL,Power(-)2
+4.3 Safety Specifications
+1) Over charge detection voltage : 4.20V ± 25mV
+2) Over charge release voltage : 3.90V ± 25mV
+3) Over charge detection delay Time : 2.0S ± 0.5S
+4) Over discharge detection voltage : 3.00V ± 25mV
+5) Over discharge release voltage : 3.20V ± 25mV
+6) Over discharge detection delay Time : 2S ± 0.5S
+7) Charge over current detection current : >3.5A
+Reset: Detect discharge, Current() <-100mA
+8) Charge over current detection delay Time : 6.0S ± 0.5S
+9) Discharge over current detection current : < -3.5A
+Reset: Detect charge, Current >200mA
+10) Discharge over current detection delay Time : 3.0S ± 0.5S
+11) Short Circuit detection : -44.4A(Delay 427uS)
+Reset: Detect discharge, Current() >-100mA
+12) Charge over temperature detection : Temperature()>45℃, <0℃,
+Reset: 5℃~40℃
+13) DisCharge over temperature detection : Temperature()>60℃, <0℃,
+Reset: 5℃~55℃
+14)Cell Imbalance detection : Max V-MinV >1.0V(3.0S±0.5S),
+Reset: None
+15) Consumption current Operating mode : < 600㎂
+Sleep mode : <100uA
+Shutdown mode : <10uA(1.75/Cell)
+*According to PCM of Part List the Safety Specification possible.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+5. Performance and Test
+5.1 Test Sampling and environmental condition
+5.1.1 Test sample condition
+The battery used for the test shall be manufactured and delivered no later than one month before.
+5.1.2 Environmental condition
+The test shall be performed at 23±2℃ and 65±15%RH
+5.1.3 Test equipment condition
+The grade of voltmeter and ammeter used in the test shall be higher than class 0.5, a high Impedance
+type.
+5.2 Standard test conditions
+5.2.1 Standard charge
+“Standard charge” means charging the pack with a charge current 0.2C5A and constant voltage
+12.60V till charge current is less than 0.02C
+5.2.2 Standard discharge
+“Standard discharge” means charging the pack with discharge current 670mA with 9.0V Cut-off
+at 23℃Within 1hour after the standard charge.
+5.3 General Performance
+5.3.1 Initial capacity
+Perform the standard charge and discharge cycling for 3 times, and measure the last Discharge
+capacity
+*The initial capacity shall be higher than Minimum capacity (Min. Capacity is 85% nominal Capacity)
+5.3.2 Cycle life
+After 300 cycles of standard charge and discharge as below conditions, the pack is
+Measured for the duration time
+*each charge and discharge step include 10minutes rest time
+*Last discharge capacity after 300th cycle shall be higher than 70% minimum capacity
+5.3.3 Discharge capacity with temperature
+The means relative value of discharge capacity at various temperature compared with the standard
+Discharge capacity as 100%
+*Pack is charge by standard charge condition.
+*Pack is discharge by standard discharge condition with various temperature.
+Relative capacity 30% 87% 87%
+At -10℃ 23℃ 40℃
+5.3.4 Storage
+The fully charged pack by the standard charge condition was stored at 25±2℃ for 30 day
+And the capacity be measured by the standard discharge condition.
+*Remaining Capacity shall be higher than 50% of the minimum capacity
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+5.4 Safety Performance
+5.4.1 Overcharge test
+Test method: Apply charge voltage 15V to the pack.
+Criteria: PCM shall operate and stop charging
+NO damage such as leakage, flame, or fire was allowed.
+5.4.2 Eternal short circuit test
+Test method: Short-circuit the standard charged pack by connecting positive and Negative
+Terminals with 50Ω wire for 1 hour.
+Criteria: PCM shall operate and stop charging
+NO damage such as leakage, flame, or fire was allowed.
+5.4.3 Over discharge test
+Test method: Discharge the pack to less than 7.50V
+Criteria: PCM shall operate and stop charging
+NO damage such as leakage, flame, or fire was allowed.
+5.5 Mechanical Performance
+5.5.1 Vibration Test
+Test method: This means the endurance of the pack against vibration.
+Frequency and amplitude : 10Hz→ 30Hz, 0.38mm ; 30Hz→ 55Hz , 0.19mm
+Sweep speed : 1 ± 0.055Hz/min
+Criteria: NO damage such as leakage, flame, or fire was allowed.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+6. Parts List
+6.1 Battery Pack
+No. Part name Specification Quantity Maker Remark
+1 Cell VK396080 3 Veken
+2 PCM MSM3007C 1
+3 CASE Top / Bottom 1
+4 Nomex tape 30*70*0.125T 8
+5 Terminal 1827684-7P 1 TE
+6 BatteryLabel MBP-3S1P3330-HAZ,
+119.4 X 59.4, Silver PET 1
+7 Sticker Label 42 X 28 X 0.1T YUPO Paper 1
+8 Poly Bag PE bag
+0.05(T) X 72(W) X 115(L),(Unit: mm)
+9 Master Box Ass’y 400(H) X W600(W) X 420(L) 1
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+6.2 PCM
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+7. Drawings of product and parts
+7.1 Drawing of Pack outline dimension
+[Note]
+SIZE(mm):6.8±0.1(T) X 201.5±0.1(W) X 90±0.1(L)
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+7.2 Drawing of Core Pack Assemble
+Nomex tape Cell VK396080 terminal PCM ( MSM3007) CASE
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+7.3 Drawing of PCM outline dimension (Layout)
+PCM Layout
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+7.4 Drawing of Label outline dimension
+*Subject to change depending on certification progress.
+8. Packing Method.
+8.1 Lot No. Marking:
+S/N: YYYY.MM
+S/N : YYYY MM
+Year Month
+Model: MBP-1S1P1150-ISS 1ICP6/34/50
+Rating: 3.7Vdc, 1150mAh / 4.255Wh
+A/S :XX-XXX-XXX-XXX S/N : YYYY.MM.DD
++
+-
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+8.2 Inner box packing
+8.2.1 Packing (Inner box) Size (mm): 290WX195LX70H
+8.2.2 Packing Weight: 1.0<Kg
+8.2.3 Packing Quantity: 1EA
+*The battery pack shall be shipped in about 30% charged state.
+Into the PE bag
+PE bag
+0.05(T) X 72(W) X 115(L)
+(Unit: mm)
+Packing Guide Form (1PCS Battery)
+Into the Packing Guide
+Into the Inner box(290WX195LX70H)
+1) The batteries are individually packaged.
+2) The batteries are packaged with a buffer.
+3) The batteries are safely packaged.
+4) The batteries are not conflicted each other.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+8.3 Master box packing
+8.3.1 Packing (Master box) Size (mm): 400(H) X 600(W) X 420(L)
+8.3.2 Packing Weight: 9.5<Kg
+8.3.3 Packing Quantity: 20EA
+<Master Box Assembly> Into the outbox
+(20PCS Battery – 10PCS X 2)
+Packing Size (mm): 400(H) X 600(W) X 420(L)
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+9. Caution and prohibition
+Before using and handling the pack, see carefully attached “Handling lnstruction for Rechargeable
+Lithium ion Pack”.
+For safety reasons rechargeable batteries are shipped in a low remaining capacity state.
+Charge before using.
+New pack is the initialized. If used without full charge and discharge for long time, the accuracy
+loss occurred. Recover such packs to original performance through repeating
+Several cycles of full charging and discharging
+10. Storage for a long term
+To be stored If the pack is for a long term (3 months or more), it is strongly recommended that the pack
+be preserved under dry and low temperature atmosphere conditions.
+11. Warranty
+Manufacturer will be responsible for replacing the battery pack against defects or poor workmanship
+for 6 months from the date of shipping Any other problem caused by malfunction of the equipment
+or misuse of the battery is battery is not covered under this warranty.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+[Appendix A]
+1. General
+Battery packs supplied by mPLUS Electronics Co., Ltd. have to be handle carefully according to the
+specification. Here are some more to be followed.
+2. Storage of pack
+The packs are requested to be stored under the following conditions:
+a. Indoor storage in a cool circumstances without direct sun light on the packs or cartons.
+b. Store batteries in a dry location with low humidity, and a temperature range of - 20°C to +30°C. In case
+of the long term storage
+a. As long-term storage can accelerate battery self-discharge and lead to the deactivation of the batteries.
+To minimize the deactivation effect, store battery packs in a temperature range of +10°C to +30°C.
+b. When charging for the first time after long-term storage, deactivation of the packs may have led to
+decreased capacity. Recover such packs to original performance through repeating several cycles of
+full charging and discharging.
+c. When store packs for more than 6 month, charge at least once charring require per 6 months to
+prevent leakage and deterioration in performance due to self-discharging.
+3. Charging pack
+a. Use suitable charger with the specified voltage and current. We strongly recommend the smart battery
+charger. We can recommend the usage or specification of the charger manufacturing.
+If you want to get the information about it, please contact us.
+b. Never attempt reverse charging. Charring with polarity reversed can cause a reversal in battery polarity,
+causing gas pressure inside of the battery to rise, which can be lead to leakage of the batteries in the
+pack.
+c. Avoid overcharging. Repeated overcharging can be lead to deterioration in pack performance. And
+Over-heat occurred.
+d. Charging efficiency drops at temperatures above 40°C.
+4. Protection from unexpected damaged to pack
+a. (+) and/or (-) terminals must not be connected in metal wire, necklace, chains.
+b. Do not drop packs from height in order to prevent them from possible malfunction or damage.
+c. Do not twist or bend packs in order to prevent possible damage.
+5. For Safety
+a. Do not disassemble packs.
+b. Do not use pack when something abnormal found such as smells, deformation, discoloration, and so on.
+c. Do not re-use Li-ion cells or other parts after removing from the packs.
+d. When the electrolyte leakage occurs, do not touch the liquid.
+e. Once watered, packs may have potential malfunctions. Do not use those packs.
+f. Do not have packs in the hot-temperature (60°C or more).
+g. Do not put packs into fire.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+h. Do not crush/nail pack.
+i. Do not apply solder directly to packs.
+j. Do not allow children to replace batteries without adult supervision
+6. Disposal guidance of battery
+a. Don't throw away your batteries, separate them with recycled items.
+b. Do not incinerate battery and put in the fire. Heat may cause explosion and fire.
+c. Do isolate them each other when disposing the secondary batteries having different electrochemical
+systems.
+d. Dispose of the battery in discharged state to prevent heat by short circuiting.
+e. Disposal guidance of batteries may depend on each country and region, there for dispose batteries in
+accordance with the regulations for each country and region.
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+[Appendix B]
+Block Diagram
+1. Connection Diagram
+2. Terminal Descriptions
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+[Appendix C]
+Schematic
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+[Appendix D]
+Component Specification
+
+PRODUCT SPECIFICATION Rev. 0.1
+Date 2025-08-21
+MBP-3S1P3330-HAZ
+(Rechargeable Li-Polymer Battery Pack 11.55Vdc, 3330mAh) Doc. No. MPSP2508-04
+[Appendix E]
+Other Data
+
+1/2
+Ref. Certif. No.
+DK-158201-UL
+IEC SYSTEM FOR MUTUAL RECOGNITION OF TEST CERTIFICATES FOR ELECTRICAL EQUIPMENT (IECEE) CB SCHEME
+CB TEST CERTIFICATE
+Product Rechargeable Li-ion Battery
+Name and address of the applicant MPLUS ELECTRONICS CO LTD
+152-10 Muchon-ro Bubal-eup Icheon-si, Gyeonggi-do, 17324
+Republic of Korea
+Name and address of the manufacturer MPLUS ELECTRONICS CO LTD
+152-10 Muchon-ro Bubal-eup Icheon-si, Gyeonggi-do, 17324
+Republic of Korea
+Name and address of the factory
+Note: When more than one factory, please report on page 2
+MPLUS ELECTRONICS CO LTD
+152-10 Muchon-ro Bubal-eup Icheon-si, Gyeonggi-do, 17324
+Republic of Korea
+Additional Information on page 2
+Ratings and principal characteristics 11.55Vdc, 3330mAh, 38.46Wh
+Trademark / Brand (if any) N/A
+Customer’s Testing Facility (CTF) Stage used
+Model / Type Ref. MBP-3S1P3330-HAZ, 3ICP4/60/80
+Additional information (if necessary may also be
+reported on page 2) National Differences: EU Group Differences, KR
+Additional Information on page 2
+A sample of the product was tested and found
+to be in conformity with IEC 62133-2:2017, IEC 62133-2:2017/AMD1:2021
+As shown in the Test Report Ref. No. which forms
+part of this Certificate C24B017-M0A0 issued on 2024-09-30
+This CB Test Certificate is issued by the National Certification Body
+ UL Solutions (US), 333 Pfingsten Rd IL 60062, Northbrook, USA
+ UL Solutions (Demko), Borupvang 5A DK-2750 Ballerup, DENMARK
+ UL Solutions (JP), Marunouchi Trust Tower Main Building 6F, 1 -8-3 Marunouchi, Chiyoda-ku, Tokyo 100-0005, JAPAN
+
+ UL Solutions (CA), 7 Underwriters Road, Toronto, M1R 3B4 Ontario, CANADA
+For full legal entity names see www.ul.com/ncbnames
+Date: 2024-10-02 Signature:
+Thomas Wilson
+
+2/2
+Ref. Certif. No.
+DK-158201-UL
+Additionally evaluated to:
+EN 62133-2:2017, EN 62133-2:2017/A1:2021
+Additional information (if necessary)
+ UL Solutions (US), 333 Pfingsten Rd IL 60062, Northbrook, USA
+ UL Solutions (Demko), Borupvang 5A DK-2750 Ballerup, DENMARK
+ UL Solutions (JP), Marunouchi Trust Tower Main Building 6F, 1 -8-3 Marunouchi, Chiyoda-ku, Tokyo 100-0005, JAPAN
+ UL Solutions (CA), 7 Underwriters Road, Toronto, M1R 3B4 Ontario, CANADA
+For full legal entity names see www.ul.com/ncbnames
+Date: 2024-10-02 Signature:
+Thomas Wilson
+
+2024-09-30
+Hyunseok Wang
+MPLUS ELECTRONICS CO LTD
+152-10 Muchon-ro Bubal-eup
+Icheon-si, Gyeonggi-do, 17324, KR
+Notice of Completion (NoC) and authorization to apply the UL Mark
+Your reference:
+Our reference: File MH48478, Volume 1 Order: 15434176
+Project: 4791437314
+Project scope: USR: 4791437314 1.1 [MH48478] [UL 2054] Rechargeable Li-ion Battery Pack,
+MBP-3S1P3330-HAZ, BASIC in Vol.1, Sec.11
+Dear Hyunseok Wang:
+We appreciate that you have a choice of certification providers and thank you for choosing UL Solutions.
+We have completed the investigation under the above project and confirmed compliance of your product(s) with UL
+Mark requirements.
+This letter temporarily supplements the UL Follow-Up Services Procedure and serves as authorization to apply the UL
+Mark at the factory location(s) identified on the Authorization Page of UL Solutions File MH48478, Volume 1. You are
+required to send a copy of this letter to all manufacturing locations authorized under UL Solutions File MH48478,
+Volume 1.
+The Follow-Up Services Procedure covering your product(s) will typically be provided by UL Solutions within 10
+business days. Any information and documentation provided to you involving the UL Mark services are provided on
+behalf of UL LLC or any authorized licensee. The UL Solutions certification directory is updated with active
+certifications shortly after projects are reviewed and completed. Please visit https://productiq.ulprospector.com/ to
+search for the certification.
+Products that bear the UL Mark must be identical to those submitted to UL for evaluation and certification and must
+comply with the Follow-Up Services Procedure covering your product(s). Additional requirements related to the
+responsibilities of the Applicant and Manufacturer can be found under Customer Requirements documents at
+www.ul.com/fus.
+A UL Solutions certification is a valuable marketing tool meaning your product or company has successfully met
+stringent requirements. We encourage you to use your UL Mark and certification in your marketing activities. We are
+happy to provide guidance on how best to promote your UL certification. Our Certification Achievement Kit
+demonstrates marketing and promotional concepts to help you best represent your UL certification.
+UL Solutions is committed to providing you with an exceptional customer experience. You may receive an email from
+ULSurvey@feedback.ul.com inviting you to provide feedback. Your survey rankings and comments regarding the
+experience are important to us. We are always seeking ways to improve in any areas we can, and your feedback and
+comments are vital to this process.
+If you have any questions, please contact me or any of our customer service representatives at www.ul.com/contact-
+us.
+
+UL.com/Solutions
+Sincerely,
+Soojin Kim
+Staff Engineer
+UL Solutions
+Soojin.Kim@ul.com
+26c635a4d56b4355a308f872409d5177
+David Piecuch
+UL Mark Certification Program Manager
+UL LLC
+David.Piecuch@ul.com

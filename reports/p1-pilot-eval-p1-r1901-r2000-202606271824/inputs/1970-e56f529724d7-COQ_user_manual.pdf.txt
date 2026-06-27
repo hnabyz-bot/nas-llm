@@ -1,0 +1,272 @@
+queueId: ingest-1781569954421-19u9
+sourcePath: raw/sources/Project/02_CYAN/2. DMR/08. 디텍터 구동 Software/XAS3/Extension/ImageJ/plugins/coq/COQ_user_manual.pdf
+combinedPath: raw/sources/_preprocessed/Project/_combined/3ff75894ddf2/COQ_user_manual__3ff75894ddf2_combined.txt
+canonicalGroupId: e56f529724d7
+productSignal: CYAN
+authoritySignal: general
+pilotRank: 1970
+
+SOURCE_TEXT
+1/10
+COQ: an ImageJ plugin for the physical characterization
+and quality checks of digital detectors.
+This software was developed for assisting users in achieving the physical characterization
+of X-ray digital systems and some image quality checks. It can be used for calculating
+various physical parameters such as the response curve, Modulation Transfer Function
+(MTF), Noise Power Spectra (NPS), Detective Quantum Efficiency (DQE). It also includes
+the computation of some image quality checks: defective pixel analysis, uniformity, dark
+analysis, and lag.
+DISCLAIMER OF WARRANTY
+THIS IMAGEJ PLUGIN IS PROVIDED “AS IS” AND WITHOUT WARRANTIES AS TO
+PERFORMANCE OR MERCHANTABILITY. THIS PLUG-IN IS PROVIDED WITHOUT ANY
+EXPRESS OR IMPLIED WARRANTIES WHATSOEVER. BECAUSE OF THE DIVERSITY OF
+CONDITIONS AND HARDWARE UNDER WHICH THIS PLUGIN MAY BE USED, NO
+WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE IS OFFERED. THE USER IS
+ADVISED TO TEST THE JAVA PLUGIN THOROUGHLY BEFORE USING IT. THE USER MUST
+ASSUME THE ENTIRE RISK OF USING THE PLUGIN.
+THIS PLUG-IN IS INTENDED TO BE USED BY QUALIFIED MEDICAL IMAGING
+PROFESSIONALS WHO UNDERSTAND THE ALGORITHMS BEING IMPLEMENTED AND THE
+RESULTS PRESENTED. IT SHOULD NOT BE USED TO MAKE DECISIONS AFFECTING THE
+CLINICAL MANAGEMENT OF PATIENTS. THERE WILL CERTAINLY BE BUGS, AND NO
+GUARANTEE CAN BE GIVEN FOR THE OVERALL STABILITY OF THE PACKAGE.
+THEREFORE, IT SHOULD NOT BE INSTALLED ON ANY MISSION CRITICAL COMPUTER
+SYSTEM. IN PARTICULAR, IT SHOULD NOT BE INSTALLED ON SYSTEMS CLASSIFIED AS
+"MEDICAL DEVICES" BY ANY COMMONLY ACCEPTED DEFINITION OF THE TERM.
+1. Installation
+If ImageJ is not installed in your computer, download it from
+http://imagej.nih.gov/ij/download.html and install it following the instructions.
+If you have already installed an old version of ImageJ (version 1.43 or older) in your
+computer, you need to upgrade ImageJ to the latest version. You can upgrade ImageJ, by
+downloading and installing the latest version from http://imagej.nih.gov/ij/download.html.
+If you have already installed ImageJ (version 1.44 or later) in your computer, you just need
+to download the plugin, without the need of upgrading ImageJ.
+Download COQ_jar from http://www.medphys.it/down_dqe.htm
+Place COQ_.jar in the plugins folder of ImageJ.
+1.1. Technical requirements
+For a correct functioning of the COQ plugin the following requirements should be satisfied:
+• ImageJ installed (version 1.44 or later).
+• Screen resolution: at least 1280×800.
+
+2/10
+2. Application GUI
+3. General buttons
+Below the ImageJ toolbar there are the following general buttons (as reported in the figure
+below).
+1. “Open” & “Close” buttons
+Load or close image/s.
+2. “Adjust” button
+To adjust window & level of the opened image
+3. “Save Lin.” button
+To save the eventually linearized image.
+4. “Magic ROI” button
+Put a ROI of selected size on the image. To select the size of the ROI use the
+“Config” button.
+5. “y=x” or “Custom” radio button
+If “y=x” is selected the image has not been linearized, otherwise if “Custom” is
+selected, the image has been linearized.
+General buttons
+Start panel
+Control panel
+Config preference
+panel
+Image parameters
+Results panel
+
+3/10
+4. Start panel (upper left)
+In this panel the user must select the field of application of further quality controls:
+1. Radiology
+a. CR (Computed Radiography)
+b. DR (Direct Radiography)
+2. Mammography
+c. CR (Computed Radiography)
+d. DR (Direct Radiography)
+3. Angiography
+e. DR (Direct Radiography)
+5. Config preference panel
+The button “Config” allows to enter the configuration menu show in the following figure.
+The preferences’ menu is composed by:
+• Open multiple file:
+o On: multi image selection is active in “Open” button [below ]
+o Off: only 1 image at time can be opened with “Open” button
+• Compute using external file:
+o On: the user can use external files (previously saved) to calculate DQE
+o Off: no external file selection will be proposed
+• Import RAW…:
+o On: the user can import also
+raw images. Further
+information like number of
+rows (Height), columns
+(Width), Offset to first image,
+Number of images, Gap
+between images, etc… are
+then required.
+• Delete current Slice:
+o On: single image deleting is active within “Close” button
+o Off: “Close” button will delete all the opened images
+
+4/10
+• Modify image for Stack
+o On: all the image will be resized to the same size to create a stack of images
+o Off: if images have different dimensions a stack cannot be created and a
+window for each image will be opened
+• Magic Roi
+o Size (in pixel) of default ROI to put on the image
+• CNR (Contrast-to-Noise Ratio)
+o Number of ROI
+ Select 2 ROIs (for mammography for example) or 5 ROIs
+o Size of ROI
+ Select size of ROIs (in pixel)
+o Distance between ROI
+ Select default distance between ROIs (in pixel)
+• 1D NNPS: the 1D NPS can be extracted from the 2D NNPS in four different ways
+o Radial: considering the entire spectrum
+o Horizontal: on the horizontal direction
+o Vertical: on the vertical direction
+o If both Horizontal and Vertical are selected, an average on the two directions
+is considered
+Push the “Save” button to save the configuration parameters.
+6. Control panel
+• Response curve
+i. Purpose: to calculate the relationship between detector dose and pixel value
+in a range compatible with clinical conditions
+ii. Procedure:
+1. Open (using “Open” button) the images you acquired (at least 4 images to
+have an accurate fit).
+2. Place a ROI of about 2 cm x 2 cm in a central position of the images.
+3. Click “Calculate” button and a new window will open.
+4. For each image insert the Air Kerma in μGy and choose the curve type
+between:
+a. Linear:
+[y = a + b·x]
+b. Logarithmic 2:
+[y = a + b·log(1+c·x)]
+c. Logarithmic 3:
+[y = a + b·log(x)]
+d. Square Root:
+[y= a + b·sqrt(x)]
+5. Then click OK
+
+5/10
+6. In Result panel will be shown the fitting results (parameters a,b, (c) and
+the squared correlation coefficient R2) of the Response curve (or
+Conversion function).
+7. Using “Export” button results can be saved in a *.csv file.
+8. From now on, the “Custom” radio button will be selected, the selected
+fitting function is reported and all the images will be linearized in dose.
+• DQE (Detective Quantum Efficiency)
+i. Purpose: to calculate detector quantum efficiency measuring the Modulation
+Transfer Function (MTF) and the Noise Power Spectrum (NNPS)
+ii. Procedure
+1. MTF
+a. Vert. Edge (Vertical Edge): the procedure is formally identical as for
+Hor. Edge.
+b. Hor. Edge (Horizontal Edge). Select a rectangular ROI along the edge
+(i.e.: yellow ROI in the following figure). This ROI selects only the length
+along the edge. The profile length in subpixel size (defined as the pixel
+pitch in mm divided by 10) will be selected within the MTF new window
+(pop-up menu).
+
+6/10
+c. Ver. Slit (Vertical Slit)
+d. Hor. Slit (Horizontal Slit): Select a rectangular ROI along the slit (i.e.:
+yellow ROI in the following figure). This ROI must be positioned, in
+order to select the area of the image where the slit is located. Check if
+the pixel size (in mm) shown in the MTF new window (pop-up menu) is
+correct, otherwise write the correct value in the text box.
+2. NNPS
+a. Open the image/s to analyze and select a ROI (i.e.: 1024 × 1024 pixels)
+
+7/10
+b. Click “NNPS” button and a new window will be opened:
+i. Check that “Pixel size (mm)” is correct
+ii. “NNPS fragment size” is the size of the running subROI
+iii. “Number of lines to omit for NNPS” is the number of lines in the
+proximity of the principal axes that will not be considered for NNPS
+estimation
+iv. “Number of lines to use for NNPS” is the number of lines near the
+axes (starting from the first line not excluded, see point iii) that will
+be considered for NNPS estimation
+v. Enabling “Show 2D NNPS” a 2D representation is shown in the
+plot panel (in the left)
+
+8/10
+3. Compute DQE
+a. Select the right “X-RAY BEAM” (RQA 3, RQA 5, RQA 7, and RQA 9 are
+yet tabulated and for those beams SNR2in is automatically compiled,
+otherwise it should be inserted manually)
+b. Select the Air Kerma in μGy
+c. Click “OK” button to calculate DQE.
+• Bad Pixel
+i. Purpose: to analyze an image uniformly irradiated to check the accuracy of the
+defective pixel/lines correction in the preprocessing stage.
+ii. Procedure:
+1. Open the image to analyze
+2. Click “Calculate” button to analyze the image within 10 mm × 10 mm ROIs. A
+defective detector element is an element of the ROI where the absolute
+value deviates more than 20% from the mean pixel value of the ROI
+elements.
+3. The number of bad pixels and their location (x,y coordinates) are calculated
+and displayed in the “Result” panel.
+
+9/10
+• Uniformity
+i. Purpose: to test the flat field correction by evaluating a uniform flat image over
+the full area of the detector
+ii. Procedure:
+1. Open the image to analyze
+2. Click “Calculate” button to analyze the image within 30 mm × 30 mm ROIs
+overlapped by ½ ROI.
+3. Local Signal Non-Uniformity (LSNU), Global Signal Non-Uniformity (GSNU),
+Local SNR Non-Uniformity (LSNRNU), and Global SNR Non-Uniformity
+(GSNRNU) are calculated and displayed in the “Result” panel.
+4. The Reference limits for LSNU, GSNU, LSNRNU, and GSNRNU are
+respectively: 4%, 8%, 8%, and 20%.
+• Dark analysis
+i. Purpose: to assess the intensity of intrinsic noise in the system
+ii. Procedure:
+1. Open the image to analyze
+2. Click “Calculate” button to analyze the image within 10 mm × 10 mm ROIs. A
+defective detector element is an element of the ROI where the absolute value
+deviates more than 20% from the mean pixel value of the ROI elements.
+• Lag
+i. Purpose: to evaluate the severity of any artifact due to previous exposure to the
+detector.
+ii. Procedure:
+1. For additive lag open two images: first an irradiated image with a test
+phantom (e.g., the edge used for the MTF calculation) and then a
+nonirradiated image. For multiplicative lag open three images: first an image
+irradiated with a test phantom, and then two uniform images with no
+phantom, one acquired before, and one after the irradiated test image. Press
+“Continue”.
+2. Move the first ROI within the phantom and press “Continue”.
+3. Move the second ROI outside the phantom and press “Continue”.
+• AGD/CNR (for mammography only)
+i. Purpose: to estimate the AGD and the contrast-to-noise ratio (CNR), in order to
+correlate image quality to patient dose in mammography.
+ii. Procedure:
+1. Select the images (at least 2) with different PMMA thicknesses.
+For AGD:
+2. Select whether to use the ESAK data estimated from the tabulated data or
+the entrance dose extracted from the DICOM file.
+Note: if one wants to modify the data for calculating the AGD, set the “Compute
+using external file” option to “On” from the “Config” panel, and then provide a .csv
+file containing the two tables for “HVL” and “Tube output” (see for example the
+Data_AGD.csv file present in the coq.zip archive).
+For CNR:
+2. Select the number and size of the ROIs to be used.
+3. Move the ROI on the right (when 2 ROIs are used) or on the center (when 5
+ROIs are used) within the phantom and press “Continue”.
+4. Repeat point 3 for all the images.
+
+10/10
+References
+1) International Electrotechnical Commission. Medical electrical equipment: characteristics of digital x-ray
+imaging devices—part 1: determination of the detective quantum efficiency. Document no. 62220-1.
+Geneva, Switzerland: International Electrotechnical Commission, 2003
+2) A. Nitrosi, M. Bertolini, G. Borasi, A. Botti, A. Barani, S. Rivetti, and L. Pierotti. “Application of QC_DR
+Software for Acceptance Testing and Routine Quality Control of Direct Digital Radiography Systems:
+Initial Experiences using the Italian Association of Physicist in Medicine Quality Control Protocol”,
+Journal of Digital Imaging 22(6): 656-666, 2009.
+3) B. Donini, S. Rivetti, N. Lanconelli, M. Bertolini, “Free software for performing physical analysis of
+systems for digital radiography and mammography”, Med. Phys. 41 (5): 051903, 2014.

@@ -440,3 +440,11 @@ Next P1 bundle:
 - note: ranks 1829 and 1898 passed on direct retry after transient JSON/schema
   failures; rank 1885 required chunked fallback
 - ops commit: `6f52632 feat: complete P1 ranks 1801-1900 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1901-r2000-202606271824`
+- rank range: 1901-2000
+- selected representatives: 100
+- total normalized chars: 8,658,134
+- extraction status: not started at this checkpoint

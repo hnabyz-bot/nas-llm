@@ -1,0 +1,2011 @@
+queueId: ingest-1781569954421-1a5f
+sourcePath: raw/sources/Project/01_BLUE/01_G1417CW/DMR/11. 승인원/구성품/대안일레콤/DEPS126002-승인원(Battery_Recharger)20250714 (3).pdf
+combinedPath: raw/sources/_preprocessed/Project/_combined/108ec5ce6276/DEPS126002-승인원(Battery_Recharger)20250714 (3)__108ec5ce6276_combined.txt
+canonicalGroupId: b8e26c53d6c6
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1930
+
+SOURCE_TEXT
+Approval Sheet
+Description Battery Recharger 승인일자 2025.07.14
+Model Name DEPS126002 REVISION 00
+EDEP210116003 1 Daean Elecom
+Battery Recharger
+DEPS126002
+Daean Elecom
+Approval History
+Daean Elecom
+NO. Type Name Sign Date NO. Type Name Sign Date
+1 기안
+(Create)
+정진환/부장
+연구소 2025.07.14 1
+2 합의
+(Consent)
+문진혁/차장
+생산 2025.07.14 2
+3 합의
+(Consent)
+박민순/부장
+구매 2025.07.14 3
+4 합의
+(Consent
+유영일/상무
+품질 2025.07.14 4
+5 승인
+(Approve)
+심상인/상무
+연구소 2025.07.14 5
+
+Approval Sheet
+Description Battery Recharger 승인일자 2025.07.14
+Model Name DEPS126002 REVISION 00
+EDEP210116003 2 Daean Elecom
+Revision History
+DV : Design Verification
+PV : Product Validation
+PR : Production Readiness
+SOP : 양산
+Rev Step Date In Charge Revision History Approval
+0 PV 2025/07/14 정진환 초도 발행 심상인
+
+Approval Sheet
+Description Battery Recharger 승인일자 2025.07.14
+Model Name DEPS126002 REVISION 00
+EDEP210116003 3 Daean Elecom
+CONTENTS
+1. PURPOSE
+2. SCOPE
+2-1 Block Diagram
+3. Standards Applied
+3-1 Quality Standard
+3-2 EMC
+3-3 Safety
+4. Electrical Specification
+4-1 Specification
+5. Environmental Requirements
+5-1 Temperature
+5-2 Humidity
+6. 별첨
+- 회로도
+- PCB도
+- 기구도
+- BOM
+- 검사/조립/포장 작업지도서
+- LABEL
+
+Approval Sheet
+Description Battery Recharger 승인일자 2025.07.14
+Model Name DEPS126002 REVISION 00
+EDEP210116003 4 Daean Elecom
+1. PURPOSE
+이 문서는 Battery 충전을 하기 위한 Battery Recharger 에 대한 각종 전기적 Spec, 기구 및 환경 대한 사항
+을 기술 및 정의하고 있다.
+2. SCOPE
+2-1 Block Diagram
+3. Standards Applied
+3-1 Quality Standard
+ISO9001: 2000 QUALITY SYSTEMS
+3-2 EMC
+KS C 9832
+KS C 9835
+EN 55032
+EN 55035
+FCC Part 15, B
+3-3 Safety
+IEC 62368-1
+
+Approval Sheet
+Description Battery Recharger 승인일자 2025.07.14
+Model Name DEPS126002 REVISION 00
+EDEP210116003 5 Daean Elecom
+4-1 Specification
+Adaptor Input Voltage 100~240VAC, 50/60Hz(47~63Hz)
+Output Voltage 15VDC / 3A ----- USB C-type PD 용
+Battery Pack
+Cell 11.55V/3330mAh(3S1P), Li-Ion, 38.46Wh
+Output Voltage 10.2~12.6VDC
+Output Current 1.3A
+Control Circuit PCM
+Output Output Voltage 12.6VDC
+Output Current 1.3A (Channel 1,2 Each)
+Dimension 253.8mm(W) X 191.8mm(L) X 35mm(H)
+Weight Under 470g
+5. Environmental Requirements
+5-1 Temperature
+- Operating : 10℃ ~ +35 ℃
+- Storage : -40℃ ~ +70℃
+5-2 Humidity
+- Operating : 75%RH / 30℃ 이하
+- Storage : 90%RH / 65℃ 이하
+6. 별첨
+6-1 회로도
+6-2 PCB도
+6-3 기구도
+6-4 BOM
+6-5 검사/조립/포장 작업지도서
+6-6 LABEL
+4. Electrical Requirements
+
+1
+1
+2
+2
+3
+3
+4
+4
+A A
+B B
+C C
+D D
+INPUT : 20V/68W
+USB TYPE-C
+ A1 : Ground return
+ A2 : SuperSpeed differential pair#1,TX,positive
+ A3 : SuperSpeed differential pair#1,TX,negative
+ A4 : Bus power
+ A5 : Configuration channel
+ A6 : Non-Superspeed differential pair, position1
+A7 : Non-Superspeed differential pair, position2
+ positive
+negative
+ A8 : Sideband use(SBU)
+ A9 : Bus power
+ A10 : SuperSpeed differential pair#1,RX,negative
+ A11 : SuperSpeed differential pair#1,RX,positive
+ A12 : Ground return
+ON OFF
+HIGH:ON
+OFF ON
+HIGH:ON
+5V
+OPEN -> 15V
+ GND -> 5V
+HIGH -> 20V
+ <SEL PIN>
+GND
+GND GND
+GND GND
+ TX1+
+TX1-
+CC1
+D+
+D-
+SBU1
+RX2-
+RX2+ TX2+
+TX2-
+CC2
+SBU1
+RX1-
+RX1+
+D-
+VBUS
+VBUS
+VBUS VBUS
+VBUS
+D+
+A_A1
+CHARGE_EN1
+ACPRES_1
++15VDC
+BAT_SEN_A
+A_B1
+CHARGE_EN2
+ACPRES_2
++15VDC
++15VDC
+BATT_A_V
+BATT_A_V
+BATT_B_V
+BATT_B_V
++15VDC
+CC2
+CC1
+ CC2
+A_A
+A_B
+BAT_SEN_B
+BAT_SEN_A
+BATT_A_V
+BAT_SEN_B
+BATT_B_V
+BAT_SEN_GND_A
+BAT_SEN_GND_B
+A_A
+A_B
+BAT_SEN_A
+A_A
+BAT_SEN_B
+A_B
+CHARGE_EN1
+CHARGE_EN2
+A_A A_A1
+A_B A_B1
+BAT_SEN_GND_A BAT_SEN_GND_A
+BAT_SEN_GND_A BAT_SEN_GND_A
+VCC_12V BATT_A_V BATT_B_V
+VCC
+VCC_12V
+VCC
+VCC_12V
+VCC_12V
+VCC
+VCC
+VCC
+VCC
+VCC
+VCC
+VCC_12V
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+ R&D CENTER CONFIDENTIAL
+DEPS126002 0
+RECHARGER MAIN
+A1
+1 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+ R&D CENTER CONFIDENTIAL
+DEPS126002 0
+RECHARGER MAIN
+A1
+1 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+ R&D CENTER CONFIDENTIAL
+DEPS126002 0
+RECHARGER MAIN
+A1
+1 4 Thursday, July 17, 2025
+Q8
+2N7002K G
+D
+S
++
+- IC2D
+LM2901D
+13
+ 11
+10
+PC2
+PS2701-1
+1
+2
+3
+4
+TVS7
+6V/1W
+1
+2
+R31
+1K
+R170 1K
+R137
+1K R84
+180K
+R30
+470K
+R167
+4.3K
+R6
+100K
+R78
+100
+R13
+10
+R53
+330K
+R27
+15K
+R175
+2K
+R196 NC
+R123
+15K
+R118
+9.1K
+R75
+100K
+R88
+470K
+TP4
+NC
+R28
+10K
+IC1
+LM2901D
+ 3
+12
+R112
+150K
+R122
+10K
+R66
+NC
+R73
+100
+R130
+1K
+R87
+560K
+R102
+510
+R193 0R0
++
+C20
+25V/47uF
+R21
+750
+U3
+LM317M
+VIN
+ 3
+ ADJ
+1
+VOUT 2
+TVS2
+12V/1W
+1
+2
+R98
+10K
+R15
+10
++
+C3
+25V/47uF
+C23
+105
+R157
+2K
+R121
+15K
+R119
+0R0
+R127
+15K
+C17
+221
+R29
+560K
+BQ24703
+U2
+ BQ24703RHDR
+VHSP 20
+VCC 22
+PWM 21
+SRP 16
+SRN 15
+COMP 7
+BATDEP 1
+BATP 12
+BATDRV 24
+VS 18
+ACN
+ 8
+ACP
+ 9
+ACDET
+ 26
+IBAT
+ 13
+VREF
+ 4
+ENABLE
+ 5
+ACSEL
+ 28
+ALARM
+ 19
+ACPRES
+ 27
+BATSET
+ 6
+SRSET
+ 2
+ACSET
+ 3
+GND
+ 17
+ACDRV
+ 25
+NC10
+10
+NC11
+11
+NC23
+23
+NC14
+14
+PAD
+29
+TP1
+NC
+C6
+50V/106
+R91
+1K
+R95
+100K
+R104
+100
+R62
+22K
+C35
+50V/106
+C28
+151
+D8
+SK54-T3-LF
+LDB1
+LED BLUE
+R1
+1R0
++
+- IC1B
+LM2901D
+1
+ 7
+6
+R141
+1K
+C22
+105
+TVS11
+12V/1W
+1
+2
+R183
+NC
+R79
+10
+SH1
+2W/20m/1%
+R61
+3.3K
+R115
+330K
+ZD2
+0.5W 13V
++
+- IC2C
+LM2901D
+14
+ 9
+8
+R187 220K
+Q7
+2N7002K G
+D
+S
++
+- IC1D
+LM2901D
+13
+ 11
+10
+TVS4
+12V/1W
+1
+2
+R174
+100
+R128
+1K
+LDR5
+LED RED
+Q1
+40V/100A
+4
+1,2,3 5,6,7
+D9
+SK54-T3-LF
+LDR1
+LED RED
+C27
+475
+J2
+2.00mm/2*10P/STRAIGHT/MALE
+ 1 2
+ 3 4
+ 5 6
+ 7 8
+ 9 10
+ 11 12
+ 13 14
+ 15 16
+ 17 18
+20 19
+R47
+10K
+R138
+1K
+R173
+4.3K
+R93
+510
+R42
+1K
++
+C2
+25V/47uF
+R136
+1K
+R109
+62K
+R134
+1K
+R195 0R0
+R186 220K
+R82
+150K
+R125
+24K
+C12
+475
+R71
+510
+R110
+10K
+LDR2
+LED RED
+C31
+221
+LDR7
+LED RED
+R140
+1K
+R192
+510
+R38
+15K
+TP2
+NC
+U1
+IP2721
+VBUSG
+ 1
+VIN
+ 2
+NC
+3
+NC
+4
+GND
+ 5
+T1
+6
+T2
+7
+T3
+8 NC 9
+NC 10
+ SEL 11
+ CC2 12
+ CC1 13
+ NC 14
+ NC 15
+ VBUS 16
+C4
+105
+R139
+1K
+R113
+51K
+R70
+NC
+LDR3
+LED RED
+C8
+331
+D19 100V/0.2A
+C29
+475
+ R185 220K
+R44
+1K
+R154 220K
+R184 220K
+R153 220K
+R108
+1K
+L2
+10uH/7.6A
+C25
+102
+D20 NC
+R147
+0R0
+IC2
+LM2901D
+ 3
+12
+TVS3
+12V/1W
+1
+2
+R145
+10K
+C13
+151
+R18
+180K
+R160
+10K
+R8
+10
+R23
+5.1K
+R4
+100
+D6
+RS1D
+R169
+2K
+R100
+1K
+C10
+102
+R152 220K
+R151 220K
+R176 1K
+TVS8
+6V/1W
+1
+2
+J1
+2.00mm/2*10P/STRAIGHT/MALE
+ 1 2
+ 3 4
+ 5 6
+ 7 8
+ 9 10
+ 11 12
+ 13 14
+ 15 16
+ 17 18
+20 19
++
+- IC1A
+LM2901D
+2
+ 5
+4
+R124
+3.3K
+D11
+SR24-T3-LF
+R9
+NC
+R158
+2K
+R37
+10K
+D1 VS-12CWQ04FNTR-M3 1
+3
+ 2
+R177 NC
+D21 NC
+R99
+15K
++
+- IC2A
+LM2901D
+2
+ 5
+4
+R179
+NC
+SH2
+2W/20m/1%
+R40
+1K
+C42
+104
+TP3
+NC
+C7
+331
+C32
+104
+R54
+330K
+LDB5
+LED BLUE
+C5
+105
+C39
+104
+R68
+510
+C34
+50V/106
+LDB3
+LED BLUE
+R77
+470
+Q12
+2N7002K
+ G
+D
+S
+C41
+104
+R198
+2.2K
+R156
+0R0
+ R103
+510
+LDR6
+LED RED
+R26
+9.1K
+R24
+100K
+SH3
+2W/20m/1%
+R106
+1K
+D16 NC
+U7
+KIA431AF
+R90
+1K
+R171 NC
+LED9
+NC
+R97
+100K
+C9
+105
+R7
+100
+R197
+240
+C18
+221
+R58
+15K
+Q9
+2N7002K G
+D
+S
+C1
+50V/106
+R150
+10K
++
+C16
+25V/47uF
+R72
+510
+R76
+470
++
+C36
+25V/47uF
+LDR8
+LED RED
+Q2
+-40V/-65A
+1
+2
+ 3
+R83
+180K
+R146
+2K
+LDB4
+LED BLUE
+R148
+0R0
+R149
+2K
+R114
+330K
+PC3
+PS2701-1
+1
+2
+3
+4
+R199
+100
+R178
+0R0
+D5
+SR24-T3-LF
+R111
+15K
+R39
+1K
+R5
+0R0
+R59
+10K
+R52
+330K
+R33
+750
++
+- IC2B
+LM2901D
+1
+ 7
+6
+R45
+1K
+C19
+104
+R107
+1K
+R129
+1K
+R194 NC
+PC1
+PS2701-1
+1
+2
+3
+4
+R133
+1K
+R41
+100
+PC4 PS2701-1
+ 1
+2
+3
+4
+R50
+51K
+R166
+1K
+PCB
+PCB1
+174x92.8x1.6Tx 1oz x2Layer_BLACK(CHARGER_MAIN_BD)DCHA00201A
+R89
+10K
+D15
+NC
+D14
+NC
+R144
+100K
+R162
+10K
+LDR4
+LED RED
+R14
+220K
+C24
+50V/106
+R3
+100
+R155 2K
+USB1
+USB-C TYPE/RIGHT
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+A9
+A10
+A11
+A12 B1
+B2
+B3
+B4
+B5
+B6
+B7
+B8
+B9
+B10
+B11
+B12
+D17 100V/0.2A
+D4
+SR24-T3-LF
+R182
+510
+R35
+4.7K
+R96
+4.7K
++
+C15
+25V/47uF
+R159
+10K
+R12
+100K
+LDB7
+LED BLUE
+R81
+82K
+R163 2K
+R49
+150K
+Q6
+2N7002K G
+D
+S
+D2
+SK54-T3-LF
+ZD1
+0.5W 13V
+C11
+105
+C33
+50V/106
+R161
+0R0
+R69
+510
+R143
+1K
+R120
+NC
+R168
+100
+C30
+221
+C40
+104
+R172
+1K
+R101
+1K
+D7 VS-12CWQ04FNTR-M3 1
+3
+ 2
+D3
+SK54-T3-LF
+R142
+1K
+D10
+SR24-T3-LF
+BQ24703
+U5
+ BQ24703RHDR
+VHSP 20
+VCC 22
+PWM 21
+SRP 16
+SRN 15
+COMP 7
+BATDEP 1
+BATP 12
+BATDRV 24
+VS 18
+ACN
+ 8
+ACP
+ 9
+ACDET
+ 26
+IBAT
+ 13
+VREF
+ 4
+ENABLE
+ 5
+ACSEL
+ 28
+ALARM
+ 19
+ACPRES
+ 27
+BATSET
+ 6
+SRSET
+ 2
+ACSET
+ 3
+GND
+ 17
+ACDRV
+ 25
+NC10
+10
+NC11
+11
+NC23
+23
+NC14
+14
+PAD
+29
+R94
+100K
+R46
+62K
+U6
+KIA431AF
+R131
+1K
+R116
+330K
+R34
+100K
+C26
+105
+R32
+1K
+ R19
+180K
+TVS12
+12V/1W
+1
+2
+R126
+0R0
+R55
+0R0
+R164
+10K
+R36
+100K
+R135
+1K
++
+C21
+25V/47uF
+TVS1
+12V/1W
+1
+2
+LDB2
+LED BLUE
+R56
+0R0
+R105
+1K
+R132
+1K
+R60
+9.1K
+R74
+100
+R181
+510
+R57
+NC
+Q13
+2N7002K
+ G
+D
+S
+R67
+510
++
+- IC1C
+LM2901D
+14
+ 9
+8
+R86
+750
+C14
+475
+R48
+43K
+LDB8
+LED BLUE
+R16
+82K
+R92
+750
+R117
+330K
+R25
+220K
+R65
+510
+SH4
+2W/20m/1%
+R51
+330K
+LDB6
+LED BLUE
+R43
+1K
+R180
+0R0
+R22
+5.1K
+L1
+10uH/7.6A
+D18 NC
+Q4
+-40V/-65A
+1
+2
+ 3
+R17
+150K
+R10
+NC
+
+A
+A
+B
+B
+C
+C
+D
+D
+A A
+B B
+C C
+D D
+BATT_A_V
+BAT_SEN_GND_A BAT_SEN_GND_A
+BAT_SEN_A BAT_SEN_A
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+2 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+2 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+2 4 Thursday, July 17, 2025
+CN1
+1827654-2
+1
+2
+3
+4
+5
+6
+7
+JC1
+2.00mm/2*10P/STRAIGHT/FEMALE
+1 2
+3 4
+5 6
+7 8
+9 10
+11 12
+13 14
+15 16
+17 18
+20 19
+PCB
+PCB2
+44.5x17x1.6Tx 1oz x2Layer_BLACK(BATTERY_BD)DCHA00202A
+
+A
+A
+B
+B
+C
+C
+D
+D
+A A
+B B
+C C
+D D
+BAT_SEN_A BAT_SEN_A
+BAT_SEN_GND_B BAT_SEN_GND_B
+BATT_A_V
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+3 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+3 4 Thursday, July 17, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+BATTERY SUB
+A4
+3 4 Thursday, July 17, 2025
+CN2
+1827654-2
+1
+2
+3
+4
+5
+6
+7
+PCB
+PCB3
+44.5x17x1.6Tx 1oz x2Layer_BLACK(BATTERY_BD)
+JC2
+2.00mm/2*10P/STRAIGHT/FEMALE
+1 2
+3 4
+5 6
+7 8
+9 10
+11 12
+13 14
+15 16
+17 18
+20 19
+
+A
+A
+B
+B
+C
+C
+D
+D
+1 1
+2 2
+3 3
+4 4
+<TAPPING SCREW-3*8>
+<CASE> <FOOT RUBBER> <LED PIPE>
+515-1351-0750F /
+Dialight
+Bumpon SJ5744
+<LABEL>
+<BRACKET>
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+ETC
+A4
+4 4 Wednesday, January 08, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+ETC
+A4
+4 4 Wednesday, January 08, 2025
+Title
+Size Model Rev
+Date: Sheet of
+DAEAN DAEAN ELECOM Co.Ltd
+R&D CENTER CONFIDENTIAL
+DEPS126002 0
+ETC
+A4
+4 4 Wednesday, January 08, 2025
+LED PIPE
+P8
+515-1351-0750F
+일체형
+TSC13
+T3*8(TAPPING SCREW)
+일체형
+TSC9
+T3*8(TAPPING SCREW)
+LED PIPE
+P5
+515-1351-0750F
+RUBBER
+E2
+BUMPON SJ5744
+일체형
+TSC15
+T3*8(TAPPING SCREW)
+PE FORM
+PE3
+DEPS126002/PE FORM/CENTER
+LABEL
+LA1
+규격 DEPS126002/ /LABEL/PC/150*80
+일체형
+TSC4
+T3*8(TAPPING SCREW)
+BRAKET
+BRACKET2
+LED WALL
+LED PIPE
+P1
+515-1351-0750F
+일체형
+TSC2
+T3*8(TAPPING SCREW)
+BOX
+BOX1
+종이박스 (351*254*124)
+일체형
+TSC12
+T3*8(TAPPING SCREW)
+일체형
+TSC8
+T3*8(TAPPING SCREW)
+일체형
+TSC3
+T3*8(TAPPING SCREW)
+RUBBER
+E1
+BUMPON SJ5744
+BRAKET
+BRACKET1
+LED WALL
+CASE
+CASE2
+DEPS126002 BOTTOM
+일체형
+TSC1
+T3*8(TAPPING SCREW)
+PE FORM
+PE2
+DEPS126002/PE FORM/BOTTOM
+LABEL
+LA2
+아트지 DEPS126002/BOX LABEL/ /30*21
+LED PIPE
+P2
+515-1351-0750F
+일체형
+TSC5
+T3*8(TAPPING SCREW)
+일체형
+TSC11
+T3*8(TAPPING SCREW)
+RUBBER
+E3
+BUMPON SJ5744
+LED PIPE
+P4
+515-1351-0750F
+일체형
+TSC6
+T3*8(TAPPING SCREW)
+일체형
+TSC14
+T3*8(TAPPING SCREW)
+RUBBER
+E4
+BUMPON SJ5744
+CASE
+CASE1
+DEPS126002 TOP
+일체형
+TSC7
+T3*8(TAPPING SCREW)
+PE FORM
+PE1
+DEPS126002/PE FORM/TOP
+LED PIPE
+P7
+515-1351-0750F
+일체형
+TSC10
+T3*8(TAPPING SCREW)
+LED PIPE
+P6
+515-1351-0750F
+LABEL
+LA3
+아트지 SERIAL_NUMBER/ /35*8
+LED PIPE
+P3
+515-1351-0750F
+
+DEP-720-206
+변경
+기호
+ 허가 또는 변경 내용
+ 설계 확인 승인
+설 계 승 인 확 인
+도 번
+부 품 명
+제 품 명
+수 량 척 도 단 위 표 면 처 리 재 질
+양 산 적 용 허 가
+각 치수에 대한 허용공차는 도장 및 최종표면처리
+표시는 변경을 표시한다
+특별한 지시없는 곳의 벤딩각도는 로 할것 특별한 지시 없는 곳의 일반허용공차
+초
+과
+초과 이하
+치 수 구 분
+이
+하
+ 도면의
+축경허용공차
+공정후의 치수를 표시한다
+치수허용공차
+제 각법
+확 인
+승 인
+DAEAN
+
+DEP-720-206
+변경
+기호
+ 허가 또는 변경 내용
+ 설계 확인 승인
+설 계 승 인 확 인
+도 번
+부 품 명
+제 품 명
+수 량 척 도 단 위 표 면 처 리 재 질
+양 산 적 용 허 가
+각 치수에 대한 허용공차는 도장 및 최종표면처리
+표시는 변경을 표시한다
+특별한 지시없는 곳의 벤딩각도는 로 할것 특별한 지시 없는 곳의 일반허용공차
+초
+과
+초과 이하
+치 수 구 분
+이
+하
+ 도면의
+축경허용공차
+공정후의 치수를 표시한다
+치수허용공차
+제 각법
+확 인
+승 인
+DAEAN
+Note
+1. 재질 : ABS AF366F 난연
+2. 후처리: 흰색 사출후 샌드 블라스트 처리
+3. 무게 : 227g
+4. 이물질 , 찍힘 , 스크레치 없을것
+5. 표기하지 않은 치수는 3D Data 참조 할 것
+6. 상대물 형합에 문제 없을것
+7. 수량 : 1EA/SET당
+Scale 1:2
+
+DEP-720-206
+변경
+기호
+ 허가 또는 변경 내용
+ 설계 확인 승인
+설 계 승 인 확 인
+도 번
+부 품 명
+제 품 명
+수 량 척 도 단 위 표 면 처 리 재 질
+양 산 적 용 허 가
+각 치수에 대한 허용공차는 도장 및 최종표면처리
+표시는 변경을 표시한다
+특별한 지시없는 곳의 벤딩각도는 로 할것 특별한 지시 없는 곳의 일반허용공차
+초
+과
+초과 이하
+치 수 구 분
+이
+하
+ 도면의
+축경허용공차
+공정후의 치수를 표시한다
+치수허용공차
+제 각법
+확 인
+승 인
+DAEAN
+Scale 1:2
+Note
+1. 재질 : ABS AF366F 난연
+2. 후처리: 흰색 사출후 샌드 블라스트 처리
+3. 무게 : 179g
+4. 이물질 , 찍힘 , 스크레치 없을것
+5. 표기하지 않은 치수는 3D Data 참조 할 것
+6. 상대물 형합에 문제 없을것
+7. 수량 : 1EA/SET당
+
+DEP-720-206
+표시는 변경을 표시한다
+특별한 지시없는 곳의 벤딩각도는 로 할것
+각 치수에 대한 허용공차는 도장 및 최종표면처리
+특별한 지시 없는 곳의 일반허용공차
+초
+과
+초과 이하
+치 수 구 분
+이
+하
+축경허용공차
+도면의
+공정후의 치수를 표시한다
+치수허용공차
+제 각법
+허가 또는 변경 내용
+설계 확인 승인
+수 량
+부 품 명
+제 품 명
+단 위 척 도
+도 번
+변경
+기호
+설 계 확 인 승 인
+양 산 적 용 허 가
+재 질 표 면 처 리
+확 인
+승 인
+DAEAN
+Scale 1:1
+Note
+1. 재질 : ABS AF366F 난연
+2. 후처리: 흑색 사출
+3. 무게 : 3g
+4. 이물질 , 찍힘 , 스크레치 없을것
+5. 표기하지 않은 치수는 3D Data 참조 할 것
+6. 상대물 형합에 문제 없을것
+7. 수량 : 2EA/SET당
+
+No Level Code Description SmdDip Spec Vendor Part No. Vendor1 Vendor2 Quantity Location No Note
+1 CAPACITOR SMD 25V/10uF/106/X5R/10%/3225/CHIP TMK325 BJ106KN-T TAIYO YUDEN 6 C1,C6,C24,C33,C34,C35
+2 CAPACITOR SMD 25V/47uF/6.3*5.7/ELEC AXV 25 VC 47 M SAMYOUNG 7 C2,C3,C15,C16,C20,C21,C36
+3 CAPACITOR SMD 25V/1uF/105/X7R/10%/1608/CHIP CL10B105KA8NNNC SAMSUNG 7 C4,C5,C9,C11,C22,C23,C26
+4 CAPACITOR SMD 50V/330pF/331/NP0/5%/1608/CHIP 0603N331J500CT WALSIN 2 C7,C8
+5 CAPACITOR SMD 50V/1000pF/102/NP0/5%/1608/CHIP 0603N102J500CT WALSIN 2 C10,C25
+6 CAPACITOR SMD 16V/4.7uF/475/X5R/10%/1608/CHIP CL10A475KO8NNNC SAMSUNG 4 C12,C14,C27,C29
+7 CAPACITOR SMD 50V/150pF/151/NP0/5%/1608/CHIP 0603N151J500CT WALSIN 2 C13,C28
+8 CAPACITOR SMD 50V/220pF/221/NP0/5%/1608/CHIP 0603N221J500CT WALSIN 4 C17,C18,C30,C31
+9 CAPACITOR SMD 50V/100nF/104/X7R/10%/1608/CHIP 0603B104K500CT WALSIN 6 C19,C32,C39,C40,C41,C42
+10 DIODE SMD 40V/12A/DPAK VS-12CWQ04FNTR-M3 VISHAY 2 D1,D7
+11 DIODE SMD 40V/5A/DO-214AB SK54-T3-LF WON-TOP ELECTRONICS 4 D2,D3,D8,D9
+12 DIODE SMD 40V/2A/DO-214AC SR24-T3-LF WON-TOP ELECTRONICS 4 D4,D5,D10,D11
+13 DIODE SMD 200V/1A/DO-214AC RS1D-E3/61T VISHAY 1 D6
+14 SMD DIODE SMD NC NC ONSEMI 6 D14,D15,D16,D18,D20,D21
+15 DIODE SMD 100V/0.2A/SOD-123 MMSD4148T1G ONSEMI 2 D17,D19
+16 IC SMD LM2901DR/COMPARATOR LM2901DR TI 2 IC1,IC2
+17 PIN HEADER DIP 2.00mm/2*10P/STRAIGHT/MALE SMEH200-D20G-SH(4.5/6.5/2.5) DONGHAN 2 J1,J2
+18 LED SMD IWS-164-BXWF(B) IWS-164-BXWF ITSWELL 8 LDB1,LDB2,LDB3,LDB4,LDB5,LDB6,LDB7,LDB8
+19 LED SMD IWS-165-RXWF(R) IWS-165-RXWF ITSWELL 8 LDR1,LDR2,LDR3,LDR4,LDR5,LDR6,LDR7,LDR8
+20 SMD LED SMD NC NC NC 1 LED9
+21 INDUCTOR SMD 10uH/7.6A CEP125NP-100MC SUMIDA 2 L1,L2
+22 PCB DIP DEPS126002/RECHARGER//FR4/1.6T/1oz/2Layer(COLOR:BLACK) 삼우전자 1 PCB1
+23 PHOTO COUPLER SMD 6V/50mA/40V/80mA/150~300 PS2701-1-F3-A(P) RENESAS 4 PC1,PC2,PC3,PC4
+24 MOSFET SMD 40V/275A/POWERPAK SO-8 BSC010N04LSIATMA1 INFINEON 1 Q1
+25 MOSFET SMD -40V/-50A/DPAK SUD50P04-08-GE3 VISHAY 2 Q2,Q4
+26 MOSFET SMD 60V/0.38A/SOT-23 2N7002KT1G ONSEMI 6 Q6,Q7,Q8,Q9,Q12,Q13
+27 RESISTOR SMD 1ohm/0.1W/1%/1608/CHIP WR06W1R00FTL WALSIN 1 R1
+28 RESISTOR SMD 100ohm/0.1W/1%/1608/CHIP WR06X1000FTL WALSIN 11 R3,R4,R7,R41,R73,R74,R78,R104,R168,R174,R199
+29 RESISTOR SMD 0ohm/0.1W/P/1608/CHIP WR06X000PTL WALSIN 13 R5,R55,R56,R119,R126,R147,R148,R156,R161,R178,R180,R
+193,R195
+30 RESISTOR SMD 100Kohm/0.1W/1%/1608/CHIP WR06X1003FTL WALSIN 10 R6,R12,R24,R34,R36,R75,R94,R95,R97,R144
+31 RESISTOR SMD 10ohm/0.1W/1%/1608/CHIP WR06X10R0FTL WALSIN 4 R8,R13,R15,R79
+32 SMD RESISTOR SMD NC NC WALSIN 8 R9,R10,R171,R177,R179,R183,R194,R196
+33 RESISTOR SMD 220Kohm/0.1W/1%/1608/CHIP WR06X2203FTL WALSIN 10 R14,R25,R151,R152,R153,R154,R184,R185,R186,R187
+34 RESISTOR SMD 82Kohm/0.1W/1%/1608/CHIP WR06X8202FTL WALSIN 2 R16,R81
+35 RESISTOR SMD 150Kohm/0.1W/1%/1608/CHIP WR06X1503FTL WALSIN 4 R17,R49,R82,R112
+36 RESISTOR SMD 180Kohm/0.1W/1%/1608/CHIP WR06X1803FTL WALSIN 4 R18,R19,R83,R84
+37 RESISTOR SMD 750ohm/0.1W/1%/1608/CHIP WR06X7500FTL WALSIN 4 R21,R33,R86,R92
+38 RESISTOR SMD 5.1Kohm/0.1W/1%/1608/CHIP WR06X5101FTL WALSIN 2 R22,R23
+39 RESISTOR SMD 9.1Kohm/0.1W/1%/1608/CHIP WR06X9101FTL WALSIN 3 R26,R60,R118
+40 RESISTOR SMD 15Kohm/0.1W/1%/1608/CHIP WR06X1502FTL WALSIN 8 R27,R38,R58,R99,R111,R121,R123,R127
+41 RESISTOR SMD 10Kohm/0.1W/1%/1608/CHIP WR06X1002FTL WALSIN 14 R28,R37,R47,R59,R89,R98,R110,R122,R145,R150,R159,R16
+0,R162,R164
+42 RESISTOR SMD 560Kohm/0.1W/1%/1608/CHIP WR06X5603FTL WALSIN 2 R29,R87
+43 RESISTOR SMD 470Kohm/0.1W/1%/1608/CHIP WR06X4703FTL WALSIN 2 R30,R88
+44 RESISTOR SMD 1Kohm/0.1W/1%/1608/CHIP WR06X1001FTL WALSIN 36
+R31,R32,R39,R40,R42,R43,R44,R45,R90,R91,R100,R101,R1
+05,R106,R107,R108,R128,R129,R130,R131,R132,R133,R134
+,R135,R136,R137,R138,R139,R140,R141,R142,R143,R166,R
+170,R172,R176
+45 RESISTOR SMD 4.7Kohm/0.1W/1%/1608/CHIP WR06X4701FTL WALSIN 2 R35,R96
+MAIN
+
+46 RESISTOR SMD 62Kohm/0.1W/1%/1608/CHIP WR06X6202FTL WALSIN 2 R46,R109
+47 RESISTOR SMD 43Kohm/0.1W/1%/1608/CHIP WR06X4302FTL WALSIN 1 R48
+48 RESISTOR SMD 51Kohm/0.1W/1%/1608/CHIP WR06X5102FTL WALSIN 2 R50,R113
+49 RESISTOR SMD 330Kohm/0.1W/1%/1608/CHIP WR06X3303FTL WALSIN 8 R51,R52,R53,R54,R114,R115,R116,R117
+50 SMD RESISTOR SMD NC NC NC 4 R57,R66,R70,R120
+51 RESISTOR SMD 3.3Kohm/0.1W/1%/1608/CHIP WR06X3301FTL WALSIN 2 R61,R124
+52 RESISTOR SMD 2Kohm/0.1W/1%/1608/CHIP WR06X2001FTL WALSIN 8 R146,R149,R155,R157,R158,R163,R169,R175
+53 RESISTOR SMD 22Kohm/0.1W/1%/1608/CHIP WR06X2202FTL WALSIN 1 R62
+54 RESISTOR SMD 510ohm/0.1W/1%/1608/CHIP WR06X5100FTL WALSIN 12 R65,R67,R68,R69,R71,R72,R93,R102,R103,R181,R182,R192
+55 RESISTOR SMD 470ohm/0.1W/1%/1608/CHIP WR06X4700FTL WALSIN 2 R76,R77
+56 RESISTOR SMD 24Kohm/0.1W/1%/1608/CHIP WR06X2402FTL WALSIN 1 R125
+
+57 RESISTOR SMD 4.3Kohm/0.1W/0.1%/1608/CHIP WF06H4301BTL WALSIN 2 R167,R173
+58 RESISTOR SMD 240ohm/0.1W/1%/1608/CHIP WR06X2400FTL WALSIN 1 R197
+59 RESISTOR SMD 2.2Kohm/0.1W/1%/1608/CHIP WR06X2201FTL WALSIN 1 R198
+60 SMD SHUNT RESISTOR SMD 2W/20m/1% MPS-2W-0R02 HMR 4 SH1,SH2,SH3,SH4
+61 TEST POINT SMD NC NC NC 4 TP1,TP2,TP3,TP4
+62 TVS SMD 12V/200W/SOD-123FL SMF12A LITTELFUSE 6 TVS1,TVS2,TVS3,TVS4,TVS11,TVS12
+63 TVS SMD 6V/200W/SOD-123FL SMF6.0A LITTELFUSE 2 TVS7,TVS8
+64 USB SMD USB-C TYPE/RIGHT USB-CF-0423R CHEN-GUANG 1 USB1
+65 IC SMD IP2721(TSSOP-16) IP2721 INJOINIC TECHNOLOGY 1 U1
+66 IC SMD BQ24703RHDR/PWM BQ24703RHDR TI 2 U2,U5
+67 SMD LDO SMD LM317M LM317M ONSEMI 1 U3
+68 IC SMD KIA431AF-RTF/P/REFERENCE KIA431AF-RTF/P KEC 2 U6,U7
+69 ZENER DIODE SMD 0.5W/13V BZT52C13-7-F DIODES INCORPORATED 2 ZD1,ZD2
+
+No Level Code Description SmdDip Spec Vendor Part No. Vendor1 Vendor2 Quantity Location No Note
+1 CONNECTOR DIP 2.0mm/1*7P/RIGHT/MALE/30V/7A 1827654-2 TE 1 CN1
+2 SMD SOCKET SMD 2.00mm/2*10P/STRAIGHT/FEMALE SMDBB200-D20G-SH(4.5/1.0) DONGHAN 1 JC1
+3 PCB DIP DEPS126002/BATTERY_SUB1//FR4/1.6T/1oz/2Layer(COLOR:BLACK) 삼우전자 1 PCB2
+SUB1
+
+No Level Code Description SmdDip Spec Vendor Part No. Vendor1 Vendor2 Quantity Location No Note
+1 CONNECTOR DIP 2.0mm/1*7P/RIGHT/MALE/30V/7A 1827654-2 TE 1 CN2
+2 SMD SOCKET SMD 2.00mm/2*10P/STRAIGHT/FEMALE SMDBB200-D20G-SH(4.5/1.0) DONGHAN 1 JC2
+3 PCB DIP DEPS126002/BATTERY_SUB2//FR4/1.6T/1oz/2Layer(COLOR:BLACK) 삼우전자 1 PCB3
+SUB2
+
+No Level Code Description SmdDip Spec Vendor Part No. Vendor1 Vendor2 Quantity Location No Note
+1 종이박스 DIP 종이박스 (351*254*124) 종이박스 (351*254*124) 대건종합상사 1 BOX1
+2 BRACKET DIP DEPS126002 LED WALL (ABS AF366F)_C69100 C69100 휴텀 2 BRACKET1,BRACKET2
+3 CASE DIP DEPS126002 TOP (ABS AF366F)_G51200 KBHA00401A 휴텀 1 CASE1
+4 CASE DIP DEPS126002 BOTTOM (ABS AF366F)_U94300 KBHA00402A 휴텀 1 CASE2
+5 RUBBER DIP BUMPON SJ5744 BUMPON SJ5744 3M 4 E1,E2,E3,E4
+6 LABEL DIP DEPS126002/규격/LABEL/PC/150*80 DEPS126002/규격/LABEL/PC/150*80 알텍PCS 1 LA1
+7 LABEL DIP DEPS126002/BOX LABEL/아트지/30*21 DEPS126002/BOX LABEL/아트지/30*21 제일문화사 1 LA2
+8 LABEL DIP SERIAL_NUMBER/아트지/35*8 YLAB000003 제일문화사 1 LA3
+9 PE FORM DIP DEPS126002/PE FORM/TOP DEPS126002/PE FORM/TOP 다호산업 1 PE1
+10 PE FORM DIP DEPS126002/PE FORM/BOTTOM DEPS126002/PE FORM/BOTTOM 다호산업 1 PE2
+11 PE FORM DIP DEPS126002/PE FORM/CENTER DEPS126002/PE FORM/CENTER 다호산업 1 PE3
+12 LED PIPE DIP 515-1351-0750F 515-1351-0750F DIALIGHT 8 P1,P2,P3,P4,P5,P6,P7,P8
+13 SCREW DIP T3*8(TAPPING SCREW) T3*8(TAPPING SCREW) 대양볼트 15
+TSC1,TSC2,TSC3,TSC4,TSC5,TS
+C6,TSC7,TSC8,TSC9,TSC10,TS
+C11,TSC12,TSC13,TSC14,TSC1
+5
+ETC
+
+작성 검토 승인 Q.C
+1 배터리 서브보드를 메인보드에 연결한다.
+2 아답터를 연결한다.
+3 LED BLUE ON(4개) 되는지 확인한다.
+4 배터리를 좌우 모두 설삽으로 적당히 삽입한다
+5 LED RED ON (4개) 되는지 확인한다.
+6 배터리를 좌우 모두 완전히 삽입한다
+7 LED BLUE ON 되는지 확인 한다 (배터리 충전상태에 따라 1~4개의 BLUE가 켜진다)
+NO
+작성
+①
+②
+③
+④
+⑤
+개
+정
+이
+력
+개정일자 개정사유 확인
+2025.07.14 신규작성 정진환
+LED 확인 (#2)
+LED 확인 (#3)
+품 명
+DEPS126002 공 정 검 사 (LED 확인) 검사기준 DE126-002-T001
+제 품 명 공정 공 정 명
+개 발 : □ 양산전 : □ 양 산 : ■
+문서번호
+BATTERY
+RECHARGER
+LED 확인 (#1)
+검사기준서
+1
+3 3
+2
+4 4
+5 5
+1
+6 6
+7 7
+DEP-830-04 대안일레콤(주) REV0.0
+
+작성 검토 승인 Q.C
+1 아답터를 연결한다.
+2 TP3 또는 C21 전압을 확인한다 (12.6V)
+3 TP2 또는 C3전압을 확인한다 (12.6V)
+4 TP1 전압을 확인한다. (15.0V)
+NO
+작성
+①
+②
+③
+④
+⑤
+개
+정
+이
+력
+개정일자 개정사유 확인
+2025.07.14 신규작성 정진환
+품 명
+DEPS126002 공 정 검 사 (전압 확인) 검사기준 DE126-002-T002 BATTERY
+RECHARGER
+제 품 명 공정 공 정 명
+개 발 : □ 양산전 : □ 양 산 : ■
+문서번호
+검사기준서 검사기준서
+4
+1
+2 3
+DEP-830-04 대안일레콤(주) REV0.0
+
+작성 검토 승인 Q.C
+1 아답터를 연결한다.
+2 EV2300을 연결한다.(Charger 1,2각각확인)
+3 배터리를 연결한다.
+4 PC에서 BQ Evaluation Software를 실행시킨다.
+5 충전전류를 확인 한다(Charger 1,2따로) - 아답터 및 배터리가 있는상태에서 확인 할것
+NO
+작성
+①
+②
+③
+④
+⑤
+문서번호 품 명
+DEPS126002 공 정 검 사 (전압 확인) 검사기준 DE126-002-T003
+제 품 명 공정 공 정 명
+개 발 : □ 양산전 : □ 양 산 : ■
+BATTERY
+RECHARGER
+개
+정
+이
+력
+개정일자 개정사유 확인
+2025.07.14 신규작성 정진환
+검사기준서 검사기준서
+1
+5
+1 1
+2 2
+3 3
+4
+DEP-830-04 대안일레콤(주) REV0.0
+
+작성 검토 승인 Q.C
+1 아답터를 연결한다.
+2 배터리를 연결한다.
+3 D2 or D3 Anode 파형이 사진과 동일한지 확인한다.
+4 D8 or D9 Anode 파형이 사진과 동일한지 확인한다.
+품 명
+BATTERY
+RECGAGER
+제 품 명 공정 공 정 명
+개 발 : □ 양산전 : □ 양 산 : ■
+문서번호
+<CHAGER 1,2 파형>
+DMPS-
+126002 공 정 검 사 (충전파형확인) 파형
+POINT DE126-002-T004
+검사기준서
+CHARGER2 CHARGER1
+1
+4 3
+2
+DEP-830-04 대안일레콤(주) REV0.0
+
+작성 검토승인 Q.C
+⊙ 볼트 체결시 무리한 힘을 주지 말것
+⊙ GAP PAD 부착 시, 유격없을것
+1
+2
+3
+☞ 작업시 안전에 주의할것
+1회 2회 3회 4회 5회 6회 7회
+1. 작업표준에 준한 작업을 실시한다.
+2. 사용공구 점검은 작업시간 5분전에 체크한다.
+3. 이상 발생시 이상처리수순에 의하여 처리한다.
+주기 기록 주기 기록 주기 기록 4. 3정 5S 관리 철저 (정리, 정돈, 청소, 청결, 마음가짐)
+1 전 수 2회이상/일 체크쉬트 2회이상/일 체크쉬트 2회이상/일 체크쉬트 NO 확인 NO 확인
+2 작성 정진환
+3 ①
+4 ②
+5 ③
+개정일자 개 정 사 유
+2025.07.14 신 규 작 성
+볼트 체결상태 마모 및 풀림이 없을것 육안,수감
+개
+정
+이
+력
+개정일자 개 정 사 유
+(세부작업도 참조)
+NO 품 질 특 성 기 준 측정기기
+측정방법 확인 작 업 자 책 임 자 검 사
+5. CASE BOTTOM을 CASE TOP에 올려놓은후
+SCREW를 채결한다 (6개) ▣ 나 의 할 일
+6. RUBBER를 부착한다 (4개)
+작업표준서 정기점검
+4. MAIN보드를 넣고 SCREW를 채결한다 (5개) 1회
+6개월
+1회
+6개월
+1회
+6개월
+작 업 요 령
+▣MAIN 작업
+1. LED PIPE을 CASE TOP에 넣는다 (위쪽에서 아래쪽으로) 7. 규격라벨을 부착한다
+▣ 설 비 관 리
+2. 뒷면에서 LED WALL을 LED PIPE를 감싸 넣는다
+8.규격라벨안에 S/N네모박스에 SN라벨을 부착한다
+3. BATTERY BD를 넣고 SCREW를 채결한다 (4개) 기계점검 치구점검
+전동토크 (PCB) 3.5~4.5Kgf/cm 육안확인 2회/일
+표준작업시간 시간당생산수
+10분
+1개 6 개 ▣ 안 전 관 리
+전동드라이버 전동토크 (기구물) 3.5~4.5Kgf/cm
+사용 부품 및 재료 ▣ 작업상 주의사항
+▣ MAIN BD ▣ BATTERY BD
+▣ CASE TOP ▣ CASE BOTTOM
+▣ LED WALL ▣ LED PIPE
+▣ RUBBER
+▣ 규격라벨 ▣ SN라벨 ▣ 작업조건 및 설비조건
+▣ TAPPING SCREW (T3*8)
+사 용 설 비 NO 점 검 항 목 규 격 측정방
+법
+작 업 자
+주 기 기 록
+사용 치공구, 계측기
+품 명
+B DMPS
+126002 조립 MAIN 조립 DE126-002-A001 BATTERY
+RECHARGER
+품질 RANK 제 품 명 공 정 공 정 명
+개 발 : □ 양산전 : □ 양 산 : ■
+문서번호
+DEP-740-04 대안일레콤(주) REV(0)
+
+평평하도록 꾹 넣을 것 네모 홈부분이 보이는 방향으로 넣을 것 약간 위쪽으로 올리면서 체결할 것 GUIDE HOLE에 맞추어 연결되는 핀이 전동드라이버 토크 (3.5~4.5) 홀 안에 힘을주어 부착할 것
+전동드라이버 토크 (3.5~4.5) 휘어지지 않도록 조립할 것
+라벨의 꺾인 부분과 CASE 홈과 네모박스에 맞추어 부착할 것
+일치하도록 부착할 것
+부착한다
+규격라벨을 그림과 같이
+8 규격라벨안에 S/N네모박스에
+주의
+사항
+작업
+요령
+7
+주의
+사항
+약
+도
+채결한다 (4개) (5개) 전동드라이버 토크 (3.5~4.5) SCREW를 채결한다 (6개)
+작업
+요령
+1 LED PIPE을 CASE TOP에
+2 뒷면에서 LED WALL을
+3 BATTERY BD를 그림과
+4 MAIN보드를 그림과 같이
+약
+도
+5 CASE BOTTOM을
+6 RUBBER를 부착한다 (4개)
+넣는다 (위쪽에서 아래쪽으로) LED PIPE를 감싸 넣는다 같이 넣고 SCREW를
+수 량 1 2
+사용 치공구, 계측기 전동드라이버
+세 부 작 업 표 준
+8 4 (SJ5744) 1 1 1
+부품명 MAIN BD BATTERY BD LED PIPE RUBBER
+약 도
+규격라벨 SN 라벨
+승인 QC
+사용부품 및 재료 문서번호
+작성 검토
+DE34-047-A002
+1
+CASE TOP CASE BOTTOM
+넣고 SCREW를 채결한다 CASE TOP에 올려놓은후
+LED WALL
+2
+SN라벨을 부착한다
+TAPPING SCREW
+15(SCREW T3*8)
+MAIN 세부조립 작업도-A
+DEP-740-04 대안일레콤(주) REV(0)
+
+NO 수량
+1 1
+2 1
+3 1
+4 1
+5 1
+6 1
+7 1
+NO 수량
+1. 단품 종이박스에 PE FORM BOTTOM을 넣는다
+` 2. PE FORM BOTTOM위에 PE FORM CENTER를 넣고
+BATTERY RECHARGER를 넣는다
+3. PE FORM TOP를 넣는다
+4. 단품 종이박스를 덮고, 박스라벨을 우측상단에 붙인다
+1. 시리얼 번호, 바코드, 규격 스티커 확인 NO
+2. 박스 적재시 시리얼 번호순으로 적재할것 0
+1
+2
+3
+4
+1. 정전기 발생 방지를 위한 어스링 및 장갑 착용 제정/개정 내용 개정 일자 담당자 비 고
+신규 제정 2025.07.14 임정섭
+작 업 표 준/ 작 업 순 서
+주의사항/이상 발생 처리방법 제정/개정 이력(Rev.0)
+5. 큰 박스에 담품 종이박스 4세트씩 담는다
+6. 큰 박스에 우측면 우즉 상단에 부품 식별표를 붙인다
+부 품 명 CODE NO 규 격
+사용설비/치공구/JIG/계측기
+부품 식별표
+박스라벨 31X21
+큰 종이박스 535X370X275
+PE FORM BOTTOM
+PE FORM CENTER
+작성부서 품질보증
+중점 관리항목
+사 용 부 품 LIST
+단품 종이박스 351X254X124
+작 성 자 임정섭
+부 품 명 CODE NO 규 격
+PE FORM TOP
+작성일자 2025.07.14
+결
+재
+검 토 승 인
+모 델 명 DEPS126002
+공용 모델
+작 성
+품 명 BATTERY RECHARGER 문서번호 DE126-002-P001 최종제정
+-
+업 체 명 DAEAN ELECOM
+품
+질
+합
+의
+합 의
+공 정 명 포장작업
+2025.07.14
+포 장 작 업 지 도 서
+1 2
+3 4
+5 6
+
+Label
+S/N
+• 설명 : 25 : 년도 / 07 : 월 / 17 : 발행일자 / 0000 : 일련번호
