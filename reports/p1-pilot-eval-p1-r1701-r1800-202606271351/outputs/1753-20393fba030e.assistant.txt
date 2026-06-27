@@ -1,0 +1,169 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954389-ix7",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/Tether_1417(FPCB)/Schematic/FPCB_ES2_241022DSN.pdf",
+    "canonicalGroupId": "20393fba030e"
+  },
+  "document": {
+    "title": "FPCB",
+    "documentType": "Schematic",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "A",
+    "documentDate": "Tuesday, March 18, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "FPCB schematic title block and net/component labels for a one-sheet drawing.",
+    "officialUse": "Supports engineering traceability for FPCB schematic content; no regulatory authority, jurisdiction, or standard is stated.",
+    "keyPoints": [
+      "Title block lists Title as FPCB.",
+      "Title block lists Rev as A.",
+      "Title block lists Date as Tuesday, March 18, 2025.",
+      "Sheet information is shown as 1 of 1.",
+      "Visible schematic labels include connectors CN2 and CN3 with 05002HR-H16J50, TD4 PTVS22VS1UR, U2 magnet1, CN1 Magnet, Ethernet TRX nets, and POWER_15V."
+    ]
+  },
+  "entities": [
+    {
+      "name": "FPCB",
+      "type": "document title",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A FPCB A4 1 1 Tuesday, March 18, 2025"
+    },
+    {
+      "name": "CN2",
+      "type": "connector reference designator",
+      "evidence": "CN2 05002HR-H16J50"
+    },
+    {
+      "name": "CN3",
+      "type": "connector reference designator",
+      "evidence": "CN3 05002HR-H16J50"
+    },
+    {
+      "name": "05002HR-H16J50",
+      "type": "component identifier",
+      "evidence": "CN2 05002HR-H16J50"
+    },
+    {
+      "name": "TD4",
+      "type": "component reference designator",
+      "evidence": "TD4 PTVS22VS1UR"
+    },
+    {
+      "name": "PTVS22VS1UR",
+      "type": "component identifier",
+      "evidence": "TD4 PTVS22VS1UR"
+    },
+    {
+      "name": "U2",
+      "type": "component reference designator",
+      "evidence": "U2 magnet1"
+    },
+    {
+      "name": "CN1",
+      "type": "connector reference designator",
+      "evidence": "CN1 Magnet"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "FPCB schematic",
+      "pageTarget": "FPCB schematic",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A FPCB A4 1 1 Tuesday, March 18, 2025"
+    },
+    {
+      "name": "Ethernet TRX differential signals",
+      "pageTarget": "Ethernet TRX differential signals",
+      "evidence": "ETH_TRX_A- ETH_TRX_A+ ETH_TRX_D- ETH_TRX_D+ ETH_TRX_B- ETH_TRX_B+ ETH_TRX_C- ETH_TRX_C+"
+    },
+    {
+      "name": "15V power rail",
+      "pageTarget": "15V power rail",
+      "evidence": "POWER_15V POWER_15V POWER_15V POWER_15V"
+    },
+    {
+      "name": "Magnet connector",
+      "pageTarget": "Magnet connector",
+      "evidence": "CN1 Magnet"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is FPCB.",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> A FPCB A4 1 1 Tuesday, March 18, 2025",
+      "pageTarget": "FPCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision is A.",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> A FPCB A4 1 1 Tuesday, March 18, 2025",
+      "pageTarget": "FPCB revision A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is Tuesday, March 18, 2025.",
+      "evidenceText": "Date: Sheet of <Doc> A FPCB A4 1 1 Tuesday, March 18, 2025",
+      "pageTarget": "FPCB document date",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic is sheet 1 of 1.",
+      "evidenceText": "FPCB A4 1 1 Tuesday, March 18, 2025",
+      "pageTarget": "FPCB schematic",
+      "confidence": "medium"
+    },
+    {
+      "claim": "CN2 is labeled with component identifier 05002HR-H16J50.",
+      "evidenceText": "CN2 05002HR-H16J50",
+      "pageTarget": "05002HR-H16J50",
+      "confidence": "high"
+    },
+    {
+      "claim": "CN3 is labeled with component identifier 05002HR-H16J50.",
+      "evidenceText": "CN3 05002HR-H16J50",
+      "pageTarget": "05002HR-H16J50",
+      "confidence": "high"
+    },
+    {
+      "claim": "TD4 is labeled PTVS22VS1UR.",
+      "evidenceText": "TD4 PTVS22VS1UR",
+      "pageTarget": "PTVS22VS1UR",
+      "confidence": "high"
+    },
+    {
+      "claim": "The visible nets include Ethernet TRX A, B, C, and D plus and minus signals.",
+      "evidenceText": "ETH_TRX_A- ETH_TRX_A+ ETH_TRX_D- ETH_TRX_D+ ETH_TRX_B- ETH_TRX_B+ ETH_TRX_C- ETH_TRX_C+",
+      "pageTarget": "Ethernet TRX differential signals",
+      "confidence": "high"
+    },
+    {
+      "claim": "The visible power net is POWER_15V.",
+      "evidenceText": "POWER_15V POWER_15V POWER_15V POWER_15V",
+      "pageTarget": "15V power rail",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standard is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document number appears only as placeholder '<Doc>' and is not captured as a definitive document number."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text is a sparse schematic extraction with repeated coordinate and pin labels, limiting context."
+    }
+  ]
+}
