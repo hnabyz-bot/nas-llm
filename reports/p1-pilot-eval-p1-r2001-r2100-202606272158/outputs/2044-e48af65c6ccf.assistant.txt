@@ -1,0 +1,151 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954408-xf2",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/ROIC_1717/좌표/BLUE_1717_ROIC_12140(241014)-좌표.xlsx",
+    "canonicalGroupId": "e48af65c6ccf"
+  },
+  "document": {
+    "title": "BLUE_1717_ROIC_12140(241014)-좌표",
+    "documentType": "component coordinate spreadsheet",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "241014",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet-style component placement coordinates for BLUE_1717_ROIC_12140.",
+    "officialUse": "Used as electrical design placement data listing reference designators, X/Y coordinates, orientation, layer, part type, package/decal, pin count, SMD status, and glue status.",
+    "keyPoints": [
+      "The table columns are RefDes, X, Y, Orient., Layer, PartType, PartDecal, Pins, SMD, and Glued.",
+      "The listed assembly includes top and bottom layer components.",
+      "Reference designators include capacitors, connectors, diodes, mounting or fiducial items, pads, resistors, test points, through-holes, and ICs.",
+      "Several components are marked as SMD Yes or No and Glued Yes or No."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_1717_ROIC_12140",
+      "type": "document identifier",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/ROIC_1717/좌표/BLUE_1717_ROIC_12140(241014)-좌표.xlsx"
+    },
+    {
+      "name": "ROIC_1717",
+      "type": "design folder identifier",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/ROIC_1717/좌표/BLUE_1717_ROIC_12140(241014)-좌표.xlsx"
+    },
+    {
+      "name": "U2 CDCLVD1212RHAR/VQFN40",
+      "type": "electronic component",
+      "evidence": "U2,220.250,28.250,180,Top,CDCLVD1212RHAR/VQFN40,QFN-V-40(0.5),42,Yes,No"
+    },
+    {
+      "name": "U16 ADR444ARMZ/MSOP8",
+      "type": "electronic component",
+      "evidence": "U16,417.750,25.875,180,Top,ADR444ARMZ/MSOP8,SOP-M-8(0.65),8,Yes,No"
+    },
+    {
+      "name": "U25 ADP7182ACPZN-R7/LFCSP6",
+      "type": "electronic component",
+      "evidence": "U25,294.875,34.125,270,Top,ADP7182ACPZN-R7/LFCSP6,LFCSP-6(0.65),7,Yes,No"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Component placement coordinates",
+      "pageTarget": "Component placement coordinates",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Reference designator",
+      "pageTarget": "Reference designator",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "PCB layer",
+      "pageTarget": "PCB layer",
+      "evidence": "BD1,227.750,36.250,180,Top,BLM21PG600SN1,LS-2012-1,2,Yes,No"
+    },
+    {
+      "name": "SMD component status",
+      "pageTarget": "Surface-mount device",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Fiducial marker",
+      "pageTarget": "PCB fiducial marker",
+      "evidence": "M8,435.000,-5.000,180,Top,FIDUCIAL_TOP-4.0,FIDUCIAL_TOP-4.0,2,No,No"
+    },
+    {
+      "name": "Test point",
+      "pageTarget": "PCB test point",
+      "evidence": "TP11,418.400,6.600,0,Bottom,TP-SMD(0.8),TP-SMD(0.8),1,Yes,No"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a coordinate table with fields for reference designator, X/Y coordinate, orientation, layer, part type, part decal, pins, SMD, and glued status.",
+      "evidenceText": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued",
+      "pageTarget": "Component placement coordinates",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source file title identifies BLUE_1717_ROIC_12140 and includes the date-like string 241014.",
+      "evidenceText": "BLUE_1717_ROIC_12140(241014)-좌표.xlsx",
+      "pageTarget": "BLUE_1717_ROIC_12140",
+      "confidence": "high"
+    },
+    {
+      "claim": "The coordinate list includes top-layer and bottom-layer entries.",
+      "evidenceText": "BD1,227.750,36.250,180,Top,BLM21PG600SN1,LS-2012-1,2,Yes,No\nC20,139.750,35.500,90,Bottom,CS-1005-1,CS-1005-1,2,Yes,No",
+      "pageTarget": "PCB layer",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector CON1 is listed at X 16.380 and Y 6.550 on the Top layer with part type 05002HR-H50CE.",
+      "evidenceText": "CON1,16.380,6.550,0,Top,05002HR-H50CE,CNS-05002HR-H50CE(0.5),52,Yes,No",
+      "pageTarget": "CON1",
+      "confidence": "high"
+    },
+    {
+      "claim": "U2 is listed as CDCLVD1212RHAR/VQFN40 with QFN-V-40(0.5) decal on the Top layer.",
+      "evidenceText": "U2,220.250,28.250,180,Top,CDCLVD1212RHAR/VQFN40,QFN-V-40(0.5),42,Yes,No",
+      "pageTarget": "U2 CDCLVD1212RHAR/VQFN40",
+      "confidence": "high"
+    },
+    {
+      "claim": "The coordinate list includes fiducial entries.",
+      "evidenceText": "M8,435.000,-5.000,180,Top,FIDUCIAL_TOP-4.0,FIDUCIAL_TOP-4.0,2,No,No",
+      "pageTarget": "PCB fiducial marker",
+      "confidence": "high"
+    },
+    {
+      "claim": "The coordinate list includes SMD test point entries.",
+      "evidenceText": "TP11,418.400,6.600,0,Bottom,TP-SMD(0.8),TP-SMD(0.8),1,Yes,No",
+      "pageTarget": "PCB test point",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The filename contains the date-like string 241014, but the source text does not explicitly define it as a document date."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly identified; productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "The source is engineering coordinate data rather than an explicit RA/regulatory approval document."
+    }
+  ]
+}

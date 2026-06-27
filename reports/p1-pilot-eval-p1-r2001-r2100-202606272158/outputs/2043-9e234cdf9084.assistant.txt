@@ -1,0 +1,178 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954402-rn7",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/XDAQ/Schematic/GEN2_XDAQ_241023.pdf",
+    "canonicalGroupId": "9e234cdf9084"
+  },
+  "document": {
+    "title": "XDAQ Block Diagram",
+    "documentType": "Schematic",
+    "productModels": [
+      "XDAQ Module",
+      "Artix-7 XC7A35-2FGG484"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev1.0; sheet title blocks show Rev A and Rev B",
+    "documentDate": "06/03/2024",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Electrical schematic pages for an XDAQ module using an Artix-7 XC7A35 FPGA, B2B connectors, LVDS/MIPI interfaces, FPGA power, and power tree.",
+    "officialUse": "Design history file electrical design schematic reference.",
+    "keyPoints": [
+      "The block diagram identifies an XDAQ Module built around Artix-7 XC7A35-2FGG484.",
+      "The page list includes BANK0/QSPI/JTAG, FPGA banks, B2B connectors JM1-JM4, FPGA power/GND, power tree, and LVDS to MIPI.",
+      "Revision table states Rev1.0 release dated 06/03/2024.",
+      "Several sheets specify 100 Ohm impedance for differential/LVDS/MGT signal groups."
+    ]
+  },
+  "entities": [
+    {
+      "name": "XDAQ Module",
+      "type": "product/module",
+      "evidence": "XDAQ Module"
+    },
+    {
+      "name": "Artix-7 XC7A35-2FGG484",
+      "type": "FPGA component",
+      "evidence": "Artix-7\nXC7A35-2FGG484"
+    },
+    {
+      "name": "JM1",
+      "type": "B2B connector",
+      "evidence": "B2B Connector : JM1, JM2"
+    },
+    {
+      "name": "JM2",
+      "type": "B2B connector",
+      "evidence": "B2B Connector : JM1, JM2"
+    },
+    {
+      "name": "JM3",
+      "type": "B2B connector",
+      "evidence": "B2B Connector : JM3, JM4"
+    },
+    {
+      "name": "JM4",
+      "type": "B2B connector",
+      "evidence": "B2B Connector : JM3, JM4"
+    },
+    {
+      "name": "MC20902",
+      "type": "LVDS to MIPI component",
+      "evidence": "U8\nMC20902/TQLMP-48"
+    },
+    {
+      "name": "TPS74801",
+      "type": "power regulator component",
+      "evidence": "MAX 1.5A / 2.7W\n(TPS74801)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "XDAQ schematic",
+      "pageTarget": "XDAQ Module Schematic",
+      "evidence": "XDAQ Block Diagram"
+    },
+    {
+      "name": "FPGA configuration interfaces",
+      "pageTarget": "FPGA QSPI and JTAG Configuration",
+      "evidence": "BANK0, JTAG, QSPI"
+    },
+    {
+      "name": "LVDS to MIPI conversion",
+      "pageTarget": "LVDS to MIPI Interface",
+      "evidence": "LVDS to MIPI"
+    },
+    {
+      "name": "FPGA power tree",
+      "pageTarget": "FPGA Power Tree",
+      "evidence": "POWER , POWER TREE"
+    },
+    {
+      "name": "100 Ohm differential impedance",
+      "pageTarget": "Differential Pair Impedance",
+      "evidence": "Impedance:100Ohm"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is an XDAQ block diagram/schematic document.",
+      "evidenceText": "XDAQ Block Diagram",
+      "pageTarget": "XDAQ Module Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The XDAQ module uses an Artix-7 XC7A35-2FGG484 FPGA.",
+      "evidenceText": "Artix-7\nXC7A35-2FGG484\n125M Diff CLK\nJTAG, QSPI\nROIC_L(0:11] ROIC_R(0:11]\nLVDS MIPI_0\nCONFIG, SPI0\nXDAQ Module",
+      "pageTarget": "XDAQ Module",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document page list includes B2B connector sheets for JM1/JM2 and JM3/JM4.",
+      "evidenceText": "B2B Connector : JM1, JM2\nB2B Connector : JM3, JM4",
+      "pageTarget": "XDAQ B2B Connectors",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a BANK0, JTAG, QSPI sheet.",
+      "evidenceText": "Title\nSize Document Number Rev\nDate: Sheet of\n<Doc> A\nBANK0, JTAG, QSPI\nA4\n4 11 Monday, April 07, 2025",
+      "pageTarget": "FPGA QSPI and JTAG Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes FPGA power and ground schematic content.",
+      "evidenceText": "Title\nSize Document Number Rev\nDate: Sheet of\n<Doc> A\nFPGA POWER, GND\nA4\n9 11 Friday, June 27, 2025",
+      "pageTarget": "FPGA Power and Ground",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a power tree with VSYS_3V and FPGA supply rails.",
+      "evidenceText": "Power Tree\n(MAX5A/15W)\nVCC_1V0N VCC_1V2N\nVCC_1V8N\nVSYS_3V VSYS_3V",
+      "pageTarget": "FPGA Power Tree",
+      "confidence": "high"
+    },
+    {
+      "claim": "The LVDS to MIPI sheet routes signals from FPGA to MPU through an MC20902 component.",
+      "evidenceText": "To MPU\nFrom FPGA\nImpedance:100Ohm\nTitle\nSize Document Number Rev\nDate: Sheet of\n<Doc> A\nLVDS to MIPI\nA4\n11 11 Monday, April 07, 2025\nU8\nMC20902/TQLMP-48",
+      "pageTarget": "LVDS to MIPI Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several differential signal groups specify 100 Ohm impedance.",
+      "evidenceText": "BANK16 BANK15\nImpedance:100Ohm Impedance:100Ohm",
+      "pageTarget": "Differential Pair Impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision table states Rev1.0 release dated 06/03/2024.",
+      "evidenceText": "Rev Date Page Description\n1.0 06/03/2024 All Rev1.0 Release",
+      "pageTarget": "XDAQ Module Schematic Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "Sheet title blocks show multiple sheet revisions and dates, including Rev A and Rev B.",
+      "evidenceText": "BANK15, BANK16\nB\n6 11 Thursday, July 03, 2025",
+      "pageTarget": "XDAQ Module Schematic Revision History",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document metadata is inconsistent: revision table states Rev1.0 dated 06/03/2024, while sheet title blocks show Rev A and Rev B with 2025 dates."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The source appears to be an engineering schematic from a DHF path, not a formal RA/regulatory submission document."
+    }
+  ]
+}

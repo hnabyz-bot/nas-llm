@@ -1,0 +1,150 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954371-21v",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/BASE/BOM/BLUE_BASE_BOM_250905 (INX).xlsx",
+    "canonicalGroupId": "449883546323"
+  },
+  "document": {
+    "title": "BLUE_BASE_BOM_20250724(INX)",
+    "documentType": "BOM",
+    "productModels": [
+      "MHR-000104",
+      "BLUE BASE PBA SMD"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM for BLUE BASE PBA SMD / BASE Ass'y listing PCB and electrical components with quantities, references, part numbers, specifications, and vendors.",
+    "officialUse": "Design history file electrical component list / base assembly bill of materials.",
+    "keyPoints": [
+      "The BOM identifies the assembly as BASE Ass'y and BLUE BASE PBA SMD.",
+      "The PCB specification is BLUE_BASE PCB, FR4, 6Layer, T1.2, 287.5x143.",
+      "The document includes itemized components with quantity, reference, code, process, item name, vendor part number, specification, vendor abbreviation, notes, vendor name, and contact columns.",
+      "Some lines are marked SKIP, indicating omitted or non-mounted BOM entries."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE BASE PBA SMD",
+      "type": "assembly",
+      "evidence": "MHR-000104,,,,,BLUE BASE PBA SMD"
+    },
+    {
+      "name": "MHR-000104",
+      "type": "assembly code",
+      "evidence": "MHR-000104,,,,,BLUE BASE PBA SMD"
+    },
+    {
+      "name": "BLUE_BASE PCB",
+      "type": "printed circuit board",
+      "evidence": "PCB-MAIN,\"BLUE_BASE PCB,FR4,6Layer,T1.2,287.5x143\""
+    },
+    {
+      "name": "VAR-SOM-MX8M-PLUS-SOM",
+      "type": "component",
+      "evidence": "MO1,,,,,,VAR-SOM-MX8M-PLUS-SOM,자체수급,Variscite"
+    },
+    {
+      "name": "Variscite",
+      "type": "vendor",
+      "evidence": "MO1,,,,,,VAR-SOM-MX8M-PLUS-SOM,자체수급,Variscite"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "BLUE_BASE_BOM_20250724(INX)"
+    },
+    {
+      "name": "Design history file",
+      "pageTarget": "Design History File",
+      "evidence": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/BASE/BOM/BLUE_BASE_BOM_250905 (INX).xlsx"
+    },
+    {
+      "name": "Printed circuit board assembly",
+      "pageTarget": "Printed Circuit Board Assembly",
+      "evidence": "BLUE BASE PBA SMD"
+    },
+    {
+      "name": "Skipped BOM item",
+      "pageTarget": "BOM Skip Status",
+      "evidence": "공정,품목명,업체 P/N,규격,업체 약어,비고"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source document title is BLUE_BASE_BOM_20250724(INX).",
+      "evidenceText": ",,BLUE_BASE_BOM_20250724(INX)",
+      "pageTarget": "BLUE_BASE_BOM_20250724(INX)",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is a BOM for BASE Ass'y.",
+      "evidenceText": ",,BASE Ass'y",
+      "pageTarget": "BASE Ass'y BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The assembly or product identifier MHR-000104 is associated with BLUE BASE PBA SMD.",
+      "evidenceText": "MHR-000104,,,,,BLUE BASE PBA SMD",
+      "pageTarget": "BLUE BASE PBA SMD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB is specified as BLUE_BASE PCB, FR4, 6Layer, T1.2, 287.5x143.",
+      "evidenceText": "PCB-MAIN,\"BLUE_BASE PCB,FR4,6Layer,T1.2,287.5x143\"",
+      "pageTarget": "BLUE_BASE PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM references FR4 6L board dimensions 287.5 mm x 143.0 mm x 1.2T and Rev.03.",
+      "evidenceText": "FR4 6L_287.5mm x 143.0mm x 1.2T(BLUE) Rev.03 적용",
+      "pageTarget": "BLUE BASE PCB Revision",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The BOM table includes columns for item, quantity, reference, code, drawing, sheets, process, item name, vendor part number, specification, vendor abbreviation, remarks, vendor name, and responsible person.",
+      "evidenceText": "Item,Quantity,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자",
+      "pageTarget": "BOM Field Definitions",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes a VAR-SOM-MX8M-PLUS-SOM component sourced from Variscite.",
+      "evidenceText": "153,1,MO1,,,,,,VAR-SOM-MX8M-PLUS-SOM,자체수급,Variscite",
+      "pageTarget": "VAR-SOM-MX8M-PLUS-SOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several BOM items are explicitly marked SKIP.",
+      "evidenceText": "11,1,J7,,,,SKIP,CONNECTOR-HEADER",
+      "pageTarget": "BOM Skip Status",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document date field is present. The title contains 20250724 and the source filename contains 250905, but the source text does not define either as the document date."
+    },
+    {
+      "severity": "info",
+      "reason": "Rev.03 appears in the PCB or assembly specification line, but the source text does not clearly state it is the overall document revision."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "The document is a component BOM from a DHF path, not an RA certificate, test report, approval, or jurisdiction-specific regulatory document."
+    }
+  ]
+}

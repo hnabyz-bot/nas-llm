@@ -1,0 +1,144 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-fcy",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/XDAQ/좌표/BLUE_XDAQ_MODULE REV.02(241028)좌표.xls",
+    "canonicalGroupId": "6af20439341e"
+  },
+  "document": {
+    "title": "BLUE_XDAQ_MODULE REV.02(241028)좌표.xls",
+    "documentType": "PCB component coordinate list",
+    "productModels": [
+      "BLUE_XDAQ_MODULE"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV.02",
+    "documentDate": "241028",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "PCB placement coordinate table listing reference designators, X/Y coordinates, orientation, layer, part type, footprint, pin count, SMD status, and glued status for BLUE_XDAQ_MODULE.",
+    "officialUse": "Supports DHF electrical design traceability for board component placement and assembly data.",
+    "keyPoints": [
+      "The table columns are RefDes, X, Y, Orient., Layer, PartType, PartDecal, Pins, SMD, and Glued.",
+      "Components are listed on Top and Bottom layers with placement coordinates and orientations.",
+      "U1 is listed as XC7A35T with BGA484_W23.0_P1.0 decal and 484 pins.",
+      "JM1, JM2, and JM3 are listed as DF40C-100DS-0.4V connectors with 100 pins.",
+      "JM4 is listed as DF40C-60DS-0.4V with 60 pins."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_XDAQ_MODULE",
+      "type": "product/module",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/XDAQ/좌표/BLUE_XDAQ_MODULE REV.02(241028)좌표.xls"
+    },
+    {
+      "name": "XC7A35T",
+      "type": "component",
+      "evidence": "U1,27.500,27.500,0,Top,XC7A35T,BGA484_W23.0_P1.0,484,Yes,Yes"
+    },
+    {
+      "name": "DF40C-100DS-0.4V",
+      "type": "connector",
+      "evidence": "JM1,3.500,27.500,270,Bottom,DF40C-100DS-0.4V,CNS-DF40C-100DS(0.4),100,Yes,Yes"
+    },
+    {
+      "name": "DF40C-60DS-0.4V",
+      "type": "connector",
+      "evidence": "JM4,27.500,51.500,0,Bottom,DF40C-60DS-0.4V,CNS-DF40C-60DS(0.4),60,Yes,Yes"
+    },
+    {
+      "name": "TPS74801DRCR/VSON-10",
+      "type": "component",
+      "evidence": "U5,49.848,46.038,90,Top,TPS74801DRCR/VSON-10,SON-V-10(0.5),16,No,No"
+    },
+    {
+      "name": "MC20902/TQLMP-48",
+      "type": "component",
+      "evidence": "U8,9.208,46.990,0,Top,MC20902/TQLMP-48,TQLMP-48(0.5),49,Yes,No"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB component coordinates",
+      "pageTarget": "PCB component placement coordinates",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Reference designator",
+      "pageTarget": "Reference designator",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "PCB layer placement",
+      "pageTarget": "PCB layer placement",
+      "evidence": "B1,27.500,30.750,90,Bottom,LS-1608-1,LS-1608-1,2,Yes,No"
+    },
+    {
+      "name": "Surface-mount device status",
+      "pageTarget": "Surface-mount device",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Component gluing status",
+      "pageTarget": "PCB component gluing",
+      "evidence": "JM1,3.500,27.500,270,Bottom,DF40C-100DS-0.4V,CNS-DF40C-100DS(0.4),100,Yes,Yes"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a PCB coordinate table with columns for reference designator, position, orientation, layer, part type, decal, pin count, SMD status, and glued status.",
+      "evidenceText": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued",
+      "pageTarget": "PCB component placement coordinates",
+      "confidence": "high"
+    },
+    {
+      "claim": "U1 is placed at X 27.500, Y 27.500 on the Top layer and uses part type XC7A35T with BGA484_W23.0_P1.0 decal and 484 pins.",
+      "evidenceText": "U1,27.500,27.500,0,Top,XC7A35T,BGA484_W23.0_P1.0,484,Yes,Yes",
+      "pageTarget": "XC7A35T",
+      "confidence": "high"
+    },
+    {
+      "claim": "JM1, JM2, and JM3 use part type DF40C-100DS-0.4V and have 100 pins.",
+      "evidenceText": "JM1,3.500,27.500,270,Bottom,DF40C-100DS-0.4V,CNS-DF40C-100DS(0.4),100,Yes,Yes; JM2,51.500,27.500,270,Bottom,DF40C-100DS-0.4V,CNS-DF40C-100DS(0.4),100,Yes,Yes; JM3,27.500,3.500,0,Bottom,DF40C-100DS-0.4V,CNS-DF40C-100DS(0.4),100,Yes,Yes",
+      "pageTarget": "DF40C-100DS-0.4V",
+      "confidence": "high"
+    },
+    {
+      "claim": "JM4 uses part type DF40C-60DS-0.4V and has 60 pins.",
+      "evidenceText": "JM4,27.500,51.500,0,Bottom,DF40C-60DS-0.4V,CNS-DF40C-60DS(0.4),60,Yes,Yes",
+      "pageTarget": "DF40C-60DS-0.4V",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table contains both Top and Bottom layer component placements.",
+      "evidenceText": "B2,11.500,35.250,180,Top,LS-1608-1,LS-1608-1,2,Yes,No; B1,27.500,30.750,90,Bottom,LS-1608-1,LS-1608-1,2,Yes,No",
+      "pageTarget": "PCB layer placement",
+      "confidence": "high"
+    },
+    {
+      "claim": "U5, U6, and U7 use part type TPS74801DRCR/VSON-10.",
+      "evidenceText": "U5,49.848,46.038,90,Top,TPS74801DRCR/VSON-10,SON-V-10(0.5),16,No,No; U6,36.513,46.038,90,Top,TPS74801DRCR/VSON-10,SON-V-10(0.5),16,No,No; U7,23.350,46.040,90,Top,TPS74801DRCR/VSON-10,SON-V-10(0.5),16,No,No",
+      "pageTarget": "TPS74801DRCR/VSON-10",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory standards are identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document title, revision, and date are inferred from the provided sourcePath filename rather than explicit document body text."
+    },
+    {
+      "severity": "info",
+      "reason": "The date string 241028 is preserved as shown in the filename and is not normalized because the source does not state the date format."
+    }
+  ]
+}

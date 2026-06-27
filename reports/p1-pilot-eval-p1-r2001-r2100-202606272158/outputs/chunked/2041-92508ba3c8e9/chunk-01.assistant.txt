@@ -1,0 +1,264 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954379-8xb",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BASE/Schematic/BASE(250723)-INX.pdf",
+    "canonicalGroupId": "92508ba3c8e9"
+  },
+  "document": {
+    "title": "BASE(250723)-INX Mother Board Schematic",
+    "documentType": "Electrical schematic / design history file motherboard schematic",
+    "productModels": [
+      "XDAQ IMX8-PLUS",
+      "BASE",
+      "INX",
+      "1417",
+      "1717"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "Rev 1.0 release; sheet title blocks show Rev A",
+    "documentDate": "Sheet dates range from 2025-03-18 to 2025-10-27; file name indicates 2025-07-23",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Mother board electrical schematic for BASE/INX XDAQ IMX8-PLUS design, covering connectors, IMX8 interfaces, power tree, signal level shifting, I2C devices, battery charging, and impedance/layout notes.",
+    "officialUse": "Can support DHF/DMR electrical design traceability, interface specification review, power budget review, layout constraint verification, and component-level design evidence.",
+    "keyPoints": [
+      "The schematic contains 19 sheets including block diagram, B2B/B2W connectors, IMX8, signal level shift, base devices, power tree, XDAQ/IMX8/ROIC/GATE/BIAS power, battery charger, and I2C flow.",
+      "High-speed layout constraints are specified for Ethernet, USB, PCIe, and MicroSD-related interfaces.",
+      "Power architecture defines adapter, battery, charger, and multiple regulated rails with stated voltage/current targets and input ranges.",
+      "I2C architecture lists devices and addresses for GPIO expanders, OLED, RTC, temperature sensor, gyro, battery, EEPROM, and voltage sensing."
+    ]
+  },
+  "entities": [
+    {
+      "name": "XDAQ IMX8-PLUS",
+      "type": "product/platform",
+      "evidence": "Block diagram identifies “XDAQ IMX8-PLUS” and shows interfaces including ROIC, GATE, MIPI, USB3.0, Ethernet, PCIe M.2, SD Card, DEBUG, and WIFI."
+    },
+    {
+      "name": "BASE Mother Board",
+      "type": "hardware assembly",
+      "evidence": "Title area states “Mother Board” and “Mother Board Block Diagram”; later sheet titles include BASE_POWER_TREE, BASE DEVICE#1, BASE DEVICE#2, and BASE DEVICE#3."
+    },
+    {
+      "name": "IMX8",
+      "type": "processor/module interface",
+      "evidence": "Sheet 6 is titled “IMX8” and lists signals for Ethernet, USB, USDHC, PCIe, MIPI CSI, LVDS, I2C, SPI, and debug UART."
+    },
+    {
+      "name": "PCA9534PWR",
+      "type": "I2C GPIO expander component",
+      "evidence": "Signal-level-shift sheet lists GPIO EXPANDER I2C ADD: 0x20 and 0x21; components U3 and U4 are PCA9534PWR."
+    },
+    {
+      "name": "TPS54620RGY",
+      "type": "power regulator component",
+      "evidence": "Power tree and power sheets use TPS54620RGY for rails including IMX8_PWR, ROIC_PWR, XDAQ_PWR, and BAIS_PWR."
+    },
+    {
+      "name": "BQ24610",
+      "type": "battery charger component",
+      "evidence": "Battery charger sheet includes U35 and U38 as BQ24610 with adapter and battery inputs shown."
+    },
+    {
+      "name": "ADP5071",
+      "type": "DC/DC power component",
+      "evidence": "GATE_POWER and BAIS_POWER sheets show ADP5071ACPZ/LFCSP used for VGH/VGL and bias negative rail generation."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "High-speed impedance layout constraints",
+      "pageTarget": "Sheets 9-11",
+      "evidence": "Ethernet is labeled 100 ohm; USB signals are labeled 90 ohm length equal and 90 ohm differential pairs; PCIe#A is labeled impedance 100 ohm."
+    },
+    {
+      "name": "Power input and regulated rail architecture",
+      "pageTarget": "Sheets 12-18",
+      "evidence": "Power tree lists BAT voltage 9.0V~13.2V, adapter/USB PD 15V, IMX8_PWR, ROIC_PWR, XDAQ_PWR, GATE_PWR, VGH/VGL_PWR, and battery charger outputs."
+    },
+    {
+      "name": "I2C device map",
+      "pageTarget": "Sheet 19",
+      "evidence": "I2C flow lists PCA9534 at 0x20/0x21, SSD1306 OLED at 0x3C, DS1340 RTC at 0x68, TMP75A at 0x48, BQ40Z50 battery at 0x0B, M24256E EEPROM at 0x50, and TLA2021 V-SEN at 0x49."
+    },
+    {
+      "name": "Gate control configuration",
+      "pageTarget": "Sheet 5",
+      "evidence": "Note states 140um Static (1417,1717) uses Gate IC 6CH; 100um Static (1417,1717) uses Gate IC 9CH; maximum 10 gate control."
+    },
+    {
+      "name": "ROIC cable/channel configuration",
+      "pageTarget": "Sheet 4",
+      "evidence": "KAL cable note lists 140um and 100um configurations for 1417 and 1717, including ROIC_R and ROIC_L channel counts."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The schematic package contains 19 sheets and includes design sections for connectors, IMX8, devices, power, battery charger, and I2C flow.",
+      "evidenceText": "Page Description lists sheets 1-19 including B2B Con_ROIC, B2B Con_GATE,MIPI, B2W connectors, IMX8, IMX8_Signal Level Shift, Base_Device#1-#4, Base Power Tree, XDAQ_POWER, IMX8_POWER, ROIC_POWER, GATE_POWER, Battery Charger, BAIS_POWER, and I2C_Flow.",
+      "pageTarget": "Sheet 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision history records Rev 1.0 release on 18/03/2024.",
+      "evidenceText": "Revision table states “1.0 18/03/2024 All Rev1.0 Release.”",
+      "pageTarget": "Sheet 1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The design uses 200 MHz differential clock lines for ROIC-related connectors.",
+      "evidenceText": "B2B Connector JM1/JM2 sheet labels “Diff_clock 2Line(200MHz)” near ROIC_L and ROIC_R clock sections.",
+      "pageTarget": "Sheet 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "B2B connector JM1 and JM2 are DF40C-100DS-0.4V connectors.",
+      "evidenceText": "Sheet 2 lists JM1 DF40C-100DS-0.4V and JM2 DF40C-100DS-0.4V.",
+      "pageTarget": "Sheet 2",
+      "confidence": "high"
+    },
+    {
+      "claim": "B2B connectors JM3 and JM4 support GATE, LVDS, MGT, MIPI, and IMX8 signal routing.",
+      "evidenceText": "Sheet 3 includes labels GATE_CONTROL, MIPI, IMX8, SINGLE:SPARE, DUAL:LVDS, GATE LVDS(S), and MGT MIPI; JM4 is DF40C-60DS-0.4V and JM3 is DF40C-100DS-0.4V.",
+      "pageTarget": "Sheet 3",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC B2W connector configuration distinguishes 140um and 100um configurations for 1417 and 1717 variants.",
+      "evidenceText": "Note states KAL Cable (1:N) use: 140um(1417) ROIC_R_01~10, 140um(1717) ROIC_R_01~12, 100um(1417) ROIC_R_01~12 and ROIC_L 14EA, 100um(1717) ROIC_R_01~12 and ROIC_L 17EA.",
+      "pageTarget": "Sheet 4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Gate connector design specifies maximum 10 gate control and different gate IC channel counts by pitch.",
+      "evidenceText": "Note states “140um Static (1417,1717) / Gate IC 6CH,” “100um Static (1417,1717) / Gate IC 9CH,” and “Maximum 10 Gate Control.”",
+      "pageTarget": "Sheet 5",
+      "confidence": "high"
+    },
+    {
+      "claim": "IMX8 boot media selection is defined by a binary strap where 0 selects SD and 1 selects EMMC.",
+      "evidenceText": "IMX8 sheet note states “0 = SD” and “1 = EMMC.”",
+      "pageTarget": "Sheet 6",
+      "confidence": "high"
+    },
+    {
+      "claim": "The signal level shift design requires VCCA to be less than or equal to VCCB.",
+      "evidenceText": "IMX8_SIGNAL_LEVEL_SHIFT sheet states “VCCA ≤ VCCB” and includes TXB0108PWR level shifters.",
+      "pageTarget": "Sheet 7",
+      "confidence": "high"
+    },
+    {
+      "claim": "GPIO expanders are assigned I2C addresses 0x20 and 0x21.",
+      "evidenceText": "Signal level shift sheet labels GPIO EXPANDER I2C ADD: 0x20 and GPIO EXPANDER I2C ADD: 0x21 with PCA9534PWR devices.",
+      "pageTarget": "Sheet 7",
+      "confidence": "high"
+    },
+    {
+      "claim": "Base device sheet 1 includes RTC, gyro, temperature, and voltage detection ADC devices with I2C addressing.",
+      "evidenceText": "Sheet 8 labels RTC I2C ADDR 0x68, GYRO I2C ADDR 0x69, TEMP I2C ADDR 0x48, and voltage detection ADC I2C ADDR 0x48/0x49.",
+      "pageTarget": "Sheet 8",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ethernet layout is constrained to 100 ohm impedance.",
+      "evidenceText": "BASE DEVICE#2 sheet states “Layout: 100ohm, ETHERNET SIGNAL” and “Impedance : 100ohm.”",
+      "pageTarget": "Sheet 9",
+      "confidence": "high"
+    },
+    {
+      "claim": "USB3.0 and I2C#A OLED routing is associated with USB-C and USB signals require 90 ohm impedance with length matching.",
+      "evidenceText": "Sheet 9 states “USB3.0 & I2C#A(OLED) to USB_C” and “Layout: 90ohm, USB signals length equal.”",
+      "pageTarget": "Sheet 9",
+      "confidence": "high"
+    },
+    {
+      "claim": "USB client differential pairs require 90 ohm impedance.",
+      "evidenceText": "BASE DEVICE#3 sheet states “Layout: 90ohm differential pairs” and “Impedance : 90ohm” for USB CLIENT.",
+      "pageTarget": "Sheet 10",
+      "confidence": "high"
+    },
+    {
+      "claim": "EEPROM address mapping is defined with device address 0x50, write address 0xA0, and read address 0xA1.",
+      "evidenceText": "Sheet 10 labels EEPROM “ADDR : (0X50), Write Addr : (0xA0), Read Addr : (0xA1).”",
+      "pageTarget": "Sheet 10",
+      "confidence": "high"
+    },
+    {
+      "claim": "MicroSD interface and PCIe interface impedance constraints are specified.",
+      "evidenceText": "Sheet 11 states “Impedance : 50Ω” near MicroSD 3.0 and “PCIE#A Impedance : 100Ω.”",
+      "pageTarget": "Sheet 11",
+      "confidence": "high"
+    },
+    {
+      "claim": "The base power tree supports battery voltage 9.0V to 13.2V and adapter/USB PD input of 15V.",
+      "evidenceText": "BASE_POWER_TREE sheet lists “BAT VOLTAGE (9.0V~13.2V)” and “ADAPTER, USB PD (15V).”",
+      "pageTarget": "Sheet 12",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power tree specifies battery packs BAT#1 and BAT#2 as 11.4V/3350mA.",
+      "evidenceText": "BASE_POWER_TREE sheet lists “BAT#1 11.4V/3350mA” and “BAT#2 11.4V/3350mA.”",
+      "pageTarget": "Sheet 12",
+      "confidence": "high"
+    },
+    {
+      "claim": "IMX8 power sheet defines an 8V to 17V input range and references hot swap testing.",
+      "evidenceText": "IMX8_POWER sheet states “HOT SWAP TEST” and “INPUT RANGE (8V~17V)” with IMX8_PWR rails.",
+      "pageTarget": "Sheet 13",
+      "confidence": "high"
+    },
+    {
+      "claim": "ROIC power sheet defines 8V to 17V input range and ROIC power outputs of 5.2V/6A and 2.75V/6A.",
+      "evidenceText": "ROIC_POWER sheet states “INPUT RANGE (8V~17V),” “ROIC_PWR (5.2V/6A),” and “ROIC_PWR (2.75V/6A).”",
+      "pageTarget": "Sheet 14",
+      "confidence": "high"
+    },
+    {
+      "claim": "GATE_POWER includes shield/EMI cover notes and INX VGH/VGL output settings.",
+      "evidenceText": "GATE_POWER sheet states “Shield/EMI Cover,” “VGH : +15.5V,” “INX(VGL : -7.94V),” and lists MS260-10CP and SMS-255 cover parts.",
+      "pageTarget": "Sheet 15",
+      "confidence": "high"
+    },
+    {
+      "claim": "XDAQ power sheet defines 8V to 17V input range and XDAQ_PWR output of 2.9V/6A.",
+      "evidenceText": "XDAQ_POWER sheet states “INPUT RANGE (8V~17V) XDAQ_PWR (2.9V/6A)” and a resistor change setting output voltage to 2.9V.",
+      "pageTarget": "Sheet 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "BIAS power sheet defines negative VGL rail targets and shield/EMI cover notes.",
+      "evidenceText": "BAIS_POWER sheet states “VGL_N4.7V/1A,” “BAIS_PWR (4.7V/6A),” “VGL_N5.5V/1A,” and “Shield/EMI Cover.”",
+      "pageTarget": "Sheet 17",
+      "confidence": "high"
+    },
+    {
+      "claim": "Battery charger/input sheet defines adapter, battery, and system current ratings.",
+      "evidenceText": "Sheet 18 states from_ADAPTER 15V/6A, ADAPTER 15V/4A, BATTERY 15V/4A, BAT1 11.5V/3A, BAT2 11.5V/3A, and VSYS_M 15V/4A.",
+      "pageTarget": "Sheet 18",
+      "confidence": "high"
+    },
+    {
+      "claim": "I2C flow defines bus speeds of 100 kHz and 400 kHz.",
+      "evidenceText": "I2C_Flow sheet shows I2C_2, I2C_6, and I2C_3 paths with labels “100KHz,” “400KHz,” and “100KHz.”",
+      "pageTarget": "Sheet 19",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document title blocks contain placeholders such as <Doc>, <Title>, <RevCo>, and <RevCode>, so formal document number/title/revision metadata is incomplete in the extracted text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision/date metadata is inconsistent: revision history shows 18/03/2024 Rev1.0 release, sheet title blocks show Rev A, and sheet dates range across 2025."
+    },
+    {
+      "severity": "info",
+      "reason": "No explicit regulatory authority, certificate, submission number, or recognized standard is stated in this chunk."
+    }
+  ]
+}

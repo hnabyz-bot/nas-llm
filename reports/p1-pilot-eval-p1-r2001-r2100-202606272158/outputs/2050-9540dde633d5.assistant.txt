@@ -1,0 +1,154 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954383-ckg",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/GATE/좌표/BLUE_GATE_BOARD REV3.0(250317)좌표.xlsx",
+    "canonicalGroupId": "9540dde633d5"
+  },
+  "document": {
+    "title": "BLUE_GATE_BOARD REV3.0(250317)좌표.xlsx",
+    "documentType": "PCB component coordinate table",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV3.0",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Coordinate table for BLUE_GATE_BOARD REV3.0 listing reference designators, X/Y positions, orientation, layer, part type, decal, pins, SMD status, and glued status.",
+    "officialUse": "Supports PCB assembly/layout traceability by identifying component placement and mounting attributes.",
+    "keyPoints": [
+      "The table columns are RefDes, X, Y, Orient., Layer, PartType, PartDecal, Pins, SMD, and Glued.",
+      "Components are assigned to Top or Bottom layers.",
+      "Rows include connectors CON1 through CON6 and J1 with part type 05002HR-50J05 and 52 pins.",
+      "Rows include mounting holes M1 through M8 with MISSING_HOLE part types.",
+      "Rows include test points TP1 through TP22 with TP-SMD(0.8) part type."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_GATE_BOARD",
+      "type": "PCB board",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/GATE/좌표/BLUE_GATE_BOARD REV3.0(250317)좌표.xlsx"
+    },
+    {
+      "name": "REV3.0",
+      "type": "revision",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/GATE/좌표/BLUE_GATE_BOARD REV3.0(250317)좌표.xlsx"
+    },
+    {
+      "name": "05002HR-50J05",
+      "type": "part type",
+      "evidence": "CON1,376.750,17.300,180,Top,05002HR-50J05,CNS-05002HR-50J05(0.5),52,Yes,Yes"
+    },
+    {
+      "name": "TS5A23157DGSR/VSSOP",
+      "type": "part type",
+      "evidence": "U4,198.500,30.000,0,Bottom,TS5A23157DGSR/VSSOP,SOP-VS-10(0.5),10,Yes,No"
+    },
+    {
+      "name": "LSF0108PWR/TSSOP",
+      "type": "part type",
+      "evidence": "U10,230.300,30.250,0,Bottom,LSF0108PWR/TSSOP,SOP-TS-20(0.65),20,Yes,No"
+    },
+    {
+      "name": "TCA9539RGER/VQFN",
+      "type": "part type",
+      "evidence": "U13,40.750,29.250,270,Bottom,TCA9539RGER/VQFN,QFN-V-24(0.5),34,No,No"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB component coordinates",
+      "pageTarget": "PCB component placement coordinates",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Reference designator",
+      "pageTarget": "Reference designator",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "PCB layer assignment",
+      "pageTarget": "PCB layer assignment",
+      "evidence": "C1,133.250,13.750,270,Top,CS-3216-1,CS-3216-1,2,Yes,No"
+    },
+    {
+      "name": "SMD mounting status",
+      "pageTarget": "Surface-mount device",
+      "evidence": "BD2,125.500,20.500,180,Top,BLM21PG600SN1,LS-2012-1,2,Yes,No"
+    },
+    {
+      "name": "Glued component status",
+      "pageTarget": "PCB glued component status",
+      "evidence": "CON1,376.750,17.300,180,Top,05002HR-50J05,CNS-05002HR-50J05(0.5),52,Yes,Yes"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a coordinate table with columns for reference designator, X/Y coordinates, orientation, layer, part type, part decal, pin count, SMD status, and glued status.",
+      "evidenceText": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued",
+      "pageTarget": "PCB component placement coordinates",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document title identifies BLUE_GATE_BOARD and revision REV3.0.",
+      "evidenceText": "BLUE_GATE_BOARD REV3.0(250317)좌표.xlsx",
+      "pageTarget": "BLUE_GATE_BOARD",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector CON1 is on the Top layer at X 376.750 and Y 17.300 with orientation 180, part type 05002HR-50J05, 52 pins, SMD Yes, and Glued Yes.",
+      "evidenceText": "CON1,376.750,17.300,180,Top,05002HR-50J05,CNS-05002HR-50J05(0.5),52,Yes,Yes",
+      "pageTarget": "05002HR-50J05",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector CON2 is on the Top layer at X 305.070 and Y 17.300 with orientation 180, part type 05002HR-50J05, 52 pins, SMD Yes, and Glued No.",
+      "evidenceText": "CON2,305.070,17.300,180,Top,05002HR-50J05,CNS-05002HR-50J05(0.5),52,Yes,No",
+      "pageTarget": "05002HR-50J05",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mounting hole M1 is on the Top layer at X 50.000 and Y -1.000 with part type MISSING_HOLE-2.0(DUAL)-1, 12 pins, SMD No, and Glued Yes.",
+      "evidenceText": "M1,50.000,-1.000,0,Top,MISSING_HOLE-2.0(DUAL)-1,MISSING_HOLE-2.0(DUAL)-1,12,No,Yes",
+      "pageTarget": "PCB mounting hole",
+      "confidence": "high"
+    },
+    {
+      "claim": "Test point TP1 is on the Top layer at X 119.000 and Y 11.250 with part type TP-SMD(0.8), 1 pin, SMD Yes, and Glued No.",
+      "evidenceText": "TP1,119.000,11.250,0,Top,TP-SMD(0.8),TP-SMD(0.8),1,Yes,No",
+      "pageTarget": "PCB test point",
+      "confidence": "high"
+    },
+    {
+      "claim": "Component U10 is on the Bottom layer at X 230.300 and Y 30.250 with part type LSF0108PWR/TSSOP and decal SOP-TS-20(0.65).",
+      "evidenceText": "U10,230.300,30.250,0,Bottom,LSF0108PWR/TSSOP,SOP-TS-20(0.65),20,Yes,No",
+      "pageTarget": "LSF0108PWR/TSSOP",
+      "confidence": "high"
+    },
+    {
+      "claim": "Component U13 is on the Bottom layer at X 40.750 and Y 29.250 with part type TCA9539RGER/VQFN and decal QFN-V-24(0.5).",
+      "evidenceText": "U13,40.750,29.250,270,Bottom,TCA9539RGER/VQFN,QFN-V-24(0.5),34,No,No",
+      "pageTarget": "TCA9539RGER/VQFN",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly identified; productSignal is 'Unclassified'."
+    },
+    {
+      "severity": "info",
+      "reason": "Filename contains '(250317)', but the source text does not explicitly define it as a document date."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the source text."
+    }
+  ]
+}

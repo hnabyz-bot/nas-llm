@@ -1,0 +1,124 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954389-ix4",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BASE/좌표/BASE-BD-REV.03(20241125)-좌표.xlsx",
+    "canonicalGroupId": "f255a672bb2b"
+  },
+  "document": {
+    "title": "BASE-BD-REV.03(20241125)-좌표.xlsx",
+    "documentType": "PCB component coordinate spreadsheet",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV.03",
+    "documentDate": "20241125",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet-style PCB component placement coordinate list for BASE-BD revision 03.",
+    "officialUse": "May support design history file traceability for electrical design component placement, orientation, layer, SMD, and glue status.",
+    "keyPoints": [
+      "The table uses columns RefDes, X, Y, Orient., Layer, PartType, PartDecal, Pins, SMD, and Glued.",
+      "Rows list component reference designators with placement coordinates and assembly attributes.",
+      "The file path identifies the document as BASE-BD-REV.03(20241125)-좌표.xlsx."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BASE-BD",
+      "type": "PCB assembly or board identifier",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BASE/좌표/BASE-BD-REV.03(20241125)-좌표.xlsx"
+    },
+    {
+      "name": "MS621F-FL11E",
+      "type": "component part type",
+      "evidence": "BAT1,173.050,108.750,270,Top,MS621F-FL11E,BATT-MS621F-FL11E,2,Yes,No"
+    },
+    {
+      "name": "TPS54620RGY",
+      "type": "component part type",
+      "evidence": "U21,260.675,57.000,90,Top,TPS54620RGY,QFN-V-14(0.5),20,No,No"
+    },
+    {
+      "name": "BQ24610/VQFN",
+      "type": "component part type",
+      "evidence": "U35,232.050,90.000,90,Top,BQ24610/VQFN,QFN-V-24(0.5),34,No,Yes"
+    },
+    {
+      "name": "DF40C-100DP-0.4V",
+      "type": "connector part type",
+      "evidence": "JM1,50.820,80.576,180,Top,DF40C-100DP-0.4V,CNS-DF40C-100DP-0.4V(0.4),104,Yes,Yes"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB component coordinate list",
+      "pageTarget": "PCB Component Coordinate List",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "Reference designator",
+      "pageTarget": "Reference Designator",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "SMD placement",
+      "pageTarget": "Surface-Mount Device Placement",
+      "evidence": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued"
+    },
+    {
+      "name": "PCB layer placement",
+      "pageTarget": "PCB Layer Placement",
+      "evidence": "BAT1,173.050,108.750,270,Top,MS621F-FL11E,BATT-MS621F-FL11E,2,Yes,No"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a component coordinate table with placement and assembly columns.",
+      "evidenceText": "RefDes,X,Y,Orient.,Layer,PartType,PartDecal,Pins,SMD,Glued",
+      "pageTarget": "PCB Component Coordinate List",
+      "confidence": "high"
+    },
+    {
+      "claim": "BAT1 is listed on the Top layer with part type MS621F-FL11E, 2 pins, SMD Yes, and Glued No.",
+      "evidenceText": "BAT1,173.050,108.750,270,Top,MS621F-FL11E,BATT-MS621F-FL11E,2,Yes,No",
+      "pageTarget": "MS621F-FL11E",
+      "confidence": "high"
+    },
+    {
+      "claim": "U21 is listed as part type TPS54620RGY with decal QFN-V-14(0.5).",
+      "evidenceText": "U21,260.675,57.000,90,Top,TPS54620RGY,QFN-V-14(0.5),20,No,No",
+      "pageTarget": "TPS54620RGY",
+      "confidence": "high"
+    },
+    {
+      "claim": "U35 is listed as part type BQ24610/VQFN with decal QFN-V-24(0.5), SMD No, and Glued Yes.",
+      "evidenceText": "U35,232.050,90.000,90,Top,BQ24610/VQFN,QFN-V-24(0.5),34,No,Yes",
+      "pageTarget": "BQ24610 VQFN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source path identifies revision REV.03 and date 20241125 in the filename.",
+      "evidenceText": "BASE-BD-REV.03(20241125)-좌표.xlsx",
+      "pageTarget": "BASE-BD Revision 03 Coordinate Spreadsheet",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly identified in the source text; productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The document appears to be an electrical design coordinate file rather than a regulatory approval certificate, report, or standard."
+    }
+  ]
+}
