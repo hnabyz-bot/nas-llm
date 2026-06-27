@@ -1,0 +1,227 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954422-1b20",
+    "sourcePath": "raw/sources/Project/02_CYAN/1. DHF/14. 디텍터 구동 Software/EngineeringTool/PatchNote.txt",
+    "canonicalGroupId": "cc7c9b9b5f58"
+  },
+  "document": {
+    "title": "PatchNote.txt",
+    "documentType": "Software patch note",
+    "productModels": [
+      "CYAN"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "1.1.0.3",
+    "documentDate": "2026-03-23",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Patch note for detector driving EngineeringTool software, listing changes through version 1.1.0.3 dated 2026-03-23.",
+    "officialUse": "Supports software configuration and maintenance traceability for EngineeringTool features, firmware dependencies, setup behavior, acquisition, aging, calibration, LUT, FPGA, and TI ROIC functions.",
+    "keyPoints": [
+      "Version 1.1.0.3 adds LUT block copy and paste and Newtype Config functions.",
+      "Version 1.1.0 changes firmware naming to AXD_Firmware and includes multiple setup, LUT table, FPGA Preset Page UX, and TI ROIC Sync Align status changes.",
+      "Several entries specify firmware dependencies, including FW 1.0.21, Firmware 1.0.16, Firmware 1.0.14, Firmware 1.0.13, and Firmware 1.0.9.",
+      "The patch note covers acquisition, aging, setup, calibration, preprocessing, retransmission, log decryption, and detector reconnection behavior."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN",
+      "type": "product",
+      "evidence": "TI ROIC Sync Align 상태 표기 기능 추가 (Need cyan 0.1.4)"
+    },
+    {
+      "name": "EngineeringTool",
+      "type": "software tool",
+      "evidence": "raw/sources/Project/02_CYAN/1. DHF/14. 디텍터 구동 Software/EngineeringTool/PatchNote.txt"
+    },
+    {
+      "name": "AXD_Firmware",
+      "type": "firmware",
+      "evidence": "Firmware 명칭을 AXD_Firmware로 변경 (setup - service 등록)"
+    },
+    {
+      "name": "AbyzFramework",
+      "type": "software framework",
+      "evidence": "AbyzFramework - Engine 연결 가능"
+    },
+    {
+      "name": "Engine",
+      "type": "software component",
+      "evidence": "DeviceInfo 읽을 때 FrameworkVersion, EngineVersion 읽기 추가"
+    },
+    {
+      "name": "FPGA",
+      "type": "hardware component",
+      "evidence": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가"
+    },
+    {
+      "name": "TI ROIC",
+      "type": "hardware component",
+      "evidence": "TI ROIC Control/Preset 관련 추가 및 변경."
+    },
+    {
+      "name": "Doosan",
+      "type": "target/customer identifier",
+      "evidence": "EL Sheet Control 기능 추가 (Target-Doosan FW 1.0.22)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "LUT block copy and paste",
+      "pageTarget": "LUT Block Copy and Paste",
+      "evidence": "LUT block copy & paste 기능 추가"
+    },
+    {
+      "name": "Newtype Config",
+      "pageTarget": "Newtype Config",
+      "evidence": "Newtype Config 기능 추가"
+    },
+    {
+      "name": "FPGA LUT Editor",
+      "pageTarget": "FPGA LUT Editor",
+      "evidence": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가"
+    },
+    {
+      "name": "TI ROIC Control/Preset",
+      "pageTarget": "TI ROIC Control and Preset",
+      "evidence": "TI ROIC Control/Preset 관련 추가 및 변경."
+    },
+    {
+      "name": "TI ROIC Sync Align",
+      "pageTarget": "TI ROIC Sync Align",
+      "evidence": "TI ROIC sync align 기능 추가."
+    },
+    {
+      "name": "Dark noise correction",
+      "pageTarget": "Dark Noise Correction",
+      "evidence": "Aging Dark(Manual)에 한해 Dark noise correction 알고리즘 적용하도록 변경 (FW 1.0.21 필요)"
+    },
+    {
+      "name": "Acquisition Timeout",
+      "pageTarget": "Acquisition Timeout",
+      "evidence": "Acquisition Timeout 삭제"
+    },
+    {
+      "name": "Auto Reconnect",
+      "pageTarget": "Detector Auto Reconnect",
+      "evidence": "Auto Reconnect -> 옵션화"
+    },
+    {
+      "name": "PatchNote viewer",
+      "pageTarget": "PatchNote Viewer",
+      "evidence": "PatchNote 뷰어 추가."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document contains an entry for version 1.1.0.3 dated 2026-03-23.",
+      "evidenceText": "버전 : 1.1.0.3\n 날짜 : 2026-03-23",
+      "pageTarget": "EngineeringTool Patch Notes",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0.3 adds LUT block copy and paste functionality.",
+      "evidenceText": "LUT block copy & paste 기능 추가",
+      "pageTarget": "LUT Block Copy and Paste",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0.3 adds Newtype Config functionality.",
+      "evidenceText": "Newtype Config 기능 추가",
+      "pageTarget": "Newtype Config",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0.2 adds LUT Preset functionality and adds FrameworkVersion and EngineVersion reading when reading DeviceInfo.",
+      "evidenceText": "LUT Preset 기능 추가\n 2. DeviceInfo 읽을 때 FrameworkVersion, EngineVersion 읽기 추가",
+      "pageTarget": "LUT Preset",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 changes the firmware name to AXD_Firmware for setup service registration.",
+      "evidenceText": "Firmware 명칭을 AXD_Firmware로 변경 (setup - service 등록)",
+      "pageTarget": "AXD_Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 adds TI ROIC Sync Align status display and notes a CYAN 0.1.4 dependency.",
+      "evidenceText": "TI ROIC Sync Align 상태 표기 기능 추가 (Need cyan 0.1.4)",
+      "pageTarget": "TI ROIC Sync Align",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.27 adds FPGA LUT editor and control functionality.",
+      "evidenceText": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가",
+      "pageTarget": "FPGA LUT Editor",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.27 adds EL Sheet Control with Target-Doosan FW 1.0.22.",
+      "evidenceText": "EL Sheet Control 기능 추가 (Target-Doosan FW 1.0.22)",
+      "pageTarget": "EL Sheet Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.26 applies the dark noise correction algorithm only to Aging Dark Manual and requires FW 1.0.21.",
+      "evidenceText": "Aging Dark(Manual)에 한해 Dark noise correction 알고리즘 적용하도록 변경 (FW 1.0.21 필요)",
+      "pageTarget": "Dark Noise Correction",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.25 states that AbyzFramework can connect to Engine.",
+      "evidenceText": "AbyzFramework - Engine 연결 가능",
+      "pageTarget": "AbyzFramework Engine Connection",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.22 adds start-to-start mode to Aging.",
+      "evidenceText": "Aging에 Start-to-start mode 추가",
+      "pageTarget": "Aging Start-to-Start Mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.15 adds TI ROIC Init functionality and requires Firmware 1.0.13.",
+      "evidenceText": "Firmware 1.0.13 버전 필요\n - TI ROIC Init 기능 추가.",
+      "pageTarget": "TI ROIC Init",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.14 adds a PatchNote viewer shown after login when the program runs.",
+      "evidenceText": "PatchNote 뷰어 추가.\n - 프로그램 실행 후 로그인시 Patch Note를 보여주는 윈도우 출력.",
+      "pageTarget": "PatchNote Viewer",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.8 adds TI ROIC sync align functionality.",
+      "evidenceText": "TI ROIC sync align 기능 추가.",
+      "pageTarget": "TI ROIC Sync Align",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.7 changes Dark acquisition so preprocessing is not performed even if ApplyPreprocessing is checked.",
+      "evidenceText": "Dark 취득시에는 ApplyPreprocessing에 체크되어 있어도 Preprocessing을 수행하지 않도록 변경.",
+      "pageTarget": "Dark Acquisition Preprocessing",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The document has entries with versions and dates, but no separate document-level approval date or revision metadata beyond patch note entries."
+    },
+    {
+      "severity": "info",
+      "reason": "The source appears to be an internal software patch note rather than an RA/regulatory submission or certificate."
+    }
+  ]
+}
