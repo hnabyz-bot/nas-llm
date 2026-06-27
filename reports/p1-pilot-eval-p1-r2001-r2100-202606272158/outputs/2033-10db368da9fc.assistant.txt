@@ -1,0 +1,148 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954377-7mh",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/USB-C/BOM/BLUE_USB-C_BOM_250724.xlsx",
+    "canonicalGroupId": "10db368da9fc"
+  },
+  "document": {
+    "title": "BLUE_USB-C_BOM_20250724",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "BLUE_USB-C Ass'y",
+      "BLUE_USB-C_ PBA"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "20250724",
+    "standards": [
+      "USB 3.2 TYPE C"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Bill of materials for BLUE_USB-C Ass'y / BLUE_USB-C SMD.",
+    "officialUse": "Lists PCB, connector, resistor, bead, and capacitor parts with references, quantities, part numbers, specifications, vendors, and process notes.",
+    "keyPoints": [
+      "PCB entry specifies BLUE_USB&PCIe PCB, FR4, 4Layer, T1.2, 00*00.",
+      "USB connector J4 uses Amphenol part 124018612112A with specification USB Connectors USB 3.2 TYPE C.",
+      "Several parts are listed for SM process; item 8 R158 is marked Skip and NC."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Murata",
+      "type": "manufacturer",
+      "evidence": "BLM18KG121TN1D/BD1608,\"Impedance:120ohm,DC_R:50mhm,100Mhz, 1608\",Murata"
+    },
+    {
+      "name": "Amphenol",
+      "type": "manufacturer",
+      "evidence": "CONNECTOR-USB,124018612112A,USB Connectors USB 3.2 TYPE C,Amphenol"
+    },
+    {
+      "name": "YEONHO",
+      "type": "manufacturer",
+      "evidence": "CONNECTOR-FPC/FFC/PIC,05002HR-10N2,\"10P,0.5mm,SMD-A,AU,Y,FLIP,BOTTOM\",YEONHO"
+    },
+    {
+      "name": "Walsin",
+      "type": "manufacturer",
+      "evidence": "R-CHIP,WR05X5601 FTL,\"5.6Kohm,1%,1/10W,TP,1005\",Walsin"
+    },
+    {
+      "name": "Samsung",
+      "type": "manufacturer",
+      "evidence": "C-CER, CHIP\",CL10B104KB8NNND,\"100nF, 5%, 50V, X7R, 1608\",Samsung"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "BLUE_USB-C_BOM_20250724"
+    },
+    {
+      "name": "BLUE_USB-C Ass'y",
+      "pageTarget": "BLUE_USB-C Assembly",
+      "evidence": "BLUE_USB-C Ass'y"
+    },
+    {
+      "name": "BLUE_USB-C SMD",
+      "pageTarget": "BLUE_USB-C SMD",
+      "evidence": "BLUE_USB-C SMD"
+    },
+    {
+      "name": "FR4 4-layer PCB",
+      "pageTarget": "FR4 PCB",
+      "evidence": "FR4 4L_00mm x 00mm x 1.2T(BLUE) Rev.03 적용"
+    },
+    {
+      "name": "USB 3.2 Type-C connector",
+      "pageTarget": "USB Type-C Connector",
+      "evidence": "CONNECTOR-USB,124018612112A,USB Connectors USB 3.2 TYPE C,Amphenol"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is BLUE_USB-C_BOM_20250724.",
+      "evidenceText": "BLUE_USB-C_BOM_20250724",
+      "pageTarget": "BLUE_USB-C BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM applies to BLUE_USB-C Ass'y and BLUE_USB-C SMD.",
+      "evidenceText": "BLUE_USB-C Ass'y,,,,,,FR4 4L_00mm x 00mm x 1.2T(BLUE) Rev.03 적용,,,,,",
+      "pageTarget": "BLUE_USB-C Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB specification includes BLUE_USB&PCIe PCB, FR4, 4Layer, T1.2, 00*00.",
+      "evidenceText": "PCB_USB&PCI,\"BLUE_USB&PCIe PCB,FR4,4Layer,T1.2,00*00\",BLUE_USB-C_ PBA",
+      "pageTarget": "BLUE_USB-C PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision shown for the FR4 4-layer board is Rev.03.",
+      "evidenceText": "FR4 4L_00mm x 00mm x 1.2T(BLUE) Rev.03 적용",
+      "pageTarget": "BLUE_USB-C PCB Revision",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J4 is an Amphenol USB 3.2 Type-C connector with part number 124018612112A.",
+      "evidenceText": "3,1,J4,,,,SM,CONNECTOR-USB,124018612112A,USB Connectors USB 3.2 TYPE C,Amphenol",
+      "pageTarget": "USB Type-C Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "FPC/FFC/PIC connector J3 uses YEONHO part 05002HR-10N2.",
+      "evidenceText": "4,1,J3,,,,SM,CONNECTOR-FPC/FFC/PIC,05002HR-10N2,\"10P,0.5mm,SMD-A,AU,Y,FLIP,BOTTOM\",YEONHO",
+      "pageTarget": "FPC FFC Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "FPC/FFC/PIC connector J5 uses YEONHO part 05002HR-H20J05.",
+      "evidenceText": "5,1,J5,,,,SM,CONNECTOR-FPC/FFC/PIC,05002HR-H20J05,\"20P,0.5mm,SMD-A,AU,Y,FLIP,BOTTOM,H:2.1mm\",YEONHO",
+      "pageTarget": "FPC FFC Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "R158 is marked as Skip and NC.",
+      "evidenceText": "8,1,R158,,,,Skip,R-CHIP,WR06X000 PTL,0/R1608/NC,Walsin,Skip",
+      "pageTarget": "BOM Skip Component",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Source metadata productSignal is Unclassified."
+    },
+    {
+      "severity": "warning",
+      "reason": "PCB dimensions appear as placeholders: 00mm x 00mm and 00*00."
+    }
+  ]
+}
