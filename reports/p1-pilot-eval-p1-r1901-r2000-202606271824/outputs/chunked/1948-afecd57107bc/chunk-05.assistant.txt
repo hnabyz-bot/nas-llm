@@ -1,0 +1,258 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-s82",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.0판 2005.12 [영문].pdf",
+    "canonicalGroupId": "afecd57107bc"
+  },
+  "document": {
+    "title": "IEC 60601-1:2005",
+    "documentType": "International medical electrical equipment safety standard",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "IEC"
+    ],
+    "revisionOrVersion": "IEC:2005",
+    "documentDate": "2005",
+    "standards": [
+      "IEC 60601-1:2005",
+      "IEC 60950-1",
+      "IEC 60384-14",
+      "IEC 60417-5021",
+      "IEC 60364-7-710"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "IEC 60601-1:2005 clauses 8.5 through 8.7 define requirements and tests for means of protection, patient connection separation, defibrillation-proof applied parts, protective earthing, and leakage currents.",
+    "officialUse": "Use for medical electrical equipment safety compliance evidence covering electric shock protection, patient leakage current limits, protective earth impedance, and defibrillation-proof applied part verification.",
+    "keyPoints": [
+      "Means of protection are categorized as patient protection or operator protection depending on which equipment parts they protect.",
+      "F-type applied parts require separation equivalent to one means of patient protection and patient leakage current testing at 110% maximum mains voltage.",
+      "Defibrillation-proof applied parts must prevent hazardous energies above 1 V peak on specified parts during defibrillator discharge and preserve basic safety and essential performance afterward.",
+      "Protective earth connections have defined impedance limits and current-carrying verification tests.",
+      "Leakage current and patient auxiliary current limits are specified for normal condition, single fault condition, and special test conditions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "IEC",
+      "type": "standards organization",
+      "evidence": "Page headers identify the document as \"60601-1 © IEC:2005\"."
+    },
+    {
+      "name": "ME EQUIPMENT",
+      "type": "regulated equipment category",
+      "evidence": "Requirements apply to ME EQUIPMENT throughout clauses 8.5 to 8.7, including protective earthing and leakage current tests."
+    },
+    {
+      "name": "MANUFACTURER",
+      "type": "responsible party",
+      "evidence": "The manufacturer defines whether multiple functions are one applied part or multiple applied parts, and must demonstrate reliability for moving-part protective earth connections."
+    },
+    {
+      "name": "OPERATOR",
+      "type": "user role",
+      "evidence": "Means of operator protection and operator-accessible potential equalization terminal requirements are specified."
+    },
+    {
+      "name": "PATIENT",
+      "type": "protected subject",
+      "evidence": "Patient connections, patient leakage currents, and patient auxiliary currents are repeatedly regulated in clauses 8.5.2 and 8.7."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Means of Patient Protection",
+      "pageTarget": "p.147",
+      "evidence": "A means of protection is a means of patient protection if it protects applied parts or parts identified under 4.6 as needing applied-part requirements."
+    },
+    {
+      "name": "Means of Operator Protection",
+      "pageTarget": "p.147",
+      "evidence": "If a means of protection does not protect applied parts or equivalent parts, it is a means of operator protection."
+    },
+    {
+      "name": "F-type applied part separation",
+      "pageTarget": "p.149",
+      "evidence": "Patient connections of any F-type applied part must be separated from all other parts by means equivalent to one means of patient protection."
+    },
+    {
+      "name": "Defibrillation-proof applied part",
+      "pageTarget": "p.153",
+      "evidence": "The classification defibrillation-proof applied part applies to the whole of one applied part."
+    },
+    {
+      "name": "Protective earth terminal",
+      "pageTarget": "p.161",
+      "evidence": "The protective earth terminal must be suitable for connection to an external protective earthing system."
+    },
+    {
+      "name": "Leakage current limits",
+      "pageTarget": "p.167-p.173",
+      "evidence": "Allowable values are specified for earth leakage current, touch current, patient leakage current, and patient auxiliary current."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Protective earth connections forming a means of operator protection must comply with IEC 60601-1 clause 8.6 or IEC 60950-1 protective earthing requirements and tests.",
+      "evidenceText": "Protective earth connections forming a means of operator protection shall either comply with 8.6 or comply with IEC 60950-1 for protective earthing.",
+      "pageTarget": "p.147",
+      "confidence": "high"
+    },
+    {
+      "claim": "Y2 capacitors complying with IEC 60384-14 may count as one means of operator protection if they pass the corresponding dielectric strength test.",
+      "evidenceText": "A Y2 capacitor complying with IEC 60384-14 is considered equivalent to one means of operator protection if it passes the dielectric strength test for one means.",
+      "pageTarget": "p.147",
+      "confidence": "high"
+    },
+    {
+      "claim": "Y1 capacitors complying with IEC 60384-14 may count as two means of operator protection if they pass the corresponding dielectric strength test.",
+      "evidenceText": "A Y1 capacitor complying with IEC 60384-14 is considered equivalent to two means of operator protection if it passes the dielectric strength test for two means.",
+      "pageTarget": "p.147",
+      "confidence": "high"
+    },
+    {
+      "claim": "F-type applied part patient connections must be separated from all other parts by one means of patient protection for a working voltage equal to maximum mains voltage.",
+      "evidenceText": "Patient connections of any F-type applied part shall be separated from all other parts by means equivalent to one means of patient protection for working voltage equal to maximum mains voltage.",
+      "pageTarget": "p.149",
+      "confidence": "high"
+    },
+    {
+      "claim": "F-type applied parts must meet the patient leakage current limit with 110% of maximum mains voltage applied.",
+      "evidenceText": "F-type applied part separation shall comply with the specified limit for patient leakage current with 110% of the maximum mains voltage applied.",
+      "pageTarget": "p.149",
+      "confidence": "high"
+    },
+    {
+      "claim": "Type BF, Type CF, and defibrillation-proof classification applies to the whole of one applied part.",
+      "evidenceText": "The classification as Type BF, Type CF or defibrillation-proof applies to the whole of one applied part.",
+      "pageTarget": "p.149",
+      "confidence": "high"
+    },
+    {
+      "claim": "Type B applied part patient connections that are not protectively earthed require one means of patient protection from unearthed metal accessible parts unless risk-based exceptions are met.",
+      "evidenceText": "Patient connections of a Type B applied part not protectively earthed shall be separated by one means of patient protection from metal accessible parts not protectively earthed, unless stated low-risk conditions apply.",
+      "pageTarget": "p.149",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient lead connectors with conductive parts not separated by one means of patient protection must be constructed to prevent connection to earth or hazardous voltage while contacting the patient.",
+      "evidenceText": "Such a connector shall be constructed so the conductive part cannot become connected to earth or possible hazardous voltage while patient connections contact the patient.",
+      "pageTarget": "p.149",
+      "confidence": "high"
+    },
+    {
+      "claim": "Maximum mains voltage is 250 V for other internally powered ME equipment.",
+      "evidenceText": "For other internally powered ME equipment, the maximum mains voltage is 250 V.",
+      "pageTarget": "p.151",
+      "confidence": "high"
+    },
+    {
+      "claim": "Working voltage for a means of protection may be determined by inspection, calculation, or measurement.",
+      "evidenceText": "The working voltage is determined by inspection, calculation or measurement, according to 8.5.4.",
+      "pageTarget": "p.147",
+      "confidence": "high"
+    },
+    {
+      "claim": "For defibrillation-proof applied parts, working voltage is determined without considering possible defibrillation voltages.",
+      "evidenceText": "For defibrillation-proof applied parts, the working voltage is determined without regard to the possible presence of defibrillation voltages.",
+      "pageTarget": "p.153",
+      "confidence": "high"
+    },
+    {
+      "claim": "Defibrillation-proof applied parts must prevent hazardous electrical energies above 1 V peak from appearing on enclosure, signal input/output parts, test foil, or other applied-part patient connections during defibrillator discharge.",
+      "evidenceText": "During cardiac defibrillator discharge, hazardous electrical energies exceeding 1 V peak between Y1 and Y2 shall not appear on listed enclosure, signal, foil, or other patient connection locations.",
+      "pageTarget": "p.153",
+      "confidence": "high"
+    },
+    {
+      "claim": "After defibrillation voltage exposure and any documented recovery time, ME equipment must still provide basic safety and essential performance.",
+      "evidenceText": "Following exposure to defibrillation voltage and any recovery time stated in accompanying documents, ME equipment shall comply with relevant requirements and continue to provide basic safety and essential performance.",
+      "pageTarget": "p.153",
+      "confidence": "high"
+    },
+    {
+      "claim": "Defibrillation-proof applied parts must deliver at least 90% of the defibrillator energy to a 100 ohm load compared with the equipment disconnected.",
+      "evidenceText": "Defibrillation-proof applied parts or patient connections shall incorporate means so energy delivered to a 100 ohm load is at least 90% of the energy with ME equipment disconnected.",
+      "pageTarget": "p.157",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth requirements in clauses 8.6.2 through 8.6.8 do not apply where parts comply with IEC 60950-1 protective earthing and serve only as means of operator protection.",
+      "evidenceText": "Requirements of 8.6.2 to 8.6.8 apply unless parts comply with IEC 60950-1 protective earthing and serve as means of operator protection but not patient protection.",
+      "pageTarget": "p.161",
+      "confidence": "high"
+    },
+    {
+      "claim": "For permanently installed ME equipment and ME equipment with an appliance inlet, protective earth impedance must not exceed 100 milliohms except as allowed by 8.6.4 b).",
+      "evidenceText": "Impedance between the protective earth terminal or appliance inlet earth pin and any protectively earthed part shall not exceed 100 mΩ, except as allowed by 8.6.4 b).",
+      "pageTarget": "p.163",
+      "confidence": "high"
+    },
+    {
+      "claim": "For ME equipment with a non-detachable power supply cord, impedance between the mains plug protective earth pin and any protectively earthed part must not exceed 200 milliohms except as allowed by 8.6.4 b).",
+      "evidenceText": "For ME equipment with a non-detachable power supply cord, impedance between the protective earth pin in the mains plug and any protectively earthed part shall not exceed 200 mΩ.",
+      "pageTarget": "p.163",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth impedance testing uses 25 A or 1.5 times the highest rated current, whichever is greater, at 50 Hz or 60 Hz for 5 s to 10 s.",
+      "evidenceText": "A current of 25 A or 1.5 times the highest rated current, whichever is greater, from a 50 Hz or 60 Hz source is passed for 5 s to 10 s.",
+      "pageTarget": "p.163",
+      "confidence": "high"
+    },
+    {
+      "claim": "Potential equalization conductor terminals must be operator-accessible, minimize accidental disconnection, detach without a tool, not be used for protective earth, and be marked with IEC 60417-5021.",
+      "evidenceText": "The terminal shall be accessible to the operator, minimize accidental disconnection, allow detachment without a tool, not be used for protective earth, and be marked with IEC 60417-5021.",
+      "pageTarget": "p.165",
+      "confidence": "high"
+    },
+    {
+      "claim": "Class II ME equipment with isolated internal screens and a three-conductor power cord may use the third conductor only as functional earth for those screens.",
+      "evidenceText": "If Class II ME equipment with isolated internal screens has a three-conductor power cord, the third conductor shall be used only as the functional earth connection for these screens.",
+      "pageTarget": "p.167",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current limits apply at operating temperature, after humidity preconditioning, in normal and specified single fault conditions, with highest rated supply frequency, and with 110% highest rated mains voltage.",
+      "evidenceText": "Specified earth leakage, touch, patient leakage, and patient auxiliary current values apply under combinations including operating temperature, humidity preconditioning, NC/SFC, highest rated frequency, and 110% highest rated mains voltage.",
+      "pageTarget": "p.167",
+      "confidence": "high"
+    },
+    {
+      "claim": "Touch current allowable values are 100 microamps in normal condition and 500 microamps in single fault condition.",
+      "evidenceText": "The allowable values of the touch current are 100 μA in normal condition and 500 μA in single fault condition.",
+      "pageTarget": "p.169",
+      "confidence": "high"
+    },
+    {
+      "claim": "Earth leakage current allowable values are 5 mA in normal condition and 10 mA in single fault condition, with higher values allowed for certain permanently installed ME equipment.",
+      "evidenceText": "Earth leakage current values are 5 mA in normal condition and 10 mA in single fault condition; a higher value is allowed for permanently installed ME equipment connected to a dedicated supply circuit.",
+      "pageTarget": "p.169",
+      "confidence": "high"
+    },
+    {
+      "claim": "No leakage current may exceed 10 mA rms in normal or single fault condition when measured with a non-frequency-weighted device.",
+      "evidenceText": "Regardless of waveform and frequency, no leakage current shall exceed 10 mA r.m.s. in normal condition or single fault condition when measured with a non-frequency-weighted device.",
+      "pageTarget": "p.169",
+      "confidence": "high"
+    },
+    {
+      "claim": "Patient leakage current under special test conditions for an F-type applied part caused by external voltage on the patient connection is 5000 microamps for Type BF and 50 microamps for Type CF.",
+      "evidenceText": "Table 4 lists patient leakage current caused by external voltage on an F-type applied part patient connection: Type BF 5,000 μA and Type CF 50 μA; Type B not applicable.",
+      "pageTarget": "p.173",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current measurements close to allowed limits or of doubtful validity must use the applicable IEC test figure as the deciding factor.",
+      "evidenceText": "Other test figures may yield accurate results, but if results are close to allowed values or validity is doubtful, the applicable test figure is used as the deciding factor.",
+      "pageTarget": "p.173",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 5 of 20 and contains only clauses 8.5 to early 8.7.4.7; document-level title and edition details are inferred from page headers and source path."
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-s82",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.0판 2005.12 [영문].pdf",
+    "canonicalGroupId": "afecd57107bc"
+  },
+  "document": {
+    "title": "IEC 60601-1 Medical electrical equipment safety standard",
+    "documentType": "International safety standard rationale/explanatory annex excerpt",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "IEC"
+    ],
+    "revisionOrVersion": "Third edition; IEC 60601-1:2005",
+    "documentDate": "2005-12",
+    "standards": [
+      "IEC 60601-1:2005",
+      "IEC 60601-2-49:2001",
+      "ISO 14971",
+      "IEC 60990",
+      "IEC 60950-1",
+      "IEC 60664-1",
+      "IEC 61010-1:2001",
+      "IEC 60695-11-10",
+      "IEC 61058-1",
+      "IEC 60065",
+      "IEC 60335-1"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This IEC 60601-1:2005 chunk provides rationale for leakage-current limits, measurement circuits, insulation, creepage/clearance, wiring, and mains isolation requirements for ME equipment.",
+    "officialUse": "Use as regulatory and test rationale for IEC 60601-1 electrical safety evaluation of medical electrical equipment, especially patient leakage current, applied parts, insulation, and supply-mains isolation.",
+    "keyPoints": [
+      "TYPE CF patient leakage current limits are justified using ventricular fibrillation probabilities for normal and single fault conditions.",
+      "Total patient leakage current limits are specified because multiple applied parts or functions can increase aggregate leakage current.",
+      "Leakage-current measurements require reproducible supply and reference configurations, often using isolating and variable-voltage transformers.",
+      "IEC 60601-1:2005 aligns several insulation, creepage, clearance, and contact-spacing requirements with IEC 60950-1, IEC 60664-1, IEC 61010-1, and IEC 61058-1."
+    ]
+  },
+  "entities": [
+    {
+      "name": "IEC",
+      "type": "standards organization",
+      "evidence": "Pages identify the document as 60601-1 IEC:2005 and reference multiple IEC standards."
+    },
+    {
+      "name": "ME EQUIPMENT",
+      "type": "regulated product class",
+      "evidence": "Requirements and rationale repeatedly apply to ME EQUIPMENT with TYPE CF, TYPE BF, and TYPE B APPLIED PARTS."
+    },
+    {
+      "name": "TYPE CF APPLIED PARTS",
+      "type": "medical electrical safety classification",
+      "evidence": "For TYPE CF APPLIED PARTS, patient leakage current is discussed at 10 μA normal condition, 50 μA single fault, and 100 μA external voltage cases."
+    },
+    {
+      "name": "TYPE BF APPLIED PARTS",
+      "type": "medical electrical safety classification",
+      "evidence": "For TYPE BF APPLIED PARTS, maximum patient leakage current under certain external-voltage conditions is discussed as 5 mA, with a 500 μA single fault value in 8.7.4.7 d)."
+    },
+    {
+      "name": "ISO 14971",
+      "type": "risk management standard",
+      "evidence": "The chunk states that use of RISK MANAGEMENT in accordance with ISO 14971 contributes to lower estimated single fault probability."
+    },
+    {
+      "name": "IEC 60601-2-49:2001",
+      "type": "particular standard",
+      "evidence": "Total patient leakage current requirements are stated to be derived from IEC 60601-2-49:2001."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Patient leakage current",
+      "pageTarget": "pp. 503-507",
+      "evidence": "The chunk gives allowable values, physiological rationale, and probability estimates for PATIENT LEAKAGE CURRENT."
+    },
+    {
+      "name": "Touch current perceptibility",
+      "pageTarget": "p. 503",
+      "evidence": "The probability of 500 μA being perceptible is given as 0.01 for men and 0.014 for women using grip electrodes with intact skin."
+    },
+    {
+      "name": "Total patient leakage current",
+      "pageTarget": "pp. 505-507",
+      "evidence": "The total patient leakage current is defined as the vector sum of individual patient leakage currents, requiring specific limits."
+    },
+    {
+      "name": "Leakage current measurement supply circuit",
+      "pageTarget": "pp. 511-513",
+      "evidence": "Correct leakage-current results require a common reference point, appropriate supply configuration, and consideration of transients, interference, and neutral-earth voltage."
+    },
+    {
+      "name": "Dielectric strength",
+      "pageTarget": "pp. 521-523",
+      "evidence": "The dielectric strength test checks solid insulation under worst-case operating-temperature conditions after humidity preconditioning."
+    },
+    {
+      "name": "Creepage distance and air clearance",
+      "pageTarget": "pp. 523-527",
+      "evidence": "Requirements are based on expected supply-mains overvoltage transients and IEC 60664-1 overvoltage categories."
+    },
+    {
+      "name": "Fixing of wiring",
+      "pageTarget": "pp. 529-531",
+      "evidence": "Wiring connections with only one securing means that prevents a loosened or broken wire from creating a hazard are considered not in compliance."
+    },
+    {
+      "name": "Isolation from supply mains",
+      "pageTarget": "pp. 531-533",
+      "evidence": "Service personnel need a means by which ME equipment can be isolated from the supply mains."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "For ME equipment with TYPE CF applied parts, the allowable patient leakage current in normal condition is 10 μA.",
+      "evidenceText": "The allowable value of PATIENT LEAKAGE CURRENT for ME EQUIPMENT with TYPE CF APPLIED PARTS in NORMAL CONDITION is 10 μA.",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 10 μA TYPE CF normal-condition leakage-current limit is associated with a 0.002 probability of ventricular fibrillation or pump failure when applied through small intracardiac areas.",
+      "evidenceText": "10 μA... has a probability of 0,002 for causing ventricular fibrillation or pump failure when applied through small areas to an intracardiac site.",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "For ME equipment with TYPE CF applied parts, 50 μA is the maximum patient leakage current allowed in single fault condition.",
+      "evidenceText": "The 50 μA maximum allowed in SINGLE FAULT CONDITION for ME EQUIPMENT with TYPE CF APPLIED PARTS...",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "For catheters 1.25 mm to 2 mm in diameter likely to contact myocardium, 50 μA has an approximately 0.01 probability of causing ventricular fibrillation.",
+      "evidenceText": "For catheters 1,25 mm - 2 mm diameter likely to contact the myocardium, the probability of 50 μA causing ventricular fibrillation is near 0,01.",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "Overall probability of ventricular fibrillation from TYPE CF patient leakage current in single fault condition is estimated as 0.001.",
+      "evidenceText": "The overall probability... in SINGLE FAULT CONDITION is 0,001 (0,1 for probability of SINGLE FAULT CONDITION, 0,01 probability of 50 μA causing ventricular fibrillation).",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE B and TYPE BF applied parts with 500 μA maximum patient leakage current under single fault condition, IEC applies the same rationale as touch current because the current will not flow directly to the heart.",
+      "evidenceText": "For ME EQUIPMENT with TYPE B APPLIED PARTS and TYPE BF APPLIED PARTS... 500 μA... the same rationale applies as that for TOUCH CURRENT since this current will not flow directly to the heart.",
+      "pageTarget": "p. 503",
+      "confidence": "high"
+    },
+    {
+      "claim": "A very low direct current is necessary to avoid tissue necrosis because patient auxiliary current and patient leakage current can flow for prolonged periods.",
+      "evidenceText": "PATIENT AUXILIARY CURRENT but also PATIENT LEAKAGE CURRENT can flow for a prolonged period. A very low value of direct current is therefore necessary to avoid tissue necrosis.",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "The electrical separation of an F-type applied part from earth must have minimum quality because the patient is not earthed through the ME equipment.",
+      "evidenceText": "The main safety feature of ME EQUIPMENT with an F-TYPE APPLIED PART is that the PATIENT is not earthed... the electrical separation... from earth is to have a minimum quality.",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE CF applied parts under the external-voltage separation rationale, patient leakage current is limited to 50 μA.",
+      "evidenceText": "For TYPE CF APPLIED PARTS, the PATIENT LEAKAGE CURRENT will be limited to 50 μA, no worse than the previously discussed SINGLE FAULT CONDITION.",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE BF applied parts under the same external-voltage condition, maximum patient leakage current is 5 mA and is treated as a low-probability worst case.",
+      "evidenceText": "For TYPE BF APPLIED PARTS the maximum PATIENT LEAKAGE CURRENT under these conditions is 5 mA... the probability of its occurrence is very low.",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 requires limits for total patient leakage current because multiple functions or applied parts can make the total higher than single-function values.",
+      "evidenceText": "With multiple functions or multiple APPLIED PARTS the total PATIENT LEAKAGE CURRENT could be much higher... it is necessary to specify limits.",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "Total patient leakage current requirements in IEC 60601-1 are derived from IEC 60601-2-49:2001.",
+      "evidenceText": "These requirements are derived from IEC 60601-2-49:2001 [16].",
+      "pageTarget": "p. 505",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE CF applied parts, 50 μA total patient leakage current in normal condition is considered acceptable.",
+      "evidenceText": "Therefore, 50 μA for NORMAL CONDITION for total PATIENT LEAKAGE CURRENT is considered acceptable.",
+      "pageTarget": "p. 507",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE CF equipment in single fault condition, total leakage current was increased to 0.1 mA and the ventricular fibrillation probability is estimated as 0.0014 using a 0.02 single-fault probability.",
+      "evidenceText": "For SINGLE FAULT CONDITION the LEAKAGE CURRENT for TYPE CF EQUIPMENT has been increased to 0,1 mA... probability... 0,07 × 0,02, or 0,0014.",
+      "pageTarget": "p. 507",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE BF applied parts, total patient leakage current is 500 μA in normal condition and 1,000 μA in single fault condition.",
+      "evidenceText": "The total PATIENT LEAKAGE CURRENT has been increased to 500 μA for NORMAL CONDITION and to 1 000 μA for SINGLE FAULT CONDITION.",
+      "pageTarget": "p. 507",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TYPE CF applied parts, total patient leakage current caused by external voltage on the patient connection has a 100 μA limit.",
+      "evidenceText": "Total PATIENT LEAKAGE CURRENT caused by an external voltage on the PATIENT CONNECTION. For TYPE CF APPLIED PARTS, the limit has been increased to 100 μA.",
+      "pageTarget": "p. 507",
+      "confidence": "high"
+    },
+    {
+      "claim": "Ventricular fibrillation probability data from Starmer and Watson are used for 50 Hz and 60 Hz currents applied directly to hearts of human populations with cardiac disease.",
+      "evidenceText": "Articles by Starmer and Watson provide data on ventricular fibrillation caused by 50 Hz and 60 Hz currents applied directly to the hearts of human populations with cardiac disease.",
+      "pageTarget": "p. 509",
+      "confidence": "high"
+    },
+    {
+      "claim": "Commonly used current values for assessing patient risk have ventricular fibrillation probabilities from approximately 0.002 to 0.01.",
+      "evidenceText": "The commonly used values have low probabilities, ranging from approximately 0,002 to 0,01.",
+      "pageTarget": "p. 511",
+      "confidence": "high"
+    },
+    {
+      "claim": "A 10 mA leakage current produces no heating sensation with a typical patient connection of about 1 cm², but currents a few times higher can produce a burn.",
+      "evidenceText": "A current of 10 mA will produce no sensation of heating... contact area... 1 cm2, but a current a few times higher... would produce a burn.",
+      "pageTarget": "p. 511",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current burn risk depends on current magnitude, not frequency, so measurement must use a non-frequency-weighted device.",
+      "evidenceText": "The RISK of a burn depends on the magnitude of the current but not on its frequency, so the current has to be measured with a non-frequency-weighted device.",
+      "pageTarget": "p. 511",
+      "confidence": "high"
+    },
+    {
+      "claim": "Leakage current measurements require a common reference point in the measuring circuit and electrical reference to all circuit parts.",
+      "evidenceText": "For correct results of LEAKAGE CURRENT measurements, it is essential to have a common reference point within the measuring circuit.",
+      "pageTarget": "p. 511",
+      "confidence": "high"
+    },
+    {
+      "claim": "Testing at 110% of rated supply voltage is necessary, particularly for ME equipment with switched-mode power supplies.",
+      "evidenceText": "A variable-voltage transformer is necessary to provide 110 % of the RATED supply voltage... particularly with ME EQUIPMENT that includes a switched-mode power supply.",
+      "pageTarget": "p. 511",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60990 general measuring devices are not appropriate for measuring patient leakage current under this rationale.",
+      "evidenceText": "Although IEC 60990 specifies some measuring devices for general use, none of these would be appropriate for measuring PATIENT LEAKAGE CURRENT.",
+      "pageTarget": "p. 513",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 8.7.4.7 b) test confirms separation between patient connections and other parts is adequate when external voltage is present.",
+      "evidenceText": "This test confirms that the separation between the PATIENT CONNECTIONS and other parts is adequate to limit the PATIENT LEAKAGE CURRENT... when an external voltage is present.",
+      "pageTarget": "p. 513",
+      "confidence": "high"
+    },
+    {
+      "claim": "If accompanying documents do not restrict connected equipment for a signal input/output part, maximum mains voltage is regarded as a normal condition in the third edition.",
+      "evidenceText": "If the ACCOMPANYING DOCUMENTS place no restrictions... the presence of the MAXIMUM MAINS VOLTAGE should be regarded as a NORMAL CONDITION.",
+      "pageTarget": "p. 515",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 8.7.4.7 d) test with 110% maximum mains voltage on unearthed accessible parts also applies to TYPE BF applied parts, with 500 μA allowable patient leakage current.",
+      "evidenceText": "The test of 8.7.4.7 d), with 110 % of the MAXIMUM MAINS VOLTAGE... also applies to TYPE BF APPLIED PARTS... allowable PATIENT LEAKAGE CURRENT is... 500 μA.",
+      "pageTarget": "p. 515",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 8.7.4.7 d) test is not needed for TYPE CF applied parts because the same 50 μA allowable value applies as in 8.7.4.7 b).",
+      "evidenceText": "There is no need to perform the test of 8.7.4.7 d) on TYPE CF APPLIED PARTS because... the same allowable value of 50 μA would apply.",
+      "pageTarget": "p. 515",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-2-49:2001 introduced comprehensive tests for equipment in scope, including measurement of part leakage current between patient connections of different functions.",
+      "evidenceText": "IEC 60601-2-49:2001 introduced a comprehensive set of tests... measurement of what is termed PART LEAKAGE CURRENT... between the PATIENT CONNECTIONS of one function and... other function(s).",
+      "pageTarget": "p. 517",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 leaves certain specific multiple-function patient connection tests to particular standards rather than incorporating them into the general standard.",
+      "evidenceText": "It was decided that such specific testing should be left to particular standards.",
+      "pageTarget": "p. 517",
+      "confidence": "high"
+    },
+    {
+      "claim": "Reinforced insulation testing may require separate testing of multiple paths to avoid overstressing means of protection.",
+      "evidenceText": "If there are multiple paths between the same points, these might need to be tested separately... parts might need to be disconnected... without overstressing.",
+      "pageTarget": "p. 517",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1:2005 introduced solid-insulation thickness and thin-sheet-material requirements derived from IEC 60950-1.",
+      "evidenceText": "National Committee comments... proposed introducing relevant requirements derived from IEC 60950-1... Both WG 14 and WG 16 recommended accepting these proposals.",
+      "pageTarget": "p. 519",
+      "confidence": "high"
+    },
+    {
+      "claim": "Distance-through-insulation and thin sheet material requirements apply to supplementary and reinforced insulation, not basic insulation.",
+      "evidenceText": "Requirements concerning distance through insulation and the use of thin sheet material apply to SUPPLEMENTARY INSULATION and to REINFORCED INSULATION, but not to BASIC INSULATION.",
+      "pageTarget": "p. 521",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dielectric strength test voltages are appropriate for solid insulation only; creepage distances and clearances are evaluated by subclause 8.9.",
+      "evidenceText": "The test voltages specified are appropriate for solid insulation only. Spacings (CREEPAGE DISTANCES and CLEARANCES) are evaluated by 8.9.",
+      "pageTarget": "p. 521",
+      "confidence": "high"
+    },
+    {
+      "claim": "In Table 6, operator protection values come from IEC 60950-1 and patient protection values come from the second edition of IEC 60601-1.",
+      "evidenceText": "In Table 6, the values for OPERATOR protection are taken from IEC 60950-1 and the values for PATIENT protection are taken from the second edition of IEC 60601-1.",
+      "pageTarget": "p. 523",
+      "confidence": "high"
+    },
+    {
+      "claim": "For common working voltages of 220 V to 240 V rms, IEC 60601-1 retained a 4,000 V rms test voltage, with each MOPP requiring at least 1,500 V rms.",
+      "evidenceText": "For the common WORKING VOLTAGE of 220 V r.m.s to 240 V r.m.s. the test voltage of 4 000 V r.m.s. was retained... each individual MOPP has to meet the 1 500 V r.m.s. minimum requirement.",
+      "pageTarget": "p. 523",
+      "confidence": "high"
+    },
+    {
+      "claim": "For ME equipment supplied from supply mains, air clearance and dielectric strength requirements are based on expected overvoltage transients entering from the supply mains.",
+      "evidenceText": "For ME EQUIPMENT intended to be supplied from the SUPPLY MAINS, AIR CLEARANCE and dielectric strength requirements are based on the expected overvoltage transients.",
+      "pageTarget": "p. 523",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 generally assumes overvoltage category II, but equipment intended for locations with supply mains category III or IV needs different values.",
+      "evidenceText": "Elsewhere in this standard overvoltage category II is assumed... If ME EQUIPMENT is intended... where the SUPPLY MAINS is in overvoltage category III or IV, these values will be inadequate.",
+      "pageTarget": "p. 523",
+      "confidence": "high"
+    },
+    {
+      "claim": "For F-type applied parts with no voltage difference, insulation between patient connections and enclosure need only satisfy basic insulation requirements.",
+      "evidenceText": "In the case of an F-TYPE APPLIED PART containing no voltage difference... insulation necessary between the APPLIED PART and the ENCLOSURE... need only satisfy... BASIC INSULATION.",
+      "pageTarget": "p. 525",
+      "confidence": "high"
+    },
+    {
+      "claim": "For F-type applied parts containing parts with voltage difference, relevant insulation should satisfy double or reinforced insulation requirements.",
+      "evidenceText": "In the case of an F-TYPE APPLIED PART containing parts with voltage difference... the relevant insulation should satisfy the requirements for DOUBLE INSULATION or REINFORCED INSULATION.",
+      "pageTarget": "p. 525",
+      "confidence": "high"
+    },
+    {
+      "claim": "Interpolation is allowed for creepage distances but not air clearances, except above 2 kV rms or 2.8 kV dc.",
+      "evidenceText": "Interpolation for CREEPAGE DISTANCES but not for AIR CLEARANCES is allowed, except where the WORKING VOLTAGE is above 2 kV r.m.s. or 2,8 kV d.c.",
+      "pageTarget": "p. 527",
+      "confidence": "high"
+    },
+    {
+      "claim": "A 4 mm distance is adequate for 5 kV defibrillator pulses lasting less than 10 ms.",
+      "evidenceText": "From IEC 60664-1, Table 2, a distance of 4 mm is adequate for pulses of 5 kV having a short duration of less than 10 ms.",
+      "pageTarget": "p. 527",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cemented joints may be exempted from creepage measurement through the joint when bonded or fully adhesive-filled so humidity cannot enter.",
+      "evidenceText": "CREEPAGE DISTANCES are measured through the joint... except for cemented joints... bonded by heat sealing... or... completely filled with adhesive... so that humidity cannot be sucked into the joint.",
+      "pageTarget": "p. 529",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1:2005 introduced potting, encapsulation, and cemented-joint requirements closely based on IEC 60950-1.",
+      "evidenceText": "The requirements that have been introduced are closely based on those of IEC 60950-1 and cover potting, encapsulation, cemented joints, etc.",
+      "pageTarget": "p. 529",
+      "confidence": "high"
+    },
+    {
+      "claim": "Wiring connections with only one securing means that prevents a loosened or broken wire from creating a hazard are considered noncompliant under single fault condition.",
+      "evidenceText": "Wiring connections are subject to the SINGLE FAULT CONDITION... having only one means of being secured... are considered not in compliance.",
+      "pageTarget": "p. 529",
+      "confidence": "high"
+    },
+    {
+      "claim": "Cord-connected hand-held switches and footswitches must remain safe to touch even if the enclosure is completely broken.",
+      "evidenceText": "This requirement ensures that even in the worst case, where the ENCLOSURE... is completely broken, only parts at voltages within the limits... safe to touch, can become exposed.",
+      "pageTarget": "p. 531",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal wiring with conductors of different circuit categories requires adequate insulation rating plus air clearances and creepage distances complying with 8.9.",
+      "evidenceText": "Adequate separation is realized by sufficient rating of the conductor insulation and by arranging for sufficient AIR CLEARANCES and CREEPAGE DISTANCES, complying with... 8.9.",
+      "pageTarget": "p. 531",
+      "confidence": "high"
+    },
+    {
+      "claim": "Service personnel accessing potentially hazardous internal ME equipment parts need a means to isolate the equipment from the supply mains.",
+      "evidenceText": "Skilled persons, such as SERVICE PERSONNEL... need a means by which the ME EQUIPMENT can be isolated from the SUPPLY MAINS.",
+      "pageTarget": "p. 531",
+      "confidence": "high"
+    },
+    {
+      "claim": "IEC 60601-1 retains a 3 mm contact-spacing requirement for switches intended to isolate supply mains, aligning with IEC 60065 and IEC 60950-1.",
+      "evidenceText": "It was thought prudent to stay with the 3 mm requirement... harmonious with... IEC 60065 and IEC 60950-1, which both require a minimum contact separation of 3 mm.",
+      "pageTarget": "p. 531",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective devices that trip installation fuses or circuit breakers can remove power from other ME equipment, possibly including life-support equipment.",
+      "evidenceText": "Such a protective device... would be likely also to cause a fuse or circuit breaker in the installation to operate, thus removing the supply of power to other ME EQUIPMENT, possibly including life-support ME EQUIPMENT.",
+      "pageTarget": "p. 533",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "Chunk is an excerpt from rationale pages, not the complete normative clauses; extracted facts should be linked to this page range only."
+    },
+    {
+      "severity": "info",
+      "reason": "The chunk is bilingual French/English; English page text was used as the primary evidence where available."
+    }
+  ]
+}

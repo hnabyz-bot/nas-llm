@@ -1,0 +1,312 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-s82",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.0판 2005.12 [영문].pdf",
+    "canonicalGroupId": "afecd57107bc"
+  },
+  "document": {
+    "title": "IEC 60601-1:2005",
+    "documentType": "International medical electrical equipment safety standard",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "IEC"
+    ],
+    "revisionOrVersion": "3.0; IEC:2005",
+    "documentDate": "2005",
+    "standards": [
+      "IEC 60601-1:2005",
+      "IEC 60417-5331",
+      "IEC 60417-5332",
+      "IEC 60079-0",
+      "IEC 60079-2",
+      "IEC 60079-5",
+      "IEC 60079-6",
+      "IEC 60068-2-2",
+      "IEC 62304",
+      "ISO 14971:2000",
+      "ISO 1853",
+      "ISO 2878",
+      "ISO 2882",
+      "ISO 23529"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This IEC 60601-1:2005 chunk covers AP/APG marking and flammable anaesthetic mixture safety tests, PEMS life-cycle documentation, software risk controls, and network/data coupling risk considerations.",
+    "officialUse": "Supports regulatory safety evidence for medical electrical equipment used near flammable anaesthetic mixtures, programmable electrical medical systems, software life-cycle documentation, and networked medical system integration risk management.",
+    "keyPoints": [
+      "Category APG and AP medical electrical equipment require visible green markings or equivalent instructions for use when marking is impossible.",
+      "Category AP and APG equipment must control electrical connections, enclosure openings, electrostatic charge, corona, temperature limits, and spark-producing circuits.",
+      "Category APG equipment has stricter requirements for oxygen or nitrous oxide mixtures, including 90 °C temperature limits or low-energy circuit limits and a 10 min ether/oxygen continuous operation test when G.6.3 is not met.",
+      "PEMS compliance requires a specified and followed development life-cycle, with requirements, architecture, verification, validation, and risk management documentation.",
+      "Network/data coupling is treated as a source of additional hazards, including data loss, corrupted data, timing errors, unauthorized access, and configuration-management failures."
+    ]
+  },
+  "entities": [
+    {
+      "name": "IEC",
+      "type": "Standards organization",
+      "evidence": "Page headers identify the document as '60601-1 © IEC:2005'."
+    },
+    {
+      "name": "Responsible Organization",
+      "type": "Regulated role",
+      "evidence": "Accompanying documents must enable the responsible organization to distinguish Category AP and Category APG parts."
+    },
+    {
+      "name": "Manufacturer",
+      "type": "Regulated role",
+      "evidence": "For network/data coupling, the manufacturer stipulates possible information types and transmission protocols in the technical description."
+    },
+    {
+      "name": "System integrator",
+      "type": "Regulated role",
+      "evidence": "The system integrator must be a single person or organization with overall responsibility for the integrated system."
+    },
+    {
+      "name": "PEMS manufacturer",
+      "type": "Regulated role",
+      "evidence": "Network/data coupling outside the control of the PEMS manufacturer should never be presumed to be 100% reliable."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Category AP marking",
+      "pageTarget": "p. 661",
+      "evidence": "Category AP ME equipment must be marked prominently with a green circle at least 2 cm diameter bearing 'AP'."
+    },
+    {
+      "name": "Category APG marking",
+      "pageTarget": "p. 661",
+      "evidence": "Category APG ME equipment must be marked prominently with a green band at least 2 cm wide bearing 'APG'."
+    },
+    {
+      "name": "Low-energy circuits for Category AP",
+      "pageTarget": "p. 667",
+      "evidence": "Spark-producing components must meet G.5.2 temperature requirements and voltage/current limits using capacitance and inductance values."
+    },
+    {
+      "name": "Restricted breathing enclosures",
+      "pageTarget": "p. 673",
+      "evidence": "Enclosures must prevent formation of flammable anaesthetic mixture with air for at least 30 min without pressure difference."
+    },
+    {
+      "name": "PEMS development life-cycle",
+      "pageTarget": "p. 687",
+      "evidence": "Clause 14 requires a PEMS development life-cycle to be specified and followed."
+    },
+    {
+      "name": "Third-party and OTS software",
+      "pageTarget": "p. 695",
+      "evidence": "Third-party or OTS software used in PEMS should be characterized to identify known or foreseeable hazards."
+    },
+    {
+      "name": "Network/data coupling hazards",
+      "pageTarget": "p. 703",
+      "evidence": "Likely hazard causes include loss of data, corrupted data, inappropriate timing, unexpected data receipt, and unauthorized access."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Category APG equipment used with flammable anaesthetic mixtures with oxygen or nitrous oxide must comply with Category APG requirements and G.4/G.6.",
+      "evidenceText": "ME equipment or parts specified for use with flammable anaesthetic mixture with oxygen or nitrous oxide shall be Category APG and comply with G.4 and G.6.",
+      "pageTarget": "p. 661",
+      "confidence": "high"
+    },
+    {
+      "claim": "AP/APG compliance testing is performed after applicable tests under 11.6.6 and 11.6.7.",
+      "evidenceText": "Compliance with G.2.3 through G.2.5 is checked by inspection and tests of G.3, G.4 and G.5; these tests are performed after applicable tests according to 11.6.6 and 11.6.7.",
+      "pageTarget": "p. 661",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP and APG equipment must not use detachable power supply cords unless circuits comply with G.5.3 and G.6.3.",
+      "evidenceText": "Category AP and Category APG ME equipment shall not be provided with a detachable power supply cord unless the circuit complies with G.5.3 and G.6.3.",
+      "pageTarget": "p. 663",
+      "confidence": "high"
+    },
+    {
+      "claim": "AP/APG enclosure construction must limit openings to reduce arcing and sparking from foreign object penetration.",
+      "evidenceText": "Top covers shall have no openings; side-cover openings must prevent penetration by objects over 4 mm diameter and base plates by objects over 12 mm diameter.",
+      "pageTarget": "p. 663",
+      "confidence": "high"
+    },
+    {
+      "claim": "AP/APG equipment must prevent electrostatic charges through antistatic materials and conductive paths.",
+      "evidenceText": "Electrostatic charges shall be prevented by measures including antistatic materials and electrically conductive paths to floor, protective earth, potential equalization, or antistatic floor.",
+      "pageTarget": "p. 665",
+      "confidence": "high"
+    },
+    {
+      "claim": "Antistatic material resistance limits for anaesthetic tubing, mattresses, pads, and castor tyres must comply with ISO 2882 and be measured using ISO 1853, ISO 2878, and ISO 23529.",
+      "evidenceText": "Electrical resistance limits shall comply with ISO 2882; compliance is checked by measurements according to ISO 1853, ISO 2878 and ISO 23529.",
+      "pageTarget": "p. 665",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP equipment must not ignite flammable anaesthetic mixtures with air in normal use and normal condition.",
+      "evidenceText": "ME equipment, parts or components shall not ignite flammable anaesthetic mixtures with air in normal use and normal condition.",
+      "pageTarget": "p. 665",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP temperature compliance can be shown when non-sparking surfaces do not exceed 150 °C with restricted vertical convection or 200 °C with unrestricted vertical convection at 25 °C ambient.",
+      "evidenceText": "Surfaces in contact with gas mixtures must not exceed 150 °C with restricted vertical air circulation or 200 °C with unrestricted circulation, measured at 25 °C ambient.",
+      "pageTarget": "p. 665",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category AP low-energy circuit compliance is verified by temperature measurement and determination of Umax, Imax, R, Lmax, and Cmax using Figures G.1 to G.3 or by design-data examination.",
+      "evidenceText": "Compliance is checked by temperature measurement and determination of Umax, Imax, R, Lmax and Cmax with Figures G.1, G.2 and G.3, or by examination of design data.",
+      "pageTarget": "p. 669",
+      "confidence": "high"
+    },
+    {
+      "claim": "Externally ventilated overpressure enclosures must maintain at least 75 Pa in normal condition and automatically de-energize ignition sources if pressure drops below 50 Pa.",
+      "evidenceText": "Overpressure inside the enclosure shall be at least 75 Pa; if it drops below 50 Pa during operation, ignition sources shall be de-energized automatically.",
+      "pageTarget": "p. 673",
+      "confidence": "high"
+    },
+    {
+      "claim": "Restricted-breathing enclosure gasket or sealing materials must resist ageing under IEC 60068-2-2 test B-b at 70 °C ± 2 °C for 96 h.",
+      "evidenceText": "If tightness is obtained by gaskets or sealing, ageing resistance is checked by IEC 60068-2-2, Clause 15, test B-b, 70 °C ± 2 °C for 96 h.",
+      "pageTarget": "p. 673",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG equipment must not ignite flammable anaesthetic mixtures with oxygen or nitrous oxide in normal use or applicable single fault condition.",
+      "evidenceText": "ME equipment, parts or components shall not ignite flammable anaesthetic mixture with oxygen or nitrous oxide in normal use or applicable single fault condition.",
+      "pageTarget": "p. 675",
+      "confidence": "high"
+    },
+    {
+      "claim": "Category APG equipment not meeting G.6.3 is tested for 10 min continuous operation in ether/oxygen mixture after thermal steady state, but not longer than 3 h after switch-on.",
+      "evidenceText": "Equipment not complying with G.6.3 is tested by a 10 min continuous operation test in ether/oxygen mixture after thermal steady state, not longer than 3 h after switching on.",
+      "pageTarget": "p. 675",
+      "confidence": "high"
+    },
+    {
+      "claim": "APG parts operating in oxygen or nitrous oxide anaesthetic mixtures require isolation from earth by one MOPP and from electrical parts by two MOPP.",
+      "evidenceText": "Parts operating in the mixture shall be supplied from a source isolated from earth by at least one means of patient protection and from electrical parts by two means of patient protection.",
+      "pageTarget": "p. 675",
+      "confidence": "high"
+    },
+    {
+      "claim": "APG heating elements that heat flammable anaesthetic mixtures with oxygen or nitrous oxide require a non-self-resetting thermal cut-out and must not directly contact the mixture with current-carrying parts.",
+      "evidenceText": "Heating equipment shall have a non-self-resetting thermal cut-out; the current-carrying part shall not be in direct contact with the flammable anaesthetic mixture.",
+      "pageTarget": "p. 683",
+      "confidence": "high"
+    },
+    {
+      "claim": "The flammable-mixture test apparatus uses an ignition space of at least 250 cm3 and a spark-producing contact arrangement.",
+      "evidenceText": "The apparatus comprises an ignition space with volume at least 250 cm3 containing the prescribed atmosphere or mixture and a contact arrangement providing sparks.",
+      "pageTarget": "p. 683",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS architecture documentation should describe PEMS structure and each PESS relationship to the whole PEMS.",
+      "evidenceText": "An architecture should be documented for the PEMS that describes structure and the relationship between each PESS and the PEMS as a whole.",
+      "pageTarget": "p. 687",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS compliance with Clause 14 requires specifying and following a development life-cycle, but does not mandate a particular life-cycle model.",
+      "evidenceText": "Clause 14 requires that a PEMS development life-cycle be specified and followed; it does not require any particular life-cycle.",
+      "pageTarget": "p. 687",
+      "confidence": "high"
+    },
+    {
+      "claim": "Adequate PEMS risk assessment requires complete requirements specification and architectural design meeting that specification.",
+      "evidenceText": "It is not possible to do an adequate risk assessment without a complete requirement specification and an architectural design that meets that specification.",
+      "pageTarget": "p. 693",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS software requirements should include security requirements where lack of security would compromise safety.",
+      "evidenceText": "Requirements should include security requirements, where lack of security would compromise safety.",
+      "pageTarget": "p. 693",
+      "confidence": "high"
+    },
+    {
+      "claim": "Third-party and off-the-shelf software requirements should identify title, manufacturer, version, release date, patch number, upgrade designation, operational support needs, interfaces, and safety-critical dependencies.",
+      "evidenceText": "Requirements should include title and manufacturer, version level, release date, patch number, upgrade designation, required hardware/software, interfaces, and safety critical and risk control functions.",
+      "pageTarget": "p. 695",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS software integration plans should include regression testing when incremental integration is used.",
+      "evidenceText": "If PESS software is built using incremental integration, sufficient regression testing should ensure previous verification is still sufficient.",
+      "pageTarget": "p. 695",
+      "confidence": "high"
+    },
+    {
+      "claim": "Configuration management and change control are needed so added software functionality is considered by the risk management process.",
+      "evidenceText": "Configuration management and change control are necessary to ensure additional software functionality is not added without being considered by the risk management process.",
+      "pageTarget": "p. 695",
+      "confidence": "high"
+    },
+    {
+      "claim": "PEMS documentation includes risk management file items and accompanying documents, with Clause 14 references and ISO 14971:2000 references.",
+      "evidenceText": "Figure H.3 includes all documentation required by Clause 14 and ISO 14971:2000; references with '#' are to ISO 14971:2000.",
+      "pageTarget": "p. 697",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network/data coupling information in this standard excludes user-interface transfers and covers manufacturer-intended transmittable information.",
+      "evidenceText": "Network/data coupling information is that intended by the manufacturer to be transmittable and does not include information transferred across user interfaces.",
+      "pageTarget": "p. 701",
+      "confidence": "high"
+    },
+    {
+      "claim": "The manufacturer must state possible network/data coupling information types and transmission protocols in the technical description.",
+      "evidenceText": "The manufacturer stipulates the possible information types and their transmission protocols in the technical description.",
+      "pageTarget": "p. 701",
+      "confidence": "high"
+    },
+    {
+      "claim": "System integration responsibility cannot be shared among multiple manufacturers; the integrator must be a single person or organization with overall responsibility.",
+      "evidenceText": "The system integrator has to be a single person or organisation with overall responsibility; this cannot be shared between several different manufacturers.",
+      "pageTarget": "p. 701",
+      "confidence": "high"
+    },
+    {
+      "claim": "A system integrator typically performs risk management on the integrated system and passes manufacturer instructions to the responsible organization.",
+      "evidenceText": "The system integrator would perform risk management on the integrated system and pass manufacturer instructions to the responsible organization for safe operation.",
+      "pageTarget": "p. 703",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network/data coupling should not be presumed 100% reliable when outside the PEMS manufacturer's control.",
+      "evidenceText": "Any network/data coupling outside the control of the PEMS manufacturer should never be presumed to be 100% reliable.",
+      "pageTarget": "p. 703",
+      "confidence": "high"
+    },
+    {
+      "claim": "Network/data coupled systems must consider cybersecurity-related hazard causes such as unauthorized access, viruses, worms, and unauthorized software updates or upgrades.",
+      "evidenceText": "Likely causes include unauthorized access to data; security considerations include viruses, worms, unauthorized software updates or upgrades.",
+      "pageTarget": "p. 703",
+      "confidence": "high"
+    },
+    {
+      "claim": "Class C network/data coupling applies to time-critical patient vital data and requires near-100% availability with disruptions limited to only a few minutes per year.",
+      "evidenceText": "Class C is for time-critical applications; availability needs to be close to 100%, and disruptions should last only a few minutes per year.",
+      "pageTarget": "p. 707",
+      "confidence": "high"
+    },
+    {
+      "claim": "Class B network/data coupling applies to non-time-critical therapeutic or diagnostic patient data and can connect through a defined controllable or secured interface.",
+      "evidenceText": "Class B handles non-time critical therapeutic or diagnostic patient data and can be linked by a defined and controllable/secured interface.",
+      "pageTarget": "p. 707",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 18 of 20; extracted facts are limited to Annex G and Annex H material visible in this chunk."
+    },
+    {
+      "severity": "info",
+      "reason": "The chunk is bilingual French/English; English passages were preferred for evidence where duplicate content appeared."
+    }
+  ]
+}

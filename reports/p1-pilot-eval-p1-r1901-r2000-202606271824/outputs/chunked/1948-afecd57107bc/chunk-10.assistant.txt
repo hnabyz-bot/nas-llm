@@ -1,0 +1,419 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-s82",
+    "sourcePath": "raw/sources/RA/20_Standard(국제)/01 Safety/IEC 60601-1 3.0판 2005.12 [영문].pdf",
+    "canonicalGroupId": "afecd57107bc"
+  },
+  "document": {
+    "title": "IEC 60601-1:2005 Medical electrical equipment safety standard",
+    "documentType": "International safety standard",
+    "productModels": [],
+    "authorityOrJurisdiction": [
+      "IEC",
+      "ISO"
+    ],
+    "revisionOrVersion": "IEC 60601-1:2005",
+    "documentDate": "2005",
+    "standards": [
+      "IEC 60601-1:2005",
+      "IEC 60529",
+      "IEC 60730-1:1999",
+      "IEC 60086-4",
+      "IEC 60127-1",
+      "IEC 61558-1:1997",
+      "IEC 61558-2-1",
+      "IEC 60884-1",
+      "IEC/TR 60083",
+      "ISO 407",
+      "ISO 7010-W001"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "This chunk of IEC 60601-1:2005 defines mechanical, component, transformer, ME system, leakage-current, wiring, socket-outlet, and EMC risk-management requirements for medical electrical equipment and systems.",
+    "officialUse": "Use as regulatory safety evidence for IEC 60601-1 conformity planning, test selection, risk-management-file review, ME system documentation, leakage-current assessment, transformer verification, and component design controls.",
+    "keyPoints": [
+      "Mechanical strength testing includes push, impact, hand-held drop, portable drop, rough handling, and mould stress relief tests, with failure tied to unacceptable risk.",
+      "Connector, battery, indicator, thermostat, thermal cut-out, and control-device requirements are verified mainly by inspection of design documentation and the risk management file.",
+      "Foot-operated controls require mechanical strength testing and liquid ingress protection using IEC 60529 IP classifications.",
+      "ME equipment transformers require overheating, short-circuit, overload, and dielectric-strength verification, including defined temperature limits and post-test dielectric testing.",
+      "ME systems must maintain safety after installation or modification and require documentation covering intended use, configuration, installation, cleaning, maintenance, environmental conditions, and patient-environment suitability.",
+      "ME system leakage-current limits include 100 μA touch current in normal condition, 500 μA under protective-earth interruption, and 5 mA earth leakage current for multiple socket-outlets.",
+      "Multiple socket-outlets in ME systems must meet IEC 60884-1 and additional IEC 60601-1 requirements for creepage, clearance, protective earth, marking, enclosure, wiring, and cord construction.",
+      "Electromagnetic compatibility risks are addressed through the risk management process with reference to IEC 60601-1-2."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ME EQUIPMENT",
+      "type": "regulated device category",
+      "evidence": "Requirements repeatedly apply to ME EQUIPMENT enclosures, connectors, batteries, indicators, transformers, and internal wiring."
+    },
+    {
+      "name": "ME SYSTEM",
+      "type": "regulated system category",
+      "evidence": "Clause 16 states that after installation or subsequent modification, an ME SYSTEM shall not result in unacceptable risk."
+    },
+    {
+      "name": "MANUFACTURER",
+      "type": "regulated actor",
+      "evidence": "The manufacturer must address risks associated with pre-set controls in the risk management process and specify ME system operating conditions."
+    },
+    {
+      "name": "RESPONSIBLE ORGANIZATION",
+      "type": "regulated actor",
+      "evidence": "ME system documents must include an address to which the responsible organization can refer and advice for system assembly and modifications."
+    },
+    {
+      "name": "OPERATOR",
+      "type": "user role",
+      "evidence": "Indicator lights must be apparent to the operator from the normal operating position, and ME system instructions warn the operator not to touch specified parts and the patient simultaneously."
+    },
+    {
+      "name": "PATIENT",
+      "type": "protected person",
+      "evidence": "Controls whose adjustment can create a hazardous situation for the patient or operator must remain aligned with scale indication."
+    },
+    {
+      "name": "RISK MANAGEMENT FILE",
+      "type": "regulatory evidence artifact",
+      "evidence": "Many clauses verify compliance by inspection of the risk management file, including connector construction, thermal controls, batteries, and ME system risk decisions."
+    },
+    {
+      "name": "IEC",
+      "type": "standards organization",
+      "evidence": "The chunk cites IEC 60601-1:2005 and references IEC 60529, IEC 60730-1:1999, IEC 60086-4, IEC 60127-1, IEC 61558-1:1997, and IEC 60884-1."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Mechanical strength test applicability",
+      "pageTarget": "p. 363 / Table 28 and 15.3",
+      "evidence": "Table 28 maps push, drop, impact, rough handling, and moulding stress relief tests to hand-held, portable, mobile, fixed, and stationary ME equipment."
+    },
+    {
+      "name": "Push test",
+      "pageTarget": "p. 363 / 15.3.2",
+      "evidence": "External enclosure parts are subjected to 250 N ± 10 N for 5 s using a 30 mm diameter circular test tool."
+    },
+    {
+      "name": "Impact test",
+      "pageTarget": "p. 363 / 15.3.3",
+      "evidence": "A 500 g ± 25 g steel ball approximately 50 mm in diameter falls from 1.3 m onto relevant enclosure areas."
+    },
+    {
+      "name": "Hand-held drop test",
+      "pageTarget": "p. 363 / 15.3.4.1",
+      "evidence": "Hand-held ME equipment is dropped once from each of three normal-use orientations from the use height or 1 m, whichever is greater."
+    },
+    {
+      "name": "Portable ME equipment drop height",
+      "pageTarget": "p. 365 / Table 29",
+      "evidence": "Portable ME equipment drop heights are 5 cm for mass ≤10 kg, 3 cm for 10<m≤50 kg, and 2 cm for m>50 kg."
+    },
+    {
+      "name": "Mould stress relief test",
+      "pageTarget": "p. 367 / 15.3.6",
+      "evidence": "Thermoplastic enclosures are conditioned in a circulating air oven at 10 °C above maximum enclosure temperature but not less than 70 °C for 7 h."
+    },
+    {
+      "name": "Construction of connectors",
+      "pageTarget": "p. 369 / 15.4.1",
+      "evidence": "Accessible electrical, hydraulic, pneumatic, and gas connectors removable without tools must prevent incorrect connection where unacceptable risk would otherwise exist."
+    },
+    {
+      "name": "Temperature and overload control devices",
+      "pageTarget": "p. 369-371 / 15.4.2",
+      "evidence": "Automatic-reset thermal cut-outs and over-current releases must not be used if resetting could cause a hazardous situation."
+    },
+    {
+      "name": "Battery safety",
+      "pageTarget": "p. 371-373 / 15.4.3",
+      "evidence": "Battery housings that can release hazardous gases during charge or discharge must be ventilated to minimize accumulation and ignition risk."
+    },
+    {
+      "name": "Lithium battery conformity",
+      "pageTarget": "p. 373 / 15.4.3.4",
+      "evidence": "Lithium batteries used in ME equipment that could become a hazard must comply with IEC 60086-4."
+    },
+    {
+      "name": "Indicator lights",
+      "pageTarget": "p. 373-375 / 15.4.4",
+      "evidence": "Indicator lights are required to show readiness for normal use unless the indication is otherwise apparent to the operator."
+    },
+    {
+      "name": "Foot-operated control liquid ingress",
+      "pageTarget": "p. 379 / 15.4.7.3",
+      "evidence": "Foot-operated controls must be at least IPX1 under IEC 60529, and electrical enclosures intended for liquid-prone areas must be at least IPX6."
+    },
+    {
+      "name": "Transformer overheating protection",
+      "pageTarget": "p. 379-381 / 15.5.1.1",
+      "evidence": "ME equipment transformers must be protected against overheating from short circuit or overload of any output winding."
+    },
+    {
+      "name": "ME system general safety",
+      "pageTarget": "p. 387 / 16.1",
+      "evidence": "After installation or subsequent modification, an ME system shall not result in an unacceptable risk."
+    },
+    {
+      "name": "ME system accompanying documents",
+      "pageTarget": "p. 389-391 / 16.2",
+      "evidence": "ME system documents must include specifications, intended use, item list, installation and modification instructions, cleaning instructions, and patient-environment suitability."
+    },
+    {
+      "name": "ME system leakage currents",
+      "pageTarget": "p. 393 / 16.6",
+      "evidence": "Touch current within the patient environment shall not exceed 100 μA in normal condition or 500 μA with interruption of non-permanently installed protective earth."
+    },
+    {
+      "name": "Multiple socket-outlet requirements",
+      "pageTarget": "p. 397 / 16.9.2.1",
+      "evidence": "Multiple socket-outlets must meet IEC 60884-1 and additional requirements for creepage distances, air clearances, Class I construction, protective earth, enclosures, wiring, ratings, and power supply cords."
+    },
+    {
+      "name": "Electromagnetic compatibility risk management",
+      "pageTarget": "p. 398 / 17",
+      "evidence": "The manufacturer must address risks associated with electromagnetic phenomena in intended-use locations and electromagnetic phenomena introduced into the environment by ME equipment or systems."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "ME equipment enclosure push testing uses a 250 N ± 10 N force for 5 seconds over a 30 mm circular contact area.",
+      "evidenceText": "External parts of an ENCLOSURE are subject to a steady force of 250 N ± 10 N for a period of 5 s... circular plane surface 30 mm in diameter.",
+      "pageTarget": "p. 363 / 15.3.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Damage after mechanical strength tests is a failure when it results in unacceptable risk as determined by risk management file inspection.",
+      "evidenceText": "After the test, any damage sustained that results in an unacceptable RISK, as determined by inspection of the RISK MANAGEMENT FILE, constitutes a failure.",
+      "pageTarget": "p. 363 / 15.3.2 and 15.3.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Impact testing excludes hand-held ME equipment and parts that are hand-held, and excludes flat panel displays, platen glass, and cathode ray tubes.",
+      "evidenceText": "Except for HAND-HELD ME EQUIPMENT... The test is not applied to flat panel displays, to the platen glass... or to cathode ray tubes.",
+      "pageTarget": "p. 363 / 15.3.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Hand-held ME equipment must not create unacceptable risk after a free-fall drop test.",
+      "evidenceText": "HAND-HELD ME EQUIPMENT and ME EQUIPMENT parts that are HAND-HELD shall not result in an unacceptable RISK as a result of a free fall.",
+      "pageTarget": "p. 363 / 15.3.4.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Portable ME equipment drop testing uses mass-based drop heights of 5 cm, 3 cm, or 2 cm.",
+      "evidenceText": "Table 29 – Drop height... m ≤ 10: 5 cm; 10 < m ≤ 50: 3 cm; m > 50: 2 cm.",
+      "pageTarget": "p. 365 / Table 29",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mobile ME equipment rough handling testing includes ascending step shock, descending step shock, and door frame shock.",
+      "evidenceText": "Rough handling test... a) Ascending step shock... b) Descending step shock... c) Door frame shock.",
+      "pageTarget": "p. 365-367 / 15.3.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "Moulded or formed thermoplastic enclosures must not distort from internal-stress relief in a way that creates unacceptable risk.",
+      "evidenceText": "ENCLOSURES of moulded or formed thermoplastic materials shall be so constructed that any shrinkage or distortion... does not result in an unacceptable RISK.",
+      "pageTarget": "p. 367 / 15.3.6",
+      "confidence": "high"
+    },
+    {
+      "claim": "Material selection for ME equipment must account for intended use, expected service life, transport, and storage.",
+      "evidenceText": "The selection and treatment of materials... shall take account of the INTENDED USE, the EXPECTED SERVICE LIFE and the conditions for transport and storage.",
+      "pageTarget": "p. 367 / 15.3.7",
+      "confidence": "high"
+    },
+    {
+      "claim": "Accessible connectors removable without tools must prevent incorrect connection where unacceptable risk would otherwise exist.",
+      "evidenceText": "Incorrect connection of accessible connectors, removable without the use of a TOOL, shall be prevented where an unacceptable RISK would otherwise exist.",
+      "pageTarget": "p. 369 / 15.4.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Medical gas connections for different gases on ME equipment must not be interchangeable in normal use.",
+      "evidenceText": "Medical gas connections on ME EQUIPMENT for different gases to be operated in NORMAL USE shall not be interchangeable.",
+      "pageTarget": "p. 369 / 15.4.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Self-resetting thermal cut-outs and over-current releases require 200 operations unless approved to an appropriate IEC component standard.",
+      "evidenceText": "SELF-RESETTING THERMAL CUT-OUTS and self-resetting OVER-CURRENT RELEASES... are caused to operate 200 times unless approved to the appropriate IEC component standard.",
+      "pageTarget": "p. 371 / 15.4.2.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Manual reset thermal cut-outs and over-current releases require 10 operations unless approved or supported by adequate reliability data.",
+      "evidenceText": "Manual reset THERMAL CUT-OUTS and OVER-CURRENT RELEASES are caused to operate 10 times, if they are not approved... or the MANUFACTURER has not provided adequate data.",
+      "pageTarget": "p. 371 / 15.4.2.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Lithium batteries in ME equipment that could become hazardous must comply with IEC 60086-4.",
+      "evidenceText": "Lithium batteries used in ME EQUIPMENT that could become a HAZARD shall comply with the requirements of IEC 60086-4.",
+      "pageTarget": "p. 373 / 15.4.3.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal electrical power sources must include appropriately rated protection against fire from excessive currents where wiring or component ratings can create short-circuit fire risk.",
+      "evidenceText": "An INTERNAL ELECTRICAL POWER SOURCE... shall be provided with an appropriately RATED device for protection against fire caused by excessive currents.",
+      "pageTarget": "p. 373 / 15.4.3.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME equipment charging an internal electrical power source must visibly indicate charging mode to the operator.",
+      "evidenceText": "In ME EQUIPMENT incorporating a means for charging an INTERNAL ELECTRICAL POWER SOURCE, the charging mode shall be visibly indicated to the OPERATOR.",
+      "pageTarget": "p. 375 / 15.4.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Rotating control knobs are tested with torque values from 1.0 Nm to 6.0 Nm depending on gripping diameter.",
+      "evidenceText": "Table 30 – Test torques for rotating controls... 10 ≤ d < 23: 1.0 Nm... d > 70: 6.0 Nm.",
+      "pageTarget": "p. 377 / Table 30",
+      "confidence": "high"
+    },
+    {
+      "claim": "Foot-operated control devices must withstand 1,350 N for 1 minute without damage causing unacceptable risk.",
+      "evidenceText": "Application... of an actuating force of 1 350 N for 1 min... There shall be no damage to the device resulting in an unacceptable RISK.",
+      "pageTarget": "p. 377 / 15.4.7.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Aluminium wires below 16 mm2 cross-section are prohibited in ME equipment.",
+      "evidenceText": "Aluminium wires of less than 16 mm2 cross-section shall not be used in ME EQUIPMENT.",
+      "pageTarget": "p. 379 / 15.4.8",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformer overheating tests require no winding to open, no hazardous situation, and winding temperatures not to exceed Table 31 limits.",
+      "evidenceText": "During the tests, no winding are to open, no HAZARDOUS SITUATION occurs, and the maximum temperatures of windings are not to exceed the values in Table 31.",
+      "pageTarget": "p. 381 / 15.5.1.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformer winding maximum temperatures under overload and short-circuit conditions are 150 °C Class A, 165 °C Class E, 175 °C Class B, 190 °C Class F, and 210 °C Class H.",
+      "evidenceText": "Table 31... Class A material 150; Class B material 175; Class E material 165; Class F material 190; Class H material 210.",
+      "pageTarget": "p. 381 / Table 31",
+      "confidence": "high"
+    },
+    {
+      "claim": "After transformer short-circuit and overload tests, dielectric strength testing is required between primary and secondary windings, primary and frame, and secondary and frame.",
+      "evidenceText": "After the short circuit and overload tests, the transformer is to pass the dielectric strength test... between primary and secondary... primary and frame... secondary and frame.",
+      "pageTarget": "p. 381 / 15.5.1.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformer dielectric strength testing applies five-times rated voltage and frequency for windings rated ≤500 V or ≤60 Hz.",
+      "evidenceText": "Transformer windings having a RATED voltage ≤ 500 V or RATED frequency ≤ 60 Hz are tested... five times the RATED voltage... frequency not less than five times.",
+      "pageTarget": "p. 385 / 15.5.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformer dielectric strength testing applies twice rated voltage and frequency for windings exceeding 500 V or 60 Hz.",
+      "evidenceText": "Windings having a RATED voltage exceeding 500 V or RATED frequency exceeding 60 Hz are tested... twice the RATED voltage... frequency not less than twice.",
+      "pageTarget": "p. 385 / 15.5.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Transformers forming means of protection required by 8.5 must comply with IEC 61558-1:1997 Subclause 5.12.",
+      "evidenceText": "Transformers of ME EQUIPMENT that form MEANS OF PROTECTION as required by 8.5 shall comply with IEC 61558-1:1997, Subclause 5.12.",
+      "pageTarget": "p. 387 / 15.5.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME systems must provide IEC 60601-1-equivalent safety within the patient environment and IEC or ISO safety-standard-equivalent safety outside it.",
+      "evidenceText": "An ME SYSTEM shall provide: within the PATIENT ENVIRONMENT, the level of safety equivalent to ME EQUIPMENT complying with this standard; and outside... equivalent to equipment complying with their respective IEC or ISO safety standards.",
+      "pageTarget": "p. 387 / 16.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Safety tests already performed on individual ME system equipment according to relevant standards need not be repeated.",
+      "evidenceText": "Safety tests that have already been performed on individual equipment of the ME SYSTEM according to relevant standards shall not be repeated.",
+      "pageTarget": "p. 387 / 16.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Non-ME equipment used in an ME system must comply with relevant IEC or ISO safety standards.",
+      "evidenceText": "Non-ME EQUIPMENT, when used in an ME SYSTEM, shall comply with IEC or ISO safety standards that are relevant to that equipment.",
+      "pageTarget": "p. 389 / 16.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Equipment relying only on basic insulation for electric shock protection must not be used in an ME system.",
+      "evidenceText": "Equipment in which protection against electric shock relies only on BASIC INSULATION shall not be used in an ME SYSTEM.",
+      "pageTarget": "p. 389 / 16.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system accompanying documents are regarded as part of the ME system.",
+      "evidenceText": "The ACCOMPANYING DOCUMENTS shall be regarded as a part of the ME SYSTEM.",
+      "pageTarget": "p. 389 / 16.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "If functional connections can cause allowable leakage-current values to be exceeded, a separation device is required.",
+      "evidenceText": "When FUNCTIONAL CONNECTION... can cause the allowable values of LEAKAGE CURRENT to be exceeded, then safety measures incorporating a SEPARATION DEVICE shall be applied.",
+      "pageTarget": "p. 391 / 16.5",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system touch current in the patient environment is limited to 100 μA in normal condition and 500 μA with interruption of non-permanently installed protective earth.",
+      "evidenceText": "In NORMAL CONDITION, the TOUCH CURRENT... shall not exceed 100 μA... interruption... PROTECTIVE EARTH CONDUCTOR... shall not exceed 500 μA.",
+      "pageTarget": "p. 393 / 16.6.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Earth leakage current in the protective earth conductor of a multiple socket-outlet supplying an ME system must not exceed 5 mA.",
+      "evidenceText": "If the ME SYSTEM... is supplied from a MULTIPLE SOCKET-OUTLET, then the current in the PROTECTIVE EARTH CONDUCTOR... shall not exceed 5 mA.",
+      "pageTarget": "p. 393 / 16.6.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system patient leakage current in normal condition must not exceed values specified for ME equipment in Tables 3 and 4.",
+      "evidenceText": "The PATIENT LEAKAGE CURRENT and total PATIENT LEAKAGE CURRENT of an ME SYSTEM in NORMAL CONDITION shall not exceed the values specified for ME EQUIPMENT, as given in Table 3 and Table 4.",
+      "pageTarget": "p. 393 / 16.6.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME systems must be designed so interruption and restoration of power does not create a hazardous situation other than loss of intended function.",
+      "evidenceText": "An ME SYSTEM shall be so designed that an interruption and restoration of the power... shall not result in a HAZARDOUS SITUATION other than interruption of its intended function.",
+      "pageTarget": "p. 395 / 16.8",
+      "confidence": "high"
+    },
+    {
+      "claim": "ME system patient-lead plugs must not connect to other outlets likely to be in the patient environment unless no hazardous situation can result.",
+      "evidenceText": "Plugs for connection of PATIENT leads shall be so designed that they cannot be connected to other outlets... likely to be located in the PATIENT ENVIRONMENT unless... no HAZARDOUS SITUATION can result.",
+      "pageTarget": "p. 395 / 16.9.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Multiple socket-outlets in ME systems must be marked with ISO 7010-W001 and maximum output or safe attachment information.",
+      "evidenceText": "A MULTIPLE SOCKET-OUTLET... shall be marked with safety sign ISO 7010-W001... and... maximum allowed continuous output... or... which equipment or equipment parts may be safely attached.",
+      "pageTarget": "p. 397 / 16.9.2.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Protective earth connections in ME systems must be arranged so removing one item does not interrupt protective earthing of another part without also disconnecting power.",
+      "evidenceText": "PROTECTIVE EARTH CONNECTIONS shall be made so that removing any single item... does not interrupt protective earthing of any other part... without at the same time disconnecting the electrical supply.",
+      "pageTarget": "p. 398 / 16.9.2.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "Conductors interconnecting different ME system equipment must be protected against mechanical damage.",
+      "evidenceText": "Conductors interconnecting different items of an ME SYSTEM shall be protected against mechanical damage.",
+      "pageTarget": "p. 398 / 16.9.2.3",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 10 of 20; extracted claims are limited to clauses and page ranges visible in this chunk."
+    },
+    {
+      "severity": "info",
+      "reason": "The chunk is bilingual; English clauses were preferred where present, while the EMC clause appears only in French within the provided text."
+    }
+  ]
+}
