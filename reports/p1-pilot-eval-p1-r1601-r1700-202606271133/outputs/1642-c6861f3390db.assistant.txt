@@ -1,0 +1,127 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954403-se4",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/BASE/Stack-up(impedance)/BASE-BD-REV.03(20241125)-1.2T_6L (STACK-UP).xls",
+    "canonicalGroupId": "c6861f3390db"
+  },
+  "document": {
+    "title": "BASE-BD-REV.03(20241125)-1.2T_6L (STACK-UP)",
+    "documentType": "PCB stack-up and impedance spreadsheet",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV.03",
+    "documentDate": "20241125",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet-style PCB stack-up listing six board layers, dielectric thicknesses, total thickness, and impedance/trace-width targets.",
+    "officialUse": "Provides stack-up and impedance/trace-width reference values for BASE-BD board design.",
+    "keyPoints": [
+      "The stack-up lists layers 1 through 6: TOP, GND, 50+DF85+DF90+DF100, GND, GND, and BOT.",
+      "The sheet includes impedance and trace-width values for 50Ω, DF85Ω, DF90Ω, and DF100Ω configurations.",
+      "The total listed thickness is 1.256."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BASE-BD",
+      "type": "board",
+      "evidence": "BASE-BD-REV.03(20241125)-1.2T_6L (STACK-UP).xls"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB stack-up",
+      "pageTarget": "PCB stack-up",
+      "evidence": "* STACKUP *"
+    },
+    {
+      "name": "Impedance and trace-width",
+      "pageTarget": "PCB impedance and trace width",
+      "evidence": "Impedance & Trace-width"
+    },
+    {
+      "name": "Six-layer board",
+      "pageTarget": "Six-layer PCB",
+      "evidence": "1,TOP; 2,GND; 3,50+DF85+DF90+DF100; 4,GND; 5,GND; 6,BOT"
+    },
+    {
+      "name": "50Ω impedance",
+      "pageTarget": "50 ohm PCB impedance",
+      "evidence": "50Ω:0.095mm (TOP,BOT); 50Ω:0.13mm (3L)"
+    },
+    {
+      "name": "Differential impedance",
+      "pageTarget": "PCB differential impedance",
+      "evidence": "DF85Ω:0.12mm & GAP:0.254mm (TOP,BOT); DF90Ω:0.105mm & GAP:0.254mm (TOP,BOT); DF100Ω:0.085mm & GAP:0.254mm (TOP,BOT)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a stack-up sheet.",
+      "evidenceText": "* STACKUP *",
+      "pageTarget": "PCB stack-up",
+      "confidence": "high"
+    },
+    {
+      "claim": "The board stack-up has six numbered layers.",
+      "evidenceText": "1,TOP; 2,GND; 3,50+DF85+DF90+DF100; 4,GND; 5,GND; 6,BOT",
+      "pageTarget": "Six-layer PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The sheet records impedance and trace-width information.",
+      "evidenceText": "Impedance & Trace-width",
+      "pageTarget": "PCB impedance and trace width",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 50Ω trace-width values are 0.095 mm for TOP/BOT and 0.13 mm for 3L.",
+      "evidenceText": "50Ω:0.095mm (TOP,BOT); 50Ω:0.13mm (3L)",
+      "pageTarget": "50 ohm PCB impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DF85Ω trace-width and gap values are 0.12 mm and 0.254 mm for TOP/BOT, and 0.16 mm and 0.254 mm for 3L.",
+      "evidenceText": "DF85Ω:0.12mm & GAP:0.254mm (TOP,BOT); DF85Ω:0.16mm & GAP:0.254mm (3L)",
+      "pageTarget": "PCB differential impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DF90Ω trace-width and gap values are 0.105 mm and 0.254 mm for TOP/BOT, and 0.137 mm and 0.254 mm for 3L.",
+      "evidenceText": "DF90Ω:0.105mm & GAP:0.254mm (TOP,BOT); DF90Ω:0.137mm & GAP:0.254mm (3L)",
+      "pageTarget": "PCB differential impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DF100Ω trace-width and gap values are 0.085 mm and 0.254 mm for TOP/BOT, and 0.105 mm and 0.254 mm for 3L.",
+      "evidenceText": "DF100Ω:0.085mm & GAP:0.254mm (TOP,BOT); DF100Ω:0.105mm & GAP:0.254mm (3L)",
+      "pageTarget": "PCB differential impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed total stack-up thickness is 1.256.",
+      "evidenceText": ",,,1.256",
+      "pageTarget": "PCB stack-up thickness",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not stated in the source text; metadata only indicates authoritySignal as general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly identified; metadata productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date and revision are inferred from the source filename rather than repeated in the sheet body."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are stated in the provided source text."
+    }
+  ]
+}
