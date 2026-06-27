@@ -1,0 +1,156 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "component purchase/BOM spreadsheet",
+    "productModels": [
+      "S4343-W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet chunk listing chip ceramic capacitor purchase/BOM rows for S4343-W PBA INTERFACE MAIN.",
+    "officialUse": "Supports DHF/DMR component traceability by identifying component part numbers, electrical specifications, approved manufacturer part numbers, suppliers, quantities, currencies, and prices for the detector interface PBA.",
+    "keyPoints": [
+      "Rows repeatedly identify model S4343-W, reference MI99-01326B, and assembly PBA INTERFACE MAIN.",
+      "The chunk is dominated by C-CER, CHIP capacitor entries with capacitance, tolerance, voltage, dielectric, package, and tape/reel attributes.",
+      "Supplier/manufacturer names include MURATA MANUFACTURING CO., LTD., KOREA MURATA ELECTRONICS CO.,LTD., AVX CORPORATION, SAMSUNG ELECTRO-MECHANICS CO., LTD., SAMWHA CAPACITOR CO., LTD., and TDK CORPORATION.",
+      "The spreadsheet contains many repeated rows and spreadsheet error values such as #REF! and #N/A."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4343-W",
+      "type": "product or model identifier",
+      "evidence": "Rows begin with S4343-W and end with combined identifiers such as S4343-W2203-000292 and S4343-W2203-005249."
+    },
+    {
+      "name": "MI99-01326B",
+      "type": "document or assembly reference identifier",
+      "evidence": "Rows repeatedly list MI99-01326B immediately after S4343-W."
+    },
+    {
+      "name": "PBA INTERFACE MAIN",
+      "type": "assembly",
+      "evidence": "Rows repeatedly state PBA INTERFACE MAIN and include category fields PC, PBA."
+    },
+    {
+      "name": "MURATA MANUFACTURING CO., LTD.",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part numbers 2203-000292 and 2203-000491 list MURATA MANUFACTURING CO., LTD."
+    },
+    {
+      "name": "KOREA MURATA ELECTRONICS CO.,LTD.",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part numbers including 2203-000438, 2203-002285, 2203-005249, and 2203-007503 list KOREA MURATA ELECTRONICS CO.,LTD."
+    },
+    {
+      "name": "AVX CORPORATION",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part numbers 2203-000425 and 2203-006460 list AVX CORPORATION."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part numbers 2203-002398, 2203-007486, and 2203-007561 list SAMSUNG ELECTRO-MECHANICS CO., LTD."
+    },
+    {
+      "name": "SAMWHA CAPACITOR CO., LTD. (CAPACITOR, YONGIN, KOREA)",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part numbers 2203-000715 and 2203-005565 list SAMWHA CAPACITOR CO., LTD. (CAPACITOR, YONGIN, KOREA)."
+    },
+    {
+      "name": "TDK CORPORATION",
+      "type": "supplier or manufacturer",
+      "evidence": "Rows for part number 2203-007474 list TDK CORPORATION."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PBA component traceability",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "evidence": "Each row links S4343-W, MI99-01326B, PBA INTERFACE MAIN, a 2203-series internal part number, component description, manufacturer part numbers, supplier, quantity, currency, and price."
+    },
+    {
+      "name": "ceramic chip capacitor specifications",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "evidence": "Rows list C-CER, CHIP descriptions such as 0.01nF,5%,50V,C0G,TP,1608; 10nF,10%,50V,X7R,TP,1005; and 10000nF,20%,16V,X5R,TP,1608(1810)."
+    },
+    {
+      "name": "approved alternate manufacturer part numbers",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "evidence": "Component rows include multiple manufacturer part numbers, for example GRM1885C1H100J, CS1608C0G100J500NRB, CL10C100JB8NNNC, and C1608COG1H100JT for 2203-000292."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk covers PBA INTERFACE MAIN component rows for S4343-W under reference MI99-01326B.",
+      "evidenceText": "S4343-W,MI99-01326B,PBA INTERFACE MAIN appears repeatedly across the rows.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed components are primarily ceramic chip capacitors.",
+      "evidenceText": "Rows contain C-CER,CHIP with capacitor specifications such as 0.01nF, 2.2nF, 10nF, 100nF, 1000nF, and 10000nF.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part number 2203-000292 is a 0.01nF 5% 50V C0G 1608 ceramic chip capacitor sourced from MURATA MANUFACTURING CO., LTD.",
+      "evidenceText": "2203-000292, C-CER,CHIP, 0.01nF,5%,50V,C0G,TP,1608, MURATA MANUFACTURING CO., LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part number 2203-002285 is a 10nF 10% 50V X7R 1005 ceramic chip capacitor sourced from KOREA MURATA ELECTRONICS CO.,LTD.",
+      "evidenceText": "2203-002285, C-CER,CHIP, 10nF,10%,50V,X7R,TP,1005, KOREA MURATA ELECTRONICS CO.,LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part number 2203-005249 is a 100nF 10% 50V X7R 1608 ceramic chip capacitor sourced from KOREA MURATA ELECTRONICS CO.,LTD.",
+      "evidenceText": "2203-005249, C-CER,CHIP, 100nF,10%,50V,X7R,TP,1608, GRM188R71H104K, CC0603KRX7R9BB104, CC0603KPX7R9BB104, KOREA MURATA ELECTRONICS CO.,LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet records purchase quantities and pricing for some components.",
+      "evidenceText": "Rows show PC, PBA, quantities such as 10000 or 3000, currencies USD or KRW, and prices such as 0.0012, 0.045, 8.56, and 10.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source data contains unresolved spreadsheet references or lookup errors.",
+      "evidenceText": "Multiple rows include #REF! and #N/A fields.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-20",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk has no header row, so column meanings are inferred from repeated values and source path context."
+    },
+    {
+      "severity": "warning",
+      "reason": "Many rows are exact or near duplicates, so repeated evidence should not be counted as independent verification."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, certificate, test standard, cybersecurity, or submission claim is present in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "Spreadsheet error values #REF! and #N/A appear in the extracted rows and may indicate broken formulas or incomplete lookup data."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "procurement BOM spreadsheet",
+    "productModels": [
+      "S4335-W",
+      "MI99-01327B",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk contains repeated procurement/BOM rows for S4335-W MI99-01327B PBA INTERFACE MAIN chip ceramic capacitors.",
+    "officialUse": "Supports DHF/DMR design and purchasing traceability by listing component part numbers, electrical specifications, manufacturer part numbers, suppliers, quantities, currencies, and unit prices for the PBA interface main assembly.",
+    "keyPoints": [
+      "Rows identify the assembly as S4335-W / MI99-01327B / PBA INTERFACE MAIN.",
+      "Listed components are primarily C-CER, CHIP capacitors used on PBA.",
+      "Suppliers include SAMWHA CAPACITOR, KOREA MURATA ELECTRONICS, AVX CORPORATION, and SAMSUNG ELECTRO-MECHANICS.",
+      "Several rows include manufacturer part-number alternates for the same internal part number.",
+      "Spreadsheet rows contain formula/reference errors such as #REF! and #N/A."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-W",
+      "type": "product or assembly code",
+      "evidence": "Rows begin with S4335-W and end with combined keys such as S4335-W2203-000257."
+    },
+    {
+      "name": "MI99-01327B",
+      "type": "document or assembly identifier",
+      "evidence": "Each populated row includes MI99-01327B immediately after S4335-W."
+    },
+    {
+      "name": "PBA INTERFACE MAIN",
+      "type": "printed board assembly",
+      "evidence": "Rows repeatedly state PBA INTERFACE MAIN and include PC, PBA fields."
+    },
+    {
+      "name": "SAMWHA CAPACITOR CO., LTD. (CAPACITOR, YONGIN, KOREA)",
+      "type": "component supplier",
+      "evidence": "Supplier field appears for capacitor rows including 2203-000257, 2203-000715, 2203-001397, 2203-005565, and 2203-006698."
+    },
+    {
+      "name": "KOREA MURATA ELECTRONICS CO.,LTD.",
+      "type": "component supplier",
+      "evidence": "Supplier field appears for capacitor rows including 2203-000438, 2203-000626, 2203-002285, 2203-005249, 2203-007132, 2203-007503, and 2203-007544."
+    },
+    {
+      "name": "AVX CORPORATION",
+      "type": "component supplier",
+      "evidence": "Supplier field appears for capacitor rows 2203-000425 and 2203-006460."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "component supplier",
+      "evidence": "Supplier field appears for rows 2203-002398, 2203-007486, and 2203-007561."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PBA interface main capacitor BOM",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "evidence": "Rows repeatedly pair S4335-W, MI99-01327B, PBA INTERFACE MAIN with C-CER, CHIP capacitor descriptions."
+    },
+    {
+      "name": "Ceramic chip capacitor electrical specification traceability",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "evidence": "Descriptions include values, tolerances, voltages, dielectric types, packaging, and sizes such as 10nF,10%,50V,X7R,TP,1608,T0.8."
+    },
+    {
+      "name": "Alternate manufacturer part numbers",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "evidence": "Rows list multiple manufacturer part numbers for one internal part, e.g. 2203-002285 lists C0402C103K5RAC, GRM155R71H103KA88D, CL05B103KB5NNNC, and others."
+    },
+    {
+      "name": "Procurement quantity and price fields",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "evidence": "Rows include unit PC, assembly PBA, quantities such as 10000 or 3000, currency USD or KRW, and unit price fields."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk documents procurement/BOM rows for the S4335-W MI99-01327B PBA INTERFACE MAIN assembly.",
+      "evidenceText": "S4335-W,MI99-01327B,PBA INTERFACE MAIN ... PC,PBA ... S4335-WPBA INTERFACE MAINPBA",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed parts in this chunk are ceramic chip capacitors with electrical and package specifications.",
+      "evidenceText": "C-CER,CHIP descriptions include 10nF,10%,50V,X7R,TP,1608,T0.8; 100nF,10%,50V,X7R,TP,1608; and 10000nF,20%,16V,X5R,TP,1608(1810).",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part 2203-002285 is a 10nF 10% 50V X7R 1005 ceramic chip capacitor with multiple listed manufacturer part numbers from Korea Murata Electronics.",
+      "evidenceText": "2203-002285 ... 10nF,10%,50V,X7R,TP,1005 ... C0402C103K5RAC,GRM155R71H103KA88D,CL05B103KB5NNNC ... KOREA MURATA ELECTRONICS CO.,LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part 2203-005249 is a 100nF 10% 50V X7R 1608 ceramic chip capacitor supplied by Korea Murata Electronics.",
+      "evidenceText": "2203-005249 ... 100nF,10%,50V,X7R,TP,1608 ... GRM188R71H104K,CC0603KRX7R9BB104,CC0603KPX7R9BB104 ... KOREA MURATA ELECTRONICS CO.,LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "Internal part 2203-007503 is a 10000nF 20% 16V X5R ceramic chip capacitor with quantity 3000 and supplier Korea Murata Electronics.",
+      "evidenceText": "2203-007503 ... 10000nF,20%,16V,X5R,TP,1608(1810) ... PC,PBA,3000 ... KOREA MURATA ELECTRONICS CO.,LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "The chunk includes Samsung Electro-Mechanics capacitor rows priced in KRW.",
+      "evidenceText": "2203-002398 ... SAMSUNG ELECTRO-MECHANICS CO., LTD.,KRW,2.81 ... and 2203-007561 ... KRW,2.65.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet extract contains unresolved formula/reference fields.",
+      "evidenceText": "Rows repeatedly include #REF! and #N/A fields after price and quantity columns.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-11",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk is a raw spreadsheet extract with many repeated rows and unresolved #REF!/#N/A fields; values should be validated against the original workbook before formal release use."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, certificate, test report, cybersecurity, or consensus standard claims are present in this chunk."
+    }
+  ]
+}

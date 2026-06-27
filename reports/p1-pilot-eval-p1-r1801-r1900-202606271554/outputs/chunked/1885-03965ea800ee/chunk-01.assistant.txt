@@ -1,0 +1,188 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx / S4335-W (MI90-02582B)",
+    "documentType": "Bill of materials / detector purchase parts list",
+    "productModels": [
+      "HAD/A/F 1417-1717",
+      "S4335-W",
+      "S4335-W_R1",
+      "SDR-C4335W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "MI90-02582B",
+    "documentDate": "2019-08-12",
+    "standards": [
+      "IEC60332-1",
+      "UL",
+      "UL94V-0",
+      "UL1061",
+      "CAT7",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk contains a detailed hierarchical parts list for S4335-W detector assembly MI90-02582B, printed 2019-08-12.",
+    "officialUse": "Design history / DMR support evidence for detector configuration, purchased components, safety-marked parts, and assembly-level materials.",
+    "keyPoints": [
+      "Top-level item is S4335-W (MI90-02582B) with printing date 2019-08-12.",
+      "The detector assembly includes S4335-W_R1 female detector assembly, front/back/middle cover assemblies, module assembly, panel assembly, and PBA assemblies.",
+      "Safety and compliance-related markings appear in component specs, including IEC60332-1, UL, UL94V-0, UL1061, CEE, EAC, ISC, and SNI.",
+      "Electrical architecture includes AC/DC power supply, WiFi module, power PBA, main PBA, ROIC PBA, GATEIC PBA, TFT sensor panel, FPGA, microprocessor, NAND flash, DDR2 SDRAM, sensors, and regulators."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-W",
+      "type": "Detector model",
+      "evidence": "Top line: \"S4335-W (MI90-02582B)\"; repeated component specs reference S4335-W."
+    },
+    {
+      "name": "MI90-02582B",
+      "type": "Top-level parts code / assembly identifier",
+      "evidence": "Document heading states \"S4335-W (MI90-02582B)\"."
+    },
+    {
+      "name": "MI90-01012P",
+      "type": "Detector assembly",
+      "evidence": "Line item: \"MI90-01012P, 1, ASSY TOP-S4335-W_R1_FEMALE DETECTOR ASSY, S4335-W\"."
+    },
+    {
+      "name": "DEPS9601",
+      "type": "Detector power supply",
+      "evidence": "SMPS entry: \"S4335-W POWER SUPPLY, DEPS9601 (B-Type), AC/DC, 48W, AC220V, 50-60Hz ... DC16V ... UL\"."
+    },
+    {
+      "name": "SWL-Q93 / WIDT30Q",
+      "type": "Wireless module",
+      "evidence": "Network entry: \"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\" with vendor P/N \"SWL-Q93\"."
+    },
+    {
+      "name": "FM3543S-D6S/A",
+      "type": "TFT sensor panel",
+      "evidence": "Panel assembly includes \"MI59-01110A, TFT-SENSOR PANEL, FM3543S-D6S/A;440x520 ±0.6mm\"."
+    },
+    {
+      "name": "AM3358BZCZA80",
+      "type": "Microprocessor",
+      "evidence": "Main PBA SMD includes \"IC-MICROPROCESSOR, AM3358BZCZA80, 720Mhz, NFBGA, 324P\"."
+    },
+    {
+      "name": "EP3C80F780C8N",
+      "type": "FPGA",
+      "evidence": "Main PBA SMD includes \"IC-FPGA, EP3C80F780C8N, FBGA, 780P ... 250MHz\"."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector bill of materials",
+      "pageTarget": "chunk-1",
+      "evidence": "Columns list Level, Parts Code, quantity, item name, specification, unit, and vendor P/N for S4335-W."
+    },
+    {
+      "name": "Safety-marked power components",
+      "pageTarget": "chunk-1",
+      "evidence": "Power cord lists \"CEE/EAC/ISC/SNI\" and power supply lists \"UL\"."
+    },
+    {
+      "name": "Flame-retardant wiring and harness requirements",
+      "pageTarget": "chunk-1",
+      "evidence": "Harness entries include \"IEC60332-1\" and \"UL1061\"; shield cable entries include \"UL94V-0\"."
+    },
+    {
+      "name": "Wireless detector architecture",
+      "pageTarget": "chunk-1",
+      "evidence": "BOM includes WiFi antennas at 2.45/5.4GHz and wireless module WIDT30Q/SWL-Q93."
+    },
+    {
+      "name": "Detector PBA subsystem",
+      "pageTarget": "chunk-1",
+      "evidence": "Entries identify S4335-W_R1 GATEIC PBA, ROIC PBA, MAIN PBA, and POWER PBA."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a hierarchical BOM or purchase parts list for S4335-W detector assembly MI90-02582B.",
+      "evidenceText": "Heading \"S4335-W (MI90-02582B)\" followed by columns \"Level, Parts Code, 수량, 품명, Spec., 단위, 업체 P/N\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document printing date is 2019-08-12.",
+      "evidenceText": "Line near top states \"Printing Date : 2019-08-12\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W detector assembly includes a 48 W AC/DC detector power supply operating from AC220V and outputting DC16V.",
+      "evidenceText": "SMPS entry: \"S4335-W POWER SUPPLY, DEPS9601 (B-Type), AC/DC, 48W, AC220V, 50-60Hz ... DC16V,+10to+40C,UL\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM references IEC60332-1 for a signal harness.",
+      "evidenceText": "Harness-signal entry: \"IEC60332-1,16P,L7000,26AWG\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM references UL94V-0 for micro coaxial shield cables.",
+      "evidenceText": "Harness signal entries state \"Micro Coaxial Cable,UL94V-0,40C\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector includes WiFi antenna components specified for 2.45/5.4 GHz operation.",
+      "evidenceText": "FPCB antenna entries list \"WIFI_SAMSUNG_003,SDR-G4335W,2.45/5.4GHz\" and \"WIFI_SAMSUNG_002,SDR-G4335W,2.45/5.4GHz\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector includes a wireless module identified as WIDT30Q / SWL-Q93.",
+      "evidenceText": "Network entry: \"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\" with vendor P/N \"SWL-Q93\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector panel assembly includes TFT sensor panel FM3543S-D6S/A with 440 x 520 ±0.6 mm dimensions.",
+      "evidenceText": "Panel assembly line: \"TFT-SENSOR PANEL,FM3543S-D6S/A;440x520 ±0.6mm\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W power PBA accepts 16 V input and outputs 5.8 V, 30 V, and -15 V.",
+      "evidenceText": "PBA POWER entry: \"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\".",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes AM3358BZCZA80 microprocessor, DDR2 SDRAM, NAND flash, FPGA, gyro, magnetic, and temperature sensor components.",
+      "evidenceText": "Main PBA SMD entries include AM3358BZCZA80, K4T1G164QJ-BCE7, MT29F2G08ABAEAWP:E, EP3C80F780C8N, K3GTR, AK8963C, TMP103AYFF, and TMP103BYFF.",
+      "pageTarget": "chunk-1",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 1 of 22; later chunks may contain additional BOM rows, revisions, approval metadata, or purchase details not visible here."
+    },
+    {
+      "severity": "warning",
+      "reason": "The file path includes purchase date 20191018, but the chunk itself only explicitly states printing date 2019-08-12."
+    },
+    {
+      "severity": "info",
+      "reason": "Regulatory authority is not identified in the source text beyond metadata authoritySignal \"general\"; compliance facts are limited to component-level standards and marks."
+    }
+  ]
+}

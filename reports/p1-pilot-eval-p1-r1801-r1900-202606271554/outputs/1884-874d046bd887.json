@@ -1,0 +1,154 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954385-ese",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/SW&OLED/Schematic/SW_OLED.pdf",
+    "canonicalGroupId": "874d046bd887"
+  },
+  "document": {
+    "title": "SW_OLED",
+    "documentType": "Schematic",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "Wednesday, July 23, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Schematic source for SW and OLED circuitry with VCC_3V3, OLED_VCC, buttons, LEDs, and I2C signal connections.",
+    "officialUse": "DHF electrical design schematic for SW&OLED circuitry.",
+    "keyPoints": [
+      "The schematic date block states Wednesday, July 23, 2025.",
+      "Power nets shown include VCC_3V3 and OLED_VCC.",
+      "Switch components SW1 and SW2 are identified as PTS526SMG15SMTR21 LFS.",
+      "OLED connector CON1 is labeled OLED0.91 with pins including SCL, SDA, IREF, VCOMH, and VCC.",
+      "Signals shown include PWR_BUTTON, AP_BUTTON, AP_BOTTON, PWR_LED, ST_LED, I2C#B_SCL_OUT, and I2C#B_SDA_OUT."
+    ]
+  },
+  "entities": [
+    {
+      "name": "SW1",
+      "type": "switch component",
+      "evidence": "SW1\nPTS526SMG15SMTR21 LFS"
+    },
+    {
+      "name": "SW2",
+      "type": "switch component",
+      "evidence": "SW2\nPTS526SMG15SMTR21 LFS"
+    },
+    {
+      "name": "CON1",
+      "type": "OLED connector/display component",
+      "evidence": "CON1\nOLED0.91"
+    },
+    {
+      "name": "CN1",
+      "type": "connector",
+      "evidence": "CN1\n05005HS-10F"
+    },
+    {
+      "name": "Q1",
+      "type": "transistor component",
+      "evidence": "Q1\nMMBT3904/SOT"
+    },
+    {
+      "name": "Q2",
+      "type": "transistor component",
+      "evidence": "Q2\nSI2301BDS"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "SW/OLED schematic",
+      "pageTarget": "SW_OLED schematic",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/SW&OLED/Schematic/SW_OLED.pdf"
+    },
+    {
+      "name": "OLED power supply",
+      "pageTarget": "OLED_VCC",
+      "evidence": "VCC_3V3\nVCC_3V3 OLED_VCC\nOLED_VCC"
+    },
+    {
+      "name": "I2C OLED signals",
+      "pageTarget": "I2C OLED interface",
+      "evidence": "I2C#B_SCL_OUT\nI2C#B_SDA_OUT"
+    },
+    {
+      "name": "Power and status indicators",
+      "pageTarget": "Power and status LED signals",
+      "evidence": "PWR_LED\nST_LED"
+    },
+    {
+      "name": "Button input signals",
+      "pageTarget": "Button input signals",
+      "evidence": "PWR_BUTTON\nAP_BOTTON\nAP_BUTTON"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is an SW_OLED schematic in the DHF electrical design SW&OLED schematic folder.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/SW&OLED/Schematic/SW_OLED.pdf",
+      "pageTarget": "SW_OLED schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic date shown is Wednesday, July 23, 2025.",
+      "evidenceText": "Date: Sheet of\n<Doc> <RevCo\n<Title>\nA4\n1 1 Wednesday, July 23, 2025",
+      "pageTarget": "SW_OLED schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision/version is not populated with a readable value in the source text.",
+      "evidenceText": "Title\nSize Document Number Rev\nDate: Sheet of\n<Doc> <RevCo\n<Title>",
+      "pageTarget": "Document revision metadata",
+      "confidence": "medium"
+    },
+    {
+      "claim": "SW1 and SW2 use PTS526SMG15SMTR21 LFS switch components.",
+      "evidenceText": "SW2\nPTS526SMG15SMTR21 LFS\nSW1\nPTS526SMG15SMTR21 LFS",
+      "pageTarget": "PTS526SMG15SMTR21 LFS",
+      "confidence": "high"
+    },
+    {
+      "claim": "CON1 is labeled OLED0.91 and includes OLED-related pins C2P, C2N, C1P, C1N, VBAT, VBREF, VSS, VDD, RES#, SCL, SDA, IREF, VCOMH, and VCC.",
+      "evidenceText": "CON1\nOLED0.91\nC2P 1\nC2N 2\nC1P 3\nC1N 4\nVBAT 5\nVBREF 6\nVSS 7\nVDD 8\nRES# 9\nSCL 10\nSDA 11\nIREF 12\nVCOMH 13\nVCC 14",
+      "pageTarget": "OLED0.91",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic shows VCC_3V3 and OLED_VCC power nets.",
+      "evidenceText": "VCC_3V3\nVCC_3V3\nVCC_3V3\nVCC_3V3 OLED_VCC\nOLED_VCC",
+      "pageTarget": "OLED_VCC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic shows I2C output signals I2C#B_SCL_OUT and I2C#B_SDA_OUT.",
+      "evidenceText": "I2C#B_SCL_OUT\nI2C#B_SDA_OUT",
+      "pageTarget": "I2C OLED interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic shows button and LED signals including PWR_BUTTON, AP_BUTTON, AP_BOTTON, PWR_LED, and ST_LED.",
+      "evidenceText": "PWR_BUTTON\nAP_BOTTON\nAP_BUTTON\nPWR_BUTTON\nPWR_LED\nST_LED\nPWR_LED",
+      "pageTarget": "Button and LED signals",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document title, document number, and revision fields appear as placeholders or truncated OCR text rather than populated metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is present; source metadata authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "No product model is clearly stated in the source text; productSignal is Unclassified."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction quality is limited, with repeated title blocks and malformed placeholder text such as '<Doc> <RevCo'."
+    }
+  ]
+}

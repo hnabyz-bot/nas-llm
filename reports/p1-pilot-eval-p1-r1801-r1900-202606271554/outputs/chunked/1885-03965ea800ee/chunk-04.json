@@ -1,0 +1,229 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector purchase BOM extract for S4343-W and S4335-WV",
+    "documentType": "BOM / detector purchase component list",
+    "productModels": [
+      "S4343-W",
+      "S4335-WV",
+      "S4335-W",
+      "SDR-C4335W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "S4335-WV_R1; S4335-W_R1",
+    "documentDate": "2019-08-12",
+    "standards": [
+      "IEC60332-1",
+      "UL",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk shows detector BOM lines for S4343-W and S4335-WV assemblies, including power, battery, wireless, panel, PBA, PCB, and safety-related components.",
+    "officialUse": "Supports DHF/DMR configuration evidence for detector assemblies, component specifications, ratings, supplier part numbers, and regulatory-relevant materials or certifications.",
+    "keyPoints": [
+      "S4335-WV section is printed on 2019-08-12 and lists Level, Parts Code, quantity, item name, specification, unit, and supplier P/N columns.",
+      "S4335-WV_R1 detector assembly includes power cord, LAN harness, IEC60332-1 signal harness, UL-marked SMPS, ID labels, packing materials, covers, panel assembly, GateIC PBA, and ROIC PBA.",
+      "Safety and performance-related parts include Li-ion polymer battery, SMPS power supply, power PBA outputs, shock sensor indicator, Wi-Fi antennas, EMI gasket, PTC thermistors, EMI filter, ferrite core, and electronic components with voltage/current/temperature ratings."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV (MI90-02202B)",
+      "type": "product model / top assembly",
+      "evidence": "Section header states \"S4335-WV (MI90-02202B)\" followed by ASSY TOP-S4335WV_R1_FE_DETECTOR ASSY."
+    },
+    {
+      "name": "S4343-W (MI90-02026B)",
+      "type": "product model / assembly section",
+      "evidence": "Section header states \"S4343-W (MI90-02026B)\" with subsequent main PCB, power PBA, battery, sensor, connector, and component lines."
+    },
+    {
+      "name": "SDR-C4335W",
+      "type": "detector label / battery-associated model",
+      "evidence": "Battery line states \"BATTERY, SDR-C4335W, Li-ion Polymer, 3400mAh\"; label line states \"LABEL ID-SDR-C4335W\"."
+    },
+    {
+      "name": "MI44-01042A / DEPS9601",
+      "type": "power supply component",
+      "evidence": "SMPS-2G_DETECTOR_POWER_BOX is specified as \"S4335-W POWER SUPPLY, DEPS9601 (B-Type), AC/DC, 48W, AC220V, 50-60Hz... DC16V, +10to+40C, UL\"."
+    },
+    {
+      "name": "MI96-01305B / SDB-3S1PA",
+      "type": "battery component",
+      "evidence": "Line lists \"BATTERY, SDR-C4335W, Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g\" with supplier P/N SDB-3S1PA."
+    },
+    {
+      "name": "MI92-02311A / DEPS9602",
+      "type": "power PBA",
+      "evidence": "Line lists \"PBA POWER, S4335-W POWER PBA, INPUT(16V), OUTPUT(5.8V, 30V,-15V)\" with supplier P/N DEPS9602."
+    },
+    {
+      "name": "MI42-01001A / WIFI_SAMSUNG_003",
+      "type": "wireless antenna",
+      "evidence": "FPCB antenna line specifies \"WIFI_SAMSUNG_003, SDR-G4335W, 2.45/5.4GHz, -11.0/-15dBi\"."
+    },
+    {
+      "name": "MI42-01002A / WIFI_SAMSUNG_002",
+      "type": "wireless antenna",
+      "evidence": "FPCB antenna line specifies \"WIFI_SAMSUNG_002, SDR-G4335W, 2.45/5.4GHz, -8.0/-8.0dBi\"."
+    },
+    {
+      "name": "MI59-01152A / TFT-C4335_SENSOR_PANEL",
+      "type": "detector sensor panel",
+      "evidence": "Panel assembly includes \"TFT-C4335_SENSOR_PANEL, TFT-C4335\" with supplier P/N \"AR-B6-23, FA3543S\"."
+    },
+    {
+      "name": "MI13-01011A / AD71140JCFZ",
+      "type": "ROIC ASIC",
+      "evidence": "Panel assembly lists \"IC ASIC-ROIC, AD71140JCFZ, S4343-W, 270/50, 5V, 0 to 70C, COF, TRAY\"."
+    },
+    {
+      "name": "MI13-01009A / HX5090-ACS22D",
+      "type": "gate driver IC",
+      "evidence": "Panel assembly lists \"IC DRIVER GATE-GATE IC, HX5090-ACS22D, COF, LINE, 40, 520, 68um\"."
+    },
+    {
+      "name": "MI63-02680A",
+      "type": "EMI grounding material",
+      "evidence": "Middle block assembly lists \"GROUND-A_EMI_GASKET, DETECTOR, Ni, T4, 10, 20\"."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM configuration control",
+      "pageTarget": "Chunk 4 / S4335-WV (MI90-02202B)",
+      "evidence": "The chunk provides structured BOM columns \"Level, Parts Code, 수량, 품명, Spec., 단위, 업체 P/N\" for the detector assembly."
+    },
+    {
+      "name": "Power subsystem ratings",
+      "pageTarget": "Chunk 4 / S4335-WV and S4343-W sections",
+      "evidence": "SMPS line specifies AC220V, 50-60Hz, 48W, DC16V output; power PBA line specifies input 16V and outputs 5.8V, 30V, -15V."
+    },
+    {
+      "name": "Wireless antenna characteristics",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 front cover assembly",
+      "evidence": "Wi-Fi antenna PCB lines specify 2.45/5.4GHz operation and antenna gains of -11.0/-15dBi and -8.0/-8.0dBi."
+    },
+    {
+      "name": "Safety and compliance marking evidence",
+      "pageTarget": "Chunk 4 / S4335-WV top assembly",
+      "evidence": "Power cord specification includes CEE/EAC/ISC/SNI; signal harness specifies IEC60332-1; SMPS specification includes UL."
+    },
+    {
+      "name": "Transport shock monitoring",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 harness assembly",
+      "evidence": "Indicator line lists \"SHOCK SENSOR, CX-30(TUBE), ACTIVATION AT 19INCH TO 30INCH, 100G\"."
+    },
+    {
+      "name": "Detector panel construction",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 panel assembly",
+      "evidence": "Panel assembly includes TFT-C4335 sensor panel, Gadox sheet, gate driver ICs, ROIC ASICs, ACF adhesives, silicone adhesive, Kapton tape, and aluminum tape."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "S4335-WV detector assembly has a documented BOM print date of 2019-08-12.",
+      "evidenceText": "\"S4335-WV (MI90-02202B)\" followed by \"Printing Date : 2019-08-12\" and BOM column headers.",
+      "pageTarget": "Chunk 4 / S4335-WV (MI90-02202B)",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV_R1 top assembly is listed as a front-end detector assembly.",
+      "evidenceText": "\"MI90-01012Q,1,ASSY TOP-S4335WV_R1_FE_DETECTOR ASSY,S4335-WV_R1\" and \"MI90-02580B,1,ASSY TOP-S4335WV_R1_FE_DETECTOR ASSY,S4335-WV_R1\".",
+      "pageTarget": "Chunk 4 / S4335-WV (MI90-02202B)",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV assembly includes a power cord with multiple regional compliance markings and 250V/10A rating.",
+      "evidenceText": "\"POWER CORD-DT, EUR,2P-S,250V,10A... CEE/EAC/ ISC/SNI... 3P(C13)-S\".",
+      "pageTarget": "Chunk 4 / S4335-WV top assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV assembly includes a signal harness specified to IEC60332-1.",
+      "evidenceText": "\"MI39-02330A,1,HARNESS-SIGNAL, IEC60332-1,16P,L7000,26AWG\".",
+      "pageTarget": "Chunk 4 / S4335-WV top assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W detector power supply is an AC/DC 48W unit with AC220V input, DC16V output, +10 to +40C operating range, and UL marking.",
+      "evidenceText": "\"SMPS-2G_DETECTOR_POWER_BOX, S4335-W POWER SUPPLY, DEPS9601 (B-Type), AC/DC, 48W, AC220V, 50-60Hz... DC16V,+10to+40C,UL\".",
+      "pageTarget": "Chunk 4 / S4335-WV top assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector battery listed for SDR-C4335W is a 3400mAh Li-ion polymer pack with stated dimensions, temperature range, and mass.",
+      "evidenceText": "\"MI96-01305B,1,BATTERY, SDR-C4335W, Li-ion Polymer,3400mAh,130x245x8.5mm,-0to60C,380g\".",
+      "pageTarget": "Chunk 4 / S4343-W section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W power PBA accepts 16V input and provides 5.8V, 30V, and -15V outputs.",
+      "evidenceText": "\"MI92-02311A,1,PBA POWER, S4335-W POWER PBA, INPUT(16V), OUTPUT(5.8V, 30V,-15V)\".",
+      "pageTarget": "Chunk 4 / S4343-W section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV_R1 front cover assembly includes two Wi-Fi antennas for 2.45/5.4GHz bands with specified gains.",
+      "evidenceText": "\"WIFI_SAMSUNG_003... 2.45/5.4GHz,-11.0/-15dBi\" and \"WIFI_SAMSUNG_002... 2.45/5.4GHz,-8.0/-8.0dBi\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 front cover assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV_R1 harness assembly includes shock sensor indicators activated at 19 to 30 inches and rated 100G.",
+      "evidenceText": "\"5903-004688,4,INDICATOR, SHOCK SENSOR,CX-30(TUBE),TUBE,ACTIVATION AT 19INCH TO 30INCH,100G\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 harness assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV_R1 panel assembly includes a TFT-C4335 sensor panel and a Gadox sheet.",
+      "evidenceText": "\"MI59-01152A,1,TFT-C4335_SENSOR_PANEL,TFT-C4335\" and \"MI63-02346A,1,SHEET-GADOX, S4335-WV... Gadox\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The panel assembly includes 5 gate driver ICs HX5090-ACS22D and 12 ROIC ASICs AD71140JCFZ.",
+      "evidenceText": "\"MI13-01009A,5,IC DRIVER GATE-GATE IC, HX5090-ACS22D\" and \"MI13-01011A,12,IC ASIC-ROIC, AD71140JCFZ\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV_R1 middle block assembly includes detector EMI gasket grounding material.",
+      "evidenceText": "\"MI63-02680A,1,GROUND-A_EMI_GASKET, DETECTOR,Ni,T4,10,20\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 middle block assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W main PCB is listed as FR4, 8-layer, T1.2, 256.20 x 236.70 mm.",
+      "evidenceText": "\"MI41-01630A,1,PCB-MAIN, S4343-W MAIN PCB,FR4,8,T1.2,256.20x236.70mm\".",
+      "pageTarget": "Chunk 4 / S4343-W section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W_R1 GateIC PCB is listed as FR4, 6-layer, T1.2, 333 x 38 mm.",
+      "evidenceText": "\"MI41-01679A,1,PCB-INTERFACE-GATEIC, S4335-W_R1 GATE PCB,FR4,6,T1.2,333x38\".",
+      "pageTarget": "Chunk 4 / S4335-WV_R1 GateIC PBA",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 4 of 22; facts are limited to the visible BOM rows and may not represent the full source workbook."
+    },
+    {
+      "severity": "warning",
+      "reason": "The first S4343-W portion begins mid-table with repeated component rows before a visible section header, so some context and column headers are inferred from later visible rows."
+    }
+  ]
+}

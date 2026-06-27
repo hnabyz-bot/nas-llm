@@ -1,0 +1,216 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018 / 1G DETECTOR 부품사LIST",
+    "documentType": "BOM and supplier procurement spreadsheet",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "PCB revisions listed include V006 and V007",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk contains HAD1717MC and HAD1717MG detector BOM/procurement data for PBAs, modules, panel assembly, power box, accessories, packaging, and supplier list information.",
+    "officialUse": "Design history / DMR purchasing evidence for component composition, supplier traceability, PCB revision identification, long-lead components, and obsolete or changed part-number review.",
+    "keyPoints": [
+      "HAD1717MG assemblies include Middle Assy, Module Assy, Front Assy, Back Cover Assy, Panel Assy, Power Box, accessories, packaging, Main PBA, Gate PBA, ROIC PBA, and Power PBA.",
+      "PCB entries identify board stackups and revisions, including ADI_MAIN_V006_PCB, ADI_GATE_V006_PCB, ADI_ROIC_V007_PCB, and ADI_POWER_V006_PCB.",
+      "Panel Assy lists a 1717 TFT Panel, 1717 Gods DRZ-PLUS, Read Out IC, Gate IC, and adhesive.",
+      "Power-related safety and functional components include SMPS MEANWELL RPS200-15, fuses rated 125V 5A, AC/DC power cables, power box board, and grounding cable fastening bolts.",
+      "Several parts include procurement risk notes such as lead time of 4 or 5 months or obsolete/changed part-number indications."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "Rows list model HAD1717MC with ROIC PBA and POWER PBA entries."
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "product model",
+      "evidence": "Rows list model HAD1717MG across MIDDLE ASSY, PANEL ASSY, POWER BOX, MAIN PBA, GATE PBA, ROIC PBA, and POWER PBA."
+    },
+    {
+      "name": "ADI_MAIN_V006_PCB",
+      "type": "PCB",
+      "evidence": "HAD1717MG MAIN PBA includes ADI_MAIN_V006_PCB described as FR4 12L_240mm x 130mm x 1.6T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "ADI_GATE_V006_PCB",
+      "type": "PCB",
+      "evidence": "HAD1717MG GATE PBA includes ADI_GATE_V006_PCB described as FR4 4L_402.5mm x 32.5mm x 1.0T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "ADI_ROIC_V007_PCB",
+      "type": "PCB",
+      "evidence": "HAD1717MG ROIC PBA includes ADI_ROIC_V007_PCB described as FR4 8L_427mm x 39mm x 1.0T(Green) gold plated glossy V007."
+    },
+    {
+      "name": "ADI_POWER_V006_PCB",
+      "type": "PCB",
+      "evidence": "HAD1717MG POWER PBA includes ADI_POWER_V006_PCB described as FR4 4L_160mm x 55mm x 1.6T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "1717 PANEL MODULE_Gods",
+      "type": "panel assembly",
+      "evidence": "HAD1717MG PANEL ASSY lists AA1-000002 as 1717 PANEL MODULE_Gods."
+    },
+    {
+      "name": "MEANWELL RPS200-15",
+      "type": "power supply component",
+      "evidence": "HAD1717MG POWER BOX includes SMPS MEANWELL / RPS200-15."
+    },
+    {
+      "name": "BOE",
+      "type": "supplier",
+      "evidence": "HAD1717MG PANEL ASSY lists F-BG-0101 1717 TFT Panel, 17*17 BOE Panel, supplier BOE."
+    },
+    {
+      "name": "AVX",
+      "type": "component supplier",
+      "evidence": "Multiple tantalum capacitor rows list supplier AVX, including TAJC226K006RNJ and TPSC106K016R0500."
+    },
+    {
+      "name": "Murata / TDK / SEC",
+      "type": "component supplier group",
+      "evidence": "Multiple ceramic capacitor rows specify Murata/TDK/SEC with X5R or above."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM traceability",
+      "pageTarget": "HAD1717MG BOM",
+      "evidence": "Rows enumerate model, assembly, part number, quantity, component type, supplier, currency, unit price, and total price."
+    },
+    {
+      "name": "PCB revision control",
+      "pageTarget": "PCB Revision Control",
+      "evidence": "PCB descriptions include explicit revisions V006 and V007 for Main, Gate, ROIC, and Power PBAs."
+    },
+    {
+      "name": "Power safety components",
+      "pageTarget": "Power Box Safety Components",
+      "evidence": "Power Box and PBA rows include SMPS, AC/DC power cables, grounding cable bolt, and fuses such as 0451 005_SMD (125V 5A)."
+    },
+    {
+      "name": "Component procurement risk",
+      "pageTarget": "Component Procurement Risk",
+      "evidence": "Rows include notes such as 납기 5개월 이상, 납기 4개월 이상, 단종확인필요, 단종, and PN 변경."
+    },
+    {
+      "name": "Supplier qualification tracking",
+      "pageTarget": "1G Detector Supplier List",
+      "evidence": "The supplier list includes HME Check, HME구매, E-Mail(HME), 승인원, and 소개서 columns with OK or planned meeting notes."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "HAD1717MG uses a Main PBA PCB revision V006 with FR4 12-layer construction.",
+      "evidenceText": "HAD1717MG, MAIN PBA, ADI_MAIN_V006_PCB, FR4 12L_240mm x 130mm x 1.6T(Green) 금도금,유광 V006.",
+      "pageTarget": "HAD1717MG Main PBA",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG uses a ROIC PBA PCB revision V007 with FR4 8-layer construction.",
+      "evidenceText": "HAD1717MG, ROIC PBA, ADI_ROIC_V007_PCB, FR4 8L_427mm x 39mm x 1.0T(Green) 금도금, 유광 V007.",
+      "pageTarget": "HAD1717MG ROIC PBA",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG Gate PBA uses PCB revision V006.",
+      "evidenceText": "HAD1717MG, GATE PBA, ADI_GATE_V006_PCB, FR4 4L_402.5mm x 32.5mm x 1.0T(Green) 금도금, 유광 V006.",
+      "pageTarget": "HAD1717MG Gate PBA",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG Power PBA uses PCB revision V006.",
+      "evidenceText": "HAD1717MG, POWER PBA, ADI_POWER_V006_PCB, FR4 4L_160mm x 55mm x 1.6T(Green) 금도금, 유광 V006.",
+      "pageTarget": "HAD1717MG Power PBA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG Panel Assy includes a 17 by 17 BOE TFT panel.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, F-BG-0101, 1717 TFT Panel, 17*17 BOE Panel, supplier BOE.",
+      "pageTarget": "HAD1717MG Panel Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG Panel Assy includes DRZ-PLUS material sized 434 mm by 434 mm by 0.465T.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, F-A7-2311, 1717 Gods, DRZ-PLUS, 434mm*434mm*0.465T.",
+      "pageTarget": "HAD1717MG Panel Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG Panel Assy includes 12 Read Out ICs part number AD71143JCFZ.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, MA2-000001, 12, Read Out IC, AD71143JCFZ.",
+      "pageTarget": "HAD1717MG Panel Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG Panel Assy includes 6 Gate ICs part number NT39565H-C5149A.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, F-A7-0107, 6, Gate IC, NT39565H-C5149A.",
+      "pageTarget": "HAD1717MG Panel Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG Power Box includes an SMPS identified as MEANWELL RPS200-15.",
+      "evidenceText": "HAD1717MG, POWER BOX, RPS200-15, SMPS, MEANWELL / RPS200-15.",
+      "pageTarget": "HAD1717MG Power Box",
+      "confidence": "high"
+    },
+    {
+      "claim": "Power-related BOM rows include a 125V 5A SMD fuse.",
+      "evidenceText": "Fuse, 0451 005_SMD (125V 5A), appears in HAD1717MG POWER PBA and MAIN PBA entries.",
+      "pageTarget": "Power Safety Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG accessory set includes LAN CAT6 cable, AC cables, trigger cable, and main data cable options.",
+      "evidenceText": "ACCESSORY rows list LAN CAT6 Cable(5M), 220V AC Cable(1.5M), 110V AC Cable(1.5M), Trigger Cable, and Main Data Cable lengths 20M, 10M, 15M, and 5M.",
+      "pageTarget": "HAD1717MG Accessories",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several capacitor and crystal/oscillator parts carry long-lead procurement notes.",
+      "evidenceText": "Rows include notes 납기 5개월 이상 for TPSC106K016R0500, F931D106KAA, TAJB225K016RNJ, TPSB106K016R0500, CX2520DB24000H0FLJC1, ST3215SB32768H5HSZA1, and CX2520DB25000H0FLJC1; C3216X5R1E336M160AC notes 납기 4개월 이상.",
+      "pageTarget": "Procurement Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Main PBA includes explicit obsolete or changed part-number notes.",
+      "evidenceText": "Connector 12507WR-25L_1.25mm notes 단종확인필요; IC_Flash_Drive SDIN7DU2-8G notes 단종 and PIN TO PIN SDINBDG4-8G; inductors LPS4018-222ML and VLS3012T-4R7M1R0 note changed part numbers.",
+      "pageTarget": "HAD1717MG Main PBA Procurement Risk",
+      "confidence": "high"
+    },
+    {
+      "claim": "The supplier list tracks supplier documentation or approval status for 1G detector components.",
+      "evidenceText": "Section title 1G DETECTOR 부품사LIST includes columns HME Check, HME구매, E-Mail(HME), 승인원, 소개서, with multiple rows marked OK.",
+      "pageTarget": "1G Detector Supplier List",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk is a partial spreadsheet extract and contains many #REF! and #N/A cells, so price totals and formula-derived fields should be verified against the original workbook before controlled use."
+    },
+    {
+      "severity": "info",
+      "reason": "Supplier list includes personal contact names, phone numbers, and email addresses; PII was not extracted into entities except as non-person supplier evidence."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority submissions, certificates, test results, or standards are stated in this chunk."
+    }
+  ]
+}

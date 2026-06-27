@@ -1,0 +1,190 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Purchase BOM / component list",
+    "productModels": [
+      "S4343-W",
+      "SDR-C4335W",
+      "SDR-G4335W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "UL94V-0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk lists S4343-W detector assemblies, PBAs, electronic components, mechanical parts, labels, suppliers, quantities, and selected performance specifications.",
+    "officialUse": "Supports DHF/DMR traceability for purchased detector components, assembly structure, supplier identification, and component-level performance or safety specifications.",
+    "keyPoints": [
+      "S4343-W includes PBA INTERFACE GATE, MIDDLE ASSY, BACK COVER ASSY, FRONT ASSY, MODULE ASSY, PBA INTERFACE MAIN, POWER BOX, and WIFI MODULE entries.",
+      "Main PBA-related entries include processor, FPGA, NAND flash, DDR2 SDRAM, power supervisors, regulators, DC/DC converters, transceivers, sensors, LEDs, and resistors.",
+      "Safety/performance-relevant entries include a shock sensor activation range, WiFi antenna frequencies/gain, UL94V-0 cable material, operating temperature ranges, and thermal pads."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4343-W",
+      "type": "product/model identifier",
+      "evidence": "Rows repeatedly begin with S4343-W and include assemblies such as PBA INTERFACE GATE, MIDDLE ASSY, BACK COVER ASSY, FRONT ASSY, and MODULE ASSY."
+    },
+    {
+      "name": "MI92-02139A",
+      "type": "PBA assembly part number",
+      "evidence": "S4343-W,MI92-02139A,PBA INTERFACE GATE appears with multiple PBA electronic component entries."
+    },
+    {
+      "name": "MI99-01326B",
+      "type": "module assembly part number",
+      "evidence": "MI99-01326B is listed as ASSY SUB MATERIAL-S4343-W PBA ASSY with description S4343-W,Female,PBA Assy."
+    },
+    {
+      "name": "MI92-02310A",
+      "type": "main PBA part number",
+      "evidence": "MI99-01326B includes MI92-02310A, ASSY PBA-MAIN, S4343-W, described as 4343W MAIN PBA."
+    },
+    {
+      "name": "DAEJIN IM CO.,LTD",
+      "type": "supplier",
+      "evidence": "MIDDLE ASSY, BACK COVER ASSY, and FRONT ASSY assembly rows list DAEJIN IM CO.,LTD as supplier."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "supplier",
+      "evidence": "Rows list SAMSUNG ELECTRO-MECHANICS CO., LTD. for components including RC1608J304CS, CL31A106KBHNNNE, and SWL-Q93."
+    },
+    {
+      "name": "KEL CORPORATION (TOKYO, JAPAN)",
+      "type": "supplier",
+      "evidence": "KEL CORPORATION is listed for a 40P board-to-cable socket and micro coaxial shield cables."
+    },
+    {
+      "name": "SHOCKWATCH",
+      "type": "supplier",
+      "evidence": "Shock sensor row lists CX-30(TUBE) supplied by SHOCKWATCH."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PBA INTERFACE GATE",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "evidence": "S4343-W,MI92-02139A,PBA INTERFACE GATE appears with resistors, capacitors, connectors, and PCB-I/F(GATE)."
+    },
+    {
+      "name": "Main PBA",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "evidence": "MI92-02310A is listed as ASSY PBA-MAIN for S4343-W and described as 4343W MAIN PBA."
+    },
+    {
+      "name": "WiFi module and antenna subsystem",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "evidence": "WIFI MODULE rows include SWL-Q93 wireless module and WiFi antenna PCB entries at 2.45/5.4GHz."
+    },
+    {
+      "name": "Shock indicator",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "evidence": "5903-004688 INDICATOR is specified as SHOCK SENSOR, CX-30(TUBE), activation at 19INCH TO 30INCH, 100G."
+    },
+    {
+      "name": "Thermal pad components",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "evidence": "PAD GAP-ROIC_B and PAD GAP-ROIC_T entries list S4343-W compounds thermal pad items A_THERMAL_PAD_B and A_THERMAL_PAD_T."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk identifies S4343-W detector assembly structure including middle, back cover, front, module, PBA interface gate, and PBA interface main sections.",
+      "evidenceText": "Rows include S4343-W with PBA INTERFACE GATE, MIDDLE ASSY, BACK COVER ASSY, FRONT ASSY, MODULE ASSY, and PBA INTERFACE MAIN.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W includes a main PBA assembly identified as MI92-02310A.",
+      "evidenceText": "MI99-01326B,MODULE ASSY includes MI92-02310A, ASSY PBA-MAIN, S4343-W, with description 4343W MAIN PBA.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA uses an AM3358BZCZA80 microprocessor operating at 720 MHz.",
+      "evidenceText": "0902-003285, IC-MICROPROCESSOR, AM3358BZCZA80, 720Mhz, NFBGA, 324P, 3.3V, 64KB.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes an EP3C80F780C8N FPGA with 250 MHz specification.",
+      "evidenceText": "1301-002136, IC-FPGA, EP3C80F780C8N, FBGA, 780P, 1.2V, 4A, 0to+85C, 250MHz.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes nonvolatile and volatile memory components.",
+      "evidenceText": "IC-NAND FLASH MT29F2G08ABAEAWP:E 2Gbit; IC-DDR2 SDRAM K4T1G164QJ-BCE7 1Gbit; IC-DRAM W9825G6KH 256Mbit.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The module assembly includes a shock sensor indicator with specified activation performance.",
+      "evidenceText": "5903-004688, INDICATOR, SHOCK SENSOR, CX-30(TUBE), ACTIVATION AT 19INCH TO 30INCH, 100G.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The front assembly contains WiFi antenna PCB parts with 2.45/5.4 GHz specifications.",
+      "evidenceText": "MI42-01001A WIFI_SAMSUNG_003, SDR-G4335W, 2.45/5.4GHz, -11.0/-15dBi; MI42-01002A WIFI_SAMSUNG_002, 2.45/5.4GHz, -8.0/-8.0dBi.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The WiFi module section includes a Samsung wireless module.",
+      "evidenceText": "MI59-01099A, NETWORK-MAIN_WIFI MODULE, SQL-Q93, WIDT30Q, WIRELESS Module, 55.0mmx24.0mmx4.8mm, supplier SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "At least two harness signal cables specify UL94V-0 material flammability rating.",
+      "evidenceText": "MI39-01557A and MI39-01683A HARNESS SIGNAL rows specify Micro Coaxial Cable, UL94V-0, 40C, gray, 42AWG.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes multiple temperature-rated components relevant to safety and reliability.",
+      "evidenceText": "TPS65217BRSL -40to+105C; TPS2051BDGN -40to+120C; LT1761 regulators -40to+125C; TPS54494PWP -40to+150C.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W module has an ID label associated with detector model SDR-C4335W.",
+      "evidenceText": "MI68-02529A, LABEL ID-SDR-C4335W, SDR-C4335W, PET, T0.05, W74.5, L58.2, SILVER/BLACK.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA interface gate includes a dedicated gate IC board PCB part.",
+      "evidenceText": "MI41-01595A, PCB-I/F(GATE), S4343-W GATEIC BOARD, FR4, 6, T1.2, 412mm x 40mm x 1.2mm.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-18",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "The chunk is a spreadsheet-like BOM extract without column headers; field meanings are inferred from repeated row structure and item descriptions."
+    },
+    {
+      "severity": "warning",
+      "reason": "Many rows contain #REF! and #N/A spreadsheet errors, so pricing or reference-link fields should not be treated as validated regulatory evidence."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is inferred from the filename suffix 20191018 rather than from an explicit row in the chunk."
+    }
+  ]
+}

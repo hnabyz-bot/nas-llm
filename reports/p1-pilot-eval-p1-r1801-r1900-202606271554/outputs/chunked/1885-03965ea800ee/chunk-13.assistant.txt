@@ -1,0 +1,176 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "procurement bill of materials spreadsheet",
+    "productModels": [
+      "S4335-WV"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "R1",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet extract listing S4335-WV detector interface gate and ROIC PBA assemblies with component part numbers, specifications, suppliers, packaging quantities, and costs.",
+    "officialUse": "Supports DHF/DMR design and purchasing traceability for detector PBA assemblies and their electronic components.",
+    "keyPoints": [
+      "Rows identify S4335-WV PBA INTERFACE GATE and PBA INTERFACE ROIC assemblies.",
+      "The extract includes R1 gate PCB and ROIC PBA/SMD assembly references.",
+      "Component lines include capacitors, tantalum capacitors, inductors, connectors, diodes, CMOS logic ICs, clock driver, voltage reference, regulators, and resistors.",
+      "Supplier names include SAMWHA CAPACITOR, KOREA MURATA ELECTRONICS, AVX CORPORATION, TEXAS INSTRUMENTS, ANALOG DEVICES, ROHM, ON SEMICONDUCTOR, NEXPERIA, DIODES, and others."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV",
+      "type": "product/model identifier",
+      "evidence": "Rows begin with S4335-WV for PBA INTERFACE GATE and PBA INTERFACE ROIC component entries."
+    },
+    {
+      "name": "MI92-02451A",
+      "type": "assembly part number",
+      "evidence": "S4335-WV,MI92-02451A,PBA INTERFACE GATE appears repeatedly as the parent assembly context."
+    },
+    {
+      "name": "MI92-02453A",
+      "type": "assembly part number",
+      "evidence": "S4335-WV,MI92-02453A,PBA INTERFACE ROIC includes ASSY PBA-INTERFACE-ROIC with description S4335-W_R1 ROIC PBA."
+    },
+    {
+      "name": "MI41-01679A",
+      "type": "PCB part number",
+      "evidence": "MI41-01679A is listed as PCB-INTERFACE-GATEIC with S4335-W_R1 GATE PCB, FR4, 6, T1.2, 333x38."
+    },
+    {
+      "name": "MI94-01052A",
+      "type": "SMD assembly part number",
+      "evidence": "MI94-01052A is listed as ASSY SMD-INTERFACE-ROIC-SMD with S4335-W R1 ROIC PBA SMD, MI92-02453A."
+    },
+    {
+      "name": "SAMWHA CAPACITOR CO., LTD.",
+      "type": "supplier",
+      "evidence": "Ceramic capacitor rows list SAMWHA CAPACITOR CO., LTD. (CAPACITOR, YONGIN, KOREA) as supplier."
+    },
+    {
+      "name": "KOREA MURATA ELECTRONICS CO.,LTD.",
+      "type": "supplier",
+      "evidence": "100nF ceramic capacitor and 47uH inductor rows list KOREA MURATA ELECTRONICS CO.,LTD."
+    },
+    {
+      "name": "AVX CORPORATION",
+      "type": "supplier",
+      "evidence": "Tantalum capacitor rows for 3.3uF and 22uF parts list AVX CORPORATION."
+    },
+    {
+      "name": "TEXAS INSTRUMENTS KOREA LTD.",
+      "type": "supplier",
+      "evidence": "CMOS logic, clock driver, and regulator rows list TEXAS INSTRUMENTS KOREA LTD."
+    },
+    {
+      "name": "ANALOG DEVICES INTERNATIONAL U.C.",
+      "type": "supplier",
+      "evidence": "Voltage reference and LT1962/LT1964 regulator rows list ANALOG DEVICES INTERNATIONAL U.C."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PBA INTERFACE GATE",
+      "pageTarget": "S4335-WV PBA INTERFACE GATE",
+      "evidence": "MI92-02451A is repeatedly labeled PBA INTERFACE GATE for S4335-WV."
+    },
+    {
+      "name": "PBA INTERFACE ROIC",
+      "pageTarget": "S4335-WV PBA INTERFACE ROIC",
+      "evidence": "MI92-02453A is labeled PBA INTERFACE ROIC and ASSY PBA-INTERFACE-ROIC."
+    },
+    {
+      "name": "R1 detector interface PBA revision",
+      "pageTarget": "S4335-WV R1 PBA assemblies",
+      "evidence": "Descriptions include S4335-W_R1 GATE PCB, S4335-W_R1 ROIC PBA, and S4335-W R1 ROIC PBA SMD."
+    },
+    {
+      "name": "Electronic component traceability",
+      "pageTarget": "Detector component BOM traceability",
+      "evidence": "Rows provide internal part numbers, component categories, detailed electrical specs, manufacturer part numbers, suppliers, and package quantities."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "S4335-WV includes a PBA INTERFACE GATE assembly identified as MI92-02451A.",
+      "evidenceText": "S4335-WV,MI92-02451A,PBA INTERFACE GATE appears across multiple component rows.",
+      "pageTarget": "S4335-WV PBA INTERFACE GATE",
+      "confidence": "high"
+    },
+    {
+      "claim": "The gate interface assembly includes an R1 gate PCB identified as MI41-01679A.",
+      "evidenceText": "MI41-01679A, PCB-INTERFACE-GATEIC, S4335-W_R1 GATE PCB, FR4, 6, T1.2, 333x38.",
+      "pageTarget": "S4335-WV R1 Gate PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV includes a PBA INTERFACE ROIC assembly identified as MI92-02453A.",
+      "evidenceText": "S4335-WV,MI92-02453A,PBA INTERFACE ROIC and ASSY PBA-INTERFACE-ROIC, S4335-W_R1 ROIC PBA.",
+      "pageTarget": "S4335-WV PBA INTERFACE ROIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC interface assembly has an SMD assembly part MI94-01052A for S4335-W R1 ROIC PBA SMD.",
+      "evidenceText": "MI94-01052A, ASSY SMD-INTERFACE-ROIC-SMD, S4335-W R1 ROIC PBA SMD, MI92-02453A.",
+      "pageTarget": "S4335-WV ROIC SMD Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC PBA uses a Schottky diode BAT54SW rated 30V and 200mA in SOT-323 packaging.",
+      "evidenceText": "0404-001152, DIODE-SCHOTTKY, BAT54SW,30V,200mA,SOT-323,TP, supplier DIODES.",
+      "pageTarget": "S4335-WV ROIC diode components",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC PBA includes CMOS logic devices including 74LCX245, 74LVC1G04, 74LVC1G34, and SN74LVC2G17.",
+      "evidenceText": "Rows list IC-CMOS LOGIC parts 74LCX245MTCX, SN74LVC1G04DBVR, 74LVC1G34GM, and SN74LVC2G17DCKR.",
+      "pageTarget": "S4335-WV ROIC logic ICs",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC PBA includes a 2:12 low additive jitter LVDS buffer clock driver CDCLVD1212RHAR.",
+      "evidenceText": "1003-002571, IC-CLOCK DRIVER, CDCLVD1212RHAR, VQFN, 40P, 2.5V, -40to+85C, 2:12 Low Additive Jitter LVDS Buffer.",
+      "pageTarget": "S4335-WV ROIC clock driver",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC PBA includes voltage reference and regulator components with specified voltage and temperature ranges.",
+      "evidenceText": "ADR444BRZ is listed as 4.0944/4.0976V, -40to+125C; LT1962EMS8-2.5, LP3874EMP-5.0, LP3874EMP-2.5, LT1964ES5-BYP, and LT1962EMS8-5 regulator rows are present.",
+      "pageTarget": "S4335-WV ROIC power components",
+      "confidence": "high"
+    },
+    {
+      "claim": "The gate and ROIC assemblies include repeated ceramic capacitor entries with 10nF and 100nF 50V X7R specifications.",
+      "evidenceText": "2203-000257 is C-CER,CHIP 10nF,10%,50V,X7R,TP,1608; 2203-005249 is 100nF,10%,50V,X7R,TP,1608.",
+      "pageTarget": "S4335-WV ceramic capacitors",
+      "confidence": "high"
+    },
+    {
+      "claim": "The gate interface PBA includes connectors, including a 40P board-to-cable socket and 2P/8P board-to-cable headers.",
+      "evidenceText": "3710-003251 SOCKET-BOARD TO CABLE, 40P; 3711-000541 HEADER-BOARD TO CABLE, BOX,2P; 3711-002127 HEADER-BOARD TO CABLE, BOX,8P.",
+      "pageTarget": "S4335-WV gate PBA connectors",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk is a partial spreadsheet extract without column headers, so some column meanings are inferred from row order and repeated values."
+    },
+    {
+      "severity": "info",
+      "reason": "Many rows are duplicated and include spreadsheet error tokens such as #REF! and #N/A; extracted facts focus on stable part, assembly, supplier, and specification fields."
+    }
+  ]
+}

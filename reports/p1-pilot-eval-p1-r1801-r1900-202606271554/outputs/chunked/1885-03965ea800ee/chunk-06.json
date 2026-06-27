@@ -1,0 +1,245 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Detector BOM, material purchase cost, and model cost analysis spreadsheet",
+    "productModels": [
+      "S4335-W",
+      "S4335-WV",
+      "S4343-W",
+      "HAD1717MG",
+      "HAD1717MC",
+      "SDR-C4335W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "S4335-W_R1 and S4335-WV_R1 referenced; FPC-MAIN FPC Ver 5.0 referenced",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "UL94V-0",
+      "IEC60332-1",
+      "UL",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet chunk lists detector BOM parts, suppliers, specifications, MOQ-based purchasing costs, panel cost assumptions, and model-level totals for S4335-W, S4335-WV, S4343-W, and HAD1717 variants.",
+    "officialUse": "Supports DHF/DMR design and purchasing traceability by documenting part codes, component specifications, suppliers, material costs, MOQ assumptions, panel sourcing, PBA processing costs, and model cost totals.",
+    "keyPoints": [
+      "Model-level material totals are shown for S4335-W, S4335-WV, S4343-W, HAD1717MG, and HAD1717MC.",
+      "Panel sourcing assumptions include INX/Abyz for 4335 and BOE for 4343, with CsI deposition cost entries.",
+      "Safety and compliance-related component specs include UL94V-0 harness material, IEC60332-1 harness cable, UL power supply notation, and certified power cord markings."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-W",
+      "type": "product model",
+      "evidence": "Cost and BOM tables include S4335-W columns and many S4335-W part specifications."
+    },
+    {
+      "name": "S4335-WV",
+      "type": "product model",
+      "evidence": "Model cost tables include S4335-WV and S4335-WV_R1 detector assembly entries."
+    },
+    {
+      "name": "S4343-W",
+      "type": "product model",
+      "evidence": "Model cost tables and purchase lists include S4343-W, including BOE 1717 panel and S4343-W PBA entries."
+    },
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "Abyz detector material purchase section lists HAD1717MC and a model cost column for HAD1717MC."
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "product model",
+      "evidence": "Abyz detector purchase material list includes columns for HAD1717MG and HAD1717MC."
+    },
+    {
+      "name": "DAEAN ELECOM CO., LTD",
+      "type": "supplier",
+      "evidence": "Listed as supplier for SMPS-2G_DETECTOR_POWER_BOX and PBA POWER."
+    },
+    {
+      "name": "ELENTEC CO,. LTD.",
+      "type": "supplier",
+      "evidence": "Listed as supplier for MI96-01305A BATTERY, SDR-C4335W Li-ion Polymer 3400mAh."
+    },
+    {
+      "name": "SEONGJI INDUSTRIAL CO.,LTD",
+      "type": "supplier",
+      "evidence": "Listed for multiple harness parts including HARNESS-SIGNAL IEC60332-1, 16P, L7000, 26AWG."
+    },
+    {
+      "name": "ANALOG DEVICES",
+      "type": "supplier",
+      "evidence": "Listed for IC ASIC-ROIC AD71140JCFZ and ADXL345 sensor."
+    },
+    {
+      "name": "HIMAX TECHNOLOGIES LIMITED",
+      "type": "supplier",
+      "evidence": "Listed for IC DRIVER GATE-GATE IC HX5090-ACS22D."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM and purchasing cost calculation",
+      "pageTarget": "Chunk 6 - detector purchase spreadsheet",
+      "evidence": "Sections include material cost by model, MOQ-based first purchase cost, parts code tables, suppliers, unit prices, MOQ, and purchase classifications."
+    },
+    {
+      "name": "CsI deposition material and processing assumption",
+      "pageTarget": "Chunk 6 - model material cost section",
+      "evidence": "Deposition row states CsI 6kg and TlI 60g, four panels simultaneously, D-company material basis, and 20% loss reflected."
+    },
+    {
+      "name": "Panel sourcing and cost comparison",
+      "pageTarget": "Chunk 6 - panel price difference analysis",
+      "evidence": "Panel analysis lists S4335-WV(GDX), S4343-W, and S4335-W with S-company, ABYZ panel, deposition, total, and difference amounts."
+    },
+    {
+      "name": "PBA processing cost basis",
+      "pageTarget": "Chunk 6 - SMT(PBA) expected processing cost",
+      "evidence": "SMT(PBA) expected processing cost section states Exentechnic company unit-price basis and inspection cost not included."
+    },
+    {
+      "name": "Safety-marked power and harness components",
+      "pageTarget": "Chunk 6 - parts code table",
+      "evidence": "Power cord spec includes CEE/EAC/ISC/SNI; SMPS power box spec includes UL; harness signal spec includes UL94V-0 and IEC60332-1."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The spreadsheet includes model-level material cost totals for S4335-W, S4335-WV, S4343-W, HAD1717MG, and HAD1717MC.",
+      "evidenceText": "Final cost table columns list S4335-W, S4335-WV, S4343-W, HAD1717MG, HAD1717MC, with total row values 5,864,847; 6,240,278; 6,016,514; 5,332,072; 4,813,772.",
+      "pageTarget": "Chunk 6 - 합계 : 소요금액",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-W_R1 main PCB is specified as FR4, 8-layer, T1.2, 217x236.",
+      "evidenceText": "MI41-01681A, PCB-MAIN, 'S4335-W_R1 MAIN PCB,FR4,8,T1.2,217x236,1'.",
+      "pageTarget": "Chunk 6 - parts listing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SDR-C4335W battery is a Li-ion polymer battery rated 3400mAh, 130x245x8.5mm, operating from 0 to 60C, with 380g mass.",
+      "evidenceText": "MI96-01305B BATTERY: 'SDR-C4335W,Li-ion Polymer,3400mAh,130x245x8.5mm,-0to60C,380g'.",
+      "pageTarget": "Chunk 6 - S4335-WV section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SMT PBA expected processing cost excludes inspection cost and is based on Exentechnic unit pricing.",
+      "evidenceText": "Section title: 'SMT(PBA) 예상가공비_엑센테크닉社 단가 기준_검사비용 미 포함'.",
+      "pageTarget": "Chunk 6 - SMT(PBA) expected processing cost",
+      "confidence": "high"
+    },
+    {
+      "claim": "PBA expected processing average costs are 21,903 for PBA Interface Gate, 55,237 for PBA Interface Main, and 26,793 for PBA Interface ROIC.",
+      "evidenceText": "SMT(PBA) table lists averages: PBA INTERFACE GATE 21,903; MAIN 55,237; ROIC 26,793; total average 103,933.",
+      "pageTarget": "Chunk 6 - SMT(PBA) expected processing cost",
+      "confidence": "high"
+    },
+    {
+      "claim": "CsI deposition assumptions include CsI 6kg, TlI 60g, four-panel simultaneous input, D-company material basis, and 20% loss reflected.",
+      "evidenceText": "Deposition note: 'CsI 6kg, TlI 60g 4매 동시투입기준, D社 재료기준, LOSS 20% 반영'.",
+      "pageTarget": "Chunk 6 - model material cost section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power supply for S4335-W is listed as an AC/DC 48W, AC220V 50-60Hz, DC16V unit with UL noted.",
+      "evidenceText": "MI44-01042A SMPS-2G_DETECTOR_POWER_BOX: 'S4335-W POWER SUPPLY, DEPS9601 (B-Type), AC/DC,48W,AC220V,50-60Hz,207x154x64mm,DC16V,+10to+40C,UL'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "A power PBA is specified for S4335-W with 16V input and 5.8V, 30V, and -15V outputs.",
+      "evidenceText": "MI92-02311A PBA POWER: 'S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "Harness-signal part MI39-01557A uses micro coaxial cable with UL94V-0 material rating.",
+      "evidenceText": "MI39-01557A HARNESS SIGNAL: 'S4335-W SHIELD CABLE A,Micro Coaxial Cable,UL94V-0,40C,L40,GRAY,42AWG'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "Harness-signal part MI39-02330A references IEC60332-1 and is a 16P, L7000, 26AWG cable.",
+      "evidenceText": "MI39-02330A HARNESS-SIGNAL: 'IEC60332-1,16P,L7000,26AWG'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power cord entry includes 250V, 10A and CEE/EAC/ISC/SNI markings.",
+      "evidenceText": "3903-001241 POWER CORD-DT: 'EUR,2P-S,250V,10A,BLK,L1500,H05VV-F 3x0.75mm2,CEE/EAC/ ISC/SNI'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The shock indicator component is specified to activate at 19 to 30 inches and 100G.",
+      "evidenceText": "5903-004688 INDICATOR: 'SHOCK SENSOR,CX-30(TUBE),TUBE,ACTIVATION AT 19INCH TO 30INCH,100G'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The WiFi antenna PCB specifications include 2.45/5.4GHz operation and gain values.",
+      "evidenceText": "MI42-01001A lists 'WIFI_SAMSUNG_003,SDR-G4335W,2.45/5.4GHz,-11.0/-15dBi'; MI42-01002A lists '2.45/5.4GHz,-8.0/-8.0dBi'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The IC ASIC-ROIC AD71140JCFZ is used for S4343-W and specified as 270/50, 5V, 0 to 70C, COF, tray.",
+      "evidenceText": "MI13-01011A IC ASIC-ROIC: 'AD71140JCFZ,S4343-W,270/50,5V,0 to 70C,COF,TRAY'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Gate IC HX5090-ACS22D is specified as COF line type with 40, 520, 68um and 40.24mm x 23mm dimensions.",
+      "evidenceText": "MI13-01009A IC DRIVER GATE-GATE IC: 'HX5090-ACS22D,COF,LINE,40,520,68um,40.24mm X 23mm'.",
+      "pageTarget": "Chunk 6 - parts code table",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Abyz detector purchase section lists HAD1717MC with a detector purchase quantity of 5 and excludes RO/Gate IC because existing stock is used.",
+      "evidenceText": "Abyz section: '구분,,HAD1717MC'; '디텍터 구매 수량,,5'; note 'RO,Gate IC 제외(재고분 사용)'.",
+      "pageTarget": "Chunk 6 - Abyz detector material purchase calculation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Abyz detector panel purchase quantity is costed as 2,384,640 won per panel times five panels, with note of $1840 per panel, 8% customs duty, and 1200 exchange rate.",
+      "evidenceText": "Panel row: 'Panel 구매 수량,\"2,384,640원/1枚\",\" 11,923,200 \"' and note '$1840/1枚, 관세 8%, 1200원 환율'.",
+      "pageTarget": "Chunk 6 - Abyz detector material purchase calculation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The first-generation Samsung material purchase calculation estimates a grand total of 131,018,078 won.",
+      "evidenceText": "Section '◆ 1세대 삼성 자재 구매 금액 산출' shows Grand Total '131,018,078'.",
+      "pageTarget": "Chunk 6 - 1세대 삼성 자재 구매 금액 산출",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "Chunk is a partial spreadsheet extract, so sheet names, workbook-level metadata, approvals, and complete column headers may be absent."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several cost cells contain spreadsheet errors such as #VALUE! and #REF!, limiting confidence in derived purchase totals where those cells are referenced."
+    },
+    {
+      "severity": "info",
+      "reason": "The content is primarily BOM and purchasing evidence; no regulatory submission, certificate number, or authority approval claim appears in this chunk."
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Detector purchase BOM / component procurement spreadsheet",
+    "productModels": [
+      "S4335-WV"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "S4335-W_R1; S4335-W Main FPCB Ver 5.0",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "UL94V-0",
+      "UL1061"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk lists S4335-WV detector module, PBA, cable, power, wireless, processor, memory, sensor, protection, and passive components with part numbers, specifications, suppliers, quantities, and costs.",
+    "officialUse": "Supports DHF/DMR traceability for purchased and assembled detector electronics, including safety-relevant materials, electrical ratings, supplier identification, and module configuration.",
+    "keyPoints": [
+      "S4335-WV uses assemblies including PBA INTERFACE ROIC, MODULE ASSY, PBA INTERFACE MAIN, POWER BOX, and WIFI MODULE.",
+      "Safety-relevant entries include UL94V-0 micro coaxial shield cables, UL1061 harness wire, PTC thermistors, and a Photomos relay rated 1500Vac.",
+      "Major electronic functions include power PBA, main PBA, wireless module, microprocessor, FPGA, DRAM, NAND flash, Ethernet transceiver, gyro sensor, magnetic sensor, and temperature transducers."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV",
+      "type": "product model",
+      "evidence": "Rows repeatedly begin with product/model identifier \"S4335-WV\" for the listed detector assemblies and components."
+    },
+    {
+      "name": "MI92-02453A",
+      "type": "PBA assembly",
+      "evidence": "Listed as \"MI92-02453A,PBA INTERFACE ROIC\" with many component lines under the S4335-WV product."
+    },
+    {
+      "name": "MI99-01327C",
+      "type": "module assembly",
+      "evidence": "Listed as \"MI99-01327C,MODULE ASSY\" and associated with S4335-WV_R1_FE_PBA ASSY."
+    },
+    {
+      "name": "MI92-02452A",
+      "type": "main PBA assembly",
+      "evidence": "Listed as \"ASSY PBA-MAIN,S4335-W_R1 MAIN PBA\" under S4335-WV module assembly."
+    },
+    {
+      "name": "MI92-02311A",
+      "type": "power PBA",
+      "evidence": "Listed as \"PBA POWER\" with \"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\"."
+    },
+    {
+      "name": "MI59-01099A",
+      "type": "wireless module",
+      "evidence": "Listed under WIFI MODULE as \"NETWORK-MAIN_WIFI MODULE\" with \"SQL-Q93,WIDT30Q,WIRELESS Module\"."
+    },
+    {
+      "name": "AM3358BZCZA80",
+      "type": "microprocessor",
+      "evidence": "Listed as \"IC-MICROPROCESSOR\" with specification \"AM3358BZCZA80,720Mhz,NFBGA,324P,TR,3.3V,64KB\"."
+    },
+    {
+      "name": "EP3C80F780C8N",
+      "type": "FPGA",
+      "evidence": "Listed as \"IC-FPGA\" with \"EP3C80F780C8N,FBGA,780P,29x29mm,1.2V,4A,0to+85C\"."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "supplier",
+      "evidence": "Supplier appears for components including capacitor part CL31A226KOHNNNE and wireless module MI59-01099A."
+    },
+    {
+      "name": "TEXAS INSTRUMENTS KOREA LTD.",
+      "type": "supplier",
+      "evidence": "Supplier appears for components including AM3358BZCZA80 microprocessor and TPS series power supervisor/converter parts."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Safety-rated wire and cable materials",
+      "pageTarget": "chunk-14",
+      "evidence": "Harness and shield cable entries specify \"UL94V-0\" and \"UL1061\" material/wire ratings."
+    },
+    {
+      "name": "Power subsystem electrical outputs",
+      "pageTarget": "chunk-14",
+      "evidence": "Power PBA entry states \"INPUT(16V), OUTPUT(5.8V, 30V,-15V)\"."
+    },
+    {
+      "name": "Isolation relay rating",
+      "pageTarget": "chunk-14",
+      "evidence": "Photomos relay entry specifies \"1500Vac,60V,1000mA,350mW,SOP\"."
+    },
+    {
+      "name": "Main electronics computing architecture",
+      "pageTarget": "chunk-14",
+      "evidence": "Main PBA includes AM3358 microprocessor, EP3C80 FPGA, SDR/DDR memory, NAND flash, Ethernet transceiver, and sensor ICs."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "S4335-WV includes a PBA Interface ROIC assembly identified as MI92-02453A.",
+      "evidenceText": "S4335-WV,MI92-02453A,PBA INTERFACE ROIC",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV includes a module assembly identified as MI99-01327C.",
+      "evidenceText": "S4335-WV,MI99-01327C,MODULE ASSY ... ASSY SUB MATERIAL-S4335WV_R1_FE_PBA ASSY,S4335-WV_R1",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power PBA for S4335-WV has 16V input and 5.8V, 30V, and -15V outputs.",
+      "evidenceText": "MI92-02311A,1,PBA POWER,\"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV main FPCB is documented as Ver 5.0.",
+      "evidenceText": "MI41-01717A,1,FPC-MAIN FPC,\"S4335-W Main FPCB,Ver 5.0,POLYMIDE,VARIABLE,T0.3,0,2L\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV WIFI MODULE uses shield cable material specified with UL94V-0.",
+      "evidenceText": "MI39-01557A,3,HARNESS SIGNAL,\"S4335-W SHIELD CABLE A,Micro Coaxial Cable,UL94V-0,40C,L40,GRAY,42AWG\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV WIFI MODULE includes a UL1061 harness signal cable.",
+      "evidenceText": "MI39-01631C,1,HARNESS-SIGNAL,\"UL1061,5P,L500,28AWG\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV includes a Photomos relay rated 1500Vac, 60V, 1000mA, and 350mW.",
+      "evidenceText": "3502-001055,1,RELAY-PHOTOMOS,\"1500Vac,60V,1000mA,350mW,SOP\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes an AM3358BZCZA80 microprocessor rated at 720MHz and 3.3V.",
+      "evidenceText": "0902-003285,1,IC-MICROPROCESSOR,\"AM3358BZCZA80,720Mhz,NFBGA,324P,TR,3.3V,64KB\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes an EP3C80F780C8N FPGA operating at 1.2V and specified for 0 to +85C.",
+      "evidenceText": "1301-002136,1,IC-FPGA,\"EP3C80F780C8N,FBGA,780P,29x29mm,1.2V,4A,0to+85C\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes PTC thermistors used as protective components.",
+      "evidenceText": "1404-001802,1,THERMISTOR-PTC,\"0.04ohm(Max),6VAC,100A,SMD,5A\" and 1404-001809,THERMISTOR-PTC,\"5ohm(Max),30VAC,100A,SMD,0.4A\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes network transceiver components, including H5019NLT and Marvell 88E1111.",
+      "evidenceText": "1205-004613,1,IC-TRANSCEIVER,\"H5019NLT,24P,1.5V,0to+70C\"; 1205-004614,1,IC-TRANSCEIVER,\"88E1111-CAA,QFN,96Z30,2.5V,0.75W,0to+85C\"",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes sensors for gyro, magnetic, and temperature measurement.",
+      "evidenceText": "IC-GYRO SENSOR K3GTR; IC-MAGNETIC SENSOR AK8963C; IC-TEMP. TRANSDUCER TMP103AYFF and TMP103BYFF",
+      "pageTarget": "chunk-14",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk is a partial spreadsheet extract without column headers, so some field meanings are inferred from row structure."
+    },
+    {
+      "severity": "info",
+      "reason": "Many rows are repeated and include spreadsheet errors such as #REF! and #N/A; extracted facts use stable repeated part descriptions rather than error cells."
+    }
+  ]
+}

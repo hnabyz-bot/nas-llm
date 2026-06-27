@@ -1,0 +1,195 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Detector purchase bill of materials and component cost spreadsheet",
+    "productModels": [
+      "S4335-WV",
+      "S4343-W",
+      "SDR-C4335W"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "Not specified in chunk",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "IEC60332-1",
+      "UL",
+      "CAT7",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk lists detector BOM/purchase items for S4335-WV and S4343-W, including PBA components, battery, accessories, cables, connectors, and safety/certification markings.",
+    "officialUse": "Supports DHF/DMR traceability for detector component procurement, approved part identification, supplier traceability, and safety-related accessory specifications.",
+    "keyPoints": [
+      "S4335-WV includes PBA INTERFACE MAIN entries with ceramic capacitors, tantalum capacitors, inductors, crystals, oscillators, beads, switches, connectors, a main PCB, battery, recharger adaptor, and recharger.",
+      "The S4335-WV battery entry specifies SDR-C4335W Li-ion Polymer, 3400mAh, dimensions 130x245x8.5mm, operating range -0to60C, and 380g.",
+      "S4343-W accessory entries include detector ID labels, ferrite core, power cord, CAT7 LAN cable, IEC60332-1 signal harness, UL-marked power supply, and SDR-C4335W sub ID label.",
+      "Multiple rows include spreadsheet error tokens such as #REF! and #N/A, indicating the chunk is an exported spreadsheet segment with formula/reference artifacts."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV",
+      "type": "product model",
+      "evidence": "Rows repeatedly begin with S4335-WV and list PBA INTERFACE MAIN, BATTERY, ACCESSORY, and PCB-MAIN items."
+    },
+    {
+      "name": "S4343-W",
+      "type": "product model",
+      "evidence": "Rows list S4343-W with ACCESSORY entries including ASSY TOP-S4343-W_FEMALE DETECTOR ASSY and LABEL ID-S4343-W."
+    },
+    {
+      "name": "SDR-C4335W",
+      "type": "detector/battery-related model identifier",
+      "evidence": "Battery description states SDR-C4335W, Li-ion Polymer, 3400mAh; accessory label entry states LABEL ID-SDR-C4335W."
+    },
+    {
+      "name": "PBA INTERFACE MAIN",
+      "type": "assembly",
+      "evidence": "S4335-WV rows identify MI99-01327C as PBA INTERFACE MAIN and classify items as PBA."
+    },
+    {
+      "name": "MI41-01681A",
+      "type": "PCB part number",
+      "evidence": "Row lists MI41-01681A, PCB-MAIN, S4335-W_R1 MAIN PCB, FR4, 8, T1.2, 217x236."
+    },
+    {
+      "name": "MI96-01305A",
+      "type": "battery module part number",
+      "evidence": "Row lists MI96-01305A, BATTERY, SDR-C4335W, Li-ion Polymer, 3400mAh."
+    },
+    {
+      "name": "MI44-01042A",
+      "type": "power supply module part number",
+      "evidence": "S4343-W accessory row lists MI44-01042A, SMPS-2G_DETECTOR_POWER_BOX, S4335-W POWER SUPPLY, DEPS9601, UL."
+    },
+    {
+      "name": "DAEAN ELECOM CO., LTD",
+      "type": "supplier/manufacturer",
+      "evidence": "Rows identify DAEAN ELECOM CO., LTD for recharger adaptor, recharger, and S4335-W POWER SUPPLY."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "component supplier",
+      "evidence": "Several S4335-WV capacitor rows list SAMSUNG ELECTRO-MECHANICS CO., LTD. as supplier."
+    },
+    {
+      "name": "KOREA MURATA ELECTRONICS CO.,LTD.",
+      "type": "component supplier",
+      "evidence": "Multiple S4335-WV chip capacitor and bead rows list KOREA MURATA ELECTRONICS CO.,LTD."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of materials component traceability",
+      "pageTarget": "Chunk 16",
+      "evidence": "Rows include model, parent assembly, part number, component type, specification, manufacturer, currency, price, and assembly classification."
+    },
+    {
+      "name": "Safety-certified power accessories",
+      "pageTarget": "Chunk 16",
+      "evidence": "Power cord entry includes CEE/EAC/ISC/SNI markings; power supply entry includes UL."
+    },
+    {
+      "name": "Cable flame standard reference",
+      "pageTarget": "Chunk 16",
+      "evidence": "S4343-W harness-signal entry specifies IEC60332-1, 16P, L7000, 26AWG."
+    },
+    {
+      "name": "Battery module specification",
+      "pageTarget": "Chunk 16",
+      "evidence": "S4335-WV battery row specifies Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g."
+    },
+    {
+      "name": "Detector PBA electronic component specifications",
+      "pageTarget": "Chunk 16",
+      "evidence": "PBA INTERFACE MAIN rows specify capacitors, inductors, crystals, oscillators, ferrite beads, switches, connectors, and sensor IC."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk documents S4335-WV PBA INTERFACE MAIN procurement items.",
+      "evidenceText": "S4335-WV, MI99-01327C, PBA INTERFACE MAIN, part rows classified as PC/PBA with component specifications and supplier names.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV includes a main PCB identified as MI41-01681A.",
+      "evidenceText": "MI41-01681A, PCB-MAIN, S4335-W_R1 MAIN PCB, FR4, 8, T1.2, 217x236.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-WV includes a Li-ion Polymer battery module for SDR-C4335W.",
+      "evidenceText": "MI96-01305A, BATTERY, SDR-C4335W, Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W accessories include a power cord with multiple certification or conformity markings.",
+      "evidenceText": "POWER CORD-DT, EUR, 2P-S, 250V, 10A, H05VV-F 3x0.75mm2, CEE/EAC/ ISC/SNI.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W accessories include an IEC60332-1 signal harness.",
+      "evidenceText": "MI39-02330A, HARNESS-SIGNAL, IEC60332-1, 16P, L7000, 26AWG.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W accessories include a UL-marked detector power supply module.",
+      "evidenceText": "MI44-01042A, SMPS-2G_DETECTOR_POWER_BOX, S4335-W POWER SUPPLY, DEPS9601, AC/DC, 48W, AC220V, 50-60Hz, DC16V, UL.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W accessories include a CAT7 hub LAN cable.",
+      "evidenceText": "MI39-01366A, HARNESS STANDARD, HUB LAN, LAN CABLE, CAT7, 8P, L3000, 26AWG, 8P8C.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA includes an ADXL345 sensor IC.",
+      "evidenceText": "3201-000358, IC-SENSOR, ADXL345, LGA, 14P, 3x5mm, 2.5V, 130uA, -40to+85C.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA includes timing components with 24 MHz, 25 MHz, 32.768 kHz, and 50 MHz specifications.",
+      "evidenceText": "CRYSTAL-SMD entries list 0.032768MHz, 25MHz, 24.000000MHz; OSCILLATOR-CLOCK entries list 50MHz.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    },
+    {
+      "claim": "The chunk contains spreadsheet formula/reference artifacts that may require source-file review.",
+      "evidenceText": "Rows include repeated #REF! and #N/A fields alongside BOM and price data.",
+      "pageTarget": "Chunk 16",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk contains many duplicate rows for the same S4335-WV PBA items; deduplication is needed before treating row counts as quantities."
+    },
+    {
+      "severity": "warning",
+      "reason": "Spreadsheet error values #REF! and #N/A appear in multiple columns, so some linked or calculated fields may not be reliable from this chunk alone."
+    },
+    {
+      "severity": "info",
+      "reason": "The document date is inferred from the filename suffix 20191018 in the source path, not from an explicit date field visible in the chunk."
+    }
+  ]
+}

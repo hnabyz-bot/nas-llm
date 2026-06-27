@@ -1,0 +1,582 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx / 1G DETECTOR 부품사LIST",
+    "documentType": "Detector purchase BOM, component cost, and supplier procurement spreadsheet",
+    "productModels": [
+      "S4335-W",
+      "S4335-W_R1",
+      "S4335-WV",
+      "S4335-WV_R1",
+      "S4343-W",
+      "SDR-C4335W",
+      "SDR-G4335W",
+      "HAD1717MC",
+      "HAD1717MG",
+      "DGR-SGAARA/KR",
+      "DGR-SGAARA/WR",
+      "DGR-SGBA2V/WR"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "MI90-02582B; MI90-02026B; MI90-02202B; R1; S4335-W Main FPCB Ver 5.0; ADI_MAIN_V006_PCB; ADI_GATE_V006_PCB; ADI_POWER_V006_PCB; ADI_ROIC_V007_PCB",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "IEC60332-1",
+      "UL",
+      "UL94V-0",
+      "UL1061",
+      "CAT7",
+      "H05VV-F",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Excel-derived 1G detector purchase/BOM spreadsheet covering S4335-W, S4335-WV, S4343-W, HAD1717MC, and HAD1717MG assemblies, component specifications, suppliers, costs, and safety-marked parts.",
+    "officialUse": "Supports DHF/DMR design history and purchasing traceability for detector configuration, purchased components, supplier qualification, PCB revisions, safety-marked accessories, and procurement risk review.",
+    "keyPoints": [
+      "The workbook contains hierarchical BOM rows with part codes, quantities, item names, specifications, units, supplier part numbers, suppliers, currencies, unit prices, and material-cost fields.",
+      "S4335-W, S4335-WV, and S4343-W detector assemblies include power supply, power PBA, main PBA, ROIC PBA, GateIC PBA, panel assemblies, Wi-Fi module, antennas, labels, battery, cables, covers, packaging, and mechanical parts.",
+      "Component-level safety or compliance references include IEC60332-1 harnesses, UL94V-0 micro coaxial cables, UL1061 harness wire, UL-marked detector power supply, CAT7 LAN cable, and CEE/EAC/ISC/SNI-marked power cords.",
+      "HAD1717MC and HAD1717MG sections include panel, power box, accessories, packaging, main/gate/ROIC/power PBAs, PCB revision identifiers V006/V007, BOE 17x17 panel entries, CsI or DRZ-PLUS panel material, fuses, SMPS, and accessory cables.",
+      "Several spreadsheet rows contain #REF! and #N/A formula or lookup artifacts, duplicate rows, long-lead notes, and discontinued or changed part-number notes that require workbook-level review before controlled release use."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-W",
+      "type": "detector model",
+      "evidence": "Rows list S4335-W with ACCESSORY, FRONT ASSY, BACK COVER ASSY, PANEL ASSY, PBA assemblies, and heading \"S4335-W (MI90-02582B)\"."
+    },
+    {
+      "name": "S4335-WV",
+      "type": "detector model",
+      "evidence": "Section header states \"S4335-WV (MI90-02202B)\" and rows identify S4335-WV with ACCESSORY, BACK COVER ASSY, FRONT ASSY, MIDDLE ASSY, MODULE ASSY, PANEL ASSY, and PBA assemblies."
+    },
+    {
+      "name": "S4343-W",
+      "type": "detector model",
+      "evidence": "Section marker states \"S4343-W (MI90-02026B)\" and rows define assemblies such as POWER BOX, PANEL ASSY, PBA INTERFACE ROIC, PBA INTERFACE GATE, MODULE ASSY, and PBA INTERFACE MAIN."
+    },
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "Rows list HAD1717MC with MIDDLE ASSY, MODULE ASSY, FRONT ASSY, BACK COVER ASSY, PANEL ASSY, POWER BOX, ACCESSORY, packaging, MAIN PBA, GATE PBA, ROIC PBA, and POWER PBA."
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "product model",
+      "evidence": "Rows list HAD1717MG across MIDDLE ASSY, PANEL ASSY, POWER BOX, MAIN PBA, GATE PBA, ROIC PBA, and POWER PBA."
+    },
+    {
+      "name": "SDR-C4335W",
+      "type": "detector label / battery-associated model",
+      "evidence": "Battery entries state \"SDR-C4335W,Li-ion Polymer,3400mAh,130x245x8.5mm,-0to60C,380g\" and label entries include \"LABEL ID-SDR-C4335W\"."
+    },
+    {
+      "name": "DEPS9601",
+      "type": "detector power supply",
+      "evidence": "SMPS entry states \"S4335-W POWER SUPPLY,DEPS9601 (B-Type),AC/DC,48W,AC220V,50-60Hz...DC16V,+10to+40C,UL\"."
+    },
+    {
+      "name": "MI92-02311A",
+      "type": "power PBA",
+      "evidence": "Rows list \"MI92-02311A,1,PBA POWER,\"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\"\"."
+    },
+    {
+      "name": "MI59-01099A / SQL-Q93 / WIDT30Q / SWL-Q93",
+      "type": "wireless module",
+      "evidence": "NETWORK-MAIN_WIFI MODULE row specifies \"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\" with supplier P/N \"SWL-Q93\"."
+    },
+    {
+      "name": "AM3358BZCZA80",
+      "type": "microprocessor",
+      "evidence": "Main PBA rows list \"IC-MICROPROCESSOR,\"AM3358BZCZA80,720Mhz,NFBGA,324P,TR,3.3V,64KB\"\"."
+    },
+    {
+      "name": "EP3C80F780C8N",
+      "type": "FPGA",
+      "evidence": "Main PBA rows list \"IC-FPGA,\"EP3C80F780C8N,FBGA,780P,29x29mm,1.2V,4A,0to+85C...250MHz\"\"."
+    },
+    {
+      "name": "AD71140JCFZ",
+      "type": "ROIC ASIC",
+      "evidence": "Panel assembly rows list \"IC ASIC-ROIC,\"AD71140JCFZ,S4343-W,270/50,5V,0 to 70C,COF,TRAY\"\"."
+    },
+    {
+      "name": "HX5090-ACS22D",
+      "type": "gate driver IC",
+      "evidence": "Panel assembly rows list \"IC DRIVER GATE-GATE IC,\"HX5090-ACS22D,COF,LINE,40,520,68um,40.24mm X 23mm\"\"."
+    },
+    {
+      "name": "FM3543S-D6S/A",
+      "type": "TFT sensor panel",
+      "evidence": "MI59-01110A row states \"TFT-SENSOR PANEL,FM3543S-D6S/A;440x520 ±0.6mm\"."
+    },
+    {
+      "name": "FM4343S-D6S/A",
+      "type": "TFT sensor panel",
+      "evidence": "MI59-01113A row states \"TFT-SENSOR PANEL,FM4343S-D6S/A; 520x520 +0.6mm\"."
+    },
+    {
+      "name": "INX 1417",
+      "type": "panel component",
+      "evidence": "PANEL ASSY row lists part MI59-01110A as \"INX 1417\" with supplier Innolux."
+    },
+    {
+      "name": "BOE 1717 / TFT Panel_17X17",
+      "type": "panel component",
+      "evidence": "S4343-W and HAD1717 sections list \"BOE 1717\" and \"TFT Panel_17X17, 17*17 BOE Panel\"."
+    },
+    {
+      "name": "CX-30(TUBE)",
+      "type": "shock indicator",
+      "evidence": "Indicator row states \"SHOCK SENSOR,CX-30(TUBE),TUBE,ACTIVATION AT 19INCH TO 30INCH,100G\"."
+    },
+    {
+      "name": "ADI_MAIN_V006_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MG MAIN PBA includes ADI_MAIN_V006_PCB described as FR4 12L_240mm x 130mm x 1.6T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "ADI_GATE_V006_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MG GATE PBA includes ADI_GATE_V006_PCB described as FR4 4L_402.5mm x 32.5mm x 1.0T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "ADI_ROIC_V007_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MG ROIC PBA includes ADI_ROIC_V007_PCB described as FR4 8L_427mm x 39mm x 1.0T(Green) gold plated glossy V007."
+    },
+    {
+      "name": "ADI_POWER_V006_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MG POWER PBA includes ADI_POWER_V006_PCB described as FR4 4L_160mm x 55mm x 1.6T(Green) gold plated glossy V006."
+    },
+    {
+      "name": "MEANWELL RPS200-15",
+      "type": "power supply component",
+      "evidence": "HAD1717MG POWER BOX includes SMPS MEANWELL / RPS200-15."
+    },
+    {
+      "name": "DAEAN ELECOM CO., LTD",
+      "type": "supplier",
+      "evidence": "Listed as supplier for SMPS-2G_DETECTOR_POWER_BOX and PBA POWER."
+    },
+    {
+      "name": "ELENTEC CO,. LTD.",
+      "type": "supplier",
+      "evidence": "Listed as supplier for battery entries describing SDR-C4335W Li-ion Polymer 3400mAh."
+    },
+    {
+      "name": "SEONGJI INDUSTRIAL CO.,LTD",
+      "type": "supplier",
+      "evidence": "Listed for harness parts including HARNESS-SIGNAL IEC60332-1, 16P, L7000, 26AWG."
+    },
+    {
+      "name": "CANON ELECTRON TUBES & DEVICES CO.",
+      "type": "supplier",
+      "evidence": "Supplier shown for MI59-01110A and MI59-01113A TFT-SENSOR PANEL rows."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "supplier",
+      "evidence": "Listed for NETWORK-MAIN_WIFI MODULE SQL-Q93 / SWL-Q93 and multiple capacitor rows."
+    },
+    {
+      "name": "TEXAS INSTRUMENTS KOREA LTD.",
+      "type": "supplier",
+      "evidence": "Listed for AM3358BZCZA80 microprocessor and multiple IC power/interface components."
+    },
+    {
+      "name": "ANALOG DEVICES",
+      "type": "supplier",
+      "evidence": "Listed for IC ASIC-ROIC AD71140JCFZ and ADXL345 sensor."
+    },
+    {
+      "name": "HIMAX TECHNOLOGIES LIMITED",
+      "type": "supplier",
+      "evidence": "Listed for IC DRIVER GATE-GATE IC HX5090-ACS22D."
+    },
+    {
+      "name": "BOE",
+      "type": "supplier",
+      "evidence": "HAD1717MG PANEL ASSY lists F-BG-0101 1717 TFT Panel, 17*17 BOE Panel, supplier BOE."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM and purchasing traceability",
+      "pageTarget": "Workbook BOM and purchasing sheets",
+      "evidence": "Rows list model, assembly, part number, quantity, item description, specification, supplier, currency, price, and total price."
+    },
+    {
+      "name": "Safety-marked power components",
+      "pageTarget": "Power cord and SMPS rows",
+      "evidence": "Power cord entries include CEE/EAC/ISC/SNI; SMPS entries include AC/DC, 48W, AC220V, DC16V, +10to+40C, UL."
+    },
+    {
+      "name": "Cable and harness safety standards",
+      "pageTarget": "Harness and cable rows",
+      "evidence": "HARNESS-SIGNAL rows include IEC60332-1 and UL1061; micro coaxial cable rows include UL94V-0."
+    },
+    {
+      "name": "Wireless detector subsystem",
+      "pageTarget": "Wi-Fi module and antenna rows",
+      "evidence": "Rows list SQL-Q93/WIDT30Q/SWL-Q93 wireless module and Wi-Fi antenna PCBs for 2.45/5.4GHz operation."
+    },
+    {
+      "name": "Power subsystem ratings",
+      "pageTarget": "Power supply and power PBA rows",
+      "evidence": "SMPS row specifies AC220V input and DC16V output; power PBA row specifies INPUT(16V), OUTPUT(5.8V, 30V,-15V)."
+    },
+    {
+      "name": "Detector panel construction",
+      "pageTarget": "Panel assembly rows",
+      "evidence": "Panel assembly rows include TFT sensor panels, Gadox sheet, CsI/TlI deposition assumptions, gate driver ICs, ROIC ASICs, ACF adhesives, silicone adhesive, Kapton tape, and aluminum tape."
+    },
+    {
+      "name": "Main PBA electronics architecture",
+      "pageTarget": "Main PBA rows",
+      "evidence": "Main PBA component rows include AM3358 microprocessor, EP3C80 FPGA, SDR/DDR memory, NAND flash, Ethernet transceiver, gyro sensor, magnetic sensor, temperature transducers, regulators, and supervisors."
+    },
+    {
+      "name": "ROIC and GateIC PBA assemblies",
+      "pageTarget": "ROIC/Gate PBA rows",
+      "evidence": "Rows identify PBA INTERFACE ROIC and PBA INTERFACE GATE assemblies with PCBs, SMD assemblies, Schottky diodes, CMOS logic, clock driver, voltage reference, regulators, connectors, resistors, and capacitors."
+    },
+    {
+      "name": "Battery module specification",
+      "pageTarget": "Battery rows",
+      "evidence": "Battery rows specify SDR-C4335W Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g."
+    },
+    {
+      "name": "Transport shock monitoring",
+      "pageTarget": "Shock indicator rows",
+      "evidence": "Indicator row lists SHOCK SENSOR, CX-30(TUBE), activation at 19INCH TO 30INCH, 100G."
+    },
+    {
+      "name": "PBA component procurement traceability",
+      "pageTarget": "Component procurement rows",
+      "evidence": "Rows link assembly codes to internal part numbers, component descriptions, manufacturer part numbers, suppliers, quantities, currencies, and unit prices."
+    },
+    {
+      "name": "PCB revision control",
+      "pageTarget": "HAD1717MC/HAD1717MG PCB rows",
+      "evidence": "PCB descriptions include explicit revisions V006 and V007 for Main, Gate, ROIC, and Power PBAs."
+    },
+    {
+      "name": "Panel and scintillator configuration",
+      "pageTarget": "HAD1717 panel rows",
+      "evidence": "HAD1717 panel rows list 1717 PANEL MODULE_CsI, 1717 PANEL MODULE_Gods, BOE 17x17 TFT panel, CsI Cesium Iodide 99.999 pure, DRZ-PLUS material, readout ICs, and gate ICs."
+    },
+    {
+      "name": "Supplier qualification tracking",
+      "pageTarget": "1G DETECTOR 부품사LIST",
+      "evidence": "Supplier list section includes columns HME Check, HME구매, E-Mail(HME), 승인원, 소개서, with multiple rows marked OK."
+    },
+    {
+      "name": "Spreadsheet reference and procurement risk",
+      "pageTarget": "Spreadsheet calculation and note fields",
+      "evidence": "Rows include #REF!, #N/A, 납기 5개월 이상, 납기 4개월 이상, 단종확인필요, 단종, and PN 변경 notes."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is an Excel-derived detector purchase/BOM and supplier procurement spreadsheet.",
+      "evidenceText": "Heading \"S4335-W (MI90-02582B)\" followed by columns \"Level, Parts Code, 수량, 품명, Spec., 단위, 업체 P/N\"; supplier list section title \"1G DETECTOR 부품사LIST\".",
+      "pageTarget": "Workbook headers and supplier list",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source filename supports a document date of 2019-10-18.",
+      "evidenceText": "Source path and repeated document references use filename \"Detector(자사_1G)구매_20191018.xlsx\".",
+      "pageTarget": "Source filename",
+      "confidence": "high"
+    },
+    {
+      "claim": "Some BOM sections show a printing date of 2019-08-12.",
+      "evidenceText": "Lines near section headers state \"Printing Date : 2019-08-12\".",
+      "pageTarget": "S4335-W/S4343-W/S4335-WV BOM sections",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W top-level assembly is associated with identifier MI90-02582B.",
+      "evidenceText": "Heading \"S4335-W (MI90-02582B)\".",
+      "pageTarget": "S4335-W BOM section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W detector assembly is associated with identifier MI90-02026B.",
+      "evidenceText": "\"S4343-W (MI90-02026B)\" appears as a repeated section marker.",
+      "pageTarget": "S4343-W BOM section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV detector assembly is associated with identifier MI90-02202B.",
+      "evidenceText": "\"S4335-WV (MI90-02202B)\" followed by BOM column headers.",
+      "pageTarget": "S4335-WV BOM section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM references IEC60332-1 for signal harnesses.",
+      "evidenceText": "HARNESS-SIGNAL rows state \"IEC60332-1,16P,L7000,26AWG\".",
+      "pageTarget": "Harness rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM references UL94V-0 for micro coaxial shield cable material.",
+      "evidenceText": "HARNESS SIGNAL rows include \"Micro Coaxial Cable,UL94V-0,40C,L40/L80,GRAY,42AWG\".",
+      "pageTarget": "Shield cable rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM references UL1061 for harness signal wire.",
+      "evidenceText": "MI39-01631C,1,HARNESS-SIGNAL,\"UL1061,5P,L500,28AWG\".",
+      "pageTarget": "Harness rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector power cord rows include CEE, EAC, ISC, and SNI markings.",
+      "evidenceText": "POWER CORD-DT row states \"EUR,2P-S,250V,10A,BLK,L1500,H05VV-F 3x0.75mm2,CEE/EAC/ ISC/SNI,Shield Y,3P(C13)-S,Fuse N\".",
+      "pageTarget": "Power cord rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector power supply is a DEPS9601 AC/DC 48W unit with AC220V input, DC16V output, +10 to +40C range, and UL marking.",
+      "evidenceText": "SMPS row: \"S4335-W POWER SUPPLY,DEPS9601 (B-Type),AC/DC,48W,AC220V,50-60Hz,207x154x64mm,DC16V,+10to+40C,UL\".",
+      "pageTarget": "SMPS rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W power PBA accepts 16V input and provides 5.8V, 30V, and -15V outputs.",
+      "evidenceText": "MI92-02311A, PBA POWER, \"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\".",
+      "pageTarget": "Power PBA rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM includes a CAT7 hub LAN cable.",
+      "evidenceText": "MI39-01366A, HARNESS STANDARD, \"HUB LAN,LAN CABLE,CAT7,8P,L3000...26AWG,8P8C\".",
+      "pageTarget": "LAN harness rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector includes Wi-Fi antenna PCB components for 2.45/5.4GHz operation.",
+      "evidenceText": "FPCB ANTENNA CHIP rows list \"WIFI_SAMSUNG_003,SDR-G4335W,2.45/5.4GHz,-11.0/-15dBi\" and \"WIFI_SAMSUNG_002,SDR-G4335W,2.45/5.4GHz,-8.0/-8.0dBi\".",
+      "pageTarget": "Wi-Fi antenna rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector includes a main Wi-Fi wireless module SQL-Q93/WIDT30Q/SWL-Q93.",
+      "evidenceText": "MI59-01099A, NETWORK-MAIN_WIFI MODULE, \"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\", supplier P/N \"SWL-Q93\".",
+      "pageTarget": "Wi-Fi module rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The SDR-C4335W battery is a Li-ion polymer battery rated 3400mAh with 130x245x8.5mm dimensions, -0to60C range, and 380g mass.",
+      "evidenceText": "MI96-01305B BATTERY: \"SDR-C4335W,Li-ion Polymer,3400mAh,130x245x8.5mm,-0to60C,380g\".",
+      "pageTarget": "Battery rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-W uses TFT sensor panel FM3543S-D6S/A with 440x520 dimensions.",
+      "evidenceText": "MI59-01110A row states \"TFT-SENSOR PANEL,FM3543S-D6S/A;440x520 ±0.6mm\".",
+      "pageTarget": "S4335-W panel rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W uses TFT sensor panel FM4343S-D6S/A with 520x520 dimensions.",
+      "evidenceText": "MI59-01113A row states \"TFT-SENSOR PANEL,FM4343S-D6S/A; 520x520 +0.6mm\".",
+      "pageTarget": "S4343-W panel rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W panel assembly includes AD71140JCFZ ROIC ASICs and HX5090-ACS22D gate driver ICs.",
+      "evidenceText": "Rows list \"MI13-01011A,12,IC ASIC-ROIC,\"AD71140JCFZ,S4343-W,270/50,5V,0 to 70C,COF,TRAY\"\" and \"MI13-01009A,6,IC DRIVER GATE-GATE IC,\"HX5090-ACS22D,COF,LINE,40,520,68um,40.24mm X 23mm\"\".",
+      "pageTarget": "S4343-W panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV panel assembly includes a TFT-C4335 sensor panel and a Gadox sheet.",
+      "evidenceText": "\"MI59-01152A,1,TFT-C4335_SENSOR_PANEL,TFT-C4335\" and \"MI63-02346A,1,SHEET-GADOX, S4335-WV... Gadox\".",
+      "pageTarget": "S4335-WV panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-WV panel assembly includes five HX5090-ACS22D gate driver ICs and twelve AD71140JCFZ ROIC ASICs.",
+      "evidenceText": "\"MI13-01009A,5,IC DRIVER GATE-GATE IC, HX5090-ACS22D\" and \"MI13-01011A,12,IC ASIC-ROIC, AD71140JCFZ\".",
+      "pageTarget": "S4335-WV panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector module assembly includes shock indicators activated at 19 to 30 inches and 100G.",
+      "evidenceText": "5903-004688 INDICATOR row states \"SHOCK SENSOR,CX-30(TUBE),TUBE,ACTIVATION AT 19INCH TO 30INCH,100G\".",
+      "pageTarget": "Shock indicator rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes AM3358BZCZA80 microprocessor, NAND flash, DDR/SDR memory, FPGA, network transceiver, and sensors.",
+      "evidenceText": "Main PBA rows include AM3358BZCZA80, MT29F2G08ABAEAWP:E, K4T1G164QJ-BCE7, W9825G6KH, EP3C80F780C8N, 88E1111-CAA, K3GTR, AK8963C, TMP103AYFF, and TMP103BYFF.",
+      "pageTarget": "Main PBA rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes PTC thermistors used as protective components.",
+      "evidenceText": "1404-001802 THERMISTOR-PTC \"0.04ohm(Max),6VAC,100A,SMD,5A\" and 1404-001809 \"5ohm(Max),30VAC,100A,SMD,0.4A\".",
+      "pageTarget": "Main PBA protection rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC PBA includes a PhotoMOS relay rated 1500Vac, 60V, 1000mA, and 350mW.",
+      "evidenceText": "3502-001055, RELAY-PHOTOMOS, \"1500Vac,60V,1000mA,350mW,SOP\", models AQY212GS/AQY212GSX.",
+      "pageTarget": "ROIC PBA rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-W_R1 main PCB is specified as FR4, 8-layer, T1.2, 217x236.",
+      "evidenceText": "MI41-01681A, PCB-MAIN, \"S4335-W_R1 MAIN PCB,FR4,8,T1.2,217x236,1\".",
+      "pageTarget": "S4335-W main PCB rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W ROIC board PCB is specified as FR4, 8 layers, T1.2, 416.7mm x 66.7mm x 1.2mm.",
+      "evidenceText": "MI41-01599A, PCB-I/F(RO), \"S4343-W ROIC BOARD,FR4,8,T1.2,416.7mm x 66.7mm x 1.2mm\".",
+      "pageTarget": "S4343-W ROIC board rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4343-W GateIC board PCB is specified as FR4, 6 layers, T1.2, 412mm x 40mm x 1.2mm.",
+      "evidenceText": "MI41-01595A, PCB-I/F(GATE), S4343-W GATEIC BOARD, FR4, 6, T1.2, 412mm x 40mm x 1.2mm.",
+      "pageTarget": "S4343-W GateIC board rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-W Main FPCB is listed as Ver 5.0 and made from polyimide.",
+      "evidenceText": "MI41-01717A,1,FPC-MAIN FPC,\"S4335-W Main FPCB,Ver 5.0,POLYMIDE,VARIABLE,T0.3,0,2L\".",
+      "pageTarget": "S4335-W Main FPCB rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet includes model-level material cost totals for S4335-W, S4335-WV, S4343-W, HAD1717MG, and HAD1717MC.",
+      "evidenceText": "Final cost table columns list S4335-W, S4335-WV, S4343-W, HAD1717MG, HAD1717MC, with total row values 5,864,847; 6,240,278; 6,016,514; 5,332,072; 4,813,772.",
+      "pageTarget": "Model material cost section",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet includes SMT PBA expected processing cost data excluding inspection cost and based on Exentechnic unit pricing.",
+      "evidenceText": "Section title: \"SMT(PBA) 예상가공비_엑센테크닉社 단가 기준_검사비용 미 포함\".",
+      "pageTarget": "SMT(PBA) expected processing cost section",
+      "confidence": "high"
+    },
+    {
+      "claim": "CsI deposition assumptions include CsI 6kg, TlI 60g, four-panel simultaneous input, D-company material basis, and 20% loss.",
+      "evidenceText": "Deposition note: \"CsI 6kg, TlI 60g 4매 동시투입기준, D社 재료기준, LOSS 20% 반영\".",
+      "pageTarget": "Panel deposition rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC uses a 1717 CsI panel assembly including a BOE 17x17 TFT panel.",
+      "evidenceText": "PANEL ASSY lists AA1-000003 1717 PANEL MODULE_CsI and F-BG-0101 TFT Panel_17X17, 17*17 BOE Panel.",
+      "pageTarget": "HAD1717MC panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The scintillator material for the HAD1717MC panel assembly is cesium iodide of 99.999 purity.",
+      "evidenceText": "PANEL ASSY lists CsI as Cesium Iodide 99.999 pure with code 42404.",
+      "pageTarget": "HAD1717MC panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG panel assembly includes a 17 by 17 BOE TFT panel and DRZ-PLUS material sized 434mm by 434mm by 0.465T.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, F-BG-0101, 1717 TFT Panel, 17*17 BOE Panel; F-A7-2311, 1717 Gods, DRZ-PLUS, 434mm*434mm*0.465T.",
+      "pageTarget": "HAD1717MG panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG Panel Assy includes 12 Read Out ICs AD71143JCFZ and 6 Gate ICs NT39565H-C5149A.",
+      "evidenceText": "HAD1717MG, PANEL ASSY, MA2-000001, 12, Read Out IC, AD71143JCFZ; F-A7-0107, 6, Gate IC, NT39565H-C5149A.",
+      "pageTarget": "HAD1717MG panel assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC/HAD1717MG main, gate, ROIC, and power PCB rows include V006 or V007 revision identifiers.",
+      "evidenceText": "Rows list ADI_MAIN_V006_PCB, ADI_GATE_V006_PCB, ADI_ROIC_V007_PCB, and ADI_POWER_V006_PCB with FR4 construction descriptions.",
+      "pageTarget": "HAD1717 PCB rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG Power Box includes an SMPS identified as MEANWELL RPS200-15.",
+      "evidenceText": "HAD1717MG, POWER BOX, RPS200-15, SMPS, MEANWELL / RPS200-15.",
+      "pageTarget": "HAD1717MG power box",
+      "confidence": "high"
+    },
+    {
+      "claim": "Power-related HAD1717 BOM rows include a 125V 5A SMD fuse.",
+      "evidenceText": "Fuse, 0451 005_SMD (125V 5A), appears in HAD1717MG POWER PBA and MAIN PBA entries.",
+      "pageTarget": "HAD1717 power safety component rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MG accessory set includes LAN CAT6 cable, AC cables, trigger cable, and main data cable options.",
+      "evidenceText": "ACCESSORY rows list LAN CAT6 Cable(5M), 220V AC Cable(1.5M), 110V AC Cable(1.5M), Trigger Cable, and Main Data Cable lengths 20M, 10M, 15M, and 5M.",
+      "pageTarget": "HAD1717MG accessory rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The supplier list tracks supplier documentation or approval status for 1G detector components.",
+      "evidenceText": "Section title 1G DETECTOR 부품사LIST includes columns HME Check, HME구매, E-Mail(HME), 승인원, 소개서, with multiple rows marked OK.",
+      "pageTarget": "1G DETECTOR 부품사LIST",
+      "confidence": "high"
+    },
+    {
+      "claim": "Some BOM items carry long-lead, discontinuation, or changed part-number notes.",
+      "evidenceText": "Rows include notes such as 납기 5개월 이상, 납기 4개월 이상, 단종확인필요, 단종, LPS4018-222ML 단종=>LPS4018-222MR 변경, and SDIN7DU2-8G => 단종.",
+      "pageTarget": "Procurement risk note rows",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet contains unresolved formula or lookup artifacts.",
+      "evidenceText": "Multiple rows show #REF! and #N/A in formula, linked, price, or calculated amount fields.",
+      "pageTarget": "Spreadsheet calculation fields",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "This is an Excel-derived BOM/procurement spreadsheet, not a formal regulatory submission, certificate, or test report; regulatory value is limited to DHF/DMR traceability and component-level standards or markings."
+    },
+    {
+      "severity": "warning",
+      "reason": "Many rows contain #REF! and #N/A spreadsheet artifacts, so pricing, linked identifiers, calculated totals, and lookup-derived fields should be verified against the original workbook before controlled use."
+    },
+    {
+      "severity": "warning",
+      "reason": "The workbook contains many repeated or near-duplicate component rows; repeated rows should not be counted as independent evidence without checking the original hierarchy and quantities."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several component rows include procurement risk notes such as long lead times, discontinued items, or changed part numbers, which may affect DMR purchasing control."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date 2019-10-18 is supported by the source filename; some BOM print sections separately state Printing Date : 2019-08-12."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, certificate number, submission number, approval decision, or formal test result is identified in the partial evidence."
+    },
+    {
+      "severity": "info",
+      "reason": "Supplier list sections include personal contact details in the source, but only supplier organization names and non-person procurement-status evidence were retained."
+    }
+  ]
+}

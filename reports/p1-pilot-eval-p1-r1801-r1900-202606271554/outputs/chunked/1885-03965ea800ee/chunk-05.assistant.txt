@@ -1,0 +1,172 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "BOM / detector purchase component list",
+    "productModels": [
+      "S4335-WV",
+      "MI90-02202B",
+      "S4335-W_R1",
+      "S4335-W",
+      "S4343-W",
+      "SDX-4335C"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "R1; Ver 5.0",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "UL94V-0",
+      "UL1061"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk contains a hierarchical BOM/purchase component listing for detector model S4335-WV (MI90-02202B), including PBA, FPC, harness, wireless, power, processor, FPGA, memory, and passive components.",
+    "officialUse": "Supports DHF/DMR design configuration and purchasing traceability for detector assemblies and subassemblies.",
+    "keyPoints": [
+      "The chunk repeatedly identifies the product grouping as S4335-WV (MI90-02202B).",
+      "The listed subassembly MI99-01327C is described as ASSY SUB MATERIAL-S4335WV_R1_FE_PBA ASSY, S4335-WV_R1.",
+      "The main PBA assembly MI92-02452A is identified as ASSY PBA-MAIN, S4335-W_R1 MAIN PBA.",
+      "The power PBA MI92-02311A is specified as S4335-W POWER PBA with INPUT(16V) and OUTPUT(5.8V, 30V, -15V).",
+      "Material and safety-related references include UL94V-0 micro coaxial shield cable and UL1061 harness signal/power cable entries."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV",
+      "type": "product model",
+      "evidence": "S4335-WV (MI90-02202B)"
+    },
+    {
+      "name": "MI90-02202B",
+      "type": "model or assembly identifier",
+      "evidence": "S4335-WV (MI90-02202B)"
+    },
+    {
+      "name": "MI99-01327C",
+      "type": "subassembly material",
+      "evidence": "MI99-01327C,1,ASSY SUB MATERIAL-S4335WV_R1_FE_PBA ASSY,S4335-WV_R1"
+    },
+    {
+      "name": "MI92-02452A",
+      "type": "main PBA assembly",
+      "evidence": "MI92-02452A,1,ASSY PBA-MAIN,S4335-W_R1 MAIN PBA"
+    },
+    {
+      "name": "MI92-02311A",
+      "type": "power PBA",
+      "evidence": "MI92-02311A,1,PBA POWER,\"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\""
+    },
+    {
+      "name": "MI41-01717A",
+      "type": "main FPC",
+      "evidence": "MI41-01717A,1,FPC-MAIN FPC,\"S4335-W Main FPCB,Ver 5.0,POLYMIDE,VARIABLE,T0.3,0,2L\""
+    },
+    {
+      "name": "MI59-01099A",
+      "type": "wireless module",
+      "evidence": "MI59-01099A,1,NETWORK-MAIN_WIFI MODULE,\"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\""
+    },
+    {
+      "name": "AM3358BZCZA80",
+      "type": "microprocessor",
+      "evidence": "IC-MICROPROCESSOR,\"AM3358BZCZA80,720Mhz,NFBGA,324P,TR,3.3V,64KB\""
+    },
+    {
+      "name": "EP3C80F780C8N",
+      "type": "FPGA",
+      "evidence": "IC-FPGA,\"EP3C80F780C8N,FBGA,780P,29x29mm,1.2V,4A,0to+85C,429,429,250MHz,TRAY\""
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM configuration",
+      "pageTarget": "S4335-WV BOM",
+      "evidence": "Hierarchical lines list S4335-WV (MI90-02202B), subassembly MI99-01327C, PBA assemblies, harnesses, FPC, wireless module, and electronic components."
+    },
+    {
+      "name": "Power PBA electrical outputs",
+      "pageTarget": "S4335-W Power PBA",
+      "evidence": "S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)"
+    },
+    {
+      "name": "UL-rated cable materials",
+      "pageTarget": "Detector Cable Materials",
+      "evidence": "Shield cable entries cite Micro Coaxial Cable, UL94V-0; harness entries cite UL1061."
+    },
+    {
+      "name": "Main FPCB revision",
+      "pageTarget": "S4335-W Main FPCB",
+      "evidence": "S4335-W Main FPCB,Ver 5.0,POLYMIDE,VARIABLE,T0.3,0,2L"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk identifies S4335-WV with identifier MI90-02202B as the product grouping.",
+      "evidenceText": "S4335-WV (MI90-02202B)",
+      "pageTarget": "S4335-WV",
+      "confidence": "high"
+    },
+    {
+      "claim": "MI99-01327C is a subassembly material for S4335WV_R1_FE_PBA ASSY.",
+      "evidenceText": "MI99-01327C,1,ASSY SUB MATERIAL-S4335WV_R1_FE_PBA ASSY,S4335-WV_R1",
+      "pageTarget": "MI99-01327C",
+      "confidence": "high"
+    },
+    {
+      "claim": "MI92-02452A is the S4335-W_R1 main PBA assembly.",
+      "evidenceText": "MI92-02452A,1,ASSY PBA-MAIN,S4335-W_R1 MAIN PBA",
+      "pageTarget": "MI92-02452A",
+      "confidence": "high"
+    },
+    {
+      "claim": "MI92-02311A is a S4335-W power PBA with 16 V input and 5.8 V, 30 V, and -15 V outputs.",
+      "evidenceText": "MI92-02311A,1,PBA POWER,\"S4335-W POWER PBA,INPUT(16V), OUTPUT(5.8V, 30V,-15V)\"",
+      "pageTarget": "MI92-02311A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W main FPCB is listed as version 5.0 and made from polyimide.",
+      "evidenceText": "MI41-01717A,1,FPC-MAIN FPC,\"S4335-W Main FPCB,Ver 5.0,POLYMIDE,VARIABLE,T0.3,0,2L\"",
+      "pageTarget": "MI41-01717A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main Wi-Fi module is listed as SQL-Q93/WIDT30Q wireless module with dimensions 55.0 mm x 24.0 mm x 4.8 mm.",
+      "evidenceText": "MI59-01099A,1,NETWORK-MAIN_WIFI MODULE,\"SQL-Q93,WIDT30Q,WIRELESS Module,55.0mmx24.0mmx4.8mm\"",
+      "pageTarget": "MI59-01099A",
+      "confidence": "high"
+    },
+    {
+      "claim": "Shield cable materials include UL94V-0 micro coaxial cable.",
+      "evidenceText": "MI39-01557A,3,HARNESS SIGNAL,\"S4335-W SHIELD CABLE A,Micro Coaxial Cable,UL94V-0,40C,L40,GRAY,42AWG\"",
+      "pageTarget": "MI39-01557A",
+      "confidence": "high"
+    },
+    {
+      "claim": "Harness signal material MI39-01631C is specified as UL1061, 5P, L500, 28AWG.",
+      "evidenceText": "MI39-01631C,1,HARNESS-SIGNAL,\"UL1061,5P,L500,28AWG\"",
+      "pageTarget": "MI39-01631C",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main PBA includes AM3358BZCZA80 microprocessor, DDR/SDR memory, NAND flash, FPGA, sensors, and power supervisor/converter ICs.",
+      "evidenceText": "Entries include IC-MICROPROCESSOR AM3358BZCZA80; IC-DDR2 SDRAM K4T1G164QJ-BCE7; IC-NAND FLASH MT29F2G08ABAEAWP:E; IC-FPGA EP3C80F780C8N.",
+      "pageTarget": "S4335-W_R1 Main PBA",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "This is chunk 5 of 22, so extraction is limited to the BOM and component facts visible in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority, certificate, submission number, or formal test result is present in this chunk."
+    }
+  ]
+}

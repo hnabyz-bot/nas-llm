@@ -1,0 +1,215 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Purchase/BOM spreadsheet",
+    "productModels": [
+      "S4343-W",
+      "HAD1717MC"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "V006/V007 PCB revisions referenced",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM and purchase data for detector assemblies, PBAs, panel, power, battery, accessories, component specifications, suppliers, and costs.",
+    "officialUse": "Supports DHF/DMR design and purchasing traceability for detector hardware configuration and supplied components.",
+    "keyPoints": [
+      "S4343-W entries include PBA INTERFACE MAIN, power box, battery, recharger accessories, and detailed electronic components.",
+      "HAD1717MC entries include middle, module, front, back cover, panel, power box, accessory, packaging, main PBA, gate PBA, and ROIC PBA assemblies.",
+      "PCB revisions are explicitly listed for HAD1717MC as ADI_MAIN_V006_PCB, ADI_GATE_V006_PCB, and ADI_ROIC_V007_PCB.",
+      "Safety- or compliance-relevant parts include Li-ion polymer battery, power box/SMPS, EMI filter, fuse, TVS, PTC thermistors, AC cables, and grounding-related fasteners."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4343-W",
+      "type": "product/configuration",
+      "evidence": "Rows repeatedly begin with S4343-W and list PBA INTERFACE MAIN, POWER BOX, BATTERY, and ACCESSORY modules."
+    },
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "Rows list HAD1717MC with MIDDLE ASSY, MODULE ASSY, FRONT ASSY, BACK COVER ASSY, PANEL ASSY, POWER BOX, ACCESSORY, and PBA assemblies."
+    },
+    {
+      "name": "ADI_MAIN_V006_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MC MAIN PBA entry lists ADI_MAIN_V006_PCB with FR4 12L, 240mm x 130mm x 1.6T, Green, gold plating, V006."
+    },
+    {
+      "name": "ADI_GATE_V006_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MC GATE PBA entry lists ADI_GATE_V006_PCB with FR4 4L, 402.5mm x 32.5mm x 1.0T, V006."
+    },
+    {
+      "name": "ADI_ROIC_V007_PCB",
+      "type": "PCB revision",
+      "evidence": "HAD1717MC ROIC PBA entry lists ADI_ROIC_V007_PCB with FR4 8L, 427mm x 39mm x 1.0T, V007."
+    },
+    {
+      "name": "1717 PANEL MODULE_CsI",
+      "type": "detector panel assembly",
+      "evidence": "HAD1717MC PANEL ASSY lists AA1-000003 as 1717 PANEL MODULE_CsI."
+    },
+    {
+      "name": "TFT Panel_17X17",
+      "type": "panel component",
+      "evidence": "HAD1717MC PANEL ASSY lists F-BG-0101, TFT Panel_17X17, described as 17*17 BOE Panel."
+    },
+    {
+      "name": "CsI",
+      "type": "scintillator material",
+      "evidence": "PANEL ASSY line lists CsI as Cesium Iodide 99.999 pure with code 42404."
+    },
+    {
+      "name": "SDB-3S1PA",
+      "type": "battery component",
+      "evidence": "S4343-W BATTERY entry lists SDR-C4335W, Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g, model SDB-3S1PA."
+    },
+    {
+      "name": "MEANWELL RPS200-15",
+      "type": "power supply component",
+      "evidence": "HAD1717MC POWER BOX entry lists SMPS, MEANWELL / RPS200-15."
+    },
+    {
+      "name": "BNX022-01L",
+      "type": "EMI filter component",
+      "evidence": "S4343-W PBA INTERFACE MAIN lists FILTER-EMI SMD, 50V, 10A, 1000000pF, BNX022-01L."
+    },
+    {
+      "name": "0451 005_SMD",
+      "type": "fuse component",
+      "evidence": "HAD1717MC MAIN PBA lists Fuse, 0451 005_SMD (125V 5A)."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Detector BOM purchasing traceability",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "evidence": "Rows combine model, assembly, part number, quantity, description, manufacturer/supplier, currency, unit price, and total price."
+    },
+    {
+      "name": "Safety-related electrical protection components",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "evidence": "Chunk includes EMI filter BNX022-01L, TVS SMCJ16CA, fuse 0451 005_SMD, and PTC thermistors MINISMDC020F/MINISMDC300F."
+    },
+    {
+      "name": "Panel and scintillator configuration",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "evidence": "HAD1717MC PANEL ASSY lists 1717 PANEL MODULE_CsI, TFT Panel_17X17, CsI Cesium Iodide 99.999 pure, readout ICs, and gate ICs."
+    },
+    {
+      "name": "PCB revision control",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "evidence": "Main, gate, and ROIC PBA rows identify PCB names with V006 or V007 revision markers."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk identifies S4343-W as a detector hardware configuration with PBA interface main, power box, battery, and accessory modules.",
+      "evidenceText": "S4343-W rows include PBA INTERFACE MAIN, POWER BOX, BATTERY, and ACCESSORY entries.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The chunk identifies HAD1717MC as a product model with multiple mechanical, panel, power, accessory, packaging, and PBA assemblies.",
+      "evidenceText": "HAD1717MC rows list MIDDLE ASSY, MODULE ASSY, FRONT ASSY, BACK COVER ASSY, PANEL ASSY, POWER BOX, ACCESSORY, packaging, MAIN PBA, GATE PBA, and ROIC PBA.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC uses a 1717 CsI panel assembly including a BOE 17x17 TFT panel.",
+      "evidenceText": "PANEL ASSY lists AA1-000003 1717 PANEL MODULE_CsI and F-BG-0101 TFT Panel_17X17, 17*17 BOE Panel.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The scintillator material for the HAD1717MC panel assembly is cesium iodide of 99.999 purity.",
+      "evidenceText": "PANEL ASSY lists CsI as Cesium Iodide 99.999 pure with code 42404.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MC main PBA PCB is identified as revision V006.",
+      "evidenceText": "MAIN PBA lists ADI_MAIN_V006_PCB, FR4 12L_240mm x 130mm x 1.6T(Green) 금도금,유광 V006.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MC gate PBA PCB is identified as revision V006.",
+      "evidenceText": "GATE PBA lists ADI_GATE_V006_PCB, FR4 4L_402.5mm x 32.5mm x 1.0T(Green) 금도금, 유광 V006.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MC ROIC PBA PCB is identified as revision V007.",
+      "evidenceText": "ROIC PBA lists ADI_ROIC_V007_PCB, FR4 8L_427mm x 39mm x 1.0T(Green) 금도금, 유광 V007.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W battery is a Li-ion polymer battery with 3400 mAh capacity and 0 to 60 C operating range.",
+      "evidenceText": "BATTERY entry lists SDR-C4335W, Li-ion Polymer, 3400mAh, 130x245x8.5mm, -0to60C, 380g, SDB-3S1PA.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W power box PBA outputs 5.8 V, 30 V, and -15 V from a 16 V input.",
+      "evidenceText": "POWER BOX entry lists PBA POWER, S4335-W POWER PBA, INPUT(16V), OUTPUT(5.8V, 30V,-15V).",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC power box includes a MEANWELL RPS200-15 SMPS.",
+      "evidenceText": "POWER BOX entry lists SMPS, MEANWELL / RPS200-15.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes EMI filtering for the S4343-W PBA interface main.",
+      "evidenceText": "PBA INTERFACE MAIN lists FILTER-EMI SMD, 50V, 10A, 1000000pF, BNX022-01L, Korea Murata Electronics.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "The HAD1717MC main PBA includes cybersecurity- or software-relevant processing and storage components.",
+      "evidenceText": "MAIN PBA lists IC_CPU iMX6S/MCIMX6S5DVM10AC, IC_DRAM K4B2G1646Q-BCK0, IC_Flash_Drive SDIN7DU2-8G, AR8031, and CP2103.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The HAD1717MC accessory set includes LAN CAT6 cable, AC cables, trigger cable, and main data cables.",
+      "evidenceText": "ACCESSORY entries list LAN CAT6 Cable(5M), 220V AC Cable(1.5M), 110V AC Cable(1.5M), Trigger Cable, and Main Data Cable variants.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    },
+    {
+      "claim": "Some BOM items carry lead-time or discontinuation review notes.",
+      "evidenceText": "Rows include notes such as 납기 5개월 이상, 단종확인필요, LPS4018-222ML 단종=>LPS4018-222MR 변경, and SDIN7DU2-8G => 단종.",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx chunk 21",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The spreadsheet chunk contains many #REF! and #N/A cells, so some calculated pricing, references, or linked identifiers may be broken."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, certificate, submission number, or formal standard is stated in this chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "Several component rows include discontinuation or lead-time notes, including 납기 5개월 이상 and 단종 references, which may affect DMR procurement control."
+    }
+  ]
+}

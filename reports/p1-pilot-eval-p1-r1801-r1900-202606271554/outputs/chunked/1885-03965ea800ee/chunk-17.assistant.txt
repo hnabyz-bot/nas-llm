@@ -1,0 +1,173 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Detector purchase BOM and component cost spreadsheet",
+    "productModels": [
+      "S4343-W"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk lists S4343-W detector BOM structures, including packaging, power box, panel assembly, ROIC interface PBA, and gate interface PBA components.",
+    "officialUse": "Supports DHF/DMR traceability for detector configuration, purchased components, suppliers, material specifications, and assembly hierarchy.",
+    "keyPoints": [
+      "S4343-W includes packaging items, a power box module, panel assembly, ROIC interface PBA, and gate interface PBA.",
+      "Panel assembly includes TFT sensor panel BOE 1717, ROIC ASIC AD71140JCFZ, gate driver HX5090-ACS22D, ACF adhesives, Kapton/AL tapes, and CsI/TlI deposition cost basis.",
+      "ROIC and gate interface PBAs list electrical components with part numbers, suppliers, ratings, package styles, and operating temperature ranges.",
+      "Several spreadsheet fields contain #REF! or #N/A and many component lines are repeated."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4343-W",
+      "type": "product model / detector configuration",
+      "evidence": "Rows repeatedly begin with S4343-W and define assemblies such as POWER BOX, PANEL ASSY, PBA INTERFACE ROIC, and PBA INTERFACE GATE."
+    },
+    {
+      "name": "MI96-01330A",
+      "type": "panel assembly part number",
+      "evidence": "MI96-01330A is listed as ASSY BOARD/MECHA-PANEL ASSY with description \"S4343W,TETD PANEL ASSY\"."
+    },
+    {
+      "name": "MI92-02138A",
+      "type": "ROIC interface PBA assembly",
+      "evidence": "MI92-02138A is listed as ASSY I/F BD-RO with description \"S4343-W ROIC BOARD\"."
+    },
+    {
+      "name": "MI92-02139A",
+      "type": "gate interface PBA assembly",
+      "evidence": "MI92-02139A is listed as ASSY I/F BD-GATE with description \"S4343-W GATEIC BOARD\"."
+    },
+    {
+      "name": "BOE",
+      "type": "supplier / component manufacturer",
+      "evidence": "TFT-SENSOR PANEL entry MI59-01113A lists \"BOE 1717\" and supplier BOE."
+    },
+    {
+      "name": "ANALOG DEVICES",
+      "type": "electronic component supplier",
+      "evidence": "IC ASIC-ROIC AD71140JCFZ is listed with supplier ANALOG DEVICES; multiple regulator/reference parts list ANALOG DEVICES INTERNATIONAL U.C."
+    },
+    {
+      "name": "TEXAS INSTRUMENTS KOREA LTD.",
+      "type": "electronic component supplier",
+      "evidence": "CMOS logic, clock driver, and regulator parts list TEXAS INSTRUMENTS KOREA LTD. as supplier."
+    },
+    {
+      "name": "AVX CORPORATION",
+      "type": "capacitor supplier",
+      "evidence": "Tantalum capacitor entries such as TAJD335M050RNJ, TAJA106M016RNJ, and TAJV226M050RNJ list AVX CORPORATION."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "S4343-W detector BOM hierarchy",
+      "pageTarget": "Detector(자사_1G)구매_20191018.xlsx#chunk-17",
+      "evidence": "Rows show nested levels for S4343-W assemblies including 포장, POWER BOX, PANEL ASSY, PBA INTERFACE ROIC, and PBA INTERFACE GATE."
+    },
+    {
+      "name": "Panel assembly material and electronics traceability",
+      "pageTarget": "MI96-01330A PANEL ASSY",
+      "evidence": "Panel assembly includes adhesives, Kapton/AL tapes, gate driver IC, ROIC ASIC, CsI/TlI deposition, and TFT-SENSOR PANEL BOE 1717."
+    },
+    {
+      "name": "ROIC interface board component specification",
+      "pageTarget": "MI92-02138A PBA INTERFACE ROIC",
+      "evidence": "ROIC board rows list PCB-I/F(RO), SMD assembly, CMOS logic, voltage reference, regulators, resistors, capacitors, inductor, relay, sockets, and headers."
+    },
+    {
+      "name": "Gate interface board component specification",
+      "pageTarget": "MI92-02139A PBA INTERFACE GATE",
+      "evidence": "Gate board rows list ASSY I/F BD-GATE, ASSY SMD, solder cream, Schmitt-trigger buffers, regulators, and resistor parts."
+    },
+    {
+      "name": "Electrical rating traceability",
+      "pageTarget": "PBA component ratings",
+      "evidence": "Component descriptions include voltage/current/temperature ratings such as 2.0/3.6V, -40to+125C, 1500Vac, 60V, 1000mA, and 50V capacitor ratings."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "S4343-W includes a defined panel assembly with part number MI96-01330A.",
+      "evidenceText": "S4343-W, MI96-01330A, PANEL ASSY, ASSY BOARD/MECHA-PANEL ASSY, \"S4343W,TETD PANEL ASSY\".",
+      "pageTarget": "MI96-01330A PANEL ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W panel assembly uses a BOE 1717 TFT sensor panel.",
+      "evidenceText": "MI59-01113A, TFT-SENSOR PANEL, BOE 1717, supplier BOE, under S4343-W PANEL ASSY.",
+      "pageTarget": "MI96-01330A PANEL ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The panel assembly includes ROIC ASIC AD71140JCFZ and gate driver HX5090-ACS22D.",
+      "evidenceText": "MI13-01011A IC ASIC-ROIC \"AD71140JCFZ,S4343-W,270/50,5V,0 to 70C,COF,TRAY\"; MI13-01009A IC DRIVER GATE \"HX5090-ACS22D,COF\".",
+      "pageTarget": "MI96-01330A PANEL ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The panel assembly records CsI/TlI deposition material assumptions.",
+      "evidenceText": "증착 row notes \"CsI 6kg, TlI 60g 4매 동시투입기준,D社 재료기준,LOSS 20% 반영\".",
+      "pageTarget": "MI96-01330A PANEL ASSY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W ROIC interface PBA is identified as MI92-02138A.",
+      "evidenceText": "MI92-02138A, PBA INTERFACE ROIC, ASSY I/F BD-RO, \"S4343-W ROIC BOARD\".",
+      "pageTarget": "MI92-02138A PBA INTERFACE ROIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC interface PBA PCB is specified as FR4, 8 layers, 1.2 mm thickness, 416.7 mm x 66.7 mm x 1.2 mm.",
+      "evidenceText": "MI41-01599A, PCB-I/F(RO), \"S4343-W ROIC BOARD,FR4,8,T1.2,416.7mm x 66.7mm x 1.2mm\".",
+      "pageTarget": "MI92-02138A PBA INTERFACE ROIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC interface PBA includes a PhotoMOS relay rated 1500 Vac, 60 V, 1000 mA.",
+      "evidenceText": "3502-001055, RELAY-PHOTOMOS, \"1500Vac,60V,1000mA,350mW,SOP\", AQY212GS/AQY212GSX.",
+      "pageTarget": "MI92-02138A PBA INTERFACE ROIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W gate interface PBA is identified as MI92-02139A.",
+      "evidenceText": "MI92-02139A, PBA INTERFACE GATE, ASSY I/F BD-GATE, \"S4343-W GATEIC BOARD\".",
+      "pageTarget": "MI92-02139A PBA INTERFACE GATE",
+      "confidence": "high"
+    },
+    {
+      "claim": "The gate interface PBA includes Schmitt-trigger buffer SN74LVC2G17DCKR with -40 to +125 C rating.",
+      "evidenceText": "0801-003334, IC-CMOS LOGIC, \"Schmitt-Trigger Buffer...-40to+125C,32mA\", SN74LVC2G17DCKR.",
+      "pageTarget": "MI92-02139A PBA INTERFACE GATE",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4343-W power box includes caution labeling for a detector.",
+      "evidenceText": "MI68-02930A, LABEL CAUTION, \"GC80W,PET,T0.05,W74.5,L28,DETECTOR\", under S4343-W POWER BOX.",
+      "pageTarget": "MI90-02024B POWER BOX",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Many spreadsheet cells contain #REF! and #N/A, so calculated prices or cross-references may not be reliable from this chunk alone."
+    },
+    {
+      "severity": "info",
+      "reason": "This is chunk 17 of 22; document title/date are inferred from the source file name, while approval status, revision, standards, and regulatory authority are not present in the chunk."
+    },
+    {
+      "severity": "info",
+      "reason": "Numerous component rows are repeated, especially resistor and capacitor entries, so repeated lines were treated as quantity/BOM evidence rather than distinct regulatory claims."
+    }
+  ]
+}

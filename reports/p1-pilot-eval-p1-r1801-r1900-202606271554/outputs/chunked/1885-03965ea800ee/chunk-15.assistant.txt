@@ -1,0 +1,146 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "component purchase / BOM spreadsheet excerpt",
+    "productModels": [
+      "S4335-WV"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "2019-10-18",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet rows list purchased electronic components for S4335-WV PBA INTERFACE MAIN, including internal part numbers, component specifications, approved manufacturer part numbers, suppliers, quantities, currencies, and unit prices.",
+    "officialUse": "Supports DHF/DMR design and purchasing traceability for detector PBA components by linking assembly S4335-WV / MI99-01327C to component specifications and supplier/manufacturer sourcing data.",
+    "keyPoints": [
+      "Rows repeatedly identify model S4335-WV and assembly MI99-01327C, PBA INTERFACE MAIN.",
+      "Component classes include R-CHIP, R-NETWORK, and C-CER,CHIP parts with electrical ratings and package details.",
+      "Supplier/manufacturer entities include ROHM Semiconductor Korea, Yageo, ABCO Electronics, Samsung Electro-Mechanics, Vishay Sprague, Korea Murata Electronics, Samwha Capacitor, and AVX.",
+      "The chunk contains purchasing fields such as PC unit, PBA classification, quantity, currency, and unit price."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-WV",
+      "type": "product/model or assembly identifier",
+      "evidence": "Every populated row begins with S4335-WV and ends with combined identifiers such as S4335-WV2007-007317."
+    },
+    {
+      "name": "MI99-01327C",
+      "type": "assembly or item code",
+      "evidence": "Rows pair S4335-WV with MI99-01327C and description PBA INTERFACE MAIN."
+    },
+    {
+      "name": "PBA INTERFACE MAIN",
+      "type": "printed board assembly",
+      "evidence": "Rows state PBA INTERFACE MAIN and classify the purchasing unit as PBA."
+    },
+    {
+      "name": "ROHM SEMICONDUCTOR KOREA CORPORATIO",
+      "type": "component supplier/manufacturer",
+      "evidence": "Supplier field appears for multiple R-CHIP and R-NETWORK rows, including part numbers 2007-007317 and 2011-000818."
+    },
+    {
+      "name": "YAGEO CORPORATION",
+      "type": "component supplier/manufacturer",
+      "evidence": "Rows list YAGEO CORPORATION for R-CHIP parts such as 300Kohm part 2007-007720 and 0ohm part 2007-008779."
+    },
+    {
+      "name": "ABCO ELECTRONICS CO.,LTD.",
+      "type": "component supplier/manufacturer",
+      "evidence": "Rows list ABCO ELECTRONICS CO.,LTD. for 2Kohm R-CHIP part 2007-007766 and 33ohm R-NETWORK part 2011-001261."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "component supplier/manufacturer",
+      "evidence": "Rows list SAMSUNG ELECTRO-MECHANICS CO., LTD. for 24.9ohm R-CHIP part 2007-009165 and 22nF capacitor part 2203-002398."
+    },
+    {
+      "name": "KOREA MURATA ELECTRONICS CO.,LTD.",
+      "type": "component supplier/manufacturer",
+      "evidence": "Rows list KOREA MURATA ELECTRONICS CO.,LTD. for multiple ceramic capacitor entries including 2203-000041, 2203-000438, and 2203-002285."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PBA component procurement traceability",
+      "pageTarget": "S4335-WV PBA INTERFACE MAIN purchasing BOM",
+      "evidence": "Rows link S4335-WV, MI99-01327C, PBA INTERFACE MAIN, internal part numbers, component descriptions, suppliers, quantities, currencies, and prices."
+    },
+    {
+      "name": "R-CHIP component specification",
+      "pageTarget": "Chip resistor specifications for S4335-WV",
+      "evidence": "R-CHIP rows include values and ratings such as 2.2Kohm, 1%, 1/16W, TP, 1005, T0.35 and 300Kohm, 1%, 1/10W, TP, 1608."
+    },
+    {
+      "name": "R-NETWORK component specification",
+      "pageTarget": "Resistor network specifications for S4335-WV",
+      "evidence": "R-NETWORK rows include 100Kohm, 5%, 1/16W, L, CHIP, 8P, TP, 3.2x1.6x0.5mm and 33ohm, 5%, 1/16W, L, CHIP, 8P, TP, 2.0x1.0x0.35mm."
+    },
+    {
+      "name": "Ceramic chip capacitor specification",
+      "pageTarget": "Ceramic capacitor specifications for S4335-WV",
+      "evidence": "C-CER,CHIP rows include capacitance, tolerance, voltage, dielectric, packaging, and size, such as 10nF, 10%, 50V, X7R, TP, 1608."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The chunk is a purchasing/BOM excerpt for S4335-WV PBA INTERFACE MAIN.",
+      "evidenceText": "Rows repeatedly show S4335-WV, MI99-01327C, PBA INTERFACE MAIN, PC, PBA, and combined keys such as S4335-WVPBA INTERFACE MAINPBA.",
+      "pageTarget": "S4335-WV PBA INTERFACE MAIN purchasing BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA uses multiple chip resistor values with internal 2007-series part numbers.",
+      "evidenceText": "Examples include 2007-007317 R-CHIP 2.2Kohm, 2007-007720 R-CHIP 300Kohm, 2007-008779 R-CHIP 0ohm, and 2007-010072 R-CHIP 0.001ohm.",
+      "pageTarget": "Chip resistor BOM items",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA includes resistor network components with internal 2011-series part numbers.",
+      "evidenceText": "Rows list 2011-000818 R-NETWORK 100Kohm, 5%, 1/16W, CHIP, 8P and 2011-001261 R-NETWORK 33ohm, 5%, 1/16W, CHIP, 8P.",
+      "pageTarget": "Resistor network BOM items",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA includes ceramic chip capacitors with internal 2203-series part numbers.",
+      "evidenceText": "Rows list C-CER,CHIP entries such as 2203-000041 0.01nF 50V C0G, 2203-000257 10nF 50V X7R, and 2203-005249 100nF 50V X7R.",
+      "pageTarget": "Ceramic capacitor BOM items",
+      "confidence": "high"
+    },
+    {
+      "claim": "Component rows provide manufacturer part number alternates for procurement control.",
+      "evidenceText": "The 2203-002285 C-CER,CHIP row lists alternates including C0402C103K5RAC, GRM155R71H103KA88D, CL05B103KB5NNNC, UMK105B7103KV-F, and 0402B103K500CT.",
+      "pageTarget": "Approved manufacturer part numbers",
+      "confidence": "high"
+    },
+    {
+      "claim": "The excerpt records purchasing quantity and price information.",
+      "evidenceText": "Most rows show PC, PBA, quantity 10000, supplier, currency such as USD or KRW, and unit prices such as USD 0.001 or KRW 2.375.",
+      "pageTarget": "Purchasing fields",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "The chunk lacks spreadsheet column headers, so field meanings are inferred from repeated row structure."
+    },
+    {
+      "severity": "info",
+      "reason": "Many rows are duplicates and several fields contain #REF! or #N/A, indicating spreadsheet formula/reference artifacts."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, certificate, test result, standard, software revision, cybersecurity, or submission data is present in this chunk."
+    }
+  ]
+}

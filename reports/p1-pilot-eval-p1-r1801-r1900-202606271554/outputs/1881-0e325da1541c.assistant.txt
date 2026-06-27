@@ -1,0 +1,275 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954381-bb2",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/14. 디텍터 구동 Software/EngineeringTool/PatchNote.txt",
+    "canonicalGroupId": "0e325da1541c"
+  },
+  "document": {
+    "title": "PatchNote",
+    "documentType": "Software patch note",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "1.1.0",
+    "documentDate": "2025-10-21",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "EngineeringTool software patch note listing versions, dates, and change details from 1.0.7 through 1.1.0.",
+    "officialUse": "Use as release-history evidence for EngineeringTool software changes, firmware dependencies, setup behavior, acquisition behavior, calibration, aging, LUT, and TI ROIC functions.",
+    "keyPoints": [
+      "Latest listed version is 1.1.0 dated 2025-10-21.",
+      "Version 1.1.0 changed the firmware name to AXD_Firmware and fixed suspected stack overflow, network setting null exception, setup service execution location, and LUT table save/load errors.",
+      "Several entries identify firmware version dependencies for features including Dark noise correction, EL Sheet Control, TI ROIC Init, and ssh open commands.",
+      "The patch history covers detector acquisition, aging, setup, calibration, FPGA LUT, EL Sheet Control, and TI ROIC control/preset functions."
+    ]
+  },
+  "entities": [
+    {
+      "name": "EngineeringTool",
+      "type": "software",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/14. 디텍터 구동 Software/EngineeringTool/PatchNote.txt"
+    },
+    {
+      "name": "AXD_Firmware",
+      "type": "software component",
+      "evidence": "Firmware 명칭을 AXD_Firmware로 변경 (setup - service 등록)"
+    },
+    {
+      "name": "Firmware",
+      "type": "software component",
+      "evidence": "이상 현상 지속 발생시 Firmware 대응 패치(v1.0.18)필요."
+    },
+    {
+      "name": "FPGA",
+      "type": "hardware/software subsystem",
+      "evidence": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가"
+    },
+    {
+      "name": "TI ROIC",
+      "type": "hardware/software subsystem",
+      "evidence": "TI ROIC Control/Preset 관련 추가 및 변경."
+    },
+    {
+      "name": "AbyzFramework",
+      "type": "software framework",
+      "evidence": "AbyzFramework - Engine 연결 가능"
+    },
+    {
+      "name": "Engine",
+      "type": "software component",
+      "evidence": "AbyzFramework - Engine 연결 가능"
+    },
+    {
+      "name": "Detector",
+      "type": "device",
+      "evidence": "Detector 연결이 해제되어 있다면 재연결 시도."
+    },
+    {
+      "name": "Target-Doosan FW",
+      "type": "firmware target",
+      "evidence": "EL Sheet Control 기능 추가 (Target-Doosan FW 1.0.22)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software patch notes",
+      "pageTarget": "Software patch note",
+      "evidence": "버전 : 1.1.0\n 날짜 : 2025-10-21\n 내역 :"
+    },
+    {
+      "name": "Firmware service registration",
+      "pageTarget": "Firmware service registration",
+      "evidence": "Firmware 명칭을 AXD_Firmware로 변경 (setup - service 등록)"
+    },
+    {
+      "name": "Aging acquisition",
+      "pageTarget": "Aging acquisition",
+      "evidence": "Aging에서 계속 Acq Start 실패시 Stack Overflow가 발생할 수 있는 의심점 수정"
+    },
+    {
+      "name": "Network setting null exception",
+      "pageTarget": "Network setting null exception",
+      "evidence": "Network Setting에서 최초 Set 시 발생하는 null exception 수정"
+    },
+    {
+      "name": "FPGA LUT editor",
+      "pageTarget": "FPGA LUT editor",
+      "evidence": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가"
+    },
+    {
+      "name": "EL Sheet Control",
+      "pageTarget": "EL Sheet Control",
+      "evidence": "EL Sheet Control 기능 추가 (Target-Doosan FW 1.0.22)"
+    },
+    {
+      "name": "Dark noise correction",
+      "pageTarget": "Dark noise correction",
+      "evidence": "Aging Dark(Manual)에 한해 Dark noise correction 알고리즘 적용하도록 변경 (FW 1.0.21 필요)"
+    },
+    {
+      "name": "Acquisition timeout",
+      "pageTarget": "Acquisition timeout",
+      "evidence": "Acquisition Timeout 삭제"
+    },
+    {
+      "name": "TI ROIC Control/Preset",
+      "pageTarget": "TI ROIC Control/Preset",
+      "evidence": "TI ROIC Control/Preset 관련 추가 및 변경."
+    },
+    {
+      "name": "Calibration dark average",
+      "pageTarget": "Calibration dark average",
+      "evidence": "Calibration dark average 계산 방식 변경. (이동평균 -> 합 평균)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The latest listed EngineeringTool patch version is 1.1.0 dated 2025-10-21.",
+      "evidenceText": "버전 : 1.1.0\n 날짜 : 2025-10-21",
+      "pageTarget": "EngineeringTool",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 renamed the firmware to AXD_Firmware for setup service registration.",
+      "evidenceText": "Firmware 명칭을 AXD_Firmware로 변경 (setup - service 등록)",
+      "pageTarget": "AXD_Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 fixed a suspected stack overflow condition when Acq Start repeatedly fails during Aging.",
+      "evidenceText": "Aging에서 계속 Acq Start 실패시 Stack Overflow가 발생할 수 있는 의심점 수정",
+      "pageTarget": "Aging acquisition",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 fixed a null exception that occurred on the first Set in Network Setting.",
+      "evidenceText": "Network Setting에서 최초 Set 시 발생하는 null exception 수정",
+      "pageTarget": "Network setting null exception",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.1.0 fixed LUT table save and load errors.",
+      "evidenceText": "LUT table save & load 오류 수정",
+      "pageTarget": "LUT table save and load",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.27.2 dated 2025-10-17 removed the Exposure Time limitation.",
+      "evidenceText": "버전 : 1.0.27.2\n 날짜 : 2025-10-17\n 내역 :\n 1. Exposure Time 제한 해제",
+      "pageTarget": "Exposure Time",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.27 added an FPGA LUT editor/control function and EL Sheet Control for Target-Doosan FW 1.0.22.",
+      "evidenceText": "FPGA LUT(Look-Up Table) Editor 및 제어 기능 추가\n 2. EL Sheet Control 기능 추가 (Target-Doosan FW 1.0.22)",
+      "pageTarget": "FPGA LUT editor",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.26 applied the Dark noise correction algorithm only to Aging Dark(Manual) and requires FW 1.0.21.",
+      "evidenceText": "Aging Dark(Manual)에 한해 Dark noise correction 알고리즘 적용하도록 변경 (FW 1.0.21 필요)",
+      "pageTarget": "Dark noise correction",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.25 changed setup so gen2 service execution is the last operation.",
+      "evidenceText": "setup 중 fw가 ip를 변경하는 현상이 있어 gen2 service 실행을 가장 후순위 작업으로 변경",
+      "pageTarget": "Setup",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.24 added a function to stop during the setup process.",
+      "evidenceText": "Setup 과정 중 중단할 수 있는 기능 추가",
+      "pageTarget": "Setup",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.23 changed Aging interval timing to a high-precision Stopwatch plus SpinWait calculation method.",
+      "evidenceText": "Aging의 Interval을 Stopwatch + SpinWait 방식을 이용한 초정밀 시간 계산으로 변경.",
+      "pageTarget": "Aging interval",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.22 added Start-to-start mode to Aging.",
+      "evidenceText": "Aging에 Start-to-start mode 추가",
+      "pageTarget": "Aging Start-to-start mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.21 added a TI ROIC Timming Editor.",
+      "evidenceText": "TI ROIC Timming Editor 추가.",
+      "pageTarget": "TI ROIC Timming Editor",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.19 fixed an issue where Progress did not change in AED mode.",
+      "evidenceText": "AED 모드에서 Progress가 변하지 않는 문제 수정.",
+      "pageTarget": "AED mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.18 added and changed TI ROIC Control/Preset behavior, including Program alpha and beta register input separation on the TI Preset page.",
+      "evidenceText": "TI Preset 페이지에 Program α, β 파트 레지스터 구분하여 입력 가능.",
+      "pageTarget": "TI ROIC Control/Preset",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.15 added TI ROIC Init and requires Firmware 1.0.13.",
+      "evidenceText": "Firmware 1.0.13 버전 필요\n - TI ROIC Init 기능 추가.",
+      "pageTarget": "TI ROIC Init",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.14 added a PatchNote viewer shown after login when the program starts.",
+      "evidenceText": "PatchNote 뷰어 추가.\n - 프로그램 실행 후 로그인시 Patch Note를 보여주는 윈도우 출력.",
+      "pageTarget": "PatchNote viewer",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.12 changed retransmission from hard transfer to DTH method.",
+      "evidenceText": "Retransmission 전송 방식을 hard transfer 방식에서 DTH 방식으로 변경.",
+      "pageTarget": "Retransmission",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.11 added an ssh open command transmission function in Setup View and requires Firmware 1.0.9.",
+      "evidenceText": "Setup View에서 firmware가 이미 업로드되어 동작중인 경우를 위해 ssh open 명령 전송 기능 추가.\n - Firmware 1.0.9 버전 필요",
+      "pageTarget": "Setup View",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.8 added TI ROIC sync align and changed Calibration dark average calculation from moving average to sum average.",
+      "evidenceText": "TI ROIC sync align 기능 추가.\n 2. Calibration dark average 계산 방식 변경. (이동평균 -> 합 평균)",
+      "pageTarget": "TI ROIC sync align",
+      "confidence": "high"
+    },
+    {
+      "claim": "Version 1.0.7 changed Dark acquisition so preprocessing is not performed even when ApplyPreprocessing is checked.",
+      "evidenceText": "Dark 취득시에는 ApplyPreprocessing에 체크되어 있어도 Preprocessing을 수행하지 않도록 변경.",
+      "pageTarget": "Dark acquisition preprocessing",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is stated in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is stated in the source text; productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "Document title is inferred from the source file name PatchNote.txt because no separate title line is present."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date and revision are taken from the latest listed patch entry, because the source is a multi-entry patch history rather than a single dated cover page."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    }
+  ]
+}

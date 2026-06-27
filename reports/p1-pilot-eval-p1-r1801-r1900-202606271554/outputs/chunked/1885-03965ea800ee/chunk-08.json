@@ -1,0 +1,220 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954396-q91",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/29. 개발완료 보고서/자료/Detector(자사_1G)구매_20191018.xlsx",
+    "canonicalGroupId": "03965ea800ee"
+  },
+  "document": {
+    "title": "Detector(자사_1G)구매_20191018.xlsx",
+    "documentType": "Detector parts purchase/BOM cost spreadsheet",
+    "productModels": [
+      "S4335-W",
+      "S4335-W_R1",
+      "S4343-W",
+      "SDR-C4335W",
+      "SDR-G4335W",
+      "INX 1417"
+    ],
+    "authorityOrJurisdiction": [
+      "general"
+    ],
+    "revisionOrVersion": "R1 referenced for S4335-W assemblies",
+    "documentDate": "2019-10-18",
+    "standards": [
+      "IEC60332-1",
+      "CAT7",
+      "UL",
+      "CEE",
+      "EAC",
+      "ISC",
+      "SNI"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Chunk lists detector BOM and purchase data for S4335-W/S4343-W assemblies, including power, labels, panel, PBA, Wi-Fi, safety-standard-marked cables, and component specifications.",
+    "officialUse": "Supports DHF/DMR traceability for purchased detector materials, assembly hierarchy, supplier identification, safety-relevant component specifications, and BOM cost records.",
+    "keyPoints": [
+      "S4335-W accessory BOM includes CAT7 LAN cable, IEC60332-1 signal harness, and a UL-marked AC/DC detector power supply.",
+      "S4335-W_R1 detector assemblies are broken down into front, back cover, middle, module, panel, and PBA gate/ROIC assemblies.",
+      "Safety/performance-related parts include Li-ion polymer battery, shock indicators, Wi-Fi antennas, EMI gasket, thermal pads, power regulators, and TFT sensor panel.",
+      "Spreadsheet contains multiple formula/reference errors such as #REF! and #N/A in calculated fields."
+    ]
+  },
+  "entities": [
+    {
+      "name": "S4335-W",
+      "type": "product model",
+      "evidence": "Rows list 제품명 S4335-W with ACCESSORY, FRONT ASSY, BACK COVER ASSY, PANEL ASSY, and PBA assemblies."
+    },
+    {
+      "name": "S4335-W_R1",
+      "type": "product revision/model variant",
+      "evidence": "Assemblies include ASSY TOP-S4335-W_R1_FEMALE DETECTOR ASSY, S4335-W_R1 PANEL ASSY, GATEIC PBA, and ROIC PBA."
+    },
+    {
+      "name": "S4343-W",
+      "type": "product model",
+      "evidence": "Rows list S4343-W GATEIC BOARD, ROIC BOARD, MAIN PCB, and S4343-W_FEMALE detector assemblies."
+    },
+    {
+      "name": "SDR-C4335W",
+      "type": "detector sub model",
+      "evidence": "LABEL ID-SDR-C4335W and BATTERY;SDR-C4335W, Li-ion Polymer, 3400mA are listed."
+    },
+    {
+      "name": "DAEAN ELECOM CO., LTD",
+      "type": "supplier",
+      "evidence": "Supplier for SMPS-2G_DETECTOR_POWER_BOX DEPS9601 and PBA POWER DEPS9602."
+    },
+    {
+      "name": "HANSUNG P&I CO.,LTD.",
+      "type": "supplier",
+      "evidence": "Supplier for detector ID labels, caution label, blank label, and deco plates."
+    },
+    {
+      "name": "DAEJIN IM CO.,LTD",
+      "type": "supplier",
+      "evidence": "Supplier for R1 back cover, front cover, and middle block assemblies."
+    },
+    {
+      "name": "CANON ELECTRON TUBES & DEVICES CO.",
+      "type": "supplier",
+      "evidence": "Listed for TFT-SENSOR PANEL FM3543S-D6S/A and FM4343S-D6S/A."
+    },
+    {
+      "name": "SAMSUNG ELECTRO-MECHANICS CO., LTD.",
+      "type": "supplier",
+      "evidence": "Listed for NETWORK-MAIN_WIFI MODULE SQL-Q93 / SWL-Q93 and ceramic capacitor CL31A106KBHNNNE."
+    },
+    {
+      "name": "TEXAS INSTRUMENTS KOREA LTD.",
+      "type": "supplier",
+      "evidence": "Listed for CMOS logic, analog switch, clock driver, and power regulator ICs in PBA assemblies."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Safety-marked power supply",
+      "pageTarget": "S4335-W accessory BOM / MI44-01042A",
+      "evidence": "SMPS-2G_DETECTOR_POWER_BOX spec includes AC/DC, 48W, AC220V, 50-60Hz, DC16V, +10to+40C, UL."
+    },
+    {
+      "name": "Flame-retardant signal harness",
+      "pageTarget": "S4335-W accessory BOM / MI39-02330A",
+      "evidence": "HARNESS-SIGNAL spec lists IEC60332-1, 16P, L7000, 26AWG."
+    },
+    {
+      "name": "Internationally marked power cord",
+      "pageTarget": "S4335-W accessory BOM / 3903-001241",
+      "evidence": "POWER CORD-DT spec lists EUR, 250V, 10A, H05VV-F 3x0.75mm2, CEE/EAC/ISC/SNI."
+    },
+    {
+      "name": "Detector panel assembly",
+      "pageTarget": "S4335-W panel assembly / MI99-01267A",
+      "evidence": "ASSY SUB MATERIAL-S4335-W_R1 PANEL ASSY includes TFT-SENSOR PANEL INX 1417 and deposition process."
+    },
+    {
+      "name": "PBA gate/ROIC assemblies",
+      "pageTarget": "S4335-W PBA assemblies / MI92-02451A and MI92-02453A",
+      "evidence": "Rows define ASSY PBA-INTERFACE-GATEIC and ASSY PBA-INTERFACE-ROIC with SMD subassemblies and electronic components."
+    },
+    {
+      "name": "Wireless antenna performance",
+      "pageTarget": "S4335-W front assembly / MI42-01001A and MI42-01002A",
+      "evidence": "Wi-Fi antenna specs list 2.45/5.4GHz with -11.0/-15dBi and -8.0/-8.0dBi values."
+    },
+    {
+      "name": "Shock handling indicator",
+      "pageTarget": "S4335-W module assembly / 5903-004688",
+      "evidence": "Indicator spec states SHOCK SENSOR, CX-30(TUBE), activation at 19 inch to 30 inch, 100G."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The S4335-W accessory BOM includes an IEC60332-1 signal harness.",
+      "evidenceText": "S4335-W, ACCESSORY, MI39-02330A, HARNESS-SIGNAL, \"IEC60332-1,16P,L7000,26AWG\"",
+      "pageTarget": "S4335-W accessory BOM / MI39-02330A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W accessory BOM includes a UL-marked detector power supply with AC/DC 48W, AC220V input, and DC16V output.",
+      "evidenceText": "MI44-01042A, SMPS-2G_DETECTOR_POWER_BOX, \"S4335-W POWER SUPPLY,DEPS9601 (B-Type),AC/DC,48W,AC220V,50-60Hz,...DC16V,+10to+40C,UL\"",
+      "pageTarget": "S4335-W accessory BOM / MI44-01042A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The accessory power cord is specified for 250V, 10A and lists CEE/EAC/ISC/SNI markings.",
+      "evidenceText": "3903-001241, POWER CORD-DT, \"EUR,2P-S,250V,10A,BLK,L1500,H05VV-F 3x0.75mm2,CEE/EAC/ ISC/SNI\"",
+      "pageTarget": "S4335-W accessory BOM / 3903-001241",
+      "confidence": "high"
+    },
+    {
+      "claim": "The S4335-W accessory BOM includes a CAT7 LAN cable.",
+      "evidenceText": "MI39-01366A, HARNESS STANDARD, \"HUB LAN,LAN CABLE,CAT7,8P,L3000...26AWG,8P8C\"",
+      "pageTarget": "S4335-W accessory BOM / MI39-01366A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The detector BOM includes a Li-ion polymer battery for SDR-C4335W.",
+      "evidenceText": "MI96-01305B, \"BATTERY;SDR-C4335W,Li-ion Polymer,3400mA\", supplier ELENTEC CO,. LTD., P/N SDB-3S1PA",
+      "pageTarget": "Top component list / MI96-01305B",
+      "confidence": "high"
+    },
+    {
+      "claim": "S4335-W_R1 panel assembly includes TFT sensor panel INX 1417 and CsI/TlI deposition material assumptions.",
+      "evidenceText": "S4335-W, MI99-01267A, PANEL ASSY; MI59-01110A TFT-SENSOR PANEL, INX 1417; deposition note \"CsI 6kg, TlI 60g...LOSS 20%\"",
+      "pageTarget": "S4335-W panel assembly / MI99-01267A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The front assembly includes Wi-Fi antennas specified for 2.45/5.4GHz operation.",
+      "evidenceText": "MI42-01001A and MI42-01002A list FPCB ANTENNA CHIP specs \"2.45/5.4GHz\" with dBi values.",
+      "pageTarget": "S4335-W front assembly / MI97-03369A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The module assembly includes shock indicators with 100G activation reference.",
+      "evidenceText": "5903-004688, INDICATOR, \"SHOCK SENSOR,CX-30(TUBE),TUBE,ACTIVATION AT 19INCH TO 30INCH,100G\"",
+      "pageTarget": "S4335-W module assembly / MI99-01157B",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA interface gate assembly includes a gate PCB made from FR4 with 6 layers and 1.2 mm thickness.",
+      "evidenceText": "MI41-01679A, PCB-INTERFACE-GATEIC, \"S4335-W_R1 GATE PCB,FR4,6,T1.2,333x38\"",
+      "pageTarget": "S4335-W PBA interface gate / MI92-02451A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PBA interface ROIC assembly includes components rated across extended temperature ranges.",
+      "evidenceText": "ROIC PBA rows include BAT54SW diode, 74LVC1G04 -40to+125, CDCLVD1212 -40to+85C, ADR444B -40to+125C, and regulators to -45to+125C.",
+      "pageTarget": "S4335-W PBA interface ROIC / MI92-02453A",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The middle assembly includes an EMI gasket for detector grounding.",
+      "evidenceText": "MI63-02680A, GROUND-A_EMI_GASKET, \"DETECTOR,Ni,T4,10,20\"",
+      "pageTarget": "S4335-W middle assembly / MI97-03432A",
+      "confidence": "high"
+    },
+    {
+      "claim": "The spreadsheet contains unresolved reference/formula errors in calculated columns.",
+      "evidenceText": "Multiple rows show #REF! and #N/A in confirmation/formula/calculated amount fields.",
+      "pageTarget": "Spreadsheet calculation fields",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Chunk is a partial spreadsheet extraction; column headers are present mid-chunk and some earlier rows lack explicit headers, so document-level interpretation is limited to supported BOM/purchase facts."
+    },
+    {
+      "severity": "warning",
+      "reason": "Multiple #REF! and #N/A values appear in formula and calculated amount fields, indicating spreadsheet calculation or lookup issues."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is inferred from the filename Detector(자사_1G)구매_20191018.xlsx, not from a visible spreadsheet cell in this chunk."
+    }
+  ]
+}
