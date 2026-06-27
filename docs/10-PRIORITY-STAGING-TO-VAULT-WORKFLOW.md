@@ -453,3 +453,11 @@ Next P1 bundle:
 - note: ranks 1971, 1985, and 1993 passed on direct retry after transient
   schema/timeout failures; ranks 1948, 1949, and 1950 required chunked fallback
 - ops commit: `976a4e3 feat: complete P1 ranks 1901-2000 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r2001-r2100-202606272158`
+- rank range: 2001-2100
+- selected representatives: 100
+- total normalized chars: 5,685,117
+- extraction status: not started at this checkpoint

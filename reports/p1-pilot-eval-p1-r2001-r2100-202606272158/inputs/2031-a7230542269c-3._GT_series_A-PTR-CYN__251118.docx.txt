@@ -1,0 +1,938 @@
+queueId: ingest-1781569954421-1a1a
+sourcePath: raw/sources/Project/02_CYAN/1. DHF/23. 성능 검증 데이터/3. [GT series] 성능시험성적서 (A-PTR-CYN)_251118.docx
+combinedPath: raw/sources/_preprocessed/Project/_combined/ea0975eeecf8/3. [GT series] 성능시험성적서 (A-PTR-CYN)_251118__ea0975eeecf8_combined.txt
+canonicalGroupId: a7230542269c
+productSignal: HnX
+authoritySignal: general
+pilotRank: 2031
+
+SOURCE_TEXT
+성능 시험 성적서
+
+Performance Test Report
+
+Manufacturer
+
+H&abyz Co., Ltd.
+
+Product name
+
+의료영상획득장치 Digital Falt Panel X-ray Detector
+
+Model Name
+
+HnX-R1
+
+Ref no.
+
+(G series)
+
+G1417CW, G1417CWP, G1417FW, G1417FWP,
+
+G1717CW, G1717CWP, G1717FW, G1717FWP
+
+(2/3G series)
+
+A1717MCW, A1417MCW, F1417MCW
+
+(GT series)
+
+GT1717C, GT1717CP
+
+Console software
+
+HnVUE
+
+Write
+
+Review
+
+Approval
+
+Name
+
+Han, Jimin
+
+Kim, Myeongseop
+
+Hur, Namkyu
+
+Dept.
+
+R&D Team
+
+R&D Team Leader
+
+Quality Management Representative
+
+Date
+
+2025.11.17
+
+2025.11.17
+
+2025.11.17
+
+Signature
+
+목 차
+
+0. 제·개정이력Revision History 3
+
+1. 개요 Document Overview 4
+
+2. 시험 정보Device information 4
+
+2.1 시험품목 4
+
+2.2 시험환경 4
+
+3. 시험 결과 요약 5
+
+4. Test contents 시험 내용 6
+
+4.1 Sensor Type 6
+
+4.2 Scintillator 확인 7
+
+4.3 Pixel pitch 확인 7
+
+4.4 Effective Pixel Number 확인 8
+
+4.5 Effective Pixel Area 확인 9
+
+4.6 MTF 9
+
+4.7 DQE 10
+
+4.8 Sensitivity 10
+
+4.9 Limited resolution 11
+
+4.10 Energy range 11
+
+4.11 A/D conversion 12
+
+4.12 Communication 13
+
+4.13 Trigger mode 14
+
+5. 결론 14
+
+6. 기타 첨부서류 14
+
+제·개정이력Revision History
+
+Rev. No.
+
+Issue date
+
+Note
+
+0
+
+2025.11.17
+
+First establishment
+
+1
+
+개요 Document Overview
+
+본 시험 성적서는 의료영상획득장치 (HnX-R1)의 GT series 디텍터 성능 확인을 위한 시험성적서이다.
+
+시험 정보Device information
+
+시험품목
+
+품목명: 의료영상획득장치
+
+모델명: HnX-R1
+
+시험제품 Ref no. 및 Serial number:
+
+GTseries
+
+Ref no
+
+Serial Number
+
+GT1717C
+
+GT1717CW2501030001
+
+GT1717CP
+
+시험환경
+
+시험일시: 2025.11.14~2025.11.17
+
+시험장소: ㈜에이치앤아비즈 (경기도 용인시 처인구 처인성로41-16 2동 (우) 17118)
+
+시험 결과 요약
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+1
+
+Sensor Type
+
+a-Si TFT
+
+사양서 확인
+
+PASS
+
+2
+
+Scintillator 확인
+
+CsI
+
+사양서 확인
+
+PASS
+
+3
+
+Pixel pitch
+
+140μm
+
+사양서 확인
+
+PASS
+
+4
+
+Effective Pixel Number
+
+3072 x 3072pixels
+
+전체영상 획득 후 유효한 영역의 픽셀 수 확인
+
+PASS
+
+5
+
+Effective Pixel Area
+
+430.08mm x 430.08mm
+
+전체 영상획득 후 유효한 Pixel 확인 후
+
+Pitch Area계산 (Pixel Pitch * 유효 Pixel Number)
+
+PASS
+
+6
+
+MTF
+
+93% 이상
+
+(@ 0.1lp/mm),
+
+75% 이상
+
+(@ 0.5lp/mm),
+
+55% 이상
+
+(@ 1.0lp/mm),
+
+35% 이상
+
+(@ 2.0lp/mm),
+
+15% 이상
+
+(@ 3.0lp/mm)
+
+MTF Phantom 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5
+
+Beam condition,
+
+70kV, 40mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+7
+
+DQE
+
+45% 이상
+
+(@ 0.1lp/mm),
+
+35% 이상
+
+(@ 0.5lp/mm),
+
+25% 이상
+
+(@ 1.0lp/mm),
+
+20% 이상
+
+(@ 2.0lp/mm),
+
+15% 이상
+
+(@ 3.0lp/mm)
+
+Bright 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5
+
+Beam condition,
+
+70kV, 40mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+8
+
+Sensitivity
+
+Center 기준 110 LSB/uGy 이상
+
+Bright 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5 Beam condition,
+
+70kV, 6.4mAs ~ 64mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+9
+
+Limited resolution
+
+Max 3.57 lp/mm
+
+1 / Pixel pitch * 2
+
+PASS
+
+10
+
+Energy range
+
+40kvp, 150kvp 조사 시 정상동작
+
+40kvp / 150kvp로 조사 시 영상 획득되는지 확인.
+
+PASS
+
+11
+
+A/D Conversion
+
+16bits
+
+ROIC A/D 변환 해상도는 16bit임
+
+PASS
+
+12
+
+Communication
+
+1 Giga-bit Ethernet via PoE (Power over Ethernet) 이상
+
+사양서 확인
+
+PASS
+
+13
+
+Trigger mode
+
+AED(Automatic Exposure Detection)
+
+디텍터를 AED모드로 설정하고 Acquisition 시작 후 shoot 시그널이 도착한 뒤 x-선을 조사했을 때 이미지가 취득되는지 확인한다.
+
+PASS
+
+Line(Manual) Trigger
+
+디텍터를 line trigger 모드로 설정하고 trigger button을 prep하여 Acquisition시작 후 shoot 시그널이 도착한 뒤 trigger button을 길게 눌러서 X-선을 조사하여 이미지가 취득되는지 확인한다.
+
+PASS
+
+Test contents 시험 내용
+
+Sensor Type
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+1
+
+Sensor Type
+
+a-Si TFT
+
+사양서 확인
+
+PASS
+
+* 시험 결과
+
+1) [첨부 1.] Panel 사양서 확인
+
+Scintillator 확인
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+2
+
+Scintillator 확인
+
+CsI
+
+사양서 확인
+
+PASS
+
+* 시험 결과
+
+1) [첨부 2.] CsI 사양서 확인
+
+Pixel pitch 확인
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+3
+
+Pixel pitch
+
+140μm
+
+사양서 확인
+
+PASS
+
+* 시험 결과
+
+ 1) [첨부 1.] Panel 사양서 확인
+
+ Effective Pixel Number 확인
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+4
+
+Effective Pixel Number 확인
+
+3072 x 3072 pixels
+
+전체영상 획득 후 유효한 영역의 픽셀 수 확인
+
+PASS
+
+* 시험 결과
+
+ Effective Pixel Area 확인
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+5
+
+Effective Pixel Area 확인
+
+430.08 x 430.08mm
+
+전체 영상획득 후 유효한 Pixel 확인 후
+
+Pitch Area계산 (Pixel Pitch * 유효 Pixel)
+
+PASS
+
+* 시험 결과
+
+가로 : 140um * 3072 = 430.08mm
+
+세로 : 140um * 3072 = 430.08mm
+
+ MTF
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+6
+
+MTF
+
+93% 이상(@ 0.1lp/mm),
+
+75% 이상(@ 0.5lp/mm),
+
+55% 이상(@ 1.0lp/mm),
+
+35% 이상(@ 2.0lp/mm),
+
+15% 이상(@ 3.0lp/mm)
+
+MTF Phantom 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5
+
+Beam condition,
+
+70kV, 40mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+* 시험 결과
+
+항목
+
+기준 값
+
+측정값
+
+결과
+
+0.1lp/mm
+
+93% 이상
+
+96%
+
+PASS
+
+0.5lp/mm
+
+75%이상
+
+80%
+
+1.0lp/mm
+
+55%이상
+
+61%
+
+2.0lp/mm
+
+35%이상
+
+42%
+
+3.0lp/mm
+
+15%이상
+
+21%
+
+ DQE
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+7
+
+DQE
+
+45% 이상(@ 0.1lp/mm),
+
+35% 이상(@ 0.5lp/mm),
+
+25% 이상(@ 1.0lp/mm),
+
+20% 이상(@ 2.0lp/mm),
+
+15% 이상(@ 3.0lp/mm)
+
+Bright 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5
+
+Beam condition,
+
+70kV, 40mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+* 시험 결과
+
+항목
+
+기준 값
+
+측정값
+
+결과
+
+0.1lp/mm
+
+45%이상
+
+53%
+
+PASS
+
+0.5lp/mm
+
+35%이상
+
+42%
+
+1.0lp/mm
+
+25%이상
+
+32%
+
+2.0lp/mm
+
+20%이상
+
+26%
+
+3.0lp/mm
+
+15%이상
+
+22%
+
+ Sensitivity
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+8
+
+Sensitivity
+
+Center 기준 110 LSB/uGy 이상
+
+Bright 영상 이미지를 획득하여 Calibration 적용 후 ‘Final Test’ 프로그램을 사용한 측정값이 시험 기준을 만족하는지 확인한다.
+
+* 조사 조건
+
+RQA5 Beam condition,
+
+70kV, 4 ~ 64mAs
+
+21mm Al filter
+
+SID: 150cm
+
+PASS
+
+* 시험 결과
+
+기준 값
+
+측정값
+
+결과
+
+Center 기준 110 LSB/uGy 이상
+
+136 LSB/uGy
+
+PASS
+
+ Limited resolution
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+9
+
+Limited resolution
+
+Max 3.57 lp/mm
+
+1 / Pixel pitch * 2
+
+PASS
+
+* 시험 결과
+
+기준 값
+
+측정값
+
+결과
+
+Max 3.57 lp/mm
+
+1 / 140um * 2 = 3.57 lp/mm
+
+PASS
+
+Energy range
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+10
+
+Energy range
+
+40kvp, 150kvp 정상동작
+
+40kvp / 150kvp로 조사 시 영상 획득되는지 확인.
+
+PASS
+
+* 시험 결과
+
+기준 값
+
+측정 내용
+
+결과
+
+40kvp 조사 시 정상동작
+
+정상 동작 확인
+
+PASS
+
+150kvp 조사 시 정상동작
+
+정상 동작 확인
+
+A/D conversion
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+11
+
+A/D Conversion
+
+16bits
+
+사양서 확인
+
+PASS
+
+* 시험 결과
+
+[첨부 3.] ROIC사양서 확인
+
+Communication
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+12
+
+Communication
+
+1 Giga-bit Ethernet via PoE (Power over Ethernet)이상
+
+CPU모듈 사양서 확인
+
+PASS
+
+* 시험 결과
+
+ [첨부 4.] CPU모듈 사양서 확인
+
+Trigger mode
+
+번호
+
+시험 항목
+
+시험 기준
+
+시험 방법
+
+시험 결과
+
+15
+
+Trigger mode
+
+AED(Automatic Exposure Detection)
+
+디텍터를 AED모드로 설정하고 Acquisition 시작 후 shoot 시그널이 도착한 뒤 x-선을 조사했을 때 이미지가 취득되는지 확인한다.
+
+PASS
+
+Line(Manual) Trigger
+
+디택터를 line trigger 모드로 설정하고 trigger button을 prep하여 Acquisition시작 후 shoot 시그널이 도착한 뒤 trigger button을 길게 눌러서 X-선을 조사하여 이미지가 취득되는지 확인한다.
+
+PASS
+
+* 시험 결과
+
+기준 값
+
+측정 내용
+
+결과
+
+AED(Automatic Exposure Detection)
+
+영상취득 확인
+
+PASS
+
+Line(Manual) Trigger
+
+영상취득 확인
+
+결론
+
+해당 시험 결과를 통해 의료영상획득장치 (모델명: HnX-R1, GT series)의 성능 설정 값에 이상 없음을 확인하였다.
+
+기타 첨부서류
+
+[첨부 1.] Panel사양서
+
+[첨부 2.] CsI 사양서
+
+[첨부 3.] ROIC 사양서
+
+[첨부 4.] CPU 모듈 사양서
+
+[첨부 5.] KGMP 적합인정서
+
+[첨부 1.] Panel사양서
+
+[첨부 2.] CsI 사양서
+
+[첨부 3.] ROIC 사양서
+
+[첨부 4.] CPU 모듈 사양서
+
+[첨부 5.] KGMP 적합인정서
