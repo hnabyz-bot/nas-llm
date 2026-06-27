@@ -666,3 +666,29 @@ Latest P1 extraction bundle queued next:
   missing evidence 0, page marker leakage 0
 - chunked pass rows: none
 - ops commit: `c972a03 feat: complete P1 ranks 2201-2275 extraction outputs`
+
+## P1 Vault Published
+
+P1 has been materialized into `D:\vault\llm-wiki-vault\wiki\` and pushed.
+
+- publish dry-run: `reports/p1-vault-publish-plan-202606280000`
+- materialize dry-run: `reports/p1-vault-materialize-dry-run-202606280000`
+- materialize apply: `reports/p1-vault-materialize-apply-202606280000`
+- final vault QA: `reports/p1-vault-qa-final-202606280000`
+- disposition rows: 7,941
+- representative outputs loaded: 2,275/2,275
+- wiki contributions materialized: 78,853
+- unique wiki files written/merged: 51,239
+- new wiki files: 44,121
+- existing wiki files merged: 7,118
+- final QA: PASS, errors 0, warnings 1
+- final QA coverage: 51,239/51,239 materialized files, 7,941/7,941 source
+  queueIds
+- vault queue count after stale reset: `{"pending":69549}`
+- vault commit pushed: `cc36f47fa wiki: publish P1 staging knowledge`
+
+Vault commit discipline:
+
+- only `wiki/` was staged and committed in the vault repo
+- `.llm-wiki/`, `logs/`, `raw/`, and vault `scripts/` remain unstaged
+- a backup of the queue before stale reset was left under `.llm-wiki/`

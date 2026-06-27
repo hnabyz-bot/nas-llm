@@ -492,3 +492,30 @@ Next P1 bundle:
 - note: ranks 2236, 2242, 2253, and 2272 passed on direct retry after
   transient schema/timeout failures
 - ops commit: `c972a03 feat: complete P1 ranks 2201-2275 extraction outputs`
+
+## P1 Vault Publish
+
+P1 representative staging extraction is complete and published to the service
+vault.
+
+- publish dry-run: `reports/p1-vault-publish-plan-202606280000`
+- materialize dry-run: `reports/p1-vault-materialize-dry-run-202606280000`
+- materialize apply: `reports/p1-vault-materialize-apply-202606280000`
+- vault QA: `reports/p1-vault-qa-final-202606280000`
+- disposition rows: 7,941
+- representative outputs loaded: 2,275/2,275
+- wiki contributions materialized: 78,853
+- unique wiki files written/merged: 51,239
+- new wiki files: 44,121
+- existing wiki files merged: 7,118
+- validation failures: 0
+- final QA result: PASS, 0 errors, 1 warning
+- final QA coverage: 51,239/51,239 materialized files, 7,941/7,941
+  source queueIds
+- vault queue count after stale reset: `{"pending":69549}`
+- vault commit pushed: `cc36f47fa wiki: publish P1 staging knowledge`
+
+Note: one stale live queue `processing` item was reset to `pending` before the
+final QA run. The backup is stored under vault `.llm-wiki/`; it was not staged
+or committed. Vault `wiki/` was the only committed path for the P1 knowledge
+publish.

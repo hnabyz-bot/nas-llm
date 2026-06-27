@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-06-27T19:48:09.246Z",
+  "priority": "p1",
+  "vaultRoot": "D:\\vault\\llm-wiki-vault",
+  "applyDir": "reports\\p1-vault-materialize-apply-202606280000",
+  "triageDir": "reports\\p1-meaningful-triage-202606241713",
+  "pass": false,
+  "errors": [
+    "queue has processing items: 1",
+    "vault wiki has uncommitted changes"
+  ],
+  "warnings": [
+    "pages containing Unicode replacement character: 1+"
+  ],
+  "stats": {
+    "plannedFileRecords": 51239,
+    "uniquePlannedPaths": 51239,
+    "sourcePages": 7941,
+    "existingFiles": 51239,
+    "markdownBytes": 95975181,
+    "actionCounts": {
+      "create": 44121,
+      "update-or-merge": 7118
+    },
+    "contributionCount": 78853,
+    "pagesWithFrontmatter": 51239,
+    "pagesWithSources": 51239,
+    "pagesWithPriorityMarker": 51239,
+    "priorityBeginCount": 51239,
+    "priorityEndCount": 51239,
+    "sourceQueueIdsSeen": 7941
+  },
+  "expected": {
+    "dispositionRows": 7941,
+    "expectedQueueIds": 7941,
+    "materializeSummary": {
+      "contributions": 78853,
+      "uniqueFiles": 51239,
+      "actionCounts": {
+        "create": 44121,
+        "update-or-merge": 7118
+      }
+    },
+    "dispositionSummary": {
+      "total": 7941,
+      "counts": {
+        "full_wiki_candidate": 2275,
+        "canonical_duplicate": 4363,
+        "needs_recovery_empty_text": 1094,
+        "needs_review_low_text": 209
+      }
+    }
+  },
+  "issueCounts": {
+    "missingFiles": 0,
+    "unsafePaths": 0,
+    "missingFrontmatter": 0,
+    "missingFrontmatterKeys": 0,
+    "emptySources": 0,
+    "missingMarker": 0,
+    "mismatchedMarker": 0,
+    "trailingWhitespace": 0,
+    "nulBytes": 0,
+    "replacementChars": 1,
+    "suspiciousTokens": 0,
+    "missingSourceSections": 0,
+    "missingQueueIds": 0
+  },
+  "issueExamples": {
+    "missingFiles": [],
+    "unsafePaths": [],
+    "missingFrontmatter": [],
+    "missingFrontmatterKeys": [],
+    "emptySources": [],
+    "missingMarker": [],
+    "mismatchedMarker": [],
+    "trailingWhitespace": [],
+    "nulBytes": [],
+    "replacementChars": [
+      "wiki/sources/39-DHF%20%28%EC%9D%B8%ED%97%88%EA%B0%80%29--37-07_%28CYAN%29%20GT1717C%2C%20GT1717CP--37-90_%EA%B7%9C%EA%B2%A9--1ly64la.md"
+    ],
+    "suspiciousTokens": [],
+    "missingSourceSections": [],
+    "missingQueueIds": []
+  },
+  "vaultState": {
+    "appRunning": false,
+    "ingestReadyFlag": false,
+    "scheduledTasks": {
+      "LLM-Wiki-Watchdog": "Disabled",
+      "LLM-Wiki-Startup": "Disabled",
+      "LLM-Wiki-Auth-Check": "Disabled"
+    },
+    "queue": {
+      "exists": true,
+      "total": 69549,
+      "counts": {
+        "processing": 1,
+        "pending": 69548
+      }
+    },
+    "gitHead": "f36083933 (HEAD -> main, origin/main) wiki: publish P0 staging knowledge",
+    "wikiDirty": true,
+    "wikiDirtyLines": [
+      "spawnSync git ENOBUFS"
+    ]
+  }
+}
