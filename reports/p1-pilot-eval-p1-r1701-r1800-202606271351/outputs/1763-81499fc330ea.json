@@ -1,0 +1,247 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954384-eiv",
+    "sourcePath": "raw/sources/RA/10_자사 품질 매뉴얼, 절차서/AQP402 QMS Software Validation 규정/예시_QMS 소프트웨어 밸리데이션 계획서_ERP.docx",
+    "canonicalGroupId": "81499fc330ea"
+  },
+  "document": {
+    "title": "QMS 소프트웨어 밸리데이션 계획서",
+    "documentType": "QMS 소프트웨어 밸리데이션 계획서",
+    "productModels": [
+      "ERP"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2024년 XX월 XX일",
+    "standards": [
+      "ISO TR 80002-2"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "ERP SW의 Lot 및 자재 입력 기능에 대한 QMS 소프트웨어 밸리데이션 계획서 예시 문서이다.",
+    "officialUse": "ERP SW에 대하여 ISO TR 80002-2 표준에 따라 유효성 확인이 되도록 하는 계획에 사용된다.",
+    "keyPoints": [
+      "프로젝트 명은 ERP Validation이다.",
+      "밸리데이션 범위는 Lot 및 자재 입력 기능이다.",
+      "밸리데이션 방법은 블랙박스(명세기반 테스트) - 사용 케이스 테스팅이다.",
+      "테스트 전략은 인수 테스트이다.",
+      "위험관리 항목은 입력 값이 올바르지 않게 저장될 수 있는 위해상황을 포함한다.",
+      "테스트 시나리오는 새로운 로트 번호 생성, 특정 로트 번호 재고 업데이트, 로트 기록 및 관련 거래 검색을 포함한다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ERP",
+      "type": "software",
+      "evidence": "SW 명\n\nERP"
+    },
+    {
+      "name": "품질경영팀",
+      "type": "internal team",
+      "evidence": "작성팀\n\n품질경영팀"
+    },
+    {
+      "name": "품질경영팀장",
+      "type": "role",
+      "evidence": "밸리데이션 담당자: 품질경영팀장"
+    },
+    {
+      "name": "품질경영팀원",
+      "type": "role",
+      "evidence": "테스트 엔지니어: 품질경영팀원"
+    },
+    {
+      "name": "ISO TR 80002-2",
+      "type": "standard",
+      "evidence": "참조문서\n\nISO TR 80002-2"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "QMS 소프트웨어 밸리데이션",
+      "pageTarget": "QMS Software Validation",
+      "evidence": "QMS 소프트웨어 밸리데이션 계획서"
+    },
+    {
+      "name": "ERP Validation",
+      "pageTarget": "ERP Validation",
+      "evidence": "프로젝트 명: ERP Validation"
+    },
+    {
+      "name": "ISO TR 80002-2 기반 유효성 확인",
+      "pageTarget": "ISO TR 80002-2",
+      "evidence": "목표: ERP SW에 대하여 ISO TR 80002-2 표준에 따라 유효성 확인이 되도록 하는 것."
+    },
+    {
+      "name": "Lot 및 자재 입력",
+      "pageTarget": "Lot and Material Input Validation",
+      "evidence": "밸리데이션 할 기능: Lot 및 자재 입력"
+    },
+    {
+      "name": "블랙박스 테스트",
+      "pageTarget": "Black-box Testing",
+      "evidence": "밸리데이션 방법: 블랙박스(명세기반 테스트) - 사용 케이스 테스팅"
+    },
+    {
+      "name": "사용 케이스 테스팅",
+      "pageTarget": "Use Case Testing",
+      "evidence": "밸리데이션 방법: 블랙박스(명세기반 테스트) - 사용 케이스 테스팅"
+    },
+    {
+      "name": "인수 테스트",
+      "pageTarget": "Acceptance Testing",
+      "evidence": "테스트 전략: 인수 테스트"
+    },
+    {
+      "name": "로트 번호 생성",
+      "pageTarget": "Lot Number Creation",
+      "evidence": "테스트 시나리오 케이스 1\n\n새로운 로트 번호 생성"
+    },
+    {
+      "name": "로트 재고 업데이트",
+      "pageTarget": "Lot Inventory Update",
+      "evidence": "테스트 시나리오 케이스 2\n\n특정 로트 번호에 대한 재고 업데이트"
+    },
+    {
+      "name": "로트 기록 및 거래 검색",
+      "pageTarget": "Lot History and Transaction Retrieval",
+      "evidence": "테스트 시나리오 케이스 3\n\n로트 기록 및 관련 거래 검색"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "문서 제목은 QMS 소프트웨어 밸리데이션 계획서이다.",
+      "evidenceText": "QMS 소프트웨어 밸리데이션 계획서",
+      "pageTarget": "QMS Software Validation Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "작성팀은 품질경영팀이다.",
+      "evidenceText": "작성팀\n\n품질경영팀",
+      "pageTarget": "Quality Management Team",
+      "confidence": "high"
+    },
+    {
+      "claim": "작성일자는 2024년 XX월 XX일로 기재되어 있다.",
+      "evidenceText": "작성일자\n\n2024년 XX월 XX일",
+      "pageTarget": "Document Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "밸리데이션 대상 SW 명은 ERP이다.",
+      "evidenceText": "SW 명\n\nERP",
+      "pageTarget": "ERP",
+      "confidence": "high"
+    },
+    {
+      "claim": "프로젝트 명은 ERP Validation이다.",
+      "evidenceText": "프로젝트 명: ERP Validation",
+      "pageTarget": "ERP Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "목표는 ERP SW에 대하여 ISO TR 80002-2 표준에 따라 유효성 확인이 되도록 하는 것이다.",
+      "evidenceText": "목표: ERP SW에 대하여 ISO TR 80002-2 표준에 따라 유효성 확인이 되도록 하는 것.",
+      "pageTarget": "ISO TR 80002-2",
+      "confidence": "high"
+    },
+    {
+      "claim": "밸리데이션 할 기능은 Lot 및 자재 입력이다.",
+      "evidenceText": "밸리데이션 할 기능: Lot 및 자재 입력",
+      "pageTarget": "Lot and Material Input Validation",
+      "confidence": "high"
+    },
+    {
+      "claim": "참조문서는 ISO TR 80002-2와 ERP 사용자 매뉴얼이다.",
+      "evidenceText": "참조문서\n\nISO TR 80002-2\n\nERP 사용자 매뉴얼",
+      "pageTarget": "Validation Reference Documents",
+      "confidence": "high"
+    },
+    {
+      "claim": "밸리데이션 방법은 블랙박스(명세기반 테스트) - 사용 케이스 테스팅이다.",
+      "evidenceText": "밸리데이션 방법: 블랙박스(명세기반 테스트) - 사용 케이스 테스팅",
+      "pageTarget": "Use Case Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "테스트 전략은 인수 테스트이다.",
+      "evidenceText": "테스트 전략: 인수 테스트",
+      "pageTarget": "Acceptance Testing",
+      "confidence": "high"
+    },
+    {
+      "claim": "밸리데이션 담당자는 품질경영팀장이다.",
+      "evidenceText": "밸리데이션 담당자: 품질경영팀장",
+      "pageTarget": "Validation Responsibilities",
+      "confidence": "high"
+    },
+    {
+      "claim": "테스트 엔지니어는 품질경영팀원이다.",
+      "evidenceText": "테스트 엔지니어: 품질경영팀원",
+      "pageTarget": "Validation Responsibilities",
+      "confidence": "high"
+    },
+    {
+      "claim": "위해상황은 입력 값이 올바르지 않게 저장될 수 있다는 것이다.",
+      "evidenceText": "위해상황\n\n위해\n\n위험수준\n\n입력 값이 올바르지 않게 저장될 수 있다.\n\n제조공정에 대한 위해\n\nQMS에 전반적인 영향을 준다.",
+      "pageTarget": "QMS Software Validation Risk Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "테스트 시나리오 케이스 1은 새로운 로트 번호 생성이다.",
+      "evidenceText": "테스트 시나리오 케이스 1\n\n새로운 로트 번호 생성",
+      "pageTarget": "Lot Number Creation",
+      "confidence": "high"
+    },
+    {
+      "claim": "새로운 로트 번호 생성 테스트의 목표는 사용자가 제품에 대한 새로운 로트 번호를 성공적으로 생성할 수 있는지 확인하는 것이다.",
+      "evidenceText": "목표\n\n사용자가 제품에 대한 새로운 로트 번호를 성공적으로 생성할 수 있는지 확인한다.",
+      "pageTarget": "Lot Number Creation",
+      "confidence": "high"
+    },
+    {
+      "claim": "테스트 시나리오 케이스 2는 특정 로트 번호에 대한 재고 업데이트이다.",
+      "evidenceText": "테스트 시나리오 케이스 2\n\n특정 로트 번호에 대한 재고 업데이트",
+      "pageTarget": "Lot Inventory Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "특정 로트 번호 재고 업데이트 테스트의 목표는 특정 로트 번호에 대한 재고를 정확하게 업데이트할 수 있는지 확인하는 것이다.",
+      "evidenceText": "목표\n\n특정 로트 번호에 대한 재고를 정확하게 업데이트할 수 있는지 확인한다.",
+      "pageTarget": "Lot Inventory Update",
+      "confidence": "high"
+    },
+    {
+      "claim": "테스트 시나리오 케이스 3은 로트 기록 및 관련 거래 검색이다.",
+      "evidenceText": "테스트 시나리오 케이스 3\n\n로트 기록 및 관련 거래 검색",
+      "pageTarget": "Lot History and Transaction Retrieval",
+      "confidence": "high"
+    },
+    {
+      "claim": "로트 기록 및 관련 거래 검색 테스트의 목표는 ERP가 특정 로트 번호에 대한 거래 기록을 검색할 수 있는지 확인하는 것이다.",
+      "evidenceText": "목표\n\nERP가 특정 로트 번호에 대한 거래 기록을 검색할 수 있는지 확인한다.",
+      "pageTarget": "Lot History and Transaction Retrieval",
+      "confidence": "high"
+    },
+    {
+      "claim": "리소스의 하드웨어 조건은 Window 10 이상이다.",
+      "evidenceText": "리소스\n\n하드웨어: Window 10 이상",
+      "pageTarget": "Validation Resources",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "작성일자와 일정이 placeholder 형식(2024년 XX월 XX일, 2024.XX.XX)으로만 제공되어 정확한 문서 날짜를 확인할 수 없음."
+    },
+    {
+      "severity": "info",
+      "reason": "revisionOrVersion 정보가 source text에 없음."
+    },
+    {
+      "severity": "warning",
+      "reason": "authorityOrJurisdiction 정보가 source text에 명시되어 있지 않고 authoritySignal도 general로만 제공됨."
+    }
+  ]
+}

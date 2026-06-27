@@ -1,0 +1,205 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954383-crr",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/12. MCU Fimware/HAD1717MC_FW_Release_개발_버전_히스토리.xlsx",
+    "canonicalGroupId": "54e03922fbf9"
+  },
+  "document": {
+    "title": "HAD1717MC_FW_Release_개발_버전_히스토리",
+    "documentType": "Firmware release development version history",
+    "productModels": [
+      "HAD1717MC",
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "firm_1.1.1 through firm_1.0.0.3",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Firmware release and development version history for HAD1717MC, listing firmware changes from 2018 to 2021.",
+    "officialUse": "Supports DHF traceability of MCU firmware changes, release versions, production releases, and compatibility notes.",
+    "keyPoints": [
+      "Lists firmware versions, dates, change contents, and remarks.",
+      "Records changes to auto-trigger, image acquisition, logging, FPGA/ROIC parameters, Ethernet packet handling, sensors, rootfs, and SDK communication.",
+      "States that FW 1.0.0.3 and SDK V1.0.0.3 must be applied together because lower firmware versions are not compatible with the SDK.",
+      "Notes quality team distribution and related department notification for the 2021.12.21 firm_1.0.0.3 release."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/12. MCU Fimware/HAD1717MC_FW_Release_개발_버전_히스토리.xlsx"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "XAS",
+      "type": "software/system",
+      "evidence": "2. XAS 연동 데이터 전송"
+    },
+    {
+      "name": "SDK",
+      "type": "software",
+      "evidence": "프로그램 버전 매칭 조건 : FW 1.0.0.3 + SDK V1.0.0.3으로 반드시 적용하여 진행해야 함."
+    },
+    {
+      "name": "feel-DRCS",
+      "type": "software",
+      "evidence": "feel-DRCS : V 2.1.300.40"
+    },
+    {
+      "name": "BMI160",
+      "type": "sensor",
+      "evidence": "BMI160 gyro sensor 내장 temp sensor 체크 기능 활용하여 온도 측정함."
+    },
+    {
+      "name": "FPGA",
+      "type": "component",
+      "evidence": "1. FPGA Parameter 추가 및 변경"
+    },
+    {
+      "name": "ROIC",
+      "type": "component",
+      "evidence": "FPGA/ROIC register setting 시, Line/Auto Trigger 상태 메시지 XAS로 전송하지 않도록 수정"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Firmware version history",
+      "pageTarget": "Firmware Version History",
+      "evidence": "FW Version,Date,Contents,비 고"
+    },
+    {
+      "name": "Auto-Trigger Mode",
+      "pageTarget": "Auto-Trigger Mode",
+      "evidence": "Auto-Trigger Mode에서 상태 메시지 delay time 1초에서 0.5초로 변경"
+    },
+    {
+      "name": "Line-Trigger Mode",
+      "pageTarget": "Line-Trigger Mode",
+      "evidence": "Line-Trigger Mode에서 Ready/Initialing 상태 메시지 추가"
+    },
+    {
+      "name": "Dark/Bright image acquisition",
+      "pageTarget": "Dark Bright Image Acquisition",
+      "evidence": "Dark/Bright Image 획득 후, XAS 데이터 전송 루틴 추가"
+    },
+    {
+      "name": "Firmware and SDK compatibility",
+      "pageTarget": "Firmware SDK Compatibility",
+      "evidence": "프로그램 버전 매칭 조건 : FW 1.0.0.3 + SDK V1.0.0.3으로 반드시 적용하여 진행해야 함."
+    },
+    {
+      "name": "Firmware release distribution",
+      "pageTarget": "Firmware Release Distribution",
+      "evidence": "품질팀 배포 및 유관 부서 전달 완료."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a firmware release development version history with columns for firmware version, date, contents, and remarks.",
+      "evidenceText": "FW Version,Date,Contents,비 고",
+      "pageTarget": "Firmware Version History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The version scheme distinguishes deployment version management, debug version, and release version formats.",
+      "evidenceText": "배포 버전 관리 : 1.0.x.x, Debug ver : 1.x.x.x.x, Release ver : 1.x.x.x",
+      "pageTarget": "Firmware Version Numbering",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.1 dated 6/20/18 changed register address output from decimal to hexadecimal notation.",
+      "evidenceText": "레지스터 어드레스 출력 시 값을 10진수를 16진수로 표기 변경",
+      "pageTarget": "Firmware firm_1.1.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.4 dated 9/28/18 increased the F/W to PC image buffer size to improve Gigabit Ethernet throughput, with a stated maximum of 390 Mbps.",
+      "evidenceText": "Gigabit Ethernet Throughput 성능 향상(max 390Mbps)을 위해 F/W -> PC image buffer size 128 -> 1460 (max) 증가 변경",
+      "pageTarget": "Firmware firm_1.1.4",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.2.2 dated 12/11/18 added accelerometer/gyroscope sensor operation and XAS linked data transfer.",
+      "evidenceText": "Accelerometer/Gyroscope Sensor 동작 구동 ... XAS 연동 데이터 전송",
+      "pageTarget": "Firmware firm_1.2.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.2.7 dated 7/23/19 implemented gyro and acceleration sensor detection, image rotation for vertical detector installation, and shock log storage for detector drops.",
+      "evidenceText": "gryo and acceleration sensor 검출 기능 구현. 디텍터 이미지 획득 시 이미지 회전 기능 추가 ... 디텍터 낙하 시 충격 감지 로그 저장 기능 추가.",
+      "pageTarget": "Firmware firm_1.2.7",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.2.8 dated 8/23/19 changed Ethernet packet size from 1024 Byte to 512 Byte due to intermittent packet data reception issues during image acquisition commands.",
+      "evidenceText": "Ethernet packet size 수정. 1024Byte --> 512Byte 영상 획득 처리 명령어 동작 중 간헐적으로 패킷 데이터가 잘 못 수신되는 경우가 발생하여 수정함.",
+      "pageTarget": "Firmware firm_1.2.8",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.0 dated 11/15/19 was released as a production version and added two initial getdark acquisitions at drdr startup.",
+      "evidenceText": "양산용 버전으로 drdr 버전 네임 변경함. firm_1.2.9 --> firm_1.0 ... drdr 초기 실행 시 2회 getdark 획득하도록 기능 추가됨.",
+      "pageTarget": "Firmware firm_1.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.0.0.2 dated 4/19/21 added temperature display using the BMI160 gyro sensor built-in temperature sensor and temperature messages for SDK communication.",
+      "evidenceText": "BMI160 gyro sensor 내장 temp sensor 체크 기능 활용하여 온도 측정함 ... SDK 와 온도 데이터를 주고 받을 수 있도록 온도 전송 메시지 추가.",
+      "pageTarget": "Firmware firm_1.0.0.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The firm_1.0.0.2 change was distributed for production on 2021.06.17 after change notification and quality distribution were completed.",
+      "evidenceText": "변경점 신고 및 품질 배포 완료. 2021.06.17(목) 엑센텍크 생산용 버전 배포 완료.",
+      "pageTarget": "Firmware Release Distribution",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.0.0.3 dated 12/21/21 requires FW 1.0.0.3 and SDK V1.0.0.3 to be applied together because lower firmware versions are not compatible with the SDK.",
+      "evidenceText": "프로그램 버전 매칭 조건 : FW 1.0.0.3 + SDK V1.0.0.3으로 반드시 적용하여 진행해야 함. (펌웨어 하위 버전으로 하면 SDK와 호환 안됨)",
+      "pageTarget": "Firmware SDK Compatibility",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 12/21/21 release identifies file versions as firmware firm_1.0.0.3, SDK V1.0.0.3, and feel-DRCS V 2.1.300.40.",
+      "evidenceText": "파일 버전 정보 : fw : firm_1.0.0.3 sdk : V1.0.0.3 feel-DRCS : V 2.1.300.40",
+      "pageTarget": "Firmware firm_1.0.0.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "The 12/21/21 firm_1.0.0.3 release was distributed to the quality team and related departments on 2021.12.22.",
+      "evidenceText": "2021.12.22 (수) 품질팀 배포 및 유관 부서 전달 완료.",
+      "pageTarget": "Firmware Release Distribution",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is present; listed dates are firmware entry dates and distribution remarks."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Some dates use two-digit years and ambiguous spreadsheet-style formatting, such as 6/20/18 and 12/21/21."
+    },
+    {
+      "severity": "info",
+      "reason": "Source appears to be an internal firmware history rather than an authority-issued regulatory document."
+    }
+  ]
+}

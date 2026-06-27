@@ -1,0 +1,189 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954408-x4o",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/12. MCU Fimware/firm_1.2.1/FW_Release.xlsx",
+    "canonicalGroupId": "51de533014fe"
+  },
+  "document": {
+    "title": "FW_Release.xlsx",
+    "documentType": "Firmware release history",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "firm_1.2.1",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Firmware release history listing versions firm_1.1.1 through firm_1.2.1 with dates and change contents.",
+    "officialUse": "Supports traceability of MCU firmware changes, including FPGA register changes, logging, auto-trigger behavior, image acquisition, Ethernet throughput, packet structures, and kernel configuration updates.",
+    "keyPoints": [
+      "firm_1.1.1 includes changes to console register address output, FPGA register names and addresses for auto-trigger, logging implementation, timeout changes, and kernel boot stability changes.",
+      "firm_1.1.4 changes image buffer size for improved Gigabit Ethernet throughput and adds Atheros 1000MB PHY kernel configuration.",
+      "firm_1.2.0 adds and removes FPGA parameters including NEGA_AED_TH, POSI_AED_TH, and AED_DARK_DELAY.",
+      "firm_1.2.1 changes Auto-Trigger Mode status message delay time from 1 second to 0.5 seconds."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "firm_1.1.1",
+      "type": "firmware version",
+      "evidence": "firm_1.1.1,6/20/18"
+    },
+    {
+      "name": "firm_1.1.4",
+      "type": "firmware version",
+      "evidence": "firm_1.1.4,9/28/18"
+    },
+    {
+      "name": "firm_1.2.0",
+      "type": "firmware version",
+      "evidence": "firm_1.2.0,10/12/18"
+    },
+    {
+      "name": "firm_1.2.1",
+      "type": "firmware version",
+      "evidence": "firm_1.2.1,10/22/18,1. Auto-Trigger Mode에서 상태 메시지 delay time 1초에서 0.5초로 변경"
+    },
+    {
+      "name": "FPGA",
+      "type": "hardware component",
+      "evidence": "FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)"
+    },
+    {
+      "name": "Atheros 1000MB PHY chip",
+      "type": "network hardware component",
+      "evidence": "PHY chip Atheros 1000MB kernel config 추가"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Firmware release history",
+      "pageTarget": "Firmware Release History",
+      "evidence": "FW Version,Date,Contents"
+    },
+    {
+      "name": "Auto-Trigger Mode",
+      "pageTarget": "Auto-Trigger Mode",
+      "evidence": "Auto-Trigger Mode에서 상태 메시지 delay time 1초에서 0.5초로 변경"
+    },
+    {
+      "name": "FPGA register configuration",
+      "pageTarget": "FPGA Register Configuration",
+      "evidence": "FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)"
+    },
+    {
+      "name": "Image acquisition logging",
+      "pageTarget": "Image Acquisition Logging",
+      "evidence": "영상 획득 관련 로그"
+    },
+    {
+      "name": "Gigabit Ethernet throughput",
+      "pageTarget": "Gigabit Ethernet Throughput",
+      "evidence": "Gigabit Ethernet Throughput 성능 향상(max 390Mbps)"
+    },
+    {
+      "name": "FPGA parameters",
+      "pageTarget": "FPGA Parameters",
+      "evidence": "FPGA Parameter 추가 및 변경"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a firmware release table with columns for firmware version, date, and contents.",
+      "evidenceText": "FW Version,Date,Contents",
+      "pageTarget": "Firmware Release History",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.1 changed register address output values from decimal to hexadecimal notation.",
+      "evidenceText": "레지스터 어드레스 출력 시 값을 10진수를 16진수로 표기 변경",
+      "pageTarget": "firm_1.1.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.1 changed and added FPGA register names and addresses for the auto-trigger function.",
+      "evidenceText": "FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)",
+      "pageTarget": "FPGA Register Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The release history records implementation of logging for image acquisition, FPGA or firmware register read/write, command transmission and reception, first firmware connection, and errors.",
+      "evidenceText": "<Log 기능 구현> 1. 영상 획득 관련 로그 2. FPGA 레지스터 또는 펌웨어 자체 설정 레지스터 관련 로그 3. command 송수신 관련 로그 4. Detector 전원이 켜지고 F/W 최초 connection 날짜 및 시간 5. 각종 Error 날짜 및 시간",
+      "pageTarget": "Firmware Logging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Set FPGA/ROIC timeout condition was changed from 3 seconds to 1 second.",
+      "evidenceText": "Set FPGA/ROIC Time-Out 조건 수정 (3초->1초)",
+      "pageTarget": "FPGA ROIC Timeout",
+      "confidence": "high"
+    },
+    {
+      "claim": "A kernel change was made to address shutdown during boot by enabling USB_OTG_VBUS and disabling USB_H1_VBUS.",
+      "evidenceText": "부팅 도중 down되는 증상 보완 => USB_OTG_VBUS 라인 Enable, USB_H1_VBUS 라인 Disable",
+      "pageTarget": "Kernel Boot Stability",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.2 fixed abnormal preview status message behavior during get bright operation in auto trigger mode.",
+      "evidenceText": "firm_1.1.2,8/21/18,\"1. auto trigger 모드에서 get bright 동작 시, preview status message 비정상 동작 수정\"",
+      "pageTarget": "firm_1.1.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.4 increased the firmware-to-PC image buffer size from 128 to 1460 for improved Gigabit Ethernet throughput up to max 390 Mbps.",
+      "evidenceText": "Gigabit Ethernet Throughput 성능 향상(max 390Mbps)을 위해 F/W -> PC image buffer size 128 -> 1460 (max) 증가 변경",
+      "pageTarget": "Gigabit Ethernet Throughput",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.4 added kernel configuration for an Atheros 1000MB PHY chip.",
+      "evidenceText": "PHY chip Atheros 1000MB kernel config 추가 CONFIG_NETDEV_1000=y CONFIG_ATL1=y CONFIG_ATL1E=y CONFIG_ATL1C=y",
+      "pageTarget": "Atheros 1000MB PHY Kernel Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.1.6 restored send packet size and data type and prevented sending the auto trigger flag in line trigger mode.",
+      "evidenceText": "send packet size 및 자료형 원복 ... Line trigger mode에서 auto trigger flag 전송 하지 않도록 수정",
+      "pageTarget": "firm_1.1.6",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.2.0 added and changed FPGA parameters, deleting AED_TEST_MODE3 and AED_CNT and adding NEGA_AED_TH, POSI_AED_TH, and AED_DARK_DELAY.",
+      "evidenceText": "FPGA Parameter 추가 및 변경 AED_CMD -> aed_test_mode3 삭제 AED_CNT 삭제 NEGA_AED_TH 추가 POSI_AED_TH 추가 AED_DARK_DELAY 추가",
+      "pageTarget": "FPGA Parameters",
+      "confidence": "high"
+    },
+    {
+      "claim": "firm_1.2.1 changed Auto-Trigger Mode status message delay time from 1 second to 0.5 seconds.",
+      "evidenceText": "firm_1.2.1,10/22/18,1. Auto-Trigger Mode에서 상태 메시지 delay time 1초에서 0.5초로 변경",
+      "pageTarget": "firm_1.2.1",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is provided; dates appear as firmware release row dates only."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority signal is 'general' and no regulatory authority or jurisdiction is identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model is taken from source metadata productSignal, not from the release table text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are referenced in the source text."
+    }
+  ]
+}

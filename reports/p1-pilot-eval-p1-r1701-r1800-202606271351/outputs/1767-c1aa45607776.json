@@ -1,0 +1,206 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954414-12ri",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/14. 디텍터 구동 Software/히스토리/SW_SDK_ HAD1717MC_휴이넘_개선_진행_히스토리_20221109.xlsx",
+    "canonicalGroupId": "c1aa45607776"
+  },
+  "document": {
+    "title": "SDK 이슈 개선 진행 사항 ( 휴이넘 외주개발 )",
+    "documentType": "SDK issue improvement progress history",
+    "productModels": [
+      "HAD1717MC"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "SDK Ver : 1.0.0.3",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "HAD1717MC SDK issue improvement history covering ROIC line, saturation, low dose, 16-bit, XAS bug, and memory leak fixes.",
+    "officialUse": "Tracks SDK/XAS/DLL improvement versions, test results, and field application issues for HAD1717MC detector software.",
+    "keyPoints": [
+      "The document identifies model HAD1717MC and SW SDK.",
+      "Most dated entries list SDK Ver : 1.0.0.3.",
+      "ROIC 256 and 2816 line issues were repeatedly tested and improved but several entries still report visible lines or need for additional improvement.",
+      "Saturation, low dose image improvement, 16-bit support, XAS bugs, aging test logging, and memory leak fixes were included in later integrated versions.",
+      "The final listed row on 2023.04.28 states that an updated HImgProcess.dll was delivered as the final executable delivery version."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "모델 : HAD1717MC"
+    },
+    {
+      "name": "SDK",
+      "type": "software",
+      "evidence": "SW : SDK"
+    },
+    {
+      "name": "휴이넘",
+      "type": "external developer",
+      "evidence": "SDK 이슈 개선 진행 사항 ( 휴이넘 외주개발 )"
+    },
+    {
+      "name": "XAS",
+      "type": "software component",
+      "evidence": "좌측 영상은 기존 XAS 촬영, 우측 영상은 개선 Version XAS 촬영"
+    },
+    {
+      "name": "Console S/W",
+      "type": "software component",
+      "evidence": "Console S/W 연동 및 촬영은 정상적으로 가능한 것으로 보임."
+    },
+    {
+      "name": "HImgProcess.dll",
+      "type": "DLL file",
+      "evidence": "HImgProcess.dll 파일 업데이트 된 버전 전달 드립니다."
+    },
+    {
+      "name": "HImgProsee.dll",
+      "type": "DLL file",
+      "evidence": "ROIC 라인개선이 적용되지 않아서 HImgProsee.dll은 사용하지 않습니다."
+    },
+    {
+      "name": "Dlib.dll",
+      "type": "DLL file",
+      "evidence": "Aging Test용 Dlib.dll 전달 드립니다."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "ROIC Line improvement",
+      "pageTarget": "ROIC Line Improvement",
+      "evidence": "ROIC Line 관련 Test 결과 전달."
+    },
+    {
+      "name": "Saturation setting",
+      "pageTarget": "Saturation Setting",
+      "evidence": "Saturation 세팅값 적용"
+    },
+    {
+      "name": "Low dose image improvement",
+      "pageTarget": "Low Dose Image Improvement",
+      "evidence": "Low dose 영상개선을 위한 게인, 오프셋 코렉션 개선 버전."
+    },
+    {
+      "name": "16-bit image support",
+      "pageTarget": "16-bit Image Support",
+      "evidence": "16비트 적용 이미지 생성 확인."
+    },
+    {
+      "name": "Gain Correction",
+      "pageTarget": "Gain Correction",
+      "evidence": "Gain Correction 관련하여 Test 결과 전달."
+    },
+    {
+      "name": "Aging Test logging",
+      "pageTarget": "Aging Test Logging",
+      "evidence": "로그를 좀 더 강화하였고 버그 발생 시 메세지 박스와 정보기록 파일(*.dmp)이 남습니다"
+    },
+    {
+      "name": "Memory Leak fix",
+      "pageTarget": "Memory Leak Fix",
+      "evidence": "ROIC 라인, Lowdose 영상개선, Saturation, 16Bit, XAS 버그, Memory Leak 수정 내용들을 통합한 버전 전달 드립니다."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is an SDK issue improvement progress history for outsourced Huenum development.",
+      "evidenceText": "SDK 이슈 개선 진행 사항 ( 휴이넘 외주개발 )",
+      "pageTarget": "SDK Issue Improvement History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The affected model is HAD1717MC.",
+      "evidenceText": "모델 : HAD1717MC",
+      "pageTarget": "HAD1717MC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The software identified in the source is SDK.",
+      "evidenceText": "SW : SDK",
+      "pageTarget": "SDK",
+      "confidence": "high"
+    },
+    {
+      "claim": "The repeated SDK version in the dated rows is SDK Ver : 1.0.0.3.",
+      "evidenceText": "2022.08.22,SDK Ver : 1.0.0.3",
+      "pageTarget": "SDK Ver 1.0.0.3",
+      "confidence": "high"
+    },
+    {
+      "claim": "Initial improvement work addressed 256 and 2816 line display during field imaging using SDK pre-processing algorithm improvements.",
+      "evidenceText": "field 영상 촬영 시 256, 2816 line 표시되는 이슈로 인해 SDK pre-processing 처리 알고리즘 외주개발 개선 진행함.",
+      "pageTarget": "ROIC Line Improvement",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2022.09.07, saturation setting was reported as applied, 256 and 2816 lines were normally removed, Console S/W interoperation was confirmed, and shooting time remained 4 to 5 seconds longer.",
+      "evidenceText": "Saturation 세팅값 적용 ROIC Line 관련 Test 결과 전달. 1. 256, 2816 Line은 기존과 동일하게 정상적으로 지워지는 것을 확인. 3. Console S/W 정상적으로 연동되는 것을 확인. 4. 촬영시간이 4~5초 늘어난 현상은 동일함.",
+      "pageTarget": "Saturation Setting",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2022.10.05, the ROIC line improvement version was considered not applicable due to image acquisition delay and image step artifacts.",
+      "evidenceText": "적용 후에 영상획득 지연과, 영상 단차 현상이 발생하여 ROIC Line 개선 버전 적용이 불가능할 것 같음.",
+      "pageTarget": "ROIC Line Improvement",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2022.10.21, XAS_ROIC image display and shooting readiness times were slower than XAS_Original by about 3 to 4 seconds.",
+      "evidenceText": "획득 시간의 차이는 3~4초 차이가 나타나는 것으로 보임. Console S/W 영상 획득하고 다음 촬영 준비 완료까지 시간 1) XAS_ROIC : 17.5~18.3초 2) XAS_Original : 14.1~14.4",
+      "pageTarget": "XAS Image Acquisition Time",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2022.12.19, a DLL for the improved 16-bit application version was received and 16-bit image generation was confirmed.",
+      "evidenceText": "16비트 적용 개선된 버전의 dll 전달 받음. 16비트 적용 이미지 생성 확인.",
+      "pageTarget": "16-bit Image Support",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2023.01.31, 14-bit mode ROIC 256 and 2816 line removal was confirmed for the 230130 ROIC line processing DLL.",
+      "evidenceText": "ROIC 라인처리 dll파일 230130 버전 전달 일단 14비트 영상에만 알고리즘 수정이 적용 되었고 테스트 이후 이상 없으면 16비트까지 수정 예정. 검증 결과 : 14bit ROIC Line 제거 확인.",
+      "pageTarget": "ROIC Line Improvement",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2023.02.13, Dlib.dll and HImgProsee.dll version 230213 included saturation, lowdose, 16-bit, and ROIC line processing improvements, with no special issues found in internal testing.",
+      "evidenceText": "Saturation, Lowdose, 16bit, ROIC 라인처리 개선 된 Dlib.dll, HImgProsee.dll 230213 버전 전달드립니다. 검증 결과: 개발팀 내부 테스트 결과 특이 사항 없었음.",
+      "pageTarget": "Dlib.dll 230213",
+      "confidence": "high"
+    },
+    {
+      "claim": "On 2023.03.13, an integrated version included ROIC line, lowdose image improvement, saturation, 16Bit, XAS bug, and memory leak fixes, but 16-bit calibration pattern output required further improvement.",
+      "evidenceText": "ROIC 라인, Lowdose 영상개선, Saturation, 16Bit, XAS 버그, Memory Leak 수정 내용들을 통합한 버전 전달 드립니다. 검증 결과: 16bit 영상 Calibration 처리 시 패턴 출력 현상으로 추가 개선 요청 진행.",
+      "pageTarget": "Integrated SDK Improvement Version",
+      "confidence": "high"
+    },
+    {
+      "claim": "The final listed entry on 2023.04.28 states that an updated HImgProcess.dll was delivered as the final executable delivery version.",
+      "evidenceText": "HImgProcess.dll 파일 업데이트 된 버전 전달 드립니다. 최종 실행 파일 전달 버전.",
+      "pageTarget": "HImgProcess.dll",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is stated in the source text; authoritySignal metadata is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document-level date is stated. The sourcePath filename includes 20221109, but source rows continue through 2023.04.28."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "The source uses repeated SDK Ver : 1.0.0.3 while also referencing multiple delivered DLL or XAS dated versions; document-level revision is therefore limited to the repeated SDK version only."
+    }
+  ]
+}
