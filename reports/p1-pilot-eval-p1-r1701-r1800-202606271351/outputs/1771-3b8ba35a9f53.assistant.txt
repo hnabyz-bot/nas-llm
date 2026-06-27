@@ -1,0 +1,217 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954391-khx",
+    "sourcePath": "raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/14. 디텍터 구동 Software/ADD(HAD1417MCW)_SW_개발_히스토리.xlsx",
+    "canonicalGroupId": "3b8ba35a9f53"
+  },
+  "document": {
+    "title": "ADD(HAD1417MCW) S/W 개발 이력",
+    "documentType": "S/W 개발 이력",
+    "productModels": [
+      "ADD(HAD1417MCW)",
+      "HAD1417MCW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "ADD(HAD1417MCW) software development history listing firmware versions 1.0.0.0 through 1.0.0.2.",
+    "officialUse": "Tracks release and debug/release version management and records software change contents by date and FW version.",
+    "keyPoints": [
+      "Version management is listed as 배포 버전 관리 : 1.0.x.x, Debug ver : 1.x.x.x.x, and Release ver : 1.x.x.x.",
+      "FW Version 1.0.0.0 is identified as the initial distributed release version dated 12/21/20.",
+      "FW Version 1.0.0.1 changed the Calibration bright file name dated 5/24/21.",
+      "FW Version 1.0.0.2 includes XAS_W version information update and multiple GUI, COM port, acquisition, detector connection, trigger mode, preview popup, and calibration file generation fixes.",
+      "The 1.0.0.2 note states it was delivered on 2022.11.21 and was not yet formally distributed."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADD(HAD1417MCW)",
+      "type": "product/software",
+      "evidence": "ADD(HAD1417MCW) S/W 개발 이력"
+    },
+    {
+      "name": "HAD1417MCW",
+      "type": "product model",
+      "evidence": "ADD(HAD1417MCW) S/W 개발 이력"
+    },
+    {
+      "name": "XAS_W",
+      "type": "software",
+      "evidence": "XAS_W Ver : V1.0.0.2 버전 정보 업데이트"
+    },
+    {
+      "name": "임용빈 프로",
+      "type": "person",
+      "evidence": "2022.11.21 (월) 임용빈 프로에게 전달함."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software Version Management",
+      "pageTarget": "Software Version Management",
+      "evidence": "배포 버전 관리 : 1.0.x.x, Debug ver : 1.x.x.x.x, Release ver : 1.x.x.x"
+    },
+    {
+      "name": "Firmware Version History",
+      "pageTarget": "Firmware Version History",
+      "evidence": "Date,FW Version,Contents,비 고"
+    },
+    {
+      "name": "Initial Release Version",
+      "pageTarget": "Software Release Version",
+      "evidence": "12/21/20,1.0.0.0,최초 배포 릴리스 버전"
+    },
+    {
+      "name": "Calibration Bright File",
+      "pageTarget": "Calibration Bright File",
+      "evidence": "Calibration bright 파일 이름 변경."
+    },
+    {
+      "name": "COM0 Port Setting",
+      "pageTarget": "COM Port Configuration",
+      "evidence": "ComPort0 설정 시 GUI 화면 에러 관련 버그 수정 및 COM0 설정 가능하도록 수정."
+    },
+    {
+      "name": "Acquisition CalEng Options",
+      "pageTarget": "Acquisition Calibration Engine",
+      "evidence": "Acquisition 메뉴에서 CalEng 옵션 적용 시 Gain, BPM 체크박스 실시간 적용되도록 수정."
+    },
+    {
+      "name": "Detector Network Connection",
+      "pageTarget": "Detector Network Connection",
+      "evidence": "디텍터와 네트워크 연결되어 있지 않는 경우 상태 정보 및 OnInitDialog() 함수에서 디텍터 초기 설정 값 적용하지 않도록 조건 추가."
+    },
+    {
+      "name": "Normal Trigger Mode",
+      "pageTarget": "Detector Trigger Mode",
+      "evidence": "CIB_ExposeOn() 함수 호출은 Normal Trigger 모드에서만 호출하도록 조건 추가."
+    },
+    {
+      "name": "Calibration File Generation",
+      "pageTarget": "Calibration File Generation",
+      "evidence": "Bright image 20EA 가 존재하지 않으면 Cal file 생성함수 호출하지 않도록 수정."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a software development history for ADD(HAD1417MCW).",
+      "evidenceText": "ADD(HAD1417MCW) S/W 개발 이력",
+      "pageTarget": "ADD(HAD1417MCW) Software Development History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document lists software version management patterns for distribution, debug, and release versions.",
+      "evidenceText": "배포 버전 관리 : 1.0.x.x, Debug ver : 1.x.x.x.x, Release ver : 1.x.x.x",
+      "pageTarget": "Software Version Management",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.0 was the initial distributed release version dated 12/21/20.",
+      "evidenceText": "12/21/20,1.0.0.0,최초 배포 릴리스 버전",
+      "pageTarget": "Firmware Version 1.0.0.0",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.1 changed the Calibration bright file name dated 5/24/21.",
+      "evidenceText": "5/24/21,1.0.0.1,Calibration bright 파일 이름 변경.",
+      "pageTarget": "Firmware Version 1.0.0.1",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 updated XAS_W version information to V1.0.0.2.",
+      "evidenceText": "XAS_W Ver : V1.0.0.2 버전 정보 업데이트",
+      "pageTarget": "Firmware Version 1.0.0.2",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 fixed a GUI screen error when setting ComPort0 and enabled COM0 configuration.",
+      "evidenceText": "ComPort0 설정 시 GUI 화면 에러 관련 버그 수정 및 COM0 설정 가능하도록 수정.",
+      "pageTarget": "COM Port Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 changed port name generation to start from sComPort COM0.",
+      "evidenceText": "sComPort COM0 부터 포트 네임 생성 및 추가하도록 수정.",
+      "pageTarget": "COM Port Configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 made Gain and BPM checkboxes apply in real time when applying the CalEng option in the Acquisition menu.",
+      "evidenceText": "Acquisition 메뉴에서 CalEng 옵션 적용 시 Gain, BPM 체크박스 실시간 적용되도록 수정.",
+      "pageTarget": "Acquisition Calibration Engine",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 fixed a bug where the BPM Generation button disappeared after BPM file generation.",
+      "evidenceText": "BPM file 생성 후 BPM Generation 버튼 사라지는 버그 수정 및 팝업 메시지 제목 수정.",
+      "pageTarget": "BPM File Generation",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 added a condition to avoid applying detector status information and initial detector settings when the detector is not connected to the network.",
+      "evidenceText": "디텍터와 네트워크 연결되어 있지 않는 경우 상태 정보 및 OnInitDialog() 함수에서 디텍터 초기 설정 값 적용하지 않도록 조건 추가.",
+      "pageTarget": "Detector Network Connection",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 limited CIB_ExposeOn() calls to Normal Trigger mode.",
+      "evidenceText": "CIB_ExposeOn() 함수 호출은 Normal Trigger 모드에서만 호출하도록 조건 추가.",
+      "pageTarget": "Detector Trigger Mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 changed preview popup window retention time to 500 ms during image acquisition.",
+      "evidenceText": "영상 획득 시 preView 팝업 창 유지 시간 500ms 로 수정.",
+      "pageTarget": "Image Acquisition Preview",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 avoids calling the calibration file generation function when 20 Bright images do not exist.",
+      "evidenceText": "On_Enable_Cal_Engine() 함수 호출하여 Cal file 생서 시 Bright image 20EA 가 존재하지 않으면 Cal file 생성함수 호출하지 않도록 수정.",
+      "pageTarget": "Calibration File Generation",
+      "confidence": "medium"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 fixed a mismatch in trigger mode value application between OnCIB_Mode_Setting() and OnInitDialog().",
+      "evidenceText": "OnCIB_Mode_Setting() 함수 호출 시 OnInitDialog() 함수에서 trigger mode 적용하는 값이 일치하지 않는 버그 수정.",
+      "pageTarget": "Detector Trigger Mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "FW Version 1.0.0.2 was delivered to 임용빈 프로 on 2022.11.21 and was not yet formally distributed.",
+      "evidenceText": "2022.11.21 (월) 임용빈 프로에게 전달함. (아직 정식 배포 안함)",
+      "pageTarget": "Firmware Version 1.0.0.2",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly provided; dated rows appear to be change-history entries rather than a document publication date."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are referenced in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No document revision or document version is explicitly identified; FW Version entries are software history items."
+    },
+    {
+      "severity": "warning",
+      "reason": "Date formats are mixed across entries: 12/21/20, 5/24/21, 21/11/2022, and 2022.11.21."
+    },
+    {
+      "severity": "info",
+      "reason": "One source phrase appears to contain a typo or OCR issue: 'Cal file 생서'."
+    }
+  ]
+}
