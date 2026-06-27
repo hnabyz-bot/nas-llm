@@ -591,5 +591,10 @@ Latest P1 extraction bundle queued next:
 - total available P1 representatives: 2,275
 - total normalized chars: 3,421,468
 - estimated tokens chars/4: 855,367
-- output status: not started at this checkpoint
-- extraction run: not started
+- output status: PASS
+- extraction run: direct Codex extraction plus direct retry for ranks 1829 and
+  1898, and chunked fallback for rank 1885
+- QA summary: 100/100 JSON outputs, 100 pass, 0 fail, validation invalid 0,
+  missing evidence 0, page marker leakage 0
+- chunked pass rows: rank 1885
+- ops commit: `6f52632 feat: complete P1 ranks 1801-1900 extraction outputs`
