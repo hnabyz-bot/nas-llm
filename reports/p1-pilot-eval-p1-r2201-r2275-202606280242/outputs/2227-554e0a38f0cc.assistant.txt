@@ -1,0 +1,139 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954422-1a9f",
+    "sourcePath": "raw/sources/Project/02_CYAN/2. DMR/08. 디텍터 구동 Software/XAS3/Extension/ImageJ/plugins/coq/COQ_/loci/plugins/config/libraries.txt",
+    "canonicalGroupId": "554e0a38f0cc"
+  },
+  "document": {
+    "title": "libraries.txt",
+    "documentType": "configuration file",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Configuration file identifying binary libraries listed in the LOCI plugins configuration dialog Libraries tab.",
+    "officialUse": "Supports the LOCI plugins configuration dialog by defining core, native, ImageJ plugin, and Java library entries with class, URL, license, version variable, and notes fields.",
+    "keyPoints": [
+      "The file states it identifies binary libraries to list in the LOCI plugins configuration dialog's Libraries tab.",
+      "Entries are grouped as core libraries, native libraries, ImageJ plugins, and Java libraries.",
+      "The file includes Bio-Formats, OME, ImageJ, OMERO, JAI, QuickTime for Java, and related dependency entries.",
+      "No regulatory authority, FDA status, document date, revision, product model, or standard is stated in the text."
+    ]
+  },
+  "entities": [
+    {
+      "name": "LOCI plugins",
+      "type": "ImageJ plugin",
+      "evidence": "[LOCI plugins] type = ImageJ plugin"
+    },
+    {
+      "name": "ImageJ",
+      "type": "core library",
+      "evidence": "[ImageJ] type = Core library"
+    },
+    {
+      "name": "Bio-Formats",
+      "type": "Java library",
+      "evidence": "[Bio-Formats] type = Java library"
+    },
+    {
+      "name": "OME plugins",
+      "type": "ImageJ plugin",
+      "evidence": "[OME plugins] type = ImageJ plugin"
+    },
+    {
+      "name": "OMERO",
+      "type": "software server dependency",
+      "evidence": "Used by Bio-Formats to connect to OMERO."
+    },
+    {
+      "name": "QuickTime for Java",
+      "type": "native library",
+      "evidence": "[QuickTime for Java] type = Native library"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "LOCI plugins configuration Libraries tab",
+      "pageTarget": "LOCI plugins configuration",
+      "evidence": "This document is a configuration file identifying binary libraries to list in the LOCI plugins configuration dialog's Libraries tab."
+    },
+    {
+      "name": "Bio-Formats Importer",
+      "pageTarget": "Bio-Formats Importer",
+      "evidence": "LOCI Plugins for ImageJ: a collection of ImageJ plugins including the Bio-Formats Importer"
+    },
+    {
+      "name": "Bio-Formats Exporter",
+      "pageTarget": "Bio-Formats Exporter",
+      "evidence": "LOCI Plugins for ImageJ: a collection of ImageJ plugins including the Bio-Formats Exporter"
+    },
+    {
+      "name": "DICOM lossless JPEG support",
+      "pageTarget": "DICOM lossless JPEG support",
+      "evidence": "Used by Bio-Formats for lossless JPEG support in DICOM."
+    },
+    {
+      "name": "JPEG2000 support",
+      "pageTarget": "JPEG2000 support",
+      "evidence": "Used by Bio-Formats for JPEG2000 support (ND2, JP2)."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a configuration file for listing binary libraries in the LOCI plugins configuration dialog Libraries tab.",
+      "evidenceText": "This document is a configuration file identifying binary libraries to list in the LOCI plugins configuration dialog's Libraries tab.",
+      "pageTarget": "LOCI plugins configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "Bio-Formats is listed as a Java library for reading and converting biological file formats.",
+      "evidenceText": "[Bio-Formats] type = Java library notes = OME Bio-Formats package for reading and converting biological file formats.",
+      "pageTarget": "Bio-Formats",
+      "confidence": "high"
+    },
+    {
+      "claim": "JAI Image I/O Tools native codecs are used by Bio-Formats for lossless JPEG support in DICOM.",
+      "evidenceText": "[JAI Image I/O Tools - native codecs] notes = Used by Bio-Formats for lossless JPEG support in DICOM.",
+      "pageTarget": "DICOM lossless JPEG support",
+      "confidence": "high"
+    },
+    {
+      "claim": "JAI Image I/O Tools Java codecs are used by Bio-Formats for JPEG2000 support in ND2 and JP2.",
+      "evidenceText": "[JAI Image I/O Tools - Java codecs] notes = Used by Bio-Formats for JPEG2000 support (ND2, JP2).",
+      "pageTarget": "JPEG2000 support",
+      "confidence": "high"
+    },
+    {
+      "claim": "Multiple OMERO Java libraries are listed as used by Bio-Formats to connect to OMERO.",
+      "evidenceText": "[OMERO Common] notes = Used by Bio-Formats to connect to OMERO.",
+      "pageTarget": "OMERO integration",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version for the document itself is present; several library entries use version variables such as bfVersion and omeVersion."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text, despite the source metadata authoritySignal value."
+    },
+    {
+      "severity": "info",
+      "reason": "No product model is stated in the source text; the metadata productSignal is not sufficient to identify a product model."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    }
+  ]
+}

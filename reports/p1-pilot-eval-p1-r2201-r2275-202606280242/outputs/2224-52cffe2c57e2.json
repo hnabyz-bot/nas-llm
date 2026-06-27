@@ -1,0 +1,181 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954422-1azm",
+    "sourcePath": "raw/sources/Project/02_CYAN/2. DMR/08. 디텍터 구동 Software/XAS3/Extension/ImageJ/jre/README.txt",
+    "canonicalGroupId": "52cffe2c57e2"
+  },
+  "document": {
+    "title": "Java(TM) Platform, Standard Edition Runtime Environment Version 6 README",
+    "documentType": "README",
+    "productModels": [
+      "Java(TM) Platform, Standard Edition Runtime Environment Version 6"
+    ],
+    "authorityOrJurisdiction": [
+      "Oracle"
+    ],
+    "revisionOrVersion": "Version 6",
+    "documentDate": "",
+    "standards": [
+      "Java Platform, Standard Edition",
+      "Endorsed Standards",
+      "Standalone Technologies",
+      "Java Community Process(SM)"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "README for Java(TM) Platform, Standard Edition Runtime Environment Version 6 describing deployment, redistribution, optional files, cryptography policy files, certificates, and endorsed standards override.",
+    "officialUse": "Provides Oracle redistribution and deployment guidance for vendors bundling the Java SE Runtime Environment with applications.",
+    "keyPoints": [
+      "The JRE is intended for software developers and vendors to redistribute with their applications, excluding the JavaFX runtime.",
+      "Redistribution is subject to the Software License Agreement and listed obligations, restrictions, and exceptions.",
+      "All files not listed as optional files must be included in redistributions of the runtime environment.",
+      "The document describes optional redistributable files, limited redistributable JDK files, JCE policy files, the cacerts certificate file, and the Endorsed Standards Override Mechanism."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Oracle",
+      "type": "organization",
+      "evidence": "The Java(TM) Runtime Environment (JRE) and the JavaFX(TM) runtime are products of Oracle."
+    },
+    {
+      "name": "Java(TM) Platform, Standard Edition Runtime Environment",
+      "type": "software product",
+      "evidence": "Java(TM) Platform, Standard Edition Runtime Environment Version 6"
+    },
+    {
+      "name": "JavaFX(TM) runtime",
+      "type": "software product",
+      "evidence": "The JRE installation triggers the download of the JavaFX runtime. The JavaFX runtime is also available separately, and is not part of the JRE."
+    },
+    {
+      "name": "Java SE Development Kit (JDK(TM))",
+      "type": "software product",
+      "evidence": "For development tools, see the Java SE Development Kit (JDK(TM))."
+    },
+    {
+      "name": "Java Community Process(SM)",
+      "type": "standards organization/process",
+      "evidence": "standards that are created outside of the Java Community Process(SM) (JCP(SM) http://www.jcp.org/)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Java SE Runtime Environment redistribution",
+      "pageTarget": "Java SE Runtime Environment redistribution",
+      "evidence": "You may reproduce and distribute the Software (and also portions of Software identified below as Redistributable), provided that:"
+    },
+    {
+      "name": "Required vs. Optional Files",
+      "pageTarget": "Java SE Runtime Environment required and optional files",
+      "evidence": "The files that make up the Java SE Runtime Environment are divided into two categories: required and optional."
+    },
+    {
+      "name": "Unlimited Strength Java Cryptography Extension",
+      "pageTarget": "Unlimited Strength Java Cryptography Extension",
+      "evidence": "An unlimited strength version of these files indicating no restrictions on cryptographic strengths is available on the JDK web site for those living in eligible countries."
+    },
+    {
+      "name": "cacerts Certificates File",
+      "pageTarget": "Java SE cacerts Certificates File",
+      "evidence": "Root CA certificates may be added to or removed from the Java SE certificate file located at <java-home>/lib/security/cacerts"
+    },
+    {
+      "name": "Endorsed Standards Override Mechanism",
+      "pageTarget": "Endorsed Standards Override Mechanism",
+      "evidence": "The Endorsed Standards Override Mechanism provides a means whereby later versions of classes and interfaces that implement Endorsed Standards or Standalone Technologies may be incorporated into the Java Platform."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is for Java(TM) Platform, Standard Edition Runtime Environment Version 6.",
+      "evidenceText": "Java(TM) Platform, Standard Edition Runtime Environment Version 6",
+      "pageTarget": "Java SE Runtime Environment Version 6",
+      "confidence": "high"
+    },
+    {
+      "claim": "The JRE is intended for developers and vendors to redistribute with applications, excluding the JavaFX runtime.",
+      "evidenceText": "The Java(TM) Platform, Standard Edition Runtime Environment (JRE(TM)), excluding the JavaFX(TM) runtime, is intended for software developers and vendors to redistribute with their applications.",
+      "pageTarget": "Java SE Runtime Environment redistribution",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Java SE Runtime Environment is not a development environment and does not include compilers or debuggers.",
+      "evidenceText": "It is not a development environment and does not contain development tools such as compilers or debuggers.",
+      "pageTarget": "Java SE Runtime Environment",
+      "confidence": "high"
+    },
+    {
+      "claim": "The JavaFX runtime is available separately and is not part of the JRE.",
+      "evidenceText": "The JavaFX runtime is also available separately, and is not part of the JRE.",
+      "pageTarget": "JavaFX runtime",
+      "confidence": "high"
+    },
+    {
+      "claim": "Vendors must follow the Java SE Runtime Environment Binary Code License agreement.",
+      "evidenceText": "Vendors must follow the terms of the Java SE Runtime Environment Binary Code License agreement.",
+      "pageTarget": "Java SE Runtime Environment Binary Code License",
+      "confidence": "high"
+    },
+    {
+      "claim": "Beta and other pre-release versions may not be redistributed under the license described in the README.",
+      "evidenceText": "NOTE - The license for this software does not allow the redistribution of beta and other pre-release versions.",
+      "pageTarget": "Java SE Runtime Environment redistribution",
+      "confidence": "high"
+    },
+    {
+      "claim": "Optional files may be excluded from JRE redistributions at the vendor's discretion.",
+      "evidenceText": "Optional files may be excluded from redistributions of the Java SE Runtime Environment at the vendor's discretion.",
+      "pageTarget": "Java SE Runtime Environment required and optional files",
+      "confidence": "high"
+    },
+    {
+      "claim": "All files not listed as optional must be included in redistributions of the runtime environment.",
+      "evidenceText": "All files not in these lists of optional files must be included in redistributions of the runtime environment.",
+      "pageTarget": "Java SE Runtime Environment required and optional files",
+      "confidence": "high"
+    },
+    {
+      "claim": "The JCE policy files shipped with the JDK and JRE allow strong but limited cryptography due to import control restrictions for some countries.",
+      "evidenceText": "Due to import control restrictions for some countries, the Java Cryptography Extension (JCE) policy files shipped with the Java SE Development Kit and the Java SE Runtime Environment allow strong but limited cryptography to be used.",
+      "pageTarget": "Java Cryptography Extension policy files",
+      "confidence": "high"
+    },
+    {
+      "claim": "Root CA certificates may be added to or removed from the Java SE cacerts file.",
+      "evidenceText": "Root CA certificates may be added to or removed from the Java SE certificate file located at <java-home>/lib/security/cacerts",
+      "pageTarget": "Java SE cacerts Certificates File",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Endorsed Standards Override Mechanism allows later versions of classes and interfaces implementing Endorsed Standards or Standalone Technologies to be incorporated into the Java Platform.",
+      "evidenceText": "The Endorsed Standards Override Mechanism provides a means whereby later versions of classes and interfaces that implement Endorsed Standards or Standalone Technologies may be incorporated into the Java Platform.",
+      "pageTarget": "Endorsed Standards Override Mechanism",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Java Runtime Environment and JavaFX runtime are products of Oracle.",
+      "evidenceText": "The Java(TM) Runtime Environment (JRE) and the JavaFX(TM) runtime are products of Oracle.",
+      "pageTarget": "Oracle Java Runtime Environment",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source metadata authoritySignal is FDA, but the source text identifies Oracle products and contains no FDA authority or regulatory approval content."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source metadata productSignal is CYAN, but CYAN is not present in the source text; the text concerns Java SE Runtime Environment Version 6."
+    },
+    {
+      "severity": "info",
+      "reason": "No explicit document date is present; the text only includes copyright year 2011."
+    },
+    {
+      "severity": "info",
+      "reason": "No medical device RA status, approval number, submission identifier, or jurisdiction-specific regulatory requirement is present in the source text."
+    }
+  ]
+}
