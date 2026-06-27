@@ -1,0 +1,157 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19ru",
+    "sourcePath": "raw/sources/Project/02_CYAN/2. DMR/10. 도면/전장/CYAN_HW_도면 등록 대장.xls",
+    "canonicalGroupId": "1d04e8e2bbae"
+  },
+  "document": {
+    "title": "도면 등록/접수 대장",
+    "documentType": "도면 등록/접수 대장",
+    "productModels": [
+      "CYAN"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "APF403-1 (Rev.0)",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CYAN hardware drawing registration/reception ledger listing drawing numbers, item names, drawing classification, registration date, and confirmation.",
+    "officialUse": "Used as a drawing registration and receipt record for CYAN hardware drawings.",
+    "keyPoints": [
+      "The ledger contains columns for drawing number, item name, drawing classification, registration date, confirmation, revision dates, and remarks.",
+      "Five populated drawing records are listed: CYAN_MAIN, CYAN_GATE, AED_SENSOR, LAN_CONNECTOR, and CYAN_SWITCH.",
+      "All five populated records show registration date 2026.04.15 and confirmation by 서동철.",
+      "The form footer states APF403-1 (Rev.0)."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN_MAIN",
+      "type": "drawing item",
+      "evidence": "1,MHR-200110,CYAN_MAIN,√,,2026.04.15,서동철"
+    },
+    {
+      "name": "CYAN_GATE",
+      "type": "drawing item",
+      "evidence": "2,MHR-200111,CYAN_GATE,√,,2026.04.15,서동철"
+    },
+    {
+      "name": "AED_SENSOR",
+      "type": "drawing item",
+      "evidence": "3,MHR-200112,AED_SENSOR,√,,2026.04.15,서동철"
+    },
+    {
+      "name": "LAN_CONNECTOR",
+      "type": "drawing item",
+      "evidence": "4,MHR-200113,LAN_CONNECTOR,√,,2026.04.15,서동철"
+    },
+    {
+      "name": "CYAN_SWITCH",
+      "type": "drawing item",
+      "evidence": "5,MHR-200115,CYAN_SWITCH,√,,2026.04.15,서동철"
+    },
+    {
+      "name": "서동철",
+      "type": "confirming person",
+      "evidence": "등록일자,확인"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "도면 등록/접수 대장",
+      "pageTarget": "Drawing registration and receipt ledger",
+      "evidence": "도면 등록/접수 대장"
+    },
+    {
+      "name": "도면번호",
+      "pageTarget": "Drawing number",
+      "evidence": "No,도면번호,품 명,도면구분"
+    },
+    {
+      "name": "양산도",
+      "pageTarget": "Mass production drawing",
+      "evidence": "양산도,시작도"
+    },
+    {
+      "name": "시작도",
+      "pageTarget": "Prototype drawing",
+      "evidence": "양산도,시작도"
+    },
+    {
+      "name": "개정일자",
+      "pageTarget": "Drawing revision date",
+      "evidence": "개 정 일 자"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a drawing registration/reception ledger.",
+      "evidenceText": "도면 등록/접수 대장",
+      "pageTarget": "Drawing registration and receipt ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ledger tracks drawing number, item name, drawing classification, registration date, confirmation, revision date, and remarks.",
+      "evidenceText": "No,도면번호,품 명,도면구분,,등록일자,확인,개 정 일 자,,,,,,,,비 고",
+      "pageTarget": "Drawing registration and receipt ledger",
+      "confidence": "high"
+    },
+    {
+      "claim": "MHR-200110 is the drawing number for CYAN_MAIN.",
+      "evidenceText": "1,MHR-200110,CYAN_MAIN,√,,2026.04.15,서동철",
+      "pageTarget": "CYAN_MAIN drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "MHR-200111 is the drawing number for CYAN_GATE.",
+      "evidenceText": "2,MHR-200111,CYAN_GATE,√,,2026.04.15,서동철",
+      "pageTarget": "CYAN_GATE drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "MHR-200112 is the drawing number for AED_SENSOR.",
+      "evidenceText": "3,MHR-200112,AED_SENSOR,√,,2026.04.15,서동철",
+      "pageTarget": "AED_SENSOR drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "MHR-200113 is the drawing number for LAN_CONNECTOR.",
+      "evidenceText": "4,MHR-200113,LAN_CONNECTOR,√,,2026.04.15,서동철",
+      "pageTarget": "LAN_CONNECTOR drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "MHR-200115 is the drawing number for CYAN_SWITCH.",
+      "evidenceText": "5,MHR-200115,CYAN_SWITCH,√,,2026.04.15,서동철",
+      "pageTarget": "CYAN_SWITCH drawing",
+      "confidence": "high"
+    },
+    {
+      "claim": "The populated drawing records show registration date 2026.04.15 and confirmation by 서동철.",
+      "evidenceText": "1,MHR-200110,CYAN_MAIN,√,,2026.04.15,서동철",
+      "pageTarget": "CYAN hardware drawings",
+      "confidence": "high"
+    },
+    {
+      "claim": "The form footer identifies APF403-1 (Rev.0).",
+      "evidenceText": "APF403-1 (Rev.0),,,,, ,,,,,,,,,,297×210mm(A4)",
+      "pageTarget": "APF403-1 form",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No issuing authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is stated; 2026.04.15 appears as registration dates for drawing records."
+    },
+    {
+      "severity": "info",
+      "reason": "No RA/regulatory standard is identified in the source text."
+    }
+  ]
+}

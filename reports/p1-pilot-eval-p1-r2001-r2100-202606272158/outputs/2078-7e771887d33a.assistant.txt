@@ -1,0 +1,187 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954393-mjv",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_ROIC_V004_20180619/SCH/ADI_ROIC_V004_180617.pdf",
+    "canonicalGroupId": "7e771887d33a"
+  },
+  "document": {
+    "title": "ADI ROIC",
+    "documentType": "electrical schematic",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V004 / 004",
+    "documentDate": "2018.6.17",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Electrical schematic for ADI ROIC V004 with 15 sheets of ROIC block, power, connector, and signal circuitry.",
+    "officialUse": "Design history file electrical design source for ADI ROIC hardware.",
+    "keyPoints": [
+      "The schematic title is ADI ROIC and the revision/version is shown as V004 and Rev 004.",
+      "The drawing set contains 15 sheets.",
+      "The schematic includes ROIC_BLOCK00 through ROIC_BLOCK11.",
+      "Power rails and reference signals include AVDD5F, AVDD5Q, AVDD5B, AVDD2, DVDD2, DVDD5, IOVDD, VREF_ADC, REF_TFT, REF_OUT, and ADAS_BIAS.",
+      "Connector blocks include Molex and YEONHO 50-pin connector references."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI ROIC",
+      "type": "document title / circuit assembly",
+      "evidence": "ADI ROIC V004 2018.6.17"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "Molex",
+      "type": "connector manufacturer / connector reference",
+      "evidence": "Molex"
+    },
+    {
+      "name": "YEONHO",
+      "type": "connector manufacturer / connector reference",
+      "evidence": "YEONHO"
+    },
+    {
+      "name": "ADR444BRZ",
+      "type": "electronic component",
+      "evidence": "U2 ADR444BRZ"
+    },
+    {
+      "name": "ADM7151ARDZ-04",
+      "type": "electronic component",
+      "evidence": "U1 ADM7151ARDZ-04"
+    },
+    {
+      "name": "LT3085EDCB#PBF",
+      "type": "electronic component",
+      "evidence": "U6 LT3085EDCB#PBF"
+    },
+    {
+      "name": "LT3090EMSE#PBF",
+      "type": "electronic component",
+      "evidence": "U3 LT3090EMSE#PBF"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "ROIC schematic",
+      "pageTarget": "ROIC electrical schematic",
+      "evidence": "ADI ROIC"
+    },
+    {
+      "name": "ROIC ADC reference voltage",
+      "pageTarget": "ROIC ADC reference voltage",
+      "evidence": "ROIC ADC REFERENCE VOLTAGE"
+    },
+    {
+      "name": "ROIC block",
+      "pageTarget": "ROIC block architecture",
+      "evidence": "04_ROIC_BLOCK00"
+    },
+    {
+      "name": "Power rails",
+      "pageTarget": "ROIC power rails",
+      "evidence": "AVDD5B = +5V DVDD2 = +2.5V DVDD5 = +5V IOVDD = +2.5V"
+    },
+    {
+      "name": "ROIC serial control signals",
+      "pageTarget": "ROIC control signals",
+      "evidence": "ROIC_SDI ROIC_SDO ROIC_SCLK ROIC_SYNC ROIC_ACLK ROIC_RESET"
+    },
+    {
+      "name": "50-pin ROIC connector",
+      "pageTarget": "ROIC 50-pin connector",
+      "evidence": "CON1 0512965094_50P_0_5mm_Molex"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is ADI ROIC.",
+      "evidenceText": "ADI ROIC",
+      "pageTarget": "ADI ROIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic identifies version V004 and revision 004.",
+      "evidenceText": "ADI ROIC V004 2018.6.17 ... <Doc> 004",
+      "pageTarget": "ADI ROIC revision V004",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is shown as 2018.6.17 in the title block area.",
+      "evidenceText": "ADI ROIC V004 2018.6.17",
+      "pageTarget": "ADI ROIC document date",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The drawing set contains 15 sheets.",
+      "evidenceText": "A3 1 15 Monday, June 18, 2018",
+      "pageTarget": "ADI ROIC schematic sheets",
+      "confidence": "high"
+    },
+    {
+      "claim": "Sheets 4 through 15 define ROIC blocks 00 through 11.",
+      "evidenceText": "04_ROIC_BLOCK00 ... 15_ROIC_BLOCK11",
+      "pageTarget": "ROIC block architecture",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes ROIC ADC reference voltage circuitry.",
+      "evidenceText": "ROIC ADC REFERENCE VOLTAGE",
+      "pageTarget": "ROIC ADC reference voltage",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes a 4.096 V ADC reference signal.",
+      "evidenceText": "4.096V /10mA ROIC ADC REFERENCE VOLTAGE",
+      "pageTarget": "ROIC ADC reference voltage",
+      "confidence": "high"
+    },
+    {
+      "claim": "Power rails include AVDD5B at +5 V, AVDD2 at +2.5 V, DVDD2 at +2.5 V, DVDD5 at +5 V, and IOVDD at +2.5 V.",
+      "evidenceText": "AVDD5B = +5V AVDD2 = +2.5V DVDD2 = +2.5V DVDD5 = +5V IOVDD = +2.5V",
+      "pageTarget": "ROIC power rails",
+      "confidence": "high"
+    },
+    {
+      "claim": "The design uses common ROIC control signals across sheets 4 through 15.",
+      "evidenceText": "ROIC_RESET [4,5,6,7,8,9,10,11,12,13,14,15] ROIC_ACLK [4,5,6,7,8,9,10,11,12,13,14,15] ROIC_SYNC [4,5,6,7,8,9,10,11,12,13,14,15]",
+      "pageTarget": "ROIC control signals",
+      "confidence": "high"
+    },
+    {
+      "claim": "The design includes 50-pin connector references for ROIC block connections.",
+      "evidenceText": "CON1 0512965094_50P_0_5mm_Molex ... CON2 05002HR-50J05_50P_0_5MM",
+      "pageTarget": "ROIC 50-pin connector",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory standards are identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document date evidence is ambiguous: the title line shows 2018.6.17, while sheet title blocks show Monday, June 18, 2018 and Monday, June 25, 2018."
+    },
+    {
+      "severity": "info",
+      "reason": "The source is a schematic-style hardware design document rather than an explicit RA or regulatory approval document."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction quality is low in title block fields, with placeholders such as <Doc>, <Rev>, <Title>, and repeated title block fragments."
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954382-cbe",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/ES/ADI_MAIN_V006_20190108/SCH/adi_main_v006_20181001.pdf",
+    "canonicalGroupId": "55809f1ab141"
+  },
+  "document": {
+    "title": "ADI MAIN",
+    "documentType": "Electrical schematic",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V006",
+    "documentDate": "Monday, October 01, 2018",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "ADI MAIN V006 electrical schematic dated Monday, October 01, 2018 for a 30-sheet hardware design.",
+    "officialUse": "Design history file hardware/electrical schematic evidence for board architecture, component selection, interfaces, power rails, and layout notes.",
+    "keyPoints": [
+      "Revision history lists V004 on 2018.6.14, V005 on 2018.7.25, and V006 on 2018.10.1.",
+      "The schematic includes power input, PMIC, FPGA, i.MX6, DDR3, eMMC, Ethernet, USB, and Mini-PCIe sections.",
+      "Layout notes specify impedance guidance such as 100 ohm high-speed data lines, 90 ohm USB differential pairs, and 50 ohm SD signal control."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI MAIN",
+      "type": "document title / board schematic",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> 006 ADI MAIN A3 1 30 Monday, October 01, 2018"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product model signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "EP4CE30F23I7N",
+      "type": "FPGA component",
+      "evidence": "U36-2 EP4CE30F23I7N"
+    },
+    {
+      "name": "iMX6S/MCIMX6S5DVM10AC",
+      "type": "processor component",
+      "evidence": "U47A iMX6S/MCIMX6S5DVM10AC"
+    },
+    {
+      "name": "MMPF0100F0AEP",
+      "type": "PMIC component",
+      "evidence": "PMIC Errata19 -> MMPF0100F0AEP"
+    },
+    {
+      "name": "K4B2G1646Q-BCK0",
+      "type": "DDR3 SDRAM component",
+      "evidence": "2G_DDR3_SDRAM_128MX16 U51 K4B2G1646Q-BCK0"
+    },
+    {
+      "name": "SDIN7DU2-8G",
+      "type": "eMMC memory component",
+      "evidence": "8GB eMMC MEMORY U54A SDIN7DU2-8G"
+    },
+    {
+      "name": "AR8031",
+      "type": "Ethernet PHY component",
+      "evidence": "AR8031 U55"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Revision history",
+      "pageTarget": "ADI MAIN Revision History",
+      "evidence": "2018.6.14 V004 Revision history 2018.7.25 V005 V006 2018.10.1"
+    },
+    {
+      "name": "Main input connector",
+      "pageTarget": "ADI MAIN Main Input Connector",
+      "evidence": "MAIN INPUT CONNECTOR No.1 No.25 No.26 No.27"
+    },
+    {
+      "name": "Power main input and power-gate IC",
+      "pageTarget": "ADI MAIN Power Architecture",
+      "evidence": "4.2V / 6A POWER MAIN INPUT POWER-GATE IC POWER-PMIC/SUB -9V /1A +13V_16V /1A"
+    },
+    {
+      "name": "PMIC outputs and control",
+      "pageTarget": "ADI MAIN PMIC",
+      "evidence": "PMIC LDO Outputs PMIC Control 8 volts to program PMIC OTP fuses PMIC Switched Outputs"
+    },
+    {
+      "name": "FPGA power",
+      "pageTarget": "ADI MAIN FPGA Power",
+      "evidence": "POWER-FPGA 1.2V / 3A 2.5V / 3A POWER-SUB 5V / 0.8A"
+    },
+    {
+      "name": "FPGA control and flash programming",
+      "pageTarget": "ADI MAIN FPGA Configuration",
+      "evidence": "FLASH PGM FPGA CONTROL CONFIG DONE SILK: FPGA JTAG SILK: FPGA PROGRAM"
+    },
+    {
+      "name": "EIM 32-bit muxed mode",
+      "pageTarget": "ADI MAIN EIM Interface",
+      "evidence": "EIM 32BIT MUXED MODE CSPI4 = Not USE CSPI3 = FPGA COMM CSPI2 = FPGA FLASH CSPI1 = Serial FLASH"
+    },
+    {
+      "name": "DDR3 memory configuration",
+      "pageTarget": "ADI MAIN DDR3 Memory",
+      "evidence": "i.MX6 QUAD ==> DDR3-1066 i.MX6 SOLO ==> DDR3-800"
+    },
+    {
+      "name": "USB layout impedance",
+      "pageTarget": "ADI MAIN USB Interface",
+      "evidence": "Layout: 90ohm differential pairs USB CLIENT"
+    },
+    {
+      "name": "Ethernet RGMII layout impedance",
+      "pageTarget": "ADI MAIN Ethernet RGMII",
+      "evidence": "Layout: High speed data lines : 100 ohms"
+    },
+    {
+      "name": "eMMC and SPI NOR memory",
+      "pageTarget": "ADI MAIN Nonvolatile Memory",
+      "evidence": "8GB eMMC MEMORY 4Mb SPI NOR FLASH"
+    },
+    {
+      "name": "Mini-PCIe interface",
+      "pageTarget": "ADI MAIN Mini PCIe",
+      "evidence": "Mini-PCIE PCIE_WAKE_B CLK1_N CLK1_P PCIE_TXM PCIE_TXP PCIE_RXP PCIE_RXM PCIE_PWR_EN"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is ADI MAIN.",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> 006 ADI MAIN A3 1 30 Monday, October 01, 2018",
+      "pageTarget": "ADI MAIN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is V006.",
+      "evidenceText": "2018.6.14 V004 Revision history 2018.7.25 V005 V006 2018.10.1",
+      "pageTarget": "ADI MAIN Revision History",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic date shown on sheets is Monday, October 01, 2018.",
+      "evidenceText": "ADI MAIN A3 1 30 Monday, October 01, 2018",
+      "pageTarget": "ADI MAIN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source is a 30-sheet ADI MAIN schematic.",
+      "evidenceText": "ADI MAIN A3 30 30 Monday, October 01, 2018",
+      "pageTarget": "ADI MAIN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The design includes a main input connector and ROIC connector signals.",
+      "evidenceText": "MAIN INPUT CONNECTOR No.1 No.25 No.26 No.27 #0 #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 ROIC CONNECTOR #12",
+      "pageTarget": "ADI MAIN Main Input Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power main input section identifies 4.2V / 6A, -9V / 1A, and +13V_16V / 1A rails.",
+      "evidenceText": "4.2V / 6A POWER MAIN INPUT POWER-GATE IC POWER-PMIC/SUB -9V /1A +13V_16V /1A",
+      "pageTarget": "ADI MAIN Power Architecture",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PMIC section includes LDO outputs, control, OTP fuse programming voltage, and switched outputs.",
+      "evidenceText": "PMIC LDO Outputs PMIC Control 8 volts to program PMIC OTP fuses PMIC Switched Outputs",
+      "pageTarget": "ADI MAIN PMIC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA power section specifies 1.2V / 3A, 2.5V / 3A, 5V / 0.8A, and 3.3V / 0.2A supplies.",
+      "evidenceText": "POWER-FPGA 1.2V / 3A 2.5V / 3A POWER-SUB 5V / 0.8A POWER-FPGA 3.3V / 0.2A",
+      "pageTarget": "ADI MAIN FPGA Power",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA component used in the schematic is EP4CE30F23I7N.",
+      "evidenceText": "U36-2 EP4CE30F23I7N",
+      "pageTarget": "EP4CE30F23I7N",
+      "confidence": "high"
+    },
+    {
+      "claim": "The processor component used in the schematic is iMX6S/MCIMX6S5DVM10AC.",
+      "evidenceText": "U47A iMX6S/MCIMX6S5DVM10AC",
+      "pageTarget": "iMX6S MCIMX6S5DVM10AC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The EIM interface is described as 32-bit muxed mode.",
+      "evidenceText": "EIM 32BIT MUXED MODE",
+      "pageTarget": "ADI MAIN EIM Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic notes CSPI3 for FPGA communication, CSPI2 for FPGA flash, and CSPI1 for serial flash.",
+      "evidenceText": "CSPI4 = Not USE CSPI3 = FPGA COMM CSPI2 = FPGA FLASH CSPI1 = Serial FLASH",
+      "pageTarget": "ADI MAIN SPI Interfaces",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DDR3 section states i.MX6 QUAD uses DDR3-1066 and i.MX6 SOLO uses DDR3-800.",
+      "evidenceText": "i.MX6 QUAD ==> DDR3-1066 i.MX6 SOLO ==> DDR3-800",
+      "pageTarget": "ADI MAIN DDR3 Memory",
+      "confidence": "high"
+    },
+    {
+      "claim": "The nonvolatile memory section includes 8GB eMMC memory and 4Mb SPI NOR flash.",
+      "evidenceText": "8GB eMMC MEMORY 4Mb SPI NOR FLASH",
+      "pageTarget": "ADI MAIN Nonvolatile Memory",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Ethernet PHY component is AR8031.",
+      "evidenceText": "AR8031 U55",
+      "pageTarget": "AR8031 Ethernet PHY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Ethernet section includes RGMII signals and layout guidance for 100 ohm high-speed data lines.",
+      "evidenceText": "Layout: High speed data lines : 100 ohms RGMII_TXCLK RGMII_TXD0 RGMII_TXD1 RGMII_TXD2 RGMII_TXD3",
+      "pageTarget": "ADI MAIN Ethernet RGMII",
+      "confidence": "high"
+    },
+    {
+      "claim": "The USB debug/client section specifies 90 ohm differential pairs.",
+      "evidenceText": "Layout: 90ohm differential pairs USB CLIENT",
+      "pageTarget": "ADI MAIN USB Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Mini-PCIe section includes PCIE_WAKE_B, differential clock, transmit, receive, and power-enable signals.",
+      "evidenceText": "Mini-PCIE PCIE_WAKE_B CLK1_N CLK1_P PCIE_TXM PCIE_TXP PCIE_RXP PCIE_RXM PCIE_PWR_EN",
+      "pageTarget": "ADI MAIN Mini PCIe",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority, jurisdiction, approval status, certificate number, or official regulatory body is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standards are identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model was taken from provided source metadata productSignal rather than schematic title block text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR/text extraction quality is uneven; repeated title blocks, malformed fields such as '<Rev', and dense schematic netlists may obscure some metadata."
+    },
+    {
+      "severity": "info",
+      "reason": "The document appears to be a hardware design schematic rather than an RA/regulatory approval document."
+    }
+  ]
+}

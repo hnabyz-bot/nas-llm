@@ -1,0 +1,236 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954388-iep",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/ADI_MAIN_V004_20180614/SCH/ADI_MAIN_V004_20180614.pdf",
+    "canonicalGroupId": "38ca0671bc46"
+  },
+  "document": {
+    "title": "ADI MAIN",
+    "documentType": "schematic",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "V004",
+    "documentDate": "2018.6.14",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "ADI MAIN V004 schematic for the HAD/A/F 1417-1717 product signal.",
+    "officialUse": "Design history file electrical schematic covering ADI main board power, FPGA, i.MX6, memory, USB, Ethernet, and Mini-PCIe circuitry.",
+    "keyPoints": [
+      "The title block identifies the document as ADI MAIN with revision/version V004.",
+      "The schematic set contains 31 sheets.",
+      "Major sections include MAIN INPUT CONNECTOR, POWER MAIN INPUT POWER-GATE IC, POWER-PMIC/SUB, POWER-FPGA, FPGA control, i.MX6Q, DDR3, eMMC, SPI NOR flash, RGMII Ethernet, USB, and Mini-PCIE."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI MAIN",
+      "type": "document_title",
+      "evidence": "ADI MAIN\n2018.6.14 V004"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product_signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "EP4CE30F23I7N",
+      "type": "component",
+      "evidence": "U36-2\nEP4CE30F23I7N"
+    },
+    {
+      "name": "iMX6S/MCIMX6S5DVM10AC",
+      "type": "component",
+      "evidence": "U47A iMX6S/MCIMX6S5DVM10AC"
+    },
+    {
+      "name": "MMPF0100F0AEP",
+      "type": "component",
+      "evidence": "MMPF0100F0AEP U15C"
+    },
+    {
+      "name": "K4B8G1646D-MYK0",
+      "type": "component",
+      "evidence": "2G_DDR3_SDRAM_128MX16\nU51\nK4B8G1646D-MYK0"
+    },
+    {
+      "name": "SDIN7DU2-8G",
+      "type": "component",
+      "evidence": "U54B\nSDIN7DU2-8G"
+    },
+    {
+      "name": "AR8031",
+      "type": "component",
+      "evidence": "AR8031\nU55"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Main input connector",
+      "pageTarget": "Main Input Connector",
+      "evidence": "MAIN INPUT CONNECTOR"
+    },
+    {
+      "name": "Power PMIC and sub power",
+      "pageTarget": "Power PMIC Subsystem",
+      "evidence": "POWER-PMIC/SUB"
+    },
+    {
+      "name": "FPGA power",
+      "pageTarget": "FPGA Power",
+      "evidence": "POWER-FPGA\n1.2V / 3A\n2.5V / 3A"
+    },
+    {
+      "name": "FPGA configuration and JTAG",
+      "pageTarget": "FPGA Configuration And JTAG",
+      "evidence": "FLASH PGM FPGA CONTROL\nCONFIG DONE\nSILK: FPGA JTAG"
+    },
+    {
+      "name": "EIM 32-bit muxed mode",
+      "pageTarget": "EIM 32 Bit Muxed Mode",
+      "evidence": "EIM 32BIT MUXED MODE"
+    },
+    {
+      "name": "DDR3 memory",
+      "pageTarget": "DDR3 Memory",
+      "evidence": "8 GBit\nDDR3"
+    },
+    {
+      "name": "eMMC memory",
+      "pageTarget": "eMMC Memory",
+      "evidence": "8GB eMMC MEMORY"
+    },
+    {
+      "name": "SPI NOR flash",
+      "pageTarget": "SPI NOR Flash",
+      "evidence": "4Mb SPI NOR FLASH"
+    },
+    {
+      "name": "RGMII Ethernet",
+      "pageTarget": "RGMII Ethernet",
+      "evidence": "Layout: High speed data lines : 100 ohms"
+    },
+    {
+      "name": "USB debug and client",
+      "pageTarget": "USB Debug And Client",
+      "evidence": "<Silk>\nUSB DEBUG Debug SERIAL\nUSB CLIENT"
+    },
+    {
+      "name": "Mini-PCIe",
+      "pageTarget": "Mini PCIe",
+      "evidence": "Mini-PCIE"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is ADI MAIN.",
+      "evidenceText": "ADI MAIN\n2018.6.14 V004",
+      "pageTarget": "ADI MAIN",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision or version is V004.",
+      "evidenceText": "ADI MAIN\n2018.6.14 V004",
+      "pageTarget": "ADI MAIN V004",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic set contains 31 sheets.",
+      "evidenceText": "Date: Sheet o f\n<Doc> 004\nADI MAIN\nA3\n1 31 Friday, June 22, 2018",
+      "pageTarget": "ADI MAIN Schematic Sheets",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes a main input connector.",
+      "evidenceText": "MAIN INPUT CONNECTOR",
+      "pageTarget": "Main Input Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes ROIC connector and ROIC control signals.",
+      "evidenceText": "ROIC CONNECTOR #12\nROIC_CS0\nROIC_CS1\nROIC_RESET\nROIC_SYNC ROIC_SDO\nROIC_SCLK\nROIC_SDI",
+      "pageTarget": "ROIC Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power main input section lists 4.2V/6A, -8V/1A, and +16V/1A rails.",
+      "evidenceText": "4.2V / 6A\nPOWER MAIN INPUT POWER-GATE IC\nPOWER-PMIC/SUB\n-8V /1A\n+16V /1A",
+      "pageTarget": "Power Main Input",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA power section lists 1.2V/3A and 2.5V/3A FPGA rails.",
+      "evidenceText": "POWER-FPGA\n1.2V / 3A\n2.5V / 3A",
+      "pageTarget": "FPGA Power",
+      "confidence": "high"
+    },
+    {
+      "claim": "The FPGA component is identified as EP4CE30F23I7N.",
+      "evidenceText": "U36-2\nEP4CE30F23I7N",
+      "pageTarget": "EP4CE30F23I7N",
+      "confidence": "high"
+    },
+    {
+      "claim": "The processor component is identified as iMX6S/MCIMX6S5DVM10AC.",
+      "evidenceText": "U47A iMX6S/MCIMX6S5DVM10AC",
+      "pageTarget": "iMX6S MCIMX6S5DVM10AC",
+      "confidence": "high"
+    },
+    {
+      "claim": "The DDR section notes i.MX6 QUAD DDR3-1066 and i.MX6 SOLO DDR3-800.",
+      "evidenceText": "i.MX6 QUAD ==> DDR3-1066\ni.MX6 SOLO ==> DDR3-800",
+      "pageTarget": "i.MX6 DDR3 Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The memory section identifies 8 GBit DDR3.",
+      "evidenceText": "8 GBit\nDDR3",
+      "pageTarget": "DDR3 Memory",
+      "confidence": "high"
+    },
+    {
+      "claim": "The storage section identifies 8GB eMMC memory and 4Mb SPI NOR flash.",
+      "evidenceText": "8GB eMMC MEMORY\n4Mb SPI NOR FLASH",
+      "pageTarget": "Storage Memory",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Ethernet PHY component is AR8031.",
+      "evidenceText": "AR8031\nU55",
+      "pageTarget": "AR8031 Ethernet PHY",
+      "confidence": "high"
+    },
+    {
+      "claim": "The USB section specifies 90 ohm differential pairs.",
+      "evidenceText": "Layout: 90ohm differential pairs\nUSB CLIENT",
+      "pageTarget": "USB Layout",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCIe connector section is labeled Mini-PCIE.",
+      "evidenceText": "Mini-PCIE",
+      "pageTarget": "Mini PCIe",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified in the source text; metadata authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document dates are conflicting or mixed: the cover shows '2018.6.14 V004', while title blocks show dates including Tuesday, June 12, 2018, Friday, June 22, 2018, and Monday, June 25, 2018."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are stated in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "OCR text quality is low to medium; many title block fields appear as placeholders such as '<Doc>', '<Rev', and '<Title>'."
+    }
+  ]
+}

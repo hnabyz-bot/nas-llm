@@ -1,0 +1,178 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954376-5zs",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/BOM/BOM_ADI_BD_180619.xls",
+    "canonicalGroupId": "d5a48e79783f"
+  },
+  "document": {
+    "title": "ADI_BD_BOM_20180619",
+    "documentType": "Bill of Materials (BOM)",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2018-06-19",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM listing ADI board PCB assemblies, PCB specifications, mounted components, quantities, references, and NC items.",
+    "officialUse": "Supports DHF electrical design traceability for ADI board hardware parts and PCB assembly configurations.",
+    "keyPoints": [
+      "Includes ADI_MAIN_V004_PCB Ass'y with FR4 12L 230mm x 120mm x 1.6T black PCB specification.",
+      "Includes ADI_ROIC_V004_PCB Ass'y with FR4 8L 427mm x 34mm x 1.0T black PCB specification.",
+      "Includes ADI_GATEIC_V004_PCB Ass'y with FR4 4L 405mm x 32mm x 1.0T black PCB specification.",
+      "Includes ADI_POWER_V003_PCB item, while the section header text also states ADI_POWER_V004_PCB Ass'y and V003 적용.",
+      "Lists NC sections for components marked not connected or not mounted."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ADI_MAIN_V004_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_MAIN_V004_PCB Ass'y,FR4 12L_230mm x 120mm x 1.6T(Black) V004 적용"
+    },
+    {
+      "name": "ADI_ROIC_V004_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_ROIC_V004_PCB Ass'y,FR4 8L_427mm x 34mm x 1.0T(Black) V004 적용"
+    },
+    {
+      "name": "ADI_GATEIC_V004_PCB Ass'y",
+      "type": "PCB assembly",
+      "evidence": "ADI_GATEIC_V004_PCB Ass'y,FR4 4L_405mm x 32mm x 1.0T(Black) V004 적용"
+    },
+    {
+      "name": "ADI_POWER_V003_PCB",
+      "type": "PCB",
+      "evidence": "1,1,PCB,,ADI_POWER_V003_PCB,\"FR4 4L_170mm x 120mm x 1.6T(Black) 금도금, 유광 V003\""
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "Murata / TDK",
+      "type": "component manufacturer or supplier",
+      "evidence": "Ceramic Capacitor,100nF_50V_1608,Murata / TDK (X5R이상)"
+    },
+    {
+      "name": "AVX",
+      "type": "component manufacturer or supplier",
+      "evidence": "Tantal Capacitor,22uF_25V_6032_Tantal_C-type,AVX"
+    },
+    {
+      "name": "Yageo/Walsin",
+      "type": "component manufacturer or supplier",
+      "evidence": "Resistor,4.7K_J_1608,Yageo/Walsin"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/BOM/BOM_ADI_BD_180619.xls"
+    },
+    {
+      "name": "PCB assembly",
+      "pageTarget": "PCB Assembly",
+      "evidence": "ADI_MAIN_V004_PCB Ass'y"
+    },
+    {
+      "name": "FR4 multilayer PCB",
+      "pageTarget": "FR4 PCB",
+      "evidence": "FR4 12L_230mm x 120mm x 1.6T(Black)"
+    },
+    {
+      "name": "NC components",
+      "pageTarget": "No Connect Components",
+      "evidence": "*NC"
+    },
+    {
+      "name": "Component reference designators",
+      "pageTarget": "Reference Designator",
+      "evidence": "Item,Quantity,Reference,CODE,품목명,규격,비고"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source document title is ADI_BD_BOM_20180619.",
+      "evidenceText": "* ADI_BD_BOM_20180619",
+      "pageTarget": "ADI BD BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is a BOM for ADI board hardware.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/11. 전장 설계/HW/WS/BOM/BOM_ADI_BD_180619.xls",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is represented as 20180619 in the title.",
+      "evidenceText": "* ADI_BD_BOM_20180619",
+      "pageTarget": "ADI BD BOM",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The product signal associated with the source is HAD/A/F 1417-1717.",
+      "evidenceText": "productSignal: HAD/A/F 1417-1717",
+      "pageTarget": "HAD/A/F 1417-1717",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADI_MAIN_V004_PCB Ass'y uses an FR4 12-layer black PCB sized 230mm x 120mm x 1.6T.",
+      "evidenceText": "ADI_MAIN_V004_PCB Ass'y,FR4 12L_230mm x 120mm x 1.6T(Black) V004 적용",
+      "pageTarget": "ADI_MAIN_V004_PCB Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADI_ROIC_V004_PCB Ass'y uses an FR4 8-layer black PCB sized 427mm x 34mm x 1.0T.",
+      "evidenceText": "ADI_ROIC_V004_PCB Ass'y,FR4 8L_427mm x 34mm x 1.0T(Black) V004 적용",
+      "pageTarget": "ADI_ROIC_V004_PCB Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "ADI_GATEIC_V004_PCB Ass'y uses an FR4 4-layer black PCB sized 405mm x 32mm x 1.0T.",
+      "evidenceText": "ADI_GATEIC_V004_PCB Ass'y,FR4 4L_405mm x 32mm x 1.0T(Black) V004 적용",
+      "pageTarget": "ADI_GATEIC_V004_PCB Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ADI_POWER section contains conflicting version text between the assembly header and PCB item.",
+      "evidenceText": "ADI_POWER_V003_PCB Ass'y ... ADI_POWER_V004_PCB Ass'y,FR4 2L_170mm x 120mm x 1.6T(Black) V003 적용 ... ADI_POWER_V003_PCB",
+      "pageTarget": "ADI_POWER_V003_PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes NC sections for excluded or not mounted components.",
+      "evidenceText": "*NC",
+      "pageTarget": "No Connect Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM table fields include item, quantity, reference, code, item name, specification, and remarks.",
+      "evidenceText": "Item,Quantity,Reference,CODE,품목명,규격,비고",
+      "pageTarget": "Bill of Materials Fields",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No formal document revision or version field is present apart from PCB assembly version strings."
+    },
+    {
+      "severity": "warning",
+      "reason": "ADI_POWER section has conflicting version evidence: section label says ADI_POWER_V003_PCB Ass'y, detail line says ADI_POWER_V004_PCB Ass'y, and PCB item says ADI_POWER_V003_PCB."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    }
+  ]
+}
