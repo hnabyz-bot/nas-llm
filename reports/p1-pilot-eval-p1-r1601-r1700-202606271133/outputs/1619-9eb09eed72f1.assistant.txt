@@ -1,0 +1,216 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954419-17a7",
+    "sourcePath": "raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/02_설계개발 입력/DI-Attachment 1. 고객 요구사항 .docx",
+    "canonicalGroupId": "9eb09eed72f1"
+  },
+  "document": {
+    "title": "고객 요구사항",
+    "documentType": "고객 요구사항 문서",
+    "productModels": [
+      "HnX-R1",
+      "HnVUE",
+      "G1417CW",
+      "G1417CWP",
+      "G1417FW",
+      "G1417FWP",
+      "G1717CW",
+      "G1717CWP",
+      "G1717FW",
+      "G1717FWP",
+      "A1717MCW",
+      "A1417MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": [
+      "DICOM 3.0",
+      "IEEE 802.11a/b/g/n/ac"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "X-ray 영상획득장치 시스템 HnX-R1의 고객 요구사항을 정리한 문서이다.",
+    "officialUse": "HnX-R1 설계개발 입력의 고객 요구사항 근거로 사용된다.",
+    "keyPoints": [
+      "HnX-R1은 기존 X-ray 디텍터 G series 8종 및 2/3G series 3종에 신규 Console Software HnVUE를 통합 구성한 제품이다.",
+      "G series 및 2/3G series 디텍터 요구사항은 각 디텍터 DHF를 참조하며, 일부 성능 및 관리기준 변경사항만 본 문서에 기재되어 있다.",
+      "HnVUE는 의료용 영상의 획득, 저장, 전송, 조회, 조작 및 DICOM 3.0 규격지원 영상 포맷과 전송, 저장기능을 요구한다.",
+      "HnVUE 보안 기능에는 사용자 ID 로그인, 권한 승인 기반 삭제, 데이터 액세스 보호, 오류 안내 메시지, PACS 통신 연결이 포함된다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HnX-R1",
+      "type": "product",
+      "evidence": "본 문서는 X-ray 영상획득장치 시스템 HnX-R1의 고객 요구사항을 정리한 문서이다."
+    },
+    {
+      "name": "HnVUE",
+      "type": "software",
+      "evidence": "신규 개발되는 Console Software (HnVUE)"
+    },
+    {
+      "name": "G series 디텍터",
+      "type": "detector series",
+      "evidence": "기존 개발 완료된 X-ray 디텍터(G series 8종 및 2/3G series 3종)"
+    },
+    {
+      "name": "2/3G series 디텍터",
+      "type": "detector series",
+      "evidence": "기존 개발 완료된 X-ray 디텍터(G series 8종 및 2/3G series 3종)"
+    },
+    {
+      "name": "PACS",
+      "type": "external system",
+      "evidence": "PACS와의 통신 연결을 통하여 기기를 사용 할 수 있다."
+    },
+    {
+      "name": "DICOM 3.0",
+      "type": "standard",
+      "evidence": "DICOM 3.0 규격지원 영상 포맷 및 전송, 저장기능"
+    },
+    {
+      "name": "IEEE 802.11a/b/g/n/ac",
+      "type": "wireless standard",
+      "evidence": "Wireless Standard IEEE 802.11a/b/g/n/ac"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "고객 요구사항",
+      "pageTarget": "Customer Requirements",
+      "evidence": "본 문서는 X-ray 영상획득장치 시스템 HnX-R1의 고객 요구사항을 정리한 문서이다."
+    },
+    {
+      "name": "설계개발파일",
+      "pageTarget": "Design History File",
+      "evidence": "기존 G series Detector 설계개발파일의 고객 요구사항 대비"
+    },
+    {
+      "name": "의료용 영상 획득, 저장, 전송",
+      "pageTarget": "Medical Image Acquisition Software",
+      "evidence": "의료용 영상의 획득, 저장, 전송 등의 기능"
+    },
+    {
+      "name": "영상 조작 기능",
+      "pageTarget": "Medical Image Manipulation",
+      "evidence": "영상의 확대, 축소, 회전, 이동, 밝기 조절 등의 영상 조작 기능"
+    },
+    {
+      "name": "사용자 권한 기반 접근 제어",
+      "pageTarget": "Software Access Control",
+      "evidence": "사용 권한을 부여받은 사용자 ID로 로그인을 해야 영상 소프트웨어의 동작을 할 수 있으며, 권한 승인 사용자 외의 사용자에 의한 데이터 액세스가 거부되도록 정보와 데이터가 보호된다."
+    },
+    {
+      "name": "Auto Exposure Detection",
+      "pageTarget": "Auto Exposure Detection",
+      "evidence": "Auto Trigger (Auto Exposure Detection)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a customer requirements document for the HnX-R1 X-ray image acquisition device system.",
+      "evidenceText": "본 문서는 X-ray 영상획득장치 시스템 HnX-R1의 고객 요구사항을 정리한 문서이다.",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnX-R1 integrates existing G series and 2/3G series X-ray detectors with newly developed Console Software HnVUE.",
+      "evidenceText": "HnX-R1은 기존 개발 완료된 X-ray 디텍터(G series 8종 및 2/3G series 3종)에 신규 개발되는 Console Software (HnVUE)를 통합 구성한 제품이다.",
+      "pageTarget": "HnX-R1",
+      "confidence": "high"
+    },
+    {
+      "claim": "Customer requirements for G series and 2/3G series detectors outside the stated exceptions are referenced to each detector DHF.",
+      "evidenceText": "하기 언급된 부분 외, G series 8종 및 2/3G series 3종의 고객 요구사항은 각 디텍터 DHF를 참조한다",
+      "pageTarget": "Design History File",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE design requires a user-friendly GUI with Login and Worklist / Studylist screens.",
+      "evidenceText": "Console software (HnVUE) - 사용자 편의 GUI 구성 1) Login 화면 2) Worklist / Studylist 화면",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "G series detector customer requirements retain prior performance requirements except for weight management criteria changes and adding an Al middle block material that does not affect product safety.",
+      "evidenceText": "기존 G series Detector 설계개발파일의 고객 요구사항 대비, 아래 사항을 제외한 성능요구사항은 동일함. 1) 무게 관리기준 변경: ‘~이하’ 관리 → ‘± 공차 관리’ 로 변경. 2) 제품 안전에 영향이 없는 Middle block 재질(Al) 추가",
+      "pageTarget": "G series Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "G series detector models listed include G1417CW, G1417CWP, G1417FW, G1417FWP, G1717CW, G1717CWP, G1717FW, and G1717FWP.",
+      "evidenceText": "Detector name G1417CW G1417CWP G1417FW G1417FWP G1717CW G1717CWP G1717FW G1717FWP",
+      "pageTarget": "G series Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "G series detectors specify CsI scintillator, 140μm pixel pitch, 40 ~ 150kvp energy range, 14 or 16 bit A/D conversion, IEEE 802.11a/b/g/n/ac wireless, IP68, 1Giga-bit Ethernet, and Line or Auto Trigger modes.",
+      "evidenceText": "Scintillator CsI Pixel Pitch 140μm Energy Range 40 ~ 150kvp A/D Conversion 14, 16 bits Wireless Standard IEEE 802.11a/b/g/n/ac IP Range IP68 Communication 1Giga-bit Ethernet Trigger Mode Line(Manual) Trigger Auto Trigger (Auto Exposure Detection)",
+      "pageTarget": "G series Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "2/3G series detector models listed include A1717MCW, A1417MCW, and F1417MCW.",
+      "evidenceText": "Detector name A1717MCW A1417MCW F1417MCW",
+      "pageTarget": "2/3G series Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "2/3G series detectors specify CsI scintillator, 140μm pixel pitch, 40 ~ 150 kvp energy range, 16 bit A/D conversion, IEEE 802.11a/b/g/n/ac wireless, IP56, 1Giga-bit Ethernet, and Line or Auto Trigger modes.",
+      "evidenceText": "Scintillator CsI Pixel Pitch 140μm Energy Range 40 ~ 150 kvp A/D Conversion 16 bits Wireless Standard IEEE 802.11a/b/g/n/ac IP Range IP56 Communication 1Giga-bit Ethernet Trigger Mode Line(Manual) Trigger Auto Trigger (Auto Exposure Detection)",
+      "pageTarget": "2/3G series Detector",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE supports acquisition, storage, transmission, retrieval, and manipulation of medical images and DICOM 3.0 format, transmission, and storage functions.",
+      "evidenceText": "의료용 영상의 획득, 저장, 전송 등의 기능 ... 영상의 확대, 축소, 회전, 이동, 밝기 조절 등의 영상 조작 기능 ... DICOM 3.0 규격지원 영상 포맷 및 전송, 저장기능",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE security functions include login by authorized user ID and denial of data access by unauthorized users.",
+      "evidenceText": "사용 권한을 부여받은 사용자 ID로 로그인을 해야 영상 소프트웨어의 동작을 할 수 있으며, 권한 승인 사용자 외의 사용자에 의한 데이터 액세스가 거부되도록 정보와 데이터가 보호된다.",
+      "pageTarget": "Software Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE provides an authorization process before image deletion to prevent accidental or intentional deletion.",
+      "evidenceText": "실수 및 고의로 인한 영상 삭제가 이루어지지 않도록 권한 승인과정을 거쳐 삭제가 실행되게 되어 있다.",
+      "pageTarget": "Software Access Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE provides handling and resolution methods when image transmission is unavailable due to PACS server downtime.",
+      "evidenceText": "PACS 서버가 다운되어 영상전송이 불가능할 때 처리방법 및 해결방법이 제공된다",
+      "pageTarget": "PACS",
+      "confidence": "high"
+    },
+    {
+      "claim": "HnVUE provides on-screen guide messages for hardware or software errors.",
+      "evidenceText": "하드웨어 혹은 소프트웨어 오류 발생 시, 화면에 안내 메시지가 제공된다.",
+      "pageTarget": "HnVUE",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "문서 일자(documentDate)가 제공된 원문에 없다."
+    },
+    {
+      "severity": "warning",
+      "reason": "개정번호 또는 버전(revisionOrVersion)이 제공된 원문에 없다."
+    },
+    {
+      "severity": "warning",
+      "reason": "공식 규제기관 또는 관할(authorityOrJurisdiction)이 원문에 명시되어 있지 않다."
+    },
+    {
+      "severity": "info",
+      "reason": "표 형태의 성능 요구사항이 전처리 텍스트에서 행 단위로 평탄화되어 일부 모델별 수치 매핑은 원표 확인이 필요하다."
+    }
+  ]
+}
