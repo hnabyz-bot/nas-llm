@@ -1,0 +1,143 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954393-myn",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/GYRO/Schematic/GYRO.pdf",
+    "canonicalGroupId": "9244eefea2c6"
+  },
+  "document": {
+    "title": "GYRO",
+    "documentType": "Schematic",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "Friday, June 27, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "GYRO schematic showing a BMI160 device, I2C address notes, power net, connector, resistors, and capacitors.",
+    "officialUse": "Design-history electrical schematic evidence for the GYRO circuit; no regulatory authority, jurisdiction, or standard is stated in the text.",
+    "keyPoints": [
+      "The schematic title is GYRO.",
+      "The schematic lists I2C address options SDO_HIGH (0x69) and SDO_LOW (0x68).",
+      "U1 is identified as BMI160.",
+      "The title block date is Friday, June 27, 2025.",
+      "The sheet information indicates A4, sheet 1 of 1."
+    ]
+  },
+  "entities": [
+    {
+      "name": "GYRO",
+      "type": "circuit",
+      "evidence": "GYRO"
+    },
+    {
+      "name": "BMI160",
+      "type": "component",
+      "evidence": "U1\nBMI160"
+    },
+    {
+      "name": "05002HR-08N2",
+      "type": "connector",
+      "evidence": "J1\n05002HR-08N2"
+    },
+    {
+      "name": "VCC_I3.3V",
+      "type": "power net",
+      "evidence": "VCC_I3.3V"
+    },
+    {
+      "name": "I2C#C_SDA",
+      "type": "signal net",
+      "evidence": "I2C#C_SDA"
+    },
+    {
+      "name": "I2C#C_SCL",
+      "type": "signal net",
+      "evidence": "I2C#C_SCL"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "GYRO schematic",
+      "pageTarget": "GYRO schematic",
+      "evidence": "GYRO"
+    },
+    {
+      "name": "I2C address selection",
+      "pageTarget": "I2C address selection",
+      "evidence": "I2C ADDR: SDO_HIGH (0x69)\nSDO_LOW (0x68)"
+    },
+    {
+      "name": "BMI160 gyroscope circuit component",
+      "pageTarget": "BMI160",
+      "evidence": "U1\nBMI160"
+    },
+    {
+      "name": "Electrical design schematic",
+      "pageTarget": "Electrical design schematic",
+      "evidence": "Title\nSize Document Number Rev\nDate: Sheet of"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is GYRO.",
+      "evidenceText": "GYRO",
+      "pageTarget": "GYRO schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is a schematic with a title block containing size, document number, revision, date, and sheet fields.",
+      "evidenceText": "Title\nSize Document Number Rev\nDate: Sheet of",
+      "pageTarget": "Electrical design schematic",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The schematic date is Friday, June 27, 2025.",
+      "evidenceText": "A4\n1 1 Friday, June 27, 2025",
+      "pageTarget": "GYRO schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic identifies U1 as BMI160.",
+      "evidenceText": "U1\nBMI160",
+      "pageTarget": "BMI160",
+      "confidence": "high"
+    },
+    {
+      "claim": "The I2C address note lists SDO_HIGH as 0x69 and SDO_LOW as 0x68.",
+      "evidenceText": "I2C ADDR: SDO_HIGH (0x69)\nSDO_LOW (0x68)",
+      "pageTarget": "I2C address selection",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes I2C#C_SDA and I2C#C_SCL signal nets.",
+      "evidenceText": "I2C#C_SDA\nI2C#C_SCL",
+      "pageTarget": "I2C bus signals",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes connector J1 identified as 05002HR-08N2.",
+      "evidenceText": "J1\n05002HR-08N2",
+      "pageTarget": "05002HR-08N2 connector",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document number and revision fields appear as placeholders or incomplete OCR text rather than usable metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority, jurisdiction, or compliance standard is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "OCR/text extraction includes repeated title-block fragments and placeholder strings such as <Doc>, <RevCo, and <Title>."
+    },
+    {
+      "severity": "info",
+      "reason": "No product model is explicitly identified in the source text or productSignal metadata."
+    }
+  ]
+}
