@@ -1,0 +1,165 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954409-ygv",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/PCIE&USB-C/Schematic/PCIEM_241223_.pdf",
+    "canonicalGroupId": "68f28bada6d6"
+  },
+  "document": {
+    "title": "PCIe.M2(WiFi)",
+    "documentType": "Schematic",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "a",
+    "documentDate": "Thursday, July 03, 2025",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Schematic sheet for a PCIe.M2(WiFi) interface with PCIe, USB, SDIO, clock, reset, wake, enable, and 3.3V connections.",
+    "officialUse": "Electrical schematic reference for PCIe.M2(WiFi) interface wiring, component placement, and impedance notes.",
+    "keyPoints": [
+      "Title block identifies the sheet as PCIe.M2(WiFi), revision a, dated Thursday, July 03, 2025.",
+      "Design notes specify 90Ω impedance for TX/RX and 100Ω impedance for CLK.",
+      "Connector J1 is identified as 2199119-4 and includes 3.3V, USB_D+/USB_D-, PCIe RX/TX, clock, reset, wake, and disable signals.",
+      "Power net VCC_P3.3V and multiple 3.3V connector pins are shown."
+    ]
+  },
+  "entities": [
+    {
+      "name": "PCIe.M2(WiFi)",
+      "type": "interface schematic title",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> a PCIe.M2(WiFi) A4 1 1 Thursday, July 03, 2025"
+    },
+    {
+      "name": "J1 2199119-4",
+      "type": "connector component",
+      "evidence": "J1 2199119-4"
+    },
+    {
+      "name": "J2 05002HR-H16J50",
+      "type": "connector component",
+      "evidence": "J2 05002HR-H16J50"
+    },
+    {
+      "name": "VCC_P3.3V",
+      "type": "power net",
+      "evidence": "VCC_P3.3V VCC_P3.3V VCC_P3.3V VCC_P3.3V"
+    },
+    {
+      "name": "BLM18KG121TN1D/BD1608",
+      "type": "ferrite bead component",
+      "evidence": "FB1 BLM18KG121TN1D/BD1608"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCIe M.2 WiFi interface",
+      "pageTarget": "PCIe M.2 WiFi Interface",
+      "evidence": "PCIe.M2(WiFi)"
+    },
+    {
+      "name": "PCIe TX/RX impedance",
+      "pageTarget": "PCIe Impedance Control",
+      "evidence": "Impedance : 90Ω TX,RX"
+    },
+    {
+      "name": "PCIe clock impedance",
+      "pageTarget": "PCIe Clock Impedance",
+      "evidence": "Impedance : 100Ω CLK"
+    },
+    {
+      "name": "3.3V power supply",
+      "pageTarget": "3.3V Power Rail",
+      "evidence": "3.3V 2 USB_D+ 3 3.3V 4"
+    },
+    {
+      "name": "PCIe reset and wake signals",
+      "pageTarget": "PCIe Control Signals",
+      "evidence": "PERST0# 52 CLKREQ0# 53 W_DISABLE2# 54 PEWAKE# 55 W_DISABLE1# 56"
+    },
+    {
+      "name": "USB differential data signals",
+      "pageTarget": "USB Differential Data Signals",
+      "evidence": "USB_D+ 3 3.3V 4 USB_D- 5"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is PCIe.M2(WiFi).",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> a PCIe.M2(WiFi) A4 1 1 Thursday, July 03, 2025",
+      "pageTarget": "PCIe M.2 WiFi Interface",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision is a.",
+      "evidenceText": "Document Number Rev Date: Sheet of <Doc> a PCIe.M2(WiFi)",
+      "pageTarget": "PCIe M.2 WiFi Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date shown is Thursday, July 03, 2025.",
+      "evidenceText": "A4 1 1 Thursday, July 03, 2025",
+      "pageTarget": "PCIe M.2 WiFi Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic specifies 90Ω impedance for TX and RX.",
+      "evidenceText": "Impedance : 90Ω TX,RX",
+      "pageTarget": "PCIe Impedance Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic specifies 100Ω impedance for CLK.",
+      "evidenceText": "Impedance : 100Ω CLK",
+      "pageTarget": "PCIe Clock Impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J1 is identified as 2199119-4.",
+      "evidenceText": "J1 2199119-4",
+      "pageTarget": "Connector 2199119-4",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J1 includes USB_D+ and USB_D- signals.",
+      "evidenceText": "USB_D+ 3 3.3V 4 USB_D- 5",
+      "pageTarget": "USB Differential Data Signals",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J1 includes PCIe receive, transmit, and reference clock signals.",
+      "evidenceText": "PERp0 35 NC 36 PERn0 37 NC 38 GND 39 NC 40 PETp0 41 NC 42 PETn0 43 NC 44 GND 45 NC 46 PEFCLKp0 47 NC 48 PEFCLKn0 49",
+      "pageTarget": "PCIe Signal Pins",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J1 includes PERST0#, CLKREQ0#, PEWAKE#, W_DISABLE1#, and W_DISABLE2# control signals.",
+      "evidenceText": "PERST0# 52 CLKREQ0# 53 W_DISABLE2# 54 PEWAKE# 55 W_DISABLE1# 56",
+      "pageTarget": "PCIe Control Signals",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector J2 is identified as 05002HR-H16J50.",
+      "evidenceText": "J2 05002HR-H16J50",
+      "pageTarget": "Connector 05002HR-H16J50",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is identified; source metadata productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Source appears to be a schematic extraction with repeated title-block text and sparse OCR-style netlist content."
+    }
+  ]
+}

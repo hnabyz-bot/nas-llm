@@ -1,0 +1,273 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954410-yqv",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/20. ES 품평회 결과 보고서/ES 품평회 보고서_250314.pdf",
+    "canonicalGroupId": "156b4f005553"
+  },
+  "document": {
+    "title": "ES 품평회 보고서_250314",
+    "documentType": "ES 품평회 결과 보고서",
+    "productModels": [
+      "GEN2 Model",
+      "BLUE 1717",
+      "BLUE 1417"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "개발일정 Rev.01 240219",
+    "documentDate": "25.03.19",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "DR개발팀 작성 ES 품평회 보고서로 GEN2/BLUE 모델 개발 항목과 신뢰성, 전원 Noise, 기구, 영상 획득 및 센서 관련 검토 내용을 포함한다.",
+    "officialUse": "DHF 내 ES 품평회 결과 및 개발 검토 항목 추적 자료로 사용 가능하다.",
+    "keyPoints": [
+      "작성일은 25.03.19이며 작성자와 작성부서는 DR개발팀 및 DR사업본부로 반복 표시된다.",
+      "GEN2 Model, BLUE 1717, BLUE 1417 및 개발일정 Rev.01 240219가 식별된다.",
+      "On/Off 시 전원 공급 불안, CPU Boot-Up 불량 연계, 전원 Noise 개선 및 재현성 확보가 검토 항목으로 제시된다.",
+      "방수 등급, 1m Drop, Frame 형합성, 후가공 양산성, Ethernet Connection, Image Data 전송, Image 획득, Trigger, Algorithm, ROIC/Panel Driving 조건이 개발 항목으로 제시된다.",
+      "센서 방식 관련 내용에는 Dark Current, Panel 적용 어려움, 충격 및 전자기장에 의한 판단 오류, Diode Sensor, Photo Diode 위치, 저선량 영상 단차, 조사 시간 30ms 이상 요구가 포함된다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "DR개발팀",
+      "type": "organization",
+      "evidence": "◎작성일: 25.03.19 ◎작성자: DR개발팀 ◎작성부서: DR사업본부"
+    },
+    {
+      "name": "DR사업본부",
+      "type": "organization",
+      "evidence": "◎작성일: 25.03.19 ◎작성자: DR개발팀 ◎작성부서: DR사업본부"
+    },
+    {
+      "name": "GEN2 Model",
+      "type": "product family",
+      "evidence": "GEN2 Model"
+    },
+    {
+      "name": "BLUE 1717",
+      "type": "product model",
+      "evidence": "BLUE 1717 BLUE 1417"
+    },
+    {
+      "name": "BLUE 1417",
+      "type": "product model",
+      "evidence": "BLUE 1717 BLUE 1417"
+    },
+    {
+      "name": "CPU",
+      "type": "component",
+      "evidence": "CPU Boot-Up 불량으로 연계"
+    },
+    {
+      "name": "ROIC",
+      "type": "component",
+      "evidence": "Driving 조건 도출 • ROIC, Panel Driving 조건 도출"
+    },
+    {
+      "name": "Panel",
+      "type": "component",
+      "evidence": "Driving 조건 도출 • ROIC, Panel Driving 조건 도출"
+    },
+    {
+      "name": "Firmware",
+      "type": "software",
+      "evidence": "신뢰성 확보 • 와 Firmware 간 Ethernet Connection 신뢰성 확보"
+    },
+    {
+      "name": "PC",
+      "type": "system",
+      "evidence": "전송 신뢰성 및 속도 확보 • 에서 PC로의 Image Data 전송 신뢰성 및 속도 확보"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "전원 Noise 개선",
+      "pageTarget": "전원 Noise 개선",
+      "evidence": "Noise 추가 개선 • 전원 Noise 개선 및 재현성 확보"
+    },
+    {
+      "name": "CPU Boot-Up 불량",
+      "pageTarget": "CPU Boot-Up 불량",
+      "evidence": "On/Off 시, 전원 공급 불안 - CPU Boot-Up 불량으로 연계"
+    },
+    {
+      "name": "방수 등급 확보",
+      "pageTarget": "방수 등급",
+      "evidence": "일체형 • 등급 방수 확보"
+    },
+    {
+      "name": "1m Drop 확보",
+      "pageTarget": "낙하 시험",
+      "evidence": "확보 • 1m Drop 확보"
+    },
+    {
+      "name": "Ethernet Connection 신뢰성",
+      "pageTarget": "Ethernet Connection 신뢰성",
+      "evidence": "신뢰성 확보 • 와 Firmware 간 Ethernet Connection 신뢰성 확보"
+    },
+    {
+      "name": "Image Data 전송 신뢰성 및 속도",
+      "pageTarget": "Image Data 전송",
+      "evidence": "전송 신뢰성 및 속도 확보 • 에서 PC로의 Image Data 전송 신뢰성 및 속도 확보"
+    },
+    {
+      "name": "Image 획득 신뢰성",
+      "pageTarget": "Image 획득 신뢰성",
+      "evidence": "획득 신뢰성 확보 • Image 획득 신뢰성 확보"
+    },
+    {
+      "name": "Trigger 지원",
+      "pageTarget": "Trigger 지원",
+      "evidence": "Trigger 지원 • Mode 별, 구동 방법 별도 지원"
+    },
+    {
+      "name": "ROIC 및 Panel Driving 조건",
+      "pageTarget": "ROIC Panel Driving 조건",
+      "evidence": "Driving 조건 도출 • ROIC, Panel Driving 조건 도출"
+    },
+    {
+      "name": "Diode Sensor",
+      "pageTarget": "Diode Sensor",
+      "evidence": "o Diode Sensor 要 : 관련 회로물 추가 구성 必"
+    },
+    {
+      "name": "Dark Current",
+      "pageTarget": "Dark Current",
+      "evidence": "낮은 Dark Current 특성"
+    },
+    {
+      "name": "조사 시간 30ms 이상",
+      "pageTarget": "조사 시간 요구사항",
+      "evidence": "반드시 조사 시간 30ms 이상 要 : 이하의 조사 시간에 대해 반응 無"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "문서 작성일은 25.03.19로 표시된다.",
+      "evidenceText": "◎작성일: 25.03.19 ◎작성자: DR개발팀 ◎작성부서: DR사업본부",
+      "pageTarget": "ES 품평회 보고서_250314",
+      "confidence": "high"
+    },
+    {
+      "claim": "작성자 및 작성부서는 각각 DR개발팀과 DR사업본부로 표시된다.",
+      "evidenceText": "◎작성일: 25.03.19 ◎작성자: DR개발팀 ◎작성부서: DR사업본부",
+      "pageTarget": "DR개발팀",
+      "confidence": "high"
+    },
+    {
+      "claim": "문서에는 GEN2 Model 및 개발일정 Rev.01 240219가 표시된다.",
+      "evidenceText": "GEN2 Model\n개발일정 Rev.01 240219",
+      "pageTarget": "GEN2 Model",
+      "confidence": "high"
+    },
+    {
+      "claim": "BLUE 1717 및 BLUE 1417 모델명이 표시된다.",
+      "evidenceText": "BLUE 1717 BLUE 1417",
+      "pageTarget": "BLUE 모델",
+      "confidence": "high"
+    },
+    {
+      "claim": "On/Off 시 전원 공급 불안이 CPU Boot-Up 불량으로 연계되는 항목이 제시된다.",
+      "evidenceText": "On/Off 시, 전원 공급 불안\n- CPU Boot-Up 불량으로 연계",
+      "pageTarget": "CPU Boot-Up 불량",
+      "confidence": "high"
+    },
+    {
+      "claim": "전원 Noise 개선 및 재현성 확보가 항목으로 제시된다.",
+      "evidenceText": "Noise 추가 개선\n• 전원 Noise 개선 및 재현성 확보",
+      "pageTarget": "전원 Noise 개선",
+      "confidence": "high"
+    },
+    {
+      "claim": "일체형 항목에는 방수 등급 확보와 1m Drop 확보가 포함된다.",
+      "evidenceText": "일체형\n• 등급 방수 확보\n확보 • 1m Drop 확보",
+      "pageTarget": "기구 신뢰성",
+      "confidence": "medium"
+    },
+    {
+      "claim": "가공형 항목에는 Frame 형합성 확보, 후가공 양산성 확보, Sink Hole 양산성 확보가 포함된다.",
+      "evidenceText": "가공형\nFrame 형합성 확보 • Frame 형합성 확보\n후가공 양산성 확보 • Sink Hole 양산성 확보",
+      "pageTarget": "Frame 형합성",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Firmware 간 Ethernet Connection 신뢰성 확보가 개발 항목으로 제시된다.",
+      "evidenceText": "신뢰성 확보 • 와 Firmware 간 Ethernet Connection 신뢰성 확보",
+      "pageTarget": "Ethernet Connection 신뢰성",
+      "confidence": "medium"
+    },
+    {
+      "claim": "PC로의 Image Data 전송 신뢰성 및 속도 확보가 항목으로 제시된다.",
+      "evidenceText": "전송 신뢰성 및 속도 확보 • 에서 PC로의 Image Data 전송 신뢰성 및 속도 확보",
+      "pageTarget": "Image Data 전송",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Image 획득 신뢰성 확보가 항목으로 제시된다.",
+      "evidenceText": "획득 신뢰성 확보 • Image 획득 신뢰성 확보",
+      "pageTarget": "Image 획득 신뢰성",
+      "confidence": "high"
+    },
+    {
+      "claim": "Trigger는 Mode 별, 구동 방법 별로 별도 지원하는 것으로 제시된다.",
+      "evidenceText": "Trigger 지원 • Mode 별, 구동 방법 별도 지원",
+      "pageTarget": "Trigger 지원",
+      "confidence": "high"
+    },
+    {
+      "claim": "Algorithm 구현 및 ROIC, Panel Driving 조건 도출이 항목으로 제시된다.",
+      "evidenceText": "개발 • Algorithm 구현\nDriving 조건 도출 • ROIC, Panel Driving 조건 도출",
+      "pageTarget": "ROIC Panel Driving 조건",
+      "confidence": "high"
+    },
+    {
+      "claim": "Rear Cover, Middle Block, 2G Rear Cover, 2G Middle Block 명칭이 표시된다.",
+      "evidenceText": "Rear Cover\nMiddle Block\n•\n2G Rear Cover\n2G Middle Block",
+      "pageTarget": "기구 부품",
+      "confidence": "high"
+    },
+    {
+      "claim": "Diode Sensor는 관련 회로물 추가 구성 및 기구물 설계 고려가 필요하다고 제시된다.",
+      "evidenceText": "o Diode Sensor 要\n: 관련 회로물 추가 구성 必\n: 기구물 설계 상, 관련 고려 必",
+      "pageTarget": "Diode Sensor",
+      "confidence": "high"
+    },
+    {
+      "claim": "Photo Diode 위치 불일치 시 조사 여부 판단이 불가하다고 제시된다.",
+      "evidenceText": "위치와 Photo Diode 위치\n불일치 시, 조사 여부 판단 불가",
+      "pageTarget": "Photo Diode 위치",
+      "confidence": "medium"
+    },
+    {
+      "claim": "저선량에서 영상 내 단차 발생이 언급된다.",
+      "evidenceText": "저 선량에서 영상 내, 단차 발생",
+      "pageTarget": "저선량 영상 단차",
+      "confidence": "high"
+    },
+    {
+      "claim": "조사 시간은 반드시 30ms 이상 필요하며 그 이하 조사 시간에는 반응이 없다고 제시된다.",
+      "evidenceText": "반드시 조사 시간 30ms 이상 要\n: 이하의 조사 시간에 대해 반응 無",
+      "pageTarget": "조사 시간 요구사항",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Source text appears to have low OCR quality: many bullets are empty or truncated, and several Korean phrases have missing subjects."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only general metadata."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are explicitly identified in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document filename includes 250314, while repeated 작성일 is 25.03.19 and a separate 개발일정 Rev.01 240219 appears; these dates appear to refer to different metadata but are not fully explained."
+    }
+  ]
+}

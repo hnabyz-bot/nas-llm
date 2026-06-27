@@ -1,0 +1,168 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954370-135",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/ROIC_1717/BOM/BLUE_ROIC_1717_BOM_250905.xlsx",
+    "canonicalGroupId": "532c002332dd"
+  },
+  "document": {
+    "title": "BLUE_ROIC_1717_BOM_20250905",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "1717_ROIC Ass'y",
+      "BLUE_1717 ROIC PBA SMD",
+      "BLUE_ROIC_1717 PBA"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "20250905",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Bill of materials for BLUE_1717 ROIC PBA SMD and 1717_ROIC Ass'y.",
+    "officialUse": "Used to identify ROIC assembly electrical parts, quantities, references, process status, part names, supplier part numbers, specifications, supplier abbreviations, and notes.",
+    "keyPoints": [
+      "The sheet identifies the assembly as 1717_ROIC Ass'y and BLUE_1717 ROIC PBA SMD.",
+      "The PCB line specifies BLUE_1717 ROIC PCB, FR4, 8Layer, T1.2, 430*39.5.",
+      "Most listed parts use the SM process, while several entries are marked SKIP.",
+      "Supplier names or abbreviations include Murata, Walsin, KEL, YEONHO, Texas Instruments, Onsemi, Analog Device, Panasonic, Diotec, Diode, AVX, Samsung, and E-Song."
+    ]
+  },
+  "entities": [
+    {
+      "name": "1717_ROIC Ass'y",
+      "type": "assembly",
+      "evidence": "1717_ROIC Ass'y"
+    },
+    {
+      "name": "BLUE_1717 ROIC PBA SMD",
+      "type": "printed board assembly",
+      "evidence": "BLUE_1717 ROIC PBA SMD"
+    },
+    {
+      "name": "BLUE_ROIC_1717 PBA",
+      "type": "printed board assembly",
+      "evidence": "PCB-ROIC_1717,\"BLUE_1717 ROIC PCB,FR4,8Layer,T1.2,430*39.5\",BLUE_ROIC_1717 PBA"
+    },
+    {
+      "name": "Texas Instruments",
+      "type": "supplier",
+      "evidence": "IC_CLK_BUF,CDCLVD1212RHAR,\"Clock Buffer Low Jitter,2-Inp Sel 1:12 Uni-to-LVDS Bf,VQFN-40\",Texas Instruments"
+    },
+    {
+      "name": "Analog Device",
+      "type": "supplier",
+      "evidence": "IC_REG,ADM7172ACPZ-2.5-R7,\"LDO Voltage Regulators 2A Hi PSRR FT LDO 2.5Vo,LFCSP-8\",Analog Device"
+    },
+    {
+      "name": "Samsung",
+      "type": "supplier",
+      "evidence": "\"C-CER, CHIP\",CL10B102KB8NFNC,\"1nF, 10%, 50V, X7R, 1608\",Samsung"
+    },
+    {
+      "name": "Murata",
+      "type": "supplier",
+      "evidence": "BEAD-SMD,BLM21PG220SN1D,\"Impedance:22ohm,DC_R:10mhm,6A,100Mhz,2012\",Murata"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "Item,Quantity,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자"
+    },
+    {
+      "name": "Surface mount process",
+      "pageTarget": "Surface Mount Technology",
+      "evidence": "1,1,PCB,,,,SM,PCB-ROIC_1717"
+    },
+    {
+      "name": "SKIP process status",
+      "pageTarget": "BOM Process Status",
+      "evidence": "18,1,U25,,,,SKIP,IC_REG,ADP7182ACPZN-R7"
+    },
+    {
+      "name": "FR4 8 layer PCB",
+      "pageTarget": "FR4 Printed Circuit Board",
+      "evidence": "FR4 8L_430mm x 39.5mm x 1.2T(BLUE) Rev.03 적용"
+    },
+    {
+      "name": "ROIC PBA",
+      "pageTarget": "ROIC Printed Board Assembly",
+      "evidence": "BLUE_1717 ROIC PBA SMD"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is BLUE_ROIC_1717_BOM_20250905.",
+      "evidenceText": "BLUE_ROIC_1717_BOM_20250905",
+      "pageTarget": "BLUE_ROIC_1717_BOM_20250905",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM applies to 1717_ROIC Ass'y.",
+      "evidenceText": "1717_ROIC Ass'y",
+      "pageTarget": "1717_ROIC Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM identifies BLUE_1717 ROIC PBA SMD.",
+      "evidenceText": "BLUE_1717 ROIC PBA SMD",
+      "pageTarget": "BLUE_1717 ROIC PBA SMD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB specification includes FR4, 8Layer, T1.2, and 430*39.5.",
+      "evidenceText": "BLUE_1717 ROIC PCB,FR4,8Layer,T1.2,430*39.5",
+      "pageTarget": "BLUE_1717 ROIC PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The header states FR4 8L_430mm x 39.5mm x 1.2T(BLUE) Rev.03 applies.",
+      "evidenceText": "FR4 8L_430mm x 39.5mm x 1.2T(BLUE) Rev.03 적용",
+      "pageTarget": "FR4 Printed Circuit Board",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes columns for item, quantity, reference, process, part name, supplier part number, specification, supplier abbreviation, note, supplier name, and responsible person.",
+      "evidenceText": "Item,Quantity,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 18 for U25 is marked SKIP.",
+      "evidenceText": "18,1,U25,,,,SKIP,IC_REG,ADP7182ACPZN-R7,\"LDO Voltage Regulators 28 V,200 mA, Low Noise,LFCSP-6\",Analog Device,SKIP",
+      "pageTarget": "BOM Process Status",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 8 lists CDCLVD1212RHAR as an IC_CLK_BUF supplied by Texas Instruments.",
+      "evidenceText": "8,1,U2,,,,SM,IC_CLK_BUF,CDCLVD1212RHAR,\"Clock Buffer Low Jitter,2-Inp Sel 1:12 Uni-to-LVDS Bf,VQFN-40\",Texas Instruments",
+      "pageTarget": "CDCLVD1212RHAR",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 42 lists 146 units of CL10B104KB8NNND ceramic chip capacitors supplied by Samsung.",
+      "evidenceText": "42,146,\"C1,C3,C9,C10,C12,C14,C15,C16,C17,C18,C19,C28,C30,C33,C34,C38,C41,C46,C48,C52,C55,C58,C60,C64,C66,C68,C72,C80,C82,C85,C88,C103,C104,C105,C107,C109,C110,C111,C113,C114,C116,C117,C118,C121,C123,C124,C125,C126,C127,C131,C132,C135,C136,C137,C139,C143,C144,C145,C146,C148,C150,C151,C152,C156,C158,C159,C160,C163,C164,C165,C166,C171,C172,C173,C174,C176,C179,C180,C181,C183,C185,C186,C187,C204,C230,C232,C234,C236,C238,C240,C242,C244,C246,C248,C250,C252,C254,C256,C258,C260,C262,C264,C266,C268,C270,C272,C274,C276,C278,C280,C282,C284,C286,C288,C290,C292,C294,C296,C298,C300,C302,C304,C306,C308,C310,C312,C314,C316,C318,C320,C322,C324,C326,C328,C330,C332,C334,C336,C338,C340,C342,C344,C346,C348,C201,C203\n\",,,,SM,\"C-CER, CHIP\",CL10B104KB8NNND,\"100nF, 5%, 50V, X7R, 1608\",Samsung",
+      "pageTarget": "CL10B104KB8NNND",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is inferred from the source title text BLUE_ROIC_1717_BOM_20250905; no separate issue or approval date is present."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "The source is a BOM spreadsheet extract rather than a regulatory approval, certificate, or authority-issued document."
+    }
+  ]
+}

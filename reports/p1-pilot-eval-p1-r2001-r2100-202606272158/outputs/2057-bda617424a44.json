@@ -1,0 +1,185 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954376-6jd",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/GATE/BOM/BLUE_GATE_BOM_250905.xlsx",
+    "canonicalGroupId": "bda617424a44"
+  },
+  "document": {
+    "title": "BLUE_GATE_BOM_20250905",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "BLUE_GATE",
+      "GATE Ass'y",
+      "BLUE_GATE PBA SMD"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "20250905",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM for BLUE_GATE PBA SMD under GATE Ass'y, listing PCB and SMD components with quantities, references, part numbers, specifications, and vendors.",
+    "officialUse": "Component bill of materials; no regulatory authority, jurisdiction, or standard is stated in the source text.",
+    "keyPoints": [
+      "Header states \"BLUE_GATE_BOM_20250905\".",
+      "Assembly line states \"GATE Ass'y\" and \"FR4 4L_398mm x 40.5mm x 1.2T(BLUE) Rev.03 적용\".",
+      "Table columns include Item, Quantity, Reference, CODE, 공정, 품목명, 업체 P/N, 규격, 업체 약어, 비고, 업체명, 담당자.",
+      "The BOM lists BLUE_GATE PCB plus SMD components including beads, FPC/FFC/PIC connectors, pads, analog switches, level translators, I/O expander, resistors, and capacitors."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_GATE_BOM_20250905",
+      "type": "document",
+      "evidence": ",,BLUE_GATE_BOM_20250905"
+    },
+    {
+      "name": "GATE Ass'y",
+      "type": "assembly",
+      "evidence": ",,GATE Ass'y,,,,,,FR4 4L_398mm x 40.5mm x 1.2T(BLUE) Rev.03 적용"
+    },
+    {
+      "name": "BLUE_GATE PBA SMD",
+      "type": "printed board assembly",
+      "evidence": ",,,,,,,,BLUE_GATE PBA SMD"
+    },
+    {
+      "name": "BLUE_GATE PCB",
+      "type": "PCB",
+      "evidence": "PCB-GATE,\"BLUE_GATE PCB,FR4,4Layer,T1.2,398*40.5\",BLUE_GATE PBA"
+    },
+    {
+      "name": "Murata",
+      "type": "supplier",
+      "evidence": "BEAD-SMD,BLM21PG220SN1D,\"Impedance:22ohm,DC_R:10mhm,6A,100Mhz,2012\",Murata"
+    },
+    {
+      "name": "YEONHO",
+      "type": "supplier",
+      "evidence": "CONNECTOR-FPC/FFC/PIC,05002HR-H50J05,\"50P,0.5mm,SMD-A,AU,Y,FLIP,BOTTOM,H:2.1mm\",YEONHO"
+    },
+    {
+      "name": "JOISNET",
+      "type": "supplier",
+      "evidence": "PAD,SMR-TS-4.5-6-4GRE,W*T*L : 4.5 * 6 * 4,JOISNET"
+    },
+    {
+      "name": "Texas Instruments",
+      "type": "supplier",
+      "evidence": "IC-Switch,TS5A23157DGSR,\"Analog Switch ICs Dual 10-Ohm SPDT Analog Switch,MSOP-10\",Texas Instruments"
+    },
+    {
+      "name": "Walsin",
+      "type": "supplier",
+      "evidence": "R-CHIP,WR06X000 PTL,\"0ohm,5%,1/10W,TP,1608\",Walsin"
+    },
+    {
+      "name": "Vishay",
+      "type": "supplier",
+      "evidence": "\"C-TA, CHIP\",293D106X9016B2TE3,\"10uF,16volt,10%, ESR:2.0ohm, B case\",Vishay"
+    },
+    {
+      "name": "Samsung",
+      "type": "supplier",
+      "evidence": "\"C-CER, CHIP\",CL31A226KAHNNNE,\"22uF, 10%, 25V, X5R, 3216\",Samsung"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "Item,Quantity,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자"
+    },
+    {
+      "name": "BLUE_GATE BOM",
+      "pageTarget": "BLUE_GATE BOM",
+      "evidence": ",,BLUE_GATE_BOM_20250905"
+    },
+    {
+      "name": "GATE Assembly",
+      "pageTarget": "GATE Assembly",
+      "evidence": ",,GATE Ass'y"
+    },
+    {
+      "name": "BLUE_GATE PBA SMD",
+      "pageTarget": "BLUE_GATE PBA SMD",
+      "evidence": ",,,,,,,,BLUE_GATE PBA SMD"
+    },
+    {
+      "name": "FR4 4-layer PCB",
+      "pageTarget": "FR4 PCB",
+      "evidence": "FR4 4L_398mm x 40.5mm x 1.2T(BLUE) Rev.03 적용"
+    },
+    {
+      "name": "Surface Mount Process",
+      "pageTarget": "Surface Mount Technology",
+      "evidence": "공정,품목명"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is titled BLUE_GATE_BOM_20250905.",
+      "evidenceText": ",,BLUE_GATE_BOM_20250905",
+      "pageTarget": "BLUE_GATE BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM applies to GATE Ass'y and references FR4 4L 398mm x 40.5mm x 1.2T(BLUE) Rev.03.",
+      "evidenceText": ",,GATE Ass'y,,,,,,FR4 4L_398mm x 40.5mm x 1.2T(BLUE) Rev.03 적용",
+      "pageTarget": "GATE Assembly",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document includes a BLUE_GATE PBA SMD section.",
+      "evidenceText": ",,,,,,,,BLUE_GATE PBA SMD",
+      "pageTarget": "BLUE_GATE PBA SMD",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 1 is a BLUE_GATE PCB with FR4, 4Layer, T1.2, 398*40.5 specification.",
+      "evidenceText": "1,1,PCB,,,,SM,PCB-GATE,\"BLUE_GATE PCB,FR4,4Layer,T1.2,398*40.5\",BLUE_GATE PBA,ETC,,,",
+      "pageTarget": "BLUE_GATE PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The table records quantities, references, process, item names, vendor part numbers, specifications, and vendor information.",
+      "evidenceText": "Item,Quantity,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM lists Texas Instruments ICs including TS5A23157DGSR, TS5A3157DCKR, LSF0108PWR, and TCA9539RGER.",
+      "evidenceText": "IC-Switch,TS5A23157DGSR,\"Analog Switch ICs Dual 10-Ohm SPDT Analog Switch,MSOP-10\",Texas Instruments; IC-Switch,TS5A3157DCKR,SPDT X 1 10OHM SC70-6,Texas Instruments; IC-Level Translator,LSF0108PWR,BIDIR 20TSSOP,Texas Instruments; IC-I/O EXP,TCA9539RGER,400KHZ I2C SMBUS 24VQFN,Texas Instruments",
+      "pageTarget": "Texas Instruments Components",
+      "confidence": "high"
+    },
+    {
+      "claim": "No regulatory authority, jurisdiction, or standard is stated in the source text.",
+      "evidenceText": "The provided rows contain BOM header and component table fields only; no authority, jurisdiction, or standards field/value is present.",
+      "pageTarget": "Regulatory Authority Metadata",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated; authoritySignal is only \"general\"."
+    },
+    {
+      "severity": "warning",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is taken from the title string \"BLUE_GATE_BOM_20250905\" rather than a separate date field."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision is taken from the assembly note \"Rev.03 적용\" rather than a dedicated revision field."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source appears to be a BOM/component list, not a regulatory approval or authority-issued document."
+    }
+  ]
+}

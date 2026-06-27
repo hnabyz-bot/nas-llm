@@ -1,0 +1,243 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19yq",
+    "sourcePath": "raw/sources/Project/02_CYAN/2. DMR/06. MCU Firmware/CYAN FW 업로드 가이드(IMX)_20260513.pptx",
+    "canonicalGroupId": "78f04a85e1cb"
+  },
+  "document": {
+    "title": "IMX 펌웨어 설치 가이드",
+    "documentType": "Firmware installation guide",
+    "productModels": [
+      "CYAN",
+      "iMX8",
+      "CYAN_MAIN",
+      "BULE_BASE"
+    ],
+    "authorityOrJurisdiction": [
+      "DR 개발팀"
+    ],
+    "revisionOrVersion": "",
+    "documentDate": "2026. 05. 13",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Internal confidential guide for iMX8 firmware installation covering Linux Yocto installation and Gen2.Server installation.",
+    "officialUse": "Used by DR 개발팀 personnel to install Yocto and upload Gen2.Server firmware using SD card boot, UART/Teraterm, Engineering Tool, and network setup steps.",
+    "keyPoints": [
+      "The guide lists two main sections: 리눅스 Yocto 설치 and Gen2.Server 설치.",
+      "Yocto installation uses an iMX8 Module card, UART to Micro 5-pin cable, and boot Micro SD card.",
+      "UART/Teraterm settings include speed 115200 and data 8bit.",
+      "Yocto installation command is /usr/bin/install_yocto.sh.",
+      "Gen2.Server installation requires the IMX module mounted in the detector and connection between detector and PC.",
+      "If Engineering Tool Setup Page Ping is not green, IPv4 is configured to IP address 192.168.0.100 and subnet mask 255.255.255.0.",
+      "Upload completion is indicated by Setup done. log and State showing green light with Idle after Connect."
+    ]
+  },
+  "entities": [
+    {
+      "name": "DR 개발팀",
+      "type": "department",
+      "evidence": "부서 - DR 개발팀"
+    },
+    {
+      "name": "서동철",
+      "type": "author",
+      "evidence": "◎작성자 : 서동철"
+    },
+    {
+      "name": "CYAN_MAIN",
+      "type": "board",
+      "evidence": "CYAN_MAIN BULE_BASE 예 )"
+    },
+    {
+      "name": "BULE_BASE",
+      "type": "board",
+      "evidence": "CYAN_MAIN BULE_BASE 예 )"
+    },
+    {
+      "name": "Teraterm",
+      "type": "software tool",
+      "evidence": "PC 에서 UART 통신을 위한 Teraterm 을 실행한다"
+    },
+    {
+      "name": "Bule Engineering Tool",
+      "type": "software tool",
+      "evidence": "Bule Engineering Tool 디텍터와 PC 간의 연결 필수"
+    },
+    {
+      "name": "Engineering Tool Setup Page",
+      "type": "software screen",
+      "evidence": "Engineering Tool Setup Page Ping 칸에 초록불이 들어오면 부팅 완료"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "iMX8 펌웨어 설치",
+      "pageTarget": "iMX8 firmware installation",
+      "evidence": "iMX8 펌웨어 설치"
+    },
+    {
+      "name": "리눅스 Yocto 설치",
+      "pageTarget": "Linux Yocto installation",
+      "evidence": "목차 1. 리눅스 Yocto 설치"
+    },
+    {
+      "name": "Gen2.Server 설치",
+      "pageTarget": "Gen2.Server installation",
+      "evidence": "목차 1. 리눅스 Yocto 설치 2. Gen2.Server 설치"
+    },
+    {
+      "name": "SD CARD 부팅모드",
+      "pageTarget": "SD card boot mode",
+      "evidence": "지정된 DIP 스위치를 SD CARD 부팅모드로 올린다"
+    },
+    {
+      "name": "UART 통신 설정",
+      "pageTarget": "UART communication settings",
+      "evidence": "설정 포트 : UART 컴포트 ( 장치관리자에서 확인 ) 속도 : 115200 데이터 : 8bit"
+    },
+    {
+      "name": "Yocto 설치 명령어",
+      "pageTarget": "Yocto installation command",
+      "evidence": "/usr/bin/install_yocto.sh 입력 후 엔터"
+    },
+    {
+      "name": "Engineering Tool Ping 확인",
+      "pageTarget": "Engineering Tool ping status",
+      "evidence": "Engineering Tool Setup Page Ping 칸에 초록불이 들어오면 부팅 완료"
+    },
+    {
+      "name": "고정 IPv4 설정",
+      "pageTarget": "Static IPv4 configuration",
+      "evidence": "IP 주소 : 192.168.0.100 입력"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is titled IMX firmware installation guide and dated 2026. 05. 13.",
+      "evidenceText": "IMX 펌웨어 설치 가이드 일자 - 2026. 05. 13 부서 - DR 개발팀",
+      "pageTarget": "IMX firmware installation guide",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document is marked confidential.",
+      "evidenceText": "IMX 펌웨어 설치 가이드 일자 - 2026. 05. 13 부서 - DR 개발팀 <confidential>",
+      "pageTarget": "Confidential document handling",
+      "confidence": "high"
+    },
+    {
+      "claim": "The guide covers Linux Yocto installation and Gen2.Server installation.",
+      "evidenceText": "목차 1. 리눅스 Yocto 설치 2. Gen2.Server 설치",
+      "pageTarget": "iMX8 firmware installation",
+      "confidence": "high"
+    },
+    {
+      "claim": "Yocto installation configuration includes an iMX8 Module card, UART to Micro 5-pin cable, and boot Micro SD card.",
+      "evidenceText": "리눅스 Yocto 설치 - 구성 iMX8 Module card UART to Micro 5-pin cable 부팅용 Micro SD card",
+      "pageTarget": "Linux Yocto installation",
+      "confidence": "high"
+    },
+    {
+      "claim": "The main board DIP switch is set to SD CARD boot mode for installation.",
+      "evidenceText": "IMX 모듈이 장착된 MAIN B/D 의 지정된 DIP 스위치를 SD CARD 부팅모드로 올린다",
+      "pageTarget": "SD card boot mode",
+      "confidence": "high"
+    },
+    {
+      "claim": "Teraterm is used for UART communication with serial port settings.",
+      "evidenceText": "PC 에서 UART 통신을 위한 Teraterm 을 실행한다 . 실행 후 Serialport 를 연결한다 .",
+      "pageTarget": "UART communication settings",
+      "confidence": "high"
+    },
+    {
+      "claim": "UART settings include speed 115200 and data 8bit.",
+      "evidenceText": "설정 포트 : UART 컴포트 ( 장치관리자에서 확인 ) 속도 : 115200 데이터 : 8bit",
+      "pageTarget": "UART communication settings",
+      "confidence": "high"
+    },
+    {
+      "claim": "After boot completion, login is performed by entering root.",
+      "evidenceText": "부팅이 완료되면 root 입력으로 로그인한다",
+      "pageTarget": "Yocto installation procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The Yocto download and installation command is /usr/bin/install_yocto.sh.",
+      "evidenceText": "/usr/bin/install_yocto.sh 입력 후 엔터",
+      "pageTarget": "Yocto installation command",
+      "confidence": "high"
+    },
+    {
+      "claim": "Yocto installation completion is indicated by the message Yocto installed successfully.",
+      "evidenceText": "다운로드 이후 ' Yocto installed successfully' 메시지 출력 시 설치 완료",
+      "pageTarget": "Yocto installation verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Gen2.Server installation requires the IMX module installed in the detector and a connection between detector and PC.",
+      "evidenceText": "Gen2.Server 설치 - 구성 디텍터에 IMX 모듈 장착 완료 상태확인 Bule Engineering Tool 디텍터와 PC 간의 연결 필수",
+      "pageTarget": "Gen2.Server installation",
+      "confidence": "high"
+    },
+    {
+      "claim": "After Yocto installation, the changed DIP switch is restored and the SD card is removed before powering on.",
+      "evidenceText": "리눅스 설치를위해 변경한 DIP 스위치를 원상태로 복구한다 2. SD CARD 를 제거 후 전원을 켠다 .",
+      "pageTarget": "Gen2.Server installation procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "Boot completion is indicated when the Engineering Tool Setup Page Ping field turns green.",
+      "evidenceText": "Engineering Tool Setup Page Ping 칸에 초록불이 들어오면 부팅 완료",
+      "pageTarget": "Engineering Tool ping status",
+      "confidence": "high"
+    },
+    {
+      "claim": "If Ping is not green, Windows IPv4 settings are changed from automatic IP to a specified IP address.",
+      "evidenceText": "‘자동으로 IP 주소 받기’ 를 ‘다음 IP 주소 사용‘ 으로 변경",
+      "pageTarget": "Static IPv4 configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The specified IP address is 192.168.0.100.",
+      "evidenceText": "IP 주소 : 192.168.0.100 입력",
+      "pageTarget": "Static IPv4 configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "The specified subnet mask is 255.255.255.0.",
+      "evidenceText": "서브넷 마스크 : 255.255.255.0 입력",
+      "pageTarget": "Static IPv4 configuration",
+      "confidence": "high"
+    },
+    {
+      "claim": "When Setup is clicked, file transfer progress appears in the lower log and upload completion outputs Setup done.",
+      "evidenceText": "Setup 버튼을 클릭하면 아래쪽 로그에 파일 전송 진행 상황이 표시되며 , 업로드가 완료되면 Setup done. 로그가 출력됨 .",
+      "pageTarget": "Gen2.Server upload procedure",
+      "confidence": "high"
+    },
+    {
+      "claim": "Upload completion is confirmed when Connect shows State green and Idle.",
+      "evidenceText": "Connect 버튼을 눌러 연결하였을 때 상단 State 에 초록 불이 들어오고 Idle 이 표시되면 업로드 완료 .",
+      "pageTarget": "Gen2.Server upload verification",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No revision or version identifier is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority, jurisdiction, or external standard is identified; authority is limited to the internal DR 개발팀 department."
+    },
+    {
+      "severity": "info",
+      "reason": "No RA/regulatory standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Source contains possible OCR or spelling inconsistencies such as BULE_BASE and Bule Engineering Tool; values were preserved as written."
+    }
+  ]
+}

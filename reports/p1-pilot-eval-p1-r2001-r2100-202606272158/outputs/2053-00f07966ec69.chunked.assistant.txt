@@ -1,0 +1,166 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954371-1zz",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/ROIC_1417/BOM/BLUE_ROIC_1417_BOM_250905.xlsx",
+    "canonicalGroupId": "00f07966ec69"
+  },
+  "document": {
+    "title": "BLUE_ROIC_BOM_20250905",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "1417_ROIC Ass'y",
+      "BLUE_1417 ROIC PBA SMD",
+      "PCB-ROIC_1417"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "2025-09-05",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Bill of materials for BLUE ROIC dated 2025-09-05, covering the 1417_ROIC Ass'y / BLUE_1417 ROIC PBA SMD assembly and identifying PCB construction, component references, process status, part numbers, specifications, and vendors.",
+    "officialUse": "Design history file / device master record support for electrical parts control and assembly configuration of the ROIC_1417 board.",
+    "keyPoints": [
+      "The document header identifies BLUE_ROIC_BOM_20250905.",
+      "The assembly covered by the BOM is 1417_ROIC Ass'y / BLUE_1417 ROIC PBA SMD.",
+      "The board configuration applies FR4 8-layer construction with dimensions and thickness identified, under Rev.03.",
+      "The BOM controls component identity through item number, quantity, reference designator, process, part name, vendor part number, specification, vendor abbreviation, remarks, vendor name, and owner columns.",
+      "Some components are intentionally marked SKIP in the BOM process or remarks fields."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_ROIC_BOM_20250905",
+      "type": "document",
+      "evidence": "SOURCE_TEXT header: BLUE_ROIC_BOM_20250905."
+    },
+    {
+      "name": "1417_ROIC Ass'y",
+      "type": "assembly",
+      "evidence": "Header rows state 1417_ROIC Ass'y and BLUE_1417 ROIC PBA SMD."
+    },
+    {
+      "name": "BLUE_1417 ROIC PBA SMD",
+      "type": "printed board assembly",
+      "evidence": "Header rows state 1417_ROIC Ass'y and BLUE_1417 ROIC PBA SMD."
+    },
+    {
+      "name": "PCB-ROIC_1417",
+      "type": "printed circuit board",
+      "evidence": "Item 1: Quantity 1, Reference PCB, 공정 SM, 품목명 PCB-ROIC_1417, specification BLUE_1417 ROIC PCB, FR4, 8Layer, T1.2, 3580*41.5."
+    },
+    {
+      "name": "Texas Instruments",
+      "type": "component manufacturer",
+      "evidence": "Item 8: U2, IC_CLK_BUF, CDCLVD1212RHAR, Clock Buffer Low Jitter, 2-Inp Sel 1:12 Uni-to-LVDS Bf, VQFN-40, Texas Instruments."
+    },
+    {
+      "name": "Analog Device",
+      "type": "component manufacturer",
+      "evidence": "Items 12 and 13 list IC_REG ADM7172ACPZ-2.5-R7 and ADM7172ACPZ-5.0-R7 as LDO Voltage Regulators from Analog Device."
+    },
+    {
+      "name": "Panasonic",
+      "type": "component manufacturer",
+      "evidence": "Item 17: U20,U22, SSR_RELAY, AQY212GSZ, Solid State Relays - PCB Mount 500MA 60V 4PIN SPST 1A, Panasonic."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "BLUE_ROIC_BOM_20250905",
+      "evidence": "Column header lists Item, Quantity, Reference, CODE, 도면, 매수, 공정, 품목명, 업체 P/N, 규격, 업체 약어, 비고, 업체명, 담당자."
+    },
+    {
+      "name": "PCB construction specification",
+      "pageTarget": "BLUE_ROIC_1417 PBA",
+      "evidence": "Header states FR4 8L_358mm x 41.5mm x 1.2T(BLUE) Rev.03 적용; PCB row states FR4, 8Layer, T1.2, 3580*41.5."
+    },
+    {
+      "name": "Surface mount assembly process",
+      "pageTarget": "PCB-ROIC_1417",
+      "evidence": "Item 1: Quantity 1, Reference PCB, 공정 SM, 품목명 PCB-ROIC_1417, specification BLUE_1417 ROIC PCB, FR4, 8Layer, T1.2, 3580*41.5."
+    },
+    {
+      "name": "Skipped BOM items",
+      "pageTarget": "Skipped BOM items",
+      "evidence": "Examples include U15 ADR444ARZ with remark SKIP, U25 ADP7182ACPZN-R7 with process SKIP and remark SKIP, and R34/R33/R84 with SKIP."
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a BOM for BLUE ROIC dated 2025-09-05.",
+      "evidenceText": "SOURCE_TEXT header: BLUE_ROIC_BOM_20250905.",
+      "pageTarget": "BLUE_ROIC_BOM_20250905",
+      "confidence": "high"
+    },
+    {
+      "claim": "The assembly covered by the BOM is 1417_ROIC Ass'y / BLUE_1417 ROIC PBA SMD.",
+      "evidenceText": "Header rows state 1417_ROIC Ass'y and BLUE_1417 ROIC PBA SMD.",
+      "pageTarget": "1417_ROIC Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "The board configuration applies FR4 8-layer construction with dimensions and thickness identified, under Rev.03.",
+      "evidenceText": "Header states FR4 8L_358mm x 41.5mm x 1.2T(BLUE) Rev.03 적용; PCB row states FR4, 8Layer, T1.2, 3580*41.5.",
+      "pageTarget": "BLUE_ROIC_1417 PBA",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM controls component identity through item number, quantity, reference designator, process, part name, vendor part number, specification, vendor abbreviation, remarks, vendor name, and owner columns.",
+      "evidenceText": "Column header lists Item, Quantity, Reference, CODE, 도면, 매수, 공정, 품목명, 업체 P/N, 규격, 업체 약어, 비고, 업체명, 담당자.",
+      "pageTarget": "BLUE_ROIC_BOM_20250905",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB item is specified as a surface-mount process item for PCB-ROIC_1417.",
+      "evidenceText": "Item 1: Quantity 1, Reference PCB, 공정 SM, 품목명 PCB-ROIC_1417, specification BLUE_1417 ROIC PCB, FR4, 8Layer, T1.2, 3580*41.5.",
+      "pageTarget": "PCB-ROIC_1417",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes a low-jitter clock buffer CDCLVD1212RHAR from Texas Instruments.",
+      "evidenceText": "Item 8: U2, IC_CLK_BUF, CDCLVD1212RHAR, Clock Buffer Low Jitter, 2-Inp Sel 1:12 Uni-to-LVDS Bf, VQFN-40, Texas Instruments.",
+      "pageTarget": "CDCLVD1212RHAR",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes voltage regulators ADM7172ACPZ-2.5-R7 and ADM7172ACPZ-5.0-R7 from Analog Device.",
+      "evidenceText": "Items 12 and 13 list IC_REG ADM7172ACPZ-2.5-R7 and ADM7172ACPZ-5.0-R7 as LDO Voltage Regulators from Analog Device.",
+      "pageTarget": "Analog Device voltage regulators",
+      "confidence": "high"
+    },
+    {
+      "claim": "Some components are intentionally marked SKIP in the BOM process or remarks fields.",
+      "evidenceText": "Examples include U15 ADR444ARZ with remark SKIP, U25 ADP7182ACPZN-R7 with process SKIP and remark SKIP, and R34/R33/R84 with SKIP.",
+      "pageTarget": "Skipped BOM items",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes solid-state relays AQY212GSZ from Panasonic with 500 mA, 60 V, 4-pin SPST 1A specification.",
+      "evidenceText": "Item 17: U20,U22, SSR_RELAY, AQY212GSZ, Solid State Relays - PCB Mount 500MA 60V 4PIN SPST 1A, Panasonic.",
+      "pageTarget": "AQY212GSZ",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes Schottky and switching diodes with defined voltage and current ratings.",
+      "evidenceText": "Item 20 lists BAT54S, 30V, 200mA, SOT-23; item 21 lists 1N4148WS-7-F, Small Signal Switching Diodes 100V Io/150mA T/R, SOD-323-2.",
+      "pageTarget": "ROIC_1417 diodes",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "info",
+      "reason": "No regulatory authority, jurisdiction, certificate, test report, or submission identifier is present in this BOM chunk."
+    },
+    {
+      "severity": "warning",
+      "reason": "The PCB dimension appears as 358mm in the header but 3580*41.5 in the PCB row; source should be reviewed for unit or transcription consistency."
+    },
+    {
+      "severity": "info",
+      "reason": "Product signal is marked Unclassified in metadata; product model names are inferred only from BOM header and item text."
+    }
+  ]
+}
