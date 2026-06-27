@@ -1,0 +1,134 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954405-uou",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/PCIE&USB-C/Schematic/USB-C_241223_IO.pdf",
+    "canonicalGroupId": "d2f61732ba17"
+  },
+  "document": {
+    "title": "USB-C_241223_IO",
+    "documentType": "Schematic",
+    "productModels": [
+      "G1717CW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "Friday, June 27, 2025",
+    "standards": [
+      "USB3.0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "USB-C I/O schematic page showing USB3.0 layout notes, connector pin signals, OLED I2C address, and related components.",
+    "officialUse": "Design history file schematic evidence for USB-C/PCIE electrical design and layout constraints.",
+    "keyPoints": [
+      "USB3.0 layout note specifies 90 ohm impedance and equal USB signal length.",
+      "OLED I2C address is listed as 0x3C.",
+      "USB-C connector J4 includes VBUS, CC1/CC2, D+/D-, SBU, TX/RX, GND, and shield pins.",
+      "Title block shows A4 sheet 1 of 1 dated Friday, June 27, 2025."
+    ]
+  },
+  "entities": [
+    {
+      "name": "G1717CW",
+      "type": "product model or source-folder product signal",
+      "evidence": "sourcePath: raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/PCIE&USB-C/Schematic/USB-C_241223_IO.pdf"
+    },
+    {
+      "name": "J4 124018612112A",
+      "type": "USB-C connector",
+      "evidence": "J4 124018612112A ... GND A1 TX1+ A2 TX1- A3 VBUS A4 CC1 A5 D1+ A6 D1- A7 SBU1 A8 VBUS A9 RX2- A10 RX2+ A11 GND A12 ... CC2 ... SBU2 ... SH1"
+    },
+    {
+      "name": "J5 0500HR-H20J50",
+      "type": "connector",
+      "evidence": "J5 0500HR-H20J50"
+    },
+    {
+      "name": "J3 0500HR-10N2",
+      "type": "connector",
+      "evidence": "J3 0500HR-10N2"
+    },
+    {
+      "name": "OLED I2C",
+      "type": "interface",
+      "evidence": "OLED I2C ADDR: (0x3C)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "USB3.0 layout impedance",
+      "pageTarget": "USB3.0 Layout Impedance",
+      "evidence": "USB3.0 Layout: 90ohm, USB signals length equal I2C#B"
+    },
+    {
+      "name": "USB-C connector pinout",
+      "pageTarget": "USB-C Connector Pinout",
+      "evidence": "J4 124018612112A ... GND A1 TX1+ A2 TX1- A3 VBUS A4 CC1 A5 D1+ A6 D1- A7 SBU1 A8 VBUS A9 RX2- A10 RX2+ A11 GND A12"
+    },
+    {
+      "name": "OLED I2C address",
+      "pageTarget": "OLED I2C Address",
+      "evidence": "OLED I2C ADDR: (0x3C)"
+    },
+    {
+      "name": "USB signal length matching",
+      "pageTarget": "USB Signal Length Matching",
+      "evidence": "USB3.0 Layout: 90ohm, USB signals length equal I2C#B"
+    },
+    {
+      "name": "USB1 signal nets",
+      "pageTarget": "USB1 Signal Nets",
+      "evidence": "USB1_TXP USB1_TXN USB1_RXN USB1_RXP USB1_DP USB1_DN USB1_VBUS"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The schematic contains a USB3.0 layout instruction for 90 ohm impedance.",
+      "evidenceText": "USB3.0 Layout: 90ohm, USB signals length equal I2C#B",
+      "pageTarget": "USB3.0 Layout Impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic states OLED I2C address 0x3C.",
+      "evidenceText": "OLED I2C ADDR: (0x3C)",
+      "pageTarget": "OLED I2C Address",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic title block is dated Friday, June 27, 2025.",
+      "evidenceText": "Date: Sheet of <Doc> <RevCo <Title> A4 1 1 Friday, June 27, 2025",
+      "pageTarget": "USB-C_241223_IO",
+      "confidence": "high"
+    },
+    {
+      "claim": "J4 is identified with part number 124018612112A and includes USB-C related pins including TX, RX, VBUS, CC, D, SBU, GND, and shield pins.",
+      "evidenceText": "J4 124018612112A GND A1 TX1+ A2 TX1- A3 VBUS A4 CC1 A5 D1+ A6 D1- A7 SBU1 A8 VBUS A9 RX2- A10 RX2+ A11 GND A12 GND B1 TX2+ B2 TX2- B3 VBUS B4 CC2 B5 D2+ B6 D2- B7 SBU2 B8 VBUS B9 RX1- B10 RX1+ B11 GND B12 SH1",
+      "pageTarget": "USB-C Connector Pinout",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic includes USB1 signal nets for transmit, receive, D+/D-, and VBUS.",
+      "evidenceText": "USB1_TXP USB1_TXN USB1_RXN USB1_RXP USB1_DP USB1_DN USB1_VBUS",
+      "pageTarget": "USB1 Signal Nets",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not present in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision/version is not present; title block contains placeholder text such as <RevCo and <Title>."
+    },
+    {
+      "severity": "info",
+      "reason": "Product model G1717CW is inferred only from the sourcePath folder name, while productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text appears to be OCR or extracted schematic text with repeated title block fragments and sparse context."
+    }
+  ]
+}

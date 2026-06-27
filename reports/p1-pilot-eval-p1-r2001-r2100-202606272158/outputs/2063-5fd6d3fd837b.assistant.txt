@@ -1,0 +1,183 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954374-4lp",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/BAT_CON/BOM/BLUE_BAT_CON_BOM_250905.xlsx",
+    "canonicalGroupId": "5fd6d3fd837b"
+  },
+  "document": {
+    "title": "BLUE_BAT_BOM_20250905",
+    "documentType": "Bill of Materials",
+    "productModels": [
+      "BLUE_BAT Ass'y"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.03",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM for BLUE_BAT Ass'y / BLUE_BAT PBA SMD listing PCB and electrical components.",
+    "officialUse": "Supports DHF traceability for electrical parts used in the BLUE_BAT assembly.",
+    "keyPoints": [
+      "PCB is listed as PCB-BAT with BLUE_BAT PCB, FR4, 2Layer, T1.2, 154*34 specification.",
+      "The assembly references FR4 2L_154mm x 34mm x 1.2T(BLUE) Rev.03 적용.",
+      "Listed components include bead, board-to-board connectors, Micro USB Type B connector, TVS diode, and chip resistors.",
+      "Some lines are marked SKIP in the remarks column."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_BAT Ass'y",
+      "type": "assembly",
+      "evidence": "BLUE_BAT Ass'y"
+    },
+    {
+      "name": "BLUE_BAT PBA SMD",
+      "type": "printed board assembly",
+      "evidence": "BLUE_BAT PBA SMD"
+    },
+    {
+      "name": "Murata",
+      "type": "supplier",
+      "evidence": "BLM18PG121SZ1D,\"Impedance:120ohm,DC_R:50mhm,100Mhz, 1608\",Murata"
+    },
+    {
+      "name": "HRS",
+      "type": "supplier",
+      "evidence": "BK22C07-6DS/2-0.4V(800),\"Mezzanine Connectors Plug, 6pos., 0.4mm Pitch, 15A\",HRS"
+    },
+    {
+      "name": "TE",
+      "type": "supplier",
+      "evidence": "1-1827654-1,2MM PITCH BATT PLG ASY7POS,TE"
+    },
+    {
+      "name": "Amphenol",
+      "type": "supplier",
+      "evidence": "10118194-0001LF,Micro USB Type B Connectors, Amphenol"
+    },
+    {
+      "name": "Texas Instruments",
+      "type": "supplier",
+      "evidence": "TPD1E10B06DPYR,TVS Diodes Sgl Channel ESD:30KV,Texas Instruments"
+    },
+    {
+      "name": "Walsin",
+      "type": "supplier",
+      "evidence": "WR06X000 PTL,\"0ohm,5%,1/10W,TP,1608\",Walsin"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of Materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "BLUE_BAT_BOM_20250905"
+    },
+    {
+      "name": "FR4 2-layer PCB",
+      "pageTarget": "FR4 PCB",
+      "evidence": "FR4 2L_154mm x 34mm x 1.2T(BLUE) Rev.03 적용"
+    },
+    {
+      "name": "SMD process",
+      "pageTarget": "Surface-Mount Device Assembly",
+      "evidence": "BLUE_BAT PBA SMD"
+    },
+    {
+      "name": "Board-to-board connector",
+      "pageTarget": "Board-to-Board Connector",
+      "evidence": "CONNECTOR-BOARD/BOARD,BK22C07-6DS/2-0.4V(800),\"Mezzanine Connectors Plug, 6pos., 0.4mm Pitch, 15A\""
+    },
+    {
+      "name": "TVS diode",
+      "pageTarget": "Transient-Voltage-Suppression Diode",
+      "evidence": "DIODE-TVS,TPD1E10B06DPYR,TVS Diodes Sgl Channel ESD:30KV"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is BLUE_BAT_BOM_20250905.",
+      "evidenceText": "BLUE_BAT_BOM_20250905",
+      "pageTarget": "BLUE_BAT_BOM_20250905",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM applies to BLUE_BAT Ass'y.",
+      "evidenceText": "BLUE_BAT Ass'y",
+      "pageTarget": "BLUE_BAT Ass'y",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document references BLUE_BAT PBA SMD.",
+      "evidenceText": "BLUE_BAT PBA SMD",
+      "pageTarget": "BLUE_BAT PBA SMD",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB specification is BLUE_BAT PCB, FR4, 2Layer, T1.2, 154*34.",
+      "evidenceText": "PCB-BAT,\"BLUE_BAT PCB,FR4,2Layer,T1.2,154*34\"",
+      "pageTarget": "PCB-BAT",
+      "confidence": "high"
+    },
+    {
+      "claim": "The assembly references FR4 2L 154 mm x 34 mm x 1.2T BLUE Rev.03.",
+      "evidenceText": "FR4 2L_154mm x 34mm x 1.2T(BLUE) Rev.03 적용",
+      "pageTarget": "FR4 PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes Murata BLM18PG121SZ1D bead with 120 ohm impedance.",
+      "evidenceText": "BEAD_SMD,BLM18PG121SZ1D,\"Impedance:120ohm,DC_R:50mhm,100Mhz, 1608\",Murata",
+      "pageTarget": "BLM18PG121SZ1D",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes HRS BK22C07-6DS/2-0.4V(800) mezzanine connectors.",
+      "evidenceText": "CONNECTOR-BOARD/BOARD,BK22C07-6DS/2-0.4V(800),\"Mezzanine Connectors Plug, 6pos., 0.4mm Pitch, 15A\",HRS",
+      "pageTarget": "BK22C07-6DS/2-0.4V(800)",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes TE 1-1827654-1 2 mm pitch battery plug assembly.",
+      "evidenceText": "CONNECTOR-BOARD/BOARD,1-1827654-1,2MM PITCH BATT PLG ASY7POS,TE",
+      "pageTarget": "1-1827654-1",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes Amphenol 10118194-0001LF Micro USB Type B connector.",
+      "evidenceText": "CONNECTOR-USB,10118194-0001LF,Micro USB Type B Connectors, Amphenol",
+      "pageTarget": "10118194-0001LF",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes Texas Instruments TPD1E10B06DPYR TVS diode.",
+      "evidenceText": "DIODE-TVS,TPD1E10B06DPYR,TVS Diodes Sgl Channel ESD:30KV,Texas Instruments",
+      "pageTarget": "TPD1E10B06DPYR",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several BOM entries are marked SKIP.",
+      "evidenceText": "Murata,SKIP; Walsin,SKIP",
+      "pageTarget": "BOM Skip Status",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit regulatory authority or jurisdiction is present in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are identified in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document date field is present; date-like tokens appear only in the title and file name."
+    },
+    {
+      "severity": "warning",
+      "reason": "Reference FB2 appears in both an active line and a SKIP line, creating potentially conflicting BOM evidence."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954370-17m",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/09. 전장 부품 List/GYRO/BOM/BLUE_GYRO_BOM_250724.xls",
+    "canonicalGroupId": "0707ab519b99"
+  },
+  "document": {
+    "title": "BLUE_GYRO_BOM_20250724",
+    "documentType": "BOM",
+    "productModels": [
+      "BLUE_GYRO Ass'y",
+      "BLUE_GYRO PBA SMD",
+      "PCB-GYRO"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Rev.02",
+    "documentDate": "20250724",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "BOM for BLUE_GYRO Ass'y / BLUE_GYRO PBA SMD listing PCB, connector, gyro IC, resistors, and capacitors.",
+    "officialUse": "Supports component traceability by listing item quantities, references, codes, item names, part numbers, specifications, supplier abbreviations, remarks, supplier names, and responsible person columns.",
+    "keyPoints": [
+      "Header identifies BLUE_GYRO_BOM_20250724 and BLUE_GYRO Ass'y.",
+      "PCB description states FR4 2L, 75mm x 17mm x 1.2T(BLUE), Rev.02 applied.",
+      "The BOM lists BMI160 as the IC-GYRO component with IMU ACCEL/GYRO I2C/SPI 14LGA specification.",
+      "Suppliers or supplier abbreviations shown include YEONHO, BOSCH, Walsin, and Samsung."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_GYRO Ass'y",
+      "type": "assembly",
+      "evidence": "BLUE_GYRO Ass'y"
+    },
+    {
+      "name": "BLUE_GYRO PBA SMD",
+      "type": "assembly",
+      "evidence": "BLUE_GYRO PBA SMD"
+    },
+    {
+      "name": "PCB-GYRO",
+      "type": "component",
+      "evidence": "Item 1 ... 품목명, ... PCB-GYRO"
+    },
+    {
+      "name": "BMI160",
+      "type": "component",
+      "evidence": "U1 ... IC-GYRO,BMI160, IMU ACCEL/GYRO I2C/SPI 14LGA,BOSCH"
+    },
+    {
+      "name": "05002HR-08N2",
+      "type": "component",
+      "evidence": "J1 ... CONNECTOR-FPC/FFC/PIC,05002HR-08N2"
+    },
+    {
+      "name": "BOSCH",
+      "type": "supplier",
+      "evidence": "BMI160, IMU ACCEL/GYRO I2C/SPI 14LGA,BOSCH"
+    },
+    {
+      "name": "YEONHO",
+      "type": "supplier",
+      "evidence": "05002HR-08N2,\"8P,0.5mm,SMD-A,AU,Y,FLIP,VERTICAL, BOTTOM\",YEONHO"
+    },
+    {
+      "name": "Walsin",
+      "type": "supplier",
+      "evidence": "WR06X1002 FTL,\"10Kohm,1%,1/10W,TP,1608\",Walsin"
+    },
+    {
+      "name": "Samsung",
+      "type": "supplier",
+      "evidence": "CL10B104KB8NNND,\"100nF, 5%, 50V, X7R, 1608\",Samsung"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "BLUE_GYRO BOM",
+      "pageTarget": "BLUE_GYRO BOM",
+      "evidence": "BLUE_GYRO_BOM_20250724"
+    },
+    {
+      "name": "BLUE_GYRO PCB",
+      "pageTarget": "BLUE_GYRO PCB",
+      "evidence": "PCB-GYRO,\"BLUE_GYRO PCB,FR4, 2ayer,T1.2"
+    },
+    {
+      "name": "FR4 2L PCB Rev.02",
+      "pageTarget": "FR4 2L PCB",
+      "evidence": "FR4 2L_75mm x 17mm x 1.2T(BLUE) Rev.02 적용"
+    },
+    {
+      "name": "BMI160 IMU gyro component",
+      "pageTarget": "BMI160",
+      "evidence": "IC-GYRO,BMI160, IMU ACCEL/GYRO I2C/SPI 14LGA"
+    },
+    {
+      "name": "FPC/FFC connector",
+      "pageTarget": "FPC FFC Connector",
+      "evidence": "CONNECTOR-FPC/FFC/PIC,05002HR-08N2"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is BLUE_GYRO_BOM_20250724.",
+      "evidenceText": "BLUE_GYRO_BOM_20250724",
+      "pageTarget": "BLUE_GYRO BOM",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM applies to BLUE_GYRO Ass'y and BLUE_GYRO PBA SMD.",
+      "evidenceText": "BLUE_GYRO Ass'y ... BLUE_GYRO PBA SMD",
+      "pageTarget": "BLUE_GYRO",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB specification references FR4 2L, 75mm x 17mm x 1.2T(BLUE), Rev.02.",
+      "evidenceText": "FR4 2L_75mm x 17mm x 1.2T(BLUE) Rev.02 적용",
+      "pageTarget": "BLUE_GYRO PCB",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 1 is one PCB-GYRO PCB component.",
+      "evidenceText": "1,1,PCB,,,,SM,PCB-GYRO,\"BLUE_GYRO PCB,FR4, 2ayer,T1.2",
+      "pageTarget": "PCB-GYRO",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 2 is one FPC/FFC/PIC connector with part number 05002HR-08N2 from YEONHO.",
+      "evidenceText": "2,1,J1,,,,SM,CONNECTOR-FPC/FFC/PIC,05002HR-08N2,\"8P,0.5mm,SMD-A,AU,Y,FLIP,VERTICAL, BOTTOM\",YEONHO",
+      "pageTarget": "FPC FFC Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "Item 3 is one BMI160 IC-GYRO specified as IMU ACCEL/GYRO I2C/SPI 14LGA from BOSCH.",
+      "evidenceText": "3,1,U1,,,,SM,IC-GYRO,BMI160, IMU ACCEL/GYRO I2C/SPI 14LGA,BOSCH",
+      "pageTarget": "BMI160",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes four 10Kohm Walsin WR06X1002 FTL chip resistors at R1, R2, R3, and R4.",
+      "evidenceText": "4,4,\"R1,R2,R3,R4\",,,,SM,R-CHIP,WR06X1002 FTL,\"10Kohm,1%,1/10W,TP,1608\",Walsin",
+      "pageTarget": "WR06X1002 FTL",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM marks one R5 10Kohm Walsin WR06X1002 FTL resistor as SKIP.",
+      "evidenceText": "5,1,R5,,,,SKIP,R-CHIP,WR06X1002 FTL,\"10Kohm,1%,1/10W,TP,1608\",Walsin,SKIP",
+      "pageTarget": "WR06X1002 FTL",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes two 4.7Kohm Walsin WR06X4701 FTL chip resistors at R6 and R7.",
+      "evidenceText": "6,2,\"R6,R7\",,,,SM,R-CHIP,WR06X4701 FTL,\"4.7Kohm,1%,1/10W,TP,1608\",Walsin",
+      "pageTarget": "WR06X4701 FTL",
+      "confidence": "high"
+    },
+    {
+      "claim": "The BOM includes Samsung ceramic capacitors CL10B104KB8NNND and CL10A105KB8NNNC.",
+      "evidenceText": "7,2,\"C2, C3\",,,,SM,\"C-CER, CHIP\",CL10B104KB8NNND,\"100nF, 5%, 50V, X7R, 1608\",Samsung ... 8,1,C1,,,,SM,\"C-CER, CHIP\",CL10A105KB8NNNC,\"1uF, 5%, 50V, X7R, 1608\",Samsung",
+      "pageTarget": "Ceramic Chip Capacitor",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is embedded in the title as 20250724, but no separate date field is shown."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the source text."
+    }
+  ]
+}

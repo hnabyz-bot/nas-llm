@@ -1,0 +1,133 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19um",
+    "sourcePath": "raw/sources/Project/02_CYAN/1. DHF/09. 전장 부품 List/CYAN_SW/CYAN_SW_BOM_20260512.xlsx",
+    "canonicalGroupId": "97f9fc45c94b"
+  },
+  "document": {
+    "title": "CAYN_SW_BOM_260512",
+    "documentType": "Bill of materials",
+    "productModels": [
+      "CYAN"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2026-05-12",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CYAN_SW bill of materials listing electronic components, references, quantities, part numbers, specifications, and supplier fields.",
+    "officialUse": "DHF electrical parts list/BOM for the CYAN_SW assembly.",
+    "keyPoints": [
+      "The BOM includes item rows for C1, D1/S1, D2, D2 support, H1, J1, and R1.",
+      "Listed component categories include chip capacitor, LED switch, LED, LED support, thru-hole, DIP connector, and chip resistor.",
+      "The source does not state regulatory authority, jurisdiction, standards, or revision/version metadata."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN",
+      "type": "product",
+      "evidence": "sourcePath: raw/sources/Project/02_CYAN/1. DHF/09. 전장 부품 List/CYAN_SW/CYAN_SW_BOM_20260512.xlsx"
+    },
+    {
+      "name": "CYAN_SW",
+      "type": "assembly",
+      "evidence": "sourcePath: raw/sources/Project/02_CYAN/1. DHF/09. 전장 부품 List/CYAN_SW/CYAN_SW_BOM_20260512.xlsx"
+    },
+    {
+      "name": "스위치올",
+      "type": "supplier_or_vendor",
+      "evidence": "D1,S1(통합) ... D-LED, SW ... ETP164L-POWER(BK) ... 스위치올"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bill of materials",
+      "pageTarget": "Bill of Materials",
+      "evidence": "sourcePath includes CYAN_SW_BOM_20260512.xlsx and the table lists Item, Quantity, Reference, CODE, 품목명, 업체 P/N, 규격."
+    },
+    {
+      "name": "Electrical parts list",
+      "pageTarget": "Electrical Parts List",
+      "evidence": "sourcePath includes 09. 전장 부품 List/CYAN_SW/CYAN_SW_BOM_20260512.xlsx"
+    },
+    {
+      "name": "LED switch",
+      "pageTarget": "LED Switch",
+      "evidence": "D1,S1(통합) ... D-LED, SW ... ETP164L-POWER(BK) ... 5컬러 LED 6X6 택트 푸쉬스위치[색상: White]"
+    },
+    {
+      "name": "Chip capacitor",
+      "pageTarget": "Chip Capacitor",
+      "evidence": "C1 ... C-CER, CHIP ... 100nF/25V/C1608"
+    },
+    {
+      "name": "Chip resistor",
+      "pageTarget": "Chip Resistor",
+      "evidence": "R1 ... R-CHIP ... 1K/R1608"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a CYAN_SW bill of materials dated by filename as 20260512 and by sheet/title text as 260512.",
+      "evidenceText": "sourcePath: .../CYAN_SW_BOM_20260512.xlsx; SOURCE_TEXT: CAYN_SW_BOM_260512",
+      "pageTarget": "CYAN_SW Bill of Materials",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The BOM table includes columns for item, quantity, needed quantity, reference, code, drawing, process, item name, vendor part number, specification, vendor abbreviation, remarks, vendor name, and person in charge.",
+      "evidenceText": "Item,Quantity,필요수량,Reference,CODE,도면,매수,공정,품목명,업체 P/N,규격,업체 약어,비고,업체명,담당자",
+      "pageTarget": "Bill of Materials",
+      "confidence": "high"
+    },
+    {
+      "claim": "C1 is listed as a chip ceramic capacitor with specification 100nF/25V/C1608.",
+      "evidenceText": "1,1,15,C1,,,,SM,\"C-CER, CHIP\",100nF/25V/C1608,,Any",
+      "pageTarget": "Chip Capacitor",
+      "confidence": "high"
+    },
+    {
+      "claim": "D1 and S1 are integrated and listed as an LED switch using part number ETP164L-POWER(BK).",
+      "evidenceText": "2,1,15,\"D1,S1(통합)\",,,,DIP,\"D-LED, SW\",ETP164L-POWER(BK) ,5컬러 LED 6X6 택트 푸쉬스위치[색상: White],스위치올",
+      "pageTarget": "LED Switch",
+      "confidence": "high"
+    },
+    {
+      "claim": "D2 is listed as an LED with part name LG30240.",
+      "evidenceText": "3,1,15,D2,,,,DIP,D-LED,LG30240,,Any",
+      "pageTarget": "LED",
+      "confidence": "high"
+    },
+    {
+      "claim": "J1 is listed as a DIP connector with part number PINHEADER_2.00_1X5PIN.",
+      "evidenceText": "6,1,15,J1,,,,DIP,CONNECTOR-DIP,PINHEADER_2.00_1X5PIN,,Any",
+      "pageTarget": "DIP Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "R1 is listed as a chip resistor with specification 1K/R1608.",
+      "evidenceText": "7,1,15,R1,,,,SM,R-CHIP,1K/R1608,,Any",
+      "pageTarget": "Chip Resistor",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No revision or version value is present."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are stated in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Title text appears to contain a product-name typo or OCR/extraction issue: 'CAYN_SW_BOM_260512' while source path indicates 'CYAN_SW_BOM_20260512.xlsx'."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954391-kpw",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/10. 기구 설계/1717/2.EP/3D/Blue_1717_IGZO_낙하_가공품_견적_리스트_241001.xlsx",
+    "canonicalGroupId": "2cf990f87362"
+  },
+  "document": {
+    "title": "Blue_1717_IGZO_낙하_가공품_견적_리스트_241001.xlsx",
+    "documentType": "가공품 견적 리스트",
+    "productModels": [
+      "blue_1717_igzo",
+      "blue_1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Blue 1717 IGZO 관련 가공품의 품명, 재질, 수량, 후처리 및 비고를 나열한 견적 리스트이다.",
+    "officialUse": "DHF 기구 설계 자료로, 부품별 재질과 후처리 조건 확인에 사용할 수 있다.",
+    "keyPoints": [
+      "blue_1717_igzo_middle_block은 MG 재질 1개이며 Non-Cromate 처리, 접지부 lazer cut, battery부 도장이 지정되어 있다.",
+      "blue_1717_igzo_rear_cover는 AL7075 재질 1개이며 Cromate 처리와 PANTONE SILVER 10077C 색상이 지정되어 있다.",
+      "SILICON BLACK 부품에는 경도 30 또는 경도 70 조건이 기재되어 있다.",
+      "모든 TAP은 최대 깊이까지 가공하되 관통 불가 조건이 기재되어 있다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "blue_1717_igzo_middle_block",
+      "type": "part",
+      "evidence": "1,blue_1717_igzo_middle_block,MG,1,Non-Cromate 처리 / 접지부(탭 위치) lazer cut / battery부 도장 (PANTONE SILVER 10077C),rear와 색상 동일"
+    },
+    {
+      "name": "blue_1717_igzo_rear_cover",
+      "type": "part",
+      "evidence": "2,blue_1717_igzo_rear_cover,AL7075,1,Cromate 처리 / 후면 알루미늄 색상 (PANTONE SILVER 10077C),"
+    },
+    {
+      "name": "blue_1717_gasket_es3",
+      "type": "part",
+      "evidence": "3,blue_1717_gasket_es3,SILICON BLACK,1,경도 30,기존과 형상 다름"
+    },
+    {
+      "name": "blue_battery_block_es3",
+      "type": "part",
+      "evidence": "4,blue_battery_block_es3,PC,1,Black / 후처리 X,"
+    },
+    {
+      "name": "blue_battery_cover_es3",
+      "type": "part",
+      "evidence": "5,blue_battery_cover_es3,PC,1,외부면 색상 (PANTONE SILVER 10077C),"
+    },
+    {
+      "name": "blue_battery_rubber_es3",
+      "type": "part",
+      "evidence": "6,blue_battery_rubber_es3,SILICON BLACK,1,경도 30,기존과 형상 다름"
+    },
+    {
+      "name": "blue_foot_es3",
+      "type": "part",
+      "evidence": "7,blue_foot_es3,SILICON BLACK,1,경도 70,기존과 형상 다름"
+    },
+    {
+      "name": "PANTONE SILVER 10077C",
+      "type": "color specification",
+      "evidence": "battery부 도장 (PANTONE SILVER 10077C); 후면 알루미늄 색상 (PANTONE SILVER 10077C); 외부면 색상 (PANTONE SILVER 10077C)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Non-Cromate 처리",
+      "pageTarget": "Non-Cromate treatment",
+      "evidence": "blue_1717_igzo_middle_block,MG,1,Non-Cromate 처리 / 접지부(탭 위치) lazer cut / battery부 도장"
+    },
+    {
+      "name": "Cromate 처리",
+      "pageTarget": "Cromate treatment",
+      "evidence": "blue_1717_igzo_rear_cover,AL7075,1,Cromate 처리 / 후면 알루미늄 색상"
+    },
+    {
+      "name": "탭 가공 깊이 제한",
+      "pageTarget": "Tap machining depth requirement",
+      "evidence": "모든 TAP 최대 깊이까지 가공 (관통 불가)"
+    },
+    {
+      "name": "탭 규격 대응",
+      "pageTarget": "Tap hole size mapping",
+      "evidence": "Φ1.6 = M2 // Φ2.1 = M2.6 // Φ3.3 = M4"
+    },
+    {
+      "name": "실리콘 경도",
+      "pageTarget": "Silicone hardness",
+      "evidence": "SILICON BLACK,1,경도 30; SILICON BLACK,1,경도 70"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a parts quotation list with columns for item name, material, quantity, post-processing, and remarks.",
+      "evidenceText": "NO.,품명,재질,수량,후처리,비고",
+      "pageTarget": "Parts quotation list",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_1717_igzo_middle_block uses MG material and has quantity 1.",
+      "evidenceText": "1,blue_1717_igzo_middle_block,MG,1,Non-Cromate 처리 / 접지부(탭 위치) lazer cut / battery부 도장 (PANTONE SILVER 10077C),rear와 색상 동일",
+      "pageTarget": "blue_1717_igzo_middle_block",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_1717_igzo_middle_block requires Non-Cromate treatment, laser cut at the grounding tap location, and battery-area painting in PANTONE SILVER 10077C.",
+      "evidenceText": "Non-Cromate 처리 / 접지부(탭 위치) lazer cut / battery부 도장 (PANTONE SILVER 10077C)",
+      "pageTarget": "blue_1717_igzo_middle_block",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_1717_igzo_rear_cover uses AL7075 material and requires Cromate treatment.",
+      "evidenceText": "2,blue_1717_igzo_rear_cover,AL7075,1,Cromate 처리 / 후면 알루미늄 색상 (PANTONE SILVER 10077C),",
+      "pageTarget": "blue_1717_igzo_rear_cover",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_1717_gasket_es3 uses SILICON BLACK material, quantity 1, hardness 30, and has a shape different from the existing one.",
+      "evidenceText": "3,blue_1717_gasket_es3,SILICON BLACK,1,경도 30,기존과 형상 다름",
+      "pageTarget": "blue_1717_gasket_es3",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_battery_block_es3 uses PC material, quantity 1, Black color, and no post-processing.",
+      "evidenceText": "4,blue_battery_block_es3,PC,1,Black / 후처리 X,",
+      "pageTarget": "blue_battery_block_es3",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_battery_cover_es3 uses PC material, quantity 1, and exterior color PANTONE SILVER 10077C.",
+      "evidenceText": "5,blue_battery_cover_es3,PC,1,외부면 색상 (PANTONE SILVER 10077C),",
+      "pageTarget": "blue_battery_cover_es3",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_battery_rubber_es3 uses SILICON BLACK material, quantity 1, hardness 30, and has a shape different from the existing one.",
+      "evidenceText": "6,blue_battery_rubber_es3,SILICON BLACK,1,경도 30,기존과 형상 다름",
+      "pageTarget": "blue_battery_rubber_es3",
+      "confidence": "high"
+    },
+    {
+      "claim": "blue_foot_es3 uses SILICON BLACK material, quantity 1, hardness 70, and has a shape different from the existing one.",
+      "evidenceText": "7,blue_foot_es3,SILICON BLACK,1,경도 70,기존과 형상 다름",
+      "pageTarget": "blue_foot_es3",
+      "confidence": "high"
+    },
+    {
+      "claim": "All taps are to be machined to maximum depth, without through machining.",
+      "evidenceText": "모든 TAP 최대 깊이까지 가공 (관통 불가)",
+      "pageTarget": "Tap machining depth requirement",
+      "confidence": "high"
+    },
+    {
+      "claim": "The tap hole mapping is Φ1.6 = M2, Φ2.1 = M2.6, and Φ3.3 = M4.",
+      "evidenceText": "Φ1.6 = M2 // Φ2.1 = M2.6 // Φ3.3 = M4",
+      "pageTarget": "Tap hole size mapping",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No issuing authority or jurisdiction is identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is present in the source text; numeric suffix in the filename was not interpreted as a document date."
+    },
+    {
+      "severity": "info",
+      "reason": "No revision or version is stated in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are cited in the source text."
+    }
+  ]
+}

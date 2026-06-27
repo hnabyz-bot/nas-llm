@@ -1,0 +1,160 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954387-gv2",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/PCIE&USB-C/Stack-up(impedance)/PCIEM2(WiFi)-REV2.0(241224)-4층 1.2T 임피던스 (3).pdf",
+    "canonicalGroupId": "b8a410285c65"
+  },
+  "document": {
+    "title": "PCIEM2(WiFi)-REV2.0(241224)-4층 1.2T 임피던스 (3)",
+    "documentType": "PCB stack-up impedance document",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV2.0",
+    "documentDate": "2020-00-00",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Four-layer 1.2T PCB stack-up and impedance control information for PCIEM2(WiFi).",
+    "officialUse": "Engineering design-history documentation for PCB layer stack-up, board thickness, dielectric materials, and target impedance values.",
+    "keyPoints": [
+      "Document states a 4 Layer 1.2 T stack-up.",
+      "Layer structure includes Top, IN1, IN2, and Bot copper layers.",
+      "Impedance control targets include 50ohm, 75ohm, 90ohm differential, 100ohm, and 110ohm with ±10% tolerance.",
+      "Line width, line space, and GND space are defined in millimeters."
+    ]
+  },
+  "entities": [
+    {
+      "name": "PCIEM2(WiFi)",
+      "type": "board_or_interface_identifier",
+      "evidence": "sourcePath: PCIEM2(WiFi)-REV2.0(241224)-4층 1.2T 임피던스 (3).pdf"
+    },
+    {
+      "name": "Top",
+      "type": "pcb_layer",
+      "evidence": "1 Top 1/2oz+Plating"
+    },
+    {
+      "name": "IN1",
+      "type": "pcb_layer",
+      "evidence": "2 IN1 1oz"
+    },
+    {
+      "name": "IN2",
+      "type": "pcb_layer",
+      "evidence": "3 IN2 1oz"
+    },
+    {
+      "name": "Bot",
+      "type": "pcb_layer",
+      "evidence": "4 Bot 1/2oz+Plating"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "4 Layer 1.2 T PCB stack-up",
+      "pageTarget": "PCB Stack-up",
+      "evidence": "4 Layer 1.2 T"
+    },
+    {
+      "name": "Impedance control",
+      "pageTarget": "Impedance Control",
+      "evidence": "Impedance Controled"
+    },
+    {
+      "name": "Single impedance",
+      "pageTarget": "Single-ended Impedance",
+      "evidence": "Stack_up Singal Impedance Differential Impedance"
+    },
+    {
+      "name": "Differential impedance",
+      "pageTarget": "Differential Impedance",
+      "evidence": "Stack_up Singal Impedance Differential Impedance"
+    },
+    {
+      "name": "Line width",
+      "pageTarget": "PCB Line Width",
+      "evidence": "W: Line width"
+    },
+    {
+      "name": "Line space",
+      "pageTarget": "PCB Line Spacing",
+      "evidence": "S: Line space"
+    },
+    {
+      "name": "GND space",
+      "pageTarget": "PCB Ground Spacing",
+      "evidence": "D: GND space (unit: mm)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document describes a four-layer 1.2T PCB stack-up.",
+      "evidenceText": "4 Layer 1.2 T",
+      "pageTarget": "PCB Stack-up",
+      "confidence": "high"
+    },
+    {
+      "claim": "The total thickness value shown is 1.158 mm.",
+      "evidenceText": "1.158 Total Thickness",
+      "pageTarget": "PCB Board Thickness",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The stack-up includes Top, IN1, IN2, and Bot layers.",
+      "evidenceText": "1 Top 1/2oz+Plating ... 2 IN1 1oz ... 3 IN2 1oz ... 4 Bot 1/2oz+Plating",
+      "pageTarget": "PCB Layer Structure",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document lists impedance targets of 50ohm, 75ohm, 90ohm differential, 100ohm, and 110ohm with ±10% tolerance.",
+      "evidenceText": "90ohm (±10%) ... 50ohm (±10%) 75ohm (±10%) 100ohm (±10%) 110ohm (±10%)",
+      "pageTarget": "Impedance Control",
+      "confidence": "high"
+    },
+    {
+      "claim": "W means line width, S means line space, and D means GND space, with units in millimeters.",
+      "evidenceText": "W: Line width S: Line space D: GND space (unit: mm)",
+      "pageTarget": "PCB Trace Geometry",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date field reads 2020-00-00.",
+      "evidenceText": "DATE: 2020-00-00",
+      "pageTarget": "Document Date",
+      "confidence": "high"
+    },
+    {
+      "claim": "The file path identifies revision REV2.0.",
+      "evidenceText": "PCIEM2(WiFi)-REV2.0(241224)-4층 1.2T 임피던스 (3).pdf",
+      "pageTarget": "Document Revision",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is stated in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly stated as a product model; PCIEM2(WiFi) appears only as a filename identifier."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document date is present as DATE: 2020-00-00, which appears incomplete or placeholder-like."
+    },
+    {
+      "severity": "warning",
+      "reason": "Filename includes (241224), which may indicate a date, but the source text states DATE: 2020-00-00; date evidence is potentially conflicting or ambiguous."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "OCR/text extraction quality is low: headings and table columns are partially merged, including 'Impedance ControledDATE' and 'Singal'."
+    }
+  ]
+}
