@@ -1,0 +1,132 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954416-14te",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/GYRO/좌표/GYRO_REV1.0_좌표데이타.xlsx",
+    "canonicalGroupId": "53ee7b762587"
+  },
+  "document": {
+    "title": "GYRO_REV1.0_좌표데이타",
+    "documentType": "GYRO component coordinate data table",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV1.0",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "GYRO component coordinate table listing part type, reference designator, decal, pins, layer, orientation, X/Y coordinates, SMD status, and glued status.",
+    "officialUse": "Official use is not stated; the content provides GYRO component placement coordinate data.",
+    "keyPoints": [
+      "The table fields include PartType, RefDes, PartDecal, Pins, Layer, Orient., X, Y, SMD, and Glued.",
+      "All listed components are on the Top layer.",
+      "BMI160 is listed as reference designator U1 with decal LGA-14(0.5)-1, 14 pins, orientation 0, X 9, Y 65, SMD Yes, Glued No.",
+      "05002HR-08N2 is listed as reference designator J1 with 10 pins, orientation 0, X 11.5, Y 10, SMD Yes, Glued No.",
+      "T1 and X2 are listed as non-SMD items."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BMI160",
+      "type": "component",
+      "evidence": "BMI160,U1,LGA-14(0.5)-1,14,Top,0,9,65,Yes,No"
+    },
+    {
+      "name": "05002HR-08N2",
+      "type": "component",
+      "evidence": "05002HR-08N2,J1,05002HR-08N2,10,Top,0,11.5,10,Yes,No"
+    },
+    {
+      "name": "CS-1608",
+      "type": "component part type",
+      "evidence": "CS-1608,C1,CS-1608,2,Top,0,15.25,11.75,Yes,No"
+    },
+    {
+      "name": "RS-1608",
+      "type": "component part type",
+      "evidence": "RS-1608,R1,RS-1608,2,Top,90,6.05,61.35,Yes,No"
+    },
+    {
+      "name": "MT-THRU4.2X10",
+      "type": "mechanical part type",
+      "evidence": "MT-THRU4.2X10,T1,MT-THRU4.2X10,1,Top,0,9,19,No,No"
+    },
+    {
+      "name": "MTHOLE2",
+      "type": "mounting hole",
+      "evidence": "MTHOLE2,X2,MTHOLE2,1,Top,0,9,71,No,No"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "GYRO component coordinates",
+      "pageTarget": "GYRO Component Coordinates",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    },
+    {
+      "name": "PCB top layer placement",
+      "pageTarget": "PCB Top Layer Component Placement",
+      "evidence": "BMI160,U1,LGA-14(0.5)-1,14,Top,0,9,65,Yes,No"
+    },
+    {
+      "name": "SMD placement status",
+      "pageTarget": "Surface-Mount Device Placement Status",
+      "evidence": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a GYRO coordinate data table with component placement fields.",
+      "evidenceText": "PartType,RefDes,PartDecal,Pins,Layer,Orient.,X,Y,SMD,Glued",
+      "pageTarget": "GYRO Component Coordinates",
+      "confidence": "high"
+    },
+    {
+      "claim": "BMI160 is listed as U1 on the Top layer at X 9 and Y 65, with SMD Yes and Glued No.",
+      "evidenceText": "BMI160,U1,LGA-14(0.5)-1,14,Top,0,9,65,Yes,No",
+      "pageTarget": "BMI160",
+      "confidence": "high"
+    },
+    {
+      "claim": "Connector 05002HR-08N2 is listed as J1 on the Top layer at X 11.5 and Y 10.",
+      "evidenceText": "05002HR-08N2,J1,05002HR-08N2,10,Top,0,11.5,10,Yes,No",
+      "pageTarget": "05002HR-08N2",
+      "confidence": "high"
+    },
+    {
+      "claim": "T1 is a non-SMD MT-THRU4.2X10 item on the Top layer at X 9 and Y 19.",
+      "evidenceText": "MT-THRU4.2X10,T1,MT-THRU4.2X10,1,Top,0,9,19,No,No",
+      "pageTarget": "MT-THRU4.2X10",
+      "confidence": "high"
+    },
+    {
+      "claim": "X2 is a non-SMD MTHOLE2 item on the Top layer at X 9 and Y 71.",
+      "evidenceText": "MTHOLE2,X2,MTHOLE2,1,Top,0,9,71,No,No",
+      "pageTarget": "MTHOLE2",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision is indicated as REV1.0 in the source file name.",
+      "evidenceText": "GYRO_REV1.0_좌표데이타.xlsx",
+      "pageTarget": "GYRO_REV1.0_좌표데이타",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text or metadata."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "Product model is not clearly identified; productSignal is Unclassified."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are stated in the provided source text."
+    }
+  ]
+}
