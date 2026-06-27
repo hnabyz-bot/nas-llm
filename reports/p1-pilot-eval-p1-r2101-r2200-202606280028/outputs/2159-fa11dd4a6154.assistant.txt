@@ -1,0 +1,129 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954423-1b72",
+    "sourcePath": "raw/sources/Project/01_BLUE/01_G1417CW/DMR/11. 승인원/전장/BLUE_BASE REV0.3.pdf",
+    "canonicalGroupId": "fa11dd4a6154"
+  },
+  "document": {
+    "title": "APPROVAL SHEET / PCB 제작사양 (MANUFACTURING SPEC.)",
+    "documentType": "conditional approval sheet and PCB manufacturing specification",
+    "productModels": [
+      "BULE-BASE-BD-REV.03"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "REV.03",
+    "documentDate": "2025-08-23",
+    "standards": [
+      "RoHS",
+      "94V-0"
+    ]
+  },
+  "sourceSummary": {
+    "oneLine": "Conditional approval sheet and PCB manufacturing specification for model BULE-BASE-BD-REV.03.",
+    "officialUse": "Defines board material, dimensions, plating, surface finish, layer structure, flammability rating, and RoHS application for approval/manufacturing.",
+    "keyPoints": [
+      "Model number is listed as BULE-BASE-BD-REV.03.",
+      "Material is FR-4, 1.2 T, 6 layer, with MLB copper foil structure.",
+      "Flammability is marked as 94V-0.",
+      "RoHS application is marked, with Gerber date 2025년 3월 21일.",
+      "Surface finish is marked as Immersion Gold."
+    ]
+  },
+  "entities": [
+    {
+      "name": "㈜ 이오닉스",
+      "type": "company",
+      "evidence": "㈜ 이오닉스 귀중"
+    },
+    {
+      "name": "(주)이오닉스 제조사업부",
+      "type": "company division",
+      "evidence": "(주)이오닉스 제조사업부 2025-08-25"
+    },
+    {
+      "name": "ITEQ",
+      "type": "material maker",
+      "evidence": "MAKER : ■ITEQ □두산 □신성 □LG □HITACHI"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "RoHS 적용",
+      "pageTarget": "RoHS",
+      "evidence": "10. ROHS 적용 ■ 거버일자 2025년 3월 21일"
+    },
+    {
+      "name": "94V-0 flammability rating",
+      "pageTarget": "UL 94 V-0 Flammability Rating",
+      "evidence": "FLAMMABILITY : 난연등급 ■94V-0 □94V-1"
+    },
+    {
+      "name": "FR-4 PCB material",
+      "pageTarget": "FR-4 PCB Material",
+      "evidence": "MATER'L : ■FR4 □CEM3 □FPCB □RFPCB (TIHCK 1.2 T )"
+    },
+    {
+      "name": "Immersion Gold surface finish",
+      "pageTarget": "Immersion Gold PCB Surface Finish",
+      "evidence": "표면처리(□일반HASL □무연HASL □OSP ■Immersion Gold)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The approval sheet is marked as conditionally approved.",
+      "evidenceText": "조건부 승인",
+      "pageTarget": "Conditional Approval",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed model number is BULE-BASE-BD-REV.03.",
+      "evidenceText": "MODEL : BULE-BASE-BD-REV.03",
+      "pageTarget": "BULE-BASE-BD-REV.03",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB material is FR-4 with 1.2 T thickness and 6 layers.",
+      "evidenceText": "1. 재질 : FR-4 , 1.2 T , 6 LAYER , H/H oz",
+      "pageTarget": "FR-4 PCB Material",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB dimensions are 1 PCS 287.5 mm x 143 mm with ±0.2 mm tolerance.",
+      "evidenceText": "외 형 치 수: 1 PCS 287.5mm x 143mm ± 0.2mm",
+      "pageTarget": "PCB Dimensions",
+      "confidence": "high"
+    },
+    {
+      "claim": "Copper plating is specified as Cu 25 μm +/-20%, with Ni 4 μm and Au 0.03 μm.",
+      "evidenceText": "도 금(PLATING) : ■ Cu 25 μm +/-20% ... ■ Ni 4μm ■ Au 0.03μm",
+      "pageTarget": "PCB Plating",
+      "confidence": "high"
+    },
+    {
+      "claim": "Surface finish is specified as Immersion Gold.",
+      "evidenceText": "표면처리(□일반HASL □무연HASL □OSP ■Immersion Gold)",
+      "pageTarget": "Immersion Gold PCB Surface Finish",
+      "confidence": "high"
+    },
+    {
+      "claim": "RoHS is marked as applied, with a Gerber date of 2025년 3월 21일.",
+      "evidenceText": "10. ROHS 적용 ■ 거버일자 2025년 3월 21일",
+      "pageTarget": "RoHS",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is explicitly identified; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "The model text appears as BULE-BASE-BD-REV.03, while source path/product signal references BLUE/ADD/AspenView; preserve source spelling pending review."
+    },
+    {
+      "severity": "info",
+      "reason": "Multiple dates appear in the source: approval sheet date 2025-08-23, footer date 2025-08-25, and Gerber date 2025-03-21."
+    }
+  ]
+}
