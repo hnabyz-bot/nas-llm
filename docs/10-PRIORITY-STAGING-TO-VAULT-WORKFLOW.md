@@ -466,3 +466,11 @@ Next P1 bundle:
 - note: ranks 2041 and 2053 required chunked fallback after transient
   tool-call/timeout failures
 - ops commit: `8e01b0a feat: complete P1 ranks 2001-2100 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r2101-r2200-202606280028`
+- rank range: 2101-2200
+- selected representatives: 100
+- total normalized chars: 1,007,715
+- extraction status: not started at this checkpoint
