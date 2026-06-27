@@ -1,0 +1,178 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19ya",
+    "sourcePath": "raw/sources/Project/02_CYAN/1. DHF/18. 포장 사양서/CYAN_포장사양서_260522.pptx",
+    "canonicalGroupId": "c874136dbb91"
+  },
+  "document": {
+    "title": "CYAN 포장",
+    "documentType": "포장 사양서",
+    "productModels": [
+      "CYAN"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "2026.05.22",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "CYAN 제품 포장 구성품 및 포장 순서를 설명하는 포장 사양서.",
+    "officialUse": "CYAN 제품 포장 시 WIRED_HANDLE 포함 또는 미포함 구성품과 제품 포장 삽입 순서를 확인하는 데 사용.",
+    "keyPoints": [
+      "문서 작성일은 2026.05.22이고 작성자는 황인호, 작성부서는 DR 개발팀 또는 DR 개발로 표시된다.",
+      "ZIPPER PACK KIT Assy는 WIRED_HANDLE 포함 여부에 따라 구성품과 수량이 구분된다.",
+      "AIR PACK KIT Assy는 POE INJECTOR, LAN_CABLE_CAT7_LONG_ANY, POWER CORD-DT, USB_MINI-B 및 Optional 항목을 포함한다.",
+      "제품 포장 순서는 높이 맞춤, AIR CAP 삽입, AIR PACK KIT Assy 삽입, DETECTOR 삽입으로 표시된다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "CYAN",
+      "type": "product",
+      "evidence": "CYAN 제품 포장"
+    },
+    {
+      "name": "DR 개발팀",
+      "type": "department",
+      "evidence": "부서 - DR 개발팀"
+    },
+    {
+      "name": "황인호",
+      "type": "person",
+      "evidence": "작성자 - 황인호"
+    },
+    {
+      "name": "WIRED_HANDLE",
+      "type": "component",
+      "evidence": "WIRED_HANDLE 포함 시"
+    },
+    {
+      "name": "ZIPPER PACK KIT Assy",
+      "type": "packaging assembly",
+      "evidence": "1. ZIPPER PACK KIT Assy"
+    },
+    {
+      "name": "AIR PACK KIT Assy",
+      "type": "packaging assembly",
+      "evidence": "2. AIR PACK KIT Assy"
+    },
+    {
+      "name": "DETECTOR",
+      "type": "component",
+      "evidence": "DETECTOR 삽입"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "CYAN 제품 포장",
+      "pageTarget": "CYAN Packaging",
+      "evidence": "CYAN 제품 포장"
+    },
+    {
+      "name": "ZIPPER PACK KIT Assy 구성",
+      "pageTarget": "ZIPPER PACK KIT Assy",
+      "evidence": "1. ZIPPER PACK KIT Assy"
+    },
+    {
+      "name": "AIR PACK KIT Assy 구성",
+      "pageTarget": "AIR PACK KIT Assy",
+      "evidence": "2. AIR PACK KIT Assy"
+    },
+    {
+      "name": "WIRED_HANDLE 포함 여부별 포장 구성",
+      "pageTarget": "WIRED_HANDLE Packaging Configuration",
+      "evidence": "WIRED_HANDLE 포함 시"
+    },
+    {
+      "name": "제품 포장 삽입 순서",
+      "pageTarget": "Product Packaging Insertion Sequence",
+      "evidence": "높이 맞춤 AIR CAP 삽입 AIR PACK KIT Assy 삽입 DETECTOR 삽입"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is CYAN 포장.",
+      "evidenceText": "CYAN 포장 일자 - 2026. 05. 22 부서 - DR 개발팀 작성자 - 황인호",
+      "pageTarget": "CYAN Packaging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is 2026.05.22.",
+      "evidenceText": "일자 - 2026. 05. 22",
+      "pageTarget": "CYAN Packaging",
+      "confidence": "high"
+    },
+    {
+      "claim": "The author is 황인호.",
+      "evidenceText": "작성자 - 황인호",
+      "pageTarget": "황인호",
+      "confidence": "high"
+    },
+    {
+      "claim": "The department is DR 개발팀 or DR 개발.",
+      "evidenceText": "부서 - DR 개발팀; 작성부서 : DR 개발",
+      "pageTarget": "DR 개발팀",
+      "confidence": "medium"
+    },
+    {
+      "claim": "ZIPPER PACK KIT Assy has separate configurations depending on whether WIRED_HANDLE is included.",
+      "evidenceText": "WIRED_HANDLE 포함 시 품번 품명 수량 ... WIRED_HANDLE 미포함 시 품번 품명 수량 ... 1. ZIPPER PACK KIT Assy",
+      "pageTarget": "ZIPPER PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "When WIRED_HANDLE is included, ZIPPER PACK KIT Assy includes CYAN_CABLE_FIX_BLOCK quantity 1, M3x10_BOLT quantity 2, M5x15_BOLT quantity 2, HEXA_WRENCH_2.5mm quantity 1, and HEXA_WRENCH_4mm quantity 1.",
+      "evidenceText": "WIRED_HANDLE 포함 시 품번 품명 수량 MKK-200114 CYAN_CABLE_FIX_BLOCK 1 B04-13-0310 M3x10_BOLT 2 B04-13-0515 M5x15_BOLT 2 MAC-000011 HEXA_WRENCH_2.5mm 1 MAC-000010 HEXA_WRENCH_4mm 1",
+      "pageTarget": "ZIPPER PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "When WIRED_HANDLE is not included, ZIPPER PACK KIT Assy includes CYAN_CABLE_FIX_BLOCK quantity 1, M3x10_BOLT quantity 2, and HEXA_WRENCH_2.5mm quantity 1.",
+      "evidenceText": "WIRED_HANDLE 미포함 시 품번 품명 수량 MKK-200114 CYAN_CABLE_FIX_BLOCK 1 B04-13-0310 M3x10_BOLT 2 MAC-000011 HEXA_WRENCH_2.5mm 1",
+      "pageTarget": "ZIPPER PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "AIR PACK KIT Assy has separate configurations depending on whether WIRED_HANDLE is included.",
+      "evidenceText": "CYAN 제품 포장 2. AIR PACK KIT Assy WIRED_HANDLE 포함 시 ... WIRED_HANDLE 미포함 시",
+      "pageTarget": "AIR PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "When WIRED_HANDLE is included, AIR PACK KIT Assy includes POE INJECTOR quantity 1, LAN_CABLE_CAT7_LONG_ANY quantity 2, POWER CORD-DT quantity 1, USB_MINI-B (7m) quantity 1 Optional, WIRED_HANDLE quantity 1 Optional, and ZIPPER PACK KIT Assy quantity 1.",
+      "evidenceText": "WIRED_HANDLE 포함 시 품번 품명 수량 MAC-000008 POE INJECTOR 1 MAC-000005 LAN_CABLE_CAT7_LONG_ANY( 시장 ) 2 3903-001241 POWER CORD-DT 1 MAC-000007 USB_MINI-B (7m) 1 Optional MKK-200115 WIRED_HANDLE 1 Optional ZIPPER PACK KIT Assy 1",
+      "pageTarget": "AIR PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "When WIRED_HANDLE is not included, AIR PACK KIT Assy includes POE INJECTOR quantity 1, LAN_CABLE_CAT7_LONG_ANY quantity 2, POWER CORD-DT quantity 1, USB_MINI-B (7m) quantity 1 Optional, and ZIPPER PACK KIT Assy quantity 1.",
+      "evidenceText": "WIRED_HANDLE 미포함 시 품번 품명 수량 MAC-000008 POE INJECTOR 1 MAC-000005 LAN_CABLE_CAT7_LONG_ANY( 시장 ) 2 3903-001241 POWER CORD-DT 1 MAC-000007 USB_MINI-B (7m) 1 Optional ZIPPER PACK KIT Assy 1",
+      "pageTarget": "AIR PACK KIT Assy",
+      "confidence": "high"
+    },
+    {
+      "claim": "The product packaging sequence includes height adjustment, AIR CAP insertion, AIR PACK KIT Assy insertion, and DETECTOR insertion.",
+      "evidenceText": "제품 포장 높이 맞춤 AIR CAP 삽입 AIR PACK KIT Assy 삽입 DETECTOR 삽입",
+      "pageTarget": "Product Packaging Insertion Sequence",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No revision or version is present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "작성부서 appears as both DR 개발팀 and DR 개발."
+    }
+  ]
+}
