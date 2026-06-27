@@ -1,0 +1,115 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954422-1aem",
+    "sourcePath": "raw/sources/Project/02_CYAN/2. DMR/08. 디텍터 구동 Software/XAS3/Extension/ImageJ/plugins/coq/COQ_/loci/formats/writers.txt",
+    "canonicalGroupId": "047d4a13a4ab"
+  },
+  "document": {
+    "title": "writers.txt",
+    "documentType": "configuration file",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Configuration file identifying all file format writers available to Bio-Formats and the order in which they should be used.",
+    "officialUse": "Lists Bio-Formats writer classes and associated file extensions; no regulatory approval, authority, or jurisdictional use is stated.",
+    "keyPoints": [
+      "The file identifies available Bio-Formats file format writers.",
+      "The file specifies the order in which writers should be used.",
+      "Listed writer outputs include OME, OME-TIFF, TIFF, JPEG, JPEG 2000, PNG, AVI, QuickTime MOV, EPS, ICS, and Java."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Bio-Formats",
+      "type": "software",
+      "evidence": "available to Bio-Formats"
+    },
+    {
+      "name": "loci.formats.out.OMEXMLWriter",
+      "type": "writer class",
+      "evidence": "loci.formats.out.OMEXMLWriter # ome"
+    },
+    {
+      "name": "loci.formats.out.OMETiffWriter",
+      "type": "writer class",
+      "evidence": "loci.formats.out.OMETiffWriter # ome.tif, ome.tiff"
+    },
+    {
+      "name": "loci.formats.out.TiffWriter",
+      "type": "writer class",
+      "evidence": "loci.formats.out.TiffWriter # tif, tiff"
+    },
+    {
+      "name": "loci.formats.out.JPEGWriter",
+      "type": "writer class",
+      "evidence": "loci.formats.out.JPEGWriter # jpg, jpeg"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Bio-Formats file format writers",
+      "pageTarget": "Bio-Formats file format writers",
+      "evidence": "This document is a configuration file identifying all file format writers available to Bio-Formats"
+    },
+    {
+      "name": "Writer usage order",
+      "pageTarget": "Bio-Formats writer order",
+      "evidence": "and the order in which they should be used"
+    },
+    {
+      "name": "File extension mapping",
+      "pageTarget": "Bio-Formats writer file extensions",
+      "evidence": "loci.formats.out.OMETiffWriter # ome.tif, ome.tiff"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a configuration file for Bio-Formats file format writers.",
+      "evidenceText": "This document is a configuration file identifying all file format writers available to Bio-Formats",
+      "pageTarget": "Bio-Formats file format writers",
+      "confidence": "high"
+    },
+    {
+      "claim": "The configuration file defines the order in which Bio-Formats writers should be used.",
+      "evidenceText": "and the order in which they should be used",
+      "pageTarget": "Bio-Formats writer order",
+      "confidence": "high"
+    },
+    {
+      "claim": "The OME-TIFF writer is associated with ome.tif and ome.tiff extensions.",
+      "evidenceText": "loci.formats.out.OMETiffWriter # ome.tif, ome.tiff",
+      "pageTarget": "OME-TIFF writer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The TIFF writer is associated with tif and tiff extensions.",
+      "evidenceText": "loci.formats.out.TiffWriter # tif, tiff",
+      "pageTarget": "TIFF writer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The JPEG writer is associated with jpg and jpeg extensions.",
+      "evidenceText": "loci.formats.out.JPEGWriter # jpg, jpeg",
+      "pageTarget": "JPEG writer",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No document date, revision, product model, regulatory authority, or jurisdiction is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source appears to be a software configuration file, not an RA/regulatory document."
+    },
+    {
+      "severity": "info",
+      "reason": "Authority signal is general and no authority is identified in the source text."
+    }
+  ]
+}
