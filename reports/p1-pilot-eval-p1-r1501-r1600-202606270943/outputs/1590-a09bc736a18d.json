@@ -1,0 +1,147 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954389-j56",
+    "sourcePath": "raw/sources/RA/06_인허가 조사 및 보고자료/260324 - Retrofit 문제점 및 대응안/참고 자료/삼성 관련정보/원재료.pdf",
+    "canonicalGroupId": "a09bc736a18d"
+  },
+  "document": {
+    "title": "원재료",
+    "documentType": "원재료 목록",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "디텍터, 전원공급장치, 배터리 팩, 충전기, 액세스 포인트, 워크스테이션 등 부분품의 명칭, 관리번호, 수량을 나열한 원재료 목록이다.",
+    "officialUse": "부분품 명칭, 부분품 관리번호, 수량 식별에 사용할 수 있는 원재료 목록이다.",
+    "keyPoints": [
+      "디텍터 항목에는 S4335-W, S4335-WV, S4343-W, S3025-W 등 관리번호가 기재되어 있다.",
+      "Detector Power Supply 항목에는 Power Supply Box DEPS9601 및 Main Adaptor BM090S15F가 기재되어 있다.",
+      "Workstation 항목에는 PC, Monitor, 운용 소프트웨어(Ver 3.10)가 기재되어 있다.",
+      "의료영상검출보조소프트웨어 항목은 관리번호와 수량이 '-'로 표시되어 있다."
+    ]
+  },
+  "entities": [
+    {
+      "name": "디텍터 (Detector)",
+      "type": "component",
+      "evidence": "1 디텍터 (Detector) S4335-W S4335-WV S4343-W S3025-W"
+    },
+    {
+      "name": "Detector Power Supply",
+      "type": "component",
+      "evidence": "2 Detector Power Supply Power Supply Box DEPS9601 1 Main Adaptor BM090S15F 1"
+    },
+    {
+      "name": "Battery Pack",
+      "type": "component",
+      "evidence": "3 Battery Pack SDB-3S1PA 1 Egi-D3S1P ELT-3S1PA"
+    },
+    {
+      "name": "Battery Charger",
+      "type": "component",
+      "evidence": "4 Battery Charger DEPS-9606 1 AD-9019A (Battery Charger Adapter) MSP-90W-12VC 1"
+    },
+    {
+      "name": "Access Point",
+      "type": "component",
+      "evidence": "5 Access Point D-LINK DIR -825 NETGEAR R7000 D-LINK DAP -2660"
+    },
+    {
+      "name": "Workstation",
+      "type": "component",
+      "evidence": "6 Workstation PC 1 Monitor 1 운용 소프트웨어 (Ver 3.10) 1"
+    },
+    {
+      "name": "컨트롤 인터페이스 박스 (CIB)",
+      "type": "component",
+      "evidence": "7 컨트롤 인터페이스 박스 (CIB) SDR- OGCI51A 1 SDR- OGCI51F 1"
+    },
+    {
+      "name": "바코드 스캐너 (Barcode Scanner)",
+      "type": "component",
+      "evidence": "8 바코드 스캐너 (Barcode Scanner) DGR-ACCBCS (1D) DGR-SWWBSA (2D) 1"
+    },
+    {
+      "name": "Detector Cable",
+      "type": "component",
+      "evidence": "9 Detector Cable Main Cable MI39-02331A 1 Gender Cable MI39-02597A 1"
+    },
+    {
+      "name": "의료영상검출보조소프트웨어",
+      "type": "software",
+      "evidence": "14 의료영상검출보조소프트웨어 - -"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "원재료",
+      "pageTarget": "원재료",
+      "evidence": "원재료"
+    },
+    {
+      "name": "부분품 관리번호",
+      "pageTarget": "부분품 관리번호",
+      "evidence": "일련 번호 부분품의 명칭 부분품 관리번호 수량"
+    },
+    {
+      "name": "운용 소프트웨어",
+      "pageTarget": "운용 소프트웨어",
+      "evidence": "운용 소프트웨어 (Ver 3.10)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "문서 제목은 원재료이다.",
+      "evidenceText": "원재료",
+      "pageTarget": "원재료",
+      "confidence": "high"
+    },
+    {
+      "claim": "이 목록은 일련번호, 부분품 명칭, 부분품 관리번호, 수량을 표 형식으로 제시한다.",
+      "evidenceText": "일련 번호 부분품의 명칭 부분품 관리번호 수량",
+      "pageTarget": "원재료",
+      "confidence": "high"
+    },
+    {
+      "claim": "디텍터 항목에는 S4335-W, S4335-WV, S4343-W, S3025-W가 포함된다.",
+      "evidenceText": "1 디텍터 (Detector) S4335-W S4335-WV S4343-W S3025-W",
+      "pageTarget": "디텍터",
+      "confidence": "high"
+    },
+    {
+      "claim": "Detector Power Supply 항목에는 Power Supply Box DEPS9601 및 Main Adaptor BM090S15F가 포함된다.",
+      "evidenceText": "2 Detector Power Supply Power Supply Box DEPS9601 1 Main Adaptor BM090S15F 1",
+      "pageTarget": "Detector Power Supply",
+      "confidence": "high"
+    },
+    {
+      "claim": "Workstation 항목에는 PC, Monitor, 운용 소프트웨어(Ver 3.10)가 포함된다.",
+      "evidenceText": "6 Workstation PC 1 Monitor 1 운용 소프트웨어 (Ver 3.10) 1",
+      "pageTarget": "Workstation",
+      "confidence": "high"
+    },
+    {
+      "claim": "의료영상검출보조소프트웨어 항목은 관리번호와 수량이 '-'로 표시되어 있다.",
+      "evidenceText": "14 의료영상검출보조소프트웨어 - -",
+      "pageTarget": "의료영상검출보조소프트웨어",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "문서일자, 개정번호 또는 버전, 관할 기관, 적용 표준이 source text에 명시되어 있지 않다."
+    },
+    {
+      "severity": "warning",
+      "reason": "완제품 모델명은 명시되어 있지 않고 부분품 관리번호만 제시되어 있다."
+    },
+    {
+      "severity": "info",
+      "reason": "일부 관리번호가 줄바꿈으로 분리되어 표시되어 원문 PDF 확인이 필요할 수 있다."
+    }
+  ]
+}
