@@ -1,0 +1,281 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-1a1l",
+    "sourcePath": "raw/sources/Project/02_CYAN/AQP707_제품 Software Validation 규정_양식_SW통합관리대장.xlsx",
+    "canonicalGroupId": "46076afd7a8e"
+  },
+  "document": {
+    "title": "Software 버전 관리대장",
+    "documentType": "software version management register",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG",
+      "HAD1417MCW",
+      "HAD1717MCW",
+      "A1417MCW",
+      "A1717MCW",
+      "F1417MCW",
+      "G1417CW",
+      "G1717CW",
+      "G1417FW",
+      "G1717FW",
+      "G1417CWP",
+      "G1717CWP",
+      "G1417FWP",
+      "G1717FWP",
+      "GT1717C",
+      "GT1717CP"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "707-2 (REV.00)",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Software version register listing software, firmware, FPGA, SDK, and console versions with compatible models, changes, issue dates, and application dates.",
+    "officialUse": "Used to track SW 명칭, 구분, 버전, 호환 모델, 변경점 내용, 발행일, 적용일, and 비고 for product software validation/version control.",
+    "keyPoints": [
+      "Initial XAS SW 1.0.0 release applied to HAD1717MC and HAD1717MG on 12/3/19.",
+      "EngineeringTool SW 1.1.1 applies to G-series and GT1717C/GT1717CP models and was issued/applied on 4/30/26.",
+      "BlueSdk was replaced by AbyzSdk with note: 기존 BlueSdk 폐기, Blue & Cyan 통합 SDK로 운영.",
+      "cyan.dll FW 1.0.0 is identified as Cyan 용 Engine (Firmware) for GT1717C and GT1717CP.",
+      "XAS3 SW 1.0.0 is described as Blue, Cyan 통합 Acqusition & Calibration SW."
+    ]
+  },
+  "entities": [
+    {
+      "name": "XAS",
+      "type": "software",
+      "evidence": "XAS,SW,1.0.0,\"HAD1717MC\nHAD1717MG\",초기 릴리즈,,12/3/19,12/3/19"
+    },
+    {
+      "name": "MC_FW",
+      "type": "firmware",
+      "evidence": "MC_FW,FW,1.0,\"\"\"\",초기 릴리즈,,3/12/19,11/29/19"
+    },
+    {
+      "name": "MC_FPGA",
+      "type": "FPGA",
+      "evidence": "MC_FPGA,FPGA,1.0,\"HAD1717MC\nHAD1717MG\",초기 릴리즈,,12/17/19,12/17/19"
+    },
+    {
+      "name": "ImfoU",
+      "type": "console software",
+      "evidence": "ImfoU,CONSOLE,2.1.254.210,\"HAD1717MC\nHAD1717MG\nHAD1417MCW\nHAD1717MCW\nA1417MCW\nA1717MCW\nF1417MCW\",초기 릴리즈,,4/16/20,4/16/20"
+    },
+    {
+      "name": "PhenixVision",
+      "type": "console software",
+      "evidence": "PhenixVision,CONSOLE,1.0.18.1213,\"HAD1717MC\nHAD1717MG\nHAD1417MCW\nHAD1717MCW\nA1417MCW\nA1717MCW\nF1417MCW\",초기 릴리즈,,6/29/21,6/29/21"
+    },
+    {
+      "name": "XAS_W",
+      "type": "software",
+      "evidence": "XAS_W,SW,2.4.0.4,\"A1417MCW\nA1717MCW\nF1417MCW\",개발 환경 빌드 문제로 인한 dll 추가,,7/12/24,7/12/24"
+    },
+    {
+      "name": "Engineering Tool",
+      "type": "software",
+      "evidence": "Engineering Tool,SW,1.0.0,\"G1417CW\nG1717CW\nG1417FW\nG1717FW\nG1417CWP\nG1717CWP\nG1417FWP\nG1717FWP\",초기 릴리즈,,7/4/25,7/4/25"
+    },
+    {
+      "name": "AXD_Firmware",
+      "type": "firmware",
+      "evidence": "AXD_Firmware,FW,1.0.0,\"\"\"\",초기 릴리즈,,7/4/25,7/4/25"
+    },
+    {
+      "name": "BlueSdk",
+      "type": "SDK",
+      "evidence": "BlueSdk,SDK,1.1.0,\"\"\"\",\"기능 추가 : Cyber security 적용, Cpp wrapping, CibLib 추가, Log Download 관련 API 추가"
+    },
+    {
+      "name": "AbyzSdk",
+      "type": "SDK",
+      "evidence": "\"BlueSdk\n→ AbyzSdk\",SDK,1.0.0,\"\"\"\",\"초기 릴리즈\n기존 BlueSdk 폐기, Blue & Cyan 통합 SDK로 운영\",,4/30/26,4/30/26"
+    },
+    {
+      "name": "AXD",
+      "type": "software",
+      "evidence": "AXD,SW,1.1.0,\"\"\"\",\"기능 추가 : Auto Reconnection 기능 추가, Log 다운로드 기능 추가, 펌웨어 업데이트 기능 추가"
+    },
+    {
+      "name": "BTS",
+      "type": "software",
+      "evidence": "BTS,SW,1.1.0,-,\"기능 추가 : Electronics Noise에서 Diff 이미지 대상 계산 방식 추가"
+    },
+    {
+      "name": "EngineeringTool",
+      "type": "software",
+      "evidence": "EngineeringTool,SW,1.1.1,\"G1417CW\nG1717CW\nG1417FW\nG1717FW\nG1417CWP\nG1717CWP\nG1417FWP\nG1717FWP\nGT1717C\nGT1717CP\""
+    },
+    {
+      "name": "core.dll",
+      "type": "firmware",
+      "evidence": "core.dll,FW,1.0.0,\"\"\"\",\"초기 릴리즈\nDetector Engine Core\",,4/30/26,4/30/26"
+    },
+    {
+      "name": "cyan.dll",
+      "type": "firmware",
+      "evidence": "cyan.dll,FW,1.0.0,\"GT1717C\nGT1717CP\",\"초기 릴리즈\nCyan 용 Engine (Firmware)\",,4/30/26,4/30/26"
+    },
+    {
+      "name": "XAS3",
+      "type": "software",
+      "evidence": "XAS3,SW,1.0.0,\"G1417CW\nG1717CW\nG1417FW\nG1717FW\nG1417CWP\nG1717CWP\nG1417FWP\nG1717FWP\nGT1717C\nGT1717CP\",\"초기 릴리즈\nBlue, Cyan 통합 Acqusition & Calibration SW\",,4/30/26,4/30/26"
+    },
+    {
+      "name": "CYAN",
+      "type": "product line",
+      "evidence": "TI-ROIC 관련 제어 기능(Cyan target)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Software version management",
+      "pageTarget": "Software Version Management Register",
+      "evidence": "Software 버전 관리대장"
+    },
+    {
+      "name": "Compatible model tracking",
+      "pageTarget": "Compatible Models",
+      "evidence": "SW 명칭,구분,버전,호환 모델,변경점 내용,,발행일,적용일,비고"
+    },
+    {
+      "name": "Issue and application dates",
+      "pageTarget": "Software Issue And Application Dates",
+      "evidence": "발행일,적용일"
+    },
+    {
+      "name": "Blue and Cyan integrated SDK",
+      "pageTarget": "AbyzSdk",
+      "evidence": "기존 BlueSdk 폐기, Blue & Cyan 통합 SDK로 운영"
+    },
+    {
+      "name": "Cyan engine firmware",
+      "pageTarget": "cyan.dll",
+      "evidence": "Cyan 용 Engine (Firmware)"
+    },
+    {
+      "name": "Blue and Cyan acquisition and calibration software",
+      "pageTarget": "XAS3",
+      "evidence": "Blue, Cyan 통합 Acqusition & Calibration SW"
+    },
+    {
+      "name": "Cyber security support",
+      "pageTarget": "Cyber Security",
+      "evidence": "Cyber security 적용"
+    },
+    {
+      "name": "DTH encrypted data transfer",
+      "pageTarget": "DTH Encrypted Data Transfer",
+      "evidence": "DTH에 데이터 암호화 전송 기능 추가"
+    },
+    {
+      "name": "Dark Noise Correction",
+      "pageTarget": "Dark Noise Correction",
+      "evidence": "Dark Noise Correction 기능 추가 (Optional)"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a software version management register.",
+      "evidenceText": "Software 버전 관리대장",
+      "pageTarget": "Software Version Management Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "The register tracks software name, category, version, compatible model, change content, issue date, application date, and remarks.",
+      "evidenceText": "SW 명칭,구분,버전,호환 모델,변경점 내용,,발행일,적용일,비고",
+      "pageTarget": "Software Version Management Register",
+      "confidence": "high"
+    },
+    {
+      "claim": "XAS SW 1.0.0 was initially released for HAD1717MC and HAD1717MG with issue and application date 12/3/19.",
+      "evidenceText": "XAS,SW,1.0.0,\"HAD1717MC\nHAD1717MG\",초기 릴리즈,,12/3/19,12/3/19",
+      "pageTarget": "XAS",
+      "confidence": "high"
+    },
+    {
+      "claim": "XAS SW 1.0.0.6 removed Bright-operation Dark-operation functionality and was issued/applied on 11/19/24.",
+      "evidenceText": "XAS,SW,1.0.0.6,\"\"\"\",Bright 동작 시 Dark 동작 기능 제거,,11/19/24,11/19/24",
+      "pageTarget": "XAS",
+      "confidence": "high"
+    },
+    {
+      "claim": "Engineering Tool SW 1.1.0 added ADC reading, Cut image resize, state display, setup pattern separation by model upload file, and Aging Dark dark noise correction algorithm application.",
+      "evidenceText": "Engineering Tool,SW,1.1.0,\"\"\"\",\"기능 추가 : ADC 읽기 기능, Cut 이미지 Resize 기능, State 표기 추가, Setup에 모델별 업로드 파일을 구분할 수 있는 Pattern 방식 추가, Aging Dark 취득에 Dark noise correction 알고리즘 적용",
+      "pageTarget": "Engineering Tool",
+      "confidence": "high"
+    },
+    {
+      "claim": "AXD_Firmware FW 1.1.0 added AES key environment variable registration/call, DTH encrypted data transfer, and optional Dark Noise Correction.",
+      "evidenceText": "AXD_Firmware,FW,1.1.0,\"\"\"\",\"기능 추가 : Patch 파일 복호화용 AES Key 환경 변수 등록 및 호출 기능 ADC 기능이 있는 경우 배터리 충전중 상태에 ADC를 사용하여 체크하는 기능 Sleep State 읽기 기능 DTH에 데이터 암호화 전송 기능 추가 Dark Noise Correction 기능 추가 (Optional)",
+      "pageTarget": "AXD_Firmware",
+      "confidence": "high"
+    },
+    {
+      "claim": "BlueSdk SDK 1.1.0 added cyber security, Cpp wrapping, CibLib, and Log Download APIs.",
+      "evidenceText": "BlueSdk,SDK,1.1.0,\"\"\"\",\"기능 추가 : Cyber security 적용, Cpp wrapping, CibLib 추가, Log Download 관련 API 추가",
+      "pageTarget": "BlueSdk",
+      "confidence": "high"
+    },
+    {
+      "claim": "AXD SW 1.1.0 added auto reconnection, log download, and firmware update functions.",
+      "evidenceText": "AXD,SW,1.1.0,\"\"\"\",\"기능 추가 : Auto Reconnection 기능 추가, Log 다운로드 기능 추가, 펌웨어 업데이트 기능 추가",
+      "pageTarget": "AXD",
+      "confidence": "high"
+    },
+    {
+      "claim": "EngineeringTool SW 1.1.1 applies to G1417CW, G1717CW, G1417FW, G1717FW, G1417CWP, G1717CWP, G1417FWP, G1717FWP, GT1717C, and GT1717CP.",
+      "evidenceText": "EngineeringTool,SW,1.1.1,\"G1417CW\nG1717CW\nG1417FW\nG1717FW\nG1417CWP\nG1717CWP\nG1417FWP\nG1717FWP\nGT1717C\nGT1717CP\"",
+      "pageTarget": "EngineeringTool",
+      "confidence": "high"
+    },
+    {
+      "claim": "BlueSdk was replaced by AbyzSdk and the SDK is operated as an integrated Blue and Cyan SDK.",
+      "evidenceText": "\"BlueSdk\n→ AbyzSdk\",SDK,1.0.0,\"\"\"\",\"초기 릴리즈\n기존 BlueSdk 폐기, Blue & Cyan 통합 SDK로 운영\",,4/30/26,4/30/26",
+      "pageTarget": "AbyzSdk",
+      "confidence": "high"
+    },
+    {
+      "claim": "core.dll FW 1.0.0 is Detector Engine Core.",
+      "evidenceText": "core.dll,FW,1.0.0,\"\"\"\",\"초기 릴리즈\nDetector Engine Core\",,4/30/26,4/30/26",
+      "pageTarget": "core.dll",
+      "confidence": "high"
+    },
+    {
+      "claim": "cyan.dll FW 1.0.0 is Cyan engine firmware for GT1717C and GT1717CP.",
+      "evidenceText": "cyan.dll,FW,1.0.0,\"GT1717C\nGT1717CP\",\"초기 릴리즈\nCyan 용 Engine (Firmware)\",,4/30/26,4/30/26",
+      "pageTarget": "cyan.dll",
+      "confidence": "high"
+    },
+    {
+      "claim": "XAS3 SW 1.0.0 is integrated Blue and Cyan acquisition and calibration software.",
+      "evidenceText": "XAS3,SW,1.0.0,\"G1417CW\nG1717CW\nG1417FW\nG1717FW\nG1417CWP\nG1717CWP\nG1417FWP\nG1717FWP\nGT1717C\nGT1717CP\",\"초기 릴리즈\nBlue, Cyan 통합 Acqusition & Calibration SW\",,4/30/26,4/30/26",
+      "pageTarget": "XAS3",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No external regulatory authority or jurisdiction is stated in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "No single document date is clearly identified; the source contains approval dates and many software issue/application dates."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Some compatible model fields are ditto-style empty quote markers, so model compatibility may inherit from prior rows but is not explicit on those rows."
+    },
+    {
+      "severity": "warning",
+      "reason": "Source contains likely typographical variants such as 'Engineering Tool' and 'EngineeringTool', and 'Acqusition'."
+    }
+  ]
+}
