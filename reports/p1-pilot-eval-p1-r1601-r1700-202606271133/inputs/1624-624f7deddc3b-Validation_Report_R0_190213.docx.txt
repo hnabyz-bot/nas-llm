@@ -1,0 +1,322 @@
+queueId: ingest-1781569954370-ld
+sourcePath: raw/sources/RA/04_제품별 인허가 진행 문서/01_HAD1717MC(MG)/▶ CE MDD/인허가 준비 자료(초기)/17. 공정 (설비) Validation Report/압흔 검사기 Validation Report R0 190213.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/1294e6e621dc/압흔 검사기 Validation Report R0 190213__1294e6e621dc_combined.txt
+canonicalGroupId: 624f7deddc3b
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1624
+
+SOURCE_TEXT
+OLB Bonding 압흔 검사기
+
+장비Validation Report
+
+작성
+
+검토
+
+승인
+
+내부 결재 완료
+
+/
+
+/
+
+/
+
+1.목적
+
+이 프로토콜은 압흔 검사장비의 Validation을 수행하기 위해 작성되었다.
+
+관련 기준은 “[AQP711] 공정 Validation 절차서”에 따른다.
+
+2.장비의 개요
+
+1)장비의기능
+
+- 본 설비는 OLB/PB공정 이후 압흔 검사 및 Align을 검사하는 설비로 품질의 안정을 위해
+
+ Bonding부 오염여부를 측정하는 설비임.
+
+- 특징으로 OLB,PB영역의 Align이 모두 측정가능하며, 1매 기준 30sec이내로
+
+ 측정이 가능함. 추가적으로 Panel의 오염여부도 측정 가능함.
+
+2)설비 외형
+
+Stage
+
+ Panel Align 및 흡착하여 검사 영역으로 이동하는 Unit(X,Y,Z,T)
+
+Align Camera
+
+ 안착 되어진 Panel의 Align하여 위치 정렬하는 Unit
+
+압흔 검사 Camera
+
+ 압흔 검사 영역을 Scan하여 압흔/Align등을 검사 Data를 확보하는 Unit
+
+PCB 검사 Camera
+
+ PCB측 Align을 검사하는 Unit
+
+[ 표 1-1. 설비 부위 별 명칭 ]
+
+3)SYSTEMUTILITY사양
+
+항목
+
+내용
+
+비고
+
+설비 Size (WxDxH)
+
+1400mm x 1700mm x 1700mm
+
+설비 중량
+
+2500kg
+
+적용 가능 Size
+
+Min : 250mm x 250mm
+
+Max : 475mm x 475mm
+
+Air Utility
+
+소모량 : 500ℓ/min, Line Air : 1/2" 1개
+
+전원
+
+3상 AC220V 60Hz 20KVA
+
+Camera
+
+Align Camera
+
+ -.F.O.V : 5.8 ×4.2mm
+
+ -.Resolution : 640 ×480pixel(≤9㎛)
+
+ -.Light : LED(coaxial)
+
+ -.Working Distance : 65㎜
+
+Line Scan Camera
+
+ -.Camera Model : Dalsa, Piranha HS 4k(TDI 방식)
+
+ -.F.O.V : 2mm
+
+ -.Resolution : 2,048pixel(≤1?m)
+
+ -.Light : LED(coaxial)
+
+ -.Scan Speed :40㎜/sec
+
+ -.Auto Focus Unit : Laser 변위 Sensor(Res : 0.1㎛)
+
+3. IQ (Installation Qualification) Protocol
+
+1) 목적
+
+설비 사양대로 정지상태에서 전기 및 기구부를 평가하기 위함
+
+2)시험 조건
+
+(1)일반조건
+
+(가)POWERON조건
+
+(나)정지상태조건
+
+(2)환경조건
+
+H&abyz detector 제조 현장(CleanRoom)
+
+3)시행 일자
+
+ 2018년 02월 11일
+
+4) 세부 항목 검사 Check list
+
+항목
+
+내용
+
+비고
+
+전원
+
+3상 AC220V 60Hz 20KVA
+
+■Pass □Fail
+
+Model Teaching
+
+Job Data Teaching/Model Data Teaching
+
+Running Test 진행
+
+■Pass □Fail
+
+압흔 검사
+
+PC와 Link 작업 진행.
+
+Model Auto 운전 진행
+
+■Pass □Fail
+
+ Running Test
+
+프로그램 검출 및 Data 확인
+
+■Pass □Fail
+
+5) 검사 결과
+
+설비사양대로입고 되었음을 확인함.
+
+4. OQ (Operational Qualification) Protocol
+
+1)목적
+
+장비의 세부 기능이 정상적으로 작동하는지 평가하기 위함
+
+2)시험조건
+
+(1)일반조건
+
+(가)POWERON조건
+
+(나)OPERATING조건
+
+(2)환경조건
+
+H&abyz detector 제조 현장(CleanRoom)
+
+3)시행 일자
+
+2019년 02월 12일
+
+4)시험규격및방법
+
+설비 시스템상 세부 기능별 동작이 정상적으로 진행되는지 확인한다.(세부동작 검사 Check list 참조)
+
+5)판정기준 및 결과
+
+순서
+
+검사항목
+
+목표
+
+목표달성여부
+
+1
+
+Panel 투입 동작
+
+검사 Panel을 검사 Stage로 투입 시킨다.
+
+■Pass □Fail
+
+2
+
+Panel 위치 동작
+
+검사할 영역에 대한 Panel 정 위치를 Camera를 이용하여 정렬한다.
+
+■Pass □Fail
+
+3
+
+1차 Vision
+
+Camera 동작[OLB]
+
+Bonding 영역에 대한 부착상태를 측정 후 항목에 대한
+
+결과값을 System에 전달한다.
+
+■Pass □Fail
+
+4
+
+2차 Vision
+
+Camera 동작[PB]
+
+Bonding 영역에 대한 부착상태를 Camera를 이용하여
+
+모니터에 전달한다.
+
+■Pass □Fail
+
+5
+
+Panel 배출동작
+
+배출 위치로 Stage가 이동한다.
+
+■Pass □Fail
+
+6)판정 기준 및 결과
+
+ 장비의 세부 기능이 정상적으로 작동됨을 확인함.
+
+5. PQ (Performance Qualification) Protocol
+
+1)목적
+
+장비가 규정된 Parameter 내에서 실행될 때, 그 성능이 미리 정한 허용규격에 맞게 항상
+
+동일하게 실시 되는지 평가하기 위함
+
+2)시험조건
+
+(1)일반조건
+
+(가)POWERON조건
+
+(나)OPERATING조건
+
+(2)환경조건
+
+H&abyz detector 제조 현장(CleanRoom)
+
+3)시행 일자
+
+ 2019년 02월 13일
+
+4)시험규격및방법
+
+ (1)검사 data 재현성
+
+(가)Reference panel (기검사 완료된 panel) 측정한다.
+
+5)판정 기준
+
+항목
+
+사양
+
+결과
+
+검사 data 재현성
+
+기존 측정 data ± 10%
+
+반복정밀도 확인결과 모든 항목 2% 이내
+
+6) 검사 결과
+
+허용 규격에 맞는 반복 정밀도가 나옴을 확인함
+
+6.승인
+
+밸리데이션의 결과는 미리 설정된 기준에 부합하는 것을 보여주었으며, 수락 할만한 결과로 확인되었다

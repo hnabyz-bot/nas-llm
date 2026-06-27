@@ -1,0 +1,793 @@
+queueId: ingest-1781569954404-tim
+sourcePath: raw/sources/RA/05_해외 등록 서류 (영업팀 F-up)/251021 대만 APLUSBIO - P1, 23G/3. NCC/Detector - WIFI Module NCC Certi & Test report/WBW880A_NCC test report 5_4-3 DFS測試報告-Rev01-190503.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/a5a0cbb3137e/WBW880A_NCC test report 5_4-3 DFS測試報告-Rev01-190503__a5a0cbb3137e_combined.txt
+canonicalGroupId: cc9e05b99ef2
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1670
+
+SOURCE_TEXT
+第 1
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+低功率射頻電機-DFS 測試報告
+友信行股份有限公司
+器材名稱: Wifi Module
+廠牌: SAMSUNG
+型號: WBW880A
+申請廠商 ： 友信行股份有限公司
+臺北市大安區敦化南路 2 段 97 號 14 樓
+測試實驗室 ： 敦吉檢測科技股份有限公司電磁相容部
+新北市林口區頂福里 53-11 號
+電話: (02) 2609-9301~2, 2609-2133~5
+傳真: (02) 2609-9303
+受理日期 ： 2019 年 02 月 26 日
+案件編號 ： C1M1902181
+報告號碼 ： EM-NC190053
+測試日期 ： 2019 年 04 月 24 日
+
+第 2
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+TABLE OF CONTENTS
+Description Page
+低功率射頻電機-DFS 測試報告 .................................................................................................. 1
+SUMMARY OF TEST RESULT .................................................................................................. 3
+1.GENERAL INFORMATION ..................................................................................................... 7
+1.1.EUT Information ............................................................................................................................... 7
+1.2.Support Equipment............................................................................................................................ 8
+1.3.Standard Requirement ....................................................................................................................... 8
+1.4.Table for DFS band Carrier Frequencies .......................................................................................... 8
+1.5.Antenna Information of DFS Band ................................................................................................... 9
+1.6.Measurement Uncertainty ................................................................................................................. 9
+2.TEST EQUIPMENT ................................................................................................................. 10
+3.WORKING MODES AND REQUIREMENT TEST ITEM.................................................... 11
+3.1.Applicability of DFS Requirements Prior To Use A Channel ........................................................ 11
+3.2.Applicability of DFS Requirements During Normal Operation ..................................................... 11
+4.DFS DETECTION THRESHOLD AND RADAR TEST WAVEFORMS ............................. 12
+4.1.Interference Threshold Value, Master or Client Incorporating In-Service Monitoring .................. 12
+4.2.Radar Test Waveform Minimum Step ............................................................................................ 12
+4.3.Short Pulse Radar Test Waveforms ................................................................................................ 12
+4.4.Long Pulse Radar Test Waveforms ................................................................................................. 13
+4.5.Frequency Hopping Pulse Radar Test Waveforms ......................................................................... 15
+4.6.Conducted Calibration Setup .......................................................................................................... 17
+4.7.Radar Waveform Calibration Procedure ......................................................................................... 17
+4.8.Calibration Deviation ...................................................................................................................... 17
+4.9.Radar Waveform Calibration Result ............................................................................................... 17
+5.TEST SETUP AND TEST RESULT ........................................................................................ 18
+5.1.Test Setup ........................................................................................................................................ 18
+5.3.Channel Move Time, Channel Closing Transmission Time, Non-Occupancy Period,
+Non-Associated Client Beacon Measurement....................................................................................... 20
+6.USER ACCESS RESTRICTION ............................................................................................. 22
+附錄一受測裝置之測試結果
+附錄二受測裝置之測試照片
+
+敦吉檢測科技股份有限公司案件編號
+低功率射頻電機
+受理日期 ：
+完成日期 ：
+報告號碼 ：
+實驗室名稱 ：
+實驗室地址 ：
+實驗室電話 ：
+認可編號及範圍 ：
+申請廠商 ：
+製造廠商 ：
+器材名稱 ：
+廠牌 ：
+型號 ：
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+低功率射頻電機-DFS 測試報告
+2019年02月26日
+2019年04月24日
+EM-NC190053
+敦吉檢測科技股份有限公司電磁相容部
+新北市林口區頂福里53-11號
+(02) 2609-9301, (02) 2609-2133
+TAF 1724 (9KHz ~ 40GHz)
+友信行股份有限公司
+Samsung Electronics Co., Ltd.
+Wifi Module
+SAMSUNG
+WBW880A
+第 3
+頁共 22
+頁
+報告號碼:EM-NC190053
+測試報告
+
+第 4
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+工作頻率/發射功率 ：
+無線技術 工作頻率(MHz) 頻道數
+發射功率(dBm)
+峰值
+(Peak)
+平均值
+(Average)
+802.11b 2412-2472 13 14.43 11.68
+802.11g 2412-2472 13 15.82 9.28
+802.11n-HT20 2412-2472 13 16.19 9.36
+802.11n-HT40 2422-2462 9 16.63 9.55
+802.11a
+UNII Band I 5180-5240 4 --- 7.04
+UNII Band II 5260-5320 4 --- 7.39
+UNII Band III 5500-5720 12 --- 8.57
+UNII Band IV 5745-5825 5 --- 6.69
+802.11n-HT20/
+802.11ac-VHT20
+UNII Band I 5180-5240 4 --- 6.52
+UNII Band II 5260-5320 4 --- 6.87
+UNII Band III 5500-5720 12 --- 8.29
+UNII Band IV 5745-5825 5 --- 6.01
+802.11n-HT40/
+802.11ac-VHT40
+UNII Band I 5190-5230 2 --- 7.07
+UNII Band II 5270-5310 2 --- 7.93
+UNII Band III 5510-5710 6 --- 8.36
+UNII Band IV 5755-5795 2 --- 6.69
+802.11ac-VHT80
+UNII Band I 5210 1 --- 7.81
+UNII Band II 5290 1 --- 8.06
+UNII Band III 5530-5690 3 --- 8.24
+UNII Band IV 5775 1 --- 6.33
+**UNII Band II & III [DFS Function-Slave (Without radar detection function)]**
+調變方式 ：
+無線技術 調變方式
+802.11b DSSS (DBPSK/ DQPSK/ CCK)
+802.11a/g/n-HT20/n-HT40 OFDM (BPSK/ QPSK/ 16QAM/ 64QAM)
+802.11ac-VHT20/VHT40/VHT80 OFDM (BPSK/ QPSK/ 16QAM/ 64QAM/ 256QAM)
+
+第 5
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+天線規格 ： 此裝置使用固定式天線，其天線資料如下
+型號 製造商 天線類型 頻率(MHz) 天線增益(dBi)
+Patch Antenna IVIEW Co.,Ltd. WIFI_SAMSUNG_005
+2400 0.4
+2450 2.9
+2500 1.9
+5200 5.6
+5300 7.3
+5400 5.9
+5500 4.3
+5600 3.5
+5700 4.9
+5800 2.1
+Patch Antenna IVIEW Co.,Ltd. WIFI_SAMSUNG_006
+2400 -0.1
+2450 2.0
+2500 1.5
+5200 3.9
+5300 2.8
+5400 4.2
+5500 2.3
+5600 1.0
+5700 3.0
+5800 4.3
+註:天線已符合NCC低功率射頻電機技術規範2.2.節之規定
+備註 ： 1.本測試報告僅對受測之樣品負責。
+2. 非經本公司同意，測試報告不得摘錄複印使用。（全部複製除外）
+3. 本產品所適用之規範修訂日期 2018 年 01 月 10 日。
+4. 此份報告是針對 UNII Band II、III 之 DFS 功能進行製作，
+至於 2.4GHz 功能報告於報告號碼(EM-NC190051)，
+至於 UNII Band I、II、III、IV 功能於報告號碼(EM-NC190052)。
+
+第 6
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+SUMMARY OF TEST RESULT
+Description of Test Item Standard Results
+Channel Availability Check Time NCC LP0002-Section 4.7.7.2 (2)(A) N/A
+Channel Move Time NCC LP0002-Section 4.7.7.2 (4) PASS
+Channel Closing Transmission Time NCC LP0002-Section 4.7.7.2 (4) PASS
+Non-Occupancy Period NCC LP0002-Section 4.7.7.2 (5) PASS
+單位主管 : 測試員 :
+(薛舜誠/課長) (吳俊澤/主任)
+
+第 7
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+1. GENERAL INFORMATION
+1.1. EUT Information
+Product Wifi Module
+Model Number WBW880A
+Brand Name SAMSUNG
+Modulation
+802.11a/n-HT20/n-HT40:
+OFDM (BPSK/ QPSK/ 16QAM/ 64QAM)
+802.11ac-VHT20/VHT40/VHT80:
+OFDM (BPSK/ QPSK/ 16QAM/ 64QAM/ 256QAM)
+Operating Frequency Range
+802.11a:
+UNII Band II (5260-5320MHz)
+UNII Band III (5500-5720MHz)
+802.11n-HT20/802.11ac-VHT20:
+UNII Band II (5260-5320MHz)
+UNII Band III (5500-5720MHz)
+802.11n-HT40/802.11ac-VHT40:
+UNII Band II (5270-5310MHz)
+UNII Band III (5510-5710MHz)
+802.11ac-VHT80:
+UNII Band II (5290MHz)
+UNII Band III (5530-5690MHz)
+Channel Bandwidth 20MHz/40MHz/80MHz
+DFS Function Slave (without radar detection function)
+Max Con. Power
+(DFS Band Max.)
+802.11a:
+UNII Band II: 7.39 dBm
+UNII Band III: 8.57 dBm
+802.11n-HT20/802.11ac-VHT20
+UNII Band II: 6.87 dBm
+UNII Band III: 8.29 dBm
+802.11n-HT40/802.11ac-VHT40
+UNII Band II: 7.93 dBm
+UNII Band III: 8.36 dBm
+802.11ac-VHT80
+UNII Band II: 8.06 dBm
+UNII Band III: 8.24 dBm
+註: 本報告以頻寬20MHz模式進行量測。
+
+第 8
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+1.2. Support Equipment
+Item Manufacturer Model Remark
+AP Server embedded with Wireless AC Module
+AP Server D-LINK DIR-868L FCC ID: KA2IR868LA1
+Wireless AC Module Alpha WMC-AC01 FCC ID: RRK2012060056-1
+1.3. Standard Requirement
+NCC LP0002 (2016-08) 4.7.7.2: U-NII devices operating in the 5.25 ~ 5.35 GHz and
+5.47 ~ 5.725 GHz band shall employ a TPC mechanism. The U-NII device is required to
+have the capability to operate at least 6 dB below the mean EIRP value of 30dBm. A
+TPC mechanism is not required for systems with an e.i.r.p. of less than 500mW.
+U-NII devices operating in the 5.25-5.35 GHz and 5.47-5.725 GHz bands shall employ
+a DFS radar detection mechanism to detect the presence of radar systems and to avoid
+co-channel operation with radar systems. EUT is Client device without radar detection
+function.
+1.4. Table for DFS band Carrier Frequencies
+Channel List
+802.11a/802.11n-HT20/802.11ac-VHT20
+UNII Band Channel
+Number
+Frequency
+(MHz) UNII Band Channel
+Number
+Frequency
+(MHz)
+II
+52 5260
+III
+116 5580
+56 5280 120 5600
+60 5300 124 5620
+64 5320 128 5640
+III
+100 5500 132 5660
+104 5520 136 5680
+108 5540 140 5700
+112 5560 144 5720
+
+第 9
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+Channel List
+802.11n-HT40/802.11ac-VHT40
+UNII Band Channel
+Number
+Frequency
+(MHz) UNII Band Channel
+Number
+Frequency
+(MHz)
+II 54 5270
+III
+118 5590
+62 5310 126 5630
+III 102 5510 134 5670
+110 5550 142 5710
+Channel List
+802.11ac-VHT80
+UNII Band Channel
+Number
+Frequency
+(MHz) UNII Band Channel
+Number
+Frequency
+(MHz)
+II 58 5290 III 122 5610
+III 106 5530 138 5690
+1.5. Antenna Information of DFS Band
+型號 製造商 天線類型 頻率(MHz) 天線增益(dBi)
+Patch Antenna IVIEW Co.,Ltd. WIFI_SAMSUNG_005
+5200 5.6
+5300 7.3
+5400 5.9
+5500 4.3
+5600 3.5
+5700 4.9
+5800 2.1
+Patch Antenna IVIEW Co.,Ltd. WIFI_SAMSUNG_006
+5200 3.9
+5300 2.8
+5400 4.2
+5500 2.3
+5600 1.0
+5700 3.0
+5800 4.3
+1.6. Measurement Uncertainty
+Test Item Uncertainty
+DFS Measurement ±0.5ms
+Threshold ±0.33dB
+
+第 10
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+2. TEST EQUIPMENT
+Item Type Manufacturer Model No. Serial No. Cal. Date Cal. Interval
+1 Vector Signal Generation R&S SMU200A 104893 2018. 06. 27 1 Year
+2 Spectrum Analyzer Agilent N9030A-544 US51350140 2018. 06. 20 1 Year
+3 Spectrum Analyzer R&S FSV30 101181 2018. 07. 12 1 Year
+4 Atteuator (10dB) X2 Worken WK0602-10 0120A02208001S N.C.R N.C.R
+5 Atteuator (30 dB) X2 Worken WK0602-30 0120A02208002S N.C.R N.C.R
+
+第 11
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+3. WORKING MODES AND REQUIREMENT TEST ITEM
+3.1. Applicability of DFS Requirements Prior To Use A Channel
+Requirement
+Operational Mode
+Master Client without
+radar detection
+Client with radar
+detection
+Non-Occupancy Period  Not required 
+DFS Detection Threshold  Not required 
+Channel Availability Check Time  Not required Not required
+Uniform Spreading  Not required Not required
+3.2. Applicability of DFS Requirements During Normal Operation
+Requirement
+Operational Mode
+Master Client without
+radar detection
+Client with radar
+detection
+DFS Detection Threshold  Not required 
+Channel Closing Transmission
+Time   
+Channel Move Time   
+
+第 12
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+4. DFS DETECTION THRESHOLD AND RADAR TEST
+WAVEFORMS
+4.1. Interference Threshold Value, Master or Client Incorporating In-Service
+Monitoring
+Maximum Transmit Power Value (See Notes 1 and 2)
+≥ 200 milliwatt -64dBm
+< 200 milliwatt -62dBm
+Note 1: This is the level at the input of the receiver assuming a 0 dBi receive antenna.
+Note 2: Throughout these test procedures an additional 1 dB has been added to the amplitude
+of the test transmission waveforms to account for variations in measurement
+equipment. This will ensure that the test signal is at or above the detection threshold
+level to trigger a DFS response.
+The radar Detection Threshold, lowest antenna gain is the parameter of interference
+radar DFS detection threshold.
+The interference Detection Threshold is -62dBm
+4.2. Radar Test Waveform Minimum Step
+Step intervals of 0.1 microsecond for Pulse Width, 1 microsecond for PRI, 1MHz for
+chirp width and 1 for the number of pulses will be utilized for the random determination
+of specific test waveforms.
+4.3. Short Pulse Radar Test Waveforms
+Radar Type Pulse Width
+(μsec)
+PRI
+(μsec)
+Number of
+Pulse
+Minimum Percentage
+of Successful
+Detection
+Minimum
+number of
+Trials
+1 1 1428 18 60% 30
+2 1-5 150-230 23-29 60% 30
+3 6-10 200-500 16-18 60% 30
+4 11-20 200-500 12-16 60% 30
+Aggregate (Radar Types 1-4) 80% 120
+A minimum of 30 unique waveforms are required for each of the short pulse radar type
+2 through 4. For short pulse radar type 1, the same waveform is used a minimum of 30
+times. If more than 30 waveforms are used for short pulse radar types 2 through 4,
+then each additional waveform must also be unique and not repeated from the previous
+waveforms. The aggregate is the average of the percentage of successful detections of
+short pulse radar types 1-4.
+
+第 13
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+Used R&S SMU200A (Vector SG with two ARB)
+B11: Base-band Generator with ARB (16M samples) and Digital Modulation
+B13: Base-band Main Module
+B106: frequency range (100 kHz to 6 GHz)
+For selecting the waveform parameters from within the bounds of the signal type,
+system was random selection using uniform distribution.
+4.4. Long Pulse Radar Test Waveforms
+Radar
+Type
+Pulse Width
+(μsec)
+Chirp
+Width
+(MHz)
+PRI
+(μsec)
+Number
+of Pulse
+Per Burst
+Number of
+Bursts
+Minimum
+Percentage of
+Successful
+Detection
+Minimum
+of Trials
+5 50-100 5-20 1000-2000 1-3 8-20 80% 30
+The parameters for this waveform are randomly chosen. Thirty unique waveforms are
+required for the Long Pulse radar test signal. If more 30 waveforms are used for the
+Long Pulse radar test signal, then each additional waveform must also be unique and not
+repeated from the previous waveforms. Each waveform is defined as following:
+(1) The transmission period for the Long Pulse Radar test signal is 12 seconds.
+(2) There are a total of 8 to 20 Bursts in the 12 second period, with the number of
+Bursts being randomly chosen. This number is Burst_Count.
+(3) Each Burst consists of 1 to 3 pulses, with the number of pulses being randomly
+chosen. Each Burst within the 12 second sequence may have a different number
+of pulses.
+(4) The pulse width is between 50 and 100 microseconds, with the pulse width being
+randomly chosen. Each pulse within a Burst will have the some pulse width.
+Pulses in different Bursts may have different pulse widths.
+(5) If more than one pulse is present in a Burst, the time between the pulses will be
+between 1000 and 2000 microseconds, with the time being randomly chosen. If
+three pulses are present in a Burst, the time between the first and second pulses is
+chosen independently of the time between the second and third pulses.
+(6) The 12 second transmission period is divided into even intervals. The number of
+intervals is equal to Burst_Count. Each interval is of length
+(12000000/Burst_Count) microseconds. Each interval contains one Burst. The
+start time for the Burst, relative to the beginning of the interval, is between 1 and
+[(12000000/Burst_Count)-(Total Burst length)+(One Random PRI interval)]
+microseconds, with the start time being randomly chosen. The step interval for
+the start time is 1 microsecond. The start time for each Burst is chosen
+
+第 14
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+independently.
+A representative example of a Long Pulse radar test waveform:
+(1) The total test signal length is 12 seconds.
+(2) 8 Bursts are randomly generated for the Burst_Count.
+(3) Burst 1 has 2 randomly generated pulses.
+(4) The pulse width (for both pulses) is randomly selected to be 75 microseconds.
+(5) The PRI is randomly selected to be at 1213 microseconds.
+(6) Bursts 2 through 8 are generated using steps 3-5.
+(7) Each Burst is contained in even intervals of 1500000 microseconds. The starting
+location for Pulse 1. Burst 1 is randomly generated (1 to 1500000 minus the total
+Burst 1 length + 1 random PRI interval) at the 325001 microsecond step. Bursts 2
+through 8 randomly fall in successive 1500000 microsecond intervals (i.e. Burst 2
+falls in the 1500001-3000000 microsecond range).
+Used R&S SMU200A (Vector SG with two ARB)
+Path A/Path B Two B11: Base-band Generator with ARB (16M samples) and Digital
+Modulation
+B13: Base-band Main Module
+B106: frequency range (100 kHz to 6 GHz)
+
+第 15
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+For selecting the waveform parameters from within the bounds of the signal type,
+system was random selection using uniform distribution.
+4.5. Frequency Hopping Pulse Radar Test Waveforms
+Radar
+Type
+Pulse Width
+(μsec)
+PRI
+(μsec)
+Pulses Per
+Hop
+Hopping Rate
+(kHz)
+Hopping
+Sequence
+Length
+(ms)
+Minimum
+Percentage of
+Successful
+Detection
+Minimum
+of Trials
+6 1 333 9 0.333 300 70% 30
+For the Frequency Hopping Radar Type, the same Burst parameters are used for each
+waveform. The hopping sequence is different for each waveform and a 100-length
+segment is selected from the hopping sequence defined by the following algorithm:
+The first frequency in a hopping sequence is selected randomly from the group of 475
+integer frequencies form 5250-5274MHz. Next, the frequency that was just chosen is
+removed from the group and a frequency is randomly selected from the remaining 474
+frequencies in the group. This process continues until all 475 frequencies are chosen
+for the set. For selection of random frequency, the frequencies remaining within the
+group are always treated as equally likely.
+
+第 16
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+Used R&S SMU200A (Vector SG with two ARB)
+B11: Base-band Generator with ARB (16M samples) and Digital Modulation
+B13: Base-band Main Module
+B106: frequency range (100 kHz to 6 GHz)
+For selecting the waveform parameters from within the bounds of the signal type,
+system was random selection using uniform distribution.
+
+第 17
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+
+4.6. Conducted Calibration Setup
+4.7. Radar Waveform Calibration Procedure
+The measured channel is 5260MHz. The radar signal was the same as transmitted
+channels, and injected into the antenna port of AP (master) or Client Device with Radar
+Detection, measured the channel closing transmission time and channel move time.
+The calibrated conducted detection threshold level is set to -62dBm. The tested level
+is lower than required level hence it provides margin to the limit.
+4.8. Calibration Deviation
+There is no deviation with the original standard.
+4.9. Radar Waveform Calibration Result
+DFS detection threshold level and the burst of pulses on the Channel frequency
+20MHz
+Radar Test
+Signal Generator
+UUT
+(Client)
+ATT 10dB 2-Way
+Splitter/
+Combiner
+Master
+ATT 30dB
+Spectrum
+Analyzer (with
+10 dB internal
+Attenuation)
+2-Way
+Splitter/
+Combiner ATT 10dB
+ATT 10dB
+
+第 18
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+5. TEST SETUP AND TEST RESULT
+5.1. Test Setup
+5.1.1. Test Setup Diagram
+Following is the test setup for generated the radar waveforms and used to
+monitor UNII device.
+5.1.2. Test Setup Operation
+System testing was performed with the designated MPEG test file that streams
+full motion video from the Access Point to Client in full motion video mode
+using the media player with the V2.61 Codec package. This file is used by IP
+and Frame based systems for loading the test channel during the in-service
+compliance testing of the U-NII device.
+The waveform parameters from within the bounds of the signal type are selected
+randomly using uniform distribution.
+A spectrum analyzer is used as a monitor to verify that the EUT has vacated the
+Channel within the (Channel Closing Transmission Time and Channel Move
+Time, and does not transmit on a Channel during the Non-Occupancy Period
+after the detection and Channel move. It is also used to monitor EUT
+transmissions during the Channel Availability Check Time.
+Radar Test
+Signal Generator
+UUT
+(Client)
+ATT 10dB 2-Way
+Splitter/
+Combiner
+Master
+ATT 30dB
+Spectrum
+Analyzer (with
+10 dB internal
+Attenuation)
+2-Way
+Splitter/
+Combiner ATT 10dB
+ATT 10dB
+
+敦吉檢測科技股份有限公司案件編號
+5.1.3. Test Setup for Data Traffic Plot
+Test Date 201
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+Test Setup for Data Traffic Plot
+2019/04/24 Temp./Hum.
+Test Mode: 20MHz
+TX 5260MHz
+第 19
+頁共 22
+頁
+報告號碼:EM-NC190053
+23℃/54%
+
+第 20
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+5.3. Channel Move Time, Channel Closing Transmission Time,
+Non-Occupancy Period, Non-Associated Client Beacon Measurement
+5.3.1. Limit
+Parameter Value
+Channel Move Time 10 seconds
+See Note 1.
+Channel Closing Transmission Time
+200 milliseconds + an aggregate of 60
+milliseconds over remaining 10 second period.
+See Notes 1 and 2.
+Non-Occupancy Period
+Non-Occupancy Period time is 30 minute during
+which a Channel will not be utilized after a
+Radar Waveform is detected on that Channel
+Non-Associated Client Beacon
+The non-associated Client Beacon Test is during
+the 30 minutes observation time. The EUT
+should not make any transmissions in the DFS
+band after EUT power up.
+Note 1: The instant that the Channel Move Time and the Channel Closing Transmission Time
+begins is as follows:
+a. For the Short Pulse Radar Test Signals this instant is the end of the Burst.
+b. For the Frequency Hopping radar Test Signal, this instant is the end of the last radar
+Burst generated.
+c. For the Long Pulse Radar Test Signal this instant is the end of the 12 second period
+defining the Radar Waveform.
+Note 2: The Channel Closing Transmission Time is comprised of 200 milliseconds starting at
+the beginning of the Channel Move Time plus any additional intermittent control
+signals required to facilitate a Channel move (an aggregate of 60 milliseconds) during
+the remainder of the 10 second period. The aggregate duration of control signals will
+not count quiet periods in between transmissions.
+
+第 21
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+5.3.2. Test Procedures
+5.3.2.1. When a radar Burst with a level equal to the DFS Detection Threshold
++ 1dB is generated on the operating channel of the U-NII device. A
+U-NII device operating as a Client Device will associate with the
+Master of channel. Stream the MPEG test file from the Master Device
+to the Client Device on the selected channel for entire period of the test.
+At time to the radar waveform generator sends a Burst of pulses for
+each of the radar types at Detection Threshold + 1dB.
+5.3.2.2. Observe the transmissions of the EUT at the end of the radar Burst on
+the Operating channel. Measure and record the transmissions from the
+EUT during the observation time [Channel Move Time]. One 10
+Second plot bee reported for the short Pulse Radar type 1-4 and one for
+the Long Pulse Radar Type test in a 22 second plot. The plot for the
+Short Pulse Radar types start at the end of the radar burst. The
+Channel Move Time will be calculated based on the plot of the short
+Pulse Radar Type. The Long Pulse Radar Type plot show the device
+ceased transmissions within the 10 second window after detection has
+occurred. The plot for the Long Pulse Radar type should start at the
+beginning of the 12 second waveform.
+5.3.2.3. Measurement of the aggregate duration of the Channel Closing
+Transmission Time method. With the spectrum analyzer set to zero
+span tuned to the center frequency of the EUT operating channel at the
+radar simulated frequency, Peak detection and max hole.
+5.3.2.4. Measure the EUT for more than 30 minutes following the channel
+close/move time to verify that the EUT does not resume only
+transmissions on this channel.
+5.3.3. Test Result for Channel Closing Transmission Time & Channel Move Time
+量測結果，請參見附錄一。
+5.3.4. Test Result for Non-Occupancy Period, Non-associated Test
+量測結果，請參見附錄一。
+
+第 22
+頁共 22
+頁
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+6. USER ACCESS RESTRICTION
+DFS controls (hardware or software) related to radar detection are not accessible to the user.
+
+附錄一
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+報告號碼:EM-NC190053
+附錄 一
+受測裝置之測試結果
+
+敦吉檢測科技股份有限公司案件編號
+1. Test Result for Channel Closing Transmission Time & Channel Move Time
+Test Date 201
+Test Mode
+Channel Closing Transmission Time
+Channel Closing Transmission Time Calculated
+Sweep Time(S) sec
+Sweep points (P)
+Number of Sweep points in 10 sec (N)
+Channel Closing Transmission Time (C) ms
+Channel closing transmission time is calculated from C=N* dwell; where dwell is the occupancy
+time per sweep point calculated by the formula: dwell=S/P. N is the number of sweep points
+indicating transmission after S1; where S1 is
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+Test Result for Channel Closing Transmission Time & Channel Move Time
+2019/04/24 Temp./Hum.
+20MHz Frequency TX 5
+Channel Closing Transmission Time Channel move time < 10 S
+Channel Closing Transmission Time Calculated
+12
+32001
+Number of Sweep points in 10 sec (N) 43
+Transmission Time (C) ms 16.12
+time is calculated from C=N* dwell; where dwell is the occupancy
+time per sweep point calculated by the formula: dwell=S/P. N is the number of sweep points
+indicating transmission after S1; where S1 is the radar signal detected
+附錄一第 1
+頁 共 2
+頁
+報告號碼:EM-NC190053
+Test Result for Channel Closing Transmission Time & Channel Move Time
+23℃/54%
+TX 5260MHz
+Channel move time < 10 S
+time is calculated from C=N* dwell; where dwell is the occupancy
+time per sweep point calculated by the formula: dwell=S/P. N is the number of sweep points
+
+敦吉檢測科技股份有限公司案件編號
+2. Test Result for Non-Occupa
+Test Date 201
+敦吉檢測科技股份有限公司案件編號: C1M1902181
+Occupancy Period Test
+2019/04/24 Temp./Hum.
+Test Mode: 20MHz
+TX 5260MHz
+Non-Occupancy Period
+附錄一第 2
+頁 共 2
+頁
+報告號碼:EM-NC190053
+23℃/54%

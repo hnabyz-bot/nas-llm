@@ -1,0 +1,155 @@
+queueId: ingest-1781569954420-18uo
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/Measurement method and accuracy result report.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/d0e7a6f5d198/Measurement method and accuracy result report__d0e7a6f5d198_combined.txt
+canonicalGroupId: 860fc945c9bd
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 1617
+
+SOURCE_TEXT
+AspenView Software Length Measurement
+Accuracy Validation Report
+AspenView Software Requirements
+AspenView Minimum Version : 1.1.40.0 or higher
+This guide assumes that the manufacturer's hardware and required
+software have been properly installed and that the Detector has been
+calibrated. If this has not been done properly, reconfigure the
+hardware.
+
+Distance and angle measurement protocol
+using pixel spacing values in X- ray images
+1. Overview
+This report is about description of verified length measurement accuracy of the AspenView
+Digital X-ray Acquisition software. The verification was performed on the AspenView
+software used with an X -ray detector from the manufacturer Aspen Imaging Healthcare, and
+the software measurements were compared with actual measurements using a phantom.
+2. Equipment and software specifications
+● Software: AspenView Digital X-ray Acquisition Software
+● X- ray detector : Manufacturer Aspen Imaging Healthcare (Model number: IODR
+1717)
+● Pixel Spacing Value: 140 microns (0.140 mm)
+● Phantom objects: Resolutoin Test Pattern (P/N: 800437 by SUN NUCLEAR)
+3. AspenView software’s length measurement calculation
+method
+
+AspenView software measures length in the following way:
+1. Calculate the number of pixels between two user specified points.
+2. Multiply the number of pixels by pixel spacing value to get the actual length.
+Expressed as a formula, it is as follows:
+Actual length ( mm ) = Number of pixels × Pixel Spacing Value ( mm / pixel )
+For example, if the number of pixels between two points is 100, and Pixel Spacing Value is
+0.140 mm / pixel : Actual length = 100 × 0.140 mm = 14.0 mm
+This calculation method is applied consistently across all areas of the X- ray image.
+4. Verification of measurement results
+4.1 Verification of Pixel Spacing calculation using Value and number of pixels
+Results of measuring the 150 mm section:
+● Number of pixels measured: 1071 pixels
+● Calculated length: 1071 × 0.140 mm = 149.94 mm
+This result shows an error of 0.06 mm at 150 mm in length, which is 0.04 %, within the
+acceptable range for error rate. (Error rate within 1%)
+4.2 Comparison of AspenView software measurements and real objects
+length measurements
+Results of measuring the same 150 mm object 10 times with AspenView software :
+● AspenView Software 150 mm Measurement average : 150.201 mm
+The average error was 0.2 mm compared to the actual object length of 150 mm, and the
+error rate was 0.13%, which was within 1%. (Table 1)
+
+4.3 Comparison of AspenView software measurements and real objects angle
+measurements
+Results of measuring the same 90 degrees object 10 times with AspenView software :
+● AspenView Software 90 degrees Measurement average : 90.05 degrees
+The average error was 0.05 degrees compared to the actual object angle of 90 degrees, and
+the error rate was 0.05%, which was within 1%. (Table 2)
+
+Table 1
+No. Test (150mm object) Result
+(Error rate)
+1
+Result : 150.30mm
+Error rate : 0.2%
+2
+Result : 150.32mm
+Error rate : 0.21%
+3
+Result : 150.30mm
+Error rate : 0.2%
+
+4
+Result : 149.91mm
+Error rate : 0.06%
+5
+Result : 150.32mm
+Error rate : 0.21%
+6
+Result : 150.35mm
+Error rate : 0.23%
+
+7
+Result : 149.91mm
+Error rate : 0.06%
+8
+Result : 149.97mm
+Error rate : 0.02%
+9
+Result : 150.32mm
+Error rate : 0.21%
+
+10
+Result : 150.32mm
+Error rate : 0.21%
+Average Error Rate 0.13%
+Table 2
+No. Test (90 degrees object) Result
+(Error rate)
+1
+Result : 90.1
+Error rate : 0.11%
+
+2
+Result : 90
+Error rate : 0%
+3
+Result : 90
+Error rate : 0%
+4
+Result : 90
+Error rate : 0%
+
+5
+Result : 90.1
+Error rate : 0.11%
+6
+Result : 90.1
+Error rate : 0.11%
+7
+Result : 89.9
+Error rate : 0.11%
+
+8
+Result : 89.9
+Error rate : 0.11%
+9
+Result : 90
+Error rate : 0%
+10
+Result : 90
+Error rate : 0%
+Average Error Rate 0.05%
+
+5. Conclusion
+1. It is confirmed that AspenView software's length measurement calculation method is
+implemented accurately. The software calculates the length using the number of
+pixels and the Pixel Value accurately.
+2. We verified that the manual calculation results using Value and pixel count exactly
+match the automatic measurement results of the AspenView software. This shows
+that the internal calculation logic of the software works accurately.
+3. We confirmed that the measured values using AspenView software are very close to
+the actual object length and angle. The average error rates are both within 1%, which
+is within the acceptable range for medical image analysis.
+These results demonstrate that the measurement tool of AspenView software is highly
+accurate.
+6. Recommendations
+● Periodic Verification: We recommend that you repeat this verification process at least
+once a month to ensure the ongoing accuracy of the system.
+● Software Updates: Re-validation is required whenever AspenView software is
+updated.

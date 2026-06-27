@@ -1,0 +1,80 @@
+queueId: ingest-1781569954420-18x7
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/14_검사기준서/출하검사기준서/HAD1717 정량평가 기준_Ver.0.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/d5c808b79431/HAD1717 정량평가 기준_Ver.0__d5c808b79431_combined.txt
+canonicalGroupId: 9d575c0fb97e
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1631
+
+SOURCE_TEXT
+Digitizing the X-ray World 卽行 / 實行 / 必行
+HAD1717MC 및 HAD1717MG
+정량 평가 기준
+2019.04.05
+
+Digitizing the X-ray World
+Sensitivity & Linearity
+Linearity 평가
+: 저선량에서 고선량으로 순차적으로 촬영하여 디텍터의 선형성을 확인
+0.00
+1000.00
+2000.00
+3000.00
+4000.00
+5000.00
+6000.00
+7000.00
+8000.00
+0.00 10.00 20.00 30.00 40.00 50.00 60.00
+Sensitivity 기준
+HAD1717MC HAD1717MG
+Sensitivity(LSB/uGy) 110 이상 60 이상
+• 측정 구간 별 오차 3% 미만
+(측정 구간은 5point로 측정)
+
+Digitizing the X-ray World
+MTF & DQE
+MTF (Modulation Transfer Function) 기준
+HAD1717MC
+0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm
+MTF (%) 93 이상 75 이상 55 이상 34 이상 15 이상
+* 조사 조건 : RQA5 (70kV, 40mAs) SID : 150cm, Al 21mm filter
+DQE (Detective Quantum Efficiency) 기준
+* 조사 조건 : RQA5 (70kV, 6.4mAs) SID : 150cm, Al 21mm filter
+HAD1717MG
+0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm
+MTF (%) 90 이상 70 이상 45 이상 18 이상 10 이상
+HAD1717MC
+0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm
+DQE (%) 45 이상 35 이상 25 이상 20 이상 15 이상
+HAD1717MG
+0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm
+DQE (%) 35 이상 20 이상 15 이상 10 이상 5 이상
+
+Digitizing the X-ray World
+Noise
+불량 기준 (Auto Trigger)
+① 30장의 영상 중 두 항목이 아래 기준을 한 장이라도 초과하면 불량
+14bit 기준 - Pixel StDev : 1.5LSB / Column StDev : 0.30 LSB
+16bit 기준 - Pixel StDev : 6.0LSB / Column StDev : 1.20 LSB
+② 30장의 영상의 평균 값을 계산 해서 두 항목이 아래 기준을 초과하면 불량
+14bit 기준 - Pixel StDev : 1.2LSB / Column StDev : 0.26 LSB
+16bit 기준 - Pixel StDev : 4.8LSB / Column StDev : 1.04 LSB
+
+Digitizing the X-ray World
+Defect
+1) Dark Image로부터 Defect 검출 조건
+- Defect 판단 기준 : Median - Offset < Median < Median + Offset
+- Offset : 500 ~ 700LSB
+2) Bright Image로부터 Defect 검출 조건
+- Defect 판단 기준 : Median - % < Median < Median + %
+- % : Median 값 으로부터 10% 이내
+Panel size (inch) The number of pixel defect
+in 3x3 windows Allowed number of cluster
+17x17
+1 2,400
+2 1,050
+3 530
+4 320
+5 110
+6 50

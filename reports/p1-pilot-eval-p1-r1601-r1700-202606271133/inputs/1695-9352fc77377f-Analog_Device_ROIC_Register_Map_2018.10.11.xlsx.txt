@@ -1,0 +1,352 @@
+queueId: ingest-1781569954418-169c
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/FPGA RTL/Analog Device ROIC Register Map_2018.10.11.xlsx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/395b803e8c36/Analog Device ROIC Register Map_2018.10.11__395b803e8c36_combined.txt
+canonicalGroupId: 9352fc77377f
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1695
+
+SOURCE_TEXT
+,,변경 일자,변경 내용,,,,
+,,2018.10.11,"1. NEGA_AED_TH register 추가
+ - Address : 0xb6
+2. POSI_AED_TH register 추가
+ - Address : 0xb7
+3. AED_DARK_DELAY register 추가
+ - Address : 0xb8
+4. AED_CMD register 구성 수정
+ - aed_test_mode3 제거",,,,
+
+,,,Register,Address,Default,Explanation,,,,Read/Write
+,,, FSM_REG,0xff,,"To show Current Status (FSM)
+ # B[2:0] : FSM status
+ - ""000"" = FSM_rst
+ - ""001"" = FSM_init
+ - ""010"" = FSM_back_bias
+ - ""011"" = FSM_flush
+ - ""100"" = FSM_aed_read
+ - ""101"" = FSM_exp
+ - ""110"" = FSM_read
+ # B[3] : Ready to get image
+ - to tell a Detector ready to get image
+ # B[4] : Aed ready done
+ - to tell a Detector ready to get bright image (to get X-ray shot) in auto trigger mode
+ # B[15:3] : Reserved",,,,Read Only
+,,, SYS_CMD_REG,0x01,," # B[0] : reset_FSM
+ - '1' = FSM will be ""FSM_rst""
+ # B[1] : get_dark
+ - '1' = getting dark images
+ - Keep the bit high until image data trasmission completed from FPGA to CPU
+ # B[2] : get_bright
+ - '1' = getting bright images
+ - Keep the bit high until image data trasmission completed from FPGA to CPU
+ # B[3] : soft_trigger
+ - Can be used instead of external ""exp_req"" signal
+ - Keep the bit high until image data trasmission completed from FPGA to CPU
+ # B[4] : system_rst
+ - To reset FPGA Logic = Digital logic initialized
+ # B[15:6] : Reserved",,,,R/W
+,,, OP_MODE_REG,0x02,," # B[0] : en_full _flush
+ - '0' = Disable the mode
+ - '1' = flushing operation will be the same as Read-Out operation
+ # B[1] : en_panel_stable
+ - '0' = Disable the mode
+ - '1' = Back-Biasing(Saturation) operation and Flushing operation repeated in Idle state
+ # B[2] : en_16bit
+ - '1' = enable 16bit ADC mode
+ # B[3] : en_test_pattern_col
+ - '1' = During this bit='1', column test pattern generated intead of real image data
+ # B[4] : en_test_pattern_raw
+ - '1' = During this bit='1', raw test pattern generated intead of real image data
+ # B[15:4] : Reserved",,,,R/W
+,,, SET_GATE,0x03,," # B[0] : gate_mode1
+ # B[1] : gate_mode2
+ # B[2] : gate_cs1
+ # B[3] : gate_cs2
+ # B[4] : gate_sel
+ # B[5] : gate_ud
+ # B[6] : gate_stv_mode
+ # B[7] : gate_oepsn
+ # B[8] : gate_lr
+ # B[15:9] : Reserved",,,,R/W
+,,, GATE_SIZE,0x04,, - The number of Gate Channels,,,,R/W
+,,, PWR_OFF_DWM,0x05,," # B[0] : en_pwr_dwn
+ - '0' = Disable Power Down Mode
+ - '1' = Enable Power Down Mode
+ * to Wake Up from the Power Down Mode 1sec required at least
+ # B[1] : en_pwr_off
+ - '0' = Disable Power Off Mode
+ - '1' = Enable Power Off Mode
+ * to Wake Up from the Power Off Mode 3sec required at least",,,,Write Only
+,,, EXPOSE_SIZE,0x10,," - Exposure time
+How to calculate real exposing time
+ - Minimum Unit = 0xF424 x ""fsm_clk"" clock rate
+ - Exposing time = Minimum Unit x ""Expose_size""
+ ex) fsm_clk = 25MHz / Expose_size = 0x003C
+ - Minimum Unit = 0xF424 x 40ns = 2.5msec
+ - Exposing time = 2.5msec x 0x0028 = 500msec",,,,R/W
+,,, BACK_BIAS_SIZE,0x11,,"
+ - Back-baising period",,,,R/W
+,,, IMAGE_HEIGHT,0x12,, - Image Height (the number of Gate lines),,,,R/W
+,,, CYCLE_WIDTH_FLUSH,0x13,,"
+ - Required Period to generate ROIC & GateIC signals for back-biasing a line
+",,,,R/W
+,,, CYCLE_WIDTH_AED,0x14,, - Required Period to generate ROIC & GateIC signals for AED read,,,,R/W
+,,, CYCLE_WIDTH_READ,0x15,, - Required Period to generate ROIC & GateIC signals for reading a line (image data),,,,R/W
+,,, REPEAT_BACK_BIAS,0x16,,"
+ - repeat_back_bias : to define how many times repeat back-biasing
+ - repeat_flush : to define how many times repeat flushing",,,,R/W
+,,, REPEAT_FLUSH,0x17,,,,,,R/W
+,,, SATURATION_FLUSH_REPEAT,0x18,,"
+ - repeat ""back_bias"" and ""flush"" FSM",,,,R/W
+,,, EXP_DELAY,0x19,,,,,,R/W
+,,, READY_DELAY,0x1a,,,,,,R/W
+,,, PRE_DELAY,0x1b,,,,,,R/W
+,,, POST_DELAY,0x1c,,,,,,R/W
+,,, UP_BACK_BIAS,0x20,,"
+ - To switch Pixel Bias between (+) bias and (-) bias for pixel saturation",,,,R/W
+,,, DOWN_BACK_BIAS,0x21,,,,,,R/W
+,,, UP_BACK_BIAS_OPR,0x22,,,,,,R/W
+,,, DOWN_BACK_BIAS_OPR,0x23,,,,,,R/W
+,,, UP_GATE_STV1_READ,0x24,,"
+ - According to Panel condition, these register must be set up again",,,,R/W
+,,, DOWN_GATE_STV1_READ,0x25,,,,,,R/W
+,,, UP_GATE_STV2_READ,0x26,,,,,,R/W
+,,, DOWN_GATE_STV2_READ,0x27,,,,,,R/W
+,,, UP_GATE_CPV1_READ,0x28,,,,,,R/W
+,,, DOWN_GATE_CPV1_READ,0x29,,,,,,R/W
+,,, UP_GATE_CPV2_READ,0x2a,,,,,,R/W
+,,, DOWN_GATE_CPV2_READ,0x2b,,,,,,R/W
+,,, DOWN_GATE_OE1_READ,0x2c,,,,,,R/W
+,,, UP_GATE_OE1_READ,0x2d,,,,,,R/W
+,,, DOWN_GATE_OE2_READ,0x2e,,,,,,R/W
+,,, UP_GATE_OE2_READ,0x2f,,,,,,R/W
+,,, DOWN_GATE_XAO_READ,0x30,,,,,,R/W
+,,, UP_GATE_XAO_READ,0x31,,,,,,R/W
+ ,,, UP_GATE_STV1_AED,0x32,,"
+ - According to Panel condition, these register must be set up again",,,,R/W
+,,, DOWN_GATE_STV1_AED,0x33,,,,,,R/W
+,,, UP_GATE_STV2_AED,0x34,,,,,,R/W
+,,, DOWN_GATE_STV2_AED,0x35,,,,,,R/W
+,,, UP_GATE_CPV1_AED,0x36,,,,,,R/W
+,,, DOWN_GATE_CPV1_AED,0x37,,,,,,R/W
+,,, UP_GATE_CPV2_AED,0x38,,,,,,R/W
+,,, DOWN_GATE_CPV2_AED,0x39,,,,,,R/W
+,,, DOWN_GATE_OE1_AED,0x3a,,,,,,R/W
+,,, UP_GATE_OE1_AED,0x3b,,,,,,R/W
+,,, DOWN_GATE_OE2_AED,0x3c,,,,,,R/W
+,,, UP_GATE_OE2_AED,0x3d,,,,,,R/W
+,,, DOWN_GATE_XAO_AED,0x3e,,,,,,R/W
+,,, UP_GATE_XAO_AED,0x3f,,,,,,R/W
+,,, UP_GATE_STV1_FLUSH,0x40,,"
+ - According to Panel condition, these register must be set up again",,,,R/W
+,,, DOWN_GATE_STV1_FLUSH,0x41,,,,,,R/W
+,,, UP_GATE_STV2_FLUSH,0x42,,,,,,R/W
+,,, DOWN_GATE_STV2_FLUSH,0x43,,,,,,R/W
+,,, UP_GATE_CPV1_FLUSH,0x44,,,,,,R/W
+,,, DOWN_GATE_CPV1_FLUSH,0x45,,,,,,R/W
+,,, UP_GATE_CPV2_FLUSH,0x46,,,,,,R/W
+,,, DOWN_GATE_CPV2_FLUSH,0x47,,,,,,R/W
+,,, DOWN_GATE_OE1_FLUSH,0x48,,,,,,R/W
+,,, UP_GATE_OE1_FLUSH,0x49,,,,,,R/W
+,,, DOWN_GATE_OE2_FLUSH,0x4a,,,,,,R/W
+,,, UP_GATE_OE2_FLUSH,0x4b,,,,,,R/W
+,,, DOWN_GATE_XAO_FLUSH,0x4c,,,,,,R/W
+,,, UP_GATE_XAO_FLUSH,0x4d,,,,,,R/W
+,,, UP_ROIC_SYNC,0x50,,,,,,R/W
+,,, UP_ROIC_ACLK_1_READ,0x51,,"
+ - Only 11 ACLK pulses can be generated",,,,R/W
+,,, UP_ROIC_ACLK_2_READ,0x52,,,,,,R/W
+,,, UP_ROIC_ACLK_3_READ,0x53,,,,,,R/W
+,,, UP_ROIC_ACLK_4_READ,0x54,,,,,,R/W
+,,, UP_ROIC_ACLK_5_READ,0x55,,,,,,R/W
+,,, UP_ROIC_ACLK_6_READ,0x56,,,,,,R/W
+,,, UP_ROIC_ACLK_7_READ,0x57,,,,,,R/W
+,,, UP_ROIC_ACLK_8_READ,0x58,,,,,,R/W
+,,, UP_ROIC_ACLK_9_READ,0x59,,,,,,R/W
+,,, UP_ROIC_ACLK_10_READ,0x5a,,,,,,R/W
+,,, UP_ROIC_ACLK_11_READ,0x5b,,,,,,R/W
+,,, UP_ROIC_ACLK_1_AED,0x5c,,"
+ - Only 11 ACLK pulses can be generated",,,,R/W
+,,, UP_ROIC_ACLK_2_AED,0x5d,,,,,,R/W
+,,, UP_ROIC_ACLK_3_AED,0x5e,,,,,,R/W
+,,, UP_ROIC_ACLK_4_AED,0x5f,,,,,,R/W
+,,, UP_ROIC_ACLK_5_AED,0x60,,,,,,R/W
+,,, UP_ROIC_ACLK_6_AED,0x61,,,,,,R/W
+,,, UP_ROIC_ACLK_7_AED,0x62,,,,,,R/W
+,,, UP_ROIC_ACLK_8_AED,0x63,,,,,,R/W
+,,, UP_ROIC_ACLK_9_AED,0x64,,,,,,R/W
+,,, UP_ROIC_ACLK_10_AED,0x65,,,,,,R/W
+,,, UP_ROIC_ACLK_11_AED,0x66,,,,,,R/W
+,,, UP_ROIC_ACLK_1_FLUSH,0x67,,"
+ - Only 11 ACLK pulses can be generated",,,,R/W
+,,, UP_ROIC_ACLK_2_FLUSH,0x68,,,,,,R/W
+,,, UP_ROIC_ACLK_3_FLUSH,0x69,,,,,,R/W
+,,, UP_ROIC_ACLK_4_FLUSH,0x6a,,,,,,R/W
+,,, UP_ROIC_ACLK_5_FLUSH,0x6b,,,,,,R/W
+,,, UP_ROIC_ACLK_6_FLUSH,0x6c,,,,,,R/W
+,,, UP_ROIC_ACLK_7_FLUSH,0x6d,,,,,,R/W
+,,, UP_ROIC_ACLK_8_FLUSH,0x6e,,,,,,R/W
+,,, UP_ROIC_ACLK_9_FLUSH,0x6f,,,,,,R/W
+,,, UP_ROIC_ACLK_10_FLUS,0x70,,,,,,R/W
+,,, UP_ROIC_ACLK_11_FLUS,0x71,,,,,,R/W
+,,, ROIC_REG_1,0x72,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9] : Not used, keep this bit '0'
+ # B[8:6] : PWR (To select power mode)
+ - 0 = Low Power 2 Mode
+ - 1 = Low Power 1 Mode
+ - 2 = Normal Mode
+ - 3 = not used
+ - 4 = Sleep Mode
+ - 5 = Power-down Mode
+ # B[5:0] : IFS (Gain)
+ - Integer 0 ~ 32",,,,R/W
+,,, ROIC_REG_2,0x73,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:7] : LPF
+ - Integer 0 ~ 7
+ # B[6] : Not used, Keep this bit '0'
+ # B[5] : CDS2_RESETEN
+ - '0' = Disable
+ - '1' = Enable, to reset CDS2 at the beginning of Line Read-Out
+ # B[4] : CMR_EN
+ - '0' = Disable
+ - '1' = Enable, to reduce common-mode errors from the AFE
+ # B[3] : READDOWN
+ - '0' = Read-Out order from channel 255 to channel 0
+ - '1' = Read-Out order from channel 0 to channel 255
+ # B[2] : EXTRST
+ - '0' = resets the integrator to the REF_TFT voltage
+ - '1' = sets REF_INT to an externally supplied reset voltage
+ # B[1] : ADCAVG
+ - '0' = Disable
+ - '1' = The results of four consecutive ADC conversions are averaged when PIPELINE_AVGEN='1'
+ # B[0] : Holes
+ - '0' = integrating electrons
+ - '1' = integrating holes ",,,,R/W
+,,, ROIC_REG_3,0x74,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9] : Not used, Keep this bit '0'
+ # B[8] : PDTFTEN
+ - '0' = disable Power-Down TFT
+ - '1' = Keeps the input stage of the integrator biased to REF_TFT when in power-down mode
+ # B[7] : REFDACDIS
+ - '0' = enable Reference DAC
+ - '1' = Allows the user to disable the on-board reference DAC, saving 5mW
+ # B[6] : Not used, Keep this bit '0'
+ # B[5] : RNDOMIZE
+ - '0' = the sampling process is performed in a sequential manner, starting with Channel 0
+ - '1' = random sampling to reduce fixed pattern noise
+ # B[4] : Not used, Keep this bit '0'
+ # B[3] : INTCLAMP
+ - '0' = Disable
+ - '1' = Enable internal clamp circuit
+ # B[2] : DOUTMODE - Keep this bit '1'
+ # B[1] : ECHOCLK - Keep this bit '1'
+ # B[0] : Pipeline
+ - '0' = AFE sampling and the data conversion process occur serially
+ - '1' = AFE sampling and the data conversion process occur in parallel (pipeline mode)",,,,R/W
+,,, ROIC_REG_4,0x75,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9] : Not used, Keep this bit '0'
+ # B[8] : AZEN
+ - '0' = Disable
+ - '1' = Enable
+ # B[7:0] : REFDAC
+ - Integer 0 ~ 255
+ - These bits determine the value for the internal reference from 0.5 V to 4.5 V
+ - LSB size = 15.625 mV",,,,R/W
+,,, ROIC_REG_5,0x76,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:8] : Not used, Keep this bit '0'
+ # B[7:4] : INTRST_C
+ - Integer 0 ~ 11
+ # B[3:0] : INTRST_O
+ - Integer 0 ~ 11",,,,R/W
+,,, ROIC_REG_6,0x77,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:8] : Not used, Keep this bit '0'
+ # B[7:4] : CDS1_C
+ - Integer 0 ~ 11
+ # B[3:0] : CDS1_O
+ - Integer 0 ~ 11",,,,R/W
+,,, ROIC_REG_7,0x78,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:8] : Not used, Keep this bit '0'
+ # B[7:4] : CDS2_C
+ - Integer 0 ~ 11
+ # B[3:0] : CDS2_O
+ - Integer 0 ~ 11",,,,R/W
+,,, ROIC_REG_8,0x79,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:8] : Not used, Keep this bit '0'
+ # B[7:4] : FA_CDS1
+ - Integer 0 ~ 11
+ # B[3:0] : FA_CDS2
+ - Integer 0 ~ 11",,,,R/W
+,,, ROIC_REG_9,0x7a,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9] : Not used, Keep this bit '0'
+ # B[8] : CUSTCLAMPEN
+ - '0' = Disable
+ - '1' = Enable the custom clamp timing feature
+ # B[7:4] : CUSTCLMP_C
+ - Integer 0 ~ 11
+ # B[3:0] : CUSTCLMP_O
+ - Integer 0 ~ 11",,,,R/W
+,,, ROIC_REG_10,0x7b,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:0] : Not used, Keep these bits 7",,,,R/W
+,,, ROIC_REG_11,0x7c,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:1] : Not used, Keep these bits 0
+ # B[0] : PIPELINE_AVGEN
+ - '0' = Disable
+ - '1' = Enables ADC averaging during pipeline mode",,,,R/W
+,,, ROIC_REG_12,0x7d,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:7] : Not used, Keep these bits 0
+ # B[6] : LFSR_EN
+ - '0' = Disable
+ - '1' = Enables
+ # B[5:0] : Not used, Keep these bits 24",,,,R/W
+,,, ROIC_REG_13,0x7e,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9] : Not used, Keep this bit 0
+ # B[8] : FUNCSLEEP
+ - '0' = Disable
+ - '1' = powers up the integrators when sleep mode is in use.
+ # B[7:0] : Not used, Keep these bits 2",,,,R/W
+,,, ROIC_REG_14,0x7f,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:0] : Not used, Keep these bits 35",,,,R/W
+,,, ROIC_REG_15,0x80,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:0] : Not used, Keep these bits 43",,,,R/W
+,,, ROIC_REG_16,0x81,," # B[15:10] : Reserved, Keep these bits 0
+ # B[9:0] : Not used, Keep these bits 8",,,,R/W
+,,, ROIC_BURST_CYCLE,0x90,,"
+ - ROIC Burst : ROIC Serial Data-Out of 4 pixels",,,,R/W
+,,, START_ROIC_BURST_CLK,0x91,,,,,,R/W
+,,, END_ROIC_BURST_CLK,0x92,,,,,,R/W
+,,, SEL_ROIC_REG,0xA0,, - To select target ROIC to read out ROIC Register set up,,,,Write Only
+,,, READY_AED_READ,0xB0,,,,,,R/W
+
+,,,Register,Address,Default,Explanation,,,,Read/Write
+,,, AED_TH,0xB1,,,,,,R/W
+,,, SEL_AED_ROIC,0xB2,,,,,,R/W
+,,, NUM_TRIGGER,0xB3,,,,,,R/W
+,,, SEL_AED_TEST_ROIC,0xB4,,,,,,R/W
+,,, AED_CMD,0xB5,," # B[2] : aed_test_mode2
+ - '1' = select aed_test_mode2
+ # B[1] : aed_test_mode1
+ - '1' = select aed_test_mode1
+ # B[0] : en_aed
+ - '0' = disable auto trigger mode
+ - '1' = enable auto trigger mode",,,,R/W
+,,, NEGA_AED_TH,0xB6,,,,,,R/W
+,,, POSI_AED_TH,0xB7,,,,,,R/W
+,,, AED_DARK_DELAY,0xB8,,,,,,R/W
+,,, PURPOSE,0xf0,,"
+ # PURPOSE
+ - D=0x0044, E=0x0045, G=0x0047, M=0x004d, N=0x004e, S=0x0053
+ - D=Dental, E=EOD, G=General (for General Medical), M=Multi Frame, N=NDT, S=Security
+ # SIZE_1
+ - 17 : 0x3137, 14 : 0x3134, 12 : 0x3132, 10 : 0x3130, 09 : 0x3039
+ # SIZE_2
+ - 17 : 0x3137, 14 : 0x3134, 12 : 0x3132, 10 : 0x3130, 09 : 0x3039
+ # MAJOR_REV
+ - 00 : 0x3030, 01 : 0x3031 ~ 99 : 0x3939
+ # MINOR_REV
+ - 00 : 0x3030, 01 : 0x3031 ~ 99 : 0x3939
+",,,,Read Only
+,,, SIZE_1,0xf1,,,,,,Read Only
+,,, SIZE_2,0xf2,,,,,,Read Only
+,,, MAJOR_REV,0xf3,,,,,,Read Only
+,,, MINOR_REV,0xf4,,,,,,Read Only

@@ -1,0 +1,44 @@
+queueId: ingest-1781569954420-18jp
+sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/14_검사기준서/출하검사기준서/Noise 검사 방법 및 기준_Ver.0.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/bfe85889e1d9/Noise 검사 방법 및 기준_Ver.0__bfe85889e1d9_combined.txt
+canonicalGroupId: 4ec270f4d520
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1637
+
+SOURCE_TEXT
+Digitizing the X-ray World 卽行 / 實行 / 必行
+Noise 검사 방법 및 기준
+
+Digitizing the X-ray World
+Noise 검사 방법 및 기준
+1. 설정 방법
+① Detector에 전원을 인가 후 XAS를 실행
+② Trigger Mode 설정
+- Line Trigger(3.번 항목), Auto Trigger(4.번 항목)
+
+Digitizing the X-ray World
+Noise 검사 방법 및 기준
+③ Aging Software를 실행 후 아래와 같이 설정 후 Start 버튼을 클릭
+
+Digitizing the X-ray World
+Noise 검사 방법 및 기준
+2. Noise 측정 기준
+① 획득된 45장의 Diff. Image 중 최초 10장 마지막 4장을 버리고 30장의 Image를 사용
+② Coordinates를 1536, 1536으로 ROI를 2900, 2900으로 설정
+
+Digitizing the X-ray World
+Noise 검사 방법 및 기준
+3. 불량 기준 (Line Trigger)
+① 30장의 영상 중 두 항목이 아래 기준을 한 장이라도 초과하면 불량
+- Pixel StDev : 1.5LSB / Column StDev : 0.25 LSB
+② 30장의 영상의 평균 값을 계산 해서 두 항목이 아래 기준을 초과하면 불량
+- Pixel StDev : 1.2LSB / Column StDev : 0.18 LSB
+
+Digitizing the X-ray World
+Noise 검사 방법 및 기준
+4. 불량 기준 (Auto Trigger)
+① 30장의 영상 중 두 항목이 아래 기준을 한 장이라도 초과하면 불량
+- Pixel StDev : 1.5LSB / Column StDev : 0.30 LSB
+② 30장의 영상의 평균 값을 계산 해서 두 항목이 아래 기준을 초과하면 불량
+- Pixel StDev : 1.2LSB / Column StDev : 0.26 LSB

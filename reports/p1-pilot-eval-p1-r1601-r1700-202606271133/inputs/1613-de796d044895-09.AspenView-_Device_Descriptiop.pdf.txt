@@ -1,0 +1,409 @@
+queueId: ingest-1781569954418-16ti
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/09.AspenView- Device Descriptiop.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/5a387ed8269d/09.AspenView- Device Descriptiop__5a387ed8269d_combined.txt
+canonicalGroupId: de796d044895
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 1613
+
+SOURCE_TEXT
+AspenView Document 1/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+1. Program Introduction
+1.1 Introduction
+AspenView software is designed for use by radiologists and radiology technicians for annotation
+in the X-ray images. The AspenView software is developed to use Aspen Imaging Flat Panel DR
+Detector and Aspen Imaging Healthcare Inc Image Viewer. The purpose of AspenView software
+is for the doctor to annotate X-ray images and then to print out with patient information or sent to
+another PACS system.
+A client user needs to install AspenView first in the recommended PC environment. After
+installation, the client user chooses a DICOM format in the uploaded patient list to be annotated,
+and then annotation is written by user after reviewing of image chosen. After annotation has
+completed it can be printed out, saved or sent to another PACS system.
+AspenView software includes an image stitching function to read multiple medical images at one
+time by stitching them to one image based on overlapping areas. It supports DICOM 3.0 which
+is standard of medical image format as well as Tiff and Raw images. It provides additional
+functions such as image retrieval, storage, and transmission. Image stitching facilitates diagnosis
+by easily stitching multiple medical images from multiple captures to one image.
+1.2 Indications for Use
+AspenView is indicated for use in general radiographic images of human anatomy. It is intended
+to replace radiographic film/screen systems in all general-purpose diagnostic procedures
+(excluding fluoroscopic, angiographic, and mammographic applications). The main features of
+this software are controlling and interfacing the detector, controlling the x-ray generator
+acquisition settings, storing acquired images, data management, image processing and image
+stitching.
+1.3 System Requirements
+We recommend following specifications to install and use AspenView.
+ITEM REQUIREMENTS REMARK
+OS Windows 10
+NETWORK 1000BASE-T Gigabit Ethernet
+IEEE 802.11ac Wireless LAN
+CPU Intel Core i5
+MEMORY 8GB or higher
+HDD/SDD 512GB or higher
+MONITOR 1920 X 1080 or higher
+
+AspenView Document 2/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2. Development Environment
+1) Programming language : C#
+2) Programming Tools
+A. Editor : Visual Studio 2022
+B. Compiler : Roslyn ( Visual Studio 2022)
+C. Debugger : Visual Studio 2022
+3) Library
+A. DICOM: fo-dicom 4.0.7.0
+B. Image processing : Intel® Integrated Performance Primitives
+C. DBMS : SQLite 3.3.4 or higher
+D. Detector : Various libraries by manufacturer
+E. Generator : Various libraries by manufacturer
+4) Hardware
+A. Operating System : Microsoft Windows 10
+B. CPU : Intel Core i5 or higher
+C. MEMORY : 8GB or higher
+D. HDD/SSD : 512GB or higher
+E. Network : Gigabit Ethernet card
+F. Display Monitor : 1920 X 1080 or higher
+
+AspenView Document 3/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+5) Software Concept Block-diagram
+
+AspenView Document 4/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3. Detailed Design
+3.1 Software Design Chart
+
+AspenView Document 5/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.2 Dependency Description
+1) Worklist Module
+A. Worklist Module
+And then change over from Worklist Mode to Exam Mode for X-ray exposure.
+B. Database Module
+Query / Save / Edit / Delete patient information in Local database.
+C. MWL(Modality Worklist) module
+MWL module searches for patient information from OCS server or PACS Worklist Server.
+2) Exam (Decision Board) Module
+A. Device Control module
+Detector Control module acquire raw image form detector (Library).
+Generator control module adjusts the X-ray dose and shoots (Library).
+B. Pre-Image processing and display module
+Image display module display raw image files on the monitor with correction.
+C. Post-Image process module
+Image processing module enhance image quality to diagnose.
+D. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+E. Database Module
+Save Study/Patient’s information
+3) Viewer (Decision Board) Module
+A. Image display module
+Image display module display DICOM image files on the monitor.
+B. Post process module
+Image processing module enhance image quality to diagnose.
+C. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+And then it send DICOM images to PACS server or print.
+Also Export DICOM Image to external storage.
+4) Browser (Worklist) Module
+A. Patient management module
+Patient management module can edit or delete data.
+And it search patient easily to diagnose.
+B. Database Module
+Save / Edit study and patient information
+Search Study information
+Delete Study information
+5) Database Module
+Query / Save / Edit / Delete patient information in worklist mode
+Query / Edit /Delete Study information in browser(worklist) mode
+Save / Edit Image information in Exam(Decision Board) mode , Viewer(Decision Board) mode
+AspenView Software
+
+AspenView Document 6/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.3 Workflow
+
+AspenView Document 7/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.4 Menu tree
+
+AspenView Document 8/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.5 Project Files
+SMCW_Backup.csproj,SMCW_BLL.csproj,SMCW_CC.Common.csproj,SMCW_CC.Dicom.cspr
+oj,SMCW_DAL.csproj,SMCW_DBMigrator.csproj,SMCW_Design.csproj,SMCW_Device.csproj,
+SMCW_Dicom.Imaging.Core.csproj,SMCW_DICOMMigrator.csproj,SMCW_DicomViewer.cspro
+j
+SMCW_DicomViewer.Controls.csproj,SMCW_Distribution.csproj,SMCW_GoDRFix.csproj,SMC
+W_IL.csproj,SMCW_ImageProcessing.csproj,SMCW_Imaging.csproj,SMCW_Log.csproj,SMCW
+_Model.csproj,SMCW_MultiframeDicom.csproj,SMCW_Print.csproj,SMCW_Product.csproj,SM
+CW_SmartInfra.csproj,SMCW_UndoRedoFramework.csproj,SMCW_Util.csproj,SMCW_ViewMo
+del.csproj,SMCW_XMLParser.csproj
+
+AspenView Document 9/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.6 Database
+Tables.
+
+AspenView Document 10/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.7 Image Processing
+1) Image Processing Parameter
+Someone who is working in the hospital can adjust the image processing parameter
+files to enhance the image quality instead of the default image processing parameter.
+Refer to the AspenView user manual for how to adjust the image processing parameters.
+2) Algorithm principle and architecture
+
+AspenView Document 11/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+3.8 User Interface Design
+1) Worklist Mode
+2) Exam (DecisionBoard) Mode
+3) Browser (ManualEntry) Mode
+
+AspenView Document 12/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+
+AspenView Document 13/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+4) Settings Mode
+5) Advanced Image Processing Mode
+
+AspenView Document 14/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+4. Stitching
+It provides the ability to read multiple medical images at once and automatically match
+them into one image based on the overlapping area. To achieve this, you need to capture
+an overlapping area of about 10% or higher (307 pixels for a 3072-pixel image).
+Acquiring images exactly according to the provided guide is crucial to
+avoid unnecessary x-ray image retaking, ensuring both efficiency and safety.
+
+AspenView Document 15/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+
+AspenView Document 16/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+
+AspenView Document 17/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+Decision board Image check in the examlist
+1) Select the images to be stitched in order. (Using the Ctrl or Shift keys) will appear
+down on the stitching board in the order of the selected image. Up to 3 images can
+be recorded.
+2) Button, the below(10.2)stitching board will pop up as shown.
+- Basically, when entering the stitching board, automatic matching is
+done.
+
+AspenView Document 18/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+- Press the 'Cancel' button on the auto-matched image to switch to manual
+matching. Note that manual stitching can be performed in vertical alignment
+only.
+- When 'OK' is selected, the stitching image is added to the check board list.
+* Before stitching, do not apply editing such as Marking Crop to the image. Stitch to
+the original image.
+1.1 Stitching board
+1) Adjust the magnification
+2) Adjust the transparency of the selected image
+3) Switching the selected image up / down and left / right
+4) Use the mouse to position the image and click the button.
+
+AspenView Document 19/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+5) Check the stitched image and click the button.
+- Left / Right White [] means the area where two images overlap.
+* Crops the edge frames in areas where images do not overlap when matching manually.
+
+AspenView Document 20/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+6) See that a stitch exam has been added.
+- Left / Right White [] means the area where two images overlap.
+- You can only edit stitched images with 'marking' or 'image rotation'.
+- The inspection name of the added stitching image is the base 'Whole Spine',
+please contact your service engineer if you want to change the name.
+* Contrast balance is not automatically adjusted following the stitching process.
+The post-stitch DICOM format is a standard file format used in medical imaging. Stitching
+images can be saved in DICOM format to maintain compatibility and use in medical image
+analysis and storage systems.
+
+AspenView Document 21/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+5. Maintenance
+This chapter provides a recommended schedule for periodic maintenance of the AspenView.
+If the PC is replaced, back up the Image file and database from the previous program.
+5.1 Maintenance Schedule
+Maintenance Frequency Description of Preventative Maintenance
+1) Every 6months
+Check the disk space to save the acquired Images
+A. Check the disk space to save the acquired Images by checking information bar.
+B. Check the virus.
+C. Remove the unnecessary program.
+D. Update the software (If the update version will be released)
+5.2 Claim Report
+This claim form should be submitted prior to user’s request of returning or replacing for the
+problem product.
+Field Problem Report & Trouble Shooting Check List
+Distributor Issuing No.
+Reporter Model Name
+Date Serial No.
+Tel/Fax Date of
+installation
+E-mail Date of Problem
+occurred
+Name of
+Problem
+component
+Serial no. of
+component
+Problem of Description
+1) Phenomenon
+2) Cause of failure
+3) Requirement
+
+AspenView Document 22/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+Trouble shoot check steps(AspenView)
+Write in your application only
+List No. Q/A Contents Remar
+k
+Installation
+Condition
+1
+Q
+Date of Installation
+A
+2
+Q
+When did the problem occur?(After installation or during
+the installation?)
+A
+Trouble
+Shooting
+Steps
+3
+Q
+Have you changed the setting?(If yes, please, send us
+description of the changes detailed.)
+A
+4
+Q
+Original DICOM files in defects (Send by e-mail)
+A
+5
+Q
+Checking for control box and the link, data, trigger cables.
+- test each part as replacing with another one.
+A
+
+AspenView Document 23/23
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+6. Software Structure
+Software Structure
+# Components Description Note
+1 AspenView.exe General software application of AspenView
+software complex.
+It is intended for image acquisition from some
+detector being under control of x-ray equipment,
+as well as for analysis and transmittance of
+images within DICOM network.
+2 SMCW_ImageProcessing
+.exe
+Software application that allows you to create or
+adjust image processing parameters
+3 FusionEx/SMCW_Fusion
+Process.exe
+AspenView's external equipment interworking
+module.
+4 log/*.log Log files generated during program operation
+5 JBMIX_Data/*.xml xml files for image processing
+6 SMCW_Wrappers.dll Image processing core
+7 log4net.dll library for log
+8 SMCW_LicenseIntf.exe
+SMCW_License.dll
+SMCW_LicenseWrapper.
+dll
+library for licensing
+9 ippcore.dll
+ippcp.dll
+ippcpg9.dll
+ippcph9.dll
+ippcpp8.dll
+ippcppx.dll
+ippcps8.dll
+ippcpw7.dll
+Intel® Integrated Performance Primitives library
+for image processing
+10 WorkList.db WorkList local database
+12 Dicom.Core.dll
+Dicom.Drawing.xml
+Dicom.Native.dll
+fo-dicom library

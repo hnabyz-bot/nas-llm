@@ -1,0 +1,5094 @@
+queueId: ingest-1781569954375-4px
+sourcePath: raw/sources/RA/00_기타 작업 서류/240718 - DK 제품별 자료 정리/DK_제품별 자료 정리(pdf)/3. HAD1717MCW/3. 소프트웨어 밸리데이션 문서/002_Software Validation Report.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/99eadd1d71b3/002_Software Validation Report__99eadd1d71b3_combined.txt
+canonicalGroupId: 40f484c3f25a
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1666
+
+SOURCE_TEXT
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 1 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Software Validation Report
+for
+ADD
+Abyz Digital Detector
+Report No.: A-TCF-5-046 (Rev.1)
+Dept. / Title Name Date Signature
+Prepared R&D team Kim, Wan Soo May/27/2021
+Review R&D Manager Lee, Dong jin May/27/2021
+Approval Quality Manager Hur Namkyu May/28/2021
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 2 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+TABLE OF CONTENTS
+1. Level of Concern ........................................................ 7
+2. Software Description.................................................. 9
+2.1. Software Name : SDK-MCW ............................................. 10
+2.1.1. Software Function........................................................................ 10
+2.1.2. Main Features...............................................................................11
+2.1.2.1. Easy and Rapid Work Process. .................................................11
+2.2. Hardware Requirement ......................................................11
+2.2.1. System requirement .....................................................................11
+2.2.2. Graphic Card ................................................................................11
+2.2.3. Detector H/W Device requirement ................................................11
+2.3. Development Language and Program Size........................11
+2.3.1. Program Language .......................................................................11
+2.3.2. Memory Management ...................................................................11
+2.3.3. Software Size ...............................................................................11
+2.3.3.1. Distribution Size ........................................................................11
+2.3.3.2. Execute File Size ......................................................................11
+3. Software Requirements Specification .................... 13
+3.1. Functional Requirement .................................................... 13
+3.1.1. Function Essential Factor by Module........................................... 13
+3.1.1.1. Common functions Module ....................................................... 13
+3.1.1.2. Image acquisition Module......................................................... 13
+3.1.1.3. Calibration Module ................................................................... 13
+3.1.1.4. Pre-Processing Module ............................................................ 14
+3.1.1.5. Firmware Update Module ......................................................... 14
+3.1.1.6. xSystem Module ....................................................................... 14
+3.1.1.7. FPGA App Module .................................................................... 14
+3.1.1.8. System task Module ................................................................. 16
+3.1.1.9. Interface Module ...................................................................... 16
+3.1.2. Cyber Security ............................................................................. 16
+3.1.3. Error Control ................................................................................ 16
+3.2. Description of Process ...................................................... 17
+3.2.1. Common functions Module .......................................................... 17
+3.2.2. Image acquisition Module ............................................................ 18
+3.2.3. Calibration Module....................................................................... 18
+3.2.4. Pre-Processing Module ............................................................... 19
+3.2.5. Firmware update Module ............................................................. 19
+3.2.6. xSystem Module .......................................................................... 19
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 3 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.2.7. FPGA App Module ....................................................................... 20
+3.2.8. System task Module .................................................................... 20
+3.2.9. Interface Module .......................................................................... 21
+3.2.10. Cyber Security ............................................................................. 21
+3.2.11. Error Control ................................................................................ 22
+4. Application Algorithm and Technology .................. 23
+4.1. Calibration ........................................................................ 23
+4.1.1. Geometry Correction ................................................................... 23
+4.1.2. Offset Correction ......................................................................... 23
+4.1.3. Gain Correction ........................................................................... 23
+4.1.4. Defect Correction......................................................................... 23
+5. Architecture Design Chart ....................................... 24
+5.1. Software Diagram and Description.................................... 24
+5.1.1. Description................................................................................... 24
+5.1.2. Diagram ....................................................................................... 24
+5.1.3. Software Function........................................................................ 25
+6. Software Design Specification ................................ 27
+6.1. Total Process Flowchart .................................................... 27
+6.1.1. Detector Init ................................................................................. 27
+6.1.2. Detector Param Loading .............................................................. 27
+6.1.3. Detector Setup............................................................................. 28
+6.1.4. Acquisition Ready ........................................................................ 28
+6.1.5. Raw image save file .................................................................... 28
+6.1.6. Detector HSW.............................................................................. 28
+6.1.7. Acquisition start ........................................................................... 28
+6.1.8. Detector H/W ............................................................................... 28
+6.1.9. X-ray expose ............................................................................... 28
+6.1.10. Data transfer Image Pre-processing ............................................ 28
+6.1.11. Raw image save .......................................................................... 29
+6.1.12. Cyber Security ............................................................................. 29
+6.1.13. Error Control ................................................................................ 29
+6.2. Software component ......................................................... 30
+6.2.1. Software Setting .......................................................................... 30
+6.3. Function Embodiment by Software Module ....................... 31
+6.3.1. Common functions Module .......................................................... 31
+6.3.2. Image acquisition Module ............................................................ 33
+6.3.3. Calibration ................................................................................... 35
+6.3.4. Pre-Processing Module ............................................................... 37
+6.3.5. Firmware Update Module ............................................................ 39
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 4 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.6. xSystem Module .......................................................................... 40
+6.3.7. FPGA App Module ....................................................................... 42
+6.3.8. System task Module .................................................................... 44
+6.3.9. Interface Module .......................................................................... 45
+6.3.10. Cyber Security ............................................................................. 46
+6.3.11. Error Control ................................................................................ 46
+7. Software Development Environment Description . 47
+7.1. Introduction ....................................................................... 47
+7.2. Concepts .......................................................................... 47
+7.2.1. Responsibilities............................................................................ 47
+7.2.1.1. Management............................................................................. 47
+7.2.1.2. Head of Development............................................................... 47
+7.2.1.3. Distribution ............................................................................... 47
+7.2.1.4. Quality Supervisor .................................................................... 47
+7.3. Software Life Cycle ........................................................... 48
+7.4. Module Test (Verification).................................................. 49
+7.4.1. Verification of Components .......................................................... 49
+7.4.2. System Verification ...................................................................... 49
+7.4.3. Test Documentation ..................................................................... 49
+7.5. System Test (Validation) ................................................... 50
+7.6. Amendments..................................................................... 50
+7.7. Documentation / Main Product File / Risk Management File
+50
+8. Software Verification and Validation Test .............. 52
+8.1. Module Test (Verification).................................................. 52
+8.1.1. Common functions Module .......................................................... 52
+8.1.2. Image acquisition Module ............................................................ 55
+8.1.3. Calibration Module....................................................................... 56
+8.1.4. Pre-processing Module ................................................................ 58
+8.1.5. Firmware update Module ............................................................. 59
+8.1.6. xSystem Module .......................................................................... 61
+8.1.7. FPGA App Module ....................................................................... 63
+8.1.8. System task Module .................................................................... 65
+8.1.9. Interface Module .......................................................................... 66
+8.1.10. Cyber Security ............................................................................. 68
+8.1.11. Error Control ................................................................................ 69
+8.2. System Test (Validation) ................................................... 70
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 5 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+9. Traceability Analysis ................................................ 80
+10. Hazard Analysis ...................................................... 85
+10.1. Severity .......................................................................... 85
+10.2. Frequency (Likelihood of Occurrence) ............................ 86
+10.3. Risk Acceptability ........................................................... 87
+10.4. Hazard Analysis ............................................................. 88
+11. Revision History ..................................................... 90
+12. Software Version History ....................................... 91
+13. Unsolved Anomalies .............................................. 93
+13.1. Scope ............................................................................. 93
+13.2. Unresolved Anomalies .................................................... 93
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 6 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+No Contents Revision Record
+0 1 2 3 4
+1 Level Of Concern 23 June 2020 27 May 2021
+2 Software Description 23 June 2020 27 May 2021
+3 Software Requirement
+Specification 23 June 2020 27 May 2021
+4 Application Algorithm
+and Technology 23 June 2020 27 May 2021
+5 Architecture Design
+Chart 23 June 2020 27 May 2021
+6 Software Design
+Specification 23 June 2020 27 May 2021
+7 Software Development
+Environment Description 23 June 2020 27 May 2021
+8 Software Verification and
+Validation Test 23 June 2020 27 May 2021
+9 Traceability Analysis 23 June 2020 27 May 2021
+10 Hazard Analysis 23 June 2020 27 May 2021
+11 Revision Level History 23 June 2020 27 May 2021
+12 Software Version History 23 June 2020 27 May 2021
+13 Unsolved Anomalies 23 June 2020 27 May 2021
+Written by : Kim Wan Soo Date : 27 May 2021
+Reviewed by : Lee Dong Jin Date : 27 May 2021
+Approved by : Hur Nam Kyu Date : 28 May 2021
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 7 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+1. Level of Concern
+The following section includes the information required in the FDA guidance document entitled
+“Guidance for the Content of Premarket Submissions for Software Contained in Medical
+Devices”, May 11, 2005.
+According to below responds, we conclude a Moderate level of concern applies to the SDK-
+MCW software.
+Level of Concern : Moderate
+If the answer to any one question below is Yes, the level of Concern for the Software Device is
+likely to be Major.
+Case 1. Major Level of Concern
+1. Does the Software Device qualify as Blood Establishment Computer Software? No
+2. Is the Software Device intended to be used in combination with a drug or
+biologic?
+No
+3. Is the Software Device an accessory to a medical device that has a Major Level
+of Concern?
+No
+4. Prior to mitigation of hazards, could a failure of the Software Device result in
+death or serious injury, either to a patient or to a user of the device? Examples
+of this include the following:
+a. Does the software Device control a life supporting or life sustaining
+function?
+b. Does the Software Device control the delivery of potentially harmful energy
+that could result in death or serious injury, such as radiation treatment
+systems, defibrillators, and ablation generators?
+c. Does the Software Device control the delivery of treatment or therapy such
+that an error or malfunction could result in death or serious injury?
+d. Does the Software Device provide diagnostic information that directly
+devices a decision regarding treatment or therapy, such that if misapplied
+it could result in serious injury or death?
+e. Does the Software Device provide vital signs monitoring and alarms for
+potentially life threatening situations in which medical intervention
+necessary?
+No
+If the Software Device is not Major Level of Concern and the answer to any one question below
+is Yes, the Level of Concern is likely to be Moderate.
+If the answers to all of the questions in Tables 1 and 2 above are No, the Level of Concern is
+Minor.
+Case 2. Moderate Level of Concern
+1. Is the Software Device an accessory to a medical device that has a Moderate
+Level of Concern?
+Yes
+2. Prior to mitigation of hazards, could a failure of the Software Device result in
+Minor Injury, either to a patient or to a user of the device?
+No
+3. Could a malfunction of, or a latent design flaw in, the Software Device lead to
+an erroneous diagnosis or a delay in delivery of appropriate medical care that
+would likely lead to Minor Injury?
+No
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 8 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+❖ Human Resources and Responsibilities
+Team Person Responsibilities (produced or processed
+documents)
+SW Team SW Engineer
+(1 person)
+SRS (design)
+Software architecture (design)
+Implementation, coding
+SDS (design)
+User Manual (design)
+Hazards analysis (design)
+Software static test report (perform) Software
+dynamic test report (verification)
+Team
+Manager (1
+person)
+SRS (approval)
+Software architecture (design, approval)
+SDS (approval)
+Hazards analysis (verification) User
+Manual (verification) Software test
+plan (verification) Software test
+report (verification) Traceability
+analysis (design) Validation report
+(design)
+Test
+Engineers (1
+person)
+Software test report
+Application
+Software
+Team
+SW Engineers
+(1 person)
+User Manual (verification)
+Proprietary application Design and implementation.
+Casual Software test
+Team
+Manager (1
+person)
+SDS (verification)
+User Manual (verification)
+Quality
+Management
+Team
+Team
+Manager (1
+person)
+SRS (approval)
+SDS (approval)
+Hazards analysis (approval) User Manual (approval)
+Hazards Analysis (approval) Software test report
+(approval) Traceability analysis (approval) Validation
+report (approval)
+Marketing
+Team
+Team Manager
+(1 person)
+SRS (verification)
+Hazards analysis (verification)
+Custome
+r Support
+Team
+Team
+Manager (1
+person)
+SDS (verification)
+User Manual (verification) Hazards
+analysis (verification) Validation
+report (verification)
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 9 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+2. Software Description
+SDK-MCW is software of Detector that performs image acquisition, image correction, and pre-
+processing.
+SDK-MCW starts by opening Main Window, and it is converted to sub modes by selection.
+
+And supporting sub modes are as below.
+✓ Common functions module : Control detector setup
+✓ Image acquisition module : Control image read
+✓ Calibration module : Calibration setup and pre-pre-processing control
+✓ Firmware update : Write detector firmware update file and read information
+✓ xSystem Module : System initialization and task creation
+✓ FPGA App Module : Image reading and communication message processing in FPGA
+✓ System task Module : Peripheral device control and network communication control
+✓ Interface Module : Power device and shock sensor communication control and
+initialization
+Image
+acquisition
+Common
+functions
+Calibration
+OK
+Image Acquisition
+SDK Library
+Firmware
+update
+MS Window OS
+Console SW
+SDK
+ Lib
+ Loading
+Detector device
+FPGA App
+Module
+System task
+Module
+xSystem
+Module
+Firmware
+Gigabit Lan
+Cable
+Interface
+Module
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 10 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+2.1. Software Name : SDK-MCW
+2.1.1. Software Function
+✓ Common functions module
+The module communicates with the detector through a network socket communication module.
+Common functions module provides commands to control detector hardware such as system
+initialization, window time setting for image acquisition and detector operation mode setting, and
+exposure time setting. It also receives feedback on the condition of the hardware from the
+detector.
+✓ Image acquisition module
+The Image Acquisition module registers the event handle setting for acquisition of image
+capture images, data processing event settings, and notification processing messages for
+image acquisition, and stores the raw images read from the detector.
+✓ Calibration module
+For proper image correction, information of the beam delivery efficiency of each fiber bundle is
+very important. Therefore, information of the beam delivery efficiency of each fiber will be
+provided in the calibration dataset. The calibration dataset will produce a table of deviation of
+fiber bundle beam delivery efficiency, and apply it to acquired images for flat fielding of the
+image.
+✓ Firmware update module
+The Firmware update module provides a function to read the firmware information of the
+detector hardware or write the latest firmware, and provides commands to manage the firmware
+of the detector hardware.
+✓ xSystem module
+When communicating with the SDK, the xSystem module creates each task that manages and
+controls the detector device, and supports reading and writing log data related to the shock
+sensor.
+✓ FPGA App module
+The FPGA App module sends and receives messages when communicating between the CPU
+and the FPGA, and supports functions to transmit image acquisition commands to the FPGA,
+set the operation mode, and store and process the transmitted image data.
+✓ System task module
+System task module supports and monitors functions such as Wi-Fi operation status
+management, power cable, power button, FPGA F/W erase and write function, and network
+status.
+✓ Interface module
+Interface module supports i2c expansion controller control for peripheral devices, power supply
+communication control, and shock sensor-related chip initialization and register read/write
+functions.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 11 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+2.1.2. Main Features
+2.1.2.1. Easy and Rapid Work Process.
+✓ Fast image pre-processing
+✓ Multitasking.
+✓ Easy and fast detector configuration.
+2.2. Hardware Requirement
+2.2.1. System requirement
+✓ CPU: Intel Core i3 6th generation or higher (i5 or higher)
+✓ Memory: Minimum 4 GB RAM (4 GB for 32-bit OS, 8 GB for 64-bit OS recommended)
+✓ HDD: At least 500GB for application and file storage.
+We recommend 500GB for application and 1TB of secondary drive for video
+file storage.
+✓ NIC: Requires dual 10/100/1000 network card system.
+One for network (Internet) and the other for DR panel communication.
+✓ Monitor Resolution: It offers a resolution of 1,600 x 900 for desktops and 1,366 x 768
+for laptops. A 1,920 x 1,080 resolution (2 Mega Pixel) monitor is
+recommended for diagnosis.
+✓ OS: Microsoft Windows 7 / Windows 10 , 32-bit/64-bit
+2.2.2. Graphic Card
+✓ It offers a resolution of 1,600 x 900 for desktops and 1,366 x 768 for laptops.
+✓ A 1,920 x 1,080 resolution (2 Mega Pixel) monitor is recommended for diagnosis.
+2.2.3. Detector H/W Device requirement
+✓ CPU : Ti AM335x.
+✓ Memory : 256MB.
+✓ Nand Flash : 2GB.
+✓ NIC : 10/100/1000 network system.
+✓ OS : Embedded Linux 32-bit.
+2.3. Development Language and Program Size
+2.3.1. Program Language
+✓ Microsoft Visual C++ 2019
+✓ Windows Api (DLL) C++ , C
+✓ Cross-Tool Arm-GCC C, C++
+2.3.2. Memory Management
+✓ Programming Language dependent
+2.3.3. Software Size
+2.3.3.1. Distribution Size
+✓ SDK : About 1 ~ 2.5Mbytes
+✓ F/W : About 14 ~ 15Mbytes
+2.3.3.2. Execute File Size
+✓ Execute SDK file name :libxd.dll
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 12 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+✓ Size : SDK about 1Mbytes
+✓ Execute F/W file name :upimage_C1SR1_xxxx.bin
+✓ Size : F/W about 14.2Mbytes
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 13 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3. Software Requirements Specification
+3.1. Functional Requirement
+Function by each module and essential factor that each function must equip in software are as
+below
+3.1.1. Function Essential Factor by Module
+3.1.1.1. Common functions Module
+SRS-1000 It should support normal mode setting function.
+SRS-1001 It should support AED mode setting function.
+SRS-1002 It should create a handle to connect with the detector.
+SRS-1003 It should return the handle used to connect the detector.
+SRS-1004 It should support X-ray exposure time setting function during image acquisition.
+SRS-1005 It should support sensing panel area setting of the detector.
+SRS-1006 It should support operation trigger mode setting of the detector device.
+SRS-1007 It should support the indicator LED color setting of the operating status of the
+external equipment of the detector.
+SRS-1008 It should support sleep mode of the detector device.
+SRS-1009 It should apply the threshold value of the detector device.
+SRS-1010 It should check the connection status of the detector device.
+3.1.1.2. Image acquisition Module
+SRS-2000 It should support the preparation process and initialization for image acquisition.
+SRS-2001 It should support a start function for image acquisition.
+SRS-2002 It should support a message processing event handler for image acquisition.
+SRS-2003 It should support the function of checking completion of the image acquisition and
+transmitting.
+SRS-2004 It should support the function to retransmit the image acquired from the detector
+device if the transmission is not completed.
+SRS-2005 It should support the function of removing the used event handle and releasing the
+memory after image acquisition.
+SRS-2006 It should support the function to send and receive commands with the hardware of
+the detector device.
+3.1.1.3. Calibration Module
+SRS-3000 It should support the handle generation function to create a calibration file.
+SRS-3001 It should support the function to acquire dark file image.
+SRS-3002 It should support the function to acquire bright file image.
+SRS-3003 It should support the function to load the acquired bright image.
+SRS-3004 It should support the function to create the defect map file and the algorithm to
+create a BPM file.
+SRS-3005 It should support the function to process offset correction.
+SRS-3006 It should support the function to process gain correction.
+SRS-3007 It should support the function to process BPM correction.
+SRS-3008 It should support the function to remove the handle used to create a calibration file
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 14 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+and return the memory.
+3.1.1.4. Pre-Processing Module
+SRS-4000 It should support the algorithm function to calibration to image from the detector.
+SRS-4001 It should support the function to read the raw image from the detector and store it
+in a buffer.
+SRS-4002 It should support the function to apply and store the algorithm to the raw image
+from the detector.
+SRS-4003 It should support the function to load and process the bpm file for calibration
+algorithm.
+SRS-4004 It should support the function to provide and process the gain correction function
+for calibration algorithm.
+SRS-4005 It should support the function to provide and process the offset correction function
+for calibration algorithm.
+SRS-4006 It should support the function to load the parameter file for calibration algorithm
+and apply correction.
+3.1.1.5. Firmware Update Module
+SRS-5000 It should support the administrator feature to import, read and write the firmware
+file.
+SRS-5001 It should support the function to read and deliver the firmware file information that
+is saved from the detector.
+SRS-5002 It should support the writing function on the firmware file of the detector device.
+SRS-5003 It should support the function to gain the structure and information of the loaded
+firmware file.
+SRS-5004 It should support the function to update the loaded firmware file to the detector.
+SRS-5005 It should support the validation function on the detector device after updating the
+firmware.
+3.1.1.6. xSystem Module
+SRS-6000 It should support the function to supply and control the power to the detector’s
+peripherals.
+SRS-6001 It should support simultaneous access restriction function for each task control.
+SRS-6002 It should support the reading function of the detector shock sensor and the data.
+SRS-6003 It should support the function to communicate with SDK and process the acquired
+image from FPGA.
+SRS-6004 It should support the function to monitor the power cable.
+SRS-6005 It should support the function to handle read and write operations of the firmware
+on FPGA chip.
+SRS-6006 It should support the task to process the data read from the shock sensor.
+SRS-6007 It should support the algorithm function on the data read from the shock sensor.
+SRS-6008 It should support the function to save the calibrated data by algorithm as a file.
+3.1.1.7. FPGA App Module
+SRS-7000 It should support the function to handle the detector parameter and the preference.
+SRS-7001 It should process messages regarding commands from SDK and provide return
+value.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 15 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS-7002 It should support initialization function to communicate with the detector.
+SRS-7003 It should support function to analyze messages from SDK, and command and set
+up the image acquisition process to FPGA controller.
+SRS-7004 It should support the function to load the image data from FPGA controller to a
+buffer.
+SRS-7005 It should support the image acquisition processing function on FPGA controller.
+SRS-7006 It should support the function to save the image data loaded in a buffer as a file.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 16 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.1.1.8. System task Module
+SRS-8000 It should support the function to save the detector setting parameter value in the
+internal memory.
+SRS-8001 It should support the function to read and write the firmware file used for FPGA
+module.
+SRS-8002 It should support the function to check the wireless network status and indicate on
+the surface of the detector.
+SRS-8003 It should support the monitoring function of power cable connection linked to the
+detector.
+SRS-8004 It should support the function to check the status of detector power button
+operation and process the button event.
+3.1.1.9. Interface Module
+SRS-9000 It should support the function to check the status of the detector power control
+module and read and write commands.
+SRS-9001 It should support the function to initialize the sensor that measures the internal
+temperature of the detector.
+SRS-9002 It should support the function to initialize the detector shock sensor.
+SRS-9003 It should support the function to initialize the sensor that measures the gyro of the
+detector.
+SRS-9004 It should support the function to measure the internal temperature of the detector
+and process the event.
+SRS-9005 It should support the function to check the external shock generation of the
+detector and calibrate the sensor.
+SRS-9006 It should support the function to check the moving direction of the detector.
+3.1.2. Cyber Security
+3.1.3. Error Control
+No. Description
+SRS-C-1 Wi-Fi Login
+Password
+Random access should be limited by setting ID and password
+when accessing the wireless network.
+SRS-C-2 Authentication
+and encryption
+Transmission data should be protected by applying encryption
+such as WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+No. Description
+SRS-E-1 Connect Error It should support recovery mode to enable reconnection in case
+of disconnection between the detector and SDK software.
+SRS-E-2 Image
+Processing
+Error
+When noise or line is appeared during the pre-processing the
+image received from the detector, it should provide a calibration
+image for normal process.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 17 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.2. Description of Process
+3.2.1. Common functions Module
+SDK Lib connects to the detector device through network communication. Common functions
+module provides commands to the detector to control its hardware functions such as detector
+initialization, image acquisition mode or parameter setting and so on. It also receives the
+feedback on the condition of the hardware from the detector.
+Function Description Specification
+SRS-1100 NormalMode It operates the detector operation
+mode as normal mode function.
+After setting the
+detector
+operation mode
+SRS-1101 AEDmode It operates the detector operation
+mode as AED mode.
+After setting the
+detector
+operation mode
+SRS-1102 SD_CreateDetector It creates a handle to connect with
+the detector.
+Before starting
+acquisition
+SRS-1103 SD_DestroyDetector It removes the handle after
+connecting with the detector.
+After completing
+the detector
+action
+SRS-1104 SD_ SetExposureTime It sets the image acquisition time. Before starting
+acquisition
+SRS-1105 SD_GetDimension It supports a reading function of
+image acquisition screen area.
+While acquisition
+SRS-1106 SD_SetOperationMode It sets the detector operation as
+trigger mode.
+After loading the
+detector lib
+SRS-1107 SD_SetLedColor It shows the detector status using
+the external indicating LED color.
+After connecting
+the detector
+SRS-1108 SD_SetSleepMode It sets the detector as sleep mode. While operating
+the detector
+SRS-1109 SD_SetVariable It sets the threshold value of the
+detector device.
+Before starting
+acquisition
+SRS-1110 SD_CheckConnection It checks the connection status with
+the detector device.
+While operating
+the detector
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 18 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.2.2. Image acquisition Module
+The image acquisition module creates the handle required for image acquisition. And, it
+registers a handler for driving events and exceptions that occur when an image is acquired. In
+addition, it processes acquired images and supports storage and notification functions.
+Module Description Specification
+SRS-2100 Acquisition initialize It initializes for acquisition. Before starting
+acquisition
+SRS-2101 Acquisition Start It provides a starting function for
+acquisition.
+When starting
+acquisition
+SRS-2102 Acquisition Event
+Handle
+It registers an event handler
+delivered from the detector.
+When starting
+acquisition
+SRS-2103 Get Raw Image It prepares the image transmission
+after checking completion of image
+acquisition.
+After acquisition
+SRS-2104 Retransmission It retransmits in the case of failure of
+image transmission.
+After acquisition
+SRS-2105 Acquisition event
+destroy
+It removes the event handle and
+used memory after completing image
+acquisition.
+After completing
+acquisition
+SRS-2106 Detector H/W It processes commands and transmit
+the acquired image.
+While acquisition
+3.2.3. Calibration Module
+Each x-ray beam transmission efficiency information is very important for proper image
+correction. Therefore, information on the transmission efficiency of each x-ray beam will be
+provided in the calibration data set. The calibration data set generates a table of deviations of
+the x-ray beam transmission efficiency and applies it to the acquired image for the image flat
+field.
+Module Description Specification
+SRS-
+3100
+SDCal_CreateExt It creates a handle to create a Cal file. Before starting
+acquisition
+SRS-
+3101
+Get dark image It brings a function to create a dark image. Before starting
+acquisition
+SRS-
+3102
+Get bright image It brings a function to create a bright
+image.
+Before starting
+acquisition
+SRS-
+3103
+Load bright image It loads the acquired bright image to
+create a Cal file.
+Before starting
+acquisition
+SRS-
+3104
+SDCal_Generate
+BadPixelMapFile
+It brings an algorithm function to create a
+defect map file.
+Before starting
+acquisition
+SRS-
+3105
+Offset correction It brings an algorithm function to create
+offset correction.
+Before starting
+acquisition
+SRS-
+3106
+Gain correction It brings an algorithm function to create
+gain correction.
+Before starting
+acquisition
+SRS-
+3107
+Bpm correction It brings an algorithm function to create
+BPM correction.
+Before starting
+acquisition
+SRS-
+3108
+SDCal_Destroy It removes the handle and memory used
+to create a Cal file.
+After completing
+acquisition
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 19 / 93
+
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.2.4. Pre-Processing Module
+The image processing module performs image processing with raw images Back ground level
+data included in raw images, image contrast, noise reduction level and contrast adjustment, and
+defect pixel removal functions are supported.
+Module Description Specification
+SRS-4100 Process manager It takes a raw image from the
+detector and provides a calibration
+algorithm.
+After completing
+connection with
+the detector
+SRS-4101 Raw image It writes the acquired raw image on
+the memory buffer.
+After acquisition
+SRS-4102 Complete processing
+image
+It processes the calibration algorithm
+and save the file.
+After acquisition
+SRS-4103 BPM correction It brings BPM function to apply the
+calibration algorithm.
+Before starting
+acquisition
+SRS-4104 Gain correction It brings gain function to apply the
+calibration algorithm
+Before starting
+acquisition
+SRS-4105 Offset correction It brings offset function to apply the
+calibration algorithm.
+Before starting
+acquisition
+SRS-4106 Proc param It processes correction by applying
+the loaded parameter.
+Before starting
+acquisition
+3.2.5. Firmware update Module
+The firmware update module supports the function to read the detector's hardware version
+information or write the latest firmware version file.
+Module Description Specification
+SRS-5100 Update Manager It performs management and
+function to read and write the
+detector firmware.
+After loading the
+firmware file and
+connecting with
+the detector
+SRS-5101 F/W update loading It read and shows the detector
+file information from the detector.
+After connecting
+with the detector
+SRS-5102 Update Running It performs the writing function of
+the loaded firmware.
+After connecting
+with the detector
+SRS-5103 SDUpdater_
+GetFirmwareFileInfo
+It obtains the information and
+structure of the firmware file.
+After connecting
+with the detector
+SRS-5104 SDUpdater_Update
+FirmwareAndFirmwareInfo
+It writes the firmware file on the
+detector.
+After connecting
+with the detector
+SRS-5105 SDUpdater_
+ValidateUpdateFirmware
+It performs validation after
+completion of firmware update.
+After connecting
+with the detector
+3.2.6. xSystem Module
+The xSystem module supports the task creation function required for system initialization and
+detector operation.
+Module Description Specification
+SRS-6100 xsystem_prepare It supplies power to the peripheral
+device that is being used by the
+detector and performs preparation
+work.
+After the detector
+is turned on
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 20 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS-6101 MutexCreate It creates a mutex handle for each
+test control.
+After booting the
+detector
+SRS-6102 Get_sensor_data It creates a task to get the shock
+and direction information data of the
+detector.
+After the power is
+supplied to the
+detector
+SRS-6103 Xcom_process It creates a communication task for
+SDK and FPGA control.
+After booting the
+detector
+SRS-6104 Pwr_cable_processing It creates a monitoring task for
+power cable connection.
+After booting the
+detector
+SRS-6105 FPGA_programming It creates a task to read and write
+FPGA firmware.
+After booting the
+detector
+SRS-6106 Acc_shock_log It creates a task to process Acc
+shock sensor.
+After booting the
+detector
+SRS-6107 Get_acc_data It performs the process of Acc shock
+sensor data algorithm.
+After booting the
+detector
+SRS-6108 Save_shock_log_data It saves the calibrated data as a file. After booting the
+detector
+3.2.7. FPGA App Module
+It receives commands from the SDK and communicates with the FPGA, processes tasks related
+to image acquisition, and supports error handling functions for exceptional situations that occur
+during image transmission. It also handles parameter setting and FPGA and ROIC initialization.
+Module Description Specification
+SRS-7100 Config process It sets various parameters and value
+used by the detector.
+After connecting
+with the detector
+SRS-7101 cmd exec and ret msg It provides return value after
+processing messages for commands
+sent from SDK.
+After connecting
+with the detector
+SRS-7102 Init server sockets It performs initialization for network
+communication.
+After the power is
+supplied to the
+detector
+SRS-7103 Xcom_process It is responsible for communication
+control with SDK and performs
+commands for image acquisition by
+communicating with FPGA.
+While acquisition
+SRS-7104 Read xray image to
+mem
+It copies image data from FPGA to
+buffer.
+After acquisition
+SRS-7105 FPGA_image read
+module
+It performs image generation
+function acquired from FPGA
+controller.
+While acquisition
+SRS-7106 Write image to disk It writes the image acquired from the
+FPGA to the buffer
+After acquisition
+3.2.8. System task Module
+The System task module supports functions that control input/output from the detector's
+peripheral devices, check wireless network status, and handle and manage events for external
+key input.
+Module Description Specification
+SRS-8100 State flag setting It writes the parameter value related After transmitting
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 21 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+to the detector function setting to the
+internal storage.
+the detector
+setting value
+SRS-8101 Fpga programming It manages, reads and writes FPGA
+file.
+After sending
+firmware update
+command
+SRS-8102 Wifi link monitoring It checks the detector network status
+and monitors the LED indicator.
+After the power is
+supplied to the
+detector
+SRS-8103 Pwr cable monitoring It monitors power cable connection
+status.
+After the power is
+supplied to the
+detector
+SRS-8104 Pwr button monitoring It checks the detector power button
+operation status.
+After the power is
+supplied to the
+detector
+3.2.9. Interface Module
+The Interface module supports communication control of the power module connected to the
+peripheral device of the detector, checks the internal temperature of the detector, and supports
+functions such as communication control of the shock sensor and the gyro sensor, and the
+shock sensor initialization.
+Module Description Specification
+SRS-9100 Power manager mcu
+control
+It checks the status from power
+module device and read and write
+data.
+After booting the
+detector
+SRS-9101 Temperature sensor
+initialize
+It initializes the temperature sensor
+that measures inside the detector.
+After booting the
+detector
+SRS-9102 shock sensor
+initialize
+It initializes the detector shock
+sensor.
+After booting the
+detector
+SRS-9103 Gyro sensor initialize It initializes the detector gyro sensor. After booting the
+detector
+SRS-9104 Temperature sensor
+control
+It measures the internal temperature
+of the detector and processes an
+event according to the status.
+After booting the
+detector
+SRS-9105 shock sensor control It performs shock sensor event
+monitoring and sensor calibration
+functions.
+After booting the
+detector
+SRS-9106 Gyro sensor control It processes the data of detector
+rotation direction.
+After booting the
+detector
+3.2.10. Cyber Security
+Description Specification
+SRS-C-
+000
+Wi-Fi Login
+Password
+Random access should be limited by
+setting ID and password when accessing
+the wireless network.
+After booting the
+detector
+SRS-C-
+001
+Authentication
+and encryption
+Transmission data should be protected
+by applying encryption such as WPA,
+WPAPSK, WPA2, WPA2PSK,
+WPAPSK+TKIP, etc.
+After booting the
+detector
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 22 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3.2.11. Error Control
+Description Specification
+SRS-E-000 Connect Error It should support recovery mode to
+enable reconnection in case of
+disconnection between the detector and
+SDK software.
+After booting the
+detector
+SRS-E-001 Image Processing
+Error
+When noise or line is appeared during
+the pre-processing the image received
+from the detector, it should provide a
+calibration image for normal process.
+After booting the
+detector
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 23 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+4. Application Algorithm and Technology
+Below are algorithm, mathematical expression and technology used in SDK-MCW.
+4.1. Calibration
+Calibration performs following compensations to acquired images.
+4.1.1. Geometry Correction
+In order to compensate geometric error caused by bidirectional scan, it performs bidirectional
+Sync.
+Because of characteristics of swing mirror driving, flying spot position of laser is determined by
+tangent and sine function and angle speed. And the angle speed is calculated by time taken
+between 2 sensors positioned at each end side of imaging area. Through this compensation,
+acquired pixels are coordinated.
+(inverse function with scale factor b)
+To prevent deterioration in resolution caused by discordance between acquired pixel
+coordination and compensated pixel coordination, extract 3 times of pixel number in horizontal
+direction than required pixel numbers, then calculate appropriate sub pixel intensity for real
+coordinate.
+4.1.2. Offset Correction
+Obtain dark image which noise is filtered. And then, subtract each pixel value of dark image
+from real X-ray acquired image. This correction process makes dark signal offset uniform, and
+enables to get uniform image.
+4.1.3. Gain Correction
+Gain map is calculated through calibration steps described below.
+Acquire images which intensity levels are 2%, 20%, 40% and 80% of full dynamic range and
+remove noise and artifact. Calculate ratio of optical fiber intensity level and standard intensity
+level. Considering image characteristics of x-ray storage phosphor plate, acquire intensity
+information on 3,500 pixels in horizontal direction and 128 pixels average Kernel intensity
+information in vertical direction. Through this step, 2D gain map is generated. This 2D gain
+map is applied to real scanned image by multiplying gain to each corresponding pixel.
+4.1.4. Defect Correction
+In case that the scanner can’t detect normal intensity light because of alien object in optical fiber
+collection part or X-ray storage phosphor plate, extract corresponding area and compensate
+through dust remover and defect correction algorithm.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 24 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+5. Architecture Design Chart
+5.1. Software Diagram and Description
+5.1.1. Description
+Software architecture consists of five independent modules. Acquisition modules provide the
+ability to correct and process raw images obtained from detectors.
+5.1.2. Diagram
+Console Interface
+Common functions
+module
+Image acquisition
+module
+Calibration
+module
+Pre-Processing
+module
+Firmware update
+module
+FPGA App
+module
+Interface
+module
+xSystem
+module
+System task
+module
+Correction image Config data
+Control data
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 25 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+5.1.3. Software Function
+✓ Common functions module
+The common functions module communicates with the detector through the network socket
+communications module. The common functions module provides commands for controlling
+detector hardware, including system initialization, window time settings for image acquisition,
+detector operational mode settings, and exposure time settings. Also provide hardware status
+feedback with the detector.
+✓ Image acquisition module
+The Image acquisition module registers event handle setting and data processing event setting
+for acquiring a video image, and notification processing messages about image acquisition, and
+stores the raw image read from the detector.
+✓ Calibration module
+For proper image correction, information of the beam delivery efficiency of each fiber bundle is
+very important. Therefore, information of the beam delivery efficiency of each fiber will be
+provided in the calibration dataset. The calibration dataset will produce a table of deviation of
+fiber bundle beam delivery efficiency, and apply it to acquired images for flat fielding of the
+image.
+✓ Pre-Processing module
+The image processing module performs image processing on raw images. Contrast the
+background level data and images contained in the Raw image, adjust the noise reduction level
+and contrast between light and shade, and remove the defect pixel contained in the Raw image.
+It also applies the settings of the specified parameters and processes them to apply the optimal
+values when deleting the data of the noise components contained in the raw image from the
+object image.
+✓ Firmware update module
+The Firmware update module provides the ability to load detector hardware firmware
+information, use the latest firmware, and provide commands to manage detector hardware
+firmware.
+✓ xSystem module
+The xSystem module supports the ability to manage and control the detector equipment during
+communication with the SDK and to read and write log data associated with impact sensors.
+✓ FPGA App module
+The FPGA App module sends messages during communication between the CPU and FPGA,
+and supports the ability to transfer image acquisition commands and set operating modes to the
+FPGA side, as well as store and process image data to be transferred.
+✓ System task module
+The System task module supports and monitors features such as Wi-Fi health management,
+power cable check, power button check, FPGA F/W erase write support, and network health
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 26 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+check.
+✓ Interface module
+The Interface module supports i2c expansion controller control and power supply
+communication control for peripheral devices, initialization of shock sensor related chips, and
+register read/write capabilities.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 27 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6. Software Design Specification
+6.1. Total Process Flowchart
+6.1.1. Detector Init
+SDS-0001 Loads the initialization data required for use by the detector device and initializes
+the variable.
+SDS-0002 After the device is initialized, it reads status information for the currently
+connected detector to verify the current configuration state.
+2.1.
+6.1.2. Detector Param Loading
+SDS-0010 Loads parameter information used by the sensor type applied to the detector
+device.
+SDS-0011 Writes the loaded parameter information by the detector device.
+SDS-0012 Call the video acquisition preparation mode after completing the detector
+parameter setting.
+START
+Detector Param Loading Detector Init
+Detector Status Loading Detector Setup
+Acquisition Ready
+Event Message Registration Raw image save file open
+Detector HSW notification setup
+Acquisition start
+X-ray expose
+Raw image save
+Acquisition Destroy
+END
+Data transfer
+Image Pre-processing
+Read – out
+OK?
+No
+Yes
+Detector H/W
+FPGA Image read
+Instruction
+processing
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 28 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.1.3. Detector Setup
+SDS-0013 Applies the read parameters and environment settings to the detector.
+6.1.4. Acquisition Ready
+SDS-0014 Process the preparatory work for the image acquisition.
+SDS-0015 Open and prepare a file to store the acquired images.
+SDS-0016 Register processing message events, error processing messages, and data
+progress processing messages that occur when the image is acquired.
+6.1.5. Raw image save file
+SDS-0017 When the image is ready to be acquired, open a file to save the acquired image.
+6.1.6. Detector HSW
+SDS-0018 Registers notification messages that occur when the detector device acquires
+images and checks messages transmitted by the detector.
+6.1.7. Acquisition start
+SDS-0020 Check if everything is ready for the image acquisition.
+SDS-0021 In order to acquire the image, press the x-ray expose switch to start the video
+acquisition process.
+SDS-0022 Check the event message to see if the beam signal sent from the X-ray was
+received from the Detector device.
+SDS-0023 When you receive the image acquisition completed message, proceed to the next
+step for the pre-processing operation.
+6.1.8. Detector H/W
+SDS-0024 A device for processing the image acquisition operation from a detector
+processes the image acquisition command and transmits the acquired image.
+6.1.9. X-ray expose
+SDS-0025 Sends the expose command to get the image from the detector.
+6.1.10. Data transfer Image Pre-processing
+SDS-0026 Receive the image acquisition completion data from the detector and prepare for
+pre-processing.
+SDS-0027 Apply offset correction, gain correction, and bpm correction to the acquired image
+using a prepared calibration file to create a clean object image.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 29 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.1.11. Raw image save
+SDS-0028 Receives the file that has completed the pre-processing correction and writes the
+file to the specified path.
+SDS-0029 Once the video acquisition and correction work are complete and all the files are
+saved, remove all the handles used to acquire the image.
+6.1.12. Cyber Security
+SDS-0030 Restrict arbitrary access with ID/PW settings when connecting to wireless
+network.
+SDS-0031 Applies encryption such as WPA, WPAPSK, WPA2, WPA2PSK, and
+WPAPSK+TKIP to protect data transmitted.
+6.1.13. Error Control
+SDS-0040 Check whether the network is connected by sending ping test messages
+periodically between the Detector and the software SDK.
+SDS-0041 After receiving the original raw file received from the detector, pre-processing is
+performed using the corrected image, and noise and bad pixels are removed from
+the image.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 30 / 93
+
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.2. Software component
+6.2.1. Software Setting
+✓ Save to ini Files
+✓ Setting contents: Acquisition setting
+Acquisition setting
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 31 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3. Function Embodiment by Software Module
+6.3.1. Common functions Module
+SDK Lib connects to the detector device through network communication. The Common
+functions module provides commands to the detector to control detector hardware functions,
+such as initializing the detector, setting modes and parameters for image acquisition.
+It also receives feedback on the condition of the hardware from the detector.
+Function Description
+SDS-
+1000
+NormalMode The detector device operates in normal mode.
+Return 1 : success
+Return -1 : fail
+SDS-
+1001
+AEDmode The detector device operates in AEDmode.
+Return 1 : success
+Return -1 : fail
+SDS-
+1002
+SD_CreateDetector Create a handle to connect with the detector..
+Return the detector's handle : success
+Return -1 : fail
+SDS-
+1003
+SD_DestroyDetector Remove the handle used when connecting to the detector
+Return 1 : success
+start
+SD_SetLogOption
+end
+SD_SetExpousreTime
+SD_CreateDetector()
+SD_GetDimension
+SD_SetLedColor
+SD_SetOperation
+Mode
+NormalMode AEDmode
+SD_DestroyDetector
+aed norma
+l
+SD_SetSleepMode
+SD_SetVariable SD_CheckConnection
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 32 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return -1 : fail
+SDS-
+1004
+SD_ SetExposureTime Set the time to be exposed to the x-ray beam when acquiring
+an image.
+Return 1 : success
+Return -1 : fail
+SDS-
+1005
+SD_GetDimension Setting the sensing panel area of the detector device
+Return 1 : success
+Return -1 : fail
+SDS-
+1006
+SD_SetOperationMode Set detector device operation trigger mode.
+Return 1 : success
+Return -1 : fail
+SDS-
+1007
+SD_SetLedColor Set the color of the external status display LED of the detector
+device.
+Return 1 : success
+Return -1 : fail
+SDS-
+1008
+SD_SetSleepMode Setting the detector device to enter power saving mode
+Return 1 : success
+Return -1 : fail
+SDS-
+1009
+SD_SetVariable Set the threshold value of the detector device.
+Return 1 : success
+Return -1 : fail
+SDS-
+1010
+SD_CheckConnection Check the connection status with the detector device.
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 33 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.2. Image acquisition Module
+The image acquisition module creates the handles required for image acquisition. And, it
+registers a handler for driving events and exceptions that occur when an image is acquired. In
+addition, it processes acquired images and supports storage and notification functions.
+Function Description
+SDS-
+2000
+Acquisition
+initialize
+Processes initialization for image acquisition.
+Return 1 : success
+Return -1 : fail
+SDS-
+2001
+Acquisition
+Start
+Call the start function to acquire the image.
+Return 1 : success
+Return -1 : fail
+SDS-
+2002
+Acquisition
+Event Handle
+Register image acquisition message processing event handler.
+Return 1 : success
+Return -1 : fail
+SDS-
+2003
+Get Raw Image After confirming that image acquisition is complete, prepare for
+image transmission..
+Return 1 : success
+Return -1 : fail
+SDS-
+2004
+Retransmission If the image acquisition from the detector is not completed, the
+image transfer function is called again.
+Return 1 : success
+Detector H/W
+Retransmission
+Acquisition event destroy
+Acquisition initialize
+Acquisition event handle Acquisition notification event
+Get Raw
+Image
+success No
+Acquisition Start
+start
+end
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 34 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return -1 : fail
+SDS-
+2005
+Acquisition
+event destroy
+Releases the event handle and used memory upon completion of
+image acquisition processing.
+Return 1 : success
+Return -1 : fail
+SDS-
+2006
+Detector H/W As a hardware device to acquire images, it processes commands
+and transmits the acquired images.
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 35 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.3. Calibration
+For proper image correction, information of the beam delivery efficiency of each fiber bundle is
+very important. Therefore, information of the beam delivery efficiency of each fiber will be
+provided in the calibration dataset. The calibration dataset will produce a table of deviation of
+fiber bundle beam delivery efficiency, and apply it to acquired images for flat fielding of the
+image.
+Function Description
+SDS-3000 SDCal_CreateExt Create a handle to create a cal file.
+Return 1 : success
+Return -1 : fail
+SDS-3001 Get dark image Calling a function to create a dark image.
+Return 1 : success
+Return -1 : fail
+SDS-3002 Get bright image Calling a function to create a bright image.
+Return 1 : success
+Return -1 : fail
+SDS-3003 Load bright image Loading the bright image acquired to create a cal file
+Return 1 : success
+SDCal_CreateExt
+Load bright image
+SDCal_GenerateBadPixelMapFile
+Offset correction
+Gain correction
+bpm correction
+Get bright image Get dark image
+SDCal_Destroy
+start
+end
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 36 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return -1 : fail
+SDS-3004 SDCal_GenerateB
+adPixelMapFile
+Calling the algorithm function to create the defect map file.
+Return 1 : success
+Return -1 : fail
+SDS-3005 Offset correction Process call to handle offset correction.
+Return 1 : success
+Return -1 : fail
+SDS-3006 Gain correction Process call to process gain correction.
+Return 1 : success
+Return -1 : fail
+SDS-3007 Bpm correction Process call to process bpm correction.
+Return 1 : success
+Return -1 : fail
+SDS-3008 SDCal_Destroy Removed the handle used to create the cal file.
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 37 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.4. Pre-Processing Module
+The image processing module performs image processing with raw images. Back ground level
+data and image contrast included in raw images, noise reduction level and contrast adjustment,
+and defect pixels included in raw images are removed.
+In addition, by applying the specified parameter setting value, the optimum value is applied
+when removing the data of the noise component included in the raw image from the object
+image.
+Function Description
+SDS-4000 Process manager Function to call correction algorithm by receiving raw image
+from detector
+Return 1 : success
+Return -1 : fail
+SDS-4001 Raw image Call raw image from Detector and store it in buffer.
+Return 1 : success
+Return -1 : fail
+SDS-4002 Complete
+processing image
+Ability to process result files that are saved after the
+correction algorithm has been processed
+Return 1 : success
+Return -1 : fail
+SDS-4003 BPM correction Ability to call and load BPM file to process calibration
+algorithm
+Return 1 : success
+Return -1 : fail
+SDS-4004 Gain correction Function to call and load a gain file to process the
+correction algorithm
+Return 1 : success
+Cal engine
+detector
+Raw image
+Offset correction Gain correction BPM correction
+Process Manager
+Proc Param
+Complete processing image
+start
+end
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 38 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return -1 : fail
+SDS-4005 Offset correction Ability to call and load an offset file to process the
+correction algorithm
+Return 1 : success
+Return -1 : fail
+SDS-4006 Proc param Supports the function of performing correction processing
+by applying the called parameters
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 39 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.5. Firmware Update Module
+The firmware update module supports the function to read the detector's hardware version
+information or write the latest firmware version file.
+Function Description
+SDS-
+5000
+Update Manager Provides management function to read/write firmware files
+Return 1 : success
+Return -1 : fail
+SDS-
+5001
+F/W update loading Function to read firmware file information from the detector
+and provide information
+Return 1 : success
+Return -1 : fail
+SDS-
+5002
+Update Running Supports writing of firmware files to the detector and
+provides information
+Return 1 : success
+Return -1 : fail
+SDS-
+5003
+SDUpdater_GetFirmwar
+eFileInfo
+Function to get the detector's firmware file information and
+structure
+Return 1 : success
+Return -1 : fail
+SDS-
+5004
+SDUpdater_UpdateFirm
+wareAndFirmwareInfo
+A function to update the firmware based on the detector's
+firmware set information
+Return 1 : success
+Return -1 : fail
+SDS-
+5005
+SDUpdater_ValidateUpd
+ateFirmware
+Support for validating the updated firmware on the detector..
+Return 1 : success
+Detector
+F/W update file loading
+Update Manager
+File checking
+message SDUpdater_Val
+idateUpdateFir
+mware
+Update Running
+SDUpdater_GetFirmwareFileInfo
+fail
+ok
+start
+end
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 40 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.6. xSystem Module
+The xSystem module supports the task creation function required for system initialization and
+detector operation.
+Return -1 : fail
+Function Description
+SDS-
+6000
+xsystem_prepare A function that supplies power to peripheral devices from the
+detector and provides preparation work
+Return 0 : success
+Return -1 : fail
+SDS-
+6001
+MutexCreate Creation of concurrent access restriction flags for each task
+control
+Return 0 : success
+Return -1 : fail
+SDS-
+6002
+Get_sensor_data Creation of a task to obtain data on the impact and direction
+of the detector
+Return 1 : success
+Return -1 : fail
+SDS-
+6003
+Xcom_process Responsible for SDK and communication functions, and
+creates tasks for FPGA and image acquisition processing
+Return 1 : success
+Return -1 : fail
+SDS-
+6004
+Pwr_cable_processing Creation of a task in charge of monitoring the power cable
+connection
+start
+end
+MutexCreate()
+Get_sensor_data()
+Xcom_process()
+Pwr_cable_
+Processing()
+Fpga_programing()
+Acc_shock_log()
+Save_shock_log_data()
+get_acc_data()
+Create Function
+Main function
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 41 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return 1 : success
+Return -1 : fail
+SDS-
+6005
+FPGA_programming Create a task to handle FPGA firmware read/write functions
+Return 1 : success
+Return -1 : fail
+SDS-
+6006
+Acc_shock_log Create a task to read and store shock sensor data
+Return 1 : success
+Return -1 : fail
+SDS-
+6007
+Get_acc_data Algorithm processing of data read from Acc shock sensor
+Return 1 : success
+Return -1 : fail
+SDS-
+6008
+Save_shock_log_data Function to save the data processed by correction calculation
+as a file
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 42 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.7. FPGA App Module
+It receives commands from the SDK and communicates with the FPGA, processes related to
+image acquisition, and supports error handling functions for exceptional situations that occur
+during image transmission. It also handles parameter setting and FPGA and ROIC initialization.
+Function Description
+SDS-
+7000
+Config process Provides setting of various parameters and variable values
+used in the detector
+Return 0 : success
+Return -1 : fail
+SDS-
+7001
+cmd exec and ret
+msg
+Provides a function to process messages for commands
+transmitted from SDK and to deliver return values
+Return 0 : success
+Return -1 : fail
+SDS-
+7002
+Init server sockets Provides the function of setting and connecting initialization
+and network information to exchange network
+communication with the detector
+Return 1 : success
+Return -1 : fail
+SDS-
+7003
+Xcom_process Processes the message transmitted from the SDK and
+provides the FPGA module with command transmission and
+setting functions for image acquisition processing
+Return 1 : success
+start
+Config process
+Xcom process
+end
+Write image to disk
+Init server sockets
+Read xray image to mem
+FPGA
+Image read
+Module
+cmd_exec_and_ret_msg
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 43 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Return -1 : fail
+SDS-
+7004
+Read xray image to
+mem
+Provides a function to load the image data buffer received
+from the FPGA module
+Return 1 : success
+Return -1 : fail
+SDS-
+7005
+FPGA_image read
+module
+Ability to handle image acquisition in the FPGA module
+Return 1 : success
+Return -1 : fail
+SDS-
+7006
+Write image to disk Provides a function to write the image data loaded in the
+buffer to a file
+Return 1 : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 44 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.8. System task Module
+System task module supports functions that control input/output from the detector's peripheral
+devices, check wireless network status, and process and manage events for external key input.
+Function Description
+SDS-
+8000
+State flag
+setting
+Provides a function to write parameter values related to detector
+function settings to the internal storage
+Return 1 : success
+Return -1 : fail
+SDS-
+8001
+Fpga
+programming
+Provides functions to read/write and manage firmware files used
+in the Fpga module
+Return 1 : success
+Return -1 : fail
+SDS-
+8002
+Wifi link
+monitoring
+Provides a function to check the detector network status and
+manage the detector external indicator LED display device
+Return 1 : success
+Return -1 : fail
+SDS-
+8003
+Pwr cable
+monitoring
+Provides a function to monitor the connection status of the power
+cable connected to the detector
+Return 1 : success
+Return -1 : fail
+SDS-
+8004
+Pwr button
+monitoring
+Checks detector power button operation status and provides
+event handling
+Return 1 : success
+Return -1 : fail
+start
+end
+state flag setting WiFi link
+monitoring
+pwr cable
+monitoring
+pwr button
+monitoring
+fpga
+programming
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 45 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.9. Interface Module
+The Interface module supports communication control of the power module connected to the
+peripheral device of the detector, checks the internal temperature of the detector, and supports
+communication control of the shock sensor, supports the gyro sensor communication function,
+and supports setting functions such as initializing the shock sensor.
+Function Description
+SDS-
+9000
+Power
+manager mcu
+control
+Provides a function to check the status of the detector power
+control module and read/write commands
+Return 1 : success
+Return -1 : fail
+SDS-
+9001
+Temperature
+sensor initialize
+Provides a function to initialize the sensor that measures the
+temperature inside the detector
+Return 1 : success
+Return -1 : fail
+SDS-
+9002
+shock sensor
+initialize
+Provides a function to initialize the detector shock sensor
+Return 1 : success
+Return -1 : fail
+SDS-
+9003
+Gyro sensor
+initialize
+Provides a function to initialize the sensor rotation direction data
+measurement sensor
+Return 1 : success
+Return -1 : fail
+SDS-
+9004
+Temperature
+sensor control
+Provides the function to measure the temperature inside the
+detector and process events according to the condition
+Return 1 : success
+Return -1 : fail
+SDS-
+9005
+shock sensor
+control
+The detector checks whether an external shock occurs and
+provides a sensor calibration function.
+Return 1 : success
+start
+end
+Power manager
+mcu control
+Temperature
+sensor
+control
+Shock sensor
+control
+gyro sensor
+control
+Shock sensor
+initialize
+gyro sensor
+initialize
+temperature
+sensor
+initialize
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 46 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+6.3.10. Cyber Security
+6.3.11. Error Control
+Return -1 : fail
+SDS-
+9006
+Gyro sensor
+contol
+Provides data processing function of the direction in which the
+detector rotates
+Return 1 : success
+Return -1 : fail
+Function Description
+SDS-
+10000
+WiFi Login
+Password
+Restrict random access by setting id / pw when connecting to
+Wires network
+Return 1 : success
+Return -1 : fail
+SDS-
+10001
+Authentication
+and encryption
+Transmission data is protected by applying encryption such as
+WPA, WPAPSK, WPA2, WPA2PSK, WPAPSK+TKIP, etc.
+Return 1 : success
+Return -1 : fail
+Function Description
+SDS-
+20000
+Connect Error Periodic transmission of ping messages to check network status
+Return 1 : success
+Return -1 : fail
+SDS-
+20001
+Image
+Processing
+Error
+The raw file received from the detector is processed using the
+corrected image to create a handle and pre-processing
+Return handle instance value : success
+Return -1 : fail
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 47 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+7. Software Development Environment Description
+7.1. Introduction
+This procedure manual (PM) describes the procedure for the development process. It will
+allow medical software to meet all legal requirements when being developed. Development
+faults will be avoided by means of a planned development process with an integral risk
+management system. A description is given on how the necessary testing, verification and
+validation steps are to be taken, from the Software Requirement Specification through the
+release of the software and how changes to the software are handled. There are also
+guidelines for incorporating amendments. The development process fulfils the requirements
+21 CFR 820.30 Design Controls.
+7.2. Concepts
+
+Verification (suitability for the application)
+✓ Verification confirms that the objectively defined requirements have been met.
+Validation (suitability for implementation)
+✓ This confirms that software has been tested for usability against all items in the
+requirements specification. It must also satisfy all the internal requirements and
+demands of the user.
+PEMS : Programmable electrical medical system
+PESS : Programmable electronic sub-system
+7.2.1. Responsibilities
+7.2.1.1. Management
+✓ Issuing a development instruction
+✓ Approving the planned budgets
+✓ Evaluating and authorising the requirement specifications (development tasks)
+7.2.1.2. Head of Development
+✓ Authorising the project plan and assessing observance
+✓ Initiating testing, verification and validation of the development and authorisation of
+individual development outcomes as they occur
+✓ Coordination of programming for the individual packages
+✓ Obtaining the currently valid norms for projects
+✓ Approving amendments
+✓ Authorising risk analysis
+7.2.1.3. Distribution
+✓ Obtaining and assessing market information
+✓ Performing application tests with potential clients to validate the products
+7.2.1.4. Quality Supervisor
+✓ Ensuring that the documentation is complete.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 48 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+7.3. Software Life Cycle
+Software development process at SDK-MCW follows a classic waterfall methodology, as
+illustrated in the following chart
+Analysis. The activity consists of establishing requirements for as much as possible before the design
+phase. The requirements are documented in the software-specific requirements and design notes. When
+enough of the requirements are gathered and analyzed for this iteration of the prototype, the activities shift
+into the design phase.
+Planning. This activity constructs the software development plan. This plan outlines the tasks,
+responsibilities, resources, and other items pertinent to the specific development project.
+Design. This activity considers four functional attributes of the software: data structure, software
+architecture, functionality, and interface characterization. The design is documented in design documents.
+Implementation. The implementation phase converts the design into a machine readable form. The
+software source code is created in accordance with SDK-MCW's coding conventions. To verify that the
+code created is consistent with Company standards, design reviews/inspections are held.
+Qualification. The qualification phase verifies that the design and code implemented meet the
+requirements. Testing ensures that defined input will produce actual results that agree with required results.
+Maintenance. Once the software enters a released state, the only software changes allowed are to fix
+identified defects in the code or to support approved enhancements. All identified system software defects
+are recorded on System Discrepancy Reports (SDR) forms or submitted electronically to the Modification
+Request (MR) database.
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 49 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+7.4. Module Test (Verification)
+In principle, each requirement from the specifications as well as from risk analysis must be
+verified by means of an appropriate test procedure.
+The following methods are used:
+✓ Testing at component and/or system level
+✓ Code inspection (for untestable requirements)
+✓ Reviewing, examination of the documentation
+7.4.1. Verification of Components
+The development of software components takes place in a cyclical process of implementing and
+testing of components. The test is performed by the programmer involved. The basis is the
+requirements assigned to the components and any test methods and acceptance criteria
+additionally specified in the design document.
+When all requirements have been met, the components are authorized and/or made available
+for use in the integration
+It is specified for each component in the design document, whether it is to be subjected to a
+component test or whether it is to be verified in the system test in interaction with other
+components. When a component test is performed, test documentation must be created.
+This is the project leader’s responsibility.
+7.4.2. System Verification
+The verification of the final product is done by means of simulated client. The fulfilling of
+system requirements is to be verified by means of one or more test procedures.
+Documentation must be created.
+The proof of a subset of requirements can be done in component tests. In such a case the test
+results for each component in question must be submitted.
+The authorization / rejection of the software takes place after the test results have been
+submitted in the verification review. The development leader, head of sales and quality
+assurance official or a representative must take part in this. It is tested whether the software
+coincides with the demands and whether the validation phase can be proceeded with.
+The protocol for the verification is an informal document (minimum contents: participants, date,
+software version involved, result of the discussions, new tasks with deadlines and
+responsibilities, software version).
+7.4.3. Test Documentation
+The documentation of a test must be done in such a way that the test is made comprehensible
+and repeatable.
+A test procedure is drawn up in preparation of the test. The document must contain a
+description of how the test has been drawn up and of the test data, as well as an overview of
+the test procedure. In addition, the test steps to be performed and their expected results are
+listed in tabular form.
+During the test, the tester enters the following data into a copy or printout of the test procedure
+(in handwriting):
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 50 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+✓ The name of the tester, data, software version, test system
+✓ Performing the test step
+✓ Result of the step ("OK“, if the expected result occurs)
+✓ Deviations from the test procedure (e.g. where steps are superfluous or further steps
+are advisable).
+✓ Test data, test software and log files must be archived in a data carrier.
+7.5. System Test (Validation)
+Requirements and testing for validation are laid down as for verification, whereby the validation
+tests are by definition restricted to the use of a possible end user.
+Participants in validation are: developments leader, head of sales, quality assurance official.
+For validating the end product a simulated end user test, whereby the intended use is imitated
+by using simulation software and corresponding hardware and following the instruction manual
+and service documentation.
+Then the conformity assessment is conducted. The validation of the product is repeated with a
+real user test (by clients) with the provision that the product has not yet been certified. By the
+systematic application of the medical product observation and reporting system, the result of the
+validation is continuously reviewed and hardened up.
+Particularly relevant observations regarding the product’s behaviour under working conditions
+(e.g. by evaluating the service reports etc.) are regularly evaluated by the development head in
+collaboration with the security official for medical products. In addition, the risk analysis is
+assessed and expanded in each case if needed.
+7.6. Amendments
+After completion of the development and authorisation of the zero series, the product may
+basically only be changed or modified by a development change. Changes are hardening the
+source code as well as new minor and lead to a service pack. Debugging is corrective
+measure for removing faults and is not defined as a development change.
+Development changes only occur when the client’s product requirements or marginal technical
+conditions change. The requirement specifications for changes are laid down in the minutes of
+the developer meetings. There, all requirements are specified and tested at the same time for
+any possible new risks. If so, the risk analysis is adjusted.
+The amendments must be documented and are added to the main product file.
+✓ new conformity statement (see manual)
+✓ new manual
+✓ filing the program CD
+✓ change files with description of changes to software
+Any amendment is concluded when a new service pack is released.
+7.7. Documentation / Main Product File / Risk Management File
+A document contains a revision status / amendment index, date and name of originator as well
+as the controller; it can only be entered into the EDP as a data record. A document is
+reviewed at regular intervals for validity.
+Remarks / minutes are the results of processes and procedures (output). They need at least
+the project number, date and name of the originator. Preliminary development results
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 51 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+(documents and notes) enter the development file.
+On completion of the development, all documents and notes must be available and listed in
+order to confirm the actual state of the released product. The main product file must be
+submitted for review by an appointed office. The documents of the main product file need not
+be tangible; a reference to where the corresponding documents can be found will suffice.
+The main product file must be administered by the development head. They must be kept on
+file for at least five years after the sale of the last product.
+7.8. Software Versioning
+The software configuration management process is processed in the
+following order.
+However, all procedures are managed and processed by our quality
+management system.
+7.8.1. Shape identification
+“Software name VER. 1.0.XXX.XXX ” (example)
+VER. X.X.XXX.XXX :
+Category Description
+1 Major X When a new product is designed and developed for the product
+number and its function
+2 Minor X
+-When functions and new functions are added.
+-If the library is changed,
+-When the compiler is changed
+3 Patch XXX In case of being changed to a bug patch, the range is from 0 to 300
+4 Patch XXX Simple error correction and function correction change, but the range is
+from 0 to 300
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 52 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8. Software Verification and Validation Test
+8.1. Module Test (Verification)
+✓ Test Categories
+⚫ Common functions Module
+⚫ Image acquisition Module
+⚫ Calibration Module
+⚫ Pre-Processing Module
+⚫ Firmware update Module
+⚫ xSystem Module
+⚫ FPGA App Module
+⚫ System task Module
+⚫ Interface Module
+⚫ Cyber Security
+⚫ Error Control
+✓ Procedures
+⚫ Check to ensure all components are correctly connected.
+⚫ Indicate which components have been used; indicate manufacturer and trade / model name of product, version number of software etc.
+⚫ Execute the tests in the table below.
+⚫ Record the output for each test in the “Actual Outcome” column.
+⚫ In case of any additional tests, record the information under the “Additional Tests” section and execute and mark results according to the same
+procedure.
+⚫ After executing all tests, compare the “Pass / Fail Criteria” with the “Actual outcome” and then mark either Pass (P) or Fail (F) in the “P/F” column.
+⚫ If any additional comments need to be made, note the comments in the “Comments” column.
+⚫ Attach any related notes, references, test data used, and all printed reports with the test report, and indicate the related Test Number on each reference.
+⚫ Upon completion of the tests, the executer should sign under “Prepared By.”.
+⚫ The tests and results obtained shall be reviewed and approved. Signature of the reviewer and approver shall each sign under “Reviewed By” and
+“Approved By”.
+8.1.1. Common functions Module
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 53 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-1000 Common functions /
+Normal Mode
+Call the function
+NormalMode
+Pass :
+- Process runs with no errors
+- Return Value Version info
+Fail :
+- Return Value Old Version
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1001 Common functions /
+AED Mode
+Call the function
+AEDmode
+Pass :
+- Process runs with no errors
+- Return Value Version info
+Fail :
+- Return Value Old Version
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1002 Common functions /
+Create Detector
+Call the function
+SD_CreateDetector
+Pass :
+- Process runs with no errors
+- Return Value instance
+Fail :
+- Return Value 0
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1003. Common functions /
+Destroy Detector
+Call the function
+SD_DestroyDetector
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value 0
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1004. Common functions /
+Set Exposure Time
+Call the function
+SD_SetExposureTime
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1005. Common functions /
+Get Dimension
+Call the function
+SD_GetDimension
+Pass :
+- Process runs with no errors
+- Return Value 1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 54 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail :
+- Return Value -1
+SV1-1006. Common functions /
+Set OperationMode
+Call the function
+SD_SetOperationMode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1007. Common functions /
+Set LedColor
+Call the function
+SD_ SetLedColor
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1008. Common functions /
+Set SleepMode
+Call the function
+SD_SetSleepMode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1009. Common functions /
+Set Variable
+Call the function
+SD_SetVariable
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-1010. Common functions /
+CheckConnection
+Call the function
+SD_ CheckConnection
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 55 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8.1.2. Image acquisition Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-2000. Image acquisition Module /
+Acquisition initialize
+Call the function
+SDAcq_Create
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-2001. Image acquisition Module /
+Acquisition Start
+Call the function
+SDAcq_Start
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-2002. Image acquisition Module /
+Acquisition EventHandler
+Call the function
+SDAcq_SetEventHandler
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-2003. Image acquisition Module /
+Get Raw Image
+Call the function
+SDAcq_GetRawImage
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-2004. Image acquisition Module /
+Retransmission
+Call the function
+SDAcq_Retransmission
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 56 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SV1-2005. Image acquisition Module /
+Acquisition Event Destroy
+Call the function
+SDAcq_EventDestroy
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-2006. Image acquisition Module /
+Detector H/W
+Call the function
+SDAcq_Detector
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+8.1.3. Calibration Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-3000. Calibration Module /
+Cal CreateExt
+Call the function
+SDCal_CreateExt
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-3001. Calibration Module /
+Get Dark Image
+Call the function
+SDCal_GetDarkImage
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 57 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value -1
+SV1-3002. Calibration Module /
+Get bright image
+Call the function
+SDCal_GetBrightImage
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-3003. Calibration Module /
+Load bright image
+Call the function
+SDCal_LoadBrightImage
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+
+been identified by the
+return value.
+SV1-3004. Calibration Module /
+GenerateBadPixelMapFile
+Call the function
+SDCal_
+GenerateBadPixelMapFile
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-3005. Calibration Module /
+Offset correction
+Call the function
+SDCal_OffsetCorrection
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-3006. Calibration Module /
+Gain OffsetCorrection
+Call the function
+SDCal_ OffsetCorrection
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-3007. Calibration Module /
+BPM OffsetCorrection
+Call the function
+SDCal_ OffsetCorrection
+Pass :
+- Process runs with no errors
+- Return Value 1 1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 58 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail :
+- Return Value -1
+SV1-3008. Calibration Module /
+SDCal Destroy
+Call the function
+SDCal_Destroy
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+8.1.4. Pre-processing Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-4000. Pre-processing /
+Process manager
+Call the function
+ProcessManager
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-4001. Pre-processing /
+Raw image
+Call the function
+RawImage
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-4002. Pre-processing /
+Complete processing image
+Call the function
+Complete_Processing_Image
+Pass :
+- Process runs with no errors
+- Return Value 1 1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 59 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail :
+- Return Value -1
+SV1-4003. Pre-processing /
+BPM correction
+Call the function
+BPM_Correction
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-4004. Pre-processing /
+Gain correction
+Call the function
+Gain_Correction
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-4005. Pre-processing /
+Offset correction
+Call the function
+Offset_Correction
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-4006. Pre-processing /
+Proc param
+Call the function
+ProcParam
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+8.1.5. Firmware update Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-5000. Firmware update /
+Update Manager
+Call the function
+SD_UpdateManager
+Pass :
+- Process runs with no 1 P Any errors should
+have been identified
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 60 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+by the return value.
+SV1-5001. Firmware update /
+F/W update loading
+Call the function
+SD_FWupdateLoading
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should
+have been identified
+by the return value.
+SV1-5002. Firmware update /
+Update Running
+Call the function
+SDUpdater_UpdateRunning
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should
+have been identified
+by the return value.
+SV1-5003.
+Firmware update /
+SDUpdater
+GetFirmwareFileInfo
+Call the function
+SDUpdater_GetFirmwareFileInfo
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should
+have been identified
+by the return value.
+SV1-5004.
+Firmware update /
+SDUpdater_Update
+FirmwareAndFirmwareInfo
+Call the function
+SDUpdater_UpdateFirmware
+AndFirmwareInfo
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should
+have been identified
+by the return value.
+SV1-5005. Firmware update /
+SDUpdater_Validate
+Call the function
+SDUpdater_Validate
+Pass :
+- Process runs with no 1 P Any errors should
+have been identified
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 61 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+UpdateFirmware UpdateFirmware errors
+- Return Value 1
+Fail :
+- Return Value -1
+by the return value.
+8.1.6. xSystem Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-6000. xSystem /
+xsystem prepare
+Call the function
+Xsystem_prepare
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6001. xSystem /
+MutexCreate
+Call the function
+MutexCreate
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6002. xSystem /
+Get_sensor_data
+Call the function
+Get_sensor_data
+Pass :
+- Process runs with no
+errors
+- Return Value 0
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6003. xSystem /
+Xcom_process
+Call the function
+Xcom_process
+Pass :
+- Process runs with no
+errors
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 62 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value 1
+Fail :
+- Return Value -1
+SV1-6004. xSystem /
+Pwr_cable_processing
+Call the function
+Pwr_cable_processing
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6005. xSystem /
+FPGA_programming
+Call the function
+FPGA_programming
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6006 xSystem /
+Acc_shock_log
+Call the function
+Acc_shock_log
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6007 xSystem /
+Get_acc_data
+Call the function
+Get_acc_data
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-6008 xSystem /
+Save_shock_log_data
+Call the function
+Save_shock_log_data
+Pass :
+- Process runs with no
+errors
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 63 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value 1
+Fail :
+- Return Value -1
+8.1.7. FPGA App Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-7000. FPGA App /
+Config process
+Call the function
+Config_process
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-7001. FPGA App /
+cmd exec and ret msg
+Call the function
+cmd_exec_and_ret_msg
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-7002. FPGA App /
+Init server sockets
+Call the function
+Init_server_sockets
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-7003. FPGA App /
+Xcom process
+Call the function
+xcom_process
+Pass :
+- Process runs with no
+errors
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 64 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value 1
+Fail :
+- Return Value -1
+SV1-7004. FPGA App /
+Read xray image to mem
+Call the function
+Read_xray_image_to_mem
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-7005 FPGA App /
+FPGA_image read module
+Call the function
+FPGA_image_read_module
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-7006 FPGA App /
+Write image to disk
+Call the function
+Write_image_to_disk
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 65 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8.1.8. System task Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-8000. System task /
+State flag setting
+Call the function
+State_flag_setting
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-8001. System task /
+Fpga programming
+Call the function
+FPGA_programming
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-8002. System task /
+Wifi link monitoring
+Call the function
+Wifi_link_ monitoring
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-8003. System task /
+Pwr cable monitoring
+Call the function
+Pwr_cable_ monitoring
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-8004. System task /
+Pwr buttin monitoring
+Call the function
+Pwr_button_monitoring
+Pass :
+- Process runs with no
+errors
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 66 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value 1
+Fail :
+- Return Value -1
+8.1.9. Interface Module
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-9000.
+interface /
+power manager mcu
+control
+Call the function
+Pm_mcu_i2c_access
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-9001.
+interface /
+temperature sensor
+initialize
+Call the function
+Temperature_sensor_initialize
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-9002. interface /
+shock sensor initialize
+Call the function
+Adxl345_sensor_initialize
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-9003. interface /
+gyro sensor initialize
+Call the function
+Gyro_sensor_initialize
+Pass :
+- Process runs with no
+errors
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 67 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+- Return Value 1
+Fail :
+- Return Value -1
+SV1-9004. interface /
+temperature sensor control
+Call the function
+Temperature_i2c_access
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-9005. interface /
+shock sensor control
+Call the function
+Adxl345_i2c_access
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-9006. interface /
+gyro sensor control
+Call the function
+Gyro_i2c_access
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 68 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8.1.10. Cyber Security
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-
+10000.
+Cyber security /
+Wifi login password
+Call the function
+SDUpdater_ReadFirmwareInfoEx
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-
+10001.
+Cyber security /
+Authentication and
+encryption
+Call the function
+SDUpdater_ReadFirmwareInfoEx
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 69 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8.1.11. Error Control
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV1-
+20000.
+Error Control /
+Connect Error
+Call the function
+SD_CheckConnection
+Pass :
+- Process runs with no
+errors
+- Return Value 1
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+SV1-
+20001.
+Error Control /
+Image processing Error
+Call the function
+SDCal_CreateExt
+SDCal_ProcessExt
+Pass :
+- Process runs with no
+errors
+- Return Value Handle
+instance value
+Fail :
+- Return Value -1
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 70 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+8.2. System Test (Validation)
+✓ Test Categories
+⚫ Common functions Module
+⚫ Image acquisition Module
+⚫ Calibration Module
+⚫ Pre-processing Module
+⚫ Firmware update Module
+⚫ xSystem Module
+⚫ FPGA App Module
+⚫ System task Module
+⚫ Interface Module
+⚫ Cyber Security
+⚫ Error Control
+✓ Procedures
+⚫ Check to ensure all components are correctly connected.
+◼ Indicate which components have been used; indicate manufacturer and trade / model name of product, version number of software etc.
+⚫ Execute the tests in the table below.
+⚫ Record the output for each test in the “Actual Outcome” column.
+⚫ In case of any additional tests, record the information under the “Additional Tests” section and execute and mark results according to the same
+procedure.
+⚫ After executing all tests, compare the “Pass / Fail Criteria” with the “Actual Outcome” and then mark either Pass (P) or Fail (F) in the “P/F” column.
+⚫ If any additional comments need to be made, note the comments in the “Comments” column.
+⚫ Attach any related notes, references, test data used, and all printed reports with the test report, and indicate the related Test Number on each reference.
+⚫ Upon completion of the tests, the executer should sign under “Prepared By”.
+⚫ The tests and results obtained shall be reviewed and approved. Signature of the reviewer and approver shall each sign under “Reviewed By” and
+“Approved By”.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 71 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+No Test Content Test Data / Procedure Pass / Fail Criteria Actual
+Output P/F Comments
+SV2-1000 Common functions /
+Normal Mode
+Call the function
+NormalMode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1001 Common functions /
+AED Mode
+Call the function
+AEDmode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1002 Common functions /
+Create Detector
+Call the function
+SD_CreateDetector
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1003 Common functions /
+Destroy Detector
+Call the function
+SD_DestroyDetector
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1004 Common functions /
+Set Exposure Time
+Call the function
+SD_SetExposureTime
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1005 Common functions /
+Get Dimension
+Call the function
+SD_GetDimension
+Pass :
+- Process runs with no errors
+- Return Value 1
+No error P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 72 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail :
+- Return Value -1
+SV2-1006 Common functions /
+Set OperationMode
+Call the function
+SD_SetOperationMode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1007 Common functions /
+Set LedColor
+Call the function
+SD_ SetLedColor
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1008 Common functions /
+Set SleepMode
+Call the function
+SD_SetSleepMode
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1009 Common functions /
+Set Variable
+
+Call the function
+SD_SetVariable
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-1010 Common functions /
+CheckConnection
+Call the function
+SD_ CheckConnection
+Pass :
+- Process runs with no errors
+- Return Value 1
+Fail :
+- Return Value -1
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2000 Image acquisition Module /
+Acquisition initialize
+Call the function
+SDAcq_Create
+Pass : Run without error No error P Any errors should have
+been identified by the
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 73 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail : Error happen over 1
+time
+return value.
+SV2-2001 Image acquisition Module /
+Acquisition Start
+Call the function
+SDAcq_Start
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2002 Image acquisition Module /
+Acquisition EventHandler
+Call the function
+SDAcq_SetEventHandler
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2003 Image acquisition Module /
+Get Raw Image
+Call the function
+SDAcq_GetRawImage
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2004 Image acquisition Module /
+Retransmission
+Call the function
+SDAcq_Retransmission
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2005 Image acquisition Module /
+Acquisition Event Destroy
+Call the function
+SDAcq_EventDestroy
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-2006 Image acquisition Module /
+Detector H/W
+Call the function
+SDAcq_Detector
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3000 Calibration Module /
+Cal CreateExt
+Call the function
+SDCal_CreateExt
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3001 Calibration Module /
+Get Dark Image
+Call the function
+SDCal_GetDarkImage
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3002 Calibration Module / Call the function Pass : Run without error No error P Any errors should have
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 74 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Get bright image SDCal_GetBrightImage
+Fail : Error happen over 1
+time
+been identified by the
+return value.
+SV2-3003 Calibration Module /
+Load bright image
+Call the function
+SDCal_LoadBrightImage
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3004 Calibration Module /
+GenerateBadPixelMapFile
+Call the function
+SDCal_
+GenerateBadPixelMapFile
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3005 Calibration Module /
+Offset correction
+Call the function
+SDCal_OffsetCorrection
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3006 Calibration Module /
+Gain OffsetCorrection
+Call the function
+SDCal_ OffsetCorrection
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3007 Calibration Module /
+BPM OffsetCorrection
+Call the function
+SDCal_ OffsetCorrection
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-3008 Calibration Module /
+SDCal Destroy
+Call the function
+SDCal_Destroy
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4000 Pre-processing /
+Process manager
+Call the function
+ProcessManager
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4001 Pre-processing /
+Raw image
+Call the function
+RawImage
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 75 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SV2-4002 Pre-processing /
+Complete processing image
+Call the function
+Complete_Processing_Image
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4003 Pre-processing /
+BPM correction
+Call the function
+BPM_Correction
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4004 Pre-processing /
+Gain correction
+Call the function
+Gain_Correction
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4005 Pre-processing /
+Offset correction
+Call the function
+Offset_Correction
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-4006 Pre-processing /
+Proc param
+Call the function
+ProcParam
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-5000 Firmware update /
+Update Manager
+Call the function
+SD_UpdateManager
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-5001 Firmware update /
+F/W update loading
+Call the function
+SD_FWupdateLoading
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-5002 Firmware update /
+Update Running
+Call the function
+SDUpdater_UpdateRunning
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-5003
+Firmware update /
+SDUpdater
+GetFirmwareFileInfo
+Call the function
+SDUpdater_GetFirmwareFileInfo
+Pass : Run without error
+Fail : Error happen over 1
+No error P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 76 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+time
+SV2-5004
+Firmware update /
+SDUpdater_Update
+FirmwareAndFirmwareInfo
+Call the function
+SDUpdater_UpdateFirmware
+AndFirmwareInfo
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-5005
+Firmware update /
+SDUpdater_Validate
+UpdateFirmware
+Call the function
+SDUpdater_Validate
+UpdateFirmware
+Pass : Run without error
+Fail : Error happen over 1
+time
+No error P
+Any errors should have
+been identified by the
+return value.
+SV2-6000 xSystem /
+xsystem prepare
+Call the function
+Xsystem_prepare
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6001 xSystem /
+MutexCreate
+Call the function
+MutexCreate
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6002 xSystem /
+Get_sensor_data
+Call the function
+Get_sensor_data
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6003 xSystem /
+Xcom_process
+Call the function
+Xcom_process
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6004 xSystem /
+Pwr_cable_processing
+Call the function
+Pwr_cable_processing
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6005 xSystem /
+FPGA_programming
+Call the function
+FPGA_programming
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6006 xSystem /
+Acc_shock_log
+Call the function
+Acc_shock_log
+Pass : Run without error 1 P Any errors should have
+been identified by the
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 77 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Fail : Error happen over 1
+time
+return value.
+SV2-6007 xSystem /
+Get_acc_data
+Call the function
+Get_acc_data
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-6008 xSystem /
+Save_shock_log_data
+Call the function
+Save_shock_log_data
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7000 FPGA App /
+Config process
+Call the function
+Config_process
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7001 FPGA App /
+cmd exec and ret msg
+Call the function
+cmd_exec_and_ret_msg
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7002 FPGA App /
+Init server sockets
+Call the function
+Init_server_sockets
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7003 FPGA App /
+Xcom process
+Call the function
+xcom_process
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7004 FPGA App /
+Read xray image to mem
+Call the function
+Read_xray_image_to_mem
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7005 FPGA App /
+FPGA_image read module
+Call the function
+FPGA_image_read_module
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-7006 FPGA App / Call the function Pass : Run without error 1 P Any errors should have
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 78 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+Write image to disk Write_image_to_disk
+Fail : Error happen over 1
+time
+been identified by the
+return value.
+SV2-8000 System task /
+State flag setting
+Call the function
+State_flag_setting
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-8001 System task /
+Fpga programming
+Call the function
+FPGA_programming
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-8002 System task /
+Wifi link monitoring
+Call the function
+Wifi_link_ monitoring
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-8003 System task /
+Pwr cable monitoring
+Call the function
+Pwr_cable_ monitoring
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-8004 System task /
+Pwr buttin monitoring
+Call the function
+Pwr_button_monitoring
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9000 interface /
+power manager mcu control
+Call the function
+Pm_mcu_i2c_access
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9001 interface /
+temperature sensor initialize
+Call the function
+Temperature_sensor_initialize
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9002 interface /
+shock sensor initialize
+Call the function
+Adxl345_sensor_initialize
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 79 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SV2-9003 interface /
+gyro sensor initialize
+Call the function
+Gyro_sensor_initialize
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9004 interface /
+temperature sensor control
+Call the function
+Temperature_i2c_access
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9005 interface /
+shock sensor control
+Call the function
+Adxl345_i2c_access
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-9006 interface /
+gyro sensor control
+Call the function
+Gyro_i2c_access
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-
+10000.
+Cyber security /
+Wifi login password
+Call the function
+SDUpdater_ReadFirmwareInfoEx
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-
+10001.
+Cyber security /
+Authentication and encryption
+Call the function
+SDUpdater_ReadFirmwareInfoEx
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-
+20000.
+Error Control /
+Connect Error
+Call the function
+SD_CheckConnection
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+SV2-
+20001.
+Error Control /
+Image processing Error
+Call the function
+SDCal_CreateExt
+SDCal_ProcessExt
+Pass : Run without error
+Fail : Error happen over 1
+time
+1 P
+Any errors should have
+been identified by the
+return value.
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 80 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+9. Traceability Analysis
+SRS Architecture SDS Hazard Module Test Integration (System) Test
+Tag Tag
+SRS-1000
+SRS-1100
+Common functions
+Module
+SDS-0001
+SDS-0002
+SDS-1000
+HA-0001
+HA-0002
+HA-0007
+SV1-1000 SV2-1000
+SRS-1001
+SRS-1101
+SDS-0001
+SDS-0002
+SDS-1001
+SV1-1001 SV2-1001
+SRS-1002
+SRS-1102
+SDS-0015
+SDS-0016
+SDS-0017
+SDS-1002
+SV1-1002 SV2-1002
+SRS-1003
+SRS-1103
+SDS-0001
+SDS-0002
+SDS-1003
+SV1-1003 SV2-1003
+SRS-1004
+SRS-1104
+SDS-0014
+SDS-1004 SV1-1004 SV2-1004
+SRS-1005
+SRS-1105
+SDS-0014
+SDS-1005 SV1-1005 SV2-1005
+SRS-1006
+SRS-1106
+SDS-0014
+SDS-1006 SV1-1006 SV2-1006
+SRS-1007
+SRS-1107
+SDS-0014
+SDS-1007 SV1-1007 SV2-1007
+SRS-1008
+SRS-1108
+SDS-0014
+SDS-1008 SV1-1008 SV2-1008
+SRS-1009
+SRS-1109
+SDS-0013
+SDS-1009 SV1-1009 SV2-1009
+SRS-1010
+SRS-1110 SDS-1010 SV1-1010 SV2-1010
+SRS-2000
+SRS-2100
+Image acquisition Module
+SDS-0015
+SDS-2000
+HA-0001
+SV1-2000 SV2-2000
+SRS-2001
+SRS-2101
+SDS-0016
+SDS-2001 SV1-2001 SV2-2001
+SRS-2002
+SRS-2102
+SDS-0017
+SDS-2002 SV1-2002 SV2-2002
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 81 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS Architecture SDS Hazard Module Test Integration (System) Test
+Tag Tag
+SRS-2003
+SRS-2103
+SDS-0020
+SDS-0025
+SDS-2003
+SV1-2003 SV2-2003
+SRS-2004
+SRS-2104
+SDS-0026
+SDS-2004 SV1-2004 SV2-2004
+SRS-2005
+SRS-2105
+SDS-0029
+SDS-2005 SV1-2005 SV2-2005
+SRS-2006
+SRS-2106
+SDS-0024
+SDS-0025
+SDS-2006
+SV1-2006 SV2-2006
+SRS-3000
+SRS-3100
+Calibration Module
+SDS-0001
+SDS-0002
+SDS-3000
+HA-0003
+SV1-3000 SV2-3000
+SRS-3001
+SRS-3101
+SDS-0010
+SDS-0011
+SDS-0012
+SDS-3001
+SV1-3001 SV2-3001
+SRS-3002
+SRS-3102
+SDS-0010
+SDS-0011
+SDS-0012
+SDS-3002
+SV1-3002 SV2-3002
+SRS-3003
+SRS-3103
+SDS-0028
+SDS-3003 SV1-3003 SV2-3003
+SRS-3004
+SRS-3104
+SDS-0027
+SDS-0028
+SDS-3004
+SV1-3004 SV2-3004
+SRS-3005
+SRS-3105
+SDS-0027
+SDS-0028
+SDS-3005
+SV1-3005 SV2-3005
+SRS-3006
+SRS-3106
+SDS-0027
+SDS-0028
+SDS-3006
+SV1-3006 SV2-3006
+SRS-3007
+SRS-3107
+SDS-0027
+SDS-0028
+SDS-3007
+SV1-3007 SV2-3007
+SRS-3008 SDS-0029 SV1-3008 SV2-3008
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 82 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS Architecture SDS Hazard Module Test Integration (System) Test
+Tag Tag
+SRS-3108 SDS-3008
+SRS-4000
+SRS-4100
+Pre-Processing Module
+SDS-0026
+SDS-4000
+HA-0003
+SV1-4000 SV2-4000
+SRS-4001
+SRS-4101
+SDS-0027
+SDS-4001 SV1-4001 SV2-4001
+SRS-4002
+SRS-4102
+SDS-0028
+SDS-4002 SV1-4002 SV2-4002
+SRS-4003
+SRS-4103
+SDS-0027
+SDS-4003 SV1-4003 SV2-4003
+SRS-4004
+SRS-4104
+SDS-0027
+SDS-4004 SV1-4004 SV2-4004
+SRS-4005
+SRS-4105
+SDS-0027
+SDS-4005 SV1-4005 SV2-4005
+SRS-4006
+SRS-4106
+SDS-0027
+SDS-4006 SV1-4006 SV2-4006
+SRS-5000
+SRS-5100
+Firmware Update Module
+SDS-5000
+HA-0004
+SV1-5000 SV2-5000
+SRS-5001
+SRS-5101
+SDS-5001 SV1-5001 SV2-5001
+SRS-5002
+SRS-5102
+SDS-5002 SV1-5002 SV2-5002
+SRS-5003
+SRS-5103
+SDS-5003 SV1-5003 SV2-5003
+SRS-5004
+SRS-5104
+SDS-5004 SV1-5004 SV2-5004
+SRS-5005
+SRS-5105
+SDS-5005 SV1-5005 SV2-5005
+SRS-6000
+SRS-6100
+xSystem Module
+SDS-0001
+SDS-0002
+SDS-6000
+HA-0005
+HA-0008
+SV1-6000 SV2-6000
+SRS-6001
+SRS-6101
+SDS-6001 SV1-6001 SV2-6001
+SRS-6002
+SRS-6102
+SDS-6002 SV1-6002 SV2-6002
+SRS-6003
+SRS-6103
+SDS-0013
+SDS-6003 SV1-6003 SV2-6003
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 83 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS Architecture SDS Hazard Module Test Integration (System) Test
+Tag Tag
+SRS-6004
+SRS-6104
+SDS-0013
+SDS-6004 SV1-6004 SV2-6004
+SRS-6005
+SRS-6105
+SDS-0013
+SDS-6005 SV1-6005 SV2-6005
+SRS-6006
+SRS-6106
+SDS-0013
+SDS-6006 SV1-6006 SV2-6006
+SRS-6007
+SRS-6107
+SDS-0013
+SDS-6007 SV1-6007 SV2-6007
+SRS-6008
+SRS-6108
+SDS-0017
+SDS-6008 SV1-6008 SV2-6008
+SRS-7000
+SRS-7100
+FPGA App Module
+SDS-0001
+SDS-7000
+HA-0006
+HA-0008
+
+SV1-7000 SV2-7000
+SRS-7001
+SRS-7101
+SDS-0001
+SDS-7001 SV1-7001 SV2-7001
+SRS-7002
+SRS-7102
+SDS-0001
+SDS-7002 SV1-7002 SV2-7002
+SRS-7003
+SRS-7103
+SDS-0013
+SDS-7003 SV1-7003 SV2-7003
+SRS-7004
+SRS-7104
+SDS-0013
+SDS-7004 SV1-7004 SV2-7004
+SRS-7005
+SRS-7105
+SDS-0018
+SDS-7005 SV1-7005 SV2-7005
+SRS-7006
+SRS-7106
+SDS-0017
+SDS-7006 SV1-7006 SV2-7006
+SRS-8000
+SRS-8100
+System task Module
+SDS-0013
+SDS-8000
+HA-0004
+HA-0006
+HA-0007
+SV1-8000 SV2-8000
+SRS-8001
+SRS-8101
+SDS-0013
+SDS-8001 SV1-8001 SV2-8001
+SRS-8002
+SRS-8102
+SDS-0013
+SDS-8002 SV1-8002 SV2-8002
+SRS-8003
+SRS-8103
+SDS-0013
+SDS-8003 SV1-8003 SV2-8003
+SRS-8004
+SRS-8104
+SDS-0013
+SDS-8004 SV1-8004 SV2-8004
+SRS-9000
+SRS-9100 Interface Module SDS-0001
+SDS-9000
+HA-0005
+HA-0008 SV1-9000 SV2-9000
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 84 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+SRS Architecture SDS Hazard Module Test Integration (System) Test
+Tag Tag
+SRS-9001
+SRS-9101
+SDS-0013
+SDS-9001 SV1-9001 SV2-9001
+SRS-9002
+SRS-9102
+SDS-0013
+SDS-9002 SV1-9002 SV2-9002
+SRS-9003
+SRS-9103
+SDS-0013
+SDS-9003 SV1-9003 SV2-9003
+SRS-9004
+SRS-9104
+SDS-0013
+SDS-9004 SV1-9004 SV2-9004
+SRS-9005
+SRS-9105
+SDS-0013
+SDS-9005 SV1-9005 SV2-9005
+SRS-9006
+SRS-9106
+SDS-0013
+SDS-9006 SV1-9006 SV2-9006
+SRS-C-1
+SRS-C-000 Cyber Security
+SDS-0030
+HA-0009 / HA-0010
+SV1-10000 SV2-10000
+SRC-C-2
+SRS-C-001 SDS-0031 SV1-10001 SV2-10001
+SRS-E-1
+SRS-E-000 Error Control
+SDS-0040 SV1-20000 SV2-20000
+SRS-E-2
+SRS-E-001 SDS-0041 SV1-20001 SV2-20001
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 85 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+10. Hazard Analysis
+The following chart shows a list of potential hazards that may occur during use of SDK-MCW.
+And analysis of what the potential cause would be along with the possible frequency and severity for each hazard has been indicated. Severity and Frequency
+were each measured based on the charts shown on the next page.
+10.1. Severity
+The severity of risk consists of 5 levels as below.
+Level Severity Score
+Paralysis State Potential failure mode affects safe system operation 5
+Very Severe System inoperable with equipment damage 4
+Severe System inoperable without damage 3
+Slight System operable with some degradation of performance 2
+Not Entirely Harmful None 1
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 86 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+10.2. Frequency (Likelihood of Occurrence)
+The frequency of risk consists of 5 levels as below.
+Level Frequency (Likelihood of Occurrence) Score
+Frequent
+Daily, 1 / 1 day (usually)
+Likely to occur often in the life of an item, with a likelihood of occurrence greater than
+10^-2 in any one mission
+5
+Probable
+Weekly, 1 / 1 week (often)
+Will occur several times in the life of an item, with a likelihood of occurrence less than
+10^-2 but greater than 10^-3 in any one mission
+4
+Occasional
+Monthly, 1 / 1 month (sometimes)
+Likely to occur sometime in the life of an item, with likelihood of occurrence less than
+10^-3 but greater than 10^-5 in any one mission
+3
+Remote
+Quarterly, 1 / 1 quarter (a few times while its life cycle)
+Unlikely but possible to occur in the life of an item, with a likelihood of occurrence
+less than 10^-5 but greater than 10^-6 in any one mission
+2
+Improbable
+Annually, 1 / 1 (might occur but hardly does)
+So unlikely, it can be assumed occurrence may not be experienced, with a likelihood
+of occurrence less than 10^-6 in any one mission.
+1
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 87 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+10.3. Risk Acceptability
+By evaluation of risk analysis factors mentioned above, the level of risk divided by 3 zones which are colored as light gray, white and dark gray.
+Acceptable – Light Gray Zone (Risk Level 1 ~ 4)
+In this zone, risk is acceptable.
+Unacceptable – Dark Gray Zone (Risk Level 5 ~ 25)
+Elimination or mitigation actions must be taken at first to reduce the risk. After that if is still in intolerable region, then halt the design.
+The Risk Acceptability reflects the evaluation of risk management.
+Section Not Entirely Harmful Slight Severe Very Severe Paralysis State
+Frequent
+Probable
+Occasional
+Remote
+Improbable
+: Acceptable Region
+: Unacceptable Region
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 88 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+10.4. Hazard Analysis
+No. Hazard Hazardous
+situation
+Harm Probability Severity Acceptabil
+ity
+Risk Control Probability Severity Acceptability
+HA-
+0001
+Image
+transmission
+Communication
+error occurred
+during image
+transmission
+Inconvenie
+nce
+3 2 Unaccept
+able
+Support
+retransmission
+function in case of
+error
+2 2 Acceptable
+HA-
+0002
+x-ray
+exposure
+energy
+User is not aware
+of product
+operation status
+Over
+exposure
+2 3 Unaccept
+able
+Create an event to
+inform you of the
+current operation
+status
+1 3 Acceptable
+HA-
+0003
+x-ray
+exposure
+energy
+Image quality
+deterioration due to
+image correction
+errors
+Misinforma
+tion
+2 3 Unaccept
+able
+Calibration module
+design
+1 3 Acceptable
+HA-
+0004
+Firmware Firmware file itself
+error
+Misinforma
+tion
+2 3 Unaccept
+able
+Checksum of
+loaded firmware file
+1 3 Acceptable
+HA-
+005
+Shock Product damage
+due to impact
+can not be
+used
+2 3 Unaccept
+able
+Log data related to
+impact sensor
+1 3 Acceptable
+HA-
+0006
+Parameter Using the product
+without initializing
+the existing ROIC
+value
+Misinforma
+tion
+2 3 Unaccept
+able
+ROIC parameter
+initialization
+function applied
+1 3 Acceptable
+
+Software Validation Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 89 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+HA-
+0007
+WiFi
+communicati
+on
+User cannot check
+network connection
+status
+Inconvenie
+nce
+3 2 Unaccept
+able
+Network status LED
+display function
+applied to the
+outside
+2 2 Acceptable
+HA-
+0008
+Sensor Cannot check
+detector status
+Malfunctio
+n
+3 2 Unaccept
+able
+Temperature,
+shock, gyro sensor
+design
+2 2 Acceptable
+HA-
+0009
+Login Unauthorized
+access by
+unauthorized
+personnel
+Cybersecu
+rity
+3 2 Unaccept
+able
+Restrict random
+access by setting id
+/ pw when
+connecting to Wires
+network
+2 2 Acceptable
+HA-
+0010
+Data
+encryption
+Unauthorized user
+can access the
+unencrypted data
+Cybersecu
+rity
+3 2 Unaccept
+able
+Protect the
+transmission data
+by applying
+encryption such as
+WPA, WPAPSK,
+WPA2, WPA2PSK,
+WPAPSK+TKIP, etc.
+2 2 Acceptable
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 90 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+11. Revision History
+Rev.
+No. Rev. date Revision contents Remark
+0 JUN/23/2020 Establishment
+1 MAY/27/2021 Add HAD1717MCW detector
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 91 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+12. Software Version History
+1) SW version info
+Revision Date Name Description
+1417MCW_1.0 June/23/2020 HAD-W-SW Initial release, Dual polynomial fitting
+calibration Only for proprietary applications.
+1.0.0.1 May/27/2021 HAD-W-SW
+Bright calibration file name changed.
+Version notation number correction.
+1417MCW_1.0 -> 1.0.0.1
+2) Firmware version info ( HAD1417MCW )
+Revision Date Name Description
+1417MCW_1.0 June/23/2020 HAD-W-FW Initial release
+1.0.0.0 May/27/2021 HAD-W-FW Version notation number correction.
+1417MCW_1.0 -> 1.0.0.0
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 92 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+3) Firmware version info ( HAD1717MCW )
+Revision Date Name Description
+1.0.0.0 May/27/2021 HAD-W-FW Initial release
+
+Software Validation
+Report
+File No A-TCF-5-046
+Rev. No 1
+Date May/27/2021
+Page 93 / 93
+A-TCF-5-046 H&Abyz CO.,LTD. A4(297*210mm)
+13. Unsolved Anomalies
+13.1. Scope
+List of errors and bugs which remain in the device and an explanation how they were
+determined to not impact safety or effectiveness, including operator usage and human factors.
+For each anomaly, indicate the problem, the impact on device performance, and if appropriate,
+any plans or timeframes for correcting the problem. This list of bugs should be communicated
+to the user in the device labeling.
+✓ Safety
+Patient, and/or user safety issue. Product cannot be released without compromising one
+of these. Must be fixed.
+✓ Major
+Defect impacting product intended use. No work around available.
+✓ Moderate
+Impact on Product, typically related to user interface or general quality of product. Work
+around is available
+✓ Minor
+No impact on product intended use, not significant or impacting product release, cosmetic.
+13.2. Unresolved Anomalies
+No Problem Description Criticality Reason for Problem Potential Impact
+None

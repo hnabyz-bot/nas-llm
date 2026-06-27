@@ -1,0 +1,109 @@
+queueId: ingest-1781569954419-17ae
+sourcePath: raw/sources/DHF (인허가)/09_HnVUE/92_인증 - FDA/참고샘플 - Aspenview/09.AspenView- Device Block Diagram.pdf
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/74e5d6883162/09.AspenView- Device Block Diagram__74e5d6883162_combined.txt
+canonicalGroupId: 99b306fa8891
+productSignal: HnVUE
+authoritySignal: FDA
+pilotRank: 1620
+
+SOURCE_TEXT
+AspenView Document 1/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+1. Software Concept Block-diagram
+
+AspenView Document 2/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2. Detailed Design
+2.1 Software Design Chart
+
+AspenView Document 3/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2.2 Dependency Description
+1) Worklist Module
+A. Worklist Module
+And then change over from Worklist Mode to Exam Mode for X-ray exposure.
+B. Database Module
+Query / Save / Edit / Delete patient information in Local database.
+C. MWL(Modality Worklist) module
+MWL module searches for patient information from OCS server or PACS Worklist Server.
+2) Exam (Decision Board) Module
+A. Device Control module
+Detector Control module acquire raw image form detector (Library).
+Generator control module adjusts the X-ray dose and shoots (Library).
+B. Pre-Image processing and display module
+Image display module display raw image files on the monitor with correction.
+C. Post-Image process module
+Image processing module enhance image quality to diagnose.
+D. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+E. Database Module
+Save Study/Patient’s information
+3) Viewer (Decision Board) Module
+A. Image display module
+Image display module display DICOM image files on the monitor.
+B. Post process module
+Image processing module enhance image quality to diagnose.
+C. DICOM Module
+DICOM module make DICOM image file form raw image file and save.
+And then it send DICOM images to PACS server or print.
+Also Export DICOM Image to external storage.
+4) Browser (Worklist) Module
+A. Patient management module
+Patient management module can edit or delete data.
+And it search patient easily to diagnose.
+B. Database Module
+Save / Edit study and patient information
+Search Study information
+Delete Study information
+5) Database Module
+Query / Save / Edit / Delete patient information in worklist mode
+Query / Edit /Delete Study information in browser(worklist) mode
+Save / Edit Image information in Exam(Decision Board) mode , Viewer(Decision Board) mode
+AspenView Software
+
+AspenView Document 4/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2.3 Workflow
+
+AspenView Document 5/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2.4 Menu tree
+
+AspenView Document 6/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2.5 Project Files
+SMCW_Backup.csproj,SMCW_BLL.csproj,SMCW_CC.Common.csproj,SMCW_CC.Dicom.cspr
+oj,SMCW_DAL.csproj,SMCW_DBMigrator.csproj,SMCW_Design.csproj,SMCW_Device.csproj,
+SMCW_Dicom.Imaging.Core.csproj,SMCW_DICOMMigrator.csproj,SMCW_DicomViewer.cspro
+j
+SMCW_DicomViewer.Controls.csproj,SMCW_Distribution.csproj,SMCW_GoDRFix.csproj,SMC
+W_IL.csproj,SMCW_ImageProcessing.csproj,SMCW_Imaging.csproj,SMCW_Log.csproj,SMCW
+_Model.csproj,SMCW_MultiframeDicom.csproj,SMCW_Print.csproj,SMCW_Product.csproj,SM
+CW_SmartInfra.csproj,SMCW_UndoRedoFramework.csproj,SMCW_Util.csproj,SMCW_ViewMo
+del.csproj,SMCW_XMLParser.csproj
+
+AspenView Document 7/7
+Doc. Name: AspenView User’s
+Manual/Doc. No.: AspenView-UM
+Initiate date: 2022.05.22 /Revision
+date: 2023.08.21(Rev.2)
+2.6 Database
+Tables.

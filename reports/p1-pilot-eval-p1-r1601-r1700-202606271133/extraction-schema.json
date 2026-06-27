@@ -1,0 +1,205 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "document",
+    "sourceSummary",
+    "entities",
+    "concepts",
+    "evidence",
+    "reviewFlags"
+  ],
+  "properties": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "queueId",
+        "sourcePath",
+        "canonicalGroupId"
+      ],
+      "properties": {
+        "queueId": {
+          "type": "string"
+        },
+        "sourcePath": {
+          "type": "string"
+        },
+        "canonicalGroupId": {
+          "type": "string"
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "documentType",
+        "productModels",
+        "authorityOrJurisdiction",
+        "revisionOrVersion",
+        "documentDate",
+        "standards"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "documentType": {
+          "type": "string"
+        },
+        "productModels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "authorityOrJurisdiction": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "revisionOrVersion": {
+          "type": "string"
+        },
+        "documentDate": {
+          "type": "string"
+        },
+        "standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sourceSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "oneLine",
+        "officialUse",
+        "keyPoints"
+      ],
+      "properties": {
+        "oneLine": {
+          "type": "string"
+        },
+        "officialUse": {
+          "type": "string"
+        },
+        "keyPoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "type",
+          "evidence"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "pageTarget",
+          "evidence"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "pageTarget": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "evidenceText",
+          "pageTarget",
+          "confidence"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "evidenceText": {
+            "type": "string"
+          },
+          "pageTarget": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "reviewFlags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "severity",
+          "reason"
+        ],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "warning",
+              "blocker"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,476 @@
+queueId: ingest-1781569954419-17a7
+sourcePath: raw/sources/DHF (인허가)/06_(Retrofit) HnX-R1/02_설계개발 입력/DI-Attachment 1. 고객 요구사항 .docx
+combinedPath: raw/sources/_preprocessed/DHF (인허가)/_combined/7480a7e3c27d/DI-Attachment 1. 고객 요구사항__7480a7e3c27d_combined.txt
+canonicalGroupId: 9eb09eed72f1
+productSignal: HnX
+authoritySignal: general
+pilotRank: 1619
+
+SOURCE_TEXT
+1. 고객 요구사항
+
+본 문서는 X-ray 영상획득장치 시스템 HnX-R1의 고객 요구사항을 정리한 문서이다.
+
+HnX-R1은 기존 개발 완료된 X-ray 디텍터(G series 8종 및 2/3G series 3종)에 신규 개발되는 Console Software (HnVUE)를 통합 구성한 제품이다.
+
+하기 언급된 부분 외, G series 8종 및 2/3G series 3종의 고객 요구사항은 각 디텍터 DHF를 참조한다
+
+1.1 디자인
+
+1.1.1 G series 및 2/3G series 디텍터
+
+- 각 디텍터 DHF 참조
+
+1.1.2 Console software (HnVUE)
+
+ - 사용자 편의 GUI 구성
+
+1) Login 화면
+
+2) Worklist / Studylist 화면
+
+1.2 성능 요구사항
+
+1.2.1 G series 디텍터
+
+ - 기존 G series Detector 설계개발파일의 고객 요구사항 대비, 아래 사항을 제외한 성능요구사항은 동일함.
+
+ 1) 무게 관리기준 변경: ‘~이하’ 관리 → ‘± 공차 관리’ 로 변경.
+
+ 2) 제품 안전에 영향이 없는 Middle block 재질(Al) 추가
+
+Detector name
+
+G1417CW
+
+G1417CWP
+
+G1417FW
+
+G1417FWP
+
+G1717CW
+
+G1717CWP
+
+G1717FW
+
+G1717FWP
+
+CsI Deposition
+
+Thickness
+
+Standard (300μm)
+
+Premium
+
+(500μm)
+
+Standard (300μm)
+
+Premium
+
+(500μm)
+
+Standard (300μm)
+
+Premium
+
+(500μm)
+
+Standard (300μm)
+
+Premium
+
+(500μm)
+
+Sensor Type
+
+PIN-TFT
+
+(a-Si, IGZO)
+
+Flexible PIN-TFT
+
+(a-Si, IGZO)
+
+PIN-TFT
+
+(a-Si, IGZO)
+
+Flexible PIN-TFT
+
+(a-Si, IGZO)
+
+Scintillator
+
+CsI
+
+Pixel Pitch
+
+140μm
+
+Effective Pixel Number
+
+2500 x 3052 pixels
+
+3040 x 3040 pixels
+
+3072 x 3072 pixels
+
+Effective Pixel Area
+
+350 x 427.3mm
+
+425.6 x 425.6mm
+
+430.1 x 430.1mm
+
+Sensitivity
+
+Center 기준 110 LSB/uGy 이상
+
+Center 기준 150 LSB/uGy 이상
+
+Center 기준 110 LSB/uGy 이상
+
+Center 기준 150 LSB/uGy 이상
+
+Center 기준 110 LSB/uGy 이상
+
+Center 기준 150 LSB/uGy 이상
+
+Center 기준 110 LSB/uGy 이상
+
+Center 기준 150 LSB/uGy 이상
+
+MTF
+
+(lp/mm)
+
+0.5
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+83% 이상
+
+1.0
+
+67% 이상
+
+62% 이상
+
+67% 이상
+
+62% 이상
+
+67% 이상
+
+62% 이상
+
+67% 이상
+
+62% 이상
+
+2.0
+
+39% 이상
+
+30% 이상
+
+39% 이상
+
+30% 이상
+
+39% 이상
+
+30% 이상
+
+39% 이상
+
+30% 이상
+
+3.0
+
+19% 이상
+
+11% 이상
+
+19% 이상
+
+11% 이상
+
+19% 이상
+
+11% 이상
+
+19% 이상
+
+11% 이상
+
+DQE
+
+(lp/mm)
+
+0.1
+
+60% 이상
+
+70% 이상
+
+60% 이상
+
+70% 이상
+
+60% 이상
+
+70% 이상
+
+60% 이상
+
+70% 이상
+
+0.5
+
+54% 이상
+
+62% 이상
+
+54% 이상
+
+62% 이상
+
+54% 이상
+
+62% 이상
+
+54% 이상
+
+62% 이상
+
+1.0
+
+47% 이상
+
+53% 이상
+
+47% 이상
+
+53% 이상
+
+47% 이상
+
+53% 이상
+
+47% 이상
+
+53% 이상
+
+2.0
+
+36% 이상
+
+38% 이상
+
+36% 이상
+
+38% 이상
+
+36% 이상
+
+38% 이상
+
+36% 이상
+
+38% 이상
+
+3.0
+
+24% 이상
+
+19% 이상
+
+24% 이상
+
+19% 이상
+
+24% 이상
+
+19% 이상
+
+24% 이상
+
+19% 이상
+
+Energy Range
+
+40 ~ 150kvp
+
+A/D Conversion
+
+14, 16 bits
+
+Wireless Standard
+
+IEEE 802.11a/b/g/n/ac
+
+IP Range
+
+IP68
+
+Communication
+
+1Giga-bit Ethernet
+
+Trigger Mode
+
+Line(Manual) Trigger
+
+Auto Trigger (Auto Exposure Detection)
+
+1.2.2 2/3G series 디텍터
+
+ - 기존 2/3G series Detector 설계개발파일의 고객 요구사항 대비, 아래 사항을 제외한 성능요구사항은 동일함.
+
+ 1) 무게 관리기준 변경: ‘~이하’ 관리 → ‘± 공차 관리’ 로 변경.
+
+ 2) 하기 일부 성능 기준값 변경.
+
+Detector name
+
+A1717MCW
+
+A1417MCW
+
+F1417MCW
+
+Sensor Type
+
+PIN-TFT / Flexible PIN-TFT
+
+(a-Si, IGZO)
+
+Scintillator
+
+CsI
+
+Pixel Pitch
+
+140μm
+
+Total Pixel Number
+
+3072 x 3072 pixels
+
+2560 x 3072 pixels
+
+Total Pixel Area
+
+430 x 430mm
+
+358.4 x 430mm
+
+Effective Pixel Number
+
+3036 x 3040 pixels
+
+2466 x 3040 pixels
+
+Effective Pixel Area
+
+425.04 x 425.6mm
+
+345.24 x 425.6mm
+
+MTF
+
+0.5lp/mm(83%이상),
+
+1.0lp/mm(63%이상),
+
+2.0lp/mm(29%이상),
+
+3.0lp/mm(12%이상)
+
+DQE
+
+0.1lp/mm(60%이상),
+
+0.5lp/mm(53%이상),
+
+1.0lp/mm(47%이상),
+
+2.0lp/mm(37%이상),
+
+3.0lp/mm(21%이상)
+
+Sensitivity
+
+Center 기준 160 LSB/uGy 이상
+
+Energy Range
+
+40 ~ 150 kvp
+
+A/D Conversion
+
+16 bits
+
+Wireless Standard
+
+IEEE 802.11a/b/g/n/ac
+
+IP Range
+
+IP56
+
+Communication
+
+1Giga-bit Ethernet
+
+Trigger Mode
+
+Line(Manual) Trigger
+
+Auto Trigger (Auto Exposure Detection)
+
+1.2.3 Console software (HnVUE)
+
+ (1) 소프트웨어 주요 성능
+
+a. 의료용 영상의 획득, 저장, 전송 등의 기능
+
+b. 촬영된 환자의 신상정보, 촬영 오더 정보, 촬영 영상 등의 저장, 조회 기능
+
+c. 영상의 확대, 축소, 회전, 이동, 밝기 조절 등의 영상 조작 기능
+
+d. 영상의 레이아웃 표시 선택, Thumbnail 영상표시, 부분 확대 등의 기능
+
+e. DICOM 3.0 규격지원 영상 포맷 및 전송, 저장기능
+
+ (2) 보안 기능
+
+a. 사용 권한을 부여받은 사용자 ID로 로그인을 해야 영상 소프트웨어의 동작을 할 수 있으며, 권한 승인 사용자 외의 사용자에 의한 데이터 액세스가 거부되도록 정보와 데이터가 보호된다.
+
+b. 실수 및 고의로 인한 영상 삭제가 이루어지지 않도록 권한 승인과정을 거쳐 삭제가 실행되게 되어 있다.
+
+c. PACS 서버가 다운되어 영상전송이 불가능할 때 처리방법 및 해결방법이 제공된다
+
+d. 하드웨어 혹은 소프트웨어 오류 발생 시, 화면에 안내 메시지가 제공된다.
+
+e. 촬영된 영상의 환자 정보를 확인할 수 있다.
+
+f. PACS와의 통신 연결을 통하여 기기를 사용 할 수 있다.
