@@ -1,0 +1,223 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954387-gsf",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/ROIC_1717/Schematic/Bule_ROIC_1717.pdf",
+    "canonicalGroupId": "0f5f421621de"
+  },
+  "document": {
+    "title": "ROIC_BOARD(RIGHT)",
+    "documentType": "Electrical schematic",
+    "productModels": [],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "A",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Electrical schematic package for ROIC_BOARD(RIGHT), including cover, block diagram, power tree, input, buffer, power, back-bias, ROIC pad, and thru-hole sheets.",
+    "officialUse": "Design-history/electrical design evidence for ROIC board circuitry and interfaces; no regulatory authority or standard is identified in the text.",
+    "keyPoints": [
+      "The schematic set contains 22 sheets.",
+      "The block diagram shows LVDS buffer, signal input/output, power input, LDO(N), LDO(P), and ROIC PAD(11EA).",
+      "The power tree lists P3.0VA, P2.5VD, P5.5VA, N5.5VA, RO_REF, and multiple AVDD/DVDD/IOVDD rails.",
+      "Signal input specifies Diff_clock 2Line(200MHz).",
+      "ROIC pad sheets identify ROIC_01 through ROIC_12 and use 05002HR-50J05_50P connectors."
+    ]
+  },
+  "entities": [
+    {
+      "name": "ROIC_BOARD(RIGHT)",
+      "type": "schematic title",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A ROIC_BOARD(RIGHT) A4 1 22 Monday, October 14, 2024"
+    },
+    {
+      "name": "BLOCK_DIAGRAM",
+      "type": "schematic sheet",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A BLOCK_DIAGRAM A4 2 22 Monday, October 14, 2024"
+    },
+    {
+      "name": "POWER_TREE",
+      "type": "schematic sheet",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A POWER_TREE A4 3 22 Monday, October 14, 2024"
+    },
+    {
+      "name": "ROIC_POWER",
+      "type": "schematic sheet",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A ROIC_POWER A4 8 22 Tuesday, September 02, 2025"
+    },
+    {
+      "name": "BACK_BIAS",
+      "type": "schematic sheet",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A BACK_BIAS A4 9 22 Wednesday, July 23, 2025"
+    },
+    {
+      "name": "CDCLVD1212RHAR",
+      "type": "component",
+      "evidence": "U2 CDCLVD1212RHAR"
+    },
+    {
+      "name": "ADM7172ACPZ-2.5-R7",
+      "type": "component",
+      "evidence": "U11 ADM7172ACPZ-2.5-R7"
+    },
+    {
+      "name": "ADM7172ACPZ-5.0-R7",
+      "type": "component",
+      "evidence": "U13 ADM7172ACPZ-5.0-R7"
+    },
+    {
+      "name": "ADR444ARMZ",
+      "type": "component",
+      "evidence": "U16 ADR444ARMZ"
+    },
+    {
+      "name": "05002HR-50J05_50P",
+      "type": "connector",
+      "evidence": "CON1 05002HR-50J05_50P"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "ROIC board schematic",
+      "pageTarget": "ROIC Board Schematic",
+      "evidence": "ROIC_BOARD(RIGHT)"
+    },
+    {
+      "name": "Block diagram",
+      "pageTarget": "Block Diagram",
+      "evidence": "BLOCK DIAGRAM Power Input LDO(N) LDO(P) Signal Input Signal Output Signal & Clock"
+    },
+    {
+      "name": "Power tree",
+      "pageTarget": "Power Tree",
+      "evidence": "P3.0VA (3V/8A) AVDDI_1T4 (2.5V/2A) AVDDI_5T8 (2.5V/2A) AVDDI_9T12 (2.5V/2A)"
+    },
+    {
+      "name": "Differential clock input",
+      "pageTarget": "Differential Clock Input",
+      "evidence": "Diff_clock 2Line(200MHz)"
+    },
+    {
+      "name": "Clock buffer",
+      "pageTarget": "Clock Buffer",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A CLOCK_BUFFER A4 6 22 Monday, October 14, 2024"
+    },
+    {
+      "name": "Signal buffer",
+      "pageTarget": "Signal Buffer",
+      "evidence": "Title Size Document Number Rev Date: Sheet of <Doc> A SIGNAL_BUFFER A4 7 22 Monday, October 14, 2024"
+    },
+    {
+      "name": "Back bias",
+      "pageTarget": "Back Bias",
+      "evidence": "-Vout = 1.22V(1+R1/R2)"
+    },
+    {
+      "name": "ROIC pad connector",
+      "pageTarget": "ROIC Pad Connector",
+      "evidence": "CON1 05002HR-50J05_50P PASS_THRU1 50 PASS_THRU2 49 PASS_THRU3 48 AVDDI 47"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The schematic package title is ROIC_BOARD(RIGHT).",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> A ROIC_BOARD(RIGHT) A4 1 22 Monday, October 14, 2024",
+      "pageTarget": "ROIC Board Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schematic set contains 22 sheets.",
+      "evidenceText": "ROIC_BOARD(RIGHT) A4 1 22 Monday, October 14, 2024",
+      "pageTarget": "ROIC Board Schematic",
+      "confidence": "high"
+    },
+    {
+      "claim": "The revision shown in sheet headers is A.",
+      "evidenceText": "Title Size Document Number Rev Date: Sheet of <Doc> A ROIC_BOARD(RIGHT)",
+      "pageTarget": "ROIC Board Schematic",
+      "confidence": "medium"
+    },
+    {
+      "claim": "The block diagram includes LVDS Buffer, Signal Output, Power Input, ROIC PAD(11EA), LDO(N), LDO(P), Signal Input, and Signal & Clock.",
+      "evidenceText": "LVDS Buffer Signal Output Power Input ROIC PAD(11EA) BLOCK DIAGRAM Power Input LDO(N) LDO(P) Signal Input Signal Output Signal & Clock",
+      "pageTarget": "Block Diagram",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power tree lists P3.0VA as 3V/8A.",
+      "evidenceText": "P3.0VA (3V/8A)",
+      "pageTarget": "Power Tree",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power tree lists RO_REF as 4.096V/10mA.",
+      "evidenceText": "RO_REF (4.096V/10mA)",
+      "pageTarget": "Power Tree",
+      "confidence": "high"
+    },
+    {
+      "claim": "The power tree lists N5.5VA as -5.5V/0.6A and NBIAS_B as -5V/0.8A.",
+      "evidenceText": "N5.5VA (-5.5V/0.6A) NBIAS_B (-5V/0.8A)",
+      "pageTarget": "Power Tree",
+      "confidence": "high"
+    },
+    {
+      "claim": "Signal input specifies a differential clock with 2 lines at 200 MHz.",
+      "evidenceText": "Diff_clock 2Line(200MHz)",
+      "pageTarget": "Differential Clock Input",
+      "confidence": "high"
+    },
+    {
+      "claim": "The clock buffer sheet uses component CDCLVD1212RHAR in a VQFN-40 package.",
+      "evidenceText": "Diff_clock 2Line(200MHz) VQFN-40 ... U2 CDCLVD1212RHAR",
+      "pageTarget": "Clock Buffer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The signal buffer sheet includes SN74LVC2G17DCKR, 74LCX245MTC, and 74LVC3G17DCUR components.",
+      "evidenceText": "U5 SN74LVC2G17DCKR ... U4 74LCX245MTC ... U3 74LVC3G17DCUR",
+      "pageTarget": "Signal Buffer",
+      "confidence": "high"
+    },
+    {
+      "claim": "The ROIC_POWER sheet includes ADM7172ACPZ-2.5-R7, ADM7172ACPZ-5.0-R7, and ADR444ARMZ components.",
+      "evidenceText": "U11 ADM7172ACPZ-2.5-R7 ... U13 ADM7172ACPZ-5.0-R7 ... U16 ADR444ARMZ",
+      "pageTarget": "ROIC Power",
+      "confidence": "high"
+    },
+    {
+      "claim": "ROIC pad sheets identify ROIC_01 through ROIC_12.",
+      "evidenceText": "ROIC_12 ... ROIC_11 ... ROIC_10 ... ROIC_09 ... ROIC_08 ... ROIC_07 ... ROIC_06 ... ROIC_05 ... ROIC_04 ... ROIC_03 ... ROIC_02 ... ROIC_01",
+      "pageTarget": "ROIC Pad Connector",
+      "confidence": "high"
+    },
+    {
+      "claim": "ROIC pad connectors use 05002HR-50J05_50P.",
+      "evidenceText": "CON12 05002HR-50J05_50P ... CON11 05002HR-50J05_50P ... CON1 05002HR-50J05_50P",
+      "pageTarget": "ROIC Pad Connector",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "warning",
+      "reason": "No product model is explicitly identified in the source text; productSignal is Unclassified."
+    },
+    {
+      "severity": "warning",
+      "reason": "Document-level date is ambiguous because sheet headers show Monday, October 14, 2024, Wednesday, July 23, 2025, and Tuesday, September 02, 2025."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Source text appears to be OCR or schematic text extraction with repeated headers and fragmented component listings."
+    }
+  ]
+}
