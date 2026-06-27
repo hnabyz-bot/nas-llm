@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Non-mutating app/API smoke QA for the P0-published vault.
+// Non-mutating app/API smoke QA for a priority-published vault.
 //
 // Requires a running llm-wiki app with local API enabled. This script only calls
 // read endpoints: health, projects, files, content, search, and graph.
@@ -11,6 +11,7 @@ const DEFAULT_BASE_URL = "http://127.0.0.1:19828";
 const DEFAULT_PROJECT_ID = "2da34b71-49aa-4919-a66a-90f1683772f9";
 const DEFAULT_VAULT = "D:\\vault\\llm-wiki-vault";
 const DEFAULT_APPLY_DIR = "reports\\p0-vault-materialize-apply-202606241458";
+const DEFAULT_PRIORITY = "p0";
 const REPORTS_ROOT = "reports";
 
 function parseArgs(argv) {
@@ -19,6 +20,7 @@ function parseArgs(argv) {
     projectId: DEFAULT_PROJECT_ID,
     vaultRoot: DEFAULT_VAULT,
     applyDir: DEFAULT_APPLY_DIR,
+    priority: DEFAULT_PRIORITY,
     outDir: "",
     token: process.env.API_TOKEN || process.env.LLM_WIKI_API_TOKEN || "",
   };
@@ -28,6 +30,7 @@ function parseArgs(argv) {
     else if (arg === "--project-id") args.projectId = argv[++i];
     else if (arg === "--vaultRoot") args.vaultRoot = argv[++i];
     else if (arg === "--apply-dir") args.applyDir = argv[++i];
+    else if (arg === "--priority") args.priority = normalizePriority(argv[++i]);
     else if (arg === "--out-dir") args.outDir = argv[++i];
     else if (arg === "--token") args.token = argv[++i];
     else if (arg === "--help" || arg === "-h") {
@@ -37,7 +40,7 @@ function parseArgs(argv) {
       throw new Error(`Unknown argument: ${arg}`);
     }
   }
-  if (!args.outDir) args.outDir = path.join(REPORTS_ROOT, `p0-app-smoke-${timestamp()}`);
+  if (!args.outDir) args.outDir = path.join(REPORTS_ROOT, `${args.priority}-app-smoke-${timestamp()}`);
   return args;
 }
 
@@ -50,10 +53,25 @@ Options:
   --base-url <url>       LLM Wiki API base URL. Default: ${DEFAULT_BASE_URL}
   --project-id <id>      Project id. Default: ${DEFAULT_PROJECT_ID}
   --vaultRoot <path>     Vault root. Default: ${DEFAULT_VAULT}
-  --apply-dir <path>     P0 apply report directory. Default: ${DEFAULT_APPLY_DIR}
-  --out-dir <path>       Report output directory. Default: reports/p0-app-smoke-<timestamp>
+  --apply-dir <path>     Apply report directory. Default: ${DEFAULT_APPLY_DIR}
+  --priority <p0|p1>     Priority prefix. Default: ${DEFAULT_PRIORITY}
+  --out-dir <path>       Report output directory. Default: reports/<priority>-app-smoke-<timestamp>
   --token <token>        Optional API token.
 `);
+}
+
+function normalizePriority(value) {
+  const normalized = String(value || DEFAULT_PRIORITY).trim().toLowerCase();
+  if (!/^p\d+$/.test(normalized)) throw new Error(`Invalid --priority: ${value}`);
+  return normalized;
+}
+
+function priorityLabel(priority) {
+  return priority.toUpperCase();
+}
+
+function publishMarker(priority) {
+  return `${priorityLabel(priority)}-STAGING-PUBLISH:${priority}:BEGIN`;
 }
 
 function timestamp() {
@@ -119,6 +137,7 @@ async function main() {
   const errors = [];
   const warnings = [];
   const sourcePage = pickSourcePage(args.applyDir);
+  const marker = publishMarker(args.priority);
 
   const health = await request(args, "GET", "/api/v1/health");
   assert(health.status === 200 && health.body.ok === true, `health failed: ${health.status}`, errors);
@@ -143,7 +162,7 @@ async function main() {
   const content = await request(args, "GET", `/api/v1/projects/${encodeURIComponent(args.projectId)}/files/content?path=${contentPath}`);
   assert(content.status === 200 && content.body.ok === true, `content failed: ${content.status}`, errors);
   const contentText = String(content.body.content || "");
-  assert(contentText.includes("P0-STAGING-PUBLISH:p0:BEGIN"), "source page content missing P0 marker", errors);
+  assert(contentText.includes(marker), `source page content missing ${priorityLabel(args.priority)} marker`, errors);
   assert(contentText.includes("queueId:"), "source page content missing queueId", errors);
   assert(contentText.includes("sources:"), "source page content missing frontmatter sources", errors);
 
@@ -165,6 +184,7 @@ async function main() {
 
   const result = {
     generatedAt: new Date().toISOString(),
+    priority: args.priority,
     pass: errors.length === 0,
     errors,
     warnings,
@@ -194,8 +214,8 @@ async function main() {
     },
   };
 
-  writeJson(path.join(args.outDir, "p0-app-smoke-summary.json"), result);
-  fs.writeFileSync(path.join(args.outDir, "p0-app-smoke-report.md"), renderMarkdown(result), "utf8");
+  writeJson(path.join(args.outDir, `${args.priority}-app-smoke-summary.json`), result);
+  fs.writeFileSync(path.join(args.outDir, `${args.priority}-app-smoke-report.md`), renderMarkdown(result), "utf8");
 
   console.log(`SMOKE ${result.pass ? "PASS" : "FAIL"}`);
   console.log(`report=${args.outDir}`);
@@ -205,8 +225,9 @@ async function main() {
 }
 
 function renderMarkdown(result) {
+  const label = priorityLabel(result.priority || DEFAULT_PRIORITY);
   return [
-    "# P0 App API Smoke Report",
+    `# ${label} App API Smoke Report`,
     "",
     `Generated: ${result.generatedAt}`,
     `Result: ${result.pass ? "PASS" : "FAIL"}`,

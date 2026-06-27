@@ -692,3 +692,42 @@ Vault commit discipline:
 - only `wiki/` was staged and committed in the vault repo
 - `.llm-wiki/`, `logs/`, `raw/`, and vault `scripts/` remain unstaged
 - a backup of the queue before stale reset was left under `.llm-wiki/`
+
+## P1 App API Smoke QA
+
+P1 app API smoke has passed after a graph endpoint performance fix in the app
+source tree.
+
+- report: `reports/p1-app-smoke-202606280000`
+- script: `scripts/smoke-p0-app-api.js --priority p1`
+- result: PASS
+- errors: 0
+- warnings: 0
+- app version: 0.4.16
+- project returned by API: `llm-wiki-vault`
+  (`2da34b71-49aa-4919-a66a-90f1683772f9`)
+- source page content read: PASS
+- source page includes P1 marker, `queueId`, and frontmatter `sources`: PASS
+- search query: `HnX cybersecurity labeling`
+- search mode: keyword
+- search results: 10
+- graph endpoint returned: 200 nodes / 0 edges
+
+Smoke procedure:
+
+- app-state was backed up, API `allowUnauthenticated` was enabled temporarily,
+  and app-state was restored after smoke
+- only read endpoints were called by the smoke script: health, projects, files,
+  content, search, graph
+- app was stopped after smoke QA
+- P1-scale graph smoke first timed out because the app built the full graph
+  before applying `limit`; `C:\dev\llm_wiki\src-tauri\src\api_server.rs` now
+  limits graph node collection before edge expansion
+- while the app was running, it auto-generated a small live-queue `wiki/`
+  update, but the generated Korean text was mojibake; those app-generated
+  `wiki/` changes were reverted and not committed
+
+P1 is complete by the revised definition: extraction PASS, deterministic vault
+materialize PASS, vault `wiki/` commit pushed, static vault QA PASS, and app API
+smoke PASS. Next priority work should begin at P2 triage/extraction, but do not
+let the app process the full live queue until the mojibake path is fixed.

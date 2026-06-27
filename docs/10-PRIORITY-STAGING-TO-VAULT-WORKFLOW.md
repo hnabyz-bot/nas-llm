@@ -519,3 +519,25 @@ Note: one stale live queue `processing` item was reset to `pending` before the
 final QA run. The backup is stored under vault `.llm-wiki/`; it was not staged
 or committed. Vault `wiki/` was the only committed path for the P1 knowledge
 publish.
+
+Latest P1 app API smoke QA:
+
+- report: `reports/p1-app-smoke-202606280000`
+- smoke script: `scripts/smoke-p0-app-api.js --priority p1`
+- result: PASS
+- errors: 0
+- warnings: 0
+- API project: `llm-wiki-vault`
+- source page content read through app API: PASS
+- search query `HnX cybersecurity labeling`: 10 keyword results
+- graph endpoint returned 200 nodes
+- app was stopped and app-state restored after the smoke check
+
+Operational note: P1-scale `graph` smoke first exposed an app-side performance
+bug where `graph?limit=...` scanned and linked the full vault before applying
+the limit. The app source fix is in `C:\dev\llm_wiki` and constrains graph
+construction to the requested node window before edge expansion. During the
+smoke run, the app also auto-generated a small `wiki/` update from the live
+queue, but that output contained mojibake and was reverted instead of being
+committed. The accepted P1 vault state remains the deterministic materialized
+commit `cc36f47fa`.
