@@ -581,3 +581,15 @@ Latest P1 extraction bundle queued next:
   missing evidence 0, page marker leakage 0
 - chunked pass rows: none
 - ops commit: `da007cc feat: complete P1 ranks 1701-1800 extraction outputs`
+
+Latest P1 extraction bundle queued next:
+
+- bundle: `reports/p1-pilot-eval-p1-r1801-r1900-202606271554`
+- script: `scripts/prepare-priority-pilot-eval.js`
+- representative rank range: 1801-1900
+- selected representatives: 100
+- total available P1 representatives: 2,275
+- total normalized chars: 3,421,468
+- estimated tokens chars/4: 855,367
+- output status: not started at this checkpoint
+- extraction run: not started

@@ -1,0 +1,756 @@
+queueId: ingest-1781569954375-4si
+sourcePath: raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/03_설계개발 출력/10_User manual/User_Console Manual/Installation_Console Manual (Rev.0.1)_KOR.docx
+combinedPath: raw/sources/_preprocessed/RA/_combined/9c5d03df56ce/Installation_Console Manual (Rev.0.1)_KOR__9c5d03df56ce_combined.txt
+canonicalGroupId: 9ae11c7acc01
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1808
+
+SOURCE_TEXT
+DR Console Software
+
+User Manual
+
+(for HUMAN)
+
+feel-DRCS ver.2
+
+설치 매뉴얼
+
+DR Console Software
+
+Installation Service Manual
+
+(for PIXX1717)
+
+feel-DRCS ver.2
+
+DR Console Software
+
+feel-DRCS
+
+User Manual Version : 0.1
+
+Date : 2020.03.12
+
+목차
+
+Install Manual
+
+(for Human)
+
+DR Console Software
+
+feel-DRCS
+
+1. 소개 5
+
+2. 목적 6
+
+2.1. 사용용도 7
+
+2.2. 심볼 라벨 7
+
+3. 요구 사항 8
+
+3.1. Workstation 8
+
+3.2. Monitor 8
+
+3.3. 연결가능한 디텍터 9
+
+4. 소프트웨어 설치 및 제거 10
+
+4.1. 설치준비 10
+
+4.2 . Net Framework 설치 11
+
+4.3 . 설치시작화면 12
+
+4.4 . 설치 경로 선택 13
+
+4.5 . 데이터 저장 경로 선택 15
+
+4.6 . 디텍터 종류 선택 17
+
+4.7 . 제너레이터 설정 18
+
+4.8 . 설치 시작 19
+
+4.9 . 각종 드라이버 설치 20
+
+4.10. 설치 완료 21
+
+4.11. 디텍터&제너레이터 설정 22
+
+4.11.1. Detector 22
+
+4.11.2. Generator & ETC 23
+
+4.11.3. System 27
+
+4.12 . 소프트웨어 제거 29
+
+4.12.1. 데이터 백업 29
+
+4.12.2. 소프트웨어 제거 29
+
+4.13. 필수 시스템(OS) 설치 항목 30
+
+4.13.1. NIC 설정 30
+
+4.13.2. Window Patch for DVD 35
+
+4.13.3. 가상 메모리 설정 36
+
+4.13.4. DEP 설정 42
+
+4.13.5. Sleep Mode 해제 49
+
+5. Trouble shooting 52
+
+5.1. 설치 에러 52
+
+5.1.1. 설치 폴더가 존재할 경우 52
+
+5.1.2. Keylock 오류 52
+
+5.2. 실행 Error 53
+
+5.2.1. Dll 에러 53
+
+5.2.2. feel-DRCS 실행 안 됨 53
+
+5.2.3. 다른 장치와의 연결 에러 54
+
+6. Appendix 55
+
+6.1. DICOM MWL interface by Text file 55
+
+6.1.1. Principles of interfacing 55
+
+6.1.2. Define order argument 56
+
+6.1.3. Method of Interfacing 57
+
+6.1.4. Sample 57
+
+7. 개정 이력 58
+
+소개
+
+feel-DRCS는 H&abyz 사의 Digital Radiography Control Software의 제품명입니다.
+
+feel-DRCS는 flat-panel 또는 CCD 등의 DR detector로부터 영상 획득 및 임상적용을 위한 빠른 속도의 영상처리, 그리고 PACS 연동을 위한 DICOM 서비스를 제공하는 DR 콘솔 또는 DR 컨트롤 소프트웨어입니다.
+
+이 매뉴얼은 feel-DRCS 소프트웨어를 설치 및 동작 하기 위한 내용을 정리되어 있습니다.
+
+주식회사 에이치앤아비즈(H&abyz)
+
+경기도 용인시 처인구 남사면 처인성로 41-16 2동 1층 일부
+
+(우) 17118
+
+목적
+
+feel-DRCS는 FS-MLW(Faster Specialized Multi Layered Wavelet) 기술을 기반하여, 각종 detector나 X-Ray Generator와 integrated 된 Operation Console System 소프트웨어입니다.
+
+feel-DRCS는 절대적인 사용자 입장에서 개발된 제품으로, 다년간 임상사이트인 병원에서 디자인 되었으며, 서비스를 위한 DR 제조사들의 서비스 엔지니어들에 의해 완성된 제품입니다. 그러므로 쉽고, 간결하면서도 다양한 기능들이 포함된 최상의 User interface로 개발된 DR 콘솔 소프트웨어입니다.
+
+feel-DRCS는 feel-TK를 기반으로 내장되어 있기 때문에 보다 빠른 속도로 노이즈와 각종 artifact 제거되고, 보다 선명한 생체조직을 볼 수 있습니다. 그리고 독자적인 calibration 기능이 내장되어, 모두 종류의 detector에 대한 기본 calibration data(offset image and gain image)을 설정할 수 있습니다. 그리고 defect view를 제공하여 진행성 defect들을 처리할 수 있습니다.
+
+feel-DRCS는 전세계적으로 판매되고 있는 각종 디텍터들에 대해서 이미 소프트웨어 검증 및 판매가 되어서 임상필드에서 사용되고 있습니다. DR제조사가 사용하고자 하는 디텍터를 손쉽게 설정에서 타입만 변경하면 바로 콘솔시스템의 소프트웨어로 사용이 가능합니다. 그리고 통합 DR 시스템인 X-ray의 generator operation panel을 소프트웨어 내부에 integration 되어 있어, APR, AEC, Ready/Exposure등을 제어가 손쉽게 가능합니다.
+
+feel-DRCS는 각종 X-ray generator와 연동이 되어, APR 기능 등을 지원하여, 하나의 콘솔 소프트웨어에서 기존의 Operation Panel의 역할을 같이 수행할 수 있게 하여 분리된 DR제품이 아닌 하나의 통합된 DR제품을 지원합니다.
+
+feel-DRCS는 단순히 소프트웨어를 공급하는 것이 아니라, 다년간 경험했던 노하우를 DR 제조사에게 전달해 드리며, 동시에 컨설팅까지 같이 지원해 줌으로써 조력자의 역할을 다 할 것입니다.
+
+2.1. 사용용도
+
+Feel-DRCS는 방사선사 및 의사들이 일반 x-ray 영상을 획득하기 위한 용도로 사용된다. 그래서 병원에서 근무하는 의사 및 방사선사 외에는 사용할 수 없다. 또한 이 소프트웨어는 서비스 엔지니어에 의해서만 설치되고 방사선기사 및 의사에 의해서만 사용되어진다.
+
+올바른 사용 및 안전을 위해 사용 설명서의 내용을 완전히 숙지한 후에 적법한 자격을 갖춘 사람 (의사, 의료 방사선 전문 기술자, 의료용 X-ray 기술자)만 이 제품을 사용할 수 있도록 하십시오.
+
+이 의료 기기는 단독으로 사용할 수 없습니다. 따라서 이 제품은 X-ray 디텍터와 연결해야 합니다. 이 소프트웨어는 X-ray 발생장치 시스템의 노출 조건에서 작동합니다..
+
+이 제품은 의료 기기로 해당 병원의 X-ray 방사선 촬영을 위한 디지털 X-ray 촬영 콘솔 소프트웨어로만 사용해야합니다.
+
+2.2. 심볼 라벨
+
+Symbols
+
+Descriptions
+
+사용 지침을 참고하십시오.
+
+함께 제공되는 지침을 따르지 않으면 사망 또는 심각한 부상을 초래할 수 있는 내용을 나타냅니다.
+
+함께 제공되는 지침을 따르지 않으면 부상을 입거나 제품이 손상될 수 있는 내용을 나타냅니다.
+
+주의 깊게 읽기
+
+- 필수 정보를 강조하는 데 사용됩니다.
+
+제조 업체
+
+제조 일자
+
+요구 사항
+
+Workstation
+
+Processor: Intel Core i3 이상(i5 이상 추천)
+
+RAM : 4GB RAM 이상(8GB 이상 추천)
+
+HDD: At least 40GB hard disk(가능하다면 7,200 RPM이상 속도의 제품). 데이터백업 및 안정성을 위하여 1개의 HDD를 논리적으로 파티션을 나눈 것이 아니라, 2개의 물리적으로 분리된 HDD를 장착하여 1st HDD: System and Software, 2 HDD: Image Data Storage용 사용할 것을 추천.
+
+Network Card : 10/100/1000Mbps Ethernet Network Card
+
+Video graphic adapter: 해상도는 최소한 1280 X 900 pixels이며 칼라 해상도는 True Color mode(no shard memory), DVI interface connector
+
+OS : Windows 7/8.1/10
+
+Monitor
+
+1600 X 1200 or 1920 X 1280 추천(최저 해상도 1280 X 900 이상)
+
+4 : 3 , 16 : 9, 16 : 10 비율 모두 지원
+
+High fidelity of grayscale and optimized luminance distribution
+
+만약 고휘도, 고해상도의 모니터를 사용하고자 한다면, Medical LCD Monitor(B/W or Color)를 선택하기로 추천함. 그리고 B/W 모니터를 선택하여도 현재 소프트웨어가 gray color 베이스에서 만들어져 있으므로 사용하는데 전혀 문제가 되지 않음.
+
+영상 QC를 위해서는 Medical Monitor에서 하기를 추천한다. 그 이유는 DR이기 때문에 촬영 후 Medical monitor에서 판독을 하는 이유로 같은 밝기에서의 영상 조절이 이루어져야 하기 때문이다. 그리고 대부분의 medical monitor들은 각 국가별 의학기준에 근거하여 제작되어 있으므로 사용에 대한 제약이 거의 없다.
+
+3.3. 연결가능한 디텍터
+
+Detector
+
+Manufacture
+
+Model
+
+H&abyz
+
+HAD1717MC, HAD1717MG, ADD
+
+feel-DRCS는 위 목록에서 지원됩니다. 호환되는 장치 이외의 장치를 변경하면 feel-DRCS는 작동되지 않습니다. 호환되는 장치를 다른 장치로 변경하려는 경우, 회사의 설치 엔지니어 없이는 장치를 변경할 수 없습니다.
+
+X-ray 발생장치 및 다른 장치의 경우 외부 PC와의 인터페이스를 위해 제조 옵션을 확인해야합니다.
+
+소프트웨어 설치 및 제거
+
+새로운 PC에 설치를 하거나 기존 버전을 제거한 후 다시 설치하려 할 경우 아래의 순서에 따라 설치를 진행하십시오.
+
+설치하고자 해당 OS의 최신 patch 및 upgrade를 한 후에 설치하시기 바랍니다.
+
+설치준비
+
+디텍터 또는 Generator 관련 드라이버 설치는 소프트웨어를 설치한 후에 하십시오.
+
+CD-ROM으로 제작된 설치 CD를 CD-ROM에 삽입하거나, 설치하려는 PC의 하드디스크에 적당한 폴더를 만들어 복사하십시오
+
+CD-ROM을 사용시에는 자동으로 설치프로그램이 동작을 합니다. 자동으로 시작되지 않으면 해당 경로로 들어가 Setup을 더블클릭 합니다.
+
+설치 CD를 Hard disk에 복사하여 사용할 경우 바탕화면 같이 경로가 길어지거나 영문 이외의 언어로 폴더를 만들지 마십시오. 드라이버 설치 시 문제가 발생할 수 있습니다.
+
+Net Framework 설치
+
+.Net Framework 3.5 SP1이 설치되어 있지 않을 경우 .Net Framework을 설치합니다. 이미 설치되어 있을 경우에는 설치를 하지 않고 바로 다음 화면으로 넘어갑니다. (Windows XP 인 경우)
+
+.Net Framework을 설치하면 반드시 PC을 재 부팅하여야 하며 부팅 후에 설치가 계속해서 진행됩니다.
+
+설치시작화면
+
+설치 시작화면이 표시되면 Next을 눌러 다음으로 진행합니다.
+
+설치 경로 선택
+
+소프트웨어가 설치될 경로를 지정합니다. 하단의 리스트에서 설치를 원하는 드라이브를 지정한 후 Next을 눌러 다음으로 진행합니다.
+
+지정한 후 Next를 눌러 다음으로 진행합니다.
+
+리스트에는 고정된 드라이브만 표시되며, CD-ROM이나 Floppy등은 표시 되지 않습니다. 그리고 feel-DRCS는 항상 C 드라이브에 설치하시기 바랍니다
+
+위와 같은 메시지가 뜨는 경우에는 여유공간이 10GB이하일 경우 표시되는 메시지로 YES을 누를 경우 무시하고 계속해서 진행할 수 있습니다. 소프트웨어를 설치하기 위해서는 최소 10GB의 여유공간이 있어야 합니다. 이것은 설치 후 추가로 생성되는 데이터를 감안한 용량입니다
+
+”
+
+위와 같은 메시지가 뜨는 경우에는 설치하려는 드라이브에 같은 명칭의 폴더가 있을 경우 표시되는 메시지로 설치를 진행할 수 없습니다. 설치를 계속하기 위해서는 해당 드라이브에 동일한 폴더의 이름을 그림의 예와 같이 "_bak"을 다른 이름으로 변경하여야 계속해서 설치를 진행할 수 있습니다.
+
+동일한 이름의 다른 소프트웨어가 설치되어 있거나 이전 설치를 제거한 후 백업 하지 않았을 경우를 위한 제한사항입니다
+
+데이터 저장 경로 선택
+
+데이터가 저장될 경로를 지정합니다. 하단의 리스트에서 원하는 드라이브를 지정한 후 Next을 눌러 다음으로 진행합니다.
+
+리스트에는 고정된 드라이브만 표시되며, CD-ROM이나 Floppy등은 표시 되지 않습니다
+
+다음과 같은 메시지가 뜰 수 있습니다.
+
+여유공간이 40GB이하일 경우 표시되는 메시지로 YES을 누를 경우 무시하고 계속해서 진행할 수 있습니다. 소프트웨어 저장공간으로 사용하기 위해서 최소 40GB의 여유공간이 있어야 합니다. 이것은 약 1000여장의 영상데이터를 저장할 수 있는 용량입니다
+
+다음과 같은 메시지가 뜰 수 있습니다.
+
+설치하려는 드라이브에 같은 명칭의 폴더가 있을 경우 표시되는 메시지로 설치를 진행할 수 없습니다. 설치를 계속하기 위해서는 해당 드라이브에 동일한 폴더의 이름을 그림의 예와 같이 "_backup"을 다른 이름으로 변경하여야 계속해서 설치를 진행할 수 있습니다.
+
+동일한 이름의 다른 소프트웨어가 설치되어 있거나 이전 설치를 제거한 후 백업 하지 않았을 경우를 위한 제한사항입니다
+
+디텍터 종류 선택
+
+사용할 디텍터의 종류를 선택합니다. 리스트에서 원하는 디텍터를 선택한 후 Next을 눌러 다음으로 진행합니다.
+
+만약 더 추가하고 싶거나, 추가 될 디텍터가 있으면 당사 영업담당자에게 연락하시길 바랍니다.
+
+고객사에 따라 지정된 모델을 맞추어서 설치버전이 공급됨으로 위의 내용은 빈칸으로 처리합니다. 만약 사용 중인 디텍터가 없으면 당사 영업 담당자에게 연락하시길 바랍니다.
+
+제너레이터 설정
+
+연동하고자 하는 제너레이터를 선택합니다.
+
+연동하고자 하는 제너레이터가 없는 경우 ‘NO GENERATOR’를 선택하십시오.
+
+만약 더 추가하고 싶거나, 추가 될 제너레이터가 있으면 당사 영업담당자에게 연락하시길 바랍니다.
+
+고객사에 따라 지정된 모델을 맞추어서 설치버전이 공급됨으로 위의 내용과 다를 수 있으며. 만약 사용 중인 제너레이터가 누락된 경우 당사 영업 담당자에게 연락하시길 바랍니다.
+
+설치 시작
+
+지금까지 선택한 내용을 표시합니다. 이상이 없을 경우 Next을 눌러 설치를 시작합니다.
+
+각종 드라이버 설치
+
+소프트웨어를 설치하는 과정에서 소프트웨어에서 사용할 드라이버를 설치하는 부분입니다.
+
+이 과정은 자동으로 진행되며 중단할 수 없습니다.
+
+드라이버 설치를 실패할 경우에 메시지가 표시됩니다. 이 경우 메시지 하단의 경로를 기억한 후 OK을 누르면 나머지 설치를 진행할 수 있습니다.
+
+다음 단계인 설치 완료에서 NO을 선택하여 재 부팅을 하지 않고 설치를 마친 후 해당 경로로 들어가 해당 드라이버를 설치한 후 수동으로 재 부팅을 하십시오
+
+설치 완료
+
+모든 설치를 완료하고 설치를 종료합니다. 재 부팅을 하게 되면 소프트웨어를 설정하는 화면이 표시됩니다. 소프트웨어 설정화면은 Setup사용법을 참조 하십시오.
+
+디텍터&제너레이터 설정
+
+디텍터/제너레이터 별로 세부적인 설정은 설치 후 재 부팅 후에 아래의 SetUp화면이 자동으로 띄워져서 수정을 할 수 있습니다. 추후 재 수정 필요 시에는 feel-DRCS 설치폴더에서 setup.exe를 실행하시면 동일 창이 떠서 내용을 수정할 수 있습니다.
+
+Detector
+
+제조사의 별도의 디텍터 관련 매뉴얼을 참조하시기 바랍니다.
+
+Generator & Etc.
+
+Generator
+
+제너레이터 설치 시에 설정된 해당 Bucky의 Workstation 번호를 입력합니다.
+
+AUX 모드를 지원하는 경우에는 해당 workstation 번호를 입력하고, 만약 그렇지 않는 경우에는 STAND 또는 TABLE의 workstation 번호를 입력합니다.
+
+Comport는 현재 제너레이터와 통신하는 시리얼 통신 포트 즉 COM 포트 번호를 선택합니다.
+
+IO Device for Trigger
+
+소프트웨어 트리거 방식으로 IO Device를 통해 Prep, Exposure 신호를 입력 받아 제너레이터 측으로 Prep, Exposure 신호를 전달하는 트리거 방식을 사용할 시에 Enable을 체크한다.
+
+i. IO Device Model
+
+해당 IO Device Model을 선택한다.
+
+현재 PCI/LPCI/LPCIe-7250 과 USB-7250 모델이 지원된다.
+
+ii. Ready Delay
+
+소프트웨어 적으로 Prep 신호 입력 후 Exposure 신호가 입력이 되었을 경우 제너레이터가 준비가 되지 않은 상태에서 X-ray가 조사되는 것을 방지하기 위해 Ready Delay를 설정한다.
+
+ETC
+
+i. 12 bit send
+
+전송 시에 12비트 DICOM 파일로 전송하고자 하는 경우에 선택합니다. 원본 데이터 값이 14비트 이상임으로 이 선택옵션은 PACS 가 12비트까지 처리가 되는 경우에 선택하고, 나머지는 그냥 체크해제상태로 둡니다.
+
+ii. Interpolation
+
+Review 모드로 진입 시에 영상을 로드하게 됩니다. 이때에 모든 이미지 로드 시에 interpolation 해서 로드하고자 하는 경우에 사용합니다. 단 이 기능을 사용하는 경우에는 로드할 때 많은 시간이 소요됨으로 체크해제상태로 두는 것을 권합니다.
+
+iii. AutoCrop
+
+ 이 기능은 촬영 시에만 동작하며, 촬영 시 영상 획득 및 프로세싱 후에 콜리메이터를 이용한 촬영된 영상에 대하여 자동으로 콜리메이션 된 영역을 검출하여 crop 해 주는 기능입니다. 이 기능은 촬영시에 단 한번만 자동으로 동작 되기 때문에 crop 영역을 해제하면 다시 수동으로 작업하셔야 합니다.
+
+iv. Virtual Keyboard
+
+ Touch 모니터를 사용하는 경우에 문자입력을 모니터상에서 터치를 통하여 입력할 경우에 사용합니다. 이 경우에 windowing 조절 시에 터치를 이용하여 사용할 수 있습니다. 문자를 입력할 수 있는 모든 TEXT 박스를 선택하면 자동으로 화면에 keyboard가 작동 되게 됩니다.
+
+v. Reject
+
+ 촬영 후에 획득한 영상에 대하여 reject 하는 기능이다. Reject는 reject 마크를 표시하고 사용할 수 없도록 할 뿐 데이터 자체가 지워지지 않는다. 만약 이 기능이 체크해제가 되어 있는 경우에는 cancel이 되면서 삭제가 됩니다.
+
+vi. Analysis
+
+ 체크가 된 이후로 촬영된 모든 영상에 대하여 환자수, 획득한 영상 개수, DICOM sending 및 reject 된 이미지 수 등을 분석할 수 있는 기능이다.
+
+vii. Stitching Processed Image
+
+ stitching 시에 이미 처리된 이미지들로 처리하고자 하는 경우에 체크합니다. 만약 스티칭 후에 원본 이미지에서 다시 영상처리를 하고자 하는 경우에는 이 기능 체크해제 합니다
+
+viii. Sensitivity
+
+ Exposure Index를 표시하고자 할 경우에 해당 디텍터의 감도를 입력합니다.
+
+ix. Use Ralco
+
+ Ralco Auto collimator와 통신하고자 하는 경우에 체크하여 사용합니다. 세부적인 설치 방법은 별도의 설치 매뉴얼을 참조하시기 바랍니다.
+
+x. Show Wifi UI
+
+ Wifi 디텍터를 사용할 경우, Wifi 상태 및 Battery 상태 표시
+
+xi. No Use Predefine shutter
+
+ Pre-define 된 shutter의 on/off 설정
+
+DAP
+
+i. Use DAP
+
+DAP 기능을 사용하고자 할 때 Check 한다
+
+ii. Type
+
+Use DAP가 Check 되었을 때 활성화된다.
+
+사용하고자 하는 DAP type을 선택한다.
+
+현재 지원되는 DAP는 CPI, vacuDAP, iba, Ecoray 제품이다.
+
+iii. Comport
+
+VacuDAP 또는 iba 제품을 사용할 시 COM No.를 선택한다.
+
+제너레이터는 해당 기능이 옵션으로 되어 있으니 사용 전에 옵션 기능이 포함되어 있는지 제조사에게 먼저 확인하시길 바랍니다.
+
+iv. Unit of DAP
+
+mGycm2, cGycm2, dGycm2, Gycm2, uGym2 중 선택한다
+
+System
+
+Worklist Section
+
+i. Use Worklist Check box
+
+DICOM Worklist 기능을 사용할 지 안 할지를 선택합니다. 기본값은 사용하는 것으로 되어 있습니다.
+
+ii. Server combo button
+
+Use Worklist가 체크되었을 경우에 활성화되며 Worklist정보를 서버로부터 받아오게 됩니다.
+
+iii. Filebase combo button
+
+Use Worklist가 체크되었을 겨우 활성화되며 파일 형식으로 작성된 Worklist 데이터를 해당 폴더로부터 얻어와서 feel-DRCS의 Worklist 데이터로 사용하도록 처리한다.
+
+부록 1의 Worklist 인터페이스를 참조하십시오.
+
+iv. Use Refresh
+
+feel-DRCS의 Worklist에서 Refresh 기능 사용 여부를 결정
+
+v. Use Log
+
+DICOM Worklist Server 통하여 Worklist를 받아오는 경우에 로그를 남기고자 할 때 Use Log를 선택합니다. 이 로그를 선택하는 경우는 WORKLIST 연결 시에 에러가 있는 경우를 확인할 때만 선택하시길 바랍니다. 그렇지 않으면 로그파일이 너무 많이 생겨 시스템 동작에 영향을 줄 수 있습니다.
+
+ViewSub
+
+ViewSub 모니터는 제너레이터와 연동이 가능한 모델인 경우에 사용합니다. 주 콘솔 모니터외에 별도의 모니터가 장착되어 사용하는 경우입니다. 만약 하나의 모니터를 사용하는 경우에는 이 해상도는 자동으로 인식되어 사용되니 체크할 필요가 없습니다. 하나의 PC에 2개의 모니터를 사용하는 것으로 주 콘솔은 항상 1번 위치의 모니터를 사용합니다. 그리고 viewsub는 2번 모니터를 사용합니다. Pos X 와 Pos Y는 2번 모니터의 시작점 위치입니다. 이 위치는 Window 시스템의 display 정보를 확인하여 입력합니다.
+
+feelView
+
+feelView는 별도의 의료용 모니터를 사용하여 고해상도 고휘도의 영상을 보고자 하는 경우에 사용되는 모니터의 설정입니다. 연결되어 있지 않으면 체크박스를 설정하지 못합니다. 해상도의 입력은 2번과 같이 처리합니다.
+
+Rotation
+
+Rotation 은 영상획득 당시에 디텍터의 위치가 잘못되어 영상을 돌리고자 하는 경우에는 사용됩니다. 사용법은 영상을 무조건 시계방향으로 몇 도를 회전할 지를 입력합니다. 90, 180, 270 세가지 중에 선택하여 입력합니다.
+
+소프트웨어 제거
+
+이미 설치된 소프트웨어에 제거할 경우 아래의 순서에 따라 진행하십시오.
+
+4.12.1. 데이터 백업
+
+소프트웨어가 설치된 경로에서 아래의 파일과 폴더를 백업하십시오.
+
+AceView.ini
+
+AceView.mdb
+
+Cor 폴더
+
+Parameter Files
+
+기타 사용자가 추가한 파일 또는 폴더
+
+4.12.2. 소프트웨어 제거
+
+제어판의 프로그램 추가 삭제에서 소프트웨어를 찾아 제거 버튼을 누르십시오.
+
+필수 시스템(OS) 설치 항목
+
+4.13.1. NIC 설정
+
+Internet Connection Sharing
+
+두 개의 LAN을 이용하여 사용하는 경우에는 필수적으로 설정하여야 하는 네트워크 구성 방법입니다. 즉 PACS 네트워크와 디텍터 네트워크 사이에 우선순위를 설정하고, 외부 즉 PACS연결시에 사용해야 할 네트워크 카드를 지정하기 위한 설정입니다.
+
+설정하기 위한 체크항목들
+
+Windows XP가 설치된 경우에는 최신 업데이트를 실시한 후에 아래의 순서대로 설치하여야 합니다.
+
+2개의 네트워크 카드가 설치되어 있어야 하며, 하나는 PACS 또는 병원 망과 연결되어 있어야 하고, 하나는 detector 와 연결되어 있어야 함.
+
+만약 PACS 또는 병원 망에 연결된 네트워크 카드의 IP가 192.168.0.XXX 로 되어 있는 경우에는 192.168.XXX.XXX로 수정하고, default gateway도 IP와 마찬가지로 192.168.XXX.XXX 로 수정하여 작업한다.
+
+두 컴퓨터에 모두 LAN 카드를 설치한 후 서로 케이블을 연결되어 있는 것이 확인된 후에 작업을 시작합니다.
+
+설정하기
+
+시작 -> 제어판 -> 네트워크 연결
+
+위와 같이 2개의 네트워크 카드를 볼 수 있습니다. 여기서 각 네트워크 카드가 디텍터, PACS망에 연결되어 있는지 확인 후 각각의 네트워크의 이름을 추 후에 이해하기 쉽도록 PACS, 디텍터로 이름을 수정한 후에 아래의 PACS 네트워크 선택 후 우측 클릭하여 Properties를 선택합니다.
+
+Advanced 또는 고급정보를 클릭합니다.
+
+아래의 박스와 같이 체크박스를 선택합니다. 그리고 OK 버튼을 클릭하여 설정을 마무리합니다.
+
+ Window XP Window 7
+
+XP 경우 재 부팅 후에는 디텍터가 연결된 네트워크 카드의 IP가 192.168.0.XXX로 변경되어 있습니다. 그래서 다시 원래 IP로 다시 변경을 하여야 합니다. 그리고 초기에 PACS 또는 병원 망으로 연결된 IP가 192.168.0.XXX로 되어 있어서 IP를 변경한 것도 원래 병원에서 할당 받은 IP로 재 변경을 하셔야 합니다.
+
+어댑터 및 바인딩 (Window XP, 7, 8 공통)
+
+메뉴에서 고급 🡺 고급 설정을 선택한다.
+
+(메뉴가 숨겨져 있을 시에 Alt+N을 누르면 메뉴가 보임)
+
+Advanced 또는 고급정보를 클릭합니다.
+
+pacs를 선택한 후 오른쪽에 위치한 . 버튼을 클릭하면 연결 순서가 바뀌는 것을 확인 후 OK 버튼을 누른다.
+
+4.13.2. Window Patch for DVD
+
+Window XP에서 DVD Burning을 위한 업데이트이며, 이 작업을 위해서는
+
+Microsoft patch file의 업데이트를 실행을 반드시 하여야 합니다.
+
+* 설치 CD안에 “hotfix” folder을 선택하십시오.
+
+1. hotfix folder안에 “IMAPI_XP_SRV2003_x86.exe” file을 설치하십시오.
+
+2. hotfix folder안에 “WindowsXP-KB932716-v2-x86-XXX” file을 설치하십시오.
+
+또한 사용하고 있는 OS의 종류의 따라 Window XP Language version이 맞는 파일 이름인지 확인하신 후 설치하십시오
+
+Note
+
+“이 작업은 Window 7 OS에서 실행하지 않습니다.”
+
+4.13.3. 가상 메모리 설정
+
+데이터의 안정적인 저장을 위하여 Virtual memory를 임의적으로 설정하는 설명입니다. 시스템의 특성에 따라 종종 발생되는 저장 시에 이유 없이 프로그램이 종료되는 현상 및 스티칭 기능을 사용한 후에 최종 저장 시에 발생하는 오류가(Human 인 경우에만 해당함) 생기지 않도록 하기 위한 기본적인 세팅입니다.
+
+XP 인 경우
+
+내 컴퓨터에서 마우스 우측버튼을 클릭하여 속성을 선택한다.
+
+고급 탭을 선택한다.
+
+성능에 해당하는 설정을 클릭한다.
+
+“고급” 탭을 선택한다.
+
+가상메모리의 변경버튼을 클릭한다.
+
+아래의 순서대로 세팅을 합니다.
+
+설정한 HDD 드라이브를 선택합니다.
+
+Custom size에 체크를 한 후에 처음 크기 :3072 이상, 최대크기 : 4092 이상으로 기입합니다.
+
+설정 버튼을 클릭한 후에 재 부팅하여 완료합니다.
+
+* 만약 C 드라이브 하나에만 프로그램 및 DCM 폴더를 설치하셨다면 C 드라이브만 설정하시면 되고, 만약 C 드라이브에는 프로그램을 설치하시고, D 드라이브에 이미지 데이터인 DCM 폴더를 설치하셨다면, C 드라이브 및 D 드라이브 모두 동일하게 세팅 해야 합니다.
+
+Window 7 인 경우
+
+내 컴퓨터에서 마우스 우측버튼을 클릭하여 속성을 선택한다.
+
+Advanced System Setting을 선택한다..
+
+고급 탭을 선택한다.
+
+성능에 해당하는 설정을 클릭한다.
+
+가상메모리의 변경버튼을 클릭한다.
+
+아래의 순서대로 세팅을 합니다.
+
+설정한 HDD 드라이브를 선택합니다.
+
+Custom size에 체크를 한 후에 처음 크기 :3072 이상, 최대 크기 : 4092 이상으로 기입합니다.
+
+설정 버튼을 클릭한 후에 재 부팅하여 완료합니다.
+
+* 만약 C 드라이브 하나에만 프로그램 및 DCM 폴더를 설치하셨다면 C 드라이브만 설정하시면 되고, 만약 C 드라이브에는 프로그램을 설치하시고, D 드라이브에 이미지 데이터인 DCM 폴더를 설치하셨다면, C 드라이브 및 D 드라이브 모두 동일하게 세팅해야 합니다
+
+4.13.4. DEP 설정
+
+Windows 시스템 자체의 실행방지기능으로 인하여 소프트웨어 강제 종료가 되는 것을 방지하기 위하여 설정하여야 하는 부분입니다.
+
+XP인 경우 : 빨간색 박스 부분을 따라서 클릭하세요
+
+위의 메모장에서 다음과 같이 변경하시기 바랍니다.
+
+/noexecute=option 또는 OptOut 또는 AlwaysOn으로 되어 있는 것을
+
+/noexecute=AlwaysOff 로 변경하세요.
+
+Note
+
+변경하라고 지시한 것만 변경해야 합니다. 그 외에 부분을 변경하시면 시스템자체 부팅이 불가능할 수도 있습니다. 이점 꼭 유의하세요.
+
+변경 후에는 반드시 재 부팅하시기 바랍니다.
+
+Window 7인 경우 : 빨간색 박스 부분을 따라서 클릭하세요
+
+(3) Window 8인 경우
+
+- 해당 기능이 제대로 동작되지 않을 수도 있습니다.
+
+- CMOS에서 해당 기능을 막아서 사용 못하도록 되어 있는 경우가 있으니 이 부분에 대해서는 OS상에서 해당 실행 기능 자체를 DEP 해제에 추가하여야 합니다.
+
+i. System
+
+Control Panel 🡺 System and Security 🡺 System
+
+ii. Advanced system Setting을 클릭하면 System Properties 창이 뜹니다. 그 후 Advanced Tab으로 이동하여 Performance의 Settings… 버튼을 클릭한다.
+
+iii. Performance Options 창이 뜨면 Data Execution Prevention Tab으로 이동한 후 하기 오른쪽 화면과 같이 Turn on DEP for all programs and services except those I select 를 선택한다.
+
+iv. Add… 버튼을 클릭하여 하기의 2개의 파일을 선택하여 DEP를 해제한다.
+
+feel-DRCS.exe
+
+WBMaker.exe
+
+v. feel-DRCS와 WBMaker가 DEP 해제가 되었는지 확인 후 Apply 버튼을 누른다.
+
+4.13.5. Sleep Mode 해제
+
+이더넷으로 연결되는 디텍터를 사용 중 Sleep mode로 인해 이더넷 연결이 끊어지는 것을 방지하기 위해 Sleep mode를 해제한다.
+
+i. 제어판을 열고 ‘System and Security’. 선택
+
+ii. Power Option을 선택
+
+iii. Balance(recommended)에 체크 후 ‘Change plan settings’ 선택
+
+iv. Put the computer to sleep을 ‘Never’로 변경
+
+Trouble shooting
+
+설치 에러
+
+5.1.1. 설치 폴더가 존재할 경우
+
+해당 경로에 폴더가 있을 경우 상기와 같이 에러가 발생을 한다.
+
+Feel-DRCS 폴더와 DCM 폴더를 삭제 후 재 시도한다.
+
+5.1.2. Keylock 오류
+
+설치 완료 후 feel-DCRS 실행 시 위와 같이 에러 발생.
+
+Lock key가 제대로 꽂혀 있는지 확인
+
+장치 관리자에서 Aladdin 관련 파일이 정상적으로 설치되어 있는지 확인
+
+실행 에러
+
+5.2.1. Dll 에러
+
+설치 시에 사용할 디텍터 종류와 모델을 정확하게 선택하였는지 확인.
+
+설치된 feel-DRCS의 프로그램을 삭제 후 재 설치
+
+같은 증상이 발생 시에 서비스 엔지니어에게 연락하시길 바랍니다.
+
+5.2.2. feel-DRCS 에러
+
+feel-DRCS.exe에서 오른쪽 마우스를 클릭하여 ‘관리자 권한으로 실행’ 선택
+
+또는 하기와 같이 feel-DRCS.exe의 속성을 변경
+
+5.2.3. 다른 장치와의 연결 에러
+
+‘feel-DRCS.exe’를 관리자 권한으로 실행
+
+위와 같이 2가지의 연결 에러 메시지가 표시될 경우 엔지니어에게 연락하시길 바랍니다. 엔지니어가 디텍터 소프트웨어의 경로를 점검합니다.
+
+위와 같은 하드웨어 연결 에러 메시지가 나타날 경우.
+
+첫째, 디텍터와 PC 및 소프트웨어를 재부팅 합니다.
+
+둘째, LAN 케이블을 PC에서 디텍터로 다시 연결합니다.
+
+셋째, 엔지니어에게 연락하시길 바랍니다.
+
+Appendix
+
+DICOM MWL interface by Text file
+
+6.1.1. Principles of interfacing
+
+6.1.2. Define order argument
+
+6.1.3. Method of Interfacing
+
+(1) Filename
+
+- Order_Date.mwl (ex. Order_20140101123456.mwl)
+
+(2) Store destination folder
+
+- C:\feel-DRCS\OCS\
+
+(3) Argument delimiter
+
+- “,” : You can use this character in all of Text file.
+
+(4) Study delimiter
+
+- CR : Carriage return (You must input CR the final patient item.)
+
+(5) Unknown value
+
+- Blank
+
+(6) Mandatory Argument
+
+- Patient ID/Name/Sex/Modality/Date of Study Scheduled
+
+6.1.4. Sample
+
+개정 이력
+
+버전
+
+날짜
+
+내용
+
+Rev. 0
+
+2020-03-12
+
+Initial Release

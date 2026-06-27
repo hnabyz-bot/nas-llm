@@ -427,3 +427,11 @@ Next P1 bundle:
 - note: ranks 1758 and 1769 passed on direct retry after transient validation
   and JSON format failures
 - ops commit: `da007cc feat: complete P1 ranks 1701-1800 extraction outputs`
+
+Next P1 bundle:
+
+- bundle: `reports/p1-pilot-eval-p1-r1801-r1900-202606271554`
+- rank range: 1801-1900
+- selected representatives: 100
+- total normalized chars: 3,421,468
+- extraction status: not started at this checkpoint

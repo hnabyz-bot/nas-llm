@@ -1,0 +1,651 @@
+queueId: ingest-1781569954376-5vx
+sourcePath: raw/sources/RA/01_DHF/feel-DRCS/ADD 콘솔 매뉴얼/Installation_Console Manual Ver.0.1_ENG.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/bee5dac8715f/Installation_Console Manual Ver.0.1_ENG__bee5dac8715f_combined.txt
+canonicalGroupId: 06b64f0ff014
+productSignal: ADD/AspenView
+authoritySignal: general
+pilotRank: 1801
+
+SOURCE_TEXT
+Installation Manual
+DR Console Software
+feel-DRCS
+
+Digital Radiography Console Software feel-DRCS
+2
+Installation Service Manual Version : 0.1
+Date : 2020.03.12
+
+Digital Radiography Console Software feel-DRCS
+3
+Table of Contents
+1. Introduction ........................................................................................................ 5
+2. Purpose ............................................................................................................... 6
+2-1. Intended user and environments .................................................................. 7
+2-2. Symbols .................................................................................................. 7
+3. System requirements ........................................................................................... 8
+3.1. Workstation ............................................................................................ 8
+3.2. Monitor.................................................................................................. 8
+3.3. Compatible related devices ......................................................................... 9
+4. Installation & Delete software ............................................................................ 10
+4.1. Installation Preparation ......................................................................................... 10
+4.2. Installation of the Net Framework .......................................................................... 11
+4.3. Installation Screen ................................................................................................. 12
+4.4. Selecting the Setup route ....................................................................................... 13
+4.5. Selecting the route of Data Storage ........................................................................ 15
+4.6. Selecting the type of the Detector .......................................................................... 17
+4.7. Selecting the type of the Generator ........................................................................ 18
+4.8. Starting the Installation ......................................................................................... 19
+4.9. Installation of the various Drivers ........................................................................... 20
+4.10. Completing the Installation ................................................................................. 21
+4.11. Setting the Detector & Generator ........................................................................ 22
+4.11.1 Detector ................................................................................................................................. 22
+4.11.2 Generator ............................................................................................................................... 23
+4.11.3 System .................................................................................................................................... 27
+4.12 Removing software .............................................................................................. 29
+4.12.1 Data Backup ........................................................................................................................... 29
+4.12.2 Software Removal .................................................................................................................. 29
+4.13 Must-Do Setup of OS ................................................................................30
+4.13.1 Set up of NIC ........................................................................................................................... 30
+4.13.2 Window Patch for DVD .......................................................................................................... 35
+4.13.3 Virtual Memory Setup(Essential Setup) ................................................................................. 36
+4.13.4 DEP ......................................................................................................................................... 42
+4.13.5 Removal of Sleep Mode ......................................................................................................... 49
+5. Trouble shooting ............................................................................................... 52
+5.1. Installation Error ........................................................................................52
+5.1.1. Case of the installation folder is existed before installation ...................................................... 52
+
+Digital Radiography Console Software feel-DRCS
+4
+5.1.2. Keylock Error .............................................................................................................................. 52
+5.2. Execution Error ..........................................................................................53
+5.2.1. Dll Error ...................................................................................................................................... 53
+5.2.2. The feel-DRCS couldn’t be executed. ......................................................................................... 53
+5.2.3. Connection error with other devices. ........................................................................................ 53
+6. Appendix ........................................................................................................... 55
+6.1. DICOM MWL interface by Text file ..................................................................55
+6.1.1. Principles of interfacing .............................................................................................................. 55
+6.1.2. Define order argument .......................................................................................... 56
+6.1.3. Method of Interfacing ........................................................................................... 57
+6.1.4 Sample................................................................................................................... 57
+7. Revision History ......................................................................................................... 58
+
+Digital Radiography Console Software feel-DRCS
+5
+1. Introduction
+feel-DRCS is the name of the digital radiography of H&abyz Co. Ltd.
+feel-DRCS is the DR console or DR control software that acquires image from the DR detector like flat
+panel or CCD, processes rapidly for clinical application, and provides DICOM services for the
+integration with PACS system. This manual explains how to install and operate feel-DRCS software.
+H&abyz CO.,LTD.
+1F, 2-dong, 41-16, Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea www.abyzr.com
+
+Digital Radiography Console Software feel-DRCS
+6
+2. Purpose
+feel-DRCS is the operation console system software integrated with various detectors or X-ray
+generator, based on FS-MLW (Faster Specialized Multi Layered Wavelet) technology.
+feel-DRCS is the product developed for the operator, designed at the clinical hospital through many
+years of clinical tests, and finished by service engineers of former major DR makers.
+feel-DRCS is the embedded software based on feel-TK enable to remove noise and various artifacts
+and much clearer body tissue. The embedded calibration function makes it possible to set the basic
+calibration data (offset image and gain image) for all types of detector. It can also process
+progressive defect by providing defect view.
+feel-DRCS is distributed and being used at the clinical fields after verifying software on various
+detectors distributed worldwide. It is easy to use console system’s software just by changing the
+type of the detector which DR makers want. Integrating the X-ray’s generator operation panel, the
+total DR system inside the software makes it possible to control APR, AEC, Ready/Exposure with
+ease.
+feel-DRCS is integrated with various X-ray generators, supports APR function, and provides all-in-one
+DR product which enables to work as existing operation panel with just one console software.
+feel-DRCS does not provide the software the DR makers, but the knowhow as well as consulting
+services to be your best partner.
+
+Digital Radiography Console Software feel-DRCS
+7
+2-1. Intended user and environments
+Feel-DRCS is intended to be used for radiological doctor and radiological technician for acquired
+general radiographic images.
+So, it’s used by radiological doctor or radiological technician in hospital.
+So, this system is installed by only X-ray engineer or X-ray installation engineer. It is used by
+radiological doctor
+For proper usage and safety purposes, please ensure that
+only legally qualified person (Doctor, Medical Treatment
+Radiological Technologist, Medical Treatment X-RAY
+Technologist) can use this product after fully familiarize with
+contents of user manual
+This medical device can’t use alone. So this product need to
+connect with X-ray detector. Sometimes, this software
+operates with exposure condition of X-ray Generator system.
+This product is a medical device, and it should only be used
+as digital X-ray radiography console software for X-ray
+radiography at corresponding hospitals.
+2-2. Symbols
+Symbols Descriptions
+Refer to operation or install manual
+Warning
+Caution
+Read Carefully
+Manufacture
+Date of manufacture
+
+Digital Radiography Console Software feel-DRCS
+8
+3. System requirements
+3.1. Workstation
+Processor: Intel Pentium Intel Duo Core/Core 2 Duo later,
+Intel i5 Third generation 2.0Ghz or above
+RAM : 2GB RAM
+HDD: At least 40GB hard disk (if possible, over 7,200 RPM). For data backup and reliability, we
+recommend two separate HDDs physically-1st HDD: System and Software, 2 HDD: Image Data
+Storage, not separating the partition logically with just one HDD.
+Network Card : 10/100/1000Mbps Ethernet Network Card
+Video graphic adapter: at least over 1280 X 900 pixels, color resolution-True Color mode(no shard
+memory), DVI interface connector
+Operating System : Windows 7 32/64 bit(at least SP1), Windows XP
+prof.(at least SP2), Windows 2000 prof.(at least SP4)
+Need I/O : 1 Parallel port(synchronize Detector & X-ray Generator & Software), 1 Serial port(in case
+Control of X-ray generator), 1 USB port(Software Lock-Key)
+3.2. Monitor
+Over 19 inch (23 inch recommended)
+ Brightness : over 300cd/m2
+ Contrast Ratio : over DC 8000:1
+ Response time : over 5 ms
+ 1600X1200 or 1920X1280 recommended (at least over 1280 X 900)
+4:3 , 16:9. 16: 10 ratio supported.
+ High fidelity of grayscale and optimized luminance distribution
+If you want to use high-resolution monitor, we recommend medical LCD monitor (B/W or color).
+There is no problem because the present software was made based on gray color when you want to
+use black and white monitor.
+For image quality control, we recommend the below among medical monitors. It is because it needs
+to adjust the image at the same brightness for diagnosis after taking X-ray. Most of monitors are
+made according to each country’s medical standard so that there is no problem to use them.
+
+Digital Radiography Console Software feel-DRCS
+9
+3.3. Compatible related devices
+Detector
+Manufacture Model
+H&abyz HAD1717MC, HAD1717MG
+The feel-DRCS support with upper lists. If you change other
+device excepted with compatible devices, the feel-DRCS can’t
+be operated. And If you want to change other device of
+compatible devices, you can’t change it without installation
+engineer of contacted company.
+In case of X-ray generator and other devices, you should
+have to check option of manufacture for interface with
+external PC.
+
+Digital Radiography Console Software feel-DRCS
+10
+4. Installation & Delete software
+If you want to install on your new PC or reinstall after removing the
+old version, please follow the below procedures.
+4.1. Installation Preparation
+Install detector or generator related drives after installing this software. Insert the installation CD
+into CD-ROM drive or copy after making a folder in your PC hard disk. The automatic installation
+program works when using CD-ROM. If you do manually, go to the below folder and double-click
+“Setup”.
+Installation CD/DVD be used by only service and installation
+engineer. So, don’t install except for service and installation
+engineer.
+Do not create a folder with other languages except English or long
+route when using after copying the installation CD on your hard
+disk. It can make problems when installing the driver.
+
+Digital Radiography Console Software feel-DRCS
+11
+4.2. Installation of the Net Framework
+If the .Net Framework 3.5 SP1 is not installed, install the .Net framework first. If it is installed
+already, go to the next screen.
+After installing the .Net Framework, make sure to reboot your PC. The installation process continues
+after rebooting.
+When you have installed the .Net Framework, you should reboot
+PC. Afterward, the installation is progressing continuously.
+
+Digital Radiography Console Software feel-DRCS
+12
+4.3. Installation Screen
+When you get the following screen, click “Next”.
+
+Digital Radiography Console Software feel-DRCS
+13
+4.4. Selecting the Setup route
+Specify the route of the software to be installed. Select the drive to install from the below list and
+click “Next”.
+The list is displayed the fixed drive, not are displayed CD-ROM or
+Floppy disk. We recommend feel-DRCS to set up to Drive C:
+When you get the above message meaning the memory space is less
+than 40GB, you can click “Yes” to continue. You need at least 10GB to
+install this software. This memory space includes created data to be
+added after installation.
+
+Digital Radiography Console Software feel-DRCS
+14
+When you get the above message meaning the same folder name
+exists in the drive to install, you cannot continue. For continuation,
+you need to change the folder name in the drive as “_bak” into a
+different name.
+This is for the case that other software with the same name was
+installed and the case that the backup was not done after removing
+the previous installation.
+
+Digital Radiography Console Software feel-DRCS
+15
+4.5. Selecting the route of Data Storage
+Select the route of data to be installed. From the below list, select the drive and click “Next”.
+The list does display the fixed drive, not CD-ROM or Floppy disk.
+
+Digital Radiography Console Software feel-DRCS
+16
+You can also get the message like this.
+When you get this message meaning the memory space is
+less than 40GB, you can click “Yes” to continue. You need at
+least 40GB for software storage space. You can save 1,000
+image data there
+You can also get the message like this.
+When you get the above message meaning the same
+folder name exists in the drive to install, you cannot
+continue. For continuation, you need to change the folder
+name in the drive as “_bak” into a different name.
+This is for the case that other software with the same
+name was installed and the case that the backup was not
+done after removing the previous installation
+
+Digital Radiography Console Software feel-DRCS
+17
+4.6. Selecting the type of the Detector
+Select the type of the detector to use. From the below list, select the detector and click “Next”.
+If you have any other detector to add, please contact our sales staff.
+The available installed detectors are different by DR System Company.
+
+Digital Radiography Console Software feel-DRCS
+18
+4.7. Selecting the type of the Generator
+Select the type of the generator to use. From the below list, select the generator and click “Next”. If
+you do not connect a generator, select “DO NOT CONNECT GENERATOR” at the bottom of the list.
+If you have any generator to add or connect, please contact our sales
+staff. The contents of installation version is different according to
+customers that’s because this version is fixed to applicable model. If
+the model of generator is empty, please contact service staff
+
+Digital Radiography Console Software feel-DRCS
+19
+4.8. Starting the Installation
+It displays all settings until now. If there is no problem, click “Next” for installation.
+
+Digital Radiography Console Software feel-DRCS
+20
+4.9. Installation of the various Drivers
+You install the drivers to use in this process. It works automatically and never stops compulsively.
+If driver is failed to set up, the message will be displayed.
+In this case, firstly press the OK button to continue setting up the rest
+part after remembering the path of message.
+The next step, press NO button in completed step of installation and
+don’t reboot after finishing the installation.
+By manual, reboot the system after looking for the path of drive and
+finishing the installation
+
+Digital Radiography Console Software feel-DRCS
+21
+4.10. Completing the Installation
+After you finish installing the software, restart your computer to display the installed software on
+the desktop. Please refer to how to use setup for software setup.
+
+Digital Radiography Console Software feel-DRCS
+22
+4.11. Setting the Detector & Generator
+For detailed setup for each detector/generator, do on the below screen after rebooting or starting
+setup.exe in the installation folder for re modification.
+4.11.1. Detector
+Refer to the detector instructor of the respective manufacturer.
+
+Digital Radiography Console Software feel-DRCS
+23
+4.11.2. Generator& Etc.
+(1) GENERATOR
+Enter the workstation No. of the applicable bucky when setting up the generator.
+If it apply to connect with AUX, Enter the applicable workstation No. Unless it apply, enter the
+the workstation No. of STAND or TABLE.
+Comport : Select the using serial communication port that is communicated with generator.
+
+Digital Radiography Console Software feel-DRCS
+24
+(2) IO Device for Trigger
+Sometime, several detectors don’t support hardware trigger with X-ray generator. In this case,
+you should have to use software trigger(if the detector support it) with Digital IO Device. And
+you should have to check a check box of Enable
+i. IO Device Model
+Select IO device model of PCI/LPCI/LPCIe-7250 or USB-7250.
+ii. Ready Delay
+This time mean that the check delay time is a starting time of checking EXPOSUE button after
+pushing PREP(READY) button.
+So, if you know a time of READY UP of generator, you type-in that time value.
+(3) ETC
+i. 12 bit send
+: To send the 12 bit dicom file must be set.
+The rest part does not check this Because the raw data value is up to 14 bit. But PACS system is
+applies to process only 12 bit , always check it .
+ii. Interpolation
+: This option is that you can choose ON/OFF of interpolation at the time of image loading in
+review mode. When the images load in the review mode, the feel-drcs apply interpolation for
+all images. So the loading time needs more time according to image count.
+But if you turn off this option, the feel-drcs does interpolation when you work as using
+windowing, panning, zooming.
+iii. AutoCrop
+: This function is available in the only exposure mode.
+The image size is automatically modified by adjusting the collimator size of x-ray tube.
+This function is operated only one time automatically.
+Also it is possible to use the manual mode after releasing the this one.
+
+Digital Radiography Console Software feel-DRCS
+25
+iv. Virtual Keyboard
+: It is applied to write the text and adjust the window width/level without keyboard.
+v. Reject
+: This function applies to cancel the examination or reject the acquired image after exposure
+and “Reject” mark is displayed on the image. The image data is not able to use for diagnostic
+purpose and does not delete the image from the saved drive. If the check is released, the image
+will be deleted with cancellation.
+vi.Analysis
+: If you want to know analysis or statistics for the used DR console station, you can use this
+function. This function informs you of Exposure counts, Dicom sending and rejected image
+counts. And you can check the rejected analysis that is done by operator.
+vii. Stitching Processed Image
+: Check this function when you want to stitch the processed image at the time. Unless you don’t
+want this, release the this function.
+vii. Sensitivity
+: Check this function when you want to display the Exposure Index or Exposure Indicator on the
+image.
+
+Digital Radiography Console Software feel-DRCS
+26
+viii. Use Ralco
+: Check this function when using the Ralco Auto collimator.
+Please, refer to the additional installation manual if you need it in detail.
+x. Show Wifi UI
+When you use wireless detector, do checked this check box.
+You can see the status of WIFI sensitivity and Battery.
+xi. No Use Predefine shutter
+Config ON/OFF about Pre-Define shutter size.
+(4) DAP
+i. Use DAP
+Check this check box when you use DAP.
+ii. Type
+Select DAP Type
+iii. Comport
+When you connect Vacutec and iba directly, setup COM port No.
+iv. Unit of DAP
+Select Unit of DAP Value.
+
+Digital Radiography Console Software feel-DRCS
+27
+4.11.3. System
+① You can set up whether enable or disable the function of using DICOM
+Worklist. This default value is using wokrlist.
+② The viewsub can be used only in the state of integrated generator. If
+you use one monitor, you cannot this function and you don’t need to
+set the resolution of main cons
+[2 monitors and integrated generator]
+The main console view always use number “1” monitor. And the
+viewsub always use number “2” monitor.
+- PosX : Position X-coordinate of number 2 monitor or viewsub
+console
+
+Digital Radiography Console Software feel-DRCS
+28
+- PosY : Position X-coordinate of number 2 monitor or viewsub
+console
+You can find system width and height in display set up of
+Windows system.
+Start > Control panel > Display > Setup TAB
+This subView is optional function. If you want these
+functions, you call sales manager.”
+③ The feelVIEW is special viewer for detail seeing image using Medical or
+high resolution monitor.
+Pos X : X coordinates for opening feelVIEW windows
+Pos Y : Y coordinates for opening feelVIEW windows
+Width : Width of feelVIEW Monitor’ resolution
+Height : Height of feelVIEW Monitor’ resolution
+④ Rotation is set up according to detector position when image is
+acquired. Rotation value must be entered to clock-direction and choose
+one of the rotation value among 90,180 and270.
+
+Digital Radiography Console Software feel-DRCS
+29
+4.12. Removing software
+Please follow the below steps to remove any pre-installed software.
+4.12.1. Data Backup
+Back up the below files and folders at the route of the installed software.
+ AceView.ini
+ AceView.mdb
+ Cor folder
+ DefaultCurve folder
+Parameter Files
+Other files or folders which other operators added
+4.12.2. Software Removal
+From Add or Remove Programs of the Control Panel, click “Remove” to uninstall the unnecessary
+software.
+
+Digital Radiography Console Software feel-DRCS
+30
+4.13. Must-Do Setup of OS
+4.13.1. Set up of NIC
+(1) Internet Connection Sharing
+The install engineer must setup for using two LAN card. This configuration needs for priority of PACS
+network and Detector network.
+A. Check items for setup
+i. The Windows XP was installed.
+ii. If it installed two network interface card in the system, the one is interfaced or setup into PACS
+network or hospital network, another is interfaced into X-ray Detector.
+If the IP address of interfaced the PACS or hospital network is
+192.168.0.XXX, you should change IP address and default
+gateway IP address (192.168.XXX.XXX)
+iii. All of NIC(LAN Card) must be interface with network cable.
+B. Setup
+i. Start -> Control Panel - > Network
+ii. After check NIC(detector NIC or PACS NIC), you have to change network name, ‘PACS’ and
+‘DETECTOR’. After change network name, select the PACS network and click the right button of
+
+Digital Radiography Console Software feel-DRCS
+31
+mouse after selecting ‘properties‘.
+iii. Click the advanced.
+iv. Check the box in the red window and click the “OK” to finish.
+
+Digital Radiography Console Software feel-DRCS
+32
+After rebooting, IP is changed to 192.168.0.xxx.
+It needs to change original IP address.
+At the first time, IP address is 192.168.0.xxx that is connected
+with hospital network or PACS .
+It should change it to the assigned IP from hospital.
+
+Digital Radiography Console Software feel-DRCS
+33
+(2) Adapters and Binding (Window XP, 7, 8 are common)
+Select the Advanced ➔ Advanced Settings.. in Menu
+(If the Menu is hidden, it will be appeared by pressing ‘Alt+N’ Key)
+Select ‘pacs’ and click the button, and then confirm the changing connection order and click
+the ‘OK’ button
+
+Digital Radiography Console Software feel-DRCS
+34
+
+Digital Radiography Console Software feel-DRCS
+35
+4.13.2. Window Patch for DVD
+This update is a assistance for DVD burning in WindowXP operating system. You should update patch
+Microsoft patch files for using DVD burning.
+* You should select a “hotfix” folder in installCD.
+* First step, Install the “IMAPI_XP_SRV2003_x86.exe” file in the hotfix folder.
+* Second step, Install the “WindowsXP-KB932716-v2-x86-XXX” file in the hotfix folder. You must
+check a file name that mated Window XP Language version. For example, if your system is
+WindowXP English version, you must install “WindowsXP-KB932716-v2-x86-ENU” file.
+Note
+“You don’t need this step on the Windows 7 Operation system”
+
+Digital Radiography Console Software feel-DRCS
+36
+4.13.3. Virtual Memory Setup(Essential Setup)
+ Window XP
+This setup is for the stability of management of memory and store image.
+A. Click right button at icon of My Computer.
+B. Click the Advanced tap.
+C. Click the Settings in Performance
+
+Digital Radiography Console Software feel-DRCS
+37
+D. Click advanced tap
+E. Click change button in Virtual Memory
+
+Digital Radiography Console Software feel-DRCS
+38
+F. Change or setup.
+i. Select HDD.(You must setup all HDD)
+ii. Check in Custom size and type in , Initial size : up to 3072, Maximum size : up to 4092.
+iii. Click Setup button in paging file size for selected drive.
+Please set up the all of the used drive.
+If you installed the program and DCM in C drive, set up only
+one drive.
+But if you installed program and DCM separately, set up all
+drive at the same way .
+
+Digital Radiography Console Software feel-DRCS
+39
+ Window 7
+
+Digital Radiography Console Software feel-DRCS
+40
+
+Digital Radiography Console Software feel-DRCS
+41
+
+Digital Radiography Console Software feel-DRCS
+42
+4.13.4. DEP
+➢ DEP Setup in WindowsXP
+
+Digital Radiography Console Software feel-DRCS
+43
+You should change from (1) to (2)
+(1) /noexecute=optin or OptOut or AlwaysOn
+(2) /noexecute =AlwaysOff
+1. You don’t change anything exclude upper list.
+2. After modify text, you must be reboot PC.
+Note
+
+Digital Radiography Console Software feel-DRCS
+44
+➢ DEP Setup in Windows 7
+
+Digital Radiography Console Software feel-DRCS
+45
+
+Digital Radiography Console Software feel-DRCS
+46
+➢ DEP Setup in Windows 8
+- This function may not work exactly.
+- There are CMOS disturbs this function to use, at that case you need to set DEP release in OS.
+i. System
+Control Panel ➔ System and Security ➔ System
+ii. Click the Advanced system Setting and then the System Properties window will be shown. And
+then move the Advanced Tab and click the Settings button of Performance
+
+Digital Radiography Console Software feel-DRCS
+47
+iii. When the Performance Options window show, move the Data Execution Prevention Tab and then
+select ‘Turn on DEP for all programs and services except those I select’
+iv. Click the ‘Add…’ button and select two files as like below
+ feel-DRCS.exe
+ WBMaker.exe
+
+Digital Radiography Console Software feel-DRCS
+48
+v. Confirm the ‘feel-DRCS’ and ‘WBMaker’ was included in List and then click ‘Apply’
+button
+
+Digital Radiography Console Software feel-DRCS
+49
+4.13.5. Removal of Sleep Mode
+If you are using the detector connecting by Ethernet,
+To prevent, Ethernet connection is disconnected by Sleep mode. Don’t use the Sleep mode
+i. Open the ‘Control Panel’ and select ‘System and Security’.
+
+Digital Radiography Console Software feel-DRCS
+50
+ii. Select ‘Power Option’
+iii. Check ‘Balance(recommended)’ and click ‘Change plan settings’
+
+Digital Radiography Console Software feel-DRCS
+51
+iv. Change ‘Never’ in ‘Put the computer to sleep’
+
+Digital Radiography Console Software feel-DRCS
+52
+5. Trouble shooting
+5.1. Installation Error
+5.1.1. Case of the installation folder is existed before installation
+① If the installation folder is existed, the error window occur as upper.
+② Delete the Feel-DRCS and DCM folders and retry installation.
+5.1.2. Keylock Error
+① If the Keylock doesn’t insert to PC or has problem, feel-DCRS doesn’t execute and occur
+error window as upper
+② Check that Lock key insert to PC correctly
+③ Check that Aladdin driver is installed correct in Device Manage
+
+Digital Radiography Console Software feel-DRCS
+53
+5.2. Execution Error
+5.2.1. Dll Error
+① When you install feel-DRCS, ensure that selection of Detector and Model is correct.
+② If selection is correct, remove feel-DRCS program and reinstall again.
+③ If the problem isn’t fixed, contact to Service engineer.
+5.2.2. The feel-DRCS couldn’t be executed.
+① Execute ‘feel-DRCS.exe’ by Run as administrator
+② Or change the property of ‘feel-DRCS.exe’ as like below
+
+Digital Radiography Console Software feel-DRCS
+54
+5.2.3. Connection error with other devices.
+① Execute ‘feel-DRCS.exe’ by Run as administrator
+2 error message is shown connection error. In this case, you should to contact with engineer. The
+engineer checks path of installed detector software.
+In this case, connection error by hardware.
+- First, reboot detector and pc and software.
+- Second, re connect LAN cable from pc to Detector.
+- Third, contact with engineer.
+
+Digital Radiography Console Software feel-DRCS
+55
+6. Appendix
+6.1. DICOM MWL interface by Text file
+6.1.1. Principles of interfacing
+
+Digital Radiography Console Software feel-DRCS
+56
+6.1.2. Define order argument
+
+Digital Radiography Console Software feel-DRCS
+57
+6.1.3. Method of Interfacing
+(1) Filename
+- Order_Date.mwl (ex. Order_20140101123456.mwl)
+(2) Store destination folder
+- C:\feel-DRCS\OCS\
+(3) Argument delimiter
+- “,” : You can use this character in all of Text file.
+(4) Study delimiter
+- CR : Carriage return
+(5) Unknown value
+- Blank
+(6) Mandatory Argument
+- Patient ID/Name/Sex/Modality/Date of Study Scheduled
+6.1.4. Sample
+
+Digital Radiography Console Software feel-DRCS
+58
+7. Revision History
+Version Date Description
+Rev. 0 2020-03-12 Initial Release
