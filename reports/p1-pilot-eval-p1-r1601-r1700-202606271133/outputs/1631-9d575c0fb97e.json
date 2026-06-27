@@ -1,0 +1,197 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954420-18x7",
+    "sourcePath": "raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/14_검사기준서/출하검사기준서/HAD1717 정량평가 기준_Ver.0.pdf",
+    "canonicalGroupId": "9d575c0fb97e"
+  },
+  "document": {
+    "title": "HAD1717MC 및 HAD1717MG 정량 평가 기준",
+    "documentType": "정량 평가 기준",
+    "productModels": [
+      "HAD1717MC",
+      "HAD1717MG"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "Ver.0",
+    "documentDate": "2019.04.05",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "HAD1717MC 및 HAD1717MG 정량 평가 기준 dated 2019.04.05.",
+    "officialUse": "출하검사기준서 source path indicates use as shipment inspection criteria; source text defines quantitative criteria for sensitivity, linearity, MTF, DQE, noise, and defect evaluation.",
+    "keyPoints": [
+      "Linearity is checked by sequential exposure from low dose to high dose, with less than 3% error by measurement interval over 5 points.",
+      "Sensitivity criteria are 110 LSB/uGy or higher for HAD1717MC and 60 LSB/uGy or higher for HAD1717MG.",
+      "MTF and DQE criteria are specified for HAD1717MC and HAD1717MG at 0.1, 0.5, 1, 2, and 3 lp/mm.",
+      "Noise failure criteria are specified for Auto Trigger using 30 images with 14-bit and 16-bit Pixel StDev and Column StDev thresholds.",
+      "Defect detection criteria are specified from Dark Image and Bright Image, with allowed cluster counts for 17x17 panel size."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD1717MC",
+      "type": "product model",
+      "evidence": "HAD1717MC 및 HAD1717MG 정량 평가 기준"
+    },
+    {
+      "name": "HAD1717MG",
+      "type": "product model",
+      "evidence": "HAD1717MC 및 HAD1717MG 정량 평가 기준"
+    },
+    {
+      "name": "RQA5",
+      "type": "test condition",
+      "evidence": "* 조사 조건 : RQA5 (70kV, 40mAs) SID : 150cm, Al 21mm filter"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Sensitivity",
+      "pageTarget": "Sensitivity",
+      "evidence": "Sensitivity 기준 HAD1717MC HAD1717MG Sensitivity(LSB/uGy) 110 이상 60 이상"
+    },
+    {
+      "name": "Linearity",
+      "pageTarget": "Linearity",
+      "evidence": "Linearity 평가 : 저선량에서 고선량으로 순차적으로 촬영하여 디텍터의 선형성을 확인"
+    },
+    {
+      "name": "MTF (Modulation Transfer Function)",
+      "pageTarget": "Modulation Transfer Function",
+      "evidence": "MTF (Modulation Transfer Function) 기준"
+    },
+    {
+      "name": "DQE (Detective Quantum Efficiency)",
+      "pageTarget": "Detective Quantum Efficiency",
+      "evidence": "DQE (Detective Quantum Efficiency) 기준"
+    },
+    {
+      "name": "Noise",
+      "pageTarget": "Detector Noise",
+      "evidence": "Noise 불량 기준 (Auto Trigger)"
+    },
+    {
+      "name": "Defect",
+      "pageTarget": "Detector Defect Criteria",
+      "evidence": "Defect 1) Dark Image로부터 Defect 검출 조건"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is HAD1717MC 및 HAD1717MG 정량 평가 기준.",
+      "evidenceText": "HAD1717MC 및 HAD1717MG 정량 평가 기준",
+      "pageTarget": "HAD1717 Quantitative Evaluation Criteria",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document date is 2019.04.05.",
+      "evidenceText": "2019.04.05",
+      "pageTarget": "HAD1717 Quantitative Evaluation Criteria",
+      "confidence": "high"
+    },
+    {
+      "claim": "The document revision/version is Ver.0.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/01_HAD1717MC, MG/03_설계개발 출력/14_검사기준서/출하검사기준서/HAD1717 정량평가 기준_Ver.0.pdf",
+      "pageTarget": "HAD1717 Quantitative Evaluation Criteria",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Linearity evaluation checks detector linearity by sequentially exposing from low dose to high dose.",
+      "evidenceText": "Linearity 평가 : 저선량에서 고선량으로 순차적으로 촬영하여 디텍터의 선형성을 확인",
+      "pageTarget": "Linearity",
+      "confidence": "high"
+    },
+    {
+      "claim": "Measurement interval error criterion is less than 3%, with measurement intervals measured at 5 points.",
+      "evidenceText": "• 측정 구간 별 오차 3% 미만 (측정 구간은 5point로 측정)",
+      "pageTarget": "Linearity",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC sensitivity criterion is 110 LSB/uGy or higher, and HAD1717MG sensitivity criterion is 60 LSB/uGy or higher.",
+      "evidenceText": "Sensitivity 기준 HAD1717MC HAD1717MG Sensitivity(LSB/uGy) 110 이상 60 이상",
+      "pageTarget": "Sensitivity",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC MTF criteria are 93% or higher at 0.1 lp/mm, 75% or higher at 0.5 lp/mm, 55% or higher at 1 lp/mm, 34% or higher at 2 lp/mm, and 15% or higher at 3 lp/mm.",
+      "evidenceText": "HAD1717MC 0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm MTF (%) 93 이상 75 이상 55 이상 34 이상 15 이상",
+      "pageTarget": "Modulation Transfer Function",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG MTF criteria are 90% or higher at 0.1 lp/mm, 70% or higher at 0.5 lp/mm, 45% or higher at 1 lp/mm, 18% or higher at 2 lp/mm, and 10% or higher at 3 lp/mm.",
+      "evidenceText": "HAD1717MG 0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm MTF (%) 90 이상 70 이상 45 이상 18 이상 10 이상",
+      "pageTarget": "Modulation Transfer Function",
+      "confidence": "high"
+    },
+    {
+      "claim": "MTF irradiation condition is RQA5, 70 kV, 40 mAs, SID 150 cm, Al 21 mm filter.",
+      "evidenceText": "* 조사 조건 : RQA5 (70kV, 40mAs) SID : 150cm, Al 21mm filter",
+      "pageTarget": "RQA5",
+      "confidence": "high"
+    },
+    {
+      "claim": "DQE irradiation condition is RQA5, 70 kV, 6.4 mAs, SID 150 cm, Al 21 mm filter.",
+      "evidenceText": "* 조사 조건 : RQA5 (70kV, 6.4mAs) SID : 150cm, Al 21mm filter",
+      "pageTarget": "RQA5",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MC DQE criteria are 45% or higher at 0.1 lp/mm, 35% or higher at 0.5 lp/mm, 25% or higher at 1 lp/mm, 20% or higher at 2 lp/mm, and 15% or higher at 3 lp/mm.",
+      "evidenceText": "HAD1717MC 0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm DQE (%) 45 이상 35 이상 25 이상 20 이상 15 이상",
+      "pageTarget": "Detective Quantum Efficiency",
+      "confidence": "high"
+    },
+    {
+      "claim": "HAD1717MG DQE criteria are 35% or higher at 0.1 lp/mm, 20% or higher at 0.5 lp/mm, 15% or higher at 1 lp/mm, 10% or higher at 2 lp/mm, and 5% or higher at 3 lp/mm.",
+      "evidenceText": "HAD1717MG 0.1lp/mm 0.5lp/mm 1lp/mm 2lp/mm 3lp/mm DQE (%) 35 이상 20 이상 15 이상 10 이상 5 이상",
+      "pageTarget": "Detective Quantum Efficiency",
+      "confidence": "high"
+    },
+    {
+      "claim": "For Auto Trigger noise, if either Pixel StDev or Column StDev exceeds the per-image threshold in any one of 30 images, it is defective.",
+      "evidenceText": "불량 기준 (Auto Trigger) ① 30장의 영상 중 두 항목이 아래 기준을 한 장이라도 초과하면 불량 14bit 기준 - Pixel StDev : 1.5LSB / Column StDev : 0.30 LSB 16bit 기준 - Pixel StDev : 6.0LSB / Column StDev : 1.20 LSB",
+      "pageTarget": "Detector Noise",
+      "confidence": "high"
+    },
+    {
+      "claim": "For Auto Trigger noise, if the average of 30 images exceeds the average threshold for either item, it is defective.",
+      "evidenceText": "② 30장의 영상의 평균 값을 계산 해서 두 항목이 아래 기준을 초과하면 불량 14bit 기준 - Pixel StDev : 1.2LSB / Column StDev : 0.26 LSB 16bit 기준 - Pixel StDev : 4.8LSB / Column StDev : 1.04 LSB",
+      "pageTarget": "Detector Noise",
+      "confidence": "high"
+    },
+    {
+      "claim": "Dark Image defect detection uses Median - Offset < Median < Median + Offset with Offset 500 to 700 LSB.",
+      "evidenceText": "1) Dark Image로부터 Defect 검출 조건 - Defect 판단 기준 : Median - Offset < Median < Median + Offset - Offset : 500 ~ 700LSB",
+      "pageTarget": "Detector Defect Criteria",
+      "confidence": "medium"
+    },
+    {
+      "claim": "Bright Image defect detection uses Median - % < Median < Median + %, with values within 10% of the median.",
+      "evidenceText": "2) Bright Image로부터 Defect 검출 조건 - Defect 판단 기준 : Median - % < Median < Median + % - % : Median 값 으로부터 10% 이내",
+      "pageTarget": "Detector Defect Criteria",
+      "confidence": "medium"
+    },
+    {
+      "claim": "For 17x17 panel size, allowed cluster counts are listed for 1 to 6 pixel defects in 3x3 windows: 2400, 1050, 530, 320, 110, and 50 respectively.",
+      "evidenceText": "Panel size (inch) The number of pixel defect in 3x3 windows Allowed number of cluster 17x17 1 2,400 2 1,050 3 530 4 320 5 110 6 50",
+      "pageTarget": "Detector Defect Criteria",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No regulatory authority or jurisdiction is identified in the source text; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "Revision/version is taken from sourcePath filename only; the source text title page does not explicitly show Ver.0."
+    },
+    {
+      "severity": "info",
+      "reason": "No formal regulatory standard document number is identified; RQA5 appears only as an irradiation condition."
+    }
+  ]
+}

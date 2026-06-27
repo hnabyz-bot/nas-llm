@@ -1,0 +1,156 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954421-19b5",
+    "sourcePath": "raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/2G PCB 도면/PCB_Stack_UP_to_Abyz_20210518.xlsx",
+    "canonicalGroupId": "995e24a75d86"
+  },
+  "document": {
+    "title": "PCB_Stack_UP_to_Abyz_20210518.xlsx",
+    "documentType": "PCB stack-up drawing",
+    "productModels": [
+      "A1417MCW",
+      "A1717MCW",
+      "F1417MCW"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "20210518",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "PCB stack-up notes for Main BD, GATE4343 BD, GATE4335 BD, ROIC BD, and SUB BD.",
+    "officialUse": "Design and development output for PCB mechanical drawing stack-up specifications.",
+    "keyPoints": [
+      "PCB thickness and copper foil thickness are stated as referring to the stack-up.",
+      "Surface treatment is Immersion Gold with Au 0.08㎛ minimum and Ni 3.0㎛ minimum.",
+      "PSR color is Green with solder resist thickness 0.005mm to 0.035mm.",
+      "Silk color is White with silkscreen thickness 0.025mm maximum.",
+      "GATE4343 BD, GATE4335 BD, and ROIC BD include PAD area Tape or Peelable Soder Mask (Blue)."
+    ]
+  },
+  "entities": [
+    {
+      "name": "A1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: 03_A1417MCW, A1717MCW, F1417MCW"
+    },
+    {
+      "name": "A1717MCW",
+      "type": "product model",
+      "evidence": "sourcePath: 03_A1417MCW, A1717MCW, F1417MCW"
+    },
+    {
+      "name": "F1417MCW",
+      "type": "product model",
+      "evidence": "sourcePath: 03_A1417MCW, A1717MCW, F1417MCW"
+    },
+    {
+      "name": "Main BD",
+      "type": "PCB board",
+      "evidence": "Main BD stackup"
+    },
+    {
+      "name": "GATE4343 BD",
+      "type": "PCB board",
+      "evidence": "GATE4343 BD stackup"
+    },
+    {
+      "name": "GATE4335 BD",
+      "type": "PCB board",
+      "evidence": "GATE4335 BD stackup"
+    },
+    {
+      "name": "ROIC BD",
+      "type": "PCB board",
+      "evidence": "ROIC BD stackup"
+    },
+    {
+      "name": "SUB BD",
+      "type": "PCB board",
+      "evidence": "SUB BD stackup"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB stack-up",
+      "pageTarget": "PCB stack-up",
+      "evidence": "Main BD stackup"
+    },
+    {
+      "name": "Immersion Gold surface treatment",
+      "pageTarget": "Immersion Gold",
+      "evidence": "표면처리,\"Immersion Gold : Au 0.08㎛(Min), Ni 3.0㎛(Min) \""
+    },
+    {
+      "name": "PSR color",
+      "pageTarget": "Photo solder resist",
+      "evidence": "PSR 색상,Green,( Solder Resist Thickness : 0.005mm ~ 0.035mm )"
+    },
+    {
+      "name": "Silk color",
+      "pageTarget": "PCB silkscreen",
+      "evidence": "Silk 색상,White,( Silkscreen Thickness 0.025mm (Max) )"
+    },
+    {
+      "name": "Peelable solder mask",
+      "pageTarget": "Peelable solder mask",
+      "evidence": "(PAD부 Tape 또는 Peelable Soder Mask (Blue))"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Main BD stack-up specifies PCB thickness and copper foil thickness by reference to the stack-up.",
+      "evidenceText": "Main BD stackup,,\n1. PCB 두께,하기 Stackup 참고,\n2. 동박 두께,하기 Stackup 참고,",
+      "pageTarget": "Main BD stack-up",
+      "confidence": "high"
+    },
+    {
+      "claim": "The PCB surface treatment is Immersion Gold with Au 0.08㎛ minimum and Ni 3.0㎛ minimum.",
+      "evidenceText": "표면처리,\"Immersion Gold : Au 0.08㎛(Min), Ni 3.0㎛(Min) \"",
+      "pageTarget": "Immersion Gold",
+      "confidence": "high"
+    },
+    {
+      "claim": "PSR color is Green and solder resist thickness is 0.005mm to 0.035mm.",
+      "evidenceText": "PSR 색상,Green,( Solder Resist Thickness : 0.005mm ~ 0.035mm )",
+      "pageTarget": "Photo solder resist",
+      "confidence": "high"
+    },
+    {
+      "claim": "Silk color is White and silkscreen thickness is 0.025mm maximum.",
+      "evidenceText": "Silk 색상,White,( Silkscreen Thickness 0.025mm (Max) )",
+      "pageTarget": "PCB silkscreen",
+      "confidence": "high"
+    },
+    {
+      "claim": "GATE4343 BD, GATE4335 BD, and ROIC BD include PAD area Tape or Peelable Soder Mask (Blue).",
+      "evidenceText": "GATE4343 BD stackup ... (PAD부 Tape 또는 Peelable Soder Mask (Blue)); GATE4335 BD stackup ... (PAD부 Tape 또는 Peelable Soder Mask (Blue)); ROIC BD stackup ... (PAD부 Tape 또는 Peelable Soder Mask (Blue))",
+      "pageTarget": "Peelable solder mask",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source path identifies the product models A1417MCW, A1717MCW, and F1417MCW.",
+      "evidenceText": "sourcePath: raw/sources/DHF (인허가)/03_A1417MCW, A1717MCW, F1417MCW/03_설계개발 출력/06_기구도면/2G PCB 도면/PCB_Stack_UP_to_Abyz_20210518.xlsx",
+      "pageTarget": "A1417MCW",
+      "confidence": "medium"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is not identified in the source text; authoritySignal is only 'general'."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the provided source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Document date is taken from the filename token '20210518' rather than an explicit date field in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the provided source text."
+    }
+  ]
+}

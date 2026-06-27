@@ -1,0 +1,138 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954420-1861",
+    "sourcePath": "raw/sources/DHF (인허가)/01_HAD1717MC, MG/01_설계개발 계획/전체 개발 일정.xlsx",
+    "canonicalGroupId": "dd558ee18e6c"
+  },
+  "document": {
+    "title": "전체 개발 일정",
+    "documentType": "Design and development schedule",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Development schedule table covering W/S & E/S integration, P/P, certification progress, and product demo activities.",
+    "officialUse": "Supports DHF design and development planning by listing development stages, responsible parts, and planned activities.",
+    "keyPoints": [
+      "Schedule columns are organized by development stage, development part, activity content, and monthly periods from 1 to 12 months.",
+      "W/S & E/S integration includes software, firmware, circuit, mechanical, and FPGA development activities.",
+      "P/P includes software integration, second design improvement, mechanical sample work, and auto trigger parameter setting.",
+      "Later listed stages include certification progress and product demo."
+    ]
+  },
+  "entities": [
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "productSignal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "Software & Firmware 개발",
+      "type": "developmentPart",
+      "evidence": "W/S & E/S 통합,Software & Firmware 개발,Viwer 수정 및 개선"
+    },
+    {
+      "name": "FPGA 설계",
+      "type": "developmentPart",
+      "evidence": "FPGA 설계,기 설계 수정 및 개선"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "W/S & E/S 통합",
+      "pageTarget": "W/S & E/S 통합",
+      "evidence": "W/S & E/S 통합,Software & Firmware 개발,Viwer 수정 및 개선"
+    },
+    {
+      "name": "P/P",
+      "pageTarget": "P/P",
+      "evidence": "P/P,Software & Firmware 개발,Console S/W & Acquisiton S/W integration"
+    },
+    {
+      "name": "인증 진행",
+      "pageTarget": "인증 진행",
+      "evidence": "인증 진행"
+    },
+    {
+      "name": "제품 Demo",
+      "pageTarget": "제품 Demo",
+      "evidence": "제품 Demo"
+    },
+    {
+      "name": "Auto Trigger Algorithm",
+      "pageTarget": "Auto Trigger Algorithm",
+      "evidence": "Auto Trigger Algorithm 개발 및 구현"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The source is a development schedule organized by development stage, part, activity content, and monthly periods.",
+      "evidenceText": "개발 단계,개발 Part,내용,1개월,,,,2개월,,,,3개월,,,,4개월,,,,5개월,,,,6개월,7개월,8개월,9개월,10개월,11개월,12개월",
+      "pageTarget": "전체 개발 일정",
+      "confidence": "high"
+    },
+    {
+      "claim": "W/S & E/S integration includes viewer modification and improvement under software and firmware development.",
+      "evidenceText": "W/S & E/S 통합,Software & Firmware 개발,Viwer 수정 및 개선",
+      "pageTarget": "W/S & E/S 통합",
+      "confidence": "high"
+    },
+    {
+      "claim": "Software and firmware activities include adding storage functionality, improving acquisition software, and stabilizing DLib with manual writing.",
+      "evidenceText": "Storage 기능 추가; Acquisition S/W 개선; DLib 안정화 및 메뉴얼 작성",
+      "pageTarget": "Software & Firmware 개발",
+      "confidence": "high"
+    },
+    {
+      "claim": "Mechanical development includes sample design, sample verification, packaging design and production, and internal and external reliability.",
+      "evidenceText": "1차 기구물 설계 및 Sample 제작; 1차 Sample 기구물 검증; 포장 설계 및 제작; 내부, 외부 신뢰성",
+      "pageTarget": "기구물 개발",
+      "confidence": "high"
+    },
+    {
+      "claim": "FPGA design includes existing design modification and improvement, auto trigger algorithm development and implementation, and auto trigger operation verification.",
+      "evidenceText": "FPGA 설계,기 설계 수정 및 개선; Auto Trigger Algorithm 개발 및 구현; Auto Trigger 구동 검증",
+      "pageTarget": "FPGA 설계",
+      "confidence": "high"
+    },
+    {
+      "claim": "The P/P stage includes console software and acquisition software integration.",
+      "evidenceText": "P/P,Software & Firmware 개발,Console S/W & Acquisiton S/W integration",
+      "pageTarget": "P/P",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schedule lists certification progress and product demo as development stages.",
+      "evidenceText": "인증 진행; 제품 Demo",
+      "pageTarget": "전체 개발 일정",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "Authority or jurisdiction is ambiguous; source metadata only provides authoritySignal as general."
+    },
+    {
+      "severity": "info",
+      "reason": "No regulatory standards are identified in the provided source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "The preprocessed spreadsheet text preserves many empty schedule cells, so exact activity timing cannot be extracted."
+    }
+  ]
+}

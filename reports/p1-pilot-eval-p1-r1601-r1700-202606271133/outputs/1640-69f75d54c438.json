@@ -1,0 +1,135 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954411-zl0",
+    "sourcePath": "raw/sources/RA/01_DHF/04_G1717CW 외 7종/DHF/11. 전장 설계/ROIC_1717/Stack-up(impedance)/BLUE_1717_ROIC_12140(241014)-1.2T_8L (STACK-UP).xls",
+    "canonicalGroupId": "69f75d54c438"
+  },
+  "document": {
+    "title": "BLUE_1717_ROIC_12140(241014)-1.2T_8L (STACK-UP).xls",
+    "documentType": "PCB stack-up / impedance spreadsheet",
+    "productModels": [
+      "BLUE_1717_ROIC_12140"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Spreadsheet-style PCB stack-up defining an 8-layer 1.222 mm stack with impedance and trace-width notes.",
+    "officialUse": "Used as electrical design stack-up and impedance information for the ROIC_1717 board context.",
+    "keyPoints": [
+      "The source is labeled '* STACKUP *'.",
+      "The stack lists layers 1 through 8: TOP, GND, DF100, GND, PWR, DF100, GND, BOT.",
+      "The total stack thickness shown is 1.222.",
+      "Impedance notes specify DF100Ω trace width and gap values for TOP/BOT and 3,6L."
+    ]
+  },
+  "entities": [
+    {
+      "name": "BLUE_1717_ROIC_12140",
+      "type": "board or design identifier",
+      "evidence": "BLUE_1717_ROIC_12140(241014)-1.2T_8L (STACK-UP).xls"
+    },
+    {
+      "name": "ROIC_1717",
+      "type": "design context",
+      "evidence": "ROIC_1717/Stack-up(impedance)/BLUE_1717_ROIC_12140(241014)-1.2T_8L (STACK-UP).xls"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "PCB stack-up",
+      "pageTarget": "PCB Stack-Up",
+      "evidence": "* STACKUP *"
+    },
+    {
+      "name": "8-layer PCB",
+      "pageTarget": "8-Layer PCB Stack-Up",
+      "evidence": "1,TOP; 2,GND; 3,DF100; 4,GND; 5,PWR; 6,DF100; 7,GND; 8,BOT"
+    },
+    {
+      "name": "Controlled impedance trace width",
+      "pageTarget": "Controlled Impedance Trace Width",
+      "evidence": "Impedance & Trace-width"
+    },
+    {
+      "name": "DF100Ω impedance",
+      "pageTarget": "DF100 Ohm Differential Impedance",
+      "evidence": "DF100Ω:0.16mm & GAP:0.254mm (TOP,BOT)"
+    },
+    {
+      "name": "Pre-preg",
+      "pageTarget": "PCB Pre-Preg",
+      "evidence": "Pre-preg,0.11 X 1,0.11"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document is a PCB stack-up source.",
+      "evidenceText": "* STACKUP *",
+      "pageTarget": "PCB Stack-Up",
+      "confidence": "high"
+    },
+    {
+      "claim": "The stack-up contains eight numbered layers.",
+      "evidenceText": "1,TOP; 2,GND; 3,DF100; 4,GND; 5,PWR; 6,DF100; 7,GND; 8,BOT",
+      "pageTarget": "8-Layer PCB Stack-Up",
+      "confidence": "high"
+    },
+    {
+      "claim": "The listed layer sequence is TOP, GND, DF100, GND, PWR, DF100, GND, BOT.",
+      "evidenceText": "1,TOP ... 2,GND ... 3,DF100 ... 4,GND ... 5,PWR ... 6,DF100 ... 7,GND ... 8,BOT",
+      "pageTarget": "PCB Layer Stack Sequence",
+      "confidence": "high"
+    },
+    {
+      "claim": "The total stack thickness shown is 1.222.",
+      "evidenceText": ",,,1.222",
+      "pageTarget": "PCB Stack-Up Thickness",
+      "confidence": "high"
+    },
+    {
+      "claim": "The sheet includes impedance and trace-width information.",
+      "evidenceText": "Impedance & Trace-width",
+      "pageTarget": "Controlled Impedance Trace Width",
+      "confidence": "high"
+    },
+    {
+      "claim": "For TOP and BOT, DF100Ω is associated with 0.16 mm trace width and 0.254 mm gap.",
+      "evidenceText": "DF100Ω:0.16mm & GAP:0.254mm (TOP,BOT)",
+      "pageTarget": "DF100 Ohm Differential Impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "For layers 3 and 6, DF100Ω is associated with 0.093 mm trace width and 0.254 mm gap.",
+      "evidenceText": "DF100Ω:0.093mm & GAP:0.254mm (3,6L)",
+      "pageTarget": "DF100 Ohm Differential Impedance",
+      "confidence": "high"
+    },
+    {
+      "claim": "Several copper layers show 0.034 thickness values.",
+      "evidenceText": "1,TOP,,0.034; 2,GND,0.2T (1oz),0.034; 3,DF100,,0.034; 4,GND,0.1T (1oz),0.034; 5,PWR,,0.034; 6,DF100,0.1T (1oz),0.034; 7,GND,,0.034; 8,BOT,,0.034",
+      "pageTarget": "PCB Copper Layer Thickness",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "No explicit issuing authority or jurisdiction is present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit revision or version metadata is present; '1.2T' appears in the filename but is treated as stack thickness context, not a revision."
+    },
+    {
+      "severity": "warning",
+      "reason": "No explicit document date is present; '(241014)' appears in the filename but is not labeled as a document date."
+    },
+    {
+      "severity": "info",
+      "reason": "Product or model identity is inferred from the filename token 'BLUE_1717_ROIC_12140' because the source metadata productSignal is Unclassified."
+    }
+  ]
+}
