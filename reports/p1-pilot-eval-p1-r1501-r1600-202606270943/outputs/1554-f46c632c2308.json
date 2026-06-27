@@ -1,0 +1,157 @@
+{
+  "source": {
+    "queueId": "ingest-1781569954382-c7k",
+    "sourcePath": "raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/02. Master Schedule/KGMP 심사용/Master Schedule.xlsx",
+    "canonicalGroupId": "f46c632c2308"
+  },
+  "document": {
+    "title": "Detector Master Plan",
+    "documentType": "Master Schedule",
+    "productModels": [
+      "HAD/A/F 1417-1717"
+    ],
+    "authorityOrJurisdiction": [],
+    "revisionOrVersion": "",
+    "documentDate": "",
+    "standards": []
+  },
+  "sourceSummary": {
+    "oneLine": "Detector development master schedule covering activities from April 2018 through July 2019.",
+    "officialUse": "Used as a DHF/KGMP review master schedule for detector development planning and completion tracking.",
+    "keyPoints": [
+      "Schedule lists development activities including MRD review, development plan drafting, detector design, design review, mechanical design, circuit design and artwork.",
+      "Includes sample making, assembly and debugging, FPGA/FW/SW design, internal performance tests, reviews, design improvement, and reliability testing.",
+      "Schedule ends with P/P production, P/P completion report, development completion, and mass-production transfer document distribution."
+    ]
+  },
+  "entities": [
+    {
+      "name": "Detector Master Plan",
+      "type": "document title",
+      "evidence": "Detector Master Plan"
+    },
+    {
+      "name": "HAD/A/F 1417-1717",
+      "type": "product signal",
+      "evidence": "productSignal: HAD/A/F 1417-1717"
+    },
+    {
+      "name": "KGMP",
+      "type": "regulatory review context",
+      "evidence": "KGMP 심사용"
+    },
+    {
+      "name": "MRD",
+      "type": "development document or review item",
+      "evidence": "MRD 검토"
+    },
+    {
+      "name": "FPGA",
+      "type": "technical design item",
+      "evidence": "FPGA 설계"
+    },
+    {
+      "name": "FW",
+      "type": "technical design item",
+      "evidence": "FW 설계"
+    },
+    {
+      "name": "SW",
+      "type": "technical design item",
+      "evidence": "SW 설계"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Master Schedule",
+      "pageTarget": "Master Schedule",
+      "evidence": "Master Schedule.xlsx"
+    },
+    {
+      "name": "Detector Design Review",
+      "pageTarget": "Detector Design Review",
+      "evidence": "Detector Design Review"
+    },
+    {
+      "name": "Reliability Test",
+      "pageTarget": "Reliability Testing",
+      "evidence": "신뢰성 테스트"
+    },
+    {
+      "name": "Mass Production Transfer Documents",
+      "pageTarget": "Mass Production Transfer",
+      "evidence": "양산이관 문서 배포"
+    },
+    {
+      "name": "Development Completion",
+      "pageTarget": "Development Completion",
+      "evidence": "개발 완료"
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "The document title is Detector Master Plan.",
+      "evidenceText": "Detector Master Plan",
+      "pageTarget": "Detector Master Plan",
+      "confidence": "high"
+    },
+    {
+      "claim": "The source is a master schedule spreadsheet for KGMP review context.",
+      "evidenceText": "sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/02. Master Schedule/KGMP 심사용/Master Schedule.xlsx",
+      "pageTarget": "Master Schedule",
+      "confidence": "high"
+    },
+    {
+      "claim": "The schedule covers months from April 2018 through July 2019.",
+      "evidenceText": "2018년 ... 4월,5월,6월,7월,8월,9월,10월,11월,12월, 2019년 ... 1월,2월,3월,4월,5월,6월,7월",
+      "pageTarget": "Development Schedule",
+      "confidence": "high"
+    },
+    {
+      "claim": "Planned development work includes MRD review, development plan drafting, detector design, and design review.",
+      "evidenceText": "MRD 검토 ... 개발계획서 작성 및 기안 ... Detector Design 설계 ... Detector Design Review",
+      "pageTarget": "Development Planning",
+      "confidence": "high"
+    },
+    {
+      "claim": "Technical design activities include mechanical design, circuit design and artwork, FPGA design, FW design, and SW design.",
+      "evidenceText": "기구 설계 ... 회로 설계 및 Artwork ... FPGA 설계 ... FW 설계 ... SW 설계",
+      "pageTarget": "Technical Design",
+      "confidence": "high"
+    },
+    {
+      "claim": "Verification and review activities include internal performance tests, reviews, design improvement, and reliability testing.",
+      "evidenceText": "W/S 내부 성능 테스트 ... W/S 품평회 ... 설계 개선 ... E/S 내부 성능 테스트 ... 신뢰성 테스트 ... E/S 품평회",
+      "pageTarget": "Design Verification",
+      "confidence": "high"
+    },
+    {
+      "claim": "Completion activities include E/S document distribution, P/P production, P/P completion report, development completion, and mass-production transfer document distribution.",
+      "evidenceText": "E/S 완료 문서 배포 ... P/P 제작 ... P/P 완료 보고서 ... 개발 완료 ... 양산이관 문서 배포",
+      "pageTarget": "Development Completion",
+      "confidence": "high"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "severity": "warning",
+      "reason": "Document date is not explicitly stated; only schedule years and months are present."
+    },
+    {
+      "severity": "warning",
+      "reason": "Revision or version is not present in the source text."
+    },
+    {
+      "severity": "warning",
+      "reason": "No issuing authority or jurisdiction is identified; authoritySignal is general."
+    },
+    {
+      "severity": "info",
+      "reason": "No standards are cited in the source text."
+    },
+    {
+      "severity": "info",
+      "reason": "Spreadsheet-derived text contains mostly schedule labels and empty cells, with no detailed milestone dates or quantities visible."
+    }
+  ]
+}
