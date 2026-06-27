@@ -1,0 +1,218 @@
+queueId: ingest-1781569954414-12ri
+sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/14. 디텍터 구동 Software/히스토리/SW_SDK_ HAD1717MC_휴이넘_개선_진행_히스토리_20221109.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/ec5af060d7fc/SW_SDK_ HAD1717MC_휴이넘_개선_진행_히스토리_20221109__ec5af060d7fc_combined.txt
+canonicalGroupId: c1aa45607776
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1767
+
+SOURCE_TEXT
+SDK 이슈 개선 진행 사항 ( 휴이넘 외주개발 ),,,,,,,
+모델 : HAD1717MC,,,,,,,
+SW : SDK,,,,,,,
+Date,Ver,진행 사항,촬영 조건,촬영 비교 이미지,비고,,
+2022.08.22,SDK Ver : 1.0.0.3,"1. field 영상 촬영 시 256, 2816 line 표시되는 이슈로 인해 SDK pre-processing 처리 알고리즘 외주개발 개선 진행함. (휴이넘 외주 개발)
+ (22.08.08 ~ 22.09.01)
+2. roic line 개선된 테스트 버전 전달 받아 테스트 진행함. (버전 정보 동일: 주석에 test 버전 표기)
+3. 마지막 테스트 버전에서 촬영 진행 시 256 line 이 표시되는 이슈 발생으로 추가 개선 진행 중…
+1) 256, 2816 Line은 찾아보기 힘들정도로 많이 지워진 것으로 보임.
+2) Test3 영상에서 알수 없는 단차라인이 보이는 현상이 나타남.
+3) 개선 version에서 Saturation이 제대로 작동하지 않는 것으로 보임."," -. Test1 : AP 촬영
+ -. Test2 : Lateral 256 위주의 촬영
+ -. Test3 : Lateral 2816 위주의 촬영","좌측 영상은 기존 XAS 촬영, 우측 영상은 개선 Version XAS 촬영
+① ②
+ ③",,,
+2022.09.05,SDK Ver : 1.0.0.3,"1. 256 Line
+ - 256 Line은 정상적으로 ROIC Line이 지워지는 것을 확인. 눈에 찾기 힘들정도로 지워지는 것을 확인.
+2. 2816 Line
+ - 2816 Line은 지워지지 않는 형태를 보임.
+3. Saturation
+ - Saturation도 아직은 적용이 되지 않는 것으로 보임.",,"①
+②
+③",,,
+2022.09.06,SDK Ver : 1.0.0.3,"1. 256 Line
+ -. 256 Line에서 ROIC Line 눈으로 찾기 힘들 정도로 지워진 것으로 보임.
+2. 2816 Line
+ -. 2816 Line도 마찬가지로 눈으로 찾기 힘들 정도로 지워진 것으로 보임.
+3. Saturation
+ -. Saturation 부분은 아직도 안되는 것으로 확인됨.
+",,"
+①
+②",,,
+2022.09.07,SDK Ver : 1.0.0.3,"필드 적용과 관련.
+Saturaion 값 8500 설정시 9400, 정도로 변경되는 현상이 아닌
+Saturaion 값 설정 자체가 되지 않아 background가 Calibration 되지 않는 현상이 보임.
+이에 Saturation 적용되지 않을시 필드 적용이 불가능함.
+관련 추가적인 내용 전달.
+1. Console S/W 연동 관련
+ -. Console S/W 연동 및 촬영은 정상적으로 가능한 것으로 보임.
+ ( 추가 Test 예정 )
+ -. ROIC Line도 정상적으로 지워지는 것으로 보임.
+ -. 촬영 시간 변화. (약 4~5초 시간 증가 )
+ 1) 기존 XAS
+ : X-ray 조사 후 11~13초 이내에 영상 획득 후 다음 촬영 준비 완료
+ 2) 개선 XAS
+ : X-ray 조사 후 16~18초 이내에 영상 획득 후 다음 촬영 준비 완료
+2. Saturation
+ -. 기존 XAS에서 Saturation 값을 설정시 Saturation 값 이상의 Pixel들은 Saturation 값으로 표현하여 Background가 모두 하나의 색으로 표현 가능.
+ ( Saturation 값 8500 설정시 -> 9000, 9400 정도로 Saturation되며, 이 수치는 Background 표현시 문제 없음.)
+ -. 개선 XAS에서 Saturation 값을 설정시 Saturation 되지 않고, 영상의 Background 영상이 무너지는 현상 발생.
+ ( Sturation 값 8500 설정시 -> Background가 제각각의 수치로 11000~20000) ",,,,,
+2022.09.07,SDK Ver : 1.0.0.3,"수정사항.
+Saturation 세팅값 적용
+ROIC Line 관련 Test 결과 전달.
+ 1. 256, 2816 Line은 기존과 동일하게 정상적으로 지워지는 것을 확인.
+ 2. Sturation 관련해서 설정한 Saturation이 정상적으로 되지 않는 현상은 사라진것으로 보임.
+ 3. Console S/W 정상적으로 연동되는 것을 확인.
+ 4. 촬영시간이 4~5초 늘어난 현상은 동일함.",,"① ②
+③",,,
+2022.09.26,SDK Ver : 1.0.0.3,"ROIC Line 개선 관련하여 임상적용 결과 전달.
+좌측 영상은 개선전 영상이며, 우측은 개선 후 영상.
+* 해당 사이트는 모든 Lateral 영상에서 ROIC Line이 나오는 상황은 아님.
+* 256 Line 부분에서는 인체 중앙부에서는 Line 형태가 지워지는 형상을 보이나, 사이드에서는 부분에서는 발생하는 형상을 보임.
+* 2816 Line에서는 약간의 Line 자국이 보이는 형상임.
+위와 같은 형상으로 추가 개선이 필요할 것 같음.
+정형외과/신경외과 임상적용 사이트는 영상 촬영 지연으로 인해 컴플레인이 있어 사이트 확보 중에 있음.",,,,,
+2022.09.29,SDK Ver : 1.0.0.3,"Calibration Point 1500 LSB 추가하여 Test한 결과 전달.
+ 1. 기존 XAS + 개선 Dll
+ -. Dark. Bright, Acqusition 시 XAS가 종료되는 현상이 있음.
+ 2. ROIC Line XAS + 개선 Dll
+ -. 영상에 단차가 생기는 현상이 있음.",,,,,
+2022.10.05,SDK Ver : 1.0.0.3,"ROIC Line 관련 추가 임상자료 전달.
+다른 사이트에서도 미세하게 ROIC Line이 나오는 형상을 보임.
+추가적으로 영상 단차가 발생하는 현상이 있음.
+현재 적용 사이트에서 ROIC Line은 미세하게 계속 발생중임.
+적용 후에 영상획득 지연과, 영상 단차 현상이 발생하여 ROIC Line 개선 버전 적용이 불가능할 것 같음.
+",,,,,
+2022.10.11,SDK Ver : 1.0.0.3,"Gain Correction Test 관련.
+1. Low Dose pelvis
+ -. background에서 Gain Correction이 적상적으로 적용되지 않은 것 처럼 나타남.
+",,,,,
+2022.10.19,SDK Ver : 1.0.0.3,"Low dose 영상개선을 위한 게인, 오프셋 코렉션 개선 버전.
+원포인트 멀티포인트 사용가능하게 수정 되었으며 투포인트 사용하실 경우 기존 도즈에 500그레이 언더에 포인트를 하나더 추가하시는것이 좋을듯 함.
+테스트 진행 요청.
+Lose dose 영상 개선 버전 Test 자료 전달드림.",,,,,
+2022.10.21,SDK Ver : 1.0.0.3,"시간 측정 버전
+ROIC Line 개선 버전 영상획득 시간 관련 테스트 결과 전달.
+XAS 영상획득 시간 관련된 숫자의 의미가 정확하게 무엇인지 확인 부탁드립니다.
+1. XAS_ROIC 영상획득 시간 측정 DLL 적용 메시지
+ - 3300~3700이 주로 나타나며, 랜덤하게 6000정도 값이 한번씩 나타남.
+ - 기존 버전에서는 DLL 적용이 되지 않아 메세지로 나타나는 값 확인 불가
+ -> 기존 버전에서는 메세지 값 확인 불가로 Data적으로 비교가 불가함.
+2. XAS 영상 획득하고 Hn_Viewer에 영상이 표시되는 시간
+ 1) XAS_ROIC : 약 7.1 ~ 7.7초 영상 표시
+ 2) XAS_Original : 약 3.3~4.5초 영상 표시
+ -> XAS_Original의 경우 영상을 획득하고 Hn_Viewer에 나타나는 시간의 차이가 큼
+ -> 획득 시간의 차이는 3~4초 차이가 나타는 것으로 보임.
+3. Console S/W로 촬영시 Raw 영상이 나타나는 시간 ( Post Processing x)
+ 1) XAS_ROIC : 8.5~9.4초 영상 표시
+ 2) XAS_Original : 5.4~5.8초 영상 표시
+ -> 획득 시간의 차이는 3~4초 차이가 나타나는 것으로 보임.
+4. Console S/W 영상 획득하고 다음 촬영 준비 완료까지 시간
+ 1) XAS_ROIC : 17.5~18.3초
+ 2) XAS_Original : 14.1~14.4
+ -> X-ray 조사 후 다음 X-ray 조사가 가능한 상태 까지 걸리는 시간의 차이는 3.3~ 4초 차이가 나타나는 것으로 보임.
+기존 XAS에 비해 영상 획득시간이 적게는 3초 많게는 4초이상 영상 획득 시간이 증가한 것으로 보이며 30~40번의 1번 정도 4초 후반대의 차이를 보이는 경우가 있었음.
+초시계로 Test한 결과이며, 약간의 오차가 있을 수 있음.",,,,,
+2022.11.01,SDK Ver : 1.0.0.3,"Gain Correction 자료 전달.
+10.28일 자료는 Single, 2 Point Calibration으로 촬영한 Pre processing 전/후 영상임.
+10.31일 자료는 Single, 2 Point Calibration으로 촬영한 Post Processing image 임.
+좌측이 기존 영상이며, 우측이 현재 Test 버전 영상임.
+ -.첫번째 이미지에서는 Line들이 더욱 뚜렷해 지는 것으로 보임.
+ -. 두번째 이미지에서는 라인 형상이 퍼져 보임.",,,,,
+2022.11.01,SDK Ver : 1.0.0.3,"ROIC Line 및 개선 버전 단차 발생으로 인한 기존 XAS 촬영 이미지 전달.
+단차 발생 사이트 영상 C/T/L Spine, Shoulder Image 모두 휴이넘측으로 전달함.",,,,,
+2022.11.04,SDK Ver : 1.0.0.3,"Gain Correction 관련하여 Test 결과 전달.
+* C-spine / 66kVp, 3.2, 4, 5, 6.4, 8, 10. 12.4, 16mAs
+ 1. Line 발생 선량
+ -. Original Version에서는 66kVp, 8mAs 이하의 선량부터 Line이 눈에 띄게 나타나기 시작.
+ -. Gain Version에서는 66kVp, 4mAs 이하의 선량부터 Line이 눈에 띄게 나타나기 시작.
+ 2. Gain Version에서 Line 형태가 뚜렷하지는 않지만 블러하게 두꺼운 Line으로 나타나는 경우가 있음.
+ 3. 동일 저선량에서 Original / Gain 비교
+ -. 동일 저선량인 경우, Original에서는 2 Line이 바로 눈에 들어오나 Gain Verison에서는 1 Line이 눈에 바로 들어옴.
+ 아예 보이지 않는 것은 아니나, Original과 비교하면 Line 형태가 감소한 형태를 보임.
+",,"
+①
+②
+③",,,
+2022.11.28,SDK Ver : 1.0.0.3,"ROIC Line 개선 관련 件
+수정사항
+- 라인처리시 원본의 기울기 팩터 반영
+- 처리시간 단축 3.0s -> 1.5s
+ROIC Line 관련하여 개선 버전 현장 적용 Test 결과
+아직 Line 형상이 아직 나타나는 것으로 보임.
+",,,,,
+2022.12.19,SDK Ver : 1.0.0.3,"16비트 적용 개선 건
+16비트 적용 개선된 버전의 dll 전달 받음.
+16비트 적용 이미지 생성 확인.",,,,,
+2023.01.10,SDK Ver : 1.0.0.3,"ROIC Line 개선 관련 dll
+ROIC 라인개선을 위한 230110 버전의 dll 전달 받음.
+- 시간이 걸리는 작업을 일부 제거하여 처리시간 개선을 기대하였으나 이미 하드웨어 가속으로 해당부분 소요시간이 줄어들어 있는 상태여서 기존 버전과 총 소요시간은 별로 차이가 없었음.
+테스트 진행 결과 라인이 아직 나타나고 있음.
+",,,,,
+2023.01.19,SDK Ver : 1.0.0.3,"수정사항.
+필드 테스트 결과 반영 전 알고리즘에 하드웨어 가속 적용
+연산이 가벼워 진데다가 가속이 되다 보니 소요시간이 300msec 언더로 줄어듬.
+14비트 영상에만 알고리즘 수정이 적용 되었고 세부적으로는 더 손볼곳도 있어 보임.
+230119버전 적용하여 내부 X-ray 촬영한
+L-spine 촬영 시 ROIC(256, 2816) line이 보여서 개선이 필요함.
+",,,,,
+2023.01.31,SDK Ver : 1.0.0.3,"수정 사항
+ROIC 라인처리 dll파일 230130 버전 전달
+일단 14비트 영상에만 알고리즘 수정이 적용 되었고 테스트 이후 이상 없으면 16비트까지 수정 예정.
+검증 결과 : 14bit ROIC Line 제거 확인.","14bit mode ROIC 256, 2816 line",,,,
+2023.01.31,SDK Ver : 1.0.0.3,"수정 사항
+Saturation, Lowdose, 16bit 개선 된 XAS_230130 버전 전달드립니다.
+ROIC 라인개선이 적용되지 않아서 HImgProsee.dll은 사용하지 않습니다.
+Saturation 값 입력항목에 16bit Saturation 값 입력항목을 추가함.
+XAS.ini의
+OfsSatuationTH_16=34000
+에 대응하는 값임.
+검증 결과 : lowdose 영상 이미지 정상 획득 확인.",lowdose,,,,
+,,"수정 사항
+Saturation, Lowdose, 16bit 개선 된 XAS_230130 버전 전달드립니다.
+ROIC 라인개선이 적용되지 않아서 HImgProsee.dll은 사용하지 않습니다.
+Saturation 값 입력항목에 16bit Saturation 값 입력항목을 추가함.
+XAS.ini의
+OfsSatuationTH_16=34000
+에 대응하는 값임.
+검증 결과 : saturation 14bit mode , 16bit 기준 범위 적용확인.
+ 16bit mode TH 설정 값 및 영상 이미지 획득 확인.","14bit saturation
+16bit saturation
+",,,,
+2023.02.06,SDK Ver : 1.0.0.3,"수정사항
+Aging Test용 Dlib.dll 전달 드립니다.
+디버깅 코드 삽입 후 현재 72시간 이상 돌고 있는 중에도 에러 상황이 발생하지 않아 크로스 체크 부탁 드립니다.
+에러 발생 시 로그파일 전달 부탁 드립니다.
+검증 결과:
+개발팀 내부 테스트 진행 시 중간에 멈춤 현상 발생으로 추가 개선 요청함.",,,,,
+2023.02.13,SDK Ver : 1.0.0.3,"수정사항
+Saturation, Lowdose, 16bit, ROIC 라인처리 개선 된 Dlib.dll, HImgProsee.dll 230213 버전 전달드립니다.
+ROIC 라인개선(HImgProsee.dll)은 지난번 실험하신 230130 버전에 16비트 영상도 적용 되도록 수정하였습니다.
+검증 결과:
+개발팀 내부 테스트 결과 특이 사항 없었음.",,,,,
+2023.02.22,SDK Ver : 1.0.0.3,"수정사항
+현재 AgingTest 진행 중이시면 전달드리는 파일로 진행 부탁 드립니다.
+로그를 좀 더 강화하였고 버그 발생 시 메세지 박스와 정보기록 파일(*.dmp)이 남습니다",,,,,
+2023.03.13,SDK Ver : 1.0.0.3,"수정사항
+ROIC 라인, Lowdose 영상개선, Saturation, 16Bit, XAS 버그, Memory Leak 수정 내용들을 통합한 버전 전달 드립니다.
+검증 결과:
+ 16bit 영상 Calibration 처리 시 패턴 출력 현상으로 추가 개선 요청 진행.",Pelvis lateral_position_65kV 40mAs_6_1,,,,
+2023.03.16,SDK Ver : 1.0.0.3,"수정 사항
+ROIC 라인, Lowdose 영상개선, Saturation, 16Bit, XAS 버그, Memory Leak 수정 내용들을 통합한 버전 전달 드립니다.
+ROIC 라인 폴더, 16Bit 영상 캘리브레이션 시 패턴 나오는 부분 수정 되었습니다.
+검증 결과:
+ 16bit 영상 cal 패턴 출력 현상 개선 안됨 디버깅 요청.",,,,,
+2023.03.20,SDK Ver : 1.0.0.3,"수정 사항
+ROIC 라인, Lowdose 영상개선, Saturation, 16Bit, XAS 버그, Memory Leak 수정 내용들을 통합한 버전 전달 드립니다.
+지난 실험버전에서 알림창 나오는 부분을 없앤 버전입니다.
+검증결과 :
+ 알림 창 팝업 제거 확인.",,,,,
+2023.03.24,SDK Ver : 1.0.0.3,"수정 사항
+지난 3월 20일에 전달 드린버전에서 HImgProcess.dll 만 업데이트 된 버전입니다.
+검증 결과:
+알림창 제거 및 ROIC line 미세하게 보임. 추가 개선 요청 진행.",,,,,
+2023.04.28,SDK Ver : 1.0.0.3,"수정사항
+HImgProcess.dll 파일 업데이트 된 버전 전달 드립니다.
+ 최종 실행 파일 전달 버전.
+",,,,,

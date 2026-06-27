@@ -1,0 +1,228 @@
+queueId: ingest-1781569954383-crr
+sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/12. MCU Fimware/HAD1717MC_FW_Release_개발_버전_히스토리.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/25890d675e2e/HAD1717MC_FW_Release_개발_버전_히스토리__25890d675e2e_combined.txt
+canonicalGroupId: 54e03922fbf9
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1766
+
+SOURCE_TEXT
+,,배포 버전 관리 : 1.0.x.x,
+,,Debug ver : 1.x.x.x.x,
+,,Release ver : 1.x.x.x,
+FW Version,Date,Contents,비 고
+firm_1.1.1,6/20/18,"1. 레지스터 어드레스 출력 시 값을 10진수를 16진수로 표기 변경
+ main.c -> ConsoleProc()
+ //printf(""Read Address 0x%08x = %d\n\n"", Addr << 16, Data);
+ printf(""Read Address 0x%08x = 0x%x\n\n"", Addr << 16, Data);
+2. FPGA 레지스터 이름 및 어드레스 변경 (auto-trigger 기능)
+ fpga.h => 레지스터 이름 변경 및 추가
+ server.c => setfpgaparam(), getfpgaparam()
+ aura_driving/aa/parameterstruct.h
+ _aura_common/parameterstruct.h",
+,7/10/18,"1. Auto-Trigger mode 에서 fpga x-ray image 획득 가능 여부 상태에 대한
+ 실시간 상태 값 PC로 전달
+ server.c => MessageProc() 함수 추가",
+,7/27/18,"<Log 기능 구현>
+1. 영상 획득 관련 로그
+ 1) 획득 된 영상의 날짜 및 시간 => RTC 구현 후 설정 (년월일 시분초)
+ 2) 획득 된 영상 종류 (Dark 이미지 또는 Bright 이미지)
+ 3) 영상 획득 횟수
+2. FPGA 레지스터 또는 펌웨어 자체 설정 레지스터 관련 로그
+ 1) write 및 read 날짜 및 시간
+ 2) write 및 read 레지스터 종류 및 해당 파라미터 값
+3. command 송수신 관련 로그
+ 1) cpu <-> pc command 별 송수신 날짜 및 시간
+4. Detector 전원이 켜지고 F/W 최초 connection 날짜 및 시간
+5. 각종 Error 날짜 및 시간",
+,8/16/18,"1. 로그 기능에서 FPGA read/write 레지스터 설정 부분을 빼고, read/write 완료 내용으로 변경.
+ (get bright 이미지 안 받아지는 side effect 수정)
+2. Set FPGA/ROIC Time-Out 조건 수정 (3초->1초)
+/* kernel 2018.08.14 수정*/
+1. 부팅 도중 down되는 증상 보완
+ => USB_OTG_VBUS 라인 Enable, USB_H1_VBUS 라인 Disable
+ arch/arm/mach-mx6/regs-anadig.h 파일 수정
+ 518 line => #define BM_ANADIG_REG_3P0_VBUS_SEL 0x00000080 -> 0x00000000",
+firm_1.1.2,8/21/18,"1. auto trigger 모드에서 get bright 동작 시, preview status message 비정상 동작 수정",
+firm_1.1.3,9/18/18,"1. auto trigger 모드에서 get bright 동작 시, preview status message 비정상 동작 수정",
+firm_1.1.4,9/28/18,"1. Gigabit Ethernet Throughput 성능 향상(max 390Mbps)을 위해 F/W -> PC image buffer size 128 -> 1460 (max) 증가 변경 및
+ PC -> F/W image buffer 구조체 분리.
+ <server.h>
+ SPKT_DATA_SIZE 1460
+ RPKT_DATA_SIZE 128
+/* kernel */
+1. PHY chip Atheros 1000MB kernel config 추가
+ CONFIG_NETDEV_1000=y
+ CONFIG_ATL1=y
+ CONFIG_ATL1E=y
+ CONFIG_ATL1C=y",
+firm_1.1.5,10/1/18,"1. send packet 및 receive packet 구조체 변수 status, data 자료형 PC와 동기화
+ <server.h>
+ uint32_t status;
+ uint16_t data;
+=>
+ int32_t status;
+ int16_t data;",
+firm_1.1.6,10/1/18,"1. send packet size 및 자료형 원복
+ #define SPKT_DATA_SIZE 128
+ typedef struct t_spkt
+ {
+ uint32_t status; // status
+ uint16_t data[SPKT_DATA_SIZE]; // block data
+ } SPKT;
+2. Line trigger mode에서 auto trigger flag 전송 하지 않도록 수정",
+firm_1.1.7,10/2/18,"1. 영상 획득 이상 현상 개선
+2. 로그 기능 변경",
+firm_1.1.8,10/4/18,"1. send packet size 변경
+ #define SPKT_DATA_SIZE 128 => 256",
+firm_1.1.9,10/10/18,"1. send packet size 변경
+ #define SPKT_DATA_SIZE 256 => 1024",
+firm_1.2.0,10/12/18,"
+1. FPGA Parameter 추가 및 변경
+ AED_CMD -> aed_test_mode3 삭제
+ AED_CNT 삭제
+ NEGA_AED_TH 추가
+ POSI_AED_TH 추가
+ AED_DARK_DELAY 추가
+",
+firm_1.2.1,10/22/18,1. Auto-Trigger Mode에서 상태 메시지 delay time 1초에서 0.5초로 변경,
+firm_1.2.2,12/11/18,"1. Accelerometer/Gyroscope Sensor 동작 구동
+ - bmi160 device driver 포팅
+ - IOMUX GPIO control 루틴 구현 및 I2C 통신 구현
+ - 가속도/자이로 센서 데이터 값 출력
+2. XAS 연동 데이터 전송",
+firm_1.2.3,12/20/18,"1. Accelerometer/Gyroscope Sensor 동작 구동
+ - Configuration 및 interrupt enable 후, 자이로 센서 data read 구조로 변경
+2. Dark/Bright Image 획득 후, XAS 데이터 전송 루틴 추가
+3. 자이로/가속도 센서 read data Log 기능 추가",
+firm_1.2.4,1/16/19,"
+1. Line-Trigger Mode에서 Ready/Initialing 상태 메시지 추가
+2. FPGA/ROIC register setting 시, Line/Auto Trigger 상태 메시지 XAS로 전송하지 않도록 수정
+",
+firm_1.2.5,1/17/19,"1. ""firm_1.2.4"" Bug Fix ",
+firm_1.2.6,3/13/19,"/* kernel */
+1. 빌드 서버에서 /home/leps/ltib/rpm/BUILD/linux_abyzr/arch/arm/mach-mx6/board-mx6q_sabresd.c 파일에 아래 내용 추가
+static struct i2c_board_info mxc_i2c2_board_info[] __initdata = {
+ {
+ I2C_BOARD_INFO(""mag3110"", 0x0e),
+ .irq = gpio_to_irq(SABRESD_eCOMPASS_INT),
+ .platform_data = (void *)&mag3110_position,
+ },
+ {
+ I2C_BOARD_INFO(""rtc-ds1307"", 0x68),
+ .type = ""ds1340"",
+ },
+};
+2. 빌드 서버 kernel directory에서 아래와 같이 수정
+# CONFIG_RTC_DRV_DS1307 is not set
+=> CONFIG_RTC_DRV_DS1307=y
+CONFIG_RTC_DRV_SNVS=y
+ => # CONFIG_RTC_DRV_SNVS is not set
+CONFIG_CRYPTO_DEV_FSL_CAAM=y
+ => # CONFIG_CRYPTO_DEV_FSL_CAAM is not set
+/* RootFS */
+<rootfs.tar.gz>
+1. root 계정 passwd 추가 (passwd : h&groupabyz)
+ - etc/shadow 파일 수정
+ root:Kuhk2/Xwee8MA:11851:0:99999:7:::
+<rootfs_AD_3rd.tar.gz>
+1. cs_manager tool의 ip/mac 변경 스크립트문 추가
+ - etc/rc.d/rc.local 파일 수정
+ /root/ip_config.sh &
+ /root/mac_config.sh &
+2. telnet 접속 IP Address 변경
+ - etc/rc.d/rc.local 파일 수정
+ ifconfig eth0 2.2.22.158 -> 2.2.22.101",
+firm_1.2.7,7/23/19,"/* drdr */
+1. gryo and acceleration sensor 검출 기능 구현.
+2. 디텍터 이미지 획득 시 이미지 회전 기능 추가 . ( 디텍터 수직 설치 상태일 경우 )
+ -. 위치 데이터 : 상 , 하 , 좌 , 우 적용.
+3. 디텍터 낙하 시 충격 감지 로그 저장 기능 추가.
+ -. log file save path : /root/log_abyz/2019-07-23_11:10:24_-8939_log_shock.csv
+/* Rootfs */
+ [ rootfs_AD_3rd.tar.gz 내용 --> rootfs.tar.gz 적용 ]
+1. rootfs.tar.gz 파일 시스템 내용 수정. ( MfgTools 을 사용하여 u-boot,kernel,rootfs.tar.gz 펌웨어 쓰기 시 최종
+ 파일 모두 적용되도록 수정.
+2. cs_manager tool의 ip/mac 변경 스크립트문 추가
+ - etc/rc.d/rc.local 파일 수정
+ /root/ip_config.sh &
+ /root/mac_config.sh &
+3. telnet 접속 IP Address 변경
+ - etc/rc.d/rc.local 파일 수정
+ ifconfig eth0 2.2.22.158 -> 2.2.22.101 ",
+firm_1.2.8,8/23/19,"/* drdr */
+1. Ethernet packet size 수정. 1024Byte --> 512Byte
+ 영상 획득 처리 명령어 동작 중 간헐적으로 패킷 데이터가 잘 못 수신되는 경우가 발생하여 수정함.
+ 원인은 1packet size 가 최대 1460Byte 인데 이보다 큰 2056Byte 를 한 번에 전송하면서 데이터 전송 지연 현상이
+ 발생하였음.
+2.펌웨어 버전 정보 변경 : firm ver 1.2.8
+3. rootfs.tar.gz 파일 갱신하여 최신파일로 생성함.",
+firm_1.2.9,10/22/19,"/* drdr */
+1. FPGA OP_MODE_REG En_16bit 모드 설정 값 PC XAS 프로그램으로 전달 기능 추가함.
+2. 펌웨어 버전 정보 변경 : firm_ver 1.2.9
+3. rootfs.tar.gz 파일 갱신하여 최신 파일 생성함. 버전 정보는 ( ver_1.0.0 )으로 적용하여 양산용으로 배포함. ",
+firm_1.0,11/6/19,"/* drdr */
+1. 양산용 버전으로 drdr 버전 네임 변경함. firm_1.2.8 --> firm_1.0
+2. 양산용 폴더 생성 후 릴리스 완료함.",
+firm_1.0,11/15/19,"/* drdr */
+1. 양산용 버전으로 drdr 버전 네임 변경함. firm_1.2.9 --> firm_1.0
+2. 양산용 폴더 생성 후 릴리스 완료함.
+3. drdr 초기 실행 시 2회 getdark 획득하도록 기능 추가됨.
+4. rootfs.tar.gz 파일에 최신 drdr 파일 갱신함. Roic_param, fpga_param 파일 갱신함.",
+firm_1.0.0,11/29/19,"/* drdr */
+1. 양산용 폴더에 최신 파일로 업데이트 함. 버전 firm_1.0
+2. drdr 초기 실행 시 5회 getdark 획득하도록 카운트 변경함.
+3. drdr 비정상 종료 시 재실행 가능하도록 shell script (restart_drdr.sh) 파일 작성하여 추가함.",
+firm_1.1,8/24/20,"/* drdr */
+1. drdr 부팅 완료 후 ( console 명령어 처리 쓰레드에서 문자열 입력 처리 루틴 버그로) cpu 사용률 90% 정도
+ 사용되는 현상 개선. 버전 firm_1.1
+ rootfs.tar.gz 파일 생성 . ( f/w , fpga 파일 갱신 함 Ver 1.1 적용 완료 )",
+firm_1.1.0,1/4/21,"/* drdr */
+1. drdr 네트워크 끊김 현상 관련 획득 영상 전송 중 네트워크 끊기는 경우 체크하여 네트워크 리셋하도록 기능 수정함.
+2. debug 모드에서 네트워크 끊김 에러 테스트 가능하도록 테스트 명령어 ""er"" 추가함.
+3. drdr 자이로센서에서 온도 값 읽어서 SDK로 전달하도록 메시지 추가.
+4. ctrl_task_thread , send_task_thread 쓰레드 핸들러 지역 변수에서 글로벌 변수로 변경함.",
+firm_1.0.0.1,4/19/21,"/* drdr */
+1. Ver 1.1 --> V1.0.0.1 으로 버전 정보 표기 오류로 버전 정보 표기 정정. ( 기능은 V1.1과 동일하다 )",
+firm_1.0.0.2,4/19/21,"/* drdr */
+1. 온도 표시 기능 추가 적용하기 위해 BMI160 gyro sensor 내장 temp sensor 체크 기능 활용하여 온도 측정함.
+2. 측정된 온도 데이터을 섭씨로 단위 변환 하기 위해 단위 변환 수식 적용.
+3. SDK 와 온도 데이터를 주고 받을 수 있도록 온도 전송 메시지 추가.
+ (온도 표시 기능 추가 관련 인허가 변경 신고 진행 완료 시 품질팀 배포될 예정 버전)
+","1.변경점 신고 및 품질 배포 완료.
+2. 2021.06.17(목) 엑센텍크 생산용 버전 배포 완료."
+firm_1.0.0.3,8/30/21,"/* drdr */
+1. 디텍터 부팅 완료 후 최초 get dark 5EA 획득 동작 중 (버전 정보 읽기 또는 영상획득 명령어 전송) 요청 시
+ 처리되도록 기능 개선.
+2. 네트워크 끊김 시 디텍터의 펌웨어에서 네트워크 끊김 에러 3sec 이후 복구하도록 기능 개선. (non-block mode,
+ select 기능 적용 )
+3. 획득 영상 send thread에서는 전송 중 전송 지연 발생 시 10sec 간 대기 후 thread 종료하도록 개선.","2021.08.30 (월)
+CS Team 임용빈대리에게 메일로 전달하고 테스트 요청함."
+firm_1.0.0.3,12/21/21,"/* drdr */
+1. 디텍터 부팅 완료 후 최초 get dark 5EA 획득 동작 중 (버전 정보 읽기 또는 영상획득 명령어 전송) 요청 시
+ 처리되도록 기능 개선.
+2. 네트워크 끊김 시 디텍터의 펌웨어에서 네트워크 끊김 에러 3sec 이후 복구하도록 기능 개선. (non-block mode,
+ select 기능 적용 )
+3. 온도 센서 데이터 읽어오는 함수 호출 부분 CtrlTask 메시지 처리 쓰레드에서 호출하여 데이터 읽도록 위치 변경함.
+4. log 메시지 출력 방식 변경함. MYDEBUG, MY_ERRLOG_WRITE 로그등의 함수를 추가하여 년,월,일 현재 시간 정보,
+ 함수명, 라인 등의 메시지를 출력하도록 기능 추가하고 디버그 메시지 출력부분 모두 변경함. log.txt 메시지 기록
+ 함수도 동일하게 변경함.
+ 로그 메시지 처리 안정화.
+5. Read_Ver() 함수 추가하여 현재 펌웨어, FPGA 버전 정보를 log.txt 로그 파일에 기록하도록 함수 추가.
+6. CtrlTask 쓰레드에서 통신 접속과 제어 명령어 처리를 하도록 구조를 변경함. ( CtrlProc() 쓰레드 사용 안함 )
+ Non-Block mode 사용하도록 기능 구현
+7. SandTask 쓰레드에서 통신 접속과 획득 영상 이미지 전송 처리를 하도록 구조를 변경함. ( SendProc 쓰레드 사용
+ 안함 ) Non-Block mode 사용하도록 기능 구현
+8. MessageProc() 쓰레드에서 현재 시간 정보 읽는 부분 삭제함.
+9. FW <--> SDK 통신 중 메시지 전송 지연으로 순서가 바껴서 수신되는 경우가 있어 플래그를 추가로 예외처리하여
+ 해결함.
+10. log_buff 변수 선언이 각각의 소스 코드 상단에 선언되어 있어서 extern 형태로 변경하고 1개의 변수를 사용하도
+ 록 수정함.
+-. 프로그램 버전 매칭 조건 : FW 1.0.0.3 + SDK V1.0.0.3으로 반드 시 적용하여 진행해야 함.
+ (펌웨어 하위 버전으로 하면 SDK와 호환 안됨)
+-. 파일 버전 정보 :
+ fw : firm_1.0.0.3
+ sdk : V1.0.0.3
+ feel-DRCS : V 2.1.300.40
+","2021.12.22 (수)
+품질팀 배포 및 유관 부서 전달 완료."

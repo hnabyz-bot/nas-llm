@@ -1,0 +1,158 @@
+queueId: ingest-1781569954413-11m9
+sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/14. 디텍터 구동 Software/히스토리/SW_SDK_ HAD1717MC_개발_히스토리.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/e3816d9e4113/SW_SDK_ HAD1717MC_개발_히스토리__e3816d9e4113_combined.txt
+canonicalGroupId: a2dfc582ca31
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1768
+
+SOURCE_TEXT
+,배포 버전 관리 : 1.0.x.x,,,
+,Debug ver : 1.x.x.x.x,,,
+,Release ver : 1.x.x.x,,,
+,Ver,수정 내용,비 고,
+,DLib Version : 1.1.0 -> 1.3.1,1.FPGA Parameter Setting 창 기존 3개에서 4개로 분리,,
+, , - minor,,
+,,2.Average Dark Time Delay 1 Sec 추가,,
+,, -minor,,
+,,3.FPGA Parameter Miss Match 에러 수정 - patch,,
+,DLib Version : 1.3.1 -> 1.4.2,1.FPGA Parameter Setting 창 순서 변경 - minor,,
+,,2.Average Dark Preview 잔상 삭제 -patch,,
+,DLib Version : 1.4.2 -> 1.6.2,1.FPGA Parameter Setting 창 순서 변경 (코드에서 순서에 맞게 변경)- minor,,
+,,2.FPGA Parameter AED_CNT 추가 -minor,,
+,DLib Version : 1.6.2 -> 1.7.4,1. Cal_Thread 끝날때까지 Tree Lock,,
+,,2. Timer 구동 방식 변경 (Thread -> Timer),,
+,,3. 이미지 수신 중 Ping Check 중지 시점 변경,,
+,,4. AutoTrigger 로직 변경,,
+,DLib Version : 1.7.4 -> 1.7.5,1.GetBright 오류 수정 - Datalisten Thread 2000ms Ctrl Thread 300ms,,
+,,2.AVG dark Delay 3000 Sec,,
+,DLib Version : 1.7.5 -> 1.10.5,"1.오토 트리거 모드에서 Get Dark Preview 창에 ""Getting a Dark Image"" 프린트 - DLIB",,
+,,2.Image 수신 스레드 종료 대기 시간 2sec->3sec - DLIB,,
+,,3.Parameter 추가,,
+,,NEGA_AED_TH,,
+,,POSI_AED_TH,,
+,,AED_DARK_DELAY,,
+,DLib Version : 1.10.5 -> 1.15.5,"1 . Worker Thread, UI Thread 분리 (Thread 비정상 종료 원인)",,
+,,2 . Worker Thread 동기화 DeadLock 방지 (Thread 비정상 종료 원인),,
+,,3 . Auto Trigger 상태 출력 Thread->Message 수정,,
+,,4 . Auto Trigger GetDark 대기 화면에서 문구 깜빡임 추가 (주기 500ms),,
+,,"5 . GetBright, GetImage 문구 Ready to Expose -> Ready for Exposure 수정",,
+,,-Socket 종료대기 시간 200ms 추가 (broken pipe 원인으로 추정) ,,
+,DLib Version : 1.15.5 -> 1.17.5 ,1 . Log Display 추가,,
+,,"2 . 영상 헤더에 시간 정보(년,월,일,시,분,초) 추가",,
+,DLib Version : 1.17.5 -> 1.19.5 ,1. Satuation 로직 추가,,
+,,2. Satuation Map 생성 로직 추가,,
+,DLib Version : 1.19.5 -> 1.21.6,1. 24 -> 43 FPGA Parameter 수정,,
+,DLib Version : 1.21.6->1.22.6,1. ROICPar->ROIC_REG_1.reg.PWR=m_PWR = 0;,,
+,DLib Version : 1.22.6->2.22.6,1. 커맨드 패킷 사이즈 변경 2048 -> 1028,,
+2019.12.20,DLib Version : 2.22.6->1.0.0,"XAS
+1. Ver 1.0.0 배포 시 Dlib_0.ini 파일 구버전 적용으로 Latest 버전으로 갱신함.
+ 양산 릴리스 배포 버전.",,
+2020.05.22,DLib Version : 1.0.0.0,"XAS
+1.Dlib 이미지 Saturation 현상 개선관련 Gain Correction
+ 처리 구조 변경.
+ Interp_Linear() 함수 X,Y 수식 처리 구조 변경.
+ Proc_NPointInterp() 함수 lookup table 처리 구조 변경. ",,
+2020.06.04,"Dlib Version : 1.0.0.0.1 test
+사용 안함.","XAS
+1. xas 동작 메시지 로그 출력 우측으로 밀려서 출력되는 현상 아래로 한칸씩
+ 올라가면서 출력되도록 수정.
+2. Bright_org=1 을 XAS.ini 파일 안에 [General] 항목 아래에 설정하면 Acquisition
+ 동작으로 촬영 영상 획득 시 순수 오리지널 raw 이미지 생성되도록 기능 추가함.
+ 파일 네임은 Bright_org_2020.05.19_17.33.49.raw 형식으로 저장됨.
+ 저장 위치는 촬영 이미지 생성 지정 폴더에 같이 생성됨.
+ 디텍터 리스트 선택에 맞춰서 파일 생성되도록 기능 추가.
+3. FPGA , ROIC param default 설정 값 최신 릴리스된 값으로 기본 생성되도록
+ 파라메터 값 업데이트 함.
+4. XAS.ini 파일에 적용되는 Tolerence, DarkMaxLSB 기본 설정 값 변경.
+5. XAS SW Ver info 변경 : 파일 속성을 열어서 자세히 텝을 확인하면 기존에 1.0.0.0 -->
+ 1.0.0.1 으로 변경됨.
+6. ""CompanyName"", ""H&abyz"" , ""LegalCopyright"", ""(c) H&abyz. 이름 변경함.",,
+2020.11.23,"Dlib Version : 1.0.0.0.1 test
+사용 안함.","XAS
+1. x64 64bit 버전으로 빌드되도록 속성 설정 완료.
+2. Dlib , XAS 속성 설정 둘다 변경 완료.
+3. x64 release 설정으로 빌드 시 x86 폴더 debug 폴더로 생성되는 것을 x64 폴더
+ release 폴더로 생성되록 수정.
+4. x64 속성으로 빌드 시 timeSetEvent() 에러 현상 DWORD_PTR 변수 선언 타입
+ 변경으로 수정.
+",,
+2020.12.03,"DLib Version : 1.0.0.1 test
+ 사용 안함.","XAS
+1.Dlib 이미지 Saturation 현상 개선관련 Gain Correction
+ 처리 구조 변경.",,
+2021.02.03,"DLib Version : 1.0.0.1 test
+ 사용 안함.","XAS
+1. Dlib 이미지 Skin Bunning 현상 개선관련 Gain Correction bug fix.
+2. 디텍터 내부 온도값 읽어 올 수 있도록 Api 추가 및 기능 구현.
+3. detector list 추가 시 FPGA Parameter 생성 ini 파일 최신 버전으로 적용되도록
+ 설정값 추가.
+4. detector Parameter 설정 값 Line Trigger, AED Trigger 각각 구분되도록 설정값 적용
+ 변수 분리함.
+5. Bright_org_xx.raw raw 파일 생성되도록 cfg 파일에 설정 정보 추가.
+6. CIB 설정 정보 cfg 파일에 추가.",,
+2021.04.22,"DLib Version : 1.0.0.1 test
+사용 안함!","XAS
+ -. 103 line grid 고정으로 사용 시 AED line 출력 이슈 개선.
+ 1. Ofscalibration() 함수 dark frame 수식 처리 구조 변경.
+ 2. iGainCalibration() 함수 FrameBufferAverage 추가하여 계산하도록 변경.
+ 3. BP_Correction2() 함수 추가함.
+ 4. Thread_Calibration() 함수 BPM 보정 알고리즘 처리 구조 변경.
+ 5. 기본 영상 밝기와 픽셀 분포를 조정하도록 CammaCorrection() 처리 함수 추가.
+ 6. 노이즈 및 그리드 제거를 위해 AverageFilter() 처리 함수 추가.
+","정식 배포 안함!
+(in 2021.05.17(월) 테스트 버전.)",
+2021.06.08,DLib Version : 1.0.0.1,"XAS
+1. 디텍터 내부 온도값 읽어 올 수 있도록 Api 추가 및 기능 구현.
+2. detector FPGA Parameter 생성 시 ini 파일에 Line Trigger, AED Trigger 모드 별로
+ 생성되도록 설정값 추가.
+3. detector Parameter 설정 값 Line Trigger, AED Trigger 각각 구분되도록 설정값 적용
+ 변수 분리함.
+4. dark 획득 시 average 설정 값 기본 42EA , 32EA 적용되도록 수정.
+5. ADD(HAD1417MCW) 디텍터 설정 관련 CIB 설정 정보 cfg 파일에 추가.",변경점 신고 후 품질 배포함.,
+2021.06.17,DLib Version : 1.0.0.2,"XAS
+ ※ 2021.04.22일자에서 수정된 AED Line 및 Grid line 개선된 V1.0.0.2 버전은 테스트
+ 버전으로 사용됨.(정식 배포 안함. 버전 정보 변경 후 추후에 적용 예정. )
+1. Dual Detector 사용 시 콘솔 프로그램에서 촬영 부위를 빠르게 선택하거나 Get
+ Image 함수 호출 후 취소 동작을 빠르게 하는 경우 명령어 전송 처리 시간 지연으로
+ 네트웍 소켓 오류가 발생하는 경우가 있음.
+ 명령어 처리 시 딜레이를 적용하여 명령어 처리 시간을 확보하도록 개선함.
+2. 명령어 처리 지연 시간은 Dlib.dll 코드 안에 dGetImage() 함수 호출 시 300ms 지연
+ 시간을 적용함."," 2021.06. 경기 광주 서울영상의학과, 제주도 강남정형외과의원 2곳 선 적용. Site 배포함.
+2021.06.21 양산 배포 버전으로 정식 배포함.",
+2021.08.30,DLib Version : 1.0.0.3_test,"XAS
+1. SDK 동작 시 기록되는 Dlib.log 파일 생성 시 날짜, 시간 정보를 추가하고 SDK 로딩
+ 시 마다 Dlib.log 파일이 생성되도록 개선.
+2. Console에서 Stand or Table 를 반복해서 변경할 때 가끔씩 발생하는 에러 팝업
+ (detector_working_error) 출력 현상은 SDK 처리 구조상 네트워크 명령어 처리 시
+ 응답 지연 현상으로, 가끔씩 명령어 전송 메시지 꼬임 현상이 발생하여 완전히
+ 해결할 수 없음.
+ 최소한으로 발생 빈도를 줄이도록 개선함. 에러 팝업을 닫으면 재 접속 가능하도록
+처리함.
+","2021.08.30 (월)
+CS Team 임용빈대리에게 메일로 전달하고 테스트 요청함.
+(시험 버전. 양산 배포 안함.)",
+2021.12.21,Dlib Version : 1.0.0.3,"XAS
+1. grid filter 적용 기능 동작 시 echo 메시지 주고 받도록 송/수신 기능 추가.
+2. Grid filter 기능 추가에 따른 SDK 알고리즘 개선. Grid, AED On/Off 옵션 기능 추가.","2021.12.22 (수)
+품질팀 배포 및 유관 부서 전달 완료.",
+2022.01.11,Dlib Version : 1.0.0.3,"XAS
+1. FT 검사 진행 중 Acquisition 모드에서 영상획득 시 LSB 값이 600 --> 1000 으로 획득되는 이슈 관련하여 수정함. ( 조사조건 : 70kV, 200mA, 32ms , 기준값 LSB : 600 )
+ 원인 : Grid filter 개선 알고리즘 수정하면서 CammaCorrection이 추가되어 Acquisition
+ 모드에서 동작 시 레벨값이 흔들리는 현상 발생함.
+2. Grid filter 체크박스 Enable 되어 있는 경우에 동작하도록 수정함.","2022.01.11 (화)
+제조, 품질, CS팀 배포 및 유관 부서 전달 완료.",정식 배포된 마지막 버전!
+2022.09.01,Dlib Version : 1.0.0.3,"XAS
+1. field 영상 촬영 시 256, 2816 line 표시되는 이슈로 인해 SDK pre-processing 처리 알고리즘 외주개발 개선 진행함. (휴이넘 외주 개발)
+ (22.08.08 ~ 22.09.01)
+2. roic line 개선된 테스트 버전 전달 받아 테스트 진행함. (버전 정보 동일: 주석에 test 버전 표기)
+3. 마지막 테스트 버전에서 촬영 진행 시 256 line 이 표시되는 이슈 발생으로 추가 개선 진행 중…",현재 개선 진행 중.,
+2022.11.21,Dlib Version : 1.0.0.1,"XAS + SDK
+1. Bright_org 파일 무조건 생성되는 이슈로 옵션 적용된 버전으로 개선하여 배포함.
+ ( 임용빈 프로에게만 전달함. 필드 이슈로 개선 문의 대응 )","2022.11.21 (월)
+CS 임용빈 프로 전달 완료.",
+2022.11.22,Dlib Version : 1.0.0.4,"XAS + SDK
+1. Dual Detector 사용 시 디텍터는 전원 On상태이고, PC만 재부팅 후 feel-DRCS 콘솔
+ 촬영 진입 시 socket error 현상 개선.
+ ( 적용된 버전 임용빈 프로에게만 전달. 필드 이슈로 개선 문의 대응 )","2022.11.22 (화)
+CS 임용빈 프로 전달 완료.",

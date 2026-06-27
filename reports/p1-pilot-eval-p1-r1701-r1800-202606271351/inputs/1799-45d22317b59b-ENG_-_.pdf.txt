@@ -1,0 +1,938 @@
+queueId: ingest-1781569954391-kye
+sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/16. Manual/제본/ENG - 내지 제본.pdf
+combinedPath: raw/sources/_preprocessed/RA/_combined/63f338e4f072/ENG - 내지 제본__63f338e4f072_combined.txt
+canonicalGroupId: 45d22317b59b
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1799
+
+SOURCE_TEXT
+Installation & User manual
+(HAD1717MC, HAD1717MG)
+$4,  9HUVLRQ   
+
+
+
+Contents
+Installation & User Manual
+1. Safety Information ...........................................................................................5
+1.1 Notice .................................................................................... 5
+1.2 Symbols Used in This Manual ..........................................................5
+1.3 Symbols ................................................................................................5
+1.4 Warning .................................................................................................8
+1.5 Caution ..................................................................................................10
+1.6 Safety Information .................................................................................12
+1.7 Label and Location of Attachment ..........................................................15
+2. Product Introduction and Specification ..........................................................18
+2.1 Product Features ....................................................................................18
+2.2 Product Components ..............................................................................18
+2.3 Part Names and Functions .....................................................................21
+2.4 Part Specifications ..................................................................................23
+2.5 Environmental Requirements .................................................................25
+2.6 Dimensions (Unit: mm) ...........................................................................26
+3. Installation and Calibration ............................................................................28
+3.1 Installation ..............................................................................................28
+3.2 Calibration ..............................................................................................38
+4. Usage ............................................................................................................42
+4.1 Set Up ....................................................................................................42
+4.2 Image Acquisition ...................................................................................46
+4.3 Viewer ...........................................................................................48
+5. Maintenance ..................................................................................................50
+5.1 Cleaning .................................................................................................50
+5.2 Inspection ...............................................................................................50
+5.3 Replaceable Parts and Instruction of Replacement ...............................51
+5.4 Disposal or Recycling .............................................................................52
+6. Warranty ..........................................................................................................53
+6.1 Warranty .................................................................................................53
+Service Manual
+1. CS Manager Instruction .....................................................................................55
+1.1 Detector MAC & IP Address Set Up ............................................................55
+1.2 Firmware, FPGA Update ............................................................................57
+1.3 RTC Set Up .................................................................................................. 59
+1.4 Default IP ...................................................................................................... 60
+
+
+
+
+2. Troubleshooting ..................................................................................... ..61
+2.1 LAN Connection Issue ...............................................................................61
+2.2 Auto Trigger Mode .......................................................................................62
+3. Service Center ..................................................................................... ..63
+
+
+
+
+
+
+
+
+
+PART 1. Installation & User Manual
+
+
+
+1. Safety Information
+1.1 Notice
+For the improvement of Product performance, supplementation and the follow-up of information the
+contents of this manual are subject to change without prior notice.
+Please, note that our company bears no responsibility for accidental damage nor will we be obligated
+to provide warranty service for any damage to equipment due to user error. Please, follow the
+instructions in this manual closely. Become familiar with the safety precautions and usage procedures
+for this Product. Note that the Product may differ slightly from the contents of this manual, depending
+on individual Product specifications.
+5[ODQNU7UGFKP6JKU/CPWCN 
+Symbols Descriptions
+
+Indicates content which, if you fail to follow the
+accompanying instructions, may cause death or serious
+personal injury.
+
+Indicates content which, if you fail to follow the
+accompanying instructions, may cause personal injury or
+damage to the product.
+
+Alternate current
+- Used to emphasize essential information.
+1.3 Symbols
+Symbols Descriptions
+Refer to instruction manual
+
+
+
+Alternate current
+Direct current
+Protective earth (Ground)
+Off (power : disconnect from the main switch)
+On (power : connect from the main switch)
+Manufacturer
+Date of manufacture
+Serial number
+Temperature limit
+WEEE : Waste Electrical and Electronic Equipment
+Authorized representative in the European Community
+Batteries Marking (Battery Directive 2006/66/EC)
+
+
+
+Keep dry
+Fragile, handle with care
+This side up
+4 layer stacking
+
+
+
+1.4 Warning
+Symbols Descriptions
+Environment of Use and Storage
+ Follow the specified process of operation instruction written in this manual
+for the safety of the users and patients.
+Connection
+ Do not connect the detector with anything other than specified. Otherwise, it
+may result in fire or electric shock.
+ To avoid the risk of electric shock, this detector must only be connected to
+supply mains with protective earth.
+ Do not touch Signal Input Part/Signal Output Part and the patient
+simultaneously. There is a risk of electric shock from current leakage.
+ Additional equipment connected to medical electrical equipment must
+comply with the respective IEC or ISO standards. Furthermore, all
+configurations shall comply with the requirements for medical electrical
+systems. Anybody connecting additional equipment to medical electrical
+equipment configures a medical system and is therefore responsible that
+the system complies with the requirements for medical electrical systems.
+Attention is drawn to the fact that local laws take priority over the above-
+mentioned requirements.
+ Equipment connected to the detector and in the patient environment must
+be powered from a medically-isolated power source or must be a medically-
+isolated device. Equipment powered from a non-isolated source can result
+in chassis leakage currents exceeding safe levels. Chassis leakage current
+created by an accessory or device connected to a non-isolated outlet may
+add to the chassis leakage current of the detector.
+Handling
+ Always be sure to keep checking the condition of the system and the patient
+to ensure they are normal during the use of the detector. If any problem is
+found, take appropriate measures, such as stopping the operation of the
+detector, as required.
+ Never disassemble or modify the detector as it may result in fire or electric
+shock.
+ Also, since the detector incorporates parts that may cause electric shocks
+and other hazardous parts, touching them may cause death or serious
+injury.
+ Do not hit or drop the detector. The detector may be damaged if it receives
+a strong jolt, which may result in fire or electric shock if the detector is used
+without being repaired
+
+
+
+When Problem Occurs
+ Should any of the following occur, immediately turn OFF the power of each
+detector, unplug the power supply cord from the AC outlet, and contact
+H&abyz Customer Service team or authorized agent.
+ When there is smoke, odd smell or abnormal sound.
+ When liquid has been spilled into the detector or a metal object has entered
+through an opening.
+ When the detector has been dropped and it is damaged.
+Error Massages
+ Messages about occur errors when using the detector are not output
+directly from the software.
+ It is provided in text format for use in upper-level software (see Section 1.5).
+ For error message contents and actions, refer to the relevant upper level
+software manual..
+ If the Upper Level Software Manual does not work, contact your H&abyz
+Customer Service team or authorized dealer.
+Maintenance and Inspection
+ For safety reasons, be sure to turn off the power of the detector when the
+following inspections are going to be performed. Otherwise, it may result in
+electric shock.
+ When the detector is going to be cleaned, be sure to turn off the power of
+each detector, and unplug the power cable from the AC outlet.
+ Do not use any type of solvent, such as benzene. Otherwise, fire or electric
+shock may result.
+ Wear waterproof gloves to protect your hands from direct contact with IPA
+(Isopropyl-alcohol) or any other liquid.
+ Maintenance of the detector should be done by an authorized service
+provider. If problem still cannot be corrected, it may result in fire or electric
+shock.
+Patients Contact
+ Stay the Detector in a bucky, and do not position the patient on the detector
+directly.
+
+
+
+1.5 Caution
+Symbols Descriptions
+User Requirements
+ This equipment should be only operated by users who have received
+professional medical education and training, such as physicians,
+radiologists, and other medical specialists.
+Environment of Use and Storage
+ Do not install the detector in a location with the conditions listed below.
+Otherwise, it may result in failure or malfunction, cause fire or injury.
+ Close to facilities where water is used.
+ Where it will be exposed to direct sunlight.
+ Close to air-conditioner or ventilation equipment.
+ Close to heat source such as a heater.
+ Prone to vibration
+ Dusty environment.
+ Saline or sulfurous environment.
+ High temperature or humidity.
+ Do not place the storage case in a location with the conditions listed
+below
+ Where the cable of the detector unit will be strongly pulled when the
+detector is put into the case, otherwise, the cable may be damaged,
+resulting in fire or electric shock.
+ Where someone might get their foot caught in the cable.
+Handling
+ In order to prevent infection, please wipe the CFRP (Carbon Fiber
+Reinforced Plastic) with a soft cloth moistened with IPA (Isopropyl-
+alcohol) liquid. Wear waterproof gloves to protect your hands from direct
+contact with IPA or any other liquid.
+ For safety reasons, be sure to turn off the power of each equipment
+when detector is not used.
+Location of Cables
+ Make sure all cables are located so that they cannot be stepped on,
+tripped over, or otherwise subjected to damage or stress.
+
+
+
+Maintenance and Inspection
+ For safety reasons, be sure to inspect the detector before using it. In
+addition, carry out a regular inspection at least once a year.
+ If the detector is defective, do not disassemble the detector randomly.
+Maintenance of the detector should be done by an authorized service
+provider. Please contact H&abyz Customer Service team or authorized
+agent.
+ Be sure to check the user’s manual for replaceable components.
+
+
+
+1.6 Safety Information
+ General Safety
+Preparation
+ Be sure to connect the cables to the proper connectors. Otherwise, the detector may
+malfunction or may be damaged.
+Handling
+ Handle the detector carefully, as it may become damaged if it is hit, dropped, or receives
+a strong jolt.
+ Be sure to use the detector on a flat place so it will not bend. Otherwise, the detector may
+be damaged.
+ Be sure to check the detector daily and confirm that it works properly. Sudden heating of
+the room in cold areas will cause condensation to form on the detector. In this case, wait
+until condensation disappears before performing exposure. If the detector is used with
+condensation formed on it, problems may occur in the quality of the detector. When an
+air-conditioner is going to be used, be sure to raise/lower the temperature gradually so
+that a difference in temperature in the room and in the detector does not occur, to prevent
+forming of condensation. Follow the recommended proper room temp.
+ Do not use the detector near devices generating a strong magnetic field. Doing so may
+produce image noise or artifacts.
+ Keep the connectors free from being in contact with the patient.
+ Connectors are intended to be connected to an external device and must follow IEC
+standards.
+
+
+
+ Do not apply excessive weight to the detector. Otherwise, the detector may be damaged
+<Uniform Load : 150Kg over the whole area of sensor window >
+<Local Load : 100Kg on 5 points areas of 40mm in diameter>
+Disinfection and Cleaning
+ Do not spray disinfectants or detergents on the detector.
+ When cleaning the detector, be sure to turn off the power, and unplug the power cable
+from the AC outlet.
+ Do not use any flammable chemicals such as thinner, benzene for cleaning. Otherwise,
+fire or electric shock may result.
+ Wear waterproof gloves to protect your hands from direct contact with disinfectants or
+detergents.
+ Electrical Safety
+ In compliance with IEC 60601-1, this medical equipment complies with the requirements
+for Safety class I
+ This system must be used in an environment complying with the requirements of the IEC.
+ EMC (Electromagnetic Compatibility)
+ Do not use any wireless devices, including cellular phones, near the system. All wireless
+devices, whether they comply with the EMC standard or not, may emit electromagnetic
+interferences and cause the system to malfunction when they are used nearby.
+
+
+
+ Provide error messages for upper-level software
+ę&RQQHFW(UURUĚ
+ In case of connection error, the “Connect Error” message is passed to the upper level
+software
+
+
+
+1.7 Label and Location of Attachment
+Please, refer to the back side of the device for details.
+
+ &GVGEVQT
+
+HAD1717MC
+
+
+HAD1717MG
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+ 2QYGT5WRRN[
+
+
+
+
+
+
+
+
+ +PFKECVKQPD[VJGRQYGTUWRRN[
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+2. Product Introduction and Specification
+2.1 Product Features
+The HAD1717MG and HAD1717MG are wired digital flat panel detectors that have been designed
+for faster, more streamlined approach to digital radiography systems. The HAD1717MG and
+HAD1717MC detector utilize a combination of propriety TFT glass and scintillators(GDX and CsI), and
+those and electronics are housed in one package. The detectors support an auto-trigger signal
+sensing technology that allows the detectors to be used without generator integration.
+The flat panel sensors of the HAD1717MG and HAD1717MC are fabricated using thin film
+technology based on amorphous silicon technology. Electronically, the sensors are much like
+conventional photodiode arrays. Each pixel in the array consists of a lightǦsensing photodiode and a
+switching Thin Film Transistor (TFT) in the same electronic circuit. Amorphous silicon photodiodes are
+sensitive to visible light, with a response curve roughly comparable to human vision. The sensitivity of
+amorphous silicon photodiodes peaks in green wavelengths, well matched to scintillators such as
+CsI(Tl) or Gd 2O 2S:Tb. The response has the excellent linearity of a chargeǦintegrating biased
+photodiode.
+2.2 Product Components
+ Components
+Picture Item Quantity
+Detector 1
+Power Supply 1
+Data Cable 1
+
+
+
+LAN Cable 1
+AC Power Cord 1
+Trigger Cable 1
+Installation CD
+- Acquisition S/W &
+Viewer
+1
+Installation & User manual
+(Hard Copy) 1
+
+
+
+ Block Diagram
+
+
+Name Description
+Detector The Detector converts X-ray to electric signals in proportion to X-ray
+Dose. The signals are digitalized and transmitted to the PC.
+Object Who has X-ray taken
+Generator Generating X-ray
+Power Supply
+SMPS integrated in the Power Supply generates DC Power from
+AC Power, and supplies the DC Power to the detector.
+LAN, Trigger signals and DC Power are integrated into the Data
+Cable in the Power Supply, and the Data Cable is connected to the
+Detector
+PC Row image data transmitted from the detector is processed using
+Abyz Acquisition Software.
+Ȅ Object, Generator, PC are not included in this component
+
+
+
+2.3 Part Names and Functions
+ Detector
+ Data Cable Connector
+This is a connector for wire communication and power supplying. The detector to the power supply
+using the cable.
+ Carbon Fiber Reinforced Plastic
+The Part of the patient’s body to which an image is to be taken should be placed against the plate.
+ Power Supply
+&CVC%CDNG%QPPGEVQT
+(TQPV8KGY%CTDQP(KDGT4GKPHQTEGF2NCUVKE
+
+
+
+ LED indicator
+When Status of LED is Green On, it means Power-On.
+ Trigger Connector
+This is a connector for synchronization between Detector and X-ray generator. Connect Power Supply
+to the generator using trigger cable.
+ Data Connector
+This is a connector for wire communication and power supplying. 1giga-bit Ethernet signals,
+synchronization signals between detector and X-ray generator and wires for power supplying are
+
+integrated into the 25pins connector. Connect Power supply to the detector using data cable
+ LAN Connector (RJ45)
+This Connector is for 1giga-bit Ethernet communication between PC and Power Supply(Detector).
+ Power Plug Connector
+This is an AC Power Supply connector, and connector AC power supply cord.
+Fuse : F3.15AH/250V
+Switch : Power On/Off switch
+
+
+
+2.4 Part Specification
+ Mechanical Features
+Dimension 460 x 460 x 15.5 mm
+Weight Typ 3.75Kg
+Encapsulation Material Al
+Window Material Carbon Fiber Plate with 1.5mm Thickness
+Packing 1 BOX
+ Electrical Features
+ Detector
+Sensor Type a-Si TFT
+Scintillator HAD1717MC: CsI:TI
+HAD1717MG: Gd2O 2S:Tb
+Total Pixel Number 3072 x 3072 pixels
+Total Pixel Area 430 x 430mm
+Effective Pixel Number 3052 x 3052 pixels
+Effective Pixel Area 427 x 427mm
+Pixel pitch 140um
+Limiting Resolution Max 3.5lp/mm
+Energy Range 40 ~ 150Kv
+A/D Conversion 14/16bits
+Preview time About 2.0 sec
+Cycle time About 3.0 sec
+Communication 1Giga-bit Ethernet
+Trigger Mode Line(Manual) Trigger
+Auto Trigger (Auto Exposure Detection)
+Drop Test 1m from Wood Floor
+ Power Supply
+AC input (100-240) V~, (50/60) Hz, 80VA
+DC output 12 V
+
+
+
+ Cable
+LAN Cable CAT.6
+Power Code 250 V~, 10 A, 0.75mm 2 x 3C (KR Spec.)
+Trigger Cable 10M
+Data Cable 5/10/15M
+
+
+
+2.5 Environment Requirement
+ PC Requirement
+Item Detail
+CPU At least Intel Core 2 or comparable AMD Dual Core processor.
+RAM At least 4GB of RAM requirement (4GB for 32-bit OS and 8GB for
+64-bit OS recommended)
+Capacity of Disk Drive
+At least 500GB for application and archiving. Recommended
+500GB for applications and secondary drive of 1TB for image
+archiving.
+Network Card Dual 10/100/1000 network card system required. One for network
+(Internet) and one for the DR Panel communication.
+Graphic Card / Monitor
+Resolution of at least 1,600 x 900 for desktop and 1366 x 768 for
+laptop. For diagnostics purpose we recommend 1920 x 1080
+resolution (2 mega pixels) monitor.
+OS Microsoft® Windows 7 32-bit/64-bit.
+ Environment Requirement
+Item Min Typ Max Unit Note
+Storage Temperatures -10 50 Ȕ
+Operating Temperatures 5 40 Ȕ
+Storage Humidity 10 80 % H.R.
+Operating Humidity 30 75 % H.R
+Storage Pressure 500 1060 hPa
+Operating Pressure 700 1060 hPa
+
+
+
+2.6 Dimensions
+ Detector
+
+
+
+ Power Supply
+
+
+
+3. Installation and Calibration
+3.1 Installation
+ Software Installation
+ Run “Hn_DR_Install.exe” to install “XAS” and “HnViewer”, and click “Next”
+ Click “Next” to start the installation
+ Progress bar shows how the installation is. And the installation is finished, click the “OK”
+
+
+
+ To use Abyz Acquisition Software and Viewer, Microsoft Visual Studio Package is required.
+Please check “Agreement” and click “Install”.
+ When the installation is finished, click “Close”.
+ Finally, the installation of Hn_DR_Install is completed, click “Ok”.
+Agreement
+Install
+Close
+
+
+
+ Product Set-Up
+1) Integration
+ Auto Trigger Mode
+Automatically detects X-ray radiation without integration of the generator and the detector. So, any
+connections are not required between the detector(Power Supply) and the generator.
+ȄG Generator, PC are not included in this component.
+ Line(Manual) Trigger Mode
+By connecting(Trigger Cable) the generator and the detector, when the generator is ready for
+operation, it sends a signal to the detector. When the detector receives this signal and is ready for
+operation, it sends a signal back to the generator to emit radiation from the generator.
+ȄG Generator, PC are not included in this component.
+
+
+
+ Trigger Connection in Line(Manual) Trigger Mode
+Trigger Cable Connector is positioned as the following picture.
+
+<Power Supply : Trigger Cable Connector>
+Trigger Cable signals consist of 2pairs named Exp_Reg / Exp_Reg_N, Exp_Ack_P / Exp_Ack.
+Exp_Reg and Exp_Ack are available signals to each of both sides, detector and generator.
+Signal Label Color In/Output
+Exp_Reg Exp_Reg Green Output
+Exp_Reg_N White Input
+Exp_Ack Exp_Ack_P Black Input
+Exp_Ack Red Output
+<Trigger Signals Description>
+The trigger cable is connected between the generator and the detector(Power Supply) as the
+following picture.
+
+
+
+Operation Sequence related to the trigger signals is descripted as the following Time Chart.
+ If the generator is not ready for exposure during the detector ready
+time(Step3. 0.6sec), add delay time using “Ready Delay” option.
+“Ready Delay” time must be longer than 100msec, and its minimum unit
+is 100msec
+
+
+
+2) PC Set-Up
+ Set-Up the Network as below
+[Network Connection] > [Local Area Connection] > Click “Properties”
+ Select [Internet Protocol Version 4(TCP/IP)] > Click “Properties
+
+
+
+ Select [Use the following IP address], and then enter the IP address the Detector IP address.
+ Abyz Detector’s default IP address is 2.2.22.101, Also you can use
+2.2.22.10 ~ 2.2.22.101 detector IP. H&Abyz recommends 2.2.22.102 ~
+2.2.22.254 for PC IP address and 255.255.255.0 for Subnet mask.
+
+
+
+3) Acquisition Software(XAS) Set-Up
+ Connect the Detector and turn on the power.
+ Type the connected detector IP address at “Detector IP Address” if the IP address is
+different with the connected detector IP address, and click “set”.
+ 
+ Run “XAS.exe” located in “C:\XAS”. When the Detector is connected to PC, Network Status on
+the software is changed from Red Cross” to “Green Check”.
+
+
+
+ After checking the connectivity, select trigger mode between line(Manual) Trigger and Auto
+Trigger.
+
+
+
+ Select “Calibration” tap and click “Common Setting”
+ Type required the value at “Window Time”. The window time must be longer than 100msec, and
+its minimum unit is 100msec.
+ADC resolution can be optionally selected between 14bit and 16bit. When “En_16bit” is
+selected, 16bit image data is acquired from the detect. Click “Set Setting” after selecting
+ADC resolution.
+ When “Window Time” is shorter than X-ray Exposure Time, images will
+not be properly acquired.
+ Must click “Set Setting” after selecting ADC resolution.
+
+
+
+3.2 Calibration
+In order to properly acquire images, calibration must be performed. Without calibration, optimum
+images cannot be acquired.
+ H&abyz recommends to warm up the detector for 10 minutes after
+turning on the power.
+ Calibration should be performed at regular intervals, typically once
+every six(6) months, or whenever the central beam of the X-ray source
+has been moved relative to the detector.
+ Dark Image Acquirement
+ Click “Get Dark” to acquire a dark image in “Calibration” tap. “Preview” window pops up,
+and a dark image is acquired. The acquired dark image is shown up in image file list.
+ H&abyz recommends to use “Average Dark” option for better image
+performance.
+ Dark images are automatically acquired as the number of values at
+“total dark frame” if “Average Dark” option is selected.
+
+
+
+ Bright Image Acquirement and Cal Point Image Generation
+ Click “Get Bright” to acquire bright images. Bright images must be acquired at each of 4
+cal points. The acquired bright images are shown up in the image file list.
+ H&Abyz recommends 4 cal points as the following table. If cal points are
+not enough, some artifact can be shown up in the acquired images.
+Cal Points 1 2 3 4
+Median Value of pixels 14bit [LSB] 300 1000 7000 12000
+Median Value of pixels 16bit [LSB] 1200 4000 28000 48000
+ At least, two bright images must be acquired at each of cal points.
+ In Auto Trigger Mode, X-ray Exposure time must be longer than
+30msec. An image can not be acquired at shorter X-ray Exposure time
+than 30msec.
+ Do not expose X-ray when “Busy” message is displayed in “Preview”
+pop-up window. Any Images can not be acquired during “Busy” state
+although X-ray is exposed.
+Expose X-ray when “Ready for Exposure” is shown up in “Preview”
+window.
+
+
+
+ Click “Generate Calibration Set” to generate Cal Point Images after acquiring bright
+images. The generated Cal Point Images are listed up in the image file list and named as
+“cBr_xxxxxA.raw”. “xxxxx” in the file name means the median value of pixels in the image. 
+
+
+
+
+ BPM Generation
+ Click “Generate BPM” in BPM tap, and click “OK” in pop-up window to finish generating
+the BPM.
+
+
+
+
+4. Usage
+4.1 Set-Up
+ Image Set-Up
+ In order to change the size of an image, use "Image Crop" in “Setting” tap. And click
+“Save”.
+ When “Image Crop” option in “Acquisition” tap is selected, Acquired
+images can be cropped.
+
+
+
+ Optionally, processing options can be selected. But select all processing options.
+ When all processing options in “Acquisition” tap are selected, corrected
+images can be acquired.
+ Multi Detector Set Up
+H&Abyz detector support “Multi Detector” function to connect a several detectors to one PC. This
+function is useful when two detectors are integrated in a X-ray system.
+ it could take a few seconds to change to another detector according to
+PC condition. If customers repeatedly select others during changing the
+detector, all detectors can be disconnected.
+
+
+
+ Click “Edit” in “Setting” tap.
+ Click “Add”. Additional Detector is listed up in “Detector List”.
+
+
+
+
+
+
+ Type the added detector name at “Alias”, and change IP address and Image Size. To
+apply the configuration changes, click “Apply”.
+Click “Confirm” when the configuration is finished.
+ Check another detector is added as the following picture, and select required detector.
+
+
+
+
+4.2 Image Acquisition
+ Check the network connection status and required processing options are selected in
+“Acquisition” tap.
+
+
+
+ Type image file name at “Image Name”, and click “Get Image” to acquire images. The
+acquired images are shown up in the image file list.
+
+ In Auto Trigger Mode, X-ray Exposure time must be longer than
+30msec. An image can not be acquired at shorter X-ray Exposure time
+than 30msec.
+ Do not expose X-ray when “Busy” message is displayed in “Preview”
+pop-up window. Any Images can not be acquired during “Busy” state
+although X-ray is exposed.
+Expose X-ray when “Ready for Exposure” is shown up in “Preview”
+window.
+
+
+
+4.3 Viewer
+ Run “Hn_Viewer” in “C:\Hn_Viewer”. Or double click the image in the image file list.
+ H&abyz Viewer is popped up after double clicking the image.
+£G Image File List
+¤ Image Bird-View
+¥G Pixel Values in the image
+¦ Image Histogram
+§ Image information in the ROI
+- Min/Max Pixel Value
+- Average/Median Pixel Value
+- Pixel / Column line Standard Deviation.
+¨ ROI Editor (Size)
+© Vertical Profile
+ª Horizontal Profile.
+Double Click
+
+
+
+ Click “Auto” for auto histogram windowing. Type window start value and end
+value at “Window & Level” for manual histogram windowing.
+
+
+
+5. Maintenance
+5.1 Cleaning
+ Clean the detector with IPA (Isopropyl-alcohol) when it is contaminated.
+ Before cleaning the detector, turn off the power and separate the battery.
+ Wear waterproof gloves to protect your hands from direct contact with IPA or any other
+liquid.
+ Do not pour or spray IPA directly on the detector. Use fabric or soft cloth moistened with
+IPA to clean.
+ Avoid getting IPA or any other liquid into the detector.
+ After cleaning, wait until the IPA is dried completely.
+5.2 Inspection
+ In order to ensure that the detector is used safely and normally, please be sure to inspect
+the product regularly before use.
+ Please perform inspections based on the check list below.
+Inspection List User Vendor Cycle
+Check if cables are not damaged √ Daily
+Check if plugs and connectors are not loose or damaged √ Daily
+Check if cover or part is not damaged √ Daily
+Check the LED indicator √ Daily
+Re-Calibration √ Half Year
+Check the performance of the product by doing test
+shots with Phantom or resolution chart √ Yearly
+
+
+
+5.3 Replaceable Parts and Instruction of Replacement
+ Fuse : )$+9 [PP
+ Press the fuse box as the following picture and pull it out.
+ Pull the fuses and replace with others.
+ Ethernet Cable: UTP 4P 24AWG (CAT.6, straight-through)
+ Power cord: 250 V~, 10 A, 0.75mm 2 x 3C (KR Spec.)
+
+
+
+5.4 Disposal or Recycling
+Follow local governing ordinances and recycling plans regarding the disposal or recycling of device
+components.
+Disposal of old Electrical & Electronic Equipment
+This symbol indicates that this product shall not be treated as household waste. Instead, it shall be
+handed over to the applicable collection point for the recycling of electrical and electronic equipment.
+By ensuring this product is disposed of correctly, you will help prevent potential negative
+consequences for the environment and human health, which could otherwise be caused by
+inappropriate waste handling of this product. For more detailed information about recycling this
+product, please refer to local governing ordinances and recycling plans.
+
+
+
+6. Warranty
+6.1 Warranty
+If Buyer promptly notifies H&abyz or Seller regarding any parts that fail to perform as specified under
+normal usage during the Warranty Period and H&abyz determines that such failure resulted from a
+defect in materials or workmanship during the Warranty Period, then H&abyz, at its option, shall repair,
+rebuild or adjust the affected parts.
+H&abyz shall have no obligation for any defects to the extent that such defect arises out of (i) normal
+and fair wear and tear or Product which has been modified without H&abyz’s approval, (ii) Product
+which has not been installed in strict conformity to the H&abyz’s directions or which have been
+subjected to electrical or other abuse, or damaged by improper handling, storage or use by Buyer or a
+third party, (iii) use of Product in combination with devices or products not purchased from H&abyz;
+(iv) use or application of Product in a field or in an environment for which such Product was not
+designed or contemplated; (v) use of any parts or material not provided by H&abyz for warranty
+service; or (vi) the third party’s maintenance not certified by H&abyz; or (vii) force majeure such as
+natural disaster.
+The remedies contained in this warranty are Buyer’s exclusive remedies. H&abyz shall not, in any
+event or under any circumstances, be responsible for damages or other sums in excess of the total
+purchase price actually paid by Buyer to Seller i.e., H&abyz or H&abyz’s authorized agent. Without
+limiting the generality of the foregoing under no circumstance shall H&abyz be responsible or liable in
+any regard with respect to damages from loss of use, loss of time, loss of data, inconvenience,
+commercial loss, lost profits or savings, or other incidental, special or consequential damages claimed
+by Buyer to arise out of the use or inability to use the Product, even if Buyer has been advised of the
+possibility of such damages.
+In the event that the product is returned to H&abyz after the warranty has expired, H&abyz reserves
+the right to invoice a reasonable fee for the repair services provided to Buyer.
+H&abyz shall make the sole final determination about whether the fail to perform occurred in normal
+usage (under warranty) or not (excluded from warranty). If the authorized agent or the Buyer doesn’t
+accept the result of H&abyz’s investigation, the burden of proof is on them.
+Warranty Procedure
+If Buyer needs to make a claim based on this Warranty, Buyer should advise Seller in writing
+immediately at the following address:
+
+
+
+
+
+
+
+
+
+PART 2. Service Manual
+
+
+
+This Service Manual gives additional instruction for setting up the detector.
+1. CS Manager Instruction
+1.1 Detector MAC & IP Address Set Up
+ 'HWHFWRU,3$GGUHVV6HW8S
+ Connect the Detector and turn on the power.
+ Launch the CS Manager and select the "IP_Change" tab.
+ Enter the IP address you want to change from 2.2.22.10 ~ 2.2.22.101 and click "Set" button.
+(The default IP address of the detector is 2.2.22.101)
+ If "IP Setting Done" message is displayed in the popup window, IP address change is successful.
+If "Work exceeded time" message is displayed, IP address change fails.
+ After changing the IP address, the detector must be rebooted.
+
+
+
+ 'HWHFWRU0$&$GGUHVV6HW8S
+ Connect the Detector and turn on the power.
+ Launch the CS Manager and select the "MAC_Change" tab.
+ Enter the MAC address you want to change and click "Set" button.
+(The default MAC address of the detector is “1E:ED:19:27:1A:B3”)
+ If "MAC Setting Done" message is displayed in the popup window, MAC address change is
+successful. If "Work exceeded time" message is displayed, MAC address change fails.
+ After changing the MAC address, the detector must be rebooted.
+
+
+
+1.2 Firmware, FPGA Update
+ )LUPZDUH8SGDWH
+ Connect the Detector and turn on the power.
+ Launch the CS Manager and select the "FW_Update" tab.
+ Click the "..." button and select the firmware file.
+ If "please Reboot" message is displayed in the popup window, FW update is successful. If "Work
+exceeded time" message is displayed, FW update fails.
+ After FW Update, the detector must be rebooted.
+
+
+
+ )3*$8SGDWH
+ Connect the detector and turn on the power.
+ Launch the CS Manager and select the "FPGA_Update" tab.
+ Click the "..." button and select the FPGA file.
+ If "Please Reboot" message is displayed in the popup window, FPAG update is successful. If
+"Work exceeded time" message is displayed, FPGA update fails.
+
+ After FPGA Update, the detector must be rebooted.
+
+
+
+1.3 RTC Set Up
+ 57&6HW8S
+ Connect the Detector and turn on the power.
+ Launch the CS Manager and select the “RTC Set " tab.
+ Click the Update button to set the Detector time to the Window's current time.
+ If "RTC Set done" message is displayed in the popup window, RTC Set Up is successful. If "Work
+exceeded time" message is displayed, RTC Set Up fails.
+ The time set on the detector is displayed in the program.
+
+
+
+1.4 Default IP Set Up
+ 'HIDXOW,36HW8S
+ Connect the Detector and turn on the power.
+ Launch the CS Manager and select the “Default IP" tab.
+ Enter the IP address of the detector to be connected and click the "Set" button.
+ When CS_Manager attempts to connect to the detector, it tries to connect to the IP address set in
+Default IP
+
+
+
+2. Troubleshooting
+2.1 LAN Connection Issue
+1) Check the Power
+ Check the Data Cable and the Power cord are connected properly
+ Check if the power led of the Power Supply is on
+2) Check PC Set Up
+ Make sure that the IP address is set to ”2.2.22.102 ~ 2.2.22.254” in “Internet Protocol
+Version4(TCP/IP)”.
+
+
+
+2.2 Auto Trigger Mode
+ To use Auto Trigger Mode, customers must keep a several requirements.
+When the requirements are not met, image acquisition could be failed.
+When image acquisition is failed, please check the following requirement for Auto Trigger mode.
+£ Keep Min X-ray Exposure time = 30ms
+¤ Expose X-ray when “Ready for Exposure” message is displayed in “Preview” window.
+Do not expose X-ray when the message is “Busy”
+
+
+
+
+
+. Service Center
+ Korea : 070-4658-9300
+ Overseas : Contact the local distributor.
+ Head Quarters – H&abyz (Korea)
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si,
+Gyeonggi-do, Republic of Korea
+1F, 2-dong, 41-16 Cheoinseong-ro, Namsa-myeon, Cheoin-gu, Yongin-si, Gyeonggi-do, Republic of
+Korea

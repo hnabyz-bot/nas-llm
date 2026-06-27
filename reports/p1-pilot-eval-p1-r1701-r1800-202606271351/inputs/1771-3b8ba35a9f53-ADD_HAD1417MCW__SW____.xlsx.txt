@@ -1,0 +1,27 @@
+queueId: ingest-1781569954391-khx
+sourcePath: raw/sources/RA/01_DHF/02_ADD (HAD1417MCW, HAD1717MCW)/DHF 1417/14. 디텍터 구동 Software/ADD(HAD1417MCW)_SW_개발_히스토리.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/60a0553a707b/ADD(HAD1417MCW)_SW_개발_히스토리__60a0553a707b_combined.txt
+canonicalGroupId: 3b8ba35a9f53
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1771
+
+SOURCE_TEXT
+,,배포 버전 관리 : 1.0.x.x,
+,,Debug ver : 1.x.x.x.x,
+,,Release ver : 1.x.x.x,
+,,ADD(HAD1417MCW) S/W 개발 이력 ,
+Date,FW Version,Contents,비 고
+12/21/20,1.0.0.0,최초 배포 릴리스 버전,
+5/24/21,1.0.0.1,Calibration bright 파일 이름 변경.,
+21/11/2022,1.0.0.2,"XAS_W Ver : V1.0.0.2 버전 정보 업데이트
+ComPort0 설정 시 GUI 화면 에러 관련 버그 수정 및 COM0 설정 가능하도록 수정.
+sComPort COM0 부터 포트 네임 생성 및 추가하도록 수정.
+Acquisition 메뉴에서 CalEng 옵션 적용 시 Gain, BPM 체크박스 실시간 적용되도록 수정.
+BPM file 생성 후 BPM Generation 버튼 사라지는 버그 수정 및 팝업 메시지 제목 수정.
+디텍터와 네트워크 연결되어 있지 않는 경우 상태 정보 및 OnInitDialog() 함수에서 디텍터 초기 설정 값 적용하지 않도록 조건 추가.
+CIB_ExposeOn() 함수 호출은 Normal Trigger 모드에서만 호출하도록 조건 추가.
+영상 획득 시 preView 팝업 창 유지 시간 500ms 로 수정.
+On_Enable_Cal_Engine() 함수 호출하여 Cal file 생서 시 Bright image 20EA 가 존재하지 않으면 Cal file 생성함수 호출하지 않도록 수정.
+OnCIB_Mode_Setting() 함수 호출 시 OnInitDialog() 함수에서 trigger mode 적용하는 값이 일치하지 않는 버그 수정.","2022.11.21 (월) 임용빈 프로에게 전달함.
+(아직 정식 배포 안함)"

@@ -1,0 +1,91 @@
+queueId: ingest-1781569954382-bsv
+sourcePath: raw/sources/RA/01_DHF/01_HAD1717MC, MG/DHF/14. 디텍터 구동 Software/히스토리/SW_SDK_ HAD1717MC_개발_히스토리 - org.xlsx
+combinedPath: raw/sources/_preprocessed/RA/_combined/1e008cb13bbe/SW_SDK_ HAD1717MC_개발_히스토리 - org__1e008cb13bbe_combined.txt
+canonicalGroupId: aecd099d8e10
+productSignal: HAD/A/F 1417-1717
+authoritySignal: general
+pilotRank: 1769
+
+SOURCE_TEXT
+,,,수정 내용
+,DLib Version : 1.1.0 -> 1.3.1,,1.FPGA Parameter Setting 창 기존 3개에서 4개로 분리
+, ,, - minor
+,,,2.Average Dark Time Delay 1 Sec 추가
+,,, -minor
+,,,3.FPGA Parameter Miss Match 에러 수정 - patch
+,DLib Version : 1.3.1 -> 1.4.2,,1.FPGA Parameter Setting 창 순서 변경 - minor
+,,,2.Average Dark Preview 잔상 삭제 -patch
+,DLib Version : 1.4.2 -> 1.6.2,,1.FPGA Parameter Setting 창 순서 변경 (코드에서 순서에 맞게 변경)- minor
+,,,2.FPGA Parameter AED_CNT 추가 -minor
+,DLib Version : 1.6.2 -> 1.7.4,,1. Cal_Thread 끝날때까지 Tree Lock
+,,,2. Timer 구동 방식 변경 (Thread -> Timer)
+,,,3. 이미지 수신 중 Ping Check 중지 시점 변경
+,,,4. AutoTrigger 로직 변경
+,DLib Version : 1.7.4 -> 1.7.5,,1.GetBright 오류 수정 - Datalisten Thread 2000ms Ctrl Thread 300ms
+,,,2.AVG dark Delay 3000 Sec
+,DLib Version : 1.7.5 -> 1.10.5,,"1.오토 트리거 모드에서 Get Dark Preview 창에 ""Getting a Dark Image"" 프린트 - DLIB"
+,,,2.Image 수신 스레드 종료 대기 시간 2sec->3sec - DLIB
+,,,3.Parameter 추가
+,,,NEGA_AED_TH
+,,,POSI_AED_TH
+,,,AED_DARK_DELAY
+,DLib Version : 1.10.5 -> 1.15.5,,"1 . Worker Thread, UI Thread 분리 (Thread 비정상 종료 원인)"
+,,,2 . Worker Thread 동기화 DeadLock 방지 (Thread 비정상 종료 원인)
+,,,3 . Auto Trigger 상태 출력 Thread->Message 수정
+,,,4 . Auto Trigger GetDark 대기 화면에서 문구 깜빡임 추가 (주기 500ms)
+,,,"5 . GetBright, GetImage 문구 Ready to Expose -> Ready for Exposure 수정"
+,,,-Socket 종료대기 시간 200ms 추가 (broken pipe 원인으로 추정)
+,DLib Version : 1.15.5 -> 1.17.5 ,,1 . Log Display 추가
+,,,"2 . 영상 헤더에 시간 정보(년,월,일,시,분,초) 추가"
+,DLib Version : 1.17.5 -> 1.19.5 ,,1. Satuation 로직 추가
+,,,2. Satuation Map 생성 로직 추가
+,DLib Version : 1.19.5 -> 1.21.6,,1. 24 -> 43 FPGA Parameter 수정
+,DLib Version : 1.21.6->1.22.6,,1. ROICPar->ROIC_REG_1.reg.PWR=m_PWR = 0;
+,DLib Version : 1.22.6->2.22.6,,1. 커맨드 패킷 사이즈 변경 2048 -> 1028
+2019.12.20,DLib Version : 2.22.6->1.0.0,,"XAS
+1. Ver 1.0.0 배포 시 Dlib_0.ini 파일 구버전 적용으로 Latest 버전으로 갱신함.
+ 양산 릴리스 배포 버전."
+2020.05.22,DLib Version : 1.0.0.0,,"XAS
+1.Dlib 이미지 Saturation 현상 개선관련 Gain Correction
+ 처리 구조 변경.
+ Interp_Linear() 함수 X,Y 수식 처리 구조 변경.
+ Proc_NPointInterp() 함수 lookup table 처리 구조 변경. "
+2020.06.04,Dlib Version : 1.0.0.1,,"XAS
+1. xas 동작 메시지 로그 출력 우측으로 밀려서 출력되는 현상 아래로 한칸씩
+ 올라가면서 출력되도록 수정.
+2. Bright_org=1 을 XAS.ini 파일 안에 [General] 항목 아래에 설정하면 Acquisition
+ 동작으로 촬영 영상 획득 시 순수 오리지널 raw 이미지 생성되도록 기능 추가함.
+ 파일 네임은 Bright_org_2020.05.19_17.33.49.raw 형식으로 저장됨.
+ 저장 위치는 촬영 이미지 생성 지정 폴더에 같이 생성됨.
+ 디텍터 리스트 선택에 맞춰서 파일 생성되도록 기능 추가.
+3. FPGA , ROIC param default 설정 값 최신 릴리스된 값으로 기본 생성되도록
+ 파라메터 값 업데이트 함.
+4. XAS.ini 파일에 적용되는 Tolerence, DarkMaxLSB 기본 설정 값 변경.
+5. XAS SW Ver info 변경 : 파일 속성을 열어서 자세히 텝을 확인하면 기존에 1.0.0.0 -->
+ 1.0.0.1 으로 변경됨.
+6. ""CompanyName"", ""H&abyz"" , ""LegalCopyright"", ""(c) H&abyz. 이름 변경함."
+2020.11.23,Dlib Version : 1.0.0.1,,"XAS
+1. x64 64bit 버전으로 빌드되도록 속성 설정 완료.
+2. Dlib , XAS 속성 설정 둘다 변경 완료.
+3. x64 release 설정으로 빌드 시 x86 폴더 debug 폴더로 생성되는 것을 x64 폴더
+ release 폴더로 생성되록 수정.
+4. x64 속성으로 빌드 시 timeSetEvent() 에러 현상 DWORD_PTR 변수 선언 타입
+ 변경으로 수정.
+"
+2021.01.08,DLib Version : 1.0.0.1,,"XAS
+1. 디텍터 내부 온도값 읽어 올 수 있도록 Api 추가 및 기능 구현.
+2. detector FPGA Parameter 생성 시 ini 파일에 Line Trigger, AED Trigger 모드 별로
+ 생성되도록 설정값 추가.
+3. detector Parameter 설정 값 Line Trigger, AED Trigger 각각 구분되도록 설정값 적용
+ 변수 분리함.
+4. dark 획득 시 average 설정 값 기본 42EA , 32EA 적용되도록 수정.
+5. ADD(HAD1417MCW) 디텍터 설정 관련 CIB 설정 정보 cfg 파일에 추가."
+2021.04.22,DLib Version : 1.0.0.2,,"XAS
+ -. 103 line grid 고정으로 사용 시 AED line 출력 이슈 개선.
+ 1. Ofscalibration() 함수 dark frame 수식 처리 구조 변경.
+ 2. iGainCalibration() 함수 FrameBufferAverage 추가하여 계산하도록 변경.
+ 3. BP_Correction2() 함수 추가함.
+ 4. Thread_Calibration() 함수 BPM 보정 알고리즘 처리 구조 변경.
+ 5. 기본 영상 밝기와 픽셀 분포를 조정하도록 CammaCorrection() 처리 함수 추가.
+ 6. 노이즈 및 그리드 제거를 위해 AverageFilter() 처리 함수 추가.
+"

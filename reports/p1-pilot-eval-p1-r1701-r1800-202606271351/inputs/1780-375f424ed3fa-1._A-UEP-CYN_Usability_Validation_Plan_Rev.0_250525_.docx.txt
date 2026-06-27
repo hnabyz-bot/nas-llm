@@ -1,0 +1,540 @@
+queueId: ingest-1781569954421-19ud
+sourcePath: raw/sources/Project/02_CYAN/1. DHF/26. 사용적합성 엔지니어링 보고서/1. A-UEP-CYN_Usability Validation Plan (Rev.0 250525).docx
+combinedPath: raw/sources/_preprocessed/Project/_combined/436e331c79cf/1. A-UEP-CYN_Usability Validation Plan (Rev.0 250525)__436e331c79cf_combined.txt
+canonicalGroupId: 375f424ed3fa
+productSignal: CYAN
+authoritySignal: FDA
+pilotRank: 1780
+
+SOURCE_TEXT
+Usability Validation Plan
+
+for
+
+GT Series
+
+Digital Flat Panel X-ray Detector
+
+Model name: GT1717C, GT1717CP
+
+Report No.: A-UVP-CYN (Rev.0)
+
+Dept. / Title
+
+Name
+
+Date
+
+Signature
+
+Prepared
+
+RA team
+
+Jimin Han
+
+May 25, 2025
+
+Review
+
+R&D Manager
+
+Kyungsoo Lee
+
+May 25, 2025
+
+Approval
+
+Quality Manager
+
+Namkyu Hur
+
+May 25, 2025
+
+Revision history
+
+Rev. No.
+
+Rev. date
+
+Revision contents
+
+Remark
+
+0
+
+May 25, 2025
+
+Establishment
+
+Contents
+
+1 Introduction 4
+
+2 Overview of Usability Engineering Process 5
+
+2.1 Usability Goals 5
+
+2.2 Design Inputs and Validation Linkage 5
+
+2.3 Summary of Formative Evaluation Results 5
+
+2.4 Overview of Summative Evaluation Plan 5
+
+3 Validation Strategy 6
+
+3.1 Validation Objectives 6
+
+3.2 Scope of Validation 6
+
+3.3 Validation Approach 6
+
+4 Test Plan 7
+
+4.1 Target User Groups 7
+
+4.2 Test environment 7
+
+4.3 Key tasks and Risk assessment 7
+
+4.4 Succes and Failure criteria 8
+
+- Task completion within the expected time. 8
+
+- No safety-critical errors during tasks. 8
+
+- Any task failure resulting in potential harm. 8
+
+- User frustration exceeding predefined thresholds (e.g., multiple retries). 8
+
+4.5 Test scenarios 8
+
+5 Formative and Summative Evaluation 9
+
+5.1 Summary of Formative Activities 9
+
+5.2 Summative Evaluation Plan 9
+
+6 Data Collection and Analysis 9
+
+6.1 Data Collection Methods 9
+
+6.2 Data Analysis Plan 9
+
+7 Risk Management and Validation Linkage 9
+
+7.1 Potential Use Errors and Hazards 9
+
+7.2 Validation of Risk Controls 9
+
+8 Schedule and Responsibilities 10
+
+8.1 Validation Schedule 10
+
+8.2 Responsibilities and Roles 10
+
+Introduction
+
+Purpose of the Document
+
+The purpose of this document is to outline the Usability Validation Plan for the Digital Flat Panel X-ray Detector GT1717C, GT1717CP. This plan ensures that the device meets usability requirements, provides a safe and effective user experience, and complies with applicable standards and regulations.
+
+Scope
+
+This plan applies to all usability validation activities for the Digital Flat Panel X-ray Detector GT1717C, GT1717CP, focusing on safety-critical tasks, user interface evaluation, and error minimization. It includes activities to evaluate the interaction of users with the device under realistic conditions.
+
+Applicable Standards and Guidelines
+
+IEC 60601-1-6 :2010/AMD2:2020 - Medical electrical equipment - Part 1-6: General requirements for basic safety and essential performance - Collateral standard: Usability
+
+IEC 62366-1:2015 - Application of Usability Engineering to Medical Devices
+
+FDA Guidance - Applying Human Factors and Usability Engineering to Medical Devices
+
+ISO 14971 - Medical Devices Application of Risk Management to Medical Devices
+
+Product overview
+
+Product Description:
+
+The GT1717C/GT1717CP are wired digital flat panel detectors that have been designed for faster, more streamlined approach to digital radiography systems. The detector consists of TFT and Scintillator (CsI) and an electronic device that converts data read through it into digital signals. The detectors support an auto exposure detection technology that allows the detectors to be used without generator integration.
+
+The flat panel sensors of GT1717C/GT1717CP are fabricated using thin film technology based on amorphous silicon technology. Electronically, the sensors are much like conventional photodiode arrays. Each pixel in the array consists of a light‐sensing photodiode and a switching Thin Film Transistor (TFT) in the same electronic circuit. The amorphous silicon photodiode is sensitive to visual light, and its response curve has almost the same performance as human vision. The sensitivity of amorphous silicon photodiodes peaks in green wavelengths, well matched to scintillators such as CsI. It also has excellent linearity according to the exposure dose.
+
+Product Name
+
+Digital Flat Panel X-ray Detector
+
+Model Name
+
+GT1717C, GT1717CP
+
+Expected service life
+
+5 years
+
+Variant model differences
+
+: The two products differ only in CsI deposition thickness, as shown below, and are identical in usability.
+
+GT1717C : 300um
+
+GT1717CP : 500um
+
+Key Features
+
+Read the user manual carefully before using the product.
+
+Connect the AC power cable to the POE adapter to supply AC power.
+
+DC voltage from the POE adapter is supplied to the detector via the LAN cable.
+
+The detector has a power button that can be used to turn the power on and off.
+
+A handle is provided as an optional accessory to make it easier to move the product.
+
+Detector calibration can be performed using software installed on a PC.
+
+An indicator (LED) allows you to check the Ethernet connection status.
+
+X-rays can be taken to identify the body's anatomical structure.
+
+Familiarity with product maintenance methods is required.
+
+Overview of Usability Engineering Process
+
+Usability Goals
+
+Safety: Ensure safe operation by minimizing user errors.
+
+Effectiveness: Enable users to perform imaging tasks efficiently.
+
+User Satisfaction: Provide an intuitive and user-friendly interface.
+
+Design Inputs and Validation Linkage
+
+The usability validation activities directly address design inputs, including:
+
+User interface layout and clarity: Ensure all buttons and indicators are clearly labeled and positioned for easy access.
+
+Safety-critical features: Verify the effectiveness of safety controls, such as dose adjustment and operational state LEDs.
+
+Task workflow: Evaluate typical user workflows to minimize complexity and reduce errors.
+
+Summary of Formative Evaluation Results
+
+Usability Formative Evaluation was conducted through Usability Formative Evaluation Plan(Doc No. A-UFEP-CYN) and Usability Formative Evaluation Report(Doc No. A-UFER-CYN), through which the following key findings were discovered and improvements were implemented.
+
+Methods Used: Iterative prototyping and user testing with radiology technicians and clinicians.
+
+Key Findings:
+
+The user manual must be written in an easy-to-understand manner.
+
+Each button and status LED should be easy to identify.
+
+When connecting components to the detector, there should be no confusion or misconnection.
+
+The product should be easy to transport.
+
+The calibration procedure should be clearly and thoroughly explained.
+
+The detector should have markings identifying the patient's imaging area.
+
+The product maintenance procedure should be simple and concise.
+
+Improvements Implemented:
+
+The user manual is written in an easy-to-understand and concise manner.
+
+The Ethernet connection status can be confirmed via an indicator (LED).
+
+The power button's LED indicates the power ON/OFF status.
+
+The product is designed to prevent incorrect connection of components, and the user manual contains detailed connection instructions.
+
+The product's calibration procedure is clearly described in the user manual.
+
+The detector has markings that identify the patient's imaging area. How to maintain the product is explained in an easy-to-understand manner in the user manual.
+
+Overview of Summative Evaluation Plan
+
+The summative evaluation will test the final design in real-world conditions with representative users to validate usability and safety goals. It will focus on critical tasks, including setup, dose adjustment, and image capture.
+
+Validation Strategy
+
+Validation Objectives
+
+Verify that the product can be used safely and effectively by intended users in the intended use environments.
+
+Identify and mitigate any residual usability risks.
+
+Scope of Validation
+
+User Groups: Radiologists, technicians, and clinicians with varying levels of expertise.
+
+Use Environments: Hospital settings, mobile clinics, emergency response units.
+
+Key Tasks:
+
+Check the user manual to ensure familiarity with product operation.
+
+Check how to connect components to the detector.
+
+Check indicator (LED) displays and status.
+
+Check product transport.
+
+Check understanding of the calibration procedure.
+
+Check the detection area identification markings on the detector.
+
+Check familiarity with product maintenance instructions.
+
+Validation Approach
+
+Conduct usability tests under simulated clinical environments to replicate real-world conditions.
+
+Use quantitative metrics (e.g., task completion time, error rates) and qualitative feedback (e.g., user satisfaction surveys) for evaluation.
+
+Test Plan
+
+Target User Groups
+
+Users who participate in the survey must be at least as high as the user profile. 설문조사에 참여하는 사용자들은 사용자 프로필과 동등 이상의 수준이어야 한다.
+
+The criteria for the user profile are as follows: 사용자 프로필의 기준은 아래와 같다.
+
+- Occupation: Doctor or Radiologist 직업: 의사 또는 방사선사
+
+- Skills and Qualifications: Medical Licensee or Radiology Licensee 기술 및 자격: 의사 면허 취득자 또는 방사선 면허 취득자
+
+- Knowledge and Education: Bachelor's degree or higher from a medical school or Bachelor's degree or higher in a radiology-related field 지식 및 교육: 의과대학 학사 학위 이상 또는 방사선 관련 학과 학사 학위 이상
+
+Test environment
+
+Simulated Clinical Settings: Replicate hospital, mobile clinic, and emergency use scenarios.
+
+Equipment Setup: Include standard accessories and compatible third-party imaging detectors.
+
+Key tasks and Risk assessment
+
+Use scenarios related to risk factors 1: Check User Manual
+
+위해 요인 관련 사용 시나리오 1: 사용자 설명서 확인
+
+Task
+
+Potential errors
+
+Associated Risks
+
+Read the user manual and understand the functions and usage사용자 설명서를 읽고 기능과 사용법 이해
+
+Not reading the instructions thoroughly.
+
+사용설명서를 충분히 숙지하지 않음.
+
+Additional X-ray exposure due to delayed diagnosis and re-examination of the patient. 환자의 진단 지연 및 재촬영에 따른 X-ray 추가 노출.
+
+Familiarize yourself with the safety warnings. 안전 경고 문구 숙지
+
+The user cannot find the safety information.
+
+The user does not understand the precautions. (Difficult term, low readability)
+
+사용자가 안전 정보를 찾을 수 없습니다.
+
+사용자가 주의사항을 이해하지 못합니다. (어려운 용어, 낮은 가독성)
+
+Additional X-ray exposure due to delayed diagnosis and re-examination of the patient. 환자의 진단 지연 및 재촬영에 따른 X-ray 추가 노출.
+
+Use scenarios related to risk factors2: Preparing the product for use
+
+위해 요인 관련 사용 시나리오 2: 제품 사용 준비
+
+Connect product components.
+
+제품 구성품 연결
+
+The user is not familiar with how to connect the product components.
+
+사용자가 제품 구성품 연결 방법을 숙지하지 못했습니다.
+
+Delayed diagnosis
+
+of patients
+
+환자의 진단 지연
+
+Product calibration
+
+제품 calibration
+
+The user is not familiar with the calibration method.
+
+사용자가 calibration 방법을 숙지하지 못했습니다.
+
+Additional X-ray exposure due to delayed diagnosis and re-examination of the patient. 환자의 진단 지연 및 재촬영에 따른 X-ray 추가 노출.
+
+Use scenarios related to risk factors 3: Product use
+
+위해 요인 관련 사용 시나리오 3: 제품 사용
+
+Product power ON/OFF
+
+제품 전원 ON/OFF
+
+The user is not familiar with how to turn the product on and off.
+
+사용자가 제품 전원 ON/OFF 방법을 숙지하지 못했습니다.
+
+Delayed diagnosis
+
+of patients
+
+Check the indicator
+
+The user is not familiar with the product's indicator status.
+
+사용자가 제품의 indicator 상태를 숙지하지 못했습니다.
+
+Delayed diagnosis
+
+of patients
+
+Product transportation
+
+제품 운반
+
+Dropping the product
+
+Wound
+
+Place the patient's imaging area on the detector.
+
+환자의 촬영부위를 디텍터에 배치.
+
+The user is not able to identify the shooting area.
+
+사용자가 촬영영역을 식별하지 못합니다.
+
+Delayed diagnosis
+
+of patients
+
+Use scenarios related to risk factors 4: Maintenance
+
+위해 요인 관련 사용 시나리오 4: 유지보수
+
+Cleaning method and verification of cleaning results청소방법 및 청소결과 확인
+
+User cannot determine the cleaning method.
+
+User does not understand the cleaning method.
+
+User cleans in an inappropriate manner.
+
+Delayed diagnosis
+
+of patients
+
+Succes and Failure criteria
+
+Success Criteria:
+
+Task completion within the expected time.
+
+No safety-critical errors during tasks.
+
+Failure Criteria:
+
+Any task failure resulting in potential harm.
+
+User frustration exceeding predefined thresholds (e.g., multiple retries).
+
+Test scenarios
+
+Scenario 1: Check User Manual
+
+Scenario 2: Preparing the product for use
+
+Scenario 3: Product use
+
+Scenario 4: Maintenance
+
+Formative and Summative Evaluation
+
+Summary of Formative Activities
+
+Activity Overview:
+
+Conducted usability tests on early prototypes.
+
+Improved product handle and indicator
+
+Findings Addressed:
+
+Ergonomic design for easy hand holding
+
+Product status can be identified through clear indicator (LED).
+
+Summative Evaluation Plan
+
+Objectives: Confirm that the final design meets all usability goals under realistic conditions.
+
+Methods:
+
+User testing with 15+ participants in diverse clinical scenarios.
+
+Data collection through task observations, error tracking, and user interviews.
+
+Data Collection and Analysis
+
+Data Collection Methods
+
+Quantitative Metrics:
+
+Task completion times
+
+Error rates (e.g., incorrect dose settings, missed Bluetooth connections)
+
+Qualitative Feedback:
+
+User satisfaction surveys
+
+Post-test interviews to gather insights on usability issues
+
+Data Analysis Plan
+
+Analyze task success rates to ensure alignment with predefined usability goals.
+
+Evaluate user feedback to identify residual design improvements
+
+Risk Management and Validation Linkage
+
+Potential Use Errors and Hazards
+
+Misinterpretation of status LEDs: Can lead to incorrect device operation
+
+Improper use of the product may result in delayed patient diagnosis and additional X-ray exposure due to re-examination.
+
+Validation of Risk Controls
+
+Targeted tests to ensure risk mitigation measures are effective.
+
+Schedule and Responsibilities
+
+Validation Schedule
+
+Formative evaluations: Completed by [~ May 20, 2025].
+
+Summative evaluations: Planned for [September 01, 2025 ~].
+
+Responsibilities and Roles
+
+Test supervisor: Hur, Namkyu
+
+Test administrator: Park, JaeHong
+
+Observer/Recorder: Han, Jimin

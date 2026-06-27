@@ -1,0 +1,32 @@
+queueId: ingest-1781569954372-2kq
+sourcePath: raw/sources/RA/00_기타 작업 서류/260129 사이버보안/2_sbom_practice_guide.md
+combinedPath: raw/sources/_preprocessed/RA/_combined/53a9566df6f4/2_sbom_practice_guide__53a9566df6f4_combined.txt
+canonicalGroupId: 4834cdbb2662
+productSignal: Unclassified
+authoritySignal: general
+pilotRank: 1787
+
+SOURCE_TEXT
+미션 1: fastapi의 CVE ID와 CVSS 점수 찾기
+• 분석 전략:
+1. universal_sbom24_spdx23_20250731_115829.spdx.json 파일에서 Ctrl+F를 사용하여 "name": "fastapi"를 검색하여 해당 패키지 객체를 찾습니다.
+2. CVE ID: fastapi 객체 내의 externalRefs 배열에서 referenceType이 cve인 항목을 찾고, referenceLocator 값에서 ID를 확인합니다.
+3. CVSS 점수: fastapi 객체 내의 annotations 배열에서 annotationType이 CVSS_BASE_SCORE인 항목을 찾고, comment 값에서 점수를 확인합니다.
+
+미션 2: django의 라이선스 확인
+• 분석 전략:
+1. 파일에서 "name": "django"를 검색하여 해당 패키지 객체를 찾습니다. (버전 정보가 있는 객체를 선택하세요.)
+2. django 객체 내에서 licenseConcluded 필드의 값을 직접 확인합니다.
+팁: NOASSERTION은 SPDX 표준 용어로, SBOM 생성 도구가 라이선스를 단정하지 않았음을 의미합니다. 이것 자체가 정답입니다.
+
+미션 3: psycopg2-binary와 numpy의 동적 링크 확인
+• 분석 전략:
+1. 각 패키지(psycopg2-binary, numpy)의 객체를 검색하여 찾습니다.
+2. 각 객체 내의 annotations 배열에서 annotationType이 LINKAGE_TYPE인 항목을 찾습니다.
+3. comment 필드 값에 DYNAMIC이 포함되어 있는지 확인하고, 그 결과를 is_dynamically_linked 필드에 true 또는 false로 기입합니다.
+
+미션 4: pillow의 SHA256 체크섬과 그 중요성
+• 분석 전략:
+1. 파일에서 "name": "pillow"를 검색하여 해당 패키지 객체를 찾습니다.
+2. pillow 객체 내의 checksums 배열에서 algorithm이 SHA256인 항목을 찾고, checksumValue 값을 복사합니다.
+3. 보안 중요성: 이 SHA256 값은 해당 라이브러리 파일의 고유한 '디지털 지문'입니다. 이 값을 비교함으로써 우리가 사용하려는 라이브러리가 원본 그대로인지, 누군가 악성 코드를 심는 등 중간에 변조(Tampering)되지 않았는지를 검증하여 소프트웨어 공급망의 **무결성(Integrity)**을 보장하는 핵심적인 역할을 한다고 서술합니다.
