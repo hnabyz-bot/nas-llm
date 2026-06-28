@@ -2,7 +2,7 @@
 # Restore snapshot if needed, then start llm_wiki only when ingest is explicitly approved.
 
 $vaultPath = "D:\vault\llm-wiki-vault"
-$appExe = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$appExe = "D:\vault\llm-wiki-vault\bin\llm-wiki.exe"
 $snapshot = "$vaultPath\.llm-wiki\file-snapshot.json"
 $snapshotBak = "$vaultPath\.llm-wiki\file-snapshot.bak"
 $ingestReadyFlag = "$vaultPath\.llm-wiki\ingest-ready.flag"
@@ -68,5 +68,4 @@ $pinfo.UseShellExecute = $false
 $pinfo.CreateNoWindow = $false
 $pinfo.EnvironmentVariables["PATH"] = $env:PATH
 [System.Diagnostics.Process]::Start($pinfo) | Out-Null
-
 

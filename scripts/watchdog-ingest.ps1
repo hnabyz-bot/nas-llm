@@ -5,7 +5,7 @@
 $QueuePath   = "D:\vault\llm-wiki-vault\.llm-wiki\ingest-queue.json"
 $StatePath   = "D:\vault\llm-wiki-vault\scripts\watchdog-state.json"
 $PreprocessScript = "D:\vault\llm-wiki-vault\scripts\preprocess-active-originals.ps1"
-$AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$AppExe      = "D:\vault\llm-wiki-vault\bin\llm-wiki.exe"
 $IngestReadyFlag = "D:\vault\llm-wiki-vault\.llm-wiki\ingest-ready.flag"
 $StuckMinutes = 60
 $IdlePendingMinutes = 10

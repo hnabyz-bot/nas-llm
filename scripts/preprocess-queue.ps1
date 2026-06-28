@@ -21,7 +21,7 @@ $PreprocFull = Join-Path $VaultRoot ($PreprocRoot -replace '/', '\')
 $ScriptDir   = Split-Path $MyInvocation.MyCommand.Path
 $XlsxScript  = Join-Path $ScriptDir "preprocess-xlsx.js"
 $ProjectId   = "2da34b71-49aa-4919-a66a-90f1683772f9"
-$AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$AppExe      = "D:\vault\llm-wiki-vault\bin\llm-wiki.exe"
 $TargetFolders = @(
     "DHF (인허가)",
     "RA",

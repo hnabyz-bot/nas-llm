@@ -139,7 +139,7 @@ if ($added -eq 0) {
 
 # 앱 실행 중이면 중단 — 큐 덮어쓰기 경쟁 방지.
 # 이 스크립트는 앱을 다시 시작하지 않는다. 전처리와 게이트 검증이 먼저다.
-$AppExe      = "C:\dev\llm_wiki\src-tauri\target\release\llm-wiki.exe"
+$AppExe      = "D:\vault\llm-wiki-vault\bin\llm-wiki.exe"
 $wasRunning  = [bool](Get-Process -Name "llm-wiki" -ErrorAction SilentlyContinue)
 if ($wasRunning) {
     Write-Host "llm-wiki 중단 (큐 경쟁 방지)..."
